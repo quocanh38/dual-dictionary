@@ -1,32 +1,44 @@
 # Dual Dictionary
 
-**Free offline English dictionary. Two dictionaries, one search.**
+Offline-first English dictionary for study and research.
 
-[Open Dual Dictionary](https://dualdictionary.netlify.app/)
+Live app: [dualdictionary.netlify.app](https://dualdictionary.netlify.app/)
 
-Dual Dictionary is a free, offline-first English–English dictionary that runs entirely in your browser. Search once and see two dictionaries side by side:
+Dual Dictionary is a browser-based PWA that brings two dictionary sources into
+one search workflow. When both sources are available, it can show WordNet 3.1
+and Simple English Wiktionary side by side. The app also supports an optional
+English–Vietnamese dictionary, reading mode, saved words, saved sentences,
+browser text-to-speech, and user-provided `.mdx` / `.mdd` files.
 
-- **WordNet 3.1** (Princeton University): 149,400 entries with CEFR A1–C2 level badges, US/UK IPA pronunciations, synonyms, and examples.
-- **Simple English Wiktionary**: 22,310 short, easy definitions for fast checks and learners.
+## Highlights
 
-After the first visit, the dictionaries are stored locally and the app works offline. Install it to your home screen on iOS 16.4+ or Android for an app-like experience. There is no account, advertising, or tracking.
+- Parallel lookup across WordNet 3.1 and Simple English Wiktionary
+- Optional open English–Vietnamese dictionary add-on
+- Phrase and multi-word search
+- Reading mode with tap-to-lookup and saved sentences
+- Saved words with lightweight review actions
+- PWA installation and offline use after dictionary data finishes downloading
+- Local-first storage with no account required
+- Bring your own authorized `.mdx`, `.mdd`, and optional `.css` files
 
-## Features
+## Run locally
 
-- Parallel lookup in WordNet and Simple English Wiktionary
-- CEFR levels and US/UK IPA pronunciations
-- Word suggestions and search history
-- Saved words with built-in spaced repetition: **Know it** / **Forgot it**
-- Browser text-to-speech pronunciation
-- Support for dictionary files you own in `.mdx` / `.mdd` format
-- Offline-first progressive web app (PWA)
+This is a static app with no build step. Serve the repository with any static
+HTTP server, then open the local URL in a modern browser. Opening `index.html`
+directly may prevent service-worker and local-file features from working.
 
-## Open data and attribution
+For deployment notes, see [`docs/deployment.md`](docs/deployment.md).
 
-- [WordNet 3.1](https://wordnet.princeton.edu/) by Princeton University
-- [Simple English Wiktionary](https://simple.wiktionary.org/) under CC BY-SA 4.0 / GFDL
-- [CMU Pronouncing Dictionary](https://github.com/cmusphinx/cmudict)
+## Dictionary data and licensing
 
-## Live site
+The public sample dictionaries are open-licensed. See [`NOTICE.md`](NOTICE.md)
+for attribution and license details. Commercial dictionaries are not bundled;
+users must load only files they are authorized to use.
 
-https://dualdictionary.netlify.app/
+The app is provided for personal study and research. Check the applicable
+license terms before redistributing code or dictionary data.
+
+## Roadmap
+
+See [`ROADMAP.md`](ROADMAP.md) for the current direction, including the MDX-first
+reader workflow and future study features.

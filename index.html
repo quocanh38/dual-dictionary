@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=1af0641f-673e-48e9-9c86-1755d64b6558
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=1af0641f-673e-48e9-9c86-1755d64b6558">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Offline English–Vietnamese & EN–EN dictionary (PWA). Use your own .mdx files, tap words while reading, save sentences. No account, no tracking.">
+<meta name="keywords" content="english dictionary, offline dictionary, tu dien anh viet, từ điển anh việt offline, english vietnamese dictionary, mdx reader, mdd, phrase search, tap to lookup, study dictionary, non-commercial, PWA, dual dictionary">
+<meta name="author" content="Dual Dictionary">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f766e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dual Dict">
+<!-- After deploying, replace the URL below with your real domain and add a <link rel="alternate" hreflang> if you add translations -->
+<!-- SEO: canonical phải trỏ đúng domain đang live (dualdictionary — không có gạch giữa).
+     Chỗ trống dưới đây chừa sẵn cho tag verify Google Search Console (user tự verify). -->
+<!-- <meta name="google-site-verification" content="PASTE_GSC_TOKEN_HERE"> -->
+<link rel="canonical" href="https://dualdictionary.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:title" content="Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)">
+<meta property="og:description" content="Offline English–Vietnamese & EN–EN dictionary (PWA). Use your own .mdx files, tap words while reading, save sentences. No account, no tracking.">
+<meta property="og:image" content="https://dualdictionary.netlify.app/icons/icon-512.png">
+<meta property="og:url" content="https://dualdictionary.netlify.app/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)">
+<meta name="twitter:description" content="Offline English–Vietnamese & EN–EN dictionary (PWA). No account, no tracking.">
+<meta name="twitter:image" content="icons/icon-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/icon-192.png">
+<title>Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Dual Dictionary",
+      "url": "./",
+      "applicationCategory": "EducationalApplication",
+      "browserRequirements": "Requires JavaScript. DecompressionStream (Chrome 80+, Safari 16.4+, Firefox 113+).",
+      "operatingSystem": "Any (PWA — iOS, Android, Windows, macOS, Linux)",
+      "inLanguage": ["en", "vi"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "An offline-first English–Vietnamese & English–English dictionary web app (PWA) for study and research: one-click open EN–VI dictionary, parallel lookup panels, phrase search, a reading mode with tap-to-lookup, saved words and sentences, support for user-provided .mdx/.mdd files — everything stored locally. Non-commercial use only.",
+      "featureList": [
+        "Open English–Vietnamese dictionary (OVDP, 386,600 entries) — one-click download",
+        "Parallel lookup in two dictionaries",
+        "Phrase and multi-word search",
+        "Reader mode: tap any word in a pasted article or Wikipedia page to look it up",
+        "Save words with their original sentences",
+        "CEFR A1–C2 level badges",
+        "US and UK IPA pronunciations",
+        "Works offline (PWA)",
+        "Supports user-provided .mdx and .mdd dictionary files",
+        "Word suggestions and search history"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can I look up Vietnamese meanings?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — one click adds the open English–Vietnamese dictionary (OVDP, 386,600 entries including inflected forms like ran → run). It downloads once and then works fully offline." } },
+        { "@type": "Question", "name": "Is Dual Dictionary free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — no account, no tracking. The bundled dictionary data is open-licensed (WordNet 3.1, Simple English Wiktionary). Dictionaries you load yourself are stored locally for personal use only." } },
+        { "@type": "Question", "name": "Does Dual Dictionary work offline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is an installable PWA: add it to your home screen and look up words with no internet connection." } },
+        { "@type": "Question", "name": "Can I use my own .mdx dictionaries?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — the Advanced panel lets either slot load any .mdx file you have the rights to use, plus the matching .mdd for audio and images. The app is a reader; you provide your own files." } },
+        { "@type": "Question", "name": "How do I install it on my phone?",
+          "acceptedAnswer": { "@type": "Answer", "text": "iPhone/iPad (Safari): Share → Add to Home Screen. Android (Chrome): menu ⋮ → Add to Home screen / Install app. Requires iOS 16.4+." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="icons/icon-192.png" alt="" width="30" height="30">
+    <h1>Dual Dictionary</h1>
+  </div>
+  <div class="topbar-actions">
+    <button id="btn-vocab" class="icon-btn" title="Saved words" aria-label="Saved words">★<span id="vocab-badge" class="badge hidden"></span></button>
+    <button id="btn-reader" class="icon-btn" title="Reading mode" aria-label="Reading mode">📖</button>
+    <button id="btn-advanced" class="icon-btn" title="Advanced" aria-label="Advanced settings">⚙</button>
+    <button id="btn-help" class="icon-btn" title="Help" aria-label="Help">?</button>
+  </div>
+</header>
+
+<main>
+  <form id="search-form" class="search-wrap" autocomplete="off">
+    <div class="search-box">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="search-input" type="search" placeholder="Type an English word…" enterkeyhint="search"
+             autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off"
+             role="combobox" aria-expanded="false" aria-controls="suggestions"
+             aria-autocomplete="list" aria-label="Search a word">
+      <button id="btn-clear" type="button" class="btn-clear hidden" aria-label="Clear">&times;</button>
+      <button id="btn-speak" type="button" class="icon-inline" title="Listen (text-to-speech)" aria-label="Listen to pronunciation" disabled>🔊</button>
+      <button id="btn-save-word" type="button" class="icon-inline" title="Save word" aria-label="Save word to your vocabulary list" disabled>☆</button>
+      <button type="submit" class="btn-search" aria-label="Search">Search</button>
+    </div>
+    <div id="suggestions" class="suggestions hidden" role="listbox" aria-label="Search suggestions"></div>
+  </form>
+
+  <div id="storage-banner" class="storage-banner hidden" role="alert">
+    <span id="storage-banner-text"></span>
+    <button id="btn-dismiss-storage" aria-label="Dismiss">&times;</button>
+  </div>
+
+  <!-- Reader: paste text or load a URL, tap any word to look it up in the panels below -->
+  <section id="reader" class="reader hidden" aria-label="Reading mode">
+    <div class="reader-toolbar">
+      <button type="button" id="btn-reader-close" class="btn-secondary">✕ Close reader</button>
+      <button type="button" id="btn-save-sentence" class="btn-secondary" disabled title="Save the sentence containing the selected word">⭐ Save sentence</button>
+    </div>
+    <div id="reader-input-wrap" class="reader-input-wrap">
+      <textarea id="reader-input" rows="7" placeholder="Paste an English article here…" aria-label="Paste text to read"></textarea>
+      <div class="reader-url-row">
+        <input id="reader-url" type="url" placeholder="…or a page URL (CORS-friendly sources work, e.g. wikipedia.org)" aria-label="Article URL">
+        <button type="button" id="btn-reader-load" class="btn-primary">Load URL</button>
+      </div>
+      <button type="button" id="btn-reader-start" class="btn-primary">📖 Start reading</button>
+      <p id="reader-msg" class="reader-msg" role="status"></p>
+    </div>
+    <div id="reader-text" class="reader-text hidden"></div>
+  </section>
+
+  <div id="history" class="history hidden" aria-label="Recent words">
+    <span class="hist-label">Recent:</span>
+    <div id="history-chips"></div>
+    <button type="button" id="btn-clear-history" class="hist-clear" aria-label="Clear recent words" title="Clear recent words">Clear</button>
+  </div>
+
+  <!-- Mobile-only view switch -->
+  <div id="view-switch" class="view-switch" role="tablist" aria-label="Choose dictionary">
+    <button data-view="oxford" role="tab" aria-selected="false">WordNet</button>
+    <button data-view="longman" role="tab" aria-selected="false">Wiktionary</button>
+    <button data-view="both" role="tab" aria-selected="true" class="active">Both</button>
+  </div>
+
+  <p id="both-hint" class="hint both-hint hidden" aria-hidden="true"></p>
+
+  <div id="dict-grid" class="dict-grid">
+    <!-- Slot 1 -->
+    <section class="dict-panel" id="panel-oxford" data-slot="oxford">
+      <div class="panel-head oxford-head">
+        <span class="dict-name">WordNet 3.1</span>
+        <span class="dict-status" id="status-oxford" role="status">not loaded</span>
+        <button type="button" class="panel-toggle" data-slot="oxford" aria-pressed="false"
+                title="Full-screen reading view" aria-label="Full-screen reading view for WordNet">⤢</button>
+      </div>
+      <div class="entry-frame" id="frame-oxford" hidden><iframe title="WordNet 3.1 entry" sandbox="allow-scripts"></iframe></div>
+    </section>
+
+    <!-- Slot 2 -->
+    <section class="dict-panel" id="panel-longman" data-slot="longman">
+      <div class="panel-head longman-head">
+        <span class="dict-name">Simple English Wiktionary</span>
+        <span class="dict-status" id="status-longman" role="status">not loaded</span>
+        <button type="button" class="panel-toggle" data-slot="longman" aria-pressed="false"
+                title="Full-screen reading view" aria-label="Full-screen reading view for Wiktionary">⤢</button>
+      </div>
+      <div class="entry-frame" id="frame-longman" hidden><iframe title="Simple English Wiktionary entry" sandbox="allow-scripts"></iframe></div>
+    </section>
+  </div>
+
+  <div id="empty-state" class="empty-state" aria-live="polite">
+    <p><strong id="empty-state-msg">Loading the default dictionaries…</strong></p>
+    <ul id="first-load-sizes" class="first-load-sizes"></ul>
+    <p id="empty-state-error" class="load-error" role="alert" hidden></p>
+    <p class="first-load-note">One-time download, stored in the app, fully offline afterwards.</p>
+    <button id="btn-quickload" class="btn-primary">⬇ Download dictionaries</button>
+    <button id="btn-cancel-load" class="btn-secondary hidden">Cancel download</button>
+    <button id="btn-open-advanced" class="btn-secondary">Use my own .mdx files</button>
+    <button type="button" id="btn-envi-empty" class="btn-secondary">🇻🇳 Add English–Vietnamese dictionary</button>
+    <button id="btn-open-help" class="btn-secondary">Help</button>
+    <a class="bmc-inline" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">☕ Buy me a coffee — keeps this free &amp; ad-free</a>
+  </div>
+
+  <section id="about" class="about">
+    <h2>A study &amp; research dictionary, right in your browser</h2>
+    <details class="about-details">
+      <summary>About this app — features &amp; terms of use</summary>
+      <p><strong>Dual Dictionary is an offline-first web app built for personal study and research:
+         it looks up English words in parallel panels, with support for your own .mdx/.mdd
+         dictionary files. Everything runs in your browser — data stays on your device,
+         no account, no tracking, no ads.</strong></p>
+      <p class="hint" style="margin-top:8px">This app is provided for personal study and research
+         purposes only. It is not a commercial product and is not intended for commercial use or
+         redistribution of any dictionary content. The bundled open data remains available
+         under its own licenses (see NOTICE.md) — this term applies to this deployment only.</p>
+      <ul>
+        <li><strong>Parallel lookup:</strong> one search, two dictionary views side by side.</li>
+        <li><strong>Open by default:</strong> the public edition ships with open-licensed dictionaries
+           (WordNet 3.1, Simple English Dictionary) — free for everyone, no login.</li>
+        <li><strong>Bring your own dictionaries:</strong> load any .mdx / .mdd file (MDX format) you own, e.g.
+           learner's dictionaries, into either panel — only files you are authorized to use.</li>
+        <li><strong>Learn-oriented tools:</strong> word suggestions, search history, and a built-in
+           spaced-repetition vocabulary list.</li>
+        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that.</li>
+      </ul>
+      <h3>Dictionaries &amp; licenses</h3>
+      <p>The public edition ships only open-licensed data (see <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):</p>
+      <ul>
+        <li><strong>WordNet 3.1</strong> — Princeton University, WordNet 3.1 license
+            (embeds IPA from CMUdict and from Simple English Wiktionary — see NOTICE.md).</li>
+        <li><strong>Simple English Dictionary</strong> — derived from Simple English Wiktionary,
+            CC BY-SA 3.0+/4.0 &amp; GFDL.</li>
+        <li><strong>Pronunciations</strong> — CMUdict (public domain / BSD, cmusphinx).</li>
+      </ul>
+      <p>Commercial dictionaries (e.g. OALD, LDOCE) are never bundled here; load your own
+         files via ⚙ Advanced only if you are authorized to use them.</p>
+    </details>
+  </section>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <footer class="foot">
+    <p class="credits">Dictionary data may be copyrighted by its respective publishers
+      (e.g. Oxford University Press, Pearson) and is stored locally on your device for
+      <strong>personal study and research use only</strong> — do not redistribute or use commercially.</p>
+    <p>Offline &amp; non-commercial · bring your own .mdx / .mdd files</p>
+    <p class="credits" style="font-size:12px">EN–VI dictionary data: “Từ điển Anh–Việt” © Open Vietnamese Dictionary Project (catusf/tudien) — MIT license.</p>
+    <div class="support">
+      <p class="support-note">If Dual Dictionary helps your study, a coffee keeps it free &amp; ad-free ☕</p>
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="quocanh38r" data-color="#FF5F5F" data-emoji=""  data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+      <noscript><a href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">Buy me a coffee</a></noscript>
+    </div>
+  </footer>
+</main>
+
+<!-- Help modal -->
+<dialog id="help-dialog">
+  <button type="button" class="dialog-close" aria-label="Close help">✕</button>
+  <h2>How to use</h2>
+  <ol class="quickstart">
+    <li><strong>Wait for the first download</strong> — the dictionaries are fetched once,
+        then stored in the app and work offline. Progress, speed and time remaining are
+        shown in each panel header; you can cancel or retry from the start screen.</li>
+    <li><strong>Type a word</strong> (e.g. <code>apple</code>) and press Enter — both
+        dictionaries show results side by side.</li>
+    <li><strong>Save words</strong> with ☆ next to the search box, then review them later
+        from ★ in the top bar (built-in spaced repetition).</li>
+  </ol>
+  <details class="help-more">
+    <summary>More features &amp; details</summary>
+    <ol>
+      <li><strong>Purpose:</strong> this app is a personal study &amp; research tool — non-commercial,
+         no account, no tracking. All dictionary data stays on your own device.</li>
+      <li><strong>Hear it:</strong> tap 🔊 next to the search box to hear the word read aloud using your
+        browser's built-in text-to-speech.</li>
+      <li><strong>Bring your own dictionary file:</strong> open <em>⚙ Advanced</em> in the top bar to load
+        a .mdx/.mdd dictionary file you have the rights to use into either slot.
+        The public edition ships with open-licensed dictionaries (WordNet 3.1, Simple English)
+        by default — load commercial dictionaries such as OALD/LDOCE only if you own them.
+        See the <a href="data-loading-guide.md" target="_blank" rel="noopener">detailed guide + troubleshooting</a>.</li>
+      <li><strong>Install on your phone:</strong>
+        <ul>
+          <li><strong>iPhone / iPad (Safari):</strong> Share → <em>Add to Home Screen</em>.</li>
+          <li><strong>Android (Chrome):</strong> menu ⋮ → <em>Add to Home screen / Install app</em>.</li>
+        </ul>
+        Requires iOS 16.4+ (technical requirement: DecompressionStream).</li>
+      <li><strong>Deploy this app yourself:</strong> drag the folder onto
+        <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a> (free) or GitHub Pages.
+        Publishing the app with only its <strong>open-licensed</strong> bundled data (WordNet 3.1,
+        Simple English Wiktionary) is fine. ⚠️ If you or your group load
+        <strong>commercial</strong> dictionary files (e.g. OALD/LDOCE), keep that deployment
+        private — serving licensed content as a public service would be redistribution.</li>
+      <li><strong>Keyboard (desktop):</strong> ↑/↓ to pick a suggestion, Enter to search, Esc to hide.</li>
+    </ol>
+  </details>
+  <details class="help-more">
+    <summary>Licenses &amp; terms of use</summary>
+    <p class="license-note">
+      This app is provided for <strong>personal study and research purposes only</strong> —
+      non-commercial use. Dictionary files you load remain the property of their respective
+      publishers (e.g. Oxford University Press, Pearson): use only files you are authorized
+      to use, keep them on your own device, and do not redistribute them or serve them publicly.<br>
+      Spoken audio uses your browser's built-in text-to-speech (no audio files bundled).
+    </p>
+  </details>
+  <form method="dialog"><button class="btn-primary">Got it</button></form>
+</dialog>
+
+<!-- Advanced settings modal -->
+<dialog id="advanced-dialog">
+  <button type="button" class="dialog-close" aria-label="Close advanced settings">✕</button>
+  <h2>Advanced</h2>
+  <p class="hint"><strong>Optional</strong> — most users never need this screen. The app downloads
+    and updates the default dictionaries by itself. Only use this if you want to load your own
+    .mdx/.mdd file into a slot; only load files you have the rights to use — see the terms of
+    use in the Help dialog.</p>
+  <h3>Slot 1 — WordNet 3.1 by default</h3>
+  <div class="file-row">
+    <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="oxford" data-kind="mdx" hidden></label>
+    <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="oxford" data-kind="mdd" hidden></label>
+    <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="oxford" data-kind="css" hidden></label>
+  </div>
+  <div class="file-row">
+    <input id="url-oxford" type="url" placeholder="https://user:pass@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
+    <button type="button" class="btn-secondary" id="url-load-oxford">⬇ Load from URL</button>
+  </div>
+  <button type="button" class="btn-secondary panel-remove" data-slot="oxford">Remove &amp; restore default</button>
+
+  <h3>Slot 2 — Simple English Wiktionary by default</h3>
+  <div class="file-row">
+    <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="longman" data-kind="mdx" hidden></label>
+    <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="longman" data-kind="mdd" hidden></label>
+    <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="longman" data-kind="css" hidden></label>
+  </div>
+  <div class="file-row">
+    <input id="url-longman" type="url" placeholder="https://user:pass@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
+    <button type="button" class="btn-secondary" id="url-load-longman">⬇ Load from URL</button>
+  </div>
+  <button type="button" class="btn-secondary panel-remove" data-slot="longman">Remove &amp; restore default</button>
+
+  <div class="envi-row">
+    <button type="button" id="btn-envi-adv" class="btn-primary">🇻🇳 Get EN–VI dictionary <small>(open-licensed, 386k words)</small></button>
+    <p class="hint">Downloads the open EN–VI dictionary (OVDP, MIT) into Slot 2 — one-time, stored offline.</p>
+  </div>
+
+  <p class="hint">Loading a new .mdx replaces the one currently in that slot.
+    <strong>Load from URL loads the whole set in one go</strong>: the matching
+    <code>.mdd</code> (audio/images) and <code>.css</code> (stylesheet) sitting next to the
+    .mdx on the server are fetched automatically — one URL, all files. The file buttons above
+    are only for offline/manual completion. See the
+    <a href="data-loading-guide.md" target="_blank" rel="noopener">detailed loading guide + troubleshooting</a>
+    for supported formats and common errors.</p>
+  <form method="dialog"><button class="btn-primary">Close</button></form>
+</dialog>
+
+<!-- Saved words / spaced-repetition modal -->
+<dialog id="vocab-dialog">
+  <button type="button" class="dialog-close" aria-label="Close saved words">✕</button>
+  <h2>Saved words</h2>
+  <p class="hint" id="vocab-count"></p>
+  <div id="vocab-list"></div>
+  <h3>Saved sentences</h3>
+  <div id="sentences-list"></div>
+  <button type="button" id="vocab-export" class="btn-secondary" disabled title="Download your saved words as a JSON file">⬇ Export JSON</button>
+  <form method="dialog"><button class="btn-primary">Close</button></form>
+</dialog>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="1af0641f-673e-48e9-9c86-1755d64b6558" data-app-host="app.netlify.com"></script>

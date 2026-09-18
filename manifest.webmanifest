@@ -1,0 +1,15 @@
+{
+  "name": "Dual Dictionary — English (EN–EN)",
+  "short_name": "Dual Dict",
+  "description": "Offline-first parallel English dictionary for personal study and research. Non-commercial use only. Works with your own .mdx/.mdd files.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f5f7",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
