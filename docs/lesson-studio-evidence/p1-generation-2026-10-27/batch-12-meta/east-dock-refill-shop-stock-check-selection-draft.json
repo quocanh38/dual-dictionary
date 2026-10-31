@@ -1,0 +1,65 @@
+{
+  "id": "draft-e9701317-1107-440d-818c-b8e47aed37fc",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Keeping Stock Ready at a Refill Shop",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Volunteers at the East Dock Refill Shop check the shelves before the doors open. They compare each jar with the stock card and write down items that are nearly empty. If soap or cooking oil starts to run low, the shift lead contacts the supplier before the weekend. At closing time, volunteers top up the display bottles from sealed containers in the storeroom. They label each bottle with the product name and refill date. The team keeps cleaning liquids on a separate shelf from food products. A weekly count helps the shop decide which items to order for the next delivery.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "Volunteers at the East Dock Refill Shop check the shelves before the doors open. They compare each jar with the stock card and write down items that are nearly empty. If soap or cooking oil starts to run low, the shift lead contacts the supplier before the weekend. At closing time, volunteers top up the display bottles from sealed containers in the storeroom. They label each bottle with the product name and refill date. The team keeps cleaning liquids on a separate shelf from food products. A weekly count helps the shop decide which items to order for the next delivery.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Volunteers at the East Dock Refill Shop check the shelves before the doors open."
+      },
+      {
+        "id": "s2",
+        "text": "They compare each jar with the stock card and write down items that are nearly empty."
+      },
+      {
+        "id": "s3",
+        "text": "If soap or cooking oil starts to run low, the shift lead contacts the supplier before the weekend."
+      },
+      {
+        "id": "s4",
+        "text": "At closing time, volunteers top up the display bottles from sealed containers in the storeroom."
+      },
+      {
+        "id": "s5",
+        "text": "They label each bottle with the product name and refill date."
+      },
+      {
+        "id": "s6",
+        "text": "The team keeps cleaning liquids on a separate shelf from food products."
+      },
+      {
+        "id": "s7",
+        "text": "A weekly count helps the shop decide which items to order for the next delivery."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "run low",
+      "meaningEn": "to become nearly empty and need more soon",
+      "meaningVi": "sắp hết, gần cạn",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "top up",
+      "meaningEn": "to add more liquid to fill a container to the top again",
+      "meaningVi": "châm thêm cho đầy lại",
+      "sourceSentenceId": "s4"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

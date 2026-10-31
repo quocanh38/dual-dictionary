@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "run low",
+        "meaningEn": "to become nearly empty and need more soon",
+        "meaningVi": "sắp hết, gần cạn",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "top up",
+        "meaningEn": "to add more liquid to fill a container to the top again",
+        "meaningVi": "châm thêm cho đầy lại",
+        "sourceSentenceId": "s4"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 511,
+    "outputTokens": 904,
+    "totalTokens": 1415
+  },
+  "status": 200,
+  "latencyMs": 7343,
+  "model": "muse-spark-1.3"
+}

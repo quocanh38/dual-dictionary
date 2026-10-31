@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "cf8215014ddcafc5e202050fcfd3955be186ab293fcae352709385ea5b304fd3",
+  "verdict": "repair",
+  "findings": [
+    {
+      "id": "ielts-meta-band-6-writing-03",
+      "severity": "major",
+      "issue": "The column headings say Items digitised in March and September, while the Recorded interviews in hours row gives 25 and 48 as hours. The unit conflicts with the item-count headings and makes cross-row comparisons unclear.",
+      "suggestedFix": "Use a neutral Amount digitised heading and label each row's unit explicitly, including Recorded interviews (hours of audio)."
+    }
+  ]
+}

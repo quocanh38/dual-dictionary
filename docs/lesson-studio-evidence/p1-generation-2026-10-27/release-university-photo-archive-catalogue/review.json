@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-5.6-terra",
+  "reviewedAt": "2026-10-27T09:06:06Z",
+  "note": "Full independent content review of this exact candidate: source/citations, both target glosses, all 15 options and explanations, and transfer. Rights and authorship are declaration-only: the supplied original-source declaration states permitted distribution and no learner PII, but were not independently verified.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Source record and provenance declare an original AI-assisted passage, authorized distribution, and no learner PII; this is declaration-only and was not independently verified."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 says students ‘work in pairs’ while cataloguing; it denotes collaboration with one partner."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘to do a task together with one other person as a team’ accurately states the s2 sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘làm việc theo cặp’ is a natural Vietnamese gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s5 says dated records appear ‘in chronological order’; the context is ordering by date."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘arranged from earliest to latest according to date or time’ accurately captures s5."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘theo thứ tự thời gian từ sớm đến muộn’ is natural, accurate, and uses diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone defines two-person collaboration; b says alone and c says leading a large group, both objectively different meanings."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All three explanations correctly contrast partnership with solo work or leading a larger group; no overgeneralized language claim."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a has plural ‘They work’ and infinitive ‘to check’; b has ungrammatical ‘to checking’ and c has singular ‘works’ with ‘They’."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations specifically identify the infinitive-form and subject–verb-agreement errors and accurately describe a."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b alone gives earliest-to-latest date ordering; a omits dates and c is random placement, both incompatible with s5."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each explanation accurately distinguishes date ordering from topical grouping and random placement."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is the standard fixed expression with correct agreement; b changes the idiom to plural ‘orders’ in this single ordered list, and c mismatches singular ‘archive’ with ‘list’."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations correctly identify the standard singular fixed phrase in this context and the singular-subject agreement error."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The learner is a sports-club leader explaining newsletters to new members, a different role, material, audience, and purpose from archive cataloguing."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model idiomatically uses ‘in chronological order’; the three checks cover length, target meaning, and new situation, and the explanation says self-assess with no automatic grade."
+    }
+  ],
+  "findings": []
+}

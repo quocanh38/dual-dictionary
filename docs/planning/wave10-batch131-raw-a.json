@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 131,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after drip feed in the manifest; consulted local OALD 10/LDOCE 6. Meanings, notes and bilingual examples are independently written.",
+  "selectionRationale": "Enrich D/E terms spanning theatre, interfaces, transport, construction, household goods, historical customs, auctions, Easter usage, time-zone vocabulary, mental health and pregnancy terminology. Notes distinguish regional senses and avoid treating medical or technical terms as advice.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 248,
+    "remainingRawOnlyAfter": 228
+  },
+  "selected": [
+    "drop curtain",
+    "drop-down menu",
+    "drop zone",
+    "drum brake",
+    "dry dock",
+    "dry goods",
+    "dry rot",
+    "dual carriageway",
+    "ducking stool",
+    "dumb waiter",
+    "dump truck",
+    "dust cover",
+    "dust jacket",
+    "dutch auction",
+    "dwelling house",
+    "easter egg",
+    "eastern standard time",
+    "eating disorder",
+    "echo sounder",
+    "ectopic pregnancy"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NHS: Eating disorders overview (https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/overview/)",
+    "NHS: Ectopic pregnancy (https://www.nhs.uk/conditions/ectopic-pregnancy/)"
+  ]
+}

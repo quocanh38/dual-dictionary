@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "163e93250e7aa832822ebbad6d61ce2d88371941d8e621cf3871e123b7bb513d",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex delegated editorial adjudicator; cross-review gpt-6-astra + gpt-6.1-terra",
+  "reviewedAt": "2026-10-27T04:19:06.833Z",
+  "note": "Explicit delegated editorial approval decision after full source/meanings/options/explanations/transfer review and cross-model reconciliation. All critical/uncertain findings resolved. Astra reviewed independently; Terra disclosed prior historical pilot-review exposure. Original Meta outputs retained; edits are not new Meta responses. AI-assisted review only, no independent human review or learning-efficacy claim. Deployment not authorized.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Astra: Provenance explicitly identifies the Dual Dictionary project as author, original source and AI assistance, with a project-original rights statement. The three generic fictional library/student sentences contain no learner PII or external attribution. Rights accepted on this declaration; no independent legal/authorship certification is claimed. Terra: Metadata identifies the project as author, states AI-assisted original source and no learner data; reading contains no apparent PII. Authorship and permission for distribution are declared, not independently verified."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Astra: Allocate resources occurs verbatim in s1, where staffing, funding or time can support longer evening library hours. Terra: s1 contains allocate resources in context of extending library opening hours."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Astra: The English gloss accurately describes making resources available for the particular purpose. The listed money, staff or time are natural examples and fit the source. Terra: Providing time, staff or money for a purpose is appropriate to the extension."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Astra: Phân bổ nguồn lực is idiomatic and accurate Vietnamese, with correct diacritics. Terra: Phân bổ nguồn lực conveys allocating resources naturally with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Astra: Meet the deadline occurs verbatim in s2 and refers to timely submission of survey findings. Terra: s2 contains meet the deadline for submitting survey findings."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Astra: The English gloss accurately includes finishing or submitting by the required time; it does not restrict completion to the exact final moment. Terra: Finishing or submitting by the required time captures meeting this deadline."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Astra: Hoàn thành đúng thời hạn naturally expresses completion on time and is an accurate contextual Vietnamese gloss. Terra: Hoàn thành đúng thời hạn conveys finishing on time naturally."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Astra: q1: a gives provision of resources for a purpose. b instead describes saving through reduced services, inconsistent with the stated extension and not the phrase meaning. c describes a shelf-ordering task, not the general allocation meaning. Only a answers the meaning question. Terra: a captures providing support; b is reducing services and c arranging books, neither defines allocation."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Astra: q1a correctly ties allocation to support for longer hours and the Vietnamese gloss. b and c are rejected for their meanings, not for whether people could ever fund those activities. The overall explanation correctly selects a. Terra: a relates support to longer hours; b distinguishes reduction and c shelving; overall explanation identifies a accurately."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Astra: q2: b alone is grammatical and natural. a has will allocates, an objective modal-complement error requiring allocate. c has for organize, requiring for organizing in this construction. Neither distractor can be rescued by choosing a plausible workshop context. Terra: b is natural; a has inflected allocates after will, c has bare organize after preposition for. Both distractors have objective grammatical errors."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Astra: q2a accurately explains base form after will; b accurately describes resources for the workshop; c accurately identifies the bare verb after for. The overall explanation states these specific errors and correctly acknowledges both to organizing and to organize constructions. The earlier false infinitive-only rule is fully removed. Terra: a requires base allocate after will, c requires organizing after for; b is correct. Overall also accurately notes that both to organizing and to organize can be grammatical."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Astra: q3: c means finish/submit by the required time. a describes discussing without submission, which is not meeting the deadline; b means postponing the date, which is also not the phrase meaning. Only c is correct. Terra: c means submit by required time; a discussing without submission and b postponing are different actions."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Astra: q3a and b correctly contrast discussion/postponement with timely completion; c correctly explains timely submission and repeats accurate Vietnamese. The overall explanation correctly links the answer to the group’s required submission. Terra: a, b, c explanations and the overall explanation correctly distinguish discussing and postponement from timely submission."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Astra: q4: a uses the correct past met and determiner the. b uses the nonstandard past meeted; c omits a determiner before singular count deadline in this ordinary complete sentence. Only a is a natural full sentence. Terra: a naturally uses met the deadline; b has nonstandard meeted and c omits a determiner before singular deadline."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Astra: q4a correctly endorses timely submission; b gives the valid correction met; c appropriately limits its determiner requirement to here. The overall explanation accurately summarizes the two objective errors. Terra: Correct option and corrections met and the deadline are explained accurately in all options and the summary."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Astra: Transfer changes the academic survey situation to a part-time shop assistant sending a manager a polite stock-list update. Role, recipient, domain and concrete purpose change materially. Terra: The assistant reports a stock list to a manager, changing occupation, audience and task from the student survey."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Astra: The revised model is two polite sentences, correctly uses meet the deadline and checking the stock, and gives a plausible Friday completion time. Having checked stock while still preparing the list is coherent. Checklist items directly test phrase, shop context, sentence count and politeness; the explanation explicitly leaves assessment to the learner and asserts no automatic grade. Terra: The revised model naturally says checking the stock, uses meet the deadline in a two-sentence polite manager message, and the checklist covers phrase, workplace, length and tone. No automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "Current q2 contains no coffee/leisure judgments. The two incorrect choices instead have will allocates and for organize, both objectively erroneous. Full option and explanation review closes the embedded legacy issue."
+    },
+    {
+      "id": "pack-finding-2",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "Current q2a replaces the valid prepositional-to gerund example with will allocates. The correct b remains natural, c remains invalid, and the overall explanation explicitly accepts both former to constructions. Full current-payload review confirms one answer."
+    },
+    {
+      "id": "astra-1-q2-multiple-answers",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "The original 1-v2 two-answer defect is absent in 1-v4: only b is grammatical. Current option a fails after modal will, and all explanations teach the correct rules."
+    },
+    {
+      "id": "astra-1-q5-inventory-wording",
+      "severity": "minor",
+      "resolved": true,
+      "evidence": "The model now says checking the stock, a natural activity directly relevant to preparing a stock list. The prior counting-the-shelves wording is absent."
+    },
+    {
+      "id": "q2-previous-gerund",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "Prior candidate incorrectly rejected to organizing; this version replaces it with will allocates and correctly acknowledges both to organizing and to organize as grammatical."
+    }
+  ],
+  "candidateFile": "docs/lesson-studio-evidence/p1-cross-model-2026-10-27/candidates/1-v4.json",
+  "candidateFileSha256": "32c39b0d9668e8d4083aafd8f46108f8e3061c8845ff94916da8898d2b82afc0",
+  "decision": "ready-for-approval",
+  "optionAudit": [
+    {
+      "exerciseId": "q1",
+      "storedCorrectOptionId": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "to provide money, staff, or time for a particular purpose",
+          "explanation": "Correct: It matches the library providing support to extend hours, Vietnamese: phân bổ nguồn lực.",
+          "judgment": "correct"
+        },
+        {
+          "id": "b",
+          "text": "to save money by reducing evening services",
+          "explanation": "Wrong: Reducing services is not the meaning of allocating resources; the source describes support for longer hours.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "c",
+          "text": "to arrange books on the shelves in alphabetical order",
+          "explanation": "Wrong: It describes organizing books, not providing money, staff, or time for evening hours.",
+          "judgment": "incorrect"
+        }
+      ],
+      "overallExplanationReviewed": "The library is providing support to extend hours, so option a is correct.",
+      "answerEvidence": "q1: a gives provision of resources for a purpose. b instead describes saving through reduced services, inconsistent with the stated extension and not the phrase meaning. c describes a shelf-ordering task, not the general allocation meaning. Only a answers the meaning question.",
+      "explanationEvidence": "q1a correctly ties allocation to support for longer hours and the Vietnamese gloss. b and c are rejected for their meanings, not for whether people could ever fund those activities. The overall explanation correctly selects a."
+    },
+    {
+      "exerciseId": "q2",
+      "storedCorrectOptionId": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "Our club will allocates resources to organize the weekend workshop.",
+          "explanation": "Wrong: After the modal will, use the base form allocate, not allocates.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "b",
+          "text": "Our club will allocate resources to organize the weekend workshop.",
+          "explanation": "Correct: It naturally means providing money, time, or people for the workshop purpose.",
+          "judgment": "correct"
+        },
+        {
+          "id": "c",
+          "text": "Our club will allocate resources for organize the weekend workshop.",
+          "explanation": "Wrong: After the preposition for, use organizing rather than the bare verb organize.",
+          "judgment": "incorrect"
+        }
+      ],
+      "overallExplanationReviewed": "Option b is grammatical and describes assigning support for a purpose. In a, will must be followed by allocate, not allocates. In c, for must be followed by organizing, not organize. Both allocate resources to organizing and allocate resources to organize can be grammatical; that distinction is not used to reject an answer.",
+      "answerEvidence": "q2: b alone is grammatical and natural. a has will allocates, an objective modal-complement error requiring allocate. c has for organize, requiring for organizing in this construction. Neither distractor can be rescued by choosing a plausible workshop context.",
+      "explanationEvidence": "q2a accurately explains base form after will; b accurately describes resources for the workshop; c accurately identifies the bare verb after for. The overall explanation states these specific errors and correctly acknowledges both to organizing and to organize constructions. The earlier false infinitive-only rule is fully removed."
+    },
+    {
+      "exerciseId": "q3",
+      "storedCorrectOptionId": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "to discuss the deadline without submitting anything",
+          "explanation": "Wrong: Discussing without submitting does not finish anything by the required time.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "b",
+          "text": "to change the deadline to a later date",
+          "explanation": "Wrong: Changing the date means postponing, not finishing by the required time.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "c",
+          "text": "to finish or submit something by the required time",
+          "explanation": "Correct: It matches the group submitting findings on time, Vietnamese: hoàn thành đúng thời hạn.",
+          "judgment": "correct"
+        }
+      ],
+      "overallExplanationReviewed": "The group must submit on time, so option c is correct.",
+      "answerEvidence": "q3: c means finish/submit by the required time. a describes discussing without submission, which is not meeting the deadline; b means postponing the date, which is also not the phrase meaning. Only c is correct.",
+      "explanationEvidence": "q3a and b correctly contrast discussion/postponement with timely completion; c correctly explains timely submission and repeats accurate Vietnamese. The overall explanation correctly links the answer to the group’s required submission."
+    },
+    {
+      "exerciseId": "q4",
+      "storedCorrectOptionId": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Our team met the deadline and submitted the report before Friday.",
+          "explanation": "Correct: It naturally means finishing and submitting on time with correct collocation.",
+          "judgment": "correct"
+        },
+        {
+          "id": "b",
+          "text": "Our team meeted the deadline and submitted the report before Friday.",
+          "explanation": "Wrong: The past tense of meet is met, not meeted.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "c",
+          "text": "Our team met deadline and submitted the report before Friday.",
+          "explanation": "Wrong: The singular count noun deadline needs a determiner here; use met the deadline.",
+          "judgment": "incorrect"
+        }
+      ],
+      "overallExplanationReviewed": "Option a uses met and the required determiner; b has the wrong past tense, and c omits the determiner.",
+      "answerEvidence": "q4: a uses the correct past met and determiner the. b uses the nonstandard past meeted; c omits a determiner before singular count deadline in this ordinary complete sentence. Only a is a natural full sentence.",
+      "explanationEvidence": "q4a correctly endorses timely submission; b gives the valid correction met; c appropriately limits its determiner requirement to here. The overall explanation accurately summarizes the two objective errors."
+    }
+  ],
+  "transferAudit": {
+    "exerciseId": "q5",
+    "type": "transfer",
+    "targetId": "t2",
+    "prompt": "You are a part-time shop assistant. Write a short polite message (2-3 sentences) to your manager about finishing the weekly stock list. Use the exact phrase 'meet the deadline'. Do not write about a library or survey.",
+    "sourceSentenceIds": [
+      "s2"
+    ],
+    "sampleAnswer": "Hi Ms Lee, I have finished checking the stock and I will meet the deadline for the stock list by Friday afternoon. Please let me know if you need anything else.",
+    "selfCheck": [
+      "I used the exact phrase 'meet the deadline'.",
+      "My message is about a shop job, not the library survey.",
+      "My message is 2-3 sentences and polite to a manager."
+    ],
+    "explanation": "Compare with the model and self-assess; no automatic grade.",
+    "newSituationEvidence": "Transfer changes the academic survey situation to a part-time shop assistant sending a manager a polite stock-list update. Role, recipient, domain and concrete purpose change materially.",
+    "modelAndChecklistEvidence": "The revised model is two polite sentences, correctly uses meet the deadline and checking the stock, and gives a plausible Friday completion time. Having checked stock while still preparing the list is coherent. Checklist items directly test phrase, shop context, sentence count and politeness; the explanation explicitly leaves assessment to the learner and asserts no automatic grade."
+  }
+}

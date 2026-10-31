@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-7",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-7-v1",
+  "completedAt": "2026-10-29T05:21:20.136Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 779,
+    "outputTokens": 9397,
+    "totalTokens": 10176
+  },
+  "latencyMs": 43862,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"Evaluating a School Meal Pilot\",\"focus\":\"Counterfactual choices and limits to causal claims\",\"part\":\"Part 3\",\"script\":\"Tutor: Hi Maya, let's review your draft evaluation of the district's free school meal pilot.\\nMaya: Thanks. My initial idea was to track attendance in the twelve pilot schools before and after the meals began last September.\\nTutor: That's a straightforward before-and-after comparison, but what does it tell you on its own?\\nMaya: Not much about causation. Without a counterfactual, I can't tell if any rise was really due to the meals.\\nTutor: Exactly. So what alternative are you considering?\\nMaya: I want to use nearby schools that didn't get the programme as a comparison group. I'll match them on enrolment size, deprivation index, and attendance history.\\nTutor: That matched comparison is more convincing than just looking at change over time. How many matches have you found?\\nMaya: I identified twenty schools that looked suitable — actually, make that eighteen, because two merged at the start of this year and no longer report separately.\\nTutor: Good correction. And did you consider random assignment?\\nMaya: In theory that would be ideal, but the council had already selected the pilot schools for logistical reasons, so randomisation wasn't possible. It's a quasi-experimental design.\\nTutor: Right, so you'll need to be cautious about causal claims. What other factors could influence attendance?\\nMaya: Winter flu outbreaks, and there was also a new subsidised bus route introduced in January that might have boosted attendance independently.\\nTutor: So you'll need to account for those in your analysis.\\nMaya: Yes, I'll include controls for illness rates and transport access, but I'll still acknowledge I can't fully isolate the meal effect.\\nTutor: Sensible. Are you focusing solely on attendance?\\nMaya: Initially yes, but teachers mentioned students seemed more focused in afternoon lessons, so I plan to add classroom concentration scores from teacher observations.\\nTutor: That's useful additional evidence, but remember to frame it as an association rather than definitive proof that meals improved learning.\\nTutor: When will you finalise this?\\nMaya: I'll revise the proposal by next Friday and then request access to the council's anonymised attendance records.\\nTutor: Excellent. Make sure your methodology section clearly justifies the counterfactual choice.\",\"questions\":[{\"title\":\"Initial Design\",\"prompt\":\"What was Maya's first plan for evaluating the pilot?\",\"options\":[\"Compare pilot schools before and after meals began\",\"Randomly assign schools to receive meals\",\"Survey parents about meal satisfaction\",\"Compare pilot schools to national averages\"],\"answer\":0,\"explanation\":\"She planned to track attendance in the twelve pilot schools before and after the September start. The national averages option confuses her later matched comparison idea with her initial plan.\"},{\"title\":\"Comparison Group\",\"prompt\":\"How does Maya plan to choose comparison schools?\",\"options\":[\"Pick schools with highest test scores\",\"Match on enrolment, deprivation and attendance history\",\"Choose schools that volunteered for study\",\"Use schools that merged recently\"],\"answer\":1,\"explanation\":\"She states she will match on enrolment size, deprivation index and attendance history. The highest test scores option misreads the matching criteria.\"},{\"title\":\"Corrected Number\",\"prompt\":\"How many comparison schools will Maya actually use?\",\"options\":[\"Twelve\",\"Twenty\",\"Eighteen\",\"Ten\"],\"answer\":2,\"explanation\":\"She corrects her initial twenty to eighteen after noting two schools merged. Twenty was the uncorrected figure before the qualification.\"},{\"title\":\"No Randomisation\",\"prompt\":\"Why was random assignment not used in the evaluation?\",\"options\":[\"Too few schools were available\",\"Teachers refused random selection\",\"Attendance data was incomplete\",\"Council had already chosen pilot schools\"],\"answer\":3,\"explanation\":\"She explains the council had already selected pilots for logistical reasons, making randomisation impossible. The teachers option incorrectly attributes the decision.\"},{\"title\":\"Concentration Evidence\",\"prompt\":\"How should the concentration findings be presented?\",\"options\":[\"As definitive proof meals improve learning\",\"As association not proof of learning gains\",\"As evidence meals have no effect\",\"As replacement for attendance data\"],\"answer\":1,\"explanation\":\"The tutor advises framing concentration scores as association rather than definitive proof of learning improvement. The proof option overstates what the design can claim.\"}]},\"reading\":{\"title\":\"Satellite Proxies and Crop Resilience\",\"focus\":\"Scope limits and interpretation of remote sensing evidence\",\"passage\":\"Satellite proxies have become central to monitoring crop resilience across large regions. Indices such as the Normalised Difference Vegetation Index (NDVI), which measures greenness from reflected light, offer frequent, low-cost coverage where field surveys are impractical. For governments and insurers, the appeal is clear: a single dataset can suggest where crops are thriving or stressed without visiting thousands of farms. This breadth has encouraged their use in resilience assessments, where the goal is not just to measure current growth but to infer capacity to withstand droughts or other shocks.\\n\\nA recent evaluation in eastern Kenya illustrates both the promise and the pitfalls. Researchers compared NDVI trends over five seasons with household harvest records for maize and sorghum. In years with moderate rainfall deficits, higher NDVI values generally aligned with better yields, suggesting the proxy captured relative stress. However, in one season with severe pest damage, NDVI remained moderately high because weeds and surviving leaves still reflected greenness, while actual grain harvests collapsed. The example shows that greenness can mask agronomic failure.\\n\\nSeveral technical limits explain such mismatches. Persistent cloud cover during the rainy season reduces usable images, forcing analysts to interpolate between clear days and potentially miss short stress events. Spatial resolution is another constraint: a single pixel often covers multiple small fields with different crops and planting dates, blending their signals. In addition, NDVI saturates in dense canopies, making it insensitive to further biomass gains that may still matter for yield. Most importantly, satellites cannot directly observe management decisions. An irrigated field may appear resilient in NDVI terms, yet its stability depends on groundwater access rather than the crop's own drought tolerance. Similarly, fertiliser use can boost greenness without improving underlying resilience to future shocks.\\n\\nThe authors argue that these constraints do not make proxies useless, but they do restrict the conclusions that can be drawn. They claim proxies are best suited as early-warning indicators of vegetation stress, not as standalone measures of resilience, which also involves recovery capacity, economic access, and farmer adaptation. Resilience, they note, is a longer-term property that cannot be inferred from a single season's greenness. Ground data on practices, soil, and household outcomes remain essential to interpret what a satellite signal means.\\n\\nFor policy, the distinction matters. Using NDVI alone to target resilience funding could reward areas with intensive inputs rather than those with genuinely robust systems. Integrating satellite data with targeted field sampling, the authors conclude, provides a more reliable basis for planning, while relying on proxies in isolation risks overstating certainty about which farming systems will endure climate variability. The paper therefore recommends a tiered approach: broad satellite screening followed by focused ground verification before allocating resources.\",\"questions\":[{\"title\":\"Appeal of Proxies\",\"prompt\":\"Why are satellite proxies attractive for monitoring?\",\"options\":[\"They provide frequent low-cost large-scale coverage\",\"They directly measure farmer adaptation\",\"They replace need for rainfall data\",\"They distinguish crop varieties accurately\"],\"answer\":0,\"explanation\":\"The passage highlights frequent low-cost coverage without field visits as the appeal. Directly measuring adaptation overstates what satellites can observe.\"},{\"title\":\"Kenya Example\",\"prompt\":\"What does the pest-damage season demonstrate?\",\"options\":[\"NDVI always predicts harvest failure\",\"Greenness can hide actual yield collapse\",\"Weeds improve maize resilience\",\"Household records are unreliable\"],\"answer\":1,\"explanation\":\"The severe pest season showed high NDVI while harvests collapsed, illustrating masking. Always predicts overgeneralises the limited example.\"},{\"title\":\"Technical Limitation\",\"prompt\":\"Which technical limit can cause missed short stress events?\",\"options\":[\"Fertiliser boosting greenness\",\"Groundwater access for irrigation\",\"Need to interpolate due to cloud cover\",\"Economic access of farmers\"],\"answer\":2,\"explanation\":\"Cloud cover forces interpolation between clear days, potentially missing brief stress. Fertiliser relates to management, not image gaps.\"},{\"title\":\"Authors' Position\",\"prompt\":\"What do the authors claim about proxies?\",\"options\":[\"They are useless for resilience assessment\",\"They alone measure recovery capacity\",\"They prove resilience from one season\",\"They work best as early-warning stress indicators\"],\"answer\":3,\"explanation\":\"They claim proxies suit early-warning of stress, not standalone resilience. Useless contradicts their stated view that constraints do not make proxies useless.\"},{\"title\":\"Policy Inference\",\"prompt\":\"What can be inferred about using NDVI alone for funding?\",\"options\":[\"It may favour input-intensive areas over robust systems\",\"It guarantees support for most resilient farms\",\"It eliminates need for field sampling\",\"It accurately predicts climate variability\"],\"answer\":0,\"explanation\":\"The passage warns NDVI alone could reward intensive inputs rather than genuinely robust systems. Guarantees support overstates certainty the authors caution against.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Evaluating a School Meal Pilot",
+      "focus": "Counterfactual choices and limits to causal claims",
+      "part": "Part 3",
+      "script": "Tutor: Hi Maya, let's review your draft evaluation of the district's free school meal pilot.\nMaya: Thanks. My initial idea was to track attendance in the twelve pilot schools before and after the meals began last September.\nTutor: That's a straightforward before-and-after comparison, but what does it tell you on its own?\nMaya: Not much about causation. Without a counterfactual, I can't tell if any rise was really due to the meals.\nTutor: Exactly. So what alternative are you considering?\nMaya: I want to use nearby schools that didn't get the programme as a comparison group. I'll match them on enrolment size, deprivation index, and attendance history.\nTutor: That matched comparison is more convincing than just looking at change over time. How many matches have you found?\nMaya: I identified twenty schools that looked suitable — actually, make that eighteen, because two merged at the start of this year and no longer report separately.\nTutor: Good correction. And did you consider random assignment?\nMaya: In theory that would be ideal, but the council had already selected the pilot schools for logistical reasons, so randomisation wasn't possible. It's a quasi-experimental design.\nTutor: Right, so you'll need to be cautious about causal claims. What other factors could influence attendance?\nMaya: Winter flu outbreaks, and there was also a new subsidised bus route introduced in January that might have boosted attendance independently.\nTutor: So you'll need to account for those in your analysis.\nMaya: Yes, I'll include controls for illness rates and transport access, but I'll still acknowledge I can't fully isolate the meal effect.\nTutor: Sensible. Are you focusing solely on attendance?\nMaya: Initially yes, but teachers mentioned students seemed more focused in afternoon lessons, so I plan to add classroom concentration scores from teacher observations.\nTutor: That's useful additional evidence, but remember to frame it as an association rather than definitive proof that meals improved learning.\nTutor: When will you finalise this?\nMaya: I'll revise the proposal by next Friday and then request access to the council's anonymised attendance records.\nTutor: Excellent. Make sure your methodology section clearly justifies the counterfactual choice.",
+      "questions": [
+        {
+          "title": "Initial Design",
+          "prompt": "What was Maya's first plan for evaluating the pilot?",
+          "options": [
+            "Compare pilot schools before and after meals began",
+            "Randomly assign schools to receive meals",
+            "Survey parents about meal satisfaction",
+            "Compare pilot schools to national averages"
+          ],
+          "answer": 0,
+          "explanation": "She planned to track attendance in the twelve pilot schools before and after the September start. The national averages option confuses her later matched comparison idea with her initial plan."
+        },
+        {
+          "title": "Comparison Group",
+          "prompt": "How does Maya plan to choose comparison schools?",
+          "options": [
+            "Pick schools with highest test scores",
+            "Match on enrolment, deprivation and attendance history",
+            "Choose schools that volunteered for study",
+            "Use schools that merged recently"
+          ],
+          "answer": 1,
+          "explanation": "She states she will match on enrolment size, deprivation index and attendance history. The highest test scores option misreads the matching criteria."
+        },
+        {
+          "title": "Corrected Number",
+          "prompt": "How many comparison schools will Maya actually use?",
+          "options": [
+            "Twelve",
+            "Twenty",
+            "Eighteen",
+            "Ten"
+          ],
+          "answer": 2,
+          "explanation": "She corrects her initial twenty to eighteen after noting two schools merged. Twenty was the uncorrected figure before the qualification."
+        },
+        {
+          "title": "No Randomisation",
+          "prompt": "Why was random assignment not used in the evaluation?",
+          "options": [
+            "Too few schools were available",
+            "Teachers refused random selection",
+            "Attendance data was incomplete",
+            "Council had already chosen pilot schools"
+          ],
+          "answer": 3,
+          "explanation": "She explains the council had already selected pilots for logistical reasons, making randomisation impossible. The teachers option incorrectly attributes the decision."
+        },
+        {
+          "title": "Concentration Evidence",
+          "prompt": "How should the concentration findings be presented?",
+          "options": [
+            "As definitive proof meals improve learning",
+            "As association not proof of learning gains",
+            "As evidence meals have no effect",
+            "As replacement for attendance data"
+          ],
+          "answer": 1,
+          "explanation": "The tutor advises framing concentration scores as association rather than definitive proof of learning improvement. The proof option overstates what the design can claim."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Satellite Proxies and Crop Resilience",
+      "focus": "Scope limits and interpretation of remote sensing evidence",
+      "passage": "Satellite proxies have become central to monitoring crop resilience across large regions. Indices such as the Normalised Difference Vegetation Index (NDVI), which measures greenness from reflected light, offer frequent, low-cost coverage where field surveys are impractical. For governments and insurers, the appeal is clear: a single dataset can suggest where crops are thriving or stressed without visiting thousands of farms. This breadth has encouraged their use in resilience assessments, where the goal is not just to measure current growth but to infer capacity to withstand droughts or other shocks.\n\nA recent evaluation in eastern Kenya illustrates both the promise and the pitfalls. Researchers compared NDVI trends over five seasons with household harvest records for maize and sorghum. In years with moderate rainfall deficits, higher NDVI values generally aligned with better yields, suggesting the proxy captured relative stress. However, in one season with severe pest damage, NDVI remained moderately high because weeds and surviving leaves still reflected greenness, while actual grain harvests collapsed. The example shows that greenness can mask agronomic failure.\n\nSeveral technical limits explain such mismatches. Persistent cloud cover during the rainy season reduces usable images, forcing analysts to interpolate between clear days and potentially miss short stress events. Spatial resolution is another constraint: a single pixel often covers multiple small fields with different crops and planting dates, blending their signals. In addition, NDVI saturates in dense canopies, making it insensitive to further biomass gains that may still matter for yield. Most importantly, satellites cannot directly observe management decisions. An irrigated field may appear resilient in NDVI terms, yet its stability depends on groundwater access rather than the crop's own drought tolerance. Similarly, fertiliser use can boost greenness without improving underlying resilience to future shocks.\n\nThe authors argue that these constraints do not make proxies useless, but they do restrict the conclusions that can be drawn. They claim proxies are best suited as early-warning indicators of vegetation stress, not as standalone measures of resilience, which also involves recovery capacity, economic access, and farmer adaptation. Resilience, they note, is a longer-term property that cannot be inferred from a single season's greenness. Ground data on practices, soil, and household outcomes remain essential to interpret what a satellite signal means.\n\nFor policy, the distinction matters. Using NDVI alone to target resilience funding could reward areas with intensive inputs rather than those with genuinely robust systems. Integrating satellite data with targeted field sampling, the authors conclude, provides a more reliable basis for planning, while relying on proxies in isolation risks overstating certainty about which farming systems will endure climate variability. The paper therefore recommends a tiered approach: broad satellite screening followed by focused ground verification before allocating resources.",
+      "questions": [
+        {
+          "title": "Appeal of Proxies",
+          "prompt": "Why are satellite proxies attractive for monitoring?",
+          "options": [
+            "They provide frequent low-cost large-scale coverage",
+            "They directly measure farmer adaptation",
+            "They replace need for rainfall data",
+            "They distinguish crop varieties accurately"
+          ],
+          "answer": 0,
+          "explanation": "The passage highlights frequent low-cost coverage without field visits as the appeal. Directly measuring adaptation overstates what satellites can observe."
+        },
+        {
+          "title": "Kenya Example",
+          "prompt": "What does the pest-damage season demonstrate?",
+          "options": [
+            "NDVI always predicts harvest failure",
+            "Greenness can hide actual yield collapse",
+            "Weeds improve maize resilience",
+            "Household records are unreliable"
+          ],
+          "answer": 1,
+          "explanation": "The severe pest season showed high NDVI while harvests collapsed, illustrating masking. Always predicts overgeneralises the limited example."
+        },
+        {
+          "title": "Technical Limitation",
+          "prompt": "Which technical limit can cause missed short stress events?",
+          "options": [
+            "Fertiliser boosting greenness",
+            "Groundwater access for irrigation",
+            "Need to interpolate due to cloud cover",
+            "Economic access of farmers"
+          ],
+          "answer": 2,
+          "explanation": "Cloud cover forces interpolation between clear days, potentially missing brief stress. Fertiliser relates to management, not image gaps."
+        },
+        {
+          "title": "Authors' Position",
+          "prompt": "What do the authors claim about proxies?",
+          "options": [
+            "They are useless for resilience assessment",
+            "They alone measure recovery capacity",
+            "They prove resilience from one season",
+            "They work best as early-warning stress indicators"
+          ],
+          "answer": 3,
+          "explanation": "They claim proxies suit early-warning of stress, not standalone resilience. Useless contradicts their stated view that constraints do not make proxies useless."
+        },
+        {
+          "title": "Policy Inference",
+          "prompt": "What can be inferred about using NDVI alone for funding?",
+          "options": [
+            "It may favour input-intensive areas over robust systems",
+            "It guarantees support for most resilient farms",
+            "It eliminates need for field sampling",
+            "It accurately predicts climate variability"
+          ],
+          "answer": 0,
+          "explanation": "The passage warns NDVI alone could reward intensive inputs rather than genuinely robust systems. Guarantees support overstates certainty the authors caution against."
+        }
+      ]
+    }
+  }
+}

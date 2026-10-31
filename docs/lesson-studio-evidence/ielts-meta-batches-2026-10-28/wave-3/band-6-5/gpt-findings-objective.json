@@ -1,0 +1,7 @@
+{
+  "stage": "band-6-5",
+  "segment": "objective",
+  "findings": [
+    { "reviewer": "gpt-6-luna", "item": "Reading · District comparison", "severity": "high", "issue": "Incorrect answer key: the keyed option says Southside has the higher survival rate without a care programme, but the passage reports Northside at 64% and Southside at 52%, linked to Northside watering and pruning. The correct option is index 1; the explanation also needs to match that answer.", "recommendedRepair": "Change the answer key to index 1 and align the explanation with the evidence." }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "2979e8f59b1aaaa91cdf84adfb95c972ae3dd4432003ad9900f294336a609cb9",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna (configured model)",
+  "reviewedAt": "2026-10-27T05:00:00Z",
+  "note": "First-pass AI-assisted editorial review of the complete hotel candidate, all targets and all exercise options/explanations in EN/VI, source/rights, and transfer; development batch, not unseen-source evaluation. No edits made; no learner study, independent human review, or provider call. Exact candidate pack digest is recorded below.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Candidate identifies an original AI-assisted source, author/project, distribution permission and no learner PII; review relies on this provenance declaration."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains exact phrase ‘hand over’; booking records are passed to night team, matching context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘To give documents or responsibility to another person or team’ fits the records passed to night team; slightly narrower than broad handover uses but adequate here."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘bàn giao’ is natural, accurately captures the transfer of records/responsibility and includes Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains exact phrase ‘follow up on’; unresolved guest requests support continuing action."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘to check and take further action on something not yet finished’ accurately describes these unresolved requests."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘theo dõi và xử lý tiếp’ is natural Vietnamese for monitoring and taking further action; diacritics present."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely matches passing the records/responsibility. b (hide) reverses the act; c (cancel) is unrelated and neither follows from s1."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option rationales fit: a describes transfer, b identifies the opposite, c distinguishes cancellation. Overall explanation correctly ties a to passing records."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is uniquely grammatical. b has a malformed ‘before leaves’ clause (no subject; ‘before leaving’ or ‘before he leaves’); c uses an inflected verb after modal ‘will’."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations state the actual defects: infinitive/participle clause issue in b and bare form after will in c. The general answer rationale is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b uniquely matches checking and further action. a means ignore; c means initiate a new request, unlike the already-made unresolved requests."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option rationale is grounded in the prompt: a is opposite action, b matches continuing action, c conflicts with requests already made."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "blocked",
+      "evidence": "BLOCKED: b ‘We will follow up your complaint tomorrow morning’ is grammatical English; follow up can take a direct object. It is therefore also a plausible natural answer, despite a being the intended phrasal-preposition pattern."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "blocked",
+      "evidence": "BLOCKED: b’s rationale falsely claims ‘on’ is required. ‘Follow up a complaint’ is an attested transitive construction; q4 needs a different objectively wrong distractor or a narrower task target."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source is an evening receptionist handing booking records to a hotel team; transfer is a school charity-fair volunteer handing materials/cash handling information to a classmate. Role and setting change materially."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Sample is idiomatic, three sentences, and uses ‘hand over … to you’ naturally. Checklist checks length, target use and changed role; prompt and explanation explicitly leave scoring to learner self-assessment."
+    }
+  ],
+  "findings": [
+    {
+      "id": "hotel-q4-unique-answer",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "q4 option b is a grammatical transitive use of ‘follow up’ with direct object ‘your complaint’; its explanation incorrectly says ‘on’ is required. Thus q4 has at least two plausible correct options and teaches an overgeneralized collocation rule. Change distractor to an objectively malformed/meaning-incompatible alternative, or redesign the item, then rereview the entire edited payload."
+    }
+  ]
+}

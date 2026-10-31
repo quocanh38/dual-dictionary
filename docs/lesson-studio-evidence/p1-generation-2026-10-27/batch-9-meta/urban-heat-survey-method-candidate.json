@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-41cea0c9-7d1c-4980-b4c1-78832b701194",
+    "version": 1,
+    "title": "Fair Comparisons and Provisional Estimates in Field Research",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:38:20.387Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Fair Comparisons and Provisional Estimates in Field Research",
+        "objective": "Learners will interpret fair comparison and provisional estimate in context and use them accurately in new academic situations.",
+        "reading": {
+          "text": "A university geography group is comparing afternoon temperatures along two city walking routes. The researchers record shade coverage, the percentage of each route shaded by trees or buildings, beside every surface-temperature reading. To make a fair comparison, observers visit both routes at the same time on several clear days. The first set of measurements is a provisional estimate because one sensor stopped working during the second visit. The team will check the missing interval against field notes before calculating a weekly average. A single hot afternoon cannot show that one route is usually warmer. The final report will describe the method, identify limitations and include the route map so another group can repeat the survey.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A university geography group is comparing afternoon temperatures along two city walking routes."
+            },
+            {
+              "id": "s2",
+              "text": "The researchers record shade coverage, the percentage of each route shaded by trees or buildings, beside every surface-temperature reading."
+            },
+            {
+              "id": "s3",
+              "text": "To make a fair comparison, observers visit both routes at the same time on several clear days."
+            },
+            {
+              "id": "s4",
+              "text": "The first set of measurements is a provisional estimate because one sensor stopped working during the second visit."
+            },
+            {
+              "id": "s5",
+              "text": "The team will check the missing interval against field notes before calculating a weekly average."
+            },
+            {
+              "id": "s6",
+              "text": "A single hot afternoon cannot show that one route is usually warmer."
+            },
+            {
+              "id": "s7",
+              "text": "The final report will describe the method, identify limitations and include the route map so another group can repeat the survey."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "fair comparison",
+            "meaningEn": "a comparison made under equal conditions so the results can be compared fairly",
+            "meaningVi": "sự so sánh công bằng",
+            "sourceSentenceId": "s3"
+          },
+          {
+            "id": "t2",
+            "phrase": "provisional estimate",
+            "meaningEn": "a temporary approximate value that may be changed after more information is checked",
+            "meaningVi": "ước tính tạm thời",
+            "sourceSentenceId": "s4"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In the sentence 'To make a fair comparison, observers visit both routes at the same time on several clear days,' what does 'fair comparison' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means comparing the two routes under equal conditions so the results can be compared fairly.",
+                "explanation": "Correct because it matches the idea of visiting both routes at the same time."
+              },
+              {
+                "id": "b",
+                "text": "It means choosing the route that feels more pleasant on a hot afternoon.",
+                "explanation": "Wrong because the context is about equal conditions, not about personal preference."
+              },
+              {
+                "id": "c",
+                "text": "It means visiting each route only once to finish the survey quickly.",
+                "explanation": "Wrong because the context describes visits at the same time on several days, not a single quick visit."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a captures equal conditions for a fair result."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'fair comparison' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To make a fair comparison, the team tested both laptops under same conditions.",
+                "explanation": "Wrong because 'same conditions' needs 'the' → 'the same conditions'."
+              },
+              {
+                "id": "b",
+                "text": "To make a fair comparison, the team tested both laptops under the same conditions.",
+                "explanation": "Correct because it describes equal conditions with correct grammar."
+              },
+              {
+                "id": "c",
+                "text": "To make a fair comparisons, the team tested both laptops under the same conditions.",
+                "explanation": "Wrong because 'a fair' requires the singular noun → 'comparison'."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only option b is grammatically correct and describes equal conditions."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In the sentence 'The first set of measurements is a provisional estimate because one sensor stopped working during the second visit,' what does 'provisional estimate' mean?",
+            "sourceSentenceIds": [
+              "s4"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a final exact result that will not be changed later.",
+                "explanation": "Wrong because the result is temporary due to missing data, not final."
+              },
+              {
+                "id": "b",
+                "text": "It means a method for repairing a broken sensor during fieldwork.",
+                "explanation": "Wrong because the phrase describes an approximate value, not a repair method."
+              },
+              {
+                "id": "c",
+                "text": "It means a temporary approximate value that may be changed after more information is checked.",
+                "explanation": "Correct because the team must check notes before calculating the average."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Only option c captures the temporary value that may be revised."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'provisional estimate' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s4"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The provisional estimate of the repair cost may change after the inspection is finished.",
+                "explanation": "Correct because it presents a temporary value with correct grammar."
+              },
+              {
+                "id": "b",
+                "text": "They provided provisional estimate of the repair cost before checking all the data.",
+                "explanation": "Wrong because the singular noun needs 'a' → 'a provisional estimate'."
+              },
+              {
+                "id": "c",
+                "text": "The provisional estimate of the repair cost may changes after the inspection is finished.",
+                "explanation": "Wrong because the modal 'may' needs the base verb → 'change'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a uses the phrase with correct grammar to describe a changeable value."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are the treasurer of a school club planning a charity fair. Write 2-3 sentences to update members on expected costs and explain why the figure might change. Use the phrase 'provisional estimate'.",
+            "sourceSentenceIds": [
+              "s4"
+            ],
+            "sampleAnswer": "Our provisional estimate for the fair is about $300 for food and decorations. We will confirm the final amount after we receive all the price quotes.",
+            "selfCheck": [
+              "My response has 2-3 sentences.",
+              "I used the phrase 'provisional estimate'.",
+              "I explain why the figure might change."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

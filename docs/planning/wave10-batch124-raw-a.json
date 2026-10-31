@@ -1,0 +1,43 @@
+{
+  "wave": 10,
+  "batch": 124,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after clinical thermometer in the manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section with digital media, surveillance, finance, clothing, idioms, assessment, weapons-in-news, industrial materials, food, substance withdrawal, telephone billing, labour relations and design. Clarify regional forms, figurative senses, technical terms and health/humanitarian context without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 388,
+    "remainingRawOnlyAfter": 368
+  },
+  "selected": [
+    "clip art",
+    "closed circuit television",
+    "closing price",
+    "closing time",
+    "cloth cap",
+    "clothes basket",
+    "cloud cuckoo land",
+    "cloze test",
+    "cluster bomb",
+    "coal tar",
+    "cock and bull story",
+    "cock fight",
+    "cocked hat",
+    "cocoa butter",
+    "cod liver oil",
+    "cold storage",
+    "cold turkey",
+    "collect call",
+    "collective bargaining",
+    "colour scheme"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "United Nations: Cluster munitions and civilian risk (https://www.un.org/en/global-issues/disarmament)",
+    "IARC Monographs: Coal-tars and derived products (https://publications.iarc.who.int/53)",
+    "NIH ODS: Omega-3 fatty acids and cod liver oil supplements (https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/)"
+  ]
+}

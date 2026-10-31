@@ -1,0 +1,85 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "batchId": "wave-4",
+  "segment": "prompts",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-28-wave-4-v2",
+  "completedAt": "2026-10-28T08:30:59.941Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 1906,
+    "outputTokens": 1734,
+    "totalTokens": 3640
+  },
+  "latencyMs": 5504,
+  "reasoningEffort": "low",
+  "maxOutputTokens": 32768,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Volunteer Sign-up Day Table",
+        "focus": "Describing a table with clear comparisons",
+        "prompt": "The table below shows how many students signed up for five volunteer jobs at Greenfield College on Volunteer Sign-up Day on 12 March. Job type: Library help - 18 students; Park cleaning - 34 students; Food bank packing - 26 students; Animal shelter help - 14 students; Reading help for young children - 22 students. All sign-ups were for Saturday morning work in April. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Borrowing Sports Equipment Log",
+        "focus": "Summarising borrowing numbers and simple changes",
+        "prompt": "The table below shows how many times students at Riverside School borrowed four types of sports equipment from the school sports room in March and April. Footballs: March 42 times, April 55 times; Basketballs: March 38 times, April 36 times; Tennis rackets: March 20 times, April 28 times; Badminton sets: March 25 times, April 24 times. Students can borrow equipment for free for two days. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Volunteering in School Life",
+        "focus": "Giving a clear opinion with direct reasons",
+        "prompt": "Some teachers think every secondary school student should do two hours of volunteer work each month, for example cleaning a park or helping in a library. Others think students are already busy with study and should not have to volunteer. Do you agree or disagree that schools should ask all students to do regular volunteer work? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Free Sports Equipment Borrowing",
+        "focus": "Explaining advantages with simple evidence",
+        "prompt": "Many schools let students borrow sports equipment such as balls and rackets for free. Some people say this is good because more students will play sport and stay healthy. Others say free borrowing causes problems because equipment gets lost or damaged. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Planning a Small Class Picnic",
+        "focus": "Comparing choices and explaining a preference",
+        "prompt": "A class of 30 students wants to plan a small end-of-term picnic in a local park. Some students want the whole class to plan everything together, including food, transport and games. Others think it is faster and easier if the teacher makes all the decisions. Which way of planning do you think is better? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Helping and Volunteering",
+        "focus": "Talking about familiar helping activities",
+        "prompt": "Answer these short questions about helping others. Give 2-3 sentences for each answer. 1. Did you ever help as a volunteer at school? 2. What kind of volunteer work do students in your area often do? 3. Do you prefer helping alone or helping with friends? Why? 4. Do you think you will do more volunteer work next year? Why or why not?"
+      },
+      {
+        "task": "Part 1 · Sport and Free Time",
+        "focus": "Describing everyday sport habits",
+        "prompt": "Answer these short questions about sport and free time. Give 2-3 sentences for each answer. 1. What sports do you often play or watch? 2. Do you ever borrow sports equipment from school or friends? 3. Where do people in your area usually play sport? 4. Do you prefer playing sport indoors or outdoors? Why?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Volunteer Day You Joined",
+        "focus": "Describing a past event with clear sequence",
+        "prompt": "Talk about a volunteer sign-up day or volunteer activity you joined or saw at school. You have one minute to prepare and should speak for one to two minutes. You should say: • what the activity was • when and where it happened • who joined with you • and explain why you remember it well or what you learned from it."
+      },
+      {
+        "task": "Part 2 · Cue card · Planning a Small Picnic",
+        "focus": "Explaining a simple plan and personal role",
+        "prompt": "Talk about a time when you helped plan a small picnic or class trip. You have one minute to prepare and should speak for one to two minutes. You should say: • where you wanted to go • who planned it with you • what food, transport or games you prepared • and explain if the plan worked well and why."
+      },
+      {
+        "task": "Part 3 · School Events and Community Help",
+        "focus": "Giving reasons and evaluating ideas",
+        "prompt": "Answer these questions as you would with an examiner. Give reasons and examples, not just short answers. 1. Why do some students join volunteer activities while others do not? 2. What are the advantages for a school when it organises a volunteer sign-up day? 3. How can schools make borrowing sports equipment fair for all students? 4. When a class plans a picnic together, what problems can happen and how can they solve them?"
+      }
+    ]
+  }
+}

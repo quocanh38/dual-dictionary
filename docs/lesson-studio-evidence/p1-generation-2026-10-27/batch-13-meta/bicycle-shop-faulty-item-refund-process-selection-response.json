@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "original payment method",
+        "meaningEn": "the same way the customer first paid, such as the same card or cash",
+        "meaningVi": "phương thức thanh toán ban đầu",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "service log",
+        "meaningEn": "a written record where staff note service actions and reasons",
+        "meaningVi": "sổ ghi chép dịch vụ",
+        "sourceSentenceId": "s5"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 573,
+    "outputTokens": 1205,
+    "totalTokens": 1778
+  },
+  "status": 200,
+  "latencyMs": 6126,
+  "model": "muse-spark-1.3"
+}

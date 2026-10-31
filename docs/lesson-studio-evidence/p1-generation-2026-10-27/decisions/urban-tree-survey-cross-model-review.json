@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "4297d21344629e0e0122967b9dd1869290ca5c8fe0c36ae8f285af37ec46cf87",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna + gpt-6.1-sol; Codex consolidation",
+  "reviewedAt": "2026-10-27T06:46:12.840Z",
+  "note": "Both models independently reviewed this exact payload criterion by criterion. Codex consolidated their evidence. AI-assisted editorial review only; no human reviewer or learner testing.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Luna: Pack attributes an original AI-assisted reading to the project, states no copied exam text/external source/learner data, and the inspected payload contains no learner PII; rights are based on this declaration, not external provenance verification.\nSol: Checked provenance: named Dual Dictionary project as AI-assisted author, original source declaration and explicit generation/distribution authorization. Reading contains no learner personal data. Rights assessment relies on supplied provenance; no external authorship verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Luna: Exact phrase occurs in s1, describing a university team conducting a tree survey.\nSol: s1 contains exact carry out a survey; s2 specifies recording species, trunk width and distance, supporting systematic information collection."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Luna: Gloss accurately describes conducting a systematic information-gathering study.\nSol: Conducting a systematic study to collect information accurately describes the tree survey, without assuming that all surveys are questionnaires."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Luna: “tiến hành một cuộc khảo sát” is natural and accurate Vietnamese with diacritics.\nSol: tiến hành một cuộc khảo sát accurately and naturally renders the phrase, with complete Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Luna: Exact phrase occurs in cited s3; report draws attention to a finding about young trees.\nSol: s3 contains point out that followed by a tree-distribution observation in a preliminary report, supporting stating/drawing attention to an observation."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Luna: Gloss accurately covers stating/drawing attention to a fact or observation.\nSol: to state or draw attention to a fact or observation accurately captures the reporting sense in s3."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Luna: “chỉ ra, nêu rõ” is an accurate, natural gloss with diacritics.\nSol: chỉ ra, nêu rõ is accurate, natural Vietnamese for the reporting sense, with full diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: a alone describes conducting the study; b–d introduce relocation, exercise or traffic control absent from the text.\nSol: a uniquely means conducting a systematic tree study. b relocates trees; c is exercise; d stops traffic. These do not mean carrying out the survey. Citation s1 is correct."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Explanations accurately distinguish research/data collection from the unrelated actions in b–d.\nSol: All four option explanations and overall explanation accurately distinguish collecting research data from relocation, physical exercise and traffic intervention."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: b is the only grammatical target use; a lacks article a, c substitutes off, and d uses carries after will.\nSol: b uses carry out a survey naturally. a lacks the determiner on singular survey; c substitutes carry off for the target research expression; d incorrectly uses carries after will. Citation s1 is valid."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Each explanation correctly identifies the article, particle or modal-form error.\nSol: All a/b/c/d explanations accurately identify the missing article, natural research collocation, particle out for the requested target phrase and base-form carry after will; overall explanation selects b."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: c alone means stating a finding to draw attention; a is literal, b questions and d rejects it.\nSol: c uniquely expresses stating an observation to draw attention. a is physical pointing; b questions the observation; d rejects it. Citation s3 is correct."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Option explanations accurately contrast reporting a finding with literal pointing, questioning or rejecting.\nSol: All four explanations and overall explanation correctly distinguish presenting a finding in a report from gesture, questioning and rejection."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: a alone is grammatical; b omits out, c adds inappropriate about before that, and d needs points in present simple.\nSol: a is natural. b omits out before a that-clause; c adds ungrammatical about that; d has point with singular guide. Citation s3 supplies reporting use."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Each explanation correctly identifies particle, preposition or subject–verb agreement.\nSol: All four option explanations are accurate: pointed out that is natural; b needs out; c must lose about; d can become points for singular present agreement. Overall explanation is correct."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Luna: A sports club schedule message changes role, topic and purpose from the university research report.\nSol: Sports club welcome message highlighting a weekend practice time differs in role and communicative purpose from an academic tree report. Citation s3 remains valid."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Luna: Two sentences use point out naturally in an idiomatic welcome message; checklist covers length, meaning and context, with self-assessment only.\nSol: Sample has two sentences, naturally uses I want to point out that with a specific practice time/location. Checklist covers sentence count, schedule fact and changed context; explanation explicitly states self-assessment and no automatic grade."
+    }
+  ],
+  "findings": []
+}

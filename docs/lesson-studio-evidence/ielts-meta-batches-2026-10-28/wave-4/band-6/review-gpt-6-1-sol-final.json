@@ -1,0 +1,38 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "3560af2fe77289392b46e95addadf318a3d4c6288d3b88b1412635876c4d5cef",
+  "verdict": "pass",
+  "findings": [],
+  "coverage": {
+    "scope": "Final candidate-final-v4.json exact-byte review: all 20 items, entire script and passage, all 40 options, 10 keys and explanations, every Writing/Speaking prompt. Repeated item contexts verified identical to shared contexts. No candidate edits and no other reviewer outputs inspected. Full v4 content reread after Saturday-morning explanation correction.",
+    "listening": "Portuguese offered versus Spanish sought; Tuesday/Thursday pair; corrected Room6 second floor; £15 materials/social coverage; delayed first date 21st",
+    "reading": "Flexibility attribution and supporting signup data; play-assistant Saturday morning games now consistent with 9–12 shift in passage, keyed option and explanation; light evening tasks; role-specific support example; fewer hours/more people comparison. Every distractor and explanation reread.",
+    "writing": "Open-day complete 2023/2024 activity counts sum correctly to 395/470; museum complete March/April activities, times, capacity and pound fees; three Task2 topics allow reasoned comparison; Task1 minimum150 words/20 minutes and Task2 minimum250 words/40 minutes verified.",
+    "speaking": "two familiar Part1 sets; talk/panel cue card includes preparation, duration, bullet coverage and follow-up; two Part3 discussions require reasons and evaluation",
+    "languageAndStage": "Reviewed natural language, unsupported claims, distractor uniqueness/plausibility, stage suitability and task realism. These are staged short-form practice items, not a complete official IELTS paper or a validated band-score measure.",
+    "itemIds": [
+      "ielts-meta-wave-4-band-6-listening-01",
+      "ielts-meta-wave-4-band-6-listening-02",
+      "ielts-meta-wave-4-band-6-listening-03",
+      "ielts-meta-wave-4-band-6-listening-04",
+      "ielts-meta-wave-4-band-6-listening-05",
+      "ielts-meta-wave-4-band-6-reading-01",
+      "ielts-meta-wave-4-band-6-reading-02",
+      "ielts-meta-wave-4-band-6-reading-03",
+      "ielts-meta-wave-4-band-6-reading-04",
+      "ielts-meta-wave-4-band-6-reading-05",
+      "ielts-meta-wave-4-band-6-writing-01",
+      "ielts-meta-wave-4-band-6-writing-02",
+      "ielts-meta-wave-4-band-6-writing-03",
+      "ielts-meta-wave-4-band-6-writing-04",
+      "ielts-meta-wave-4-band-6-writing-05",
+      "ielts-meta-wave-4-band-6-speaking-01",
+      "ielts-meta-wave-4-band-6-speaking-02",
+      "ielts-meta-wave-4-band-6-speaking-03",
+      "ielts-meta-wave-4-band-6-speaking-04",
+      "ielts-meta-wave-4-band-6-speaking-05"
+    ],
+    "priorReviewExposure": "Same reviewer previously reviewed v2 in full and reported findings. Parent supplied editorial change summaries. Full final content reread rather than delta-only review; other reviewer outputs not inspected."
+  },
+  "reviewerType": "AI-assisted"
+}

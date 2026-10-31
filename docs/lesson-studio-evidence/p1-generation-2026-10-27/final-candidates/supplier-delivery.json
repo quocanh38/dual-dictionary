@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "packId": "pack-3203d64e-13cf-400f-a639-33b27efb90bc",
+  "version": 1,
+  "title": "Checking Deliveries and Contacting Suppliers",
+  "language": "en",
+  "explanationLanguage": "en-vi",
+  "levelEstimate": "B1",
+  "topic": "workplace",
+  "provenance": {
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "sourceType": "original",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "aiAssisted": true
+  },
+  "generation": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "generatedAt": "2026-10-27T05:44:21.046Z"
+  },
+  "lessons": [
+    {
+      "lessonId": "lesson-1",
+      "title": "Checking Deliveries and Contacting Suppliers",
+      "objective": "Learners will understand and use two workplace phrases for comparing goods with an order and for contacting someone.",
+      "reading": {
+        "text": "The warehouse team will check the delivery against the order before signing the receipt. If an item is missing, a supervisor will get in touch with the supplier that afternoon. Staff will photograph the unopened boxes and keep the order number beside the checklist. This record helps both teams explain which items arrived without blaming a colleague who was not present.",
+        "sentences": [
+          {
+            "id": "s1",
+            "text": "The warehouse team will check the delivery against the order before signing the receipt."
+          },
+          {
+            "id": "s2",
+            "text": "If an item is missing, a supervisor will get in touch with the supplier that afternoon."
+          },
+          {
+            "id": "s3",
+            "text": "Staff will photograph the unopened boxes and keep the order number beside the checklist."
+          },
+          {
+            "id": "s4",
+            "text": "This record helps both teams explain which items arrived without blaming a colleague who was not present."
+          }
+        ]
+      },
+      "targets": [
+        {
+          "id": "t1",
+          "phrase": "check the delivery against the order",
+          "meaningEn": "to compare the delivered goods with the order to see if they match",
+          "meaningVi": "đối chiếu hàng được giao với đơn đặt hàng",
+          "sourceSentenceId": "s1"
+        },
+        {
+          "id": "t2",
+          "phrase": "get in touch with",
+          "meaningEn": "to contact someone",
+          "meaningVi": "liên lạc với ai đó",
+          "sourceSentenceId": "s2"
+        }
+      ],
+      "exercises": [
+        {
+          "exerciseId": "q1",
+          "type": "meaning",
+          "targetId": "t1",
+          "prompt": "In the sentence 'The warehouse team will check the delivery against the order before signing the receipt,' what does 'check the delivery against the order' mean?",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "It means comparing the delivered goods with the order to see if they match.",
+              "explanation": "This is correct because it paraphrases comparing goods with the order to confirm a match."
+            },
+            {
+              "id": "b",
+              "text": "It means signing the receipt before looking at the delivered boxes.",
+              "explanation": "This is wrong because checking happens before signing, not signing without looking."
+            },
+            {
+              "id": "c",
+              "text": "It means sending the whole delivery back without opening the boxes.",
+              "explanation": "This is wrong because the team compares the items instead of returning everything unopened."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The phrase means comparing delivered goods with the order to confirm they match."
+        },
+        {
+          "exerciseId": "q2",
+          "type": "usage",
+          "targetId": "t1",
+          "prompt": "Choose the natural sentence that uses 'check the delivery against the order' correctly.",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "We always check the delivery against the order before we sign the receipt.",
+              "explanation": "This is correct because word order, verb forms and articles are all natural."
+            },
+            {
+              "id": "b",
+              "text": "We always check the delivery against the order before we signing the receipt.",
+              "explanation": "This is wrong because signing should be corrected to sign after we."
+            },
+            {
+              "id": "c",
+              "text": "We always check the delivery against order before we sign the receipt.",
+              "explanation": "This is wrong because order should be corrected to the order with the article the."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Only one option uses correct verb forms and articles with the target phrase."
+        },
+        {
+          "exerciseId": "q3",
+          "type": "meaning",
+          "targetId": "t2",
+          "prompt": "In the sentence 'If an item is missing, a supervisor will get in touch with the supplier that afternoon,' what does 'get in touch with' mean?",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "It means contacting the supplier that afternoon about the missing item.",
+              "explanation": "This is correct because it paraphrases contacting someone in this context."
+            },
+            {
+              "id": "b",
+              "text": "It means avoiding the supplier and waiting for the next delivery.",
+              "explanation": "This is wrong because getting in touch means contacting, not avoiding."
+            },
+            {
+              "id": "c",
+              "text": "It means blaming a colleague who was not present for the mistake.",
+              "explanation": "This is wrong because the phrase means contacting the supplier, not blaming a colleague."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The phrase means contacting the supplier about the missing item."
+        },
+        {
+          "exerciseId": "q4",
+          "type": "usage",
+          "targetId": "t2",
+          "prompt": "Choose the natural sentence that uses 'get in touch with' correctly.",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "Please get in touch with me if the parcel arrives late.",
+              "explanation": "This is correct because the collocation with and the verb forms are natural."
+            },
+            {
+              "id": "b",
+              "text": "Please get in touch to me if the parcel arrives late.",
+              "explanation": "This is wrong because to should be corrected to with in the fixed collocation."
+            },
+            {
+              "id": "c",
+              "text": "Please get in touch with me if the parcel arrive late.",
+              "explanation": "This is wrong because arrive should be corrected to arrives to agree with the parcel."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Only one option uses the correct collocation and verb agreement."
+        },
+        {
+          "exerciseId": "q5",
+          "type": "transfer",
+          "targetId": "t2",
+          "prompt": "You are a new office assistant planning a team lunch, not checking a warehouse delivery. Write 2-3 sentences to a coworker to arrange a time to discuss the menu. Use the phrase get in touch with.",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "sampleAnswer": "Hi Anna, I am planning our team lunch for Friday. I will get in touch with you tomorrow morning to discuss the menu.",
+          "selfCheck": [
+            "My answer has 2-3 sentences.",
+            "I use get in touch with to contact my coworker.",
+            "My situation is about a team lunch, not a warehouse delivery."
+          ],
+          "explanation": "Compare with the model and self-assess; no automatic grade."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewerType": "not-reviewed",
+    "note": "",
+    "checks": {
+      "rights": false,
+      "meaning": false,
+      "uniqueAnswers": false,
+      "explanations": false
+    },
+    "findings": []
+  }
+}

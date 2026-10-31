@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "ee22798605f2bc50695a3c2d1e0ddc7ccc25dc1baa2d93a1c922d205e3261567",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna (configured model)",
+  "reviewedAt": "2026-10-27T06:00:00Z",
+  "note": "Fresh full AI-assisted editorial rereview of the frozen final candidate: all 17 criteria, every option and explanation, both target EN/VI glosses, cited source and transfer. Development batch; not unseen-source evaluation. No candidate edits, learner study, independent human review, or provider call. Pack digest ee22798605f2bc50695a3c2d1e0ddc7ccc25dc1baa2d93a1c922d205e3261567.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Candidate declares an original AI-assisted project source, distribution permission, and no learner PII; review relies on this provenance statement."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains exact phrase ‘carry out an inspection’; supervisor checks a new machine before it is used."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Performing a careful check or examination accurately captures the inspection described."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘tiến hành kiểm tra’ is a natural, accurate Vietnamese gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains ‘comply with the safety rules’; the team must follow them despite waiting orders."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Obeying or following the safety rules accurately captures the contextual meaning."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘tuân thủ các quy tắc an toàn’ is natural, accurate and correctly diacritized."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a matches performing a careful pre-use machine check. b cancels the check; c moves the machine for storage; neither means inspecting."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations correctly distinguish inspection from cancellation and storage. The phrase ‘matches to perform’ is awkward, but the reason remains clear."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural. b uses ‘about’ where ‘of’ is natural for the bridge as the object examined; c uses ‘carries’ after modal will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The revised b rationale now limits ‘of’ to the object being examined and correctly states that ‘about’ is unnatural here; c’s modal-form explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a means obey despite pressure. b reverses the meaning; c means writing new rules rather than following the existing ones."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All rationales distinguish following current rules from ignoring or creating rules. ‘Matches to obey’ is awkward, but meaning is clear."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is the natural target sentence. a has the wrong preposition after comply; c uses ‘complies’ after modal must."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option rationales correctly identify ‘comply with’ and the bare verb after must; overall uniqueness rationale is accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Source is workshop team under order pressure; transfer shifts to a hotel guest discussing swimming-pool rules and guest behavior with a friend."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence answer uses ‘comply with the safety rules’ naturally. Checklist covers length, target phrase and clarity/grammar; self-assessment only."
+    }
+  ],
+  "findings": [
+    {
+      "id": "workshop-explanations-awkward-phrasing",
+      "severity": "minor",
+      "resolved": true,
+      "evidence": "q1 and q3 option a explanations say ‘matches to perform’ / ‘matches to obey’, which is awkward English. The intended meanings remain clear and do not mislead answers; editor may polish to ‘matches the meaning “to perform/to obey”’. Nonblocking."
+    }
+  ]
+}

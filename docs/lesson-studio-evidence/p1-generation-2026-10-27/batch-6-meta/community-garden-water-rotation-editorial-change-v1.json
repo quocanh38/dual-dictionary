@@ -1,0 +1,32 @@
+{
+  "createdAt": "2026-10-27T08:02:09.879Z",
+  "kind": "local-editorial-revision",
+  "rawMetaCandidate": "community-garden-water-rotation-candidate.json",
+  "rawMetaCandidatePackSha256": "11b782817902d5dd09615b3fc2049bc2e371f7183e7fd2418bc23128e5a3cbca",
+  "editedCandidate": "community-garden-water-rotation-candidate-editorial-v1.json",
+  "editedPackSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+  "editor": "Codex AI-assisted editor",
+  "providerCallsForRevision": 0,
+  "changes": [
+    {
+      "exerciseId": "q1",
+      "reason": "Replace implausible distractor with a credible contrast between recording use and assigning shares."
+    },
+    {
+      "exerciseId": "q2",
+      "reason": "Make the correct usage example idiomatic and natural."
+    },
+    {
+      "exerciseId": "q3",
+      "reason": "Replace a nonsensical physical reading with a plausible literal-alignment distractor and an explicit context explanation."
+    },
+    {
+      "exerciseId": "q5",
+      "reason": "Clarify that head office set the working hours in the transfer model answer."
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

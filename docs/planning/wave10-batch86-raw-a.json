@@ -1,0 +1,16 @@
+{
+  "wave": 10,
+  "batch": 86,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after social service; reviewed against local OALD 10/LDOCE 6. Current US campaign-finance terminology for soft money checked against the FEC. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover social support, food and drink, basic chemistry, computing, commerce and anatomy; clarify contested/nontechnical drug terminology and the changing US legal context of campaign-finance language.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1140, "remainingRawOnlyAfter": 1120},
+  "selected": ["social worker", "soda fountain", "soda lime", "soda pop", "soda water", "sodium bicarbonate", "sodium carbonate", "sodium chloride", "soft copy", "soft drug", "soft goods", "soft money", "soft palate", "soft pedal", "soft soap", "software package", "soil pipe", "solar energy", "solar flare", "solar plexus"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "https://www.fec.gov/about/fec-historical-timeline/",
+    "https://www.fec.gov/legal-resources/court-cases/grover-v-fec/"
+  ]
+}

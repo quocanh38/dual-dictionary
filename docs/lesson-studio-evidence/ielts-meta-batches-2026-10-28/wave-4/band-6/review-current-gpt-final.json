@@ -1,0 +1,10 @@
+{
+  "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+  "reviewScope": "Final review of all 20 items, source contexts, every option, answer key, explanation, Writing prompt and Speaking prompt after the recorded Meta repairs and editorial edits.",
+  "candidateSha256": "37e1c7ac3a98fd561d9efdd6d66e16b2e99b855d030a24abf6ba6f83a458b0c1",
+  "sidecarMatches": true,
+  "verdict": "single-model-pass",
+  "findings": [],
+  "reviewedAt": "2026-10-28T08:34:00.381Z",
+  "crossModelStatus": "pending; this file does not substitute for the separately required gpt-6-luna and gpt-6.1-sol exact-hash reviews."
+}

@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Comparing Counts and Describing Trends",
+    "objective": "Learners will understand and correctly use 'account for' and 'long-term decline' to describe data and trends in academic contexts.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s2, 'the analyst will account for the length of each visit before comparing totals', what does 'account for' mean?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "to consider and include the length of each visit when comparing totals",
+            "explanation": "This is correct because it matches the analyst adjusting totals for different observation times."
+          },
+          {
+            "id": "b",
+            "text": "to give a spoken explanation of why each visit happened",
+            "explanation": "This is wrong because the sentence is about including time in the comparison, not explaining reasons aloud."
+          },
+          {
+            "id": "c",
+            "text": "to replace the length of each visit with an estimated average",
+            "explanation": "This is wrong because the analyst keeps the real visit lengths, not replaces them with an average."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a matches the source context of adjusting for visit length."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'account for' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The report accounts for differences in observation time before comparing the two sites.",
+            "explanation": "This is correct because verb agreement and the collocation 'accounts for' are natural."
+          },
+          {
+            "id": "b",
+            "text": "She account for travel time when planning her weekly schedule.",
+            "explanation": "This is wrong because the verb must be corrected to 'accounts' to agree with 'She'."
+          },
+          {
+            "id": "c",
+            "text": "They accounted about the extra costs in the final budget.",
+            "explanation": "This is wrong because the preposition must be corrected to 'for', as the fixed collocation is 'accounted for'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a uses 'account for' with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s6, 'not as evidence of a long-term decline', what does 'long-term decline' mean?",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "a sudden temporary drop during one season",
+            "explanation": "This is wrong because it describes a short sudden change, not a gradual change over a long period."
+          },
+          {
+            "id": "b",
+            "text": "a gradual decrease over a long period of time",
+            "explanation": "This is correct because it matches the contrast with a small sample and provisional estimate."
+          },
+          {
+            "id": "c",
+            "text": "a small difference between two wetlands at one time",
+            "explanation": "This is wrong because it describes a comparison at one moment, not a decrease over time."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only option b matches the source context of a decrease over a long period."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'long-term decline' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The city has seen an long-term decline in tourism this decade.",
+            "explanation": "This is wrong because the article must be corrected to 'a' before the consonant sound in 'long-term'."
+          },
+          {
+            "id": "b",
+            "text": "The study found a long-term decline in fish stocks in the lake.",
+            "explanation": "This is correct because the article, singular noun, and preposition are natural and grammatical."
+          },
+          {
+            "id": "c",
+            "text": "The long-term decline in rainfall have affected local farms for years.",
+            "explanation": "This is wrong because the verb must be corrected to 'has' to agree with the singular subject."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only option b uses the noun phrase with correct grammar."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are a local shop owner writing a note to your supplier about packaging orders. Write 2–3 sentences explaining your decision and use the phrase 'long-term decline' to describe customer demand for plastic bags.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "sampleAnswer": "I am reducing my monthly order because we have seen a long-term decline in demand for plastic bags. Customers now bring their own bags, so we need less stock.",
+        "selfCheck": [
+          "I wrote 2–3 sentences as a shop owner to a supplier about packaging.",
+          "I used 'long-term decline' to describe a gradual decrease over time.",
+          "My sentences are clear, natural, and grammatically correct."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1008,
+    "outputTokens": 5006,
+    "totalTokens": 6014
+  },
+  "status": 200,
+  "latencyMs": 25840,
+  "model": "muse-spark-1.3"
+}

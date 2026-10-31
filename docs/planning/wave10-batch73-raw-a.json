@@ -1,0 +1,16 @@
+{
+  "wave": 10,
+  "batch": 73,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after rheumatic fever; checked against local OALD 10/LDOCE 6. Rheumatoid arthritis, river blindness, rhythm method and Richter-scale notes cross-checked against NIAMS, WHO, CDC and USGS references. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover health, earth science, music, finance, road transport and everyday phrasal verbs; clarify regional/legal variation, colloquial register and commonly confused scientific labels.",
+  "counts": {"selected":20,"rawPagesUpgraded":20,"rawOnlyBefore":1400,"remainingRawOnlyAfter":1380},
+  "selected": ["rheumatoid arthritis","rhyming slang","rhythm and blues","rhythm method","richter scale","rifle range","rift valley","rig up","right of way","right wing","rights issue","rigor mortis","ring road","ring up","rip off","rip tide","river basin","river blindness","road hog","road map"],
+  "references": [
+    "https://www.niams.nih.gov/health-topics/rheumatoid-arthritis",
+    "https://www.who.int/health-topics/onchocerciasis/",
+    "https://stacks.cdc.gov/view/cdc/12090/cdc_12090_DS1.pdf",
+    "https://www.usgs.gov/faqs/moment-magnitude-richter-scale-what-are-different-magnitude-scales-and-why-are-there-so-many?items_per_page=6&page=1&qt-news_science_products=4&tltagv_gid=466"
+  ]
+}

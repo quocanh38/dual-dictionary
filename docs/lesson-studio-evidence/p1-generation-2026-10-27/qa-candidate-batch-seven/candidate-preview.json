@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-10-27T08:15:09.078Z",
+  "results": [
+    {
+      "id": "city-bus-temporary-diversion",
+      "status": "PASS",
+      "candidateSha256": "caa5a1760250187133c78395bb5e0ed4db18ee009b2ec7cc31b798876c23ab78",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "clinic-appointment-process",
+      "status": "PASS",
+      "candidateSha256": "65b76b999490e05bb5e0da7a0f077a8b7558ecf82cae0e9c1d7091af4a0bfff5",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "coastal-bird-count-method",
+      "status": "PASS",
+      "candidateSha256": "6bb7f0007ceb46970b13dd08d821f6b5c5b444b0e9edff64cb71b1769fab6b0d",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

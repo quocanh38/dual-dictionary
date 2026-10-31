@@ -1,0 +1,212 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-200d40dc-d233-4ee2-9dad-d3d8164643bd",
+    "version": 1,
+    "title": "Planning a Conference Visit",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project; locally authored exercises",
+      "sourceType": "original",
+      "rightsStatement": "Original reading supplied by the Dual Dictionary project and declared authorized for generation and distribution. The reading is retained from the Meta selection stage; exercises in this pack were authored locally after the exercise-generation request timed out. No external source, copied exam text or learner personal data is included.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Local editorial authoring",
+      "model": "Codex assistant (not Meta-generated)",
+      "promptVersion": "conference-travel-offline-authoring-v1",
+      "generatedAt": "2026-10-27T07:43:16.310Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Planning a Conference Visit",
+        "objective": "Understand make arrangements for and provide evidence of in an academic funding context, then use provide evidence of in a new request.",
+        "reading": {
+          "text": "The department will make arrangements for students to attend a regional conference. Each applicant must provide evidence of how the event relates to their research. Because the travel fund is limited, the panel will compare the purpose and expected benefit of each visit. Students should describe a specific session they plan to attend rather than simply listing the speakers they admire.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The department will make arrangements for students to attend a regional conference."
+            },
+            {
+              "id": "s2",
+              "text": "Each applicant must provide evidence of how the event relates to their research."
+            },
+            {
+              "id": "s3",
+              "text": "Because the travel fund is limited, the panel will compare the purpose and expected benefit of each visit."
+            },
+            {
+              "id": "s4",
+              "text": "Students should describe a specific session they plan to attend rather than simply listing the speakers they admire."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "make arrangements for",
+            "meaningEn": "to plan and organize what is needed for someone or something",
+            "meaningVi": "sắp xếp, chuẩn bị những việc cần thiết cho ai hoặc việc gì",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "provide evidence of",
+            "meaningEn": "to supply information or documents that support a claim or show a connection",
+            "meaningVi": "cung cấp bằng chứng, thông tin để chứng minh hoặc làm rõ điều gì",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In s1, 'The department will make arrangements for students to attend a regional conference,' what does 'make arrangements for' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "to plan and organize what is needed for the students' conference attendance",
+                "explanation": "Correct: s1 says the department will organize what is needed so the students can attend."
+              },
+              {
+                "id": "b",
+                "text": "to compare how useful each student’s research visit will be",
+                "explanation": "Wrong: comparing the purpose and benefit of visits is the panel’s task in s3, not what the department arranges in s1."
+              },
+              {
+                "id": "c",
+                "text": "to describe which conference speakers each student admires",
+                "explanation": "Wrong: s4 says students should describe a session rather than list admired speakers; that is not arranging the visit."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Here the phrase means organizing the practical plans for students to attend; the comparison and session description are separate tasks."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the natural sentence using 'make arrangements for'.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The faculty made arrangements for the visiting researchers to stay near campus.",
+                "explanation": "Correct: “made arrangements for” is followed by the people and the infinitive describing the plan."
+              },
+              {
+                "id": "b",
+                "text": "The faculty made arrangements the visiting researchers to stay near campus.",
+                "explanation": "Wrong: add “for” before the people; the natural form is “made arrangements for the visiting researchers to stay.”"
+              },
+              {
+                "id": "c",
+                "text": "The faculty made arrangements for the visiting researcher to stays near campus.",
+                "explanation": "Wrong: use the base verb “stay” after “to,” not “stays.”"
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only a has the required “for” construction and a correct infinitive."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In s2, what does 'provide evidence of how the event relates to their research' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "to supply information or documents that support the connection between the event and an applicant’s research",
+                "explanation": "Correct: applicants must show how the event is relevant to their research."
+              },
+              {
+                "id": "b",
+                "text": "to state which conference speaker an applicant admires most",
+                "explanation": "Wrong: s4 distinguishes listing admired speakers from describing a session; that preference does not show a research connection."
+              },
+              {
+                "id": "c",
+                "text": "to compare the expected benefit of one visit with another",
+                "explanation": "Wrong: s3 assigns that comparison to the panel; it is not the evidence applicants provide in s2."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The evidence must support the relevance of the event to the applicant’s research, not a speaker preference or the panel’s comparison."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the natural sentence using 'provide evidence of'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Applicants should provide evidence of how the event supports their research.",
+                "explanation": "Correct: “provide evidence of how” naturally introduces the connection they need to support."
+              },
+              {
+                "id": "b",
+                "text": "Applicants should provide an evidence of how the event supports their research.",
+                "explanation": "Wrong: “evidence” is uncountable in this use, so remove “an.”"
+              },
+              {
+                "id": "c",
+                "text": "Applicants should provides evidence of how the event supports their research.",
+                "explanation": "Wrong: the plural subject “Applicants” takes “provide,” not “provides.”"
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only a uses the uncountable noun “evidence” and agrees with the plural subject."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are asking a community committee for a small grant to run a weekend science club for local teenagers. Write 2–3 sentences describing the project and providing evidence of community interest.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "We are applying for a small grant to run a weekend science club for local teenagers. Sign-up records from last term provide evidence of strong community interest. The funding would help us buy simple lab materials.",
+            "selfCheck": [
+              "I wrote 2–3 sentences.",
+              "I used “provide evidence of” to introduce information that supports a claim.",
+              "My request concerns a new project rather than conference travel.",
+              "My details make the community interest clear; the response is for self-assessment, not automatic grading."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

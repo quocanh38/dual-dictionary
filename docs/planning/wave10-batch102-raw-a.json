@@ -1,0 +1,26 @@
+{
+  "wave": 10,
+  "batch": 102,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after turn around in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover high-frequency phrasal verbs, common idioms, health and legal vocabulary, finance, communications, and country names. Separate senses through grammar patterns, mark register and regional differences, and clarify commonly confused geography and technical ranges.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 820,
+    "remainingRawOnlyAfter": 800
+  },
+  "selected": [
+    "turn back", "turn down", "turn in", "turn off", "turn on",
+    "turn out", "turn over", "turn round", "turn to", "turn up",
+    "turning point", "twilight zone", "ultra-high frequency", "ultra vires", "umbilical cord",
+    "uncalled for", "unheard of", "unit trust", "united arab emirates", "united kingdom"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "Federal Communications Commission, FCC 97-59 (UHF: 300–3000 MHz) (https://docs.fcc.gov/public/attachments/FCC-97-59A1.pdf)",
+    "Queensland Government, Subordinate legislation must be within power (ultra vires) (https://www.premiers.qld.gov.au/publications/categories/policies-and-codes/handbooks/legislation-handbook/subord-legislation/within-power.aspx)"
+  ]
+}

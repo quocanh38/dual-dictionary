@@ -1,0 +1,15 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e38b085749af3fff23f4c48fe6807fa04540160855daaa83e6ce8ff53df5e044",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-7-band-7-writing-02",
+      "issue": "The prompt gives 900 residents across three information-session methods but does not state the number surveyed in each method group. Add per-method denominators if available; percentages remain interpretable as within-group rates, so this is a minor clarity observation.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": "Full exact-byte review of the 351-word listening script and 445-word reading passage, all 10 objective questions/options/keys/explanations, all five Writing and five Speaking prompts, and metadata/provenance. Word counts match declared values and meet expected ranges; both objective sets cover all four answer positions. Keys are uniquely grounded in the full passages/script, including corrected match counts, counterfactuals, technical limits and scope of proxies. Task 1 study comparison includes group sizes, score gains and teacher percentages; flood-risk communication gives all three methods and response outcomes, with one minor observation about per-method sample sizes. Writing targets and timing are present. Speaking spans Parts 1, 2 and 3, with a complete one-minute-preparation cue card and appropriate advanced discussion demands. Provenance declares originalContent:true; no official-question or score claims. No unresolved critical, major or uncertain issue.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,8 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "ff24a2ed89f18069558a9954229aa483cb8a24a44f8331b1cde601648541fb81",
+  "verdict": "changes_required",
+  "findings": [
+    "normalizationFindings / Listening answer-position distribution: The candidate itself reports that positions do not cover all four options. The five listening answers are [1, 2, 0, 2, 0], leaving option D (index 3) never keyed. This unresolved normalization issue should be repaired by reordering options and adjusting the matching answer indices and explanations, then cleared and re-reviewed against a new hash."
+  ]
+}

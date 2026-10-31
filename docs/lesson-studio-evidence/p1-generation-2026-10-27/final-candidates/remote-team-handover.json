@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "packId": "pack-0e754c61-b77f-41b3-a7ed-1b4efc7f62ea",
+  "version": 1,
+  "title": "Handing Over Work and Tracking Requests",
+  "language": "en",
+  "explanationLanguage": "en-vi",
+  "levelEstimate": "B1",
+  "topic": "workplace",
+  "provenance": {
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "sourceType": "original",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "aiAssisted": true
+  },
+  "generation": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "generatedAt": "2026-10-27T05:46:36.174Z"
+  },
+  "lessons": [
+    {
+      "lessonId": "lesson-1",
+      "title": "Handing Over Work and Tracking Requests",
+      "objective": "Learners will understand hand over and keep track of from a workplace handover and use them in new contexts.",
+      "reading": {
+        "text": "Before the project lead leaves for annual leave, she will hand over the client schedule to her colleague. They will go over the open tasks in a short video call and flag any deadline that may change. The colleague will keep track of new requests in the shared log and follow up with the design team if a file is missing. A clear handover helps everyone know who is responsible while the lead is away.",
+        "sentences": [
+          {
+            "id": "s1",
+            "text": "Before the project lead leaves for annual leave, she will hand over the client schedule to her colleague."
+          },
+          {
+            "id": "s2",
+            "text": "They will go over the open tasks in a short video call and flag any deadline that may change."
+          },
+          {
+            "id": "s3",
+            "text": "The colleague will keep track of new requests in the shared log and follow up with the design team if a file is missing."
+          },
+          {
+            "id": "s4",
+            "text": "A clear handover helps everyone know who is responsible while the lead is away."
+          }
+        ]
+      },
+      "targets": [
+        {
+          "id": "t1",
+          "phrase": "hand over",
+          "meaningEn": "to give responsibility for work to another person",
+          "meaningVi": "bàn giao công việc cho người khác",
+          "sourceSentenceId": "s1"
+        },
+        {
+          "id": "t2",
+          "phrase": "keep track of",
+          "meaningEn": "to monitor and record the progress of something over time",
+          "meaningVi": "theo dõi và ghi chép",
+          "sourceSentenceId": "s3"
+        }
+      ],
+      "exercises": [
+        {
+          "exerciseId": "q1",
+          "type": "meaning",
+          "targetId": "t1",
+          "prompt": "In s1, what does hand over mean when the lead will hand over the client schedule to her colleague?",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "It means she will keep the schedule herself and work during her leave.",
+              "explanation": "Wrong because keeping the work contradicts giving responsibility to her colleague."
+            },
+            {
+              "id": "b",
+              "text": "It means she will give responsibility for the schedule to her colleague.",
+              "explanation": "Correct because it matches giving work responsibility to another person in this context."
+            },
+            {
+              "id": "c",
+              "text": "It means she will postpone the schedule until she returns from leave.",
+              "explanation": "Wrong because postponing delays work rather than transferring responsibility."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Hand over here means transferring responsibility for the schedule to the colleague."
+        },
+        {
+          "exerciseId": "q2",
+          "type": "usage",
+          "targetId": "t1",
+          "prompt": "Choose the sentence that follows the reading's pattern, with 'hand over' immediately before the thing being transferred.",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "She will hand over the client schedule to her colleague before she leaves.",
+              "explanation": "Correct because hand over correctly takes the object and to for the receiver."
+            },
+            {
+              "id": "b",
+              "text": "She will hand the client schedule over to her colleague before she leaves.",
+              "explanation": "This is grammatical English, but it places the object between hand and over rather than following the pattern requested."
+            },
+            {
+              "id": "c",
+              "text": "She will hands over the client schedule to her colleague before she leaves.",
+              "explanation": "Wrong because hands should be hand after the modal will."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Only a follows the requested pattern, with hand over immediately before the object; b is a valid alternative word order."
+        },
+        {
+          "exerciseId": "q3",
+          "type": "meaning",
+          "targetId": "t2",
+          "prompt": "In s3, what does keep track of mean when the colleague will keep track of new requests in the shared log?",
+          "sourceSentenceIds": [
+            "s3"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "It means they will monitor and record new requests over time.",
+              "explanation": "Correct because it matches monitoring and recording progress over time in this context."
+            },
+            {
+              "id": "b",
+              "text": "It means they will complete all requests immediately without recording them.",
+              "explanation": "Wrong because completing immediately without recording omits monitoring over time."
+            },
+            {
+              "id": "c",
+              "text": "It means they will ignore new requests until someone complains.",
+              "explanation": "Wrong because ignoring requests is the opposite of monitoring and recording them."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Keep track of here means monitoring and recording new requests over time."
+        },
+        {
+          "exerciseId": "q4",
+          "type": "usage",
+          "targetId": "t2",
+          "prompt": "Choose the natural correct sentence using keep track of.",
+          "sourceSentenceIds": [
+            "s3"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "The colleague keeps track on new requests in the shared log every day.",
+              "explanation": "Wrong because the standard phrase is keep track of, not keep track on."
+            },
+            {
+              "id": "b",
+              "text": "The colleague keeps track of new requests in the shared log every day.",
+              "explanation": "Correct because it uses the standard phrase keep track of with correct grammar."
+            },
+            {
+              "id": "c",
+              "text": "The colleague keep track of new requests in the shared log every day.",
+              "explanation": "Wrong because the singular subject the colleague requires keeps, not keep."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Only one option uses the standard phrase keep track of with correct grammar."
+        },
+        {
+          "exerciseId": "q5",
+          "type": "transfer",
+          "targetId": "t1",
+          "prompt": "Imagine you are the captain of a school football team who is graduating. Write 2-3 sentences to the next captain about what duties you will pass to them. Use hand over in your answer.",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "sampleAnswer": "I will hand over the team equipment and training schedule to you next week. We will meet briefly so you know who to contact for each task.",
+          "selfCheck": [
+            "I wrote 2-3 sentences.",
+            "I used hand over to describe giving responsibility.",
+            "I described a school team context, not annual leave."
+          ],
+          "explanation": "Compare with the model and self-assess; no automatic grade."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewerType": "not-reviewed",
+    "note": "",
+    "checks": {
+      "rights": false,
+      "meaning": false,
+      "uniqueAnswers": false,
+      "explanations": false
+    },
+    "findings": []
+  }
+}

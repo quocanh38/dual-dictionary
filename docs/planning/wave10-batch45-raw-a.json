@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 45,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after life insurance, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes. Regional, scientific, financial, legal and safety labels are explicit; source wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1940,
+    "remainingRawOnlyAfter": 1920
+  },
+  "selected": [
+    "life jacket",
+    "life preserver",
+    "life raft",
+    "life saver",
+    "life support",
+    "life support system",
+    "life vest",
+    "lift off",
+    "light bulb",
+    "light-emitting diode",
+    "light heavyweight",
+    "light meter",
+    "light pen",
+    "light year",
+    "lightning conductor",
+    "lightning rod",
+    "lima bean",
+    "lime water",
+    "limited company",
+    "limited liability"
+  ]
+}

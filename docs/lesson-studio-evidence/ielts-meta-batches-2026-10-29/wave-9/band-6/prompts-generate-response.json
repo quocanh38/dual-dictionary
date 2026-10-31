@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-9",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-9-v1",
+  "completedAt": "2026-10-29T05:21:09.131Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 646,
+    "outputTokens": 5559,
+    "totalTokens": 6205
+  },
+  "latencyMs": 20819,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Riverside City Bicycle-Safety Festival Attendance\",\"focus\":\"paraphrase, corrected details and clear comparisons\",\"prompt\":\"You should spend about 20 minutes on this task. The table below shows attendance at the Riverside City Bicycle-Safety Festival from 2022 to 2024, by participant group. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\\n\\nRiverside City Bicycle-Safety Festival – Registered Participants:\\n2022: Students 120, Commuters 80, Families 60, Total 260\\n2023: Students 150, Commuters 95, Families 110, Total 355\\n2024: Students 140, Commuters 130, Families 145, Total 415\\n\\nThe festival was held in Central Park in May each year. All figures are number of people.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Greenfield University Language Exchange Programme\",\"focus\":\"linked ideas and clear comparisons with data\",\"prompt\":\"You should spend about 20 minutes on this task. The table below shows the number of students taking part in the Greenfield University Language Exchange Programme in three semesters. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\\n\\nGreenfield University Language Exchange – Participants by Language Pairing:\\nSpring 2023: English-Spanish 45, English-Japanese 30, English-Arabic 20, Total 95\\nAutumn 2023: English-Spanish 60, English-Japanese 35, English-Arabic 25, Total 120\\nSpring 2024: English-Spanish 70, English-Japanese 50, English-Arabic 30, Total 150\\n\\nThe programme pairs a native speaker of one language with a learner of that language. Numbers show active pairs per semester.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Funding for Bicycle-Safety Events\",\"focus\":\"paraphrase, linked ideas and evaluation of views\",\"prompt\":\"You should spend about 40 minutes on this task. Some people think cities should spend more public money on bicycle-safety events and training for all age groups. Others think individuals should be responsible for their own safety and that money should be used for roads and public transport instead. Discuss both views and give your own opinion. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Language Exchange and Classroom Learning\",\"focus\":\"clear comparisons, linked ideas and corrected details\",\"prompt\":\"You should spend about 40 minutes on this task. At many universities, students can join a language exchange where they teach their own language to a partner and learn their partner's language in return. Some people argue this is more effective than traditional classroom language courses. Others say classroom teaching is more reliable and structured. Discuss the advantages and disadvantages of both methods and give your opinion. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Library Local-History Exhibits\",\"focus\":\"paraphrase, linked ideas and reasoned evaluation\",\"prompt\":\"You should spend about 40 minutes on this task. Many public libraries organise local-history exhibits with photographs, documents and objects from the community. Some people say this is an important use of library space and funds. Others believe libraries should focus mainly on digital resources and quiet study areas. To what extent do you agree or disagree? Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Bicycles and Getting Around\",\"focus\":\"familiar topics, paraphrase and linked ideas\",\"prompt\":\"Let's talk about getting around in your area.\\nDo you ride a bicycle? Why or why not?\\nHow common is cycling where you live?\\nWhat makes cycling safe or unsafe in your city?\\nHave your travel habits changed in the last few years?\"},{\"task\":\"Part 1 · Libraries and Local History\",\"focus\":\"familiar topics and clear comparisons\",\"prompt\":\"Let's talk about libraries and learning.\\nHow often do you visit a public library?\\nWhat do you usually do when you go to a library?\\nDo you enjoy learning about the history of your local area? Why or why not?\\nDo you prefer learning from exhibits, books, or online resources?\"},{\"task\":\"Part 2 · Cue card · A Community Learning Event\",\"focus\":\"linked ideas, corrected details and clear description\",\"prompt\":\"Describe a bicycle-safety event, university language exchange meeting, or library local-history exhibit you have attended or would like to attend. You will have one minute to prepare and should speak for one to two minutes.\\nYou should say:\\n• what the event or exhibit was\\n• when and where it took place or would take place\\n• what you did or learned there\\n• and explain why you found it useful or memorable.\\nYou can add any other relevant details.\"},{\"task\":\"Part 3 · Community Events and Safety Education\",\"focus\":\"reasons, evaluation and clear comparisons\",\"prompt\":\"Let's discuss community safety events.\\nWhy do some people choose to attend free city events like bicycle-safety festivals while others do not?\\nHow can a city evaluate whether such events actually change people's behaviour?\\nIs hands-on training more effective than posters or online videos for teaching safety? Why?\"},{\"task\":\"Part 3 · Language, Culture and Public Spaces\",\"focus\":\"evaluation, reasons and comparison across familiar academic topics\",\"prompt\":\"Let's consider language learning and cultural exhibits.\\nWhat are the advantages and disadvantages of learning a language through exchange with a partner compared to learning alone?\\nShould universities require all students to take part in intercultural programmes? Why or why not?\\nHow can libraries balance preserving local history with serving the needs of a diverse modern community?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Riverside City Bicycle-Safety Festival Attendance",
+        "focus": "paraphrase, corrected details and clear comparisons",
+        "prompt": "You should spend about 20 minutes on this task. The table below shows attendance at the Riverside City Bicycle-Safety Festival from 2022 to 2024, by participant group. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\n\nRiverside City Bicycle-Safety Festival – Registered Participants:\n2022: Students 120, Commuters 80, Families 60, Total 260\n2023: Students 150, Commuters 95, Families 110, Total 355\n2024: Students 140, Commuters 130, Families 145, Total 415\n\nThe festival was held in Central Park in May each year. All figures are number of people.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Greenfield University Language Exchange Programme",
+        "focus": "linked ideas and clear comparisons with data",
+        "prompt": "You should spend about 20 minutes on this task. The table below shows the number of students taking part in the Greenfield University Language Exchange Programme in three semesters. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\n\nGreenfield University Language Exchange – Participants by Language Pairing:\nSpring 2023: English-Spanish 45, English-Japanese 30, English-Arabic 20, Total 95\nAutumn 2023: English-Spanish 60, English-Japanese 35, English-Arabic 25, Total 120\nSpring 2024: English-Spanish 70, English-Japanese 50, English-Arabic 30, Total 150\n\nThe programme pairs a native speaker of one language with a learner of that language. Numbers show active pairs per semester.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Funding for Bicycle-Safety Events",
+        "focus": "paraphrase, linked ideas and evaluation of views",
+        "prompt": "You should spend about 40 minutes on this task. Some people think cities should spend more public money on bicycle-safety events and training for all age groups. Others think individuals should be responsible for their own safety and that money should be used for roads and public transport instead. Discuss both views and give your own opinion. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Language Exchange and Classroom Learning",
+        "focus": "clear comparisons, linked ideas and corrected details",
+        "prompt": "You should spend about 40 minutes on this task. At many universities, students can join a language exchange where they teach their own language to a partner and learn their partner's language in return. Some people argue this is more effective than traditional classroom language courses. Others say classroom teaching is more reliable and structured. Discuss the advantages and disadvantages of both methods and give your opinion. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Library Local-History Exhibits",
+        "focus": "paraphrase, linked ideas and reasoned evaluation",
+        "prompt": "You should spend about 40 minutes on this task. Many public libraries organise local-history exhibits with photographs, documents and objects from the community. Some people say this is an important use of library space and funds. Others believe libraries should focus mainly on digital resources and quiet study areas. To what extent do you agree or disagree? Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Bicycles and Getting Around",
+        "focus": "familiar topics, paraphrase and linked ideas",
+        "prompt": "Let's talk about getting around in your area.\nDo you ride a bicycle? Why or why not?\nHow common is cycling where you live?\nWhat makes cycling safe or unsafe in your city?\nHave your travel habits changed in the last few years?"
+      },
+      {
+        "task": "Part 1 · Libraries and Local History",
+        "focus": "familiar topics and clear comparisons",
+        "prompt": "Let's talk about libraries and learning.\nHow often do you visit a public library?\nWhat do you usually do when you go to a library?\nDo you enjoy learning about the history of your local area? Why or why not?\nDo you prefer learning from exhibits, books, or online resources?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Community Learning Event",
+        "focus": "linked ideas, corrected details and clear description",
+        "prompt": "Describe a bicycle-safety event, university language exchange meeting, or library local-history exhibit you have attended or would like to attend. You will have one minute to prepare and should speak for one to two minutes.\nYou should say:\n• what the event or exhibit was\n• when and where it took place or would take place\n• what you did or learned there\n• and explain why you found it useful or memorable.\nYou can add any other relevant details."
+      },
+      {
+        "task": "Part 3 · Community Events and Safety Education",
+        "focus": "reasons, evaluation and clear comparisons",
+        "prompt": "Let's discuss community safety events.\nWhy do some people choose to attend free city events like bicycle-safety festivals while others do not?\nHow can a city evaluate whether such events actually change people's behaviour?\nIs hands-on training more effective than posters or online videos for teaching safety? Why?"
+      },
+      {
+        "task": "Part 3 · Language, Culture and Public Spaces",
+        "focus": "evaluation, reasons and comparison across familiar academic topics",
+        "prompt": "Let's consider language learning and cultural exhibits.\nWhat are the advantages and disadvantages of learning a language through exchange with a partner compared to learning alone?\nShould universities require all students to take part in intercultural programmes? Why or why not?\nHow can libraries balance preserving local history with serving the needs of a diverse modern community?"
+      }
+    ]
+  }
+}

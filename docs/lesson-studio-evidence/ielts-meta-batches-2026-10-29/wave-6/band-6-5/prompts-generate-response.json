@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-6",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-6-v1",
+  "completedAt": "2026-10-29T05:20:33.960Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 652,
+    "outputTokens": 6331,
+    "totalTokens": 6983
+  },
+  "latencyMs": 20572,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Campus Biodiversity Garden Funding\",\"focus\":\"Summarising and comparing funding data with qualified claims\",\"prompt\":\"You should spend about 20 minutes on this task. Write at least 150 words.\\n\\nThe table below shows the funding plan for a proposed campus biodiversity garden at Greenfield University for the academic year 2024-2025.\\n\\nFunding source | Amount pledged (USD) | Status and conditions\\nUniversity Sustainability Fund | 18,000 | Confirmed; can be used only for native plants, soil and irrigation\\nStudent Union Grant | 7,500 | Pending approval, decision expected November 2024\\nLocal business sponsorship (3 companies combined) | 9,000 | Confirmed; sponsors require logo display at garden entrance for two years\\nAlumni donations | 4,200 | Collected by June 2024; amount may vary if further donations arrive\\nEstimated total cost of project | 42,000 | Includes design, planting and two years of maintenance\\n\\nSummarise the information by selecting and reporting the main features, making comparisons where relevant and noting any uncertainties or limitations in the funding.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Student Health Survey Results and Limitations\",\"focus\":\"Describing survey results and accurately handling limitations\",\"prompt\":\"You should spend about 20 minutes on this task. Write at least 150 words.\\n\\nThe table below summarises results from an online health and wellbeing survey of undergraduates at Greenfield University, conducted in March 2024.\\n\\nSurvey details: Invitations sent to 1,200 students; 300 responded (25% response rate). Participation was voluntary.\\n\\nIndicator | Result among respondents\\nAverage sleep less than 6 hours per night | 38%\\nExercise three or more times per week | 42%\\nReported high stress in the past two weeks | 61%\\nVisited campus health centre in the past month | 24%\\n\\nAdditional information about the sample: 68% of respondents were female, compared with 51% in the overall undergraduate population. First-year students made up 48% of respondents but only 32% of the student body.\\n\\nSummarise the information by selecting and reporting the main features, comparing the figures where relevant and explaining the limitations of the data.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Funding a Campus Biodiversity Garden\",\"focus\":\"Discussing competing priorities with balanced, evidence-based argument\",\"prompt\":\"You should spend about 40 minutes on this task. Write at least 250 words.\\n\\nAt Greenfield University, a proposal to build a campus biodiversity garden (estimated cost $42,000) has divided opinion. Supporters argue it will support wellbeing, education and local ecology. Critics argue that with limited budgets, universities should prioritise laboratories, libraries and student support services.\\n\\nDiscuss both views and give your own opinion. Support your argument with reasons and examples, using qualified language where claims are uncertain and referring to evidence cautiously.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Using Imperfect Health Survey Evidence\",\"focus\":\"Evaluating evidence and handling uncertainty in recommendations\",\"prompt\":\"You should spend about 40 minutes on this task. Write at least 250 words.\\n\\nA university health survey of 300 students (25% response rate, voluntary online participation) found that 61% reported high stress and 38% slept less than six hours per night. Some staff claim this proves poor sleep causes stress and demand immediate funding for new services. Others say the survey is too limited to support major decisions.\\n\\nTo what extent should universities act on limited survey evidence of this kind? Discuss how such data should be interpreted, what its limitations are, and what further evidence might be needed before making policy changes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Proposing Safer Walking Routes Near Schools\",\"focus\":\"Proposing and evaluating practical solutions with consideration of trade-offs\",\"prompt\":\"You should spend about 40 minutes on this task. Write at least 250 words.\\n\\nThe city council near Greenfield University proposes to create safer walking routes to three local schools by adding two new pedestrian crossings, widening 800 metres of pavement, introducing a 20 km/h speed limit between 7:30-9:00 and 14:30-16:00, and organising parent volunteers to supervise crossings. Some residents support the plan for safety and health reasons, while others oppose it due to traffic delays and inconvenience for drivers.\\n\\nDiscuss the possible benefits and drawbacks of this proposal and suggest how its effectiveness could be evaluated. Give reasons for your answer and include any relevant examples from your own experience or knowledge.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Green Spaces and Campus Life\",\"focus\":\"Describing personal habits and preferences related to nature\",\"prompt\":\"Answer the following questions in 2-3 sentences each. Do not give memorised answers.\\n1. Do you have access to a garden or green space where you study or live?\\n2. How often do you spend time in parks or natural areas?\\n3. What do you think a biodiversity garden could offer to students?\\n4. Has your attitude to nature changed since you were younger?\"},{\"task\":\"Part 1 · Health, Sleep and Daily Routines\",\"focus\":\"Talking about personal health habits with qualified descriptions\",\"prompt\":\"Answer the following questions in 2-3 sentences each.\\n1. How would you describe your current sleep habits?\\n2. What kind of exercise do you do, if any?\\n3. What helps you manage stress during busy periods?\\n4. Do you think students pay enough attention to their health? Why or why not?\"},{\"task\":\"Part 2 · Cue card · A Walk to School or University\",\"focus\":\"Describing a route with detail and reflection\",\"prompt\":\"Describe a walking route you use or used to get to school, university or work.\\n\\nYou should say:\\n- where the route starts and ends\\n- what you see or experience along the way\\n- who you usually walk with, if anyone\\n- and explain why this route is or was important to you.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Interpreting Surveys and Health Information\",\"focus\":\"Evaluating reliability, bias and cautious use of evidence\",\"prompt\":\"Discuss the following questions, giving reasons and examples.\\n1. Why might voluntary health surveys give a misleading picture of student wellbeing?\\n2. How should universities decide whether survey evidence is strong enough to act on?\\n3. What other types of evidence could complement a small survey before making policy changes?\\n4. Do you think people are becoming more cautious about health information online? Why or why not?\"},{\"task\":\"Part 3 · Funding Public Projects and Road Safety\",\"focus\":\"Weighing priorities, stakeholder views and measuring success\",\"prompt\":\"Discuss the following questions, giving reasons and evaluation.\\n1. Who should pay for projects like a campus biodiversity garden or safer school walking routes, and why?\\n2. How can planners balance driver convenience with pedestrian safety near schools?\\n3. What are the challenges of evaluating whether a safety project has actually worked?\\n4. Should local communities have a direct say in how such projects are funded and designed? Why or why not?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Campus Biodiversity Garden Funding",
+        "focus": "Summarising and comparing funding data with qualified claims",
+        "prompt": "You should spend about 20 minutes on this task. Write at least 150 words.\n\nThe table below shows the funding plan for a proposed campus biodiversity garden at Greenfield University for the academic year 2024-2025.\n\nFunding source | Amount pledged (USD) | Status and conditions\nUniversity Sustainability Fund | 18,000 | Confirmed; can be used only for native plants, soil and irrigation\nStudent Union Grant | 7,500 | Pending approval, decision expected November 2024\nLocal business sponsorship (3 companies combined) | 9,000 | Confirmed; sponsors require logo display at garden entrance for two years\nAlumni donations | 4,200 | Collected by June 2024; amount may vary if further donations arrive\nEstimated total cost of project | 42,000 | Includes design, planting and two years of maintenance\n\nSummarise the information by selecting and reporting the main features, making comparisons where relevant and noting any uncertainties or limitations in the funding.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Student Health Survey Results and Limitations",
+        "focus": "Describing survey results and accurately handling limitations",
+        "prompt": "You should spend about 20 minutes on this task. Write at least 150 words.\n\nThe table below summarises results from an online health and wellbeing survey of undergraduates at Greenfield University, conducted in March 2024.\n\nSurvey details: Invitations sent to 1,200 students; 300 responded (25% response rate). Participation was voluntary.\n\nIndicator | Result among respondents\nAverage sleep less than 6 hours per night | 38%\nExercise three or more times per week | 42%\nReported high stress in the past two weeks | 61%\nVisited campus health centre in the past month | 24%\n\nAdditional information about the sample: 68% of respondents were female, compared with 51% in the overall undergraduate population. First-year students made up 48% of respondents but only 32% of the student body.\n\nSummarise the information by selecting and reporting the main features, comparing the figures where relevant and explaining the limitations of the data.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Funding a Campus Biodiversity Garden",
+        "focus": "Discussing competing priorities with balanced, evidence-based argument",
+        "prompt": "You should spend about 40 minutes on this task. Write at least 250 words.\n\nAt Greenfield University, a proposal to build a campus biodiversity garden (estimated cost $42,000) has divided opinion. Supporters argue it will support wellbeing, education and local ecology. Critics argue that with limited budgets, universities should prioritise laboratories, libraries and student support services.\n\nDiscuss both views and give your own opinion. Support your argument with reasons and examples, using qualified language where claims are uncertain and referring to evidence cautiously.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Using Imperfect Health Survey Evidence",
+        "focus": "Evaluating evidence and handling uncertainty in recommendations",
+        "prompt": "You should spend about 40 minutes on this task. Write at least 250 words.\n\nA university health survey of 300 students (25% response rate, voluntary online participation) found that 61% reported high stress and 38% slept less than six hours per night. Some staff claim this proves poor sleep causes stress and demand immediate funding for new services. Others say the survey is too limited to support major decisions.\n\nTo what extent should universities act on limited survey evidence of this kind? Discuss how such data should be interpreted, what its limitations are, and what further evidence might be needed before making policy changes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Proposing Safer Walking Routes Near Schools",
+        "focus": "Proposing and evaluating practical solutions with consideration of trade-offs",
+        "prompt": "You should spend about 40 minutes on this task. Write at least 250 words.\n\nThe city council near Greenfield University proposes to create safer walking routes to three local schools by adding two new pedestrian crossings, widening 800 metres of pavement, introducing a 20 km/h speed limit between 7:30-9:00 and 14:30-16:00, and organising parent volunteers to supervise crossings. Some residents support the plan for safety and health reasons, while others oppose it due to traffic delays and inconvenience for drivers.\n\nDiscuss the possible benefits and drawbacks of this proposal and suggest how its effectiveness could be evaluated. Give reasons for your answer and include any relevant examples from your own experience or knowledge.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Green Spaces and Campus Life",
+        "focus": "Describing personal habits and preferences related to nature",
+        "prompt": "Answer the following questions in 2-3 sentences each. Do not give memorised answers.\n1. Do you have access to a garden or green space where you study or live?\n2. How often do you spend time in parks or natural areas?\n3. What do you think a biodiversity garden could offer to students?\n4. Has your attitude to nature changed since you were younger?"
+      },
+      {
+        "task": "Part 1 · Health, Sleep and Daily Routines",
+        "focus": "Talking about personal health habits with qualified descriptions",
+        "prompt": "Answer the following questions in 2-3 sentences each.\n1. How would you describe your current sleep habits?\n2. What kind of exercise do you do, if any?\n3. What helps you manage stress during busy periods?\n4. Do you think students pay enough attention to their health? Why or why not?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Walk to School or University",
+        "focus": "Describing a route with detail and reflection",
+        "prompt": "Describe a walking route you use or used to get to school, university or work.\n\nYou should say:\n- where the route starts and ends\n- what you see or experience along the way\n- who you usually walk with, if anyone\n- and explain why this route is or was important to you.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Interpreting Surveys and Health Information",
+        "focus": "Evaluating reliability, bias and cautious use of evidence",
+        "prompt": "Discuss the following questions, giving reasons and examples.\n1. Why might voluntary health surveys give a misleading picture of student wellbeing?\n2. How should universities decide whether survey evidence is strong enough to act on?\n3. What other types of evidence could complement a small survey before making policy changes?\n4. Do you think people are becoming more cautious about health information online? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Funding Public Projects and Road Safety",
+        "focus": "Weighing priorities, stakeholder views and measuring success",
+        "prompt": "Discuss the following questions, giving reasons and evaluation.\n1. Who should pay for projects like a campus biodiversity garden or safer school walking routes, and why?\n2. How can planners balance driver convenience with pedestrian safety near schools?\n3. What are the challenges of evaluating whether a safety project has actually worked?\n4. Should local communities have a direct say in how such projects are funded and designed? Why or why not?"
+      }
+    ]
+  }
+}

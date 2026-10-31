@@ -1,0 +1,9 @@
+{
+  "stage": "band-5",
+  "segment": "prompts",
+  "findings": [
+    { "reviewer": "gpt-6-luna", "item": "speaking", "severity": "high", "issue": "Only one Speaking prompt was returned instead of the required five, leaving this stage batch at 16 items and omitting Speaking Parts 2 and 3.", "recommendedRepair": "Add four distinct prompts to complete five Speaking prompts, covering Parts 1, 2 with visible cue-card bullets, and 3." },
+    { "reviewer": "gpt-6-luna", "item": "Task 1 · University Orientation Timetable", "severity": "medium", "issue": "The prompt lists Monday 1 September, Tuesday 2 September, and Wednesday 3 September 2026, but those dates are Tuesday, Wednesday, and Thursday.", "recommendedRepair": "Correct the weekday labels or choose dates that match Monday through Wednesday." },
+    { "reviewer": "gpt-5.6-terra", "item": "speaking", "severity": "high", "issue": "The stage supplies only one Speaking Part 1 prompt and has no Part 2 cue card or Part 3 discussion. This leaves the batch at 16 items rather than the intended 20 and does not cover the full IELTS Speaking format.", "recommendedRepair": "Add four speaking prompts: one further Part 1 set, two accessible Part 2 cue cards, and one scaffolded Part 3 discussion set. Preserve beginner-level language and make the total prompt count ten." }
+  ]
+}

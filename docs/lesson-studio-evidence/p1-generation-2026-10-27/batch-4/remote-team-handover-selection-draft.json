@@ -1,0 +1,53 @@
+{
+  "id": "draft-0e754c61-b77f-41b3-a7ed-1b4efc7f62ea",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Preparing a remote team handover",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Before the project lead leaves for annual leave, she will hand over the client schedule to her colleague. They will go over the open tasks in a short video call and flag any deadline that may change. The colleague will keep track of new requests in the shared log and follow up with the design team if a file is missing. A clear handover helps everyone know who is responsible while the lead is away.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "Before the project lead leaves for annual leave, she will hand over the client schedule to her colleague. They will go over the open tasks in a short video call and flag any deadline that may change. The colleague will keep track of new requests in the shared log and follow up with the design team if a file is missing. A clear handover helps everyone know who is responsible while the lead is away.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Before the project lead leaves for annual leave, she will hand over the client schedule to her colleague."
+      },
+      {
+        "id": "s2",
+        "text": "They will go over the open tasks in a short video call and flag any deadline that may change."
+      },
+      {
+        "id": "s3",
+        "text": "The colleague will keep track of new requests in the shared log and follow up with the design team if a file is missing."
+      },
+      {
+        "id": "s4",
+        "text": "A clear handover helps everyone know who is responsible while the lead is away."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "hand over",
+      "meaningEn": "to give responsibility for work to another person",
+      "meaningVi": "bàn giao công việc cho người khác",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "keep track of",
+      "meaningEn": "to monitor and record the progress of something over time",
+      "meaningVi": "theo dõi và ghi chép",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

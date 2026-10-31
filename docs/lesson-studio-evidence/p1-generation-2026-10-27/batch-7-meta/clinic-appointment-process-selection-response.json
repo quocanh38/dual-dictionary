@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "in advance",
+        "meaningEn": "before the appointment time, with notice given ahead of time",
+        "meaningVi": "trước giờ hẹn, báo trước",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "routine appointment",
+        "meaningEn": "a regular, non-urgent scheduled visit with a doctor",
+        "meaningVi": "cuộc hẹn khám thông thường, không khẩn cấp",
+        "sourceSentenceId": "s6"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 501,
+    "outputTokens": 903,
+    "totalTokens": 1404
+  },
+  "status": 200,
+  "latencyMs": 6006,
+  "model": "muse-spark-1.3"
+}

@@ -1,0 +1,32 @@
+{
+  "completedAt": "2026-10-29T04:24:45.087Z",
+  "status": "all-final-exact-hash-cross-reviews-pass",
+  "reviewers": [
+    "gpt-6-luna",
+    "gpt-6.1-sol"
+  ],
+  "candidate": "candidate-final-v4.json",
+  "stages": [
+    {
+      "batchId": "wave-4",
+      "stage": "band-5",
+      "candidateSha256": "b293fbeaaaaf6b42eed1eabc30a7631e61a7f26a5894802874575bb7930562cc"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-6",
+      "candidateSha256": "3560af2fe77289392b46e95addadf318a3d4c6288d3b88b1412635876c4d5cef"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-6-5",
+      "candidateSha256": "148ea435be99d65a34f93eaf8b0e419b56d0c86235fbe4c89238427e606d577f"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-7",
+      "candidateSha256": "a5663e4bb0cc1e3fb18ea6046ec99735ef0de6054766f2db702f62a6f25dd293"
+    }
+  ],
+  "decision": "AI-assisted editor accepts for local practice integration; minor observations retained; no unresolved critical/uncertain findings"
+}

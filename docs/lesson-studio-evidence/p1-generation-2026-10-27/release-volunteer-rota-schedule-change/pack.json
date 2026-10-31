@@ -1,0 +1,220 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-80b0637b-59e9-4e66-9717-6752a793bcdf",
+    "version": 1,
+    "title": "Workplace Scheduling: Bring Forward and Put Off",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T09:04:35.437Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Workplace Scheduling: Bring Forward and Put Off",
+        "objective": "Learners will understand and use bring forward and put off to describe moving work events earlier or later.",
+        "reading": {
+          "text": "After reviewing the volunteer rota, the project coordinator decided to bring forward the equipment check by one day because the meeting room is booked on Friday. The change does not affect the public event, which remains on Sunday. If delivery of the display boards is delayed, the team may put off the optional walkthrough until more volunteers are available. The coordinator will confirm any change by email, so volunteers should not rely on an old printed schedule. Anyone unable to attend can suggest another time, but the shared calendar will be updated only after the venue approves it. Volunteers are asked to reply by Wednesday so the coordinator can arrange enough people for each task.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "After reviewing the volunteer rota, the project coordinator decided to bring forward the equipment check by one day because the meeting room is booked on Friday."
+            },
+            {
+              "id": "s2",
+              "text": "The change does not affect the public event, which remains on Sunday."
+            },
+            {
+              "id": "s3",
+              "text": "If delivery of the display boards is delayed, the team may put off the optional walkthrough until more volunteers are available."
+            },
+            {
+              "id": "s4",
+              "text": "The coordinator will confirm any change by email, so volunteers should not rely on an old printed schedule."
+            },
+            {
+              "id": "s5",
+              "text": "Anyone unable to attend can suggest another time, but the shared calendar will be updated only after the venue approves it."
+            },
+            {
+              "id": "s6",
+              "text": "Volunteers are asked to reply by Wednesday so the coordinator can arrange enough people for each task."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "bring forward",
+            "meaningEn": "to move an event to an earlier time or date",
+            "meaningVi": "dời lên sớm hơn",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "put off",
+            "meaningEn": "to postpone something to a later time",
+            "meaningVi": "hoãn lại",
+            "sourceSentenceId": "s3"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s1, what does bring forward mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To move the equipment check to an earlier day.",
+                "explanation": "It is correct because the coordinator moved the check earlier since Friday is booked."
+              },
+              {
+                "id": "b",
+                "text": "To delay the equipment check to a later day.",
+                "explanation": "It is wrong because delaying means moving later, the opposite of the context."
+              },
+              {
+                "id": "c",
+                "text": "To cancel the equipment check completely.",
+                "explanation": "It is wrong because the check still happens, only the date changes."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The context shows the check happens one day earlier, not later or cancelled."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses bring forward correctly and naturally.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The team decided to bring forward the workshop to Thursday to avoid the Friday booking.",
+                "explanation": "It is correct because it uses bring forward with correct grammar to mean moving to an earlier date."
+              },
+              {
+                "id": "b",
+                "text": "She bring forward the presentation to Monday because the client is available.",
+                "explanation": "It is wrong because She bring should be She brings to agree with the subject."
+              },
+              {
+                "id": "c",
+                "text": "We will bring forward the review on next Tuesday to finish earlier.",
+                "explanation": "It is wrong because on next Tuesday should be next Tuesday without on."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one option uses bring forward with correct grammar to mean an earlier time."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s3, what does put off mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To start the walkthrough earlier than planned.",
+                "explanation": "It is wrong because starting earlier is the opposite of delaying until more volunteers are available."
+              },
+              {
+                "id": "b",
+                "text": "To postpone the walkthrough to a later time.",
+                "explanation": "It is correct because the team delays the walkthrough until more volunteers are available."
+              },
+              {
+                "id": "c",
+                "text": "To cancel the walkthrough permanently.",
+                "explanation": "It is wrong because the walkthrough may still happen later, not be cancelled forever."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The context shows a delay until more volunteers are available, not an earlier start or cancellation."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses put off correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "We had to put off the site visit until next week when more staff are available.",
+                "explanation": "It is correct because it uses put off with correct grammar to mean postponing to a later time."
+              },
+              {
+                "id": "b",
+                "text": "They has put off the training until June due to scheduling issues.",
+                "explanation": "It is wrong because They has should be They have to agree with the plural subject."
+              },
+              {
+                "id": "c",
+                "text": "He decided to put off the meeting in Monday morning because of the delay.",
+                "explanation": "It is wrong because in Monday morning should be on Monday morning for days."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one option uses put off with correct grammar to mean postponing."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "Imagine you are an office assistant emailing a client about a product meeting. Write 2-3 sentences explaining you need to postpone the meeting and suggesting a new arrangement. Use the phrase put off.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "sampleAnswer": "I am writing to let you know we need to put off our product meeting until next Tuesday. More team members will be available then to discuss the details with you.",
+            "selfCheck": [
+              "I wrote 2-3 sentences as a message with a new role and purpose.",
+              "I used put off correctly to mean postponing to a later time.",
+              "My message suggests a new arrangement for the meeting."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "gpt-5.6-terra; 2026-10-27T09:06:06Z. Full independent content review of this exact candidate: source/citations, both target glosses, all 15 options and explanations, and transfer. Rights and authorship are declaration-only: the supplied original-source declaration states permitted distribution and no learner PII, but were not independently verified.",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": []
+    }
+  },
+  "sha256": "8ac3d11991ead39a9408923aee29f30d5f0b63e1b60bde2c446b06aa261d0e8b"
+}

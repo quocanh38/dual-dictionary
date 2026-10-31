@@ -1,0 +1,212 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-898c63a0-049e-45cd-bd59-bd890e81691c",
+    "version": 1,
+    "title": "Collecting Information and Making Careful Judgments",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading composed for this project with coding-assistant assistance; no copied examination passage, third-party source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v4",
+      "generatedAt": "2026-10-27T04:35:40.915Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Collecting Information and Making Careful Judgments",
+        "objective": "Learners will understand and use 'gather evidence' and 'take into consideration' to describe careful academic work.",
+        "reading": {
+          "text": "A student research group will gather evidence about water use in two campus buildings. Before drawing a conclusion, the group must take into consideration the different numbers of people using each building. They will compare measurements from ordinary teaching weeks rather than holidays. Their report will explain the limits of the sample instead of claiming that one small study proves which building is always more efficient.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A student research group will gather evidence about water use in two campus buildings."
+            },
+            {
+              "id": "s2",
+              "text": "Before drawing a conclusion, the group must take into consideration the different numbers of people using each building."
+            },
+            {
+              "id": "s3",
+              "text": "They will compare measurements from ordinary teaching weeks rather than holidays."
+            },
+            {
+              "id": "s4",
+              "text": "Their report will explain the limits of the sample instead of claiming that one small study proves which building is always more efficient."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "gather evidence",
+            "meaningEn": "to collect information or facts to support a finding or idea",
+            "meaningVi": "thu thập bằng chứng hoặc dữ liệu để hỗ trợ một nhận định",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "take into consideration",
+            "meaningEn": "to think about something carefully when making a decision or judgment",
+            "meaningVi": "xem xét, cân nhắc đến điều gì",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s1, what does 'gather evidence' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To collect measurements and facts about water use to support a finding.",
+                "explanation": "This is correct because it matches collecting information to support a finding."
+              },
+              {
+                "id": "b",
+                "text": "To ignore measurements and hide facts about water use in the buildings.",
+                "explanation": "This is wrong because it describes the opposite of collecting information."
+              },
+              {
+                "id": "c",
+                "text": "To announce a final conclusion without checking any measurements.",
+                "explanation": "This is wrong because it describes deciding without information, not collecting it."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a correctly describes collecting facts to support a finding."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Which sentence uses 'gather evidence' naturally?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The team gathered evidence from surveys before recommending a new library schedule.",
+                "explanation": "This is correct because the verb form and collocation are natural."
+              },
+              {
+                "id": "b",
+                "text": "The team gathered evidences from surveys before recommending a new library schedule.",
+                "explanation": "This is wrong because 'evidences' should be corrected to 'evidence' as it is uncountable."
+              },
+              {
+                "id": "c",
+                "text": "The team gathered evidence for support their recommendation about the library schedule.",
+                "explanation": "This is wrong because 'for support' should be corrected to 'to support' before the verb."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a is the only fully grammatical and natural use."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s2, what does 'take into consideration' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To announce the building results immediately without further discussion.",
+                "explanation": "This is wrong because it describes deciding without careful thought."
+              },
+              {
+                "id": "b",
+                "text": "To think carefully about the different numbers of users when drawing a conclusion.",
+                "explanation": "This is correct because it matches thinking carefully when making a judgment."
+              },
+              {
+                "id": "c",
+                "text": "To refuse to compare the buildings because the numbers are different.",
+                "explanation": "This is wrong because it describes refusing to judge, not thinking carefully."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b correctly describes careful thought before a conclusion."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Which sentence uses 'take into consideration' naturally?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The committee will take rising transport costs into considerations when planning next term.",
+                "explanation": "This is wrong because 'considerations' should be corrected to 'consideration' in the fixed phrase."
+              },
+              {
+                "id": "b",
+                "text": "The committee will take rising transport costs into consideration when planning next term.",
+                "explanation": "This is correct because the fixed collocation and grammar are natural."
+              },
+              {
+                "id": "c",
+                "text": "The committee will take in consideration rising transport costs when planning next term.",
+                "explanation": "This is wrong because 'in' should be corrected to 'into' in the fixed collocation."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b is the only fully grammatical and natural use."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "Imagine you are a football fan writing a short online post to persuade friends that your favourite player deserves an award. Write 2–3 sentences using a natural form of 'gather evidence' to describe what you did.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "sampleAnswer": "I think our captain deserves the best player award this season. I gathered evidence from match videos and statistics to support my choice.",
+            "selfCheck": [
+              "My text has 2–3 sentences.",
+              "I used a natural form of 'gather evidence' to describe collecting information.",
+              "My role and purpose are persuading friends about a player, not reporting campus water use."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "Codex delegated adjudicator; economical cross-review Luna + Sol; 2026-10-27T04:44:30.914Z. Explicit AI-assisted editorial decision under owner delegation, after independent Luna and Sol full reviews. Every source, EN/VI target, option/explanation and transfer checked. Resolved prior follow-up ambiguity and Vietnamese overclaim. Original provider outputs and all edits retained. No human certification, learning outcome claim or deployment approval.",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": []
+    }
+  },
+  "sha256": "4703a2b464ec0dbb71897dba1c3df027c332374c19872ac160a58afea1bd5ccd"
+}

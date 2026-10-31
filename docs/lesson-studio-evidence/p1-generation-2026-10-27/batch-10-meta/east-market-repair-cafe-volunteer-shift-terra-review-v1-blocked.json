@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "64dd6f9ebca7b562c3860c3bc32ef4fd46c7666cbf77d351afe8542b775bfd11",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Independent Terra cross-reviewer",
+  "reviewedAt": "2026-10-27T08:49:00Z",
+  "note": "Recorded from the independent gpt-5.6-terra review of the exact v1 hash. Intentionally blocked; not used for approval. AI-assisted, not human or learner review; provenance rights remain declaration-only.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pass: local source declares AI-assisted original text and authorized use; no learner PII visible. Declaration-only, not independently verified."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Pass: “sign up for a shift” appears in cited s2 after the local sentence merge."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Pass: register to work during a particular period matches the meaning."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Pass: Vietnamese gloss naturally means registering for a work shift."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Pass: “runs out of” appears in cited s4 after the local sentence merge."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Pass: have no more of something left because it has been used matches the stock context."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Pass: Vietnamese gloss naturally means no stock remains."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Pass: a alone means registering for work; b/c/d are unrelated actions."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "Fail: overall explanation cites s3 although the target and source citation are now s2."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Pass: a is correct; b needs signs, c needs to help, d needs a."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Pass: all option explanations describe objective grammar corrections."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Pass: b alone means no stock remains."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "Fail: overall explanation cites s5 although the target and source citation are now s4."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Pass: b is correct; a/d need ran out, c needs run."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Pass: tense and agreement explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Pass: roommates and kitchen supplies differ from the repair-café setting."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "fail",
+      "evidence": "Fail: prompt does not explicitly request the target while model and checklist do."
+    }
+  ],
+  "findings": [
+    {
+      "id": "east-q1-source-reference",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "Top-level q1 explanation cites s3; target is at s2."
+    },
+    {
+      "id": "east-q3-source-reference",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "Top-level q3 explanation cites s5; target is at s4."
+    },
+    {
+      "id": "east-q5-missing-target-instruction",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "Transfer prompt omits required target phrase while sample and self-check require it."
+    }
+  ]
+}

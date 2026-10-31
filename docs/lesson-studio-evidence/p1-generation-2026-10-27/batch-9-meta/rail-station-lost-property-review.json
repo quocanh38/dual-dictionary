@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "193bb9647b047eed854a08abb8d3de7ad03689fbd2807015e0c0cf5ff2ba58d3",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews",
+  "reviewedAt": "2026-10-27T08:42:10.756Z",
+  "note": "Two independent AI-assisted reviewers evaluated the exact pack hash, matching source row, and schema. The recorded evidence synthesizes their findings and a source-level consistency check. Review is not human or learner validation. The rights/authorship statement is locally declared and not independently verified. Requested Luna route was not exposed (runtime-visible model label GPT-6); Terra route was gpt-5.6-terra (runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both independent reviewers checked the local provenance declaration for AI-assisted original educational text, authorized distribution, no copied exam/external source or learner PII; no PII is visible. This is a local declaration check, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “hand it in” appears verbatim in cited s1 and means giving found property to staff at an official desk."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the English gloss accurately describes giving a found item to staff at an official desk."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “giao nộp vật nhặt được cho nhân viên hoặc quầy thông tin” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “proof of ownership” appears verbatim in cited s3 as evidence that may be required before staff release an item."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss accurately defines evidence showing that the claimant owns the item."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “bằng chứng chứng minh quyền sở hữu” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only compliant meaning of handing in a found item; leaving it on a seat or keeping it is contrary to the passage."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all explanations accurately distinguish handing the item to staff from leaving or keeping it."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only grammatical option: b needs past-tense “handed”; c needs “an” before the vowel sound in “information”."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and article corrections are accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the only claimant evidence of ownership; the numbered tag and daily register are staff tracking records."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm each explanation correctly distinguishes claimant proof from the station’s internal records."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b has a subject/tense error and c incorrectly pluralizes “ownership” in this context."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and noun-form explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from claiming property at a station to a resident contacting an apartment manager about a parcel left in a lobby."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm v2 now explicitly requires the target phrase “proof of ownership”; prompt, natural sample using order confirmation and contents description, and checklist align. It asks for 2–3 sentences and remains self-assessed, not automatically graded."
+    }
+  ],
+  "findings": []
+}

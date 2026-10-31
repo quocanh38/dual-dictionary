@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 82,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after short circuit; reviewed against local OALD 10/LDOCE 6. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Prioritize useful general, academic, workplace, civic and travel vocabulary; explain phrasal-verb particle patterns, UK/US variants, less-common historical terms, and literal versus extended senses.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1220, "remainingRawOnlyAfter": 1200},
+  "selected": ["short cut", "short list", "shot put", "shoulder strap", "show boat", "show business", "show jumping", "shrove tuesday", "shut down", "shut in", "shut off", "shut out", "shuttle diplomacy", "siamese cat", "sickness benefit", "side effect", "side order", "side street", "side view", "side whiskers"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

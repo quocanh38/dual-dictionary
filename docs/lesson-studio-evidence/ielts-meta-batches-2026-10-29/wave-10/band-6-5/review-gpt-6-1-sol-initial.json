@@ -1,0 +1,93 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "21d324a20a4b49befe7299fb2d77954094cc9ad8151758eb0eb656014a3f4fb5",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-10-band-6-5-listening-01",
+      "severity": "minor",
+      "issue": "Stem attributes BuildingC 18% statement to Marco, but Priya says it in the script. Replace Marco with the students or Priya; content key is explicit and unique."
+    },
+    {
+      "item": "ielts-meta-wave-10-band-6-5-listening-04 explanation",
+      "severity": "minor",
+      "issue": "Explanation cites 1200 litres/day and purchase prices, but irrigation litres saved are not quantified. It should cite students explicit cost-per-litre conclusion rather than imply a numerical comparison can be independently calculated from listed figures."
+    },
+    {
+      "item": "ielts-meta-wave-10-band-6-5-speaking-03",
+      "severity": "minor",
+      "issue": "Put Unicode cue bullets on separate lines for cue-card readability; all required content/preparation/duration already present."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking. Read entire contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical to shared contexts. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete water-saving tutorial read: BuildingC 18% versus BuildingD 6%, missing guest leaflets, irrigation 22% dry-period correction to 14% semester, installation costs, showerhead 1200 litres/day and long-term turnover limitation. All five content keys [2,0,1,3,1],20 options and explanations supported; speaker attribution and quantitative explanation precision remain minor observations.",
+    "reading": "Complete monitoring passage read. Verified uneven 80-sensor placement,60% green locations,2.1 to 1.2°C adjusted cooling within 200 metres, limits of satellite comparison, raw 15% to adjusted 8% sparrow decline, effort/identification adjustments, variation and uncertainty. All five keys [0,3,1,2,0], options and explanations are supported.",
+    "writing": "All five prompts read. Water-use table supplies five complete building rows with baseline/projected/actual volumes, coverage and meter-fault note. Bird table supplies observer effort and three species counts across three habitats/two years, with weather/area/double-count limitations. Three Task 2 topics support qualified evaluation. All word/time instructions and metadata agree.",
+    "speaking": "All five prompts read: personal water/nature Part 1 sets, project-experience Part 2 with all cues and correct preparation/duration (inline readability observation), and two evaluative Part 3 sets. Appropriate advanced practice focus without required memorised statistics.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 322,
+        "reading": 407
+      },
+      "metadataWordCounts": {
+        "listening": 322,
+        "reading": 407
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Read Baseten Model API provenance, model meta-models/muse-spark-open-1026, wave10-v1 prompt versions and originalContent=true. No recognisable copied official question or score guarantee found; this is not an exhaustive plagiarism audit. Fictional study data assessed for internal consistency, not empirical validation. Stage labels indicate intended practice progression, not validated attainment.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-6-5-listening-01",
+      "ielts-meta-wave-10-band-6-5-listening-02",
+      "ielts-meta-wave-10-band-6-5-listening-03",
+      "ielts-meta-wave-10-band-6-5-listening-04",
+      "ielts-meta-wave-10-band-6-5-listening-05",
+      "ielts-meta-wave-10-band-6-5-reading-01",
+      "ielts-meta-wave-10-band-6-5-reading-02",
+      "ielts-meta-wave-10-band-6-5-reading-03",
+      "ielts-meta-wave-10-band-6-5-reading-04",
+      "ielts-meta-wave-10-band-6-5-reading-05",
+      "ielts-meta-wave-10-band-6-5-writing-01",
+      "ielts-meta-wave-10-band-6-5-writing-02",
+      "ielts-meta-wave-10-band-6-5-writing-03",
+      "ielts-meta-wave-10-band-6-5-writing-04",
+      "ielts-meta-wave-10-band-6-5-writing-05",
+      "ielts-meta-wave-10-band-6-5-speaking-01",
+      "ielts-meta-wave-10-band-6-5-speaking-02",
+      "ielts-meta-wave-10-band-6-5-speaking-03",
+      "ielts-meta-wave-10-band-6-5-speaking-04",
+      "ielts-meta-wave-10-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

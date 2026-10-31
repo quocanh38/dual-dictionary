@@ -1,0 +1,88 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "1d291ef42ecaca212f078d0603fbb5798307977f4a891ab070086d1e51ab751a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-10-band-7-speaking-02",
+      "severity": "minor",
+      "issue": "Question about usefulness of average wellbeing score is abstract analysis closer toPart 3 than everyday personalPart 1. Ask about personal information/preferences here and reserve averages analysis forPart 3."
+    },
+    {
+      "item": "ielts-meta-wave-10-band-7-writing-05",
+      "severity": "minor",
+      "issue": "Interrupted-time-series terminology creates specialist framing. Briefly define it as comparing outcome trends before and after a policy; prompt otherwise supplies dates/results and invites cautious causal reasoning."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking. Read entire contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical to shared contexts. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete tutoring/wellbeing/time-series tutorial read. Verified 0.3 SD effect, rural/urban and tutor differences, opposing composite components, full-year versus semester correction and concurrent-funding explanation. All five keys [0,0,2,3,1],20 options and explanations supported.",
+    "reading": "Complete 463-word passage read. Verified 0.35 SD trial result, implementation/context modifiers, neutral composite versus subgroup anxiety,48 monthly observations around January 2023, pre-existing trend and transport subsidy. All five keys [2,1,0,3,0], options and explanations supported; distinctions among claims, data and causality are clear.",
+    "writing": "All five prompts read. Tutoring arithmetic:67.4−58.2=9.2 and 62.1−57.9=4.2 points; scope and subgroup sizes supplied. Each wellbeing breakdown totals 2400 respondents; weighted means by year/accommodation/status are 7.2/7.1875/7.24375, all rounding to reported 7.2. All three Task 2 prompts are answerable; specialist terminology observation recorded. Minima 150/250 and suggested 20/40 minutes are in metadata.",
+    "speaking": "All five prompts read. Two personal-based Part 1 sets contain one abstract-average question noted separately; study-help Part 2 has four visible bullets/preparation/duration; two Part 3 sets invite precise evidence/policy evaluation. Advanced difficulty is coherent as practice, not a validated band assessment.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 335,
+        "reading": 463
+      },
+      "metadataWordCounts": {
+        "listening": 335,
+        "reading": 463
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          0,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          2,
+          1,
+          0,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Read Baseten Model API provenance, model meta-models/muse-spark-open-1026, wave10-v1 prompt versions and originalContent=true. No recognisable copied official question or score guarantee found; this is not an exhaustive plagiarism audit. Fictional study data assessed for internal consistency, not empirical validation. Stage labels indicate intended practice progression, not validated attainment.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-7-listening-01",
+      "ielts-meta-wave-10-band-7-listening-02",
+      "ielts-meta-wave-10-band-7-listening-03",
+      "ielts-meta-wave-10-band-7-listening-04",
+      "ielts-meta-wave-10-band-7-listening-05",
+      "ielts-meta-wave-10-band-7-reading-01",
+      "ielts-meta-wave-10-band-7-reading-02",
+      "ielts-meta-wave-10-band-7-reading-03",
+      "ielts-meta-wave-10-band-7-reading-04",
+      "ielts-meta-wave-10-band-7-reading-05",
+      "ielts-meta-wave-10-band-7-writing-01",
+      "ielts-meta-wave-10-band-7-writing-02",
+      "ielts-meta-wave-10-band-7-writing-03",
+      "ielts-meta-wave-10-band-7-writing-04",
+      "ielts-meta-wave-10-band-7-writing-05",
+      "ielts-meta-wave-10-band-7-speaking-01",
+      "ielts-meta-wave-10-band-7-speaking-02",
+      "ielts-meta-wave-10-band-7-speaking-03",
+      "ielts-meta-wave-10-band-7-speaking-04",
+      "ielts-meta-wave-10-band-7-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

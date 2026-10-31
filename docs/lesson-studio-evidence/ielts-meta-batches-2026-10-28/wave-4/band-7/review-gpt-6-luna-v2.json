@@ -1,0 +1,8 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "6fede567440b44dd00744a7354e78206dd576b7fa18f3b58d027277d950fe74a",
+  "verdict": "pass",
+  "findings": [],
+  "coverage": "Full exact-byte review of both shared contexts (366-word app-data seminar script; 427-word multi-site tutoring passage), all 10 Listening/Reading stems, options, keys and explanations, and all five Task 1/Task 2 Writing and five Speaking prompts. Confirmed unique keys grounded in the scripts/passages, including numerical corrections, qualification, inference and recommendations; distractors are contradicted or overstate the evidence, with explanations consistent with the source. Language and inference demands suit the advanced practice stage. Task 1 flood-risk probabilities and actual outcomes are explicit; the visitor/spending series specify years, sites and units (thousands of visitors and thousand dollars), with the damage note identified separately. OriginalContent provenance and wave disclosure identify original formative practice, not official IELTS material.",
+  "reviewerType": "AI-assisted"
+}

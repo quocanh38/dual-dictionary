@@ -1,44 +1,44 @@
-# Dual Dictionary
+# Dual Dictionary — Offline Lesson Studio
 
-Offline-first English dictionary for study and research.
+Turn a permitted reading into a reviewed bilingual lesson pack, then learn offline without an API key.
 
-Live app: [dualdictionary.netlify.app](https://dualdictionary.netlify.app/)
-
-Dual Dictionary is a browser-based PWA that brings two dictionary sources into
-one search workflow. When both sources are available, it can show WordNet 3.1
-and Simple English Wiktionary side by side. The app also supports an optional
-English–Vietnamese dictionary, reading mode, saved words, saved sentences,
-browser text-to-speech, and user-provided `.mdx` / `.mdd` files.
-
-## Highlights
-
-- Parallel lookup across WordNet 3.1 and Simple English Wiktionary
-- Optional open English–Vietnamese dictionary add-on
-- Phrase and multi-word search
-- Reading mode with tap-to-lookup and saved sentences
-- Saved words with lightweight review actions
-- PWA installation and offline use after dictionary data finishes downloading
-- Local-first storage with no account required
-- Bring your own authorized `.mdx`, `.mdd`, and optional `.css` files
+- [Live Studio](https://dualdictionary.netlify.app/lessons/)
+- [Live dictionary and Vault](https://dualdictionary.netlify.app/)
+- [Hackathon dossier](docs/hackathon-submission/README.md)
+- [Pre-event foundation and new hackathon work](NEW-WORK.md)
+- [Studio architecture and author workflow](docs/LESSON-STUDIO.md)
+- [Third-party data and code attribution](NOTICE.md)
 
 ## Run locally
 
-This is a static app with no build step. Serve the repository with any static
-HTTP server, then open the local URL in a modern browser. Opening `index.html`
-directly may prevent service-worker and local-file features from working.
+This is a static browser app. With Python 3 installed, run from the repository root:
 
-For deployment notes, see [`docs/deployment.md`](docs/deployment.md).
+```sh
+python3 -m http.server 8080
+```
 
-## Dictionary data and licensing
+Open http://localhost:8080/lessons/ for Studio, or http://localhost:8080/ for the main app. Use localhost or HTTPS for service workers; do not open index.html directly. Install a reviewed pack and wait for offline readiness before going offline.
 
-The public sample dictionaries are open-licensed. See [`NOTICE.md`](NOTICE.md)
-for attribution and license details. Commercial dictionaries are not bundled;
-users must load only files they are authorized to use.
+Learner practice needs no key. Creating drafts requires the author's own provider account/key, connectivity and per-request consent. The current creation route uses Baseten-hosted Muse Spark Open; optional repair uses Meta Model API. No credentials are bundled. Review and approval remain explicit; free writing is self-assessed.
 
-The app is provided for personal study and research. Check the applicable
-license terms before redistributing code or dictionary data.
+## Validate without provider calls
 
-## Roadmap
+Use a current Node.js release (22 or later):
 
-See [`ROADMAP.md`](ROADMAP.md) for the current direction, including the MDX-first
-reader workflow and future study features.
+```sh
+node tools/lessons/check.mjs
+node tools/lessons/library-check.mjs
+node tools/lessons/quality-gate-check.mjs
+```
+
+The library contains 33 approved, versioned AI-assisted packs. Automated validation and AI-assisted review do not establish learning gains or independent human language certification.
+
+## Source snapshot and scope
+
+This export contains the current application source, static learning assets, test/build tools and structured generation/review/QA evidence. It is based on private deployment-source commit `dddf30818`, including the v151 Studio UI and the separately updated submission documents of 31 October 2026. The pre-event dictionary, Reader, Vault and Tutor are disclosed in NEW-WORK.md; Studio is the hackathon contribution.
+
+Existing public repository history is preserved. Deployment-repository history, workstation handoffs and browser QA PNG screenshots are not exported; historical evidence references to those screenshots may therefore be unavailable. Structured JSON/text evidence remains included. Local demo video files and private study/browser backups are not in this source repository. A hosted three-minute video URL is still pending.
+
+This GitHub synchronization does not push to the separate Netlify deployment repository. The deployed application is not rebuilt by this change.
+
+Third-party content retains its own terms in NOTICE.md. No new blanket license grant for original application code is introduced by this synchronization.

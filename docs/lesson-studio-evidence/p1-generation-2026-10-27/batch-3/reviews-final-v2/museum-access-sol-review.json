@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "9418d62ef8d883d222c80e6c7ade38ff79f5902bcecfe53fe1620e3d93665783",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-sol",
+  "reviewedAt": "2026-10-27T06:44:47.414Z",
+  "note": "Independent AI-assisted editorial inspection of full exact final candidate, verified against canonical packSha256. Checked all sources, citations, English/Vietnamese meanings, options, explanations and transfer. Rights assessment relies on supplied original-author/distribution declaration; no external authorship verification, human or learner testing. Candidate unchanged.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Checked provenance: named Dual Dictionary project as AI-assisted author, original source declaration and explicit generation/distribution authorization. Reading contains no learner personal data. Rights assessment relies on supplied provenance; no external authorship verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains take steps to make its public lectures easier to attend; purpose clause supports taking action."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "to take action in order to achieve something is the contextual meaning in s1, rather than literal walking."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "thực hiện các hành động để đạt được điều gì đó is accurate Vietnamese with complete diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains identify barriers that prevent visitors from joining the discussion; relative clause explicitly supports obstacles."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Recognizing obstacles preventing participation accurately glosses identify barriers in s2."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "xác định các trở ngại ngăn cản mọi người làm điều gì đó is accurate, natural Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely expresses taking action to improve attendance. b changes the actor to walking visitors; c substitutes counting stairs. Citation s1 matches."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All a/b/c explanations and overall explanation correctly distinguish purposeful action from walking or counting stairs."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is grammatical and natural. b incorrectly pairs plural schools with has; c uses bare singular count noun step. Citation s1 supplies take steps."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All explanations accurately identify agreement in a/b and restore the target idiom take steps in c. Overall explanation correctly selects a."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b uniquely identifies obstacles preventing participation. a proposes building fences; c proposes welcoming people. Citation s2 matches the intended sense."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Every option explanation and the overall explanation accurately distinguish recognizing obstacles from building fences or welcoming visitors. stop visitors joining is natural British English."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is grammatical and natural. b uses prevents with plural barriers; c has undetermined singular barrier and plural prevent. Changing barrier to barriers fixes c. Citation s2 supplies the target."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations accurately address natural a, prevents to prevent in b, and barrier to barriers in c. The revised overall explanation correctly states plural barriers matches prevent; prior fixed-collocation overstatement is absent in this exact payload."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Class representative improving group study sessions differs from museum organisers improving public lectures; target applies naturally to this new academic purpose. Citation s2 is valid."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence sample naturally uses identify barriers and gives meeting-time/noise obstacles with proposed changes. Checklist covers role, length, target meaning and grammar; explanation explicitly says no automatic grade."
+    }
+  ],
+  "findings": []
+}

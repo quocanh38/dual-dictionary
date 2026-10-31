@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 114,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after arctic circle; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the A-section with scientific, historical, technical and high-utility vocabulary. Explain variant spelling, terminology, collocations, grammar and conceptual contrasts without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 588,
+    "remainingRawOnlyAfter": 568
+  },
+  "selected": [
+    "arithmetic mean",
+    "armistice day",
+    "armour plate",
+    "artesian well",
+    "article of faith",
+    "articles of confederation",
+    "arts and crafts",
+    "aspect ratio",
+    "assembly language",
+    "assembly line",
+    "atomic bomb",
+    "atomic energy",
+    "atomic number",
+    "atomic theory",
+    "atomic weight",
+    "attorney general",
+    "au fait",
+    "auto-immune disease",
+    "automated teller machine",
+    "automatic transmission"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

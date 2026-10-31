@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-29",
+  "batchId": "wave-5",
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "generationCalls": 8,
+  "repairCalls": 6,
+  "providerResponses": "All 14 requests returned HTTP 200; per-call metadata is retained with responses.",
+  "candidateFiles": "candidate-final-v2.json",
+  "reviewers": [
+    "gpt-6-luna",
+    "gpt-6.1-sol"
+  ],
+  "reviewStatus": "All four final exact-byte hashes passed both reviewers with no unresolved findings.",
+  "nonBlockingObservations": [
+    "Band-7 Writing prompt participation-rate denominator could be clearer.",
+    "Band-7 Speaking Part 1 prompt is relatively abstract."
+  ],
+  "integration": {
+    "status": "PASS",
+    "report": "integration-report.json",
+    "output": "js/ielts-meta-practice.js",
+    "outputSha256": "3b3664de66b477f13e154ade005ff90faccf6264afecf9a1486a6a376642196c",
+    "reviewedItems": 400,
+    "newWaveItems": 80,
+    "totalsBySkill": {
+      "Listening": 100,
+      "Reading": 100,
+      "Writing": 100,
+      "Speaking": 100
+    }
+  },
+  "offlinePack": {
+    "version": "2.8.0",
+    "serviceWorkerCache": "mdx-dict-v146",
+    "stableContentIds": 520,
+    "ieltsObjectiveQuestions": 284,
+    "ieltsDiagnostics": 80,
+    "ieltsObjectivePractice": 204,
+    "writingPrompts": 110,
+    "speakingPrompts": 110
+  },
+  "checks": [
+    {
+      "command": "node tools/tutor/check.mjs",
+      "status": "PASS",
+      "result": "520 stable content IDs; 400 GPT-cross-reviewed IELTS Meta items; IELTS and TOEIC schemas/counts pass."
+    },
+    {
+      "command": "node tools/tutor/offline-study-smoke.cjs",
+      "status": "PASS",
+      "result": "IELTS stage filtering, diagnostic sessions, audio, writing/speaking drafts, backup/import, encrypted backup round-trip; zero page errors."
+    },
+    {
+      "command": "node tools/tutor/offline-cache-smoke.cjs",
+      "status": "PASS",
+      "result": "1280px and 390px app shell and first IELTS question load after network loss; zero page errors."
+    }
+  ],
+  "accountUsageOrBillingChecked": false,
+  "liveVersion": "v148 unchanged",
+  "pushedOrDeployed": false
+}

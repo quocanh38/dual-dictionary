@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e1f96a2b0ba94617965237f40f865c74216757e3ba317d093f78f043000846f1",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading are 331/409 words, within range. All objective keys and explanations are supported and answer positions balanced. Music-room reservation details are internally consistent. Bicycle-safety Reading covers road rules, equipment checks and supervised practical training. Writing Task 1 includes visible film attendance and enjoyment figures, museum layout changes, and an ordered safety-check diagram. Step 5 now specifies safe pedal reach with a slight knee bend and adjustment under manufacturer guidance, resolving the earlier unsafe seat-height advice. Speaking parts and cue-card points/timing are complete. Provenance is original; no score or official-item claims. Minor clarity: film enjoyment percentages lack a respondent denominator."
+  ],
+  "coverage": "Full review of provenance/metadata, both contexts and word limits, all 10 objective prompts/options/keys/explanations, all five Writing prompts and data/process sequence, all five Speaking prompts including Part 2 cue card and timing, and bicycle-safety fit instruction.",
+  "reviewerType": "AI-assisted"
+}

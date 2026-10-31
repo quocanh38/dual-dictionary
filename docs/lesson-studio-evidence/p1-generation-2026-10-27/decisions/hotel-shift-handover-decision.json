@@ -1,0 +1,11 @@
+{
+  "decision": "approve-for-local-release-qa",
+  "delegation": "Owner cross-model content-approval authorization27October2026",
+  "candidateSha256": "8e3203a631ea43c77e5e86e443df709c9e7e4122083c8e03ea09f894532d81c1",
+  "crossReviewSha256": {
+    "luna": "fbe5cc6d5fd773df84f897bbab83e7b402648af43091c42e9b0ed908c397aaa0",
+    "sol": "2149951b05ca1f698ed46392b4c653b8916ce8af3807f91b4eba1cbbd558d9b8"
+  },
+  "reason": "Repaired q4 no longer labels transitive follow up as wrong; wrong options have redundant on or modal agreement error.",
+  "deployed": false
+}

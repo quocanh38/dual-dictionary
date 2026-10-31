@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "0cf868d01f48a08b034eacb1aa0c8ba9602dd05a88cb8459790fe9ab5707389f",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex coding assistant",
+  "reviewedAt": "2026-10-27T01:33:35.250Z",
+  "note": "AI-assisted editorial review of all targets, options, explanations and transfer. Not independent human review, learner effectiveness evidence or certification. Manual corrections retain original Meta generation metadata and separate before/after evidence. No approval action performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Original short reading drafted within this project with AI assistance; author/rights statement recorded; no copied exam text, external source or personal learner data in the reading."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "keep track of occurs verbatim in s1: Our team will keep track of customer requests during the software trial."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Reviewed contextual gloss: to stay informed about something by monitoring it over time. It states the phrase meaning, not a reason to choose it."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Reviewed Vietnamese meaning: theo dõi để nắm được thông tin cập nhật về điều gì. Fits the cited context and contains diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "take into account occurs verbatim in s2: We need to take into account the time required to train new staff before setting a launch date."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Reviewed contextual gloss: to consider something when making a decision or plan. It states the phrase meaning, not a reason to choose it."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Reviewed Vietnamese meaning: cân nhắc, tính đến điều gì khi đưa ra quyết định hoặc kế hoạch. Fits the cited context and contains diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a means monitoring requests and staying informed; b is ignoring, c completing requests quickly, neither defines ongoing monitoring."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Corrected gloss/explanation does not require written notes. Completing requests and monitoring their status are different actions."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b uses keep track of correctly; a incorrectly has on instead of of; c omits required of. No assumed intention is needed to distinguish them."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "b explains the spreadsheet as one optional method; a/c identify the preposition correction, not a claim that monitoring always needs records."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c means considering training time when planning; a ignores it and b describes speed, neither defines considering a factor."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations track the distinction between consideration, ignoring and speed; no extra sense is introduced."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uses take into account correctly; b adds an erroneous of after account; c puts into after account."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each distractor has an objective fixed-expression error; explanations specify deleting of or restoring take into account."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Friendly laptop-buying advice replaces workplace launch planning; recipient, purpose and factor considered change."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence idiomatic answer uses take into account battery life and weight; checklist fits the new task; no automatic writing grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "uncertain",
+      "resolved": true,
+      "evidence": "q2c missing of and q4c wrong phrase order replace presumed-intention alternatives. keep track of gloss and q1 explanations also corrected: written recording is optional. Original output retained."
+    }
+  ]
+}

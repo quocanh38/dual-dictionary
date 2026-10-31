@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-8",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:21:25.376Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 750,
+    "outputTokens": 9155,
+    "totalTokens": 9905
+  },
+  "latencyMs": 39376,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"Campus Music Room Reservation\",\"focus\":\"booking details and conditions\",\"part\":\"Part 1\",\"script\":\"Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\\nMr. Davies: Of course, Maya. Which day would you like?\\nMaya: This Thursday, please. In the afternoon.\\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\\nMaya: I prefer the grand piano, so Room B, please.\\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\\nMaya: From 3 p.m. to 5 p.m. would be great.\\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\\nMaya: Yes, 4 to 6 is fine.\\nMr. Davies: Great. How long will you need it regularly? Just this week?\\nMaya: Just this Thursday for now. Maybe every week later.\\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\\nMaya: That's fine. Do I need to bring anything?\\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\\nMaya: M-442, got it. Can I book online next time?\\nMr. Davies: Yes, after today you can book on the campus website.\\nMaya: Perfect. Thank you very much.\\nMr. Davies: You're welcome. See you Thursday.\",\"questions\":[{\"title\":\"Reason for Calling\",\"prompt\":\"What does Maya want to do?\",\"options\":[\"Reserve a practice room for piano\",\"Cancel a music lesson on Friday\",\"Buy a grand piano for home\",\"Join the campus music club\"],\"answer\":0,\"explanation\":\"She says she wants to book a room for piano practice. The lesson option is wrong because she is booking, not cancelling.\"},{\"title\":\"Room Choice\",\"prompt\":\"Why does Maya choose Room B?\",\"options\":[\"It is cheaper than Room A\",\"It has a grand piano\",\"It is free all afternoon\",\"It is near the reception desk\"],\"answer\":1,\"explanation\":\"She prefers the grand piano, which is in Room B. Price is not mentioned as a difference between rooms.\"},{\"title\":\"Final Booking Time\",\"prompt\":\"What is Maya's final booking time?\",\"options\":[\"2 p.m. to 4 p.m.\",\"3 p.m. to 5 p.m.\",\"4 p.m. to 6 p.m.\",\"5 p.m. to 7 p.m.\"],\"answer\":2,\"explanation\":\"The receptionist corrects the first request and confirms 4 to 6 p.m. The 3 to 5 slot was requested but unavailable.\"},{\"title\":\"Payment Amount\",\"prompt\":\"How much will Maya pay for her booking?\",\"options\":[\"$5 in total\",\"$15 in total\",\"$20 in total\",\"$10 in total\"],\"answer\":3,\"explanation\":\"The fee is $5 per hour for two hours, totalling $10. $5 would be for one hour only.\"},{\"title\":\"Rules to Follow\",\"prompt\":\"What must Maya bring and follow?\",\"options\":[\"Bring student ID and no food or drinks\",\"Bring own piano and pay online\",\"Bring two guests and arrive early\",\"Bring booking number M-442 only\"],\"answer\":0,\"explanation\":\"She must show her ID and not bring food or drinks. The booking number is given but not the only requirement.\"}]},\"reading\":{\"title\":\"Student Bicycle Safety Workshop\",\"focus\":\"main ideas and supporting examples\",\"passage\":\"Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to college and cycling saves money and time every day in town together. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\\n\\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\\n\\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, found that her helmet was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\\n\\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\\n\\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.\",\"questions\":[{\"title\":\"Purpose of Workshop\",\"prompt\":\"Why did Student Services organise the workshop?\",\"options\":[\"To reduce accidents near campus gates\",\"To sell bicycles to new students\",\"To build a new sports hall\",\"To train police officers in town\"],\"answer\":0,\"explanation\":\"The text links recent accidents near the gates to the decision to help students stay safe. Selling bicycles was the bike shop's job, not the college's purpose.\"},{\"title\":\"Workshop Leaders\",\"prompt\":\"Who led the bicycle safety workshop?\",\"options\":[\"Two college teachers\",\"A police officer and a bike mechanic\",\"Forty student volunteers\",\"Sports hall managers\"],\"answer\":1,\"explanation\":\"The passage names Officer White and mechanic Sam Lee as leaders. Teachers and volunteers attended but did not lead.\"},{\"title\":\"Practical Activity\",\"prompt\":\"What did students do during practical training?\",\"options\":[\"Watched videos inside the hall\",\"Repaired the campus gates\",\"Rode a marked course in the car park\",\"Wrote a booklet about helmets\"],\"answer\":2,\"explanation\":\"They rode a cone-marked course outside while leaders gave advice. The booklet was given to them, not written by them.\"},{\"title\":\"Understanding Lisa's Experience\",\"prompt\":\"What can be inferred about Lisa before the workshop?\",\"options\":[\"She worked at the bike shop\",\"She taught other students safety\",\"She never owned a bicycle before\",\"She thought her helmet fitted correctly\"],\"answer\":3,\"explanation\":\"She only discovered the looseness when checking on the course, implying she believed it was fine. There is no evidence she worked at the shop.\"},{\"title\":\"Author's Main Point\",\"prompt\":\"Which is the author's claim, not just an example?\",\"options\":[\"Lisa's helmet was loose during practice\",\"The workshop mainly built student confidence\",\"Cones marked turns in the car park\",\"The next workshop is in November\"],\"answer\":1,\"explanation\":\"The writer states confidence-building as the main value, while Lisa's helmet is presented as one example. The November date is a future plan, not the claim.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Campus Music Room Reservation",
+      "focus": "booking details and conditions",
+      "part": "Part 1",
+      "script": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "questions": [
+        {
+          "title": "Reason for Calling",
+          "prompt": "What does Maya want to do?",
+          "options": [
+            "Reserve a practice room for piano",
+            "Cancel a music lesson on Friday",
+            "Buy a grand piano for home",
+            "Join the campus music club"
+          ],
+          "answer": 0,
+          "explanation": "She says she wants to book a room for piano practice. The lesson option is wrong because she is booking, not cancelling."
+        },
+        {
+          "title": "Room Choice",
+          "prompt": "Why does Maya choose Room B?",
+          "options": [
+            "It is cheaper than Room A",
+            "It has a grand piano",
+            "It is free all afternoon",
+            "It is near the reception desk"
+          ],
+          "answer": 1,
+          "explanation": "She prefers the grand piano, which is in Room B. Price is not mentioned as a difference between rooms."
+        },
+        {
+          "title": "Final Booking Time",
+          "prompt": "What is Maya's final booking time?",
+          "options": [
+            "2 p.m. to 4 p.m.",
+            "3 p.m. to 5 p.m.",
+            "4 p.m. to 6 p.m.",
+            "5 p.m. to 7 p.m."
+          ],
+          "answer": 2,
+          "explanation": "The receptionist corrects the first request and confirms 4 to 6 p.m. The 3 to 5 slot was requested but unavailable."
+        },
+        {
+          "title": "Payment Amount",
+          "prompt": "How much will Maya pay for her booking?",
+          "options": [
+            "$5 in total",
+            "$15 in total",
+            "$20 in total",
+            "$10 in total"
+          ],
+          "answer": 3,
+          "explanation": "The fee is $5 per hour for two hours, totalling $10. $5 would be for one hour only."
+        },
+        {
+          "title": "Rules to Follow",
+          "prompt": "What must Maya bring and follow?",
+          "options": [
+            "Bring student ID and no food or drinks",
+            "Bring own piano and pay online",
+            "Bring two guests and arrive early",
+            "Bring booking number M-442 only"
+          ],
+          "answer": 0,
+          "explanation": "She must show her ID and not bring food or drinks. The booking number is given but not the only requirement."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Student Bicycle Safety Workshop",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to college and cycling saves money and time every day in town together. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, found that her helmet was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "questions": [
+        {
+          "title": "Purpose of Workshop",
+          "prompt": "Why did Student Services organise the workshop?",
+          "options": [
+            "To reduce accidents near campus gates",
+            "To sell bicycles to new students",
+            "To build a new sports hall",
+            "To train police officers in town"
+          ],
+          "answer": 0,
+          "explanation": "The text links recent accidents near the gates to the decision to help students stay safe. Selling bicycles was the bike shop's job, not the college's purpose."
+        },
+        {
+          "title": "Workshop Leaders",
+          "prompt": "Who led the bicycle safety workshop?",
+          "options": [
+            "Two college teachers",
+            "A police officer and a bike mechanic",
+            "Forty student volunteers",
+            "Sports hall managers"
+          ],
+          "answer": 1,
+          "explanation": "The passage names Officer White and mechanic Sam Lee as leaders. Teachers and volunteers attended but did not lead."
+        },
+        {
+          "title": "Practical Activity",
+          "prompt": "What did students do during practical training?",
+          "options": [
+            "Watched videos inside the hall",
+            "Repaired the campus gates",
+            "Rode a marked course in the car park",
+            "Wrote a booklet about helmets"
+          ],
+          "answer": 2,
+          "explanation": "They rode a cone-marked course outside while leaders gave advice. The booklet was given to them, not written by them."
+        },
+        {
+          "title": "Understanding Lisa's Experience",
+          "prompt": "What can be inferred about Lisa before the workshop?",
+          "options": [
+            "She worked at the bike shop",
+            "She taught other students safety",
+            "She never owned a bicycle before",
+            "She thought her helmet fitted correctly"
+          ],
+          "answer": 3,
+          "explanation": "She only discovered the looseness when checking on the course, implying she believed it was fine. There is no evidence she worked at the shop."
+        },
+        {
+          "title": "Author's Main Point",
+          "prompt": "Which is the author's claim, not just an example?",
+          "options": [
+            "Lisa's helmet was loose during practice",
+            "The workshop mainly built student confidence",
+            "Cones marked turns in the car park",
+            "The next workshop is in November"
+          ],
+          "answer": 1,
+          "explanation": "The writer states confidence-building as the main value, while Lisa's helmet is presented as one example. The November date is a future plan, not the claim."
+        }
+      ]
+    }
+  }
+}

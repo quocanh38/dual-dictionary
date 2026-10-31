@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "21d324a20a4b49befe7299fb2d77954094cc9ad8151758eb0eb656014a3f4fb5",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-10-band-6-5-listening-04 / Campus Water-Saving Project Discussion",
+      "issue": "The script asserts showerheads had “much better” cost per litre saved, but gives no absolute irrigation water volume saved and compares an installation cost with season-specific/semester savings. The stated figures cannot substantiate that comparative unit cost. Add comparable absolute savings and aligned cost/time bases, or soften/remove the cost-per-litre conclusion and the dependent keyed answer.",
+      "severity": "major"
+    }
+  ],
+  "observations": [
+    "Listening/Reading contexts are 322/407 words; the other nine objective keys are supported and explanations align with the contexts. Task 1 water data includes units, projected/actual figures and the Sports Centre meter-fault caveat; bird-count data includes observer hours, weather, habitat-area and double-counting limitations. Writing targets/timing and Speaking parts/cue-card elements are complete. Original-content provenance is stated; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, all 10 objective prompts/options/keys/explanations, both Task 1 datasets including units/denominators/limitations, all five Writing prompts/timing, and all five Speaking prompts including part fit/cue card. Checked cost and water-savings evidence for internal comparability.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,336 @@
+{
+  "stage": "band-7",
+  "batchId": "wave-6",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-6-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-6-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Riverton Bus-Fare Pilot Evaluation",
+      "focus": "Causal limits and sampling bias in transport policy evidence",
+      "part": "Part 3",
+      "script": "Maya: Hi Jonah, have you finished reading the evaluation of the Riverton bus-fare pilot for our transport policy seminar?\nJonah: Mostly. The city cut all bus fares by 50% from April to June last year to test whether cheaper fares would encourage regular commuters to switch from cars, right?\nMaya: Yes, that was the official aim in the council brief — to see if lower costs would shift daily commuting patterns, not just leisure trips.\nJonah: I wrote down it ran from March to May, actually sorry, April to June — I misread the dates. Three months total. The report says weekday ridership rose 18% compared to January to March.\nMaya: That's the headline increase, but we have to be careful about causality. In May, petrol prices rose 22% citywide, so driving became much more expensive during the same period.\nJonah: So we can't tell how much of the rise was due to the fare cut versus people avoiding high fuel costs.\nMaya: Exactly. And there was no control group — no similar city or unaffected bus route to compare against. Without that, any causal claim is weak.\nJonah: What about the passenger survey? It said 78% of respondents would continue using the bus if fares stayed low.\nMaya: But that survey was voluntary, conducted at the central terminal on weekdays. The authors note respondents were self-selected — mainly frequent riders who benefited most.\nJonah: So it overrepresents enthusiastic users and underrepresents occasional riders or those who didn't change behaviour.\nMaya: Right, that's a classic selection bias. The report acknowledges the sample isn't representative of all residents.\nJonah: So for our presentation, we shouldn't say the pilot proved cheaper fares work.\nMaya: No, we should conclude the evidence is suggestive but inconclusive. We can recommend a longer, controlled trial with random sampling across routes and neighbourhoods to get a clearer picture.\nJonah: That makes sense. We'll emphasize the limits and propose a better design rather than claiming success.",
+      "wordCount": 328
+    },
+    "reading": {
+      "title": "Volunteer Heat Maps and Education Rankings",
+      "focus": "Selection bias and measurement uncertainty in policy data",
+      "passage": "Cities increasingly rely on low-cost data to guide climate policy. One popular method is the volunteer heat survey, where residents use handheld sensors to record street-level temperatures during a heatwave. These campaigns generate detailed maps and raise public awareness, but they also introduce systematic errors that are often overlooked in media reports. Policymakers may be tempted to treat these maps as complete, but without understanding who participated, they risk misallocating cooling resources to already comfortable neighbourhoods.\n\nThe 2022 Riverton Heat Watch illustrates the problem. Organisers recruited 140 volunteers through neighbourhood associations and social media. Participation was voluntary, and the resulting sample was geographically skewed: 68% of readings came from the greener, wealthier northern districts, where tree cover is high and housing is less dense. Only 12% came from the industrial south, where asphalt and warehouses trap heat. Because volunteers chose where and when to measure, often near their homes on pleasant streets, the dataset overrepresented cooler areas. The published citywide average of 31.4°C therefore understated the true exposure in the hottest zones, where independent satellite data later showed peaks of 38.1°C. The example does not prove volunteers are unmotivated; it shows how self-selection shapes coverage.\n\nThe author argues that such surveys should not be dismissed, but their scope must be qualified. They are valuable for identifying relative hotspots within sampled areas and for community engagement, yet they cannot support precise citywide estimates or causal claims about the effectiveness of cooling interventions without statistical adjustment for sampling bias. The limitation is not the volunteers' effort but the lack of random, representative coverage. Weighting results by district population or supplementing with satellite data can reduce bias, but such corrections are rarely applied in initial press releases.\n\nA similar issue of uncertainty appears in cross-country education indicators. International reports often rank countries by secondary-school completion rates, implying direct comparability. However, national definitions of \"completion\" differ — some count part-time vocational programmes, others do not — and data collection varies from census to sample surveys. A country reporting 89% completion may appear superior to one reporting 82%, but the gap may reflect measurement differences rather than real achievement. The passage notes that year-to-year changes within a single country, using a consistent method, are more reliable than cross-country league tables at a single point in time.\n\nTogether, these cases suggest a general principle: data collected for different purposes or through non-random methods require careful interpretation. Recognising who is missing, how definitions vary, and what comparisons are warranted prevents overclaiming and leads to more honest policy. Transparency about methods and limits, rather than precise rankings, builds greater trust in the evidence.",
+      "wordCount": 435
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-6-band-7-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverton Bus-Fare Pilot Evaluation",
+      "pathwayStage": "band-7",
+      "focus": "Causal limits and sampling bias in transport policy evidence",
+      "transcript": "Maya: Hi Jonah, have you finished reading the evaluation of the Riverton bus-fare pilot for our transport policy seminar?\nJonah: Mostly. The city cut all bus fares by 50% from April to June last year to test whether cheaper fares would encourage regular commuters to switch from cars, right?\nMaya: Yes, that was the official aim in the council brief — to see if lower costs would shift daily commuting patterns, not just leisure trips.\nJonah: I wrote down it ran from March to May, actually sorry, April to June — I misread the dates. Three months total. The report says weekday ridership rose 18% compared to January to March.\nMaya: That's the headline increase, but we have to be careful about causality. In May, petrol prices rose 22% citywide, so driving became much more expensive during the same period.\nJonah: So we can't tell how much of the rise was due to the fare cut versus people avoiding high fuel costs.\nMaya: Exactly. And there was no control group — no similar city or unaffected bus route to compare against. Without that, any causal claim is weak.\nJonah: What about the passenger survey? It said 78% of respondents would continue using the bus if fares stayed low.\nMaya: But that survey was voluntary, conducted at the central terminal on weekdays. The authors note respondents were self-selected — mainly frequent riders who benefited most.\nJonah: So it overrepresents enthusiastic users and underrepresents occasional riders or those who didn't change behaviour.\nMaya: Right, that's a classic selection bias. The report acknowledges the sample isn't representative of all residents.\nJonah: So for our presentation, we shouldn't say the pilot proved cheaper fares work.\nMaya: No, we should conclude the evidence is suggestive but inconclusive. We can recommend a longer, controlled trial with random sampling across routes and neighbourhoods to get a clearer picture.\nJonah: That makes sense. We'll emphasize the limits and propose a better design rather than claiming success.",
+      "prompt": "What was the council's stated aim for the fare reduction?",
+      "options": [
+        "Encourage daily commuters to switch from cars",
+        "Increase leisure travel on weekends",
+        "Test electric buses on busy routes",
+        "Reduce traffic congestion downtown only"
+      ],
+      "answer": 0,
+      "explanation": "The brief aimed to shift daily commuting from cars, not leisure trips. Option B reverses the stated scope."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverton Bus-Fare Pilot Evaluation",
+      "pathwayStage": "band-7",
+      "focus": "Causal limits and sampling bias in transport policy evidence",
+      "transcript": "Maya: Hi Jonah, have you finished reading the evaluation of the Riverton bus-fare pilot for our transport policy seminar?\nJonah: Mostly. The city cut all bus fares by 50% from April to June last year to test whether cheaper fares would encourage regular commuters to switch from cars, right?\nMaya: Yes, that was the official aim in the council brief — to see if lower costs would shift daily commuting patterns, not just leisure trips.\nJonah: I wrote down it ran from March to May, actually sorry, April to June — I misread the dates. Three months total. The report says weekday ridership rose 18% compared to January to March.\nMaya: That's the headline increase, but we have to be careful about causality. In May, petrol prices rose 22% citywide, so driving became much more expensive during the same period.\nJonah: So we can't tell how much of the rise was due to the fare cut versus people avoiding high fuel costs.\nMaya: Exactly. And there was no control group — no similar city or unaffected bus route to compare against. Without that, any causal claim is weak.\nJonah: What about the passenger survey? It said 78% of respondents would continue using the bus if fares stayed low.\nMaya: But that survey was voluntary, conducted at the central terminal on weekdays. The authors note respondents were self-selected — mainly frequent riders who benefited most.\nJonah: So it overrepresents enthusiastic users and underrepresents occasional riders or those who didn't change behaviour.\nMaya: Right, that's a classic selection bias. The report acknowledges the sample isn't representative of all residents.\nJonah: So for our presentation, we shouldn't say the pilot proved cheaper fares work.\nMaya: No, we should conclude the evidence is suggestive but inconclusive. We can recommend a longer, controlled trial with random sampling across routes and neighbourhoods to get a clearer picture.\nJonah: That makes sense. We'll emphasize the limits and propose a better design rather than claiming success.",
+      "prompt": "What correction does Jonah make about the pilot period?",
+      "options": [
+        "It lasted two months, not three",
+        "It ran April to June, not March to May",
+        "It started in January, not April",
+        "It ended in July, not June"
+      ],
+      "answer": 1,
+      "explanation": "Jonah first says March to May then corrects to April to June. Option A misstates the correction as duration."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverton Bus-Fare Pilot Evaluation",
+      "pathwayStage": "band-7",
+      "focus": "Causal limits and sampling bias in transport policy evidence",
+      "transcript": "Maya: Hi Jonah, have you finished reading the evaluation of the Riverton bus-fare pilot for our transport policy seminar?\nJonah: Mostly. The city cut all bus fares by 50% from April to June last year to test whether cheaper fares would encourage regular commuters to switch from cars, right?\nMaya: Yes, that was the official aim in the council brief — to see if lower costs would shift daily commuting patterns, not just leisure trips.\nJonah: I wrote down it ran from March to May, actually sorry, April to June — I misread the dates. Three months total. The report says weekday ridership rose 18% compared to January to March.\nMaya: That's the headline increase, but we have to be careful about causality. In May, petrol prices rose 22% citywide, so driving became much more expensive during the same period.\nJonah: So we can't tell how much of the rise was due to the fare cut versus people avoiding high fuel costs.\nMaya: Exactly. And there was no control group — no similar city or unaffected bus route to compare against. Without that, any causal claim is weak.\nJonah: What about the passenger survey? It said 78% of respondents would continue using the bus if fares stayed low.\nMaya: But that survey was voluntary, conducted at the central terminal on weekdays. The authors note respondents were self-selected — mainly frequent riders who benefited most.\nJonah: So it overrepresents enthusiastic users and underrepresents occasional riders or those who didn't change behaviour.\nMaya: Right, that's a classic selection bias. The report acknowledges the sample isn't representative of all residents.\nJonah: So for our presentation, we shouldn't say the pilot proved cheaper fares work.\nMaya: No, we should conclude the evidence is suggestive but inconclusive. We can recommend a longer, controlled trial with random sampling across routes and neighbourhoods to get a clearer picture.\nJonah: That makes sense. We'll emphasize the limits and propose a better design rather than claiming success.",
+      "prompt": "Why can't the ridership rise be attributed solely to cheaper fares?",
+      "options": [
+        "Bus drivers went on strike in May",
+        "Ticket machines failed to record data",
+        "Petrol prices increased sharply during pilot",
+        "Weather was unusually cold that quarter"
+      ],
+      "answer": 2,
+      "explanation": "Petrol prices rose 22% at the same time, offering a competing explanation. Option A invents a strike not mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverton Bus-Fare Pilot Evaluation",
+      "pathwayStage": "band-7",
+      "focus": "Causal limits and sampling bias in transport policy evidence",
+      "transcript": "Maya: Hi Jonah, have you finished reading the evaluation of the Riverton bus-fare pilot for our transport policy seminar?\nJonah: Mostly. The city cut all bus fares by 50% from April to June last year to test whether cheaper fares would encourage regular commuters to switch from cars, right?\nMaya: Yes, that was the official aim in the council brief — to see if lower costs would shift daily commuting patterns, not just leisure trips.\nJonah: I wrote down it ran from March to May, actually sorry, April to June — I misread the dates. Three months total. The report says weekday ridership rose 18% compared to January to March.\nMaya: That's the headline increase, but we have to be careful about causality. In May, petrol prices rose 22% citywide, so driving became much more expensive during the same period.\nJonah: So we can't tell how much of the rise was due to the fare cut versus people avoiding high fuel costs.\nMaya: Exactly. And there was no control group — no similar city or unaffected bus route to compare against. Without that, any causal claim is weak.\nJonah: What about the passenger survey? It said 78% of respondents would continue using the bus if fares stayed low.\nMaya: But that survey was voluntary, conducted at the central terminal on weekdays. The authors note respondents were self-selected — mainly frequent riders who benefited most.\nJonah: So it overrepresents enthusiastic users and underrepresents occasional riders or those who didn't change behaviour.\nMaya: Right, that's a classic selection bias. The report acknowledges the sample isn't representative of all residents.\nJonah: So for our presentation, we shouldn't say the pilot proved cheaper fares work.\nMaya: No, we should conclude the evidence is suggestive but inconclusive. We can recommend a longer, controlled trial with random sampling across routes and neighbourhoods to get a clearer picture.\nJonah: That makes sense. We'll emphasize the limits and propose a better design rather than claiming success.",
+      "prompt": "What problem do they identify with the passenger survey?",
+      "options": [
+        "It was conducted only online after pilot",
+        "It excluded all weekday travellers",
+        "It asked only about leisure trips",
+        "It overrepresented enthusiastic frequent riders"
+      ],
+      "answer": 3,
+      "explanation": "The voluntary terminal survey was self-selected toward frequent beneficiaries. Option A incorrectly claims it was online."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverton Bus-Fare Pilot Evaluation",
+      "pathwayStage": "band-7",
+      "focus": "Causal limits and sampling bias in transport policy evidence",
+      "transcript": "Maya: Hi Jonah, have you finished reading the evaluation of the Riverton bus-fare pilot for our transport policy seminar?\nJonah: Mostly. The city cut all bus fares by 50% from April to June last year to test whether cheaper fares would encourage regular commuters to switch from cars, right?\nMaya: Yes, that was the official aim in the council brief — to see if lower costs would shift daily commuting patterns, not just leisure trips.\nJonah: I wrote down it ran from March to May, actually sorry, April to June — I misread the dates. Three months total. The report says weekday ridership rose 18% compared to January to March.\nMaya: That's the headline increase, but we have to be careful about causality. In May, petrol prices rose 22% citywide, so driving became much more expensive during the same period.\nJonah: So we can't tell how much of the rise was due to the fare cut versus people avoiding high fuel costs.\nMaya: Exactly. And there was no control group — no similar city or unaffected bus route to compare against. Without that, any causal claim is weak.\nJonah: What about the passenger survey? It said 78% of respondents would continue using the bus if fares stayed low.\nMaya: But that survey was voluntary, conducted at the central terminal on weekdays. The authors note respondents were self-selected — mainly frequent riders who benefited most.\nJonah: So it overrepresents enthusiastic users and underrepresents occasional riders or those who didn't change behaviour.\nMaya: Right, that's a classic selection bias. The report acknowledges the sample isn't representative of all residents.\nJonah: So for our presentation, we shouldn't say the pilot proved cheaper fares work.\nMaya: No, we should conclude the evidence is suggestive but inconclusive. We can recommend a longer, controlled trial with random sampling across routes and neighbourhoods to get a clearer picture.\nJonah: That makes sense. We'll emphasize the limits and propose a better design rather than claiming success.",
+      "prompt": "What will they argue in their presentation?",
+      "options": [
+        "Pilot proved fare cuts always increase ridership",
+        "Results are inconclusive and need controlled follow-up",
+        "Survey data should be ignored completely",
+        "Fuel prices had no effect on travel"
+      ],
+      "answer": 1,
+      "explanation": "They plan to call evidence suggestive but inconclusive and recommend a controlled trial. Option A overclaims proof."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Volunteer Heat Maps and Education Rankings",
+      "pathwayStage": "band-7",
+      "focus": "Selection bias and measurement uncertainty in policy data",
+      "passage": "Cities increasingly rely on low-cost data to guide climate policy. One popular method is the volunteer heat survey, where residents use handheld sensors to record street-level temperatures during a heatwave. These campaigns generate detailed maps and raise public awareness, but they also introduce systematic errors that are often overlooked in media reports. Policymakers may be tempted to treat these maps as complete, but without understanding who participated, they risk misallocating cooling resources to already comfortable neighbourhoods.\n\nThe 2022 Riverton Heat Watch illustrates the problem. Organisers recruited 140 volunteers through neighbourhood associations and social media. Participation was voluntary, and the resulting sample was geographically skewed: 68% of readings came from the greener, wealthier northern districts, where tree cover is high and housing is less dense. Only 12% came from the industrial south, where asphalt and warehouses trap heat. Because volunteers chose where and when to measure, often near their homes on pleasant streets, the dataset overrepresented cooler areas. The published citywide average of 31.4°C therefore understated the true exposure in the hottest zones, where independent satellite data later showed peaks of 38.1°C. The example does not prove volunteers are unmotivated; it shows how self-selection shapes coverage.\n\nThe author argues that such surveys should not be dismissed, but their scope must be qualified. They are valuable for identifying relative hotspots within sampled areas and for community engagement, yet they cannot support precise citywide estimates or causal claims about the effectiveness of cooling interventions without statistical adjustment for sampling bias. The limitation is not the volunteers' effort but the lack of random, representative coverage. Weighting results by district population or supplementing with satellite data can reduce bias, but such corrections are rarely applied in initial press releases.\n\nA similar issue of uncertainty appears in cross-country education indicators. International reports often rank countries by secondary-school completion rates, implying direct comparability. However, national definitions of \"completion\" differ — some count part-time vocational programmes, others do not — and data collection varies from census to sample surveys. A country reporting 89% completion may appear superior to one reporting 82%, but the gap may reflect measurement differences rather than real achievement. The passage notes that year-to-year changes within a single country, using a consistent method, are more reliable than cross-country league tables at a single point in time.\n\nTogether, these cases suggest a general principle: data collected for different purposes or through non-random methods require careful interpretation. Recognising who is missing, how definitions vary, and what comparisons are warranted prevents overclaiming and leads to more honest policy. Transparency about methods and limits, rather than precise rankings, builds greater trust in the evidence.",
+      "prompt": "According to the passage, what do volunteer heat surveys provide?",
+      "options": [
+        "Precise citywide temperature averages for policy",
+        "Detailed maps and public engagement despite errors",
+        "Satellite data to replace street sensors",
+        "Proof that tree cover has no effect"
+      ],
+      "answer": 1,
+      "explanation": "The passage says they generate detailed maps and raise awareness despite systematic errors. Option A claims precision the author denies."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Volunteer Heat Maps and Education Rankings",
+      "pathwayStage": "band-7",
+      "focus": "Selection bias and measurement uncertainty in policy data",
+      "passage": "Cities increasingly rely on low-cost data to guide climate policy. One popular method is the volunteer heat survey, where residents use handheld sensors to record street-level temperatures during a heatwave. These campaigns generate detailed maps and raise public awareness, but they also introduce systematic errors that are often overlooked in media reports. Policymakers may be tempted to treat these maps as complete, but without understanding who participated, they risk misallocating cooling resources to already comfortable neighbourhoods.\n\nThe 2022 Riverton Heat Watch illustrates the problem. Organisers recruited 140 volunteers through neighbourhood associations and social media. Participation was voluntary, and the resulting sample was geographically skewed: 68% of readings came from the greener, wealthier northern districts, where tree cover is high and housing is less dense. Only 12% came from the industrial south, where asphalt and warehouses trap heat. Because volunteers chose where and when to measure, often near their homes on pleasant streets, the dataset overrepresented cooler areas. The published citywide average of 31.4°C therefore understated the true exposure in the hottest zones, where independent satellite data later showed peaks of 38.1°C. The example does not prove volunteers are unmotivated; it shows how self-selection shapes coverage.\n\nThe author argues that such surveys should not be dismissed, but their scope must be qualified. They are valuable for identifying relative hotspots within sampled areas and for community engagement, yet they cannot support precise citywide estimates or causal claims about the effectiveness of cooling interventions without statistical adjustment for sampling bias. The limitation is not the volunteers' effort but the lack of random, representative coverage. Weighting results by district population or supplementing with satellite data can reduce bias, but such corrections are rarely applied in initial press releases.\n\nA similar issue of uncertainty appears in cross-country education indicators. International reports often rank countries by secondary-school completion rates, implying direct comparability. However, national definitions of \"completion\" differ — some count part-time vocational programmes, others do not — and data collection varies from census to sample surveys. A country reporting 89% completion may appear superior to one reporting 82%, but the gap may reflect measurement differences rather than real achievement. The passage notes that year-to-year changes within a single country, using a consistent method, are more reliable than cross-country league tables at a single point in time.\n\nTogether, these cases suggest a general principle: data collected for different purposes or through non-random methods require careful interpretation. Recognising who is missing, how definitions vary, and what comparisons are warranted prevents overclaiming and leads to more honest policy. Transparency about methods and limits, rather than precise rankings, builds greater trust in the evidence.",
+      "prompt": "Why did Riverton's average understate heat exposure?",
+      "options": [
+        "Most readings came from cooler northern districts",
+        "Volunteers measured only at night",
+        "Sensors were faulty in industrial areas",
+        "Satellite data was not included"
+      ],
+      "answer": 0,
+      "explanation": "68% of readings came from greener northern districts, overrepresenting cooler areas. Option B invents a night-only method."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Volunteer Heat Maps and Education Rankings",
+      "pathwayStage": "band-7",
+      "focus": "Selection bias and measurement uncertainty in policy data",
+      "passage": "Cities increasingly rely on low-cost data to guide climate policy. One popular method is the volunteer heat survey, where residents use handheld sensors to record street-level temperatures during a heatwave. These campaigns generate detailed maps and raise public awareness, but they also introduce systematic errors that are often overlooked in media reports. Policymakers may be tempted to treat these maps as complete, but without understanding who participated, they risk misallocating cooling resources to already comfortable neighbourhoods.\n\nThe 2022 Riverton Heat Watch illustrates the problem. Organisers recruited 140 volunteers through neighbourhood associations and social media. Participation was voluntary, and the resulting sample was geographically skewed: 68% of readings came from the greener, wealthier northern districts, where tree cover is high and housing is less dense. Only 12% came from the industrial south, where asphalt and warehouses trap heat. Because volunteers chose where and when to measure, often near their homes on pleasant streets, the dataset overrepresented cooler areas. The published citywide average of 31.4°C therefore understated the true exposure in the hottest zones, where independent satellite data later showed peaks of 38.1°C. The example does not prove volunteers are unmotivated; it shows how self-selection shapes coverage.\n\nThe author argues that such surveys should not be dismissed, but their scope must be qualified. They are valuable for identifying relative hotspots within sampled areas and for community engagement, yet they cannot support precise citywide estimates or causal claims about the effectiveness of cooling interventions without statistical adjustment for sampling bias. The limitation is not the volunteers' effort but the lack of random, representative coverage. Weighting results by district population or supplementing with satellite data can reduce bias, but such corrections are rarely applied in initial press releases.\n\nA similar issue of uncertainty appears in cross-country education indicators. International reports often rank countries by secondary-school completion rates, implying direct comparability. However, national definitions of \"completion\" differ — some count part-time vocational programmes, others do not — and data collection varies from census to sample surveys. A country reporting 89% completion may appear superior to one reporting 82%, but the gap may reflect measurement differences rather than real achievement. The passage notes that year-to-year changes within a single country, using a consistent method, are more reliable than cross-country league tables at a single point in time.\n\nTogether, these cases suggest a general principle: data collected for different purposes or through non-random methods require careful interpretation. Recognising who is missing, how definitions vary, and what comparisons are warranted prevents overclaiming and leads to more honest policy. Transparency about methods and limits, rather than precise rankings, builds greater trust in the evidence.",
+      "prompt": "What does the author claim about volunteer surveys?",
+      "options": [
+        "Volunteers lacked motivation to measure accurately",
+        "Surveys are useless for any policy purpose",
+        "They are useful for hotspots but not precise citywide estimates",
+        "Satellite data proves volunteers measured correctly"
+      ],
+      "answer": 2,
+      "explanation": "The author says they are valuable for hotspots and engagement but cannot support precise citywide estimates without adjustment. Option A is explicitly rejected by the example."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Volunteer Heat Maps and Education Rankings",
+      "pathwayStage": "band-7",
+      "focus": "Selection bias and measurement uncertainty in policy data",
+      "passage": "Cities increasingly rely on low-cost data to guide climate policy. One popular method is the volunteer heat survey, where residents use handheld sensors to record street-level temperatures during a heatwave. These campaigns generate detailed maps and raise public awareness, but they also introduce systematic errors that are often overlooked in media reports. Policymakers may be tempted to treat these maps as complete, but without understanding who participated, they risk misallocating cooling resources to already comfortable neighbourhoods.\n\nThe 2022 Riverton Heat Watch illustrates the problem. Organisers recruited 140 volunteers through neighbourhood associations and social media. Participation was voluntary, and the resulting sample was geographically skewed: 68% of readings came from the greener, wealthier northern districts, where tree cover is high and housing is less dense. Only 12% came from the industrial south, where asphalt and warehouses trap heat. Because volunteers chose where and when to measure, often near their homes on pleasant streets, the dataset overrepresented cooler areas. The published citywide average of 31.4°C therefore understated the true exposure in the hottest zones, where independent satellite data later showed peaks of 38.1°C. The example does not prove volunteers are unmotivated; it shows how self-selection shapes coverage.\n\nThe author argues that such surveys should not be dismissed, but their scope must be qualified. They are valuable for identifying relative hotspots within sampled areas and for community engagement, yet they cannot support precise citywide estimates or causal claims about the effectiveness of cooling interventions without statistical adjustment for sampling bias. The limitation is not the volunteers' effort but the lack of random, representative coverage. Weighting results by district population or supplementing with satellite data can reduce bias, but such corrections are rarely applied in initial press releases.\n\nA similar issue of uncertainty appears in cross-country education indicators. International reports often rank countries by secondary-school completion rates, implying direct comparability. However, national definitions of \"completion\" differ — some count part-time vocational programmes, others do not — and data collection varies from census to sample surveys. A country reporting 89% completion may appear superior to one reporting 82%, but the gap may reflect measurement differences rather than real achievement. The passage notes that year-to-year changes within a single country, using a consistent method, are more reliable than cross-country league tables at a single point in time.\n\nTogether, these cases suggest a general principle: data collected for different purposes or through non-random methods require careful interpretation. Recognising who is missing, how definitions vary, and what comparisons are warranted prevents overclaiming and leads to more honest policy. Transparency about methods and limits, rather than precise rankings, builds greater trust in the evidence.",
+      "prompt": "What can be inferred about comparing 89% and 82% completion rates?",
+      "options": [
+        "The 7% gap definitely shows better achievement",
+        "Both countries used identical census methods",
+        "Vocational programmes are always excluded",
+        "The gap may reflect measurement differences, not achievement"
+      ],
+      "answer": 3,
+      "explanation": "The passage notes differing definitions and methods may explain the gap. Option A overstates certainty the author warns against."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Volunteer Heat Maps and Education Rankings",
+      "pathwayStage": "band-7",
+      "focus": "Selection bias and measurement uncertainty in policy data",
+      "passage": "Cities increasingly rely on low-cost data to guide climate policy. One popular method is the volunteer heat survey, where residents use handheld sensors to record street-level temperatures during a heatwave. These campaigns generate detailed maps and raise public awareness, but they also introduce systematic errors that are often overlooked in media reports. Policymakers may be tempted to treat these maps as complete, but without understanding who participated, they risk misallocating cooling resources to already comfortable neighbourhoods.\n\nThe 2022 Riverton Heat Watch illustrates the problem. Organisers recruited 140 volunteers through neighbourhood associations and social media. Participation was voluntary, and the resulting sample was geographically skewed: 68% of readings came from the greener, wealthier northern districts, where tree cover is high and housing is less dense. Only 12% came from the industrial south, where asphalt and warehouses trap heat. Because volunteers chose where and when to measure, often near their homes on pleasant streets, the dataset overrepresented cooler areas. The published citywide average of 31.4°C therefore understated the true exposure in the hottest zones, where independent satellite data later showed peaks of 38.1°C. The example does not prove volunteers are unmotivated; it shows how self-selection shapes coverage.\n\nThe author argues that such surveys should not be dismissed, but their scope must be qualified. They are valuable for identifying relative hotspots within sampled areas and for community engagement, yet they cannot support precise citywide estimates or causal claims about the effectiveness of cooling interventions without statistical adjustment for sampling bias. The limitation is not the volunteers' effort but the lack of random, representative coverage. Weighting results by district population or supplementing with satellite data can reduce bias, but such corrections are rarely applied in initial press releases.\n\nA similar issue of uncertainty appears in cross-country education indicators. International reports often rank countries by secondary-school completion rates, implying direct comparability. However, national definitions of \"completion\" differ — some count part-time vocational programmes, others do not — and data collection varies from census to sample surveys. A country reporting 89% completion may appear superior to one reporting 82%, but the gap may reflect measurement differences rather than real achievement. The passage notes that year-to-year changes within a single country, using a consistent method, are more reliable than cross-country league tables at a single point in time.\n\nTogether, these cases suggest a general principle: data collected for different purposes or through non-random methods require careful interpretation. Recognising who is missing, how definitions vary, and what comparisons are warranted prevents overclaiming and leads to more honest policy. Transparency about methods and limits, rather than precise rankings, builds greater trust in the evidence.",
+      "prompt": "What general principle do both cases illustrate?",
+      "options": [
+        "Non-random data need careful interpretation to avoid overclaiming",
+        "Volunteer data should never guide policy decisions",
+        "International rankings are always more reliable than local trends",
+        "Statistical adjustment eliminates all uncertainty"
+      ],
+      "answer": 0,
+      "explanation": "Both cases show non-random or inconsistently defined data require qualified interpretation. Option B is too absolute; the author says not to dismiss surveys."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-7-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · University press releases and uncertainty statements",
+      "pathwayStage": "band-7",
+      "focus": "selecting main trends, comparing proportions and totals, avoiding causal overclaim",
+      "prompt": "The table below shows the proportion of university press releases that included an explicit uncertainty statement (mentioning limitations, small sample size, or need for further research) at three universities in 2018, 2021 and 2024, along with the total number of press releases issued. Data: Northfield University – 2018: 22% of 180 releases included uncertainty; 2021: 31% of 210; 2024: 38% of 195. Westlake University – 2018: 18% of 150; 2021: 24% of 165; 2024: 29% of 170. Southridge University – 2018: 35% of 120; 2021: 33% of 140; 2024: 41% of 135. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words in about 20 minutes. All data is provided here; no external information is needed.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Urban wetland visitors and wildlife incidents",
+      "pathwayStage": "band-7",
+      "focus": "describing correlated trends, noting timing of intervention, limits of causality",
+      "prompt": "The chart below shows monthly visitor numbers and reported wildlife disturbance incidents at Riverton Urban Wetland Reserve from March to August 2024. In June, the reserve introduced voluntary path restrictions near nesting areas. Data: March – 8,200 visitors, 12 incidents; April – 11,500 visitors, 18 incidents; May – 15,000 visitors, 31 incidents; June – 18,400 visitors, 42 incidents; July – 19,100 visitors, 38 incidents; August – 14,300 visitors, 22 incidents. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider the relationship between visitor numbers and incidents without assuming direct causation. You should write at least 150 words in about 20 minutes. All data is provided here.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · How universities should report uncertain findings",
+      "pathwayStage": "band-7",
+      "focus": "discussing competing views, evaluating evidence, precise language without overgeneralising",
+      "prompt": "Some people argue that universities should not publicise research findings to the public until results have been peer-reviewed and replicated, because early publicity risks misleading people. Others argue that universities should share preliminary findings promptly, provided they clearly explain uncertainties and limitations, especially for health or environmental issues. Discuss both views and give your own opinion. Support your position with reasons and examples, and avoid overclaiming about the effects of either approach. You should write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Balancing public access with urban wildlife protection",
+      "pathwayStage": "band-7",
+      "focus": "weighing competing interests, scope of restrictions, evaluating voluntary versus strict measures",
+      "prompt": "In many cities, urban parks and wetlands are valued both as habitats for wildlife and as places for recreation. Some people believe public access should be strictly limited during sensitive periods, such as breeding seasons, even if this reduces enjoyment for visitors. Others argue that education and voluntary guidelines are enough and that strict closures are unnecessary. Discuss both views and give your own opinion. Evaluate the competing evidence and consider the limits of each approach. You should write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Whether short pilots justify permanent policy",
+      "pathwayStage": "band-7",
+      "focus": "scope, seasonality and causality limits, using short-term evidence for long-term decisions",
+      "prompt": "A city council ran a three-month pilot closing a central shopping street to cars. During the pilot, footfall increased by 12% and nitrogen dioxide levels fell by 15% compared with the same three months the previous year, but delivery drivers and some shop owners reported difficulties. The council now proposes to make the closure permanent based on these results. To what extent does evidence from a short pilot justify a permanent policy change? Discuss the strengths and limitations of using short-term data for long-term decisions, including issues of scope, seasonality and causality. Give your own view with precise reasoning. You should write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-7-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · University research and news",
+      "pathwayStage": "band-7",
+      "focus": "personal habits and evaluating uncertain claims",
+      "prompt": "Answer in short, natural responses as in Part 1. 1) Do you often see news about university research? Where do you see it? 2) How do you decide whether a scientific finding is trustworthy? 3) Have you ever shared news about a discovery and later found it was uncertain? 4) Do you think universities have a responsibility to explain the limits of their findings?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Urban parks and wildlife",
+      "pathwayStage": "band-7",
+      "focus": "personal experience and attitudes to access rules",
+      "prompt": "Answer in short, natural responses as in Part 1. 1) Are there parks or nature reserves near where you live? How often do you visit them? 2) What do people usually do there? 3) Have you noticed any rules designed to protect wildlife? Do people follow them? 4) Would you be willing to avoid parts of a park to protect nesting birds? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card",
+      "pathwayStage": "band-7",
+      "focus": "describing an experience with uncertain information and reflecting on inference",
+      "prompt": "Describe a time when you learned about a scientific finding or news claim that later turned out to be uncertain or incomplete. You will have one minute to prepare and should speak for one to two minutes. You should say: • what the finding or claim was • where and when you first heard about it • why it seemed important or convincing at first • and explain what you learned about interpreting uncertain information."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Balancing public access and wildlife protection",
+      "pathwayStage": "band-7",
+      "focus": "reasons and evaluation of competing policies, limits of evidence",
+      "prompt": "Consider the following questions in depth, giving reasons and evaluation rather than memorised facts. 1) Why is it difficult for cities to both encourage public access to urban nature reserves and protect wildlife? 2) What are the advantages and disadvantages of strict seasonal closures compared with voluntary guidelines and education? 3) How can authorities assess whether an access policy is working, and what are the limits of visitor and incident data? 4) Who should have the final say in balancing recreation and conservation – local government, scientists, or the public? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-7-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Short pilots and permanent policy",
+      "pathwayStage": "band-7",
+      "focus": "scope, causality and handling competing evidence without overclaiming",
+      "prompt": "Consider the following questions in depth, giving reasons and evaluation rather than memorised facts. 1) Why do governments often use short pilot schemes before making permanent policy changes? 2) What are the limitations of using three to six months of pilot data to predict long-term outcomes? Consider seasonality and causality. 3) How should decision-makers weigh competing evidence from a pilot, such as environmental gains versus economic complaints? 4) When, if ever, is it reasonable to make a pilot permanent despite incomplete evidence? What safeguards would you recommend?"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 <meta name="hosting-provider" content="Netlify">
 <meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=1af0641f-673e-48e9-9c86-1755d64b6558">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Offline English–Vietnamese & EN–EN dictionary (PWA). Use your own .mdx files, tap words while reading, save sentences. No account, no tracking.">
+<meta name="description" content="Offline EN–VI & EN–EN dictionary (PWA). Read, tap to look up, then save words with their sentences, tag, review and practice offline, and export to CSV/Anki. No account, no tracking.">
 <meta name="keywords" content="english dictionary, offline dictionary, tu dien anh viet, từ điển anh việt offline, english vietnamese dictionary, mdx reader, mdd, phrase search, tap to lookup, study dictionary, non-commercial, PWA, dual dictionary">
 <meta name="author" content="Dual Dictionary">
 <meta name="robots" content="index, follow">
@@ -21,15 +21,18 @@
      Chỗ trống dưới đây chừa sẵn cho tag verify Google Search Console (user tự verify). -->
 <!-- <meta name="google-site-verification" content="PASTE_GSC_TOKEN_HERE"> -->
 <link rel="canonical" href="https://dualdictionary.netlify.app/">
+<link rel="alternate" hreflang="en" href="https://dualdictionary.netlify.app/">
+<link rel="alternate" hreflang="vi" href="https://dualdictionary.netlify.app/vi/">
+<link rel="alternate" hreflang="x-default" href="https://dualdictionary.netlify.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dual Dictionary">
 <meta property="og:title" content="Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)">
-<meta property="og:description" content="Offline English–Vietnamese & EN–EN dictionary (PWA). Use your own .mdx files, tap words while reading, save sentences. No account, no tracking.">
+<meta property="og:description" content="Offline EN–VI & EN–EN dictionary (PWA). Read, tap to look up, then save words with their sentences, tag, review and practice offline, and export to CSV/Anki. No account, no tracking.">
 <meta property="og:image" content="https://dualdictionary.netlify.app/icons/icon-512.png">
 <meta property="og:url" content="https://dualdictionary.netlify.app/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)">
-<meta name="twitter:description" content="Offline English–Vietnamese & EN–EN dictionary (PWA). No account, no tracking.">
+<meta name="twitter:description" content="Offline EN–VI & EN–EN dictionary (PWA). Look up, save with context, review. No account, no tracking.">
 <meta name="twitter:image" content="icons/icon-512.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -49,15 +52,25 @@
       "operatingSystem": "Any (PWA — iOS, Android, Windows, macOS, Linux)",
       "inLanguage": ["en", "vi"],
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "An offline-first English–Vietnamese & English–English dictionary web app (PWA) for study and research: one-click open EN–VI dictionary, parallel lookup panels, phrase search, a reading mode with tap-to-lookup, saved words and sentences, support for user-provided .mdx/.mdd files — everything stored locally. Non-commercial use only.",
+      "description": "An offline-first English–Vietnamese & English–English dictionary web app (PWA) for study and research: one-click open EN–VI dictionary, one-tap switching between dictionary panels, phrase search, a reading mode with tap-to-lookup, saved words and sentences, support for user-provided .mdx/.mdd files — everything stored locally. Non-commercial use only.",
       "featureList": [
         "Open English–Vietnamese dictionary (OVDP, 386,600 entries) — one-click download",
-        "Parallel lookup in two dictionaries",
+        "One search — switch dictionary with one tap",
         "Phrase and multi-word search",
-        "Reader mode: tap any word in a pasted article or Wikipedia page to look it up",
-        "Save words with their original sentences",
-        "CEFR A1–C2 level badges",
-        "US and UK IPA pronunciations",
+        "Reader mode: tap any word in a pasted article, Wikipedia page or YouTube transcript to look it up",
+        "Save words, phrases and sentences with their original sentence",
+        "Vault: notes and tags on everything you save",
+        "Review: FSRS spaced-repetition queue",
+        "Context: your saved sentence shown above the entry, with Add example",
+        "Practice saved items with micro-exercises (fill-the-gap, listen & type, say it aloud)",
+        "Speaking cue cards: prompt, 1-minute prep, 2-minute speak with speech readback",
+        "Writing journal with word count and an IELTS Task 2 timer, saved in the Vault",
+        "Listening practice: your own audio file with a synced transcript",
+        "Live reading pace (elapsed, words, wpm) while you read",
+        "Optional review reminders (opt-in, local-only: app badge, banner, notifications)",
+        "Real IPA pronunciations for most English words",
+        "Stats: words learned, retention, sources read",
+        "Export / import as JSON, CSV, TSV or Anki-ready text",
         "Works offline (PWA)",
         "Supports user-provided .mdx and .mdd dictionary files",
         "Word suggestions and search history"
@@ -74,6 +87,8 @@
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is an installable PWA: add it to your home screen and look up words with no internet connection." } },
         { "@type": "Question", "name": "Can I use my own .mdx dictionaries?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes — the Advanced panel lets either slot load any .mdx file you have the rights to use, plus the matching .mdd for audio and images. The app is a reader; you provide your own files." } },
+        { "@type": "Question", "name": "Does it help me learn, or only look up words?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Both. Save words, phrases and sentences with their original sentence, add notes and tags, run the spaced-repetition Review queue and quick practice sessions (fill-the-gap, listen & type) to remember them, and export everything to CSV/Anki — all offline, all on your device." } },
         { "@type": "Question", "name": "How do I install it on my phone?",
           "acceptedAnswer": { "@type": "Answer", "text": "iPhone/iPad (Safari): Share → Add to Home Screen. Android (Chrome): menu ⋮ → Add to Home screen / Install app. Requires iOS 16.4+." } }
       ]
@@ -82,82 +97,292 @@
 }
 </script>
 </head>
-<body>
+<body data-dict-state="idle">
+<a class="skip-link" href="#search-input" data-i18n="ui.skip">Skip to search</a>
 <header class="topbar">
   <div class="brand">
-    <img src="icons/icon-192.png" alt="" width="30" height="30">
+    <!-- U18: inline mark only (no file request). The previous open-book glyph was
+         two lobes plus a centre stroke, which read as a "pause" icon at 30px; a
+         CLOSED dictionary (cover + curved spine + text lines) is unambiguous.
+         The wrapper is the <a>, so the SVG stays aria-hidden and the link keeps
+         its own accessible name (title + aria-label, both i18n). -->
+    <a class="brand-mark" href="#/search" data-i18n-title="top.home" data-i18n-aria="top.homeAria"
+       title="Dual Dictionary — go to search" aria-label="Dual Dictionary — go to search">
+      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false" fill="none"
+           stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 18.9A2.6 2.6 0 0 1 7.6 16.3H19.2"/>
+        <path d="M7.6 3.1H19.2v16.8H7.6A2.6 2.6 0 0 1 5 17.3V5.7A2.6 2.6 0 0 1 7.6 3.1z"/>
+        <path d="M9.4 7.6h6.6M9.4 10.9h6.6"/>
+      </svg>
+    </a>
     <h1>Dual Dictionary</h1>
   </div>
+  <nav class="app-nav" aria-label="Main">
+    <a href="#/search" data-nav="search" class="active" data-i18n="nav.search">Search</a>
+    <a href="#/reader" data-nav="reader" data-i18n="nav.reader">Reader</a>
+    <a href="#/vault" data-nav="vault"><span data-i18n="nav.vault">Vault</span><span class="badge vocab-due hidden"></span></a>
+    <a href="#/review" data-nav="review"><span data-i18n="nav.review">Review</span><span class="badge review-due hidden"></span></a>
+    <a href="#/practice" data-nav="practice" data-i18n="nav.practice">Practice</a>
+    <a href="#/stats" data-nav="stats" data-i18n="nav.stats">Stats</a>
+  </nav>
   <div class="topbar-actions">
-    <button id="btn-vocab" class="icon-btn" title="Saved words" aria-label="Saved words">★<span id="vocab-badge" class="badge hidden"></span></button>
-    <button id="btn-reader" class="icon-btn" title="Reading mode" aria-label="Reading mode">📖</button>
-    <button id="btn-advanced" class="icon-btn" title="Advanced" aria-label="Advanced settings">⚙</button>
-    <button id="btn-help" class="icon-btn" title="Help" aria-label="Help">?</button>
+    <!-- U11: every control carries an aria-label (i18n, via data-i18n-aria) AND a
+         visible hover/focus tooltip (data-tip → CSS, title stays as the native
+         fallback). On narrow screens the two least-used controls (advanced, help)
+         collapse into the ⋯ overflow menu so the app title stays on one line —
+         the theme toggle stays in the bar on every screen size. -->
+    <button id="btn-install" class="icon-btn hidden" title="Install app" aria-label="Install app" data-i18n-title="top.install" data-i18n-aria="top.installAria" data-i18n-tip="top.tipInstall" data-tip="Install">⬇</button>
+    <button id="btn-lang" class="icon-btn" title="Language (EN / VI)" aria-label="Language" data-i18n-title="top.lang" data-i18n-aria="top.langAria" data-i18n-tip="top.tipLang" data-tip="EN / VI">EN</button>
+    <button id="btn-theme" class="icon-btn" title="Theme: auto / light / dark" aria-label="Theme" data-i18n-title="top.theme" data-i18n-aria="top.themeAria" data-i18n-tip="top.tipTheme" data-tip="Theme">🌓</button>
+    <button id="btn-advanced" class="icon-btn topbar-optional" title="Advanced" aria-label="Advanced settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Advanced">⚙</button>
+    <button id="btn-help" class="icon-btn topbar-optional" title="Help" aria-label="Help" data-i18n-title="top.help" data-i18n-aria="top.helpAria" data-i18n-tip="top.tipHelp" data-tip="Help">?</button>
+    <button id="btn-more" class="icon-btn hidden" aria-label="More options" aria-expanded="false"
+            aria-haspopup="true" aria-controls="more-menu" title="More options" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="More">⋯</button>
+    <div id="more-menu" class="more-menu hidden" role="menu" aria-label="More options">
+      <button id="more-advanced" type="button" role="menuitem" data-i18n="top.advancedShort">⚙ Advanced</button>
+      <button id="more-help" type="button" role="menuitem" data-i18n="top.helpShort">? Help</button>
+    </div>
   </div>
 </header>
 
-<main>
-  <form id="search-form" class="search-wrap" autocomplete="off">
+<main id="main">
+    <div class="hero-loop" id="hero-loop">
+      <p class="hero-kicker" data-i18n="ui.heroKicker">Reader → phrases → new situation → Vault</p>
+      <h3 data-i18n="hero.title">Turn what you just read into phrases you can actually use</h3>
+      <p class="hint" data-i18n="hero.steps">Read → pick a phrase in context → answer a new situation → get quoted feedback → save to Vault</p>
+      <div class="hero-actions">
+        <button type="button" id="btn-hero-tutor" class="btn-primary" data-i18n="hero.cta">✨ Try the 2-minute loop</button>
+        <a href="./demo/tutor.html" class="btn-secondary" data-i18n="hero.offline">Start a free offline lesson (no key)</a>
+      </div>
+    </div>
+  <form id="search-form" class="search-wrap" role="search" autocomplete="off">
     <div class="search-box">
       <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="search-input" type="search" placeholder="Type an English word…" enterkeyhint="search"
+      <input id="search-input" type="search" placeholder="Type an English word…" data-i18n-ph="search.placeholder" enterkeyhint="search"
              autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off"
              role="combobox" aria-expanded="false" aria-controls="suggestions"
              aria-autocomplete="list" aria-label="Search a word">
-      <button id="btn-clear" type="button" class="btn-clear hidden" aria-label="Clear">&times;</button>
-      <button id="btn-speak" type="button" class="icon-inline" title="Listen (text-to-speech)" aria-label="Listen to pronunciation" disabled>🔊</button>
-      <button id="btn-save-word" type="button" class="icon-inline" title="Save word" aria-label="Save word to your vocabulary list" disabled>☆</button>
-      <button type="submit" class="btn-search" aria-label="Search">Search</button>
+      <button id="btn-clear" type="button" class="btn-clear hidden" aria-label="Clear" data-i18n-aria="ui.clear">&times;</button>
+      <button id="btn-speak" type="button" class="icon-inline" title="Listen (text-to-speech)" aria-label="Listen to pronunciation" data-i18n-title="ui.listenTts" data-i18n-aria="ui.listenPron" disabled>🔊</button>
+      <button id="btn-save-word" type="button" class="icon-inline" title="Save word" aria-label="Save word to your vocabulary list" data-i18n-title="ui.saveWord" data-i18n-aria="ui.saveWordAria" disabled>☆</button>
+      <button type="submit" class="btn-search" aria-label="Search" data-i18n="search.search">Search</button>
     </div>
     <div id="suggestions" class="suggestions hidden" role="listbox" aria-label="Search suggestions"></div>
+    <!-- U3: the not-ready state of the lookup surface. The field stays editable
+         (typing during a download is legitimate) but the surface says out loud
+         that a lookup cannot happen yet and points at the one CTA below.
+         Placed AFTER #suggestions so the dropdown keeps its static position
+         directly under the search box. -->
+    <!-- CLS: rendered visible from first paint with the text boot would set
+         anyway — toggling it on after JS start pushed the whole download card
+         down (it sits above the card). updateIdleDictState owns the text. -->
+    <p id="search-gate-note" class="gate-note" role="status" aria-live="polite" data-i18n="search.gateStarting">Checking for a dictionary stored on this device…</p>
   </form>
 
   <div id="storage-banner" class="storage-banner hidden" role="alert">
     <span id="storage-banner-text"></span>
-    <button id="btn-dismiss-storage" aria-label="Dismiss">&times;</button>
+    <button id="btn-dismiss-storage" aria-label="Dismiss" data-i18n-aria="ui.dismissShort">&times;</button>
+  </div>
+
+  <div id="net-banner" class="net-banner hidden" role="status">
+    <span id="net-banner-text"></span>
+  </div>
+
+  <!-- v67 R2: the quiet in-app due surface — max once a day, dismissible.
+       Notifications are a SEPARATE opt-in (onboarding link / Advanced toggle);
+       this banner never asks for permission and never mentions enabling. -->
+  <div id="due-banner" class="net-banner due-banner hidden" role="status">
+    <span id="due-banner-text"></span>
+    <a href="#/review" id="due-banner-cta" class="due-banner-cta" data-i18n="dueBanner.cta">Review now</a>
+    <button id="btn-dismiss-due" aria-label="Dismiss">&times;</button>
   </div>
 
   <!-- Reader: paste text or load a URL, tap any word to look it up in the panels below -->
   <section id="reader" class="reader hidden" aria-label="Reading mode">
     <div class="reader-toolbar">
-      <button type="button" id="btn-reader-close" class="btn-secondary">✕ Close reader</button>
-      <button type="button" id="btn-save-sentence" class="btn-secondary" disabled title="Save the sentence containing the selected word">⭐ Save sentence</button>
+      <!-- U15: the Reader is a TAB with its own route/state (the bottom nav marks
+           it active), so this control is an explicit navigation out — never a ✕
+           "close" that would suggest a modal. Behaviour is unchanged. -->
+      <button type="button" id="btn-reader-close" class="btn-secondary" data-i18n="reader.back" data-i18n-title="reader.backTitle"
+              title="Back to search — the Reader keeps its text">← Back to search</button>
+      <a href="./lessons/" class="btn-secondary" data-i18n="reader.offlinePacks">Offline lesson packs</a>
+      <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson" title="Complete an authored lesson and save a real Vault card; no key needed">Start a free offline lesson</a>
+      <button type="button" id="btn-tutor-start" class="btn-primary" data-i18n="tutor.start">✨ AI practice (online · own key)</button>
+      <button type="button" id="btn-open-snapshots" class="btn-secondary" data-i18n="reader.savedArticles" title="Read a saved article offline">📁 Saved articles</button>
+      <details class="reader-tools"><summary data-i18n="reader.tools">Reading tools</summary>
+      <button type="button" id="btn-save-sentence" class="btn-secondary" disabled title="Save the sentence containing the selected word" data-i18n="reader.save">⭐ Save sentence</button>
+      <button type="button" id="btn-save-offline" class="btn-secondary" data-i18n="reader.saveOffline" title="Save this article to read offline later">💾 Save offline</button>
+      <button type="button" id="btn-cov-hl" class="btn-secondary is-off" title="Highlight known / learning / new words in the text" data-i18n-title="cov.hlTitle" data-i18n="cov.highlight">🎨 Highlight</button>
+      </details>
+      <span id="reader-timer" class="reader-timer hint" aria-live="off"></span>
     </div>
     <div id="reader-input-wrap" class="reader-input-wrap">
-      <textarea id="reader-input" rows="7" placeholder="Paste an English article here…" aria-label="Paste text to read"></textarea>
-      <div class="reader-url-row">
-        <input id="reader-url" type="url" placeholder="…or a page URL (CORS-friendly sources work, e.g. wikipedia.org)" aria-label="Article URL">
-        <button type="button" id="btn-reader-load" class="btn-primary">Load URL</button>
-      </div>
-      <button type="button" id="btn-reader-start" class="btn-primary">📖 Start reading</button>
-      <p id="reader-msg" class="reader-msg" role="status"></p>
+      <textarea id="reader-input" rows="7" placeholder="Paste an English article here…" data-i18n-ph="reader.paste" aria-label="Paste text to read"></textarea>
+
     </div>
+    <!-- v72: the start/re-edit button moved OUT of #reader-input-wrap — readerRender
+         hides the wrap while reading, which took the "Re-edit text" toggle with it
+         (the toggle branch of startReading was unreachable). As a direct sibling it
+         serves both states: "Start reading" over the editor, "Re-edit text" while reading. -->
+      <button type="button" id="btn-reader-start" class="btn-primary" data-i18n="reader.start">📖 Start reading</button>
+      <details class="reader-source-options"><summary data-i18n="ui.moreWays">More ways to read: file, URL, transcript or audio</summary>
+      <label class="file-btn">📄 Open .epub<input type="file" id="epub-file" accept=".epub,application/epub+zip" hidden></label>
+      <label class="file-btn">📄 Open .pdf<input type="file" id="pdf-file" accept=".pdf,application/pdf" hidden></label>
+      <button type="button" id="btn-reader-youtube" class="btn-secondary" data-i18n="reader.yt.btn">🎬 YouTube transcript</button>
+      <button type="button" id="btn-listening" class="btn-secondary" data-i18n="reader.listen.btn">🎧 Listening</button>
+      <div class="reader-url-row">
+        <input id="reader-url" type="url" placeholder="…or a page URL (CORS-friendly sources work, e.g. wikipedia.org)" data-i18n-ph="reader.url" aria-label="Article URL">
+        <button type="button" id="btn-reader-load" class="btn-primary" data-i18n="reader.load">Load URL</button>
+      </div>
+      </details>
+      <p id="reader-msg" class="reader-msg" role="status"></p>
+      <!-- v118 A1: reading-coverage card (plan D5) — passive, never blocks. -->
+      <div id="cov-card" class="cov-card hidden"></div>
     <div id="reader-text" class="reader-text hidden"></div>
   </section>
 
+  <dialog id="tutor-dialog" class="tutor-dialog" aria-labelledby="tutor-title">
+    <header class="tutor-dialog-header">
+      <h2 id="tutor-title" data-i18n="tutor.title">Reading to speaking practice</h2>
+      <button type="button" class="dialog-close" aria-label="Close tutor">✕</button>
+    </header>
+    <div class="tutor-dialog-body">
+      <p class="hint" data-i18n="tutor.hint">AI suggestions are checked against your reading. Review feedback before saving it to your study history.</p>
+      <p id="tutor-status" role="status" aria-live="polite"></p>
+      <div id="tutor-stage"></div>
+    </div>
+  </dialog>
+
+  <dialog id="sense-save-dialog" class="sense-save-dialog">
+    <div class="sense-save-form" id="sense-save-form">
+      <h2 data-i18n="sense.title">Save this meaning</h2>
+      <p class="hint">Choose the dictionary entry you are viewing. The full definition and source are saved on this device; edit the text if you want to keep one specific sense.</p>
+      <label for="sense-save-entry" data-i18n="sense.entry">Dictionary entry</label>
+      <select id="sense-save-entry"></select>
+      <label for="sense-save-definition" data-i18n="sense.meaning">Meaning to remember</label>
+      <textarea id="sense-save-definition" rows="7" required></textarea>
+      <label for="sense-save-context" data-i18n="sense.context">Source sentence (optional)</label>
+      <textarea id="sense-save-context" rows="3"></textarea>
+      <p id="sense-save-status" class="hint" role="status" aria-live="polite"></p>
+      <div class="sense-save-actions">
+        <button type="button" id="btn-sense-save" class="btn-primary" data-i18n="sense.save">Save meaning</button>
+        <button type="button" id="btn-sense-cancel" class="btn-secondary" data-i18n="sense.cancel">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="tutor-setup-dialog" class="sense-save-dialog">
+    <div class="sense-save-form" id="tutor-setup-form">
+      <h2 data-i18n="ui.tsTitle">Connect your AI account</h2>
+      <p class="hint" data-i18n="ui.tsHint">This is optional. Offline study stays free. Your key stays in this browser and is sent only to the provider you choose after you approve each request. The provider may charge for tokens.</p>
+      <label for="tutor-setup-provider" data-i18n="ui.tsProvider">Provider</label>
+      <select id="tutor-setup-provider">
+        <option value="meta">Meta Model API</option><option value="openai">OpenAI</option><option value="anthropic">Anthropic</option><option value="compatible" data-i18n="ui.tsOther">Other compatible service</option>
+      </select>
+      <label for="tutor-setup-key" data-i18n="ui.tsKey">Provider API key</label>
+      <input id="tutor-setup-key" type="password" autocomplete="off" spellcheck="false" required>
+      <details id="tutor-setup-advanced"><summary data-i18n="ui.tsAdv">Advanced: model and endpoint</summary>
+        <label for="tutor-setup-model" data-i18n="ui.tsModel">Model</label><input id="tutor-setup-model" type="text" spellcheck="false">
+        <label for="tutor-setup-url" data-i18n="ui.tsEndpoint">API endpoint</label><input id="tutor-setup-url" type="url" spellcheck="false">
+      </details>
+      <p id="tutor-setup-status" class="hint" role="status" aria-live="polite"></p>
+      <div class="sense-save-actions">
+        <button type="button" id="btn-tutor-setup-save" class="btn-primary" data-i18n="ui.tsSave">Save and continue</button>
+        <button type="button" id="btn-tutor-setup-cancel" class="btn-secondary" data-i18n="ui.btnCancel">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
   <div id="history" class="history hidden" aria-label="Recent words">
-    <span class="hist-label">Recent:</span>
+    <span class="hist-label" data-i18n="history.recent">Recent:</span>
     <div id="history-chips"></div>
-    <button type="button" id="btn-clear-history" class="hist-clear" aria-label="Clear recent words" title="Clear recent words">Clear</button>
+    <a class="hist-all" href="#/history" data-i18n="history.viewAll">View all</a>
+    <button type="button" id="btn-clear-history" class="hist-clear" aria-label="Clear recent words" title="Clear recent words" data-i18n="history.clear">Clear</button>
   </div>
 
-  <!-- Mobile-only view switch -->
-  <div id="view-switch" class="view-switch" role="tablist" aria-label="Choose dictionary">
-    <button data-view="oxford" role="tab" aria-selected="false">WordNet</button>
+  <!-- Dictionary tab switch: picks the ONE dictionary to show, on every screen
+       size (the stacked "Both" view was removed in v97) -->
+  <div id="view-switch" class="view-switch" role="tablist" aria-label="Choose dictionary" data-i18n-aria="ui.chooseDict">
+    <button data-view="oxford" role="tab" aria-selected="true" class="active">WordNet</button>
     <button data-view="longman" role="tab" aria-selected="false">Wiktionary</button>
-    <button data-view="both" role="tab" aria-selected="true" class="active">Both</button>
+    <button data-view="third" role="tab" aria-selected="false" class="hidden" data-i18n="slot.third">Slot 3</button>
   </div>
 
-  <p id="both-hint" class="hint both-hint hidden" aria-hidden="true"></p>
+  <div id="pron-strip" class="pron-strip hidden" aria-label="Pronunciation">
+    <span id="pron-word" class="pron-word"></span>
+    <span id="pron-freq" class="pron-freq hint hidden"></span>
+    <span id="pron-ipa" class="pron-ipa hidden"></span>
+    <button type="button" id="btn-pron-speak" class="icon-inline" title="Hear the word" aria-label="Hear the word" data-i18n-title="ui.hearWord" data-i18n-aria="ui.hearWord">🔊</button>
+    <button type="button" id="btn-pron-slow" class="btn-secondary" title="Slow playback (0.75×)" aria-pressed="false" data-i18n-title="ui.slowPlayback">🐢 0.75×</button>
+    <button type="button" id="btn-pron-replay" class="btn-secondary hidden" title="Replay the saved sentence" data-i18n-title="ui.replaySentence">↺ Sentence</button>
+    <!-- v69 R4: browser speech recognition (opt-in per click; the browser's own
+         engine — Chrome sends the audio to Google, Safari to Apple; this app has
+         no server). Hidden entirely when the API is unsupported. -->
+    <button type="button" id="btn-pron-mic" class="btn-secondary hidden" data-i18n-title="pron.micTitle" title="Say the word and check it — your browser's speech recognition (Chrome sends the audio to Google, Safari to Apple; this app has no server)" aria-label="Say the word and check it">🎤 Say it</button>
+    <span id="pron-mic-result" class="pron-mic-result hint hidden" aria-live="polite"></span>
+  </div>
+
+  <section id="context-bar" class="context-bar hidden" aria-label="Saved context for this word" data-word="" data-i18n-aria="ui.savedCtx">
+    <div class="context-main">
+      <span class="context-label" data-i18n="ui.inSavedCtx">In your saved context</span>
+      <p id="context-sentence" class="context-sentence"></p>
+      <span id="context-source" class="context-source hint"></span>
+      <div id="context-more" class="context-more hidden"></div>
+    </div>
+    <div class="context-actions">
+      <button type="button" id="btn-context-add" class="btn-secondary" data-i18n="ui.addExample">➕ Add example</button>
+      <button type="button" id="btn-context-vault" class="btn-secondary" data-i18n="ui.openInVault">Open in Vault</button>
+    </div>
+  </section>
+
+  <!-- U3 + v91 chooser: the gate is a real CHOICE now — the user picks which of
+       the three open dictionaries to download (EN–VI first for vi locales) and
+       the CTA sums exactly what is selected. #dict-grid is hidden outright while
+       this card is in charge (see body[data-dict-state="idle"] in style.css), so
+       the lookup surface never shows a ready-looking search box over empty panels. -->
+  <div id="empty-state" class="empty-state" aria-live="polite">
+    <h2 class="firstload-title" data-i18n="firstload.title">Choose dictionaries to download</h2>
+    <p><strong id="empty-state-msg" data-i18n="firstload.idle">No dictionary is loaded yet — pick the dictionaries you need and download them once.</strong></p>
+    <ul id="first-load-sizes" class="dict-chooser" role="group" aria-label="Dictionaries to download"></ul>
+    <div class="empty-cta">
+      <button id="btn-quickload" class="btn-primary" data-i18n="firstload.download">⬇ Download dictionaries</button>
+      <button type="button" id="btn-download-all" class="btn-secondary" data-i18n="firstload.downloadAll">Download all</button>
+      <button id="btn-cancel-load" class="btn-secondary hidden" data-i18n="ui.cancelDownload">Cancel download</button>
+    </div>
+    <p id="empty-state-error" class="load-error" role="alert" hidden></p>
+    <p class="first-load-note" data-i18n="firstload.note">One-time download, stored in the app, fully offline afterwards.</p>
+    <p class="first-load-actions">
+      <button id="btn-open-advanced" class="btn-secondary" data-i18n="firstload.own">Use my own .mdx files</button>
+      <button type="button" id="btn-envi-empty" class="btn-secondary hidden" data-i18n="firstload.envi">🇻🇳 Add English–Vietnamese dictionary</button>
+      <button type="button" id="btn-open-help" class="btn-secondary" data-i18n="firstload.help">Help</button>
+    </p>
+    <!-- U17: the support link lives in the footer only — nothing here competes
+         with the download CTA for attention. btn-envi-empty stays in the DOM
+         (wired + tested) but the chooser card covers its job, so it is hidden. -->
+  </div>
+
+  <!-- v78: the EN–VI one-click used to live ONLY in the first-load card, which
+       hides the moment a dictionary attaches — the students who need it most lost
+       it exactly by doing the expected thing (downloading). This quiet line sits
+       above the panels while slot 3 is empty and no one has dismissed it. -->
+  <div id="envi-hint" class="envi-hint hidden">
+    <span data-i18n="envi.hint">Want Vietnamese meanings? Add the open EN–VI dictionary — one click.</span>
+    <button type="button" id="btn-envi-hint" class="btn-secondary">🇻🇳 <span data-i18n="envi.hintBtn">Add EN–VI</span></button>
+    <button type="button" id="btn-envi-hint-close" class="icon-inline" aria-label="Dismiss this suggestion" title="Dismiss" data-i18n-aria="ui.dismiss" data-i18n-title="ui.dismissShort">✕</button>
+  </div>
 
   <div id="dict-grid" class="dict-grid">
     <!-- Slot 1 -->
     <section class="dict-panel" id="panel-oxford" data-slot="oxford">
       <div class="panel-head oxford-head">
-        <span class="dict-name">WordNet 3.1</span>
+        <span class="dict-name" title="WordNet 3.1">WordNet 3.1</span>
+        <!-- U5: one-line attribution — dictionary name + licence short form; the
+             full licence text is in the tooltip, the complete wording in NOTICE.md. -->
+        <a class="dict-lic" href="NOTICE.md" target="_blank" rel="noopener"
+           title="WordNet 3.1 — WordNet 3.1 license (Princeton University — wordnet.princeton.edu). IPA portions come from CMUdict (public domain / BSD) and Simple English Wiktionary (CC BY-SA). Full text: NOTICE.md">WordNet licence</a>
         <span class="dict-status" id="status-oxford" role="status">not loaded</span>
         <button type="button" class="panel-toggle" data-slot="oxford" aria-pressed="false"
-                title="Full-screen reading view" aria-label="Full-screen reading view for WordNet">⤢</button>
+                title="Full-screen reading view" aria-label="Full-screen reading view for WordNet" data-i18n-title="ui.fullscreen" data-i18n-aria="ui.fsOxford">⤢</button>
       </div>
       <div class="entry-frame" id="frame-oxford" hidden><iframe title="WordNet 3.1 entry" sandbox="allow-scripts"></iframe></div>
     </section>
@@ -165,100 +390,466 @@
     <!-- Slot 2 -->
     <section class="dict-panel" id="panel-longman" data-slot="longman">
       <div class="panel-head longman-head">
-        <span class="dict-name">Simple English Wiktionary</span>
+        <span class="dict-name" title="Simple English Wiktionary">Simple English Wiktionary</span>
+        <a class="dict-lic" href="NOTICE.md" target="_blank" rel="noopener"
+           title="Simple English Wiktionary — dictionary content from Simple English Wiktionary, CC BY-SA 3.0+/4.0 (dual-licensed) &amp; GFDL — simple.wiktionary.org. Full text: NOTICE.md">CC BY-SA &amp; GFDL</a>
         <span class="dict-status" id="status-longman" role="status">not loaded</span>
         <button type="button" class="panel-toggle" data-slot="longman" aria-pressed="false"
-                title="Full-screen reading view" aria-label="Full-screen reading view for Wiktionary">⤢</button>
+                title="Full-screen reading view" aria-label="Full-screen reading view for Wiktionary" data-i18n-title="ui.fullscreen" data-i18n-aria="ui.fsLongman">⤢</button>
       </div>
       <div class="entry-frame" id="frame-longman" hidden><iframe title="Simple English Wiktionary entry" sandbox="allow-scripts"></iframe></div>
     </section>
-  </div>
 
-  <div id="empty-state" class="empty-state" aria-live="polite">
-    <p><strong id="empty-state-msg">Loading the default dictionaries…</strong></p>
-    <ul id="first-load-sizes" class="first-load-sizes"></ul>
-    <p id="empty-state-error" class="load-error" role="alert" hidden></p>
-    <p class="first-load-note">One-time download, stored in the app, fully offline afterwards.</p>
-    <button id="btn-quickload" class="btn-primary">⬇ Download dictionaries</button>
-    <button id="btn-cancel-load" class="btn-secondary hidden">Cancel download</button>
-    <button id="btn-open-advanced" class="btn-secondary">Use my own .mdx files</button>
-    <button type="button" id="btn-envi-empty" class="btn-secondary">🇻🇳 Add English–Vietnamese dictionary</button>
-    <button id="btn-open-help" class="btn-secondary">Help</button>
-    <a class="bmc-inline" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">☕ Buy me a coffee — keeps this free &amp; ad-free</a>
+    <!-- Slot 3 (optional — e.g. the open EN–VI dictionary) -->
+    <section class="dict-panel hidden" id="panel-third" data-slot="third">
+      <div class="panel-head third-head">
+        <span class="dict-name" data-i18n="ui.slot3name">Slot 3 (optional — your own .mdx)</span>
+        <!-- v64: slot 3 gets the same licence chip as slots 1–2 (OVDP EN–VI = MIT
+             when star_anhviet.mdx is loaded; hidden for unknown files). -->
+        <a class="dict-lic" href="NOTICE.md" target="_blank" rel="noopener" hidden></a>
+        <span class="dict-status" id="status-third" role="status">not loaded</span>
+        <button type="button" class="panel-toggle" data-slot="third" aria-pressed="false"
+                title="Full-screen reading view" aria-label="Full-screen reading view for slot 3" data-i18n-title="ui.fullscreen" data-i18n-aria="ui.fsThird">⤢</button>
+      </div>
+      <div class="entry-frame" id="frame-third" hidden><iframe title="Slot 3 entry" sandbox="allow-scripts"></iframe></div>
+    </section>
   </div>
 
   <section id="about" class="about">
-    <h2>A study &amp; research dictionary, right in your browser</h2>
+    <h2 data-i18n="about.title">A study &amp; research dictionary, right in your browser</h2>
     <details class="about-details">
-      <summary>About this app — features &amp; terms of use</summary>
-      <p><strong>Dual Dictionary is an offline-first web app built for personal study and research:
-         it looks up English words in parallel panels, with support for your own .mdx/.mdd
+      <summary data-i18n="about.summary">About this app — features &amp; terms of use</summary>
+      <p data-i18n-html="about.intro"><strong>Dual Dictionary is an offline-first web app built for personal study and research:
+         it looks up English words across several dictionaries with one-tap panel switching, and supports your own .mdx/.mdd
          dictionary files. Everything runs in your browser — data stays on your device,
          no account, no tracking, no ads.</strong></p>
-      <p class="hint" style="margin-top:8px">This app is provided for personal study and research
+      <p class="hint" style="margin-top:8px" data-i18n-html="about.terms">This app is provided for personal study and research
          purposes only. It is not a commercial product and is not intended for commercial use or
          redistribution of any dictionary content. The bundled open data remains available
          under its own licenses (see NOTICE.md) — this term applies to this deployment only.</p>
-      <ul>
-        <li><strong>Parallel lookup:</strong> one search, two dictionary views side by side.</li>
+      <ul data-i18n-html="about.features">
+        <li><strong>Multi-dictionary lookup:</strong> one search — tap a tab to switch the
+           dictionary you are reading.</li>
+        <li><strong>Reader mode:</strong> paste an article or load a Wikipedia page, then tap
+           any word to look it up in the panels below — without leaving the text.</li>
         <li><strong>Open by default:</strong> the public edition ships with open-licensed dictionaries
-           (WordNet 3.1, Simple English Dictionary) — free for everyone, no login.</li>
+           (WordNet 3.1, Simple English Wiktionary) — free for everyone, no login. You can also add
+           the open English–Vietnamese dictionary (OVDP, 386,600 entries) in one click.</li>
         <li><strong>Bring your own dictionaries:</strong> load any .mdx / .mdd file (MDX format) you own, e.g.
            learner's dictionaries, into either panel — only files you are authorized to use.</li>
-        <li><strong>Learn-oriented tools:</strong> word suggestions, search history, and a built-in
-           spaced-repetition vocabulary list.</li>
-        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that.</li>
+        <li><strong>Learn-oriented tools:</strong> word suggestions, search history, a Vault that keeps
+           every word, phrase and sentence with your notes and tags, and a spaced-repetition
+           Review queue that can re-fit its FSRS weights to your own history (on-device,
+           from ⚙ Advanced, once enough reviews accumulate).</li>
+        <li><strong>Context that sticks:</strong> look up a saved word and see your own original
+           sentence highlighted above the entry — add extra examples any time.</li>
+        <li><strong>Practice &amp; track:</strong> turn saved items into quick practice sessions
+          (fill in the gap, listen &amp; type, say it aloud with your browser's speech
+          recognition) and watch words learned, retention and sources in Stats.
+          Review runs on the FSRS scheduler, and real IPA is shown for most English words.
+          Practice also has 🎤 <em>cue cards</em> (prompt, 1-minute prep, 2-minute speak);
+          the Reader shows your live reading pace, and the Vault has a ✍ <em>journal</em>
+          with a word count and an IELTS Task 2 timer.</li>
+        <li><strong>Your data is yours:</strong> export / import Vault items as JSON, CSV, TSV or
+           Anki-ready text — no cloud or account for your study data. Optional AI sends your article and answers to your chosen provider after you agree; you pay that provider for tokens.</li>
+        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that. Optional review reminders (opt-in, local-only) can be enabled in ⚙ Advanced.</li>
       </ul>
-      <h3>Dictionaries &amp; licenses</h3>
-      <p>The public edition ships only open-licensed data (see <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):</p>
-      <ul>
-        <li><strong>WordNet 3.1</strong> — Princeton University, WordNet 3.1 license
-            (embeds IPA from CMUdict and from Simple English Wiktionary — see NOTICE.md).</li>
-        <li><strong>Simple English Dictionary</strong> — derived from Simple English Wiktionary,
-            CC BY-SA 3.0+/4.0 &amp; GFDL.</li>
-        <li><strong>Pronunciations</strong> — CMUdict (public domain / BSD, cmusphinx).</li>
+      <h3 data-i18n="about.licH">Dictionaries &amp; licenses</h3>
+      <p data-i18n-html="about.licP">The public edition ships only open-licensed data (see <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):</p>
+      <!-- U5: one short line per source (name + licence short form); the full
+           licence wording is one hover/tap away in the link's tooltip. -->
+      <ul data-i18n-html="about.licList">
+        <li><strong>WordNet 3.1</strong> — <a href="NOTICE.md" target="_blank" rel="noopener"
+            title="WordNet 3.1 license (Princeton University — wordnet.princeton.edu). Includes IPA from CMUdict (public domain / BSD) and from Simple English Wiktionary (CC BY-SA). Full text: NOTICE.md">WordNet licence</a></li>
+        <li><strong>Simple English Wiktionary</strong> — <a href="NOTICE.md" target="_blank" rel="noopener"
+            title="Derived from Simple English Wiktionary: CC BY-SA 3.0+/4.0 (dual-licensed) &amp; GFDL — simple.wiktionary.org. Full text: NOTICE.md">CC BY-SA &amp; GFDL</a></li>
+        <li><strong>Pronunciations</strong> — <a href="NOTICE.md" target="_blank" rel="noopener"
+            title="CMUdict (public domain / BSD, cmusphinx). Full text: NOTICE.md">CMUdict</a></li>
+        <li><strong>Word frequency</strong> — <a href="NOTICE.md" target="_blank" rel="noopener"
+            title="Top-10k frequency bands from hermitdave/FrequencyWords, MIT License. Full text: NOTICE.md">MIT</a></li>
+        <li><strong>Pronunciations (IPA)</strong> — <a href="NOTICE.md" target="_blank" rel="noopener"
+            title="IPA table from thichhoc-org/thichhoc-dict (CC BY-SA 4.0; upstream WordNet, CMUdict, Wiktionary) filled from CMUdict (public domain / BSD). Full text: NOTICE.md">CC BY-SA 4.0 &amp; CMUdict</a></li>
       </ul>
-      <p>Commercial dictionaries (e.g. OALD, LDOCE) are never bundled here; load your own
+      <p data-i18n-html="about.licNote">Commercial dictionaries (e.g. OALD, LDOCE) are never bundled here; load your own
          files via ⚙ Advanced only if you are authorized to use them.</p>
+      <!-- v65: feedback moved out of the footer/Stats — one opt-in line at the end
+           of About (mail to is user-initiated; no form, no network call) -->
+      <p class="hint" data-i18n-html="about.feedback">If this app helps your study, I'd genuinely like to hear it —
+         <a class="support-link" href="mailto:quocanh38@gmail.com?subject=Dual%20Dictionary%20%E2%80%94%20feedback">one email is enough</a>.</p>
     </details>
+  </section>
+
+  <!-- ===== Vault (Phase 3 Release B): everything you saved, in one place ===== -->
+  <section id="vault-view" class="vault-view hidden" aria-label="Vault">
+    <div class="vault-head">
+      <h2 data-i18n="section.vault">Vault</h2>
+      <span id="vault-count" class="hint" aria-live="polite"></span>
+      <span class="head-actions">
+        <label class="sort-wrap"><span class="hint">Deck</span>
+          <select id="vault-deck" aria-label="Filter by deck"><option value="">All decks</option></select>
+        </label>
+        <label class="sort-wrap"><span class="hint">Sort</span>
+          <select id="vault-sort" aria-label="Sort items">
+            <option value="new">Newest</option>
+            <option value="due">Due first</option>
+            <option value="hard">Hardest first</option>
+            <option value="alpha">A–Z</option>
+          </select>
+        </label>
+        <button type="button" id="btn-vault-tags" class="btn-secondary">🏷️ Tags</button>
+        <!-- U14: the same "Practice" label as the Review section (one vocabulary);
+             it was the only Practice entry point left untranslated. -->
+        <button type="button" id="btn-vault-practice" class="btn-secondary" data-i18n="review.practice">🎯 Practice</button>
+        <button type="button" id="btn-vault-stats" class="btn-secondary">📊 Stats</button>
+      </span>
+    </div>
+    <input id="vault-search" type="search" class="vault-search" placeholder="Search your vault — text, notes, tags…" data-i18n-ph="vault.search" aria-label="Search your vault">
+    <div id="vault-tabs" class="tab-row" role="tablist" aria-label="Vault filters">
+      <button type="button" data-tab="all" class="active" role="tab" aria-selected="true" data-i18n="vault.tab.all">All</button>
+      <button type="button" data-tab="word" role="tab" aria-selected="false" data-i18n="vault.tab.word">Words</button>
+      <button type="button" data-tab="phrase" role="tab" aria-selected="false" data-i18n="vault.tab.phrase">Phrases</button>
+      <button type="button" data-tab="sentence" role="tab" aria-selected="false" data-i18n="vault.tab.sentence">Sentences</button>
+      <button type="button" data-tab="due" role="tab" aria-selected="false" data-i18n="vault.tab.due">Needs review</button>
+      <button type="button" data-tab="journal" role="tab" aria-selected="false" data-i18n="vault.tab.journal">✍ Journal</button>
+    </div>
+    <!-- v75: Writing journal — an editor with a live word count, an IELTS Task 2
+         countdown and one-click save into the Vault. Entries are items tagged
+         'journal' with status 'known', so they never enter the review queue. -->
+    <div id="journal-panel" class="journal-panel hidden">
+      <textarea id="journal-input" rows="9" spellcheck="true" data-i18n-ph="journal.ph" placeholder="Write in English — a diary entry, a summary of something you read, an IELTS Task 2 essay…" aria-label="Journal editor"></textarea>
+      <div class="journal-bar">
+        <span id="journal-count" class="hint">0 words</span>
+        <span id="journal-timer" class="hint journal-timer" aria-live="off"></span>
+        <span class="journal-actions">
+          <button type="button" id="btn-journal-timer" class="btn-secondary" title="Start / pause the 40-minute IELTS Task 2 countdown">⏱ Task 2</button>
+          <button type="button" id="btn-journal-save" class="btn-primary" data-i18n="journal.save">💾 Save to Vault</button>
+        </span>
+      </div>
+      <p class="hint" id="journal-msg" role="status"></p>
+      <div id="journal-list" class="journal-list"></div>
+    </div>
+    <div id="vault-select-bar" class="select-bar">
+      <span class="select-group select-group-lead">
+        <button type="button" id="btn-vault-select-all" class="btn-secondary" data-i18n="vault.selectAll">Select all</button>
+        <span id="vault-selected-count" class="hint">0 selected</span>
+      </span>
+      <span class="select-spacer"></span>
+      <span class="select-group" role="group" aria-label="Review actions">
+        <button type="button" id="btn-vault-review" class="btn-secondary" disabled data-i18n="vault.reviewNow">Review now</button>
+        <button type="button" id="btn-vault-tag" class="btn-secondary" disabled data-i18n="vault.addTag">Add tag</button>
+        <button type="button" id="btn-vault-known" class="btn-secondary" disabled data-i18n="vault.markKnown">Mark as known</button>
+      </span>
+      <span class="select-group" role="group" aria-label="Item actions">
+        <button type="button" id="btn-vault-export" class="btn-secondary" disabled data-i18n="vault.export">Export</button>
+        <button type="button" id="btn-vault-delete" class="btn-secondary btn-danger" disabled data-i18n="vault.delete">Delete</button>
+      </span>
+    </div>
+    <div id="vault-list"></div>
+    <div id="vault-empty" class="empty-state hidden">
+      <p><strong data-i18n="vault.emptyTitle">Your Vault is empty</strong></p>
+      <p class="hint" data-i18n="vault.emptyHint">Save a word or phrase while reading — your examples and notes will appear here.</p>
+      <a class="btn-primary" href="#/reader" data-i18n="vault.openReader">📖 Open Reader</a>
+      <a class="btn-secondary" href="#/search" data-i18n="vault.searchWord">🔍 Search a word</a>
+      <!-- v117 A2: known-words milestone CTA (plan D6) — exactly one of the two
+           blocks below is visible; renderKnownEmpty() decides. -->
+      <div id="known-empty-status" class="hint hidden"></div>
+      <div id="known-empty-box" class="known-empty-box hidden">
+        <p><strong data-i18n="known.title">I already know the most common words</strong></p>
+        <p class="hint" data-i18n="known.hint">Pick a starting milestone so "words you know" is counted correctly from day one. Nothing is added to your Vault — this is only a reading-coverage baseline, offline on this device.</p>
+        <div id="known-empty-chips" class="known-chips"></div>
+      </div>
+    </div>
+    <div id="vault-no-results" class="empty-state hidden">
+      <p><strong data-i18n="vault.noneTitle">No items match</strong></p>
+      <p class="hint" data-i18n="vault.noneHint">Try a different search, or clear the filters. Tip: use the sort menu or a tag to narrow things down.</p>
+    </div>
+  </section>
+
+  <!-- ===== Review (Phase 3 Release B): the due queue ===== -->
+  <section id="review-view" class="review-view hidden" aria-label="Review">
+    <div class="vault-head">
+      <h2 data-i18n="section.review">Review</h2>
+      <span id="review-count" class="hint" aria-live="polite"></span>
+      <button type="button" id="btn-review-practice" class="btn-secondary head-actions" data-i18n="review.practice">🎯 Practice</button>
+    </div>
+    <div id="review-list"></div>
+    <div id="review-empty" class="empty-state hidden">
+      <p><strong id="review-empty-msg">Nothing due for review</strong></p>
+      <p class="hint" data-i18n="review.emptyHint">Words and phrases you save from Search or Reader appear here when they're due. Come back later, or practice from the Vault.</p>
+      <a class="btn-secondary" href="#/vault" data-i18n="review.openVault">Open Vault</a>
+    </div>
+  </section>
+
+  <!-- ===== Practice (Phase 3+ micro-exercises) ===== -->
+  <section id="practice-view" class="practice-view hidden" aria-label="Practice">
+    <div class="vault-head">
+      <h2 data-i18n="section.practice">Practice</h2>
+      <span id="practice-count" class="hint" aria-live="polite"></span>
+    </div>
+    <!-- v76: cue card — a prompt, a 1-minute prep and a 2-minute speak countdown,
+         with the browser's own recognition to read back what was said. Free
+         speech has no single right answer, so the transcript is shown for
+         self-assessment rather than scored. -->
+    <div id="cue-card" class="cue-card">
+      <div class="cue-head">
+        <strong>🎤 Cue card</strong>
+        <button type="button" id="btn-cue-next" class="btn-secondary" data-i18n="practice.cueNext">Next →</button>
+      </div>
+      <p id="cue-prompt" class="cue-prompt"></p>
+      <div class="cue-bar">
+        <span id="cue-clock" class="hint" aria-live="off">1:00</span>
+        <span class="cue-actions">
+          <button type="button" id="btn-cue-start" class="btn-primary" data-i18n="practice.cueStart">Start</button>
+          <button type="button" id="btn-cue-mic" class="btn-secondary" hidden data-i18n="practice.cueRecord">🎤 Record</button>
+        </span>
+      </div>
+      <p class="hint" id="cue-result" role="status"></p>
+    </div>
+    <details id="offline-exam-lab" class="offline-study-panel">
+      <summary><strong>📚 IELTS Academic &amp; TOEIC practice</strong><span class="hint"> Answer keys and explanations · offline</span></summary>
+      <p class="hint">Original offline content pack · IELTS Academic Listening and Reading include 40-question diagnostics for section-length practice; Writing and Speaking include prompts for all four practice stages. Listening uses browser-generated voice, so this is not an official or calibrated mock and does not produce an overall four-skill band.</p>
+      <details class="offline-data-details"><summary><strong>Manage offline storage</strong></summary><h3>Offline data on this device</h3><p id="offline-data-status" class="hint" aria-live="polite">Checking local storage…</p><div class="exam-actions"><button id="btn-offline-storage" type="button" class="btn-secondary">Keep data on this device</button><button id="btn-offline-dictionaries" type="button" class="btn-secondary">Manage downloaded dictionaries</button><a href="#/vault" class="btn-secondary">Open saved words</a></div><p class="hint">Practice questions are bundled with the app. Dictionaries and your listening files take extra storage; downloads and recordings stay in this browser profile.</p></details>
+      <div class="exam-picker"><label for="exam-select">Exam</label><select id="exam-select"><option>IELTS Academic</option><option>TOEIC Listening &amp; Reading</option></select><label for="ielts-pathway-stage" class="ielts-pathway-only">IELTS pathway stage</label><select id="ielts-pathway-stage" class="ielts-pathway-only"><option value="band-5">Foundation · around 5.0</option><option value="band-6">Stage 1 · 5.0 → 6.0</option><option value="band-6-5">Stage 2 · 6.0 → 6.5</option><option value="band-7">Stage 3 · 6.5 → 7.0</option></select><label for="exam-skill">Skill</label><select id="exam-skill"><option value="all">All objective questions</option><option value="Listening">Listening</option><option value="Reading">Reading</option></select><label for="exam-mode">Mode</label><select id="exam-mode"><option value="practice">Practice · feedback after each answer</option><option value="timed">Timed practice · current pathway set</option><option value="diagnostic">IELTS L/R diagnostic · 40 questions per skill</option></select><button type="button" id="btn-exam-begin" class="btn-primary">Start</button><button type="button" id="exam-resume" class="btn-secondary" hidden>Resume</button></div>
+      <div id="ielts-stage-guidance" class="ielts-pathway-only" aria-live="polite"></div>
+      <section id="ielts-assignment" class="ielts-assignment ielts-pathway-only" aria-live="polite" hidden></section>
+      <div id="exam-start"><p id="study-pack-status" class="hint">Loading original offline content pack…</p><p class="hint">Question formats include multiple choice, short answer, gap-fill, matching and bundled audio choices. Missed answers are saved to Vault for local review. Audio files are stored with the app and work offline.</p></div>
+      <div id="exam-question" class="hidden"></div>
+      <details class="offline-writing">
+        <summary><strong>✍ Writing practice</strong></summary>
+        <div class="exam-picker"><label for="writing-prompt">IELTS Academic prompt · grouped by pathway stage</label><select id="writing-prompt"></select><button type="button" id="btn-writing-prompt" class="btn-secondary">New prompt in selected stage</button></div>
+        <div id="writing-prompt-text" class="exam-passage" aria-live="polite"></div><textarea id="writing-input" rows="8" placeholder="Write your response. Drafts save automatically on this device."></textarea><div class="journal-bar"><span id="writing-word-count" class="hint">0 words</span><button id="btn-writing-save" type="button" class="btn-primary">Save attempt</button></div>
+        <fieldset class="self-check"><legend>IELTS Writing self-review · formative, not a band score</legend><label><input type="checkbox" data-writing-check value="Task achievement / task response"> I addressed every part of the task and made my position or overview clear</label><label><input type="checkbox" data-writing-check value="Coherence and cohesion"> My ideas follow a clear order and connections are easy to follow</label><label><input type="checkbox" data-writing-check value="Lexical resource"> My word choices fit the meaning and avoid distracting repetition</label><label><input type="checkbox" data-writing-check value="Grammatical range and accuracy"> My sentences have clear subject–verb structure and I checked recurring errors</label></fieldset><p id="writing-save-state" class="hint" aria-live="polite"></p>
+        <details class="ai-review"><summary>Optional AI feedback</summary><p class="hint">Offline self-review works without an account or key. Each request sends the selected writing prompt and up to 6,000 characters from this response editor to your chosen provider; token charges may apply. It does not include your other drafts.</p><label><input type="checkbox" id="writing-ai-consent"> I agree to send the selected Writing prompt and the response in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-writing-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-writing-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="writing-ai-status" class="hint" role="status" aria-live="polite"></p><div id="writing-ai-feedback" aria-live="polite"></div></details>
+      </details>
+      <details class="offline-speaking">
+        <summary><strong>🎤 Speaking practice</strong></summary><p class="hint">Recording uses your microphone and is saved locally. Browser speech recognition is optional and may use an online service; it is not required here.</p>
+        <p id="speaking-task-label" class="hint"></p><p id="speaking-method-guidance" class="hint"></p><textarea id="speaking-prompt" rows="3" readonly aria-label="Speaking prompt"></textarea><button type="button" id="btn-speaking-prompt" class="btn-secondary">New speaking prompt in selected stage</button>
+        <textarea id="speaking-notes" rows="3" placeholder="Optional transcript or reflection notes; saves automatically on this device."></textarea><div class="exam-actions"><button type="button" id="btn-record-speaking" class="btn-primary">● Record</button><button type="button" id="btn-stop-speaking" class="btn-secondary" disabled>■ Stop and save recording</button><button type="button" id="btn-speaking-save" class="btn-secondary">Save notes</button></div>
+        <fieldset class="self-check"><legend>IELTS Speaking self-review · formative, not a band score</legend><label><input type="checkbox" data-speaking-check value="Fluency and coherence"> I kept a clear line of thought and managed pauses</label><label><input type="checkbox" data-speaking-check value="Lexical resource"> I used accurate words and phrases, and paraphrased when needed</label><label><input type="checkbox" data-speaking-check value="Grammatical range and accuracy"> I used clear sentence spines and checked repeated grammar errors</label><label><input type="checkbox" data-speaking-check value="Pronunciation"> My speech was understandable, with clear word stress and chunking</label></fieldset><details class="ai-review"><summary>Optional AI feedback</summary><p class="hint">Your recording stays on this device and is not sent. Each request sends only the selected Speaking prompt and up to 6,000 characters from the notes editor; token charges may apply. It does not include your recording or other drafts.</p><label><input type="checkbox" id="speaking-ai-consent"> I agree to send the selected Speaking prompt and the notes in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-speaking-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-speaking-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="speaking-ai-status" class="hint" role="status" aria-live="polite"></p><div id="speaking-ai-feedback" aria-live="polite"></div></details><p id="speaking-status" class="hint" aria-live="polite"></p>
+      </details><details class="offline-history"><summary>Recent Writing, Speaking &amp; exercise attempts</summary><div id="offline-study-history" class="study-history-list"></div></details><details class="offline-study-stats"><summary>Offline practice statistics</summary><div id="offline-study-stats" class="study-history-list"></div></details>
+    </details>
+    <div id="practice-stage"></div>
+    <div id="practice-empty" class="empty-state hidden">
+      <p><strong id="practice-empty-msg" data-i18n="practice.emptyTitle">Nothing to practice yet</strong></p>
+      <p class="hint" data-i18n="practice.emptyHint">Save a few words, phrases or sentences first, then come back — Practice builds quick fill-the-gap and listen-and-type drills from your Vault.</p>
+      <a class="btn-secondary" href="#/vault" data-i18n="practice.openVault">Open Vault</a>
+    </div>
+  </section>
+
+  <!-- ===== Stats (Phase 3+) ===== -->
+  <section id="stats-view" class="stats-view hidden" aria-label="Stats">
+    <div class="vault-head">
+      <h2 data-i18n="section.stats">Stats</h2>
+      <span id="stats-count" class="hint" aria-live="polite"></span>
+    </div>
+    <p id="backup-info" class="hint"></p>
+    <div id="stats-grid" class="stats-grid"></div>
+  </section>
+
+  <!-- ===== Search history (Phase: full recent-searches page) ===== -->
+  <section id="history-view" class="history-view hidden" aria-label="Search history">
+    <div class="vault-head">
+      <h2 data-i18n="history.head">Search history</h2>
+      <button type="button" id="btn-clear-history-full" class="btn-secondary head-actions" data-i18n="history.clearAll">Clear all</button>
+    </div>
+    <div id="history-full"></div>
   </section>
 
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
   <footer class="foot">
-    <p class="credits">Dictionary data may be copyrighted by its respective publishers
-      (e.g. Oxford University Press, Pearson) and is stored locally on your device for
-      <strong>personal study and research use only</strong> — do not redistribute or use commercially.</p>
-    <p>Offline &amp; non-commercial · bring your own .mdx / .mdd files</p>
-    <p class="credits" style="font-size:12px">EN–VI dictionary data: “Từ điển Anh–Việt” © Open Vietnamese Dictionary Project (catusf/tudien) — MIT license.</p>
-    <div class="support">
-      <p class="support-note">If Dual Dictionary helps your study, a coffee keeps it free &amp; ad-free ☕</p>
-      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="quocanh38r" data-color="#FF5F5F" data-emoji=""  data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-      <noscript><a href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">Buy me a coffee</a></noscript>
-    </div>
+    <!-- R-B: the legal/attribution block is now ONE short line + ONE link. The
+         licence truth is unchanged: the use terms stay visible in the footer, the
+         per-source names and licence short forms live where the content is shown
+         (the panel-head name + licence chip from v61) and in the in-app About
+         ("Dictionaries & licenses"), and the full wording is one hop away in
+         NOTICE.md — which is precached, so it still opens offline. Same shape as
+         the v61 chips: short visible text, full wording in the tooltip. -->
+    <p class="credits attr-line" id="foot-legal">
+      <span data-i18n="foot.termsShort">Personal study &amp; research only — no redistribution or commercial use.</span>
+      <a href="NOTICE.md" target="_blank" rel="noopener" id="foot-lic-link"
+         data-i18n="foot.licLink" data-i18n-title="foot.licLinkTitle"
+         title="Full licence text and the bundled dictionary sources (WordNet 3.1, Simple English Wiktionary, EN–VI OVDP). Also in-app under About — “Dictionaries &amp; licenses”. Full text: NOTICE.md">Licences &amp; sources</a>
+    </p>
+    <p class="foot-offline" data-i18n="foot.offline">Offline &amp; non-commercial · bring your own .mdx / .mdd files</p>
+    <!-- U17: support stays a small, quiet footer text link — never a competing CTA -->
+    <p class="support">If Dual Dictionary helps your study, you can
+      <a class="support-link" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">buy me a coffee ☕</a>.</p>
   </footer>
 </main>
+
+<!-- ===== Bottom navigation (mobile only, <900px) ===== -->
+<nav class="bottom-nav" aria-label="Main (mobile)">
+  <a href="#/search" data-nav="search" class="active"><span class="bn-icon">🔍</span><span class="bn-label" data-i18n="nav.search">Search</span></a>
+  <a href="#/reader" data-nav="reader"><span class="bn-icon">📖</span><span class="bn-label" data-i18n="nav.reader">Reader</span></a>
+  <a href="#/vault" data-nav="vault"><span class="bn-icon">★</span><span class="bn-label" data-i18n="nav.vault">Vault</span><span class="badge vocab-due hidden"></span></a>
+  <a href="#/review" data-nav="review"><span class="bn-icon">🔁</span><span class="bn-label" data-i18n="nav.review">Review</span><span class="badge review-due hidden"></span></a>
+  <a href="#/practice" data-nav="practice"><span class="bn-icon">✍</span><span class="bn-label" data-i18n="nav.practice">Practice</span></a>
+  <a href="#/stats" data-nav="stats"><span class="bn-icon">📊</span><span class="bn-label" data-i18n="nav.stats">Stats</span></a>
+</nav>
+
+<!-- ===== Item editor (Vault ••• → edit note / tags / status / delete / export) ===== -->
+<dialog id="item-editor">
+  <button type="button" class="dialog-close" aria-label="Close editor" data-i18n-aria="ui.closeEditor">✕</button>
+  <h2 data-i18n="dialog.itemEdit">Edit item</h2>
+  <p class="hint" id="item-editor-text"></p>
+  <label class="field"><span data-i18n="field.note">Note</span>
+    <textarea id="item-note" rows="3" placeholder="Your own note…"></textarea>
+  </label>
+  <label class="field"><span data-i18n="field.tags">Tags (comma-separated)</span>
+    <input id="item-tags" type="text" placeholder="work, review-later" spellcheck="false">
+  </label>
+  <label class="field"><span data-i18n="field.deck">Deck (theme)</span>
+    <input id="item-deck" type="text" placeholder="e.g. IELTS, Travel" spellcheck="false" list="deck-options">
+    <datalist id="deck-options"></datalist>
+  </label>
+  <label class="field"><span data-i18n="field.status">Status</span>
+    <select id="item-status">
+      <option value="new" data-i18n="opt.new">New</option>
+      <option value="learning" data-i18n="opt.learning">Learning</option>
+      <option value="known" data-i18n="opt.known">Known</option>
+    </select>
+  </label>
+  <div class="editor-actions">
+    <button type="button" id="item-editor-save" class="btn-primary" data-i18n="btn.save">Save</button>
+    <button type="button" id="item-editor-delete" class="btn-secondary" data-i18n="btn.delete">Delete</button>
+    <button type="button" id="item-editor-export" class="btn-secondary" data-i18n="btn.export">Export</button>
+  </div>
+  <form method="dialog"><button class="btn-secondary" data-i18n="ui.btnClose">Close</button></form>
+</dialog>
+
+<!-- ===== Add-example dialog (Context layer P1) ===== -->
+<dialog id="example-dialog">
+  <button type="button" class="dialog-close" aria-label="Close">✕</button>
+  <h2 data-i18n="dialog.addExample">Add an example</h2>
+  <p class="hint" data-i18n-html="example.hint">Your own example sentence for “<strong id="example-word"></strong>”.</p>
+  <label class="field"><span data-i18n="field.example">Example sentence</span>
+    <textarea id="example-text" rows="3" placeholder="e.g. They called off the meeting at the last minute."></textarea>
+  </label>
+  <div class="editor-actions">
+    <button type="button" id="example-save" class="btn-primary" data-i18n="btn.saveExample">Save example</button>
+  </div>
+  <form method="dialog"><button class="btn-secondary" data-i18n="ui.btnCancel">Cancel</button></form>
+</dialog>
+
+<!-- ===== Export dialog (Phase 3+ / P1) ===== -->
+<dialog id="export-dialog">
+  <button type="button" class="dialog-close" aria-label="Close">✕</button>
+  <h2 data-i18n="dialog.export">Export</h2>
+  <p class="hint" id="export-scope"></p>
+  <label class="field"><span data-i18n="field.format">Format</span>
+    <select id="export-format">
+      <option value="csv">CSV (.csv)</option>
+      <option value="tsv">TSV (.tsv)</option>
+      <option value="anki">Anki (tab-separated .txt)</option>
+      <option value="apkg">Anki deck (.apkg)</option>
+      <option value="json">JSON v3 (.json)</option>
+    </select>
+  </label>
+  <fieldset class="field" id="export-fields">
+    <legend data-i18n="field.fields">Fields</legend>
+    <label><input type="checkbox" data-field="text" checked> <span data-i18n="field.fText">text</span></label>
+    <label><input type="checkbox" data-field="type" checked> <span data-i18n="field.fType">type</span></label>
+    <label><input type="checkbox" data-field="status" checked> <span data-i18n="field.fStatus">status</span></label>
+    <label><input type="checkbox" data-field="tags" checked> <span data-i18n="field.fTags">tags</span></label>
+    <label><input type="checkbox" data-field="deck" checked> <span data-i18n="field.fDeck">deck</span></label>
+    <label><input type="checkbox" data-field="note" checked> <span data-i18n="field.fNote">note</span></label>
+    <label><input type="checkbox" data-field="sentence" checked> <span data-i18n="field.fSentence">sentence</span></label>
+    <label><input type="checkbox" data-field="source" checked> <span data-i18n="field.fSource">source</span></label>
+    <label><input type="checkbox" data-field="created" checked> <span data-i18n="field.fCreated">created</span></label>
+  </fieldset>
+  <div class="editor-actions">
+    <button type="button" id="export-run" class="btn-primary" data-i18n="btn.export">Export</button>
+  </div>
+  <form method="dialog"><button class="btn-secondary" data-i18n="ui.btnCancel">Cancel</button></form>
+</dialog>
+
+<!-- ===== Passphrase dialog (encrypted backup) ===== -->
+<dialog id="crypto-dialog">
+  <button type="button" class="dialog-close" aria-label="Close">✕</button>
+  <h2 data-i18n="ui.ppTitle">Passphrase</h2>
+  <p class="hint" id="crypto-label"></p>
+  <label class="field"><span data-i18n="ui.ppTitle">Passphrase</span><input type="password" id="crypto-pass" autocomplete="off" spellcheck="false"></label>
+  <div class="editor-actions"><button type="button" id="crypto-confirm" class="btn-primary" data-i18n="ui.ppGo">Continue</button></div>
+  <form method="dialog"><button class="btn-secondary" data-i18n="ui.btnCancel">Cancel</button></form>
+</dialog>
+
+<!-- ===== Tag manager (rename / delete tags) ===== -->
+<dialog id="tags-dialog">
+  <button type="button" class="dialog-close" aria-label="Close">✕</button>
+  <h2 data-i18n="dialog.tags">Tags</h2>
+  <p class="hint" data-i18n="tags.hint">Rename or delete a tag across all saved items.</p>
+  <div id="tags-list"></div>
+  <form method="dialog"><button class="btn-primary" data-i18n="ui.btnClose">Close</button></form>
+</dialog>
+
+<!-- ===== Onboarding (first visit) ===== -->
+<dialog id="onboarding-dialog">
+  <button type="button" class="dialog-close" aria-label="Close">✕</button>
+  <h2 data-i18n="dialog.welcome">Welcome 👋</h2>
+  <ol class="quickstart" data-i18n-html="onboarding.steps">
+    <li><strong>Look up</strong> — type a word, then tap a dictionary tab to read its result;
+        switch anytime. Prefer meanings in your language? Add the Vietnamese dictionary in one click.</li>
+    <li><strong>Read &amp; save</strong> — open 📖 <em>Reader</em>, paste an article (or a Wikipedia URL), tap any word to look it up. Save the word with ☆, or ⭐ save the whole sentence.</li>
+    <li><strong>Review &amp; practice</strong> — your saved items live in ★ <em>Vault</em>: filter, tag, sort. 🔁 <em>Review</em> runs a spaced-repetition queue; 🎯 <em>Practice</em> turns it into quick drills.</li>
+    <li><strong>Make it yours</strong> — switch theme (🌓) or the navigation language (EN/VI); turn on optional review reminders in ⚙ <em>Advanced</em>; dictionary lookup, saving and review work offline for free. Optional AI practice needs internet and your own provider key. You pay the provider for tokens; article text and answers are sent only after your agreement.</li>
+  </ol>
+  <!-- v67 R2: the only pre-Advanced reminder opt-in — a quiet link, ignorable,
+       never shown again after it is used once (the app hides it on click). -->
+  <p class="hint onboarding-extra"><button type="button" id="onboard-reminders" class="linklike" data-i18n="onboard.reminders">🔔 Get a nudge when words are due</button></p>
+  <form method="dialog"><button class="btn-primary" data-i18n="onboard.cta">Got it — let's go</button></form>
+</dialog>
+
+<!-- ===== Saved articles (offline snapshots) ===== -->
+<dialog id="snapshots-dialog">
+  <button type="button" class="dialog-close" aria-label="Close">✕</button>
+  <h2 data-i18n="ui.snapTitle">Saved articles</h2>
+  <p class="hint" data-i18n="ui.snapHint">Articles you saved for offline reading. Tap one to load it into the Reader — no network needed.</p>
+  <div id="snapshots-list"></div>
+  <form method="dialog"><button class="btn-primary" data-i18n="ui.btnClose">Close</button></form>
+</dialog>
 
 <!-- Help modal -->
 <dialog id="help-dialog">
   <button type="button" class="dialog-close" aria-label="Close help">✕</button>
-  <h2>How to use</h2>
-  <ol class="quickstart">
+  <h2 data-i18n="help.title">How to use</h2>
+  <p class="hint"><a href="docs/huong-dan-su-dung.html" target="_blank" rel="noopener">📘 Mở hướng dẫn sử dụng đầy đủ bằng tiếng Việt</a></p>
+  <ol class="quickstart" data-i18n-html="help.quick">
     <li><strong>Wait for the first download</strong> — the dictionaries are fetched once,
         then stored in the app and work offline. Progress, speed and time remaining are
         shown in each panel header; you can cancel or retry from the start screen.</li>
-    <li><strong>Type a word</strong> (e.g. <code>apple</code>) and press Enter — both
-        dictionaries show results side by side.</li>
-    <li><strong>Save words</strong> with ☆ next to the search box, then review them later
-        from ★ in the top bar (built-in spaced repetition).</li>
+    <li><strong>Type a word</strong> (e.g. <code>apple</code>) and press Enter — tap a tab
+        above the result to switch dictionaries.</li>
+    <li><strong>Read &amp; tap</strong> — open 📖 <em>Reader</em>, paste an article (or load a
+        Wikipedia URL), then tap any word to look it up below without leaving the text.
+        🎬 <em>YouTube transcript</em> turns a video's captions into the same tappable text.</li>
+    <li><strong>Save a meaning</strong> — ☆ opens loaded dictionary entries. Choose the source and edit the full definition if you want one sense per card. Reader also keeps the tapped sentence; ⭐ <em>Save sentence</em> saves that sentence by itself.</li>
+    <li><strong>Review</strong> — open ★ <em>Vault</em> to browse meanings with their saved source and sentence, notes, tags
+        and filters, then 🔁 <em>Review</em> runs the FSRS spaced-repetition queue — after a
+        few hundred graded reviews, ⚙ Advanced can re-fit its weights to your own history
+        (entirely on this device).</li>
   </ol>
+  <details class="help-more"><summary>Offline IELTS, TOEIC, Writing and Speaking practice</summary>
+    <ol><li>Open <em>Practice</em> and choose IELTS Academic or TOEIC Listening &amp; Reading, then choose Listening, Reading or all objective questions. The versioned original content pack works offline and demonstrates multiple choice, audio choice, short answer, gap-fill and matching; it is not official exam material.</li><li>For TOEIC Part 1, play each bundled statement from its audio control and choose the one that matches the picture. These original audio clips are precached with the app and work offline. Other listening examples reveal their transcript after practice; optional browser voice playback depends on installed voices.</li><li>Choose <em>Practice</em> for feedback after every answer or <em>Timed practice · current question set</em> to move between available questions, go back, skip, and submit against a countdown. Timed pathway practice scales to the selected set. IELTS Academic diagnostic mode has 40 Listening questions in four Parts and 40 Reading questions in three passages, with 30- and 60-minute section timers; both can be completed in one 90-minute objective-only session. Browser-generated Listening voice is synthetic, and the authored items are not calibrated, so results suggest a next stage per skill rather than a predicted or overall band. TOEIC remains a short starter bank (8 Listening and 8 Reading questions). Answers stay hidden until submission; reloading preserves the selected skill, question, answers and remaining time. Progress shows local raw answers by skill, never an official score.</li><li>IELTS Academic Writing prompts cover Task 1 and Task 2, and Speaking prompts cover Parts 1–3. Drafts save on this device. Use the checklist for self-review, then save an attempt to offline history. The TOEIC set intentionally covers L&amp;R; TOEIC Speaking and Writing are separate tests and are not included.</li><li>Optional AI feedback for Writing/Speaking uses the provider and API key you configured in Advanced → Learning. It requires internet, your per-request consent, and may incur token charges with the provider. Writing sends the prompt and your response; Speaking sends only your prompt and typed transcript/notes. Recordings never leave the device through this feature. Feedback is for practice and does not predict an official score. Prompts, drafts, self-review and saved recordings remain available offline without a key.</li><li>Speaking prompts can be recorded with your microphone; recordings are stored on this device (maximum 25 MB each) and included in JSON/encrypted study backups. Microphone access needs a secure browser context and your permission. Speech recognition is optional and may contact the browser vendor online; this app does not guarantee offline transcription.</li><li>In Reader → Listening, save your own audio file and transcript to keep them for later offline sessions. The audio stays local. Include your saved study data in a JSON or encrypted backup before moving devices; media makes the file larger. You can delete saved materials and recordings from their lists.</li><li>Vault’s <em>Journal</em> tab remains available even when you have no saved vocabulary. Journal text and its timer resume after reload on this browser.</li></ol>
+  </details>
+  <details class="help-more"><summary>Optional AI practice — setup, privacy and costs</summary>
+    <p>Dictionary lookup, Reader, Vault and review remain free and offline after setup. AI practice is optional, requires internet for new responses and uses an API key for your chosen provider. Token charges are paid directly to that provider.</p>
+    <ol><li>When you first choose AI practice without a saved key, a short setup appears with provider defaults already filled in. Paste your own key and continue; custom model and endpoint values are under <em>Advanced</em>. This saves settings only and does not call AI by itself. You can also configure or forget the key in Advanced → Learning.</li><li>In Reader, start a reading of at least 80 characters, then choose AI practice. Before each live model request, inspect the exact learner data, provider/model and possible token cost, then agree to that request. Cached suggestions are labelled and do not make a provider call.</li><li>Select a phrase with its source sentence, answer the situation, and review the quoted feedback. Accept useful feedback or mark it not useful before saving the phrase to Vault or trying another situation.</li><li>Saving a phrase does not grade a review. Your regular FSRS reviews run locally. Previously cached phrase suggestions may be reused offline; new situations and feedback need your provider connection.</li><li><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Run the authored live AI evaluation cases</a> to review correct use, a grammar error, an off-topic answer, and a missing required phrase. Each case requires separate consent; the exported report contains no API key and describes only those cases.</li><li>Drafts and sessions are saved in this browser and included in study backups. Advanced → Learning lets you forget the key, clear phrase cache, or delete Tutor data. Browser data may be lost when cleared: export a backup first.</li></ol>
+    <p>The offline tutorial is an authored walkthrough. It does not evaluate your answer or pretend to be a live model result. Browser speech recognition may also use your browser vendor's online service as described in pronunciation help.</p>
+  </details>
   <details class="help-more">
     <summary>More features &amp; details</summary>
-    <ol>
+    <ol data-i18n-html="help.more">
       <li><strong>Purpose:</strong> this app is a personal study &amp; research tool — non-commercial,
          no account, no tracking. All dictionary data stays on your own device.</li>
-      <li><strong>Hear it:</strong> tap 🔊 next to the search box to hear the word read aloud using your
-        browser's built-in text-to-speech.</li>
+      <li><strong>Hear it, say it, see the IPA:</strong> 🔊 hears the word (browser text-to-speech);
+         the pronunciation strip shows real IPA for most English words; 🎤 checks your
+         pronunciation using your browser's speech recognition (Practice also has a
+         say-it-aloud drill). On Chrome the audio is processed by Google, on Safari by
+         Apple — this app has no server.</li>
+      <li><strong>Review reminders (optional):</strong> enable in ⚙ <em>Advanced</em> — local-only
+         and opt-in: an app badge, a quiet banner, and notifications on installed
+         Android/desktop PWAs at browser-chosen times. Nothing is sent anywhere.</li>
       <li><strong>Bring your own dictionary file:</strong> open <em>⚙ Advanced</em> in the top bar to load
         a .mdx/.mdd dictionary file you have the rights to use into either slot.
         The public edition ships with open-licensed dictionaries (WordNet 3.1, Simple English)
@@ -277,11 +868,43 @@
         <strong>commercial</strong> dictionary files (e.g. OALD/LDOCE), keep that deployment
         private — serving licensed content as a public service would be redistribution.</li>
       <li><strong>Keyboard (desktop):</strong> ↑/↓ to pick a suggestion, Enter to search, Esc to hide.</li>
+      <li><strong>Reader mode:</strong> paste text or load a page and tap words to look them up;
+        your saved sentence stays with the word — shown highlighted above the entry, with
+        <em>Add example</em> for extra sentences.</li>
+      <li><strong>Vault &amp; Review:</strong> every word, phrase and sentence lives in one place —
+        notes, tags, status, search-within, multi-select. <em>Review</em> uses the FSRS
+        spaced-repetition queue (know / forgot / skip).</li>
+      <li><strong>Your data is yours:</strong> export Vault items as JSON, or use the complete study backup to include local sessions and audio — no cloud,
+        no account, nothing leaves your device.</li>
+      <li><strong>One-click EN–VI:</strong> add the open English–Vietnamese dictionary
+        (OVDP, 386,600 entries) from the start screen or ⚙ Advanced.</li>
+      <li><strong>Practice &amp; stats:</strong> 🎯 <em>Practice</em> (from Vault or Review) runs
+        quick exercises — fill in the missing word, or listen &amp; type — with
+        <em>Got it</em> / <em>Review again</em>. 📊 <em>Stats</em> shows words learned,
+        retention, due items and sources read.</li>
+      <li><strong>Export anywhere:</strong> the Vault exports your items as JSON, CSV, TSV or
+        Anki-ready text, with field selection.</li>
+      <li><strong>Pronunciation:</strong> 🔊 speaks a word, 🐢 <em>0.75×</em> slows playback, and
+        ↺ replays your saved sentence. IPA is shown when the dictionary data includes it.</li>
+      <li><strong>Look &amp; language:</strong> switch theme (system / light / dark) with the 🌓 button;
+        switch the navigation between English and Vietnamese with the EN/VI button.</li>
+      <li><strong>Find things again:</strong> 📊 <em>Stats</em> is in the top/bottom navigation; recent
+        searches have their own page (<em>View all</em> from the Recent bar); 🏷️ <em>Tags</em> in the
+        Vault renames or deletes a tag across every item.</li>
+      <li><strong>Install &amp; offline safety:</strong> the ⬇ button installs the app; an “Offline”
+        note appears if the network drops (your data keeps working). A JSON backup of your items is
+        written on-device once a day — restore it from ⚙ Advanced.</li>
     </ol>
   </details>
   <details class="help-more">
+    <summary>Save words from any web page</summary>
+    <p class="hint">Drag this button to your browser's bookmarks bar. Select text on any page, then click the bookmark to open it in Dual Dictionary's Reader.</p>
+    <p><a class="btn-secondary bookmarklet" href="javascript:void(window.open('https://dualdictionary.netlify.app/?read='+encodeURIComponent(String(window.getSelection()||''))))">📖 Send to Dual Dictionary</a></p>
+    <p class="hint">For a single word you can also open <code>https://dualdictionary.netlify.app/?q=word</code> — it searches right away.</p>
+  </details>
+  <details class="help-more">
     <summary>Licenses &amp; terms of use</summary>
-    <p class="license-note">
+    <p class="license-note" data-i18n-html="help.licenses">
       This app is provided for <strong>personal study and research purposes only</strong> —
       non-commercial use. Dictionary files you load remain the property of their respective
       publishers (e.g. Oxford University Press, Pearson): use only files you are authorized
@@ -289,69 +912,197 @@
       Spoken audio uses your browser's built-in text-to-speech (no audio files bundled).
     </p>
   </details>
-  <form method="dialog"><button class="btn-primary">Got it</button></form>
+  <form method="dialog"><button class="btn-primary" data-i18n="help.cta">Got it</button></form>
 </dialog>
 
 <!-- Advanced settings modal -->
 <dialog id="advanced-dialog">
   <button type="button" class="dialog-close" aria-label="Close advanced settings">✕</button>
-  <h2>Advanced</h2>
-  <p class="hint"><strong>Optional</strong> — most users never need this screen. The app downloads
-    and updates the default dictionaries by itself. Only use this if you want to load your own
-    .mdx/.mdd file into a slot; only load files you have the rights to use — see the terms of
-    use in the Help dialog.</p>
-  <h3>Slot 1 — WordNet 3.1 by default</h3>
-  <div class="file-row">
-    <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="oxford" data-kind="mdx" hidden></label>
-    <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="oxford" data-kind="mdd" hidden></label>
-    <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="oxford" data-kind="css" hidden></label>
-  </div>
-  <div class="file-row">
-    <input id="url-oxford" type="url" placeholder="https://user:pass@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
-    <button type="button" class="btn-secondary" id="url-load-oxford">⬇ Load from URL</button>
-  </div>
-  <button type="button" class="btn-secondary panel-remove" data-slot="oxford">Remove &amp; restore default</button>
+  <h2 data-i18n="dialog.advanced">Advanced</h2>
+  <p class="hint"><strong>Optional</strong> — most users never need this screen. Three tabs:
+    your dictionaries, your data, and how the app behaves while you study.</p>
 
-  <h3>Slot 2 — Simple English Wiktionary by default</h3>
-  <div class="file-row">
-    <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="longman" data-kind="mdx" hidden></label>
-    <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="longman" data-kind="mdd" hidden></label>
-    <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="longman" data-kind="css" hidden></label>
-  </div>
-  <div class="file-row">
-    <input id="url-longman" type="url" placeholder="https://user:pass@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
-    <button type="button" class="btn-secondary" id="url-load-longman">⬇ Load from URL</button>
-  </div>
-  <button type="button" class="btn-secondary panel-remove" data-slot="longman">Remove &amp; restore default</button>
-
-  <div class="envi-row">
-    <button type="button" id="btn-envi-adv" class="btn-primary">🇻🇳 Get EN–VI dictionary <small>(open-licensed, 386k words)</small></button>
-    <p class="hint">Downloads the open EN–VI dictionary (OVDP, MIT) into Slot 2 — one-time, stored offline.</p>
+  <!-- v73: the seven <details> sections grew into an unscannable wall — three
+       different concerns (dictionary setup, data care, study behaviour) now get
+       one tab each. All element IDs are unchanged, so the test suites and the
+       wiring keep working; the tab choice is context-based (see renderAdvStatus). -->
+  <div class="adv-tabs" role="tablist" aria-label="Advanced settings sections">
+    <button type="button" class="adv-tab" id="adv-tab-dicts" role="tab" aria-selected="true">Dictionaries</button>
+    <button type="button" class="adv-tab" id="adv-tab-data" role="tab" aria-selected="false">Data</button>
+    <button type="button" class="adv-tab" id="adv-tab-learning" role="tab" aria-selected="false">Learning</button>
   </div>
 
-  <p class="hint">Loading a new .mdx replaces the one currently in that slot.
-    <strong>Load from URL loads the whole set in one go</strong>: the matching
-    <code>.mdd</code> (audio/images) and <code>.css</code> (stylesheet) sitting next to the
-    .mdx on the server are fetched automatically — one URL, all files. The file buttons above
-    are only for offline/manual completion. See the
-    <a href="data-loading-guide.md" target="_blank" rel="noopener">detailed loading guide + troubleshooting</a>
-    for supported formats and common errors.</p>
-  <form method="dialog"><button class="btn-primary">Close</button></form>
+  <div id="adv-panel-dicts" class="adv-panel" role="tabpanel" aria-label="Dictionaries">
+  <p class="hint" id="adv-status" aria-live="polite"></p>
+
+  <details class="adv-section" open>
+    <summary>Dictionaries in your slots</summary>
+    <div class="adv-slot">
+      <h3>Slot 1</h3>
+      <div class="file-row">
+        <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="oxford" data-kind="mdx" hidden></label>
+        <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="oxford" data-kind="mdd" hidden></label>
+        <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="oxford" data-kind="css" hidden></label>
+      </div>
+      <div class="file-row">
+        <input id="url-oxford" type="url" aria-label="Dictionary .mdx URL for slot 1" placeholder="https://user:***@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
+        <button type="button" class="btn-secondary" id="url-load-oxford">⬇ Load from URL</button>
+      </div>
+      <button type="button" class="btn-secondary panel-remove" data-slot="oxford">Remove &amp; restore default</button>
+    </div>
+    <div class="adv-slot">
+      <h3>Slot 2</h3>
+      <div class="file-row">
+        <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="longman" data-kind="mdx" hidden></label>
+        <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="longman" data-kind="mdd" hidden></label>
+        <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="longman" data-kind="css" hidden></label>
+      </div>
+      <div class="file-row">
+        <input id="url-longman" type="url" aria-label="Dictionary .mdx URL for slot 2" placeholder="https://user:***@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
+        <button type="button" class="btn-secondary" id="url-load-longman">⬇ Load from URL</button>
+      </div>
+      <button type="button" class="btn-secondary panel-remove" data-slot="longman">Remove &amp; restore default</button>
+    </div>
+    <div class="adv-slot">
+      <h3>Slot 3 (optional — e.g. EN–VI)</h3>
+      <div class="file-row">
+        <label class="file-btn">📄 .mdx<input type="file" accept=".mdx" data-slot="third" data-kind="mdx" hidden></label>
+        <label class="file-btn">🔊 .mdd <small>(audio/images)</small><input type="file" accept=".mdd" data-slot="third" data-kind="mdd" hidden></label>
+        <label class="file-btn">🎨 .css <small>(styles, optional)</small><input type="file" accept=".css" data-slot="third" data-kind="css" hidden></label>
+      </div>
+      <div class="file-row">
+        <input id="url-third" type="url" aria-label="Dictionary .mdx URL for slot 3" placeholder="https://user:***@your-home-server/dicts/your-dictionary.mdx" spellcheck="false" style="flex:1;min-width:0">
+        <button type="button" class="btn-secondary" id="url-load-third">⬇ Load from URL</button>
+      </div>
+      <button type="button" class="btn-secondary panel-remove" data-slot="third">Remove</button>
+    </div>
+    <!-- C13: this swaps slots 1 and 2 ONLY (slot 3 is never touched) — the label says exactly that. -->
+    <button type="button" id="btn-swap-slots" class="btn-secondary" data-i18n="btn.swapSlots">⇄ Swap slots 1 ↔ 2</button>
+  </details>
+
+  <details class="adv-section">
+    <summary>Open dictionaries</summary>
+    <div class="envi-row">
+      <button type="button" id="btn-envi-adv" class="btn-primary">🇻🇳 Get EN–VI dictionary <small>(open-licensed, 386k words)</small></button>
+      <p class="hint">Downloads the open EN–VI dictionary (OVDP, MIT) into Slot 2 — one-time, stored offline.</p>
+    </div>
+  </details>
+
+  <p class="hint">Loading a new .mdx replaces the one currently in that slot. <strong>Load from URL loads the whole set in one go</strong>: the matching <code>.mdd</code> (audio/images) and <code>.css</code> (stylesheet) sitting next to the .mdx on the server are fetched automatically. The file buttons are only for offline/manual completion. See the <a href="data-loading-guide.md" target="_blank" rel="noopener">detailed loading guide + troubleshooting</a>.</p>
+  </div>
+
+  <div id="adv-panel-data" class="adv-panel" role="tabpanel" aria-label="Your data" hidden>
+  <details class="adv-section">
+    <summary>Your data — import &amp; backup</summary>
+    <div class="envi-row">
+      <label class="file-btn" for="import-file">⬆ Import data (.json / Anki .txt / .csv)<input type="file" id="import-file" accept=".json,application/json,.txt,.tsv,.csv,text/plain" hidden></label>
+      <p class="hint">Merge a previously exported Dual Dictionary data file (old v2 or new v3 format). Duplicates are skipped — your current data always wins.</p>
+      <button type="button" id="btn-export-full-backup" class="btn-secondary">📦 Download complete JSON study backup</button>
+      <p class="hint">The complete backup includes local exercise sessions, writing/speaking drafts and saved audio. Media can make the file large. Import the JSON file above to restore it.</p>
+    </div>
+    <div class="envi-row">
+      <p class="hint"><strong>On-device restore points</strong> — a snapshot of your Vault, Tutor and offline study records is written automatically once a day (kept: last 7 days); saved audio is included and can use extra storage. <strong>Restoring merges</strong>: it adds back anything missing and skips items you already have — it is not a rollback and never deletes anything. Creating a restore point adds one more snapshot to the same list (newest 5 kept).</p>
+      <div class="backup-row">
+        <select id="backup-select" aria-label="Choose a restore point"></select>
+        <button type="button" id="btn-restore-backup" class="btn-secondary">↩ Restore (merge)</button>
+        <button type="button" id="btn-create-restore-point" class="btn-secondary">📌 Create restore point</button>
+      </div>
+      <div class="envi-row">
+        <p class="hint"><strong>Real off-device backup</strong> — the encrypted file below is the only backup that survives losing this device or its browser data. Keep it somewhere else (another drive, another device).</p>
+        <button type="button" id="btn-export-encrypted" class="btn-secondary">🔐 Encrypt &amp; download a real backup</button>
+        <label class="file-btn" for="import-encrypted">🔓 Restore from an encrypted backup<input type="file" id="import-encrypted" accept=".ddbackup,.json,application/json,application/octet-stream" hidden></label>
+        <p class="hint">End-to-end encrypted (AES-256-GCM, key derived from your passphrase, 600,000 PBKDF2 iterations). Move the file between devices yourself — nothing touches a server, the passphrase is never stored. Backups made by earlier versions still import.</p>
+      </div>
+    </div>
+  </details>
+  <!-- v117 A2: known-words baseline management (plan D6) -->
+  <details class="adv-section">
+    <summary data-i18n="known.advTitle">Known words — reading-coverage baseline</summary>
+    <p class="hint" id="known-adv-status" aria-live="polite"></p>
+    <div id="known-adv-chips" class="known-chips"></div>
+    <button type="button" id="known-adv-reset" class="btn-secondary" data-i18n="known.reset">Reset known words</button>
+  </details>
+  </div>
+
+  <div id="adv-panel-learning" class="adv-panel" role="tabpanel" aria-label="Learning behaviour" hidden>
+  <details class="adv-section">
+    <summary>Optional AI tutor — connect your AI account</summary><div class="ai-settings-form">
+    <p class="hint">Choose your AI provider and paste its API key. The app fills in the usual model and endpoint for you. Your key is saved in this browser profile and sent only to that provider when you test the connection or request AI feedback. Tutor sessions and answers are included in JSON and encrypted backups; the key is not. Use a key you are comfortable storing in this browser profile.</p>
+    <label for="ai-provider">AI provider</label>
+    <select id="ai-provider" aria-describedby="ai-provider-hint"><option value="meta">Meta Model API</option><option value="openai">OpenAI</option><option value="anthropic">Anthropic</option><option value="compatible" data-i18n="ui.tsOther">Other compatible service</option></select>
+    <p id="ai-provider-hint" class="hint">The free offline features work without connecting an AI account.</p>
+    <label for="ai-api-key">API key</label>
+    <input id="ai-api-key" type="password" autocomplete="off" spellcheck="false" style="width:100%" aria-label="AI provider API key">
+    <details id="ai-advanced-fields" class="ai-advanced-fields">
+      <summary>Advanced: model and endpoint</summary>
+      <p class="hint">The default values are filled in for the provider above. Change these only if your provider gave you different settings.</p>
+      <label for="ai-base-url">API endpoint</label>
+      <input id="ai-base-url" type="url" spellcheck="false" style="width:100%">
+      <label for="ai-model">Model name</label>
+      <input id="ai-model" type="text" spellcheck="false" style="width:100%">
+    </details>
+    <p class="hint">Saving settings alone does not contact the provider. Testing sends a small request and may incur a token charge.</p>
+    <p class="hint"><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Evaluate live Tutor feedback with four consent-gated cases</a> · the report records latency, verdict and quote checks without including your key.</p>
+    <div class="envi-row">
+      <button type="button" id="btn-ai-save" class="btn-secondary">Save settings</button>
+      <button type="button" id="btn-ai-test" class="btn-secondary">Save &amp; test connection</button>
+      <button type="button" id="btn-ai-clear" class="btn-secondary">Forget key</button>
+      <button type="button" id="btn-ai-clear-cache" class="btn-secondary">Clear phrase cache</button>
+    </div>
+    <button type="button" id="btn-tutor-clear-data" class="btn-secondary btn-danger">Delete tutor data from this browser</button>
+    <p id="ai-settings-status" class="hint" role="status" aria-live="polite"></p></div>
+  </details>
+  <details class="adv-section">
+    <summary>Review reminders</summary>
+    <div class="envi-row">
+      <label class="reminders-row"><input type="checkbox" id="reminders-toggle">
+        <span data-i18n="adv.reminders.label">Nudge me when words are due for review</span></label>
+      <p class="hint" id="reminders-status" aria-live="polite"></p>
+      <p class="hint" data-i18n="adv.reminders.note">Local-only: notifications are generated on this device and nothing is sent anywhere. While the app is closed, nudges only work on an installed Android / desktop-Chrome PWA, at times the browser chooses; on iOS the app nudges only while it is open.</p>
+    </div>
+  </details>
+
+  <details class="adv-section">
+    <summary>Adaptive review scheduling</summary>
+    <div class="envi-row">
+      <button type="button" id="btn-fsrs-optimize" class="btn-secondary" data-i18n="adv.fsrs.optimize">⚙ Optimize with my review history</button>
+      <button type="button" id="btn-fsrs-reset" class="btn-secondary hidden" data-i18n="adv.fsrs.reset">↩ Back to default weights</button>
+      <p class="hint" id="fsrs-opt-status" aria-live="polite"></p>
+      <p class="hint" data-i18n="adv.fsrs.note">Trains the 17 FSRS scheduling weights on YOUR review history, entirely on this device — no server, nothing exported. Recommended from ~400 graded reviews (200 minimum); below that the button stays off and the defaults keep scheduling.</p>
+    </div>
+  </details>
+  </div>
+
+  <form method="dialog"><button class="btn-primary" data-i18n="ui.btnClose">Close</button></form>
 </dialog>
 
-<!-- Saved words / spaced-repetition modal -->
-<dialog id="vocab-dialog">
-  <button type="button" class="dialog-close" aria-label="Close saved words">✕</button>
-  <h2>Saved words</h2>
-  <p class="hint" id="vocab-count"></p>
-  <div id="vocab-list"></div>
-  <h3>Saved sentences</h3>
-  <div id="sentences-list"></div>
-  <button type="button" id="vocab-export" class="btn-secondary" disabled title="Download your saved words as a JSON file">⬇ Export JSON</button>
-  <form method="dialog"><button class="btn-primary">Close</button></form>
+<!-- Phase 7 P1: YouTube transcript → Reader. One honest paste — YouTube sends
+     no CORS headers, so a direct link fetch is impossible without a server; the
+     video never plays here, only the words the user copied reach the Reader. -->
+<dialog id="yt-dialog">
+  <button type="button" class="dialog-close" aria-label="Close YouTube transcript dialog">✕</button>
+  <h2 data-i18n="reader.yt.title">Read a YouTube video as text</h2>
+  <p class="hint" data-i18n="reader.yt.hint">On the video page, open the description → Show transcript, select all, copy, and paste it below. The video itself never plays in the app — you read the words and tap any word to look it up. A direct link fetch is impossible without a server (CORS), so this is one paste.</p>
+  <input id="yt-url" type="url" spellcheck="false" data-i18n-ph="reader.yt.linkPh" placeholder="https://youtube.com/watch?v=… (optional — kept as the source label)" aria-label="Video link (optional)">
+  <textarea id="yt-transcript" rows="9" spellcheck="false" data-i18n-ph="reader.yt.pastePh" placeholder="Paste the transcript here (0:07⏎text… — SRT / VTT / plain text also work)" aria-label="Transcript text"></textarea>
+  <button type="button" id="btn-reader-yt-read" class="btn-primary" data-i18n="reader.yt.read">📖 Read transcript</button>
 </dialog>
 
+<!-- v77: Listening — the user's own audio file + a pasted transcript, synced:
+     tap a line to seek, the playing line follows along. The audio stays on the
+     device (object URL, session-only) — nothing is uploaded anywhere. -->
+<dialog id="listen-dialog">
+  <button type="button" class="dialog-close" aria-label="Close listening dialog">✕</button>
+  <h2 data-i18n="reader.listen.title">Listen &amp; read along</h2>
+  <p class="hint" data-i18n="reader.listen.hint">Pick an audio file from this device and paste its transcript (YouTube copy, SRT/VTT or plain text). The audio plays locally — nothing is uploaded, and the session lasts until you close the page.</p>
+  <label class="file-btn" for="listen-audio-file">🎧 Choose an audio file<input type="file" id="listen-audio-file" accept="audio/*" hidden></label>
+  <p class="hint" id="listen-file-name" aria-live="polite"></p>
+  <label for="listen-material-title">Material name</label><input id="listen-material-title" type="text" placeholder="e.g. Practice test 1, section 2">
+  <textarea id="listen-transcript" rows="9" spellcheck="false" data-i18n-ph="reader.yt.pastePh" placeholder="Paste the transcript here (0:07⏎text… — SRT / VTT / plain text also work)" aria-label="Transcript text"></textarea>
+  <div class="exam-actions"><button type="button" id="btn-listen-start" class="btn-primary" data-i18n="reader.listen.start">🎧 Start listening</button><button type="button" id="btn-listen-save" class="btn-secondary">💾 Save for offline</button></div><p id="listen-save-status" class="hint" role="status"></p><div id="listen-library"></div>
+</dialog>
+
+<script src="js/fuzzy.js"></script><!-- v111: "did you mean" engine — plain script so window.DSFuzzy exists before the module boots -->
 <script type="module" src="js/app.js"></script>
 </body>
 </html>
-<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="1af0641f-673e-48e9-9c86-1755d64b6558" data-app-host="app.netlify.com"></script>

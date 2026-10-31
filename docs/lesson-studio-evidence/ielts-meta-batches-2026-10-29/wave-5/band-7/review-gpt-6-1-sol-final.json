@@ -1,0 +1,76 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "c2a9fb003ba2e3f098495a6ab54f644d924a22e6846863d07c078cd70b5260e1",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-5-band-7-speaking-02",
+      "severity": "minor",
+      "issue": "The question about missing information affecting school judgements is broader than the surrounding personal Part1 questions and approaches Part3 style. Answerable in short familiar terms; no blocking content or scoring issue. Specialist Writing burden is substantially reduced by definitions."
+    }
+  ],
+  "coverage": {
+    "listening": "Full policy-evaluation discussion read:3cities2018 plus4cities2020, temporary2021 confusion resolved as survey date,12% estimate, simultaneous recycling confound, placebo distinction, later wide intervals and two missing/two complete of four later cities, qualified causality conclusion. Keys [2,0,1,3,1] supported and unique; all20 options and five explanations checked, including early/later cohort distractors.",
+    "reading": "Full restoration-indicator passage read: objective/comparable appearance;11to19 wader example contrasted with single-indicator caution;40%of78 divergent richness patterns; site-specific timescales and historic missing baselines/ArdenHeath; complementary measures recommendation. Keys [0,1,2,3,0] supported and unique; every option/explanation assessed. Unrelated education-comparison sentence removed.",
+    "writing": "All five prompts read. Task1 recycling table gives2022 intervention/one-year12/8/4% estimates, complete95% uncertainty ranges, good/moderate/poor match and15/12/8 comparison-city counts; comparison method and uncertainty explained in plain language. School table gives2023/outof100 scores plus all five reporting%,participation% and2022 point changes. Task2 biodiversity, reporting uncertainty and incomplete-ranking topics allow evaluative argument; definitions reduce specialist burden.150/250 minimumWords and20/40 suggestedMinutes fields correct, though not repeated in prompt prose.",
+    "speaking": "All five prompts read: nature and education-information Part1 sets, personal decision-under-uncertainty cue card with full bullets/preparation/duration, and broader Part3 trust/research/indicator discussions. Advanced inference focus is coherent for practice; one Part1 general-judgement question remains a minor realism observation.",
+    "resolvedInitialIssues": [
+      "Later group now consistently four2020 cities; two lack supermarket data and estimate uses remaining two, in full script and listening05 explanation. Total seven remains a deliberately false all-seven distractor.",
+      "Specialist Writing terminology now unpacked: comparison estimates no-policy outcome using other cities; uncertainty range and quality of prior match explained, permitting accessible evidence comparison.",
+      "Reading no longer digresses to regional education comparisons."
+    ],
+    "scope": "Full independent AI-assisted final rereview of candidate-final-v2.json: all20items (5Listening,5Reading,5Writing,5Speaking), complete shared contexts, all40options,10keys/10explanations and all productive prompts/metadata. Repeated contexts verified string-identical to shared contexts. Entire payload reviewed, not only repair deltas. No other final reviewer reports read; no provider calls or candidate edits.",
+    "structure": {
+      "itemCount": 20,
+      "wordCounts": {
+        "listening": 329,
+        "reading": 405
+      },
+      "wordCountConvention": "Whitespace-delimited, including speaker labels; matches payload wordCount.",
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "normalizationFindings": [],
+      "taskTiming": "Task1 minimumWords150/suggestedMinutes20; Task2 minimumWords250/suggestedMinutes40; timing sometimes in metadata rather than prompt prose."
+    },
+    "itemIds": [
+      "ielts-meta-wave-5-band-7-listening-01",
+      "ielts-meta-wave-5-band-7-listening-02",
+      "ielts-meta-wave-5-band-7-listening-03",
+      "ielts-meta-wave-5-band-7-listening-04",
+      "ielts-meta-wave-5-band-7-listening-05",
+      "ielts-meta-wave-5-band-7-reading-01",
+      "ielts-meta-wave-5-band-7-reading-02",
+      "ielts-meta-wave-5-band-7-reading-03",
+      "ielts-meta-wave-5-band-7-reading-04",
+      "ielts-meta-wave-5-band-7-reading-05",
+      "ielts-meta-wave-5-band-7-writing-01",
+      "ielts-meta-wave-5-band-7-writing-02",
+      "ielts-meta-wave-5-band-7-writing-03",
+      "ielts-meta-wave-5-band-7-writing-04",
+      "ielts-meta-wave-5-band-7-writing-05",
+      "ielts-meta-wave-5-band-7-speaking-01",
+      "ielts-meta-wave-5-band-7-speaking-02",
+      "ielts-meta-wave-5-band-7-speaking-03",
+      "ielts-meta-wave-5-band-7-speaking-04",
+      "ielts-meta-wave-5-band-7-speaking-05"
+    ],
+    "originalityAndClaims": "No recognisable copied official question or score guarantee found. Provenance identifies Baseten/meta-models/muse-spark-open-1026 and originalContent=true; no exhaustive external plagiarism audit or empirical verification of fictional study statistics performed. Stage labels indicate practice progression, not validated score attainment.",
+    "independence": "Same reviewer performed initial review. Prior own findings considered for closure, while full final content reread independently. Other reviewers final findings not read."
+  },
+  "reviewerType": "AI-assisted"
+}

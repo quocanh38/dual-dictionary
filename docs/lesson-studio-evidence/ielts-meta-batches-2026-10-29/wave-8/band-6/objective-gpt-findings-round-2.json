@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-8-band-6-listening-04",
+      "severity": "uncertain",
+      "issue": "Stem asks what David MUST do to confirm, but keyed Reply YES is optional: script explicitly permits confirmation during the phone call instead. Ask How can David confirm? or provide the complete alternative Reply YES or confirm during the phone call; retain unique supported key/explanation.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

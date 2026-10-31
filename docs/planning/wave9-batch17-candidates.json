@@ -1,0 +1,31 @@
+{
+  "wave": 9,
+  "batch": 17,
+  "generated": "2026-10-20",
+  "tier": "B + exam-priority raw-page upgrades",
+  "source": "Remaining docs/vi-p2-pool.json Tier B candidates plus seven existing raw-only TOEIC business pages named in the academic review; OALD 10 and LDOCE 6 were consulted locally as editorial references.",
+  "selectionRationale": "Small exam-first batch: upgrade seven existing TOEIC/logistics/accounting pages and add five Tier B phrases useful for IELTS/TOEIC writing and business contexts. Each entry has a focused Vietnamese meaning, a usable pattern, two original bilingual examples and a learner note. Dictionary entries informed sense boundaries, register and regional labels; all Vietnamese definitions, usage notes and bilingual examples in this batch are independently written.",
+  "counts": {
+    "selected": 12,
+    "rawPagesUpgraded": 7,
+    "newTierBPages": 5,
+    "tierBPoolBefore": 683,
+    "tierBPoolAfter": 678
+  },
+  "upgradedExistingRaw": [
+    "accounts payable",
+    "balance sheet",
+    "bill of lading",
+    "cash flow",
+    "down payment",
+    "fiscal year",
+    "fringe benefit"
+  ],
+  "selectedTierB": [
+    "foreign direct investment",
+    "interest rate",
+    "public transport",
+    "service industry",
+    "tax break"
+  ]
+}

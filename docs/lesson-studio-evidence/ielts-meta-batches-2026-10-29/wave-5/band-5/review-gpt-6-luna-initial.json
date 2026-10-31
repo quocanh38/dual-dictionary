@@ -1,0 +1,21 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "8439ab29c8dfa12974322bd3b4e7d56c68022d2152d3eeb1734a29fe7c1f6f6c",
+  "verdict": "fail",
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script",
+      "issue": "The script contains 410 whitespace-delimited words (the payload declares 410), exceeding the requested 300–400-word range and matching normalizationFindings. Shorten it by at least 10 words and update the count.",
+      "severity": "major"
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-5-band-5-reading-04",
+      "issue": "The keyed option says café produce “is fresher,” but the passage only identifies fresh herbs/leaves and says short transport reduces transport costs and packaging waste. The comparative freshness claim is not established; consider removing “fresher” and wording the option to match the passage.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": "Full review of candidate-initial-v1.json exact bytes: 410-word listening script and 449-word reading passage, all 10 objective questions with every option/key/explanation, all five Writing prompts and five Speaking prompts, plus normalizationFindings and provenance. Checked answer uniqueness and evidence, distractors, English, stage fit, Task 1 data and timing, Speaking Parts/cue-card structure, originality disclosure and score claims. Objective keys are otherwise source-grounded. Writing data include bake-sale counts/prices/proceeds and queue means by day/time; task timings and word targets are explicit. Speaking covers familiar Parts 1, a Part 2 cue card and Part 3. Candidate provenance declares originalContent:true; there are no official-question or learner-score claims. The listening length is a required correction; one minor overclaim is recorded separately.",
+  "reviewerType": "AI-assisted"
+}

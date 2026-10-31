@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-8-band-5-writing-03",
+      "issue": "The six-step bicycle safety diagram says to lower/adjust the seat until the rider can easily touch the ground. That criterion can encourage an excessively low saddle and conflicts with standard fit checks focused on safe pedal reach; the prompt is presented as a safety procedure. Replace with a qualified fit check or omit the seat-height instruction unless its safety rationale is specified.",
+      "severity": "major",
+      "reviewer": "gpt-6-luna"
+    }
+  ]
+}

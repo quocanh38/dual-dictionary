@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "takes on",
+        "meaningEn": "to accept and start doing a task or responsibility",
+        "meaningVi": "đảm nhận một công việc hoặc trách nhiệm",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "work towards",
+        "meaningEn": "to make steady efforts over time to achieve a goal",
+        "meaningVi": "nỗ lực phấn đấu để đạt được một mục tiêu",
+        "sourceSentenceId": "s6"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 576,
+    "outputTokens": 898,
+    "totalTokens": 1474
+  },
+  "status": 200,
+  "latencyMs": 3041,
+  "model": "muse-spark-1.3"
+}

@@ -1,0 +1,46 @@
+{
+  "wave": 10,
+  "batch": 120,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after cash crop; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section with media, healthcare, finance, optics, statistics, language, tax, retail, science, administration, and agriculture. Clarify spelling, jurisdiction, distinctions between related financial/chemical terms, and register without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 468,
+    "remainingRawOnlyAfter": 448
+  },
+  "selected": [
+    "cable television",
+    "caesarean section",
+    "calendar month",
+    "call option",
+    "camera obscura",
+    "camp follower",
+    "cancel out",
+    "capital gain",
+    "capital gains tax",
+    "capital letter",
+    "capital loss",
+    "car boot sale",
+    "carbon copy",
+    "carbon dating",
+    "carbon dioxide",
+    "carbon monoxide",
+    "carbon paper",
+    "card index",
+    "carpet bag",
+    "cash crop"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "SEC Investor.gov: An Introduction to Options (https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-63)",
+    "GOV.UK: Capital Gains Tax overview (https://www.gov.uk/capital-gains-tax/overview)",
+    "NHS: Caesarean section (https://www.nhs.uk/tests-and-treatments/caesarean-section/)",
+    "CDC: Carbon Monoxide Poisoning Fact Sheet (https://www.cdc.gov/carbon-monoxide/factsheets/co-poisoning-fact-sheet.html)",
+    "NASA: Carbon Dioxide Earth Indicator (https://science.nasa.gov/earth/explore/earth-indicators/carbon-dioxide/)",
+    "NIST: Radiometric dating and carbon-14 (https://www.nist.gov/news-events/news/2010/09/research-shows-radiometric-dating-still-reliable-again)"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.reading.passage paragraph2; ielts-meta-wave-6-band-7-reading-02 explanation",
+      "severity": "uncertain",
+      "issue": "Biased volunteer handheld street-temperature mean31.4°C is contrasted with satellite peaks38.1°C as evidence of understatement. Mean versus hotspot peak and handheld air temperature versus unspecified satellite surface temperature are not comparable measures. Preserve the sampling-bias point but use independent matched air-temperature observations at comparable times/statistic, or explicitly state satellite peaks cannot validate bias magnitude; align the question/explanation with sampling evidence alone."
+    }
+  ]
+}

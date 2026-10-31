@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 127,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after contact lens in the manifest; consulted local OALD 10/LDOCE 6. Meanings, notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue through the C/D transition with music and military vocabulary, North American history, plants, road safety, credit, medicine, physics, reference and geometry terms, banking and job applications, theatre, tropical fruit, technology, and building construction. Notes clarify regional labels, literal/figurative senses and high-stakes terminology.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 328,
+    "remainingRawOnlyAfter": 308
+  },
+  "selected": [
+    "country and western",
+    "court martial",
+    "covered wagon",
+    "crab apple",
+    "crash barrier",
+    "credit rating",
+    "crib death",
+    "critical mass",
+    "cross reference",
+    "cross section",
+    "crystal clear",
+    "current account",
+    "curriculum vitae",
+    "curtain call",
+    "custard apple",
+    "cutting edge",
+    "cystic fibrosis",
+    "daisy chain",
+    "daisy wheel",
+    "damp course"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NIH MedlinePlus: Cystic fibrosis (https://medlineplus.gov/cysticfibrosis.html)",
+    "Consumer Financial Protection Bureau: What is a credit score? (https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/)"
+  ]
+}

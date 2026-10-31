@@ -1,0 +1,71 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "7c18b72f239cf21cfcbdabcf0eb3658842de0c05757d40f9a3463909c9804a55",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": {
+    "listening": "Full cycle-course dialogue read: beginner reason, Saturday-to-Sunday correction at09–11, south entrance, £40 hire/check/guide, loaned helmets/lights, weekend20 versus weekday12 and completion rates, online form/photoID and early fitting. All five keys [0,0,1,2,3] uniquely supported; all20 options and five explanations assessed. Listening04 now explicitly asks weekend morning versus weekday evening comparison.",
+    "reading": "Full oral-history passage read: missing daily life in official records,70+ eligibility,45–60minutes, written opt-in and participant control, Elena social interpretation example,28then41 interview totals,58home versus46library minutes, conditional60s extension. Five keys [1,2,1,0,3] supported; all options/explanations checked for overclaim and chronology.",
+    "writing": "All five prompts read. Museum guide dates2024 versus visitor shares2023 distinguish schedule, fees and individual-visitor distribution; open-day tours exclude Mondays; family share explicitly counts each person and shares42/28/18/12 total100. Recording survey frequency denominator all400, reason denominator360 users (400×90%), multiple answers explicit; complete35/40/15/10 and68/55/48/72 data. Three Task2 prompts coherent discussions; all word/time fields and prose instructions agree150/20 and250/40.",
+    "speaking": "All five prompts read: two personal Part1 sets, memorable museum-visit Part2 with concrete bullets/preparation/duration, and two evaluative Part3 access/heritage sets. Appropriate progression from personal answers to reasons and comparisons.",
+    "resolvedInitialIssues": [
+      "Listening04 supplies formerly missing subject: weekend morning groups compared with weekday evening groups, with explicit larger/higher-completion key and explanation.",
+      "Museum tours now explicitly only Tuesday–Sunday/open days; no Monday tours.",
+      "Museum percentages explicitly use individual visitors, including persons entering on family tickets.",
+      "Recording reasons explicitly use360 users, distinct from400 frequency respondents, with multiple-response note."
+    ],
+    "scope": "Full independent AI-assisted final rereview of candidate-final-v2.json: all20items (5Listening,5Reading,5Writing,5Speaking), complete shared contexts, all40options,10keys/10explanations and all productive prompts/metadata. Repeated contexts verified string-identical to shared contexts. Entire payload reviewed, not only repair deltas. No other final reviewer reports read; no provider calls or candidate edits.",
+    "structure": {
+      "itemCount": 20,
+      "wordCounts": {
+        "listening": 347,
+        "reading": 448
+      },
+      "wordCountConvention": "Whitespace-delimited, including speaker labels; matches payload wordCount.",
+      "answerPositions": {
+        "Listening": [
+          0,
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          1,
+          2,
+          1,
+          0,
+          3
+        ]
+      },
+      "normalizationFindings": [],
+      "taskTiming": "Task1 minimumWords150/suggestedMinutes20; Task2 minimumWords250/suggestedMinutes40; timing sometimes in metadata rather than prompt prose."
+    },
+    "itemIds": [
+      "ielts-meta-wave-5-band-6-listening-01",
+      "ielts-meta-wave-5-band-6-listening-02",
+      "ielts-meta-wave-5-band-6-listening-03",
+      "ielts-meta-wave-5-band-6-listening-04",
+      "ielts-meta-wave-5-band-6-listening-05",
+      "ielts-meta-wave-5-band-6-reading-01",
+      "ielts-meta-wave-5-band-6-reading-02",
+      "ielts-meta-wave-5-band-6-reading-03",
+      "ielts-meta-wave-5-band-6-reading-04",
+      "ielts-meta-wave-5-band-6-reading-05",
+      "ielts-meta-wave-5-band-6-writing-01",
+      "ielts-meta-wave-5-band-6-writing-02",
+      "ielts-meta-wave-5-band-6-writing-03",
+      "ielts-meta-wave-5-band-6-writing-04",
+      "ielts-meta-wave-5-band-6-writing-05",
+      "ielts-meta-wave-5-band-6-speaking-01",
+      "ielts-meta-wave-5-band-6-speaking-02",
+      "ielts-meta-wave-5-band-6-speaking-03",
+      "ielts-meta-wave-5-band-6-speaking-04",
+      "ielts-meta-wave-5-band-6-speaking-05"
+    ],
+    "originalityAndClaims": "No recognisable copied official question or score guarantee found. Provenance identifies Baseten/meta-models/muse-spark-open-1026 and originalContent=true; no exhaustive external plagiarism audit or empirical verification of fictional study statistics performed. Stage labels indicate practice progression, not validated score attainment.",
+    "independence": "Same reviewer performed initial review. Prior own findings considered for closure, while full final content reread independently. Other reviewers final findings not read."
+  },
+  "reviewerType": "AI-assisted"
+}

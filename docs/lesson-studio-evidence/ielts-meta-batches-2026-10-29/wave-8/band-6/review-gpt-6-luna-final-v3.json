@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "26029e8b86d1afd55df40a197788ca886959feaac6afd2dba0315d40c88c51e5",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading are 307/405 words, both within range (Listening is near the lower bound). All 10 objective keys and explanations are supported; answer positions are balanced. Clinic reminder instructions are coherent, and the park audit findings/claim/examples match their questions. Task 1 health-attendance totals sum correctly (100, 140, 150); volunteer hours have units. Writing targets/timing and all Speaking parts/cue card are complete. Provenance is original; no score or official-item claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts and word counts, all 10 objective questions/options/keys/explanations, both Task 1 datasets and numerical units, all five Writing prompts/timing and all five Speaking prompts including cue card and part fit.",
+  "reviewerType": "AI-assisted"
+}

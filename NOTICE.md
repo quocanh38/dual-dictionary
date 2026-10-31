@@ -23,3 +23,61 @@ The optional English–Vietnamese dictionary ("Từ điển Anh–Việt v1.1", 
 entries incl. inflected forms) is built and maintained by the **Open Vietnamese
 Dictionary Project** (OVDP) and distributed via catusf/tudien — MIT license.
 Source: https://github.com/catusf/tudien
+
+## Word frequency data (English)
+
+- `data/freq-en.json` — top 10,000 English word frequency bands derived from
+  [hermitdave/FrequencyWords](https://github.com/hermitdave/FrequencyWords)
+  (OpenSubtitles 2018 en_50k), MIT License. Bands: top 1k / 2k / 5k / 10k.
+
+## Pronunciation (IPA) data — `data/ipa-en.json`
+
+Headword → IPA lookup table used by the pronunciation strip (English
+pronunciations only — no definitions are shipped from these sources):
+
+- Primary: [thichhoc-org/thichhoc-dict](https://github.com/thichhoc-org/thichhoc-dict)
+  release v0.9.0 (2026-08-05) — dictionary data **CC BY-SA 4.0** (required by the
+  share-alike Wiktionary upstream; full attribution chain in that repo's
+  `dict-en-vi/LICENSE-DATA` and `ATTRIBUTION.txt`). Only the `<span class="ipa">`
+  pronunciation field is extracted; upstream sources are WordNet 3.1, CMUdict and
+  Wiktionary.
+- Fill for function words missing there: [cmusphinx/cmudict](https://github.com/cmusphinx/cmudict)
+  (CMUdict, public domain / BSD), converted with the standard ARPAbet→IPA mapping.
+- Built by `tools/build-ipa-json.py` (in the workspace, not deployed); the JSON is
+  lazy-loaded on first use and served as-is.
+
+## Learning-set frame data — `data/ngsl.json`
+
+The "learning set" (nhóm "Học chính" on the 2,000-word pages) is framed by the
+**New General Service List (NGSL) 1.2** by Charles Browne, Brent Culligan and
+Joseph Phillips — **CC BY-SA 4.0** (this redistribution therefore carries the
+same license; see https://www.newgeneralservicelist.com/new-general-service-list):
+
+- `core`: 2,809 lemmas with official SFI ranks, from the official
+  `NGSL_12_stats.csv` (downloaded 2026-10-01 from newgeneralservicelist.com).
+- `supplementary`: 52 weekday/month/number lemmas from the official
+  `SUP_lemmatized.csv`.
+- Used by `tools/build-word-pages.cjs` and `tools/classify-wordlist.cjs` to
+  label each word page: core (lemma in NGSL) / inflection (dạng chia, lemma
+  shown) / off-list (fragment, abbreviation, proper noun, or lemma outside
+  NGSL) / vulgar (separate warning group). No claim is made that a word is
+  "top 2,000 by some list" — frequency bands come from OpenSubtitles, learning
+  membership from NGSL, and both are labeled distinctly.
+
+## Academic Word List — `data/awl.json`
+
+The "Học thuật (AWL)" label and the supplement pages of the word-pages set
+(v95) come from the **Academic Word List (AWL)** — 570 word families by
+**Averil Coxhead**, Victoria University of Wellington (2000), distributed free
+for educational/research use with this attribution (see
+https://www.wgtn.ac.nz/lals/resources/academicwordlist/). Word + sublist
+assignment imported from the Simple English Wiktionary rendering of the list;
+3 official Sublist-9 members (protocol, founded, duration) restored from the
+published list. Used by `tools/build-word-pages.cjs` (batch 2) and the
+"Thuộc AWL" hub filter. AWL membership is labeled distinctly and never
+conflated with OpenSubtitles frequency bands or NGSL learning membership.
+
+## Anki .apkg export (v119 A3)
+
+- `js/vendor/sql-wasm.js` + `js/vendor/sql-wasm.wasm` — [sql.js](https://sql.js.org) 1.13.0 (SQLite compiled to WebAssembly), **MIT License** (full text: `js/vendor/sql-js-LICENSE.txt`). Loaded lazily on first .apkg export, cached by the service worker after that.
+- `js/vendor/apkg-writer.js` — original code for this project (zip STORE writer + Anki 2 schema v11 builder), no third-party zip/deflate code.

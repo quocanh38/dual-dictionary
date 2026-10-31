@@ -1,0 +1,349 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-9",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 1940,
+        "outputTokens": 3912,
+        "totalTokens": 5852
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-9-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-9-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Tutorial on Wetland Restoration Indicators",
+      "focus": "Comparing the reliability of plant, water and bird measures",
+      "part": "Part 3",
+      "script": "Tutor: Right, Maya and Jon, you've been comparing indicators for those three restored wetlands near the estuary. What did you find most useful?\nMaya: Well, we looked at plant diversity, water nitrogen levels, and bird counts over four years. Plant diversity seemed the most consistent. All three sites showed a steady increase in native species, even when other measures fluctuated.\nJon: Yeah, but bird counts were tricky. Site A had a big jump in year two, but that was because of a temporary influx of migratory gulls, not the restoration itself.\nTutor: So you're saying bird numbers can be misleading if you don't account for seasonal visitors?\nMaya: Exactly. We need to separate resident breeding birds from passing migrants. Otherwise you overestimate success.\nJon: For water quality, Site C looked great at first. Nitrogen dropped by 40% in the first year. But then in year three it rose again after heavy rainfall washed fertiliser in from nearby farms.\nTutor: That suggests water chemistry is sensitive to external factors beyond the project.\nMaya: Right. So compared to plants, water data needs longer monitoring. Plants showed recovery within two years and stayed stable.\nJon: And just to clarify our data – for Site B we logged 42 native plant species in year four – sorry, actually 32 species. I misread the table earlier. Still, that's double the starting number of 16.\nTutor: Good catch. So overall, which indicator would you recommend for a short-term evaluation?\nMaya: Plant diversity, with qualification. It's reliable for early progress, but it doesn't tell you if the whole ecosystem is functioning. For that you'd need bird and water data over five to ten years.\nTutor: Perfect. For your report, focus on that comparison and note the limitations of each measure. Can you add a section on how delayed bird colonisation affects interpretation?\nJon: Yes, we'll include that and revise the Site B figure.",
+      "wordCount": 316
+    },
+    "reading": {
+      "title": "Interpreting Six Years of Library Use",
+      "focus": "Evaluating trends and survey bias in a university library dataset",
+      "passage": "The University Central Library analysed six years of usage data from 2018 to 2023 to understand how student behaviour is changing. The dataset combined three indicators: gate entries, physical book loans, and e-book chapter downloads. Study-room bookings were also recorded, but were excluded from the main analysis because the booking system changed in 2020, making comparisons unreliable.\n\nAt first glance, the trends appear to show a clear shift from physical to digital use. Gate entries fell by 22% between 2018 and 2023, while e-book downloads more than tripled, from 48,000 to 156,000. Physical loans declined by 18% over the same period. However, the authors argue that this headline comparison is misleading without considering context. Much of the drop in gate entries occurred between 2019 and 2021, coinciding with extended campus closures. When the analysis is limited to 2021–2023, gate entries actually rose by 9%, suggesting a partial recovery rather than continuous decline.\n\nThe report distinguishes between its overall claim and specific examples that complicate it. The authors' central claim is that the long-term decline in physical loans is modest – about 6% when the pandemic years are set aside. An example illustrates why: in the Engineering faculty, physical loans increased by 14% in 2022 after the introduction of a project-based module requiring print standards and handbooks. This local rise does not contradict the overall downward trend, but shows how curriculum changes can temporarily reverse it.\n\nA second methodological issue concerns the annual user survey used to interpret the figures. The survey was emailed to all enrolled students each March, with a four-week deadline. In 2023, 62% of responses arrived in the first ten days, predominantly from full-time students living on or near campus. The remaining 38%, who replied after a reminder, included a much higher proportion of part-time commuter students. These late responders were significantly more likely to report using the library only in the evenings or at weekends and to rate opening hours as inadequate. The authors note that relying solely on early responses would have created a bias, overestimating satisfaction and underestimating demand for extended hours.\n\nThe authors conclude that no single indicator should be used in isolation. Gate entries capture presence but not purpose, while e-book figures are inflated by automatic preview downloads that do not represent full reading. Furthermore, the dataset covers only the Central Library; departmental collections, which remain heavily used in Law and Medicine, were not included. The report therefore recommends combining usage metrics with targeted interviews, particularly with commuter students whose patterns are underrepresented in early survey returns, to guide future decisions about space and digital investment.",
+      "wordCount": 434
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-9-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Tutorial on Wetland Restoration Indicators",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing the reliability of plant, water and bird measures",
+      "transcript": "Tutor: Right, Maya and Jon, you've been comparing indicators for those three restored wetlands near the estuary. What did you find most useful?\nMaya: Well, we looked at plant diversity, water nitrogen levels, and bird counts over four years. Plant diversity seemed the most consistent. All three sites showed a steady increase in native species, even when other measures fluctuated.\nJon: Yeah, but bird counts were tricky. Site A had a big jump in year two, but that was because of a temporary influx of migratory gulls, not the restoration itself.\nTutor: So you're saying bird numbers can be misleading if you don't account for seasonal visitors?\nMaya: Exactly. We need to separate resident breeding birds from passing migrants. Otherwise you overestimate success.\nJon: For water quality, Site C looked great at first. Nitrogen dropped by 40% in the first year. But then in year three it rose again after heavy rainfall washed fertiliser in from nearby farms.\nTutor: That suggests water chemistry is sensitive to external factors beyond the project.\nMaya: Right. So compared to plants, water data needs longer monitoring. Plants showed recovery within two years and stayed stable.\nJon: And just to clarify our data – for Site B we logged 42 native plant species in year four – sorry, actually 32 species. I misread the table earlier. Still, that's double the starting number of 16.\nTutor: Good catch. So overall, which indicator would you recommend for a short-term evaluation?\nMaya: Plant diversity, with qualification. It's reliable for early progress, but it doesn't tell you if the whole ecosystem is functioning. For that you'd need bird and water data over five to ten years.\nTutor: Perfect. For your report, focus on that comparison and note the limitations of each measure. Can you add a section on how delayed bird colonisation affects interpretation?\nJon: Yes, we'll include that and revise the Site B figure.",
+      "prompt": "What does Maya say about plant diversity?",
+      "options": [
+        "It increased steadily at all three sites",
+        "It fluctuated more than other measures",
+        "It recovered only at Site A",
+        "It was unaffected by restoration work"
+      ],
+      "answer": 0,
+      "explanation": "Maya states all three sites showed a steady increase in native species. Option B reverses her point that other measures fluctuated more."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Tutorial on Wetland Restoration Indicators",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing the reliability of plant, water and bird measures",
+      "transcript": "Tutor: Right, Maya and Jon, you've been comparing indicators for those three restored wetlands near the estuary. What did you find most useful?\nMaya: Well, we looked at plant diversity, water nitrogen levels, and bird counts over four years. Plant diversity seemed the most consistent. All three sites showed a steady increase in native species, even when other measures fluctuated.\nJon: Yeah, but bird counts were tricky. Site A had a big jump in year two, but that was because of a temporary influx of migratory gulls, not the restoration itself.\nTutor: So you're saying bird numbers can be misleading if you don't account for seasonal visitors?\nMaya: Exactly. We need to separate resident breeding birds from passing migrants. Otherwise you overestimate success.\nJon: For water quality, Site C looked great at first. Nitrogen dropped by 40% in the first year. But then in year three it rose again after heavy rainfall washed fertiliser in from nearby farms.\nTutor: That suggests water chemistry is sensitive to external factors beyond the project.\nMaya: Right. So compared to plants, water data needs longer monitoring. Plants showed recovery within two years and stayed stable.\nJon: And just to clarify our data – for Site B we logged 42 native plant species in year four – sorry, actually 32 species. I misread the table earlier. Still, that's double the starting number of 16.\nTutor: Good catch. So overall, which indicator would you recommend for a short-term evaluation?\nMaya: Plant diversity, with qualification. It's reliable for early progress, but it doesn't tell you if the whole ecosystem is functioning. For that you'd need bird and water data over five to ten years.\nTutor: Perfect. For your report, focus on that comparison and note the limitations of each measure. Can you add a section on how delayed bird colonisation affects interpretation?\nJon: Yes, we'll include that and revise the Site B figure.",
+      "prompt": "Why can bird counts be misleading?",
+      "options": [
+        "Resident birds were not counted at all",
+        "Temporary migratory visitors inflated numbers",
+        "Gulls caused water quality to decline",
+        "Counts were done in different years"
+      ],
+      "answer": 1,
+      "explanation": "Jon attributes Site A's jump to migratory gulls and the tutor paraphrases this as seasonal visitors. Option A misstates the counting problem."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Tutorial on Wetland Restoration Indicators",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing the reliability of plant, water and bird measures",
+      "transcript": "Tutor: Right, Maya and Jon, you've been comparing indicators for those three restored wetlands near the estuary. What did you find most useful?\nMaya: Well, we looked at plant diversity, water nitrogen levels, and bird counts over four years. Plant diversity seemed the most consistent. All three sites showed a steady increase in native species, even when other measures fluctuated.\nJon: Yeah, but bird counts were tricky. Site A had a big jump in year two, but that was because of a temporary influx of migratory gulls, not the restoration itself.\nTutor: So you're saying bird numbers can be misleading if you don't account for seasonal visitors?\nMaya: Exactly. We need to separate resident breeding birds from passing migrants. Otherwise you overestimate success.\nJon: For water quality, Site C looked great at first. Nitrogen dropped by 40% in the first year. But then in year three it rose again after heavy rainfall washed fertiliser in from nearby farms.\nTutor: That suggests water chemistry is sensitive to external factors beyond the project.\nMaya: Right. So compared to plants, water data needs longer monitoring. Plants showed recovery within two years and stayed stable.\nJon: And just to clarify our data – for Site B we logged 42 native plant species in year four – sorry, actually 32 species. I misread the table earlier. Still, that's double the starting number of 16.\nTutor: Good catch. So overall, which indicator would you recommend for a short-term evaluation?\nMaya: Plant diversity, with qualification. It's reliable for early progress, but it doesn't tell you if the whole ecosystem is functioning. For that you'd need bird and water data over five to ten years.\nTutor: Perfect. For your report, focus on that comparison and note the limitations of each measure. Can you add a section on how delayed bird colonisation affects interpretation?\nJon: Yes, we'll include that and revise the Site B figure.",
+      "prompt": "What correction does Jon make about Site B?",
+      "options": [
+        "The starting figure was 16 not 32",
+        "The data was from Site C not Site B",
+        "Year four total was 32 not 42 species",
+        "The increase was only 10 percent"
+      ],
+      "answer": 2,
+      "explanation": "Jon corrects the year-four total from 42 to 32 species. Option A confuses the unchanged starting figure of 16."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Tutorial on Wetland Restoration Indicators",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing the reliability of plant, water and bird measures",
+      "transcript": "Tutor: Right, Maya and Jon, you've been comparing indicators for those three restored wetlands near the estuary. What did you find most useful?\nMaya: Well, we looked at plant diversity, water nitrogen levels, and bird counts over four years. Plant diversity seemed the most consistent. All three sites showed a steady increase in native species, even when other measures fluctuated.\nJon: Yeah, but bird counts were tricky. Site A had a big jump in year two, but that was because of a temporary influx of migratory gulls, not the restoration itself.\nTutor: So you're saying bird numbers can be misleading if you don't account for seasonal visitors?\nMaya: Exactly. We need to separate resident breeding birds from passing migrants. Otherwise you overestimate success.\nJon: For water quality, Site C looked great at first. Nitrogen dropped by 40% in the first year. But then in year three it rose again after heavy rainfall washed fertiliser in from nearby farms.\nTutor: That suggests water chemistry is sensitive to external factors beyond the project.\nMaya: Right. So compared to plants, water data needs longer monitoring. Plants showed recovery within two years and stayed stable.\nJon: And just to clarify our data – for Site B we logged 42 native plant species in year four – sorry, actually 32 species. I misread the table earlier. Still, that's double the starting number of 16.\nTutor: Good catch. So overall, which indicator would you recommend for a short-term evaluation?\nMaya: Plant diversity, with qualification. It's reliable for early progress, but it doesn't tell you if the whole ecosystem is functioning. For that you'd need bird and water data over five to ten years.\nTutor: Perfect. For your report, focus on that comparison and note the limitations of each measure. Can you add a section on how delayed bird colonisation affects interpretation?\nJon: Yes, we'll include that and revise the Site B figure.",
+      "prompt": "What do they conclude about water nitrogen data?",
+      "options": [
+        "It is cheaper to collect than plant data",
+        "It shows faster recovery than plant diversity",
+        "It remained stable after the first year",
+        "It is more affected by outside influences"
+      ],
+      "answer": 3,
+      "explanation": "They agree water chemistry is sensitive to external farm runoff and needs longer monitoring. Option C contradicts the reported rise in year three."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Tutorial on Wetland Restoration Indicators",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing the reliability of plant, water and bird measures",
+      "transcript": "Tutor: Right, Maya and Jon, you've been comparing indicators for those three restored wetlands near the estuary. What did you find most useful?\nMaya: Well, we looked at plant diversity, water nitrogen levels, and bird counts over four years. Plant diversity seemed the most consistent. All three sites showed a steady increase in native species, even when other measures fluctuated.\nJon: Yeah, but bird counts were tricky. Site A had a big jump in year two, but that was because of a temporary influx of migratory gulls, not the restoration itself.\nTutor: So you're saying bird numbers can be misleading if you don't account for seasonal visitors?\nMaya: Exactly. We need to separate resident breeding birds from passing migrants. Otherwise you overestimate success.\nJon: For water quality, Site C looked great at first. Nitrogen dropped by 40% in the first year. But then in year three it rose again after heavy rainfall washed fertiliser in from nearby farms.\nTutor: That suggests water chemistry is sensitive to external factors beyond the project.\nMaya: Right. So compared to plants, water data needs longer monitoring. Plants showed recovery within two years and stayed stable.\nJon: And just to clarify our data – for Site B we logged 42 native plant species in year four – sorry, actually 32 species. I misread the table earlier. Still, that's double the starting number of 16.\nTutor: Good catch. So overall, which indicator would you recommend for a short-term evaluation?\nMaya: Plant diversity, with qualification. It's reliable for early progress, but it doesn't tell you if the whole ecosystem is functioning. For that you'd need bird and water data over five to ten years.\nTutor: Perfect. For your report, focus on that comparison and note the limitations of each measure. Can you add a section on how delayed bird colonisation affects interpretation?\nJon: Yes, we'll include that and revise the Site B figure.",
+      "prompt": "What will the students add to their report?",
+      "options": [
+        "A section on delayed bird colonisation effects",
+        "New data from a fourth wetland site",
+        "A recommendation to stop water testing",
+        "Results from the 2019 survey only"
+      ],
+      "answer": 0,
+      "explanation": "The tutor requests a section on delayed bird colonisation and Jon agrees to add it. Option C misrepresents their qualified support for multiple indicators."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Six Years of Library Use",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating trends and survey bias in a university library dataset",
+      "passage": "The University Central Library analysed six years of usage data from 2018 to 2023 to understand how student behaviour is changing. The dataset combined three indicators: gate entries, physical book loans, and e-book chapter downloads. Study-room bookings were also recorded, but were excluded from the main analysis because the booking system changed in 2020, making comparisons unreliable.\n\nAt first glance, the trends appear to show a clear shift from physical to digital use. Gate entries fell by 22% between 2018 and 2023, while e-book downloads more than tripled, from 48,000 to 156,000. Physical loans declined by 18% over the same period. However, the authors argue that this headline comparison is misleading without considering context. Much of the drop in gate entries occurred between 2019 and 2021, coinciding with extended campus closures. When the analysis is limited to 2021–2023, gate entries actually rose by 9%, suggesting a partial recovery rather than continuous decline.\n\nThe report distinguishes between its overall claim and specific examples that complicate it. The authors' central claim is that the long-term decline in physical loans is modest – about 6% when the pandemic years are set aside. An example illustrates why: in the Engineering faculty, physical loans increased by 14% in 2022 after the introduction of a project-based module requiring print standards and handbooks. This local rise does not contradict the overall downward trend, but shows how curriculum changes can temporarily reverse it.\n\nA second methodological issue concerns the annual user survey used to interpret the figures. The survey was emailed to all enrolled students each March, with a four-week deadline. In 2023, 62% of responses arrived in the first ten days, predominantly from full-time students living on or near campus. The remaining 38%, who replied after a reminder, included a much higher proportion of part-time commuter students. These late responders were significantly more likely to report using the library only in the evenings or at weekends and to rate opening hours as inadequate. The authors note that relying solely on early responses would have created a bias, overestimating satisfaction and underestimating demand for extended hours.\n\nThe authors conclude that no single indicator should be used in isolation. Gate entries capture presence but not purpose, while e-book figures are inflated by automatic preview downloads that do not represent full reading. Furthermore, the dataset covers only the Central Library; departmental collections, which remain heavily used in Law and Medicine, were not included. The report therefore recommends combining usage metrics with targeted interviews, particularly with commuter students whose patterns are underrepresented in early survey returns, to guide future decisions about space and digital investment.",
+      "prompt": "Why were study-room bookings left out of main analysis?",
+      "options": [
+        "They showed no clear trend over time",
+        "They were rarely used by students",
+        "The booking system changed in 2020",
+        "They duplicated gate entry data"
+      ],
+      "answer": 2,
+      "explanation": "The passage says the booking system change made comparisons unreliable. Option A invents a different reason not stated."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Six Years of Library Use",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating trends and survey bias in a university library dataset",
+      "passage": "The University Central Library analysed six years of usage data from 2018 to 2023 to understand how student behaviour is changing. The dataset combined three indicators: gate entries, physical book loans, and e-book chapter downloads. Study-room bookings were also recorded, but were excluded from the main analysis because the booking system changed in 2020, making comparisons unreliable.\n\nAt first glance, the trends appear to show a clear shift from physical to digital use. Gate entries fell by 22% between 2018 and 2023, while e-book downloads more than tripled, from 48,000 to 156,000. Physical loans declined by 18% over the same period. However, the authors argue that this headline comparison is misleading without considering context. Much of the drop in gate entries occurred between 2019 and 2021, coinciding with extended campus closures. When the analysis is limited to 2021–2023, gate entries actually rose by 9%, suggesting a partial recovery rather than continuous decline.\n\nThe report distinguishes between its overall claim and specific examples that complicate it. The authors' central claim is that the long-term decline in physical loans is modest – about 6% when the pandemic years are set aside. An example illustrates why: in the Engineering faculty, physical loans increased by 14% in 2022 after the introduction of a project-based module requiring print standards and handbooks. This local rise does not contradict the overall downward trend, but shows how curriculum changes can temporarily reverse it.\n\nA second methodological issue concerns the annual user survey used to interpret the figures. The survey was emailed to all enrolled students each March, with a four-week deadline. In 2023, 62% of responses arrived in the first ten days, predominantly from full-time students living on or near campus. The remaining 38%, who replied after a reminder, included a much higher proportion of part-time commuter students. These late responders were significantly more likely to report using the library only in the evenings or at weekends and to rate opening hours as inadequate. The authors note that relying solely on early responses would have created a bias, overestimating satisfaction and underestimating demand for extended hours.\n\nThe authors conclude that no single indicator should be used in isolation. Gate entries capture presence but not purpose, while e-book figures are inflated by automatic preview downloads that do not represent full reading. Furthermore, the dataset covers only the Central Library; departmental collections, which remain heavily used in Law and Medicine, were not included. The report therefore recommends combining usage metrics with targeted interviews, particularly with commuter students whose patterns are underrepresented in early survey returns, to guide future decisions about space and digital investment.",
+      "prompt": "What does the 2021–2023 data suggest about gate entries?",
+      "options": [
+        "They partly recovered after pandemic closures",
+        "They continued to fall steadily",
+        "They tripled like e-book downloads",
+        "They returned to 2018 levels"
+      ],
+      "answer": 0,
+      "explanation": "The authors note a 9% rise in that limited period, indicating partial recovery. Option B ignores this qualified recovery."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Six Years of Library Use",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating trends and survey bias in a university library dataset",
+      "passage": "The University Central Library analysed six years of usage data from 2018 to 2023 to understand how student behaviour is changing. The dataset combined three indicators: gate entries, physical book loans, and e-book chapter downloads. Study-room bookings were also recorded, but were excluded from the main analysis because the booking system changed in 2020, making comparisons unreliable.\n\nAt first glance, the trends appear to show a clear shift from physical to digital use. Gate entries fell by 22% between 2018 and 2023, while e-book downloads more than tripled, from 48,000 to 156,000. Physical loans declined by 18% over the same period. However, the authors argue that this headline comparison is misleading without considering context. Much of the drop in gate entries occurred between 2019 and 2021, coinciding with extended campus closures. When the analysis is limited to 2021–2023, gate entries actually rose by 9%, suggesting a partial recovery rather than continuous decline.\n\nThe report distinguishes between its overall claim and specific examples that complicate it. The authors' central claim is that the long-term decline in physical loans is modest – about 6% when the pandemic years are set aside. An example illustrates why: in the Engineering faculty, physical loans increased by 14% in 2022 after the introduction of a project-based module requiring print standards and handbooks. This local rise does not contradict the overall downward trend, but shows how curriculum changes can temporarily reverse it.\n\nA second methodological issue concerns the annual user survey used to interpret the figures. The survey was emailed to all enrolled students each March, with a four-week deadline. In 2023, 62% of responses arrived in the first ten days, predominantly from full-time students living on or near campus. The remaining 38%, who replied after a reminder, included a much higher proportion of part-time commuter students. These late responders were significantly more likely to report using the library only in the evenings or at weekends and to rate opening hours as inadequate. The authors note that relying solely on early responses would have created a bias, overestimating satisfaction and underestimating demand for extended hours.\n\nThe authors conclude that no single indicator should be used in isolation. Gate entries capture presence but not purpose, while e-book figures are inflated by automatic preview downloads that do not represent full reading. Furthermore, the dataset covers only the Central Library; departmental collections, which remain heavily used in Law and Medicine, were not included. The report therefore recommends combining usage metrics with targeted interviews, particularly with commuter students whose patterns are underrepresented in early survey returns, to guide future decisions about space and digital investment.",
+      "prompt": "Which reflects the authors' central claim about physical loans?",
+      "options": [
+        "Engineering loans rose 14% in 2022",
+        "Overall decline is modest excluding pandemic years",
+        "Print handbooks are now required everywhere",
+        "Curriculum changes always increase loans"
+      ],
+      "answer": 1,
+      "explanation": "The central claim is about a modest 6% decline when pandemic years are excluded. Option A is the specific Engineering example, not the claim."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Six Years of Library Use",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating trends and survey bias in a university library dataset",
+      "passage": "The University Central Library analysed six years of usage data from 2018 to 2023 to understand how student behaviour is changing. The dataset combined three indicators: gate entries, physical book loans, and e-book chapter downloads. Study-room bookings were also recorded, but were excluded from the main analysis because the booking system changed in 2020, making comparisons unreliable.\n\nAt first glance, the trends appear to show a clear shift from physical to digital use. Gate entries fell by 22% between 2018 and 2023, while e-book downloads more than tripled, from 48,000 to 156,000. Physical loans declined by 18% over the same period. However, the authors argue that this headline comparison is misleading without considering context. Much of the drop in gate entries occurred between 2019 and 2021, coinciding with extended campus closures. When the analysis is limited to 2021–2023, gate entries actually rose by 9%, suggesting a partial recovery rather than continuous decline.\n\nThe report distinguishes between its overall claim and specific examples that complicate it. The authors' central claim is that the long-term decline in physical loans is modest – about 6% when the pandemic years are set aside. An example illustrates why: in the Engineering faculty, physical loans increased by 14% in 2022 after the introduction of a project-based module requiring print standards and handbooks. This local rise does not contradict the overall downward trend, but shows how curriculum changes can temporarily reverse it.\n\nA second methodological issue concerns the annual user survey used to interpret the figures. The survey was emailed to all enrolled students each March, with a four-week deadline. In 2023, 62% of responses arrived in the first ten days, predominantly from full-time students living on or near campus. The remaining 38%, who replied after a reminder, included a much higher proportion of part-time commuter students. These late responders were significantly more likely to report using the library only in the evenings or at weekends and to rate opening hours as inadequate. The authors note that relying solely on early responses would have created a bias, overestimating satisfaction and underestimating demand for extended hours.\n\nThe authors conclude that no single indicator should be used in isolation. Gate entries capture presence but not purpose, while e-book figures are inflated by automatic preview downloads that do not represent full reading. Furthermore, the dataset covers only the Central Library; departmental collections, which remain heavily used in Law and Medicine, were not included. The report therefore recommends combining usage metrics with targeted interviews, particularly with commuter students whose patterns are underrepresented in early survey returns, to guide future decisions about space and digital investment.",
+      "prompt": "What bias would using only early survey responses create?",
+      "options": [
+        "Underestimate use of e-books",
+        "Overlook Law and Medicine collections",
+        "Miss automatic download inflation",
+        "Overestimate satisfaction with opening hours"
+      ],
+      "answer": 3,
+      "explanation": "Early responders were satisfied on-campus students, while late commuters rated hours inadequate. Option B refers to a separate dataset limitation."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Six Years of Library Use",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating trends and survey bias in a university library dataset",
+      "passage": "The University Central Library analysed six years of usage data from 2018 to 2023 to understand how student behaviour is changing. The dataset combined three indicators: gate entries, physical book loans, and e-book chapter downloads. Study-room bookings were also recorded, but were excluded from the main analysis because the booking system changed in 2020, making comparisons unreliable.\n\nAt first glance, the trends appear to show a clear shift from physical to digital use. Gate entries fell by 22% between 2018 and 2023, while e-book downloads more than tripled, from 48,000 to 156,000. Physical loans declined by 18% over the same period. However, the authors argue that this headline comparison is misleading without considering context. Much of the drop in gate entries occurred between 2019 and 2021, coinciding with extended campus closures. When the analysis is limited to 2021–2023, gate entries actually rose by 9%, suggesting a partial recovery rather than continuous decline.\n\nThe report distinguishes between its overall claim and specific examples that complicate it. The authors' central claim is that the long-term decline in physical loans is modest – about 6% when the pandemic years are set aside. An example illustrates why: in the Engineering faculty, physical loans increased by 14% in 2022 after the introduction of a project-based module requiring print standards and handbooks. This local rise does not contradict the overall downward trend, but shows how curriculum changes can temporarily reverse it.\n\nA second methodological issue concerns the annual user survey used to interpret the figures. The survey was emailed to all enrolled students each March, with a four-week deadline. In 2023, 62% of responses arrived in the first ten days, predominantly from full-time students living on or near campus. The remaining 38%, who replied after a reminder, included a much higher proportion of part-time commuter students. These late responders were significantly more likely to report using the library only in the evenings or at weekends and to rate opening hours as inadequate. The authors note that relying solely on early responses would have created a bias, overestimating satisfaction and underestimating demand for extended hours.\n\nThe authors conclude that no single indicator should be used in isolation. Gate entries capture presence but not purpose, while e-book figures are inflated by automatic preview downloads that do not represent full reading. Furthermore, the dataset covers only the Central Library; departmental collections, which remain heavily used in Law and Medicine, were not included. The report therefore recommends combining usage metrics with targeted interviews, particularly with commuter students whose patterns are underrepresented in early survey returns, to guide future decisions about space and digital investment.",
+      "prompt": "What limitation do the authors note about their dataset?",
+      "options": [
+        "It excludes departmental library collections",
+        "It ignores gate entry figures",
+        "It covers only one year of data",
+        "It includes too many interviews"
+      ],
+      "answer": 0,
+      "explanation": "The authors state the data covers only the Central Library, not departmental collections. Option C contradicts the six-year span described."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · River Restoration Outcomes and Uncertainty",
+      "pathwayStage": "band-6-5",
+      "focus": "summarising projections with qualified claims and uncertainty ranges",
+      "prompt": "The table below shows projected outcomes for the River Lenton Restoration Plan (2025–2030) prepared by the city environment agency. The figures are estimates based on modelling and pilot studies. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table: Intervention | Projected increase in native fish numbers by 2030 | Uncertainty range | Evidence quality | Estimated cost (USD) — Re-meandering 2km channel | +18% | +8% to +28% | Moderate – based on one pilot site | 420,000 — Creating 5-hectare wetland buffer | +25% | +15% to +30% | Strong – three comparable rivers | 610,000 — Installing fish pass at weir | +12% | +2% to +22% | Limited – laboratory and overseas data only | 180,000. You should explain what the uncertainty ranges and evidence quality suggest about confidence in each projection.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Survey Methods for Playground Shade Study",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing sampling methods and handling limitations and bias",
+      "prompt": "The table below compares three survey methods considered by Riverton Council to understand public opinion on funding shade structures at 12 public playgrounds. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table: Method | Sample size achieved in trial | Response rate | Age group most represented | Key limitation noted by researchers — A: Door-to-door near playgrounds | 320 | 78% | Parents aged 25–40 | High cost and limited to nearby residents — B: Open online survey via council website | 1,150 | 22% of viewers | Adults aged 18–30 without children | Self-selection bias; under-represents older adults and non-internet users — C: Stratified random sample at playgrounds, schools and clinics | 500 | 65% | Balanced across age and parental status | Requires more time to recruit; needs trained interviewers.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Funding Shade at Public Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating funding priorities and fairness with qualified arguments",
+      "prompt": "Some people argue that local governments should fully fund shade structures at all public playgrounds to protect children’s health, while others believe funding should be shared with community groups, businesses, or parents because budgets are limited. Discuss both views, compare the evidence and arguments for each, and give your own opinion. Support your position with reasons and examples, and acknowledge any limitations or trade-offs in your argument.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Communicating Uncertainty in a River Restoration Plan",
+      "pathwayStage": "band-6-5",
+      "focus": "explaining how to present uncertain evidence clearly and honestly",
+      "prompt": "Scientists advising on a river restoration plan have incomplete evidence and wide uncertainty ranges for some outcomes. Some people say experts should present only the most likely results to avoid confusing the public, while others say they should show the full range of uncertainty even if it makes decisions harder. Discuss both views and give your own opinion. Use qualified language, compare the strengths and weaknesses of each approach, and explain how limitations should be handled.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Choosing a Fair Survey Sample",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing evidence quality and justifying methodological choices",
+      "prompt": "When councils conduct surveys about public facilities, the way participants are selected can affect the fairness and usefulness of the results. Some argue that large online surveys are best because they collect many responses quickly, while others argue that smaller, carefully balanced samples give more reliable evidence for decision-making. To what extent do you agree or disagree? Compare the two approaches, discuss issues of bias and representativeness, and support your view with reasons and examples while acknowledging limitations.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Outdoor Spaces and Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "personal experience and preferences related to public parks",
+      "prompt": "I would like to ask you about outdoor spaces. Do you have a park or playground near where you live? How often do you visit public parks? What do you think makes a playground comfortable and safe in hot weather? Has your use of outdoor spaces changed in recent years?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Surveys and Giving Opinions",
+      "pathwayStage": "band-6-5",
+      "focus": "attitudes to surveys and participation",
+      "prompt": "Let us talk about surveys. Have you ever taken part in a survey for your local area? How do you feel when you are asked to give your opinion online or in person? Do you think most people answer surveys honestly? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card",
+      "pathwayStage": "band-6-5",
+      "focus": "describing an experience of explaining uncertain information",
+      "prompt": "Describe a time when you had to explain something uncertain or incomplete to other people.\n\nYou should say:\n• what the information was about\n• who you were explaining it to\n• how you explained the uncertainty or limitations\n• and explain how the other person or people reacted and how you felt about it.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Funding Public Facilities",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating priorities and fairness in public spending",
+      "prompt": "Let us consider funding for public facilities like playground shade. Why might some people support full government funding while others prefer shared funding? How should councils decide which parks get improvements first when budgets are limited? What are the advantages and disadvantages of asking local businesses to contribute? Do you think decisions about public money should always follow survey results? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Science Communication and Uncertainty",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing ways to present evidence and handling limitations",
+      "prompt": "Let us talk about how experts share uncertain information. Why is it sometimes difficult for scientists to give clear answers about environmental projects? What are the risks of only showing the most positive predictions to the public? How can showing uncertainty help or hinder public trust? In your view, what makes an explanation of complex evidence both honest and understandable?"
+    }
+  ]
+}

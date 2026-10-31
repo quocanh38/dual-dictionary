@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "5ef90d1f82c576073a006bf8ae617a6ee531044e9a2bad71aa81ab8ecd7dab9a",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra route reviews",
+  "reviewedAt": "2026-10-27T08:32:30Z",
+  "note": "Two independent reviewers examined this exact payload hash with its matching batch source row and schema. AI-assisted editorial review, not human or learner review. Rights/authorship remain supported only by local declarations and were not independently verified. Routes requested: gpt-6-luna (runtime-visible label GPT-6; configured route not exposed) and gpt-5.6-terra (Terra confirmed; runtime label Codex GPT-6). This v1 review is historical and intentionally fails: the two reviewers disagreed on severity of the stale s6 reference; subsequent local revisions address it.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers checked the matching local source/candidate declaration of AI-assisted original content, authorized distribution, no copied exam/external material or learner PII; no PII visible. Declaration only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “check out” occurs verbatim in cited s1 and is used for borrowing a projector from the equipment desk."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the temporary equipment-borrowing sense; the next sentence supplies the local loan-recording procedure."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “mượn tạm thiết bị có ghi lại thông tin mượn” is natural and contextually suitable Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “run late” occurs in source s5 and the target cites the complete sentence about a session overrunning and requesting an extension."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The v1/v2 contextual gloss “to continue beyond the scheduled end time” is accurate for the source session-overrun context."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "The v1/v2 contextual gloss “kéo dài quá giờ dự kiến” is natural and accurate for the source session-overrun context."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as borrowing temporarily; b means inspecting picture quality, another sense that does not fit the desk-loan context, and c means returning the item."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all option explanations and the key distinguish borrowing from inspection and return accurately."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as natural; b requires the past-tense “checked out” and c contains an extra “to” after “from.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and preposition corrections are objective and accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the contextual session-overrun meaning; a refers to late arrival and c to finishing early."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "Terra classified the learner-facing explanation as a critical source-reference error: it said s6 although the target phrase appears in s5 and s6 is only email confirmation. Luna also detected the mismatch, classifying it as minor. The q3 key remains semantically correct, but the evidence reference is inaccurate; later editorial edits fix it."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as natural; b requires past “ran” and c uses “lately” instead of “late.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and word-choice corrections are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from equipment-desk scheduling to apologizing to a friend for missing dinner because of a bus delay."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the two-sentence apology is idiomatic, uses “ran late,” and supports self-assessment rather than automated grading."
+    }
+  ],
+  "findings": [
+    {
+      "id": "q3-overall-explanation-wrong-source-reference-terra",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "Terra: q3 overall explanation says the target context is in s6; it is s5. s6 only says staff confirm the return time by email. Blocks approval under the stricter review standard."
+    },
+    {
+      "id": "q3-overall-explanation-wrong-source-reference-luna",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "Luna independently found the same s6/s5 mismatch, assessed as a minor source-reference wording defect. Preserved alongside Terra’s stricter critical assessment."
+    }
+  ]
+}

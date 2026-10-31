@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "5ef6ea6a9a65a41fa6958ccab5a36589d916d8f815184a0a59d06514fba7fc58",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra route reviews",
+  "reviewedAt": "2026-10-27T08:30:04Z",
+  "note": "Two independent reviewers examined this exact payload hash with its matching source row and schema; both returned 17/17 PASS and no critical, uncertain or minor findings. AI-assisted editorial review, not human or learner review. Original-source rights are supported only by local declarations and were not independently verified. Routes requested: gpt-6-luna (runtime-visible label GPT-6; configured route not exposed) and gpt-5.6-terra (Terra confirmed; runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the source row and pack declare AI-assisted original material, authorized for distribution, no copied exam/external text or learner PII; no PII visible. Declaration only, not independent proof of authorship or rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “weekly averages” appears in cited s3, where values are calculated after time windows are aligned."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “mean values calculated over a one-week period” is accurate."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “giá trị trung bình theo tuần” is natural and accurate."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “consistent with” appears in cited s6 describing agreement between a pattern, local weather and repeated evidence."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “in agreement with something; matching or supporting it” captures the contextual sense."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “phù hợp với” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the unique one-week mean; b is a maximum and c is a maintenance window."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the explanations accurately distinguish a mean from a maximum or time window."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as grammatical; b requires “compares” and c requires “aligning” after “by.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm each subject-agreement/gerund correction is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the unique meaning of matching/supporting local weather; b states causation despite conflict and c states independence."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the options correctly distinguish agreement from causation and unrelatedness."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b needs “with” and c needs singular “is.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the collocation and subject-agreement explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from marine research to a running-club captain explaining results to new members."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the two-sentence model naturally uses “consistent with”; the checklist is usable, self-assessed and not automatically graded."
+    }
+  ],
+  "findings": []
+}

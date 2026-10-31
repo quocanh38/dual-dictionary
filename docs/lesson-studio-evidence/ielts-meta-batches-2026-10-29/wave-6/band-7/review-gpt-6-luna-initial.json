@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "3bcc6f9f8d6fe4a0802986d45771aba0a8587d6a9e5c5625558fa2fb8df07be1",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening and Reading contexts are 328 and 435 words, within target ranges. All 10 answers are uniquely defensible from the contexts; distractors and explanations appropriately address corrections, confounds, sampling bias, inference and author claims. Both Task 1 prompts provide complete numerical series and units: university percentages plus release totals, and monthly visitors/incidents with intervention timing; the second explicitly cautions against causal inference. Writing word minimums/timing are appropriate. Speaking has two Part 1, one complete Part 2 cue card and two evaluative Part 3 tasks. Original-content provenance is explicit; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts (listening 328 words; reading 435 words), all 10 objective prompts/options/keys/explanations and evidence, both Task 1 datasets/units/timing, all five Writing prompts, and all five Speaking prompts including part fit and cue-card completeness.",
+  "reviewerType": "AI-assisted"
+}

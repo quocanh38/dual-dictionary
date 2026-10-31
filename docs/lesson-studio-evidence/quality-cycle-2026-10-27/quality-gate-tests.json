@@ -1,0 +1,42 @@
+[
+  {
+    "name": "template is pending, never ready or automatically approved",
+    "status": "PASS"
+  },
+  {
+    "name": "complete explicit review permits an importable approved envelope",
+    "status": "PASS"
+  },
+  {
+    "name": "any payload edit invalidates a previous review",
+    "status": "PASS"
+  },
+  {
+    "name": "missing, duplicated, invented or unsupported criteria cannot pass",
+    "status": "PASS"
+  },
+  {
+    "name": "critical and uncertain findings block even complete checklists",
+    "status": "PASS"
+  },
+  {
+    "name": "existing pack findings need explicit documented closure",
+    "status": "PASS"
+  },
+  {
+    "name": "reviewer identity, valid timestamp and scope are required",
+    "status": "PASS"
+  },
+  {
+    "name": "malformed review input fails closed",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid pack cannot reach editorial approval",
+    "status": "PASS"
+  },
+  {
+    "name": "CLI template does not overwrite; approval creates new release directory",
+    "status": "PASS"
+  }
+]

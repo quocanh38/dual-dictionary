@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-8",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:21:14.970Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 652,
+    "outputTokens": 7030,
+    "totalTokens": 7682
+  },
+  "latencyMs": 28146,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Pilot Mentoring Programme Results\",\"focus\":\"summarising comparative data with qualified claims and noting study limitations\",\"prompt\":\"You should spend about 20 minutes on this task. The table below shows results of a pilot mentoring programme for first-year undergraduates in the Faculty of Science at Westfield University, 2023-2024. It compares 120 students who volunteered for mentoring with 150 students who did not. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data: Mentored group (n=120) – Retention to Year 2: 89%, Average GPA (4.0 scale): 3.2, Reported high satisfaction: 78%, Average meetings with advisor per month: 2.4. Non-mentored group (n=150) – Retention to Year 2: 76%, Average GPA: 2.9, Reported high satisfaction: 52%, Average meetings per month: 0.8. Note: Participants self-selected; results apply only to one faculty and one academic year.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Comparison of Public-Health Measures in Two Cities\",\"focus\":\"comparing participation and reported outcomes across interventions and locations\",\"prompt\":\"You should spend about 20 minutes on this task. The chart below compares three public-health measures in Riverton and Hillford in 2024. It shows participation rate and self-reported health improvement for each measure. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data for 2024: Vaccination drive – Riverton participation 62%, reported improvement 45%; Hillford participation 58%, reported improvement 41%. Free health screening – Riverton participation 38%, reported improvement 33%; Hillford participation 44%, reported improvement 36%. Health education workshops – Riverton participation 27%, reported improvement 22%; Hillford participation 31%, reported improvement 29%. All figures are percentages of the adult population surveyed (Riverton n=1,200; Hillford n=1,150).\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · University Conference Waste Audit 2022-2024\",\"focus\":\"describing trends in waste generation and recycling with accurate handling of figures\",\"prompt\":\"You should spend about 20 minutes on this task. The table below shows waste generated (in kilograms) and the proportion recycled at the GreenTech University Conference from 2022 to 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data: 2022 – Total waste 820 kg (Plastic 210 kg, Paper 340 kg, Food waste 270 kg), Recycling rate 38%, Attendees 500. 2023 – Total waste 760 kg (Plastic 180 kg, Paper 310 kg, Food waste 270 kg), Recycling rate 46%, Attendees 520. 2024 – Total waste 690 kg (Plastic 140 kg, Paper 280 kg, Food waste 270 kg), Recycling rate 58%, Attendees 510. Note: Food waste remained constant; plastic and paper waste declined.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Justifying Expansion of a Mentoring Programme\",\"focus\":\"evaluating qualified claims, comparing evidence, and designing a stronger follow-up study\",\"prompt\":\"You should spend about 40 minutes on this task. A university ran a small pilot mentoring programme in one faculty and found that mentored students had higher retention, GPA and satisfaction than non-mentored students. The university now plans to expand the programme to all faculties based on these results. To what extent do the pilot results justify expansion? What should a follow-up study include to provide stronger evidence? Discuss the need for qualified claims, comparison of evidence, and handling of limitations such as self-selection, sample size and faculty differences. Give reasons and examples from your knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Effectiveness and Limits of Waste-Reduction Measures at Conferences\",\"focus\":\"comparing measures, evaluating effectiveness, and discussing practical and measurement limitations\",\"prompt\":\"You should spend about 40 minutes on this task. Many universities are trying to reduce waste at large academic conferences by banning single-use plastics, providing digital programmes instead of printed materials, and donating leftover food. How effective are such measures likely to be, and what challenges should be considered when evaluating their success? Compare different types of evidence and discuss practical limitations such as cost, attendee behaviour and difficulties in measuring long-term change. Give reasons and examples from your knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Study Support and Mentoring\",\"focus\":\"personal experience with support systems and help-seeking\",\"prompt\":\"Let's talk about study and support. Do you have or have you had a mentor at school, university or work? What kind of help did they give? How important is support for new students in your view? How often do you seek advice when you face a problem with your studies or work?\"},{\"task\":\"Part 1 · Health Information and Daily Habits\",\"focus\":\"personal health habits and sources of public-health information\",\"prompt\":\"Let's discuss health. Where do you usually get information about public health issues? Have you ever taken part in a vaccination drive, health screening or workshop? Why or why not? What do you do to stay healthy in your daily life?\"},{\"task\":\"Part 2 · Cue card - A Guidance Experience\",\"focus\":\"describing a mentoring experience and reflecting on its impact\",\"prompt\":\"Describe a time when someone guided or mentored you in your studies, work or personal development. You will have one minute to prepare and should speak for one to two minutes. You should say: • who the person was • what kind of guidance or support they provided • how often you met or communicated • and explain how this experience affected you. Follow-up question: Do you think you might become a mentor for others in the future?\"},{\"task\":\"Part 3 · Evaluating Programmes and Evidence\",\"focus\":\"reasons for limited generalisability, comparing interventions, and causation\",\"prompt\":\"Let's consider how programmes are evaluated. Why might a mentoring programme that works well in a small pilot not have the same results when expanded to a whole university? How can researchers fairly compare the effectiveness of different public-health measures, such as vaccination drives and education workshops, when data is incomplete? What makes it difficult to prove that a specific intervention caused an improvement?\"},{\"task\":\"Part 3 · Waste Reduction and Institutional Change\",\"focus\":\"evaluating responsibility, trade-offs, and long-term behaviour change\",\"prompt\":\"Let's talk about reducing waste at large events. Who should be most responsible for reducing waste at university conferences – organisers, attendees, or sponsors? Why? What are the advantages and limitations of measures like banning single-use plastics or using digital materials? How can universities know whether such policies actually change behaviour in the long term?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Pilot Mentoring Programme Results",
+        "focus": "summarising comparative data with qualified claims and noting study limitations",
+        "prompt": "You should spend about 20 minutes on this task. The table below shows results of a pilot mentoring programme for first-year undergraduates in the Faculty of Science at Westfield University, 2023-2024. It compares 120 students who volunteered for mentoring with 150 students who did not. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data: Mentored group (n=120) – Retention to Year 2: 89%, Average GPA (4.0 scale): 3.2, Reported high satisfaction: 78%, Average meetings with advisor per month: 2.4. Non-mentored group (n=150) – Retention to Year 2: 76%, Average GPA: 2.9, Reported high satisfaction: 52%, Average meetings per month: 0.8. Note: Participants self-selected; results apply only to one faculty and one academic year.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Comparison of Public-Health Measures in Two Cities",
+        "focus": "comparing participation and reported outcomes across interventions and locations",
+        "prompt": "You should spend about 20 minutes on this task. The chart below compares three public-health measures in Riverton and Hillford in 2024. It shows participation rate and self-reported health improvement for each measure. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data for 2024: Vaccination drive – Riverton participation 62%, reported improvement 45%; Hillford participation 58%, reported improvement 41%. Free health screening – Riverton participation 38%, reported improvement 33%; Hillford participation 44%, reported improvement 36%. Health education workshops – Riverton participation 27%, reported improvement 22%; Hillford participation 31%, reported improvement 29%. All figures are percentages of the adult population surveyed (Riverton n=1,200; Hillford n=1,150).",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · University Conference Waste Audit 2022-2024",
+        "focus": "describing trends in waste generation and recycling with accurate handling of figures",
+        "prompt": "You should spend about 20 minutes on this task. The table below shows waste generated (in kilograms) and the proportion recycled at the GreenTech University Conference from 2022 to 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data: 2022 – Total waste 820 kg (Plastic 210 kg, Paper 340 kg, Food waste 270 kg), Recycling rate 38%, Attendees 500. 2023 – Total waste 760 kg (Plastic 180 kg, Paper 310 kg, Food waste 270 kg), Recycling rate 46%, Attendees 520. 2024 – Total waste 690 kg (Plastic 140 kg, Paper 280 kg, Food waste 270 kg), Recycling rate 58%, Attendees 510. Note: Food waste remained constant; plastic and paper waste declined.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Justifying Expansion of a Mentoring Programme",
+        "focus": "evaluating qualified claims, comparing evidence, and designing a stronger follow-up study",
+        "prompt": "You should spend about 40 minutes on this task. A university ran a small pilot mentoring programme in one faculty and found that mentored students had higher retention, GPA and satisfaction than non-mentored students. The university now plans to expand the programme to all faculties based on these results. To what extent do the pilot results justify expansion? What should a follow-up study include to provide stronger evidence? Discuss the need for qualified claims, comparison of evidence, and handling of limitations such as self-selection, sample size and faculty differences. Give reasons and examples from your knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Effectiveness and Limits of Waste-Reduction Measures at Conferences",
+        "focus": "comparing measures, evaluating effectiveness, and discussing practical and measurement limitations",
+        "prompt": "You should spend about 40 minutes on this task. Many universities are trying to reduce waste at large academic conferences by banning single-use plastics, providing digital programmes instead of printed materials, and donating leftover food. How effective are such measures likely to be, and what challenges should be considered when evaluating their success? Compare different types of evidence and discuss practical limitations such as cost, attendee behaviour and difficulties in measuring long-term change. Give reasons and examples from your knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Study Support and Mentoring",
+        "focus": "personal experience with support systems and help-seeking",
+        "prompt": "Let's talk about study and support. Do you have or have you had a mentor at school, university or work? What kind of help did they give? How important is support for new students in your view? How often do you seek advice when you face a problem with your studies or work?"
+      },
+      {
+        "task": "Part 1 · Health Information and Daily Habits",
+        "focus": "personal health habits and sources of public-health information",
+        "prompt": "Let's discuss health. Where do you usually get information about public health issues? Have you ever taken part in a vaccination drive, health screening or workshop? Why or why not? What do you do to stay healthy in your daily life?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Guidance Experience",
+        "focus": "describing a mentoring experience and reflecting on its impact",
+        "prompt": "Describe a time when someone guided or mentored you in your studies, work or personal development. You will have one minute to prepare and should speak for one to two minutes. You should say: • who the person was • what kind of guidance or support they provided • how often you met or communicated • and explain how this experience affected you. Follow-up question: Do you think you might become a mentor for others in the future?"
+      },
+      {
+        "task": "Part 3 · Evaluating Programmes and Evidence",
+        "focus": "reasons for limited generalisability, comparing interventions, and causation",
+        "prompt": "Let's consider how programmes are evaluated. Why might a mentoring programme that works well in a small pilot not have the same results when expanded to a whole university? How can researchers fairly compare the effectiveness of different public-health measures, such as vaccination drives and education workshops, when data is incomplete? What makes it difficult to prove that a specific intervention caused an improvement?"
+      },
+      {
+        "task": "Part 3 · Waste Reduction and Institutional Change",
+        "focus": "evaluating responsibility, trade-offs, and long-term behaviour change",
+        "prompt": "Let's talk about reducing waste at large events. Who should be most responsible for reducing waste at university conferences – organisers, attendees, or sponsors? Why? What are the advantages and limitations of measures like banning single-use plastics or using digital materials? How can universities know whether such policies actually change behaviour in the long term?"
+      }
+    ]
+  }
+}

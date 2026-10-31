@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "0a642e443c1a75a0cea9ea3fd30215ef87a5ee87f9a0318fdc189362e076168a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 320/410 words. All 10 objective keys are uniquely supported and explanations match the scripts/passages; answer positions are balanced. Open-day route, appointment times, room locations and parking validation are coherent. Recycling scheme figures and distinctions between examples and claims are accurately reflected in Reading items. Task 1 totals reconcile (260, 355, 415; language-pair totals 95, 120, 150); volunteer-hours data has units. Writing minimums/timing and Speaking part/cue-card structures are complete. Original-content provenance is declared; no official-item or score claims."
+  ],
+  "coverage": "Full review of provenance/metadata, both contexts, every objective prompt/options/key/explanation, all three Task 1 datasets including totals/units, all five Writing prompts/timing, and all five Speaking prompts including cue-card completeness and part fit.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-27T07:10:26.606Z",
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "purpose": "One deliberate retest of the missing-quote case after it reached the 2,000-token output cap; previous response remains unchanged.",
+  "requestBound": {
+    "maxCalls": 1,
+    "maxTokens": 10000,
+    "perCallEstimateLimitUsd": 0.05,
+    "automaticRetries": 0
+  },
+  "billingConfirmed": false,
+  "estimatedUsd": 0.00787425,
+  "note": "Synthetic payload only; no learner data or repository source. The Tutor adapter now uses max_tokens=10000 and reasoning_effort=medium. Estimate uses published standard rates and is not a confirmed Billing charge.",
+  "case": {
+    "caseId": "missing-quote",
+    "status": "success",
+    "elapsedMs": 10757,
+    "estimatedUsd": 0.00787425,
+    "usage": {
+      "inputTokens": 397,
+      "outputTokens": 1736,
+      "totalTokens": 2133
+    },
+    "finishReason": "stop",
+    "providerResponseKeys": [
+      "id",
+      "choices",
+      "created",
+      "model",
+      "object",
+      "usage"
+    ],
+    "choiceKeys": [
+      "finish_reason",
+      "index",
+      "message",
+      "logprobs"
+    ],
+    "messageKeys": [
+      "content",
+      "refusal",
+      "role"
+    ],
+    "rawOutput": "{\"verdict\":\"incorrect\",\"quote\":\"I careful practice every evening\",\"issue\":\"careful is an adjective, so it cannot be used as a verb before practice here\",\"suggestion\":\"I improved my English with careful practice every evening.\",\"explanation_vi\":\"Bạn dùng careful như động từ nên câu sai ngữ pháp, cần dùng careful practice như cụm danh từ để nói về việc luyện tập cẩn thận.\",\"retry_prompt\":\"Can you try that sentence again using careful practice as a noun phrase to say how you improved?\"}",
+    "payload": {
+      "phrase": "careful practice",
+      "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+      "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+      "answer": "I careful practice every evening and it make me improve fast."
+    },
+    "expectedVerdicts": [
+      "uncertain"
+    ],
+    "rawFeedback": {
+      "verdict": "incorrect",
+      "quote": "I careful practice every evening",
+      "issue": "careful is an adjective, so it cannot be used as a verb before practice here",
+      "suggestion": "I improved my English with careful practice every evening.",
+      "explanation_vi": "Bạn dùng careful như động từ nên câu sai ngữ pháp, cần dùng careful practice như cụm danh từ để nói về việc luyện tập cẩn thận.",
+      "retry_prompt": "Can you try that sentence again using careful practice as a noun phrase to say how you improved?"
+    },
+    "feedback": {
+      "evidenceStatus": "quoted",
+      "verdict": "incorrect",
+      "correct": false,
+      "quote": "I careful practice every evening",
+      "issue": "careful is an adjective, so it cannot be used as a verb before practice here",
+      "suggestion": "I improved my English with careful practice every evening.",
+      "explanation_vi": "Bạn dùng careful như động từ nên câu sai ngữ pháp, cần dùng careful practice như cụm danh từ để nói về việc luyện tập cẩn thận.",
+      "retry_prompt": "Can you try that sentence again using careful practice as a noun phrase to say how you improved?"
+    },
+    "expectedVerdictPass": false,
+    "quoteExact": true,
+    "quoteValid": true
+  }
+}

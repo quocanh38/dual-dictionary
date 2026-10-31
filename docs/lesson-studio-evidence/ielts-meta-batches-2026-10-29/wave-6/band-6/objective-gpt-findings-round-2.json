@@ -1,0 +1,22 @@
+{
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-6-band-6-reading-context / reading-03",
+      "issue": "The described audit method measures diners scraping leftovers into containers, but the revised weekend explanation attributes higher per-person waste to kitchen-prepared surplus discarded unserved. The method never says kitchen surplus was collected, weighed, or included in the per-person denominator; the explanation is therefore not evidenced by the stated audit. Specify that unserved kitchen food was separately included and explain the denominator, or remove/reframe the causal explanation and dependent question/key.",
+      "severity": "major",
+      "reviewer": "gpt-6-luna"
+    },
+    {
+      "item": "ielts-meta-wave-6-band-6-writing-02",
+      "severity": "uncertain",
+      "issue": "Initial denominator finding remains unresolved: attendance shares sum100 across ages per session, suggesting age distribution of attendees, but wording refers to percentages within age groups. Completion percentages also lack an explicit base. Specify the denominator of each attendance/completion series consistently so learners can compare them correctly.",
+      "reviewer": "gpt-6.1-sol"
+    },
+    {
+      "item": "sharedContexts.reading.passage audit method/results; ielts-meta-wave-6-band-6-reading-03",
+      "severity": "uncertain",
+      "issue": "Repaired results explain weekend per-diner waste through unserved kitchen surplus, but described collection method measures only diner plate scraps in three bins. Explicitly include weighing discarded unserved kitchen food in audit method/category definitions, so the newly introduced surplus is part of the measured numerator.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

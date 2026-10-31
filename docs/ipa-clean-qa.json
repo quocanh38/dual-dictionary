@@ -1,0 +1,728 @@
+{
+  "generatedAt": "2026-10-02T03:33:47.090Z",
+  "keys": 149600,
+  "changed": 143,
+  "curatedChanged": 91,
+  "resolved2000": 53,
+  "keptDataset": 0,
+  "longTail": 147521,
+  "copybugKept": 0,
+  "charsetReverted": 1,
+  "changes": [
+    {
+      "w": "accounts",
+      "from": "əˈkaʊnt",
+      "to": "əˈkaʊnts"
+    },
+    {
+      "w": "admitted",
+      "from": "ədˈmɪt",
+      "to": "ədˈmɪtɪd"
+    },
+    {
+      "w": "allowed",
+      "from": "əˈlaʊ",
+      "to": "əˈlaʊd"
+    },
+    {
+      "w": "arrested",
+      "from": "ɚˈɛst",
+      "to": "ɚˈɛstɪd"
+    },
+    {
+      "w": "ashes",
+      "from": "æʃ",
+      "to": "æʃɪz"
+    },
+    {
+      "w": "balls",
+      "from": "bɔl",
+      "to": "bɔlz"
+    },
+    {
+      "w": "barking",
+      "from": "bɑɹk",
+      "to": "bɑɹkɪŋ"
+    },
+    {
+      "w": "became",
+      "from": "bɪˈkʌm",
+      "to": "bɪˈkeɪm"
+    },
+    {
+      "w": "been",
+      "from": "bi",
+      "to": "bɪn"
+    },
+    {
+      "w": "began",
+      "from": "bɪˈɡɪn",
+      "to": "bɪˈɡæn"
+    },
+    {
+      "w": "begun",
+      "from": "bɪˈɡɪn",
+      "to": "bɪˈɡʌn"
+    },
+    {
+      "w": "bitten",
+      "from": "baɪt",
+      "to": "ˈbɪtən"
+    },
+    {
+      "w": "bled",
+      "from": "blid",
+      "to": "blɛd"
+    },
+    {
+      "w": "blew",
+      "from": "bloʊ",
+      "to": "blu"
+    },
+    {
+      "w": "blocks",
+      "from": "blɑk",
+      "to": "blɑks"
+    },
+    {
+      "w": "boots",
+      "from": "but",
+      "to": "buts"
+    },
+    {
+      "w": "borrowed",
+      "from": "ˈbɑˌɹoʊ",
+      "to": "ˈbɑˌɹoʊd"
+    },
+    {
+      "w": "bought",
+      "from": "baɪ",
+      "to": "bɔt"
+    },
+    {
+      "w": "boxes",
+      "from": "bɑks",
+      "to": "bɑksɪz"
+    },
+    {
+      "w": "brought",
+      "from": "bɹɪŋ",
+      "to": "brɔt"
+    },
+    {
+      "w": "bugs",
+      "from": "bʌɡ",
+      "to": "bʌɡz"
+    },
+    {
+      "w": "buildings",
+      "from": "ˈbɪldɪŋ",
+      "to": "ˈbɪldɪŋz"
+    },
+    {
+      "w": "called",
+      "from": "kɔl",
+      "to": "kɔld"
+    },
+    {
+      "w": "came",
+      "from": "kʌm",
+      "to": "keɪm"
+    },
+    {
+      "w": "caught",
+      "from": "kætʃ",
+      "to": "kɔt"
+    },
+    {
+      "w": "changes",
+      "from": "tʃeɪndʒ",
+      "to": "tʃeɪndʒɪz"
+    },
+    {
+      "w": "children",
+      "from": "tʃaɪld",
+      "to": "ˈtʃɪldrən"
+    },
+    {
+      "w": "chose",
+      "from": "tʃuz",
+      "to": "tʃoʊz"
+    },
+    {
+      "w": "clung",
+      "from": "klɪŋ",
+      "to": "klʌŋ"
+    },
+    {
+      "w": "comes",
+      "from": "kʌm",
+      "to": "kʌmz"
+    },
+    {
+      "w": "could",
+      "from": "kæn",
+      "to": "kʊd"
+    },
+    {
+      "w": "crept",
+      "from": "kɹip",
+      "to": "krɛpt"
+    },
+    {
+      "w": "dealt",
+      "from": "dil",
+      "to": "dɛlt"
+    },
+    {
+      "w": "did",
+      "from": "du",
+      "to": "dɪd"
+    },
+    {
+      "w": "does",
+      "from": "du",
+      "to": "dʌz"
+    },
+    {
+      "w": "doing",
+      "from": "du",
+      "to": "duɪŋ"
+    },
+    {
+      "w": "drank",
+      "from": "dɹɪŋk",
+      "to": "dɹæŋk"
+    },
+    {
+      "w": "drinks",
+      "from": "dɹɪŋk",
+      "to": "dɹɪŋks"
+    },
+    {
+      "w": "dropped",
+      "from": "dɹɑp",
+      "to": "dɹɑpt"
+    },
+    {
+      "w": "eaten",
+      "from": "it",
+      "to": "ˈitən"
+    },
+    {
+      "w": "eldest",
+      "from": "ˈɛldəst",
+      "to": "ˈɛldɪst"
+    },
+    {
+      "w": "ends",
+      "from": "ɛnd",
+      "to": "ɛndz"
+    },
+    {
+      "w": "fallen",
+      "from": "ˈfɑlən",
+      "to": "ˈfɔlən"
+    },
+    {
+      "w": "farthest",
+      "from": "ˈfɑɹðəst",
+      "to": "ˈfɑɹðɪst"
+    },
+    {
+      "w": "feet",
+      "from": "fʊt",
+      "to": "fit"
+    },
+    {
+      "w": "fled",
+      "from": "fli",
+      "to": "flɛd"
+    },
+    {
+      "w": "flew",
+      "from": "flaɪ",
+      "to": "flu"
+    },
+    {
+      "w": "flown",
+      "from": "flaɪ",
+      "to": "floʊn"
+    },
+    {
+      "w": "flung",
+      "from": "flɪŋ",
+      "to": "flʌŋ"
+    },
+    {
+      "w": "forbad",
+      "from": "fɚˈbɪd",
+      "to": "fɚˈbæd"
+    },
+    {
+      "w": "forbade",
+      "from": "fɚˈbɪd",
+      "to": "fɚˈbæd"
+    },
+    {
+      "w": "forgave",
+      "from": "fɚˈɡɪv",
+      "to": "fɚˈɡeɪv"
+    },
+    {
+      "w": "forgiven",
+      "from": "fɚˈɡɪv",
+      "to": "fɚˈɡɪvən"
+    },
+    {
+      "w": "forgot",
+      "from": "fɚˈɡɛt",
+      "to": "fɚˈɡɑt"
+    },
+    {
+      "w": "fought",
+      "from": "faɪt",
+      "to": "fɔt"
+    },
+    {
+      "w": "froze",
+      "from": "fɹiz",
+      "to": "fɹoʊz"
+    },
+    {
+      "w": "furthest",
+      "from": "ˈfɝθəst",
+      "to": "ˈfɝðɪst"
+    },
+    {
+      "w": "gave",
+      "from": "ɡɪv",
+      "to": "ɡeɪv"
+    },
+    {
+      "w": "geese",
+      "from": "ɡus",
+      "to": "ɡis"
+    },
+    {
+      "w": "gone",
+      "from": "ɡɔn",
+      "to": "ɡɑn"
+    },
+    {
+      "w": "got",
+      "from": "ɡɛt",
+      "to": "ɡɑt"
+    },
+    {
+      "w": "gotten",
+      "from": "ɡɛt",
+      "to": "ˈɡɑtən"
+    },
+    {
+      "w": "grew",
+      "from": "ɡɹoʊ",
+      "to": "ɡɹu"
+    },
+    {
+      "w": "groaning",
+      "from": "ɡɹoʊn",
+      "to": "ɡɹoʊnɪŋ"
+    },
+    {
+      "w": "had",
+      "from": "hæv",
+      "to": "hæd"
+    },
+    {
+      "w": "has",
+      "from": "hɑ",
+      "to": "hæz"
+    },
+    {
+      "w": "heads",
+      "from": "hɛd",
+      "to": "hɛdz"
+    },
+    {
+      "w": "hid",
+      "from": "haɪd",
+      "to": "hɪd"
+    },
+    {
+      "w": "his",
+      "from": "haɪ",
+      "to": "hɪz"
+    },
+    {
+      "w": "hoping",
+      "from": "hoʊp",
+      "to": "hoʊpɪŋ"
+    },
+    {
+      "w": "hung",
+      "from": "hæŋ",
+      "to": "hʌŋ"
+    },
+    {
+      "w": "including",
+      "from": "ˌɪnˈklud",
+      "to": "ˌɪnˈkludɪŋ"
+    },
+    {
+      "w": "is",
+      "from": "bi",
+      "to": "ɪz"
+    },
+    {
+      "w": "its",
+      "from": "ɪt",
+      "to": "ɪts"
+    },
+    {
+      "w": "keeps",
+      "from": "kip",
+      "to": "kips"
+    },
+    {
+      "w": "keys",
+      "from": "ki",
+      "to": "kiz"
+    },
+    {
+      "w": "killed",
+      "from": "kɪl",
+      "to": "kɪld"
+    },
+    {
+      "w": "knew",
+      "from": "noʊ",
+      "to": "nu"
+    },
+    {
+      "w": "leaves",
+      "from": "lif",
+      "to": "livz"
+    },
+    {
+      "w": "lesser",
+      "from": "ˈlɛsɚ",
+      "to": "lɛsɚ"
+    },
+    {
+      "w": "lice",
+      "from": "laʊs",
+      "to": "laɪs"
+    },
+    {
+      "w": "lights",
+      "from": "laɪt",
+      "to": "laɪts"
+    },
+    {
+      "w": "lines",
+      "from": "laɪn",
+      "to": "laɪnz"
+    },
+    {
+      "w": "lives",
+      "from": "laɪf",
+      "to": "laɪvz"
+    },
+    {
+      "w": "locked",
+      "from": "lɑk",
+      "to": "lɑkt"
+    },
+    {
+      "w": "losing",
+      "from": "luz",
+      "to": "luzɪŋ"
+    },
+    {
+      "w": "meant",
+      "from": "min",
+      "to": "mɛnt"
+    },
+    {
+      "w": "members",
+      "from": "ˈmɛmbɚ",
+      "to": "ˈmɛmbɚz"
+    },
+    {
+      "w": "met",
+      "from": "mit",
+      "to": "mɛt"
+    },
+    {
+      "w": "mice",
+      "from": "maʊs",
+      "to": "maɪs"
+    },
+    {
+      "w": "movies",
+      "from": "ˈmuvi",
+      "to": "ˈmuviz"
+    },
+    {
+      "w": "named",
+      "from": "neɪm",
+      "to": "neɪmd"
+    },
+    {
+      "w": "nights",
+      "from": "naɪt",
+      "to": "naɪts"
+    },
+    {
+      "w": "overcame",
+      "from": "ˈoʊvɚˌkʌm",
+      "to": "ˌoʊvɚˈkeɪm"
+    },
+    {
+      "w": "oxen",
+      "from": "ˈɑksən",
+      "to": "ɑksən"
+    },
+    {
+      "w": "passed",
+      "from": "pæs",
+      "to": "pæst"
+    },
+    {
+      "w": "photos",
+      "from": "ˈfoʊˌtoʊ",
+      "to": "ˈfoʊˌtoʊz"
+    },
+    {
+      "w": "pieces",
+      "from": "pis",
+      "to": "pisɪz"
+    },
+    {
+      "w": "points",
+      "from": "pɔɪnt",
+      "to": "pɔɪnts"
+    },
+    {
+      "w": "ran",
+      "from": "ɹʌn",
+      "to": "ɹæn"
+    },
+    {
+      "w": "rang",
+      "from": "ɹɪŋ",
+      "to": "ɹæŋ"
+    },
+    {
+      "w": "records",
+      "from": "ɹəˈkɔɹd",
+      "to": "ɹəˈkɔɹdz"
+    },
+    {
+      "w": "ridden",
+      "from": "ɹaɪd",
+      "to": "ˈɹɪdən"
+    },
+    {
+      "w": "rights",
+      "from": "ɹaɪt",
+      "to": "ɹaɪts"
+    },
+    {
+      "w": "rode",
+      "from": "ɹaɪd",
+      "to": "ɹoʊd"
+    },
+    {
+      "w": "rules",
+      "from": "ɹul",
+      "to": "ɹulz"
+    },
+    {
+      "w": "says",
+      "from": "seɪ",
+      "to": "sɛz"
+    },
+    {
+      "w": "seconds",
+      "from": "ˈsɛkənd",
+      "to": "ˈsɛkəndz"
+    },
+    {
+      "w": "seen",
+      "from": "si",
+      "to": "sin"
+    },
+    {
+      "w": "should",
+      "from": "ʃˈʊd",
+      "to": "ʃʊd"
+    },
+    {
+      "w": "slept",
+      "from": "slip",
+      "to": "slɛpt"
+    },
+    {
+      "w": "soldiers",
+      "from": "ˈsoʊldʒɚ",
+      "to": "ˈsoʊldʒɚz"
+    },
+    {
+      "w": "sped",
+      "from": "spid",
+      "to": "spɛd"
+    },
+    {
+      "w": "sprang",
+      "from": "spɹɪŋ",
+      "to": "spɹæŋ"
+    },
+    {
+      "w": "sprung",
+      "from": "spɹɪŋ",
+      "to": "spɹʌŋ"
+    },
+    {
+      "w": "spun",
+      "from": "spɪn",
+      "to": "spʌn"
+    },
+    {
+      "w": "stars",
+      "from": "stɑɹ",
+      "to": "stɑɹz"
+    },
+    {
+      "w": "stayed",
+      "from": "steɪ",
+      "to": "steɪd"
+    },
+    {
+      "w": "staying",
+      "from": "steɪ",
+      "to": "steɪɪŋ"
+    },
+    {
+      "w": "stolen",
+      "from": "stil",
+      "to": "ˈstoʊlən"
+    },
+    {
+      "w": "stood",
+      "from": "stænd",
+      "to": "stʊd"
+    },
+    {
+      "w": "swam",
+      "from": "swɪm",
+      "to": "swæm"
+    },
+    {
+      "w": "swore",
+      "from": "swɛɹ",
+      "to": "swɔɹ"
+    },
+    {
+      "w": "swum",
+      "from": "swɪm",
+      "to": "swʌm"
+    },
+    {
+      "w": "swung",
+      "from": "swɪŋ",
+      "to": "swʌŋ"
+    },
+    {
+      "w": "taught",
+      "from": "titʃ",
+      "to": "tɔt"
+    },
+    {
+      "w": "threw",
+      "from": "θɹoʊ",
+      "to": "θɹu"
+    },
+    {
+      "w": "told",
+      "from": "tɛl",
+      "to": "toʊld"
+    },
+    {
+      "w": "took",
+      "from": "teɪk",
+      "to": "tʊk"
+    },
+    {
+      "w": "walked",
+      "from": "wɔk",
+      "to": "wɔkt"
+    },
+    {
+      "w": "wants",
+      "from": "wɑnt",
+      "to": "wɑnts"
+    },
+    {
+      "w": "was",
+      "from": "bi",
+      "to": "wʌz"
+    },
+    {
+      "w": "went",
+      "from": "ɡoʊ",
+      "to": "wɛnt"
+    },
+    {
+      "w": "wept",
+      "from": "wip",
+      "to": "wɛpt"
+    },
+    {
+      "w": "were",
+      "from": "bi",
+      "to": "wɝ"
+    },
+    {
+      "w": "withstood",
+      "from": "wɪθˈstænd",
+      "to": "wɪðˈstʊd"
+    },
+    {
+      "w": "woke",
+      "from": "weɪk",
+      "to": "woʊk"
+    },
+    {
+      "w": "woken",
+      "from": "weɪk",
+      "to": "ˈwoʊkən"
+    },
+    {
+      "w": "women",
+      "from": "ˈwʊmən",
+      "to": "ˈwɪmɪn"
+    },
+    {
+      "w": "wore",
+      "from": "wɛɹ",
+      "to": "wɔɹ"
+    },
+    {
+      "w": "worked",
+      "from": "wɝk",
+      "to": "wɝkt"
+    },
+    {
+      "w": "would",
+      "from": "wɪl",
+      "to": "wʊd"
+    },
+    {
+      "w": "wrote",
+      "from": "ɹaɪt",
+      "to": "ɹoʊt"
+    }
+  ]
+}

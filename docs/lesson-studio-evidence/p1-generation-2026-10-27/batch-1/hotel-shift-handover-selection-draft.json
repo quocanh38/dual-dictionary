@@ -1,0 +1,53 @@
+{
+  "id": "draft-71baf4b5-06fa-42f1-97b8-e24796a4dd22",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Hotel shift handover",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The evening receptionist will hand over the booking records to the night team before leaving. Staff must follow up on guest requests that were not resolved during the day. A guest who needs an early taxi should receive a clear confirmation before the morning shift begins. The shared checklist shows who is responsible for each request, so guests do not need to explain the same problem again.",
+    "rightsStatement": "Original reading composed for this project with coding-assistant assistance; no copied examination passage, third-party source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The evening receptionist will hand over the booking records to the night team before leaving. Staff must follow up on guest requests that were not resolved during the day. A guest who needs an early taxi should receive a clear confirmation before the morning shift begins. The shared checklist shows who is responsible for each request, so guests do not need to explain the same problem again.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The evening receptionist will hand over the booking records to the night team before leaving."
+      },
+      {
+        "id": "s2",
+        "text": "Staff must follow up on guest requests that were not resolved during the day."
+      },
+      {
+        "id": "s3",
+        "text": "A guest who needs an early taxi should receive a clear confirmation before the morning shift begins."
+      },
+      {
+        "id": "s4",
+        "text": "The shared checklist shows who is responsible for each request, so guests do not need to explain the same problem again."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "hand over",
+      "meaningEn": "to give documents or responsibility to another person or team",
+      "meaningVi": "bàn giao",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "follow up on",
+      "meaningEn": "to check and take further action on something not yet finished",
+      "meaningVi": "theo dõi và xử lý tiếp",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

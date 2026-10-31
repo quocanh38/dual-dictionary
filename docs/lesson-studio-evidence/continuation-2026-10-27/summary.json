@@ -1,0 +1,39 @@
+{
+  "sourceCommit": "b76540e572bac7f590e0d8827a4471224ca9d209",
+  "date": "2026-10-27",
+  "productionCache": "mdx-dict-v123",
+  "productionDeployApi": "not queried; cache HTTP read only",
+  "sandboxBrowser": "BLOCKED SIGABRT/EPERM",
+  "outsideSandboxBrowser": "PASS",
+  "mainBrowserGroups": 14,
+  "backupGroups": 11,
+  "recovery": "PASS",
+  "draftImport": "PASS",
+  "persistenceKeyboardReloadOffline": "PASS",
+  "runtimeAdapterMockChecks": "PASS",
+  "realCdp": "not run",
+  "physicalDevice": false,
+  "realProviderCalls": 0,
+  "balance": "unknown; no provider calls attempted",
+  "candidates": "3 READY_FOR_APPROVAL; no real candidate approved or installed",
+  "localChecks": [
+    "offline-shell-contract-check",
+    "quality-gate-check",
+    "batch-input-check",
+    "repair-preflight-check",
+    "budget-check",
+    "network",
+    "check",
+    "draft-file-check"
+  ],
+  "remaining": [
+    "authoring-stage reload matrix and stale responses across distinct drafts",
+    "mixed historical record fixtures and existing Vault/Review schedule preservation assertions",
+    "offline optional Meta failure messaging",
+    "dialog/editor keyboard audit",
+    "owner pack approval and approved export release QA",
+    "library expansion subject to verified free credits",
+    "bounded product evaluation",
+    "official submission rules verification and fresh demo video"
+  ]
+}

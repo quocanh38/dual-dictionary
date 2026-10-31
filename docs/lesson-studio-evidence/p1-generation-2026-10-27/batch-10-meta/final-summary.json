@@ -1,0 +1,106 @@
+{
+  "completedAt": "2026-10-27T08:59:59.383Z",
+  "batch": "P1 offline lesson generation batch 10",
+  "sourceFile": "sources-batch-10.json",
+  "sourceSha256": "051408058a4e3340a0b510e5c7ca4e159cec8f8c0d7cf00236528a37d439b8e5",
+  "generationPrompt": "lesson-studio-2026-10-27-v5",
+  "generationStatus": "Three raw Meta candidates are preserved unchanged; local editorial revisions are separately versioned and are not attributed to Meta.",
+  "packs": [
+    {
+      "id": "east-market-repair-cafe-volunteer-shift",
+      "packId": "pack-593359c8-d912-43aa-acc3-63f4ce979bb3",
+      "version": 1,
+      "title": "Repair Café Work: Shifts and Supplies",
+      "levelEstimate": "B1",
+      "rawMetaCandidateSha256": "3ecd45e5111d46068045886cb8e06c8a3612a3886eb788bacaeb5efcb8b2b07b",
+      "finalEditorialCandidateFile": "east-market-repair-cafe-volunteer-shift-candidate-editorial-v2.json",
+      "finalReviewedPayloadSha256": "269cd70f8c0f433dd64cd14f7c73522b044873beb36556adc8d5d689374ad95c",
+      "finalReviewSha256": "62c17741bfe098a473a5948c78fc0abde4d43e86ba12e46c7c2074cedf1c64f9",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "252f176bc35ead4ecbf3e5f59e9d84816ac9de999d2f4f903754524c924876f7",
+      "releaseDirectory": "release-east-market-repair-cafe-volunteer-shift",
+      "libraryFile": "lessons/library/east-market-repair-cafe-volunteer-shift.json"
+    },
+    {
+      "id": "school-library-survey-privacy",
+      "packId": "pack-b984407d-d36b-4251-b7a7-3d53d5a3ba51",
+      "version": 1,
+      "title": "Library Survey: Choosing to Participate and Sharing Information",
+      "levelEstimate": "B2",
+      "rawMetaCandidateSha256": "683b36a9cb6aa5ed6791537f8d8e2bc29ffc5c7cc296b1870e4a0d04face2643",
+      "finalEditorialCandidateFile": "school-library-survey-privacy-candidate-editorial-v1.json",
+      "finalReviewedPayloadSha256": "683b36a9cb6aa5ed6791537f8d8e2bc29ffc5c7cc296b1870e4a0d04face2643",
+      "finalReviewSha256": "17358f09386e1af70fd1a56e0285086d3d7e497ee0bca52dca7f38f06d3cf031",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "c4197d4a6947045e77b24be231a826d7f5329bdf6d1f5f8074137204858002aa",
+      "releaseDirectory": "release-school-library-survey-privacy",
+      "libraryFile": "lessons/library/school-library-survey-privacy.json"
+    },
+    {
+      "id": "riverside-centre-class-registration",
+      "packId": "pack-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+      "version": 1,
+      "title": "Registering for a Class: Forms and Waiting Lists",
+      "levelEstimate": "B1",
+      "rawMetaCandidateSha256": "945bf46a4f85e4548c757055e8020edd13a4ef35dc8cf541ac6a777ef670fdd3",
+      "finalEditorialCandidateFile": "riverside-centre-class-registration-candidate-editorial-v1.json",
+      "finalReviewedPayloadSha256": "945bf46a4f85e4548c757055e8020edd13a4ef35dc8cf541ac6a777ef670fdd3",
+      "finalReviewSha256": "0e30946a7c7aa62563ca92830041581fb0c095a7e3eefa2a9a2e2e4140753dba",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "7789783ed910a4554f915aa98abd3be5fe781bc6ef792109be78b175734defa5",
+      "releaseDirectory": "release-riverside-centre-class-registration",
+      "libraryFile": "lessons/library/riverside-centre-class-registration.json"
+    }
+  ],
+  "editorialHistory": {
+    "east-market-repair-cafe-volunteer-shift": "Raw Meta payload is preserved. Local v1 merged a sentence after “9 a.m.” but had two stale explanation references and a transfer prompt without a target instruction; Terra identified three critical findings. Local v2 corrected s2/s4 citations and explicitly requires “run out of” or a correct inflection. Both reviewers passed the final v2 hash at 17/17 with no findings. The blocked v1 report and both change records remain preserved.",
+    "school-library-survey-privacy": "v1 preserves the Meta candidate unchanged; both reviewers passed all 17 criteria on its exact hash.",
+    "riverside-centre-class-registration": "v1 preserves the Meta candidate unchanged; both reviewers passed all 17 criteria on its exact hash."
+  },
+  "reviewRoutesRequested": [
+    "gpt-6-luna (requested; configured route not exposed by runtime)",
+    "gpt-5.6-terra"
+  ],
+  "reviewRuntimeLabels": [
+    "GPT-6",
+    "Codex GPT-6"
+  ],
+  "reviewLimitations": [
+    "AI-assisted editorial review, not human or learner review",
+    "Rights/authorship supported only by local declarations, not independently verified"
+  ],
+  "approval": "Three exact-hash local approvals recorded under the owner’s delegated editorial authority; only final editorial revisions listed above are approved.",
+  "qa": {
+    "finalUnapprovedPreview": "PASS for all three exact final editorial hashes in Chrome mobile offline emulation 390x844 on cache v135; no Vault writes, zero paid/provider requests, no JS errors",
+    "approvedReleaseQa": "PASS, 54 clean and preseeded Chrome mobile emulation contexts across all 27 approved packs; zero external requests or provider calls; no JS errors",
+    "catalogueOfflineInstall": "PASS, all 27 indexed packs installed offline; malformed index and tampered pack rejected; existing Vault/Review history preserved; zero external/provider requests",
+    "offlineShell": "PASS, 42 offline paths in mdx-dict-v135",
+    "providerRequestsDuringReviewAndQa": 0,
+    "externalRequests": 0,
+    "physicalDevice": false
+  },
+  "library": {
+    "packCount": 27,
+    "newPacks": 3,
+    "cache": "mdx-dict-v135"
+  },
+  "ownerInstruction": "Owner handles Meta credits and asked Codex not to check Meta usage/Billing.",
+  "metaUsageOrBillingLookup": "not performed, per owner instruction",
+  "deployment": "not performed; local candidate only",
+  "checks": [
+    "exact-hash quality-gate audit and delegated approval",
+    "three independent 17-criterion reviews from requested Luna and Terra routes; exact hashes confirmed",
+    "candidate mobile offline preview PASS on v135",
+    "27-pack offline shell contract PASS (42 paths)",
+    "schema, quality-gate and library checks PASS",
+    "approved-library-check: 54 exact-pack contexts PASS",
+    "catalogue offline UI: 27 pack installs plus malformed/tampered rejection PASS",
+    "git diff --check PASS"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "equipment-loan-desk",
+  "rawCandidateFile": "equipment-loan-desk-candidate.json",
+  "previousEditorialCandidateFile": "equipment-loan-desk-candidate-editorial-v2.json",
+  "editorialCandidateFile": "equipment-loan-desk-candidate-editorial-v3.json",
+  "generatedByMeta": false,
+  "beforePackSha256": "c628e5931a45559e0aa5af32f93aa32cfa05c9fbd72283cf83f816f2359debb1",
+  "changes": [
+    {
+      "part": "target t2 meaningEn/meaningVi",
+      "before": "EN: to continue beyond the scheduled end time; VI: kéo dài quá giờ dự kiến",
+      "after": "EN: to be delayed or to continue beyond the scheduled time; VI: bị chậm hoặc kéo dài quá thời gian dự kiến",
+      "reason": "Cover the related idiomatic uses supported by the source-session overrun and transfer example of a bus delayed behind its schedule."
+    }
+  ],
+  "reason": "Resolve the independent reviewer’s non-blocking learning-alignment note; preserve all earlier raw and editorial candidates separately."
+}

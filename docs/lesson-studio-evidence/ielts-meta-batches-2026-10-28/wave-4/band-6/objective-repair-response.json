@@ -1,0 +1,156 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6",
+  "batchId": "wave-4",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-28-wave-4-v2",
+  "completedAt": "2026-10-28T08:31:02.259Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2855,
+    "outputTokens": 3664,
+    "totalTokens": 6519
+  },
+  "latencyMs": 13933,
+  "reasoningEffort": "low",
+  "maxOutputTokens": 32768,
+  "result": {
+    "listening": {
+      "title": "University Language Exchange Signup",
+      "focus": "Listening for practical details, times, and corrected information",
+      "part": "Part 1",
+      "script": "Receptionist: Good morning, Language Centre. How can I help you? Leo: Hi, I'm interested in joining the language exchange programme this term. Receptionist: Great. I can sign you up now. What's your full name? Leo: Leo Martins. That's L-E-O, Martins with an I. Receptionist: Got it. And which language do you want to practise? Leo: Spanish. I'm at intermediate level, and I'd like to meet a native speaker. Receptionist: Okay, Spanish intermediate. And what is your first language, for your partner? Leo: Portuguese. I can help someone with Portuguese conversation. Receptionist: Perfect, we have several Spanish speakers who want Portuguese. Now, the groups meet twice a week. The current Spanish-Portuguese group meets on Tuesday and Thursday evenings. Leo: Tuesday and Thursday works for me. What time? Receptionist: From 6.30 to 7.30 in the Student Hub, Room 4. Actually, sorry — Room 4 is under repair, so we've moved to Room 6 on the second floor. Leo: Room 6, second floor. Noted. Is there a fee? Receptionist: There's a small signup fee of fifteen pounds for the term. That covers materials and the end-of-term social event. Leo: That's fine. Do I need to bring anything to the first session? Receptionist: Just your student ID and this registration form. Oh, and the first meeting was planned for next Tuesday, the 14th, but we've delayed it by one week. So it will start on Tuesday the 21st. Leo: So first meeting Tuesday the 21st at 6.30 in Room 6? Receptionist: Exactly. And please arrive ten minutes early so we can introduce partners. Leo: Will we be in a pair or a small group? Receptionist: We'll start with pairs, then sometimes combine into groups of four for activities. You'll get your partner's email after signup. Leo: Excellent. How do I pay the fifteen pounds? Receptionist: You can pay online through the university portal, or in person at the centre office. If you pay today, I can confirm your place immediately. Leo: I'll pay online tonight. Receptionist: Lovely. I'll hold your place until tomorrow morning. Welcome to the programme.",
+      "questions": [
+        {
+          "title": "Q1 - Offered Language",
+          "prompt": "What language does Leo want to help his partner practise?",
+          "options": [
+            "Spanish conversation skills",
+            "Portuguese conversation skills",
+            "Intermediate English grammar",
+            "Beginner French vocabulary"
+          ],
+          "answer": 1,
+          "explanation": "The script states Leo offers Portuguese while seeking Spanish. Spanish is what he wants to learn, so it is the strongest distractor."
+        },
+        {
+          "title": "Q2 - Meeting Days",
+          "prompt": "On which days does the exchange group meet?",
+          "options": [
+            "Monday and Wednesday",
+            "Thursday and Friday",
+            "Saturday and Sunday",
+            "Tuesday and Thursday"
+          ],
+          "answer": 3,
+          "explanation": "The receptionist clearly lists Tuesday and Thursday evenings. Thursday and Friday shares one day but is not the stated pair."
+        },
+        {
+          "title": "Q3 - Room Change",
+          "prompt": "Where will the group now meet?",
+          "options": [
+            "Room 6 on the second floor",
+            "Room 4 in the Student Hub",
+            "Room 6 on the ground floor",
+            "Room 4 on the second floor"
+          ],
+          "answer": 0,
+          "explanation": "Room 4 is corrected to Room 6 on the second floor due to repairs. Room 4 is the old location mentioned before the correction."
+        },
+        {
+          "title": "Q4 - Fee Purpose",
+          "prompt": "What does the £15 fee include?",
+          "options": [
+            "Textbooks and private lessons",
+            "Materials and social event",
+            "Transport and evening meals",
+            "Exams and certificates"
+          ],
+          "answer": 1,
+          "explanation": "The fee is said to cover materials and the end-of-term social. Textbooks and private lessons overstates what is offered."
+        },
+        {
+          "title": "Q5 - Start Date",
+          "prompt": "When is the first meeting?",
+          "options": [
+            "Tuesday the 14th",
+            "Thursday the 16th",
+            "Tuesday the 21st",
+            "Thursday the 23rd"
+          ],
+          "answer": 2,
+          "explanation": "The 14th is delayed by one week to the 21st. The 14th is the original plan, so it fails after the qualification."
+        }
+      ]
+    },
+    "reading": {
+      "title": "City Park Volunteers: A Flexible Evening and Weekend Schedule",
+      "focus": "Understanding schedules, roles, and comparisons in a community programme",
+      "passage": "Maplewood City Park relies on local volunteers to keep its gardens, paths, and playgrounds welcoming. Last year, the council introduced a new volunteer schedule to attract people who work or study during the day. Instead of only morning shifts, the park now offers evening sessions on weekdays and longer sessions at weekends. The change increased regular volunteers from 40 to 95 in eight months. The coordinator, Dana Ellis, says the main reason for the growth is flexibility, not advertising. People can choose short tasks after work or join a full weekend team. This claim is supported by signup data: over 70% of new volunteers selected evening or weekend slots because they could not attend mornings. The weekly schedule is organised around three roles. Garden helpers water plants, plant flowers, and collect fallen leaves. Path monitors walk the main trails, report damage, and help visitors with directions. Play assistants stay near the playground, tidy equipment, and organise simple games for children on Saturday afternoons. Volunteers choose one main role each month but may try another role if spaces allow. Evening shifts run on Tuesdays and Thursdays from 6 p.m. to 7.30 p.m. These shifts focus on light work such as watering, litter collection, and sweeping entrances. Weekend shifts are longer. On Saturdays, volunteers work from 9 a.m. to 12 p.m., with a break for drinks provided by the park café. On Sundays, there is a shorter tidy-up session from 10 a.m. to 11.30 a.m. The park provides gloves, tools, and training, so no experience is needed. For example, new garden helpers attend a 30-minute introduction on how to use tools safely and how to identify weeds. This example shows the type of support offered, but it does not mean all roles need the same training. Path monitors, for instance, receive a map and a short briefing rather than tool training. The schedule also includes a monthly evening meeting on the first Wednesday from 7 p.m. to 8 p.m. Volunteers review progress, suggest improvements, and plan seasonal events such as the autumn tree-planting day. Attendance is encouraged but not required. Compared with the old morning-only system, the new system asks for fewer hours per person but involves more people overall. The council believes this shared approach reduces pressure and builds community. Many volunteers also say they enjoy meeting neighbours and learning simple gardening skills during these relaxed sessions. Early results suggest fewer missed shifts and cleaner public areas, although a full review will be published next spring.",
+      "questions": [
+        {
+          "title": "Q1 - Growth Reason",
+          "prompt": "Why does the coordinator say volunteer numbers grew?",
+          "options": [
+            "Because of wider advertising",
+            "Because of greater flexibility",
+            "Because of paid evening work",
+            "Because of shorter training"
+          ],
+          "answer": 1,
+          "explanation": "Ellis attributes growth to flexibility, not advertising. Advertising is explicitly rejected as the main reason."
+        },
+        {
+          "title": "Q2 - Play Assistants",
+          "prompt": "What is a specific duty of play assistants?",
+          "options": [
+            "Repair damaged playground equipment",
+            "Give directions on main trails",
+            "Organise games on Saturday afternoons",
+            "Plant flowers near entrances"
+          ],
+          "answer": 2,
+          "explanation": "The passage assigns Saturday afternoon games to play assistants. Giving directions belongs to path monitors, the closest distractor."
+        },
+        {
+          "title": "Q3 - Evening Work",
+          "prompt": "What do Tuesday and Thursday shifts mainly involve?",
+          "options": [
+            "Café service and event planning",
+            "Tool repair and map briefing",
+            "Tree-planting and heavy digging",
+            "Watering and litter collection"
+          ],
+          "answer": 3,
+          "explanation": "Evenings focus on light work like watering and litter collection. Tree-planting is a separate seasonal event, not a weekly evening task."
+        },
+        {
+          "title": "Q4 - Training Example",
+          "prompt": "What does the garden-helper introduction show?",
+          "options": [
+            "The kind of support provided",
+            "All roles share identical training",
+            "Weekend shifts need experience",
+            "Briefings have been cancelled"
+          ],
+          "answer": 0,
+          "explanation": "The 30-minute session is presented as an example of support, with other roles differing. Identical training is contradicted by the path-monitor comparison."
+        },
+        {
+          "title": "Q5 - System Comparison",
+          "prompt": "How does the new system compare to the old one?",
+          "options": [
+            "More hours per person, fewer people",
+            "Same hours but paid roles",
+            "Fewer hours per person, more people",
+            "Longer shifts but less training"
+          ],
+          "answer": 2,
+          "explanation": "The author states fewer hours per person but more people overall. The reverse comparison misstates that relationship."
+        }
+      ]
+    }
+  }
+}

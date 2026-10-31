@@ -1,0 +1,88 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "0aa86ee4abf77d02fec7859769daba5befecda78e10df9a0771311f5ad28f53c",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "sharedContexts.reading.passage",
+      "severity": "minor",
+      "issue": "Greenfield comparison only20% winter drop lacks baseline (from summer output or below predicted output). Identify baseline or remove comparison. Also explicitly state actual panel tilt if attributing seasonal differences to30-degree optimisation."
+    },
+    {
+      "item": "sharedContexts.listening.script",
+      "severity": "minor",
+      "issue": "Cheaper to run is tentative, but unit purchase price and battery life alone do not establish operating costs after cleaning labour; keep this clearly a hypothesis pending full costs."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final rereview of all 20 items:5 Listening,5 Reading,5 Writing,5 Speaking. Entire contexts, all 40 options/10 keys/10 explanations and all productive prompts/metadata reread; copied item contexts verified identical. No other model reports inspected, no candidate edits or provider calls.",
+    "listening": "Full sensor tutorial read. Revised trial January–May now five months, consistent with winter/spring limitation. Verified North 28/South 40→32 units,12% versus 7% false alerts, missed small floods, battery life/prices and silt cleaning. All five keys [1,1,0,3,2],20 options and explanations supported.",
+    "reading": "Full 444-word solar passage read: model assumptions, seasonal outputs and deviations, snow/shading/dust/weather caveats, claim versus snow example, multiyear/local-model recommendation.4850/4620≈+5% and 1120/1860≈−40% correct. Five keys [1,0,3,2,0], options and explanations unique and supported; minor baseline/tilt clarity observation retained.",
+    "writing": "All five Writing prompts read. Funding sources sum 38700 against 42000 estimated cost with pending/restriction/status details. Survey 300/1200=25%, respondent indicators and population/sample comparisons complete. Three Task 2 prompts support qualified funding/survey/road-safety arguments. All word minima/time instructions and metadata agree.",
+    "speaking": "All five Speaking prompts read: personal green-space/health Part 1 sets; concrete route Part 2 has four newline bullets/preparation/duration; two Part 3 sets require evidence and funding/safety evaluation. Appropriate progression to qualified arguments.",
+    "initialIssueResolution": [
+      "January–June changed to January–May, six months changed to five; script/key/explanation now consistently exclude summer."
+    ],
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 338,
+        "reading": 444
+      },
+      "answerPositions": {
+        "Listening": [
+          1,
+          1,
+          0,
+          3,
+          2
+        ],
+        "Reading": [
+          1,
+          0,
+          3,
+          2,
+          0
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      }
+    },
+    "originalityAndProvenance": "Baseten Model API, meta-models/muse-spark-open-1026, wave6-v1 prompt versions and repair metadata read. No recognisable official-question copying or guaranteed score claim found; no exhaustive plagiarism or empirical-research validation performed. Stage labels treated as intended practice difficulty.",
+    "independence": "Same reviewer completed initial review and now full final rereview; own prior findings used for closure. Other model reports were not read.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-6-5-listening-01",
+      "ielts-meta-wave-6-band-6-5-listening-02",
+      "ielts-meta-wave-6-band-6-5-listening-03",
+      "ielts-meta-wave-6-band-6-5-listening-04",
+      "ielts-meta-wave-6-band-6-5-listening-05",
+      "ielts-meta-wave-6-band-6-5-reading-01",
+      "ielts-meta-wave-6-band-6-5-reading-02",
+      "ielts-meta-wave-6-band-6-5-reading-03",
+      "ielts-meta-wave-6-band-6-5-reading-04",
+      "ielts-meta-wave-6-band-6-5-reading-05",
+      "ielts-meta-wave-6-band-6-5-writing-01",
+      "ielts-meta-wave-6-band-6-5-writing-02",
+      "ielts-meta-wave-6-band-6-5-writing-03",
+      "ielts-meta-wave-6-band-6-5-writing-04",
+      "ielts-meta-wave-6-band-6-5-writing-05",
+      "ielts-meta-wave-6-band-6-5-speaking-01",
+      "ielts-meta-wave-6-band-6-5-speaking-02",
+      "ielts-meta-wave-6-band-6-5-speaking-03",
+      "ielts-meta-wave-6-band-6-5-speaking-04",
+      "ielts-meta-wave-6-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

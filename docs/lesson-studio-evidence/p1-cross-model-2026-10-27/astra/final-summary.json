@@ -1,0 +1,55 @@
+{
+  "reviewerModelConfigured": "gpt-6-astra",
+  "reviewType": "Independent AI-assisted editorial full re-review; no human review",
+  "reviewedAt": "2026-10-27T04:18:02.775Z",
+  "results": [
+    {
+      "id": "1-v4",
+      "reviewFile": "docs/lesson-studio-evidence/p1-cross-model-2026-10-27/astra/final-1-v4.json",
+      "packSha256": "163e93250e7aa832822ebbad6d61ce2d88371941d8e621cf3871e123b7bb513d",
+      "candidateFileSha256": "32c39b0d9668e8d4083aafd8f46108f8e3061c8845ff94916da8898d2b82afc0",
+      "decision": "ready-for-approval",
+      "criteriaCount": 17,
+      "unresolvedFindings": [],
+      "gateAudit": {
+        "status": "ready-for-approval",
+        "ready": true,
+        "sha256": "163e93250e7aa832822ebbad6d61ce2d88371941d8e621cf3871e123b7bb513d",
+        "reviewerType": "ai-assisted-editor",
+        "errors": []
+      }
+    },
+    {
+      "id": "2-v4",
+      "reviewFile": "docs/lesson-studio-evidence/p1-cross-model-2026-10-27/astra/final-2-v4.json",
+      "packSha256": "202bcd3f8c0cfae42230c81f4c0f47313c0ee7efcaa50e550fe35f408e987147",
+      "candidateFileSha256": "b817ed69a0fb3d887b619dcb3247dd0e0c0334d8d320c99bc0ea6842d639a85c",
+      "decision": "ready-for-approval",
+      "criteriaCount": 17,
+      "unresolvedFindings": [],
+      "gateAudit": {
+        "status": "ready-for-approval",
+        "ready": true,
+        "sha256": "202bcd3f8c0cfae42230c81f4c0f47313c0ee7efcaa50e550fe35f408e987147",
+        "reviewerType": "ai-assisted-editor",
+        "errors": []
+      }
+    },
+    {
+      "id": "3-v4",
+      "reviewFile": "docs/lesson-studio-evidence/p1-cross-model-2026-10-27/astra/final-3-v4.json",
+      "packSha256": "2203c4622e566dff68111bc71ec68f4622cc535ecc7d89d8f2014149e87df2e5",
+      "candidateFileSha256": "1ef43b622194574cffa0b64ea77c93a1b48d5fd34750632d2b3f51a4b9685b88",
+      "decision": "ready-for-approval",
+      "criteriaCount": 17,
+      "unresolvedFindings": [],
+      "gateAudit": {
+        "status": "ready-for-approval",
+        "ready": true,
+        "sha256": "2203c4622e566dff68111bc71ec68f4622cc535ecc7d89d8f2014149e87df2e5",
+        "reviewerType": "ai-assisted-editor",
+        "errors": []
+      }
+    }
+  ]
+}

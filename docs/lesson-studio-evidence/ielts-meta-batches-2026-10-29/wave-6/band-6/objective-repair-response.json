@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-6",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-6-v1",
+  "completedAt": "2026-10-29T05:28:43.330Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2833,
+    "outputTokens": 9059,
+    "totalTokens": 11892
+  },
+  "latencyMs": 24770,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listening\":{\"title\":\"Riverside Museum Audio-Guide Trial\",\"focus\":\"Everyday services and booking details with paraphrase and correction\",\"part\":\"Part 1\",\"script\":\"Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\\nMaya: Great. How does it work? Do I need to download an app?\\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\\nMaya: That sounds useful. Is there an extra charge for it?\\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\\nMaya: Perfect. Do I need to bring anything for the booking?\\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\\nMaya: I do have a student ID. I'll book for this Friday then.\\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\\nMaya: One last thing — is parking available nearby?\\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.\",\"questions\":[{\"title\":\"Availability of Trial\",\"prompt\":\"What is true about the audio-guide trial?\",\"options\":[\"Covers only the art floor\",\"Available until the end of May\",\"Requires downloading an app\",\"Costs £2 for online bookings\"],\"answer\":1,\"explanation\":\"Script says trial runs until end of May. Distractor about app fails because Tom says no app needed, device is lent.\"},{\"title\":\"How Guide Works\",\"prompt\":\"How does the audio guide operate?\",\"options\":[\"Plays automatically in each room\",\"Must be started by staff\",\"Works only on personal phones\",\"Offers one fixed story\"],\"answer\":0,\"explanation\":\"Tom says it plays automatically when you enter each room. Distractor about staff fails because guide is automatic and user-controlled.\"},{\"title\":\"Corrected Detail\",\"prompt\":\"What correction does Tom make?\",\"options\":[\"Café discount has ended\",\"Group tour is at 10:30 not 10:00\",\"Museum now opens earlier\",\"Online booking is no longer free\"],\"answer\":1,\"explanation\":\"Tom corrects website time from 10 a.m. to 10:30 a.m. Distractor about opening earlier fails because he says museum now opens later.\"},{\"title\":\"What to Bring\",\"prompt\":\"What should Maya bring for her visit?\",\"options\":[\"Cash for parking\",\"Own headphones\",\"Printed website page\",\"Booking reference and student ID\"],\"answer\":3,\"explanation\":\"Tom asks for booking reference and student ID for café discount. Distractor about headphones fails because headphones are provided.\"},{\"title\":\"Parking Advice\",\"prompt\":\"What does Tom say about parking?\",\"options\":[\"No visitor parking available\",\"Car park is always empty\",\"Arrive early on Fridays as it fills quickly\",\"Parking costs £4 on Fridays\"],\"answer\":2,\"explanation\":\"Tom says free car park behind museum fills quickly on Fridays. Distractor about cost fails because parking is free.\"}]},\"reading\":{\"title\":\"Student Food-Waste Audit at Greenfield College\",\"focus\":\"Understanding method, results, and author claims versus examples\",\"passage\":\"Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\\n\\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. The team also noted the number of students eating each day, so they could calculate waste per person. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\\n\\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\\n\\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\\n\\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.\",\"questions\":[{\"title\":\"Purpose of Audit\",\"prompt\":\"Why did students organise the food-waste audit?\",\"options\":[\"To test new recycling bins\",\"To create advertising posters\",\"To measure actual waste despite existing measures\",\"To close the dining hall\"],\"answer\":2,\"explanation\":\"Passage says audit followed bins and posters because staff suspected waste continued. Distractor about testing bins fails because bins already existed.\"},{\"title\":\"Method to Keep Behaviour Normal\",\"prompt\":\"How did the team try to keep behaviour normal?\",\"options\":[\"Did not inform most students beforehand\",\"Weighed waste after closing time\",\"Only checked staff-served days\",\"Cancelled weekend meals\"],\"answer\":0,\"explanation\":\"Team did not tell most students in advance to avoid changing behaviour. Distractor about staff-served days fails because both service types were compared.\"},{\"title\":\"Weekend Waste Inference\",\"prompt\":\"What can be inferred about higher weekend waste per person?\",\"options\":[\"Weekend food was less popular\",\"Volunteers made weighing errors\",\"Students ate more meals on weekends\",\"Kitchen prepared same total food for fewer diners, creating surplus waste\"],\"answer\":3,\"explanation\":\"Passage says kitchen kept preparing similar total quantity on weekends, so unserved food was discarded, raising per-diner average. Distractor about popularity fails because authors link waste to portion control, not dislike.\"},{\"title\":\"Claim Versus Example\",\"prompt\":\"Which correctly separates author claim from example?\",\"options\":[\"Claim that waste fell 18% everywhere\",\"Claim about portion control; example of hall with smaller plates\",\"Example that all halls volunteered\",\"Claim that audit was inaccurate\"],\"answer\":1,\"explanation\":\"Authors claim portion control and habit cause waste; hall with smaller plates is one example. Distractor about 18% everywhere fails because fall was only in that hall.\"},{\"title\":\"Recommendations\",\"prompt\":\"What does the team recommend?\",\"options\":[\"Stop serving rice and pasta\",\"Close dining hall on weekends\",\"Offer varied portions and share waste data\",\"Charge students for leftovers\"],\"answer\":2,\"explanation\":\"Recommendations are different portion sizes, second helpings, and weekly figures on boards. Distractor about closing weekends fails because they suggest adjusting portions, not closing.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Riverside Museum Audio-Guide Trial",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "part": "Part 1",
+      "script": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "questions": [
+        {
+          "title": "Availability of Trial",
+          "prompt": "What is true about the audio-guide trial?",
+          "options": [
+            "Covers only the art floor",
+            "Available until the end of May",
+            "Requires downloading an app",
+            "Costs £2 for online bookings"
+          ],
+          "answer": 1,
+          "explanation": "Script says trial runs until end of May. Distractor about app fails because Tom says no app needed, device is lent."
+        },
+        {
+          "title": "How Guide Works",
+          "prompt": "How does the audio guide operate?",
+          "options": [
+            "Plays automatically in each room",
+            "Must be started by staff",
+            "Works only on personal phones",
+            "Offers one fixed story"
+          ],
+          "answer": 0,
+          "explanation": "Tom says it plays automatically when you enter each room. Distractor about staff fails because guide is automatic and user-controlled."
+        },
+        {
+          "title": "Corrected Detail",
+          "prompt": "What correction does Tom make?",
+          "options": [
+            "Café discount has ended",
+            "Group tour is at 10:30 not 10:00",
+            "Museum now opens earlier",
+            "Online booking is no longer free"
+          ],
+          "answer": 1,
+          "explanation": "Tom corrects website time from 10 a.m. to 10:30 a.m. Distractor about opening earlier fails because he says museum now opens later."
+        },
+        {
+          "title": "What to Bring",
+          "prompt": "What should Maya bring for her visit?",
+          "options": [
+            "Cash for parking",
+            "Own headphones",
+            "Printed website page",
+            "Booking reference and student ID"
+          ],
+          "answer": 3,
+          "explanation": "Tom asks for booking reference and student ID for café discount. Distractor about headphones fails because headphones are provided."
+        },
+        {
+          "title": "Parking Advice",
+          "prompt": "What does Tom say about parking?",
+          "options": [
+            "No visitor parking available",
+            "Car park is always empty",
+            "Arrive early on Fridays as it fills quickly",
+            "Parking costs £4 on Fridays"
+          ],
+          "answer": 2,
+          "explanation": "Tom says free car park behind museum fills quickly on Fridays. Distractor about cost fails because parking is free."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. The team also noted the number of students eating each day, so they could calculate waste per person. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "questions": [
+        {
+          "title": "Purpose of Audit",
+          "prompt": "Why did students organise the food-waste audit?",
+          "options": [
+            "To test new recycling bins",
+            "To create advertising posters",
+            "To measure actual waste despite existing measures",
+            "To close the dining hall"
+          ],
+          "answer": 2,
+          "explanation": "Passage says audit followed bins and posters because staff suspected waste continued. Distractor about testing bins fails because bins already existed."
+        },
+        {
+          "title": "Method to Keep Behaviour Normal",
+          "prompt": "How did the team try to keep behaviour normal?",
+          "options": [
+            "Did not inform most students beforehand",
+            "Weighed waste after closing time",
+            "Only checked staff-served days",
+            "Cancelled weekend meals"
+          ],
+          "answer": 0,
+          "explanation": "Team did not tell most students in advance to avoid changing behaviour. Distractor about staff-served days fails because both service types were compared."
+        },
+        {
+          "title": "Weekend Waste Inference",
+          "prompt": "What can be inferred about higher weekend waste per person?",
+          "options": [
+            "Weekend food was less popular",
+            "Volunteers made weighing errors",
+            "Students ate more meals on weekends",
+            "Kitchen prepared same total food for fewer diners, creating surplus waste"
+          ],
+          "answer": 3,
+          "explanation": "Passage says kitchen kept preparing similar total quantity on weekends, so unserved food was discarded, raising per-diner average. Distractor about popularity fails because authors link waste to portion control, not dislike."
+        },
+        {
+          "title": "Claim Versus Example",
+          "prompt": "Which correctly separates author claim from example?",
+          "options": [
+            "Claim that waste fell 18% everywhere",
+            "Claim about portion control; example of hall with smaller plates",
+            "Example that all halls volunteered",
+            "Claim that audit was inaccurate"
+          ],
+          "answer": 1,
+          "explanation": "Authors claim portion control and habit cause waste; hall with smaller plates is one example. Distractor about 18% everywhere fails because fall was only in that hall."
+        },
+        {
+          "title": "Recommendations",
+          "prompt": "What does the team recommend?",
+          "options": [
+            "Stop serving rice and pasta",
+            "Close dining hall on weekends",
+            "Offer varied portions and share waste data",
+            "Charge students for leftovers"
+          ],
+          "answer": 2,
+          "explanation": "Recommendations are different portion sizes, second helpings, and weekly figures on boards. Distractor about closing weekends fails because they suggest adjusting portions, not closing."
+        }
+      ]
+    }
+  }
+}

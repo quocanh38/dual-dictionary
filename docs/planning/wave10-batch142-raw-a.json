@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 142,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after gross profit in the current phrase manifest; consulted local OALD 10/LDOCE 6 and NHS for hay-fever terminology. Vietnamese meanings, notes and examples independently written.",
+  "selectionRationale": "Enrich wildlife, emergency, healthcare, legal, research, military-history, computing and transport vocabulary. Notes distinguish metaphorical uses, US/UK variants, technical definitions and health/legal terminology without giving personal advice.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 28,
+    "remainingRawOnlyAfter": 8
+  },
+  "selected": [
+    "ground squirrel",
+    "ground zero",
+    "group therapy",
+    "growing pains",
+    "growth ring",
+    "guard rail",
+    "guardian angel",
+    "guided missile",
+    "guinea fowl",
+    "guinea pig",
+    "gulf war",
+    "habeas corpus",
+    "half mast",
+    "half nelson",
+    "hapax legomenon",
+    "hard currency",
+    "hard disk",
+    "hard shoulder",
+    "harvest mouse",
+    "hay fever"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NHS: Hay fever (https://www.nhs.uk/conditions/hay-fever/)"
+  ]
+}

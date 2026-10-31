@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 136,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after fire hydrant in the current phrase manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples independently written.",
+  "selectionRationale": "Enrich fire-safety vocabulary, first aid, household and photography terms, business costs, transport, computing, politics and geography. Notes distinguish regional variants, technical concepts and figurative senses without treating dictionary entries as safety instructions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 148,
+    "remainingRawOnlyAfter": 128
+  },
+  "selected": [
+    "fire retardant",
+    "fire sale",
+    "fire screen",
+    "firing squad",
+    "first aid",
+    "first aid kit",
+    "fish-eye lens",
+    "fish slice",
+    "fixed costs",
+    "flag down",
+    "flare up",
+    "flash back",
+    "flash bulb",
+    "flash flood",
+    "flash memory",
+    "flea market",
+    "flight deck",
+    "flight simulator",
+    "floating voter",
+    "flood plain"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

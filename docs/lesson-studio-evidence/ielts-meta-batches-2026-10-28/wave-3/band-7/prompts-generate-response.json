@@ -1,0 +1,78 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-7",
+  "batchId": "wave-3",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:13:18.555Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 514,
+    "outputTokens": 4457,
+    "totalTokens": 4971
+  },
+  "latencyMs": 20895,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Reading Discovery Channels in Nortavia",
+        "focus": "summarising change over time and comparing groups without overstating causes",
+        "prompt": "The table below shows original survey data for the fictional country of Nortavia. In both 2019 and 2024, 1,200 regular readers aged 18-65 were asked which single channel they mainly used to discover books, and how many books they completed per year on average.\n\nMain discovery channel - Share in 2019 - Share in 2024 - Average books completed in 2019 - Average books completed in 2024:\nAlgorithmic recommendations (apps and websites): 22% - 41% - 7.2 books - 6.8 books\nRecommendations from friends or family: 34% - 27% - 8.1 books - 8.4 books\nRecommendations from librarians or bookshop staff: 26% - 15% - 9.4 books - 9.6 books\nOwn browsing without a recommendation: 18% - 17% - 6.5 books - 6.9 books\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Do not explain causes that are not shown by the data. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Remote and Clinic-Supported Trial Monitoring",
+        "focus": "comparing competing evidence and noting limits in missing data",
+        "prompt": "The table below shows original fictional data from a six-month 2023 trial of a non-drug sleep routine programme called RestWell. 800 adult volunteers were divided equally into two groups: a Remote group monitored by phone app and video calls, and a Clinic group with regular in-person check-ups.\n\nRemote group (400 starters): Completed the full 6 months: 268 participants (67%); Average missing diary days per participant: 18.4 days; Participants reporting mild issues such as morning tiredness: 42; Attended final follow-up: 61%\nClinic group (400 starters): Completed the full 6 months: 322 participants (80.5%); Average missing diary days per participant: 7.2 days; Participants reporting mild issues such as morning tiredness: 55; Attended final follow-up: 84%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note what the data shows and does not show about reliability. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Algorithmic Recommendations and Reading Habits",
+        "focus": "evaluating competing claims with attention to scope and causality",
+        "prompt": "Some people argue that algorithmic recommendations from apps and websites help people discover a wider range of books, while others argue that such systems narrow reading habits by suggesting only similar titles.\n\nDiscuss both views, consider what kind of evidence could and could not prove a causal effect on habits, and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Avoid overgeneralising from single examples. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Limits of Evidence in Remote Clinical Trials",
+        "focus": "weighing wider inclusion against data quality and precise claims",
+        "prompt": "Some people believe that remote clinical trials, in which participants take part from home using apps and video calls, should largely replace traditional clinic-based trials because they are cheaper and can include more diverse participants. Others argue that remote trials produce less complete data and should only support, not replace, in-person research.\n\nDiscuss both views and give your own opinion, paying careful attention to the limits of the evidence, such as dropout rates and missing information, and to what can reasonably be concluded about safety and effectiveness. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Public-Funding Trade-offs for Reading and Health",
+        "focus": "evaluating priorities under limited budgets",
+        "prompt": "Governments have limited budgets. Some argue that public money should prioritise maintaining local libraries and community health clinics, while others argue that greater long-term benefit would come from investing the same funds in affordable high-speed internet access that supports online reading and remote health services.\n\nDiscuss both views, evaluate the trade-offs and possible unintended effects, and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Be precise about what is known and what is uncertain. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Reading in Daily Life",
+        "focus": "everyday habits, preferences and light evaluation",
+        "prompt": "Answer in short, natural responses of 2-4 sentences. 1. How often do you read books, articles or news, and at what time of day? 2. How do you usually choose what to read next? 3. Has the way you find things to read changed in recent years? 4. Do you prefer recommendations from people you know or from apps and websites? Why? 5. Is there a type of reading you would like to do more of in future?"
+      },
+      {
+        "task": "Part 2 · Cue card: An Online Recommendation You Received",
+        "focus": "describing an experience and evaluating its influence carefully",
+        "prompt": "Describe an occasion when an app or website recommended a book, article, film or product to you. You should say:\n• what was recommended and on which app or website\n• how the recommendation was presented to you\n• what you decided to do and why\n• and explain how helpful or unhelpful you found the recommendation and what this suggests about such systems.\nYou have one minute to prepare and should speak for 1-2 minutes."
+      },
+      {
+        "task": "Part 2 · Cue card: A Health Study or Trial You Heard About",
+        "focus": "reporting information with awareness of evidence limits",
+        "prompt": "Describe a health study, trial or survey you have heard or read about. You should say:\n• what the study was about and where you learned of it\n• who took part and how information was collected\n• what the main finding or claim was\n• and explain how far you think the finding can be trusted and why.\nYou have one minute to prepare and should speak for 1-2 minutes."
+      },
+      {
+        "task": "Part 3 · Algorithms, Choice and Evidence",
+        "focus": "reasoning about causality, scope and competing evidence",
+        "prompt": "Discuss in more depth, giving reasons and evaluations rather than memorised facts. 1. How can we tell whether recommendation systems actually change what people read, rather than simply reflecting existing tastes? 2. What are the possible benefits and risks when many people rely on the same recommendation systems? 3. What kind of evidence should companies or researchers provide before claiming that a system broadens reading? 4. How should individuals balance algorithmic suggestions with other ways of choosing? 5. In what situations might it be difficult to know if an observed change was caused by an algorithm?"
+      }
+    ]
+  }
+}

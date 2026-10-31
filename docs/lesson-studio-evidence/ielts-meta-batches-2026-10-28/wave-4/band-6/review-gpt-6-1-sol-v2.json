@@ -1,0 +1,44 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "37e1c7ac3a98fd561d9efdd6d66e16b2e99b855d030a24abf6ba6f83a458b0c1",
+  "verdict": "pass",
+  "findings": [
+    {
+      "item": "sharedContexts.reading",
+      "issue": "Saturday general shift is stated as 9 a.m.–12 p.m., but play assistants organise games on Saturday afternoons. Clarify that play assistants have a separate afternoon session so the schedule is internally clear. This does not change the unique key to reading-02.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted final review of 20 items: 5 Listening, 5 Reading, 5 Writing and 5 Speaking. Entire shared script and passage read; all 40 options, zero-based keys and 10 explanations evaluated. All repeated item contexts verified byte-for-string identical to shared context. No other reviewer outputs inspected; no candidates edited.",
+    "listening": "Portuguese offered versus Spanish sought; Tuesday/Thursday pair; corrected Room6 second floor; £15 materials/social coverage; delayed first date 21st",
+    "reading": "flexibility attribution and supporting signup data; play-assistant games; light evening tasks; role-specific support example; fewer hours/more people comparison",
+    "writing": "Open-day complete 2023/2024 activity counts sum correctly to 395/470; museum complete March/April activities, times, capacity and pound fees; three Task2 topics allow reasoned comparison; Task1 minimum150 words/20 minutes and Task2 minimum250 words/40 minutes verified.",
+    "speaking": "two familiar Part1 sets; talk/panel cue card includes preparation, duration, bullet coverage and follow-up; two Part3 discussions require reasons and evaluation",
+    "languageAndStage": "Reviewed natural language, unsupported claims, distractor uniqueness/plausibility, stage suitability and task realism. These are staged short-form practice items, not a complete official IELTS paper or a validated band-score measure.",
+    "itemIds": [
+      "ielts-meta-wave-4-band-6-listening-01",
+      "ielts-meta-wave-4-band-6-listening-02",
+      "ielts-meta-wave-4-band-6-listening-03",
+      "ielts-meta-wave-4-band-6-listening-04",
+      "ielts-meta-wave-4-band-6-listening-05",
+      "ielts-meta-wave-4-band-6-reading-01",
+      "ielts-meta-wave-4-band-6-reading-02",
+      "ielts-meta-wave-4-band-6-reading-03",
+      "ielts-meta-wave-4-band-6-reading-04",
+      "ielts-meta-wave-4-band-6-reading-05",
+      "ielts-meta-wave-4-band-6-writing-01",
+      "ielts-meta-wave-4-band-6-writing-02",
+      "ielts-meta-wave-4-band-6-writing-03",
+      "ielts-meta-wave-4-band-6-writing-04",
+      "ielts-meta-wave-4-band-6-writing-05",
+      "ielts-meta-wave-4-band-6-speaking-01",
+      "ielts-meta-wave-4-band-6-speaking-02",
+      "ielts-meta-wave-4-band-6-speaking-03",
+      "ielts-meta-wave-4-band-6-speaking-04",
+      "ielts-meta-wave-4-band-6-speaking-05"
+    ],
+    "priorReviewExposure": "No other reviewer reports inspected. Parent sent confirmation of proposed average-error blocker after this review independently identified and reported it."
+  },
+  "reviewerType": "AI-assisted"
+}

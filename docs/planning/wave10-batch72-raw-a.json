@@ -1,0 +1,15 @@
+{
+  "wave": 10,
+  "batch": 72,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after relational database; checked against local OALD 10/LDOCE 6. Medical and technical entries were cross-checked against authoritative public references where relevant. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover chemistry, sleep science, UK observances, transport, healthcare, computing, civil engineering and blood/medical vocabulary; distinguish related terms and jurisdiction-sensitive labels.",
+  "counts": {"selected":20,"rawPagesUpgraded":20,"rawOnlyBefore":1420,"remainingRawOnlyAfter":1400},
+  "selected": ["relative atomic mass","relative density","rem sleep","remembrance sunday","remote control","rent rebate","reserve bank","reset button","resident physician","response time","rest area","rest on","retaining wall","return address","return ticket","reverse gear","revolving door","rh factor","rhesus factor","rheumatic fever"],
+  "references": [
+    "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/acute-rheumatic-fever.html",
+    "https://medlineplus.gov/ency/article/003345.htm",
+    "https://www.nbt.nhs.uk/our-services/a-z-services/neuropsychiatry/rapid-eye-movement-rem-sleep-behaviour-disorder"
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "id": "draft-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+  "revision": 0,
+  "stage": "draft",
+  "source": {
+    "title": "Registering for a Class at the Riverside Centre",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The Riverside Centre opens registration for its spring pottery classes on Monday. Each class meets once a week for six weeks, and the fee includes clay and access to shared tools. New participants should fill in the online form and choose a preferred class time. A confirmation email will arrive within two working days if a place is available. When a class is full, the centre puts applicants on a waiting list in the order their forms were received. Staff contact people on that list if a place opens before the first session. Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The Riverside Centre opens registration for its spring pottery classes on Monday. Each class meets once a week for six weeks, and the fee includes clay and access to shared tools. New participants should fill in the online form and choose a preferred class time. A confirmation email will arrive within two working days if a place is available. When a class is full, the centre puts applicants on a waiting list in the order their forms were received. Staff contact people on that list if a place opens before the first session. Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The Riverside Centre opens registration for its spring pottery classes on Monday."
+      },
+      {
+        "id": "s2",
+        "text": "Each class meets once a week for six weeks, and the fee includes clay and access to shared tools."
+      },
+      {
+        "id": "s3",
+        "text": "New participants should fill in the online form and choose a preferred class time."
+      },
+      {
+        "id": "s4",
+        "text": "A confirmation email will arrive within two working days if a place is available."
+      },
+      {
+        "id": "s5",
+        "text": "When a class is full, the centre puts applicants on a waiting list in the order their forms were received."
+      },
+      {
+        "id": "s6",
+        "text": "Staff contact people on that list if a place opens before the first session."
+      },
+      {
+        "id": "s7",
+        "text": "Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "fill in the online form",
+      "meaningEn": "to complete a form by writing the required information",
+      "meaningVi": "điền vào biểu mẫu trực tuyến",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "waiting list",
+      "meaningEn": "a list of people waiting to be offered a place if one becomes available",
+      "meaningVi": "danh sách chờ",
+      "sourceSentenceId": "s5"
+    }
+  ],
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+    "version": 1,
+    "title": "Registering for a Class: Forms and Waiting Lists",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:50:59.502Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Registering for a Class: Forms and Waiting Lists",
+        "objective": "Learners will understand and correctly use 'fill in the online form' and 'waiting list' in everyday service and workplace situations.",
+        "reading": {
+          "text": "The Riverside Centre opens registration for its spring pottery classes on Monday. Each class meets once a week for six weeks, and the fee includes clay and access to shared tools. New participants should fill in the online form and choose a preferred class time. A confirmation email will arrive within two working days if a place is available. When a class is full, the centre puts applicants on a waiting list in the order their forms were received. Staff contact people on that list if a place opens before the first session. Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The Riverside Centre opens registration for its spring pottery classes on Monday."
+            },
+            {
+              "id": "s2",
+              "text": "Each class meets once a week for six weeks, and the fee includes clay and access to shared tools."
+            },
+            {
+              "id": "s3",
+              "text": "New participants should fill in the online form and choose a preferred class time."
+            },
+            {
+              "id": "s4",
+              "text": "A confirmation email will arrive within two working days if a place is available."
+            },
+            {
+              "id": "s5",
+              "text": "When a class is full, the centre puts applicants on a waiting list in the order their forms were received."
+            },
+            {
+              "id": "s6",
+              "text": "Staff contact people on that list if a place opens before the first session."
+            },
+            {
+              "id": "s7",
+              "text": "Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "fill in the online form",
+            "meaningEn": "to complete a form by writing the required information",
+            "meaningVi": "điền vào biểu mẫu trực tuyến",
+            "sourceSentenceId": "s3"
+          },
+          {
+            "id": "t2",
+            "phrase": "waiting list",
+            "meaningEn": "a list of people waiting to be offered a place if one becomes available",
+            "meaningVi": "danh sách chờ",
+            "sourceSentenceId": "s5"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In the sentence 'New participants should fill in the online form and choose a preferred class time,' what does 'fill in the online form' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to complete the online form by writing the required information.",
+                "explanation": "Correct because the context requires participants to provide their details."
+              },
+              {
+                "id": "b",
+                "text": "It means to delete the online form from the website.",
+                "explanation": "Wrong because deleting the form would prevent registration instead of completing it."
+              },
+              {
+                "id": "c",
+                "text": "It means to forward the online form to someone else without completing it.",
+                "explanation": "Wrong because forwarding without completing leaves the required information missing."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The phrase describes completing the form with the required details."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the natural and grammatically correct sentence using 'fill in the online form'.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Please fill in the online form before Friday to reserve your place.",
+                "explanation": "Correct because the verb forms and infinitive 'to reserve' are natural and accurate."
+              },
+              {
+                "id": "b",
+                "text": "Please fill in the online form before Friday to reserving your place.",
+                "explanation": "Wrong because 'to reserving' should be 'to reserve'."
+              },
+              {
+                "id": "c",
+                "text": "She has fill in the online form already.",
+                "explanation": "Wrong because 'has fill' should be 'has filled'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the phrase with correct grammar."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In the sentence 'When a class is full, the centre puts applicants on a waiting list in the order their forms were received,' what does 'waiting list' mean?",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a list of people who have already finished the course.",
+                "explanation": "Wrong because people on the list have not started and are still waiting for a place."
+              },
+              {
+                "id": "b",
+                "text": "It means a list of people waiting to be offered a place if one becomes available.",
+                "explanation": "Correct because the list holds applicants in order until a place opens."
+              },
+              {
+                "id": "c",
+                "text": "It means a list of tools that participants can share during class.",
+                "explanation": "Wrong because the sentence is about applicants waiting for a place, not about tools."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The phrase describes ordered applicants waiting for an open place."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the natural and grammatically correct sentence using 'waiting list'.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "They put us on the waiting list until a place becomes available.",
+                "explanation": "Correct because pronoun case and article use are natural and accurate."
+              },
+              {
+                "id": "b",
+                "text": "They put we on the waiting list until a place becomes available.",
+                "explanation": "Wrong because 'we' should be 'us' after the verb 'put'."
+              },
+              {
+                "id": "c",
+                "text": "They put us on waiting list until a place becomes available.",
+                "explanation": "Wrong because 'on waiting list' should be 'on the waiting list'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the phrase with correct grammar."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You are helping a new colleague get a staff lunch card. Write a short message to the colleague (2-3 sentences) explaining what to do. Use the phrase 'fill in the online form'.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "sampleAnswer": "Welcome to the team! Please fill in the online form on the staff portal so we can order your lunch card.",
+            "selfCheck": [
+              "I wrote 2-3 sentences.",
+              "I used the phrase 'fill in the online form' correctly.",
+              "My message gives a clear instruction to a colleague."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  },
+  "selectionModel": "muse-spark-1.3",
+  "repairCount": 0
+}

@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 135,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after extrasensory perception in the current phrase manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples independently written.",
+  "selectionRationale": "Enrich F-section phrasal verbs, cultural practice, transport and sports vocabulary, political labels, office administration, finance, financial reporting, consumer text, and fire-safety terms. Notes distinguish regional variants, potentially accusatory language, and the limits of dictionary definitions in safety contexts.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 168,
+    "remainingRawOnlyAfter": 148
+  },
+  "selected": [
+    "fend off",
+    "feng shui",
+    "ferry boat",
+    "fibre optics",
+    "field hockey",
+    "field mouse",
+    "field of vision",
+    "fifth columnist",
+    "file cabinet",
+    "filing clerk",
+    "filling station",
+    "finance company",
+    "financial institution",
+    "financial year",
+    "fine print",
+    "fire brigade",
+    "fire drill",
+    "fire extinguisher",
+    "fire hose",
+    "fire hydrant"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

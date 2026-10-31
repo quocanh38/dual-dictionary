@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "3d2d447057fff8eb9aaac184a96a8b161ba7faad210dd67ca3d9797b4be50b9d",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:29:11Z",
+  "note": "Independent full-pack review of the exact packSha256 above: checked source sentences, both target meanings in EN/VI, every question and option explanation, answer uniqueness, and transfer. Rights/authorship and permission were checked only against local declarations; they were not independently verified. B1/B2 labels are estimates, not calibrated levels. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The frozen source manifest and pack declare an AI-assisted original passage, distribution authorization, and no learner personal data; declarations are consistent. This checks project-local claims only and does not independently verify authorship or rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“off the record” appears in s4 in the interviewee’s request, followed by leaving that section out of the public episode; the non-publication sense is supported."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The gloss states the contextual restriction against public release. The adjacent sentence clarifies this project’s treatment (omit the section); it does not claim all off-record agreements have identical terms."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“không được công bố công khai” is a natural Vietnamese rendering of the stated non-publication constraint and includes diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“time stamp” occurs verbatim in s3, where the editor uses it to find a particular part of the audio; the locator meaning is explicit."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The gloss accurately describes a recorded time locating a part within an audio file, matching s3. “Time stamp” is an accepted two-word form; no claim excludes “timestamp.”"
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“mốc thời gian” is natural and accurate for the locator in an audio file, with Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone captures the request to keep the comment out of the public episode. B concerns audibility and C episode duration; neither matches the privacy/publication context in s4."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A’s explanation cites the action in s4. B and C correctly distinguish privacy from sound quality and length. The overall explanation matches the target gloss and passage."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A has the standard phrase “off the record” and is coherent in a budget-disclosure context. B pluralizes the fixed expression; C omits “the.” Only A is correct as written."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The option explanations correctly identify “off the records” and “off record” as errors in this idiom. “Fixed phrase” is an appropriately scoped usage note, not an overbroad grammar rule."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B alone identifies a time locator within the audio. A describes artwork and C a completion deadline; neither can locate a section as s3 requires."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "B links the time to finding a part; A and C explanations accurately distinguish visual decoration and deadline from location. The stem explanation reflects s3."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is grammatical and natural. B has a past-tense error (“writed” instead of “wrote”); C uses the adjective “quick” where the adverb “quickly” modifies “locate.” No other option is acceptable as written."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations correctly identify the irregular past-tense error and adverb-form error; A’s use of a time stamp to locate a section is idiomatic."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source concerns an editor locating a podcast excerpt; the prompt changes the learner’s role to a club member recommending a workout video and the purpose to guiding a friend to useful content."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The sample is a natural two-sentence recommendation and uses “time stamp” to identify 8:20 in a video. Checklist checks requested length, locator use, and clarity; it supports self-review without automatic grading."
+    }
+  ],
+  "findings": []
+}

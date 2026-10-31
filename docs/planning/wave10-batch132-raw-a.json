@@ -1,0 +1,43 @@
+{
+  "wave": 10,
+  "batch": 132,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after ectopic pregnancy in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, learner notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover E-section literature and engineering vocabulary, electrical safety terms, physics, transport, legal doctrine, French expressions, interface and product language, and environmental institutions. Notes distinguish US legal/jurisdictional terms, figurative meanings and technical senses.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 228,
+    "remainingRawOnlyAfter": 208
+  },
+  "selected": [
+    "ego trip",
+    "el dorado",
+    "elbow grease",
+    "electric chair",
+    "electric shock",
+    "electrical engineering",
+    "electron gun",
+    "electron microscope",
+    "electronic mail",
+    "elementary particle",
+    "elevated railway",
+    "embark on",
+    "emergency brake",
+    "eminent domain",
+    "en passant",
+    "en route",
+    "end user",
+    "entrance hall",
+    "environmental protection agency",
+    "epoxy resin"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "Cornell Legal Information Institute: Eminent domain (https://www.law.cornell.edu/wex/eminent_domain)",
+    "CERN: The Standard Model (https://home.cern/science/physics/standard-model/)",
+    "US EPA: Our mission and what we do (https://www.epa.gov/aboutepa/our-mission-and-what-we-do)"
+  ]
+}

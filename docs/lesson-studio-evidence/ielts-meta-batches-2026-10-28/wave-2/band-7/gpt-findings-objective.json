@@ -1,0 +1,8 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening",
+      "issue": "Unsupported answer-position distribution: the five Listening keys are [1, 2, 0, 2, 0], so option D (index 3) is never keyed. Revise one otherwise well-supported item to make index 3 the correct answer while preserving script evidence, unique defensibility, and a plausible distractor. Recheck all five keys and explanations."
+    }
+  ]
+}

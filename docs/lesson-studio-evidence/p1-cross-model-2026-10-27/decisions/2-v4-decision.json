@@ -1,0 +1,12 @@
+{
+  "decision": "approve-content-for-local-release-qa",
+  "authority": "Owner delegation in AUTHORIZATION.md",
+  "packSha256": "202bcd3f8c0cfae42230c81f4c0f47313c0ee7efcaa50e550fe35f408e987147",
+  "reviewSha256": "9f0ee43d4a22a5580367f57e0bd346fc83a1d4836ce65b5a649b180136bf1255",
+  "crossReviewHashes": {
+    "astra": "e76ba549de8ab80ec71924fd7a77be2ff5fa09e0021e76ac3ceb56156de547b8",
+    "terra": "4658241676424d89c9540b9a146c6ccf5ec2255e573fa49937878a2156ceda70"
+  },
+  "rationale": "Monitoring does not require written notes; usage distractors have objective of/word-order errors; model uses idiomatic battery life.",
+  "deploymentApproved": false
+}

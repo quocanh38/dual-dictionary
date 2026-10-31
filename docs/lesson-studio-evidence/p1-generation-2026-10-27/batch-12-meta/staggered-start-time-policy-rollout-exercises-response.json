@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Testing Flexible Start Times at Work",
+    "objective": "Learners will understand and correctly use phase in and take effect in workplace contexts.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence 2, 'Managers plan to phase in the change over six weeks,' what does 'phase in' mean here?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means they will introduce the change gradually in stages over six weeks.",
+            "explanation": "Correct: this matches gradual introduction in stages over six weeks."
+          },
+          {
+            "id": "b",
+            "text": "It means they will cancel the change completely before six weeks end.",
+            "explanation": "Incorrect: cancel is the opposite of introducing a change gradually."
+          },
+          {
+            "id": "c",
+            "text": "It means they will announce the change suddenly without any preparation.",
+            "explanation": "Incorrect: suddenly contradicts the idea of doing something gradually in stages."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "The six-week period for reporting problems shows gradual introduction."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'phase in' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The school will phases in the new timetable over three weeks.",
+            "explanation": "Incorrect: change phases to phase after will."
+          },
+          {
+            "id": "b",
+            "text": "The school will phase in the new timetable over three weeks.",
+            "explanation": "Correct: this uses the verb phrase with correct grammar and natural word order."
+          },
+          {
+            "id": "c",
+            "text": "The school will phase in the new timetable over three weeks ago.",
+            "explanation": "Incorrect: remove ago because will refers to the future."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only one option uses phase in with correct grammar and natural timing."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence 3, 'The new schedule will take effect on 1 December,' what does 'take effect' mean here?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means the schedule will be discussed as a possible idea on that date.",
+            "explanation": "Incorrect: discussing an idea is different from starting to apply it."
+          },
+          {
+            "id": "b",
+            "text": "It means the schedule will be cancelled and stop working on that date.",
+            "explanation": "Incorrect: cancelled means ending while the context shows starting to apply."
+          },
+          {
+            "id": "c",
+            "text": "It means the schedule will start to apply and become official on that date.",
+            "explanation": "Correct: this matches starting to apply after the trial and review."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "The context after trial and review shows the schedule becomes official."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'take effect' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The new safety rules will take effect next Monday.",
+            "explanation": "Correct: this uses the fixed phrase with correct grammar and natural timing."
+          },
+          {
+            "id": "b",
+            "text": "The new safety rules will take an effect next Monday.",
+            "explanation": "Incorrect: remove an because the fixed collocation is take effect."
+          },
+          {
+            "id": "c",
+            "text": "The new safety rules will takes effect next Monday.",
+            "explanation": "Incorrect: change takes to take after will."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option keeps the fixed phrase take effect with correct grammar."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t1",
+        "prompt": "Imagine you are an organizer of a weekend sports club. Write a short message to members explaining that you will introduce a new online booking system gradually. Write 2-3 sentences and use the phrase phase in.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "sampleAnswer": "We will phase in our new online booking system over the next two weeks. Please keep using the old form until your group is notified.",
+        "selfCheck": [
+          "I wrote 2-3 sentences as a club message to members.",
+          "I used the phrase phase in correctly for gradual introduction.",
+          "My message explains the new system and what members should do."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 995,
+    "outputTokens": 4864,
+    "totalTokens": 5859
+  },
+  "status": 200,
+  "latencyMs": 16337,
+  "model": "muse-spark-1.3"
+}

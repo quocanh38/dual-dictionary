@@ -1,0 +1,364 @@
+{
+  "stage": "band-7",
+  "batchId": "wave-2",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 2918,
+        "outputTokens": 4671,
+        "totalTokens": 7589
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+      "focus": "Understanding selective dropout and evaluating retention strategies",
+      "part": "Part 3",
+      "script": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+      "wordCount": 371
+    },
+    "reading": {
+      "title": "Measuring City Noise: Accuracy, Cost and Participation",
+      "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+      "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+      "wordCount": 492
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-2-band-7-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+      "pathwayStage": "band-7",
+      "focus": "Understanding selective dropout and evaluating retention strategies",
+      "transcript": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+      "prompt": "What is stated about the first questionnaire?",
+      "options": [
+        "It was completed by 520 students.",
+        "It was sent to 850 students and 78% completed it.",
+        "It was delayed by ethics approval.",
+        "It contained 25 questions about sleep and workload."
+      ],
+      "answer": 1,
+      "explanation": "The script states 850 first-year students and 78% completed it fully. The 520 figure refers to the second survey, so that distractor confuses the two waves."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+      "pathwayStage": "band-7",
+      "focus": "Understanding selective dropout and evaluating retention strategies",
+      "transcript": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+      "prompt": "When did the second survey take place?",
+      "options": [
+        "In spring 2023 at the start of the study.",
+        "In spring 2024 as originally planned.",
+        "In autumn 2024 after a delay.",
+        "On Sunday evenings in autumn 2024."
+      ],
+      "answer": 2,
+      "explanation": "Tom corrects himself: spring 2024 — sorry, autumn 2024, delayed by ethics approval. The spring 2024 distractor repeats the corrected error, while Sunday evenings refers to reminders, not the survey date."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+      "pathwayStage": "band-7",
+      "focus": "Understanding selective dropout and evaluating retention strategies",
+      "transcript": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+      "prompt": "According to the discussion, who was most likely to stop responding?",
+      "options": [
+        "Students working over 15 hours a week and those who changed accommodation.",
+        "Students who received only a five-pound voucher.",
+        "Students who completed the survey in under 14 minutes.",
+        "Students living in university halls throughout the study."
+      ],
+      "answer": 0,
+      "explanation": "Tom says those working more than 15 hours and those who changed flats were about twice as likely to stop. The voucher distractor confuses a retention method with a predictor of dropout."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+      "pathwayStage": "band-7",
+      "focus": "Understanding selective dropout and evaluating retention strategies",
+      "transcript": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+      "prompt": "Which incentive did Tom say helped more than the extra money?",
+      "options": [
+        "Increasing the voucher from five to ten pounds.",
+        "Shortening the survey from 40 to 25 questions.",
+        "Offering ethics approval information by text.",
+        "Sending reminders on Sunday evenings."
+      ],
+      "answer": 3,
+      "explanation": "Tom says the well-timed text reminders helped more than the extra money, especially messages sent on Sunday evenings. The voucher increase is the comparison named in the question; shortening the survey also helped, but it is a separate design change."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+      "pathwayStage": "band-7",
+      "focus": "Understanding selective dropout and evaluating retention strategies",
+      "transcript": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+      "prompt": "What caution must be included about the improvement in the second wave?",
+      "options": [
+        "The separate effects cannot be untangled because two changes were made together.",
+        "The sample of 520 is too small to calculate any average.",
+        "Shorter surveys always reduce data quality.",
+        "Sunday messages prove reminders cause higher wellbeing."
+      ],
+      "answer": 0,
+      "explanation": "Tom notes the larger voucher and reminders were introduced together, so the team could not prove which caused improvement. The wellbeing distractor overclaims causality, which the speakers explicitly reject."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring City Noise: Accuracy, Cost and Participation",
+      "pathwayStage": "band-7",
+      "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+      "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+      "prompt": "According to the passage, what is the main weakness of Merriton's fixed stations?",
+      "options": [
+        "They cannot record continuously for five years.",
+        "They are difficult to calibrate on rooftops.",
+        "They may not represent nearby shielded locations.",
+        "They only measure night-market sound."
+      ],
+      "answer": 2,
+      "explanation": "The passage states levels can fall sharply within a block, so a rooftop average may poorly represent a side-road bedroom. The calibration distractor reverses the stated strength that stations are easy to calibrate."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring City Noise: Accuracy, Cost and Participation",
+      "pathwayStage": "band-7",
+      "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+      "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+      "prompt": "What did the 2024 wearable pilot reveal?",
+      "options": [
+        "Brief loud episodes missed by fixed stations, such as on underground platforms.",
+        "That 180 volunteers avoided all noisy places for two weeks.",
+        "That battery failures made all personal data unusable.",
+        "That personal exposure is identical to rooftop averages."
+      ],
+      "answer": 0,
+      "explanation": "The passage says the pilot revealed short, loud episodes fixed stations never captured, giving the platform example. The avoidance distractor overstates a possible distortion as if all volunteers did it."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring City Noise: Accuracy, Cost and Participation",
+      "pathwayStage": "band-7",
+      "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+      "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+      "prompt": "Why might computational predictions be inaccurate?",
+      "options": [
+        "They cover only twelve rooftop locations.",
+        "They ignore traffic counts and building maps.",
+        "They reflect personal sensitivity and window type.",
+        "They rely on inputs that may be outdated or simplified."
+      ],
+      "answer": 3,
+      "explanation": "Models depend on input quality; outdated traffic data or simplified reflections make predictions high or low. The sensitivity distractor confuses survey perception factors with modelling inputs."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring City Noise: Accuracy, Cost and Participation",
+      "pathwayStage": "band-7",
+      "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+      "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+      "prompt": "How does the Elm Row case function in the argument?",
+      "options": [
+        "It proves night markets are the main city health risk.",
+        "It illustrates the claim that no single method is sufficient.",
+        "It proves double glazing removes all annoyance.",
+        "It shows models are always more accurate than stations."
+      ],
+      "answer": 1,
+      "explanation": "Researchers argue no single method is sufficient and illustrate with Elm Row where station, model, wearable and survey differ. The main-risk distractor is explicitly denied: the example does not prove markets are the main risk."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring City Noise: Accuracy, Cost and Participation",
+      "pathwayStage": "band-7",
+      "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+      "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+      "prompt": "What limited inference do the researchers support about reducing decibels?",
+      "options": [
+        "Any fall in decibels guarantees better health.",
+        "A fall in decibels will not automatically bring a proportional health gain.",
+        "Combining methods eliminates all uncertainty.",
+        "Survey annoyance can replace physical measurement."
+      ],
+      "answer": 1,
+      "explanation": "The conclusion cautions against claiming automatic proportional health gain because sleep, stress and other factors intervene. The guarantee distractor overclaims causality beyond what the evidence supports."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-7-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Comparing Health Measures in Two Cities",
+      "pathwayStage": "band-7",
+      "focus": "Describing contrasting data and recognising how measurement choices change comparisons",
+      "prompt": "The table below shows three different health-related measures for two cities, Northfield and Southport, in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table data: Hospital admissions for respiratory illness per 10,000 residents - Northfield 42, Southport 38; Percentage of adults reporting good or very good health in a survey of 2,000 residents in each city - Northfield 71%, Southport 78%; Average days of sick leave per employed person during the year - Northfield 6.2 days, Southport 7.1 days. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Commuter Patterns in Riverton",
+      "pathwayStage": "band-7",
+      "focus": "Comparing change over time and selecting key contrasts without overstating causes",
+      "prompt": "The table below shows the percentage of commuters in the town of Riverton who used five main methods of travel to work in 2015 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data for 2015: Car 58%, Bus 18%, Train 12%, Bicycle 7%, Walking 5%. Data for 2025: Car 46%, Bus 20%, Train 18%, Bicycle 10%, Walking 6%. The total number of commuters was 24,000 in 2015 and 27,500 in 2025. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Funding Cultural Heritage with Limited Evidence",
+      "pathwayStage": "band-7",
+      "focus": "Evaluating competing claims and recognising limits of evidence",
+      "prompt": "Some people argue that public money should be used to preserve historic buildings and traditional crafts because of their cultural value, while others argue that such funding should only continue when there is clear evidence of economic or social benefit. Discuss both views, consider what kinds of evidence are difficult to measure, and give your own opinion with reasons. Avoid making strong causal claims that the evidence cannot support. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Competing Explanations for Commuter Behaviour",
+      "pathwayStage": "band-7",
+      "focus": "Weighing competing explanations and limits on causal claims",
+      "prompt": "Surveys in several cities show an increase in cycling to work over the past ten years. Some analysts link this change mainly to new cycle lanes and safer junctions, while others point to rising city-centre parking charges and more flexible working hours as the main reasons. Discuss these competing explanations, evaluate what additional evidence would be needed to support a causal conclusion, and give your own view on how such trends should be interpreted. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · How Measurement Choices Affect Health Comparisons",
+      "pathwayStage": "band-7",
+      "focus": "Scope, inference and precise evaluation of public-health rankings",
+      "prompt": "News reports often rank cities or countries as healthier than others on the basis of a single measure, such as hospital visits, self-reported health, or average sick leave. To what extent do such rankings provide a reliable comparison? Discuss how the choice of measure can change the conclusion, what limits should be placed on interpreting the data, and how comparisons could be reported more carefully. Give reasons for your answer with examples. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-7-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Travel and Routine",
+      "pathwayStage": "band-7",
+      "focus": "personal detail with limited scope",
+      "prompt": "Answer the following short questions about your daily travel. Give full but concise answers and avoid generalising beyond your experience. 1. How do you usually travel to work or study? 2. Has your routine changed in recent years? 3. What do you usually notice during your journey? 4. Do you prefer travelling at busy times or quiet times, and why?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Health and Local Area",
+      "pathwayStage": "band-7",
+      "focus": "describing with cautious inference",
+      "prompt": "Answer the following short questions about health and your local area. 1. What do people in your area usually do to stay healthy? 2. Are there good places to walk or exercise where you live? 3. How do people find out about local health services? 4. Do you think your area has become healthier or less healthy recently, and what makes you think so?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Regular Journey",
+      "pathwayStage": "band-7",
+      "focus": "Organised description with careful explanation of reasons",
+      "prompt": "Describe a regular journey you make to work, study, or visit family. You should say: • where you travel from and to • how you usually travel and how long it takes • what you see or do during the journey • and explain why you travel in this way and whether you might change it. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Historic Place",
+      "pathwayStage": "band-7",
+      "focus": "Detailed description with evaluation of limited evidence",
+      "prompt": "Describe a historic building or traditional place you have visited. You should say: • where it is and what it looks like • what you learned about its history during your visit • how it is maintained or used today • and explain why you think it is or is not worth preserving. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-7-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Heritage Funding and Health Evidence",
+      "pathwayStage": "band-7",
+      "focus": "Reasons, competing evidence and evaluation without overclaiming",
+      "prompt": "Discuss the following questions, giving reasons and evaluating different viewpoints rather than repeating memorised facts. 1. Why might it be difficult to prove that funding for historic sites brings economic benefits? 2. When two health measures point in different directions, how should the public interpret the results? 3. What kinds of evidence would help decide whether a new cycle lane caused a change in commuter behaviour? 4. How can decision-makers be careful not to claim more than the evidence supports?"
+    }
+  ],
+  "manualEditorialAdjustments": [
+    {
+      "items": [
+        "ielts-meta-wave-2-band-7-reading-01",
+        "ielts-meta-wave-2-band-7-reading-02",
+        "ielts-meta-wave-2-band-7-reading-03",
+        "ielts-meta-wave-2-band-7-reading-04",
+        "ielts-meta-wave-2-band-7-reading-05"
+      ],
+      "change": "Label all five-question Reading texts as short-form practice passages.",
+      "reason": "The Meta bank is formative five-question practice, not a full IELTS Reading passage or mock section."
+    },
+    {
+      "item": "ielts-meta-wave-2-band-7-listening-04",
+      "change": "Narrowed the stem to the explicit comparison with the extra money.",
+      "reason": "The original broad retention-effect question could also be read as asking about the shorter questionnaire."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "99e80e749852452b0eb5e778c3e044071c33cb6d24e678081efaabf07d33cf50",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna (configured model)",
+  "reviewedAt": "2026-10-27T05:00:00Z",
+  "note": "First-pass AI-assisted editorial review of all 17 criteria, complete options and explanations, targets/source/rights, Vietnamese glosses, and transfer. Development batch, not unseen-source evaluation. No edits to candidate; no learner study, independent human review or provider call. Exact digest: 99e80e749852452b0eb5e778c3e044071c33cb6d24e678081efaabf07d33cf50.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Candidate declares an original AI-assisted project source, distribution permission and no learner PII; this review relies on the supplied provenance statement."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains exact target ‘gather evidence’; water-use investigation is a supported context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Collecting information or facts to support a finding or idea accurately states the contextual meaning; it does not assert certainty."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "blocked",
+      "evidence": "BLOCKED: The Vietnamese gloss adds ‘để chứng minh’ (to prove), stronger than ‘gather evidence’ for a study whose reading explicitly says one small study does not prove which building is always more efficient. Prefer ‘thu thập bằng chứng/dữ liệu để hỗ trợ một nhận định’."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains exact phrase ‘take into consideration’; differences in user counts are the explicit factor considered before drawing a conclusion."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Thinking carefully about something when making a decision or judgment fits this sentence."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘xem xét, cân nhắc đến điều gì’ is natural and accurate Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely matches collecting measurements/facts to support a finding. b describes concealment/opposite; c describes unsupported conclusion rather than gathering."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The three option rationales distinguish evidence collection from hiding information and concluding without checking; the overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural. b uses nonstandard plural ‘evidences’ in ordinary research context; c has malformed ‘for support’ before a verb (use ‘to support’). Neither is a plausible standard answer here."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "b correctly identifies evidence as uncountable in ordinary usage; c accurately corrects ‘for support’ to infinitive ‘to support’. Overall exclusivity is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b matches taking user numbers into account before a conclusion. a is immediate unsupported conclusion; c means refusing comparison, not considering a factor."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each rationale accurately distinguishes consideration from premature announcement or refusal; no distractor is a plausible equivalent."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is the only natural sentence. a has plural ‘considerations’ in the fixed expression ‘take … into consideration’; c substitutes ‘in’ for ‘into’ in this idiom."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The option explanations correctly identify number and fixed preposition errors; b is natural and the overall rationale is accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Source is student research on campus water use; transfer changes role to a football fan and purpose to persuading friends about an award using video/statistical evidence."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence model is idiomatic and uses ‘gathered evidence … to support my choice’ correctly. Checklist checks length, target use and distinct scenario; self-assessment only."
+    }
+  ],
+  "findings": [
+    {
+      "id": "campus-t1-vi-overclaim",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "meaningVi says ‘thu thập thông tin để chứng minh’ (collect information to prove), which overstates evidence gathering and contradicts s4’s explicit caution that a small study does not prove which building is always more efficient. Replace with wording such as ‘thu thập bằng chứng/dữ liệu để hỗ trợ một nhận định’, then rerun full review on the edited payload."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "1029d7923c7fe78c2d7f4df75b002e141e9de571eb2ea2292f52bbd58972d7ef",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 363/405 words. All 10 objective answers are supported and explanations accurately distinguish phased rollout, competing causal explanations, indicator sensitivity and attrition adjustments. LEZ figures, weekday/weekend distinction, dates and qualifications are consistent; reading claims and example are properly separated. Both Task 1 datasets include units, time points and relevant caveats; composite scores exactly equal the stated simple averages (72, 68, 75, 61). Writing timing/word minimums and Speaking sections/cue card are complete. Original-content provenance is declared; no official-item or score claims. Minor clarity: Reading’s “more than 14,000 monthly observations” for six cities could specify whether observations are monitor/pixel records rather than city-months."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts, all 10 objective items/options/keys/explanations, all five Writing prompts including calculation and data checks, and all five Speaking prompts including cue-card completeness and IELTS part fit.",
+  "reviewerType": "AI-assisted"
+}

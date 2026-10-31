@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "416f49e30f5abfe2c6d3fcc31192ddb789caf151d66ddfa9a26ad2bd9b63c6a2",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 319/413 words; all 10 objective answer keys are uniquely supported and answer positions are balanced. Task 1 tables state all values and units; the survey prompt specifies 500 residents and clearly separates before/after awareness percentages. The 150/250-word minimums and 20/40-minute timing are set; Speaking has two Part 1, one complete Part 2 cue card and two Part 3 prompts. Original-content provenance is declared; no official-item or score claims. Minor clarity: the 500 survey denominator is not split by wave, and the prompt does not say whether the same residents were surveyed twice; interpret the percentages as wave-level results rather than individual change."
+  ],
+  "coverage": "Full rereview of metadata/provenance, both shared contexts (script 319 words; passage 413 words), every objective prompt/options/key/explanation, both Task 1 datasets/units, all five Writing prompts/timing and all five Speaking prompts including cue-card points and part fit.",
+  "reviewerType": "AI-assisted"
+}

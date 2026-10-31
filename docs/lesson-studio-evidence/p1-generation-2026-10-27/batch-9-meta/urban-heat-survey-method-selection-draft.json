@@ -1,0 +1,65 @@
+{
+  "id": "draft-41cea0c9-7d1c-4980-b4c1-78832b701194",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Comparing Shade Along Two City Routes",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A university geography group is comparing afternoon temperatures along two city walking routes. The researchers record shade coverage, the percentage of each route shaded by trees or buildings, beside every surface-temperature reading. To make a fair comparison, observers visit both routes at the same time on several clear days. The first set of measurements is a provisional estimate because one sensor stopped working during the second visit. The team will check the missing interval against field notes before calculating a weekly average. A single hot afternoon cannot show that one route is usually warmer. The final report will describe the method, identify limitations and include the route map so another group can repeat the survey.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A university geography group is comparing afternoon temperatures along two city walking routes. The researchers record shade coverage, the percentage of each route shaded by trees or buildings, beside every surface-temperature reading. To make a fair comparison, observers visit both routes at the same time on several clear days. The first set of measurements is a provisional estimate because one sensor stopped working during the second visit. The team will check the missing interval against field notes before calculating a weekly average. A single hot afternoon cannot show that one route is usually warmer. The final report will describe the method, identify limitations and include the route map so another group can repeat the survey.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A university geography group is comparing afternoon temperatures along two city walking routes."
+      },
+      {
+        "id": "s2",
+        "text": "The researchers record shade coverage, the percentage of each route shaded by trees or buildings, beside every surface-temperature reading."
+      },
+      {
+        "id": "s3",
+        "text": "To make a fair comparison, observers visit both routes at the same time on several clear days."
+      },
+      {
+        "id": "s4",
+        "text": "The first set of measurements is a provisional estimate because one sensor stopped working during the second visit."
+      },
+      {
+        "id": "s5",
+        "text": "The team will check the missing interval against field notes before calculating a weekly average."
+      },
+      {
+        "id": "s6",
+        "text": "A single hot afternoon cannot show that one route is usually warmer."
+      },
+      {
+        "id": "s7",
+        "text": "The final report will describe the method, identify limitations and include the route map so another group can repeat the survey."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "fair comparison",
+      "meaningEn": "a comparison made under equal conditions so the results can be compared fairly",
+      "meaningVi": "sự so sánh công bằng",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "provisional estimate",
+      "meaningEn": "a temporary approximate value that may be changed after more information is checked",
+      "meaningVi": "ước tính tạm thời",
+      "sourceSentenceId": "s4"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

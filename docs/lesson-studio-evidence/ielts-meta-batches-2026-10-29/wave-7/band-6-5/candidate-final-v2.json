@@ -1,0 +1,349 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-7",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2257,
+        "outputTokens": 6029,
+        "totalTokens": 8286
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-7-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-7-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Urban Tree Watering Trials",
+      "focus": "Comparing effectiveness and costs of two watering methods",
+      "part": "Part 3",
+      "script": "Maya: Hi Jon, have you finished reviewing the council reports for our urban forestry presentation?\nJon: Mostly. I focused on the two different watering approaches they trialled from 2021 to 2023.\nMaya: Good. So the first site in North Park used deep infrequent watering – they delivered about 80 litres per tree every three weeks during summer.\nJon: Right, and the second site in Westfield used sensor-controlled drip irrigation, which released small amounts daily only when soil moisture fell below 20%.\nMaya: The North Park results looked strong – 18% higher survival after two years compared to the control group with no extra watering.\nJon: Yes, but we can't take that at face value. Westfield is much hotter and has far more paved surfaces, so the trees there were already under greater stress.\nMaya: The researchers acknowledged that, didn't they? They said the location difference limits any direct comparison of effectiveness.\nJon: Exactly, they qualified their conclusion and said the sensor system might have matched or even outperformed deep watering under equal conditions.\nMaya: I initially thought deep watering would be cheaper, but I was wrong – the report shows labour and tanker transport made it about 15% more expensive per tree annually.\nJon: I had the same assumption. Actually, drip had higher installation costs, but after twelve months the ongoing costs dropped significantly.\nMaya: What about growth measurements? I recall drip-irrigated trees had slightly smaller trunk diameters but about 10% greater canopy cover.\nJon: That's right, but the authors warned that canopy density alone doesn't necessarily indicate better long-term health without further monitoring.\nMaya: So our main point should be that both methods improved survival compared to doing nothing, but the evidence for one being clearly superior remains inconclusive.\nJon: Agreed. And we should note the sample was relatively small – only 120 trees per trial – so findings should be interpreted cautiously.\nMaya: Perfect. I'll prepare the slides on costs and limitations if you handle survival and growth data?",
+      "wordCount": 331
+    },
+    "reading": {
+      "title": "Interpreting Uncertain Data",
+      "focus": "Measurement change and recruitment bias as limits on conclusions",
+      "passage": "Researchers often face difficulties when data appear to show clear trends but underlying methods introduce uncertainty. Two recent studies illustrate how careful interpretation is needed before drawing firm conclusions. In both cases, the raw numbers are less informative than the conditions under which they were gathered.\n\nThe first study examined coastal erosion at Bayford over twelve years, from 2011 to 2023. Early measurements relied on aerial photographs, while from 2019 onwards the team used more precise GPS ground surveys. The combined dataset suggests the coastline retreated by an average of 0.8 metres per year, with a sharper increase to 1.4 metres per year after 2018. However, the authors emphasise that this apparent acceleration should be treated cautiously. The change in measurement technique alone could account for part of the difference, as GPS surveys detect smaller shifts that aerial images miss. In addition, two severe storms in 2020 and 2021 removed large sections of cliff in single events, temporarily inflating annual averages. When these storm years are excluded, the post-2018 rate falls to 1.0 metre per year. The authors therefore conclude that while erosion is ongoing, the exact rate of increase remains uncertain and longer monitoring with a consistent method is required. They recommend extending the GPS series for at least another five years before confirming any acceleration.\n\nA second example comes from a student wellbeing survey conducted at a large urban university in 2023. The survey aimed to estimate overall stress levels and was distributed through social media channels and posters in the university counselling centre. Of the 420 respondents, 68% reported high levels of stress. At first glance, this figure suggests a widespread problem. The researchers, however, argue that the recruitment method likely biased the sample. Students experiencing stress may have been more motivated to participate, and those visiting the counselling centre were already seeking support. Consequently, the sample over-represented psychology undergraduates and first-year students living in university accommodation, groups known to report higher stress. The 68% figure is presented not as evidence of campus-wide prevalence, but as an illustration of how self-selection can distort results. The authors' central claim is that without random sampling, such surveys cannot reliably estimate the true proportion of highly stressed students, although they remain useful for identifying factors associated with stress among respondents. For instance, interviews with a subset of respondents revealed useful links between workload and sleep disruption, even though prevalence could not be established.\n\nTogether, these cases show that data must be read with attention to how they were collected. Recognising measurement inconsistencies and recruitment biases allows researchers to make qualified claims rather than overstating certainty. This approach strengthens credibility, even when it limits the scope of conclusions.",
+      "wordCount": 447
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-7-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Urban Tree Watering Trials",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and costs of two watering methods",
+      "transcript": "Maya: Hi Jon, have you finished reviewing the council reports for our urban forestry presentation?\nJon: Mostly. I focused on the two different watering approaches they trialled from 2021 to 2023.\nMaya: Good. So the first site in North Park used deep infrequent watering – they delivered about 80 litres per tree every three weeks during summer.\nJon: Right, and the second site in Westfield used sensor-controlled drip irrigation, which released small amounts daily only when soil moisture fell below 20%.\nMaya: The North Park results looked strong – 18% higher survival after two years compared to the control group with no extra watering.\nJon: Yes, but we can't take that at face value. Westfield is much hotter and has far more paved surfaces, so the trees there were already under greater stress.\nMaya: The researchers acknowledged that, didn't they? They said the location difference limits any direct comparison of effectiveness.\nJon: Exactly, they qualified their conclusion and said the sensor system might have matched or even outperformed deep watering under equal conditions.\nMaya: I initially thought deep watering would be cheaper, but I was wrong – the report shows labour and tanker transport made it about 15% more expensive per tree annually.\nJon: I had the same assumption. Actually, drip had higher installation costs, but after twelve months the ongoing costs dropped significantly.\nMaya: What about growth measurements? I recall drip-irrigated trees had slightly smaller trunk diameters but about 10% greater canopy cover.\nJon: That's right, but the authors warned that canopy density alone doesn't necessarily indicate better long-term health without further monitoring.\nMaya: So our main point should be that both methods improved survival compared to doing nothing, but the evidence for one being clearly superior remains inconclusive.\nJon: Agreed. And we should note the sample was relatively small – only 120 trees per trial – so findings should be interpreted cautiously.\nMaya: Perfect. I'll prepare the slides on costs and limitations if you handle survival and growth data?",
+      "prompt": "What did the North Park trial involve?",
+      "options": [
+        "Daily drip when moisture dropped",
+        "Small amounts every day in summer",
+        "About 80 litres every three weeks",
+        "Weekly watering with tanker trucks"
+      ],
+      "answer": 2,
+      "explanation": "The script states North Park delivered about 80 litres every three weeks. Option A describes the Westfield sensor method, not North Park."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Urban Tree Watering Trials",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and costs of two watering methods",
+      "transcript": "Maya: Hi Jon, have you finished reviewing the council reports for our urban forestry presentation?\nJon: Mostly. I focused on the two different watering approaches they trialled from 2021 to 2023.\nMaya: Good. So the first site in North Park used deep infrequent watering – they delivered about 80 litres per tree every three weeks during summer.\nJon: Right, and the second site in Westfield used sensor-controlled drip irrigation, which released small amounts daily only when soil moisture fell below 20%.\nMaya: The North Park results looked strong – 18% higher survival after two years compared to the control group with no extra watering.\nJon: Yes, but we can't take that at face value. Westfield is much hotter and has far more paved surfaces, so the trees there were already under greater stress.\nMaya: The researchers acknowledged that, didn't they? They said the location difference limits any direct comparison of effectiveness.\nJon: Exactly, they qualified their conclusion and said the sensor system might have matched or even outperformed deep watering under equal conditions.\nMaya: I initially thought deep watering would be cheaper, but I was wrong – the report shows labour and tanker transport made it about 15% more expensive per tree annually.\nJon: I had the same assumption. Actually, drip had higher installation costs, but after twelve months the ongoing costs dropped significantly.\nMaya: What about growth measurements? I recall drip-irrigated trees had slightly smaller trunk diameters but about 10% greater canopy cover.\nJon: That's right, but the authors warned that canopy density alone doesn't necessarily indicate better long-term health without further monitoring.\nMaya: So our main point should be that both methods improved survival compared to doing nothing, but the evidence for one being clearly superior remains inconclusive.\nJon: Agreed. And we should note the sample was relatively small – only 120 trees per trial – so findings should be interpreted cautiously.\nMaya: Perfect. I'll prepare the slides on costs and limitations if you handle survival and growth data?",
+      "prompt": "What did the North Park results show after two years?",
+      "options": [
+        "18% higher survival than control group",
+        "18% higher survival than Westfield site",
+        "10% greater canopy cover than control",
+        "Lower survival due to paved surfaces"
+      ],
+      "answer": 0,
+      "explanation": "Maya reports 18% higher survival versus the no-watering control. Option B misreads the comparison as between the two trial sites."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Urban Tree Watering Trials",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and costs of two watering methods",
+      "transcript": "Maya: Hi Jon, have you finished reviewing the council reports for our urban forestry presentation?\nJon: Mostly. I focused on the two different watering approaches they trialled from 2021 to 2023.\nMaya: Good. So the first site in North Park used deep infrequent watering – they delivered about 80 litres per tree every three weeks during summer.\nJon: Right, and the second site in Westfield used sensor-controlled drip irrigation, which released small amounts daily only when soil moisture fell below 20%.\nMaya: The North Park results looked strong – 18% higher survival after two years compared to the control group with no extra watering.\nJon: Yes, but we can't take that at face value. Westfield is much hotter and has far more paved surfaces, so the trees there were already under greater stress.\nMaya: The researchers acknowledged that, didn't they? They said the location difference limits any direct comparison of effectiveness.\nJon: Exactly, they qualified their conclusion and said the sensor system might have matched or even outperformed deep watering under equal conditions.\nMaya: I initially thought deep watering would be cheaper, but I was wrong – the report shows labour and tanker transport made it about 15% more expensive per tree annually.\nJon: I had the same assumption. Actually, drip had higher installation costs, but after twelve months the ongoing costs dropped significantly.\nMaya: What about growth measurements? I recall drip-irrigated trees had slightly smaller trunk diameters but about 10% greater canopy cover.\nJon: That's right, but the authors warned that canopy density alone doesn't necessarily indicate better long-term health without further monitoring.\nMaya: So our main point should be that both methods improved survival compared to doing nothing, but the evidence for one being clearly superior remains inconclusive.\nJon: Agreed. And we should note the sample was relatively small – only 120 trees per trial – so findings should be interpreted cautiously.\nMaya: Perfect. I'll prepare the slides on costs and limitations if you handle survival and growth data?",
+      "prompt": "Why can't the two trials be directly compared?",
+      "options": [
+        "They used different tree species",
+        "Westfield had hotter, more paved conditions",
+        "North Park had smaller sample size",
+        "GPS surveys were only used at North Park"
+      ],
+      "answer": 1,
+      "explanation": "Jon notes Westfield was hotter with more paved surfaces, creating greater stress. Option D invents a method difference not mentioned for these trials."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Urban Tree Watering Trials",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and costs of two watering methods",
+      "transcript": "Maya: Hi Jon, have you finished reviewing the council reports for our urban forestry presentation?\nJon: Mostly. I focused on the two different watering approaches they trialled from 2021 to 2023.\nMaya: Good. So the first site in North Park used deep infrequent watering – they delivered about 80 litres per tree every three weeks during summer.\nJon: Right, and the second site in Westfield used sensor-controlled drip irrigation, which released small amounts daily only when soil moisture fell below 20%.\nMaya: The North Park results looked strong – 18% higher survival after two years compared to the control group with no extra watering.\nJon: Yes, but we can't take that at face value. Westfield is much hotter and has far more paved surfaces, so the trees there were already under greater stress.\nMaya: The researchers acknowledged that, didn't they? They said the location difference limits any direct comparison of effectiveness.\nJon: Exactly, they qualified their conclusion and said the sensor system might have matched or even outperformed deep watering under equal conditions.\nMaya: I initially thought deep watering would be cheaper, but I was wrong – the report shows labour and tanker transport made it about 15% more expensive per tree annually.\nJon: I had the same assumption. Actually, drip had higher installation costs, but after twelve months the ongoing costs dropped significantly.\nMaya: What about growth measurements? I recall drip-irrigated trees had slightly smaller trunk diameters but about 10% greater canopy cover.\nJon: That's right, but the authors warned that canopy density alone doesn't necessarily indicate better long-term health without further monitoring.\nMaya: So our main point should be that both methods improved survival compared to doing nothing, but the evidence for one being clearly superior remains inconclusive.\nJon: Agreed. And we should note the sample was relatively small – only 120 trees per trial – so findings should be interpreted cautiously.\nMaya: Perfect. I'll prepare the slides on costs and limitations if you handle survival and growth data?",
+      "prompt": "What is true about costs according to the report?",
+      "options": [
+        "Deep watering had lower labour costs",
+        "Drip irrigation was cheaper to install",
+        "Both methods cost the same annually",
+        "Deep watering was about 15% more expensive yearly"
+      ],
+      "answer": 3,
+      "explanation": "Maya corrects her initial view, noting labour and tanker transport made deep watering 15% more expensive annually. Option B reverses the installation cost finding."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Urban Tree Watering Trials",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and costs of two watering methods",
+      "transcript": "Maya: Hi Jon, have you finished reviewing the council reports for our urban forestry presentation?\nJon: Mostly. I focused on the two different watering approaches they trialled from 2021 to 2023.\nMaya: Good. So the first site in North Park used deep infrequent watering – they delivered about 80 litres per tree every three weeks during summer.\nJon: Right, and the second site in Westfield used sensor-controlled drip irrigation, which released small amounts daily only when soil moisture fell below 20%.\nMaya: The North Park results looked strong – 18% higher survival after two years compared to the control group with no extra watering.\nJon: Yes, but we can't take that at face value. Westfield is much hotter and has far more paved surfaces, so the trees there were already under greater stress.\nMaya: The researchers acknowledged that, didn't they? They said the location difference limits any direct comparison of effectiveness.\nJon: Exactly, they qualified their conclusion and said the sensor system might have matched or even outperformed deep watering under equal conditions.\nMaya: I initially thought deep watering would be cheaper, but I was wrong – the report shows labour and tanker transport made it about 15% more expensive per tree annually.\nJon: I had the same assumption. Actually, drip had higher installation costs, but after twelve months the ongoing costs dropped significantly.\nMaya: What about growth measurements? I recall drip-irrigated trees had slightly smaller trunk diameters but about 10% greater canopy cover.\nJon: That's right, but the authors warned that canopy density alone doesn't necessarily indicate better long-term health without further monitoring.\nMaya: So our main point should be that both methods improved survival compared to doing nothing, but the evidence for one being clearly superior remains inconclusive.\nJon: Agreed. And we should note the sample was relatively small – only 120 trees per trial – so findings should be interpreted cautiously.\nMaya: Perfect. I'll prepare the slides on costs and limitations if you handle survival and growth data?",
+      "prompt": "What do the researchers say about growth and overall findings?",
+      "options": [
+        "Canopy cover alone proves better health",
+        "Both methods helped but superiority is inconclusive",
+        "Drip trees had larger trunk diameters",
+        "Sample of 120 trees was sufficient"
+      ],
+      "answer": 1,
+      "explanation": "They agree both methods improved survival versus no intervention but superiority remains inconclusive, with canopy qualified as insufficient proof. Option A contradicts the authors' warning about canopy alone."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Uncertain Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Measurement change and recruitment bias as limits on conclusions",
+      "passage": "Researchers often face difficulties when data appear to show clear trends but underlying methods introduce uncertainty. Two recent studies illustrate how careful interpretation is needed before drawing firm conclusions. In both cases, the raw numbers are less informative than the conditions under which they were gathered.\n\nThe first study examined coastal erosion at Bayford over twelve years, from 2011 to 2023. Early measurements relied on aerial photographs, while from 2019 onwards the team used more precise GPS ground surveys. The combined dataset suggests the coastline retreated by an average of 0.8 metres per year, with a sharper increase to 1.4 metres per year after 2018. However, the authors emphasise that this apparent acceleration should be treated cautiously. The change in measurement technique alone could account for part of the difference, as GPS surveys detect smaller shifts that aerial images miss. In addition, two severe storms in 2020 and 2021 removed large sections of cliff in single events, temporarily inflating annual averages. When these storm years are excluded, the post-2018 rate falls to 1.0 metre per year. The authors therefore conclude that while erosion is ongoing, the exact rate of increase remains uncertain and longer monitoring with a consistent method is required. They recommend extending the GPS series for at least another five years before confirming any acceleration.\n\nA second example comes from a student wellbeing survey conducted at a large urban university in 2023. The survey aimed to estimate overall stress levels and was distributed through social media channels and posters in the university counselling centre. Of the 420 respondents, 68% reported high levels of stress. At first glance, this figure suggests a widespread problem. The researchers, however, argue that the recruitment method likely biased the sample. Students experiencing stress may have been more motivated to participate, and those visiting the counselling centre were already seeking support. Consequently, the sample over-represented psychology undergraduates and first-year students living in university accommodation, groups known to report higher stress. The 68% figure is presented not as evidence of campus-wide prevalence, but as an illustration of how self-selection can distort results. The authors' central claim is that without random sampling, such surveys cannot reliably estimate the true proportion of highly stressed students, although they remain useful for identifying factors associated with stress among respondents. For instance, interviews with a subset of respondents revealed useful links between workload and sleep disruption, even though prevalence could not be established.\n\nTogether, these cases show that data must be read with attention to how they were collected. Recognising measurement inconsistencies and recruitment biases allows researchers to make qualified claims rather than overstating certainty. This approach strengthens credibility, even when it limits the scope of conclusions.",
+      "prompt": "Why does the author introduce the two studies?",
+      "options": [
+        "To show data always misleads researchers",
+        "To illustrate need for careful interpretation",
+        "To prove coastal erosion is accelerating",
+        "To compare environmental and social methods"
+      ],
+      "answer": 1,
+      "explanation": "The opening frames both studies as illustrations of careful interpretation. Option C mistakes an uncertain trend for a proven claim."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Uncertain Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Measurement change and recruitment bias as limits on conclusions",
+      "passage": "Researchers often face difficulties when data appear to show clear trends but underlying methods introduce uncertainty. Two recent studies illustrate how careful interpretation is needed before drawing firm conclusions. In both cases, the raw numbers are less informative than the conditions under which they were gathered.\n\nThe first study examined coastal erosion at Bayford over twelve years, from 2011 to 2023. Early measurements relied on aerial photographs, while from 2019 onwards the team used more precise GPS ground surveys. The combined dataset suggests the coastline retreated by an average of 0.8 metres per year, with a sharper increase to 1.4 metres per year after 2018. However, the authors emphasise that this apparent acceleration should be treated cautiously. The change in measurement technique alone could account for part of the difference, as GPS surveys detect smaller shifts that aerial images miss. In addition, two severe storms in 2020 and 2021 removed large sections of cliff in single events, temporarily inflating annual averages. When these storm years are excluded, the post-2018 rate falls to 1.0 metre per year. The authors therefore conclude that while erosion is ongoing, the exact rate of increase remains uncertain and longer monitoring with a consistent method is required. They recommend extending the GPS series for at least another five years before confirming any acceleration.\n\nA second example comes from a student wellbeing survey conducted at a large urban university in 2023. The survey aimed to estimate overall stress levels and was distributed through social media channels and posters in the university counselling centre. Of the 420 respondents, 68% reported high levels of stress. At first glance, this figure suggests a widespread problem. The researchers, however, argue that the recruitment method likely biased the sample. Students experiencing stress may have been more motivated to participate, and those visiting the counselling centre were already seeking support. Consequently, the sample over-represented psychology undergraduates and first-year students living in university accommodation, groups known to report higher stress. The 68% figure is presented not as evidence of campus-wide prevalence, but as an illustration of how self-selection can distort results. The authors' central claim is that without random sampling, such surveys cannot reliably estimate the true proportion of highly stressed students, although they remain useful for identifying factors associated with stress among respondents. For instance, interviews with a subset of respondents revealed useful links between workload and sleep disruption, even though prevalence could not be established.\n\nTogether, these cases show that data must be read with attention to how they were collected. Recognising measurement inconsistencies and recruitment biases allows researchers to make qualified claims rather than overstating certainty. This approach strengthens credibility, even when it limits the scope of conclusions.",
+      "prompt": "Why do authors say post-2018 acceleration is uncertain?",
+      "options": [
+        "Storms removed too little cliff to measure",
+        "GPS surveys were less precise than photos",
+        "Monitoring period was only five years",
+        "Method change and storms inflated averages"
+      ],
+      "answer": 3,
+      "explanation": "The passage cites technique change and two storm years as inflating the post-2018 average. Option B reverses the precision difference described."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Uncertain Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Measurement change and recruitment bias as limits on conclusions",
+      "passage": "Researchers often face difficulties when data appear to show clear trends but underlying methods introduce uncertainty. Two recent studies illustrate how careful interpretation is needed before drawing firm conclusions. In both cases, the raw numbers are less informative than the conditions under which they were gathered.\n\nThe first study examined coastal erosion at Bayford over twelve years, from 2011 to 2023. Early measurements relied on aerial photographs, while from 2019 onwards the team used more precise GPS ground surveys. The combined dataset suggests the coastline retreated by an average of 0.8 metres per year, with a sharper increase to 1.4 metres per year after 2018. However, the authors emphasise that this apparent acceleration should be treated cautiously. The change in measurement technique alone could account for part of the difference, as GPS surveys detect smaller shifts that aerial images miss. In addition, two severe storms in 2020 and 2021 removed large sections of cliff in single events, temporarily inflating annual averages. When these storm years are excluded, the post-2018 rate falls to 1.0 metre per year. The authors therefore conclude that while erosion is ongoing, the exact rate of increase remains uncertain and longer monitoring with a consistent method is required. They recommend extending the GPS series for at least another five years before confirming any acceleration.\n\nA second example comes from a student wellbeing survey conducted at a large urban university in 2023. The survey aimed to estimate overall stress levels and was distributed through social media channels and posters in the university counselling centre. Of the 420 respondents, 68% reported high levels of stress. At first glance, this figure suggests a widespread problem. The researchers, however, argue that the recruitment method likely biased the sample. Students experiencing stress may have been more motivated to participate, and those visiting the counselling centre were already seeking support. Consequently, the sample over-represented psychology undergraduates and first-year students living in university accommodation, groups known to report higher stress. The 68% figure is presented not as evidence of campus-wide prevalence, but as an illustration of how self-selection can distort results. The authors' central claim is that without random sampling, such surveys cannot reliably estimate the true proportion of highly stressed students, although they remain useful for identifying factors associated with stress among respondents. For instance, interviews with a subset of respondents revealed useful links between workload and sleep disruption, even though prevalence could not be established.\n\nTogether, these cases show that data must be read with attention to how they were collected. Recognising measurement inconsistencies and recruitment biases allows researchers to make qualified claims rather than overstating certainty. This approach strengthens credibility, even when it limits the scope of conclusions.",
+      "prompt": "What do authors conclude about Bayford erosion?",
+      "options": [
+        "Erosion continues but exact increase unclear",
+        "Erosion stopped after 2021 storms",
+        "GPS data proves faster erosion now",
+        "Aerial photos underestimated earlier erosion"
+      ],
+      "answer": 0,
+      "explanation": "They conclude erosion is ongoing but the rate of increase remains uncertain pending consistent monitoring. Option C overstates certainty the authors explicitly qualify."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Uncertain Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Measurement change and recruitment bias as limits on conclusions",
+      "passage": "Researchers often face difficulties when data appear to show clear trends but underlying methods introduce uncertainty. Two recent studies illustrate how careful interpretation is needed before drawing firm conclusions. In both cases, the raw numbers are less informative than the conditions under which they were gathered.\n\nThe first study examined coastal erosion at Bayford over twelve years, from 2011 to 2023. Early measurements relied on aerial photographs, while from 2019 onwards the team used more precise GPS ground surveys. The combined dataset suggests the coastline retreated by an average of 0.8 metres per year, with a sharper increase to 1.4 metres per year after 2018. However, the authors emphasise that this apparent acceleration should be treated cautiously. The change in measurement technique alone could account for part of the difference, as GPS surveys detect smaller shifts that aerial images miss. In addition, two severe storms in 2020 and 2021 removed large sections of cliff in single events, temporarily inflating annual averages. When these storm years are excluded, the post-2018 rate falls to 1.0 metre per year. The authors therefore conclude that while erosion is ongoing, the exact rate of increase remains uncertain and longer monitoring with a consistent method is required. They recommend extending the GPS series for at least another five years before confirming any acceleration.\n\nA second example comes from a student wellbeing survey conducted at a large urban university in 2023. The survey aimed to estimate overall stress levels and was distributed through social media channels and posters in the university counselling centre. Of the 420 respondents, 68% reported high levels of stress. At first glance, this figure suggests a widespread problem. The researchers, however, argue that the recruitment method likely biased the sample. Students experiencing stress may have been more motivated to participate, and those visiting the counselling centre were already seeking support. Consequently, the sample over-represented psychology undergraduates and first-year students living in university accommodation, groups known to report higher stress. The 68% figure is presented not as evidence of campus-wide prevalence, but as an illustration of how self-selection can distort results. The authors' central claim is that without random sampling, such surveys cannot reliably estimate the true proportion of highly stressed students, although they remain useful for identifying factors associated with stress among respondents. For instance, interviews with a subset of respondents revealed useful links between workload and sleep disruption, even though prevalence could not be established.\n\nTogether, these cases show that data must be read with attention to how they were collected. Recognising measurement inconsistencies and recruitment biases allows researchers to make qualified claims rather than overstating certainty. This approach strengthens credibility, even when it limits the scope of conclusions.",
+      "prompt": "How do researchers interpret the 68% high-stress figure?",
+      "options": [
+        "Accurate estimate of campus-wide stress",
+        "Proof counselling services are ineffective",
+        "Example of distortion from self-selection",
+        "Evidence psychology students are most stressed"
+      ],
+      "answer": 2,
+      "explanation": "The 68% is presented as an illustration of self-selection distortion, not prevalence. Option A is the superficial reading the authors reject."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Interpreting Uncertain Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Measurement change and recruitment bias as limits on conclusions",
+      "passage": "Researchers often face difficulties when data appear to show clear trends but underlying methods introduce uncertainty. Two recent studies illustrate how careful interpretation is needed before drawing firm conclusions. In both cases, the raw numbers are less informative than the conditions under which they were gathered.\n\nThe first study examined coastal erosion at Bayford over twelve years, from 2011 to 2023. Early measurements relied on aerial photographs, while from 2019 onwards the team used more precise GPS ground surveys. The combined dataset suggests the coastline retreated by an average of 0.8 metres per year, with a sharper increase to 1.4 metres per year after 2018. However, the authors emphasise that this apparent acceleration should be treated cautiously. The change in measurement technique alone could account for part of the difference, as GPS surveys detect smaller shifts that aerial images miss. In addition, two severe storms in 2020 and 2021 removed large sections of cliff in single events, temporarily inflating annual averages. When these storm years are excluded, the post-2018 rate falls to 1.0 metre per year. The authors therefore conclude that while erosion is ongoing, the exact rate of increase remains uncertain and longer monitoring with a consistent method is required. They recommend extending the GPS series for at least another five years before confirming any acceleration.\n\nA second example comes from a student wellbeing survey conducted at a large urban university in 2023. The survey aimed to estimate overall stress levels and was distributed through social media channels and posters in the university counselling centre. Of the 420 respondents, 68% reported high levels of stress. At first glance, this figure suggests a widespread problem. The researchers, however, argue that the recruitment method likely biased the sample. Students experiencing stress may have been more motivated to participate, and those visiting the counselling centre were already seeking support. Consequently, the sample over-represented psychology undergraduates and first-year students living in university accommodation, groups known to report higher stress. The 68% figure is presented not as evidence of campus-wide prevalence, but as an illustration of how self-selection can distort results. The authors' central claim is that without random sampling, such surveys cannot reliably estimate the true proportion of highly stressed students, although they remain useful for identifying factors associated with stress among respondents. For instance, interviews with a subset of respondents revealed useful links between workload and sleep disruption, even though prevalence could not be established.\n\nTogether, these cases show that data must be read with attention to how they were collected. Recognising measurement inconsistencies and recruitment biases allows researchers to make qualified claims rather than overstating certainty. This approach strengthens credibility, even when it limits the scope of conclusions.",
+      "prompt": "What can be inferred about the wellbeing survey despite bias?",
+      "options": [
+        "It can still reveal links between factors",
+        "It proves most students need counselling",
+        "It should be repeated with same method",
+        "It shows random sampling is unnecessary"
+      ],
+      "answer": 0,
+      "explanation": "The authors note the survey remains useful for identifying associated factors among respondents. Option B incorrectly generalises the biased sample to all students."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-7-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Coastal Restoration Prioritisation Table",
+      "pathwayStage": "band-6-5",
+      "focus": "Summarising multi-criteria evidence and comparing qualified priorities",
+      "prompt": "The table below shows information used by the Bayford Coastal Authority in 2024 to prioritise restoration work at four sites. The data includes erosion risk, biodiversity value, estimated cost, and community support.\n\nSite | Erosion risk | Biodiversity score /10 (ecologist assessment) | Estimated cost (USD) | Community support % (public consultation, n=1,200) | Proposed priority rank\nNorth Bay | High | 8.2 | 420,000 | 78% | 1\nSouth Marsh | Medium | 9.1 | 310,000 | 62% | 2\nEast Dune | High | 6.5 | 180,000 | 85% | 3\nWest Estuary | Low | 7.8 | 550,000 | 45% | 4\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Discuss how the different criteria relate to the proposed ranking. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Travel Plan Indicators Table",
+      "pathwayStage": "band-6-5",
+      "focus": "Selecting key trends and handling differences in data reliability",
+      "prompt": "The table below shows five proposed indicators for monitoring the Green Campus Travel Plan at Midford University, with baseline data for 2023, targets for 2026, and an assessment of data reliability.\n\nIndicator | Baseline 2023 | Target 2026 | Data reliability | Collection method\nDaily bicycle entries on campus | 340 | 680 | High | Automated gate counters (calibrated daily counts)\nWeekly bus trips by students and staff | 8,400 | 12,000 | High | Electronic ticket records\nAverage car occupancy (people per car) | 1.3 | 1.8 | Medium | Annual travel survey (n=800)\nEstimated CO2 from commuting (tonnes/year) | 1,150 | 850 | Low | Modelled from survey and fuel estimates\nSatisfaction with travel options (/10) | 6.1 | 7.5 | Medium | Annual travel survey (n=800)\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the reliability ratings suggest about interpreting progress. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Interpreting Non-Response in a Wellbeing Study",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating survey limitations and qualified interpretation of results",
+      "prompt": "A university wellbeing survey in 2024 reported that 78% of respondents felt positive about their mental health. However, only 45% of the 2,000 students invited to take part responded, and previous research suggests that students experiencing stress are less likely to complete such surveys.\n\nTo what extent can the university confidently conclude that most students have good wellbeing? Discuss the possible effects of non-response, how the findings should be qualified, and what additional evidence would strengthen the conclusions. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Prioritising Coastal Restoration Work",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing ecological, economic and social arguments with evidence awareness",
+      "prompt": "Some people argue that coastal restoration projects should give highest priority to sites with the greatest biodiversity value, while others believe priority should go to sites where restoration most reduces economic damage from erosion and flooding.\n\nDiscuss both views, considering how decision-makers should weigh ecological, economic and community factors. Give your own opinion on how priorities should be set, with attention to the strengths and limitations of different types of evidence. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Choosing Indicators for a Campus Travel Plan",
+      "pathwayStage": "band-6-5",
+      "focus": "Critical evaluation of measurement choices and unintended consequences",
+      "prompt": "Many universities use simple indicators, such as the number of bicycles counted on campus or total bus ticket sales, to judge whether a sustainable travel plan is successful.\n\nDiscuss the advantages and disadvantages of relying on such indicators. What problems might arise if indicators are poorly chosen, and how should a university select a more balanced set of measures? Refer to issues of accuracy, reliability and possible unintended effects in your answer. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-7-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Travel and Campus Life",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing habits and frequency with qualified detail",
+      "prompt": "Let's talk about travel and daily life.\n- How do you usually travel to work or study? Has this changed recently?\n- How often do you use public transport, cycling or walking?\n- What do you like or dislike about travelling in your area?\n- Do you think your travel habits will change in the next few years? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Wellbeing and Study Routines",
+      "pathwayStage": "band-6-5",
+      "focus": "Talking about personal wellbeing with balanced, non-absolute language",
+      "prompt": "Let's talk about wellbeing and routines.\n- How do you usually manage stress during busy periods?\n- Do you take part in any activities that help your mental or physical health?\n- How important is it for universities or workplaces to support wellbeing?\n- Have your ideas about a healthy lifestyle changed over time?"
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Coastal or Natural Area You Visited",
+      "pathwayStage": "band-6-5",
+      "focus": "Descriptive narrative with reflective evaluation",
+      "prompt": "Describe a coastal or other natural area that you have visited and found interesting.\nYou should say:\n- where the area is and when you went there\n- what the area looks like and what you did there\n- who you went with, if anyone\n- and explain why you found the visit memorable and what, if anything, you learned about the environment there.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Time You Did Not Respond to a Survey",
+      "pathwayStage": "band-6-5",
+      "focus": "Explaining reasons for non-response and considering wider implications",
+      "prompt": "Describe a time when you were asked to complete a survey or questionnaire but chose not to respond.\nYou should say:\n- what the survey was about and who was conducting it\n- how you were asked to take part\n- why you decided not to respond\n- and explain how you think your decision, and similar decisions by others, might affect the usefulness of the survey results.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Evidence for Environmental and Wellbeing Policies",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence types, justifying priorities, and handling uncertainty",
+      "prompt": "Let's discuss how evidence is used for environmental and wellbeing decisions.\n- How reliable do you think surveys are for understanding wellbeing? What are their strengths and limitations?\n- When resources are limited, how should authorities decide which coastal or environmental projects to fund first? What criteria matter most?\n- What makes a good indicator for measuring the success of a policy like a campus travel plan? Can poor indicators lead to poor decisions?\n- How should decision-makers communicate uncertainty or gaps in evidence to the public?"
+    }
+  ]
+}

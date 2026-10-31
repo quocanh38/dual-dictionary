@@ -1,0 +1,349 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-8",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 924,
+        "outputTokens": 13573,
+        "totalTokens": 14497
+      },
+      "round": 2
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-8-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-8-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Riverside Clinic Reminder Trial Call",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "part": "Part 1",
+      "script": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "wordCount": 307
+    },
+    "reading": {
+      "title": "Central Park Accessibility Audit",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "wordCount": 405
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-8-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Clinic Reminder Trial Call",
+      "pathwayStage": "band-6",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "transcript": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "prompt": "Why is David calling the clinic?",
+      "options": [
+        "To cancel his Tuesday appointment",
+        "To ask about a reminder trial text",
+        "To change his doctor to Dr. Patel",
+        "To book a new health check"
+      ],
+      "answer": 1,
+      "explanation": "David says he got a text about a reminder trial. Option A is wrong because he confirms he will attend."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Clinic Reminder Trial Call",
+      "pathwayStage": "band-6",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "transcript": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "prompt": "What is David's corrected appointment time?",
+      "options": [
+        "Tuesday at 11:30 in Room 3",
+        "Tuesday at 10:30 in Room 3",
+        "Monday at 11:30 in Room 3",
+        "Tuesday at 11:30 in Room 2"
+      ],
+      "answer": 0,
+      "explanation": "Sarah corrects the time from 10:30 to 11:30 in Room 3. Option B uses the initial time before the correction."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Clinic Reminder Trial Call",
+      "pathwayStage": "band-6",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "transcript": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "prompt": "When did David receive the SMS reminder?",
+      "options": [
+        "Monday afternoon",
+        "Tuesday morning",
+        "Yesterday at about 4 pm",
+        "This morning at 10:30"
+      ],
+      "answer": 2,
+      "explanation": "David confirms he received it yesterday at about 4 pm. Option A confuses this with the future phone call time."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Clinic Reminder Trial Call",
+      "pathwayStage": "band-6",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "transcript": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "prompt": "How can David confirm his appointment?",
+      "options": [
+        "Only by visiting reception in person",
+        "Only by fasting before the visit",
+        "Only by bringing his health card early",
+        "By replying YES or confirming on the phone"
+      ],
+      "answer": 3,
+      "explanation": "Sarah says replying YES or confirming during the Monday call are both acceptable. Option A adds a requirement not mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Clinic Reminder Trial Call",
+      "pathwayStage": "band-6",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "transcript": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "prompt": "What does Sarah say about the follow-up message?",
+      "options": [
+        "It must be answered to keep appointment",
+        "It asks if the reminder was helpful",
+        "It gives free parking for two hours",
+        "It confirms the bus number 42"
+      ],
+      "answer": 1,
+      "explanation": "Sarah says the follow-up checks if the reminder was helpful and can be ignored. Option A incorrectly makes it mandatory."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Central Park Accessibility Audit",
+      "pathwayStage": "band-6",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "prompt": "Why did the council carry out the audit?",
+      "options": [
+        "To check ease of use for all visitors",
+        "To close the south entrance permanently",
+        "To build a new café and toilets",
+        "To train 40 regular park users"
+      ],
+      "answer": 0,
+      "explanation": "The passage states the aim was to check ease for all visitors. Option D confuses the interview sample with the purpose."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Central Park Accessibility Audit",
+      "pathwayStage": "band-6",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "prompt": "What does the council report claim about recent changes?",
+      "options": [
+        "They fixed the lake path completely",
+        "They were praised by café staff",
+        "They show strong commitment to inclusion",
+        "They added sand around the swing"
+      ],
+      "answer": 2,
+      "explanation": "The report claims changes show strong commitment to inclusion. Option B describes an example of staff help, not the report's claim."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Central Park Accessibility Audit",
+      "pathwayStage": "band-6",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "prompt": "What problem was most common in interviews?",
+      "options": [
+        "Poor lighting in older toilets",
+        "Difficulty using the lake path",
+        "Lack of large print signs",
+        "High cost of café menus"
+      ],
+      "answer": 1,
+      "explanation": "The audit noted the lake path was the most common complaint. Option A was mentioned but not as the most frequent."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Central Park Accessibility Audit",
+      "pathwayStage": "band-6",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "prompt": "What can be inferred about visitors with limited mobility?",
+      "options": [
+        "They cannot enter the park at all",
+        "They prefer soft sand playground surfaces",
+        "They do not use the café toilets",
+        "They will have easier access via the north entrance"
+      ],
+      "answer": 3,
+      "explanation": "The north has a ramp and smooth paths while the south has only steps. Option A is too extreme because a detour exists."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Central Park Accessibility Audit",
+      "pathwayStage": "band-6",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "prompt": "What does the report conclude about Central Park?",
+      "options": [
+        "All entrances are now fully accessible",
+        "Access is still unequal despite improvements",
+        "Funding for ramps was already approved",
+        "The playground needs no further changes"
+      ],
+      "answer": 1,
+      "explanation": "The report concludes the park is more welcoming but access remains unequal. Option C misreads plans as subject to funding."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Community Health-Information Evening Attendance",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrasing figures and comparing changes over time",
+      "prompt": "The table below shows the number of people who attended three sessions at a community health-information evening held at Riverside Community Centre on three dates in 2024.\n\nDate | Nutrition Talk | Exercise Workshop | Sleep Advice Session | Total Visitors\n15 March 2024 | 45 | 30 | 25 | 100\n14 June 2024 | 50 | 55 | 35 | 140\n18 October 2024 | 60 | 40 | 50 | 150\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · City Park Volunteer Rota Hours",
+      "pathwayStage": "band-6",
+      "focus": "Describing linked data and correcting details in comparisons",
+      "prompt": "The table below shows the total volunteer hours recorded for three tasks in Greenfield City Park from January to April 2024.\n\nTask | January | February | March | April\nPlanting and Gardening | 20 hours | 25 hours | 40 hours | 35 hours\nLitter Collection | 30 hours | 28 hours | 32 hours | 30 hours\nGuiding Visitors | 15 hours | 18 hours | 22 hours | 30 hours\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · College Project Showcase Judging",
+      "pathwayStage": "band-6",
+      "focus": "Presenting linked ideas and a clear position with support",
+      "prompt": "Some people think that projects at a college showcase should be judged only by teachers, while others believe that students and visitors should also have a vote.\nDiscuss both views and give your own opinion.\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Health-Information Evenings and Online Information",
+      "pathwayStage": "band-6",
+      "focus": "Comparing ideas and evaluating effectiveness",
+      "prompt": "Some people believe that community health-information evenings are one of the best ways to help people stay healthy, while others think that getting health information online is more practical and useful.\nDiscuss both views and give your own opinion.\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Compulsory Park Volunteering for Students",
+      "pathwayStage": "band-6",
+      "focus": "Explaining advantages and disadvantages with linked examples",
+      "prompt": "Some colleges require students to complete a number of volunteer hours in local parks, for example helping with planting, cleaning, or guiding visitors.\nWhat are the advantages and disadvantages of this requirement?\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Health and Everyday Life",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrasing familiar answers and linking ideas",
+      "prompt": "Let's talk about health and daily routines.\n- What do you usually do to stay healthy?\n- Where do you prefer to get information about health?\n- Have your health habits changed compared to a few years ago?\n- Do you think community events can help people learn about health?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · College and Projects",
+      "pathwayStage": "band-6",
+      "focus": "Giving extended answers with comparisons",
+      "prompt": "Let's talk about your studies and college life.\n- What kind of projects do you enjoy working on?\n- Do you prefer working alone or with other students?\n- Have you ever shown your work to other people? How did you feel?\n- What do you think makes a good project presentation?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card",
+      "pathwayStage": "band-6",
+      "focus": "Describing an event with linked details and clear sequencing",
+      "prompt": "Describe a community health-information evening, college project showcase, or park volunteer activity you attended or heard about.\nYou should say:\n- when and where it took place\n- what happened during the event\n- who organised it or who you went with\n- and explain what you learned from it or why it was memorable.\nYou will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Community Learning Events",
+      "pathwayStage": "band-6",
+      "focus": "Giving reasons and evaluating different approaches",
+      "prompt": "Let's discuss community learning events.\n- Why do some people attend community health or education evenings while others do not?\n- What makes a community event more useful than simply reading information online?\n- How can organisers make sure information is accurate and easy to understand?\n- Do you think local events will become more or less important in the future? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Volunteering and Public Spaces",
+      "pathwayStage": "band-6",
+      "focus": "Comparing views and justifying opinions about volunteering",
+      "prompt": "Let's talk about volunteering in public places like city parks.\n- What are the benefits of volunteer rotas for parks and for volunteers themselves?\n- Should volunteering be voluntary or should colleges make it compulsory? Why?\n- How does volunteering in a park compare to other forms of community service?\n- What can be done to encourage more young people to volunteer regularly?"
+    }
+  ]
+}

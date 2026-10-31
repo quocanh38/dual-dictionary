@@ -1,0 +1,12 @@
+{
+  "decision": "approve-content-for-local-release-qa",
+  "authority": "Owner delegation in AUTHORIZATION.md",
+  "packSha256": "163e93250e7aa832822ebbad6d61ce2d88371941d8e621cf3871e123b7bb513d",
+  "reviewSha256": "91b2d9e1718bb6fbe05b8836023471b6dcf03ca4b97950ce37a1ef2566f4f359",
+  "crossReviewHashes": {
+    "astra": "9df647d7bf5770f41691881b670748ba4b300abcd737579c6a97aa5db379d438",
+    "terra": "b262ae44d31f87a61b4b67b9d0324e8652233de05b33d7569b5a3e94e170d801"
+  },
+  "rationale": "Rejected prior two-answer q2; current will allocates distractor has an objective modal error, explanations acknowledge prepositional to. Transfer stock wording corrected.",
+  "deploymentApproved": false
+}

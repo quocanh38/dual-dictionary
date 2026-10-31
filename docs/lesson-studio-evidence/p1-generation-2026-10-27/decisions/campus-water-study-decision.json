@@ -1,0 +1,11 @@
+{
+  "decision": "approve-for-local-release-qa",
+  "delegation": "Owner cross-model content-approval authorization27October2026",
+  "candidateSha256": "67095ea484efd7c0f358629bc81f08de4ee0134190b95cedc02cad5d7fa3a256",
+  "crossReviewSha256": {
+    "luna": "8cbd48e8a6df7c163e75a3f8857d893e4b8ed138d7bf6d9027d05791dc7bd2d1",
+    "sol": "741cbf140211b8e0bae3a136581565cc4c8da4450112628e94d97b308901c838"
+  },
+  "reason": "Natural gathered evidence recognized by controlled schema fix; Vietnamese now says supporting a claim rather than proving it.",
+  "deployed": false
+}

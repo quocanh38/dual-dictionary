@@ -1,0 +1,339 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-6",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "normalizationFindings": [
+    "Reading answer positions do not cover all four options."
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-6-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-6-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Campus Canteen Allergy Information Desk",
+      "focus": "understanding allergy information and service details",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts. So it should be safe for your allergy.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "wordCount": 362
+    },
+    "reading": {
+      "title": "The Campus Garden Tool-Loan Service",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "wordCount": 417
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-6-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Canteen Allergy Information Desk",
+      "pathwayStage": "band-5",
+      "focus": "understanding allergy information and service details",
+      "transcript": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts. So it should be safe for your allergy.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "prompt": "Why is Maya calling the allergy desk?",
+      "options": [
+        "To apply for a canteen job",
+        "To complain about yesterday's meal",
+        "To check if lunch is safe for her allergy",
+        "To book a table for friends"
+      ],
+      "answer": 2,
+      "explanation": "Maya says she has a serious nut allergy and wants to ask about food before ordering lunch. Option A fails because no job is mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Canteen Allergy Information Desk",
+      "pathwayStage": "band-5",
+      "focus": "understanding allergy information and service details",
+      "transcript": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts. So it should be safe for your allergy.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "prompt": "What does David say about the chicken pasta?",
+      "options": [
+        "It has milk and wheat but no nuts",
+        "It has nuts and milk but no wheat",
+        "It is free from all major allergens",
+        "It contains eggs and peanuts"
+      ],
+      "answer": 0,
+      "explanation": "David says the pasta contains milk and wheat but no nuts or peanuts. Option C describes the vegetable soup, not the pasta."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Canteen Allergy Information Desk",
+      "pathwayStage": "band-5",
+      "focus": "understanding allergy information and service details",
+      "transcript": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts. So it should be safe for your allergy.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "prompt": "What must Maya do for a special meal?",
+      "options": [
+        "Pay extra at the counter",
+        "Tell the kitchen one hour ahead",
+        "Bring her own ingredients",
+        "Order only on weekends"
+      ],
+      "answer": 1,
+      "explanation": "Staff says a special meal without milk or wheat requires informing the kitchen at least one hour before. Option A fails because no extra charge is mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Canteen Allergy Information Desk",
+      "pathwayStage": "band-5",
+      "focus": "understanding allergy information and service details",
+      "transcript": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts. So it should be safe for your allergy.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "prompt": "How can students find allergy information themselves?",
+      "options": [
+        "Ask the security guard",
+        "Call the manager at home",
+        "Check the canteen website only",
+        "Look at green cards and QR codes"
+      ],
+      "answer": 3,
+      "explanation": "Staff says green cards are next to dishes and QR codes on tables show ingredients. Option C fails because the website alone is not mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Canteen Allergy Information Desk",
+      "pathwayStage": "band-5",
+      "focus": "understanding allergy information and service details",
+      "transcript": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts. So it should be safe for your allergy.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "prompt": "When does weekday lunch service end?",
+      "options": [
+        "At 2 p.m.",
+        "At 3 p.m.",
+        "At 3:30 p.m.",
+        "At 4 p.m."
+      ],
+      "answer": 2,
+      "explanation": "Staff corrects the first time of 3 p.m. to 3:30 p.m. on weekdays. Option A is the weekend closing time."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "The Campus Garden Tool-Loan Service",
+      "pathwayStage": "band-5",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "prompt": "Who is allowed to use the tool-loan service?",
+      "options": [
+        "All registered students",
+        "Only agriculture students",
+        "Only Environment Office staff",
+        "Students with own gardens"
+      ],
+      "answer": 0,
+      "explanation": "The passage says the service is open to all registered students, not only gardening students. Option B fails because it limits access incorrectly."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "The Campus Garden Tool-Loan Service",
+      "pathwayStage": "band-5",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "prompt": "How long can most tools be borrowed?",
+      "options": [
+        "For one day only",
+        "For seven days, extendable if free",
+        "For one month without extension",
+        "For two days maximum"
+      ],
+      "answer": 1,
+      "explanation": "Most tools can be borrowed for seven days with a possible seven-day extension if not booked. Option A fails because the period is longer."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "The Campus Garden Tool-Loan Service",
+      "pathwayStage": "band-5",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "prompt": "Which item does the service NOT lend?",
+      "options": [
+        "Spades and forks",
+        "Watering cans",
+        "Petrol lawnmowers",
+        "Wheelbarrows"
+      ],
+      "answer": 2,
+      "explanation": "The service does not lend large machines such as petrol lawnmowers. Option D fails because wheelbarrows are listed as available."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "The Campus Garden Tool-Loan Service",
+      "pathwayStage": "band-5",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "prompt": "What is the author's claim in paragraph four?",
+      "options": [
+        "One group returned muddy tools late last term",
+        "Other students could not use tools for two days",
+        "Clean and on-time returns keep service working well",
+        "Safety sessions last 20 minutes"
+      ],
+      "answer": 2,
+      "explanation": "The author claims the clean and on-time rule is the most important reason the service works. Option A is the example used to support it, not the claim."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "The Campus Garden Tool-Loan Service",
+      "pathwayStage": "band-5",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "prompt": "What can be inferred from the survey results?",
+      "options": [
+        "The service will close next year",
+        "Most users saved money by borrowing",
+        "All students now garden at home",
+        "The library garden is still empty"
+      ],
+      "answer": 1,
+      "explanation": "The survey showed 80% saved money, so most users saved. Option C fails because the passage says more students garden, not all."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Welcome Picnic Attendance",
+      "pathwayStage": "band-5",
+      "focus": "Summarising a table with trends and comparisons",
+      "prompt": "The table below shows the number of students who attended the campus welcome picnic in 2022, 2023 and 2024, by year group.\n\nYear group | 2022 | 2023 | 2024\nFirst-year students | 85 | 110 | 130\nSecond-year students | 60 | 65 | 70\nThird-year students | 40 | 45 | 50\nTotal | 185 | 220 | 250\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Borrowing Sports Kits by Month",
+      "pathwayStage": "band-5",
+      "focus": "Describing changes over time from monthly borrowing data",
+      "prompt": "The bar chart below shows the number of times students borrowed sports kits from the campus sports centre from January to May 2024.\n\nMonth | Number of borrowings\nJanuary | 32\nFebruary | 48\nMarch | 54\nApril | 42\nMay | 68\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Welcome Events for New Students",
+      "pathwayStage": "band-5",
+      "focus": "Discussing two views and giving a clear opinion with examples",
+      "prompt": "Some people think universities should organise a welcome picnic for new students at the start of each year. Others think it is not necessary and students can meet each other in other ways.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Borrowing or Buying Sports Equipment",
+      "pathwayStage": "band-5",
+      "focus": "Explaining reasons and evaluating advantages and disadvantages",
+      "prompt": "Many universities allow students to borrow sports kits for free instead of buying their own. Some students prefer to borrow, while others prefer to buy.\n\nWhy do students borrow sports kits? Do the advantages of borrowing outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Joining a Beginner Cooking Class",
+      "pathwayStage": "band-5",
+      "focus": "Giving a clear position with simple reasons and direct evidence",
+      "prompt": "Some people believe that all university students should join a beginner cooking class to learn basic cooking skills. Others think students are too busy with their studies for this.\n\nDo you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Food and Cooking at Home",
+      "pathwayStage": "band-5",
+      "focus": "Talking about familiar daily topics with simple explanations",
+      "prompt": "Let's talk about food and cooking.\nDo you like cooking at home or eating outside?\nHow often do you cook?\nWho taught you to cook?\nWhat kind of food do you like to eat with friends?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Campus Life and Free Time",
+      "pathwayStage": "band-5",
+      "focus": "Talking about familiar campus activities and free time",
+      "prompt": "Let's talk about your campus and free time.\nWhat do you do in your free time on campus?\nDo you enjoy outdoor events like picnics?\nHow often do you do sports or other activities with other students?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Campus Welcome Picnic",
+      "pathwayStage": "band-5",
+      "focus": "Describing a past campus event with details, actions and feelings",
+      "prompt": "Describe a welcome picnic or outdoor event you went to on your campus.\nYou should say:\n• when and where the event was\n• who you went there with\n• what food and activities there were\n• and explain why you liked or did not like this event.\n\nYou will have one minute to prepare and you should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Events and Practical Skills",
+      "pathwayStage": "band-5",
+      "focus": "Evaluating reasons and value of campus events and practical classes",
+      "prompt": "Let's discuss community events and learning new skills.\nWhy do universities organise welcome events for new students?\nAre large campus events a good way to make new friends? Why or why not?\nDo you think practical classes like beginner cooking are as important as academic classes? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Borrowing and Sharing at University",
+      "pathwayStage": "band-5",
+      "focus": "Discussing reasons for borrowing and evaluating university support",
+      "prompt": "Let's talk about borrowing and sharing things at university.\nWhy do some students prefer to borrow sports equipment instead of buying it?\nWhat are the advantages and disadvantages of sharing university facilities?\nShould universities provide more free services for students? Why or why not?"
+    }
+  ]
+}

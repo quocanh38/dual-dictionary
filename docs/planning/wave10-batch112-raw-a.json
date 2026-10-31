@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 112,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "First 20 raw-only entries in the builder manifest after auditing the remaining 628; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Resume the remaining raw-only pages from the beginning of the manifest, prioritizing academic, business, legal, technical and common Latin-derived terms. Contrast paired reasoning terms and clarify register, grammar and regional variants.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 628,
+    "remainingRawOnlyAfter": 608
+  },
+  "selected": [
+    "a. n. other",
+    "a posteriori",
+    "a priori",
+    "absentee ballot",
+    "absolute zero",
+    "academic year",
+    "academy award",
+    "accident prone",
+    "account executive",
+    "achilles tendon",
+    "acid rain",
+    "acid test",
+    "action replay",
+    "ad hoc",
+    "ad lib",
+    "ad valorem",
+    "adjustable spanner",
+    "advertising agency",
+    "age of consent",
+    "air brake"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "Crown Prosecution Service, What is the age of consent? (https://www.cps.gov.uk/types-crime/violence-against-women-and-girls/rape-and-sexual-assault/what-are-rape-and-sexual-assault)"
+  ]
+}

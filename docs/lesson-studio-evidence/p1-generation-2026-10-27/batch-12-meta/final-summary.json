@@ -1,0 +1,198 @@
+{
+  "completedAt": "2026-10-27T09:43:58.085Z",
+  "batch": "P1 offline lesson generation batch 12",
+  "sourceFile": "sources-batch-12.json",
+  "sourceSha256": "76c6f9bff4e1c619e1891d6cc22594939171f4126b198fc68b98f5bfd6af070c",
+  "generationPrompt": "lesson-studio-2026-10-27-v5",
+  "generationStatus": "Three original Meta candidates preserved; one local editorial correction was recorded and rereviewed at the new exact hash.",
+  "generation": {
+    "sourcesAttempted": 3,
+    "selectionAndExerciseCalls": 6,
+    "responsesReceived": 6,
+    "automaticRetries": 0,
+    "repairCalls": 0,
+    "providerRequestsDuringReviewAndQa": 0,
+    "metaUsageOrBillingLookup": "not performed per owner instruction"
+  },
+  "packs": [
+    {
+      "id": "east-dock-refill-shop-stock-check",
+      "packId": "pack-e9701317-1107-440d-818c-b8e47aed37fc",
+      "version": 1,
+      "title": "Refill Shop Supplies",
+      "topic": "workplace",
+      "levelEstimate": "B1",
+      "purpose": "development",
+      "sourceType": "original",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "05e4fcd193fa9045fbfbaf86f34f8bcd54c7803d81afa765f1fe12102fa26fae",
+      "finalCandidateFile": "east-dock-refill-shop-stock-check-candidate-v2.json",
+      "finalReviewedPayloadSha256": "4f994d95dd9bc3af8ea6fcc6efa22e38c1c8868fb58a098817ab7e36847864ea",
+      "reviewers": [
+        {
+          "model": "gpt-6-luna",
+          "reviewFile": "east-dock-refill-shop-stock-check-review-luna-v2.json",
+          "reviewSha256": "a6c523114e9f341a19521e15b13e1bc13191d9564b7d23291687c7c3d0cbacb8",
+          "criteriaPassed": 17,
+          "findings": [
+            {
+              "id": "minor-q1-reordered",
+              "severity": "minor",
+              "resolved": false,
+              "evidence": "The q1 option-a explanation says the stock “must be reordered”; the source says the shift lead contacts the supplier before the weekend but does not explicitly state that a reorder is mandatory. This is a minor overstatement in the explanation, not an answer-key or meaning error."
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "reviewFile": "east-dock-refill-shop-stock-check-review-terra-v2.json",
+          "reviewSha256": "b13852e99270930974faaa76efd2b196c0b8b5286994cf487f301e302abc3420",
+          "criteriaPassed": 17,
+          "findings": []
+        }
+      ],
+      "reviewSha256": "b13852e99270930974faaa76efd2b196c0b8b5286994cf487f301e302abc3420",
+      "approvedEnvelopeSha256": "f250bd97e09249d9ce0037e10953af8ca6f142a6b11173013cb9ea090a58c35d",
+      "releaseDirectory": "release-east-dock-refill-shop-stock-check",
+      "libraryFile": "lessons/library/east-dock-refill-shop-stock-check.json",
+      "librarySha256": "f250bd97e09249d9ce0037e10953af8ca6f142a6b11173013cb9ea090a58c35d",
+      "editorialStatus": "approved"
+    },
+    {
+      "id": "student-podcast-interview-editing",
+      "packId": "pack-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+      "version": 1,
+      "title": "Podcast Notes: Off the Record and Time Stamp",
+      "topic": "academic",
+      "levelEstimate": "B1",
+      "purpose": "development",
+      "sourceType": "original",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "3d2d447057fff8eb9aaac184a96a8b161ba7faad210dd67ca3d9797b4be50b9d",
+      "finalCandidateFile": "student-podcast-interview-editing-candidate.json",
+      "finalReviewedPayloadSha256": "3d2d447057fff8eb9aaac184a96a8b161ba7faad210dd67ca3d9797b4be50b9d",
+      "reviewers": [
+        {
+          "model": "gpt-6-luna",
+          "reviewFile": "student-podcast-interview-editing-review-luna.json",
+          "reviewSha256": "f1950fc73a132b169fc8d8e5f35297a04905ca6dd63b685cfe6de25bd00bad3b",
+          "criteriaPassed": 17,
+          "findings": []
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "reviewFile": "student-podcast-interview-editing-review-terra.json",
+          "reviewSha256": "cbd779605fcd9f3d3bc55d0f3294ee86cc42a4e747c7b248a93b9457f907650f",
+          "criteriaPassed": 17,
+          "findings": []
+        }
+      ],
+      "reviewSha256": "cbd779605fcd9f3d3bc55d0f3294ee86cc42a4e747c7b248a93b9457f907650f",
+      "approvedEnvelopeSha256": "8cf75f0d83cbc344334dc73da95c8cc555c7d28def7b2d2357b3a5d05a911aed",
+      "releaseDirectory": "release-student-podcast-interview-editing",
+      "libraryFile": "lessons/library/student-podcast-interview-editing.json",
+      "librarySha256": "8cf75f0d83cbc344334dc73da95c8cc555c7d28def7b2d2357b3a5d05a911aed",
+      "editorialStatus": "approved"
+    },
+    {
+      "id": "staggered-start-time-policy-rollout",
+      "packId": "pack-44150ff8-e9c3-4d89-9c1b-f5ce7c5e2f90",
+      "version": 1,
+      "title": "Testing Flexible Start Times at Work",
+      "topic": "workplace",
+      "levelEstimate": "B2",
+      "purpose": "development",
+      "sourceType": "original",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "585209460808922f22ca9ca21b732da68913503305d6177dbd527cfb9d1630b2",
+      "finalCandidateFile": "staggered-start-time-policy-rollout-candidate.json",
+      "finalReviewedPayloadSha256": "585209460808922f22ca9ca21b732da68913503305d6177dbd527cfb9d1630b2",
+      "reviewers": [
+        {
+          "model": "gpt-6-luna",
+          "reviewFile": "staggered-start-time-policy-rollout-review-luna.json",
+          "reviewSha256": "0d24dcd0aa39da7405900ed33e1d0455f900883642a1fb7ae30ebc5e53060d50",
+          "criteriaPassed": 17,
+          "findings": []
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "reviewFile": "staggered-start-time-policy-rollout-review-terra.json",
+          "reviewSha256": "ce6a4e9793caa207b52b34925a58e8584d27df86e2c411501045b3540ba21a18",
+          "criteriaPassed": 17,
+          "findings": []
+        }
+      ],
+      "reviewSha256": "ce6a4e9793caa207b52b34925a58e8584d27df86e2c411501045b3540ba21a18",
+      "approvedEnvelopeSha256": "3f30c73e3d91b7b8c67102ac5295c1f45d97d1dda08b4d8115b9093b9529b079",
+      "releaseDirectory": "release-staggered-start-time-policy-rollout",
+      "libraryFile": "lessons/library/staggered-start-time-policy-rollout.json",
+      "librarySha256": "3f30c73e3d91b7b8c67102ac5295c1f45d97d1dda08b4d8115b9093b9529b079",
+      "editorialStatus": "approved"
+    }
+  ],
+  "reviewRoutesRequested": [
+    "gpt-6-luna",
+    "gpt-5.6-terra"
+  ],
+  "reviewLimitations": [
+    "AI-assisted editorial review, not human or learner review",
+    "Rights/authorship supported only by local declarations, not independently verified",
+    "B1/B2 are estimates, not calibrated CEFR ratings",
+    "One non-blocking minor wording finding on the Refill Shop pack was recorded by Luna; no critical or uncertain findings remain."
+  ],
+  "editorialRevisions": [
+    {
+      "sourceId": "east-dock-refill-shop-stock-check",
+      "editType": "local-editorial-correction",
+      "editor": "Codex AI-assisted editor",
+      "reason": "Terra exact-hash review found the prior correction for “low of stock” was awkward and could misteach collocation. Replace it with one clear preposition error and a natural exact correction.",
+      "originalCandidateFile": "east-dock-refill-shop-stock-check-candidate.json",
+      "originalPackSha256": "05e4fcd193fa9045fbfbaf86f34f8bcd54c7803d81afa765f1fe12102fa26fae",
+      "revisedCandidateFile": "east-dock-refill-shop-stock-check-candidate-v2.json",
+      "revisedPackSha256": "4f994d95dd9bc3af8ea6fcc6efa22e38c1c8868fb58a098817ab7e36847864ea",
+      "changes": [
+        {
+          "path": "lessons[0].exercises[q2].options[b].text",
+          "before": "Our office printer paper is running low of stock, so I ordered another box.",
+          "after": "Our office printer is running low of paper, so I ordered another box."
+        },
+        {
+          "path": "lessons[0].exercises[q2].options[b].explanation",
+          "before": "This is wrong because the fixed collocation should be 'running low on stock', not 'low of stock'.",
+          "after": "This is wrong because the natural phrase is 'running low on paper', not 'running low of paper'."
+        }
+      ],
+      "metaRequestCount": 0
+    }
+  ],
+  "approval": "Three exact-hash approvals recorded under owner-delegated AI-assisted editorial authority after both reviewers passed all 17 criteria; the Refill Shop pack retains one non-blocking minor note. Deployment remains unperformed.",
+  "qa": {
+    "finalUnapprovedPreview": "PASS, 3 exact candidates in Chrome mobile offline emulation 390x844; no Vault writes, 0 provider requests, 0 JS errors",
+    "approvedReleaseQa": "PASS, 66 clean/preseeded Chrome mobile emulation contexts across all 33 exact approved packs; 0 provider/external requests and 0 JS errors",
+    "catalogueOfflineInstall": "PASS, all 33 indexed packs installed offline; malformed index and tampered pack rejected; existing Vault/Review history preserved; 0 external/provider requests",
+    "offlineShell": "PASS, 48 offline paths in mdx-dict-v137",
+    "schemaContracts": "PASS, 27 contract groups",
+    "qualityGateContracts": "PASS",
+    "libraryContracts": "PASS",
+    "providerRequestsDuringReviewAndQa": 0,
+    "externalRequests": 0,
+    "physicalDevice": false,
+    "evidence": {
+      "candidatePreview": "qa-candidate-batch-twelve-v136/candidate-preview.json",
+      "approvedLibrary": "qa-approved-batch-twelve-v137/approved-library-tests.json",
+      "catalogueUi": "qa-library-ui-thirty-three-v137/library-ui-tests.json"
+    }
+  },
+  "library": {
+    "packCount": 33,
+    "newPacks": 3,
+    "cache": "mdx-dict-v137",
+    "newLevelDistribution": {
+      "B1": 2,
+      "B2": 1
+    }
+  },
+  "deployed": false,
+  "ownerInstruction": "Owner accepts responsibility for Meta credits, requested no usage/Billing checks, and asks Codex to notify them when deployment is needed."
+}

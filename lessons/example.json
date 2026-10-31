@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "packId": "authored-library-20261027",
+  "version": 1,
+  "title": "Plan a library service",
+  "language": "en",
+  "explanationLanguage": "en-vi",
+  "levelEstimate": "B1",
+  "topic": "academic",
+  "provenance": {
+    "author": "Dual Dictionary authored example",
+    "sourceType": "original",
+    "rightsStatement": "New passage and exercises authored for this demonstration; no commercial exam content.",
+    "aiAssisted": true
+  },
+  "generation": {
+    "provider": "Authored fixture, not a provider response",
+    "model": "none",
+    "promptVersion": "authored-example-1",
+    "generatedAt": "2026-10-27"
+  },
+  "lessons": [
+    {
+      "lessonId": "library-service",
+      "title": "Plan a library service",
+      "objective": "Use two phrases to describe resources and deadlines.",
+      "reading": {
+        "text": "The university library will allocate resources to extend its evening opening hours. A student group must meet the deadline for submitting its survey findings. The team will compare weekday and weekend visits before recommending a schedule.",
+        "sentences": [
+          {
+            "id": "s1",
+            "text": "The university library will allocate resources to extend its evening opening hours."
+          },
+          {
+            "id": "s2",
+            "text": "A student group must meet the deadline for submitting its survey findings."
+          },
+          {
+            "id": "s3",
+            "text": "The team will compare weekday and weekend visits before recommending a schedule."
+          }
+        ]
+      },
+      "targets": [
+        {
+          "id": "t1",
+          "phrase": "allocate resources",
+          "meaningEn": "assign available money, time or staff to a particular purpose",
+          "meaningVi": "phân bổ nguồn lực",
+          "sourceSentenceId": "s1"
+        },
+        {
+          "id": "t2",
+          "phrase": "meet the deadline",
+          "meaningEn": "finish the required work by the specified time",
+          "meaningVi": "hoàn thành công việc đúng thời hạn",
+          "sourceSentenceId": "s2"
+        }
+      ],
+      "exercises": [
+        {
+          "exerciseId": "meaning-1",
+          "type": "meaning",
+          "targetId": "t1",
+          "prompt": "In its source sentence, what does “allocate resources” mean?",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "assign available money, time or staff to a particular purpose",
+              "explanation": "This matches the meaning in the supplied sentence."
+            },
+            {
+              "id": "b",
+              "text": "Cancel the activity before it starts.",
+              "explanation": "The sentence describes doing the work, not cancelling it."
+            },
+            {
+              "id": "c",
+              "text": "Ignore the people affected by the decision.",
+              "explanation": "This is not the meaning of the target phrase."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "assign available money, time or staff to a particular purpose · phân bổ nguồn lực"
+        },
+        {
+          "exerciseId": "usage-1",
+          "type": "usage",
+          "targetId": "t1",
+          "prompt": "Choose the grammatically correct sentence.",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "Our team will allocate resources.",
+              "explanation": "After will, use the base verb form."
+            },
+            {
+              "id": "b",
+              "text": "Our team will allocates resources.",
+              "explanation": "Do not add -s to the verb after will."
+            },
+            {
+              "id": "c",
+              "text": "Our team will allocating resources.",
+              "explanation": "Will must be followed by the base verb form here."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Will + base verb describes the planned action."
+        },
+        {
+          "exerciseId": "meaning-2",
+          "type": "meaning",
+          "targetId": "t2",
+          "prompt": "In its source sentence, what does “meet the deadline” mean?",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "finish the required work by the specified time",
+              "explanation": "This matches the meaning in the supplied sentence."
+            },
+            {
+              "id": "b",
+              "text": "Cancel the activity before it starts.",
+              "explanation": "The sentence describes doing the work, not cancelling it."
+            },
+            {
+              "id": "c",
+              "text": "Ignore the people affected by the decision.",
+              "explanation": "This is not the meaning of the target phrase."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "finish the required work by the specified time · hoàn thành công việc đúng thời hạn"
+        },
+        {
+          "exerciseId": "usage-2",
+          "type": "usage",
+          "targetId": "t2",
+          "prompt": "Choose the grammatically correct sentence.",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "Our team will meet the deadline.",
+              "explanation": "After will, use the base verb form."
+            },
+            {
+              "id": "b",
+              "text": "Our team will meets the deadline.",
+              "explanation": "Do not add -s to the verb after will."
+            },
+            {
+              "id": "c",
+              "text": "Our team will meeting the deadline.",
+              "explanation": "Will must be followed by the base verb form here."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Will + base verb describes the planned action."
+        },
+        {
+          "exerciseId": "transfer-1",
+          "type": "transfer",
+          "targetId": "t1",
+          "prompt": "A community clinic wants to offer weekend appointments. Explain how it will support the service, using “allocate resources”.",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "sampleAnswer": "The clinic will allocate resources to hiring weekend staff and keeping the reception desk open.",
+          "selfCheck": [
+            "Did I use allocate resources naturally?",
+            "Did I specify what the clinic will fund or staff?",
+            "Did I describe the clinic rather than repeat the library situation?"
+          ],
+          "explanation": "Compare your sentence with the example and checklist. This is self-assessment, not an automatic AI grade."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewerType": "authored-fixture",
+    "note": "Authored demonstration with fixed answers. Self-reviewed by the coding assistant; not independent human review.",
+    "checks": {
+      "rights": true,
+      "meaning": true,
+      "uniqueAnswers": true,
+      "explanations": true
+    },
+    "findings": []
+  }
+}

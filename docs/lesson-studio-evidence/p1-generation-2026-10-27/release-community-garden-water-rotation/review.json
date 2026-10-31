@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor (synthesized independent gpt-6-luna and gpt-5.6-terra route reviews)",
+  "reviewedAt": "2026-10-27T08:05:03.904Z",
+  "note": "Both reviewers examined the exact final payload hash, including both targets and EN/VI glosses, all four closed questions, every option and explanation, and the transfer prompt, model and checklist. Both returned 17/17 PASS with no critical, uncertain or minor findings. Routes requested: gpt-6-luna and gpt-5.6-terra; each runtime exposed only the broader label GPT-6. AI-assisted editorial review, not human review. Rights and authorship remain supported by local declarations and were not independently verified. Short reading and relatively simple B2 practice are retained as a non-blocking scope limitation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers checked local source/provenance consistency. The passage is declared AI-assisted original, authorized for distribution, and free of external copied text and learner personal data. This is a declaration, not independent proof of authorship or rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the exact phrase “allocate water to” occurs in cited s1 and means assigning/distributing water among plots."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm “to distribute and assign water to each plot for use” captures the contextual sense without narrowing it."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm “phân bổ nước cho” is natural, complete and correctly accented for the context."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the exact phrase “in line with” occurs in cited s2 and describes adjusting the schedule according to rainfall changes."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm “in agreement with or according to changes in rainfall” conveys the contextual meaning."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm “phù hợp với; theo” is natural, accented and contextually suitable Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers identify a as the unique paraphrase of assigning each plot a share of water. b removes water and c records use without allocating it."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm each explanation matches the revised alternatives and distinguishes allocation from draining or recording water use."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm a is natural. b incorrectly inflects the verb after will; c uses on where the collocation requires to."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the explanations identify the exact verb-form and preposition corrections without overgeneralizing."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers identify a as the only source-supported meaning. b contradicts the rainfall adjustment; c gives a possible literal alignment sense that does not fit the source context."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the explanations accurately distinguish agreement/adaptation from opposition and the irrelevant literal placement sense."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm a is the sole natural fixed expression. b pluralizes line; c substitutes of for with."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm each explanation gives the exact singular-noun or preposition correction without unsupported claims."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the transfer changes from community-garden water planning to an office assistant’s note about colleagues’ break times and working hours."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the two-sentence model naturally uses “in line with”; the checklist is usable, consistently requires 2–3 sentences, and keeps writing self-assessed rather than automatically graded."
+    }
+  ],
+  "findings": []
+}

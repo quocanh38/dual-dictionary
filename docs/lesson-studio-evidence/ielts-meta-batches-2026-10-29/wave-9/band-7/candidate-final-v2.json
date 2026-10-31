@@ -1,0 +1,349 @@
+{
+  "stage": "band-7",
+  "batchId": "wave-9",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2834,
+        "outputTokens": 7153,
+        "totalTokens": 9987
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-9-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-9-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Riverdale Low-Emission Zone Case Study",
+      "focus": "Phased transport policy and challenges of evaluating early effects",
+      "part": "Part 3",
+      "script": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+      "wordCount": 363
+    },
+    "reading": {
+      "title": "When Methods Shape Conclusions",
+      "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+      "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+      "wordCount": 405
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-9-band-7-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverdale Low-Emission Zone Case Study",
+      "pathwayStage": "band-7",
+      "focus": "Phased transport policy and challenges of evaluating early effects",
+      "transcript": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+      "prompt": "Why did they choose Riverdale's low-emission zone as a case?",
+      "options": [
+        "Its charges apply only to older vehicles",
+        "Its staged introduction complicates impact assessment",
+        "Its central district has the worst pollution",
+        "Its tram line opened before the zone"
+      ],
+      "answer": 1,
+      "explanation": "They highlight the phased rollout as analytically interesting and messy for evaluation. The older-vehicle detail describes the charge but not why it was chosen."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverdale Low-Emission Zone Case Study",
+      "pathwayStage": "band-7",
+      "focus": "Phased transport policy and challenges of evaluating early effects",
+      "transcript": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+      "prompt": "What does the interim report show about Phase 1?",
+      "options": [
+        "Bus use rose centrally but citywide driving stayed flat",
+        "Car entries fell equally on weekdays and weekends",
+        "Air quality improved solely due to fewer cars",
+        "Total car trips fell 12% across the city"
+      ],
+      "answer": 0,
+      "explanation": "The report notes a 12% central bus rise while citywide car trips barely changed. The 12% car-trip fall misattributes the bus figure."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverdale Low-Emission Zone Case Study",
+      "pathwayStage": "band-7",
+      "focus": "Phased transport policy and challenges of evaluating early effects",
+      "transcript": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+      "prompt": "What is the corrected start date for Phase 2?",
+      "options": [
+        "Early January",
+        "February after tram opening",
+        "Late April after delay",
+        "Early March as first planned"
+      ],
+      "answer": 2,
+      "explanation": "Maya corrects her initial March note to late April due to signage and camera installation. March was the uncorrected expectation."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverdale Low-Emission Zone Case Study",
+      "pathwayStage": "band-7",
+      "focus": "Phased transport policy and challenges of evaluating early effects",
+      "transcript": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+      "prompt": "How do the authors qualify the 7% nitrogen dioxide fall?",
+      "options": [
+        "It was caused entirely by windy weather",
+        "It was measured only on weekdays",
+        "It was smaller than the bus ridership rise",
+        "It may partly reflect unusually windy conditions"
+      ],
+      "answer": 3,
+      "explanation": "They note an unusually windy winter also disperses pollution, so attribution is uncertain. Entirely caused overstates this qualified caution."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Riverdale Low-Emission Zone Case Study",
+      "pathwayStage": "band-7",
+      "focus": "Phased transport policy and challenges of evaluating early effects",
+      "transcript": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+      "prompt": "What do the students conclude about evaluating the phased policy?",
+      "options": [
+        "Early central gains prove citywide success",
+        "A full year after Phase 2 is needed to judge effects",
+        "Seasonal patterns have no impact on results",
+        "Displacement to periphery has already been ruled out"
+      ],
+      "answer": 1,
+      "explanation": "They agree a full year of post-Phase 2 data is needed to distinguish spread from displacement. Early gains were described as geographically limited, not citywide proof."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "When Methods Shape Conclusions",
+      "pathwayStage": "band-7",
+      "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+      "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+      "prompt": "What is the passage's main aim?",
+      "options": [
+        "To propose new biodiversity indicators for conservation",
+        "To promote literacy programmes in disadvantaged areas",
+        "To show how methods shape conclusions in two fields",
+        "To argue field studies are too flawed to use"
+      ],
+      "answer": 2,
+      "explanation": "The passage uses two cases to show conclusions shift with indicator choice and attrition handling. Proposing new indicators mistakes illustration for advocacy."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "When Methods Shape Conclusions",
+      "pathwayStage": "band-7",
+      "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+      "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+      "prompt": "What does the 40-region analysis demonstrate?",
+      "options": [
+        "Most rankings change when the indicator changes",
+        "Habitat intactness is the most reliable indicator",
+        "Coastal Basin has little conservation value",
+        "Three regions have no threatened species"
+      ],
+      "answer": 0,
+      "explanation": "Only three regions stayed top ten across all measures, showing most positions are indicator-dependent. The low-value reading confuses volatility with lack of worth."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "When Methods Shape Conclusions",
+      "pathwayStage": "band-7",
+      "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+      "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+      "prompt": "How does the Coastal Basin function in the argument?",
+      "options": [
+        "It proves rankings should be abandoned entirely",
+        "It illustrates why single-indicator rankings can mislead",
+        "It shows the authors' preferred ranking method",
+        "It demonstrates habitat intactness is superior"
+      ],
+      "answer": 1,
+      "explanation": "The authors' claim is for uncertainty bands; the Basin is an example of misleading single-indicator results. Abandoning rankings overstates their position."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "When Methods Shape Conclusions",
+      "pathwayStage": "band-7",
+      "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+      "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+      "prompt": "What happened in the literacy programme analysis?",
+      "options": [
+        "Dropouts had higher baseline scores than completers",
+        "Weighting adjustments increased the estimated gain",
+        "Attrition was random and did not affect results",
+        "Completers-only estimate exceeded adjusted estimate"
+      ],
+      "answer": 3,
+      "explanation": "The completers-only 15% gain dropped to 6% after weighting for non-random dropout characteristics. The increased-gain option reverses the reported direction."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "When Methods Shape Conclusions",
+      "pathwayStage": "band-7",
+      "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+      "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+      "prompt": "What cautious inference is warranted about the programme's benefits?",
+      "options": [
+        "Larger unadjusted gains should not be assumed for likely dropouts",
+        "The programme had no benefit for any participants",
+        "Adjusted 6% gain proves long-term citywide success",
+        "Dropouts left mainly due to lack of interest"
+      ],
+      "answer": 0,
+      "explanation": "The passage cautions against generalising the larger 15% unadjusted gain to disadvantaged likely dropouts. Claiming no benefit overstates beyond the modest adjusted gain."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-7-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Phased Transport Changes in Riverton",
+      "pathwayStage": "band-7",
+      "focus": "comparing phased changes and handling missing observations without overclaiming causality",
+      "prompt": "The table below shows average weekday trips (in thousands) by mode in Riverton before and after two transport phases. Phase 1 (2019) introduced a central bus lane; Phase 2 (2022) extended the tram network. Cycling data for 2020 is marked n/a because the survey was suspended during roadworks.\n\nYear | Bus | Tram | Bicycle | Car\n2018 (baseline) | 45 | 22 | 18 | 110\n2020 (after Phase 1) | 58 | 23 | n/a | 102\n2024 (after Phase 2) | 52 | 41 | 31 | 95\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note overall trends and differences between phases, and acknowledge where data is missing rather than estimating it.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Composite Liveability Scores in Harbridge",
+      "pathwayStage": "band-7",
+      "focus": "describing a composite indicator and its components with precise, limited claims",
+      "prompt": "The table below shows the 2023 Liveability Score (out of 100) for four districts of Harbridge. The composite score is the simple average of three equally weighted components: Access to Services, Green Space, and Air Quality.\n\nDistrict | Composite Score | Access to Services | Green Space | Air Quality\nNorthfield | 72 | 85 | 60 | 71\nEaston | 68 | 62 | 78 | 64\nSouthgate | 75 | 70 | 68 | 87\nWestford | 61 | 55 | 58 | 70\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider how the composite score relates to its components and where a single score hides differences.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Evaluating Phased Transport Evidence",
+      "pathwayStage": "band-7",
+      "focus": "nuanced inference, scope and causality limits when comparing before-and-after data",
+      "prompt": "Some cities introduce transport changes in phases and then point to later changes in travel behaviour as proof that the changes worked. Others argue that phased data alone cannot show what caused the change.\n\nDiscuss both views and give your own opinion. Refer to issues such as time lags, other factors that may affect travel, and the limits of before-and-after comparisons. Avoid claiming direct cause and effect unless the evidence clearly supports it.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · The Value and Limits of Composite Indicators",
+      "pathwayStage": "band-7",
+      "focus": "competing evidence and precise evaluation of single-score summaries",
+      "prompt": "Governments and media often use single composite scores (for example, a city liveability index or a university ranking) to compare places or institutions. Some people think these scores are useful summaries, while others believe they hide important differences.\n\nTo what extent do you agree that composite indicators are useful for public decision-making? Support your view with reasons and examples, and consider when a single score may be misleading and when detailed component data is needed.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Representing Missing Observations in Public Reports",
+      "pathwayStage": "band-7",
+      "focus": "honest communication of incomplete evidence and trade-offs in visualisation",
+      "prompt": "When data is missing for a period (for example, because a survey was cancelled or a sensor failed), some reports leave a gap or mark the data as unavailable, while others estimate the missing value to keep the trend line complete.\n\nDiscuss the advantages and disadvantages of each approach. What principles should guide how missing observations are shown to the public? Give reasons for your answer and support them with examples, considering clarity, honesty, and the risk of misleading the audience.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-7-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Travel and Local Changes",
+      "pathwayStage": "band-7",
+      "focus": "personal observation of transport change and limits of personal evidence",
+      "prompt": "Let's talk about getting around where you live.\nHow do you usually travel to work or study?\nHave you noticed any recent changes to transport in your area, such as new routes or cycle lanes?\nHow easy is it to tell whether those changes have made a difference?\nDo you prefer to see detailed information about travel options or just a simple summary?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Information and Missing Data",
+      "pathwayStage": "band-7",
+      "focus": "attitudes to incomplete information and trust in reports",
+      "prompt": "Let's discuss information you see in reports or the news.\nHow often do you see charts or scores that compare cities or schools?\nWhen you notice that some information is missing, how does that affect your trust in the report?\nDo you prefer a report that leaves a gap or one that gives an estimate with an explanation?\nHow important is it for you to know how data was collected?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · Describing a Change That Happened in Stages",
+      "pathwayStage": "band-7",
+      "focus": "describing phased change with cautious interpretation and competing explanations",
+      "prompt": "Describe a transport or public service change in your city or town that happened in stages.\nYou should say:\n• what the change was and when the stages happened\n• how people responded or how use changed after each stage\n• what other factors might also explain any changes you noticed\n• and explain how certain you can be about whether the change itself caused the difference.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Composite Scores",
+      "pathwayStage": "band-7",
+      "focus": "value and limits of composite indicators, balancing simplicity and detail",
+      "prompt": "Let's consider how composite scores are used to compare places.\nWhy do governments and media like to use a single score to rank cities or neighbourhoods?\nIn what situations might a single score hide more than it reveals?\nHow should decision-makers balance a simple overall ranking with more detailed information about its parts?\nIs it ever justified to make a major decision based only on a composite indicator? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-7-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Honesty and Clarity in Public Data",
+      "pathwayStage": "band-7",
+      "focus": "representing missing observations, scope limits, and ethical communication",
+      "prompt": "Let's talk about how missing information should be handled in public reports.\nWhat are the risks of filling in missing data with an estimate without clearly labelling it?\nHow might leaving a gap in a chart affect how the public understands a trend?\nWho should be responsible for explaining the limits of the data — the researchers, the media, or the audience?\nHow can reports remain both honest and easy to understand when evidence is incomplete?"
+    }
+  ]
+}

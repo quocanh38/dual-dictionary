@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "148ea435be99d65a34f93eaf8b0e419b56d0c86235fbe4c89238427e606d577f",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte rereview of the shared 325-word peer-support evaluation script and 421-word air-monitor passage; all five Listening and five Reading questions, all options, answer keys and explanations; and all five Task 1/Task 2 Writing and five Speaking prompts. Checked answer uniqueness and source grounding, distractor validity, explanation accuracy, natural language and band fit, Task 1 data/units, and originality disclosure. Reading 02 correctly states “average errors below 15%,” which matches the passage and avoids implying every measurement was within that range. Campaign reach units, sample sizes and multiple-response caveat are clear; course funding totals and percentage data are complete. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-10-27T03:54:13.972Z",
+  "checks": [
+    "source stage survives reload with exact persisted payload",
+    "selected stage survives reload with exact persisted payload",
+    "draft stage survives reload with exact persisted payload",
+    "reviewed stage survives reload with exact persisted payload",
+    "draft stage survives reload with exact persisted payload",
+    "payload edit invalidates reviewed status across reload",
+    "delayed successful response after switching drafts discarded without overwriting either draft",
+    "offline optional generation refused before network/ledger mutation; drafts and existing answered lesson progress preserved"
+  ],
+  "baseUrl": "http://127.0.0.1:8877",
+  "mockedProviderCalls": 3,
+  "uncaughtBrowserErrors": [],
+  "fixtureOnly": true,
+  "realProviderCalls": 0,
+  "unexpectedExternalRequests": 0,
+  "approvalPerformed": false,
+  "physicalDevice": false,
+  "appSha256": "ac12912bc785f172ce6aba32d0eb59bb3a313370e8b03adc0789bee98fd45cb3"
+}

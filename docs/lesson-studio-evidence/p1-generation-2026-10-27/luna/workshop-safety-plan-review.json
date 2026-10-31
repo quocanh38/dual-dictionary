@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "759c7bcc08675d5d0148bb976b6042bb57f92a9387e436778c4db25fb05e3f58",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna (configured model)",
+  "reviewedAt": "2026-10-27T05:00:00Z",
+  "note": "First-pass AI-assisted editorial review of all 17 criteria, complete options and explanations, targets/source/rights, Vietnamese glosses, and transfer. Development batch, not unseen-source evaluation. No edits to candidate; no learner study, independent human review or provider call. Exact digest: 759c7bcc08675d5d0148bb976b6042bb57f92a9387e436778c4db25fb05e3f58.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Candidate declares an original AI-assisted project source, distribution permission and no learner PII; this review relies on the supplied provenance statement."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains exact phrase ‘carry out an inspection’; a supervisor checks a new machine before use, matching the contextual meaning."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘perform a careful check or examination’ fits the pre-use inspection context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘tiến hành kiểm tra’ is natural and accurate Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains exact ‘comply with the safety rules’; orders waiting establish pressure but not a changed meaning."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘obey or follow the safety rules’ is the accurate contextual meaning."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘tuân thủ các quy tắc an toàn’ is natural and accurate, with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a matches performing the pre-use check. b cancels rather than performs it; c moves/stores the machine and does not mean inspect."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation accurately distinguishes inspecting from canceling or moving the machine."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural for examining a bridge. b ‘inspection about the bridge’ is not natural for an inspection of the structure in this sentence; c uses inflected ‘carries’ after modal will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a’s ‘inspection of’ is natural; b is an unsuitable preposition for examining the bridge as object, and c has a clear modal-form error. Minor wording note: ‘about should be corrected to of after inspection’ is broader than this example warrants, since inspection complements vary by sense (e.g. inspection into a problem). Narrow rationale to ‘of’ for the object examined here."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a matches obeying the rules despite pressure. b reverses compliance; c means creating rules rather than following existing rules."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option rationales correctly distinguish following current rules from ignoring or drafting rules."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is the only natural target use. a uses incorrect ‘comply to’ in this context; c uses inflected ‘complies’ after modal must."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a correctly needs ‘with’ after comply; c needs the bare form ‘comply’ after must. The overall explanation matches the item."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Source is workshop staff under delivery pressure; transfer shifts to a hotel guest describing pool rules and guest behavior to a friend."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence sample uses ‘comply with the safety rules’ naturally and the checklist covers length, target phrase and clarity/grammar. Explanation says self-assess with no automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "workshop-q2-rationale-scope",
+      "severity": "minor",
+      "resolved": true,
+      "evidence": "The item has a clear intended answer and a plausible wrong preposition in context. Its explanation ‘about should be corrected to of after inspection’ overgeneralizes; inspection complements vary by sense (for example, inspection into a problem). Narrow to ‘of’ for examining the bridge as object. Nonblocking wording limitation."
+    }
+  ]
+}

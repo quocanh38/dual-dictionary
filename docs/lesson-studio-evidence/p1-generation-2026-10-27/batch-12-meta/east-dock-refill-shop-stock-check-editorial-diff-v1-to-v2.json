@@ -1,0 +1,23 @@
+{
+  "sourceId": "east-dock-refill-shop-stock-check",
+  "editType": "local-editorial-correction",
+  "editor": "Codex AI-assisted editor",
+  "reason": "Terra exact-hash review found the prior correction for “low of stock” was awkward and could misteach collocation. Replace it with one clear preposition error and a natural exact correction.",
+  "originalCandidateFile": "east-dock-refill-shop-stock-check-candidate.json",
+  "originalPackSha256": "05e4fcd193fa9045fbfbaf86f34f8bcd54c7803d81afa765f1fe12102fa26fae",
+  "revisedCandidateFile": "east-dock-refill-shop-stock-check-candidate-v2.json",
+  "revisedPackSha256": "4f994d95dd9bc3af8ea6fcc6efa22e38c1c8868fb58a098817ab7e36847864ea",
+  "changes": [
+    {
+      "path": "lessons[0].exercises[q2].options[b].text",
+      "before": "Our office printer paper is running low of stock, so I ordered another box.",
+      "after": "Our office printer is running low of paper, so I ordered another box."
+    },
+    {
+      "path": "lessons[0].exercises[q2].options[b].explanation",
+      "before": "This is wrong because the fixed collocation should be 'running low on stock', not 'low of stock'.",
+      "after": "This is wrong because the natural phrase is 'running low on paper', not 'running low of paper'."
+    }
+  ],
+  "metaRequestCount": 0
+}

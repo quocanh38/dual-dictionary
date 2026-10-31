@@ -1,0 +1,16 @@
+{
+  "wave": 10,
+  "batch": 84,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after ski jump; reviewed against local OALD 10/LDOCE 6. Sleeping sickness checked against WHO; slipped-disc terminology checked against NHS. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover travel/leisure, materials, historical and political vocabulary, business, and technical terms; give careful context for slavery-related language and current medical terminology.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1180, "remainingRawOnlyAfter": 1160},
+  "selected": ["ski lift", "ski plane", "skin diver", "skin diving", "skipping rope", "skull cap", "sky blue", "slaked lime", "slap bang", "slave driver", "slave state", "slave trade", "sleeping partner", "sleeping sickness", "sliding door", "sliding scale", "slip knot", "slipped disc", "slow motion", "slush fund"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "https://www.who.int/health-topics/human-african-trypanosomiasis",
+    "https://www.nhs.uk/conditions/slipped-disc/"
+  ]
+}

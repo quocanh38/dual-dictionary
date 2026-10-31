@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 137,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after flood plain in the current phrase manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples independently written.",
+  "selectionRationale": "Enrich tide and flood terminology, legacy computing, diagrams, wedding and historical vocabulary, measurement, architecture, policing, nutrition, food and agriculture, legal/financial language, chemistry and vehicle technology. Notes flag regional units, historical senses, legal variation and commonly confused terms.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 128,
+    "remainingRawOnlyAfter": 108
+  },
+  "selected": [
+    "flood tide",
+    "floppy disk",
+    "flow chart",
+    "flower girl",
+    "fluid ounce",
+    "flying buttress",
+    "flying squad",
+    "focal point",
+    "fog lamp",
+    "folic acid",
+    "food and agriculture organization",
+    "food chain",
+    "food poisoning",
+    "food processor",
+    "foot and mouth disease",
+    "force majeure",
+    "foreign exchange",
+    "formic acid",
+    "four-stroke engine",
+    "four-wheel drive"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

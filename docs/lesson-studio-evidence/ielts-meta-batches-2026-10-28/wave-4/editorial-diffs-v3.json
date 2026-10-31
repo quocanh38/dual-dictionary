@@ -1,0 +1,65 @@
+{
+  "editor": "Codex AI-assisted editorial corrections after independent GPT review",
+  "reason": "Clarify average error, distinguish searches from journeys, correct attribution and internal consistency; Meta single-repair allowance already used; preserve all original provider outputs.",
+  "stages": [
+    {
+      "stage": "band-5",
+      "candidateSha256": "b293fbeaaaaf6b42eed1eabc30a7631e61a7f26a5894802874575bb7930562cc",
+      "edits": [
+        {
+          "before": "so the new week starts clean",
+          "after": "so that job is not postponed until Monday",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "stage": "band-6",
+      "candidateSha256": "75002c7b7e08bf488503d8ccc33728a088859a76545fa7dafc80cc8fa9ad4258",
+      "edits": [
+        {
+          "before": "on Saturday afternoons",
+          "after": "on Saturday mornings",
+          "occurrences": 7
+        }
+      ]
+    },
+    {
+      "stage": "band-6-5",
+      "candidateSha256": "148ea435be99d65a34f93eaf8b0e419b56d0c86235fbe4c89238427e606d577f",
+      "edits": [
+        {
+          "before": "Both were within 15% of the reference values",
+          "after": "Both had average errors below 15%",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "stage": "band-7",
+      "candidateSha256": "a5663e4bb0cc1e3fb18ea6046ec99735ef0de6054766f2db702f62a6f25dd293",
+      "edits": [
+        {
+          "before": "roughly 8,000 actual journeys once return searches are merged",
+          "after": "roughly 8,000 distinct journey searches once repeated searches are merged",
+          "occurrences": 6
+        },
+        {
+          "before": "It contains 8,000 journeys after merging",
+          "after": "It contains 8,000 distinct journey searches",
+          "occurrences": 1
+        },
+        {
+          "before": "gives 8,000 merged journeys",
+          "after": "gives 8,000 distinct journey searches",
+          "occurrences": 1
+        },
+        {
+          "before": "Maya says users tend to be younger",
+          "after": "Jonas says users tend to be younger",
+          "occurrences": 1
+        }
+      ]
+    }
+  ]
+}

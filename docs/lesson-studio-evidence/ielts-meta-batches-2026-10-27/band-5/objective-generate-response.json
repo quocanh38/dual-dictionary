@@ -1,0 +1,152 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+  "completedAt": "2026-10-27T12:32:56.327Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 524,
+    "outputTokens": 8983,
+    "totalTokens": 9507
+  },
+  "latencyMs": 29834,
+  "result": {
+    "listening": {
+      "title": "The University Seed Library",
+      "focus": "Main ideas, details and a corrected detail",
+      "script": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "questions": [
+        {
+          "title": "Main Purpose",
+          "prompt": "What is the main purpose of the seed library?",
+          "options": [
+            "To sell seeds to biology students",
+            "To let students borrow seeds and return new seeds later",
+            "To give gardening lessons in Room 3",
+            "To keep old seed packets in storage"
+          ],
+          "answer": 1,
+          "explanation": "The script says students take home packets, grow them, and later return new seeds. The sell option fails because Mr Lee says borrowing is free."
+        },
+        {
+          "title": "Monthly Limit",
+          "prompt": "How many seed packets can a student take each month now?",
+          "options": [
+            "Three packets",
+            "Five packets",
+            "Four packets",
+            "One packet"
+          ],
+          "answer": 0,
+          "explanation": "Mr Lee corrects the old guide and says the new limit is three because demand is high. Five fails because it was the old information."
+        },
+        {
+          "title": "Popular Seeds",
+          "prompt": "Which seeds are most popular and why?",
+          "options": [
+            "Tomatoes because they are cheap",
+            "Carrots because they need little water",
+            "Beans because they grow quickly in small pots",
+            "Sunflowers because they need no light"
+          ],
+          "answer": 2,
+          "explanation": "Mr Lee says beans are the most popular because they grow quickly, even in small pots. Tomatoes fails because price is never mentioned."
+        },
+        {
+          "title": "Growing Diary",
+          "prompt": "What must Maya write in her growing diary?",
+          "options": [
+            "Her name, number and email",
+            "The shop price and seller",
+            "The workshop time and room",
+            "The planting date, pot place and watering"
+          ],
+          "answer": 3,
+          "explanation": "Mr Lee says write the planting date, where you put the pot, and how often you water. Name and email fails because that is for the joining form, not the diary."
+        },
+        {
+          "title": "Beginners Workshop",
+          "prompt": "When and where is the beginners workshop?",
+          "options": [
+            "Thursday at 2 p.m. in Room 3",
+            "Friday at 2 p.m. in Room 3",
+            "Friday at 4 p.m. in Room 5",
+            "Thursday at 1 p.m. in the basement"
+          ],
+          "answer": 1,
+          "explanation": "Mr Lee corrects the plan: it moved from Thursday to Friday at 2 p.m. in Room 3. Thursday fails because it was the old plan."
+        }
+      ]
+    },
+    "reading": {
+      "title": "The Campus Repair Workshop",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "questions": [
+        {
+          "title": "Workshop Idea",
+          "prompt": "What is the main idea of the Campus Repair Workshop?",
+          "options": [
+            "To sell cheap tools to students",
+            "To throw away broken items safely",
+            "To help students learn to repair and reuse small items",
+            "To train students to make new phones"
+          ],
+          "answer": 2,
+          "explanation": "The passage says students learn to fix small broken things and reuse them. Throw away fails because the idea is the opposite of throwing things away."
+        },
+        {
+          "title": "Not Accepted",
+          "prompt": "Which item will the workshop NOT repair?",
+          "options": [
+            "A large fridge",
+            "A bicycle with a flat tyre",
+            "A jacket with a broken zip",
+            "A phone with a cracked cover"
+          ],
+          "answer": 0,
+          "explanation": "The passage says large electrical items such as fridges are not repaired because they can be dangerous. Bicycle fails because flat tyres are listed as a common repair."
+        },
+        {
+          "title": "Lena Example",
+          "prompt": "Why is Lena's lamp story included in the passage?",
+          "options": [
+            "To prove every repair takes forty minutes",
+            "To claim lamps are the most common repair",
+            "To explain why repairs always fail",
+            "To give an example of how a repair works"
+          ],
+          "answer": 3,
+          "explanation": "The passage says the story is one example and does not mean every repair is quick or cheap. Every repair takes forty minutes fails because the passage warns against that general idea."
+        },
+        {
+          "title": "Main Value",
+          "prompt": "According to the organiser's report, what is the main value of the workshop?",
+          "options": [
+            "Saving a lot of money on new things",
+            "Learning practical skills and confidence",
+            "Recording numbers of repairs each term",
+            "Reducing waiting time on busy days"
+          ],
+          "answer": 1,
+          "explanation": "The report claims the main value is learning, not saving money. Saving money fails because the passage says it is only a second benefit."
+        },
+        {
+          "title": "Staying for Repair",
+          "prompt": "What can be inferred about a student who visits the workshop?",
+          "options": [
+            "The student must book a week in advance",
+            "The student can leave the item and return later",
+            "The student will join in the repair and stay until the end",
+            "The student must buy tools before the visit"
+          ],
+          "answer": 2,
+          "explanation": "Volunteers do not fix alone and students must stay for the whole repair, so the student takes part. Leave the item fails because the rules require staying."
+        }
+      ]
+    }
+  }
+}

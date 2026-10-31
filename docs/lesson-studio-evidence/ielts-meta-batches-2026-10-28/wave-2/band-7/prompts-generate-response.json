@@ -1,0 +1,83 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-7",
+  "batchId": "wave-2",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+  "completedAt": "2026-10-28T02:57:28.306Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 519,
+    "outputTokens": 3584,
+    "totalTokens": 4103
+  },
+  "latencyMs": 16158,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Comparing Health Measures in Two Cities",
+        "focus": "Describing contrasting data and recognising how measurement choices change comparisons",
+        "prompt": "The table below shows three different health-related measures for two cities, Northfield and Southport, in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table data: Hospital admissions for respiratory illness per 10,000 residents - Northfield 42, Southport 38; Percentage of adults reporting good or very good health in a survey of 2,000 residents in each city - Northfield 71%, Southport 78%; Average days of sick leave per employed person during the year - Northfield 6.2 days, Southport 7.1 days. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Commuter Patterns in Riverton",
+        "focus": "Comparing change over time and selecting key contrasts without overstating causes",
+        "prompt": "The table below shows the percentage of commuters in the town of Riverton who used five main methods of travel to work in 2015 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data for 2015: Car 58%, Bus 18%, Train 12%, Bicycle 7%, Walking 5%. Data for 2025: Car 46%, Bus 20%, Train 18%, Bicycle 10%, Walking 6%. The total number of commuters was 24,000 in 2015 and 27,500 in 2025. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Funding Cultural Heritage with Limited Evidence",
+        "focus": "Evaluating competing claims and recognising limits of evidence",
+        "prompt": "Some people argue that public money should be used to preserve historic buildings and traditional crafts because of their cultural value, while others argue that such funding should only continue when there is clear evidence of economic or social benefit. Discuss both views, consider what kinds of evidence are difficult to measure, and give your own opinion with reasons. Avoid making strong causal claims that the evidence cannot support. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Competing Explanations for Commuter Behaviour",
+        "focus": "Weighing competing explanations and limits on causal claims",
+        "prompt": "Surveys in several cities show an increase in cycling to work over the past ten years. Some analysts link this change mainly to new cycle lanes and safer junctions, while others point to rising city-centre parking charges and more flexible working hours as the main reasons. Discuss these competing explanations, evaluate what additional evidence would be needed to support a causal conclusion, and give your own view on how such trends should be interpreted. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · How Measurement Choices Affect Health Comparisons",
+        "focus": "Scope, inference and precise evaluation of public-health rankings",
+        "prompt": "News reports often rank cities or countries as healthier than others on the basis of a single measure, such as hospital visits, self-reported health, or average sick leave. To what extent do such rankings provide a reliable comparison? Discuss how the choice of measure can change the conclusion, what limits should be placed on interpreting the data, and how comparisons could be reported more carefully. Give reasons for your answer with examples. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Travel and Routine",
+        "focus": "personal detail with limited scope",
+        "prompt": "Answer the following short questions about your daily travel. Give full but concise answers and avoid generalising beyond your experience. 1. How do you usually travel to work or study? 2. Has your routine changed in recent years? 3. What do you usually notice during your journey? 4. Do you prefer travelling at busy times or quiet times, and why?"
+      },
+      {
+        "task": "Part 1 · Health and Local Area",
+        "focus": "describing with cautious inference",
+        "prompt": "Answer the following short questions about health and your local area. 1. What do people in your area usually do to stay healthy? 2. Are there good places to walk or exercise where you live? 3. How do people find out about local health services? 4. Do you think your area has become healthier or less healthy recently, and what makes you think so?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Regular Journey",
+        "focus": "Organised description with careful explanation of reasons",
+        "prompt": "Describe a regular journey you make to work, study, or visit family. You should say: • where you travel from and to • how you usually travel and how long it takes • what you see or do during the journey • and explain why you travel in this way and whether you might change it. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 2 · Cue card - A Historic Place",
+        "focus": "Detailed description with evaluation of limited evidence",
+        "prompt": "Describe a historic building or traditional place you have visited. You should say: • where it is and what it looks like • what you learned about its history during your visit • how it is maintained or used today • and explain why you think it is or is not worth preserving. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Heritage Funding and Health Evidence",
+        "focus": "Reasons, competing evidence and evaluation without overclaiming",
+        "prompt": "Discuss the following questions, giving reasons and evaluating different viewpoints rather than repeating memorised facts. 1. Why might it be difficult to prove that funding for historic sites brings economic benefits? 2. When two health measures point in different directions, how should the public interpret the results? 3. What kinds of evidence would help decide whether a new cycle lane caused a change in commuter behaviour? 4. How can decision-makers be careful not to claim more than the evidence supports?"
+      }
+    ]
+  }
+}

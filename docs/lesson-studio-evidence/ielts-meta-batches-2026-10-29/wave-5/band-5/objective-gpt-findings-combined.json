@@ -1,0 +1,42 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script",
+      "issue": "The script contains 410 whitespace-delimited words (the payload declares 410), exceeding the requested 300–400-word range and matching normalizationFindings. Shorten it by at least 10 words and update the count.",
+      "severity": "major"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-5-reading-04",
+      "issue": "The keyed option says café produce “is fresher,” but the passage only identifies fresh herbs/leaves and says short transport reduces transport costs and packaging waste. The comparative freshness claim is not established; consider removing “fresher” and wording the option to match the passage.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "sharedContexts.listening.script; normalizationFindings",
+      "issue": "Listening has 410 whitespace-delimited words, matching wordCount410 and the normalization finding, exceeding the required300–400 range. Shorten the complete script to at most400 and keep all repeated exercise transcripts and wordCount synchronised.",
+      "severity": "critical"
+    },
+    {
+      "item": "sharedContexts.reading.passage, paragraph2; all Reading passage copies",
+      "issue": "The passage classifies rosemary with cacti as plants from desert regions. Kew describes rosemary habitat as dry Mediterranean scrubland, not a desert habitat. Use a clear desert example or describe the area as containing plants from dry regions, preserving the warm/dry contrast. Source: https://www.kew.org/plants/rosemary .",
+      "severity": "uncertain"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-5-listening-04; reading-05",
+      "issue": "Several distractors are implausible or almost nonsensical in the role, e.g. bring Swimming teacher and Bring100people. They do not threaten unique keys but weaken discrimination even at this introductory stage.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-5-reading-04",
+      "issue": "The keyed fresh/short-transport inference is reasonable from fresh herbs and salad leaves plus short travel, but transport waste is less precise than the passage wording transport costs and packaging waste. Prefer that wording.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Listening script has 410 words; expected 300–400.",
+      "severity": "critical"
+    }
+  ]
+}

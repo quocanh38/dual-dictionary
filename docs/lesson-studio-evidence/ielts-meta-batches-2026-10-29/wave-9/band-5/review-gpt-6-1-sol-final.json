@@ -1,0 +1,94 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "b4dc5ea4a2aafc43889684f0581857e88da156e9cde75706a8a8f5beb43c1712",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "sharedContexts.reading",
+      "severity": "minor",
+      "issue": "The series is called free but pottery has a disclosed materials fee. Say tuition is free, with a pottery materials charge, for immediate clarity."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-5-reading-04",
+      "severity": "minor",
+      "issue": "Key correctly says another person may not get a place; explanation overstates this as late cancellation blocks others. Preserve may or reduces the chance."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-5-writing-01; writing-02",
+      "severity": "minor",
+      "issue": "Numerical data are complete but supplied as lists rather than a table/bar chart. Render the named visuals or call these figures/data."
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted final rereview of all20items:5Listening,5Reading,5Writing,5Speaking; entire shared contexts,all40options,10keys/explanations and all productive prompts/metadata assessed against exact final file. Previously performed this stage initial review; no other reviewer report inspected. Initial/final diffs checked as supplementary evidence, not a replacement for full content review. No candidate edits or provider calls.",
+    "listening": "354-word meal-card dialogue read in full: 50 corrected to 60 dollars, no fee above 20, two-hour availability, three outlets, replacement 5 dollars, non-transferability, receipt and Friday 16:30 closing. All 20 choices, five keys and explanations checked; unique keys.",
+    "reading": "408-word art workshop passage read: spring six-session series, Saturday 10–12, online signup/three-day deadline/15 places/confirmation, painting/pottery 10-dollar materials/own photography device, 24-hour cancellation, connections claim versus exhibition example. All alternatives, five keys and explanations checked.",
+    "writing": "Two Task 1 datasets have eight sports values (2022/2023) and eight book-exchange values (January–April 2024). Borrowing beyond March donations is feasible with inventory from prior months. Three Task 2 prompts cover study rooms, exchanges and sports participation. All word and timing targets explicit and metadata consistent.",
+    "speaking": "Two familiar Part 1 sets, one visible four-bullet Part 2 with one-minute preparation/1–2-minute talk, two reasoned Part 3 sets. Accessible band-5 practice.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 354,
+        "reading": 408
+      },
+      "metadataWordCounts": {
+        "listening": 354,
+        "reading": 408
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "repeatedContextsEqualShared": true,
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          2
+        ],
+        "Reading": [
+          1,
+          0,
+          2,
+          3,
+          1
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026 and wave9-v1 objective/writingSpeaking identifiers, originalContent=true inspected. No recognisable official-question copying found; not an exhaustive plagiarism audit or independent rights verification. Fictional study figures checked internally, not externally verified. Stage difficulty is estimated practice progression, not validated IELTS attainment.",
+    "itemIds": [
+      "ielts-meta-wave-9-band-5-listening-01",
+      "ielts-meta-wave-9-band-5-listening-02",
+      "ielts-meta-wave-9-band-5-listening-03",
+      "ielts-meta-wave-9-band-5-listening-04",
+      "ielts-meta-wave-9-band-5-listening-05",
+      "ielts-meta-wave-9-band-5-reading-01",
+      "ielts-meta-wave-9-band-5-reading-02",
+      "ielts-meta-wave-9-band-5-reading-03",
+      "ielts-meta-wave-9-band-5-reading-04",
+      "ielts-meta-wave-9-band-5-reading-05",
+      "ielts-meta-wave-9-band-5-writing-01",
+      "ielts-meta-wave-9-band-5-writing-02",
+      "ielts-meta-wave-9-band-5-writing-03",
+      "ielts-meta-wave-9-band-5-writing-04",
+      "ielts-meta-wave-9-band-5-writing-05",
+      "ielts-meta-wave-9-band-5-speaking-01",
+      "ielts-meta-wave-9-band-5-speaking-02",
+      "ielts-meta-wave-9-band-5-speaking-03",
+      "ielts-meta-wave-9-band-5-speaking-04",
+      "ielts-meta-wave-9-band-5-speaking-05"
+    ],
+    "finalRepairAssessment": "Final bytes identical to initial; full content reassessed with no blocking findings.",
+    "repairMetadata": []
+  },
+  "reviewerType": "AI-assisted"
+}

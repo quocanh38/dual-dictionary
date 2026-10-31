@@ -1,0 +1,11 @@
+{
+  "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+  "reviewedAt": "2026-10-28T08:30:33.462Z",
+  "reviewScope": "Pre-repair single-model GPT content review; findings are issue-focused; no claim of independent cross-model review.",
+  "candidateSha256": "1dd99b53a84232cd1c8b28b1dfa36ff353146eb2ef7cb9a8e7832497c74c68e9",
+  "rawResponseSha256": {
+    "objective-generate-response.json": "306a43c10822da63a6ab25d165672ffcb0d2aa0f9f9beecb4f1da9d43283c6e3",
+    "prompts-generate-response.json": "8fa574e55a857a9e3b05aa79d66e11dc486c00479db5638df42bd13b0bd3a8f5"
+  },
+  "findings": []
+}

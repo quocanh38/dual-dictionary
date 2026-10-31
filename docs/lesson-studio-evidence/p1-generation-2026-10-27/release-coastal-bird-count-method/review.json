@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "6bb7f0007ceb46970b13dd08d821f6b5c5b444b0e9edff64cb71b1769fab6b0d",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing two independent model-route reviews",
+  "reviewedAt": "2026-10-27T08:18:31Z",
+  "note": "Two independent reviewers examined this exact payload hash, the corresponding source row and the lesson schema. Both reported 17/17 criteria PASS with no critical or uncertain findings. Review is AI-assisted editorial review, not human or learner review. Rights/authorship are supported only by local declarations and were not independently verified. Reviewer route requests: Luna (gpt-6-luna requested; runtime exposed only GPT-6 and did not expose configured route) and Terra (gpt-5.6-terra requested and confirmed; runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers checked the local source/candidate declaration: AI-assisted original, authorized for distribution, no copied exam/external text or learner PII; no PII found. Declaration only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “account for” occurs verbatim in cited s2 and is used for considering visit length in the total comparison."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss, “to consider and include the length of each visit when comparing totals,” fits the observation-time context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “tính đến, xem xét đến thời lượng của mỗi lần quan sát” is natural, accurate and correctly accented."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “long-term decline” occurs verbatim in cited s6 and is contrasted with a provisional estimate from few observations."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “a gradual decrease over a long period of time” accurately defines the contextual trend."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “sự suy giảm trong thời gian dài” is natural and accurate."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the unique context-appropriate sense: including visit length in the comparison. b explains reasons aloud; c lists without including it."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm each explanation accurately distinguishes adjustment/inclusion from explanation or separate listing."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b lacks subject-verb agreement and c uses “about” instead of the collocation “for.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the agreement and preposition corrections are specific and accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the only gradual decrease over a long period; a is temporary and c is a one-time site difference."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the option explanations distinguish short-term change, spatial difference and a long-term trend."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as grammatical; a needs “a” before “long-term” and c requires “has” with a singular subject."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the article and agreement corrections are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from academic bird-count methods to a shop owner explaining packaging demand to a supplier."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm an idiomatic two-sentence model using “long-term decline,” with a useful self-check and no automatic grading."
+    }
+  ],
+  "findings": []
+}

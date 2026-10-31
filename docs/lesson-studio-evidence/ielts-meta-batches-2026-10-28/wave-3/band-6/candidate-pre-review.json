@@ -1,0 +1,336 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-3",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-28-wave-3-v1",
+      "writingSpeaking": "ielts-practice-2026-10-28-wave-3-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Extended Library Hours Trial Discussion",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "part": "Part 3",
+      "script": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "wordCount": 342
+    },
+    "reading": {
+      "title": "Campus Reusable-Cup Return Scheme",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "wordCount": 423
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-3-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Extended Library Hours Trial Discussion",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "transcript": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "prompt": "Why is the library trialling late opening?",
+      "options": [
+        "To provide quiet morning space for full-time students",
+        "To improve access for part-time students who work during the day",
+        "To test a new evening cafe service",
+        "To reduce crowding on Saturday mornings"
+      ],
+      "answer": 1,
+      "explanation": "Mia says the library is testing late opening because many part-time students cannot use it after work. The morning-space option fails because no morning need is mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Extended Library Hours Trial Discussion",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "transcript": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "prompt": "According to the corrected information, when does the trial start?",
+      "options": [
+        "19th May",
+        "12th May",
+        "27th June",
+        "Early April"
+      ],
+      "answer": 0,
+      "explanation": "Mia corrects her notes from 12th May to 19th May as shown on the notice. The 12th May option is the initial error she rejects."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Extended Library Hours Trial Discussion",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "transcript": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "prompt": "What is the rule for the top floor after 8 p.m. during the trial?",
+      "options": [
+        "Group discussion is encouraged there",
+        "A food service will operate there",
+        "Only silent study is allowed and only water in closed bottles",
+        "Seats must be booked a day in advance"
+      ],
+      "answer": 2,
+      "explanation": "Josh and Mia state the top floor becomes a quiet zone after 8 p.m. with no conversations and only water in closed bottles. The group-discussion option contradicts the silent-study rule."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Extended Library Hours Trial Discussion",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "transcript": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "prompt": "What is the evening rule for small group rooms?",
+      "options": [
+        "They cannot be booked in the evening",
+        "They are reserved for staff only",
+        "They are available without booking",
+        "Bookings are limited to 45 minutes instead of two hours"
+      ],
+      "answer": 3,
+      "explanation": "Josh states evening bookings are only 45 minutes instead of the usual two hours to share access. The no-booking option fails because booking is still allowed with a shorter limit."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Extended Library Hours Trial Discussion",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "transcript": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "prompt": "What do Mia and Josh plan to do for their evaluation?",
+      "options": [
+        "Count visitors at the weekend",
+        "Compare entry numbers before and after 8 p.m. and interview evening users",
+        "Survey cafe staff about drink sales",
+        "Review book borrowing records from last year"
+      ],
+      "answer": 1,
+      "explanation": "Mia plans to compare door counts before and after 8 p.m. and interview ten evening users about travel and concentration. The weekend-count option fails because weekends are unchanged and not the focus."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Reusable-Cup Return Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "prompt": "According to the passage, why was the reusable-cup scheme introduced?",
+      "options": [
+        "Because recycling single-use cups on campus was difficult",
+        "Because students requested cheaper hot drinks",
+        "Because cafes wanted to increase drink sales",
+        "Because the library requested fewer bins"
+      ],
+      "answer": 0,
+      "explanation": "The passage links most cups being thrown away to the lining making recycling difficult, prompting the alternative. The cheaper-drinks option fails because price is never given as a reason."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Reusable-Cup Return Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "prompt": "What happens when a customer returns a reusable cup?",
+      "options": [
+        "They receive a free hot drink",
+        "They can keep the cup without extra charge",
+        "They receive a discount for bringing their own mug",
+        "They get the deposit back as credit on their student card"
+      ],
+      "answer": 3,
+      "explanation": "The passage states the deposit is returned as cash credit on the student card at collection points. The own-mug discount option describes a different system contrasted in the passage."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Reusable-Cup Return Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "prompt": "What did early figures show about different locations?",
+      "options": [
+        "All cafes had identical results",
+        "The canteen had the largest fall in single-use orders, while the sports kiosk had the smallest",
+        "The library stopped selling drinks completely",
+        "The sports kiosk returned every cup"
+      ],
+      "answer": 1,
+      "explanation": "The passage compares the canteen with the largest drop and the sports kiosk with the smallest because cups were taken to training. The identical-results option contradicts this stated comparison."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Reusable-Cup Return Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "prompt": "What can be inferred from the facilities team note about 60 percent?",
+      "options": [
+        "Washing costs will disappear if rates improve",
+        "Students prefer single-use cups for sport",
+        "The scheme needs high return rates to stay better than single-use cups",
+        "The university will close the canteen collection point"
+      ],
+      "answer": 2,
+      "explanation": "The note says below 60 percent the scheme may cost more and create similar waste, implying high returns are needed for benefit. The close-the-canteen option is unsupported because more points are planned."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Reusable-Cup Return Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "prompt": "What distinction does the final paragraph make?",
+      "options": [
+        "The general claim is that habit and reminders matter most; the chemistry cafe is one example of this",
+        "The claim is that the deposit should be raised; the chemistry cafe proves deposits fail",
+        "The chemistry cafe created the whole scheme; the report only copied it",
+        "The report claims cold drinks are included now; the chemistry cafe opposes this"
+      ],
+      "answer": 0,
+      "explanation": "The report argues success needs normal habit, and the chemistry cafe with reminders and a display board is presented as an example reaching 90 percent. The raised-deposit option fails because the report says reminders matter more than deposit size."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-3-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Museum Volunteer Induction Timetable",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase and clear comparisons of schedules",
+      "prompt": "The table below shows the induction programme for new volunteers at Harbourside Museum on three Saturdays in March 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Group A (12 volunteers) - 7 March: Welcome talk 2 hours, Safety tour 1 hour; 14 March: Visitor communication 2 hours, Ticket desk practice 2 hours; 21 March: Gallery support 3 hours. Group B (15 volunteers) - 7 March: Welcome talk 2 hours, Safety tour 1 hour; 14 March: Visitor communication 3 hours, Ticket desk practice 1 hour; 21 March: Gallery support 2 hours. Group C (10 volunteers) - 7 March: Welcome talk 1 hour, Safety tour 2 hours; 14 March: Visitor communication 2 hours, Ticket desk practice 2 hours; 21 March: Gallery support 3 hours. All groups finished with a 30-minute feedback meeting on 21 March.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Community Language Exchange Attendance",
+      "pathwayStage": "band-6",
+      "focus": "corrected details and linked ideas from numbers",
+      "prompt": "The bar chart data below shows the number of participants in a community language exchange in Riverside Town in 2024 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Data: Spanish-English exchange: 45 participants in 2024, 60 in 2025. Arabic-English exchange: 30 participants in 2024, 38 in 2025. Mandarin-English exchange: 25 participants in 2024, 22 in 2025. Evening sessions were the most popular in both years, with 55 attendees in 2024 and 70 in 2025. Morning sessions had 30 attendees in 2024 and 28 in 2025. Weekend sessions had 15 attendees in 2024 and 22 in 2025.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Campus Peer Mentoring",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas and clear comparison of views",
+      "prompt": "At many colleges, older students act as peer mentors to help new students with study skills and daily life. Some people think peer mentoring should be a required part of college life, while others think it should be voluntary. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Language Exchange",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase and explaining reasons with examples",
+      "prompt": "In some towns, local centres organise a community language exchange where people meet weekly to practise different languages together. Some people believe these exchanges are more useful for learning a language than studying alone at home. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Museums and Volunteers",
+      "pathwayStage": "band-6",
+      "focus": "evaluation of advantages and linked ideas",
+      "prompt": "Many small museums depend on volunteers to welcome visitors and explain exhibitions. Some people argue that museums benefit more from volunteers than volunteers benefit from museums. Do the advantages of museum volunteering for the volunteers themselves outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-3-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Helping and Community Life",
+      "pathwayStage": "band-6",
+      "focus": "short linked answers on familiar topics",
+      "prompt": "Answer in short, natural responses of 2-3 sentences. 1. Do you often help neighbours or classmates? 2. Have you ever done any volunteer work? 3. What kind of community activities are popular where you live? 4. Would you like to join a museum volunteer group in the future? Why or why not? 5. How do people in your area usually learn about local events?"
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Learning Languages",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase and giving corrected details",
+      "prompt": "Answer in short, natural responses of 2-3 sentences. 1. What languages are you learning at the moment? 2. How do you usually practise a new language outside class? 3. Do you prefer studying alone or with a partner? Why? 4. Has your way of learning languages changed compared to last year? 5. Would you join a community language exchange? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Volunteer Induction",
+      "pathwayStage": "band-6",
+      "focus": "clear description with linked ideas",
+      "prompt": "Describe a volunteer induction or first training session you attended or heard about. You should say: • where the induction took place • who led the session and who attended • what activities or information were included • and explain why this induction was useful or memorable. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Helpful Peer or Language Partner",
+      "pathwayStage": "band-6",
+      "focus": "describing a person with comparisons",
+      "prompt": "Describe a peer mentor, tutor, or language partner who helped you. You should say: • who this person is and how you met them • what kind of help they gave you • how often you met or worked together • and explain how this help changed your study or daily life. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Programmes and Mentoring",
+      "pathwayStage": "band-6",
+      "focus": "giving reasons and evaluating ideas",
+      "prompt": "Discuss in more detail, giving reasons and evaluations, not only facts. 1. Why do some community programmes, such as language exchanges, succeed while others stop after a short time? 2. Compared to learning from teachers, what are the advantages and disadvantages of learning from peer mentors? 3. Should museums and colleges offer more support to volunteers and mentors? Why? 4. How can organisers check whether a mentoring programme is really helping people?"
+    }
+  ]
+}

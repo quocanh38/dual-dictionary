@@ -1,0 +1,15 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "c2a9fb003ba2e3f098495a6ab54f644d924a22e6846863d07c078cd70b5260e1",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-5-band-7-writing-02",
+      "issue": "The prompt labels a “student participation rate” but does not explicitly state the denominator (for example, participating students out of all eligible students). The meaning is reasonably inferable in context, so this is a minor clarity improvement rather than a blocker.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": "Full exact-byte review of candidate-final-v2.json: listening script is 329 words and reading passage 405 words; all 10 Listening/Reading questions with every option, key and explanation; all five Writing and five Speaking prompts; and metadata/provenance. All objective keys are uniquely grounded in the passages/script, including staggered treatment timing, placebo limits, missing sales records, indicator evidence and baseline uncertainty. Task 1 synthetic-control data state point estimates, 95% uncertainty ranges, pre-policy fit and donor counts; regional table gives scores out of 100, reporting coverage, participation rates and year-on-year changes (one minor denominator-clarity observation is recorded). Both have complete values and timing/word targets. Task 2 and Speaking prompts appropriately invite qualified evaluation; Speaking includes two Part 1 sets, a Part 2 cue card and two Part 3 sets. Language and reasoning fit band 7. Provenance declares originalContent:true; no official-question or learner-score claims appear. No unresolved critical, major or uncertain issue.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-7-band-6-5-writing-02",
+      "severity": "uncertain",
+      "issue": "Automated gate counters alone cannot measure Percentage of students cycling daily: they count entries, including repeat riders/staff/visitors, without unique-student identity or enrolled-student denominator. Yet this indicator is labelled High reliability. Either change it to bicycle entries per day with count units and coherent values, or specify unique-student identification, daily frequency criterion and student denominator."
+    }
+  ]
+}

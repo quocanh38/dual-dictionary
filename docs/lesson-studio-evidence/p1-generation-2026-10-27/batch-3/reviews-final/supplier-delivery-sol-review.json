@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "b91d11fc8707fda89b60ebba111cb0ffb14d99f1eb25eed0b0765b8e2a658d04",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-sol",
+  "reviewedAt": "2026-10-27T06:44:01.211Z",
+  "note": "Independent AI-assisted editorial inspection of this complete exact final payload, verified against canonical packSha256. Checked all sources, citations, English/Vietnamese glosses, options, explanations and transfer. Rights assessment relies on supplied original-author/distribution declaration; no external authorship verification, human or learner testing. Candidate unchanged.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Checked provenance: named Dual Dictionary project as AI-assisted author, original source declaration and explicit generation/distribution authorization. Reading contains no learner personal data. Rights assessment relies on supplied provenance; no external authorship verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains the exact phrase check the delivery against the order; comparison before signing supports the intended checking sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Comparing delivered goods with the order to see if they match accurately describes the action in s1."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "đối chiếu hàng được giao với đơn đặt hàng is accurate, natural Vietnamese with complete diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains get in touch with the supplier; the missing-item condition supports contacting the supplier."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "to contact someone is the contextual meaning of get in touch with in s2."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "liên lạc với ai đó naturally and accurately translates the contact sense, with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely means comparing goods with the order. b reverses before-signing sequence; c substitutes returning the delivery for comparing it. Citation s1 matches."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Checked all a/b/c explanations and overall explanation: comparison, checking before signing and distinction from returning unopened goods are accurate."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is grammatical and natural. b has we signing instead of we sign; c omits the required determiner before singular count noun order. Citation s1 supplies the target use."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations correctly identify natural a, signing to sign after we in b, and the missing the in c; overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a correctly paraphrases contacting the supplier about the missing item. b means avoiding contact; c means blaming someone. Neither matches get in touch with. Citation s2 matches."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All a/b/c explanations and overall explanation correctly distinguish contact from avoidance and blame without unsupported grammar claims."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural. b uses to me instead of with me; c lacks third-person singular arrives after the parcel. Citation s2 supplies the contact phrase."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Checked every option: with is the correct preposition and parcel requires arrives; overall collocation and agreement explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Office assistant arranging a menu discussion for a team lunch differs in role and purpose from a warehouse supervisor reporting missing goods; s2 remains a valid source reference."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence sample naturally uses get in touch with you and proposes tomorrow morning for menu discussion. Three checklist points cover length, contact sense and new context. Explanation explicitly states self-assessment and no automatic grade."
+    }
+  ],
+  "findings": []
+}

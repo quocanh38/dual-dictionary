@@ -1,0 +1,89 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "e1f96a2b0ba94617965237f40f865c74216757e3ba317d093f78f043000846f1",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-01",
+      "severity": "minor",
+      "issue": "Explanation invents bike-shop selling as a stated job; simply say selling bicycles is not the workshop purpose given."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-speaking-01; speaking-02",
+      "severity": "minor",
+      "issue": "Fixed30–60seconds per Part1 answer is relatively long; short natural responses with a reason/example would be more realistic."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-writing-01",
+      "severity": "minor",
+      "issue": "Clarify whether enjoyment percentages pool all three months or have another respondent base."
+    }
+  ],
+  "coverage": {
+    "scope": "Full candidate-only AI-assisted rereview of 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking. Entire contexts, all 40 options,10 keys/explanations and all productive prompts/metadata read. No prior reviewer report inspected during this pass; no candidate edits or provider calls.",
+    "listening": "Full music reservation reviewed: RoomB/grand piano, corrected Thursday 4–6 slot, two hours/$10, ID/no food/drinks, one quiet guest and booking code. All five keys/options/explanations supported.",
+    "reading": "Full cycle-workshop passage reviewed: prevention purpose, leaders, course practice, Lisa prior helmet belief and confidence claim. All five keys supported; one distractor-explanation embellishment noted separately.",
+    "writing": "Three Task 1 prompts complete: film counts/enjoyment, museum 2020/2025 location changes, six-step bicycle process. Saddle guidance now uses pedal reach/slight knee bend and manufacturer instructions. Two Task 2 prompts coherent;150/20 and 250/40 requirements correct.",
+    "speaking": "Two personal Part 1 sets with overlong 30–60-second guidance noted; film card has four visible cues/preparation/duration; two evaluative Part 3 sets. Appropriate accessible language practice.",
+    "structure": {
+      "wordCounts": {
+        "listening": 331,
+        "reading": 409
+      },
+      "listeningBounds": [
+        300,
+        400
+      ],
+      "readingBounds": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "normalizationFindingsRead": [],
+      "contextCopies": "All repeated contexts string-identical to shared contexts."
+    },
+    "originalityAndProvenance": "Read Baseten Model API/meta-models/muse-spark-open-1026 provenance, originalContent=true and repair metadata. No recognisable official-exam copying or score guarantee found; not an exhaustive plagiarism or empirical-source audit. Fictional data assessed for coherence.",
+    "independence": "Reviewer has previous conversation exposure to earlier versions, but this pass used candidate files only and reread all content; no prior or other-model reports opened.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-5-listening-01",
+      "ielts-meta-wave-8-band-5-listening-02",
+      "ielts-meta-wave-8-band-5-listening-03",
+      "ielts-meta-wave-8-band-5-listening-04",
+      "ielts-meta-wave-8-band-5-listening-05",
+      "ielts-meta-wave-8-band-5-reading-01",
+      "ielts-meta-wave-8-band-5-reading-02",
+      "ielts-meta-wave-8-band-5-reading-03",
+      "ielts-meta-wave-8-band-5-reading-04",
+      "ielts-meta-wave-8-band-5-reading-05",
+      "ielts-meta-wave-8-band-5-writing-01",
+      "ielts-meta-wave-8-band-5-writing-02",
+      "ielts-meta-wave-8-band-5-writing-03",
+      "ielts-meta-wave-8-band-5-writing-04",
+      "ielts-meta-wave-8-band-5-writing-05",
+      "ielts-meta-wave-8-band-5-speaking-01",
+      "ielts-meta-wave-8-band-5-speaking-02",
+      "ielts-meta-wave-8-band-5-speaking-03",
+      "ielts-meta-wave-8-band-5-speaking-04",
+      "ielts-meta-wave-8-band-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

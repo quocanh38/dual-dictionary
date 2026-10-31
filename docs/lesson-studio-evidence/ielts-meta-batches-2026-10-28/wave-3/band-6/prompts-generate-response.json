@@ -1,0 +1,83 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6",
+  "batchId": "wave-3",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:11:26.604Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 499,
+    "outputTokens": 3336,
+    "totalTokens": 3835
+  },
+  "latencyMs": 16546,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Museum Volunteer Induction Timetable",
+        "focus": "paraphrase and clear comparisons of schedules",
+        "prompt": "The table below shows the induction programme for new volunteers at Harbourside Museum on three Saturdays in March 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Group A (12 volunteers) - 7 March: Welcome talk 2 hours, Safety tour 1 hour; 14 March: Visitor communication 2 hours, Ticket desk practice 2 hours; 21 March: Gallery support 3 hours. Group B (15 volunteers) - 7 March: Welcome talk 2 hours, Safety tour 1 hour; 14 March: Visitor communication 3 hours, Ticket desk practice 1 hour; 21 March: Gallery support 2 hours. Group C (10 volunteers) - 7 March: Welcome talk 1 hour, Safety tour 2 hours; 14 March: Visitor communication 2 hours, Ticket desk practice 2 hours; 21 March: Gallery support 3 hours. All groups finished with a 30-minute feedback meeting on 21 March.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Community Language Exchange Attendance",
+        "focus": "corrected details and linked ideas from numbers",
+        "prompt": "The bar chart data below shows the number of participants in a community language exchange in Riverside Town in 2024 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Data: Spanish-English exchange: 45 participants in 2024, 60 in 2025. Arabic-English exchange: 30 participants in 2024, 38 in 2025. Mandarin-English exchange: 25 participants in 2024, 22 in 2025. Evening sessions were the most popular in both years, with 55 attendees in 2024 and 70 in 2025. Morning sessions had 30 attendees in 2024 and 28 in 2025. Weekend sessions had 15 attendees in 2024 and 22 in 2025.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Campus Peer Mentoring",
+        "focus": "linked ideas and clear comparison of views",
+        "prompt": "At many colleges, older students act as peer mentors to help new students with study skills and daily life. Some people think peer mentoring should be a required part of college life, while others think it should be voluntary. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Community Language Exchange",
+        "focus": "paraphrase and explaining reasons with examples",
+        "prompt": "In some towns, local centres organise a community language exchange where people meet weekly to practise different languages together. Some people believe these exchanges are more useful for learning a language than studying alone at home. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Museums and Volunteers",
+        "focus": "evaluation of advantages and linked ideas",
+        "prompt": "Many small museums depend on volunteers to welcome visitors and explain exhibitions. Some people argue that museums benefit more from volunteers than volunteers benefit from museums. Do the advantages of museum volunteering for the volunteers themselves outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Helping and Community Life",
+        "focus": "short linked answers on familiar topics",
+        "prompt": "Answer in short, natural responses of 2-3 sentences. 1. Do you often help neighbours or classmates? 2. Have you ever done any volunteer work? 3. What kind of community activities are popular where you live? 4. Would you like to join a museum volunteer group in the future? Why or why not? 5. How do people in your area usually learn about local events?"
+      },
+      {
+        "task": "Part 1 · Learning Languages",
+        "focus": "paraphrase and giving corrected details",
+        "prompt": "Answer in short, natural responses of 2-3 sentences. 1. What languages are you learning at the moment? 2. How do you usually practise a new language outside class? 3. Do you prefer studying alone or with a partner? Why? 4. Has your way of learning languages changed compared to last year? 5. Would you join a community language exchange? Why or why not?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Volunteer Induction",
+        "focus": "clear description with linked ideas",
+        "prompt": "Describe a volunteer induction or first training session you attended or heard about. You should say: • where the induction took place • who led the session and who attended • what activities or information were included • and explain why this induction was useful or memorable. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 2 · Cue card - A Helpful Peer or Language Partner",
+        "focus": "describing a person with comparisons",
+        "prompt": "Describe a peer mentor, tutor, or language partner who helped you. You should say: • who this person is and how you met them • what kind of help they gave you • how often you met or worked together • and explain how this help changed your study or daily life. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Community Programmes and Mentoring",
+        "focus": "giving reasons and evaluating ideas",
+        "prompt": "Discuss in more detail, giving reasons and evaluations, not only facts. 1. Why do some community programmes, such as language exchanges, succeed while others stop after a short time? 2. Compared to learning from teachers, what are the advantages and disadvantages of learning from peer mentors? 3. Should museums and colleges offer more support to volunteers and mentors? Why? 4. How can organisers check whether a mentoring programme is really helping people?"
+      }
+    ]
+  }
+}

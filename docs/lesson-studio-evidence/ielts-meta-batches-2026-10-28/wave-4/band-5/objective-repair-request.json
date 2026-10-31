@@ -1,0 +1,169 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-4",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Keep each option under 12 words and each explanation to 1–2 sentences; do not repeat source paragraphs in explanations. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage around IELTS 5.0: clear main ideas, direct evidence, familiar academic contexts, and accurate simple explanations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: booking a community sports hall, a first-year student kitchen rota, and a campus lost-property desk. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-5",
+    "batchId": "wave-4",
+    "currentBatch": {
+      "listening": {
+        "title": "Booking the Community Sports Hall",
+        "focus": "Everyday conversation: main ideas, details and a change to a booking",
+        "part": "Part 1",
+        "script": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+        "questions": [
+          {
+            "title": "Question 1",
+            "prompt": "Why does Daniel want to use the small sports hall?",
+            "options": [
+              "For weekly sports training",
+              "For a meeting about parking",
+              "For a birthday party",
+              "For a music lesson"
+            ],
+            "answer": 2,
+            "explanation": "The script says Daniel wants to book the hall 'for a birthday party'. The distractor about sports training fails because sport is the hall type, not the reason for use."
+          },
+          {
+            "title": "Question 2",
+            "prompt": "What is the final booking time?",
+            "options": [
+              "2pm to 5pm",
+              "2pm to 4pm",
+              "4pm to 6pm",
+              "12pm to 2pm"
+            ],
+            "answer": 1,
+            "explanation": "Daniel first says 'from 2 to 5' then corrects to 'from 2 to 4', and staff confirms '2pm to 4pm'. The 2 to 5 option fails because it was changed."
+          },
+          {
+            "title": "Question 3",
+            "prompt": "What must Daniel pay today?",
+            "options": [
+              "A £20 deposit",
+              "The full £50",
+              "£25 for one hour",
+              "Nothing until next month"
+            ],
+            "answer": 0,
+            "explanation": "Staff says 'You pay a £20 deposit today... and the rest on the day.' The full £50 option fails because only part is paid now."
+          },
+          {
+            "title": "Question 4",
+            "prompt": "What is the rule about shoes in the hall?",
+            "options": [
+              "Visitors can wear any shoes",
+              "Children do not need shoes",
+              "Shoes must be left at the desk",
+              "Only sports shoes can be worn"
+            ],
+            "answer": 3,
+            "explanation": "Staff says 'sports shoes must be worn in the hall - no outdoor shoes.' The any-shoes option fails because outdoor shoes are not allowed."
+          },
+          {
+            "title": "Question 5",
+            "prompt": "What must Daniel do to collect the key?",
+            "options": [
+              "Phone Anna on the day",
+              "Come to the main desk early with the booking email",
+              "Pay extra for parking behind the centre",
+              "Bring 40 chairs from home"
+            ],
+            "answer": 1,
+            "explanation": "Staff says 'Come to the main desk... 15 minutes early, and bring your booking email as proof.' The phone option fails because no phone call is mentioned for key collection."
+          }
+        ]
+      },
+      "reading": {
+        "title": "A Student Kitchen Rota That Works",
+        "focus": "Finding main ideas, details and the difference between a claim and an example",
+        "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+        "questions": [
+          {
+            "title": "Question 1",
+            "prompt": "What was the problem at the start?",
+            "options": [
+              "Students did not like cooking together",
+              "The shared kitchen was dirty and messy",
+              "There were no cleaning tools in the flat",
+              "Students argued about shopping money"
+            ],
+            "answer": 1,
+            "explanation": "The passage says dirty plates covered the table, the floor was sticky, and nobody took out rubbish. The cooking-together option fails because cooking together is a later positive result, not the first problem."
+          },
+          {
+            "title": "Question 2",
+            "prompt": "How does the weekly rota work?",
+            "options": [
+              "Everyone does the same job every week",
+              "Six students share five jobs, so one person is free each week",
+              "One student does all five jobs on Monday",
+              "Jobs change every Sunday evening"
+            ],
+            "answer": 1,
+            "explanation": "The passage says there are six students and only five jobs, so one person each week is free, and jobs change every Monday. The same-job option fails because jobs change weekly."
+          },
+          {
+            "title": "Question 3",
+            "prompt": "What is the author's main claim about why the rota works, and what is the example?",
+            "options": [
+              "Claim: swapping weeks is required; Example: rules are short and clear",
+              "Claim: rules are short and clear, not punishment; Example: Mia swapped weeks with Tom",
+              "Claim: fines are the best method; Example: Tom paid money",
+              "Claim: the free week is unfair; Example: Mia cleaned the fridge"
+            ],
+            "answer": 0,
+            "explanation": "The passage states the belief that it works 'because the rules are short and clear, not because students are punished' and gives Mia swapping with Tom as an example. The fines option fails because the group thinks swapping is better than fines."
+          },
+          {
+            "title": "Question 4",
+            "prompt": "What can be inferred from the Sunday evening check?",
+            "options": [
+              "Unfinished work is left until next Monday",
+              "The same person finishes any unfinished job that evening",
+              "A new rota is written every Sunday",
+              "The free student checks the kitchen alone"
+            ],
+            "answer": 1,
+            "explanation": "The passage says if a job is not finished, the same person completes it that evening, so the kitchen starts the new week clean. The left-until-Monday option fails because the text says it is completed that evening."
+          },
+          {
+            "title": "Question 5",
+            "prompt": "What happened after two months of the rota?",
+            "options": [
+              "All arguments completely stopped",
+              "The kitchen was cleaner and students cooked together more",
+              "Students stopped using the rota during exams",
+              "Everyone paid different amounts for cleaning products"
+            ],
+            "answer": 1,
+            "explanation": "The passage says the kitchen is much cleaner and students now cook together more often. The all-arguments-stopped option fails because the text says it did not remove all arguments."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+      "reviewedAt": "2026-10-28T08:30:33.462Z",
+      "reviewScope": "Pre-repair single-model GPT content review; findings are issue-focused; no claim of independent cross-model review.",
+      "candidateSha256": "6ebf1dca28db9213cf6127a7f8e6cdf276aece930f2083264b07ae990c2cce06",
+      "rawResponseSha256": {
+        "objective-generate-response.json": "ccf05b08dec5ea9f5ef246c91b69f52824992a5c14047abf067851434c628c09",
+        "prompts-generate-response.json": "d4986ea27d512fc5e51067e4f9eb24865296cb18c1d652f6fac9dac561155022"
+      },
+      "findings": [
+        {
+          "item": "Reading · Q3 · rota claim and example",
+          "severity": "critical",
+          "issue": "Incorrect answer key: answer index 0 says the claim is swapping weeks and the example is clear rules, which reverses the passage. Option B at index 1 matches the stated claim and Mia/Tom example; the explanation also describes B.",
+          "recommendedRepair": "Set the key to index 1 and make the explanation identify the actual claim and example. Then distribute the five Reading answer indexes across 0–3, keeping every key grounded and explanations aligned."
+        },
+        {
+          "item": "Reading · answer-index coverage",
+          "severity": "medium",
+          "issue": "The five Reading keys use only indexes 0 and 1; the required coverage of all four positions is missing.",
+          "recommendedRepair": "Reorder suitable options and update indexes/explanations so the five questions cover 0, 1, 2, and 3 without changing their meaning."
+        }
+      ]
+    }
+  }
+}

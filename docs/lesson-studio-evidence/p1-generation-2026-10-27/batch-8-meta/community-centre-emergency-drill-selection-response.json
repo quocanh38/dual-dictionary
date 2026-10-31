@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "fire drill",
+        "meaningEn": "a practice evacuation for a fire emergency",
+        "meaningVi": "buổi diễn tập phòng cháy chữa cháy",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "assembly point",
+        "meaningEn": "a designated safe place where people gather during an evacuation",
+        "meaningVi": "điểm tập trung an toàn",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 537,
+    "outputTokens": 994,
+    "totalTokens": 1531
+  },
+  "status": 200,
+  "latencyMs": 7169,
+  "model": "muse-spark-1.3"
+}

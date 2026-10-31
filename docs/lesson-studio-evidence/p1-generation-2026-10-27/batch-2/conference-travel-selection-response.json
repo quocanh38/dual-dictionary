@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "make arrangements for",
+        "meaningEn": "to plan and organize something so it can happen",
+        "meaningVi": "sắp xếp, tổ chức cho việc gì",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "provide evidence of",
+        "meaningEn": "to supply proof or details showing that something is true or relevant",
+        "meaningVi": "cung cấp bằng chứng về việc gì",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 390,
+    "outputTokens": 952,
+    "totalTokens": 1342
+  },
+  "status": 200,
+  "latencyMs": 10397,
+  "model": "muse-spark-1.3"
+}

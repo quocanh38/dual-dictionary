@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "348fbf3cd5425a65f4c4ee2e45b85bfdf262bbe8402303fb40e0d5322b0c2930",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 321/412 words; all keys and explanations are uniquely supported and answer positions are balanced. River-sampling inference is properly qualified and the 4.5 mg/L modeled values are explicitly uncertain against an unobserved flood peak. Task 1 units and limitations are visible: water totals/meter coverage/fault estimate, bird counts/observer hours/habitat changes/weather/double-count risk, and conference waste totals/recycling rates/attendees. The category totals reconcile for all three years. Writing and Speaking minimums/timing and Part 2/3 fit are complete. Provenance states original content; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, all 10 objective questions/options/keys/explanations, all three Task 1 data sets and unit/denominator/limitation checks, all five Writing prompts/timing and all five Speaking prompts including cue-card completeness and part fit.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "945bf46a4f85e4548c757055e8020edd13a4ef35dc8cf541ac6a777ef670fdd3",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews",
+  "reviewedAt": "2026-10-27T08:54:25.903Z",
+  "note": "Two independent AI-assisted reviewers evaluated this exact payload hash against the matching source row and schema. Evidence synthesizes both reviews and a local consistency check. This is not human or learner validation. Rights/authorship are supported only by local declarations and are not independently verified. Terra route: gpt-5.6-terra (runtime label Codex GPT-6); Luna route was requested as gpt-6-luna but runtime exposed only broad GPT-6 label.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both independent reviewers checked the local AI-assisted original-source and distribution-rights declaration; no learner PII is visible. This is a declaration check only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “fill in the online form” occurs verbatim in cited s3 and refers to entering required registration information."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss accurately explains completing a form by writing the required details."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “điền vào biểu mẫu trực tuyến” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “waiting list” occurs verbatim in cited s5, for applicants waiting until a class place opens."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss accurately describes people waiting to be offered an available place."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “danh sách chờ” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as completing the form; deleting it or forwarding it without filling it in are not equivalent."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all option explanations accurately contrast completing, deleting and forwarding an incomplete form."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only grammatical option; b needs “to reserve” and c needs “has filled.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the infinitive and present-perfect corrections are accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the only description of applicants waiting for a place; completed courses and shared tools are unrelated."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the option explanations accurately distinguish waiting applicants from course completers and equipment."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b requires object pronoun “us” and c requires the idiom “the waiting list.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the object-pronoun and article explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from registering for pottery lessons to helping a new colleague request a staff lunch card."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the prompt explicitly requires “fill in the online form,” the model is a natural concise instruction and the checklist matches the task; self-assessed without automatic grading."
+    }
+  ],
+  "findings": []
+}

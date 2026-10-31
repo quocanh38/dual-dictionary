@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "311d151c245c2ebd3abc94677b3f9eb61452338b6758ceea29c4090036bdc433",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing two independent model-route reviews",
+  "reviewedAt": "2026-10-27T08:18:31Z",
+  "note": "Two independent reviewers examined this exact payload hash, the corresponding source row and the lesson schema. Both reported 17/17 criteria PASS with no critical or uncertain findings. Review is AI-assisted editorial review, not human or learner review. Rights/authorship are supported only by local declarations and were not independently verified. Reviewer route requests: Luna (gpt-6-luna requested; runtime exposed only GPT-6 and did not expose configured route) and Terra (gpt-5.6-terra requested and confirmed; runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers checked the local source/candidate declaration: AI-assisted original, authorized for distribution, no copied exam/external text or learner PII; no PII found. Declaration only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “in advance” occurs verbatim in cited source sentence s2 and fits calling before the desired appointment time."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “before a particular time or event” is accurate for the call made at least one day ahead."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “trước một thời điểm hoặc sự kiện đã nêu” is natural, correctly accented and contextually accurate."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “routine appointment” occurs verbatim in s6 and is contrasted with urgent symptoms."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “a scheduled non-urgent visit at the clinic” accurately captures the contextual distinction."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “cuộc hẹn khám thông thường, không khẩn cấp” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the unique before-the-appointment notice meaning; a is after the visit and c is during it."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm each option explanation and key accurately distinguish notice before the event from after/during it."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only grammatical and natural use; b misuses “advanced” and c uses the invalid “for to arrive.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the corrections are specific and accurate; v2 accurately says advance ordering helps supplies arrive before the workshop."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the unique non-urgent scheduled visit. Luna noted “with a doctor” is narrower than the provider-unspecified source, but plausible and not ambiguous."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the explanations distinguish urgent care, a routine scheduled clinic visit, and an administrative rescheduling call."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only grammatical option; b has an article/plural mismatch and c omits an article before a singular count noun."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the article and number corrections are accurate. Luna noted “after a routine” could be phrased more clearly as “after the article ‘a’”; this does not change the rule or answer."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer moves from clinic rescheduling to colleagues confirming attendance for workplace training materials."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the model is idiomatic and uses the target phrase; the short response and self-check are usable and are not automatically graded."
+    }
+  ],
+  "findings": [
+    {
+      "id": "minor-provider-specificity-q3",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "Luna noted q3 option b says “with a doctor” while the source does not specify a provider, and two small prompt/explanation phrasings could be clearer (“after a routine” → “after the article a”; q1 prompt punctuation). Terra found no issue. Both reviewers still passed all 17 criteria and confirmed a unique correct answer; the remaining scope note is minor and does not affect meaning, safety or offline use."
+    }
+  ]
+}

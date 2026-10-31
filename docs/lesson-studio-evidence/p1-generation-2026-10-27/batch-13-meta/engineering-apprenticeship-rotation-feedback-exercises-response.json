@@ -1,0 +1,164 @@
+{
+  "result": {
+    "title": "Taking on Tasks and Working Towards Goals at Work",
+    "objective": "Learners will understand and correctly use takes on and work towards to describe responsibilities and steady progress toward workplace goals.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s2, what does 'takes on' mean when the apprentice 'takes on supervised tasks that match their current skills'?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means the apprentice accepts and starts doing supervised tasks that fit their skills.",
+            "explanation": "This is correct because it matches the meaning of accepting and starting a responsibility."
+          },
+          {
+            "id": "b",
+            "text": "It means the apprentice gives the supervised tasks to another trainee to do.",
+            "explanation": "This is wrong because giving tasks to someone else is the opposite of accepting them."
+          },
+          {
+            "id": "c",
+            "text": "It means the apprentice only watches the supervised tasks without doing them.",
+            "explanation": "This is wrong because watching without doing does not involve accepting responsibility."
+          },
+          {
+            "id": "d",
+            "text": "It means the apprentice delays the supervised tasks until a later time.",
+            "explanation": "This is wrong because delaying tasks does not mean starting them now."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a correctly paraphrases takes on as accepting and starting tasks in s2."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'takes on' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "After her safety training, she takes on challenging projects in the design team.",
+            "explanation": "This is correct because the verb form and collocation takes on + object are natural."
+          },
+          {
+            "id": "b",
+            "text": "After her safety training, she take on challenging projects in the design team.",
+            "explanation": "This is wrong because take should be corrected to takes to agree with she."
+          },
+          {
+            "id": "c",
+            "text": "After her safety training, she takes on to lead challenging projects in the design team.",
+            "explanation": "This is wrong because to lead should be corrected to leading after takes on."
+          },
+          {
+            "id": "d",
+            "text": "After her safety training, she takes on with challenging projects in the design team.",
+            "explanation": "This is wrong because the extra preposition with should be removed after takes on."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a uses takes on with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s6, what does 'work towards' mean when trainees are 'encouraged to work towards a professional certificate'?",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means the trainees make steady efforts over time to earn a professional certificate.",
+            "explanation": "This is correct because it describes gradual effort to achieve a goal."
+          },
+          {
+            "id": "b",
+            "text": "It means the trainees receive a professional certificate immediately without effort.",
+            "explanation": "This is wrong because immediate receipt without effort ignores steady progress."
+          },
+          {
+            "id": "c",
+            "text": "It means the trainees avoid trying to earn a professional certificate.",
+            "explanation": "This is wrong because avoiding a goal is the opposite of working toward it."
+          },
+          {
+            "id": "d",
+            "text": "It means the trainees give up their attempt to earn a professional certificate.",
+            "explanation": "This is wrong because giving up means stopping effort, not continuing it."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a correctly paraphrases work towards as steady effort to achieve a goal."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'working towards' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Our team is working towards launching the new product by December.",
+            "explanation": "This is correct because working towards is correctly followed by the gerund launching."
+          },
+          {
+            "id": "b",
+            "text": "Our team is working towards launch the new product by December.",
+            "explanation": "This is wrong because launch should be corrected to launching after towards."
+          },
+          {
+            "id": "c",
+            "text": "Our team is work towards launching the new product by December.",
+            "explanation": "This is wrong because work should be corrected to working after is."
+          },
+          {
+            "id": "d",
+            "text": "Our team is working towards for launching the new product by December.",
+            "explanation": "This is wrong because the extra preposition for should be removed after towards."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a uses working towards with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are writing a short personal message to a friend about your fitness goal. Write 2-3 sentences describing your steady efforts and use the phrase work towards naturally.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "sampleAnswer": "I have started running every morning before work. I am working towards completing my first half-marathon in spring.",
+        "selfCheck": [
+          "I wrote 2-3 sentences as a personal message to a friend about a fitness goal.",
+          "I described steady efforts and used working towards naturally with correct grammar.",
+          "My message is clear, natural, and different from the workplace training context."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1066,
+    "outputTokens": 5872,
+    "totalTokens": 6938
+  },
+  "status": 200,
+  "latencyMs": 19023,
+  "model": "muse-spark-1.3"
+}

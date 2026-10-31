@@ -1,0 +1,53 @@
+{
+  "manifest": {
+    "startedAt": "2026-10-27T09:03:03.070Z",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "requestParameters": {
+      "model": "muse-spark-1.3",
+      "temperature": 0.2,
+      "maxOutputTokens": 10000,
+      "reasoningEffort": "medium"
+    },
+    "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+    "sourcesSha256": "fef0597ea0d2158ec935d5c4c0b131fa0c2bc79728d39bff831afabe86f2e677",
+    "results": []
+  },
+  "sources": [
+    {
+      "sourceId": "university-photo-archive-catalogue",
+      "purpose": "development",
+      "title": "Cataloguing Photographs for a University Archive",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "A university archive is inviting students to help catalogue photographs donated by local businesses. Students work in pairs and enter only details visible in each image, such as a shop sign or a date printed on the back. If a photograph shows a familiar street but no exact address, the catalogue entry records the uncertainty rather than guessing. Visitors can use a searchable index to find a topic and then open the original scan for context. Records with known dates appear in chronological order, while uncertain dates are kept in a separate group. When students mention a photograph in their notes, they refer to its catalogue number so another reader can locate the same item. Staff will check a sample of entries before the collection becomes available online.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "sourceType": "original",
+      "topic": "academic",
+      "levelEstimate": "B2"
+    },
+    {
+      "sourceId": "community-arts-open-day-volunteers",
+      "purpose": "development",
+      "title": "Volunteers at a Community Arts Open Day",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "The Hillview Arts Centre will hold an open day next month so residents can see its new workshop rooms. Volunteers may take part in a short welcome session before visitors arrive. One coordinator is in charge of the welcome desk, while other volunteers guide people to the printmaking and pottery rooms. The centre will provide signs, name badges and a simple room map. Volunteers who cannot attend the session can read the same instructions in the shared folder. The event is free, but visitors need to register at the entrance because each workshop has limited space. After the open day, the team will meet briefly to note which signs were easy to follow and which rooms need clearer directions.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "sourceType": "original",
+      "topic": "workplace",
+      "levelEstimate": "B1"
+    },
+    {
+      "sourceId": "volunteer-rota-schedule-change",
+      "purpose": "development",
+      "title": "Updating a Volunteer Rota",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "After reviewing the volunteer rota, the project coordinator decided to bring forward the equipment check by one day because the meeting room is booked on Friday. The change does not affect the public event, which remains on Sunday. If delivery of the display boards is delayed, the team may put off the optional walkthrough until more volunteers are available. The coordinator will confirm any change by email, so volunteers should not rely on an old printed schedule. Anyone unable to attend can suggest another time, but the shared calendar will be updated only after the venue approves it. Volunteers are asked to reply by Wednesday so the coordinator can arrange enough people for each task.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "sourceType": "original",
+      "topic": "workplace",
+      "levelEstimate": "B2"
+    }
+  ]
+}

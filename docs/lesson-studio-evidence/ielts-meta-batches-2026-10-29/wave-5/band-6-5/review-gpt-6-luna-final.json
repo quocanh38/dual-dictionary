@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "c5be88754dc7fc822c49f02403cc7530f01e3cff7374cb258b5b44986cf912f3",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte review of candidate-final-v2.json: listening script is 315 words and the reading passage 408 words; all 10 Listening/Reading questions with every option, key and explanation; all five Writing and five Speaking prompts; and metadata/provenance. Confirmed initial Listening 04 mis-key is resolved: answer index 1 selects Eastfield’s 35% response rate, matching both script and explanation. Confirmed answer-position normalization issue is resolved: Listening keys use positions [2,0,3,1,2] and Reading keys [0,1,2,3,0], covering all four choices in each set. Remaining objective answers are uniquely supported; distractors and explanations are accurate. Task 1 shade table includes three schools, all options, USD costs, years to shade and annual maintenance; downloads table states thousands, three years, user groups and the fixed set of 40 datasets. All writing prompts state word targets and timing. Speaking has two Part 1 sets, one complete Part 2 cue card and two Part 3 sets. Language and evidence demands suit this stage. Provenance declares originalContent:true; no official-question or learner-score claims appear. No unresolved critical, major or uncertain issue.",
+  "reviewerType": "AI-assisted"
+}

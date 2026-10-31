@@ -1,0 +1,88 @@
+{
+  "editor": "Codex coding assistant — AI-assisted editor",
+  "newMetaCalls": 0,
+  "changes": [
+    {
+      "path": "/lessons/0/exercises/0/options/0/text",
+      "before": "It means to monitor and record customer requests over time.",
+      "after": "It means to monitor customer requests and stay informed about them over time."
+    },
+    {
+      "path": "/lessons/0/exercises/0/options/0/explanation",
+      "before": "This is correct because it matches monitoring and recording information over time.",
+      "after": "Correct: The team monitors customer requests to stay aware of them; making written records is one possible method, not part of the required meaning."
+    },
+    {
+      "path": "/lessons/0/exercises/0/options/2/explanation",
+      "before": "This is wrong because finishing quickly without notes does not involve ongoing monitoring.",
+      "after": "Wrong: Completing requests is different from monitoring them over time; the phrase does not require written notes."
+    },
+    {
+      "path": "/lessons/0/exercises/0/explanation",
+      "before": "Only option A reflects monitoring and recording requests during the trial.",
+      "after": "Keep track of means monitoring something to stay informed about it, as the team does with customer requests."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/1/explanation",
+      "before": "This is correct because keep track of naturally collocates with recording hours over time.",
+      "after": "Correct: He monitors his working hours; the spreadsheet is one way of keeping track of them."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/2/text",
+      "before": "He keeps track of his working hours in a spreadsheet to forget them immediately.",
+      "after": "He keeps track his working hours in a spreadsheet every week."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/2/explanation",
+      "before": "This is wrong because the purpose to forget them contradicts the meaning of monitoring.",
+      "after": "Wrong: The fixed expression is keep track of something; of is missing before his working hours."
+    },
+    {
+      "path": "/lessons/0/exercises/1/explanation",
+      "before": "Only option B uses the correct collocation and logical purpose.",
+      "after": "Only b uses keep track of; a substitutes on for of, and c omits of."
+    },
+    {
+      "path": "/lessons/0/exercises/3/options/2/text",
+      "before": "Please take into account the travel time when you ignore your schedule completely.",
+      "after": "Please take account into the travel time when you plan your commute."
+    },
+    {
+      "path": "/lessons/0/exercises/3/options/2/explanation",
+      "before": "This is wrong because ignoring your schedule contradicts the idea of considering something carefully.",
+      "after": "Wrong: The fixed expression has the order take into account, not take account into."
+    },
+    {
+      "path": "/lessons/0/exercises/3/explanation",
+      "before": "Only option A uses the correct form with a logical planning context.",
+      "after": "Only a uses take into account with the correct order and without an extra of."
+    },
+    {
+      "path": "/lessons/0/targets/0/meaningVi",
+      "before": "theo dõi và ghi lại thông tin theo thời gian",
+      "after": "theo dõi để nắm được thông tin cập nhật về điều gì"
+    },
+    {
+      "path": "/lessons/0/targets/0/meaningEn",
+      "before": "to monitor and record information over time",
+      "after": "to stay informed about something by monitoring it over time"
+    },
+    {
+      "path": "/review/note",
+      "before": "Reviewed by coding assistant; no independent human review. See quality-review.md.",
+      "after": "Candidate prepared for the hackathon quality process. Original Meta output retained separately; corrections are coding-assistant editorial changes, not another Meta response. No independent human review."
+    },
+    {
+      "path": "/review/checks/rights",
+      "before": true,
+      "after": false
+    },
+    {
+      "path": "/review/checks/meaning",
+      "before": true,
+      "after": false
+    }
+  ],
+  "originalSha256": "759db70b95cb0ca7b08c7f2253d2005664b629fcc9ffbc2fc4a4a6fe527362dc",
+  "correctedSha256": "0cf868d01f48a08b034eacb1aa0c8ba9602dd05a88cb8459790fe9ab5707389f"
+}

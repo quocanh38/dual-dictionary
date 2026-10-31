@@ -1,0 +1,222 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-10-27T04:47:37.171Z",
+  "appFileSha256": "99bb718be65312518670889c3639984f68912f4bd538953ae6eb68bd27219145",
+  "runtimeSha256": {
+    "lessons/app.js": "99bb718be65312518670889c3639984f68912f4bd538953ae6eb68bd27219145",
+    "lessons/storage.js": "12ca575784ba44cc0238b7fe6a5834d5b771314df390a7e268b789a6157e0684",
+    "lessons/library.js": "114310d2729db2f1dc56fe55a72d3fe3cd0c46eab98f31cbb151c403923b0c82",
+    "sw.js": "3b1ce086ac818f315c49c764605e525c6a55ffcc792b13a17c71febc450460da"
+  },
+  "physicalDevice": false,
+  "device": "Chrome mobile emulation 390x844",
+  "realProviderRequests": 0,
+  "blockedExternalRequests": [],
+  "uncaughtExceptions": [],
+  "results": [
+    {
+      "release": "release-1-v4",
+      "packId": "pack-7b561abd-993e-415e-9304-0baa103ddf2c",
+      "version": 1,
+      "payloadSha256": "011e985f434bee1e080a6dc8174570d01db1fc695ce0a5f09679f1f80b73d3df",
+      "packFileSha256": "30aec96a5568a6e07314ec7dbfa8596d706f949ec2fcfbbb0af2b403ec5e85c0",
+      "mode": "clean",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-1-v4",
+      "packId": "pack-7b561abd-993e-415e-9304-0baa103ddf2c",
+      "version": 1,
+      "payloadSha256": "011e985f434bee1e080a6dc8174570d01db1fc695ce0a5f09679f1f80b73d3df",
+      "packFileSha256": "30aec96a5568a6e07314ec7dbfa8596d706f949ec2fcfbbb0af2b403ec5e85c0",
+      "mode": "preseeded",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-2-v4",
+      "packId": "pack-fd14f5d3-1f53-4f59-b9a4-781b7f2e9856",
+      "version": 1,
+      "payloadSha256": "750cc3cdd654b854fe38a09da6639116efa5cac6748e520bebc1c8168da48d35",
+      "packFileSha256": "65c68b425c87a5a234885e9346646d3c1f1fca3fa3c8bdf6abbecf04ca52156e",
+      "mode": "clean",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-2-v4",
+      "packId": "pack-fd14f5d3-1f53-4f59-b9a4-781b7f2e9856",
+      "version": 1,
+      "payloadSha256": "750cc3cdd654b854fe38a09da6639116efa5cac6748e520bebc1c8168da48d35",
+      "packFileSha256": "65c68b425c87a5a234885e9346646d3c1f1fca3fa3c8bdf6abbecf04ca52156e",
+      "mode": "preseeded",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-3-v4",
+      "packId": "pack-c765f334-1b00-43c2-a398-d63570e04d21",
+      "version": 1,
+      "payloadSha256": "a8d2f90f5dc11f86ae27c4290e77f19ddecff14fa0318d81480ed4a4a52528ee",
+      "packFileSha256": "c149af497ae0736340342207c9858d9c43c497f3bc7357537655e1a2c5434332",
+      "mode": "clean",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-3-v4",
+      "packId": "pack-c765f334-1b00-43c2-a398-d63570e04d21",
+      "version": 1,
+      "payloadSha256": "a8d2f90f5dc11f86ae27c4290e77f19ddecff14fa0318d81480ed4a4a52528ee",
+      "packFileSha256": "c149af497ae0736340342207c9858d9c43c497f3bc7357537655e1a2c5434332",
+      "mode": "preseeded",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-campus-water-study",
+      "packId": "pack-898c63a0-049e-45cd-bd59-bd890e81691c",
+      "version": 1,
+      "payloadSha256": "4703a2b464ec0dbb71897dba1c3df027c332374c19872ac160a58afea1bd5ccd",
+      "packFileSha256": "136c1ad0e220648c56dc22db6177f601010ef11d2637fb914bb31cf119286d0e",
+      "mode": "clean",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-campus-water-study",
+      "packId": "pack-898c63a0-049e-45cd-bd59-bd890e81691c",
+      "version": 1,
+      "payloadSha256": "4703a2b464ec0dbb71897dba1c3df027c332374c19872ac160a58afea1bd5ccd",
+      "packFileSha256": "136c1ad0e220648c56dc22db6177f601010ef11d2637fb914bb31cf119286d0e",
+      "mode": "preseeded",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-hotel-shift-handover",
+      "packId": "pack-71baf4b5-06fa-42f1-97b8-e24796a4dd22",
+      "version": 1,
+      "payloadSha256": "abf826498ab1908545fb6114bf0b72ebff3462542b61bacf16a1a720cad554ce",
+      "packFileSha256": "fee0dbdd77fcbd035178df5ce79eb61600d07d5850bfe5df3b7aa3785e2f7be8",
+      "mode": "clean",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-hotel-shift-handover",
+      "packId": "pack-71baf4b5-06fa-42f1-97b8-e24796a4dd22",
+      "version": 1,
+      "payloadSha256": "abf826498ab1908545fb6114bf0b72ebff3462542b61bacf16a1a720cad554ce",
+      "packFileSha256": "fee0dbdd77fcbd035178df5ce79eb61600d07d5850bfe5df3b7aa3785e2f7be8",
+      "mode": "preseeded",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-workshop-safety-plan",
+      "packId": "pack-d15f0d67-d556-4420-bde1-f31155ac1e79",
+      "version": 1,
+      "payloadSha256": "1257e16f113eff56138952ae5b0a6ed4d752b617187e0b74628f63c48ab8c887",
+      "packFileSha256": "54214b1a1ac7cd513c189bd518b47dd359a54a85b162510a52cea1a44f56c984",
+      "mode": "clean",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    },
+    {
+      "release": "release-workshop-safety-plan",
+      "packId": "pack-d15f0d67-d556-4420-bde1-f31155ac1e79",
+      "version": 1,
+      "payloadSha256": "1257e16f113eff56138952ae5b0a6ed4d752b617187e0b74628f63c48ab8c887",
+      "packFileSha256": "54214b1a1ac7cd513c189bd518b47dd359a54a85b162510a52cea1a44f56c984",
+      "mode": "preseeded",
+      "status": "PASS",
+      "checks": [
+        "q1: every wrong option blocked / correct advanced",
+        "q2: every wrong option blocked / correct advanced",
+        "q3: every wrong option blocked / correct advanced",
+        "q4: every wrong option blocked / correct advanced",
+        "q5: transfer fill/model/all checklist"
+      ],
+      "vaultAndReview": "UI links, exact saved meanings/source, dedup schedule/log, reload/offline PASS"
+    }
+  ]
+}

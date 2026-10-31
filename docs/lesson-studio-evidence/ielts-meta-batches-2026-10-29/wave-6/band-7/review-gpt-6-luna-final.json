@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e376d93a520d586ebfd4181838cd0af143fa1879d292eee658f446d9fce8de9b",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 328/455 words. All 10 objective items have uniquely supported keys and sound explanations; the fixed-sensor benchmark in Reading now directly supports the claim that the volunteer average understated exposure. Writing Task 1 tables give complete values, units and comparison details; wetland prompt cautions against causality. All Writing timing/word minimums and Speaking part/cue-card requirements are appropriate. Original-content provenance is stated; no official-item or score claims. Minor observation: heat-map passage gives a 140-volunteer count and readout shares but does not state number of measurements/readings, so avoid inferring precision from volunteer count."
+  ],
+  "coverage": "Full review of metadata/provenance, listening and reading contexts, all objective prompts/options/keys/explanations, both Task 1 datasets/units/timing, all five Writing prompts and all five Speaking prompts including cue-card completeness and Part 3 fit.",
+  "reviewerType": "AI-assisted"
+}

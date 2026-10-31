@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Fair Comparisons and Provisional Estimates in Field Research",
+    "objective": "Learners will interpret fair comparison and provisional estimate in context and use them accurately in new academic situations.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In the sentence 'To make a fair comparison, observers visit both routes at the same time on several clear days,' what does 'fair comparison' mean?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means comparing the two routes under equal conditions so the results can be compared fairly.",
+            "explanation": "Correct because it matches the idea of visiting both routes at the same time."
+          },
+          {
+            "id": "b",
+            "text": "It means choosing the route that feels more pleasant on a hot afternoon.",
+            "explanation": "Wrong because the context is about equal conditions, not about personal preference."
+          },
+          {
+            "id": "c",
+            "text": "It means visiting each route only once to finish the survey quickly.",
+            "explanation": "Wrong because the context describes visits at the same time on several days, not a single quick visit."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a captures equal conditions for a fair result."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'fair comparison' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "To make a fair comparison, the team tested both laptops under same conditions.",
+            "explanation": "Wrong because 'same conditions' needs 'the' → 'the same conditions'."
+          },
+          {
+            "id": "b",
+            "text": "To make a fair comparison, the team tested both laptops under the same conditions.",
+            "explanation": "Correct because it describes equal conditions with correct grammar."
+          },
+          {
+            "id": "c",
+            "text": "To make a fair comparisons, the team tested both laptops under the same conditions.",
+            "explanation": "Wrong because 'a fair' requires the singular noun → 'comparison'."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only option b is grammatically correct and describes equal conditions."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In the sentence 'The first set of measurements is a provisional estimate because one sensor stopped working during the second visit,' what does 'provisional estimate' mean?",
+        "sourceSentenceIds": [
+          "s4"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means a final exact result that will not be changed later.",
+            "explanation": "Wrong because the result is temporary due to missing data, not final."
+          },
+          {
+            "id": "b",
+            "text": "It means a method for repairing a broken sensor during fieldwork.",
+            "explanation": "Wrong because the phrase describes an approximate value, not a repair method."
+          },
+          {
+            "id": "c",
+            "text": "It means a temporary approximate value that may be changed after more information is checked.",
+            "explanation": "Correct because the team must check notes before calculating the average."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Only option c captures the temporary value that may be revised."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'provisional estimate' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s4"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The provisional estimate of the repair cost may change after the inspection is finished.",
+            "explanation": "Correct because it presents a temporary value with correct grammar."
+          },
+          {
+            "id": "b",
+            "text": "They provided provisional estimate of the repair cost before checking all the data.",
+            "explanation": "Wrong because the singular noun needs 'a' → 'a provisional estimate'."
+          },
+          {
+            "id": "c",
+            "text": "The provisional estimate of the repair cost may changes after the inspection is finished.",
+            "explanation": "Wrong because the modal 'may' needs the base verb → 'change'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a uses the phrase with correct grammar to describe a changeable value."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are the treasurer of a school club planning a charity fair. Write 2-3 sentences to update members on expected costs and explain why the figure might change. Use the phrase 'provisional estimate'.",
+        "sourceSentenceIds": [
+          "s4"
+        ],
+        "sampleAnswer": "Our provisional estimate for the fair is about $300 for food and decorations. We will confirm the final amount after we receive all the price quotes.",
+        "selfCheck": [
+          "My response has 2-3 sentences.",
+          "I used the phrase 'provisional estimate'.",
+          "I explain why the figure might change."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1024,
+    "outputTokens": 7211,
+    "totalTokens": 8235
+  },
+  "status": 200,
+  "latencyMs": 34324,
+  "model": "muse-spark-1.3"
+}

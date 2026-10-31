@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "05e4fcd193fa9045fbfbaf86f34f8bcd54c7803d81afa765f1fe12102fa26fae",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:29:11Z",
+  "note": "Independent full-pack review of the exact packSha256 above: checked source sentences, both target meanings in EN/VI, every question and option explanation, answer uniqueness, and transfer. Rights/authorship and permission were checked only against local declarations; they were not independently verified. B1/B2 labels are estimates, not calibrated levels. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The frozen source manifest and pack declare an AI-assisted original passage, distribution authorization, and no learner personal data; declarations are consistent. This checks project-local claims only and does not independently verify authorship or rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“run low” occurs verbatim in s3 (“soap or cooking oil starts to run low”); the supplier contact before the weekend supports a low/soon-to-be-needed stock sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“to become nearly empty and need more soon” matches the stock-level meaning in s3; it does not reduce the phrase to literal running or price reduction."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“sắp hết, gần cạn” is natural Vietnamese for the soap/oil supply becoming nearly empty, with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“top up” occurs in s4 (“top up the display bottles from sealed containers”); this supports adding more liquid to the bottles."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The gloss describes the contextual action of adding liquid to refill bottles. “to the top again” is somewhat narrower than all uses of “top up,” but fits the stated bottle-refilling context and does not mislead here."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“châm thêm cho đầy lại” naturally describes adding liquid to refill the display bottles and includes Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone gives the contextual near-empty stock sense; B interprets “run” literally as movement, and C confuses stock level with price reduction. No distractor is plausible in the stated soap/oil context."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A’s explanation connects s3 to nearly finished stock. B and C explanations distinguish stock quantity from movement and price. The stem explanation is consistent with s3; “nearly empty” is appropriately supported."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is grammatical and natural (“paper is running low”). B has the nonstandard “low of stock” construction; C mismatches singular “paper” with “are.” These are objective issues, so A is unique."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation identifies its relevant point: A uses “running low” for a dwindling supply; B’s “low of stock” is not the idiomatic construction (compare “low on stock”); C has subject–verb disagreement. No broad claim that “run low” always requires “on” is made."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone describes adding liquid to refill the bottles; B describes closing with a lid and C placing bottles high up. Neither distractor fits “top up” in s4."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A’s rationale matches s4’s refilling from sealed containers; B and C accurately distinguish closure and shelf placement from adding liquid. The general explanation “refill the bottles” is supported."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is a natural request. B redundantly repeats “up” after the phrasal verb; C incorrectly adds -s after modal “could.” No alternative is grammatical and natural as written."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations correctly identify the duplicated particle in B and the modal/base-form error in C; A’s refill interpretation is natural for a water bottle."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source is a volunteer’s shop routine; the transfer changes role to a guest writing to a host and purpose to offering picnic preparation help. This is a meaningful change."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The sample is a natural three-sentence note, uses “top up” correctly for water bottles, and offers help. The checklist checks length, target use, and changed situation; it invites self-assessment, not automatic grading."
+    }
+  ],
+  "findings": []
+}

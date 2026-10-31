@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "0aa86ee4abf77d02fec7859769daba5befecda78e10df9a0771311f5ad28f53c",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 338/444 words. All 10 objective answers are uniquely supported; explanations correctly handle corrected sensor count, false-alert/missed-event distinction, limits of generalisation, claim/example distinction and qualified inference. Solar-output calculations are consistent (summer about 5% above; winter about 40% below) and methodological caveats are present. Funding table is explicit in USD/status/conditions with a $3,300 gap to estimated project cost; the survey gives n=1,200 invitations, n=300 respondents and sample-composition limits. All Writing targets/timing and Speaking prompts, parts and cue-card points are complete. Provenance says original content; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts and word counts, all objective prompts/options/keys/explanations, both Task 1 datasets and numerical/unit/denominator checks, all five Writing prompts/timing, and all five Speaking prompts including part fit and cue-card completeness.",
+  "reviewerType": "AI-assisted"
+}

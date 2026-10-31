@@ -1,0 +1,470 @@
+[
+  {
+    "phrase": "funny bone",
+    "pos": "noun phrase (usually singular; informal)",
+    "hideOvdp": true,
+    "note": "Funny bone là vùng khuỷu tay nơi dây thần kinh rất nhạy chạy gần bề mặt; va vào đó thường gây cảm giác tê buốt. Tên gọi gây hiểu nhầm vì phần nhạy cảm không phải một chiếc xương đặc biệt; cụm cũng xuất hiện trong thành ngữ hit somebody’s funny bone.",
+    "senses": [
+      {
+        "m": "vùng khuỷu tay dễ tê buốt khi va chạm",
+        "pat": "hit/bang your funny bone · the nerve near the funny bone",
+        "ex": [
+          [
+            "I hit my funny bone against the desk and felt a sharp tingle.",
+            "Tôi va khuỷu tay vào bàn và cảm thấy tê buốt."
+          ],
+          [
+            "She rubbed her funny bone after bumping it on the doorframe.",
+            "Cô xoa khuỷu tay sau khi va vào khung cửa."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "fusion bomb",
+    "pos": "noun phrase (countable; also thermonuclear bomb)",
+    "hideOvdp": true,
+    "note": "Fusion bomb là bom hạt nhân lấy năng lượng từ phản ứng nhiệt hạch, thường là bom khinh khí; đây là loại vũ khí hủy diệt hàng loạt. Không nhầm với fission bomb, loại lấy năng lượng chủ yếu từ phản ứng phân hạch.",
+    "senses": [
+      {
+        "m": "bom nhiệt hạch/bom khinh khí",
+        "pat": "a fusion bomb uses nuclear fusion · develop/test a fusion bomb",
+        "ex": [
+          [
+            "The novel imagines a world threatened by a fusion bomb.",
+            "Cuốn tiểu thuyết hình dung một thế giới bị đe dọa bởi bom nhiệt hạch."
+          ],
+          [
+            "The museum exhibit explains the history of the fusion bomb.",
+            "Triển lãm bảo tàng giải thích lịch sử của bom nhiệt hạch."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "fuzzy logic",
+    "pos": "noun phrase (uncountable; computing)",
+    "hideOvdp": true,
+    "note": "Fuzzy logic là hệ logic cho phép mức độ đúng sai nằm trên một thang liên tục thay vì chỉ 0 hoặc 1, giúp mô hình hóa các khái niệm mơ hồ như hơi nóng hay khá bẩn. Đây là cách xử lý thông tin không chính xác, không có nghĩa hệ thống đưa ra kết quả tùy tiện.",
+    "senses": [
+      {
+        "m": "logic mờ, hệ logic xử lý các mức độ thay vì chỉ đúng/sai tuyệt đối",
+        "pat": "fuzzy-logic system · apply fuzzy logic to · fuzzy logic controls",
+        "ex": [
+          [
+            "The washing machine uses fuzzy logic to adjust the cycle.",
+            "Máy giặt dùng logic mờ để điều chỉnh chu trình."
+          ],
+          [
+            "Fuzzy logic can represent a temperature as warm rather than simply on or off.",
+            "Logic mờ có thể biểu diễn nhiệt độ là ấm thay vì chỉ bật hoặc tắt."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gamma radiation",
+    "pos": "noun phrase (uncountable; physics; also gamma rays)",
+    "hideOvdp": true,
+    "note": "Gamma radiation là bức xạ điện từ năng lượng cao, bước sóng rất ngắn, phát ra từ một số quá trình hạt nhân/phóng xạ; gamma rays thường là dạng số nhiều chỉ các tia gamma. Không nhầm tên này với gamma trong các ngữ cảnh toán học khác.",
+    "senses": [
+      {
+        "m": "bức xạ gamma/tia gamma",
+        "pat": "emit/give off gamma radiation · exposure to gamma rays · gamma-ray source",
+        "ex": [
+          [
+            "The detector recorded gamma radiation from the sample.",
+            "Máy dò ghi nhận bức xạ gamma từ mẫu thử."
+          ],
+          [
+            "Some radioactive substances give off gamma rays.",
+            "Một số chất phóng xạ phát ra tia gamma."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "garbage collector",
+    "pos": "noun phrase (countable; computing also)",
+    "hideOvdp": true,
+    "note": "Garbage collector thường là nhân viên thu gom rác; trong tin học, đây cũng là thành phần phần mềm tự tìm và thu hồi vùng nhớ không còn được chương trình sử dụng. Ngữ cảnh nghề nghiệp hay máy tính phân biệt hai nghĩa.",
+    "senses": [
+      {
+        "m": "nhân viên thu gom rác",
+        "pat": "work as a garbage collector · a garbage-collection crew · garbage collectors collect waste",
+        "ex": [
+          [
+            "The garbage collector lifted the bins into the truck.",
+            "Nhân viên thu gom rác nâng các thùng lên xe."
+          ],
+          [
+            "A garbage collector starts work before sunrise on this route.",
+            "Nhân viên thu gom rác bắt đầu làm việc trước bình minh trên tuyến này."
+          ]
+        ]
+      },
+      {
+        "m": "(tin học) bộ thu gom rác, tự quản lý vùng nhớ không còn dùng",
+        "pat": "a language’s garbage collector · garbage collection reclaims memory",
+        "ex": [
+          [
+            "The garbage collector released memory that the program no longer needed.",
+            "Bộ thu gom rác giải phóng vùng nhớ mà chương trình không còn cần."
+          ],
+          [
+            "A pause occurred while the garbage collector checked unused objects.",
+            "Một khoảng dừng xảy ra khi bộ thu gom rác kiểm tra các đối tượng không còn được dùng."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "garbage truck",
+    "pos": "noun phrase (countable; North American English)",
+    "hideOvdp": true,
+    "note": "Garbage truck là xe chuyên thu gom rác từ nhà ở hoặc điểm tập kết; tiếng Anh-Anh thường dùng bin lorry hoặc rubbish truck, còn dustcart là cách gọi cũ. Cụm chỉ xe, không phải thùng rác hay toàn bộ dịch vụ vệ sinh đô thị.",
+    "senses": [
+      {
+        "m": "xe chở/thu gom rác (Bắc Mỹ)",
+        "pat": "a garbage truck collects rubbish · drive a garbage truck · garbage-truck route",
+        "ex": [
+          [
+            "The garbage truck came down our street early this morning.",
+            "Xe thu gom rác đi qua phố chúng tôi vào sáng sớm nay."
+          ],
+          [
+            "A garbage truck lifted the bins beside the apartment building.",
+            "Xe rác nâng các thùng bên cạnh tòa chung cư."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "garden of eden",
+    "pos": "proper noun phrase (also the Garden of Eden)",
+    "hideOvdp": true,
+    "note": "The Garden of Eden là khu vườn trong câu chuyện Kinh Thánh về Adam và Eve; nghĩa bóng chỉ nơi đẹp đẽ, bình yên hoặc sung túc như thiên đường. Tên riêng thường viết hoa Garden và Eden; cách gọi rút gọn Garden of Eden vẫn giữ nghĩa ám chỉ đó.",
+    "senses": [
+      {
+        "m": "vườn Địa Đàng trong Kinh Thánh; nghĩa bóng là nơi như thiên đường",
+        "pat": "the Garden of Eden · a modern Garden of Eden · describe a place as Eden",
+        "ex": [
+          [
+            "The mural shows Adam and Eve in the Garden of Eden.",
+            "Bức tranh tường mô tả Adam và Eve trong Vườn Địa Đàng."
+          ],
+          [
+            "To the children, the orchard felt like a Garden of Eden.",
+            "Với lũ trẻ, vườn cây ăn quả giống như một chốn thiên đường."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gas chamber",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Gas chamber là phòng hoặc buồng kín có thể được nạp khí độc để giết người hay động vật; cụm đặc biệt gắn với hành quyết và tội ác lịch sử. Đây là từ vựng mô tả, không phải hướng dẫn kỹ thuật.",
+    "senses": [
+      {
+        "m": "phòng/buồng khí độc dùng để giết người hoặc động vật",
+        "pat": "a gas chamber in a prison · send somebody to the gas chamber",
+        "ex": [
+          [
+            "The history exhibit documents the use of gas chambers during the war.",
+            "Triển lãm lịch sử ghi lại việc sử dụng phòng hơi ngạt trong chiến tranh."
+          ],
+          [
+            "The witness described the fear of being sent to a gas chamber.",
+            "Nhân chứng kể về nỗi sợ bị đưa vào phòng hơi ngạt."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gas mask",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Gas mask là thiết bị đeo kín mặt để bảo vệ đường hô hấp khỏi một số khí hoặc hạt độc hại; mức bảo vệ tùy loại mặt nạ và bộ lọc, không phải mặt nạ nào cũng dùng được cho mọi chất. Cụm thường gặp trong bối cảnh quân sự, công nghiệp hoặc ứng phó khẩn cấp.",
+    "senses": [
+      {
+        "m": "mặt nạ phòng độc",
+        "pat": "wear/use a gas mask · a gas-mask filter · put on a gas mask",
+        "ex": [
+          [
+            "Workers wore gas masks during the chemical leak drill.",
+            "Công nhân đeo mặt nạ phòng độc trong buổi diễn tập rò rỉ hóa chất."
+          ],
+          [
+            "The museum displayed a gas mask from the period.",
+            "Bảo tàng trưng bày một chiếc mặt nạ phòng độc từ thời kỳ đó."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gas meter",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Gas meter là đồng hồ đo lượng khí đốt một hộ gia đình hoặc cơ sở sử dụng, thường phục vụ việc theo dõi và tính hóa đơn. Thiết bị có thể là loại cơ học hoặc đồng hồ thông minh; không nên nhầm với gas gauge đo nhiên liệu trong bình xe.",
+    "senses": [
+      {
+        "m": "đồng hồ đo lượng khí đốt tiêu thụ",
+        "pat": "read/check a gas meter · a gas-meter reading · install a smart gas meter",
+        "ex": [
+          [
+            "The landlord recorded the gas meter reading before the tenants moved in.",
+            "Chủ nhà ghi chỉ số đồng hồ gas trước khi người thuê chuyển vào."
+          ],
+          [
+            "A technician replaced the old gas meter with a digital one.",
+            "Kỹ thuật viên thay đồng hồ gas cũ bằng loại kỹ thuật số."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gas pedal",
+    "pos": "noun phrase (countable; especially North American English; also accelerator)",
+    "hideOvdp": true,
+    "note": "Gas pedal là bàn đạp người lái nhấn để điều khiển tốc độ động cơ; ở Anh thường gọi accelerator, và cả hai tên đều dùng ở nhiều nơi. Dù có chữ gas trong tên Mỹ, xe điện vẫn có thể có gas pedal theo cách gọi thông dụng.",
+    "senses": [
+      {
+        "m": "bàn đạp ga",
+        "pat": "press/release the gas pedal · take your foot off the gas pedal · accelerator pedal",
+        "ex": [
+          [
+            "He pressed the gas pedal gently as the light turned green.",
+            "Anh nhẹ nhàng nhấn bàn đạp ga khi đèn chuyển xanh."
+          ],
+          [
+            "She took her foot off the gas pedal before the bend.",
+            "Cô nhấc chân khỏi bàn đạp ga trước khúc cua."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gear shift",
+    "pos": "noun phrase (countable; also gearshift, gear lever, gearstick)",
+    "hideOvdp": true,
+    "note": "Gear shift là cần hoặc bộ điều khiển dùng để đổi số của xe; ở Mỹ có thể gọi gearshift hoặc stick shift, còn ở Anh thường dùng gear lever/gearstick. Xe số tự động vẫn có cần chọn chế độ nhưng thao tác khác việc sang số bằng tay.",
+    "senses": [
+      {
+        "m": "cần/bộ điều khiển chuyển số",
+        "pat": "move/change the gear shift · a manual gear shift · gear lever/gearstick",
+        "ex": [
+          [
+            "She moved the gear shift into reverse.",
+            "Cô chuyển cần số sang chế độ lùi."
+          ],
+          [
+            "The mechanic checked the manual gear shift for damage.",
+            "Thợ máy kiểm tra cần số sàn xem có hỏng không."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "general assembly",
+    "pos": "noun phrase (countable; often capitalized as a proper name)",
+    "hideOvdp": true,
+    "note": "General assembly có thể là cơ quan đại diện gồm các thành viên/tổ chức; khi viết The General Assembly, thường chỉ Đại hội đồng Liên Hợp Quốc. Ở một số bang Mỹ, cụm cũng chỉ cơ quan lập pháp; trong tổ chức, đó có thể là cuộc họp toàn thể ra quyết định.",
+    "senses": [
+      {
+        "m": "Đại hội đồng Liên Hợp Quốc hoặc cơ quan đại diện toàn thể",
+        "pat": "the United Nations General Assembly · address the General Assembly · a General Assembly resolution",
+        "ex": [
+          [
+            "The General Assembly met to discuss the proposed resolution.",
+            "Đại hội đồng họp để thảo luận nghị quyết được đề xuất."
+          ],
+          [
+            "Each member state sent a delegation to the General Assembly.",
+            "Mỗi quốc gia thành viên cử một đoàn đại biểu tới Đại hội đồng."
+          ]
+        ]
+      },
+      {
+        "m": "cơ quan lập pháp của một số bang Mỹ hoặc cuộc họp toàn thể của tổ chức",
+        "pat": "a state General Assembly · hold a general assembly · vote at the assembly",
+        "ex": [
+          [
+            "The state General Assembly debated changes to the education law.",
+            "Cơ quan lập pháp bang tranh luận về các sửa đổi luật giáo dục."
+          ],
+          [
+            "Members will vote on the proposal at the annual general assembly.",
+            "Các thành viên sẽ bỏ phiếu về đề xuất tại đại hội thường niên."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "general delivery",
+    "pos": "noun phrase (uncountable; North American English)",
+    "hideOvdp": true,
+    "note": "General delivery là dịch vụ bưu điện giữ thư tại bưu cục để người nhận tới lấy, thường hữu ích khi đi lại hoặc chưa có địa chỉ nhận ổn định; ở Anh gọi poste restante. Dịch vụ, thời gian lưu và yêu cầu giấy tờ tùy nhà cung cấp.",
+    "senses": [
+      {
+        "m": "dịch vụ giữ thư tại bưu cục để người nhận tới lấy (Bắc Mỹ)",
+        "pat": "send/receive mail by general delivery · pick up a letter at general delivery",
+        "ex": [
+          [
+            "She asked the post office to hold her parcel under general delivery.",
+            "Cô nhờ bưu điện giữ bưu kiện theo dịch vụ nhận thư tại bưu cục."
+          ],
+          [
+            "Travellers can sometimes receive letters through general delivery.",
+            "Khách đi đường đôi khi có thể nhận thư qua dịch vụ general delivery."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "general headquarters",
+    "pos": "noun phrase (plural form; military; abbreviation GHQ)",
+    "hideOvdp": true,
+    "note": "General Headquarters (GHQ) là trung tâm chỉ huy chính của một tổ chức quân sự; headquarters có hình thức số nhiều nhưng có thể đi với động từ số ít hoặc số nhiều tùy cách nhìn về cơ quan. Trong văn bản, tên đơn vị cụ thể thường viết hoa.",
+    "senses": [
+      {
+        "m": "tổng hành dinh/bộ chỉ huy tối cao của tổ chức quân sự",
+        "pat": "the General Headquarters · report to GHQ · establish headquarters",
+        "ex": [
+          [
+            "The order was sent from General Headquarters to the field units.",
+            "Mệnh lệnh được gửi từ tổng hành dinh tới các đơn vị ngoài chiến trường."
+          ],
+          [
+            "The officers returned to GHQ after the briefing.",
+            "Các sĩ quan trở về bộ chỉ huy sau buổi báo cáo."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "generative grammar",
+    "pos": "noun phrase (countable or uncountable; linguistics)",
+    "hideOvdp": true,
+    "note": "Generative grammar là một cách mô tả ngôn ngữ bằng tập hợp quy tắc có thể tạo ra các câu được xem là có thể có trong ngôn ngữ đó. Đây là thuật ngữ chuyên ngành ngôn ngữ học, không có nghĩa là ngữ pháp tự động viết văn bản bằng AI.",
+    "senses": [
+      {
+        "m": "ngữ pháp tạo sinh, hệ quy tắc mô tả cách tạo câu trong một ngôn ngữ",
+        "pat": "a theory of generative grammar · generative-grammar rules · study generative grammar",
+        "ex": [
+          [
+            "The seminar introduced generative grammar to first-year students.",
+            "Buổi chuyên đề giới thiệu ngữ pháp tạo sinh cho sinh viên năm nhất."
+          ],
+          [
+            "The linguist used a generative grammar to describe sentence patterns.",
+            "Nhà ngôn ngữ học dùng một hệ ngữ pháp tạo sinh để mô tả các mẫu câu."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "geometric progression",
+    "pos": "noun phrase (countable; also geometric series)",
+    "hideOvdp": true,
+    "note": "Geometric progression là dãy số trong đó mỗi số sau được tạo bằng cách nhân hoặc chia số trước với cùng một tỷ số; ví dụ 2, 6, 18 có công bội 3. Khác với arithmetic progression, trong đó hiệu giữa hai số liên tiếp là không đổi.",
+    "senses": [
+      {
+        "m": "cấp số nhân/dãy hình học có công bội cố định",
+        "pat": "a geometric progression with ratio 2 · the terms of a geometric progression · geometric series",
+        "ex": [
+          [
+            "The sequence 3, 6, 12, 24 is a geometric progression.",
+            "Dãy 3, 6, 12, 24 là một cấp số nhân."
+          ],
+          [
+            "Each term in this geometric progression is multiplied by four.",
+            "Mỗi số hạng trong cấp số nhân này được nhân với bốn."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "german measles",
+    "pos": "noun phrase (uncountable; also rubella)",
+    "hideOvdp": true,
+    "note": "German measles là tên thông dụng cũ của rubella, một bệnh do virus; hiện rubella là tên chuyên môn thường dùng hơn. Từ measles trong tên có thể khiến người học nhầm với bệnh sởi, nhưng đây là hai bệnh khác nhau.",
+    "senses": [
+      {
+        "m": "rubella/bệnh sởi Đức (tên thông dụng cũ)",
+        "pat": "catch/have German measles · German measles is also called rubella",
+        "ex": [
+          [
+            "German measles is also known by the medical name rubella.",
+            "German measles còn được gọi bằng tên y khoa là rubella."
+          ],
+          [
+            "The article distinguishes German measles from measles.",
+            "Bài viết phân biệt rubella với bệnh sởi."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "gin rummy",
+    "pos": "noun phrase (uncountable; card game)",
+    "hideOvdp": true,
+    "note": "Gin rummy là trò chơi bài dành cho hai người, trong đó người chơi cố tạo các nhóm lá cùng hạng hoặc các dãy liên tiếp cùng chất và giảm số lá lẻ. Tên thường được giữ nguyên trong tiếng Việt; cụm thường đi với play a game of gin rummy.",
+    "senses": [
+      {
+        "m": "trò gin rummy, một trò chơi bài thường dành cho hai người",
+        "pat": "play gin rummy · a game of gin rummy · gin-rummy players",
+        "ex": [
+          [
+            "They played gin rummy while waiting for the train.",
+            "Họ chơi gin rummy trong lúc chờ tàu."
+          ],
+          [
+            "My aunt taught us a simple version of gin rummy.",
+            "Dì tôi dạy chúng tôi một phiên bản gin rummy đơn giản."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "glandular fever",
+    "pos": "noun phrase (uncountable; British English; also mononucleosis, mono)",
+    "hideOvdp": true,
+    "note": "Glandular fever là tên Anh-Anh cho bệnh truyền nhiễm thường gọi infectious mononucleosis ở Mỹ, thân mật là mono; bệnh có thể làm hạch sưng và gây mệt mỏi kéo dài. Tên gọi không có nghĩa đây chỉ là một cơn sốt thông thường.",
+    "senses": [
+      {
+        "m": "sốt tuyến/bệnh tăng bạch cầu đơn nhân nhiễm khuẩn",
+        "pat": "have/get glandular fever · recover from glandular fever · mononucleosis/mono",
+        "ex": [
+          [
+            "He missed several weeks of classes after getting glandular fever.",
+            "Anh nghỉ học nhiều tuần sau khi mắc sốt tuyến."
+          ],
+          [
+            "In the US, the illness is often called mono.",
+            "Ở Mỹ, căn bệnh này thường được gọi là mono."
+          ]
+        ]
+      }
+    ]
+  }
+]

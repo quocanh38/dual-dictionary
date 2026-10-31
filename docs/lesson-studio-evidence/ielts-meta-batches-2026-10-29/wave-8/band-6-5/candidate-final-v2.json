@@ -1,0 +1,349 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-8",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2156,
+        "outputTokens": 5289,
+        "totalTokens": 7445
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-8-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-8-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "River Sampling Project Discussion",
+      "focus": "Identifying bias from missing samples",
+      "part": "Part 3",
+      "script": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "wordCount": 321
+    },
+    "reading": {
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "wordCount": 412
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-8-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "River Sampling Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "Identifying bias from missing samples",
+      "transcript": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "prompt": "Why were no samples collected for three weeks in April?",
+      "options": [
+        "Access road flooded, river too high to sample",
+        "Equipment failure at gauging station",
+        "Samples were contaminated in lab",
+        "Students forgot to collect them"
+      ],
+      "answer": 0,
+      "explanation": "The students state the access road flooded and the river was too high to sample safely. Option B is incorrect because the gauging station actually supplied usable flow data."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "River Sampling Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "Identifying bias from missing samples",
+      "transcript": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "prompt": "What was Jon's initial view about the missing weeks?",
+      "options": [
+        "The flood made data more accurate",
+        "Three missing weeks would have little impact",
+        "April always has low nitrate levels",
+        "The gauging station data were unreliable"
+      ],
+      "answer": 1,
+      "explanation": "Jon says three out of sixteen weeks wouldn't matter much, a view later revised. Option C misstates his concern, which was about quantity not nitrate level."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "River Sampling Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "Identifying bias from missing samples",
+      "transcript": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "prompt": "What did the flow data show about the missing weeks?",
+      "options": [
+        "Flow was low during missing weeks",
+        "Data were missing at random",
+        "Missing weeks coincided with peak discharge",
+        "Snowmelt had no effect on flow"
+      ],
+      "answer": 2,
+      "explanation": "Maya reports the missing weeks coincided with peak discharge, so the gap wasn't random. Option B is the opposite of this qualified finding."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "River Sampling Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "Identifying bias from missing samples",
+      "transcript": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "prompt": "What did the flow-concentration model estimate?",
+      "options": [
+        "It confirmed the simple average was accurate",
+        "It showed nitrate was lower than expected",
+        "It was impossible to calculate without samples",
+        "It estimated higher nitrate and 30% greater load"
+      ],
+      "answer": 3,
+      "explanation": "The model predicted about 4.5 mg per litre and raised the seasonal load by almost 30%. Option A describes the first analysis that ignored the gap."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "River Sampling Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "Identifying bias from missing samples",
+      "transcript": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "prompt": "How do the students qualify their final conclusion?",
+      "options": [
+        "Flood peak estimates are now certain",
+        "Adjusted load is probably better but remains uncertain",
+        "Simple average should be reported alone",
+        "No further sampling is needed next year"
+      ],
+      "answer": 1,
+      "explanation": "They conclude the adjusted load is likely more accurate but still uncertain without direct flood samples. Option A claims certainty they explicitly deny."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "pathwayStage": "band-6-5",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "prompt": "What limitation did evaluators note about the first-year results?",
+      "options": [
+        "Participants may have been more motivated initially",
+        "Surveys were completed too early in term",
+        "Retention data were not collected properly",
+        "Mentors lacked adequate training that year"
+      ],
+      "answer": 0,
+      "explanation": "The passage notes without a matched comparison group they couldn't know if participants were already more motivated. Option B invents a timing problem not mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "pathwayStage": "band-6-5",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "prompt": "What did the second-year comparison show?",
+      "options": [
+        "Self-efficacy gains were large and significant",
+        "Belonging gains were significantly greater for mentored students",
+        "Grades were higher for mentored students overall",
+        "Comparison group was less motivated at entry"
+      ],
+      "answer": 1,
+      "explanation": "Mentored students showed significantly greater gains in belonging, while self-efficacy differences were small and not significant. Option A reverses the self-efficacy finding."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "pathwayStage": "band-6-5",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "prompt": "How do evaluators interpret the Engineering grade result?",
+      "options": [
+        "It demonstrates overall grade improvement",
+        "It was based on unreliable grade data",
+        "It was a small subgroup and not general evidence",
+        "It was the only department studied"
+      ],
+      "answer": 2,
+      "explanation": "They caution the Engineering result was a small intensive subgroup and not evidence of a general effect. Option A mistakes this example for the authors' overall claim."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "pathwayStage": "band-6-5",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "prompt": "What did the third-year attendance analysis show?",
+      "options": [
+        "High attenders kept advantage to June, lost it by year two",
+        "Low attenders outperformed the comparison group in June",
+        "Attendance remained stable after week six",
+        "Retention differences increased in year two"
+      ],
+      "answer": 0,
+      "explanation": "High attenders kept higher belonging in June but the advantage had largely disappeared by year two. Option C contradicts the sharp decline after week six."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "pathwayStage": "band-6-5",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "prompt": "What do the authors conclude about the programme?",
+      "options": [
+        "It should be stopped because effects faded",
+        "It proves voluntary schemes have no bias",
+        "It guarantees higher grades when embedded",
+        "It supports short-term transition but not sustained outcomes"
+      ],
+      "answer": 3,
+      "explanation": "The authors argue it reliably supports initial transition but does not sustain integration or improve attainment broadly. Option A misreads their recommendation to embed rather than stop it."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Pilot Mentoring Programme Results",
+      "pathwayStage": "band-6-5",
+      "focus": "summarising comparative data with qualified claims and noting study limitations",
+      "prompt": "You should spend about 20 minutes on this task. The table below shows results of a pilot mentoring programme for first-year undergraduates in the Faculty of Science at Westfield University, 2023-2024. It compares 120 students who volunteered for mentoring with 150 students who did not. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data: Mentored group (n=120) – Retention to Year 2: 89%, Average GPA (4.0 scale): 3.2, Reported high satisfaction: 78%, Average meetings with advisor per month: 2.4. Non-mentored group (n=150) – Retention to Year 2: 76%, Average GPA: 2.9, Reported high satisfaction: 52%, Average meetings per month: 0.8. Note: Participants self-selected; results apply only to one faculty and one academic year.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Comparison of Public-Health Measures in Two Cities",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing participation and reported outcomes across interventions and locations",
+      "prompt": "You should spend about 20 minutes on this task. The chart below compares three public-health measures in Riverton and Hillford in 2024. It shows participation rate and self-reported health improvement for each measure. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data for 2024: Vaccination drive – Riverton participation 62%, reported improvement 45%; Hillford participation 58%, reported improvement 41%. Free health screening – Riverton participation 38%, reported improvement 33%; Hillford participation 44%, reported improvement 36%. Health education workshops – Riverton participation 27%, reported improvement 22%; Hillford participation 31%, reported improvement 29%. All figures are percentages of the adult population surveyed (Riverton n=1,200; Hillford n=1,150).",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · University Conference Waste Audit 2022-2024",
+      "pathwayStage": "band-6-5",
+      "focus": "describing trends in waste generation and recycling with accurate handling of figures",
+      "prompt": "You should spend about 20 minutes on this task. The table below shows waste generated (in kilograms) and the proportion recycled at the GreenTech University Conference from 2022 to 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. Data: 2022 – Total waste 820 kg (Plastic 210 kg, Paper 340 kg, Food waste 270 kg), Recycling rate 38%, Attendees 500. 2023 – Total waste 760 kg (Plastic 180 kg, Paper 310 kg, Food waste 270 kg), Recycling rate 46%, Attendees 520. 2024 – Total waste 690 kg (Plastic 140 kg, Paper 280 kg, Food waste 270 kg), Recycling rate 58%, Attendees 510. Note: Food waste remained constant; plastic and paper waste declined.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Justifying Expansion of a Mentoring Programme",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating qualified claims, comparing evidence, and designing a stronger follow-up study",
+      "prompt": "You should spend about 40 minutes on this task. A university ran a small pilot mentoring programme in one faculty and found that mentored students had higher retention, GPA and satisfaction than non-mentored students. The university now plans to expand the programme to all faculties based on these results. To what extent do the pilot results justify expansion? What should a follow-up study include to provide stronger evidence? Discuss the need for qualified claims, comparison of evidence, and handling of limitations such as self-selection, sample size and faculty differences. Give reasons and examples from your knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Effectiveness and Limits of Waste-Reduction Measures at Conferences",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing measures, evaluating effectiveness, and discussing practical and measurement limitations",
+      "prompt": "You should spend about 40 minutes on this task. Many universities are trying to reduce waste at large academic conferences by banning single-use plastics, providing digital programmes instead of printed materials, and donating leftover food. How effective are such measures likely to be, and what challenges should be considered when evaluating their success? Compare different types of evidence and discuss practical limitations such as cost, attendee behaviour and difficulties in measuring long-term change. Give reasons and examples from your knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Study Support and Mentoring",
+      "pathwayStage": "band-6-5",
+      "focus": "personal experience with support systems and help-seeking",
+      "prompt": "Let's talk about study and support. Do you have or have you had a mentor at school, university or work? What kind of help did they give? How important is support for new students in your view? How often do you seek advice when you face a problem with your studies or work?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Health Information and Daily Habits",
+      "pathwayStage": "band-6-5",
+      "focus": "personal health habits and sources of public-health information",
+      "prompt": "Let's discuss health. Where do you usually get information about public health issues? Have you ever taken part in a vaccination drive, health screening or workshop? Why or why not? What do you do to stay healthy in your daily life?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Guidance Experience",
+      "pathwayStage": "band-6-5",
+      "focus": "describing a mentoring experience and reflecting on its impact",
+      "prompt": "Describe a time when someone guided or mentored you in your studies, work or personal development. You will have one minute to prepare and should speak for one to two minutes.\nYou should say:\n• who the person was\n• what kind of guidance or support they provided\n• how often you met or communicated\n• and explain how this experience affected you.\n\nFollow-up question: Do you think you might become a mentor for others in the future?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Programmes and Evidence",
+      "pathwayStage": "band-6-5",
+      "focus": "reasons for limited generalisability, comparing interventions, and causation",
+      "prompt": "Let's consider how programmes are evaluated. Why might a mentoring programme that works well in a small pilot not have the same results when expanded to a whole university? How can researchers fairly compare the effectiveness of different public-health measures, such as vaccination drives and education workshops, when data is incomplete? What makes it difficult to prove that a specific intervention caused an improvement?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Waste Reduction and Institutional Change",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating responsibility, trade-offs, and long-term behaviour change",
+      "prompt": "Let's talk about reducing waste at large events. Who should be most responsible for reducing waste at university conferences – organisers, attendees, or sponsors? Why? What are the advantages and limitations of measures like banning single-use plastics or using digital materials? How can universities know whether such policies actually change behaviour in the long term?"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "id": "draft-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+  "revision": 0,
+  "stage": "draft",
+  "source": {
+    "title": "Selecting Excerpts for a Student Podcast",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A student media group is preparing a short podcast about how older buildings are reused. After recording three interviews with local planners, the students listen to the files together. They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part. If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode. The editor checks each excerpt against the full conversation to make sure its meaning has not changed. Before release, the team sends the final audio to the speakers for a factual check.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "A student media group is preparing a short podcast about how older buildings are reused. After recording three interviews with local planners, the students listen to the files together. They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part. If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode. The editor checks each excerpt against the full conversation to make sure its meaning has not changed. Before release, the team sends the final audio to the speakers for a factual check.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A student media group is preparing a short podcast about how older buildings are reused."
+      },
+      {
+        "id": "s2",
+        "text": "After recording three interviews with local planners, the students listen to the files together."
+      },
+      {
+        "id": "s3",
+        "text": "They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part."
+      },
+      {
+        "id": "s4",
+        "text": "If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode."
+      },
+      {
+        "id": "s5",
+        "text": "The editor checks each excerpt against the full conversation to make sure its meaning has not changed."
+      },
+      {
+        "id": "s6",
+        "text": "Before release, the team sends the final audio to the speakers for a factual check."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "off the record",
+      "meaningEn": "not to be published or shared publicly",
+      "meaningVi": "không được công bố công khai",
+      "sourceSentenceId": "s4"
+    },
+    {
+      "id": "t2",
+      "phrase": "time stamp",
+      "meaningEn": "a recorded time that shows where a part is in an audio file",
+      "meaningVi": "mốc thời gian",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+    "version": 1,
+    "title": "Podcast Notes: Off the Record and Time Stamp",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T09:19:57.269Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Podcast Notes: Off the Record and Time Stamp",
+        "objective": "Learners will understand the meanings of off the record and time stamp in the podcast context and use them naturally in new situations.",
+        "reading": {
+          "text": "A student media group is preparing a short podcast about how older buildings are reused. After recording three interviews with local planners, the students listen to the files together. They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part. If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode. The editor checks each excerpt against the full conversation to make sure its meaning has not changed. Before release, the team sends the final audio to the speakers for a factual check.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A student media group is preparing a short podcast about how older buildings are reused."
+            },
+            {
+              "id": "s2",
+              "text": "After recording three interviews with local planners, the students listen to the files together."
+            },
+            {
+              "id": "s3",
+              "text": "They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part."
+            },
+            {
+              "id": "s4",
+              "text": "If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode."
+            },
+            {
+              "id": "s5",
+              "text": "The editor checks each excerpt against the full conversation to make sure its meaning has not changed."
+            },
+            {
+              "id": "s6",
+              "text": "Before release, the team sends the final audio to the speakers for a factual check."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "off the record",
+            "meaningEn": "not to be published or shared publicly",
+            "meaningVi": "không được công bố công khai",
+            "sourceSentenceId": "s4"
+          },
+          {
+            "id": "t2",
+            "phrase": "time stamp",
+            "meaningEn": "a recorded time that shows where a part is in an audio file",
+            "meaningVi": "mốc thời gian",
+            "sourceSentenceId": "s3"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s4, what does 'off the record' mean?",
+            "sourceSentenceIds": [
+              "s4"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the comment should be kept private and not shared in the public episode.",
+                "explanation": "Correct because s4 says the group leaves that section out of the public episode."
+              },
+              {
+                "id": "b",
+                "text": "It means the comment was hard to hear because of background noise.",
+                "explanation": "Wrong because s4 is about privacy, not about audio quality."
+              },
+              {
+                "id": "c",
+                "text": "It means the comment was removed because the episode was already too long.",
+                "explanation": "Wrong because s4 is about privacy, not about episode length."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "In s4 'off the record' means not to be published or shared publicly."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'off the record' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s4"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The manager shared the budget details off the record so we would not publish them.",
+                "explanation": "Correct because it uses the fixed phrase 'off the record' with natural grammar."
+              },
+              {
+                "id": "b",
+                "text": "The manager shared the budget details off the records so we would not publish them.",
+                "explanation": "Wrong because 'records' should be 'record' in the fixed phrase."
+              },
+              {
+                "id": "c",
+                "text": "The manager shared the budget details off record so we would not publish them.",
+                "explanation": "Wrong because 'record' needs 'the' to form 'off the record'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a uses the fixed collocation 'off the record' correctly."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s3, what does 'time stamp' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a decorative image added to the podcast cover.",
+                "explanation": "Wrong because s3 is about finding a part, not about decoration."
+              },
+              {
+                "id": "b",
+                "text": "It means a recorded time that shows where a part is in the audio file.",
+                "explanation": "Correct because s3 says the note helps the editor find each part."
+              },
+              {
+                "id": "c",
+                "text": "It means a deadline for finishing the final audio edit.",
+                "explanation": "Wrong because s3 is about location in audio, not about a deadline."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "In s3 'time stamp' means a recorded time that locates a part in the file."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'time stamp' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "She wrote down the time stamp to locate the key section quickly.",
+                "explanation": "Correct because it uses natural grammar and collocation with 'time stamp'."
+              },
+              {
+                "id": "b",
+                "text": "She writed down the time stamp to locate the key section quickly.",
+                "explanation": "Wrong because 'writed' should be 'wrote'."
+              },
+              {
+                "id": "c",
+                "text": "She wrote down the time stamp to locate the key section quick.",
+                "explanation": "Wrong because 'quick' should be 'quickly' to modify the verb."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is fully grammatical and natural with 'time stamp'."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a fitness club member recommending an online workout video to a friend. Write 2-3 sentences telling your friend where the useful stretching part is and why to watch it.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "sampleAnswer": "I found a great workout video for beginners. Note the time stamp at 8:20 because the stretching routine there is very clear.",
+            "selfCheck": [
+              "I wrote 2-3 sentences.",
+              "I used 'time stamp' naturally to show a location in a video.",
+              "My sentences are clear and grammatically correct."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  },
+  "selectionModel": "muse-spark-1.3",
+  "repairCount": 0
+}

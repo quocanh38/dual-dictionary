@@ -1,0 +1,378 @@
+[
+  {
+    "phrase": "sign off",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Sign off có thể là kết thúc thư/chương trình phát sóng, hoặc sign something off là ký duyệt chính thức. Trong công việc, sign off on something (đặc biệt Anh-Mỹ) thường nghĩa là chấp thuận một kế hoạch hoặc khoản chi.",
+    "senses": [
+      {
+        "m": "kết thúc thư hoặc chương trình phát thanh/truyền hình",
+        "pat": "sign off a letter/email · sign off with + closing · a presenter signs off",
+        "ex": [
+          ["She signed off the email with a brief thank-you.", "Cô kết thúc email bằng một lời cảm ơn ngắn."],
+          ["The presenter signed off after announcing tomorrow's headlines.", "Người dẫn chương trình chào kết thúc sau khi thông báo các tin chính ngày mai."]
+        ]
+      },
+      {
+        "m": "ký hoặc xác nhận chính thức rằng việc gì đã được chấp thuận/hoàn tất",
+        "pat": "sign something off · sign off on a proposal/budget · be signed off by a manager",
+        "ex": [
+          ["The safety inspector signed off the repaired lift this morning.", "Sáng nay, thanh tra an toàn ký xác nhận thang máy đã được sửa xong."],
+          ["Finance must sign off on the revised project budget.", "Bộ phận tài chính phải phê duyệt ngân sách dự án đã chỉnh sửa."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sign on",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Sign on có thể là đăng ký với cơ quan để nhận hỗ trợ khi thất nghiệp (cách dùng Anh-Anh, khá cũ trong một số hệ thống), hoặc ký hợp đồng để làm việc/gia nhập một tổ chức. Sign on/up for a course nghĩa là đăng ký học khóa đó.",
+    "senses": [
+      {
+        "m": "(Anh-Anh, thân mật/cũ) đăng ký với cơ quan để được ghi nhận là thất nghiệp và xin trợ cấp",
+        "pat": "sign on for unemployment benefit · sign on at the local office · be signed on",
+        "ex": [
+          ["After his contract ended, he signed on while looking for another job.", "Sau khi hợp đồng kết thúc, anh đăng ký thất nghiệp trong lúc tìm công việc khác."],
+          ["The novel describes a period when many workers had to sign on for support.", "Cuốn tiểu thuyết kể về giai đoạn nhiều người lao động phải đăng ký để nhận hỗ trợ."]
+        ]
+      },
+      {
+        "m": "ký hợp đồng để làm việc/gia nhập một đội, hoặc đăng ký tham gia khóa học",
+        "pat": "sign on as a + job · sign on with a company/team · sign on/up for a course",
+        "ex": [
+          ["The club signed on a young goalkeeper for the new season.", "Câu lạc bộ ký hợp đồng với một thủ môn trẻ cho mùa giải mới."],
+          ["I signed on for a weekend course in business writing.", "Tôi đăng ký khóa học viết trong kinh doanh vào cuối tuần."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "signal box",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Signal box là nhà/trạm cạnh đường sắt, nơi nhân viên vận hành tín hiệu và thiết bị điều khiển tàu; cách gọi này thuộc tiếng Anh-Anh. Nhiều hệ thống hiện đại điều khiển tín hiệu từ trung tâm thay vì hộp tín hiệu ở từng ga.",
+    "senses": [
+      {
+        "m": "trạm cạnh đường sắt dùng để điều khiển tín hiệu và việc tàu chạy",
+        "pat": "a railway signal box · operate/work in a signal box · the signal box controls the line",
+        "ex": [
+          ["The old signal box has been preserved beside the station platform.", "Trạm tín hiệu cũ được bảo tồn cạnh sân ga."],
+          ["A railway worker watched the approaching train from the signal box.", "Nhân viên đường sắt quan sát đoàn tàu đang đến từ trạm tín hiệu."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "signal-to-noise ratio",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Signal-to-noise ratio (SNR) so sánh cường độ tín hiệu hữu ích với nhiễu không mong muốn; SNR càng cao thường thì tín hiệu càng dễ phân biệt. Nghĩa bóng, cụm chỉ tỷ lệ thông tin có ích so với nội dung gây nhiễu trong một nguồn dữ liệu/cuộc thảo luận.",
+    "senses": [
+      {
+        "m": "(điện tử/viễn thông) tỷ số giữa tín hiệu cần thu và tín hiệu nhiễu",
+        "pat": "a high/low signal-to-noise ratio · improve/reduce the SNR · measure the signal-to-noise ratio",
+        "ex": [
+          ["The engineers improved the signal-to-noise ratio by replacing the damaged cable.", "Các kỹ sư cải thiện tỷ số tín hiệu trên nhiễu bằng cách thay sợi cáp hỏng."],
+          ["A higher signal-to-noise ratio made the recording clearer.", "Tỷ số tín hiệu trên nhiễu cao hơn giúp bản ghi âm rõ hơn."]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) mức độ thông tin hữu ích so với thông tin gây nhiễu",
+        "pat": "a better signal-to-noise ratio · improve the signal-to-noise ratio of a discussion/feed",
+        "ex": [
+          ["Clearer meeting notes improved the signal-to-noise ratio of the project channel.", "Biên bản họp rõ ràng hơn giúp kênh dự án có tỷ lệ thông tin hữu ích cao hơn."],
+          ["The editor removed repeated posts to raise the signal-to-noise ratio in the forum.", "Biên tập viên xóa các bài đăng lặp lại để tăng tỷ lệ nội dung hữu ích trên diễn đàn."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "silent partner",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Silent partner là người góp vốn vào doanh nghiệp nhưng không trực tiếp tham gia điều hành; cách gọi tương đương trong tiếng Anh-Anh là sleeping partner. Quyền, nghĩa vụ và mức độ chịu trách nhiệm phụ thuộc vào loại hình pháp lý và luật áp dụng.",
+    "senses": [
+      {
+        "m": "đối tác góp vốn nhưng không tham gia quản lý hoạt động hằng ngày",
+        "pat": "a silent partner in a business · bring in/find a silent partner · a sleeping partner (BrE)",
+        "ex": [
+          ["Her uncle became a silent partner and provided the money to open the café.", "Chú cô trở thành đối tác góp vốn thầm lặng và cung cấp tiền để mở quán cà phê."],
+          ["The silent partner receives financial reports but does not manage the shop.", "Đối tác góp vốn nhận báo cáo tài chính nhưng không điều hành cửa hàng."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "silica gel",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Silica gel là vật liệu xốp dạng hạt làm từ silica, có khả năng hút hơi ẩm; thường có trong gói nhỏ đặt cùng giày, đồ điện tử hoặc thực phẩm đóng gói. Tên gọi có chữ gel nhưng sản phẩm thường thấy là các hạt rắn, không phải gel lỏng.",
+    "senses": [
+      {
+        "m": "chất hút ẩm dạng hạt xốp làm từ silica",
+        "pat": "a packet of silica gel · silica gel absorbs moisture · silica-gel sachets",
+        "ex": [
+          ["A packet of silica gel was placed inside the camera case to absorb moisture.", "Một gói silica gel được đặt trong túi máy ảnh để hút ẩm."],
+          ["The packaging contains silica gel to help keep the shoes dry during shipping.", "Bao bì có silica gel để giúp giữ giày khô trong quá trình vận chuyển."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "silicon chip",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Silicon chip là mảnh silicon rất nhỏ chứa một hoặc nhiều mạch điện tử phức tạp, thường được gọi ngắn là chip. Phân biệt silicon (nguyên tố bán dẫn) với silicone (họ vật liệu polymer dùng làm chất trám, đồ gia dụng...).",
+    "senses": [
+      {
+        "m": "vi mạch điện tử chế tạo trên một mảnh silicon nhỏ",
+        "pat": "a silicon chip in a device · manufacture/design silicon chips · a computer/memory chip",
+        "ex": [
+          ["A silicon chip inside the card stores its security information.", "Một vi mạch silicon bên trong thẻ lưu thông tin bảo mật của thẻ."],
+          ["The factory produces silicon chips for phones and medical equipment.", "Nhà máy sản xuất vi mạch silicon cho điện thoại và thiết bị y tế."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "silk screen",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Silk screen là phương pháp in ép mực qua lưới có khuôn, ngày nay lưới thường làm bằng vật liệu tổng hợp chứ không nhất thiết bằng tơ lụa. Từ này cũng chỉ một bản in được tạo ra bằng phương pháp đó; screen printing là tên gọi mô tả rõ kỹ thuật hơn.",
+    "senses": [
+      {
+        "m": "kỹ thuật in mực qua lưới có khuôn để tạo hình ảnh",
+        "pat": "silk-screen printing · print something by silk screen · a silk-screen method",
+        "ex": [
+          ["The artist used a silk-screen process to print the design on cotton bags.", "Nghệ sĩ dùng kỹ thuật in lưới để in họa tiết lên túi vải cotton."],
+          ["Silk-screen printing allows the same image to be reproduced in several colors.", "In lưới cho phép tái tạo cùng một hình ảnh bằng nhiều màu."]
+        ]
+      },
+      {
+        "m": "bức tranh/bản in được tạo bằng kỹ thuật in lưới",
+        "pat": "a silk screen of a portrait · a series of silk-screen prints · collect silk screens",
+        "ex": [
+          ["The gallery displayed a silk screen of a famous film star.", "Phòng trưng bày giới thiệu một bản in lưới chân dung ngôi sao điện ảnh nổi tiếng."],
+          ["Each silk screen in the series uses a different background color.", "Mỗi bản in lưới trong loạt này dùng một màu nền khác nhau."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "silver plate",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Silver plate là kim loại nền được phủ một lớp bạc mỏng, hoặc đồ vật làm từ kim loại mạ bạc; không phải bạc nguyên khối. Tính từ silver-plated thường dùng để mô tả vật đã được mạ bạc.",
+    "senses": [
+      {
+        "m": "kim loại hoặc đồ vật được phủ một lớp bạc mỏng",
+        "pat": "silver plate cutlery/tableware · a silver-plated object · a thin layer of silver",
+        "ex": [
+          ["The auction catalogue identifies the tray as silver plate, not solid silver.", "Danh mục đấu giá xác định chiếc khay là đồ mạ bạc, không phải bạc nguyên khối."],
+          ["She polished the silver-plate candlesticks before the dinner party.", "Cô đánh bóng những chân nến mạ bạc trước bữa tiệc tối."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "simple interest",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Simple interest là lãi chỉ tính trên số tiền gốc ban đầu, không cộng lãi đã phát sinh vào vốn để tính kỳ tiếp theo; đối lập với compound interest (lãi kép). Khi so sánh khoản vay/đầu tư, cần kiểm tra cách tính và kỳ hạn cụ thể.",
+    "senses": [
+      {
+        "m": "lãi tính chỉ trên số vốn gốc ban đầu",
+        "pat": "earn/pay simple interest · a simple-interest rate · calculate simple interest on the principal",
+        "ex": [
+          ["The account earns simple interest on the original deposit.", "Tài khoản sinh lãi đơn trên khoản tiền gửi ban đầu."],
+          ["With simple interest, the interest is not added to the principal for the next period's calculation.", "Với lãi đơn, tiền lãi không được cộng vào vốn gốc để tính cho kỳ tiếp theo."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "simultaneous equations",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Simultaneous equations là một hệ gồm từ hai phương trình trở lên có chung các ẩn; nghiệm của hệ phải thỏa mãn mọi phương trình cùng lúc. Thường giải bằng phương pháp thế, khử hoặc biểu diễn đồ thị.",
+    "senses": [
+      {
+        "m": "hệ phương trình có chung các ẩn và được giải đồng thời",
+        "pat": "solve simultaneous equations · a pair/system of simultaneous equations · simultaneous linear equations",
+        "ex": [
+          ["We solved the simultaneous equations by eliminating x first.", "Chúng tôi giải hệ phương trình bằng cách khử x trước."],
+          ["The point where the two lines cross is the solution to the simultaneous equations.", "Giao điểm của hai đường thẳng là nghiệm của hệ phương trình đó."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "single combat",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Single combat là cuộc giao chiến giữa hai cá nhân, thường được nhắc trong bối cảnh lịch sử, truyền thuyết hoặc tiểu thuyết giả tưởng; nó khác trận đánh giữa hai đội quân. Cụm hiện nay chủ yếu xuất hiện trong văn phong trang trọng hoặc kể chuyện.",
+    "senses": [
+      {
+        "m": "cuộc chiến đấu giữa hai người, thường dùng vũ khí trong bối cảnh lịch sử/tưởng tượng",
+        "pat": "fight/meet in single combat · challenge somebody to single combat · a duel (related term)",
+        "ex": [
+          ["The legend says the two champions met in single combat at dawn.", "Truyền thuyết kể rằng hai dũng sĩ giao chiến tay đôi lúc bình minh."],
+          ["The novel's final scene ends with the rivals facing each other in single combat.", "Cảnh cuối của tiểu thuyết kết thúc khi hai đối thủ đối mặt trong một trận đấu tay đôi."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "single cream",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Single cream là loại kem sữa loãng dùng để rưới lên món ăn hoặc cho vào nấu, theo cách gọi của Anh; ở Bắc Mỹ, light cream là tên gần tương đương nhưng thành phần có thể khác theo quy định địa phương. Loại kem này thường không đủ béo để đánh bông như double cream.",
+    "senses": [
+      {
+        "m": "kem sữa loãng dùng trong nấu ăn hoặc rưới lên món ăn (Anh-Anh)",
+        "pat": "pour single cream over dessert · add single cream to a sauce · single cream (BrE), light cream (approx. AmE equivalent)",
+        "ex": [
+          ["Serve the fruit with a little single cream on the side.", "Dọn trái cây cùng một ít kem sữa loãng để riêng bên cạnh."],
+          ["The recipe uses single cream to make the sauce smoother.", "Công thức dùng kem sữa loãng để làm nước xốt mịn hơn."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sinking fund",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Sinking fund là quỹ được tích lũy theo kế hoạch để trả dần một khoản nợ lớn hoặc thay thế tài sản trong tương lai; thuật ngữ thường gặp trong tài chính và kế toán. Cách dùng và yêu cầu pháp lý phụ thuộc vào hợp đồng/quy định áp dụng.",
+    "senses": [
+      {
+        "m": "quỹ tích lũy định kỳ để trả nợ hoặc tài trợ một khoản chi lớn trong tương lai",
+        "pat": "establish/set up a sinking fund · contribute to a sinking fund · a sinking fund for debt repayment",
+        "ex": [
+          ["The company established a sinking fund to repay its bonds over ten years.", "Công ty lập quỹ trả nợ để thanh toán trái phiếu trong vòng mười năm."],
+          ["Monthly contributions to the sinking fund will cover the building's future repairs.", "Các khoản đóng góp hằng tháng vào quỹ dự phòng sẽ chi trả cho việc sửa chữa tòa nhà trong tương lai."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sinn fein",
+    "pos": "proper noun",
+    "hideOvdp": true,
+    "note": "Sinn Féin (thường viết Sinn Fein khi bỏ dấu) là một đảng chính trị Ireland theo chủ nghĩa cộng hòa, hoạt động ở cả Ireland và Bắc Ireland và ủng hộ thống nhất Ireland. Đây là tên riêng; đường lối và vai trò chính trị nên được mô tả theo thời điểm và nguồn tin cụ thể.",
+    "senses": [
+      {
+        "m": "Sinn Féin, một đảng chính trị Ireland ủng hộ thống nhất Ireland",
+        "pat": "Sinn Féin party · a Sinn Féin member/representative · Sinn Féin's Irish-unity platform",
+        "ex": [
+          ["Sinn Féin representatives discussed the proposal in the assembly.", "Các đại diện Sinn Féin thảo luận đề xuất tại nghị viện khu vực."],
+          ["The article outlines Sinn Féin's position on Irish unity.", "Bài viết trình bày lập trường của Sinn Féin về thống nhất Ireland."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sit down",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Sit down là chuyển từ đứng sang ngồi; sit down to do something thường nhấn mạnh bắt đầu ngồi vào bàn để làm việc. Sit down with somebody có thể chỉ một cuộc gặp/thảo luận nghiêm túc; dạng mệnh lệnh thường dùng để mời ai ngồi.",
+    "senses": [
+      {
+        "m": "ngồi xuống từ tư thế đứng",
+        "pat": "sit down on/in a chair · sit somebody down · sit down and relax",
+        "ex": [
+          ["Please sit down while I check your appointment.", "Vui lòng ngồi xuống trong lúc tôi kiểm tra lịch hẹn."],
+          ["He sat down by the window and opened his notebook.", "Anh ngồi xuống cạnh cửa sổ rồi mở sổ ghi chép."]
+        ]
+      },
+      {
+        "m": "ngồi vào bàn để bắt đầu làm việc/thảo luận",
+        "pat": "sit down to do something · sit down with somebody · sit down for a meal",
+        "ex": [
+          ["They sat down to discuss the final details of the contract.", "Họ ngồi lại để thảo luận các chi tiết cuối cùng của hợp đồng."],
+          ["I need to sit down and finish the report before lunch.", "Tôi cần ngồi vào làm và hoàn tất báo cáo trước bữa trưa."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sit up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Sit up là ngồi thẳng dậy thay vì nằm/ngả ra sau; cụm cũng có nghĩa thức khuya hơn thường lệ. Cấu trúc sit up and take notice là thành ngữ: bắt đầu chú ý nghiêm túc vì điều gì đó đáng quan tâm.",
+    "senses": [
+      {
+        "m": "ngồi thẳng dậy từ tư thế nằm hoặc ngả người",
+        "pat": "sit up in bed · sit up straight · help somebody sit up",
+        "ex": [
+          ["The patient sat up slowly and asked for a glass of water.", "Bệnh nhân từ từ ngồi dậy và xin một cốc nước."],
+          ["Sit up straight so that everyone can see the screen behind you.", "Hãy ngồi thẳng để mọi người có thể nhìn thấy màn hình phía sau bạn."]
+        ]
+      },
+      {
+        "m": "thức khuya, không đi ngủ vào giờ thường lệ",
+        "pat": "sit up late · sit up all night · sit up talking/reading",
+        "ex": [
+          ["We sat up late talking about our plans for the summer.", "Chúng tôi thức khuya trò chuyện về kế hoạch mùa hè."],
+          ["She sat up all night to finish the presentation.", "Cô thức suốt đêm để hoàn thành bài thuyết trình."]
+        ]
+      },
+      {
+        "m": "(sit up and take notice) bắt đầu chú ý nghiêm túc",
+        "pat": "make somebody sit up and take notice · sit up and listen",
+        "ex": [
+          ["The team's unexpected win made the league sit up and take notice.", "Chiến thắng bất ngờ của đội khiến cả giải đấu phải chú ý."],
+          ["The sharp rise in costs should make the board sit up and take notice.", "Chi phí tăng mạnh đáng lẽ phải khiến ban lãnh đạo chú ý nghiêm túc."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sitting room",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Sitting room là phòng sinh hoạt chung trong nhà, nơi mọi người ngồi trò chuyện hoặc xem TV; cách gọi này đặc biệt phổ biến trong tiếng Anh-Anh. Living room là từ thông dụng ở cả Anh-Anh và Anh-Mỹ.",
+    "senses": [
+      {
+        "m": "phòng sinh hoạt chung trong nhà để ngồi trò chuyện, thư giãn hoặc xem TV",
+        "pat": "in the sitting room · a comfortable/family sitting room · sit in the living room (common alternative)",
+        "ex": [
+          ["The guests waited in the sitting room while dinner was prepared.", "Khách chờ trong phòng sinh hoạt chung trong lúc bữa tối được chuẩn bị."],
+          ["Their sitting room has two large windows overlooking the garden.", "Phòng sinh hoạt chung của họ có hai cửa sổ lớn nhìn ra khu vườn."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "situation comedy",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Situation comedy là chương trình hài xoay quanh một nhóm nhân vật và các tình huống lặp lại; cách gọi rút gọn sitcom phổ biến hơn trong giao tiếp. Cụm có thể chỉ thể loại truyền hình hoặc một chương trình cụ thể thuộc thể loại đó.",
+    "senses": [
+      {
+        "m": "phim/chương trình hài có các nhân vật cố định trong những tình huống đời thường lặp lại",
+        "pat": "a television situation comedy · write/star in a sitcom · a situation-comedy series",
+        "ex": [
+          ["The situation comedy follows a group of nurses working in a city hospital.", "Bộ phim hài tình huống kể về một nhóm y tá làm việc trong bệnh viện thành phố."],
+          ["She wrote a situation comedy about three roommates sharing a small flat.", "Cô viết một phim hài tình huống về ba người bạn cùng thuê một căn hộ nhỏ."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "ski jump",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Ski jump là dốc nhân tạo rất dốc kết thúc bằng điểm phóng, nơi vận động viên trượt xuống rồi bay xa trước khi tiếp đất; môn thi thường gọi là ski jumping.",
+    "senses": [
+      {
+        "m": "dốc trượt tuyết nhân tạo dùng trong môn nhảy xa bằng ván trượt",
+        "pat": "a ski jump hill/ramp · train on a ski jump · an Olympic ski jump",
+        "ex": [
+          ["The ski jump was closed after heavy snow damaged the landing area.", "Dốc nhảy trượt tuyết bị đóng cửa sau khi tuyết dày làm hỏng khu vực tiếp đất."],
+          ["Spectators watched the athletes launch from the ski jump and soar over the valley.", "Khán giả xem các vận động viên lao khỏi dốc nhảy và bay qua thung lũng."]
+        ]
+      }
+    ]
+  }
+]

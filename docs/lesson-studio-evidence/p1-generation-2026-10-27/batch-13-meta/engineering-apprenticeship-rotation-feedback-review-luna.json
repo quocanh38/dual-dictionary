@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "70a74f57570e5db3b437f8db0a8ae016b6a3acf87716776c00179ef8eeb29210",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:49:23Z",
+  "note": "Independent full-pack review of this exact candidate: source sentences, both EN/VI target meanings, every option/explanation, answer uniqueness, and transfer. Rights/authorship/permission are local declarations only and were not independently verified. B2 is an estimate, not calibrated. This is AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack and frozen source declare an AI-assisted original passage, authorization for distribution, and no learner PII; declarations match. This is a local declaration check only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "‘takes on’ appears verbatim in s2: each apprentice takes on supervised tasks matching current skills. This supports accepting and undertaking work."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘to accept and start doing a task or responsibility’ accurately gives the contextual sense of taking on supervised tasks."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘đảm nhận một công việc hoặc trách nhiệm’ accurately and naturally conveys the meaning with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "‘work towards’ occurs verbatim in s6 before ‘a professional certificate’; this supports making continuing efforts toward a goal."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘to make steady efforts over time to achieve a goal’ accurately describes working towards the certificate."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘nỗ lực phấn đấu để đạt được một mục tiêu’ is a natural and accurate Vietnamese gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone paraphrases accepting and doing the supervised tasks. B delegates them, C only observes, and D delays them; none has the meaning supported by s2."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All four explanations correctly contrast taking responsibility with delegation, observation, or delay."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is the only grammatical sentence with ‘takes on’ plus a direct object. B lacks third-person agreement; C lacks an object after ‘takes on’; D adds an unlicensed ‘with.’"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The agreement, complement, and preposition explanations are accurate for the presented constructions and do not make broad claims beyond them."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone expresses continuing effort to earn a certificate. B implies effortless immediate receipt; C and D describe avoiding or abandoning the goal."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each explanation accurately contrasts sustained effort with immediate receipt, avoidance, or giving up."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is natural: ‘work towards’ takes the gerund ‘launching’ here. B uses a bare verb, C mismatches the auxiliary ‘is,’ and D adds an unnecessary preposition."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations accurately identify the gerund after the preposition ‘towards,’ the present progressive form, and the redundant ‘for.’"
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The prompt moves from apprentices seeking a professional certificate to an individual’s personal fitness goal; the role, goal, and context differ meaningfully."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model is idiomatic and uses ‘working towards’ for a half-marathon goal. The checks cover length, context, sustained effort, and phrase use; it is self-check, not auto-grading."
+    }
+  ],
+  "findings": []
+}

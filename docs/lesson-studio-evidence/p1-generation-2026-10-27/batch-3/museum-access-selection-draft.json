@@ -1,0 +1,53 @@
+{
+  "id": "draft-8a955f70-327f-4eab-a145-13d4d849c2e8",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Making a museum visit accessible",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The museum will take steps to make its public lectures easier to attend. Organisers need to identify barriers that prevent visitors from joining the discussion. They will ask participants about seating, sound and the timing of events before changing the programme. The report will separate observations from suggestions so that the committee can decide which changes to test first.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "The museum will take steps to make its public lectures easier to attend. Organisers need to identify barriers that prevent visitors from joining the discussion. They will ask participants about seating, sound and the timing of events before changing the programme. The report will separate observations from suggestions so that the committee can decide which changes to test first.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The museum will take steps to make its public lectures easier to attend."
+      },
+      {
+        "id": "s2",
+        "text": "Organisers need to identify barriers that prevent visitors from joining the discussion."
+      },
+      {
+        "id": "s3",
+        "text": "They will ask participants about seating, sound and the timing of events before changing the programme."
+      },
+      {
+        "id": "s4",
+        "text": "The report will separate observations from suggestions so that the committee can decide which changes to test first."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "take steps",
+      "meaningEn": "to take action in order to achieve something",
+      "meaningVi": "thực hiện các hành động để đạt được điều gì đó",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "identify barriers",
+      "meaningEn": "to recognize obstacles that prevent people from doing something",
+      "meaningVi": "xác định các trở ngại ngăn cản mọi người làm điều gì đó",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

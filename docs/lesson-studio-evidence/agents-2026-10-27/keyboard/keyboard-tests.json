@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "screen transitions focus their visible heading",
+    "authoring inputs have associated labels",
+    "keyboard Enter activates navigation and authoring actions",
+    "Space toggles rights and per-request consent",
+    "consent is inline, no modal focus trap applies",
+    "Tab reaches player controls and native radio group",
+    "ArrowDown changes answer and retains focused checked radio after save/render",
+    "390px emulation without overflow"
+  ],
+  "providerCalls": 0,
+  "physicalDevice": false
+}

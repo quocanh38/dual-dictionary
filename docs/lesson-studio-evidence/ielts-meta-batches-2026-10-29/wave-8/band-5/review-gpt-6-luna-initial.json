@@ -1,0 +1,31 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "8d117b3699c2e1c83b07db5fbe5c379ae6ac364079475316b220b7c4c5f34340",
+  "verdict": "repair",
+  "findings": [
+    {
+      "issue": "The reading passage contains an ungrammatical and unclear sentence: “Many students live close to college and cycling saves money and time every day in town together.” The phrase “in town together” has no clear meaning and the clause is awkwardly joined. Revise for natural, accurate prose.",
+      "severity": "major",
+      "item": "sharedContexts.reading.passage (also repeated in reading exercise passages)"
+    }
+  ],
+  "observations": [
+    "The listening script is 331 words and the reading passage is exactly 400 words; both are within the requested ranges.",
+    "All five listening and five reading keys are supported by their source texts and explanations; writing/speaking counts, IELTS timing/word limits, and cue-card timing are present.",
+    "Provenance states originalContent=true and records provider/model and prompt versions; no obvious overlap or copied source material was apparent in this review."
+  ],
+  "coverage": {
+    "itemsReviewed": 20,
+    "listeningExercises": 5,
+    "readingExercises": 5,
+    "writingPrompts": 5,
+    "speakingPrompts": 5,
+    "sharedListeningWordCount": 331,
+    "sharedReadingWordCount": 400,
+    "answersOptionsExplanations": "reviewed",
+    "writingDataTimingWordTargets": "reviewed",
+    "speakingCueCardAndStageLevel": "reviewed",
+    "provenanceOriginalityMetadata": "reviewed"
+  },
+  "reviewerType": "AI-assisted"
+}

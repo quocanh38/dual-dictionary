@@ -1,0 +1,336 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-9",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-9-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-9-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Student Meal-Card Top-Up Service",
+      "focus": "Understanding amounts, fees and service hours",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "wordCount": 354
+    },
+    "reading": {
+      "title": "Community Art Workshop Sign-Up",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "wordCount": 408
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-9-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Student Meal-Card Top-Up Service",
+      "pathwayStage": "band-5",
+      "focus": "Understanding amounts, fees and service hours",
+      "transcript": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "prompt": "How much will the student add to the card?",
+      "options": [
+        "Twenty dollars",
+        "Fifty dollars",
+        "Sixty dollars",
+        "Eleven dollars"
+      ],
+      "answer": 2,
+      "explanation": "The student corrects the first amount of fifty to sixty dollars. Fifty was the initial idea, not the final amount."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Student Meal-Card Top-Up Service",
+      "pathwayStage": "band-5",
+      "focus": "Understanding amounts, fees and service hours",
+      "transcript": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "prompt": "What is the fee for this top-up?",
+      "options": [
+        "No fee for this amount",
+        "Five dollars extra charge",
+        "Twenty dollars minimum fee",
+        "Two hours waiting fee"
+      ],
+      "answer": 0,
+      "explanation": "Staff says no fee for amounts above twenty dollars, so sixty has no fee. The five-dollar charge is for a replacement card, not a top-up."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Student Meal-Card Top-Up Service",
+      "pathwayStage": "band-5",
+      "focus": "Understanding amounts, fees and service hours",
+      "transcript": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "prompt": "When can the student use the money?",
+      "options": [
+        "Immediately at payment desk",
+        "In about two hours",
+        "After Friday at four thirty",
+        "Next month only"
+      ],
+      "answer": 1,
+      "explanation": "Staff says the balance will be ready in about two hours, after eleven o'clock. It is not immediate and not delayed until Friday."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Student Meal-Card Top-Up Service",
+      "pathwayStage": "band-5",
+      "focus": "Understanding amounts, fees and service hours",
+      "transcript": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "prompt": "Where can the student use the meal card?",
+      "options": [
+        "Only in library snack bar",
+        "Only in main dining hall",
+        "Only at student services office",
+        "Dining hall, cafe, snack bar"
+      ],
+      "answer": 3,
+      "explanation": "Staff lists three places: main dining hall, campus cafe, and library snack bar. Single-location options miss the full list."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Student Meal-Card Top-Up Service",
+      "pathwayStage": "band-5",
+      "focus": "Understanding amounts, fees and service hours",
+      "transcript": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "prompt": "When does the office close on Friday?",
+      "options": [
+        "At nine o'clock",
+        "At five o'clock",
+        "At four thirty",
+        "At eleven o'clock"
+      ],
+      "answer": 2,
+      "explanation": "Staff says Friday closing is earlier at four thirty, not five like other weekdays. Five o'clock is the Monday to Thursday time."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Community Art Workshop Sign-Up",
+      "pathwayStage": "band-5",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "prompt": "What is the main aim of the workshops?",
+      "options": [
+        "To prepare students for final art exams",
+        "To try creative activities and meet people",
+        "To collect money for centre repairs",
+        "To provide free bus service nearby"
+      ],
+      "answer": 1,
+      "explanation": "The passage states the aim is to try creative activities and meet people. Exam preparation is not mentioned as a purpose."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Community Art Workshop Sign-Up",
+      "pathwayStage": "band-5",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "prompt": "How must people sign up for workshops?",
+      "options": [
+        "Fill in online form on centre website",
+        "Call centre office one day after",
+        "Write name on library notice board",
+        "Pay fee at Room B entrance"
+      ],
+      "answer": 0,
+      "explanation": "The passage says sign-up is by online form on the website. The notice board only gives information, not sign-up."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Community Art Workshop Sign-Up",
+      "pathwayStage": "band-5",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "prompt": "What is true about Pottery Basics?",
+      "options": [
+        "It is only for experienced artists",
+        "It provides all materials for free",
+        "It requires ten dollars for materials",
+        "It takes place on Sunday afternoon"
+      ],
+      "answer": 2,
+      "explanation": "The passage says pottery has a ten-dollar fee for clay and firing. Painting is the free-materials workshop, not pottery."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Community Art Workshop Sign-Up",
+      "pathwayStage": "band-5",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "prompt": "What can be inferred about late cancellation?",
+      "options": [
+        "They will receive confirmation email quickly",
+        "They must pay ten dollars extra",
+        "They can bring child without adult",
+        "Another person may not get place"
+      ],
+      "answer": 3,
+      "explanation": "The passage asks for 24-hour cancellation so another person can take the place, implying late cancellation blocks others. No extra fee is mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Community Art Workshop Sign-Up",
+      "pathwayStage": "band-5",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "prompt": "What is the organiser's main claim?",
+      "options": [
+        "Last year's group held small exhibition",
+        "Workshops help build stronger community connections",
+        "Room B is near campus bus stop",
+        "Pottery needs ten-dollar material fee"
+      ],
+      "answer": 1,
+      "explanation": "The claim is that workshops build community connections; the exhibition is given as an example to support it. The location detail is not a claim."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Student Sports Day Participation",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas and direct comparisons with simple data",
+      "prompt": "The table below shows the number of students who took part in four activities during the student sports day at Greenfield College in 2022 and 2023.\n\nFootball: 45 in 2022, 60 in 2023\nBasketball: 30 in 2022, 35 in 2023\nRunning race: 50 in 2022, 40 in 2023\nVolleyball: 25 in 2022, 38 in 2023\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Community Book Exchange Use",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas and direct evidence from monthly figures",
+      "prompt": "The bar chart below shows the number of books donated and borrowed at the Riverside Community Book Exchange from January to April 2024.\n\nJanuary: 80 donated, 60 borrowed\nFebruary: 95 donated, 85 borrowed\nMarch: 70 donated, 90 borrowed\nApril: 110 donated, 100 borrowed\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Finding a Room for a Study Group",
+      "pathwayStage": "band-5",
+      "focus": "accurate simple explanations of problems and solutions in a familiar academic context",
+      "prompt": "Many college students find it difficult to find a quiet room for group study on campus. What are the main problems this causes for students? What can colleges do to help? Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Book Exchange Value",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas with direct evidence and personal opinion",
+      "prompt": "Some people think community book exchanges are a good way to share books and meet neighbours. Others think people prefer to buy new books or read online. Discuss both views and give your own opinion. Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Compulsory Student Sports Day",
+      "pathwayStage": "band-5",
+      "focus": "simple evaluation and reasons for a familiar school topic",
+      "prompt": "Some schools have a sports day every year where all students take part in sports activities. Do you think this is a good idea? Why or why not? Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Sports and Free Time",
+      "pathwayStage": "band-5",
+      "focus": "familiar topics and short clear answers",
+      "prompt": "Answer 3-4 short questions about yourself. Talk about: what sports you like to watch or play, whether your school had a sports day, how often you do exercise, and if you prefer team sports or individual sports."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Books and Reading Habits",
+      "pathwayStage": "band-5",
+      "focus": "familiar topics and simple explanations",
+      "prompt": "Answer 3-4 short questions about yourself. Talk about: how often you read books, whether you prefer to borrow or buy books, if you have used a library or community book exchange, and what kind of books you enjoy."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card",
+      "pathwayStage": "band-5",
+      "focus": "describe a familiar event with clear main ideas and direct evidence",
+      "prompt": "Describe a student sports day or group activity you took part in. You will have one minute to prepare and speak for 1-2 minutes.\n\n• when and where it was\n• who you were with\n• what you did during the activity\n• and explain how you felt about it"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Study Spaces and Group Learning",
+      "pathwayStage": "band-5",
+      "focus": "reasons and evaluation of solutions for academic contexts",
+      "prompt": "Discuss in more depth. Why do students need quiet rooms for group study? What problems happen when there are not enough rooms? How can colleges manage study rooms in a fair way? Evaluate different solutions and give reasons."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Activities and Book Sharing",
+      "pathwayStage": "band-5",
+      "focus": "reasons and evaluation of community ideas",
+      "prompt": "Discuss in more depth. What are the benefits and problems of a community book exchange? How does it compare to a library or reading online? Should local councils support these exchanges? Give reasons and evaluate your ideas."
+    }
+  ]
+}

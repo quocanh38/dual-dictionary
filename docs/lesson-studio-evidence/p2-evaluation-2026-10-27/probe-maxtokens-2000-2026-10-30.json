@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30T06:58:11.497Z",
+  "caseId": "natural-use",
+  "maxTokens": 2000,
+  "shape": {
+    "httpStatus": 200,
+    "elapsedMs": 9155,
+    "topKeys": [
+      "id",
+      "choices",
+      "created",
+      "model",
+      "object",
+      "usage"
+    ],
+    "choiceKeys": [
+      "finish_reason",
+      "index",
+      "message",
+      "logprobs"
+    ],
+    "finishReason": "stop",
+    "messageKeys": [
+      "content",
+      "refusal",
+      "role"
+    ],
+    "contentType": "string",
+    "contentLength": 214,
+    "contentHead": "{\"verdict\":\"correct\",\"quote\":\"\",\"issue\":\"\",\"suggestion\":\"\",\"explanation_vi\":\"Bạn dùng cụm “careful practice” rất tự nhiên và trả lời đúng yêu cầu kể cách bạn đã cải thiện tiếng Anh. Làm tốt lắm!\",\"retry_prompt\":\"\"}",
+    "usage": {
+      "completion_tokens": 1753,
+      "prompt_tokens": 403,
+      "total_tokens": 2156,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1692
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "estimatedUsd": 0.007954
+  }
+}

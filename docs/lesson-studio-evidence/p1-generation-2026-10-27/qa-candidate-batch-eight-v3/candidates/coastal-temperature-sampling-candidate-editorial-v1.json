@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-d1f70c2f-90d8-4080-a616-7783c6f06d12",
+    "version": 1,
+    "title": "Comparing Data Carefully with Weekly Averages and Consistent Patterns",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:26:50.359Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Comparing Data Carefully with Weekly Averages and Consistent Patterns",
+        "objective": "Learners will interpret weekly averages and consistent with in the reading context and use them accurately in new situations.",
+        "reading": {
+          "text": "A marine science class is comparing water temperatures at two coastal bays during the spring. One buoy records a reading every fifteen minutes, while the other sends data once an hour. Before calculating weekly averages, the analyst will align each time window so that the same part of the day is represented at both sites. The team will check sensor notes for gaps and flag days affected by maintenance. A difference between two averages should not be treated as a trend on its own. The researchers will describe a pattern as consistent with local weather only when it appears in several readings and agrees with the station log. They will publish the method with the data so another class can repeat the comparison.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A marine science class is comparing water temperatures at two coastal bays during the spring."
+            },
+            {
+              "id": "s2",
+              "text": "One buoy records a reading every fifteen minutes, while the other sends data once an hour."
+            },
+            {
+              "id": "s3",
+              "text": "Before calculating weekly averages, the analyst will align each time window so that the same part of the day is represented at both sites."
+            },
+            {
+              "id": "s4",
+              "text": "The team will check sensor notes for gaps and flag days affected by maintenance."
+            },
+            {
+              "id": "s5",
+              "text": "A difference between two averages should not be treated as a trend on its own."
+            },
+            {
+              "id": "s6",
+              "text": "The researchers will describe a pattern as consistent with local weather only when it appears in several readings and agrees with the station log."
+            },
+            {
+              "id": "s7",
+              "text": "They will publish the method with the data so another class can repeat the comparison."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "weekly averages",
+            "meaningEn": "mean values calculated over a one-week period",
+            "meaningVi": "giá trị trung bình theo tuần",
+            "sourceSentenceId": "s3"
+          },
+          {
+            "id": "t2",
+            "phrase": "consistent with",
+            "meaningEn": "in agreement with something; matching or supporting it",
+            "meaningVi": "phù hợp với",
+            "sourceSentenceId": "s6"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s3, what does 'weekly averages' mean when the analyst calculates them after aligning time windows?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means mean values calculated over a one-week period.",
+                "explanation": "This is correct because it matches calculating overall mean values for each week in s3."
+              },
+              {
+                "id": "b",
+                "text": "It means the highest single readings recorded during each week.",
+                "explanation": "This is wrong because s3 concerns overall mean values, not only the highest readings."
+              },
+              {
+                "id": "c",
+                "text": "It means the daily time windows chosen for sensor maintenance.",
+                "explanation": "This is wrong because the phrase refers to calculated values, not maintenance windows."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "In s3 weekly averages refers to mean values over a week calculated after aligning time windows."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'weekly averages' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The analyst compared weekly averages from both bays after aligning the time windows.",
+                "explanation": "This is correct because verb agreement and preposition use are natural and accurate."
+              },
+              {
+                "id": "b",
+                "text": "The analyst compare weekly averages from both bays after aligning the time windows.",
+                "explanation": "This is wrong because compare should be compares to agree with the singular subject analyst."
+              },
+              {
+                "id": "c",
+                "text": "The analyst compared weekly averages from both bays by align the time windows.",
+                "explanation": "This is wrong because align should be aligning after the preposition by."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a uses weekly averages with fully correct grammar and natural collocation."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s6, what does 'consistent with local weather' mean when describing a pattern?",
+            "sourceSentenceIds": [
+              "s6"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the pattern matches and is supported by local weather.",
+                "explanation": "This is correct because it expresses agreement between the pattern and local weather in s6."
+              },
+              {
+                "id": "b",
+                "text": "It means the pattern causes local weather despite conflicting evidence.",
+                "explanation": "This is wrong because s6 describes agreement, not causing weather despite conflict."
+              },
+              {
+                "id": "c",
+                "text": "It means the pattern is unrelated to and independent of local weather.",
+                "explanation": "This is wrong because consistent with means matching, not unrelated or independent."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "In s6 consistent with means the pattern agrees with and is supported by local weather."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'consistent with' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s6"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The temperature pattern is consistent with the station log from last spring.",
+                "explanation": "This is correct because is agrees with the subject and with correctly follows consistent."
+              },
+              {
+                "id": "b",
+                "text": "The temperature pattern is consistent to the station log from last spring.",
+                "explanation": "This is wrong because to should be with in the fixed collocation consistent with."
+              },
+              {
+                "id": "c",
+                "text": "The temperature pattern are consistent with the station log from last spring.",
+                "explanation": "This is wrong because are should be is to agree with the singular subject pattern."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a combines correct subject-verb agreement with the fixed collocation consistent with."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a school running club captain writing a message to new members about training results. Write 2-3 sentences explaining whether the results fit your training plan. Use the phrase 'consistent with'.",
+            "sourceSentenceIds": [
+              "s6"
+            ],
+            "sampleAnswer": "We compared this month's race times to our training plan. The steady improvement is consistent with the extra hill sessions we added in March.",
+            "selfCheck": [
+              "My response has 2-3 sentences.",
+              "My response uses the phrase consistent with correctly to show agreement.",
+              "My response uses a new role and purpose different from the marine science comparison."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

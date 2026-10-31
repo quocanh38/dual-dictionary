@@ -1,0 +1,345 @@
+{
+  "stage": "band-6-5",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 2202,
+        "outputTokens": 3069,
+        "totalTokens": 5271
+      },
+      "round": 2
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "University Peer Mentoring Evaluation",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "part": "Part 3",
+      "script": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "wordCount": 344
+    },
+    "reading": {
+      "title": "Microplastics in the River Calder",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "wordCount": 449
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "University Peer Mentoring Evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "transcript": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "prompt": "What was the main aim of the university's mentoring evaluation?",
+      "options": [
+        "To measure whether students enjoyed meeting their mentors",
+        "To recruit more volunteers for the mentoring scheme",
+        "To find out if mentoring helped first-years manage academically",
+        "To compare science students with other faculties"
+      ],
+      "answer": 2,
+      "explanation": "Jonas says the evaluation checked whether the scheme helps students settle in academically, not just whether they enjoy it. The enjoyment option fails because satisfaction alone is explicitly described as insufficient."
+    },
+    {
+      "id": "ielts-meta-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "University Peer Mentoring Evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "transcript": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "prompt": "What correction does Jonas make about the interviews?",
+      "options": [
+        "48 mentees were interviewed, not 50",
+        "36 mentors were interviewed, not 48",
+        "180 students answered the questionnaire, not 150",
+        "Interviews lasted 30 minutes, not 50 minutes"
+      ],
+      "answer": 0,
+      "explanation": "Jonas first says 50 mentees, then corrects to 48 because two withdrew. The 36-mentors distractor fails because 36 refers to weekly logs completed by mentors, not interviews."
+    },
+    {
+      "id": "ielts-meta-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "University Peer Mentoring Evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "transcript": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "prompt": "According to the results, how did the two formats differ?",
+      "options": [
+        "Workshop students submitted lab reports earlier than one-to-one mentees",
+        "One-to-one mentees met deadlines more often than workshop-only students",
+        "Both groups showed the same submission pattern as each other",
+        "Workshop students received higher final grades than mentees"
+      ],
+      "answer": 1,
+      "explanation": "Jonas reports regular one-to-one students submitted the first two lab reports on time more often than workshop-only students, whose record was close to no mentoring. The identical-pattern distractor fails because similarity is claimed only between workshops and no mentoring."
+    },
+    {
+      "id": "ielts-meta-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "University Peer Mentoring Evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "transcript": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "prompt": "Why does the report qualify the small grade difference?",
+      "options": [
+        "Grades were not collected for all participants",
+        "Mentors recorded grades incorrectly in their logs",
+        "Workshops lasted only ten weeks in total",
+        "Volunteers may already have been more motivated"
+      ],
+      "answer": 3,
+      "explanation": "The report notes grades were slightly higher but the gap was small and could reflect prior motivation because students volunteered. The ten-weeks distractor fails because duration is a separate limitation about persistence, not about grades."
+    },
+    {
+      "id": "ielts-meta-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "University Peer Mentoring Evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "transcript": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "prompt": "What does the report recommend for the follow-up study?",
+      "options": [
+        "Stop one-to-one mentoring and expand workshops",
+        "Track retention and progression over a longer period",
+        "Limit mentoring to lab report writing only",
+        "Compare science grades with other universities"
+      ],
+      "answer": 1,
+      "explanation": "Jonas says the recommendation is a longer follow-up tracking retention and progression, not just early submission. The expand-workshops distractor fails because the report suggests keeping one-to-one mentoring for students who request it."
+    },
+    {
+      "id": "ielts-meta-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Microplastics in the River Calder",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "prompt": "What were the researchers mainly trying to test?",
+      "options": [
+        "Whether cotton coats prevent all fibre contamination",
+        "Whether contamination varies by location and rainfall",
+        "Whether wastewater treatment removes all plastics",
+        "Whether autumn leaves trap more plastics than spring flows"
+      ],
+      "answer": 1,
+      "explanation": "The opening states the study compared levels along an urban gradient and tested whether rainfall increased counts. The cotton-coats distractor fails because coats were only a contamination control, not the research aim."
+    },
+    {
+      "id": "ielts-meta-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Microplastics in the River Calder",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "prompt": "What can reasonably be inferred about the reported concentrations?",
+      "options": [
+        "They include plastics of all sizes in the river",
+        "They were counted only once for each sample",
+        "They prove annual pollution loads for the river",
+        "They likely understate true contamination"
+      ],
+      "answer": 3,
+      "explanation": "The passage says the method excludes particles smaller than 0.3 mm, so total contamination is likely underestimated. The all-sizes distractor fails because the size range is explicitly restricted to 0.3 to 5 mm."
+    },
+    {
+      "id": "ielts-meta-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Microplastics in the River Calder",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "prompt": "How does the Mill Road storm drain incident function in the passage?",
+      "options": [
+        "As an illustration of a possible pathway, not proof of the trend",
+        "As the main evidence for the urban gradient pattern",
+        "As proof that street cleaning causes all fibre pollution",
+        "As a counterexample to the wastewater outlet finding"
+      ],
+      "answer": 0,
+      "explanation": "The authors present the Mill Road cluster only as an example of a possible pathway, not as proof of the overall trend. The main-evidence distractor fails because the trend rests on averaged site data of 1.2, 3.8 and 5.1 particles."
+    },
+    {
+      "id": "ielts-meta-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Microplastics in the River Calder",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "prompt": "What happened to particle composition after heavy rain?",
+      "options": [
+        "Fragments increased while fibres decreased",
+        "Films became the largest particle category",
+        "Fibres formed a larger share, while other types changed little",
+        "All particle types rose equally in proportion"
+      ],
+      "answer": 2,
+      "explanation": "After rain, fibres rose from 55% to 78% while fragments and films changed little. The equal-rise distractor fails because the increase is described as consisting mainly of fibres."
+    },
+    {
+      "id": "ielts-meta-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Microplastics in the River Calder",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "prompt": "Which statement best reflects the authors' cautious central claim?",
+      "options": [
+        "The wastewater outlet alone causes the downstream increase",
+        "Within the studied season and size range, urban activity after rain was linked to higher counts",
+        "Spring results describe pollution levels for the whole year",
+        "Higher river flow has been ruled out as an alternative explanation"
+      ],
+      "answer": 1,
+      "explanation": "The authors limit their claim to the size range and season studied and use associated with, explicitly not claiming the outlet alone causes the increase. The outlet-alone distractor fails because that causal claim is directly disavowed."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Freshwater microplastic sampling study",
+      "pathwayStage": "band-6-5",
+      "focus": "Summarising denser academic information with qualified comparisons",
+      "prompt": "This is original practice material, not an official test. The table below shows results from a freshwater microplastic sampling study on the River Alder in 2024 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Note the study limitations where they affect interpretation. Write at least 150 words in about 20 minutes. Table data: Site | Season | Samples taken | Mean particles per litre | Fibres as share of particles | Samples above 10 particles per litre. Upstream Rural | Dry 2024 | 30 | 2.1 | 48 percent | 7 percent. Upstream Rural | Wet 2025 | 30 | 3.4 | 52 percent | 13 percent. Town Centre | Dry 2024 | 32 | 6.8 | 71 percent | 38 percent. Town Centre | Wet 2025 | 32 | 9.2 | 68 percent | 56 percent. Downstream Estuary | Dry 2024 | 28 | 5.3 | 62 percent | 29 percent. Downstream Estuary | Wet 2025 | 28 | 7.9 | 65 percent | 46 percent. Method note: one laboratory, visual counting with partial chemical check, small seasonal samples.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · University mentoring evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence across groups and handling uncertainty",
+      "prompt": "This is original practice material, not an official test. The table below shows results from a university mentoring evaluation for first-year students in 2023 to 2024 at Northfield University. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Faculty | Mentored participants | Completed full programme | Reported improved study organisation | First-year continuation rate mentored | First-year continuation rate non-mentored. Arts | 120 | 78 percent | 64 percent | 88 percent | 81 percent. Science | 150 | 71 percent | 58 percent | 86 percent | 80 percent. Engineering | 95 | 66 percent | 61 percent | 84 percent | 79 percent. Evaluation note: participation was voluntary, survey response was 82 percent, and continuation is influenced by entry grades and other support.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Public transport demand data",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing trends and contrasting qualified claims from data",
+      "prompt": "This is original practice material, not an official test. The table below shows average weekday public transport demand in the city of Merrivale in 2019 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Mode | Average weekday boardings 2019 | Average weekday boardings 2024 | Peak-hour share of daily boardings 2024 | Fare revenue as share of operating cost 2024. Bus | 182000 | 165000 | 34 percent | 42 percent. Tram | 96000 | 118000 | 41 percent | 55 percent. Suburban rail | 74000 | 71000 | 48 percent | 38 percent. Note: 2019 was pre-network change, 2024 includes a new tram extension opened in March 2023, figures exclude weekends and holidays.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Local clean-ups and packaging rules",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating qualified claims and comparing limited evidence",
+      "prompt": "This is original practice material, not an official test. Some people argue that local river clean-up projects do more to reduce freshwater plastic than national rules on packaging, while others argue that only national rules can address the causes. Discuss both views, compare the type of evidence each side might use, and give your own opinion with reasons. Acknowledge limitations in the evidence where relevant. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Compulsory university mentoring and transport priorities",
+      "pathwayStage": "band-6-5",
+      "focus": "Balanced argument with careful qualifications and trade-offs",
+      "prompt": "This is original practice material, not an official test. Some universities require all first-year students to join a mentoring programme, and some cities give priority to public transport investment over road expansion. Supporters say these policies improve long-term outcomes, while critics say they limit choice and ignore practical constraints. Discuss the advantages and disadvantages of both approaches in terms of long-term benefits, individual choice, and practical constraints, and give your own opinion on which approach is more justified. Support your points with relevant examples and qualify general claims. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Water, rivers and local environment",
+      "pathwayStage": "band-6-5",
+      "focus": "Everyday experience with some qualified description",
+      "prompt": "This is original practice. Answer in short, natural responses of 2 to 4 sentences, not memorised facts. Questions: How often do you walk near a river, lake or coast? What do you notice about litter or water quality in your area? Have you ever taken part in a clean-up or recycling activity? How has your use of single-use plastic changed in recent years? Why do you think some people are more concerned about water pollution than others?"
+    },
+    {
+      "id": "ielts-meta-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Study support and mentoring",
+      "pathwayStage": "band-6-5",
+      "focus": "Personal experience with careful comparison",
+      "prompt": "This is original practice. Answer in short, natural responses. Questions: Did anyone help you when you started school, university or a new job? What kind of advice is most useful for new students? Do you prefer to learn alone or with guidance from others? How has the way students ask for help changed? Why might mentoring suit some students more than others?"
+    },
+    {
+      "id": "ielts-meta-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: A mentoring or coaching experience",
+      "pathwayStage": "band-6-5",
+      "focus": "Extended turn with organisation and reflection on limitations",
+      "prompt": "This is original practice. Speak for 1 to 2 minutes. Describe a time when you received or gave mentoring, coaching or practical guidance. You should say: • who was involved and how you knew them • what the goal was and how long it lasted • what you or they actually did in the sessions • explain what was helpful and what was limited or uncertain about the support. You have about one minute to prepare and may make brief notes."
+    },
+    {
+      "id": "ielts-meta-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: A regular journey by public transport",
+      "pathwayStage": "band-6-5",
+      "focus": "Extended description with comparison and detail",
+      "prompt": "This is original practice. Speak for 1 to 2 minutes. Describe a journey you often make or once made by public transport such as bus, tram or train. You should say: • where you travelled from and to and why • which mode you used and when you travelled • what the service was like for comfort, time and cost • explain how satisfactory it was and what would improve it. You have about one minute to prepare and may make brief notes."
+    },
+    {
+      "id": "ielts-meta-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evidence, environment and public choices",
+      "pathwayStage": "band-6-5",
+      "focus": "Reasons and evaluation, not memorised facts",
+      "prompt": "This is original practice. Discuss ideas with reasons and evaluation. Questions: Why should small sampling studies on rivers be treated with caution before making policy? How can decision makers compare evidence from a local study with evidence from national data? What are the advantages and limitations of voluntary mentoring compared with compulsory programmes? When should cities prioritise public transport over roads, and what trade-offs should be evaluated? How can the public be encouraged to interpret qualified claims carefully?"
+    }
+  ]
+}

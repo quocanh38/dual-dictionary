@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "b3cf0328ef18ded56c51fd6d523660871b93f794c474a4644f49516298f6c0bf",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra route reviews",
+  "reviewedAt": "2026-10-27T08:30:04Z",
+  "note": "Two independent reviewers examined this exact payload hash with its matching source row and schema; both returned 17/17 PASS and no critical, uncertain or minor findings. AI-assisted editorial review, not human or learner review. Original-source rights are supported only by local declarations and were not independently verified. Routes requested: gpt-6-luna (runtime-visible label GPT-6; configured route not exposed) and gpt-5.6-terra (Terra confirmed; runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the source row and pack declare AI-assisted original material, authorized for distribution, no copied exam/external text or learner PII; no PII visible. Declaration only, not independent proof of authorship or rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “fire drill” appears in cited s1 as planned emergency practice."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “a practice evacuation for a fire emergency” accurately describes the source context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “buổi diễn tập phòng cháy chữa cháy” is natural and accurately accented."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “assembly point” is supported by s2, where visitors are guided to a designated gathering place."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss identifies a designated safe gathering place during an evacuation."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “điểm tập trung an toàn” is natural and accurate."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the unique planned evacuation practice; b is a real fire and c is an unrelated library class."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the key and all option explanations accurately distinguish practice from a real fire and unrelated activity."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as natural; b incorrectly uses a gerund after infinitive “to,” and c uses “an” before the consonant sound in “fire.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the infinitive and article corrections are accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the unique evacuation gathering place; b is a manager’s office and c is a library borrowing entrance."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the explanations accurately reject an office and a borrowing entrance as meanings of the target."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b lacks the article “the” and c incorrectly adds “of” after “behind.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the article and preposition corrections are exact and accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from a centre fire drill to reassuring a friend who is starting an office job."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the two-sentence model naturally uses the phrase; the checklist supports self-assessment and no automatic grading."
+    }
+  ],
+  "findings": []
+}

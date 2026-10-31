@@ -1,0 +1,23 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "maxOutputTokens": 32768,
+  "stage": "band-6",
+  "batchId": "wave-6",
+  "segment": "prompts",
+  "action": "generate",
+  "completedAt": "2026-10-29T05:21:22.210Z",
+  "outcome": "failed-or-unknown",
+  "error": "Provider output was truncated at its token limit. No draft accepted; retry deliberately or shorten the source.",
+  "call": {
+    "purpose": "generate-original-ielts-prompts-wave-6",
+    "model": "meta-models/muse-spark-open-1026",
+    "status": 200,
+    "usage": {
+      "inputTokens": 648,
+      "outputTokens": 32768,
+      "totalTokens": 33416
+    },
+    "latencyMs": 67762
+  }
+}

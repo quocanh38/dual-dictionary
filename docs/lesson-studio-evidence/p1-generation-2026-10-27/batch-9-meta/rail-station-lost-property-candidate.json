@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-0ecba08e-7198-4bb5-ab2e-57eef26115e6",
+    "version": 1,
+    "title": "Lost Property at Central Station",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:38:56.459Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Lost Property at Central Station",
+        "objective": "Learners will understand and use two phrases for reporting and claiming lost items in service settings.",
+        "reading": {
+          "text": "Passengers who find a wallet or bag at Central Station should hand it in to the information desk rather than leave it on a seat. Staff attach a numbered tag and record the time and location where the item was found. A person collecting it may need to give proof of ownership, such as a clear description of an item inside, before staff release it. The desk stores small objects in a locked cabinet and keeps larger bags in a supervised room. Items are recorded in a daily register so the next shift can answer questions. If a passenger thinks they have lost something, they should describe it without sharing sensitive account numbers in public. The station will contact the owner if a safe contact detail is available.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "Passengers who find a wallet or bag at Central Station should hand it in to the information desk rather than leave it on a seat."
+            },
+            {
+              "id": "s2",
+              "text": "Staff attach a numbered tag and record the time and location where the item was found."
+            },
+            {
+              "id": "s3",
+              "text": "A person collecting it may need to give proof of ownership, such as a clear description of an item inside, before staff release it."
+            },
+            {
+              "id": "s4",
+              "text": "The desk stores small objects in a locked cabinet and keeps larger bags in a supervised room."
+            },
+            {
+              "id": "s5",
+              "text": "Items are recorded in a daily register so the next shift can answer questions."
+            },
+            {
+              "id": "s6",
+              "text": "If a passenger thinks they have lost something, they should describe it without sharing sensitive account numbers in public."
+            },
+            {
+              "id": "s7",
+              "text": "The station will contact the owner if a safe contact detail is available."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "hand it in",
+            "meaningEn": "to give something you found to staff at an official desk",
+            "meaningVi": "giao nộp vật nhặt được cho nhân viên hoặc quầy thông tin",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "proof of ownership",
+            "meaningEn": "evidence showing that you are the owner of something",
+            "meaningVi": "bằng chứng chứng minh quyền sở hữu",
+            "sourceSentenceId": "s3"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s1, what does 'hand it in' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to give a found wallet or bag to the information desk.",
+                "explanation": "Correct - it matches giving a found item to staff at an official desk."
+              },
+              {
+                "id": "b",
+                "text": "It means to leave a found wallet or bag on a seat for others.",
+                "explanation": "Wrong - it describes the opposite action warned against in s1."
+              },
+              {
+                "id": "c",
+                "text": "It means to keep a found wallet or bag for personal use.",
+                "explanation": "Wrong - it describes keeping the item instead of giving it to staff."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a matches giving a found item to staff in s1."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'hand it in' correctly.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "I found a wallet in the hall, so I handed it in to the information desk.",
+                "explanation": "Correct - past tense and prepositions are natural and accurate."
+              },
+              {
+                "id": "b",
+                "text": "She hand it in to the office yesterday morning.",
+                "explanation": "Wrong - 'hand' must be corrected to 'handed' for past time."
+              },
+              {
+                "id": "c",
+                "text": "He handed it in to a information desk this morning.",
+                "explanation": "Wrong - 'a information' must be corrected to 'an information'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is grammatically correct and natural."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s3, what does 'proof of ownership' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a numbered tag that staff attach to a found item.",
+                "explanation": "Wrong - it describes staff labelling in s2, not owner evidence."
+              },
+              {
+                "id": "b",
+                "text": "It means evidence such as a clear description showing you own the item.",
+                "explanation": "Correct - it matches evidence showing you are the owner."
+              },
+              {
+                "id": "c",
+                "text": "It means a daily register that helps the next shift answer questions.",
+                "explanation": "Wrong - it describes the record in s5, not owner evidence."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only option b matches evidence of ownership in s3."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'proof of ownership' correctly.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The desk asked for proof of ownership before returning the lost bag.",
+                "explanation": "Correct - the phrase and sentence grammar are natural and accurate."
+              },
+              {
+                "id": "b",
+                "text": "He show proof of ownership when he collected the parcel.",
+                "explanation": "Wrong - 'show' must be corrected to 'showed' for past time."
+              },
+              {
+                "id": "c",
+                "text": "She provided proof of ownerships to claim her camera.",
+                "explanation": "Wrong - 'ownerships' must be corrected to 'ownership'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is grammatically correct and natural."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a resident emailing your apartment manager about a parcel you left in the lobby. Write 2-3 sentences explaining what happened and what evidence you can show to collect it.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "sampleAnswer": "I think I left my small parcel in the lobby on Monday evening. I can show proof of ownership with the order confirmation and a description of the contents when I collect it.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used 'proof of ownership' to describe my evidence.",
+              "I mention what evidence I can show to collect the parcel."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

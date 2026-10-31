@@ -1,0 +1,820 @@
+{
+  "wave": 6,
+  "batch": 13,
+  "generated": "2026-10-19",
+  "source": "399 skip của batch 12 (ngưỡng nới — loại cứng giữ nguyên: vulgar/sensitive/dated/tên riêng/quân hàm/ngành hẹp) → 258 ứng viên → 76 chọn",
+  "counts": {
+    "ứngViên": 258,
+    "loạiCứng": 141,
+    "selected": 76,
+    "skipped": 182
+  },
+  "selected": [
+    "earth science",
+    "evening dress",
+    "family doctor",
+    "family tree",
+    "film star",
+    "first half",
+    "full moon",
+    "front door",
+    "funeral home",
+    "general store",
+    "gift shop",
+    "good nature",
+    "grand total",
+    "green tea",
+    "hard cash",
+    "head of state",
+    "high chair",
+    "high pressure",
+    "house guest",
+    "house party",
+    "ice cream",
+    "jump cut",
+    "key ring",
+    "last name",
+    "life story",
+    "love letter",
+    "low pressure",
+    "market day",
+    "medicine ball",
+    "middle school",
+    "military police",
+    "mother country",
+    "national service",
+    "natural history",
+    "night light",
+    "off day",
+    "old master",
+    "old world",
+    "opening night",
+    "party spirit",
+    "picture book",
+    "pocket knife",
+    "police dog",
+    "power station",
+    "private detective",
+    "red line",
+    "rest home",
+    "ring finger",
+    "roof garden",
+    "rough cut",
+    "running mate",
+    "school board",
+    "sea power",
+    "search party",
+    "second person",
+    "secret agent",
+    "silly season",
+    "single file",
+    "social work",
+    "speed reading",
+    "still life",
+    "stone age",
+    "story line",
+    "subject matter",
+    "summer school",
+    "stay over",
+    "tea set",
+    "thank you",
+    "time machine",
+    "top secret",
+    "tree house",
+    "true love",
+    "waiting room",
+    "walking stick",
+    "wedding ring",
+    "working group"
+  ],
+  "skippedByReason": [
+    {
+      "phrase": "engine driver",
+      "reason": "nghề cụ thể BrE — value thấp"
+    },
+    {
+      "phrase": "face pack",
+      "reason": "niche làm đẹp"
+    },
+    {
+      "phrase": "family man",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "family name",
+      "reason": "trùng value (family tree/last name)"
+    },
+    {
+      "phrase": "fellow feeling",
+      "reason": "văn chương — value thấp"
+    },
+    {
+      "phrase": "field hand",
+      "reason": "niche US nông nghiệp"
+    },
+    {
+      "phrase": "field house",
+      "reason": "niche US thể thao"
+    },
+    {
+      "phrase": "fire company",
+      "reason": "niche US — trùng fire department"
+    },
+    {
+      "phrase": "flying fish",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "free form",
+      "reason": "nghệ thuật niche"
+    },
+    {
+      "phrase": "french bread",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "french door",
+      "reason": "niche kiến trúc"
+    },
+    {
+      "phrase": "front matter",
+      "reason": "niche xuất bản"
+    },
+    {
+      "phrase": "full face",
+      "reason": "niche nhiếp ảnh"
+    },
+    {
+      "phrase": "gas oil",
+      "reason": "kỹ thuật nhiên liệu"
+    },
+    {
+      "phrase": "gas ring",
+      "reason": "thiết bị bếp UK niche"
+    },
+    {
+      "phrase": "go together",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "good looks",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "grace note",
+      "reason": "âm nhạc niche"
+    },
+    {
+      "phrase": "green room",
+      "reason": "nhà hát niche"
+    },
+    {
+      "phrase": "ground glass",
+      "reason": "kỹ thuật quang học"
+    },
+    {
+      "phrase": "guest house",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "guest room",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "half note",
+      "reason": "âm nhạc US"
+    },
+    {
+      "phrase": "half step",
+      "reason": "âm nhạc US"
+    },
+    {
+      "phrase": "hand off",
+      "reason": "niche US football"
+    },
+    {
+      "phrase": "health food",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "hiding place",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "high jump",
+      "reason": "môn thể thao đơn"
+    },
+    {
+      "phrase": "high road",
+      "reason": "value so quota"
+    },
+    {
+      "phrase": "high water mark",
+      "reason": "niche"
+    },
+    {
+      "phrase": "home page",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "horse race",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "hour hand",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "ice chest",
+      "reason": "niche US"
+    },
+    {
+      "phrase": "ice water",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "job action",
+      "reason": "niche US lao động"
+    },
+    {
+      "phrase": "jump shot",
+      "reason": "niche US basketball"
+    },
+    {
+      "phrase": "keep in",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "lay about",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "little finger",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "look in",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "love seat",
+      "reason": "nội thất US"
+    },
+    {
+      "phrase": "love story",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "market garden",
+      "reason": "UK nông nghiệp niche"
+    },
+    {
+      "phrase": "market town",
+      "reason": "UK niche"
+    },
+    {
+      "phrase": "may queen",
+      "reason": "lễ hội"
+    },
+    {
+      "phrase": "meeting place",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "mess hall",
+      "reason": "quân đội — value so quota"
+    },
+    {
+      "phrase": "middle distance",
+      "reason": "điền kinh niche"
+    },
+    {
+      "phrase": "middle english",
+      "reason": "ngôn ngữ học chuyên"
+    },
+    {
+      "phrase": "minute hand",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "morning coat",
+      "reason": "trang phục lễ niche"
+    },
+    {
+      "phrase": "morning dress",
+      "reason": "trang phục lễ niche"
+    },
+    {
+      "phrase": "music stand",
+      "reason": "giá nhạc niche"
+    },
+    {
+      "phrase": "natural science",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "news stand",
+      "reason": "niche US đường phố"
+    },
+    {
+      "phrase": "nose ring",
+      "reason": "thời trang — value thấp"
+    },
+    {
+      "phrase": "office block",
+      "reason": "UK building"
+    },
+    {
+      "phrase": "oil paint",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "oil painting",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "old english",
+      "reason": "ngôn ngữ học"
+    },
+    {
+      "phrase": "old lady",
+      "reason": "sắc thái thân mật — value so quota"
+    },
+    {
+      "phrase": "order form",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "pack animal",
+      "reason": "săn/khỏi — niche"
+    },
+    {
+      "phrase": "pack horse",
+      "reason": "niche"
+    },
+    {
+      "phrase": "pack ice",
+      "reason": "địa cực"
+    },
+    {
+      "phrase": "paper knife",
+      "reason": "đồ vật niche"
+    },
+    {
+      "phrase": "pass key",
+      "reason": "niche US khách sạn"
+    },
+    {
+      "phrase": "period piece",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "phone call",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "phone in",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "phone number",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "place name",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "playing card",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "plus sign",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "point duty",
+      "reason": "UK giao thông niche"
+    },
+    {
+      "phrase": "police force",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "police officer",
+      "reason": "tổ hợp hiển nhiên (nghề)"
+    },
+    {
+      "phrase": "press box",
+      "reason": "thể thao media niche"
+    },
+    {
+      "phrase": "price list",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "prison camp",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "push forward",
+      "reason": "phrasal hiển nhiên"
+    },
+    {
+      "phrase": "push out",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "rain drop",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "reading room",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "red wine",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "rest house",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "rest stop",
+      "reason": "niche US cao tốc"
+    },
+    {
+      "phrase": "river bed",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "road sense",
+      "reason": "UK — value so quota"
+    },
+    {
+      "phrase": "rock garden",
+      "reason": "làm vườn niche"
+    },
+    {
+      "phrase": "roll down",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "roll-on roll-off",
+      "reason": "vận tải hải niche"
+    },
+    {
+      "phrase": "rose water",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "running time",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "safety match",
+      "reason": "cụ thể — value so quota"
+    },
+    {
+      "phrase": "screw top",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "sea captain",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "sea floor",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "sea king",
+      "reason": "tên máy bay"
+    },
+    {
+      "phrase": "sea wall",
+      "reason": "kỹ thuật"
+    },
+    {
+      "phrase": "second in command",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "secret police",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "selling price",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "send on",
+      "reason": "phrasal mỏng"
+    },
+    {
+      "phrase": "set square",
+      "reason": "dụng cụ UK"
+    },
+    {
+      "phrase": "shooting stick",
+      "reason": "UK quirk"
+    },
+    {
+      "phrase": "shop front",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "short time",
+      "reason": "mờ"
+    },
+    {
+      "phrase": "show trial",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "side road",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "sleeping bag",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "soft drink",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "some day",
+      "reason": "chính tả someday"
+    },
+    {
+      "phrase": "soul food",
+      "reason": "văn hoá cụ thể — value so quota"
+    },
+    {
+      "phrase": "sound system",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "space bar",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "special agent",
+      "reason": "trùng tone (secret agent)"
+    },
+    {
+      "phrase": "speech community",
+      "reason": "ngôn ngữ học chuyên"
+    },
+    {
+      "phrase": "square off",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "stage door",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "stage name",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "standing room",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "starting point",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "state house",
+      "reason": "US niche"
+    },
+    {
+      "phrase": "stone cold",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "stone dead",
+      "reason": "trùng tone (stone cold)"
+    },
+    {
+      "phrase": "storm door",
+      "reason": "US house"
+    },
+    {
+      "phrase": "storm window",
+      "reason": "US house"
+    },
+    {
+      "phrase": "street light",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "sun hat",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "sweet roll",
+      "reason": "US pastry"
+    },
+    {
+      "phrase": "sword dance",
+      "reason": "văn hoá — value so quota"
+    },
+    {
+      "phrase": "table wine",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "tea chest",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "tea garden",
+      "reason": "niche"
+    },
+    {
+      "phrase": "tea service",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "time clock",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "time signal",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "toilet paper",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "toilet roll",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "top hat",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "track and field",
+      "reason": "môn thể thao đơn"
+    },
+    {
+      "phrase": "training college",
+      "reason": "trùng (trade school)"
+    },
+    {
+      "phrase": "truck farm",
+      "reason": "US nông nghiệp"
+    },
+    {
+      "phrase": "truck stop",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "video game",
+      "reason": "trùng value (computer game — batch 11)"
+    },
+    {
+      "phrase": "wall painting",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "war criminal",
+      "reason": "trùng (war crime)"
+    },
+    {
+      "phrase": "war dance",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "warm front",
+      "reason": "khí tượng"
+    },
+    {
+      "phrase": "waste paper",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "water bird",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "water bottle",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "water boy",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "water clock",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "water ice",
+      "reason": "UK dessert niche"
+    },
+    {
+      "phrase": "water main",
+      "reason": "kỹ thuật"
+    },
+    {
+      "phrase": "weather station",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "wedding cake",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "wedding dress",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "well done",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "well known",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "well ordered",
+      "reason": "value thấp"
+    },
+    {
+      "phrase": "well thought of",
+      "reason": "value thấp"
+    },
+    {
+      "phrase": "well tried",
+      "reason": "value thấp"
+    },
+    {
+      "phrase": "well turned",
+      "reason": "value thấp"
+    },
+    {
+      "phrase": "wet bar",
+      "reason": "US house"
+    },
+    {
+      "phrase": "wet suit",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "white bread",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "white horse",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "white meat",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "white water",
+      "reason": "rafting niche"
+    },
+    {
+      "phrase": "whole milk",
+      "reason": "dinh dưỡng cụ thể"
+    },
+    {
+      "phrase": "window box",
+      "reason": "làm vườn"
+    },
+    {
+      "phrase": "window seat",
+      "reason": "nội thất"
+    },
+    {
+      "phrase": "wine bar",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "work of art",
+      "reason": "tổ hợp hiển nhiên"
+    },
+    {
+      "phrase": "world power",
+      "reason": "value thấp so quota"
+    },
+    {
+      "phrase": "writing desk",
+      "reason": "cụ thể"
+    },
+    {
+      "phrase": "writing paper",
+      "reason": "cụ thể"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "956a2dfaed9309163c906ce7cc8511adbead0e8d04a1eed64a7ee8bfc3446a89",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening is 375 words and Reading 417, both within required ranges. The script now identifies ingredients as distinct from cross-contact and directs the student to confirm kitchen preparation for both dishes, addressing the serious-allergy safety risk. All 10 objective keys are uniquely supported with accurate explanations and balanced options. Writing tables reconcile (picnic totals 185/220/250; kit borrowings 32/48/54/42/68); writing/speaking tasks and Part 2 cue card are complete and stage-appropriate. Original-content provenance is declared; no score or official-item claims."
+  ],
+  "coverage": "Full review of provenance/structure, both contexts and 300–400/400–500 word ranges, all 10 objective prompts/options/keys/explanations, all five Writing prompts/data/timing, and all five Speaking prompts/IELTS part fit. Specifically checked allergy ingredient and cross-contact safety.",
+  "reviewerType": "AI-assisted"
+}

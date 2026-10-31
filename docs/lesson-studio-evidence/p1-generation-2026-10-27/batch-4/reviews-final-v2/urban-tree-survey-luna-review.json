@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "4297d21344629e0e0122967b9dd1869290ca5c8fe0c36ae8f285af37ec46cf87",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T06:44:08Z",
+  "note": "Independent review of the exact candidate payload and its source links, target meanings, MCQ keys/explanations and transfer task. AI-assisted editorial judgment; no external rights audit, human review or learner testing.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack attributes an original AI-assisted reading to the project, states no copied exam text/external source/learner data, and the inspected payload contains no learner PII; rights are based on this declaration, not external provenance verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact phrase occurs in s1, describing a university team conducting a tree survey."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately describes conducting a systematic information-gathering study."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“tiến hành một cuộc khảo sát” is natural and accurate Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact phrase occurs in cited s3; report draws attention to a finding about young trees."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately covers stating/drawing attention to a fact or observation."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“chỉ ra, nêu rõ” is an accurate, natural gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone describes conducting the study; b–d introduce relocation, exercise or traffic control absent from the text."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations accurately distinguish research/data collection from the unrelated actions in b–d."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is the only grammatical target use; a lacks article a, c substitutes off, and d uses carries after will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each explanation correctly identifies the article, particle or modal-form error."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c alone means stating a finding to draw attention; a is literal, b questions and d rejects it."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations accurately contrast reporting a finding with literal pointing, questioning or rejecting."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone is grammatical; b omits out, c adds inappropriate about before that, and d needs points in present simple."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each explanation correctly identifies particle, preposition or subject–verb agreement."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "A sports club schedule message changes role, topic and purpose from the university research report."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two sentences use point out naturally in an idiomatic welcome message; checklist covers length, meaning and context, with self-assessment only."
+    }
+  ],
+  "findings": []
+}

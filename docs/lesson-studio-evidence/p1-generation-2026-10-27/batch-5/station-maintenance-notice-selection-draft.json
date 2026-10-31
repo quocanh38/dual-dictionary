@@ -1,0 +1,53 @@
+{
+  "id": "draft-8ad96ec0-b0ce-4cc3-bc80-70a877b48f56",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Planning maintenance at a bus station",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The station manager will carry out maintenance on the north entrance escalator next Tuesday. While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts. Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager. The notice asks passengers to allow a few extra minutes when changing platforms.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The station manager will carry out maintenance on the north entrance escalator next Tuesday. While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts. Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager. The notice asks passengers to allow a few extra minutes when changing platforms.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The station manager will carry out maintenance on the north entrance escalator next Tuesday."
+      },
+      {
+        "id": "s2",
+        "text": "While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts."
+      },
+      {
+        "id": "s3",
+        "text": "Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager."
+      },
+      {
+        "id": "s4",
+        "text": "The notice asks passengers to allow a few extra minutes when changing platforms."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "carry out maintenance",
+      "meaningEn": "to perform work to repair or keep equipment in good condition",
+      "meaningVi": "thực hiện bảo trì",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "out of service",
+      "meaningEn": "not working or not available for use",
+      "meaningVi": "ngừng hoạt động",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

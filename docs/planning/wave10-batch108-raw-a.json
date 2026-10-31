@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 108,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after well meant in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover nuanced adjective compounds and everyday science, government, technology and music terms. Clarify hyphenation, regional variants, figurative senses, and contrasts such as well-off/better-off and LAN/WAN.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 700,
+    "remainingRawOnlyAfter": 680
+  },
+  "selected": [
+    "well off",
+    "well preserved",
+    "well read",
+    "well rounded",
+    "well timed",
+    "well worn",
+    "wet nurse",
+    "wetting agent",
+    "white blood cell",
+    "white fish",
+    "white goods",
+    "white heat",
+    "white house",
+    "white lead",
+    "white noise",
+    "white paper",
+    "whole note",
+    "wide-angle lens",
+    "wide area network",
+    "wildcat strike"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

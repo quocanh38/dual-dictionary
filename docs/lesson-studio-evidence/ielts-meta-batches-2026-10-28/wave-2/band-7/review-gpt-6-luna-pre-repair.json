@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "ff24a2ed89f18069558a9954229aa483cb8a24a44f8331b1cde601648541fb81",
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "item": "normalizationFindings / Listening answer-position distribution",
+      "skill": "Listening",
+      "issue": "The candidate records “Listening answer positions do not cover all four options.” The five keyed positions are [1, 2, 0, 2, 0], so option D (index 3) is never keyed. This remains an unresolved normalization concern and can make the answer pattern less balanced.",
+      "suggestion": "Reorder options and update the corresponding answer indices and explanations so all four positions are represented, then clear the finding."
+    }
+  ]
+}

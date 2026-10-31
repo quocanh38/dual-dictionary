@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sourceBatch": "batch-4",
+  "sourceCandidate": "../batch-4/urban-tree-survey-candidate.json",
+  "sourceHash": "f8d066ca027345edb726b0a70a6f137c137fb8e57cef484b2ac3f80bdc4ceec2",
+  "finalHash": "4297d21344629e0e0122967b9dd1869290ca5c8fe0c36ae8f285af37ec46cf87",
+  "edits": [
+    {
+      "path": "lesson-1/objective",
+      "change": "Rewrote parallel wording while preserving both target objectives."
+    },
+    {
+      "path": "lesson-1/q4/options[d].explanation",
+      "change": "Corrected the agreement explanation to present-simple points with singular The guide."
+    }
+  ]
+}

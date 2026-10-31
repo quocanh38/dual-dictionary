@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "e397158a48d2816200aea60b536df9624eca097a695169abcb942a52d2787d7f",
+  "verdict": "repair",
+  "findings": [
+    {
+      "id": "ielts-meta-band-5-listening-01 through ielts-meta-band-5-listening-05",
+      "severity": "major",
+      "issue": "All five items are labelled Listening Part 4, but their shared source is a two-speaker service conversation between Mr Lee and Maya. Part 4 requires a single-speaker academic talk, so the stated part is incompatible with the material.",
+      "suggestedFix": "Relabel the shared context and all five items as Listening Part 1, or replace the dialogue with a Part 4 monologue."
+    }
+  ]
+}

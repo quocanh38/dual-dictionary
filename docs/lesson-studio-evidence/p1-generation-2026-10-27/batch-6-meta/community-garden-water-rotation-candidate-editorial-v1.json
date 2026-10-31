@@ -1,0 +1,211 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-c9e4b2e8-edd5-4af7-a463-690a755f33ba",
+    "version": 1,
+    "title": "Sharing Resources at Work",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:01:36.313Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Sharing Resources at Work",
+        "objective": "Learners will understand and correctly use allocate water to and in line with in workplace messages.",
+        "reading": {
+          "text": "Before the dry season, the community garden team will allocate water to each plot according to the crops and the weekly forecast. Volunteers record the volume used so they can adjust the schedule in line with changes in rainfall. The coordinator asks each grower to report leaks as soon as they are found. This helps the team conserve water without leaving young plants dry.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "Before the dry season, the community garden team will allocate water to each plot according to the crops and the weekly forecast."
+            },
+            {
+              "id": "s2",
+              "text": "Volunteers record the volume used so they can adjust the schedule in line with changes in rainfall."
+            },
+            {
+              "id": "s3",
+              "text": "The coordinator asks each grower to report leaks as soon as they are found."
+            },
+            {
+              "id": "s4",
+              "text": "This helps the team conserve water without leaving young plants dry."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "allocate water to",
+            "meaningEn": "to distribute and assign water to each plot for use",
+            "meaningVi": "phân bổ nước cho",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "in line with",
+            "meaningEn": "in agreement with or according to changes in rainfall",
+            "meaningVi": "phù hợp với; theo",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In s1, the team will allocate water to each plot according to the crops and the weekly forecast. What does allocate water to mean here?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the team will distribute and assign a share of water to each plot for use.",
+                "explanation": "Correct because it matches the source meaning of distributing water to each plot."
+              },
+              {
+                "id": "b",
+                "text": "It means the team will drain all water away from each plot to keep it dry.",
+                "explanation": "Wrong because the team gives water to plots instead of removing it."
+              },
+              {
+                "id": "c",
+                "text": "It means the team will record how much water is used without assigning any to the plots.",
+                "explanation": "Wrong because recording water use is different from assigning each plot its share."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a fits the context of giving water to plots for crops."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses allocate water to naturally and correctly.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The facilities manager will allocate water to each worksite during the dry season.",
+                "explanation": "Correct because it uses the right verb form and the fixed preposition to."
+              },
+              {
+                "id": "b",
+                "text": "The manager will allocates water to each department kitchen every week.",
+                "explanation": "Wrong because after will the verb should be allocate without s."
+              },
+              {
+                "id": "c",
+                "text": "The manager will allocate water on each department kitchen every week.",
+                "explanation": "Wrong because the fixed collocation requires to instead of on."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is grammatically correct and natural."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In s2, volunteers can adjust the schedule in line with changes in rainfall. What does in line with mean here?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the schedule agrees with or follows changes in rainfall.",
+                "explanation": "Correct because it matches the source meaning of according to rainfall changes."
+              },
+              {
+                "id": "b",
+                "text": "It means the schedule opposes changes in rainfall and ignores them.",
+                "explanation": "Wrong because the schedule follows rainfall instead of opposing it."
+              },
+              {
+                "id": "c",
+                "text": "It means the schedule is physically placed in a row beside the rainfall chart.",
+                "explanation": "Wrong because here the phrase describes matching the schedule to rainfall changes, not its physical position beside a chart."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a fits the context of adjusting to rainfall."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses in line with naturally and correctly.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The new schedule is in line with the updated safety rules.",
+                "explanation": "Correct because it uses the fixed phrase in line with to show agreement."
+              },
+              {
+                "id": "b",
+                "text": "The new schedule is in lines with the updated safety rules.",
+                "explanation": "Wrong because the fixed noun should be singular line instead of lines."
+              },
+              {
+                "id": "c",
+                "text": "The new schedule is in line of the updated safety rules.",
+                "explanation": "Wrong because the fixed preposition should be with instead of of."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is grammatically correct and natural."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are an office assistant writing a short note to colleagues about a change in break times. Write 2-3 sentences explaining the change and why it was made using the phrase in line with.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "We have moved the lunch break to 12:30. This change is in line with the new working hours set by head office.",
+            "selfCheck": [
+              "My note has 2-3 sentences.",
+              "I used in line with to show agreement with a rule or change.",
+              "My note is clear and correct for colleagues."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "carry out a survey",
+        "meaningEn": "to conduct a systematic study to collect information",
+        "meaningVi": "tiến hành một cuộc khảo sát",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "point out",
+        "meaningEn": "to state or draw attention to a fact or observation",
+        "meaningVi": "chỉ ra, nêu rõ",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 398,
+    "outputTokens": 1151,
+    "totalTokens": 1549
+  },
+  "status": 200,
+  "latencyMs": 3720,
+  "model": "muse-spark-1.3"
+}

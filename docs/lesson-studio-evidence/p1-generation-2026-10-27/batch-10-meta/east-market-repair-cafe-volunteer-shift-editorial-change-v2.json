@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "east-market-repair-cafe-volunteer-shift",
+  "previousEditorialCandidateFile": "east-market-repair-cafe-volunteer-shift-candidate-editorial-v1.json",
+  "editorialCandidateFile": "east-market-repair-cafe-volunteer-shift-candidate-editorial-v2.json",
+  "editedLocally": true,
+  "generatedByMeta": false,
+  "changes": [
+    {
+      "path": "pack.lessons[0].exercises[q1].explanation",
+      "before": "Top-level explanation cited s3 after the target moved to s2.",
+      "after": "Changed citation to s2.",
+      "reason": "Correct source reference after sentence merge."
+    },
+    {
+      "path": "pack.lessons[0].exercises[q3].explanation",
+      "before": "Top-level explanation cited s5 after the target moved to s4.",
+      "after": "Changed citation to s4.",
+      "reason": "Correct source reference after sentence merge."
+    },
+    {
+      "path": "pack.lessons[0].exercises[q5].prompt",
+      "before": "Prompt asked what supply was gone and what would happen next but did not require the target.",
+      "after": "Explicitly requires “run out of” or a correct inflected form.",
+      "reason": "Align transfer prompt with the target, model answer and self-check."
+    }
+  ],
+  "reason": "Resolve all critical findings from exact-hash cross-review before approval."
+}

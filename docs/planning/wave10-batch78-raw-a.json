@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 78,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after screen saver; reviewed against local OALD 10/LDOCE 6. Security-service and unit-of-measure details checked against MI5 and NGA references. All Vietnamese definitions, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover maritime and weather vocabulary, information technology, law, travel, history and public institutions; clarify jurisdictional, regional and literal/figurative distinctions.",
+  "counts": {"selected":20,"rawPagesUpgraded":20,"rawOnlyBefore":1300,"remainingRawOnlyAfter":1280},
+  "selected": ["sea breeze","sea dog","sea lane","sea level","sea mile","sealing wax","search engine","search warrant","seat belt","second class","second coming","second hand","second string","second wind","second world war","secret service","secretary general","secretary of state","security service","see through"],
+  "references": [
+    "https://www.mi5.gov.uk/what-we-do",
+    "https://msi.nga.mil/api/publications/download?key=16693975%2FSFH00000%2FBowditch_Vol_2_LoRes_2019.pdf&type=view"
+  ]
+}

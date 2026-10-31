@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-5-band-6-writing-01",
+      "issue": "Clarify that daily museum-tour times apply on open days because the museum is closed Mondays; label the family-ticket/individual-visitor denominator explicitly.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-6-writing-02",
+      "issue": "Label each reasons percentage denominator as all 400 surveyed students or recording users, preserving the multiple-response note.",
+      "severity": "minor"
+    }
+  ]
+}

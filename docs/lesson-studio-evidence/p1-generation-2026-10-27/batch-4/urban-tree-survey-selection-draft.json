@@ -1,0 +1,53 @@
+{
+  "id": "draft-97eb5b4b-1d2e-419a-8e5d-299406ee638e",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Recording an urban tree survey",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A university team will carry out a survey of trees along three busy streets. Researchers will record the species, trunk width and distance from the road at each site. In the preliminary report, they point out that young trees are concentrated near newer apartment blocks. The team will compare these observations with summer temperature readings before recommending where the city should plant more trees.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A university team will carry out a survey of trees along three busy streets. Researchers will record the species, trunk width and distance from the road at each site. In the preliminary report, they point out that young trees are concentrated near newer apartment blocks. The team will compare these observations with summer temperature readings before recommending where the city should plant more trees.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A university team will carry out a survey of trees along three busy streets."
+      },
+      {
+        "id": "s2",
+        "text": "Researchers will record the species, trunk width and distance from the road at each site."
+      },
+      {
+        "id": "s3",
+        "text": "In the preliminary report, they point out that young trees are concentrated near newer apartment blocks."
+      },
+      {
+        "id": "s4",
+        "text": "The team will compare these observations with summer temperature readings before recommending where the city should plant more trees."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "carry out a survey",
+      "meaningEn": "to conduct a systematic study to collect information",
+      "meaningVi": "tiến hành một cuộc khảo sát",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "point out",
+      "meaningEn": "to state or draw attention to a fact or observation",
+      "meaningVi": "chỉ ra, nêu rõ",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

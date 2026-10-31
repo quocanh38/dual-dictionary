@@ -1,0 +1,153 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-2",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage around IELTS 5.0: clear main ideas, direct evidence, familiar academic contexts, and accurate simple explanations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a campus bicycle-repair desk, a student project about local trees, and a public library study-room booking service. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-5",
+    "batchId": "wave-2",
+    "currentBatch": {
+      "listening": {
+        "title": "Campus Bicycle-Repair Desk",
+        "focus": "Everyday service details: problem, place, price and time",
+        "part": "Part 1",
+        "script": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it for repair?\nSTAFF: Of course, Anna. We can fix both problems here. Could you write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday.",
+        "questions": [
+          {
+            "title": "Reason for Visit",
+            "prompt": "Why does Anna contact the repair desk?",
+            "options": [
+              "To buy a new blue city bike",
+              "To ask about sports office hours",
+              "To get her tyre and brakes fixed",
+              "To change her phone number"
+            ],
+            "answer": 2,
+            "explanation": "The script says her bike has a flat back tyre and loose brakes. The option about buying a bike is wrong because the blue city bike is the bike she already owns."
+          },
+          {
+            "title": "Storage Location",
+            "prompt": "Where should Anna leave her bike?",
+            "options": [
+              "In Room 4 past the sports office",
+              "In Room 3 with the old sign",
+              "In the sports office itself",
+              "In Room 4 before the sports office"
+            ],
+            "answer": 0,
+            "explanation": "Staff says go past the sports office to Room 4 and corrects Room 3 to Room 4. Room 3 is wrong because it is only the old sign, not the current room."
+          },
+          {
+            "title": "Repair Cost",
+            "prompt": "How much will Anna pay in total?",
+            "options": [
+              "6 pounds",
+              "14 pounds",
+              "8 pounds",
+              "5 pounds"
+            ],
+            "answer": 1,
+            "explanation": "Staff says 8 pounds for the tyre plus 6 pounds for the brakes, so 14 pounds total. 8 pounds is wrong because it is only for the tyre."
+          },
+          {
+            "title": "Collection Time",
+            "prompt": "When can Anna collect her bike?",
+            "options": [
+              "On Monday morning",
+              "On Wednesday afternoon",
+              "On Tuesday morning",
+              "On Thursday morning after 10"
+            ],
+            "answer": 3,
+            "explanation": "Staff first says Wednesday, then corrects it to Thursday morning after 10 because Wednesday is a holiday. Wednesday is wrong because of this correction."
+          },
+          {
+            "title": "Collection Requirement",
+            "prompt": "What must Anna do when she collects her bike?",
+            "options": [
+              "Bring the yellow receipt and pay by card",
+              "Pay cash and show her phone number",
+              "Bring a new lock and repair form",
+              "Pay by card and clean Room 4"
+            ],
+            "answer": 0,
+            "explanation": "Staff says bring the yellow receipt and pay by card, no cash. Paying cash is wrong because staff says they do not take cash anymore."
+          }
+        ]
+      },
+      "reading": {
+        "title": "A Student Project About Local Trees",
+        "focus": "Main ideas, details, and claims in a student project",
+        "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+        "questions": [
+          {
+            "title": "Project Aim",
+            "prompt": "What was the main aim of Maya and Tom's project?",
+            "options": [
+              "To build a new playground in the park",
+              "To find what trees grow and how shade is used",
+              "To cut down old trees near the lake",
+              "To draw a new map for the library"
+            ],
+            "answer": 1,
+            "explanation": "The first paragraph says they wanted to know what kinds of trees grow and how people use shade. Building a playground is wrong because the playground is only one study area."
+          },
+          {
+            "title": "Research Method",
+            "prompt": "How did the students collect information about trees?",
+            "options": [
+              "By walking three paths weekly and recording trees",
+              "By asking families to plant fruit trees",
+              "By copying an old park map exactly",
+              "By counting people only on Saturdays"
+            ],
+            "answer": 0,
+            "explanation": "The second paragraph says they walked each path for six weeks, took photos and measured trunks. Copying the map is wrong because they did not copy it as trees had changed."
+          },
+          {
+            "title": "Main Finding",
+            "prompt": "According to the records, which trees were most common?",
+            "options": [
+              "Oak trees with 40 trees",
+              "Pine and birch trees",
+              "Maple trees with 90 trees",
+              "Fruit trees near the lake"
+            ],
+            "answer": 2,
+            "explanation": "The third paragraph says maple trees were most common with 90 of 180 trees. Oak trees are wrong because with 40 they were second."
+          },
+          {
+            "title": "Claim Versus Example",
+            "prompt": "Which statement shows the difference between the example and the main claim?",
+            "options": [
+              "The park map is the main claim about shade",
+              "The fruit trees are the main claim about planting",
+              "The large oak is one example, while shade changing park use is the main claim",
+              "The six-week walk is the main claim about old trees"
+            ],
+            "answer": 2,
+            "explanation": "The passage presents the large oak near the lake as only one example, and shade helping people stay longer as the main claim. The fruit-tree option is wrong because those trees are part of the findings, not the main claim."
+          },
+          {
+            "title": "Reasonable Inference",
+            "prompt": "What can be reasonably inferred about the playground area?",
+            "options": [
+              "It has the most maple trees already",
+              "It was closed during the whole project",
+              "It is used only by local families",
+              "It probably gets hot and uncomfortable in summer"
+            ],
+            "answer": 3,
+            "explanation": "The passage says there is little shade near the playground and shade helps people stay longer, so the playground is likely hot. It already has most maples is wrong because maples are suggested for future planting there."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "ielts-meta-wave-2-band-5-reading-05",
+          "issue": "Unsupported answer inference: the keyed option claims the playground is probably hot and uncomfortable in summer. The passage only says the playground has little shade and that shade is associated with more people staying in the park; it does not support heat or discomfort. Replace the key/option/explanation with an inference directly supported by the passage, or add explicit evidence while preserving a single defensible answer."
+        }
+      ]
+    }
+  }
+}

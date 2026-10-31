@@ -1,0 +1,12 @@
+{
+  "previousCandidate": "docs/lesson-studio-evidence/quality-cycle-2026-10-27/candidates/2-v2.json",
+  "candidate": "2-v3",
+  "changes": [
+    {
+      "path": "lessons/0/exercises/0/options/1/explanation",
+      "before": "This is wrong because ignoring is the opposite of monitoring and recording.",
+      "after": "Wrong: Ignoring requests is the opposite of monitoring them and staying informed. Written records are optional."
+    }
+  ],
+  "newMetaCalls": 0
+}

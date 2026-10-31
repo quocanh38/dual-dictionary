@@ -1,0 +1,90 @@
+[
+  {
+    "id": "draft-7b561abd-993e-415e-9304-0baa103ddf2c",
+    "title": "Library opening hours",
+    "calls": [
+      {
+        "purpose": "select-targets",
+        "usage": {
+          "inputTokens": 328,
+          "outputTokens": 1072,
+          "totalTokens": 1400
+        },
+        "status": 200,
+        "latencyMs": 8442,
+        "model": "muse-spark-1.3"
+      },
+      {
+        "purpose": "generate-exercises",
+        "usage": {
+          "inputTokens": 594,
+          "outputTokens": 5061,
+          "totalTokens": 5655
+        },
+        "status": 200,
+        "latencyMs": 24182,
+        "model": "muse-spark-1.3"
+      }
+    ],
+    "status": "validated-unreviewed-draft"
+  },
+  {
+    "id": "draft-09b4c070-410f-461a-ac8f-3ec55b57b865",
+    "title": "Workplace delivery",
+    "calls": [
+      {
+        "purpose": "select-targets",
+        "usage": {
+          "inputTokens": 339,
+          "outputTokens": 1154,
+          "totalTokens": 1493
+        },
+        "status": 200,
+        "latencyMs": 7409,
+        "model": "muse-spark-1.3"
+      },
+      {
+        "purpose": "generate-exercises",
+        "model": "muse-spark-1.3",
+        "status": 200,
+        "usage": {
+          "inputTokens": 617,
+          "outputTokens": 6000,
+          "totalTokens": 6617
+        },
+        "latencyMs": 29578
+      }
+    ],
+    "status": "failed",
+    "error": "Provider output is not JSON. No automatic retry."
+  },
+  {
+    "id": "draft-c765f334-1b00-43c2-a398-d63570e04d21",
+    "title": "Community study",
+    "calls": [
+      {
+        "purpose": "select-targets",
+        "usage": {
+          "inputTokens": 344,
+          "outputTokens": 987,
+          "totalTokens": 1331
+        },
+        "status": 200,
+        "latencyMs": 4733,
+        "model": "muse-spark-1.3"
+      },
+      {
+        "purpose": "generate-exercises",
+        "usage": {
+          "inputTokens": 617,
+          "outputTokens": 4246,
+          "totalTokens": 4863
+        },
+        "status": 200,
+        "latencyMs": 18560,
+        "model": "muse-spark-1.3"
+      }
+    ],
+    "status": "validated-unreviewed-draft"
+  }
+]

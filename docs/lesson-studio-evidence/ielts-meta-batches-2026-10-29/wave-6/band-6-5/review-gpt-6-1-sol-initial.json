@@ -1,0 +1,94 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "f7eb2c64affb719e4ba286ab83c64603198af21f43b0371c3f183dd5a0a43fdb",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; ielts-meta-wave-6-band-6-5-listening-05 and explanation",
+      "severity": "critical",
+      "issue": "Trial is January–June yet described as only winter and spring, excluding summer; June is included in summer in this wave own seasonal framework. Make dates and season limitation consistent, e.g. January–May excluding summer, or January–June covers winter/spring/early summer but excludes later summer thunderstorms. Update question/key/explanation and all transcript copies."
+    }
+  ],
+  "observations": [
+    {
+      "item": "sharedContexts.reading.passage",
+      "severity": "minor",
+      "issue": "Greenfield comparison only20% winter drop lacks baseline (from summer output or below predicted output). Identify baseline or remove comparison. Also explicitly state actual panel tilt if attributing seasonal differences to30-degree optimisation."
+    },
+    {
+      "item": "sharedContexts.listening.script",
+      "severity": "minor",
+      "issue": "Cheaper to run is tentative, but unit purchase price and battery life alone do not establish operating costs after cleaning labour; keep this clearly a hypothesis pending full costs."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review:20items, entire script/passage, all40options,10keys/10explanations,5Writing/5Speaking andmetadata. Per-item copied contexts verified identical to shared contexts. No other reviewer outputs inspected; no candidates edited or provider calls.",
+    "listening": "Full338-word flood-sensor tutorial:North28ultrasonic/South40→32pressure,12%/7%falsealerts and2missedoverflows,3/5monthbatteries,£420/£310units,4Southmonthlycleaning,qualifiedcosts/generalisation. Keys[1,1,0,3,2] checked with20options/5explanations;Jan–June/season contradiction blocks last item context.",
+    "reading": "Full444-word solar passage:120panels/March2022,June2022–May2023monitoring,30degreemodel/no shade assumptions,summer4850/4620≈+5%,autumn−2%,winter1120/1860≈−40%,spring−15%,snow18days/shadow/dust/cloud15%limits,claimversusexample and multiyear recommendation. Keys[1,0,3,2,0] unique;all20options/5explanations checked.",
+    "writing": "All5Writing read: fundingUSD18000+7500+9000+4200=38700 versus42000cost with pending/status/restrictions clear; survey300/1200=25%,4respondentpercentages,sex/year sample-population comparisons explicit. ThreeTask2 funding,limitedsurveys,schoolroutes self-contained and qualified. All150/250 and20/40 instructions/fields consistent.",
+    "speaking": "All5Speaking read:2familiarPart1sets;routePart2card has concretebullets/prep/duration;2Part3sets require reasons/evidence/funding/safety trade-offs. SomePart1generalquestions broader but answerable;stage6.5qualification focus coherent.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItemCount": 20,
+      "wordCounts": {
+        "listening": 338,
+        "reading": 444
+      },
+      "metadataWordCounts": {
+        "listening": 338,
+        "reading": 444
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          1,
+          1,
+          0,
+          3,
+          2
+        ],
+        "Reading": [
+          1,
+          0,
+          3,
+          2,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026, wave6v1 prompt versions, originalContent=true read. No recognisable official exam copying or guaranteed-score claim found; originality is not exhaustively independently proven. Fictional study data assessed for internal consistency,not empirical validation. Stage labels treated as practice targets,not measured attainment.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-6-5-listening-01",
+      "ielts-meta-wave-6-band-6-5-listening-02",
+      "ielts-meta-wave-6-band-6-5-listening-03",
+      "ielts-meta-wave-6-band-6-5-listening-04",
+      "ielts-meta-wave-6-band-6-5-listening-05",
+      "ielts-meta-wave-6-band-6-5-reading-01",
+      "ielts-meta-wave-6-band-6-5-reading-02",
+      "ielts-meta-wave-6-band-6-5-reading-03",
+      "ielts-meta-wave-6-band-6-5-reading-04",
+      "ielts-meta-wave-6-band-6-5-reading-05",
+      "ielts-meta-wave-6-band-6-5-writing-01",
+      "ielts-meta-wave-6-band-6-5-writing-02",
+      "ielts-meta-wave-6-band-6-5-writing-03",
+      "ielts-meta-wave-6-band-6-5-writing-04",
+      "ielts-meta-wave-6-band-6-5-writing-05",
+      "ielts-meta-wave-6-band-6-5-speaking-01",
+      "ielts-meta-wave-6-band-6-5-speaking-02",
+      "ielts-meta-wave-6-band-6-5-speaking-03",
+      "ielts-meta-wave-6-band-6-5-speaking-04",
+      "ielts-meta-wave-6-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

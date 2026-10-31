@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "239059717add867b60ceb55cc7d5a47c84f1e482e1645e47c996c5e5b98a04b1",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews",
+  "reviewedAt": "2026-10-27T08:42:10.745Z",
+  "note": "Two independent AI-assisted reviewers evaluated the exact pack hash, matching source row, and schema. The recorded evidence synthesizes their findings and a source-level consistency check. Review is not human or learner validation. The rights/authorship statement is locally declared and not independently verified. Requested Luna route was not exposed (runtime-visible model label GPT-6); Terra route was gpt-5.6-terra (runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both independent reviewers checked the local provenance declaration for AI-assisted original educational text, authorized distribution, no copied exam/external source or learner PII; no PII is visible. This is a local declaration check, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “take turns” appears verbatim in cited sentence s2 and describes two people alternating refrigerator-temperature checks."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the English gloss means doing the task alternately, one after another, matching s2."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “thay phiên nhau làm việc gì” is natural and accurate Vietnamese for the target."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “is responsible for” appears verbatim in cited s3 and denotes an assigned duty for one part of the room."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “to have the duty to take care of a particular area or task” matches the context."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “chịu trách nhiệm về một khu vực hoặc công việc cụ thể” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the only answer describing alternating the task; a describes simultaneous checking and c describes only observing."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all option explanations and the key accurately distinguish alternating from simultaneous action and passive observation."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only grammatical natural use: plural subject takes “take” and “take turns” is followed by a gerund; b and c each violate one rule."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the subject–verb agreement and gerund explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only meaning of having a duty; liking a room or being allowed to visit it is not responsibility."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the key and each distractor explanation accurately distinguish duty from preference and permission."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the correct collocation “responsible for” plus gerund; a has the wrong preposition and c uses a bare verb after a preposition."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all grammar explanations for the preposition and gerund are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from kitchen shift responsibilities to agreeing how roommates alternate bathroom cleaning."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the model is a natural two-sentence fair plan using “take turns”; the checklist is usable and the response is self-assessed, not automatically graded."
+    }
+  ],
+  "findings": []
+}

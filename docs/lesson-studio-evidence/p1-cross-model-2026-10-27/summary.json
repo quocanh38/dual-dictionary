@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-27T04:22:05.375314+00:00",
+  "baselineCommit": "02e3fe8b914569e6cb46ffdd1a31699e8064f895",
+  "approvedPacks": [
+    {
+      "packId": "pack-7b561abd-993e-415e-9304-0baa103ddf2c",
+      "version": 1,
+      "title": "Library Hours and Student Deadlines",
+      "topic": "academic",
+      "levelEstimate": "B1",
+      "file": "library-hours.json",
+      "sha256": "011e985f434bee1e080a6dc8174570d01db1fc695ce0a5f09679f1f80b73d3df"
+    },
+    {
+      "packId": "pack-fd14f5d3-1f53-4f59-b9a4-781b7f2e9856",
+      "version": 1,
+      "title": "Tracking Work and Planning Ahead",
+      "topic": "workplace",
+      "levelEstimate": "B1",
+      "file": "tracking-work.json",
+      "sha256": "750cc3cdd654b854fe38a09da6639116efa5cac6748e520bebc1c8168da48d35"
+    },
+    {
+      "packId": "pack-c765f334-1b00-43c2-a398-d63570e04d21",
+      "version": 1,
+      "title": "Surveys and Differences in a Coastal Town",
+      "topic": "academic",
+      "levelEstimate": "B1",
+      "file": "coastal-survey.json",
+      "sha256": "a8d2f90f5dc11f86ae27c4290e77f19ddecff14fa0318d81480ed4a4a52528ee"
+    }
+  ],
+  "approval": "Explicit AI editorial decisions delegated by owner; exact reviewed and exported hashes linked by quality-gate",
+  "crossReviewModelsUsed": [
+    "gpt-6-astra",
+    "gpt-6.1-terra"
+  ],
+  "reviewIndependenceLimit": "Terra disclosed prior historical pilot review exposure; not fully blinded",
+  "futureReviewRouting": [
+    "gpt-6-luna",
+    "gpt-6.1-sol"
+  ],
+  "productChanges": [
+    "Reviewed no-key library catalogue and atomic install",
+    "Exact manifest and approved pack integrity checks",
+    "Library manifest and all three packs precached; offline readiness checks18paths"
+  ],
+  "qa": {
+    "mainBrowserGroups": 14,
+    "exactApprovedPackContexts": 6,
+    "catalogueOfflineInstalls": 3,
+    "catalogueRejectionCases": 2,
+    "libraryContracts": "PASS",
+    "offlinePaths": 18,
+    "serviceWorkerGuard": "PASS124to125"
+  },
+  "appFileSha256": {
+    "lessons/app.js": "8b4ad63ba9858a768edadbd7a2bcb9f243f62cff17c34dd6b263189ea5a2256b",
+    "lessons/storage.js": "12ca575784ba44cc0238b7fe6a5834d5b771314df390a7e268b789a6157e0684",
+    "lessons/library.js": "114310d2729db2f1dc56fe55a72d3fe3cd0c46eab98f31cbb151c403923b0c82",
+    "sw.js": "ab921a38b4b4256a85319ad140518271d8e926eae1b006323afda0f073c24efc"
+  },
+  "candidateCache": "mdx-dict-v125",
+  "productionCacheLastObserved": "mdx-dict-v123",
+  "deployed": false,
+  "newMetaCalls": 0,
+  "metaBalanceObservationUsd": 149.26,
+  "balanceObservationLimit": "UI activity may be delayed by up to1hour; not a hard spend cap",
+  "generationBlocker": "DD_META_KEY missing from secure shell environment and launchd; no keys extracted or created",
+  "nextBatchPreparedSources": 3,
+  "next": "Secure generation configuration before next batch; local library ready for owner-authorized deploy after full deploy runbook"
+}

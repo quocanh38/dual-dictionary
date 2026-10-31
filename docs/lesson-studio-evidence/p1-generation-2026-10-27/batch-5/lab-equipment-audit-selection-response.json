@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "carry out",
+        "meaningEn": "to perform or complete a task such as an audit",
+        "meaningVi": "thực hiện",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "account for",
+        "meaningEn": "to record and explain the status or location of each item",
+        "meaningVi": "kiểm kê và giải trình",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 404,
+    "outputTokens": 854,
+    "totalTokens": 1258
+  },
+  "status": 200,
+  "latencyMs": 7758,
+  "model": "muse-spark-1.3"
+}

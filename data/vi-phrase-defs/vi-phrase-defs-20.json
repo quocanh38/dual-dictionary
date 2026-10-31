@@ -1,0 +1,568 @@
+[
+  {
+    "phrase": "bank account",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tài khoản tại ngân hàng cho phép khách hàng gửi, giữ, nhận hoặc rút tiền",
+        "pat": "open/close a bank account · pay money into/withdraw money from an account",
+        "ex": [
+          [
+            "The company opened a separate bank account for payroll.",
+            "Công ty mở một tài khoản ngân hàng riêng để trả lương."
+          ],
+          [
+            "You can transfer the refund directly to your bank account.",
+            "Bạn có thể chuyển khoản tiền hoàn lại thẳng vào tài khoản ngân hàng."
+          ]
+        ]
+      }
+    ],
+    "note": "Các loại cụ thể gồm current/checking account và savings account; tên gọi thay đổi theo quốc gia và loại dịch vụ."
+  },
+  {
+    "phrase": "bank statement",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bản sao kê ghi các khoản tiền vào, tiền ra và số dư của tài khoản trong một khoảng thời gian",
+        "pat": "monthly bank statement · check/review a statement · statement for an account",
+        "ex": [
+          [
+            "Please attach the latest bank statement to the loan application.",
+            "Vui lòng đính kèm bản sao kê ngân hàng mới nhất vào hồ sơ vay."
+          ],
+          [
+            "The accountant found the duplicate payment on the March bank statement.",
+            "Kế toán phát hiện khoản thanh toán trùng trên sao kê ngân hàng tháng Ba."
+          ]
+        ]
+      }
+    ],
+    "note": "Bản sao kê phản ánh giao dịch đã ghi nhận trong kỳ; nó không giống invoice (hóa đơn yêu cầu thanh toán) hay bank balance (số dư tại một thời điểm)."
+  },
+  {
+    "phrase": "bar code",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mã vạch — dãy vạch hoặc ký hiệu máy đọc được, dùng để nhận diện sản phẩm hay dữ liệu",
+        "pat": "scan/read a bar code · bar-code reader · a bar code on a label",
+        "ex": [
+          [
+            "The cashier scanned the bar code on each item.",
+            "Nhân viên thu ngân quét mã vạch trên từng món hàng."
+          ],
+          [
+            "A damaged bar code may prevent the parcel from being tracked.",
+            "Mã vạch bị hỏng có thể khiến bưu kiện không được theo dõi."
+          ]
+        ]
+      }
+    ],
+    "note": "Barcode viết liền cũng rất phổ biến; chọn một cách viết nhất quán trong cùng tài liệu."
+  },
+  {
+    "phrase": "battle cry",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tiếng hô khích lệ đồng đội hoặc làm đối phương khiếp sợ trước/trong trận chiến",
+        "pat": "shout/raise a battle cry · a warrior’s battle cry",
+        "ex": [
+          [
+            "The soldiers raised a battle cry before advancing.",
+            "Những người lính hô vang trước khi tiến lên."
+          ],
+          [
+            "A distant battle cry echoed across the valley.",
+            "Tiếng hô xung trận vang vọng từ phía bên kia thung lũng."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) khẩu hiệu hoặc lời kêu gọi thể hiện mục tiêu chung của một nhóm",
+        "pat": "a battle cry for change · adopt something as a battle cry",
+        "ex": [
+          [
+            "“Fair wages for all” became the campaign’s battle cry.",
+            "“Lương công bằng cho tất cả” trở thành khẩu hiệu của chiến dịch."
+          ],
+          [
+            "The proposal gave the reform movement a clear battle cry.",
+            "Đề xuất ấy đem lại cho phong trào cải cách một lời kêu gọi rõ ràng."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa bóng thường dùng trong chính trị, vận động hoặc kinh doanh để nhấn mạnh một mục tiêu tập thể."
+  },
+  {
+    "phrase": "beat out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tạo nhịp hoặc âm thanh bằng cách gõ liên tục lên một vật",
+        "pat": "beat out a rhythm/tune on something",
+        "ex": [
+          [
+            "The drummer beat out a steady rhythm on the table.",
+            "Người chơi trống gõ nhịp đều lên mặt bàn."
+          ],
+          [
+            "She beat out the tune on a small hand drum.",
+            "Cô ấy gõ giai điệu trên chiếc trống tay nhỏ."
+          ]
+        ]
+      },
+      {
+        "m": "dập tắt ngọn lửa bằng cách đập hoặc phủ lên nó",
+        "pat": "beat out a fire/flame · beat the flames out",
+        "ex": [
+          [
+            "They beat out the small fire with a blanket.",
+            "Họ dùng chăn dập tắt đám cháy nhỏ."
+          ],
+          [
+            "A worker beat the flames out before they reached the storage area.",
+            "Một công nhân dập lửa trước khi lửa lan tới khu vực lưu kho."
+          ]
+        ]
+      }
+    ],
+    "note": "Đây là phrasal verb có tân ngữ; có thể đặt tân ngữ sau particle hoặc ở giữa: beat out a rhythm / beat a rhythm out."
+  },
+  {
+    "phrase": "beat up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đánh hoặc đá ai đó nhiều lần khiến họ bị thương",
+        "pat": "beat somebody up · get/be beaten up",
+        "ex": [
+          [
+            "The witness said two men beat up the security guard.",
+            "Nhân chứng nói hai người đàn ông đã đánh nhân viên bảo vệ."
+          ],
+          [
+            "He was beaten up while walking home.",
+            "Anh ấy bị đánh trên đường đi bộ về nhà."
+          ]
+        ]
+      }
+    ],
+    "note": "Cụm mang nghĩa bạo lực; khi đứng trước danh từ với nghĩa “cũ nát”, viết có gạch nối: a beat-up car."
+  },
+  {
+    "phrase": "bell glass",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "chuông kính; tấm chụp kính hình chuông dùng để che hoặc bảo vệ cây và vật trưng bày",
+        "pat": "a bell glass over a plant · cover something with a bell glass",
+        "ex": [
+          [
+            "The gardener placed a bell glass over the young seedling.",
+            "Người làm vườn chụp chuông kính lên cây non."
+          ],
+          [
+            "Moisture collected inside the bell glass overnight.",
+            "Hơi ẩm đọng bên trong chuông kính qua đêm."
+          ]
+        ]
+      }
+    ],
+    "note": "Tên gọi chuyên biệt, ít gặp trong giao tiếp hiện đại; bell jar là cách gọi phổ biến hơn cho vật chụp kính dạng chuông."
+  },
+  {
+    "phrase": "big business",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "các doanh nghiệp lớn được xem như một nhóm có ảnh hưởng đáng kể",
+        "pat": "big business and government · the interests of big business",
+        "ex": [
+          [
+            "The policy was criticized for favoring big business over local firms.",
+            "Chính sách bị chỉ trích vì ưu ái các tập đoàn lớn hơn doanh nghiệp địa phương."
+          ],
+          [
+            "Big business has a strong influence on the sector.",
+            "Các doanh nghiệp lớn có ảnh hưởng mạnh trong lĩnh vực này."
+          ]
+        ]
+      },
+      {
+        "m": "một hoạt động kinh doanh có quy mô hoặc doanh thu lớn",
+        "pat": "something is big business · turn something into big business",
+        "ex": [
+          [
+            "Online tutoring has become big business in the region.",
+            "Dạy kèm trực tuyến đã trở thành ngành kinh doanh lớn trong khu vực."
+          ],
+          [
+            "For the resort, winter tourism is big business.",
+            "Với khu nghỉ dưỡng, du lịch mùa đông là hoạt động kinh doanh chủ lực."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong nghĩa “các doanh nghiệp lớn”, big business thường là danh từ không đếm được; nghĩa thứ hai nói về một lĩnh vực sinh lợi lớn."
+  },
+  {
+    "phrase": "big gun",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(thân mật) người có ảnh hưởng hoặc chuyên môn cao, thường được mời để giúp đạt mục tiêu",
+        "pat": "bring in/call in the big guns · one of the big guns in …",
+        "ex": [
+          [
+            "The startup brought in the big guns to negotiate the contract.",
+            "Công ty khởi nghiệp mời những người có ảnh hưởng và kinh nghiệm vào đàm phán hợp đồng."
+          ],
+          [
+            "She is one of the big guns in environmental law.",
+            "Cô ấy là một trong những chuyên gia hàng đầu về luật môi trường."
+          ]
+        ]
+      }
+    ],
+    "note": "Thành ngữ thân mật; tùy ngữ cảnh có thể dịch là “nhân vật có thế lực”, “chuyên gia hàng đầu” hoặc “người chủ chốt”, không nhất thiết chỉ vũ khí."
+  },
+  {
+    "phrase": "big shot",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(thân mật, đôi khi châm biếm) người có quyền lực, địa vị hoặc tự cho mình là quan trọng",
+        "pat": "a big shot in something · act/think like a big shot",
+        "ex": [
+          [
+            "He became a big shot in the finance industry at a young age.",
+            "Anh ấy sớm trở thành nhân vật có thế lực trong ngành tài chính."
+          ],
+          [
+            "The new director arrived acting like a big shot.",
+            "Vị giám đốc mới đến với vẻ ta đây là người quan trọng."
+          ]
+        ]
+      }
+    ],
+    "note": "Sắc thái phụ thuộc giọng điệu: có thể khen người thành đạt, nhưng thường gợi sự tự phụ hoặc mỉa mai."
+  },
+  {
+    "phrase": "big top",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "lều lớn nhất của rạp xiếc, nơi diễn ra buổi biểu diễn chính",
+        "pat": "under/in the big top · a big-top show",
+        "ex": [
+          [
+            "The children watched the acrobats under the big top.",
+            "Bọn trẻ xem các nghệ sĩ nhào lộn trong lều xiếc lớn."
+          ],
+          [
+            "The circus raised its big top outside the town.",
+            "Gánh xiếc dựng chiếc lều lớn ở ngoại ô thị trấn."
+          ]
+        ]
+      }
+    ],
+    "note": "Cụm thường gợi hình ảnh rạp xiếc lưu động; big-top đứng trước danh từ có thể viết có gạch nối."
+  },
+  {
+    "phrase": "black and white",
+    "pos": "adjective phrase / noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đen trắng, không có màu sắc khác",
+        "pat": "black-and-white photograph/film · print something in black and white",
+        "ex": [
+          [
+            "The archive contains black-and-white photographs of the old station.",
+            "Kho lưu trữ có những bức ảnh đen trắng về nhà ga cũ."
+          ],
+          [
+            "The documentary was filmed in black and white.",
+            "Bộ phim tài liệu được quay bằng hai màu đen trắng."
+          ]
+        ]
+      },
+      {
+        "m": "được trình bày bằng văn bản rõ ràng, có thể kiểm chứng",
+        "pat": "in black and white · have something in black and white",
+        "ex": [
+          [
+            "Please put the agreed changes in black and white.",
+            "Vui lòng ghi rõ những thay đổi đã thống nhất thành văn bản."
+          ],
+          [
+            "The warranty terms are set out in black and white.",
+            "Các điều khoản bảo hành được ghi rõ bằng văn bản."
+          ]
+        ]
+      },
+      {
+        "m": "rõ ràng thành hai phía đối lập, không tính đến sắc thái trung gian",
+        "pat": "see something in black and white · a black-and-white view",
+        "ex": [
+          [
+            "The issue is more complex than a simple black-and-white choice.",
+            "Vấn đề phức tạp hơn một lựa chọn trắng đen đơn giản."
+          ],
+          [
+            "He tends to see workplace disagreements in black and white.",
+            "Anh ấy thường nhìn bất đồng nơi công sở theo hướng chỉ có hai phía đúng sai."
+          ]
+        ]
+      }
+    ],
+    "note": "Trước danh từ, cụm tính từ thường có gạch nối (black-and-white); in black and white thường chỉ văn bản hoặc cách nhìn phân đôi."
+  },
+  {
+    "phrase": "black death",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Cái Chết Đen — đại dịch dịch hạch tàn khốc lan rộng ở châu Âu vào thế kỷ XIV",
+        "pat": "the Black Death · spread of the Black Death · victims of the Black Death",
+        "ex": [
+          [
+            "The Black Death reshaped communities across medieval Europe.",
+            "Đại dịch Cái Chết Đen làm thay đổi các cộng đồng khắp châu Âu thời trung cổ."
+          ],
+          [
+            "The museum’s exhibit explains how the Black Death spread.",
+            "Trưng bày của bảo tàng giải thích cách dịch Cái Chết Đen lan rộng."
+          ]
+        ]
+      }
+    ],
+    "note": "Tên sự kiện lịch sử thường viết hoa và có the; không dùng black death như cách gọi chung cho mọi đợt dịch hạch."
+  },
+  {
+    "phrase": "black eye",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vết bầm tím quanh mắt do bị va đập",
+        "pat": "get/have a black eye · give somebody a black eye",
+        "ex": [
+          [
+            "He got a black eye during the match.",
+            "Anh ấy bị bầm quanh mắt trong trận đấu."
+          ],
+          [
+            "The fall left her with a painful black eye.",
+            "Cú ngã khiến cô bị bầm tím đau quanh mắt."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) tổn hại danh tiếng hoặc hình ảnh",
+        "pat": "give something a black eye · suffer a black eye",
+        "ex": [
+          [
+            "The data leak gave the company a black eye.",
+            "Vụ rò rỉ dữ liệu làm tổn hại danh tiếng công ty."
+          ],
+          [
+            "The scandal was a black eye for the whole organization.",
+            "Vụ bê bối là một vết nhơ đối với toàn bộ tổ chức."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa bóng thường dùng trong báo chí và công việc để nói về thiệt hại uy tín, không phải tổn thương thể chất."
+  },
+  {
+    "phrase": "black hole",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "hố đen — vùng trong không gian có lực hấp dẫn mạnh đến mức ánh sáng cũng không thể thoát ra",
+        "pat": "a black hole in space · form/observe a black hole",
+        "ex": [
+          [
+            "The telescope detected a black hole near the centre of the galaxy.",
+            "Kính thiên văn phát hiện một hố đen gần trung tâm thiên hà."
+          ],
+          [
+            "Matter can be drawn towards a black hole.",
+            "Vật chất có thể bị hút về phía hố đen."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) nơi hoặc tình trạng liên tục nuốt thời gian, tiền bạc hay thông tin mà ít thấy kết quả",
+        "pat": "a black hole for money/time · disappear into a black hole",
+        "ex": [
+          [
+            "Without clear controls, the project became a black hole for public funds.",
+            "Thiếu cơ chế kiểm soát rõ ràng, dự án trở thành nơi ngốn ngân sách công."
+          ],
+          [
+            "My request disappeared into a black hole after I submitted the form.",
+            "Yêu cầu của tôi như rơi vào hư không sau khi gửi biểu mẫu."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa thiên văn là thuật ngữ khoa học; nghĩa bóng thường hàm ý thứ gì đó tiêu tốn nguồn lực hoặc không nhận được phản hồi."
+  },
+  {
+    "phrase": "black market",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thị trường mua bán hàng hóa hoặc dịch vụ trái pháp luật hay ngoài kênh được quản lý",
+        "pat": "buy/sell something on the black market · a black market in …",
+        "ex": [
+          [
+            "The stolen medicines were sold on the black market.",
+            "Số thuốc bị đánh cắp được bán trên thị trường chợ đen."
+          ],
+          [
+            "Restrictions created a black market in fuel.",
+            "Các hạn chế làm nảy sinh thị trường chợ đen về nhiên liệu."
+          ]
+        ]
+      }
+    ],
+    "note": "Thường dùng với the; black-market đứng trước danh từ như tính từ (black-market goods). Tính hợp pháp cụ thể tùy luật từng nước."
+  },
+  {
+    "phrase": "black out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bất tỉnh hoặc mất ý thức trong một khoảng thời gian",
+        "pat": "black out · black out from heat/exhaustion",
+        "ex": [
+          [
+            "The runner blacked out after finishing the race in extreme heat.",
+            "Vận động viên chạy bộ bất tỉnh sau khi kết thúc cuộc đua dưới trời quá nóng."
+          ],
+          [
+            "She briefly blacked out but recovered quickly.",
+            "Cô ấy mất ý thức trong chốc lát rồi nhanh chóng hồi tỉnh."
+          ]
+        ]
+      },
+      {
+        "m": "làm mất điện hoặc che/xóa thông tin để người khác không nhìn thấy",
+        "pat": "the power blacks out · black out a name/section · black something out",
+        "ex": [
+          [
+            "The storm blacked out several neighbourhoods.",
+            "Cơn bão làm mất điện ở một số khu dân cư."
+          ],
+          [
+            "The report blacked out the customer’s personal details.",
+            "Báo cáo đã che thông tin cá nhân của khách hàng."
+          ]
+        ]
+      }
+    ],
+    "note": "Black out là động từ; danh từ viết liền blackout, còn tính từ đứng trước danh từ có thể viết blacked-out. Chọn nghĩa theo chủ thể: người, điện hoặc văn bản."
+  },
+  {
+    "phrase": "black tie",
+    "pos": "noun phrase / adjective",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "quy định trang phục trang trọng buổi tối, thường yêu cầu nam giới mặc tuxedo hoặc dinner jacket",
+        "pat": "a black-tie event/dinner · wear black tie · black-tie dress code",
+        "ex": [
+          [
+            "The invitation says the awards dinner is black tie.",
+            "Thiệp mời ghi rõ tiệc trao giải yêu cầu trang phục dạ tiệc trang trọng."
+          ],
+          [
+            "Guests wore tuxedos to the black-tie reception.",
+            "Khách mời mặc tuxedo tại buổi tiếp tân trang trọng."
+          ]
+        ]
+      }
+    ],
+    "note": "Black tie thường chỉ dress code, không nhất thiết nói về một chiếc cà vạt màu đen thông thường; trước danh từ thường viết black-tie."
+  },
+  {
+    "phrase": "blind date",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "buổi hẹn giữa hai người chưa từng gặp nhau trước đó, thường do người khác sắp xếp",
+        "pat": "go on/have a blind date · set somebody up on a blind date",
+        "ex": [
+          [
+            "A colleague set them up on a blind date.",
+            "Một đồng nghiệp sắp xếp cho họ một buổi hẹn làm quen."
+          ],
+          [
+            "She was nervous before going on her first blind date.",
+            "Cô ấy hồi hộp trước buổi hẹn làm quen đầu tiên."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong cách dùng hiện đại, cụm này thường nói về buổi hẹn hò; không nhất thiết có nghĩa người tham gia bị che mắt."
+  },
+  {
+    "phrase": "blind spot",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vùng người lái không thể nhìn thấy trực tiếp qua gương hoặc cửa kính xe",
+        "pat": "check/look in the blind spot · a vehicle’s blind spot",
+        "ex": [
+          [
+            "Check your blind spot before changing lanes.",
+            "Hãy kiểm tra điểm mù trước khi chuyển làn."
+          ],
+          [
+            "The cyclist was hidden in the truck’s blind spot.",
+            "Người đi xe đạp bị khuất trong điểm mù của xe tải."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) khía cạnh một người khó nhận ra hoặc đánh giá khách quan",
+        "pat": "have a blind spot about/for something · a political blind spot",
+        "ex": [
+          [
+            "The manager has a blind spot about how the policy affects new staff.",
+            "Người quản lý không nhận ra chính sách ảnh hưởng đến nhân viên mới như thế nào."
+          ],
+          [
+            "The review exposed a blind spot in the company’s risk assessment.",
+            "Bản đánh giá phơi bày một điểm mù trong việc phân tích rủi ro của công ty."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa bóng thường nói về hạn chế trong nhận thức hoặc đánh giá, không chỉ một lỗi nhỏ."
+  }
+]

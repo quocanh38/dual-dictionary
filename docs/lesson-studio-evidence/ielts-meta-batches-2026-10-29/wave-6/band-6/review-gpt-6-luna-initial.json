@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "7eac0931ceaaa2b534a3bd50a5a412ce887ef2b6585b4f75712fa8f034757a1c",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "Reading objective answer-position distribution",
+      "issue": "Reading keys are [2,0,1,2,1]; position 3 is never correct, matching the candidate normalization finding. Rebalance options/keys while preserving the passage-supported answers.",
+      "severity": "minor"
+    }
+  ],
+  "observations": [
+    "Listening and Reading contexts are 334 and 416 words, within target ranges. All 10 objective keys are context-supported and explanations distinguish claim/example or inference appropriately. Task 1 activity table is complete with family counts, participant counts and /5 ratings. The digital-skills table reports age-group percentages but does not explicitly state the denominator for completion percentages; clarify whether these are percentages of attendees completing each session follow-up or of each age group overall. Writing prompts specify standard minimums/timing; Speaking includes two Part 1, two complete Part 2 cue cards and one Part 3. Original-content provenance is present; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, listening script (334 words) and reading passage (416 words), all 10 objective items and their options/keys/explanations, both Task 1 datasets and denominators/units, all five Writing prompts and timing, and all five Speaking prompts including the two Part 2 cue cards and section fit.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,43 @@
+{
+  "testedAt": "2026-10-27T08:16:45.255Z",
+  "results": [
+    {
+      "id": "city-bus-temporary-diversion",
+      "status": "PASS",
+      "candidateSha256": "86c81bda8df20469418d193989332ff5d17c5c77ea59977a13ecd536b4e24581",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "clinic-appointment-process",
+      "status": "PASS",
+      "candidateSha256": "311d151c245c2ebd3abc94677b3f9eb61452338b6758ceea29c4090036bdc433",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

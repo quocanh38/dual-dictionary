@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "966206547723f2bea327ce580201308e36ebe076d18055195b04b3aa299711d9",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "sharedContexts.listening",
+      "issue": "The declared and actual Listening script length is 402 words, exceeding the required 300–400-word range (also recorded in normalizationFindings). Trim at least 2 words while preserving all evidence needed by the five questions.",
+      "severity": "major"
+    }
+  ],
+  "observations": [
+    "I reviewed all 20 items: the five Listening and five Reading keys are supported, explanations match evidence, and answer positions are balanced. The new cost comparison in Listening is arithmetically consistent for the stated 120-day semester: 1,200 L/day × 120 = 144,000 L; 800 L/day × 120 = 96,000 L; $900/144,000 L is <1 cent/L, and >$6,000/96,000 L is >6 cents/L. The comparison should remain explicitly limited to installation cost and this semester, as stated. Reading is 407 words. Writing/Speaking prompts, data, timing, and Part 2/3 structures are complete; provenance declares original content and makes no official-item/score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, all 10 objective prompts/options/keys/explanations, all five Writing prompts and numerical data/units/timing, and all five Speaking prompts including Part 2 and Part 3 fit. Verified Listening actual and declared word count and recalculated the added cost-per-litre figures.",
+  "reviewerType": "AI-assisted"
+}

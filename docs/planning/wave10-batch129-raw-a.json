@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 129,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after deus ex machina in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue D-section technical vocabulary, mathematics and computing, financial and tax terminology, British/North American variants, parliamentary usage, displacement terminology, road types, idioms, and a literary allusion. Notes separate regional meanings, technical senses, legal categories, and common learner confusions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 288,
+    "remainingRawOnlyAfter": 268
+  },
+  "selected": [
+    "dew point",
+    "dialog box",
+    "differential calculus",
+    "differential equation",
+    "differential gear",
+    "dip switch",
+    "direct action",
+    "direct current",
+    "direct tax",
+    "disc jockey",
+    "discount rate",
+    "disk drive",
+    "disk jockey",
+    "dispatch box",
+    "displaced person",
+    "disposable income",
+    "divided highway",
+    "dog collar",
+    "dollar sign",
+    "don juan"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "GOV.UK: Conditional order or decree nisi (https://www.gov.uk/divorce/apply-for-conditional-order-decree-nisi)",
+    "UNHCR: IDP definition (https://emergency.unhcr.org/protection/legal-framework/idp-definition)"
+  ]
+}

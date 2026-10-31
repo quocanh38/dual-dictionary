@@ -1,0 +1,352 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-10",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "normalizationFindings": [
+    "Listening script has 402 words; expected 300–400."
+  ],
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2824,
+        "outputTokens": 7812,
+        "totalTokens": 10636
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-10-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-10-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Campus Water-Saving Project Discussion",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "part": "Part 3",
+      "script": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "wordCount": 402
+    },
+    "reading": {
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "wordCount": 407
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-10-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Campus Water-Saving Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "transcript": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "prompt": "What did Marco report about water use in Building C?",
+      "options": [
+        "Rose slightly due to conference guests",
+        "Stayed same as previous semester",
+        "Fell by about 18% in early weeks",
+        "Dropped 6% after information campaign"
+      ],
+      "answer": 2,
+      "explanation": "The script gives an 18% fall in Building C in the first eight weeks. The 6% figure refers to Building D, making that distractor incorrect."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Campus Water-Saving Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "transcript": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "prompt": "Why was the saving smaller in Building D?",
+      "options": [
+        "Guests did not receive guidance leaflet",
+        "Showerheads were different model installed",
+        "Building had fewer occupied rooms",
+        "Water pressure limited shower flow"
+      ],
+      "answer": 0,
+      "explanation": "Speakers attribute the 6% result to short-stay guests missing the leaflet, so behaviour didn't change. A different equipment model was explicitly ruled out."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Campus Water-Saving Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "transcript": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "prompt": "What correction does Marco make about irrigation savings?",
+      "options": [
+        "Cost was lower than first stated",
+        "22% saving applied only to dry months",
+        "System was not fully automated",
+        "Data covered full year, not semester"
+      ],
+      "answer": 1,
+      "explanation": "Marco corrects himself that 22% was for June-August only, with 14% across the semester. The cost was not corrected."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Campus Water-Saving Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "transcript": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "prompt": "What do students conclude about cost-effectiveness?",
+      "options": [
+        "Irrigation saved less water overall",
+        "Both systems cost about the same",
+        "Irrigation better value despite high cost",
+        "Showerheads cheaper per litre saved"
+      ],
+      "answer": 3,
+      "explanation": "They calculate ~144,000 litres total for $900 (<1 cent per litre) versus ~96,000 litres for over $6,000 (>6 cents per litre), so showerheads are cheaper per litre."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Campus Water-Saving Project Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "transcript": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "prompt": "What limitation do they agree prevents long-term claims?",
+      "options": [
+        "Sensors failed during hot months",
+        "Need another year of data as occupants change",
+        "University will remove both systems",
+        "Previous semester data was incomplete"
+      ],
+      "answer": 1,
+      "explanation": "Priya says annual student turnover means another year of data is needed to judge durability. Sensor failure was never mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "prompt": "What problem does the author identify with environmental datasets?",
+      "options": [
+        "They often rely on uneven or changing collection methods",
+        "They are rarely available for cities",
+        "They focus only on temperature",
+        "They are collected mainly by professionals"
+      ],
+      "answer": 0,
+      "explanation": "The opening frames both cases as data not collected for research with uneven coverage. The city-only option is too narrow."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "prompt": "Why was the initial urban cooling estimate inflated?",
+      "options": [
+        "Satellite maps were less precise",
+        "Sensors measured only at night",
+        "Parks were smaller than assumed",
+        "Green areas were over-represented in sample"
+      ],
+      "answer": 3,
+      "explanation": "The passage says 60% of sensors were in parks/avenues, inflating the 2.1°C average. Satellite precision is a separate limitation, not the cause."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "prompt": "According to the passage, what did the adjusted cooling analysis conclude?",
+      "options": [
+        "Cooling reached 2.1°C across entire city",
+        "Cooling averaged about 1.2°C near parks with variation",
+        "Satellite data proved street-level cooling exactly",
+        "Industrial zones were cooler than parks"
+      ],
+      "answer": 1,
+      "explanation": "The weighted estimate was ~1.2°C within 200m, varying by size/wind/time. The 2.1°C figure was the unadjusted example, not the authors' claim."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "prompt": "What can reasonably be inferred about the sparrow decline?",
+      "options": [
+        "Decline was definitely 15% nationwide",
+        "Suburban gardens showed the steepest drop",
+        "About 8% decline remains but uncertainty is wide",
+        "Volunteer counts prove farming caused decline"
+      ],
+      "answer": 2,
+      "explanation": "After adjusting for effort, ~8% remains but authors note wide uncertainty and non-uniform trends. The 15% headline and suburban-drop options contradict the adjusted analysis."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "prompt": "What do authors recommend for reporting such results?",
+      "options": [
+        "Present both raw and adjusted figures with limits",
+        "Use only satellite data for future studies",
+        "Avoid citizen science due to errors",
+        "Report single headline figure for clarity"
+      ],
+      "answer": 0,
+      "explanation": "The conclusion advises reporting both initial and adjusted figures with explanations. Using only one source or a single headline opposes that qualified approach."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-10-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Water Use and Saving Projections",
+      "pathwayStage": "band-6-5",
+      "focus": "Summarising and comparing projected versus actual use with denser data and limitations",
+      "prompt": "Summarise the information in the table. Compare the main trends and differences between projected and actual water use, and note any limitations in the data. Table: Northfield University Campus Water Project (cubic metres per year). Dormitories: 2023 baseline 42,000; 2024 projected 36,000; 2024 actual 38,500; metering coverage 98%. Science Laboratories: 28,000; 24,000; 25,200; 95%. Sports Centre: 18,000; 14,500; 16,800*; 70%. Cafeterias and Kitchens: 15,000; 12,000; 12,400; 100%. Administration Offices: 9,000; 8,000; 8,600; 92%. *Sports Centre 2024 actual includes estimate for March-April due to meter fault. Interventions in 2024: low-flow showers in dormitories, water-recycling system in laboratories, awareness campaign in all buildings. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Bird Monitoring Results Across Campus Habitats",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing counts across habitats and years while handling observer effort and uncertainty",
+      "prompt": "Summarise the information in the table. Compare bird counts across habitats and between years, and comment on observer effort and data limitations. Table: Greenfield Campus Bird Monitoring - individuals counted. Woodland Patch: observer hours 40 in 2022, 60 in 2024; Swifts 45 in 2022, 62 in 2024; Sparrows 120, 135; Herons 8, 9. Lake Edge: 40, 60; Swifts 12, 18; Sparrows 80, 95; Herons 22, 31. Rooftop Gardens: 30, 50; Swifts 28, 55; Sparrows 60, 110; Herons 2, 3. Notes: 2024 had calmer spring weather; rooftop garden area increased by 30% between surveys; some juvenile swifts and sparrows may have been double-counted. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Technical Upgrades or Behaviour Change for Campus Water Saving",
+      "pathwayStage": "band-6-5",
+      "focus": "Qualified argument with evidence comparison and handling of limitations",
+      "prompt": "Some people think universities should prioritise technical upgrades such as efficient fixtures and recycling systems to save water, while others think behaviour campaigns such as education and incentives are more effective. Discuss both views, compare the evidence and costs, and give your own view with qualified claims. Consider long-term effects and the limitations of available evidence. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Communicating Bird-Monitoring Results to Different Audiences",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating accuracy versus accessibility and communicating uncertainty",
+      "prompt": "Bird-monitoring results are often simplified for the public, which some people say is misleading, while others argue that detailed scientific reports are too difficult for most people to use. Discuss both views and give your opinion. Compare different communication approaches and explain how uncertainty and limitations should be handled. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Selecting Urban Heat Measures for a Campus District",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing options with trade-offs, evidence and limitations",
+      "prompt": "A university district is choosing measures to reduce urban heat: planting more trees, installing reflective roofs, or creating water features such as ponds and fountains. Each option has benefits and drawbacks for cost, maintenance, and effectiveness. Discuss what factors should guide the choice, compare the evidence for the different options, and explain how trade-offs and limitations should be handled. Give reasons for your view. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-10-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Water Use and Conservation",
+      "pathwayStage": "band-6-5",
+      "focus": "Personal habits and qualified descriptions of routine behaviour",
+      "prompt": "Answer 4-5 short questions in 4-5 minutes. 1. How do you usually try to save water at home? 2. Has your attitude to saving water changed in recent years? 3. What water-saving measures have you seen in schools or workplaces? 4. Do you think people in your area are concerned about water use?"
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Nature and Birdlife in Your Area",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing local environment and personal experience with nature",
+      "prompt": "Answer 4-5 short questions in 4-5 minutes. 1. Are there many birds or green spaces where you live? 2. Do you often notice birds or other wildlife in your daily life? 3. Have you ever taken part in a nature observation activity? 4. How important is it for cities to protect habitats for birds?"
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · An Environmental Project You Observed or Joined",
+      "pathwayStage": "band-6-5",
+      "focus": "Narrative with reflection on results and limitations",
+      "prompt": "Describe an environmental project you observed or took part in, such as a water-saving, bird-monitoring, or urban heat project. You will have 1 minute to prepare and 1-2 minutes to speak. Include: • what the project was and where it took place • what you did or observed • what the results or challenges were • and explain what you learned about its success or limitations."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Campus Environmental Projects",
+      "pathwayStage": "band-6-5",
+      "focus": "Reasons, trade-offs and evidence comparison for decision making",
+      "prompt": "Discuss for 4-5 minutes. 1. How should universities decide between technical solutions and behaviour campaigns for saving water? 2. What are the advantages and limitations of using short-term data to judge a project? 3. Should student views be included when selecting urban heat measures? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Communicating Scientific Information to the Public",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluation of accuracy, accessibility and handling uncertainty",
+      "prompt": "Discuss for 4-5 minutes. 1. Why might simplified summaries of bird-monitoring results be useful, and what risks do they carry? 2. How can communicators show uncertainty without confusing the public? 3. When evidence is limited or mixed, how should decision makers explain their choices about urban heat measures?"
+    }
+  ]
+}

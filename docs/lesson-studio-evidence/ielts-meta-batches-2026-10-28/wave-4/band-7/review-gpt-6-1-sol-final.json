@@ -1,0 +1,38 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "a5663e4bb0cc1e3fb18ea6046ec99735ef0de6054766f2db702f62a6f25dd293",
+  "verdict": "pass",
+  "findings": [],
+  "coverage": {
+    "scope": "Final candidate-final-v4.json exact-byte review: all 20 items, entire script and passage, all 40 options, 10 keys and explanations, every Writing/Speaking prompt. Repeated item contexts verified identical to shared contexts. No candidate edits and no other reviewer outputs inspected. Full v3 content reread; v4 verified byte-identical to that reviewed v3 file.",
+    "listening": "12,000 taps correction to 8,000 distinct journey searches consistently in script/key/explanation, avoiding unsupported boarding inference; user representativeness; intention versus boarding; weekday/weekend comparison and near-third qualification; combined timing/volume method; full script including smart-card tourist coverage caveat read; Jonas attribution correctly fixed in listening02.",
+    "reading": "three-month mean versus site range; volunteer staffing/training bias; Year6 implementation illustration rather than room-only causation; spare-capacity cost condition; reporting ranges and broad second-round testing",
+    "writing": "flood forecast six percentages and six yes/no outcomes across2022/2023 supplied, 68% survey note treated as subjective reported perception rather than proof warnings were false; historic-site visitors/spending complete20 observations with explicit thousand units across2019–2023; all three Task2 prompts coherent and evaluative; Task1 minimum150 words/20 minutes and Task2 minimum250 words/40 minutes verified.",
+    "speaking": "two personal Part1 sets; forecast cue card and historic-site cue card both include preparation/duration and sufficient bullets, with advanced analytical scaffold appropriate for practice; Part3 public-research discussion answerable without memorised facts",
+    "languageAndStage": "Reviewed natural language, unsupported claims, distractor uniqueness/plausibility, stage suitability and task realism. These are staged short-form practice items, not a complete official IELTS paper or a validated band-score measure.",
+    "itemIds": [
+      "ielts-meta-wave-4-band-7-listening-01",
+      "ielts-meta-wave-4-band-7-listening-02",
+      "ielts-meta-wave-4-band-7-listening-03",
+      "ielts-meta-wave-4-band-7-listening-04",
+      "ielts-meta-wave-4-band-7-listening-05",
+      "ielts-meta-wave-4-band-7-reading-01",
+      "ielts-meta-wave-4-band-7-reading-02",
+      "ielts-meta-wave-4-band-7-reading-03",
+      "ielts-meta-wave-4-band-7-reading-04",
+      "ielts-meta-wave-4-band-7-reading-05",
+      "ielts-meta-wave-4-band-7-writing-01",
+      "ielts-meta-wave-4-band-7-writing-02",
+      "ielts-meta-wave-4-band-7-writing-03",
+      "ielts-meta-wave-4-band-7-writing-04",
+      "ielts-meta-wave-4-band-7-writing-05",
+      "ielts-meta-wave-4-band-7-speaking-01",
+      "ielts-meta-wave-4-band-7-speaking-02",
+      "ielts-meta-wave-4-band-7-speaking-03",
+      "ielts-meta-wave-4-band-7-speaking-04",
+      "ielts-meta-wave-4-band-7-speaking-05"
+    ],
+    "priorReviewExposure": "Same reviewer previously reviewed v2 in full and reported findings. Parent supplied editorial change summaries. Full final content reread rather than delta-only review; other reviewer outputs not inspected."
+  },
+  "reviewerType": "AI-assisted"
+}

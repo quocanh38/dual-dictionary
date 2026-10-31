@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "rail-station-lost-property",
+  "previousEditorialCandidateFile": "rail-station-lost-property-candidate-editorial-v1.json",
+  "editorialCandidateFile": "rail-station-lost-property-candidate-editorial-v2.json",
+  "editedLocally": true,
+  "generatedByMeta": false,
+  "changes": [
+    {
+      "path": "pack.lessons[0].exercises[q5].prompt",
+      "before": "The prompt asked what evidence the resident could show but did not require the selected target phrase.",
+      "after": "Added an explicit instruction to use “proof of ownership”.",
+      "reason": "Align the transfer prompt with its required target use, sample answer and self-check."
+    }
+  ],
+  "reason": "Resolve the critical cross-review finding before approval."
+}

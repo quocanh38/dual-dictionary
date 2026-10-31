@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "585209460808922f22ca9ca21b732da68913503305d6177dbd527cfb9d1630b2",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:29:11Z",
+  "note": "Independent full-pack review of the exact packSha256 above: checked source sentences, both target meanings in EN/VI, every question and option explanation, answer uniqueness, and transfer. Rights/authorship and permission were checked only against local declarations; they were not independently verified. B1/B2 labels are estimates, not calibrated levels. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The frozen source manifest and pack declare an AI-assisted original passage, distribution authorization, and no learner personal data; declarations are consistent. This checks project-local claims only and does not independently verify authorship or rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“phase in” appears in s2 (“phase in the change over six weeks”), and the staged six-week rollout supports the gradual-introduction sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The gloss “to introduce a change gradually in stages” directly describes s2 and is not merely an explanation for selecting an answer."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“triển khai dần từng bước” is natural Vietnamese for introducing the policy gradually in stages and includes diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“take effect” occurs in s3 with a date and after a trial/review; this supports when a schedule starts applying or becoming official."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“to start to apply or become official” matches the schedule’s effective date after trial and review."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“có hiệu lực; bắt đầu được áp dụng” is accurate, natural Vietnamese for the stated schedule context and includes diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone expresses a staged introduction over six weeks. B says cancellation and C says sudden implementation, both contradict the gradual rollout in s2."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A’s rationale matches the six-week period; B and C explanations correctly identify meanings opposite to “phase in.” The overall explanation is supported by s2."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B is correct. A has subject-verb form “phases” after modal “will”; C combines future “will” with “three weeks ago,” an incompatible time expression. Only B works."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations accurately correct the verb to base form after “will” and remove “ago” from the future-time clause. They do not overgeneralize beyond these sentences."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "C alone says the schedule will begin applying and become official on that date. A only discusses a possible idea; B says cancellation, opposite to s3."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "C’s explanation correctly connects the date after trial/review with application; A and B explanations accurately distinguish discussion/cancellation from commencement."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A uses “take effect” correctly. B inserts an article not used in this construction; C incorrectly uses “takes” after modal “will.” Neither distractor is a valid alternative."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations correctly identify the article insertion and modal agreement errors; A’s next-Monday effective date is a natural use of the phrase."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source is a firm rolling out a workplace schedule policy. The prompt changes the role to a sports-club organizer and the purpose to explaining a gradual online booking-system launch to members."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model is idiomatic and uses “phase in” for gradual introduction, then tells members what to do meanwhile. The checklist covers length, phrase meaning, and practical message content without assigning an automatic score."
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,512 @@
+[
+  {
+    "phrase": "line drawing",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bản vẽ đường nét, chủ yếu tạo hình bằng các đường thẳng hoặc cong thay vì mảng màu và sắc độ đậm nhạt",
+        "pat": "a line drawing of something · make/create a line drawing · a simple line drawing",
+        "ex": [
+          [
+            "The manual includes a line drawing of the machine.",
+            "Sách hướng dẫn có bản vẽ đường nét của chiếc máy."
+          ],
+          [
+            "She began with a line drawing before adding colour.",
+            "Cô bắt đầu bằng bản phác đường nét rồi mới thêm màu."
+          ]
+        ]
+      }
+    ],
+    "note": "Line drawing thường dùng trong minh họa, sơ đồ và hướng dẫn kỹ thuật; bản vẽ có thể vẫn có chữ hoặc ký hiệu nhưng không tập trung vào mảng màu."
+  },
+  {
+    "phrase": "line item",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mục riêng biệt được ghi thành một dòng trong danh sách, hóa đơn, ngân sách hoặc báo cáo tài chính",
+        "pat": "a budget line item · list/show something as a line item · review each line item",
+        "ex": [
+          [
+            "Travel costs appear as a separate line item in the budget.",
+            "Chi phí đi lại được ghi thành một mục riêng trong ngân sách."
+          ],
+          [
+            "The auditor checked every line item on the invoice.",
+            "Kiểm toán viên kiểm tra từng mục trên hóa đơn."
+          ]
+        ]
+      }
+    ],
+    "note": "Line item thường dùng trong kế toán, mua sắm và báo cáo; nó giúp theo dõi từng khoản riêng thay vì một tổng số gộp."
+  },
+  {
+    "phrase": "line of sight",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đường nhìn trực tiếp từ mắt đến vật; tầm nhìn không bị vật cản",
+        "pat": "in somebody’s line of sight · have a clear line of sight · block the line of sight",
+        "ex": [
+          [
+            "A pillar blocked the driver’s line of sight at the junction.",
+            "Một cột trụ che khuất tầm nhìn của tài xế tại ngã giao."
+          ],
+          [
+            "The camera needs a clear line of sight to the entrance.",
+            "Máy quay cần có tầm nhìn thẳng tới lối vào."
+          ]
+        ]
+      },
+      {
+        "m": "(kỹ thuật) đường truyền trực tiếp giữa hai thiết bị hoặc điểm quan sát, không bị địa hình/công trình chắn",
+        "pat": "line-of-sight communication · maintain a line of sight between devices · a line-of-sight link",
+        "ex": [
+          [
+            "The radio link failed when the hill blocked the line of sight.",
+            "Đường truyền vô tuyến bị ngắt khi ngọn đồi chắn tầm nhìn thẳng."
+          ],
+          [
+            "The sensor works best with a direct line of sight to the target.",
+            "Cảm biến hoạt động tốt nhất khi có đường ngắm trực tiếp tới mục tiêu."
+          ]
+        ]
+      }
+    ],
+    "note": "Line of sight thường nói về tầm nhìn hoặc đường truyền trực tiếp; sight line cũng là biến thể. Đường truyền vô tuyến thực tế còn phụ thuộc tần số, vật liệu và điều kiện môi trường."
+  },
+  {
+    "phrase": "line printer",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "máy in dòng — máy in tốc độ cao kiểu cũ, in nguyên một dòng văn bản mỗi lần thay vì từng ký tự hoặc từng trang",
+        "pat": "a high-speed line printer · print a report on a line printer · line-printer output",
+        "ex": [
+          [
+            "The old data centre used a line printer for batch reports.",
+            "Trung tâm dữ liệu cũ dùng máy in dòng cho các báo cáo xử lý theo lô."
+          ],
+          [
+            "A line printer produced pages of transaction records overnight.",
+            "Máy in dòng in ra nhiều trang hồ sơ giao dịch qua đêm."
+          ]
+        ]
+      }
+    ],
+    "note": "Line printer là công nghệ in cũ, phổ biến trong xử lý dữ liệu khối lượng lớn; ngày nay thường được nhắc trong lịch sử máy tính hoặc hệ thống chuyên dụng."
+  },
+  {
+    "phrase": "line up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "xếp thành hàng hoặc tạo thành một hàng",
+        "pat": "line up for something · line up outside a venue · people line up",
+        "ex": [
+          [
+            "Visitors lined up outside the museum before it opened.",
+            "Khách xếp hàng bên ngoài bảo tàng trước giờ mở cửa."
+          ],
+          [
+            "The students lined up in front of the classroom.",
+            "Học sinh xếp thành hàng trước lớp."
+          ]
+        ]
+      },
+      {
+        "m": "sắp xếp người/vật theo hàng hoặc bố trí các mục theo một thứ tự",
+        "pat": "line something up · line up chairs/meetings · line something up with something",
+        "ex": [
+          [
+            "The staff lined up the chairs for the presentation.",
+            "Nhân viên xếp ghế thành hàng cho buổi thuyết trình."
+          ],
+          [
+            "Line up the two marks before tightening the bracket.",
+            "Căn thẳng hai dấu trước khi siết giá đỡ."
+          ]
+        ]
+      },
+      {
+        "m": "thu xếp hoặc bảo đảm có người, kế hoạch hay nguồn lực sẵn sàng",
+        "pat": "line up a meeting/sponsor/interview · line somebody up for something · have something lined up",
+        "ex": [
+          [
+            "We have lined up two suppliers for the pilot project.",
+            "Chúng tôi đã thu xếp được hai nhà cung cấp cho dự án thí điểm."
+          ],
+          [
+            "She lined up an interview before completing the course.",
+            "Cô thu xếp được một buổi phỏng vấn trước khi hoàn thành khóa học."
+          ]
+        ]
+      }
+    ],
+    "note": "Line up có thể là nội động từ hoặc ngoại động từ tách được; đại từ đứng giữa: line it up. Danh từ line-up thường chỉ danh sách người/vật hoặc đội hình."
+  },
+  {
+    "phrase": "lingua franca",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ngôn ngữ chung được những người có tiếng mẹ đẻ khác nhau sử dụng để giao tiếp",
+        "pat": "a global/regional lingua franca · use something as a lingua franca · English is a lingua franca",
+        "ex": [
+          [
+            "English serves as a lingua franca at many international conferences.",
+            "Tiếng Anh đóng vai trò ngôn ngữ chung tại nhiều hội nghị quốc tế."
+          ],
+          [
+            "The traders used a local lingua franca to negotiate across language groups.",
+            "Các thương nhân dùng một ngôn ngữ chung địa phương để thương lượng giữa các nhóm ngôn ngữ."
+          ]
+        ]
+      }
+    ],
+    "note": "Lingua franca không nhất thiết là tiếng mẹ đẻ của bất kỳ người tham gia nào; số nhiều có thể là lingua francas hoặc linguae francae."
+  },
+  {
+    "phrase": "link up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "nối hoặc kết nối với một người, nhóm, thiết bị hay hệ thống khác",
+        "pat": "link up with somebody · link one system up to another · be linked up",
+        "ex": [
+          [
+            "The two offices linked up through a secure video call.",
+            "Hai văn phòng kết nối với nhau qua cuộc gọi video bảo mật."
+          ],
+          [
+            "The sensor links up to the control unit wirelessly.",
+            "Cảm biến kết nối không dây với bộ điều khiển."
+          ]
+        ]
+      },
+      {
+        "m": "gặp hoặc phối hợp với ai để cùng làm một việc",
+        "pat": "link up with a team · link up to discuss something · link up again",
+        "ex": [
+          [
+            "Our field team linked up with local volunteers near the village.",
+            "Đội công tác kết nối với tình nguyện viên địa phương gần ngôi làng."
+          ],
+          [
+            "The researchers linked up to compare their findings.",
+            "Các nhà nghiên cứu phối hợp để so sánh kết quả."
+          ]
+        ]
+      }
+    ],
+    "note": "Link up thường có with khi nói về người/nhóm; khi nói về thiết bị, có thể dùng link up to. Trong văn phong trang trọng, connect hoặc collaborate có thể phù hợp hơn."
+  },
+  {
+    "phrase": "linseed oil",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "dầu hạt lanh — dầu ép từ hạt cây lanh, được dùng trong một số loại sơn, chất hoàn thiện gỗ và thực phẩm",
+        "pat": "raw/boiled linseed oil · apply linseed oil to wood · flaxseed/linseed oil",
+        "ex": [
+          [
+            "The restorer applied linseed oil to protect the wooden surface.",
+            "Người phục chế thoa dầu hạt lanh để bảo vệ bề mặt gỗ."
+          ],
+          [
+            "The label identifies the food product as cold-pressed linseed oil.",
+            "Nhãn ghi sản phẩm thực phẩm là dầu hạt lanh ép lạnh."
+          ]
+        ]
+      }
+    ],
+    "note": "Linseed oil cũng gọi là flaxseed oil, nhưng sản phẩm dùng cho sơn/gỗ có thể chứa phụ gia và không được dùng làm thực phẩm. Dầu khô trên giẻ có nguy cơ tự nóng lên; xử lý theo hướng dẫn an toàn."
+  },
+  {
+    "phrase": "lip service",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "lời ủng hộ chỉ mang tính hình thức, không đi kèm hành động thực tế",
+        "pat": "pay lip service to something · give lip service to an idea · mere lip service",
+        "ex": [
+          [
+            "The company pays lip service to sustainability but has not changed its supply chain.",
+            "Công ty chỉ nói ủng hộ phát triển bền vững nhưng chưa thay đổi chuỗi cung ứng."
+          ],
+          [
+            "The proposal gave lip service to accessibility without funding the necessary changes.",
+            "Đề xuất chỉ nhắc đến khả năng tiếp cận theo hình thức mà không cấp kinh phí cho các thay đổi cần thiết."
+          ]
+        ]
+      }
+    ],
+    "note": "Pay lip service to thường mang sắc thái phê phán và hàm ý lời nói không khớp với hành động."
+  },
+  {
+    "phrase": "liquid assets",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tài sản thanh khoản — tiền mặt hoặc tài sản có thể nhanh chóng chuyển thành tiền mặt mà ít mất giá",
+        "pat": "hold liquid assets · liquid assets include cash · convert assets into cash",
+        "ex": [
+          [
+            "The company keeps liquid assets to cover short-term expenses.",
+            "Công ty giữ tài sản thanh khoản để trang trải chi phí ngắn hạn."
+          ],
+          [
+            "Cash and short-term deposits are included among its liquid assets.",
+            "Tiền mặt và tiền gửi ngắn hạn được tính vào tài sản thanh khoản của công ty."
+          ]
+        ]
+      }
+    ],
+    "note": "Mức độ thanh khoản phụ thuộc thời gian chuyển đổi, tính chắc chắn của giá và thị trường; liquid assets không đồng nghĩa với toàn bộ tài sản có giá trị."
+  },
+  {
+    "phrase": "liquid crystal display",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "màn hình tinh thể lỏng — màn hình dùng tinh thể lỏng điều khiển ánh sáng để tạo hình ảnh; thường viết tắt LCD",
+        "pat": "a liquid crystal display (LCD) · an LCD screen/panel · liquid-crystal-display technology",
+        "ex": [
+          [
+            "The instrument uses a liquid crystal display to show the readings.",
+            "Thiết bị dùng màn hình tinh thể lỏng để hiển thị số đo."
+          ],
+          [
+            "The LCD panel remains readable in bright conditions.",
+            "Tấm nền LCD vẫn dễ đọc trong điều kiện sáng."
+          ]
+        ]
+      }
+    ],
+    "note": "LCD là công nghệ màn hình; nhiều màn hình LCD dùng đèn nền LED, nên “LED display” trong quảng cáo đôi khi chỉ LCD có đèn nền LED chứ không phải màn hình LED tự phát sáng toàn phần."
+  },
+  {
+    "phrase": "list price",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "giá niêm yết hoặc giá công bố của hàng hóa trước khi áp dụng giảm giá hay thương lượng",
+        "pat": "the list price · sell below/at list price · compare list prices",
+        "ex": [
+          [
+            "The list price is higher than the amount paid by most customers.",
+            "Giá niêm yết cao hơn số tiền mà phần lớn khách hàng thực trả."
+          ],
+          [
+            "The dealer offered a discount from the list price.",
+            "Đại lý giảm giá so với giá niêm yết."
+          ]
+        ]
+      }
+    ],
+    "note": "List price không nhất thiết là giá giao dịch cuối cùng; thuế, phí, chiết khấu và điều kiện bán có thể làm số tiền phải trả khác đi."
+  },
+  {
+    "phrase": "litmus paper",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "giấy quỳ — giấy tẩm chất chỉ thị đổi màu để kiểm tra sơ bộ dung dịch có tính axit hay bazơ",
+        "pat": "blue/red litmus paper · test a solution with litmus paper · turn litmus paper red/blue",
+        "ex": [
+          [
+            "Blue litmus paper turned red when it touched the acidic solution.",
+            "Giấy quỳ xanh chuyển đỏ khi chạm vào dung dịch axit."
+          ],
+          [
+            "The students used litmus paper for a quick classroom test.",
+            "Học sinh dùng giấy quỳ để thử nhanh trong lớp."
+          ]
+        ]
+      }
+    ],
+    "note": "Giấy quỳ cho biết tính axit/bazơ một cách định tính, không đo chính xác pH và không nhận diện mọi hóa chất. Dùng bảo hộ và xử lý mẫu theo quy định phòng thí nghiệm."
+  },
+  {
+    "phrase": "little dipper",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Bắc Mỹ) Tiểu Hùng Tinh — nhóm sao nhỏ trong chòm Ursa Minor, có hình dáng giống một chiếc gáo nhỏ",
+        "pat": "the Little Dipper · find/locate the Little Dipper · stars in the Little Dipper",
+        "ex": [
+          [
+            "The guide pointed out the Little Dipper in the northern sky.",
+            "Hướng dẫn viên chỉ Tiểu Hùng Tinh trên bầu trời phía bắc."
+          ],
+          [
+            "Polaris marks the end of the Little Dipper’s handle.",
+            "Sao Bắc Cực nằm ở đầu cán của Tiểu Hùng Tinh."
+          ]
+        ]
+      }
+    ],
+    "note": "Little Dipper là tên thông dụng ở Bắc Mỹ; Polaris là sao ở gần cực bắc thiên cầu và thuộc chòm Ursa Minor. Khả năng quan sát phụ thuộc vị trí địa lý, mùa và điều kiện trời."
+  },
+  {
+    "phrase": "live wire",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "dây điện đang mang điện và có thể gây điện giật nếu chạm vào",
+        "pat": "a live wire · touch/cut a live wire · stay clear of live wires",
+        "ex": [
+          [
+            "The technician confirmed that the live wire was disconnected before repairs.",
+            "Kỹ thuật viên xác nhận dây điện đang mang điện đã được ngắt trước khi sửa."
+          ],
+          [
+            "Never touch a fallen live wire; contact the emergency utility service.",
+            "Không chạm vào dây điện rơi đang mang điện; hãy liên hệ đơn vị điện lực khẩn cấp."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) người năng động, nhiệt tình và đầy sáng kiến",
+        "pat": "a real live wire · a live wire in the team · describe somebody as a live wire",
+        "ex": [
+          [
+            "The new coordinator is a live wire who keeps the team motivated.",
+            "Điều phối viên mới là người đầy năng lượng, luôn tạo động lực cho nhóm."
+          ],
+          [
+            "She was a live wire on the debate team.",
+            "Cô là thành viên rất năng nổ trong đội tranh biện."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa điện là nguy hiểm và không nên tự xử lý; chỉ người có chuyên môn mới kiểm tra dây điện. Nghĩa bóng là lời khen thân mật."
+  },
+  {
+    "phrase": "livery company",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "một trong các hội nghề nghiệp lịch sử của Thành phố London, hình thành quanh một nghề hoặc ngành và có vai trò từ thiện, nghi lễ hay giáo dục",
+        "pat": "a City of London livery company · join/serve in a livery company · a livery-company hall",
+        "ex": [
+          [
+            "The livery company supports apprenticeships in its historic trade.",
+            "Hội nghề nghiệp lịch sử hỗ trợ các chương trình học nghề trong ngành truyền thống của mình."
+          ],
+          [
+            "Members attended a formal event at the livery company hall.",
+            "Các thành viên dự một sự kiện trang trọng tại hội quán của hội nghề nghiệp."
+          ]
+        ]
+      }
+    ],
+    "note": "Livery company trong nghĩa riêng thường chỉ các guild của City of London; không nhầm với livery nghĩa là đồng phục nhận diện hoặc dịch vụ cho thuê xe/ngựa."
+  },
+  {
+    "phrase": "living room",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "phòng khách — căn phòng trong nhà dùng để ngồi, trò chuyện, tiếp khách hoặc thư giãn",
+        "pat": "the living room · a living-room sofa · spend an evening in the living room",
+        "ex": [
+          [
+            "They gathered in the living room after dinner.",
+            "Họ tụ họp trong phòng khách sau bữa tối."
+          ],
+          [
+            "The living room opens onto a small balcony.",
+            "Phòng khách thông ra một ban công nhỏ."
+          ]
+        ]
+      }
+    ],
+    "note": "Living room phổ biến trong Anh-Mỹ; sitting room là tên thường gặp ở Anh. Bố trí và chức năng cụ thể tùy kiểu nhà và văn hóa."
+  },
+  {
+    "phrase": "load line",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vạch mớn nước an toàn trên thân tàu, cho biết giới hạn tàu có thể chìm xuống theo tải trọng và điều kiện vận hành",
+        "pat": "a ship’s load line · mark/check the load line · load-line regulations",
+        "ex": [
+          [
+            "The surveyor checked the ship’s load line before departure.",
+            "Kiểm định viên kiểm tra vạch mớn nước của tàu trước khi khởi hành."
+          ],
+          [
+            "The vessel must remain within its marked load line.",
+            "Con tàu phải nằm trong giới hạn vạch mớn nước được đánh dấu."
+          ]
+        ]
+      }
+    ],
+    "note": "Load line còn gọi là Plimsoll line; dấu có thể thay đổi theo vùng nước, mùa và loại tàu. Đây là quy định an toàn hàng hải, không chỉ là vạch trang trí."
+  },
+  {
+    "phrase": "loan translation",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bản dịch sao phỏng — từ hoặc cụm từ mới được tạo bằng cách dịch từng thành tố của một biểu thức từ ngôn ngữ khác",
+        "pat": "a loan translation of a foreign expression · form a loan translation · a calque/loan translation",
+        "ex": [
+          [
+            "The term is a loan translation built from the parts of a French expression.",
+            "Thuật ngữ này là bản dịch sao phỏng tạo từ các thành tố của một biểu thức tiếng Pháp."
+          ],
+          [
+            "Linguists traced the loan translation to contact between the two languages.",
+            "Các nhà ngôn ngữ học truy nguồn bản dịch sao phỏng từ sự tiếp xúc giữa hai ngôn ngữ."
+          ]
+        ]
+      }
+    ],
+    "note": "Loan translation còn gọi là calque; khác với việc vay mượn nguyên dạng từ nước ngoài vì các thành tố được dịch sang ngôn ngữ tiếp nhận."
+  },
+  {
+    "phrase": "local area network",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mạng cục bộ (LAN) — mạng kết nối máy tính và thiết bị trong phạm vi giới hạn như nhà, văn phòng hoặc trường học",
+        "pat": "a local area network (LAN) · connect devices to a LAN · a wired/wireless local area network",
+        "ex": [
+          [
+            "The office uses a local area network to share printers and files.",
+            "Văn phòng dùng mạng cục bộ để chia sẻ máy in và tệp."
+          ],
+          [
+            "A wireless local area network connects the classrooms to the school server.",
+            "Mạng cục bộ không dây kết nối các lớp học với máy chủ của trường."
+          ]
+        ]
+      }
+    ],
+    "note": "LAN mô tả phạm vi mạng, không chỉ một công nghệ cụ thể; mạng có dây và Wi-Fi đều có thể thuộc LAN. Bảo mật còn phụ thuộc cấu hình, phân quyền và thiết bị."
+  }
+]

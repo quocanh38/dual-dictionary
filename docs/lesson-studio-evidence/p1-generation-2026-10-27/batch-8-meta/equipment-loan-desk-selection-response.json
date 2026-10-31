@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "check out",
+        "meaningEn": "to borrow equipment temporarily after recording the loan",
+        "meaningVi": "mượn tạm thiết bị có ghi lại thông tin mượn",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "run late",
+        "meaningEn": "to continue beyond the scheduled end time",
+        "meaningVi": "kéo dài quá giờ dự kiến",
+        "sourceSentenceId": "s6"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 575,
+    "outputTokens": 984,
+    "totalTokens": 1559
+  },
+  "status": 200,
+  "latencyMs": 8046,
+  "model": "muse-spark-1.3"
+}

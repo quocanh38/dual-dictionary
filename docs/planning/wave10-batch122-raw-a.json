@@ -1,0 +1,46 @@
+{
+  "wave": 10,
+  "batch": 122,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after central nervous system in the manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section with computing, accounting, medicine, cooking equipment, history, textiles, online media, chemistry, engineering, business roles and architecture. Clarify US/UK spellings, professional titles, related technical terms and organizational variation without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 428,
+    "remainingRawOnlyAfter": 408
+  },
+  "selected": [
+    "central office",
+    "central processing unit",
+    "certified public accountant",
+    "cesarean section",
+    "chafing dish",
+    "chain letter",
+    "chain mail",
+    "chain reaction",
+    "chain stitch",
+    "chapter house",
+    "chartered accountant",
+    "chat room",
+    "chat show",
+    "chemical element",
+    "chemical engineering",
+    "chief executive",
+    "chief executive officer",
+    "chief operating officer",
+    "chimney breast",
+    "china clay"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NHS: Caesarean section (https://www.nhs.uk/tests-and-treatments/caesarean-section/)",
+    "AICPA & CIMA: CPA licensing requirements (https://www.aicpa-cima.com/resources/toolkit/cpa-exam?tab-1=1)",
+    "ICAEW: What is chartered accountancy? (https://www.icaew.com/about-icaew/what-is-chartered-accountancy)",
+    "IChemE: What is chemical engineering? (https://www.icheme.org/about-us/what-is-chemical-engineering/)",
+    "IUPAC Gold Book: Chemical element (https://goldbook.iupac.org/terms/view/C01022.html)",
+    "Computer History Museum: CPU function glossary (https://www.computerhistory.org/siliconengine/glossary/)"
+  ]
+}

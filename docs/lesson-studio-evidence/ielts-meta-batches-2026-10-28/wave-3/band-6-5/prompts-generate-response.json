@@ -1,0 +1,83 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "batchId": "wave-3",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:12:22.571Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 505,
+    "outputTokens": 4184,
+    "totalTokens": 4689
+  },
+  "latencyMs": 17792,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Coastal Restoration Grant Outcomes",
+        "focus": "Comparing quantified outcomes across schemes and noting data limitations",
+        "prompt": "Three coastal restoration grants were awarded in the Meridian Bay region in 2022. The table below shows their targets and measured results after 18 months. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Note any important limitations or uncertainties in the data. Write at least 150 words. You should spend about 20 minutes on this task.\n\nMeridian Bay Restoration Grants - Awarded March 2022, reviewed September 2023:\n1. North Cove Saltmarsh Replanting - Grant: 85000 dollars - Target area: 12.0 hectares - Area actually planted: 10.5 hectares - Seedling survival at 18 months: 62% - Estimated local temporary jobs: 14 - Water quality note: monitoring incomplete for 3 of 9 months due to sensor failure.\n2. South Spit Dune Stabilisation - Grant: 62000 dollars - Target area: 8.0 hectares - Area actually planted/fenced: 8.2 hectares - Native grass survival at 18 months: 78% - Estimated local temporary jobs: 9 - Visitor footpath erosion reduced by an estimated 34%, based on two survey points.\n3. East Inlet Mangrove Trial - Grant: 110000 dollars - Target area: 6.0 hectares - Area actually planted: 5.1 hectares - Seedling survival at 18 months: 48% - Estimated local temporary jobs: 18 - Trial affected by an unusually severe storm in January 2023; replanting of 1.2 hectares was still in progress at review date.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · City Congestion-Charge Trial Monitoring Data",
+        "focus": "Describing change over time and comparing a trial zone with a comparison area",
+        "prompt": "The city of Aldwick ran a six-month trial congestion charge for private cars entering the central zone on weekdays 7am-7pm, from January to June 2024. The table below compares the central zone with the non-charged Riverside comparison area. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the data can and cannot show about the effects of the charge. Write at least 150 words. You should spend about 20 minutes on this task.\n\nBaseline (July-Dec 2023 average) and Trial period (Jan-Jun 2024 average):\nCentral Zone - Private car entries per weekday: 42500 baseline, 34800 trial - Average peak-hour bus journey time through centre: 28 minutes baseline, 24 minutes trial - Weekday public transport trips by residents: 61200 baseline, 68400 trial - Nitrogen dioxide monthly average: 38 micrograms per cubic metre baseline, 33 trial.\nRiverside Comparison Area (no charge) - Private car entries per weekday: 18900 baseline, 18400 trial - Average peak-hour bus journey time: 22 minutes baseline, 22 minutes trial - Weekday public transport trips by residents: 27400 baseline, 28100 trial - Nitrogen dioxide monthly average: 29 micrograms per cubic metre baseline, 28 trial.\nTrial charge: 4.50 dollars per day. Exemptions applied for emergency vehicles, adapted vehicles for disabled drivers, and residents with low income permits (about 8% of entries). Revenue data are not included here.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Funding Coastal Restoration",
+        "focus": "Evaluating ecological versus economic criteria for grants with qualified arguments",
+        "prompt": "Some people argue that public grants for coastal restoration should only be given to projects that can demonstrate clear economic benefits within five years, such as increased tourism or fisheries income. Others argue that ecological value alone, such as protecting habitats and biodiversity, should be sufficient to justify funding, even when economic returns are uncertain or long term. Discuss both views and give your own opinion. Support your position with reasons and relevant examples. Acknowledge the limitations of the evidence where appropriate. Write at least 250 words. You should spend about 40 minutes on this task.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Information for Research Participants",
+        "focus": "Balancing thorough informed consent with practical constraints on research",
+        "prompt": "Universities increasingly invite students and local residents to take part in academic research studies. Some people believe researchers should always provide full, detailed information about methods, possible risks, and how data will be stored before participants agree, even if this makes studies slower, more expensive, and harder to complete. Others believe a shorter summary should be sufficient when risks appear low. To what extent do you agree that full detailed disclosure should always be required? Give reasons for your answer and include any relevant examples from study or community life. Write at least 250 words. You should spend about 40 minutes on this task.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · City Congestion-Charge Proposal",
+        "focus": "Weighing advantages and disadvantages of a charging policy with attention to fairness and evidence",
+        "prompt": "The council in a large city has proposed introducing a daily congestion charge for private cars entering the city centre during peak hours. The income would be used to improve bus and tram services and to support discounted travel for low-income workers. Supporters say this will reduce traffic, improve air quality, and make public transport more reliable. Critics say it will unfairly affect shift workers, small businesses, and people with limited transport options. Do the advantages of this proposal outweigh the disadvantages? Discuss with reasons, compare the likely effects on different groups, and note where evidence is incomplete or uncertain. Write at least 250 words. You should spend about 40 minutes on this task.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Travel and Local Environment",
+        "focus": "Giving extended personal responses with comparison and qualification",
+        "prompt": "Answer the following questions in 2-3 sentences each, giving reasons where possible. 1. How do you usually travel to work or study, and how reliable is that method? 2. Has traffic in your area changed in recent years? 3. Is there a coastal or riverside area near where you live? What is it like? 4. Do you prefer to spend free time in busy city centres or in quieter natural places? Why? 5. How important is clean air in the place where you live? 6. Would you be willing to change your travel habits to reduce congestion? Why or why not?"
+      },
+      {
+        "task": "Part 1 · Study, Information and Decisions",
+        "focus": "Explaining habits and preferences with reasons and examples",
+        "prompt": "Answer the following questions in 2-3 sentences each. 1. Do you usually read information carefully before agreeing to join an activity or study? Why? 2. Where do you normally look for reliable information about health or environmental issues? 3. Have you ever taken part in a survey, volunteer project, or university study? What happened? 4. Do you find it easy to understand forms that explain risks and privacy? What helps you? 5. When you need to make an important decision, do you prefer detailed data or a short summary? Why?"
+      },
+      {
+        "task": "Part 2 · Cue card: Coastal Restoration Project",
+        "focus": "Describing a project coherently while comparing expectations and results",
+        "prompt": "Describe a coastal or natural restoration project you have heard about, read about, or visited. You should say: • where the project is and what problem it aimed to address • what actions were taken and who was involved • what results were reported or observed • and explain why you think the project was or was not successful, noting any limitations in what is known. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 2 · Cue card: Traffic Reduction Idea",
+        "focus": "Presenting a proposal with possible effects on different people",
+        "prompt": "Describe a proposal or change intended to reduce traffic or pollution in a city you know. You should say: • what the proposal is and where it would apply • how it would work in practice • who would benefit most and who might face difficulties • and explain whether you would support it and why. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Environmental Funding and Transport Policy",
+        "focus": "Comparing evidence, qualifying claims, and evaluating fairness and limitations",
+        "prompt": "Discuss the following questions, giving reasons and evaluating different viewpoints. 1. How should governments decide which coastal restoration projects deserve limited grant funding? What kinds of evidence are most convincing, and why? 2. What are the limitations of using short-term measurements, such as 18-month survival rates, to judge environmental success? 3. When researchers ask the public to join studies, how much information is enough for a fair decision? How should this balance change if risks are higher? 4. Are charges for driving into city centres a fair way to reduce congestion? How might the effects differ for low-income workers, small businesses, and residents with limited public transport? 5. How can cities tell whether a transport policy has worked, rather than reflecting other changes? What additional information would you want before supporting a permanent scheme?"
+      }
+    ]
+  }
+}

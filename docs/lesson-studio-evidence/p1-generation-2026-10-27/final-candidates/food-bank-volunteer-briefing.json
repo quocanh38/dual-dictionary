@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "packId": "pack-f453802c-cc42-47cf-9b3c-de60532027d4",
+  "version": 1,
+  "title": "Reserving Time and Taking Care at the Food Bank",
+  "language": "en",
+  "explanationLanguage": "en-vi",
+  "levelEstimate": "B1",
+  "topic": "workplace",
+  "provenance": {
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "sourceType": "original",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "aiAssisted": true
+  },
+  "generation": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "generatedAt": "2026-10-27T06:53:09.153Z"
+  },
+  "lessons": [
+    {
+      "lessonId": "lesson-1",
+      "title": "Reserving Time and Taking Care at the Food Bank",
+      "objective": "Learners will understand set aside and look after in context and use them naturally in new everyday situations.",
+      "reading": {
+        "text": "The coordinator will set aside time for a short briefing before the food-bank opens on Saturday. New volunteers will learn where to store donated goods and how to look after chilled items. During the first hour, a team leader will hand out labels and assign each person a shelf to check. At the end of the shift, volunteers will record low-stock items so the next team can prepare an order.",
+        "sentences": [
+          {
+            "id": "s1",
+            "text": "The coordinator will set aside time for a short briefing before the food-bank opens on Saturday."
+          },
+          {
+            "id": "s2",
+            "text": "New volunteers will learn where to store donated goods and how to look after chilled items."
+          },
+          {
+            "id": "s3",
+            "text": "During the first hour, a team leader will hand out labels and assign each person a shelf to check."
+          },
+          {
+            "id": "s4",
+            "text": "At the end of the shift, volunteers will record low-stock items so the next team can prepare an order."
+          }
+        ]
+      },
+      "targets": [
+        {
+          "id": "t1",
+          "phrase": "set aside",
+          "meaningEn": "to reserve time for a specific activity or purpose",
+          "meaningVi": "dành ra (thời gian cho một việc gì đó)",
+          "sourceSentenceId": "s1"
+        },
+        {
+          "id": "t2",
+          "phrase": "look after",
+          "meaningEn": "to take care of something and keep it in good condition",
+          "meaningVi": "trông nom, bảo quản",
+          "sourceSentenceId": "s2"
+        }
+      ],
+      "exercises": [
+        {
+          "exerciseId": "q1",
+          "type": "meaning",
+          "targetId": "t1",
+          "prompt": "In s1, 'The coordinator will set aside time for a short briefing before the food-bank opens on Saturday,' what does 'set aside' mean?",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "to reserve time for a briefing",
+              "explanation": "Correct: it matches reserving time for a specific purpose in s1."
+            },
+            {
+              "id": "b",
+              "text": "to cancel a briefing because there is no time",
+              "explanation": "Wrong: s1 is about arranging time, not cancelling the briefing."
+            },
+            {
+              "id": "c",
+              "text": "to move a briefing to a later date",
+              "explanation": "Wrong: s1 is about reserving time, not postponing it to later."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Only a matches the source meaning of reserving time for a purpose."
+        },
+        {
+          "exerciseId": "q2",
+          "type": "usage",
+          "targetId": "t1",
+          "prompt": "Choose the natural sentence using 'set aside' to talk about reserving time or money.",
+          "sourceSentenceIds": [
+            "s1"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "They set aside some money each month for pay their bills.",
+              "explanation": "Wrong: for pay should be for paying to use a gerund after for."
+            },
+            {
+              "id": "b",
+              "text": "They set aside some money each month for their holiday.",
+              "explanation": "Correct: set aside with an object and for plus noun phrase is natural."
+            },
+            {
+              "id": "c",
+              "text": "They set aside some money each month to saving for the future.",
+              "explanation": "Wrong: to saving should be to save to use infinitive after to."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Only b uses correct grammar with set aside."
+        },
+        {
+          "exerciseId": "q3",
+          "type": "meaning",
+          "targetId": "t2",
+          "prompt": "In s2, 'New volunteers will learn where to store donated goods and how to look after chilled items,' what does 'look after' mean?",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "to look at chilled items quickly without touching them",
+              "explanation": "Wrong: s2 is about taking care of items, not just glancing at them."
+            },
+            {
+              "id": "b",
+              "text": "to take care of chilled items and keep them in good condition",
+              "explanation": "Correct: it matches taking care of something and keeping it in good condition."
+            },
+            {
+              "id": "c",
+              "text": "to carry chilled items to a different shelf",
+              "explanation": "Wrong: s2 is about caring for items, not moving them elsewhere."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Only b matches the source meaning of taking care of something."
+        },
+        {
+          "exerciseId": "q4",
+          "type": "usage",
+          "targetId": "t2",
+          "prompt": "Choose the natural sentence using 'look after' to talk about taking care of something.",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "options": [
+            {
+              "id": "a",
+              "text": "My neighbour look after our plants when we are away.",
+              "explanation": "Wrong: look should be looks to agree with the singular subject."
+            },
+            {
+              "id": "b",
+              "text": "My neighbour looks after our plants when we are away.",
+              "explanation": "Correct: looks after with a singular subject and object is natural."
+            },
+            {
+              "id": "c",
+              "text": "My neighbour looks after to our plants when we are away.",
+              "explanation": "Wrong: remove the extra preposition 'to' after 'after'. The correct phrase is 'look after'."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Only b uses correct grammar with look after."
+        },
+        {
+          "exerciseId": "q5",
+          "type": "transfer",
+          "targetId": "t2",
+          "prompt": "You are a neighbour asking another neighbour for help while you travel. Write 2-3 sentences asking them to take care of your plants and explaining what to do.",
+          "sourceSentenceIds": [
+            "s2"
+          ],
+          "sampleAnswer": "I will be away next weekend. Could you please look after my plants and water them every morning? Please leave the key in the mailbox afterward.",
+          "selfCheck": [
+            "My message has 2-3 sentences.",
+            "I used look after in a correct form to talk about taking care of something.",
+            "My request is polite and clearly explains the task."
+          ],
+          "explanation": "Compare with the model and self-assess; no automatic grade."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewerType": "not-reviewed",
+    "note": "",
+    "checks": {
+      "rights": false,
+      "meaning": false,
+      "uniqueAnswers": false,
+      "explanations": false
+    },
+    "findings": []
+  }
+}

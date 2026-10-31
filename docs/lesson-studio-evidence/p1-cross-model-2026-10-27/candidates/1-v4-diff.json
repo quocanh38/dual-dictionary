@@ -1,0 +1,12 @@
+{
+  "previousCandidate": "1-v3",
+  "candidate": "1-v4",
+  "changes": [
+    {
+      "path": "lessons/0/exercises/4/sampleAnswer",
+      "before": "Hi Ms Lee, I have finished counting the shelves and I will meet the deadline for the stock list by Friday afternoon. Please let me know if you need anything else.",
+      "after": "Hi Ms Lee, I have finished checking the stock and I will meet the deadline for the stock list by Friday afternoon. Please let me know if you need anything else."
+    }
+  ],
+  "newMetaCalls": 0
+}

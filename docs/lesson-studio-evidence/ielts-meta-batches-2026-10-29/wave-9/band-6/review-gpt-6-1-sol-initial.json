@@ -1,0 +1,108 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "231676567bc915d39310a10da6af9c2239f479b0ba0b5ccc3fe0de116a289e4e",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-9-band-6-writing-02",
+      "severity": "critical",
+      "issue": "The opening says the table counts students, but the final sentence says active pairs per semester. These units differ by a factor of two. State pairs consistently throughout, including the heading, or convert every value and total to student counts."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-speaking-03",
+      "severity": "major",
+      "issue": "The opening permits an event the learner would like to attend, but cues require what you did or learned and why you found it memorable. Provide parallel future forms (would do/learn; would find useful) or restrict the card to attended events."
+    }
+  ],
+  "observations": [
+    {
+      "item": "sharedContexts.reading",
+      "severity": "minor",
+      "issue": "General description says each feedback card includes a street comparison, but trial groups receive different contents. Introduce the general description as the full version, with exceptions for trial groups."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-listening-05",
+      "severity": "minor",
+      "issue": "Key is supported, but explanation says only North Car Park is free although the dialogue only specifies free parking there, not exclusion of all others. Say free parking is confirmed there; other locations are not established."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-reading-04",
+      "severity": "minor",
+      "issue": "Explanation treats social comparison adding motivation as demonstrated; passage says suggests. Preserve this qualification."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-writing-05",
+      "severity": "minor",
+      "issue": "Two opposing positions are followed by to what extent do you agree or disagree without identifying which statement. Prefer discuss both views and give your opinion."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all20 items:5Listening,5Reading,5Writing,5Speaking; entire contexts,all40options,10keys/explanations and productive prompts/metadata. No other wave9 reviewer reports inspected; no candidate edits/provider calls.",
+    "listening": "320-word open-day dialogue read: 10 changed to 10:30, Welcome Hall by library, 90-minute labs/accommodation/sports route, Business 13:00 B12 with prior registration, cafe 14:00/market 15:00, validated North Car Park ticket. All options, keys and explanations read.",
+    "reading": "410-word recycling passage read: 34% correct sorting, voluntary 12,000 households, 18% increase/contamination 22 to 14, Elmwood 27% as example, three trial versions with 24 versus 11, renters and app plans. All alternatives, keys and explanations checked.",
+    "writing": "Two Task 1 datasets: festival category totals 260/355/415 sum correctly; language-exchange totals 95/120/150 sum but unit students versus pairs contradicts. Three Task 2s have reasoned familiar civic topics. 150/20 and 250/40 explicit and consistent.",
+    "speaking": "Two personal Part 1 sets, one visible timed four-cue Part 2 with attended/future mismatch, two evaluative Part 3 sets. Band-6 comparisons/linking focus plausible.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 320,
+        "reading": 410
+      },
+      "metadataWordCounts": {
+        "listening": 320,
+        "reading": 410
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "repeatedContextsEqualShared": true,
+      "answerPositions": {
+        "Listening": [
+          1,
+          0,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          1,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026 and wave9-v1 objective/writingSpeaking identifiers, originalContent=true inspected. No recognisable official-question copying found; not an exhaustive plagiarism audit or independent rights verification. Fictional study figures checked internally, not externally verified. Stage difficulty is estimated practice progression, not validated IELTS attainment.",
+    "itemIds": [
+      "ielts-meta-wave-9-band-6-listening-01",
+      "ielts-meta-wave-9-band-6-listening-02",
+      "ielts-meta-wave-9-band-6-listening-03",
+      "ielts-meta-wave-9-band-6-listening-04",
+      "ielts-meta-wave-9-band-6-listening-05",
+      "ielts-meta-wave-9-band-6-reading-01",
+      "ielts-meta-wave-9-band-6-reading-02",
+      "ielts-meta-wave-9-band-6-reading-03",
+      "ielts-meta-wave-9-band-6-reading-04",
+      "ielts-meta-wave-9-band-6-reading-05",
+      "ielts-meta-wave-9-band-6-writing-01",
+      "ielts-meta-wave-9-band-6-writing-02",
+      "ielts-meta-wave-9-band-6-writing-03",
+      "ielts-meta-wave-9-band-6-writing-04",
+      "ielts-meta-wave-9-band-6-writing-05",
+      "ielts-meta-wave-9-band-6-speaking-01",
+      "ielts-meta-wave-9-band-6-speaking-02",
+      "ielts-meta-wave-9-band-6-speaking-03",
+      "ielts-meta-wave-9-band-6-speaking-04",
+      "ielts-meta-wave-9-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 52,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only phrase pages after mild steel, selected by comparing builder slugs with all hand-definition files; cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese meanings, usage patterns, bilingual examples and learner notes; regional labels and distinctions between compounds, phrasal verbs and idioms are explicit. A hazardous-weapon term is defined only for identification, with no construction details.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1820,
+    "remainingRawOnlyAfter": 1800
+  },
+  "selected": [
+    "milk chocolate",
+    "milk float",
+    "milk shake",
+    "milky way",
+    "mind reader",
+    "mineral water",
+    "minimum wage",
+    "mirror image",
+    "mix in",
+    "mix up",
+    "mixed bag",
+    "mixed farming",
+    "mixed marriage",
+    "mixed up",
+    "mobile home",
+    "molotov cocktail",
+    "money box",
+    "money order",
+    "money supply",
+    "monkey wrench"
+  ]
+}

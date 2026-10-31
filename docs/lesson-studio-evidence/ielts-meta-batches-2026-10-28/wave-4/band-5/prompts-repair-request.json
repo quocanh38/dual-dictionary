@@ -1,0 +1,92 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-prompts-wave-4",
+  "instructions": "Return JSON only, no markdown, with exactly {\"writing\":[{\"task\":\"Task 1 · ... or Task 2 · ...\",\"focus\":\"...\",\"prompt\":\"...\",\"minimumWords\":150,\"suggestedMinutes\":20}],\"speaking\":[{\"task\":\"Part 1 · ... or Part 2 · Cue card or Part 3 · ...\",\"focus\":\"...\",\"prompt\":\"...\"}]}. Generate exactly five Writing and five Speaking prompts. Writing: use either two Task 1 + three Task 2 or three Task 1 + two Task 2. Give complete original data directly in each Task 1 prompt (no image dependency), with minimum words (Task 1: 150; Task 2: 250) and realistic times (20/40 minutes). Speaking: include at least one prompt for each of Parts 1, 2 and 3; Part 2 must include visible cue-card bullet points; Part 3 needs reasons/evaluation, not memorised facts. Prompts must be distinct and answerable without hidden material. Keep prompts concise and complete; do not add sample answers or band estimates. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage around IELTS 5.0: clear main ideas, direct evidence, familiar academic contexts, and accurate simple explanations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a student volunteer sign-up day, borrowing sports equipment, and planning a small class picnic. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied writing and speaking prompts against the findings. Preserve every valid unflagged prompt and keep exactly five per skill. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-5",
+    "batchId": "wave-4",
+    "currentBatch": {
+      "writing": [
+        {
+          "task": "Task 1 · Volunteer Sign-up Day Table",
+          "focus": "Describing a table with clear comparisons",
+          "prompt": "The table below shows how many students signed up for five volunteer jobs at Greenfield College on Volunteer Sign-up Day on 12 March. Job type: Library help - 18 students; Park cleaning - 34 students; Food bank packing - 26 students; Animal shelter help - 14 students; Reading help for young children - 22 students. All sign-ups were for Saturday morning work in April. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 1 · Borrowing Sports Equipment Log",
+          "focus": "Summarising borrowing numbers and simple changes",
+          "prompt": "The table below shows how many times students at Riverside School borrowed four types of sports equipment from the school sports room in March and April. Footballs: March 42 times, April 55 times; Basketballs: March 38 times, April 36 times; Tennis rackets: March 20 times, April 28 times; Badminton sets: March 25 times, April 24 times. Students can borrow equipment for free for two days. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 2 · Volunteering in School Life",
+          "focus": "Giving a clear opinion with direct reasons",
+          "prompt": "Some teachers think every secondary school student should do two hours of volunteer work each month, for example cleaning a park or helping in a library. Others think students are already busy with study and should not have to volunteer. Do you agree or disagree that schools should ask all students to do regular volunteer work? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Free Sports Equipment Borrowing",
+          "focus": "Explaining advantages with simple evidence",
+          "prompt": "Many schools let students borrow sports equipment such as balls and rackets for free. Some people say this is good because more students will play sport and stay healthy. Others say free borrowing causes problems because equipment gets lost or damaged. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Planning a Small Class Picnic",
+          "focus": "Comparing choices and explaining a preference",
+          "prompt": "A class of 30 students wants to plan a small end-of-term picnic in a local park. Some students want the whole class to plan everything together, including food, transport and games. Others think it is faster and easier if the teacher makes all the decisions. Which way of planning do you think is better? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Part 1 · Helping and Volunteering",
+          "focus": "Talking about familiar helping activities",
+          "prompt": "Answer these short questions about helping others. Give 2-3 sentences for each answer. 1. Did you ever help as a volunteer at school? 2. What kind of volunteer work do students in your area often do? 3. Do you prefer helping alone or helping with friends? Why? 4. Do you think you will do more volunteer work next year? Why or why not?"
+        },
+        {
+          "task": "Part 1 · Sport and Free Time",
+          "focus": "Describing everyday sport habits",
+          "prompt": "Answer these short questions about sport and free time. Give 2-3 sentences for each answer. 1. What sports do you often play or watch? 2. Do you ever borrow sports equipment from school or friends? 3. Where do people in your area usually play sport? 4. Do you prefer playing sport indoors or outdoors? Why?"
+        },
+        {
+          "task": "Part 2 · Cue card · A Volunteer Day You Joined",
+          "focus": "Describing a past event with clear sequence",
+          "prompt": "Talk about a volunteer sign-up day or volunteer activity you joined or saw at school. You have one minute to prepare and should speak for one to two minutes. You should say: • what the activity was • when and where it happened • who joined with you • and explain why you remember it well or what you learned from it."
+        },
+        {
+          "task": "Part 2 · Cue card · Planning a Small Picnic",
+          "focus": "Explaining a simple plan and personal role",
+          "prompt": "Talk about a time when you helped plan a small picnic or class trip. You have one minute to prepare and should speak for one to two minutes. You should say: • where you wanted to go • who planned it with you • what food, transport or games you prepared • and explain if the plan worked well and why."
+        },
+        {
+          "task": "Part 3 · School Events and Community Help",
+          "focus": "Giving reasons and evaluating ideas",
+          "prompt": "Discuss these questions with your partner or teacher. Give reasons and examples, not just short answers. 1. Why do some students join volunteer activities while others do not? 2. What are the advantages for a school when it organises a volunteer sign-up day? 3. How can schools make borrowing sports equipment fair for all students? 4. When a class plans a picnic together, what problems can happen and how can they solve them?"
+        }
+      ]
+    },
+    "gptFindings": {
+      "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+      "reviewedAt": "2026-10-28T08:30:33.462Z",
+      "reviewScope": "Pre-repair single-model GPT content review; findings are issue-focused; no claim of independent cross-model review.",
+      "candidateSha256": "6ebf1dca28db9213cf6127a7f8e6cdf276aece930f2083264b07ae990c2cce06",
+      "rawResponseSha256": {
+        "objective-generate-response.json": "ccf05b08dec5ea9f5ef246c91b69f52824992a5c14047abf067851434c628c09",
+        "prompts-generate-response.json": "d4986ea27d512fc5e51067e4f9eb24865296cb18c1d652f6fac9dac561155022"
+      },
+      "findings": [
+        {
+          "item": "Speaking · Part 3 · School Events and Community Help",
+          "severity": "medium",
+          "issue": "The IELTS Speaking Part 3 prompt asks the learner to discuss with a partner or teacher, which misrepresents the examiner-led test format.",
+          "recommendedRepair": "Address the candidate as an examiner would and retain open-ended reason/evaluation questions; remove the partner framing."
+        }
+      ]
+    }
+  }
+}

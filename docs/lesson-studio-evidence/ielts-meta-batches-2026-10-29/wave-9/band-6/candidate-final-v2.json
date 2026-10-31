@@ -1,0 +1,349 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-9",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 1985,
+        "outputTokens": 4059,
+        "totalTokens": 6044
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-9-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-9-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "University Open Day Visitor Route",
+      "focus": "Listening for times, locations and instructions",
+      "part": "Part 1",
+      "script": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "wordCount": 320
+    },
+    "reading": {
+      "title": "City Household Recycling Feedback Scheme",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "wordCount": 410
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-9-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "University Open Day Visitor Route",
+      "pathwayStage": "band-6",
+      "focus": "Listening for times, locations and instructions",
+      "transcript": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "prompt": "What is the new start time for the general campus tour?",
+      "options": [
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30"
+      ],
+      "answer": 1,
+      "explanation": "The staff corrects the visitor's 10:00 assumption to 10:30 due to a guide delay, so 10:00 is the outdated time."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "University Open Day Visitor Route",
+      "pathwayStage": "band-6",
+      "focus": "Listening for times, locations and instructions",
+      "transcript": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "prompt": "Where should visitors go for the tour?",
+      "options": [
+        "Welcome Hall next to the library",
+        "Business School Room B12",
+        "North Car Park entrance",
+        "Central Cafe ground floor"
+      ],
+      "answer": 0,
+      "explanation": "Maya directs visitors past reception to the Welcome Hall next to the library; the other places are for talks, parking or lunch."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "University Open Day Visitor Route",
+      "pathwayStage": "band-6",
+      "focus": "Listening for times, locations and instructions",
+      "transcript": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "prompt": "What does the general tour include?",
+      "options": [
+        "Business School and library only",
+        "Food market and cafe",
+        "Science labs, accommodation, sports centre",
+        "North Car Park and reception"
+      ],
+      "answer": 2,
+      "explanation": "The tour is described as labs, accommodation and sports centre; the Business School is on a separate route."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "University Open Day Visitor Route",
+      "pathwayStage": "band-6",
+      "focus": "Listening for times, locations and instructions",
+      "transcript": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "prompt": "What must visitors do to attend the Business School presentation?",
+      "options": [
+        "Pay at the Central Cafe",
+        "Go directly to Room B12",
+        "Book parking in North Car Park",
+        "Register at information desk first"
+      ],
+      "answer": 3,
+      "explanation": "Maya says registration at the information desk is required for the 1 p.m. talk; going directly is not allowed."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "University Open Day Visitor Route",
+      "pathwayStage": "band-6",
+      "focus": "Listening for times, locations and instructions",
+      "transcript": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "prompt": "What is true about parking for visitors today?",
+      "options": [
+        "Free in North Car Park with validation",
+        "Free in any car park all day",
+        "Paid parking next to library",
+        "Only available until 2 p.m."
+      ],
+      "answer": 0,
+      "explanation": "Parking is free only in North Car Park after ticket validation at the Welcome Hall; it is not free everywhere."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "City Household Recycling Feedback Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "prompt": "Why did Riverton council start the feedback scheme?",
+      "options": [
+        "To replace fines with feedback",
+        "To address low sorting and contamination",
+        "To test a new mobile app",
+        "To support neighbouring areas"
+      ],
+      "answer": 1,
+      "explanation": "The passage links the launch to 34% correct sorting and high contamination; the app is a future plan, not the initial reason."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "City Household Recycling Feedback Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "prompt": "What information is on the monthly feedback card?",
+      "options": [
+        "Weight, error rate, street comparison",
+        "App login and calendar dates",
+        "Fines and collection times",
+        "Tips only without numbers"
+      ],
+      "answer": 0,
+      "explanation": "The card lists weight, incorrect-item percentage and street average; fines are explicitly avoided."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "City Household Recycling Feedback Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "prompt": "How does the report use the Elmwood neighbourhood?",
+      "options": [
+        "As proof families always recycle more",
+        "As example of strong engagement",
+        "As main claim about feedback",
+        "As average for whole city"
+      ],
+      "answer": 1,
+      "explanation": "Elmwood's 27% rise is presented as an example of engagement, while the main claim is that personalised feedback encourages habits."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "City Household Recycling Feedback Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "prompt": "Which group showed the greatest improvement?",
+      "options": [
+        "Numbers only group",
+        "Numbers plus tips group",
+        "Numbers, tips and neighbour comparison",
+        "No feedback group"
+      ],
+      "answer": 2,
+      "explanation": "The third group with neighbour comparison rose 24% versus 11% for numbers only, showing social comparison adds motivation."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "City Household Recycling Feedback Scheme",
+      "pathwayStage": "band-6",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "prompt": "What can be inferred about households in rented accommodation?",
+      "options": [
+        "They were not included in scheme",
+        "They had highest recycling increase",
+        "They preferred fines to feedback",
+        "They improved less, needing targeted support"
+      ],
+      "answer": 3,
+      "explanation": "The passage notes renters improved less and the council plans more direct inclusion, implying targeted support is needed; they did participate."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Riverside City Bicycle-Safety Festival Attendance",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, corrected details and clear comparisons",
+      "prompt": "You should spend about 20 minutes on this task. The table below shows attendance at the Riverside City Bicycle-Safety Festival from 2022 to 2024, by participant group. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\n\nRiverside City Bicycle-Safety Festival – Registered Participants:\n2022: Students 120, Commuters 80, Families 60, Total 260\n2023: Students 150, Commuters 95, Families 110, Total 355\n2024: Students 140, Commuters 130, Families 145, Total 415\n\nThe festival was held in Central Park in May each year. All figures are number of people.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Greenfield University Language Exchange Programme",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas and clear comparisons with data",
+      "prompt": "You should spend about 20 minutes on this task. The table below shows the number of active pairs taking part in the Greenfield University Language Exchange Programme in three semesters. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\n\nGreenfield University Language Exchange – Active Pairs by Language Pairing:\nSpring 2023: English-Spanish 45, English-Japanese 30, English-Arabic 20, Total 95\nAutumn 2023: English-Spanish 60, English-Japanese 35, English-Arabic 25, Total 120\nSpring 2024: English-Spanish 70, English-Japanese 50, English-Arabic 30, Total 150\n\nThe programme pairs a native speaker of one language with a learner of that language. Numbers show active pairs per semester.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Funding for Bicycle-Safety Events",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and evaluation of views",
+      "prompt": "You should spend about 40 minutes on this task. Some people think cities should spend more public money on bicycle-safety events and training for all age groups. Others think individuals should be responsible for their own safety and that money should be used for roads and public transport instead. Discuss both views and give your own opinion. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Language Exchange and Classroom Learning",
+      "pathwayStage": "band-6",
+      "focus": "clear comparisons, linked ideas and corrected details",
+      "prompt": "You should spend about 40 minutes on this task. At many universities, students can join a language exchange where they teach their own language to a partner and learn their partner's language in return. Some people argue this is more effective than traditional classroom language courses. Others say classroom teaching is more reliable and structured. Discuss the advantages and disadvantages of both methods and give your opinion. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Library Local-History Exhibits",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and reasoned evaluation",
+      "prompt": "You should spend about 40 minutes on this task. Many public libraries organise local-history exhibits with photographs, documents and objects from the community. Some people say this is an important use of library space and funds. Others believe libraries should focus mainly on digital resources and quiet study areas. To what extent do you agree or disagree? Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-9-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Bicycles and Getting Around",
+      "pathwayStage": "band-6",
+      "focus": "familiar topics, paraphrase and linked ideas",
+      "prompt": "Let's talk about getting around in your area.\nDo you ride a bicycle? Why or why not?\nHow common is cycling where you live?\nWhat makes cycling safe or unsafe in your city?\nHave your travel habits changed in the last few years?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Libraries and Local History",
+      "pathwayStage": "band-6",
+      "focus": "familiar topics and clear comparisons",
+      "prompt": "Let's talk about libraries and learning.\nHow often do you visit a public library?\nWhat do you usually do when you go to a library?\nDo you enjoy learning about the history of your local area? Why or why not?\nDo you prefer learning from exhibits, books, or online resources?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Community Learning Event",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas, corrected details and clear description",
+      "prompt": "Describe a bicycle-safety event, university language exchange meeting, or library local-history exhibit you have attended or would like to attend. You will have one minute to prepare and should speak for one to two minutes.\nYou should say:\n• what the event or exhibit was\n• when and where it took place or would take place\n• what you did or would do and what you learned or would learn there\n• and explain why you found it useful or memorable or why you would find it useful or memorable.\nYou can add any other relevant details."
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Events and Safety Education",
+      "pathwayStage": "band-6",
+      "focus": "reasons, evaluation and clear comparisons",
+      "prompt": "Let's discuss community safety events.\nWhy do some people choose to attend free city events like bicycle-safety festivals while others do not?\nHow can a city evaluate whether such events actually change people's behaviour?\nIs hands-on training more effective than posters or online videos for teaching safety? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-9-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Language, Culture and Public Spaces",
+      "pathwayStage": "band-6",
+      "focus": "evaluation, reasons and comparison across familiar academic topics",
+      "prompt": "Let's consider language learning and cultural exhibits.\nWhat are the advantages and disadvantages of learning a language through exchange with a partner compared to learning alone?\nShould universities require all students to take part in intercultural programmes? Why or why not?\nHow can libraries balance preserving local history with serving the needs of a diverse modern community?"
+    }
+  ]
+}

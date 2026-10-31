@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "startedAt": "2026-10-27T05:43:44.194Z",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "requestParameters": {
+      "model": "muse-spark-1.3",
+      "temperature": 0.2,
+      "maxOutputTokens": 10000,
+      "reasoningEffort": "medium"
+    },
+    "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+    "sourcesSha256": "6424059317da59874abc110b27aea2a7dc514d6e11696baacbcf5f4b5ad84784",
+    "results": []
+  },
+  "sources": [
+    {
+      "sourceId": "supplier-delivery",
+      "purpose": "development",
+      "title": "Checking a supplier delivery",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "The warehouse team will check the delivery against the order before signing the receipt. If an item is missing, a supervisor will get in touch with the supplier that afternoon. Staff will photograph the unopened boxes and keep the order number beside the checklist. This record helps both teams explain which items arrived without blaming a colleague who was not present.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+      "sourceType": "original",
+      "topic": "workplace",
+      "levelEstimate": "B1"
+    },
+    {
+      "sourceId": "museum-access",
+      "purpose": "development",
+      "title": "Making a museum visit accessible",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "The museum will take steps to make its public lectures easier to attend. Organisers need to identify barriers that prevent visitors from joining the discussion. They will ask participants about seating, sound and the timing of events before changing the programme. The report will separate observations from suggestions so that the committee can decide which changes to test first.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+      "sourceType": "original",
+      "topic": "academic",
+      "levelEstimate": "B2"
+    }
+  ]
+}

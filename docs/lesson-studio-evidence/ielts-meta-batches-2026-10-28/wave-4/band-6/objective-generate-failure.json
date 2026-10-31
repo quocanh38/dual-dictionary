@@ -1,0 +1,22 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6",
+  "batchId": "wave-4",
+  "segment": "objective",
+  "action": "generate",
+  "completedAt": "2026-10-28T08:24:04.704Z",
+  "outcome": "failed-or-unknown",
+  "error": "Provider output was truncated at its token limit. No draft accepted; retry deliberately or shorten the source.",
+  "call": {
+    "purpose": "generate-original-ielts-objective-wave-4",
+    "model": "muse-spark-1.3",
+    "status": 200,
+    "usage": {
+      "inputTokens": 605,
+      "outputTokens": 10000,
+      "totalTokens": 10605
+    },
+    "latencyMs": 38696
+  }
+}

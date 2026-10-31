@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 117,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after blue peter; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the B-section with business finance, law, science, demography, linguistics, cooking, packaging, mechanics, data diagrams and UK-specific usage. Clarify legal variability, historical terminology, register and related senses without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 528,
+    "remainingRawOnlyAfter": 508
+  },
+  "selected": [
+    "big wheel",
+    "bill of exchange",
+    "bill of sale",
+    "biological warfare",
+    "bird of paradise",
+    "birth rate",
+    "black belt",
+    "black economy",
+    "black english",
+    "black flag",
+    "black pepper",
+    "black widow",
+    "blank cheque",
+    "bleeding heart",
+    "blind alley",
+    "blister pack",
+    "block and tackle",
+    "block diagram",
+    "blue chip",
+    "blue peter"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "UK Bills of Exchange Act 1882, section 3 (https://www.legislation.gov.uk/ukpga/Vict/45-46/61/section/3)",
+    "United Nations: Biological Weapons Convention overview (https://www.un.org/en/node/162761)"
+  ]
+}

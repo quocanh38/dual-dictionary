@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "e7480cf9dbf12359443a0c55a61fef8f8fa7c7eb9b433edebf3b50e2a3dd8ae0",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-5.6-terra",
+  "reviewedAt": "2026-10-27T09:48:47Z",
+  "note": "Full independent review of this exact candidate: source/citations, both EN/VI target glosses, every option and explanation, and transfer. Rights/authorship are local declarations only and were not independently verified; the B2 estimate is not calibrated; this is not human or learner validation.",
+  "criteria": [
+    {"id":"rights","prompt":"Original/permitted source, author, distribution rights and no learner PII checked.","status":"pass","evidence":"The matching frozen source and provenance declare an original AI-assisted passage, authorized distribution, and no learner PII; that evidence is declaration-only."},
+    {"id":"lesson-1/t1/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s2 says each apprentice ‘takes on supervised tasks’ after safety training, supporting accepting and beginning responsibilities."},
+    {"id":"lesson-1/t1/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"‘to accept and start doing a task or responsibility’ accurately states the s2 meaning."},
+    {"id":"lesson-1/t1/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘đảm nhận một công việc hoặc trách nhiệm’ naturally and accurately conveys taking on a task, with diacritics."},
+    {"id":"lesson-1/t2/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s6 encourages trainees to ‘work towards a professional certificate’, supporting sustained effort to achieve it."},
+    {"id":"lesson-1/t2/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"‘to make steady efforts over time to achieve a goal’ accurately captures the purposeful-progress sense in s6."},
+    {"id":"lesson-1/t2/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘nỗ lực phấn đấu để đạt được một mục tiêu’ is natural, accurate Vietnamese with diacritics for sustained work toward a goal."},
+    {"id":"lesson-1/q1/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q1 a alone says the apprentice accepts and starts tasks; delegating, merely watching, and delaying do not express taking on responsibility."},
+    {"id":"lesson-1/q1/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q1’s explanations accurately contrast accepting responsibility with giving it away, observing only, or postponing it."},
+    {"id":"lesson-1/q2/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q2 a alone has third-person ‘takes on’ followed by a noun object; b lacks agreement, c has an unlicensed infinitive after the phrasal verb, and d adds an extraneous preposition."},
+    {"id":"lesson-1/q2/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q2 accurately identifies subject-verb agreement, the noun/gerund-object pattern after ‘takes on’, and the absence of ‘with’ in the taught construction."},
+    {"id":"lesson-1/q3/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q3 a alone describes steady effort to earn the certificate; immediate receipt, avoidance, and giving up contradict the source sense."},
+    {"id":"lesson-1/q3/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q3 explanations accurately contrast gradual effort with no effort, avoidance, and stopping effort."},
+    {"id":"lesson-1/q4/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q4 a alone has progressive ‘is working’ and a gerund complement after towards; b needs launching, c needs working, and d adds an unnecessary preposition."},
+    {"id":"lesson-1/q4/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q4 explanations correctly state the gerund pattern after towards and the present-progressive form, and a uses the phrase naturally."},
+    {"id":"lesson-1/q5/new-situation","prompt":"Role or purpose differs meaningfully from the source; not merely rewriting it.","status":"pass","evidence":"The transfer changes role, audience, and goal: a person messages a friend about fitness and a half-marathon rather than workplace apprenticeship training."},
+    {"id":"lesson-1/q5/self-check","prompt":"Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.","status":"pass","evidence":"The two-sentence model idiomatically uses ‘working towards’ for a fitness goal; checks cover length, target use, and the changed context, and the explanation says to self-assess without automatic grading."}
+  ],
+  "findings": []
+}

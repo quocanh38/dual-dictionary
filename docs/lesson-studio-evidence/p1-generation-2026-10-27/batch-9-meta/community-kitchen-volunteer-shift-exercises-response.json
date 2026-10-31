@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Sharing Closing Duties in the Community Kitchen",
+    "objective": "Learners will understand and use 'take turns' and 'is responsible for' to describe shared workplace duties.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence 2, 'Two people take turns checking the refrigerator temperatures,' what does 'take turns' mean?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "They check the temperatures together at exactly the same time.",
+            "explanation": "Wrong because it describes simultaneous action, not alternating one after the other."
+          },
+          {
+            "id": "b",
+            "text": "They check the temperatures one after the other in rotation.",
+            "explanation": "Correct because it matches the meaning of doing something alternately one after the other."
+          },
+          {
+            "id": "c",
+            "text": "They watch the shift lead check while they do nothing.",
+            "explanation": "Wrong because it describes only observing without sharing the task."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Option b correctly paraphrases alternating the checking task one after the other."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'take turns' correctly.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The two classmates take turns presenting their project slides.",
+            "explanation": "Correct because the plural verb and gerund make the sentence grammatical and natural."
+          },
+          {
+            "id": "b",
+            "text": "The two classmates takes turns presenting their project slides.",
+            "explanation": "Wrong because 'takes' should be 'take' to agree with the plural subject."
+          },
+          {
+            "id": "c",
+            "text": "The two classmates take turns present their project slides.",
+            "explanation": "Wrong because 'present' should be 'presenting' after the phrase 'take turns'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Option a is the only fully grammatical and natural use of 'take turns'."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence 3, 'Each volunteer is responsible for one part of the room,' what does 'is responsible for' mean?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The volunteer has the duty to take care of that part of the room.",
+            "explanation": "Correct because it matches having the duty to take care of a task or area."
+          },
+          {
+            "id": "b",
+            "text": "The volunteer happens to like that part of the room very much.",
+            "explanation": "Wrong because liking a place does not mean having a duty to take care of it."
+          },
+          {
+            "id": "c",
+            "text": "The volunteer is allowed to visit that part of the room briefly.",
+            "explanation": "Wrong because being allowed to visit does not mean having the duty to take care of it."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Option a correctly paraphrases having the duty to take care of an area."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'is responsible for' correctly.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "She is responsible to cleaning the meeting room on Fridays.",
+            "explanation": "Wrong because 'to' should be 'for' in the fixed collocation 'responsible for'."
+          },
+          {
+            "id": "b",
+            "text": "She is responsible for cleaning the meeting room on Fridays.",
+            "explanation": "Correct because the collocation 'responsible for' plus gerund is grammatical and natural."
+          },
+          {
+            "id": "c",
+            "text": "She is responsible for clean the meeting room on Fridays.",
+            "explanation": "Wrong because 'clean' should be 'cleaning' after the preposition 'for'."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Option b is the only fully grammatical and natural use of 'is responsible for'."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t1",
+        "prompt": "You share an apartment with a friend and need to share cleaning the bathroom. Write 2-3 sentences to your friend suggesting a fair plan. Use the phrase 'take turns'.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "sampleAnswer": "We can take turns cleaning the bathroom each weekend. You can clean it this Saturday and I will clean it next Saturday.",
+        "selfCheck": [
+          "I wrote 2-3 sentences.",
+          "I used the phrase 'take turns' to describe alternating the task.",
+          "My message suggests a fair sharing plan to a roommate."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1063,
+    "outputTokens": 4104,
+    "totalTokens": 5167
+  },
+  "status": 200,
+  "latencyMs": 19839,
+  "model": "muse-spark-1.3"
+}

@@ -1,0 +1,38 @@
+{
+  "sourceId": "bicycle-shop-faulty-item-refund-process",
+  "editType": "local-editorial-correction",
+  "reason": "Two independent exact-hash reviews found that both in the service log and on the service log are idiomatic; replace the ambiguous preposition distractor with a location-only near distractor and align all options with the bicycle shop context.",
+  "metaRequestCount": 0,
+  "changes": [
+    {
+      "path": "lessons[0].exercises[q4].options[a].text",
+      "before": "She recorded the broken chair and the repair request in service log.",
+      "after": "She recorded the broken helmet strap and the refund request in service log."
+    },
+    {
+      "path": "lessons[0].exercises[q4].options[a].explanation",
+      "before": "It is wrong because the article 'the' is missing before 'service log.'",
+      "after": "It is wrong because the specific shop record needs the article the: in the service log."
+    },
+    {
+      "path": "lessons[0].exercises[q4].options[b].text",
+      "before": "She recorded the broken chair and the repair request in the service log.",
+      "after": "She recorded the broken helmet strap and the refund request in the service log."
+    },
+    {
+      "path": "lessons[0].exercises[q4].options[b].explanation",
+      "before": "It is correct because article, preposition, and singular noun are all natural.",
+      "after": "It is correct because it records the refund request in the shop record, as described in s5."
+    },
+    {
+      "path": "lessons[0].exercises[q4].options[c].text",
+      "before": "She recorded the broken chair and the repair request on the service log.",
+      "after": "She recorded the broken helmet strap and the refund request near the service log."
+    },
+    {
+      "path": "lessons[0].exercises[q4].options[c].explanation",
+      "before": "It is wrong because the preposition should be 'in,' not 'on.'",
+      "after": "It is wrong because near only describes a location; the source says the assistant enters the reason in the record."
+    }
+  ]
+}

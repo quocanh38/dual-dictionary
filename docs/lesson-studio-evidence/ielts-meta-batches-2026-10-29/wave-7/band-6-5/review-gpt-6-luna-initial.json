@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "0502b57e78f4aee1d5309bbb6223fe1498d001e778a85a7b2c81615de98a3713",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte review of the 331-word listening script and 447-word reading passage, all 10 objective questions/options/keys/explanations, all five Writing and five Speaking prompts, and metadata/provenance. Word counts match declared values and meet expected ranges; both objective sets use every answer position. Keys are uniquely supported and explanations preserve the limitations and qualifications in the source. Task 1 coastal table includes all four sites, erosion/biodiversity/cost/support/rank measures and consultation n=1,200; travel-plan table includes baseline/targets, units, methods and stated reliability/sample size. Task 2 prompts set adequate word targets/timing. Speaking includes two Part 1 sets, two complete Part 2 cue cards with one-minute preparation and 1–2-minute delivery, and a Part 3 set; complexity fits the stage. Provenance declares originalContent:true; no official-question or learner-score claims. No unresolved issue.",
+  "reviewerType": "AI-assisted"
+}

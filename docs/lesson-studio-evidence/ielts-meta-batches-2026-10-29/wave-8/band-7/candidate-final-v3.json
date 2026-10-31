@@ -1,0 +1,360 @@
+{
+  "stage": "band-7",
+  "batchId": "wave-8",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2819,
+        "outputTokens": 7920,
+        "totalTokens": 10739
+      },
+      "round": 2
+    },
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 1969,
+        "outputTokens": 4303,
+        "totalTokens": 6272
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-8-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-8-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Pilot Survey Results Discussion",
+      "focus": "measurement invariance in language surveys",
+      "part": "Part 3",
+      "script": "Maya: Hi Jon, are you ready to review the pilot results for our language learning project?\nJon: Absolutely. Our goal was to compare motivation to learn English among university students in Vancouver, Lima, and Seoul, wasn't it?\nMaya: Yes. We translated the original English questionnaire into Spanish and Korean, but I've been worrying about whether the questions mean the same thing in each context.\nJon: You mean measurement invariance. Dr. Chen warned us that if the survey doesn't work equivalently across groups, any cross-city comparison could be invalid.\nMaya: Exactly. Even with careful translation, cultural differences can affect interpretation. We tested the survey with, I think, 200 students in total — actually, sorry, 240, with 80 from each city.\nJon: Right, 80 per site. What did the invariance tests show?\nMaya: The good news is that the overall pattern held. In all three cities, students grouped items about confidence, interest, and future goals in the same way, so configural invariance was supported.\nJon: So the basic structure is shared. But I recall there was an issue at the next level?\nMaya: Yes, metric invariance failed. Two items about \"volunteering answers in class\" were much less strongly related to the underlying motivation factor in Lima than in Vancouver and Seoul.\nJon: Interesting. Could that be a translation problem, or something deeper about classroom norms?\nMaya: We think it's more cultural. In Lima, speaking up may reflect politeness norms rather than motivation, so the item doesn't indicate the same trait there.\nJon: That means we can't directly compare average scores across cities, right? The scale is biased for those items.\nMaya: Precisely. We can't claim Lima students are less motivated; we can only say our measure isn't equivalent for those questions. We need to revise or remove them and retest before making any substantive claims.\nJon: Let's propose new wording and check with Dr. Chen before collecting more data.",
+      "wordCount": 317
+    },
+    "reading": {
+      "title": "Can Traffic Restrictions Claim Credit for Cleaner Air?",
+      "focus": "causal attribution in a multi-city air-quality study",
+      "passage": "Researchers investigated whether low-emission zones (LEZs) introduced between 2019 and 2021 improved air quality in six fictional cities created for this illustrative study. They tracked monthly PM2.5 concentrations for two years before and after implementation, adjusting for temperature, wind, and seasonal variation. Data came from municipal monitoring networks and satellite-derived estimates, totaling more than 14,000 monthly observations. The central question was whether observed declines could be causally linked to traffic restrictions rather than other factors, and the team pre-registered its analytical approach to limit selective interpretation and to specify control variables in advance.\n\nResults were mixed. In four cities — Northaven, Eastford, Westbridge, and Southport — PM2.5 fell by 8 to 12 percent after LEZs began. In Lakeview and Hillcrest, no statistically significant change was detected. At first glance, the pattern suggests LEZs were effective in most locations, but the authors note that raw before-after comparisons cannot separate policy effects from background trends.\n\nHowever, the authors urge caution. During the same period, industrial output declined in Northaven and Eastford due to an economic slowdown, and regional weather patterns in 2021 favored pollutant dispersion. In Southport, a coal plant retrofit completed in late 2020 also reduced emissions independently of traffic. These concurrent changes provide competing explanations for the observed drops and highlight the risk of over-attributing improvement to a single policy, especially when multiple environmental and economic shifts overlap.\n\nTo address this, the team compared LEZ cities with matched control cities without traffic restrictions but with similar industrial and meteorological trends. After this adjustment, the estimated LEZ effect shrank to 3 to 5 percent in Northaven and Eastford and remained non-significant in the other two previously positive cities. Even these smaller estimates had wide confidence intervals, indicating uncertainty about the precise magnitude. The authors conclude that traffic restrictions likely contributed modestly in some contexts but were not the sole driver of cleaner air, and that short-term gains should not be extrapolated without further evidence.\n\nThe distinction between overall improvement and policy-specific effect is illustrated by Westbridge. There, PM2.5 declined by 10 percent, yet traffic volume fell by only 4 percent, while a major logistics hub relocated outside the LEZ boundary during the study window. The authors use this case to show that city-wide averages can mask displacement rather than reduction, and that traffic data must be examined alongside pollution data to avoid mistaking geographic shifts for genuine emission cuts.\n\nOverall, the study argues for limited causal claims: LEZs may help, but attribution requires isolating policy effects from broader economic and environmental shifts, and longer-term data are needed to confirm durability and rule out temporary fluctuations.",
+      "wordCount": 434
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-8-band-7-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Pilot Survey Results Discussion",
+      "pathwayStage": "band-7",
+      "focus": "measurement invariance in language surveys",
+      "transcript": "Maya: Hi Jon, are you ready to review the pilot results for our language learning project?\nJon: Absolutely. Our goal was to compare motivation to learn English among university students in Vancouver, Lima, and Seoul, wasn't it?\nMaya: Yes. We translated the original English questionnaire into Spanish and Korean, but I've been worrying about whether the questions mean the same thing in each context.\nJon: You mean measurement invariance. Dr. Chen warned us that if the survey doesn't work equivalently across groups, any cross-city comparison could be invalid.\nMaya: Exactly. Even with careful translation, cultural differences can affect interpretation. We tested the survey with, I think, 200 students in total — actually, sorry, 240, with 80 from each city.\nJon: Right, 80 per site. What did the invariance tests show?\nMaya: The good news is that the overall pattern held. In all three cities, students grouped items about confidence, interest, and future goals in the same way, so configural invariance was supported.\nJon: So the basic structure is shared. But I recall there was an issue at the next level?\nMaya: Yes, metric invariance failed. Two items about \"volunteering answers in class\" were much less strongly related to the underlying motivation factor in Lima than in Vancouver and Seoul.\nJon: Interesting. Could that be a translation problem, or something deeper about classroom norms?\nMaya: We think it's more cultural. In Lima, speaking up may reflect politeness norms rather than motivation, so the item doesn't indicate the same trait there.\nJon: That means we can't directly compare average scores across cities, right? The scale is biased for those items.\nMaya: Precisely. We can't claim Lima students are less motivated; we can only say our measure isn't equivalent for those questions. We need to revise or remove them and retest before making any substantive claims.\nJon: Let's propose new wording and check with Dr. Chen before collecting more data.",
+      "prompt": "What was the students' initial research aim?",
+      "options": [
+        "Compare motivation to learn English in three cities",
+        "Assess effectiveness of translation methods",
+        "Study politeness norms in Lima classrooms",
+        "Develop new motivation theory for undergraduates"
+      ],
+      "answer": 0,
+      "explanation": "The opening confirms the goal was comparing English motivation across Vancouver, Lima and Seoul. The translation option describes a method, not the aim."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Pilot Survey Results Discussion",
+      "pathwayStage": "band-7",
+      "focus": "measurement invariance in language surveys",
+      "transcript": "Maya: Hi Jon, are you ready to review the pilot results for our language learning project?\nJon: Absolutely. Our goal was to compare motivation to learn English among university students in Vancouver, Lima, and Seoul, wasn't it?\nMaya: Yes. We translated the original English questionnaire into Spanish and Korean, but I've been worrying about whether the questions mean the same thing in each context.\nJon: You mean measurement invariance. Dr. Chen warned us that if the survey doesn't work equivalently across groups, any cross-city comparison could be invalid.\nMaya: Exactly. Even with careful translation, cultural differences can affect interpretation. We tested the survey with, I think, 200 students in total — actually, sorry, 240, with 80 from each city.\nJon: Right, 80 per site. What did the invariance tests show?\nMaya: The good news is that the overall pattern held. In all three cities, students grouped items about confidence, interest, and future goals in the same way, so configural invariance was supported.\nJon: So the basic structure is shared. But I recall there was an issue at the next level?\nMaya: Yes, metric invariance failed. Two items about \"volunteering answers in class\" were much less strongly related to the underlying motivation factor in Lima than in Vancouver and Seoul.\nJon: Interesting. Could that be a translation problem, or something deeper about classroom norms?\nMaya: We think it's more cultural. In Lima, speaking up may reflect politeness norms rather than motivation, so the item doesn't indicate the same trait there.\nJon: That means we can't directly compare average scores across cities, right? The scale is biased for those items.\nMaya: Precisely. We can't claim Lima students are less motivated; we can only say our measure isn't equivalent for those questions. We need to revise or remove them and retest before making any substantive claims.\nJon: Let's propose new wording and check with Dr. Chen before collecting more data.",
+      "prompt": "What concern does Dr. Chen's warning highlight?",
+      "options": [
+        "Pilot sample was too small to analyze",
+        "Survey may not function equivalently across groups",
+        "Students grouped items incorrectly",
+        "Cultural differences always invalidate surveys"
+      ],
+      "answer": 1,
+      "explanation": "Jon paraphrases the warning as the survey not working equivalently across groups. The grouping option is incorrect because configural invariance was supported."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Pilot Survey Results Discussion",
+      "pathwayStage": "band-7",
+      "focus": "measurement invariance in language surveys",
+      "transcript": "Maya: Hi Jon, are you ready to review the pilot results for our language learning project?\nJon: Absolutely. Our goal was to compare motivation to learn English among university students in Vancouver, Lima, and Seoul, wasn't it?\nMaya: Yes. We translated the original English questionnaire into Spanish and Korean, but I've been worrying about whether the questions mean the same thing in each context.\nJon: You mean measurement invariance. Dr. Chen warned us that if the survey doesn't work equivalently across groups, any cross-city comparison could be invalid.\nMaya: Exactly. Even with careful translation, cultural differences can affect interpretation. We tested the survey with, I think, 200 students in total — actually, sorry, 240, with 80 from each city.\nJon: Right, 80 per site. What did the invariance tests show?\nMaya: The good news is that the overall pattern held. In all three cities, students grouped items about confidence, interest, and future goals in the same way, so configural invariance was supported.\nJon: So the basic structure is shared. But I recall there was an issue at the next level?\nMaya: Yes, metric invariance failed. Two items about \"volunteering answers in class\" were much less strongly related to the underlying motivation factor in Lima than in Vancouver and Seoul.\nJon: Interesting. Could that be a translation problem, or something deeper about classroom norms?\nMaya: We think it's more cultural. In Lima, speaking up may reflect politeness norms rather than motivation, so the item doesn't indicate the same trait there.\nJon: That means we can't directly compare average scores across cities, right? The scale is biased for those items.\nMaya: Precisely. We can't claim Lima students are less motivated; we can only say our measure isn't equivalent for those questions. We need to revise or remove them and retest before making any substantive claims.\nJon: Let's propose new wording and check with Dr. Chen before collecting more data.",
+      "prompt": "How many students participated in the pilot?",
+      "options": [
+        "200 in total",
+        "80 in total",
+        "240 in total, 80 per city",
+        "300 in total, 100 per city"
+      ],
+      "answer": 2,
+      "explanation": "Maya corrects her initial 200 to 240 total, 80 per city. The 200 option is the uncorrected figure she retracts."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Pilot Survey Results Discussion",
+      "pathwayStage": "band-7",
+      "focus": "measurement invariance in language surveys",
+      "transcript": "Maya: Hi Jon, are you ready to review the pilot results for our language learning project?\nJon: Absolutely. Our goal was to compare motivation to learn English among university students in Vancouver, Lima, and Seoul, wasn't it?\nMaya: Yes. We translated the original English questionnaire into Spanish and Korean, but I've been worrying about whether the questions mean the same thing in each context.\nJon: You mean measurement invariance. Dr. Chen warned us that if the survey doesn't work equivalently across groups, any cross-city comparison could be invalid.\nMaya: Exactly. Even with careful translation, cultural differences can affect interpretation. We tested the survey with, I think, 200 students in total — actually, sorry, 240, with 80 from each city.\nJon: Right, 80 per site. What did the invariance tests show?\nMaya: The good news is that the overall pattern held. In all three cities, students grouped items about confidence, interest, and future goals in the same way, so configural invariance was supported.\nJon: So the basic structure is shared. But I recall there was an issue at the next level?\nMaya: Yes, metric invariance failed. Two items about \"volunteering answers in class\" were much less strongly related to the underlying motivation factor in Lima than in Vancouver and Seoul.\nJon: Interesting. Could that be a translation problem, or something deeper about classroom norms?\nMaya: We think it's more cultural. In Lima, speaking up may reflect politeness norms rather than motivation, so the item doesn't indicate the same trait there.\nJon: That means we can't directly compare average scores across cities, right? The scale is biased for those items.\nMaya: Precisely. We can't claim Lima students are less motivated; we can only say our measure isn't equivalent for those questions. We need to revise or remove them and retest before making any substantive claims.\nJon: Let's propose new wording and check with Dr. Chen before collecting more data.",
+      "prompt": "What did the invariance tests reveal?",
+      "options": [
+        "Both configural and metric invariance were supported",
+        "Configural invariance failed in all cities",
+        "Translation errors caused all differences",
+        "Basic structure held but two items functioned differently in Lima"
+      ],
+      "answer": 3,
+      "explanation": "The script states configural invariance was supported but metric invariance failed for two Lima items. The both-supported option overstates the findings."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Pilot Survey Results Discussion",
+      "pathwayStage": "band-7",
+      "focus": "measurement invariance in language surveys",
+      "transcript": "Maya: Hi Jon, are you ready to review the pilot results for our language learning project?\nJon: Absolutely. Our goal was to compare motivation to learn English among university students in Vancouver, Lima, and Seoul, wasn't it?\nMaya: Yes. We translated the original English questionnaire into Spanish and Korean, but I've been worrying about whether the questions mean the same thing in each context.\nJon: You mean measurement invariance. Dr. Chen warned us that if the survey doesn't work equivalently across groups, any cross-city comparison could be invalid.\nMaya: Exactly. Even with careful translation, cultural differences can affect interpretation. We tested the survey with, I think, 200 students in total — actually, sorry, 240, with 80 from each city.\nJon: Right, 80 per site. What did the invariance tests show?\nMaya: The good news is that the overall pattern held. In all three cities, students grouped items about confidence, interest, and future goals in the same way, so configural invariance was supported.\nJon: So the basic structure is shared. But I recall there was an issue at the next level?\nMaya: Yes, metric invariance failed. Two items about \"volunteering answers in class\" were much less strongly related to the underlying motivation factor in Lima than in Vancouver and Seoul.\nJon: Interesting. Could that be a translation problem, or something deeper about classroom norms?\nMaya: We think it's more cultural. In Lima, speaking up may reflect politeness norms rather than motivation, so the item doesn't indicate the same trait there.\nJon: That means we can't directly compare average scores across cities, right? The scale is biased for those items.\nMaya: Precisely. We can't claim Lima students are less motivated; we can only say our measure isn't equivalent for those questions. We need to revise or remove them and retest before making any substantive claims.\nJon: Let's propose new wording and check with Dr. Chen before collecting more data.",
+      "prompt": "What conclusion do the students draw about comparing cities?",
+      "options": [
+        "Lima students are less motivated than others",
+        "Average scores cannot be directly compared yet",
+        "Survey is ready for full data collection",
+        "Cultural norms have no effect on responses"
+      ],
+      "answer": 1,
+      "explanation": "They agree average scores cannot be compared until items are revised and retested. The Lima-less-motivated option is explicitly rejected as an unsupported claim."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can Traffic Restrictions Claim Credit for Cleaner Air?",
+      "pathwayStage": "band-7",
+      "focus": "causal attribution in a multi-city air-quality study",
+      "passage": "Researchers investigated whether low-emission zones (LEZs) introduced between 2019 and 2021 improved air quality in six fictional cities created for this illustrative study. They tracked monthly PM2.5 concentrations for two years before and after implementation, adjusting for temperature, wind, and seasonal variation. Data came from municipal monitoring networks and satellite-derived estimates, totaling more than 14,000 monthly observations. The central question was whether observed declines could be causally linked to traffic restrictions rather than other factors, and the team pre-registered its analytical approach to limit selective interpretation and to specify control variables in advance.\n\nResults were mixed. In four cities — Northaven, Eastford, Westbridge, and Southport — PM2.5 fell by 8 to 12 percent after LEZs began. In Lakeview and Hillcrest, no statistically significant change was detected. At first glance, the pattern suggests LEZs were effective in most locations, but the authors note that raw before-after comparisons cannot separate policy effects from background trends.\n\nHowever, the authors urge caution. During the same period, industrial output declined in Northaven and Eastford due to an economic slowdown, and regional weather patterns in 2021 favored pollutant dispersion. In Southport, a coal plant retrofit completed in late 2020 also reduced emissions independently of traffic. These concurrent changes provide competing explanations for the observed drops and highlight the risk of over-attributing improvement to a single policy, especially when multiple environmental and economic shifts overlap.\n\nTo address this, the team compared LEZ cities with matched control cities without traffic restrictions but with similar industrial and meteorological trends. After this adjustment, the estimated LEZ effect shrank to 3 to 5 percent in Northaven and Eastford and remained non-significant in the other two previously positive cities. Even these smaller estimates had wide confidence intervals, indicating uncertainty about the precise magnitude. The authors conclude that traffic restrictions likely contributed modestly in some contexts but were not the sole driver of cleaner air, and that short-term gains should not be extrapolated without further evidence.\n\nThe distinction between overall improvement and policy-specific effect is illustrated by Westbridge. There, PM2.5 declined by 10 percent, yet traffic volume fell by only 4 percent, while a major logistics hub relocated outside the LEZ boundary during the study window. The authors use this case to show that city-wide averages can mask displacement rather than reduction, and that traffic data must be examined alongside pollution data to avoid mistaking geographic shifts for genuine emission cuts.\n\nOverall, the study argues for limited causal claims: LEZs may help, but attribution requires isolating policy effects from broader economic and environmental shifts, and longer-term data are needed to confirm durability and rule out temporary fluctuations.",
+      "prompt": "What was the study's primary aim?",
+      "options": [
+        "Link PM2.5 declines causally to traffic restrictions",
+        "Measure temperature effects on pollution",
+        "Compare satellite and municipal data accuracy",
+        "Document industrial output across Europe"
+      ],
+      "answer": 0,
+      "explanation": "The passage frames the central question as causal linkage to traffic restrictions. Temperature was a control variable, not the aim."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can Traffic Restrictions Claim Credit for Cleaner Air?",
+      "pathwayStage": "band-7",
+      "focus": "causal attribution in a multi-city air-quality study",
+      "passage": "Researchers investigated whether low-emission zones (LEZs) introduced between 2019 and 2021 improved air quality in six fictional cities created for this illustrative study. They tracked monthly PM2.5 concentrations for two years before and after implementation, adjusting for temperature, wind, and seasonal variation. Data came from municipal monitoring networks and satellite-derived estimates, totaling more than 14,000 monthly observations. The central question was whether observed declines could be causally linked to traffic restrictions rather than other factors, and the team pre-registered its analytical approach to limit selective interpretation and to specify control variables in advance.\n\nResults were mixed. In four cities — Northaven, Eastford, Westbridge, and Southport — PM2.5 fell by 8 to 12 percent after LEZs began. In Lakeview and Hillcrest, no statistically significant change was detected. At first glance, the pattern suggests LEZs were effective in most locations, but the authors note that raw before-after comparisons cannot separate policy effects from background trends.\n\nHowever, the authors urge caution. During the same period, industrial output declined in Northaven and Eastford due to an economic slowdown, and regional weather patterns in 2021 favored pollutant dispersion. In Southport, a coal plant retrofit completed in late 2020 also reduced emissions independently of traffic. These concurrent changes provide competing explanations for the observed drops and highlight the risk of over-attributing improvement to a single policy, especially when multiple environmental and economic shifts overlap.\n\nTo address this, the team compared LEZ cities with matched control cities without traffic restrictions but with similar industrial and meteorological trends. After this adjustment, the estimated LEZ effect shrank to 3 to 5 percent in Northaven and Eastford and remained non-significant in the other two previously positive cities. Even these smaller estimates had wide confidence intervals, indicating uncertainty about the precise magnitude. The authors conclude that traffic restrictions likely contributed modestly in some contexts but were not the sole driver of cleaner air, and that short-term gains should not be extrapolated without further evidence.\n\nThe distinction between overall improvement and policy-specific effect is illustrated by Westbridge. There, PM2.5 declined by 10 percent, yet traffic volume fell by only 4 percent, while a major logistics hub relocated outside the LEZ boundary during the study window. The authors use this case to show that city-wide averages can mask displacement rather than reduction, and that traffic data must be examined alongside pollution data to avoid mistaking geographic shifts for genuine emission cuts.\n\nOverall, the study argues for limited causal claims: LEZs may help, but attribution requires isolating policy effects from broader economic and environmental shifts, and longer-term data are needed to confirm durability and rule out temporary fluctuations.",
+      "prompt": "What did initial results show before adjustments?",
+      "options": [
+        "All six cities improved significantly",
+        "Lakeview and Hillcrest had largest declines",
+        "PM2.5 fell 8-12% in four cities",
+        "No city showed any change"
+      ],
+      "answer": 2,
+      "explanation": "Before controls, four cities showed 8-12% falls while Lakeview and Hillcrest showed no significant change. The all-six option overgeneralizes the mixed results."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can Traffic Restrictions Claim Credit for Cleaner Air?",
+      "pathwayStage": "band-7",
+      "focus": "causal attribution in a multi-city air-quality study",
+      "passage": "Researchers investigated whether low-emission zones (LEZs) introduced between 2019 and 2021 improved air quality in six fictional cities created for this illustrative study. They tracked monthly PM2.5 concentrations for two years before and after implementation, adjusting for temperature, wind, and seasonal variation. Data came from municipal monitoring networks and satellite-derived estimates, totaling more than 14,000 monthly observations. The central question was whether observed declines could be causally linked to traffic restrictions rather than other factors, and the team pre-registered its analytical approach to limit selective interpretation and to specify control variables in advance.\n\nResults were mixed. In four cities — Northaven, Eastford, Westbridge, and Southport — PM2.5 fell by 8 to 12 percent after LEZs began. In Lakeview and Hillcrest, no statistically significant change was detected. At first glance, the pattern suggests LEZs were effective in most locations, but the authors note that raw before-after comparisons cannot separate policy effects from background trends.\n\nHowever, the authors urge caution. During the same period, industrial output declined in Northaven and Eastford due to an economic slowdown, and regional weather patterns in 2021 favored pollutant dispersion. In Southport, a coal plant retrofit completed in late 2020 also reduced emissions independently of traffic. These concurrent changes provide competing explanations for the observed drops and highlight the risk of over-attributing improvement to a single policy, especially when multiple environmental and economic shifts overlap.\n\nTo address this, the team compared LEZ cities with matched control cities without traffic restrictions but with similar industrial and meteorological trends. After this adjustment, the estimated LEZ effect shrank to 3 to 5 percent in Northaven and Eastford and remained non-significant in the other two previously positive cities. Even these smaller estimates had wide confidence intervals, indicating uncertainty about the precise magnitude. The authors conclude that traffic restrictions likely contributed modestly in some contexts but were not the sole driver of cleaner air, and that short-term gains should not be extrapolated without further evidence.\n\nThe distinction between overall improvement and policy-specific effect is illustrated by Westbridge. There, PM2.5 declined by 10 percent, yet traffic volume fell by only 4 percent, while a major logistics hub relocated outside the LEZ boundary during the study window. The authors use this case to show that city-wide averages can mask displacement rather than reduction, and that traffic data must be examined alongside pollution data to avoid mistaking geographic shifts for genuine emission cuts.\n\nOverall, the study argues for limited causal claims: LEZs may help, but attribution requires isolating policy effects from broader economic and environmental shifts, and longer-term data are needed to confirm durability and rule out temporary fluctuations.",
+      "prompt": "Why do authors urge caution about attributing declines to LEZs?",
+      "options": [
+        "Monitoring networks were unreliable",
+        "Other factors coincided with LEZ introduction",
+        "Sample size was too small",
+        "Cities did not implement LEZs fully"
+      ],
+      "answer": 1,
+      "explanation": "Concurrent industrial slowdown, weather and retrofit offer competing explanations. Unreliable monitors are not cited as a problem."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can Traffic Restrictions Claim Credit for Cleaner Air?",
+      "pathwayStage": "band-7",
+      "focus": "causal attribution in a multi-city air-quality study",
+      "passage": "Researchers investigated whether low-emission zones (LEZs) introduced between 2019 and 2021 improved air quality in six fictional cities created for this illustrative study. They tracked monthly PM2.5 concentrations for two years before and after implementation, adjusting for temperature, wind, and seasonal variation. Data came from municipal monitoring networks and satellite-derived estimates, totaling more than 14,000 monthly observations. The central question was whether observed declines could be causally linked to traffic restrictions rather than other factors, and the team pre-registered its analytical approach to limit selective interpretation and to specify control variables in advance.\n\nResults were mixed. In four cities — Northaven, Eastford, Westbridge, and Southport — PM2.5 fell by 8 to 12 percent after LEZs began. In Lakeview and Hillcrest, no statistically significant change was detected. At first glance, the pattern suggests LEZs were effective in most locations, but the authors note that raw before-after comparisons cannot separate policy effects from background trends.\n\nHowever, the authors urge caution. During the same period, industrial output declined in Northaven and Eastford due to an economic slowdown, and regional weather patterns in 2021 favored pollutant dispersion. In Southport, a coal plant retrofit completed in late 2020 also reduced emissions independently of traffic. These concurrent changes provide competing explanations for the observed drops and highlight the risk of over-attributing improvement to a single policy, especially when multiple environmental and economic shifts overlap.\n\nTo address this, the team compared LEZ cities with matched control cities without traffic restrictions but with similar industrial and meteorological trends. After this adjustment, the estimated LEZ effect shrank to 3 to 5 percent in Northaven and Eastford and remained non-significant in the other two previously positive cities. Even these smaller estimates had wide confidence intervals, indicating uncertainty about the precise magnitude. The authors conclude that traffic restrictions likely contributed modestly in some contexts but were not the sole driver of cleaner air, and that short-term gains should not be extrapolated without further evidence.\n\nThe distinction between overall improvement and policy-specific effect is illustrated by Westbridge. There, PM2.5 declined by 10 percent, yet traffic volume fell by only 4 percent, while a major logistics hub relocated outside the LEZ boundary during the study window. The authors use this case to show that city-wide averages can mask displacement rather than reduction, and that traffic data must be examined alongside pollution data to avoid mistaking geographic shifts for genuine emission cuts.\n\nOverall, the study argues for limited causal claims: LEZs may help, but attribution requires isolating policy effects from broader economic and environmental shifts, and longer-term data are needed to confirm durability and rule out temporary fluctuations.",
+      "prompt": "What happened after comparing with control cities?",
+      "options": [
+        "LEZ effect disappeared in all cities",
+        "Industrial output was excluded from analysis",
+        "Westbridge showed the strongest LEZ effect",
+        "Estimated effect shrank and became uncertain"
+      ],
+      "answer": 3,
+      "explanation": "After adjustment the effect fell to 3-5% with wide intervals, indicating uncertainty. The disappeared-in-all option ignores the remaining modest effect in two cities."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can Traffic Restrictions Claim Credit for Cleaner Air?",
+      "pathwayStage": "band-7",
+      "focus": "causal attribution in a multi-city air-quality study",
+      "passage": "Researchers investigated whether low-emission zones (LEZs) introduced between 2019 and 2021 improved air quality in six fictional cities created for this illustrative study. They tracked monthly PM2.5 concentrations for two years before and after implementation, adjusting for temperature, wind, and seasonal variation. Data came from municipal monitoring networks and satellite-derived estimates, totaling more than 14,000 monthly observations. The central question was whether observed declines could be causally linked to traffic restrictions rather than other factors, and the team pre-registered its analytical approach to limit selective interpretation and to specify control variables in advance.\n\nResults were mixed. In four cities — Northaven, Eastford, Westbridge, and Southport — PM2.5 fell by 8 to 12 percent after LEZs began. In Lakeview and Hillcrest, no statistically significant change was detected. At first glance, the pattern suggests LEZs were effective in most locations, but the authors note that raw before-after comparisons cannot separate policy effects from background trends.\n\nHowever, the authors urge caution. During the same period, industrial output declined in Northaven and Eastford due to an economic slowdown, and regional weather patterns in 2021 favored pollutant dispersion. In Southport, a coal plant retrofit completed in late 2020 also reduced emissions independently of traffic. These concurrent changes provide competing explanations for the observed drops and highlight the risk of over-attributing improvement to a single policy, especially when multiple environmental and economic shifts overlap.\n\nTo address this, the team compared LEZ cities with matched control cities without traffic restrictions but with similar industrial and meteorological trends. After this adjustment, the estimated LEZ effect shrank to 3 to 5 percent in Northaven and Eastford and remained non-significant in the other two previously positive cities. Even these smaller estimates had wide confidence intervals, indicating uncertainty about the precise magnitude. The authors conclude that traffic restrictions likely contributed modestly in some contexts but were not the sole driver of cleaner air, and that short-term gains should not be extrapolated without further evidence.\n\nThe distinction between overall improvement and policy-specific effect is illustrated by Westbridge. There, PM2.5 declined by 10 percent, yet traffic volume fell by only 4 percent, while a major logistics hub relocated outside the LEZ boundary during the study window. The authors use this case to show that city-wide averages can mask displacement rather than reduction, and that traffic data must be examined alongside pollution data to avoid mistaking geographic shifts for genuine emission cuts.\n\nOverall, the study argues for limited causal claims: LEZs may help, but attribution requires isolating policy effects from broader economic and environmental shifts, and longer-term data are needed to confirm durability and rule out temporary fluctuations.",
+      "prompt": "What does the Westbridge example illustrate?",
+      "options": [
+        "Overall improvement does not prove policy-specific reduction",
+        "Traffic volume fell more than pollution",
+        "Logistics hubs always increase pollution",
+        "City-wide averages are the best measure"
+      ],
+      "answer": 0,
+      "explanation": "Westbridge shows a 10% pollution decline alongside only a 4% traffic fall and a concurrent hub relocation, illustrating that overall improvement alone does not establish a policy-specific reduction. The traffic-fell-more option reverses the reported figures."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-7-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Open Data Portal and Public Trust",
+      "pathwayStage": "band-7",
+      "focus": "Describing trends and cautious comparison without overstating causality",
+      "prompt": "The table below shows results from a public trust survey in four cities before and after the launch of a municipal open data portal. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data: Percentage of respondents who said they trust local government to act in the public interest (2019 vs 2023) and average monthly portal users per 1,000 residents in 2023. City A: 42% (2019) to 48% (2023), 120 users; City B: 51% to 49%, 85 users; City C: 38% to 55%, 210 users; City D: 60% to 58%, 95 users. All surveys sampled 1,000 residents per city. Write at least 150 words in 20 minutes. Report what the data shows without assuming the portal alone caused the changes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Coastal Reserves: Visitors, Budgets and Disturbance",
+      "pathwayStage": "band-7",
+      "focus": "Comparing multi-site data with competing patterns",
+      "prompt": "The table below compares three coastal nature reserves in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data for 2022: North Bay Reserve - 180,000 visitors, conservation budget $420,000, 45 habitat disturbance incidents, 70% of area open to public; South Cove Reserve - 95,000 visitors, $610,000 budget, 22 incidents, 40% open; East Point Reserve - 250,000 visitors, $380,000 budget, 78 incidents, 85% open. Write at least 150 words in 20 minutes. Highlight key similarities and differences without drawing unsupported causal conclusions.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Does Open Data Always Build Public Trust?",
+      "pathwayStage": "band-7",
+      "focus": "Evaluating scope, causality limits and competing explanations",
+      "prompt": "Some people argue that publishing government data online automatically increases public trust. Others argue that trust depends on data quality, how understandable the data is, and whether authorities act on what the data reveals. Discuss both views, consider the limits of evidence for a direct causal link, and give your own opinion with carefully qualified claims. Use relevant examples and avoid overgeneralising. Write at least 250 words in 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Balancing Conservation and Public Access",
+      "pathwayStage": "band-7",
+      "focus": "Weighing competing evidence and stakeholder interests with precise evaluation",
+      "prompt": "Many protected natural areas face pressure to allow more visitors for education, recreation and funding, while conservationists warn that greater access can damage fragile habitats. Should access be restricted to protect ecosystems even if it reduces public support and income, or should access be expanded to build engagement? Discuss the trade-offs, consider short-term and long-term consequences, and support your position with reasoned arguments that acknowledge uncertainty and context. Write at least 250 words in 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Interpreting Conflicting Evidence from Multi-Site Studies",
+      "pathwayStage": "band-7",
+      "focus": "Interpreting variation across contexts and avoiding overclaiming",
+      "prompt": "When studies of the same environmental policy in different locations produce conflicting results, some argue the policy is ineffective, while others argue local context explains the differences. How should policymakers and the public interpret such mixed evidence? Discuss the importance of methodology, sample scope, and contextual factors in drawing conclusions, and explain how to evaluate competing findings without overstating what the evidence proves. Write at least 250 words in 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-7-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Information and Trust in Everyday Life",
+      "pathwayStage": "band-7",
+      "focus": "Personal habits and attitudes to data and news",
+      "prompt": "Answer in short, natural responses. 1. How often do you look at official statistics or government information? 2. Do you generally trust the information you see online about public issues? Why or why not? 3. Has the way you check whether information is reliable changed in recent years? 4. Do you think most people in your community are interested in open data about local services?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Visiting Natural Places",
+      "pathwayStage": "band-7",
+      "focus": "Personal experience with conservation and access",
+      "prompt": "Answer in short, natural responses. 1. Do you enjoy visiting nature reserves, parks or coastal areas? 2. What kind of rules do you usually notice in protected natural places? 3. Do you think visitor numbers have changed in natural areas near you? 4. How important is it for children to have access to natural environments?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Time You Questioned Information",
+      "pathwayStage": "band-7",
+      "focus": "Narrating evaluation and decision-making",
+      "prompt": "Describe a time when you questioned information you saw online or in the media.\nYou should say:\n• what the information was about\n• where you saw or heard it\n• why you began to doubt it\n• and explain what you did to check it or decide what to believe.\nYou will have 1 minute to prepare and should speak for 1 to 2 minutes."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Transparency, Open Data and Trust",
+      "pathwayStage": "band-7",
+      "focus": "Reasoned evaluation of whether transparency always helps",
+      "prompt": "Discuss in more depth, giving reasons and examples. 1. Does making government data public always lead to greater public trust? Why or why not? 2. Why might greater transparency sometimes reduce trust in the short term? 3. How should authorities present complex data so it is useful without being misleading? 4. What are the limits of using survey data alone to judge whether open data has worked?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-7-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Conservation, Access and Learning from Other Places",
+      "pathwayStage": "band-7",
+      "focus": "Balancing interests and interpreting evidence across contexts",
+      "prompt": "Discuss in more depth, giving reasons and evaluation. 1. Should popular natural sites limit visitor numbers to protect habitats, even if it disappoints tourists? 2. How can evidence from one nature reserve or country be usefully applied to another? 3. What are the risks of drawing general conclusions from a single study or a single location? 4. How should decision-makers balance scientific evidence with local community needs when evidence is mixed?"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "78b16f0382d991460c8b319fd60c0f0e3ba508c273f24f3c26c972016477b901",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-sol",
+  "reviewedAt": "2026-10-27T06:45:42.829Z",
+  "note": "Independent AI-assisted editorial reread of this complete exact final payload, with canonical hash verified. Checked every source/citation, English/Vietnamese gloss, answer, distractor, explanation and transfer, including the revised q2 pattern distinction and every q4 agreement claim. Rights assessment relies on supplied provenance; no external authorship verification, human review or learner testing. Candidate and v2 artifacts unchanged.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Checked provenance: named Dual Dictionary project as AI-assisted author, original source declaration and explicit generation/distribution authorization. Reading contains no learner personal data. Rights assessment relies on supplied provenance; no external authorship verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact hand over occurs in s1. Annual leave, colleague responsibility and s4 handover context support transferring work responsibility rather than merely passing a document."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "to give responsibility for work to another person accurately describes the handover in this workplace context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "bàn giao công việc cho người khác naturally expresses transferring work responsibility, with full diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact keep track of occurs in s3, with new requests entered in a shared log; monitoring and recording is supported."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Monitoring and recording progress over time is an appropriate contextual gloss for tracking requests in the shared log."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "theo dõi và ghi chép accurately and naturally conveys monitoring and recording, with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b uniquely expresses giving schedule responsibility to the colleague. a keeps the work; c postpones it. Neither matches the handover. Citation s1 is valid."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Every option explanation and the overall explanation accurately distinguish transferring responsibility from retaining or postponing work."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely follows the explicitly requested pattern hand over immediately before the object. b is grammatical but splits hand and over around the object; c uses hands after will. Citation s1 supports the requested pattern."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations are accurate: a follows requested object placement, b is correctly acknowledged as a valid alternative word order, and c requires hand after will. Overall explanation does not imply the split construction is ungrammatical."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely describes monitoring and recording requests. b substitutes completing immediately without records; c means ignoring requests. Citation s3 matches."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All three option explanations and overall explanation accurately distinguish monitoring over time from immediate completion or ignoring requests."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b uniquely uses The colleague keeps track of naturally. a incorrectly has track on; c has keep instead of keeps with singular colleague. Key b is correct and citation s3 supplies the target."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Checked a: correctly changes track on to track of. Checked b: keeps track of is the standard phrase with correct singular agreement. Checked c: revised explanation correctly states singular the colleague requires keeps, not keep. Overall explanation correctly selects the only grammatical option; prior reversed instruction is absent."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Graduating school football captain transferring team duties differs meaningfully in role and purpose from project lead taking annual leave. Citation s1 supplies hand over."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence sample naturally uses hand over with equipment and training schedule, followed by contact guidance. Checklist covers length, responsibility sense and school context. Explanation explicitly states self-assessment and no automatic grade."
+    }
+  ],
+  "findings": []
+}

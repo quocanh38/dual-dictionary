@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "weekly averages",
+        "meaningEn": "mean values calculated over a one-week period",
+        "meaningVi": "giá trị trung bình theo tuần",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "consistent with",
+        "meaningEn": "in agreement with something; matching or supporting it",
+        "meaningVi": "phù hợp với",
+        "sourceSentenceId": "s6"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 548,
+    "outputTokens": 835,
+    "totalTokens": 1383
+  },
+  "status": 200,
+  "latencyMs": 6463,
+  "model": "muse-spark-1.3"
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "phase in",
+        "meaningEn": "to introduce a change gradually in stages",
+        "meaningVi": "triển khai dần từng bước",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "take effect",
+        "meaningEn": "to start to apply or become official",
+        "meaningVi": "có hiệu lực; bắt đầu được áp dụng",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 516,
+    "outputTokens": 925,
+    "totalTokens": 1441
+  },
+  "status": 200,
+  "latencyMs": 2874,
+  "model": "muse-spark-1.3"
+}

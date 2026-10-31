@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 138,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after four-wheel drive in the current phrase manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples independently written.",
+  "selectionRationale": "Enrich media and political vocabulary, fox-hunting expressions and animal terms, postal equipment, economic and legal concepts, rail and road transport, chemistry, measurement, architecture and physics. Notes distinguish regional usage, debated practices, specialized senses and spelling variants.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 108,
+    "remainingRawOnlyAfter": 88
+  },
+  "selected": [
+    "fourth estate",
+    "fox hunt",
+    "fox hunting",
+    "fox terrier",
+    "frame of reference",
+    "franking machine",
+    "frat house",
+    "free enterprise",
+    "free port",
+    "free radical",
+    "freezing point",
+    "freight car",
+    "freight train",
+    "french polish",
+    "front bench",
+    "frontage road",
+    "fruit machine",
+    "full length",
+    "fully fledged",
+    "fundamental particle"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

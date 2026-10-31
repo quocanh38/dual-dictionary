@@ -1,0 +1,65 @@
+{
+  "id": "draft-9d62218e-ce0c-4f8d-8710-2774f188153b",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Cataloguing Photographs for a University Archive",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A university archive is inviting students to help catalogue photographs donated by local businesses. Students work in pairs and enter only details visible in each image, such as a shop sign or a date printed on the back. If a photograph shows a familiar street but no exact address, the catalogue entry records the uncertainty rather than guessing. Visitors can use a searchable index to find a topic and then open the original scan for context. Records with known dates appear in chronological order, while uncertain dates are kept in a separate group. When students mention a photograph in their notes, they refer to its catalogue number so another reader can locate the same item. Staff will check a sample of entries before the collection becomes available online.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A university archive is inviting students to help catalogue photographs donated by local businesses. Students work in pairs and enter only details visible in each image, such as a shop sign or a date printed on the back. If a photograph shows a familiar street but no exact address, the catalogue entry records the uncertainty rather than guessing. Visitors can use a searchable index to find a topic and then open the original scan for context. Records with known dates appear in chronological order, while uncertain dates are kept in a separate group. When students mention a photograph in their notes, they refer to its catalogue number so another reader can locate the same item. Staff will check a sample of entries before the collection becomes available online.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A university archive is inviting students to help catalogue photographs donated by local businesses."
+      },
+      {
+        "id": "s2",
+        "text": "Students work in pairs and enter only details visible in each image, such as a shop sign or a date printed on the back."
+      },
+      {
+        "id": "s3",
+        "text": "If a photograph shows a familiar street but no exact address, the catalogue entry records the uncertainty rather than guessing."
+      },
+      {
+        "id": "s4",
+        "text": "Visitors can use a searchable index to find a topic and then open the original scan for context."
+      },
+      {
+        "id": "s5",
+        "text": "Records with known dates appear in chronological order, while uncertain dates are kept in a separate group."
+      },
+      {
+        "id": "s6",
+        "text": "When students mention a photograph in their notes, they refer to its catalogue number so another reader can locate the same item."
+      },
+      {
+        "id": "s7",
+        "text": "Staff will check a sample of entries before the collection becomes available online."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "work in pairs",
+      "meaningEn": "to do a task together with one other person as a team",
+      "meaningVi": "làm việc theo cặp",
+      "sourceSentenceId": "s2"
+    },
+    {
+      "id": "t2",
+      "phrase": "in chronological order",
+      "meaningEn": "arranged from earliest to latest according to date or time",
+      "meaningVi": "theo thứ tự thời gian từ sớm đến muộn",
+      "sourceSentenceId": "s5"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

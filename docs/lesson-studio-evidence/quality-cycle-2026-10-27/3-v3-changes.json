@@ -1,0 +1,33 @@
+{
+  "editor": "Codex coding assistant — AI-assisted editor",
+  "newMetaCalls": 0,
+  "changes": [
+    {
+      "path": "/review/note",
+      "before": "Reviewed by coding assistant; no independent human review. See quality-review.md. Shape, source grounding, contextual meanings, five answer keys/explanations and transfer were reviewed; no critical issue identified in this small sample. Kept unapproved for release decision.",
+      "after": "Candidate prepared for the hackathon quality process. Original Meta output retained separately; corrections are coding-assistant editorial changes, not another Meta response. No independent human review."
+    },
+    {
+      "path": "/review/checks/uniqueAnswers",
+      "before": true,
+      "after": false
+    },
+    {
+      "path": "/review/checks/rights",
+      "before": true,
+      "after": false
+    },
+    {
+      "path": "/review/checks/explanations",
+      "before": true,
+      "after": false
+    },
+    {
+      "path": "/review/checks/meaning",
+      "before": true,
+      "after": false
+    }
+  ],
+  "originalSha256": "cde761fd10b217f8875207ae4d146ad54ef091d7ec9dc7d213c2a24beb643e19",
+  "correctedSha256": "e841bd0cc9935c3338b2221e08077568498c9ab7b6ba4ab9a5739f83b686a811"
+}

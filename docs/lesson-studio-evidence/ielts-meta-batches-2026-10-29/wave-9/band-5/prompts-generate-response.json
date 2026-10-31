@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-9",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-9-v1",
+  "completedAt": "2026-10-29T05:21:05.670Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 635,
+    "outputTokens": 4492,
+    "totalTokens": 5127
+  },
+  "latencyMs": 18530,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Student Sports Day Participation\",\"focus\":\"clear main ideas and direct comparisons with simple data\",\"prompt\":\"The table below shows the number of students who took part in four activities during the student sports day at Greenfield College in 2022 and 2023.\\n\\nFootball: 45 in 2022, 60 in 2023\\nBasketball: 30 in 2022, 35 in 2023\\nRunning race: 50 in 2022, 40 in 2023\\nVolleyball: 25 in 2022, 38 in 2023\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Community Book Exchange Use\",\"focus\":\"clear main ideas and direct evidence from monthly figures\",\"prompt\":\"The bar chart below shows the number of books donated and borrowed at the Riverside Community Book Exchange from January to April 2024.\\n\\nJanuary: 80 donated, 60 borrowed\\nFebruary: 95 donated, 85 borrowed\\nMarch: 70 donated, 90 borrowed\\nApril: 110 donated, 100 borrowed\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Finding a Room for a Study Group\",\"focus\":\"accurate simple explanations of problems and solutions in a familiar academic context\",\"prompt\":\"Many college students find it difficult to find a quiet room for group study on campus. What are the main problems this causes for students? What can colleges do to help? Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Community Book Exchange Value\",\"focus\":\"clear main ideas with direct evidence and personal opinion\",\"prompt\":\"Some people think community book exchanges are a good way to share books and meet neighbours. Others think people prefer to buy new books or read online. Discuss both views and give your own opinion. Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Compulsory Student Sports Day\",\"focus\":\"simple evaluation and reasons for a familiar school topic\",\"prompt\":\"Some schools have a sports day every year where all students take part in sports activities. Do you think this is a good idea? Why or why not? Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Sports and Free Time\",\"focus\":\"familiar topics and short clear answers\",\"prompt\":\"Answer 3-4 short questions about yourself. Talk about: what sports you like to watch or play, whether your school had a sports day, how often you do exercise, and if you prefer team sports or individual sports.\"},{\"task\":\"Part 1 · Books and Reading Habits\",\"focus\":\"familiar topics and simple explanations\",\"prompt\":\"Answer 3-4 short questions about yourself. Talk about: how often you read books, whether you prefer to borrow or buy books, if you have used a library or community book exchange, and what kind of books you enjoy.\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"describe a familiar event with clear main ideas and direct evidence\",\"prompt\":\"Describe a student sports day or group activity you took part in. You will have one minute to prepare and speak for 1-2 minutes.\\n\\n• when and where it was\\n• who you were with\\n• what you did during the activity\\n• and explain how you felt about it\"},{\"task\":\"Part 3 · Study Spaces and Group Learning\",\"focus\":\"reasons and evaluation of solutions for academic contexts\",\"prompt\":\"Discuss in more depth. Why do students need quiet rooms for group study? What problems happen when there are not enough rooms? How can colleges manage study rooms in a fair way? Evaluate different solutions and give reasons.\"},{\"task\":\"Part 3 · Community Activities and Book Sharing\",\"focus\":\"reasons and evaluation of community ideas\",\"prompt\":\"Discuss in more depth. What are the benefits and problems of a community book exchange? How does it compare to a library or reading online? Should local councils support these exchanges? Give reasons and evaluate your ideas.\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Student Sports Day Participation",
+        "focus": "clear main ideas and direct comparisons with simple data",
+        "prompt": "The table below shows the number of students who took part in four activities during the student sports day at Greenfield College in 2022 and 2023.\n\nFootball: 45 in 2022, 60 in 2023\nBasketball: 30 in 2022, 35 in 2023\nRunning race: 50 in 2022, 40 in 2023\nVolleyball: 25 in 2022, 38 in 2023\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Community Book Exchange Use",
+        "focus": "clear main ideas and direct evidence from monthly figures",
+        "prompt": "The bar chart below shows the number of books donated and borrowed at the Riverside Community Book Exchange from January to April 2024.\n\nJanuary: 80 donated, 60 borrowed\nFebruary: 95 donated, 85 borrowed\nMarch: 70 donated, 90 borrowed\nApril: 110 donated, 100 borrowed\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Finding a Room for a Study Group",
+        "focus": "accurate simple explanations of problems and solutions in a familiar academic context",
+        "prompt": "Many college students find it difficult to find a quiet room for group study on campus. What are the main problems this causes for students? What can colleges do to help? Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Community Book Exchange Value",
+        "focus": "clear main ideas with direct evidence and personal opinion",
+        "prompt": "Some people think community book exchanges are a good way to share books and meet neighbours. Others think people prefer to buy new books or read online. Discuss both views and give your own opinion. Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Compulsory Student Sports Day",
+        "focus": "simple evaluation and reasons for a familiar school topic",
+        "prompt": "Some schools have a sports day every year where all students take part in sports activities. Do you think this is a good idea? Why or why not? Give reasons and examples from your own experience or knowledge. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Sports and Free Time",
+        "focus": "familiar topics and short clear answers",
+        "prompt": "Answer 3-4 short questions about yourself. Talk about: what sports you like to watch or play, whether your school had a sports day, how often you do exercise, and if you prefer team sports or individual sports."
+      },
+      {
+        "task": "Part 1 · Books and Reading Habits",
+        "focus": "familiar topics and simple explanations",
+        "prompt": "Answer 3-4 short questions about yourself. Talk about: how often you read books, whether you prefer to borrow or buy books, if you have used a library or community book exchange, and what kind of books you enjoy."
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "describe a familiar event with clear main ideas and direct evidence",
+        "prompt": "Describe a student sports day or group activity you took part in. You will have one minute to prepare and speak for 1-2 minutes.\n\n• when and where it was\n• who you were with\n• what you did during the activity\n• and explain how you felt about it"
+      },
+      {
+        "task": "Part 3 · Study Spaces and Group Learning",
+        "focus": "reasons and evaluation of solutions for academic contexts",
+        "prompt": "Discuss in more depth. Why do students need quiet rooms for group study? What problems happen when there are not enough rooms? How can colleges manage study rooms in a fair way? Evaluate different solutions and give reasons."
+      },
+      {
+        "task": "Part 3 · Community Activities and Book Sharing",
+        "focus": "reasons and evaluation of community ideas",
+        "prompt": "Discuss in more depth. What are the benefits and problems of a community book exchange? How does it compare to a library or reading online? Should local councils support these exchanges? Give reasons and evaluate your ideas."
+      }
+    ]
+  }
+}

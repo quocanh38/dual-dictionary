@@ -1,0 +1,73 @@
+{
+  "createdAt": "2026-10-27T08:09:26.618Z",
+  "sourceId": "community-garden-water-rotation",
+  "title": "Sharing Resources at Work",
+  "packId": "pack-c9e4b2e8-edd5-4af7-a463-690a755f33ba",
+  "providerDraft": "Meta candidate retained unchanged at community-garden-water-rotation-candidate.json",
+  "rawMetaCandidatePackSha256": "11b782817902d5dd09615b3fc2049bc2e371f7183e7fd2418bc23128e5a3cbca",
+  "localEditorialRevision": "community-garden-water-rotation-candidate-editorial-v1.json",
+  "localEditorialRevisionSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+  "editorialChanges": "q1-q3 distractors and q5 model language; no generation call for local revisions",
+  "review": {
+    "file": "community-garden-water-rotation-review-v1.json",
+    "sha256": "d98dab10955f22f422a184d0d3cd6c209401eb15bd4852866c2d191f3cc04688",
+    "reviewers": 2,
+    "routesRequested": [
+      "gpt-6-luna",
+      "gpt-5.6-terra"
+    ],
+    "runtimeLabels": [
+      "GPT-6",
+      "GPT-6"
+    ],
+    "criteriaPerReviewer": 17,
+    "unresolvedFindings": 0,
+    "reviewedPayloadSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+    "limitations": [
+      "AI-assisted, not human review",
+      "Rights/authorship only declared and not independently verified",
+      "Brief and relatively simple for declared B2 level"
+    ]
+  },
+  "approval": {
+    "decision": "approve-for-local-release-qa",
+    "delegated": true,
+    "approvedEnvelopeSha256": "eadd5188e872312b9448c5644949b5cc07c369c4faa9a0a11da015ae6762020e",
+    "releaseDirectory": "../release-community-garden-water-rotation"
+  },
+  "library": {
+    "file": "lessons/library/community-garden-water-rotation.json",
+    "indexEntrySha256": "eadd5188e872312b9448c5644949b5cc07c369c4faa9a0a11da015ae6762020e",
+    "totalApprovedPacks": 15,
+    "cache": "mdx-dict-v131"
+  },
+  "qa": {
+    "approvedPacks": 15,
+    "contexts": 30,
+    "cleanAndPreseeded": true,
+    "status": "PASS",
+    "device": "Chrome mobile emulation 390x844",
+    "physicalDevice": false,
+    "realProviderRequests": 0,
+    "blockedExternalRequests": 0,
+    "uncaughtJsExceptions": 0,
+    "catalogueOfflineInstall": {
+      "status": "PASS",
+      "packInstallContexts": 15,
+      "malformedIndexRejected": true,
+      "tamperedPackRejected": true
+    }
+  },
+  "metaUsageOrBillingLookup": "not performed, per owner instruction",
+  "deployment": "not performed",
+  "checks": [
+    "quality-gate audit ready-for-approval",
+    "separate delegated approval with exact hash and checksum",
+    "library index and approved-pack hash match",
+    "15-pack offline shell contract PASS",
+    "quality-gate tests PASS",
+    "approved-library-check 30 contexts PASS",
+    "catalogue offline install and tamper checks PASS",
+    "git diff --check PASS"
+  ]
+}

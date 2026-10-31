@@ -1,0 +1,93 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "e376d93a520d586ebfd4181838cd0af143fa1879d292eee658f446d9fce8de9b",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-6-band-7-speaking-03",
+      "severity": "minor",
+      "issue": "Cue content uses inline Unicode bullets. Put each cue on a separate line for easier cue-card reading; prep/duration already explicit."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-7-speaking-01",
+      "severity": "minor",
+      "issue": "Question4 on universities institutional responsibility is broader than typical personal Part1. Personal experience of explanations would fit more naturally."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-7-writing-01",
+      "severity": "minor",
+      "issue": "Whole-percent release shares imply fractional counts when multiplied by totals. Label percentages as rounded if learners may compare approximate counts."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final rereview of all 20 items:5 Listening,5 Reading,5 Writing,5 Speaking. Entire contexts, all 40 options/10 keys/10 explanations and all productive prompts/metadata reread; copied item contexts verified identical. No other model reports inspected, no candidate edits or provider calls.",
+    "listening": "Full bus-fare seminar dialogue read:50% cut/April–June correction,18% ridership increase,22% petrol confound, absent control,78% voluntary frequent-user survey and qualified recommendation. Keys [0,1,2,3,1],20 options and all explanations supported.",
+    "reading": "Full 455-word heat/education passage read. Sampling bias 68%north/12%south now compared with calibrated fixed AIR-temperature sensors at the same hour:31.4 volunteer mean versus 33.6 matched citywide mean/35.9 south mean; previous satellite-peak mismatch removed. Education 89/82% definitions and within-country consistent methods checked. Keys [1,0,2,3,0], options and explanations supported.",
+    "writing": "All five Writing prompts read. Press-release table has nine complete percentage/total pairs over 2018/2021/2024; wetland table has six visitor/incident pairs March–August 2024 and June intervention context. Three Task 2 prompts invite nuanced research-publicity/access/pilot-policy arguments. All minima 150/250 and times 20/40 explicit and consistent.",
+    "speaking": "All five Speaking prompts read: two personal-based Part 1 sets (one institutional question remains minor), science-claim Part 2 has complete cues/preparation/duration though inline format, two broader Part 3 sets evaluate wildlife/policy evidence. Advanced language practice fits intended stage, with realism observations retained.",
+    "initialIssueResolution": [
+      "Satellite hotspot peak replaced with fixed air-temperature network means at matched afternoon hour and even district coverage; mean-to-mean comparison resolves measurement/aggregation issue."
+    ],
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 328,
+        "reading": 455
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          1,
+          0,
+          2,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      }
+    },
+    "originalityAndProvenance": "Baseten Model API, meta-models/muse-spark-open-1026, wave6-v1 prompt versions and repair metadata read. No recognisable official-question copying or guaranteed score claim found; no exhaustive plagiarism or empirical-research validation performed. Stage labels treated as intended practice difficulty.",
+    "independence": "Same reviewer completed initial review and now full final rereview; own prior findings used for closure. Other model reports were not read.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-7-listening-01",
+      "ielts-meta-wave-6-band-7-listening-02",
+      "ielts-meta-wave-6-band-7-listening-03",
+      "ielts-meta-wave-6-band-7-listening-04",
+      "ielts-meta-wave-6-band-7-listening-05",
+      "ielts-meta-wave-6-band-7-reading-01",
+      "ielts-meta-wave-6-band-7-reading-02",
+      "ielts-meta-wave-6-band-7-reading-03",
+      "ielts-meta-wave-6-band-7-reading-04",
+      "ielts-meta-wave-6-band-7-reading-05",
+      "ielts-meta-wave-6-band-7-writing-01",
+      "ielts-meta-wave-6-band-7-writing-02",
+      "ielts-meta-wave-6-band-7-writing-03",
+      "ielts-meta-wave-6-band-7-writing-04",
+      "ielts-meta-wave-6-band-7-writing-05",
+      "ielts-meta-wave-6-band-7-speaking-01",
+      "ielts-meta-wave-6-band-7-speaking-02",
+      "ielts-meta-wave-6-band-7-speaking-03",
+      "ielts-meta-wave-6-band-7-speaking-04",
+      "ielts-meta-wave-6-band-7-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

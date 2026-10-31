@@ -1,0 +1,540 @@
+[
+  {
+    "phrase": "local call",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cuộc gọi nội hạt — cuộc gọi đến số điện thoại trong cùng khu vực dịch vụ, thường không phải cuộc gọi đường dài",
+        "pat": "make/receive a local call · the cost of a local call · local-call rates",
+        "ex": [
+          [
+            "The hotel charges a small fee for each local call.",
+            "Khách sạn tính một khoản phí nhỏ cho mỗi cuộc gọi nội hạt."
+          ],
+          [
+            "You can make a local call without adding an area code.",
+            "Bạn có thể gọi nội hạt mà không cần thêm mã vùng."
+          ]
+        ]
+      }
+    ],
+    "note": "Phạm vi và giá cước của local call phụ thuộc nhà mạng và khu vực; ở một số nơi, cuộc gọi gần vẫn bị tính như cuộc gọi đường dài."
+  },
+  {
+    "phrase": "local time",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "giờ địa phương tại một địa điểm cụ thể, theo múi giờ và quy ước thời gian đang áp dụng ở đó",
+        "pat": "local time · arrive at 8 p.m. local time · convert to local time",
+        "ex": [
+          [
+            "The flight lands at 6:30 a.m. local time.",
+            "Chuyến bay hạ cánh lúc 6 giờ 30 sáng theo giờ địa phương."
+          ],
+          [
+            "Set your watch to local time after crossing the border.",
+            "Hãy chỉnh đồng hồ theo giờ địa phương sau khi qua biên giới."
+          ]
+        ]
+      }
+    ],
+    "note": "Local time có thể chịu ảnh hưởng của giờ mùa hè hoặc quy định địa phương; khi đặt lịch quốc tế, nên ghi rõ múi giờ hoặc mã UTC."
+  },
+  {
+    "phrase": "lock away",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "nhốt một người vào nơi giam giữ, thường trong thời gian dài",
+        "pat": "lock somebody away · be locked away for years · lock somebody away in prison",
+        "ex": [
+          [
+            "The court did not want to lock the teenager away for a minor offence.",
+            "Tòa không muốn giam thiếu niên vì một vi phạm nhỏ."
+          ],
+          [
+            "He was locked away for several years after the conviction.",
+            "Anh bị giam nhiều năm sau khi bị kết án."
+          ]
+        ]
+      },
+      {
+        "m": "cất giữ một vật ở nơi khóa kín để bảo vệ hoặc giữ riêng",
+        "pat": "lock something away · lock away valuables/documents · be locked away in a safe",
+        "ex": [
+          [
+            "She locked away the original documents in a fireproof cabinet.",
+            "Cô cất các tài liệu gốc trong tủ chống cháy có khóa."
+          ],
+          [
+            "The spare keys are locked away in the office safe.",
+            "Chìa khóa dự phòng được cất trong két khóa ở văn phòng."
+          ]
+        ]
+      }
+    ],
+    "note": "Lock away tương tự lock up; dạng tách được: lock the files away / lock them away. Nghĩa về giam giữ thường mang sắc thái mạnh hơn “đưa vào tù”."
+  },
+  {
+    "phrase": "lock keeper",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh) người vận hành âu thuyền trên kênh hoặc sông, điều khiển cửa cống để tàu đi qua đoạn nước có chênh lệch mực",
+        "pat": "a canal lock keeper · ask the lock keeper for help · a lock keeper opens the gates",
+        "ex": [
+          [
+            "The lock keeper opened the gates for the narrowboat.",
+            "Người vận hành âu thuyền mở cửa cống cho chiếc thuyền hẹp."
+          ],
+          [
+            "The lock keeper checked that the chamber was clear before raising the water level.",
+            "Người giữ âu kiểm tra buồng âu đã trống trước khi nâng mực nước."
+          ]
+        ]
+      }
+    ],
+    "note": "Lock trong cụm này là âu thuyền, không phải ổ khóa. Lock-keeper là biến thể viết có gạch nối."
+  },
+  {
+    "phrase": "lock out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ngăn ai vào một nơi bằng cách khóa cửa; cũng có thể vô tình khiến bản thân không vào được",
+        "pat": "lock somebody out · lock yourself out of a house/account · be locked out",
+        "ex": [
+          [
+            "I locked myself out of the apartment and had to call the caretaker.",
+            "Tôi tự khóa mình bên ngoài căn hộ và phải gọi người quản lý."
+          ],
+          [
+            "The system locked the user out after several failed sign-in attempts.",
+            "Hệ thống chặn người dùng đăng nhập sau nhiều lần thử sai."
+          ]
+        ]
+      },
+      {
+        "m": "(lao động) chủ sử dụng lao động tạm thời không cho nhân viên vào nơi làm việc trong một cuộc tranh chấp",
+        "pat": "lock workers out · be locked out during a dispute · a management lockout",
+        "ex": [
+          [
+            "The company locked workers out during the contract dispute.",
+            "Công ty không cho công nhân vào làm trong cuộc tranh chấp hợp đồng."
+          ],
+          [
+            "The union criticized the decision to lock staff out.",
+            "Công đoàn chỉ trích quyết định khóa cửa không cho nhân viên vào."
+          ]
+        ]
+      }
+    ],
+    "note": "Lock out có thể chỉ sự cố khóa cửa/tài khoản hoặc biện pháp lao động; nghĩa thứ hai thường gọi là lockout (danh từ, viết liền)."
+  },
+  {
+    "phrase": "lock up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "khóa cửa và cửa sổ để đóng cửa hoặc bảo vệ một tòa nhà",
+        "pat": "lock up at night · lock the office up · remember to lock up",
+        "ex": [
+          [
+            "Please lock up before you leave the workshop.",
+            "Hãy khóa cửa trước khi rời xưởng."
+          ],
+          [
+            "The shop owner locked up after the last customer left.",
+            "Chủ cửa hàng khóa cửa sau khi khách cuối cùng rời đi."
+          ]
+        ]
+      },
+      {
+        "m": "cất giữ vật có giá trị trong nơi khóa kín",
+        "pat": "lock something up · lock up cash/jewellery · be locked up in a safe",
+        "ex": [
+          [
+            "They locked up the cash before closing the register.",
+            "Họ cất tiền vào nơi khóa kín trước khi chốt quầy."
+          ],
+          [
+            "The paintings are locked up when the gallery is closed.",
+            "Các bức tranh được cất giữ trong khu vực khóa kín khi phòng tranh đóng cửa."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) giam ai vào tù hoặc đồn/cơ sở tạm giữ",
+        "pat": "lock somebody up · be locked up for something · lock somebody up in prison",
+        "ex": [
+          [
+            "The thieves were locked up after the trial.",
+            "Những tên trộm bị giam sau phiên tòa."
+          ],
+          [
+            "He was locked up overnight for questioning.",
+            "Anh bị tạm giữ qua đêm để thẩm vấn."
+          ]
+        ]
+      }
+    ],
+    "note": "Lock up có thể tách được khi có tân ngữ: lock the door up / lock it up. Danh từ lock-up có các nghĩa riêng như nơi giam giữ hoặc nhà để xe nhỏ."
+  },
+  {
+    "phrase": "log book",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "sổ nhật ký ghi lại hoạt động, chuyến đi, số liệu hoặc sự kiện theo trình tự thời gian",
+        "pat": "keep/fill in a log book · a ship’s/vehicle log book · record something in the log book",
+        "ex": [
+          [
+            "The driver recorded the mileage in the vehicle log book.",
+            "Tài xế ghi số quãng đường vào sổ nhật trình của xe."
+          ],
+          [
+            "The laboratory log book lists each test and its result.",
+            "Sổ nhật ký phòng thí nghiệm liệt kê từng phép thử và kết quả."
+          ]
+        ]
+      }
+    ],
+    "note": "Logbook cũng là cách viết liền; ở Anh, log book có thể chỉ giấy tờ đăng ký xe trong một số ngữ cảnh. Loại sổ và thông tin bắt buộc tùy ngành."
+  },
+  {
+    "phrase": "log in",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thực hiện các bước xác thực để bắt đầu sử dụng máy tính, ứng dụng hoặc tài khoản trực tuyến",
+        "pat": "log in to a system/account · log in with a password · be logged in",
+        "ex": [
+          [
+            "Log in to the portal with your work email address.",
+            "Đăng nhập cổng thông tin bằng địa chỉ email công việc."
+          ],
+          [
+            "Users must log in before viewing their records.",
+            "Người dùng phải đăng nhập trước khi xem hồ sơ."
+          ]
+        ]
+      }
+    ],
+    "note": "Log in và log on thường dùng gần như nhau trong tin học; login thường là danh từ hoặc tính từ (login page), còn động từ viết tách."
+  },
+  {
+    "phrase": "log off",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "kết thúc phiên sử dụng máy tính, hệ thống hoặc tài khoản trực tuyến bằng cách đăng xuất",
+        "pat": "log off from a system · log off at the end of a shift · be logged off",
+        "ex": [
+          [
+            "Remember to log off from the shared computer.",
+            "Hãy nhớ đăng xuất khỏi máy tính dùng chung."
+          ],
+          [
+            "The system logs users off after a period of inactivity.",
+            "Hệ thống tự đăng xuất người dùng sau một khoảng thời gian không hoạt động."
+          ]
+        ]
+      }
+    ],
+    "note": "Log off và log out gần như đồng nghĩa trong tin học; log off thường nhấn mạnh việc kết thúc phiên. Đóng cửa sổ trình duyệt không phải lúc nào cũng đăng xuất tài khoản."
+  },
+  {
+    "phrase": "log on",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đăng nhập vào hệ thống hoặc dịch vụ máy tính để bắt đầu một phiên sử dụng",
+        "pat": "log on to a computer/network · log on with a username · be logged on",
+        "ex": [
+          [
+            "Employees log on to the network using a security key.",
+            "Nhân viên đăng nhập mạng bằng khóa bảo mật."
+          ],
+          [
+            "She logged on to the training platform from home.",
+            "Cô đăng nhập nền tảng đào tạo từ nhà."
+          ]
+        ]
+      }
+    ],
+    "note": "Log on thường tương đương log in; log on cũng có thể mang nghĩa lên tàu/phương tiện trong một số cách dùng cũ, nhưng nghĩa tin học phổ biến nhất."
+  },
+  {
+    "phrase": "log out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đăng xuất khỏi máy tính, ứng dụng hoặc tài khoản để kết thúc phiên sử dụng",
+        "pat": "log out of an account · log out when finished · automatically log somebody out",
+        "ex": [
+          [
+            "Please log out of your account when using a public computer.",
+            "Vui lòng đăng xuất khỏi tài khoản khi dùng máy tính công cộng."
+          ],
+          [
+            "The app logged her out after the password was changed.",
+            "Ứng dụng đăng xuất cô sau khi mật khẩu được thay đổi."
+          ]
+        ]
+      }
+    ],
+    "note": "Log out gần như đồng nghĩa log off; cấu trúc thường là log out of an account. Để bảo vệ tài khoản, hãy đăng xuất trên thiết bị dùng chung."
+  },
+  {
+    "phrase": "logic bomb",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bom logic — đoạn mã độc được cài vào hệ thống và chỉ kích hoạt khi một điều kiện hoặc thời điểm định trước xảy ra",
+        "pat": "a logic bomb in software · detect/remove a logic bomb · trigger a logic bomb",
+        "ex": [
+          [
+            "The security team found a logic bomb during the code audit.",
+            "Đội bảo mật phát hiện bom logic trong đợt kiểm tra mã."
+          ],
+          [
+            "A delayed logic bomb disrupted the company’s systems.",
+            "Một bom logic được đặt giờ làm gián đoạn hệ thống của công ty."
+          ]
+        ]
+      }
+    ],
+    "note": "Logic bomb là mối đe dọa an ninh mạng; nội dung ở đây chỉ giải thích thuật ngữ. Phòng vệ tập trung vào kiểm soát thay đổi mã, quyền truy cập, giám sát và sao lưu."
+  },
+  {
+    "phrase": "logic gate",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cổng logic — mạch điện tử thực hiện một phép toán logic trên một hoặc nhiều tín hiệu đầu vào để tạo tín hiệu đầu ra",
+        "pat": "a logic gate · an AND/OR/NOT gate · combine logic gates into a circuit",
+        "ex": [
+          [
+            "An AND logic gate produces an output only when both inputs are true.",
+            "Cổng AND chỉ tạo đầu ra khi cả hai đầu vào đều đúng."
+          ],
+          [
+            "The processor combines millions of logic gates.",
+            "Bộ xử lý kết hợp hàng triệu cổng logic."
+          ]
+        ]
+      }
+    ],
+    "note": "Các cổng cơ bản gồm AND, OR và NOT; cổng thực tế được chế tạo bằng linh kiện bán dẫn và có thể có nhiều mức logic."
+  },
+  {
+    "phrase": "lollipop lady",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh, thân mật) nữ nhân viên tuần tra qua đường học sinh, dùng biển tròn cầm tay để dừng xe khi trẻ băng qua đường",
+        "pat": "a school lollipop lady · wait for the lollipop lady · a lollipop lady stops traffic",
+        "ex": [
+          [
+            "The lollipop lady helped the children cross the busy road.",
+            "Nữ nhân viên tuần tra giúp trẻ em qua con đường đông xe."
+          ],
+          [
+            "Drivers stopped when the lollipop lady raised her sign.",
+            "Tài xế dừng lại khi nhân viên tuần tra giơ biển báo."
+          ]
+        ]
+      }
+    ],
+    "note": "Lollipop man là cách gọi nam; school crossing patrol hoặc crossing guard trung tính hơn và thường dùng ở nhiều khu vực."
+  },
+  {
+    "phrase": "lombard street",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Lombard Street — con phố ở Thành phố London gắn với lịch sử ngân hàng và khu tài chính của Anh",
+        "pat": "Lombard Street in the City of London · banks on Lombard Street · the financial history of Lombard Street",
+        "ex": [
+          [
+            "The archive traces banking on Lombard Street back several centuries.",
+            "Kho lưu trữ lần theo lịch sử ngân hàng ở Lombard Street qua nhiều thế kỷ."
+          ],
+          [
+            "The office is a short walk from Lombard Street in the City.",
+            "Văn phòng cách Lombard Street ở khu City một quãng đi bộ ngắn."
+          ]
+        ]
+      }
+    ],
+    "note": "Lombard Street ở London khác Lombard Street nổi tiếng với đường dốc quanh co tại San Francisco; cần nêu thành phố nếu có thể gây nhầm."
+  },
+  {
+    "phrase": "long haul",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "chuyến đi hoặc vận chuyển đường dài, nhất là chuyến bay dài",
+        "pat": "a long-haul flight · travel over a long haul · a long-haul route",
+        "ex": [
+          [
+            "The airline added a long-haul route to Singapore.",
+            "Hãng bay mở thêm tuyến đường dài tới Singapore."
+          ],
+          [
+            "She packed carefully for the long haul across the Pacific.",
+            "Cô chuẩn bị kỹ cho chuyến đi dài vượt Thái Bình Dương."
+          ]
+        ]
+      },
+      {
+        "m": "quá trình dài và khó khăn đòi hỏi nỗ lực liên tục",
+        "pat": "for the long haul · in it for the long haul · a long haul ahead",
+        "ex": [
+          [
+            "Building trust with customers is a long haul.",
+            "Xây dựng niềm tin với khách hàng là một quá trình dài."
+          ],
+          [
+            "The team is in it for the long haul, not just the launch.",
+            "Nhóm cam kết theo đuổi lâu dài chứ không chỉ đến ngày ra mắt."
+          ]
+        ]
+      }
+    ],
+    "note": "Long-haul thường viết có gạch nối trước danh từ (long-haul flight); for the long haul là thành ngữ chỉ cam kết hoặc khoảng thời gian dài."
+  },
+  {
+    "phrase": "long jump",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "nhảy xa — môn điền kinh trong đó vận động viên chạy đà rồi bật từ ván giậm để nhảy xa nhất có thể vào hố cát",
+        "pat": "compete in the long jump · a long-jump event · set a long-jump record",
+        "ex": [
+          [
+            "She won the long jump with a final attempt of six metres.",
+            "Cô thắng nội dung nhảy xa với cú nhảy cuối dài sáu mét."
+          ],
+          [
+            "The long-jump athletes took turns on the runway.",
+            "Các vận động viên nhảy xa lần lượt bước lên đường chạy đà."
+          ]
+        ]
+      }
+    ],
+    "note": "Ở Bắc Mỹ, broad jump cũng là tên gọi khác; long jump là thuật ngữ phổ biến trong điền kinh quốc tế. Thành tích được đo từ ván giậm đến dấu chạm gần nhất trong hố."
+  },
+  {
+    "phrase": "long wave",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "sóng dài — sóng vô tuyến có bước sóng lớn và tần số thấp; cũng chỉ một dải phát thanh nhất định trong một số hệ thống",
+        "pat": "long-wave radio · broadcast on long wave · a long wave signal",
+        "ex": [
+          [
+            "The station continued broadcasting on long wave for regional listeners.",
+            "Đài tiếp tục phát sóng dài cho thính giả trong khu vực."
+          ],
+          [
+            "Long-wave signals can travel over considerable distances under suitable conditions.",
+            "Tín hiệu sóng dài có thể truyền đi xa trong điều kiện phù hợp."
+          ]
+        ]
+      }
+    ],
+    "note": "Long wave thường được viết có gạch nối khi bổ nghĩa cho danh từ; tần số/dải sóng cụ thể phụ thuộc quy ước kỹ thuật. Không nhầm với long wavelength trong quang học."
+  },
+  {
+    "phrase": "look for",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cố tìm hoặc tìm kiếm người/vật đang cần hoặc chưa thấy",
+        "pat": "look for somebody/something · look for a job/solution · be looking for",
+        "ex": [
+          [
+            "We are looking for a reliable supplier near the port.",
+            "Chúng tôi đang tìm một nhà cung cấp đáng tin gần cảng."
+          ],
+          [
+            "She looked for her keys throughout the apartment.",
+            "Cô tìm chìa khóa khắp căn hộ."
+          ]
+        ]
+      },
+      {
+        "m": "mong đợi hoặc yêu cầu điều gì đó từ ai, đôi khi hàm ý sẽ đánh giá họ dựa trên điều đó",
+        "pat": "look for improvement/results · look to somebody for something · be looking for more",
+        "ex": [
+          [
+            "The manager is looking for a clear improvement next quarter.",
+            "Quản lý mong thấy sự cải thiện rõ rệt trong quý tới."
+          ],
+          [
+            "They look to the new system for faster reporting.",
+            "Họ trông đợi hệ thống mới giúp báo cáo nhanh hơn."
+          ]
+        ]
+      }
+    ],
+    "note": "Look for thường nghĩa tìm kiếm; khi nói mong đợi/kỳ vọng, tân ngữ thường là kết quả hoặc tiêu chuẩn. Phân biệt với look after “chăm sóc” và look into “điều tra”."
+  },
+  {
+    "phrase": "look out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cảnh báo ai cẩn thận vì có nguy hiểm hoặc vật sắp va vào",
+        "pat": "look out! · look out for traffic · look out when doing something",
+        "ex": [
+          [
+            "Look out! A cyclist is coming through the gate.",
+            "Cẩn thận! Có người đi xe đạp đang đi qua cổng."
+          ],
+          [
+            "Look out for loose cables on the floor.",
+            "Hãy chú ý các sợi cáp lỏng trên sàn."
+          ]
+        ]
+      },
+      {
+        "m": "quan sát hoặc để ý nhằm phát hiện người/vật cần tìm",
+        "pat": "look out for somebody/something · look out of a window · keep looking out",
+        "ex": [
+          [
+            "I will look out for your parcel this afternoon.",
+            "Chiều nay tôi sẽ để ý gói hàng của bạn."
+          ],
+          [
+            "She looked out of the window toward the station.",
+            "Cô nhìn ra ngoài cửa sổ về phía nhà ga."
+          ]
+        ]
+      }
+    ],
+    "note": "Look out! là lời cảnh báo; look out for somebody/something có thể nghĩa để ý tìm hoặc trông chừng. Phân biệt look out of a window với look out for traffic."
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "8d117b3699c2e1c83b07db5fbe5c379ae6ac364079475316b220b7c4c5f34340",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-02",
+      "severity": "critical",
+      "issue": "The explanation invents that teachers and volunteers attended. The passage says about forty students attended and teachers later asked for a similar staff session. Remove unsupported attendance claims."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-04",
+      "severity": "uncertain",
+      "issue": "Finding a loose helmet during practice does not establish that Lisa previously thought it fitted correctly. She could already have known or been unsure. Add explicit prior belief to the passage or ask about the observed problem; the current keyed inference is insufficiently supported."
+    }
+  ],
+  "observations": [
+    {
+      "item": "sharedContexts.reading",
+      "severity": "minor",
+      "issue": "The sentence ending saves money and time every day in town together is unnatural padding; remove together and simplify."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-01",
+      "severity": "minor",
+      "issue": "Selling bicycles was the bike shop's job is an invented aside, not passage evidence. Simply say no bicycle-selling purpose is stated."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-writing-01",
+      "severity": "minor",
+      "issue": "Clarify whether enjoyment percentages aggregate all three months; the reference to three screenings conflicts slightly with three film types shown in three months."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-writing-02; writing-03",
+      "severity": "minor",
+      "issue": "Only textual map/process descriptions are supplied. Call them descriptions/steps rather than referring to maps or a diagram below, unless the presentation layer creates those visuals."
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted initial review of all 20 items: 5 Listening, 5 Reading, 5 Writing, 5 Speaking; entire shared contexts, all 40 options, 10 keys/explanations, productive prompts and metadata. Prior wave-7 band-5 reviewer report viewed only as schema example; no other wave-8 reviewer reports inspected. No candidate edits or provider calls.",
+    "listening": "331-word music-room dialogue: Thursday Room B grand piano, correction 3–5 to 4–6, $5/hour=$10, ID/no food/drinks. All 20 options and five keys/explanations read; keys supported.",
+    "reading": "400-word bicycle workshop report: accidents, police/mechanic, practical course, helmet example and confidence claim. All 20 options and five explanations read; unsupported inference and invented explanation flagged.",
+    "writing": "Three Task 1s: 3x3 film counts plus enjoyment, museum 2020/2025 locations, six-step bicycle process; two Task 2 discussions. 150/20 and 250/40 present.",
+    "speaking": "Two personal Part 1 sets, one visible four-bullet Part 2 with correct timing, two broader Part 3 sets. Accessible band-5 practice.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 331,
+        "reading": 400
+      },
+      "metadataWordCounts": {
+        "listening": 331,
+        "reading": 400
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      "repeatedContextsEqualShared": true,
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API / meta-models/muse-spark-open-1026; wave-8-v1 prompt identifiers and originalContent=true inspected. No recognisable official-question copying found; authorship declaration is not independent plagiarism verification. Fictional research data checked internally, not externally verified. Stages are estimated practice progression, not validated band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-5-listening-01",
+      "ielts-meta-wave-8-band-5-listening-02",
+      "ielts-meta-wave-8-band-5-listening-03",
+      "ielts-meta-wave-8-band-5-listening-04",
+      "ielts-meta-wave-8-band-5-listening-05",
+      "ielts-meta-wave-8-band-5-reading-01",
+      "ielts-meta-wave-8-band-5-reading-02",
+      "ielts-meta-wave-8-band-5-reading-03",
+      "ielts-meta-wave-8-band-5-reading-04",
+      "ielts-meta-wave-8-band-5-reading-05",
+      "ielts-meta-wave-8-band-5-writing-01",
+      "ielts-meta-wave-8-band-5-writing-02",
+      "ielts-meta-wave-8-band-5-writing-03",
+      "ielts-meta-wave-8-band-5-writing-04",
+      "ielts-meta-wave-8-band-5-writing-05",
+      "ielts-meta-wave-8-band-5-speaking-01",
+      "ielts-meta-wave-8-band-5-speaking-02",
+      "ielts-meta-wave-8-band-5-speaking-03",
+      "ielts-meta-wave-8-band-5-speaking-04",
+      "ielts-meta-wave-8-band-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

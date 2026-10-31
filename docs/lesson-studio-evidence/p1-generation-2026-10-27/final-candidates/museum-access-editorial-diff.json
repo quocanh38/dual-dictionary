@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "sourceBatch": "batch-3",
+  "sourceCandidate": "../batch-3/museum-access-candidate.json",
+  "sourceHash": "65d6306f3f7aad3325377e847f95dce090577cd39e0647033615061cdfe2f727",
+  "finalHash": "9418d62ef8d883d222c80e6c7ade38ff79f5902bcecfe53fe1620e3d93665783",
+  "edits": [
+    {
+      "path": "lesson-1/q4/explanation",
+      "change": "Replaced the overgeneralized fixed-collocation claim with the specific plural-noun and verb-agreement reason."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "draft-d1f70c2f-90d8-4080-a616-7783c6f06d12",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Comparing Temperature Readings at Two Bays",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A marine science class is comparing water temperatures at two coastal bays during the spring. One buoy records a reading every fifteen minutes, while the other sends data once an hour. Before calculating weekly averages, the analyst will align each time window so that the same part of the day is represented at both sites. The team will check sensor notes for gaps and flag days affected by maintenance. A difference between two averages should not be treated as a trend on its own. The researchers will describe a pattern as consistent with local weather only when it appears in several readings and agrees with the station log. They will publish the method with the data so another class can repeat the comparison.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A marine science class is comparing water temperatures at two coastal bays during the spring. One buoy records a reading every fifteen minutes, while the other sends data once an hour. Before calculating weekly averages, the analyst will align each time window so that the same part of the day is represented at both sites. The team will check sensor notes for gaps and flag days affected by maintenance. A difference between two averages should not be treated as a trend on its own. The researchers will describe a pattern as consistent with local weather only when it appears in several readings and agrees with the station log. They will publish the method with the data so another class can repeat the comparison.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A marine science class is comparing water temperatures at two coastal bays during the spring."
+      },
+      {
+        "id": "s2",
+        "text": "One buoy records a reading every fifteen minutes, while the other sends data once an hour."
+      },
+      {
+        "id": "s3",
+        "text": "Before calculating weekly averages, the analyst will align each time window so that the same part of the day is represented at both sites."
+      },
+      {
+        "id": "s4",
+        "text": "The team will check sensor notes for gaps and flag days affected by maintenance."
+      },
+      {
+        "id": "s5",
+        "text": "A difference between two averages should not be treated as a trend on its own."
+      },
+      {
+        "id": "s6",
+        "text": "The researchers will describe a pattern as consistent with local weather only when it appears in several readings and agrees with the station log."
+      },
+      {
+        "id": "s7",
+        "text": "They will publish the method with the data so another class can repeat the comparison."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "weekly averages",
+      "meaningEn": "mean values calculated over a one-week period",
+      "meaningVi": "giá trị trung bình theo tuần",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "consistent with",
+      "meaningEn": "in agreement with something; matching or supporting it",
+      "meaningVi": "phù hợp với",
+      "sourceSentenceId": "s6"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

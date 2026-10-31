@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "equipment-loan-desk",
+  "rawCandidateFile": "equipment-loan-desk-candidate.json",
+  "previousEditorialCandidateFile": "equipment-loan-desk-candidate-editorial-v1.json",
+  "editorialCandidateFile": "equipment-loan-desk-candidate-editorial-v2.json",
+  "generatedByMeta": false,
+  "beforePackSha256": "5ef90d1f82c576073a006bf8ae617a6ee531044e9a2bad71aa81ab8ecd7dab9a",
+  "changes": [
+    {
+      "part": "q3 overall explanation",
+      "before": "Only option b matches continuing beyond the scheduled end time in s6.",
+      "after": "Only option b matches continuing beyond the scheduled end time described in s5.",
+      "reason": "The complete source sentence containing “run late” is s5 after locally repairing the earlier abbreviation split; s6 only confirms the new return time by email. This fixes the mismatched source reference raised independently by both reviewers."
+    }
+  ],
+  "reason": "Resolve a cross-review source-reference finding; preserve the original Meta candidate and earlier local revision separately."
+}

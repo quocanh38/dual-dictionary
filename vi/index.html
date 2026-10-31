@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Từ điển Anh–Việt offline miễn phí cho người học tiếng Anh</title>
+<meta name="description" content="Từ điển Anh–Việt & Anh–Anh offline miễn phí: 386.000 mục từ, Reader mode tra từ trong bài đọc, ôn tập FSRS có nhắc ôn, luyện phát âm, lưu câu ví dụ, dùng file .mdx riêng.">
+<meta name="keywords" content="từ điển anh việt offline, tu dien anh viet, từ điển anh văn offline, học từ vựng tiếng anh, từ điển mdx, tra từ offline, dual dictionary">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dualdictionary.netlify.app/vi/">
+<link rel="alternate" hreflang="vi" href="https://dualdictionary.netlify.app/vi/">
+<link rel="alternate" hreflang="en" href="https://dualdictionary.netlify.app/">
+<link rel="alternate" hreflang="x-default" href="https://dualdictionary.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:title" content="Từ điển Anh–Việt offline miễn phí cho người học tiếng Anh">
+<meta property="og:description" content="386.000 mục từ Anh–Việt, Reader mode tra từ ngay trong bài đọc, lưu câu ví dụ, hỗ trợ file .mdx. Không cần tài khoản, không quảng cáo.">
+<meta property="og:image" content="https://dualdictionary.netlify.app/icons/icon-512.png">
+<meta property="og:url" content="https://dualdictionary.netlify.app/vi/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Từ điển Anh–Việt offline miễn phí | Dual Dictionary">
+<meta name="twitter:description" content="386.000 mục từ Anh–Việt offline, tra từ ngay trong bài đọc, lưu câu ví dụ. Không cần tài khoản.">
+<meta name="theme-color" content="#0f766e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  .vi-landing { max-width: 52rem; margin: 0 auto; padding: 0 var(--sp-3); }
+  .vi-hero { text-align: center; padding: var(--sp-6) 0 var(--sp-4); }
+  .vi-hero h1 { font-size: var(--fs-xl); line-height: 1.3; margin-bottom: var(--sp-2); }
+  .vi-hero .lede { color: var(--text-2); font-size: var(--fs-md); line-height: 1.7; }
+  .vi-cta { display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap; margin: var(--sp-4) 0; }
+  .vi-section { margin: var(--sp-5) 0; }
+  .vi-section h2 { font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
+  .vi-features { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-2); }
+  .vi-feature { border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--sp-3); background: var(--surface); }
+  .vi-feature strong { display: block; margin-bottom: 4px; color: var(--accent); }
+  .vi-feature p { margin: 0; font-size: var(--fs-sm); color: var(--text-2); line-height: 1.6; }
+  .vi-steps { padding-left: var(--sp-5); line-height: 2; }
+  .vi-cta-bottom { text-align: center; margin: var(--sp-6) 0; }
+  .vi-cta-bottom .btn-primary { font-size: var(--fs-md); padding: 14px 28px; }
+  .vi-note { font-size: var(--fs-xs); color: var(--text-2); }
+  @media (max-width: 640px) { .vi-features { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Dual Dictionary",
+      "url": "https://dualdictionary.netlify.app/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any (PWA — iOS, Android, Windows, macOS, Linux)",
+      "inLanguage": ["vi", "en"],
+      "description": "Từ điển Anh–Việt & Anh–Anh offline miễn phí dạng PWA: 386.000 mục từ, Reader mode tra từ ngay trong bài đọc, lưu từ và câu ví dụ, hỗ trợ file .mdx/.mdd. Không cần tài khoản, không quảng cáo.",
+      "featureList": [
+        "Từ điển Anh–Việt mở (OVDP) 386.600 mục từ, tải một lần dùng offline",
+        "Một lần tìm — bấm một chạm để đổi từ điển đang xem",
+        "Tra cụm từ và biến thể từ (ran → run)",
+        "Reader mode: dán bài báo hoặc trang Wikipedia, bấm vào từ để tra ngay",
+        "Lưu từ, cụm từ và câu kèm ghi chú và nhãn",
+        "Ôn tập (Review): lặp lại ngắt quãng theo thuật toán FSRS — biết / quên / bỏ qua",
+        "Ngữ cảnh: câu bạn đã lưu hiện phía trên mục từ, kèm “Thêm ví dụ”",
+        "Luyện tập bằng bài tập nhỏ (điền từ, nghe và gõ, đọc to bằng giọng của bạn)",
+        "Nhắc ôn local (tùy chọn): badge, banner nhẹ và thông báo trên app đã cài",
+        "Phiên âm IPA thật cho hầu hết từ tiếng Anh",
+        "Thống kê: từ đã học, tỷ lệ nhớ, nguồn đã đọc",
+        "Chỉ báo độ phủ từ vựng khi đọc: % từ trong phạm vi ước tính, tô nổi 3 màu từ mới/đang học/đã biết — tính offline trên máy",
+        "Luyện điền từ (cloze) từ chính những câu bạn đã đọc, gồm cả từ biến dạng (run → running)",
+        "Xuất / nhập dạng JSON, CSV, TSV, văn bản cho Anki, hoặc bộ thẻ .apkg chuẩn một lần bấm",
+        "Hỗ trợ file .mdx/.mdd của người dùng",
+        "Không cần tài khoản, không quảng cáo, không theo dõi"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Từ điển Anh–Việt có mất phí không?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Không. Dual Dictionary miễn phí hoàn toàn, không cần tài khoản, không quảng cáo. Kể cả các tính năng mà app trả phí thu subscription — chỉ báo độ phủ khi đọc (LingQ $14.99/tháng), luyện điền từ vào câu đã đọc, xuất bộ thẻ .apkg cho Anki (Readlang $6/tháng) — đều miễn phí ở đây. Từ điển Anh–Việt dùng dữ liệu mở (OVDP, giấy phép MIT)." } },
+        { "@type": "Question", "name": "Tra offline được không?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Có. Dữ liệu từ điển tải một lần về máy (lưu trong IndexedDB của trình duyệt), sau đó tra từ hoàn toàn offline. App chạy dạng PWA, cài lên điện thoại như ứng dụng thường." } },
+        { "@type": "Question", "name": "Tra được từ đã chia thì như ran, stopped không?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Có. Từ điển Anh–Việt có 386.600 dạng tra được gồm cả biến thể từ — gõ ran sẽ thấy nghĩa dẫn về run, không phải tự đoán nguyên mẫu." } },
+        { "@type": "Question", "name": "Tôi có dùng file .mdx riêng được không?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Được. Mở ⚙ Advanced để nạp file .mdx/.mdd của bạn vào từng panel — app đọc trực tiếp định dạng MDict ngay trong trình duyệt." } },
+        { "@type": "Question", "name": "App có giúp ôn từ vựng không?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Có. Lưu từ, cụm từ và câu kèm ghi chú, gắn nhãn, rồi dùng hàng đợi Ôn tập theo thuật toán FSRS (lặp lại ngắt quãng) để nhớ lâu — tất cả offline, dữ liệu trên máy bạn. Có thể bật nhắc ôn local (tùy chọn) và luyện đọc to bằng micro." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="vi-landing">
+  <header class="vi-hero">
+    <h1>Từ điển Anh–Việt offline miễn phí cho người học tiếng Anh</h1>
+    <p class="lede">Tra WordNet và Simple English Wiktionary trong một lần tìm — một chạm chuyển giữa các từ điển, hoặc bật từ điển Anh–Việt với 386.000 mục từ. Chạy ngay trong trình duyệt, dữ liệu lưu trên máy bạn.</p>
+    <div class="vi-cta">
+      <a class="btn-primary" href="/" style="text-decoration:none">🚀 Mở từ điển ngay</a>
+      <a class="btn-secondary" href="/#about" style="text-decoration:none">Tính năng chi tiết</a>
+    </div>
+  </header>
+
+  <section class="vi-section">
+    <h2>Vì sao chọn Dual Dictionary</h2>
+    <!-- v119: the free-vs-paid banner leads the section — the new features are
+         exactly the ones paid tools put behind a subscription. -->
+    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: #0f766e; background: #f0fdfa;">
+      <strong>💡 Những gì app trả phí tính subscription — ở đây miễn phí</strong>
+      <p>Chỉ báo "độ phủ từ vựng" khi đọc (LingQ tính <strong>$14.99/tháng</strong> cho tính năng này — app của tôi đo miễn phí, hoàn toàn offline trên máy bạn). Xuất bộ thẻ <strong>.apkg</strong> chuẩn Anki một lần bấm (Readlang tính <strong>$6/tháng</strong>). Luyện <strong>điền từ vào chính câu bạn đã đọc</strong>, ôn theo lịch FSRS, Reader đa nguồn, từ điển .mdx của riêng bạn — không gói Premium, không tài khoản, không giới hạn.</p>
+    </div>
+    <div class="vi-features">
+      <div class="vi-feature"><strong>📖 Nhiều từ điển, một chạm</strong><p>WordNet 3.1, Simple English Wiktionary, Anh–Việt: tra một lần, bấm tab để đổi nguồn — so nghĩa tức thì.</p></div>
+      <div class="vi-feature"><strong>🇻🇳 Anh–Việt đầy đủ</strong><p>Một cú bấm thêm từ điển Anh–Việt mở (OVDP) 386.600 mục từ, kể cả biến thể: gõ <em>ran</em> vẫn ra <em>run</em>.</p></div>
+      <div class="vi-feature"><strong>📡 Offline thật sự</strong><p>Dữ liệu tải một lần, lưu trên máy — sau đó tra từ không cần mạng. Không phải chờ 10-15 phút nạp dữ liệu như các bản offline khác.</p></div>
+      <div class="vi-feature"><strong>📚 Reader mode</strong><p>Dán bài báo hoặc mở trang Wikipedia, bấm vào bất kỳ từ nào để tra ngay — không rời trang đang đọc.</p></div>
+      <div class="vi-feature"><strong>⭐ Lưu từ + câu gốc</strong><p>Mỗi từ được lưu kèm nguyên câu bạn đang đọc — học từ trong ngữ cảnh, không học từ khô khan.</p></div>
+      <div class="vi-feature"><strong>🗂️ Hỗ trợ .mdx/.mdd</strong><p>Đã có từ điển MDict riêng? Nạp thẳng vào app — định dạng được đọc trực tiếp trong trình duyệt.</p></div>
+      <div class="vi-feature"><strong>🗃️ Vault — sổ tay từ vựng</strong><p>Mọi từ, cụm từ, câu bạn lưu nằm gọn một chỗ: ghi chú, gắn nhãn, lọc và tìm lại dễ dàng.</p></div>
+      <div class="vi-feature"><strong>🔁 Ôn tập (Review)</strong><p>Lặp lại ngắt quãng theo thuật toán FSRS — biết / quên / bỏ qua, nhớ lâu hơn. Bật thêm nhắc ôn local (tùy chọn) để không bỏ lỡ phiên ôn.</p></div>
+      <div class="vi-feature"><strong>🎯 Luyện tập</strong><p>Biến từ đã lưu thành bài tập nhanh: điền từ còn thiếu, nghe &amp; gõ, trắc nghiệm, đọc to — biết / quên / bỏ qua.</p></div>
+      <div class="vi-feature"><strong>🔊 Phiên âm &amp; đọc to</strong><p>IPA thật cho hầu hết từ tiếng Anh; bấm micro để đọc từ và được kiểm tra bằng nhận dạng giọng của trình duyệt.</p></div>
+      <div class="vi-feature"><strong>📊 Thống kê</strong><p>Theo dõi từ đã học, tỷ lệ nhớ, số từ đến hạn ôn và những nguồn bạn đã đọc.</p></div>
+      <div class="vi-feature"><strong>📊 Độ phủ khi đọc</strong><p>Trước khi đọc, app ước tính bao nhiêu % từ trong bài nằm trong phạm vi đã ước tính, tô nổi 3 màu từ mới/đang học/đã biết — tính ngay trên máy, miễn phí (tính năng LingQ thu $14.99/tháng).</p></div>
+      <div class="vi-feature"><strong>📖 Luyện từ bài đã đọc</strong><p>Những câu bạn từng đọc trong Reader biến thành bài điền từ còn thiếu — kể cả từ biến dạng (run → running) — và ôn theo lịch FSRS.</p></div>
+      <div class="vi-feature"><strong>⬇ Xuất CSV / Anki .apkg</strong><p>Một lần bấm xuất bộ thẻ <strong>.apkg chuẩn</strong> nạp thẳng vào Anki/AnkiDroid (Readlang thu $6/tháng) — hoặc CSV, TSV, JSON tùy chọn trường.</p></div>
+    </div>
+  </section>
+
+  <section class="vi-section">
+    <h2>Học IELTS &amp; TOEIC với Dual Dictionary</h2>
+    <p>Những ai ôn thi thường hỏi: một cái từ điển thì giúp được gì cho điểm số? Câu trả lời nằm ở thói quen hằng ngày, không nằm ở ngày thi. Bốn việc dưới đây là những gì người học làm được với app mỗi ngày, không tốn thêm một phút nào cho "việc phụ":</p>
+    <ul class="vi-steps">
+      <li><strong>Ôn từ không quên</strong> — mỗi từ bạn lưu đi vào hàng đợi Ôn tập chạy thuật toán FSRS: app tự nhắc đúng lúc bạn sắp quên, đỡ phải tự nhớ xem hôm nay nên ôn từ nào.</li>
+      <li><strong>Luyện Speaking Part 2 đúng format</strong> — mục Cue card cho bạn 1 phút chuẩn bị rồi 2 phút nói, y như phòng thi; nói xong app đối chiếu lại những từ bạn đã phát ra.</li>
+      <li><strong>Luyện đọc không gián đoạn</strong> — dán bài Reading vào Reader mode, gặp từ lạ bấm vào là ra nghĩa ngay; tốc độ đọc (từ/phút) được đo luôn trong lúc đọc, thứ mà Part 7 TOEIC đòi hỏi gắt nhất.</li>
+      <li><strong>Luyện Writing Task 2 đúng giờ</strong> — Vault có mục Journal với đồng hồ 40 phút chuẩn Task 2 và đếm từ trực tiếp, viết xong bài nằm luôn trong sổ tay để đọc lại.</li>
+    </ul>
+    <p>Mọi thứ trên chạy trên chính thiết bị của bạn — kể cả khi không có mạng, kể cả khi app đã cài vào màn hình chính điện thoại. Không tài khoản, không quảng cáo, dữ liệu không đi đâu cả.</p>
+  </section>
+
+  <section class="vi-section">
+    <h2>Lộ trình &amp; kinh nghiệm tự học</h2>
+    <p>Ngoài công cụ, tôi cũng viết về phương pháp: làm sao chọn đúng từ để học, sao học ba mươi từ tối hôm trước mà sáng sau chỉ nhớ bốn năm từ, và làm sao duy trì hai mươi phút mỗi ngày giữa lịch làm việc dày đặc. Kinh nghiệm này đến từ chính quá trình học IELTS của tôi và quá trình đồng hành cùng đồng nghiệp luyện TOEIC ở công ty.</p>
+    <p>Đọc thêm tại <a href="/vi/blog/"><strong>blog học IELTS &amp; TOEIC</strong></a> — bài mới mỗi tuần, mỗi bài đều dùng được ngay không cần app.</p>
+  </section>
+
+  <section class="vi-section">
+    <h2>Bắt đầu trong 3 bước</h2>
+    <ol class="vi-steps">
+      <li><a href="/"><strong>Mở từ điển</strong></a> và bấm tải dữ liệu (khoảng 13 MB, một lần duy nhất).</li>
+      <li>Bấm <strong>🇻🇳 Add English–Vietnamese dictionary</strong> nếu muốn tra nghĩa tiếng Việt.</li>
+      <li>Tra từ, đọc bài với Reader mode, lưu từ muốn nhớ — mọi thứ hoạt động offline sau đó.</li>
+    </ol>
+  </section>
+
+  <section class="vi-section">
+    <h2>Câu hỏi thường gặp</h2>
+    <p><strong>Có mất phí không?</strong> Miễn phí hoàn toàn — không tài khoản, không quảng cáo, không theo dõi. App phi thương mại.</p>
+    <p><strong>Tra offline được không?</strong> Có — dữ liệu tải một lần về IndexedDB của trình duyệt, tra từ không cần mạng.</p>
+    <p><strong>Tra được "ran", "stopped" không?</strong> Có — 386.600 dạng tra được gồm biến thể từ, nghĩa dẫn về nguyên mẫu bằng tiếng Việt.</p>
+    <p><strong>Dùng file .mdx riêng được không?</strong> Được — mở ⚙ Advanced và nạp file vào panel bạn muốn.</p>
+    <p><strong>Có giúp ôn từ vựng không?</strong> Có — lưu từ/câu vào Vault, rồi dùng hàng đợi Ôn tập (lặp lại ngắt quãng) để nhớ lâu. Tất cả offline, trên máy bạn.</p>
+    <p><strong>Có luyện tập và xuất dữ liệu được không?</strong> Có — Vault có Export (CSV / TSV / JSON / Anki, chọn trường), và 🎯 Practice tạo bài tập nhanh (điền từ, nghe &amp; gõ, trắc nghiệm).</p>
+  </section>
+
+  <section class="vi-section">
+    <h2>Tra từ vựng online</h2>
+    <p>Xem nghĩa tiếng Việt, phiên âm và từ liên quan của <a href="/vi/tu/"><strong>6.936 từ tiếng Anh</strong></a> (phổ biến nhất + danh sách học thuật AWL) và <a href="/vi/tu/cum-tu/"><strong>3.508 cụm từ</strong></a> (phrasal verbs, collocations — 3.508 cụm biên soạn riêng) — mỗi trang một nội dung riêng, không cần tải app.</p>
+  </section>
+
+  <div class="vi-cta-bottom">
+    <a class="btn-primary" href="/">🚀 Mở từ điển ngay — miễn phí</a>
+    <p class="vi-note">Dữ liệu Anh–Việt: “Từ điển Anh–Việt” © Open Vietnamese Dictionary Project (catusf/tudien) — MIT license.</p>
+  </div>
+</div>
+</body>
+</html>

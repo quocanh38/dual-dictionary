@@ -1,0 +1,53 @@
+{
+  "id": "draft-d15f0d67-d556-4420-bde1-f31155ac1e79",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Workshop safety planning",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The workshop supervisor will carry out an inspection before a new machine is used. The team must comply with the safety rules, even when several orders are waiting. A short training session will show staff where to stop the machine and whom to contact if something goes wrong. The supervisor will ask a colleague to check that the written instructions match the controls on the machine.",
+    "rightsStatement": "Original reading composed for this project with coding-assistant assistance; no copied examination passage, third-party source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The workshop supervisor will carry out an inspection before a new machine is used. The team must comply with the safety rules, even when several orders are waiting. A short training session will show staff where to stop the machine and whom to contact if something goes wrong. The supervisor will ask a colleague to check that the written instructions match the controls on the machine.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The workshop supervisor will carry out an inspection before a new machine is used."
+      },
+      {
+        "id": "s2",
+        "text": "The team must comply with the safety rules, even when several orders are waiting."
+      },
+      {
+        "id": "s3",
+        "text": "A short training session will show staff where to stop the machine and whom to contact if something goes wrong."
+      },
+      {
+        "id": "s4",
+        "text": "The supervisor will ask a colleague to check that the written instructions match the controls on the machine."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "carry out an inspection",
+      "meaningEn": "to perform a careful check or examination",
+      "meaningVi": "tiến hành kiểm tra",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "comply with the safety rules",
+      "meaningEn": "to obey or follow the safety rules",
+      "meaningVi": "tuân thủ các quy tắc an toàn",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

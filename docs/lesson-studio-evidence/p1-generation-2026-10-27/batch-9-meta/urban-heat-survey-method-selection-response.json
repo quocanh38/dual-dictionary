@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "fair comparison",
+        "meaningEn": "a comparison made under equal conditions so the results can be compared fairly",
+        "meaningVi": "sự so sánh công bằng",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "provisional estimate",
+        "meaningEn": "a temporary approximate value that may be changed after more information is checked",
+        "meaningVi": "ước tính tạm thời",
+        "sourceSentenceId": "s4"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 536,
+    "outputTokens": 1098,
+    "totalTokens": 1634
+  },
+  "status": 200,
+  "latencyMs": 7318,
+  "model": "muse-spark-1.3"
+}

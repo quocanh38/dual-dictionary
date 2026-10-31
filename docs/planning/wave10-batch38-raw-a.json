@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 38,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after indian corn, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes. Regional, historical, legal, financial, scientific and technical labels are stated; dated/offensive terminology is explicitly flagged; source text/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2080,
+    "remainingRawOnlyAfter": 2060
+  },
+  "selected": [
+    "indian red",
+    "indirect discourse",
+    "indirect tax",
+    "individual retirement account",
+    "industrial arts",
+    "industrial park",
+    "inferiority complex",
+    "information science",
+    "information theory",
+    "inheritance tax",
+    "ink pad",
+    "inland revenue",
+    "inner tube",
+    "inside track",
+    "insider trading",
+    "instrument panel",
+    "insulating tape",
+    "insurance policy",
+    "integral calculus",
+    "integrated circuit"
+  ]
+}

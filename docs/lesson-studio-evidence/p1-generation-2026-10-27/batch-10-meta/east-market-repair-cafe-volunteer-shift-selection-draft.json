@@ -1,0 +1,69 @@
+{
+  "id": "draft-593359c8-d912-43aa-acc3-63f4ce979bb3",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "A Repair Café Volunteer Shift",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "At the East Market repair café, volunteers meet at 9 a.m. to prepare shared tools for a free repair session. New volunteers sign up for a shift using the schedule beside the entrance. The shift lead checks each tool and places items that need attention in a labelled tray. If the café runs out of a common part, volunteers record the item and tell the visitor what can be repaired that day. They do not promise a completion time until a technician has inspected the item. At closing, the lead passes on any unfinished requests to the next team. Visitors may wait in the seating area while a repair is in progress.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "At the East Market repair café, volunteers meet at 9 a.m. to prepare shared tools for a free repair session. New volunteers sign up for a shift using the schedule beside the entrance. The shift lead checks each tool and places items that need attention in a labelled tray. If the café runs out of a common part, volunteers record the item and tell the visitor what can be repaired that day. They do not promise a completion time until a technician has inspected the item. At closing, the lead passes on any unfinished requests to the next team. Visitors may wait in the seating area while a repair is in progress.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "At the East Market repair café, volunteers meet at 9 a.m."
+      },
+      {
+        "id": "s2",
+        "text": "to prepare shared tools for a free repair session."
+      },
+      {
+        "id": "s3",
+        "text": "New volunteers sign up for a shift using the schedule beside the entrance."
+      },
+      {
+        "id": "s4",
+        "text": "The shift lead checks each tool and places items that need attention in a labelled tray."
+      },
+      {
+        "id": "s5",
+        "text": "If the café runs out of a common part, volunteers record the item and tell the visitor what can be repaired that day."
+      },
+      {
+        "id": "s6",
+        "text": "They do not promise a completion time until a technician has inspected the item."
+      },
+      {
+        "id": "s7",
+        "text": "At closing, the lead passes on any unfinished requests to the next team."
+      },
+      {
+        "id": "s8",
+        "text": "Visitors may wait in the seating area while a repair is in progress."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "sign up for a shift",
+      "meaningEn": "to register to work during a particular period of time",
+      "meaningVi": "đăng ký làm một ca làm việc",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "runs out of",
+      "meaningEn": "to have no more of something left because it has all been used",
+      "meaningVi": "hết sạch, không còn thứ gì đó",
+      "sourceSentenceId": "s5"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

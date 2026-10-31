@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-10",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:35:06.605Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2824,
+    "outputTokens": 7812,
+    "totalTokens": 10636
+  },
+  "latencyMs": 19374,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listening\":{\"title\":\"Campus Water-Saving Project Discussion\",\"focus\":\"comparing two campus water-saving interventions and handling limitations\",\"part\":\"Part 3\",\"script\":\"Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\\n\\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\\n\\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\\n\\nDr. Lee: And was that consistent across both buildings?\\n\\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\\n\\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\\n\\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\\n\\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\\n\\nDr. Lee: So the headline figure was a bit misleading?\\n\\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\\n\\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\\n\\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\\n\\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\\n\\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\\n\\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.\",\"questions\":[{\"title\":\"Building C Result\",\"prompt\":\"What did Marco report about water use in Building C?\",\"options\":[\"Rose slightly due to conference guests\",\"Stayed same as previous semester\",\"Fell by about 18% in early weeks\",\"Dropped 6% after information campaign\"],\"answer\":2,\"explanation\":\"The script gives an 18% fall in Building C in the first eight weeks. The 6% figure refers to Building D, making that distractor incorrect.\"},{\"title\":\"Building D Difference\",\"prompt\":\"Why was the saving smaller in Building D?\",\"options\":[\"Guests did not receive guidance leaflet\",\"Showerheads were different model installed\",\"Building had fewer occupied rooms\",\"Water pressure limited shower flow\"],\"answer\":0,\"explanation\":\"Speakers attribute the 6% result to short-stay guests missing the leaflet, so behaviour didn't change. A different equipment model was explicitly ruled out.\"},{\"title\":\"Irrigation Correction\",\"prompt\":\"What correction does Marco make about irrigation savings?\",\"options\":[\"Cost was lower than first stated\",\"22% saving applied only to dry months\",\"System was not fully automated\",\"Data covered full year, not semester\"],\"answer\":1,\"explanation\":\"Marco corrects himself that 22% was for June-August only, with 14% across the semester. The cost was not corrected.\"},{\"title\":\"Cost Comparison\",\"prompt\":\"What do students conclude about cost-effectiveness?\",\"options\":[\"Irrigation saved less water overall\",\"Both systems cost about the same\",\"Irrigation better value despite high cost\",\"Showerheads cheaper per litre saved\"],\"answer\":3,\"explanation\":\"They calculate ~144,000 litres total for $900 (<1 cent per litre) versus ~96,000 litres for over $6,000 (>6 cents per litre), so showerheads are cheaper per litre.\"},{\"title\":\"Long-Term Limitation\",\"prompt\":\"What limitation do they agree prevents long-term claims?\",\"options\":[\"Sensors failed during hot months\",\"Need another year of data as occupants change\",\"University will remove both systems\",\"Previous semester data was incomplete\"],\"answer\":1,\"explanation\":\"Priya says annual student turnover means another year of data is needed to judge durability. Sensor failure was never mentioned.\"}]},\"reading\":{\"title\":\"Measuring Environmental Change with Imperfect Data\",\"focus\":\"evaluating bias and uncertainty in urban cooling and bird-count estimates\",\"passage\":\"Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\\n\\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\\n\\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\\n\\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\\n\\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\\n\\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.\",\"questions\":[{\"title\":\"General Problem\",\"prompt\":\"What problem does the author identify with environmental datasets?\",\"options\":[\"They often rely on uneven or changing collection methods\",\"They are rarely available for cities\",\"They focus only on temperature\",\"They are collected mainly by professionals\"],\"answer\":0,\"explanation\":\"The opening frames both cases as data not collected for research with uneven coverage. The city-only option is too narrow.\"},{\"title\":\"Cooling Bias\",\"prompt\":\"Why was the initial urban cooling estimate inflated?\",\"options\":[\"Satellite maps were less precise\",\"Sensors measured only at night\",\"Parks were smaller than assumed\",\"Green areas were over-represented in sample\"],\"answer\":3,\"explanation\":\"The passage says 60% of sensors were in parks/avenues, inflating the 2.1°C average. Satellite precision is a separate limitation, not the cause.\"},{\"title\":\"Adjusted Finding\",\"prompt\":\"According to the passage, what did the adjusted cooling analysis conclude?\",\"options\":[\"Cooling reached 2.1°C across entire city\",\"Cooling averaged about 1.2°C near parks with variation\",\"Satellite data proved street-level cooling exactly\",\"Industrial zones were cooler than parks\"],\"answer\":1,\"explanation\":\"The weighted estimate was ~1.2°C within 200m, varying by size/wind/time. The 2.1°C figure was the unadjusted example, not the authors' claim.\"},{\"title\":\"Bird Trend Inference\",\"prompt\":\"What can reasonably be inferred about the sparrow decline?\",\"options\":[\"Decline was definitely 15% nationwide\",\"Suburban gardens showed the steepest drop\",\"About 8% decline remains but uncertainty is wide\",\"Volunteer counts prove farming caused decline\"],\"answer\":2,\"explanation\":\"After adjusting for effort, ~8% remains but authors note wide uncertainty and non-uniform trends. The 15% headline and suburban-drop options contradict the adjusted analysis.\"},{\"title\":\"Reporting Recommendation\",\"prompt\":\"What do authors recommend for reporting such results?\",\"options\":[\"Present both raw and adjusted figures with limits\",\"Use only satellite data for future studies\",\"Avoid citizen science due to errors\",\"Report single headline figure for clarity\"],\"answer\":0,\"explanation\":\"The conclusion advises reporting both initial and adjusted figures with explanations. Using only one source or a single headline opposes that qualified approach.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Campus Water-Saving Project Discussion",
+      "focus": "comparing two campus water-saving interventions and handling limitations",
+      "part": "Part 3",
+      "script": "Dr. Lee: Right, Priya and Marco, you were comparing the two campus water-saving trials from last term. What did you find?\n\nPriya: We focused on the low-flow showerheads fitted in the north residences and the sensor-based irrigation system on the main sports fields. Both ran for one semester, which was 120 days.\n\nMarco: For the showerheads, the data looked promising at first. In Building C, water use fell by about 18% in the first eight weeks compared to the previous semester.\n\nDr. Lee: And was that consistent across both buildings?\n\nPriya: No, that's the interesting part. In Building D, the saving was only around 6%. The equipment was identical, so we checked occupancy records.\n\nMarco: Building D had many short-stay conference guests in that period. They didn't receive the information leaflet about shorter showers, so behaviour hardly changed. It shows technology alone isn't enough.\n\nPriya: The irrigation system was different because it's automated. It adjusts watering based on soil moisture.\n\nMarco: It cut outdoor water use by 22% — actually, sorry, that figure is only for the dry period from June to August. Across the whole semester, the average saving was about 14%.\n\nDr. Lee: So the headline figure was a bit misleading?\n\nMarco: Yes. On the hottest days it saved more than the showerheads — about 1,600 litres a day — but averaged across the full 120-day semester it saved only about 800 litres a day, so about 96,000 litres in total.\n\nPriya: The showerheads saved roughly 1,200 litres a day on average across the same semester, so about 144,000 litres in total. The installation cost was about $900 for the showerheads in both residences, compared to over $6,000 for the irrigation system.\n\nMarco: If you divide the installation cost by the total litres saved that semester, the showerheads cost less than one cent per litre, while the irrigation system cost over six cents per litre. So the cost per litre saved was much better for the showerheads.\n\nPriya: But the effect depends on people. The showerheads only work well if behaviour changes.\n\nMarco: Exactly. We concluded the showerheads offer better value if the university improves student briefings, while the irrigation system offers more reliable, automated savings, but mainly in the dry season.\n\nPriya: And we can't really claim long-term success yet. Students change every year, so we'd need at least another year of data to see if either saving lasts.",
+      "questions": [
+        {
+          "title": "Building C Result",
+          "prompt": "What did Marco report about water use in Building C?",
+          "options": [
+            "Rose slightly due to conference guests",
+            "Stayed same as previous semester",
+            "Fell by about 18% in early weeks",
+            "Dropped 6% after information campaign"
+          ],
+          "answer": 2,
+          "explanation": "The script gives an 18% fall in Building C in the first eight weeks. The 6% figure refers to Building D, making that distractor incorrect."
+        },
+        {
+          "title": "Building D Difference",
+          "prompt": "Why was the saving smaller in Building D?",
+          "options": [
+            "Guests did not receive guidance leaflet",
+            "Showerheads were different model installed",
+            "Building had fewer occupied rooms",
+            "Water pressure limited shower flow"
+          ],
+          "answer": 0,
+          "explanation": "Speakers attribute the 6% result to short-stay guests missing the leaflet, so behaviour didn't change. A different equipment model was explicitly ruled out."
+        },
+        {
+          "title": "Irrigation Correction",
+          "prompt": "What correction does Marco make about irrigation savings?",
+          "options": [
+            "Cost was lower than first stated",
+            "22% saving applied only to dry months",
+            "System was not fully automated",
+            "Data covered full year, not semester"
+          ],
+          "answer": 1,
+          "explanation": "Marco corrects himself that 22% was for June-August only, with 14% across the semester. The cost was not corrected."
+        },
+        {
+          "title": "Cost Comparison",
+          "prompt": "What do students conclude about cost-effectiveness?",
+          "options": [
+            "Irrigation saved less water overall",
+            "Both systems cost about the same",
+            "Irrigation better value despite high cost",
+            "Showerheads cheaper per litre saved"
+          ],
+          "answer": 3,
+          "explanation": "They calculate ~144,000 litres total for $900 (<1 cent per litre) versus ~96,000 litres for over $6,000 (>6 cents per litre), so showerheads are cheaper per litre."
+        },
+        {
+          "title": "Long-Term Limitation",
+          "prompt": "What limitation do they agree prevents long-term claims?",
+          "options": [
+            "Sensors failed during hot months",
+            "Need another year of data as occupants change",
+            "University will remove both systems",
+            "Previous semester data was incomplete"
+          ],
+          "answer": 1,
+          "explanation": "Priya says annual student turnover means another year of data is needed to judge durability. Sensor failure was never mentioned."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Measuring Environmental Change with Imperfect Data",
+      "focus": "evaluating bias and uncertainty in urban cooling and bird-count estimates",
+      "passage": "Environmental monitoring often depends on data that were not collected for research. Two examples show why careful adjustment and clear reporting of uncertainty are essential.\n\nA recent study examined how much urban parks cool surrounding streets. The city had installed 80 temperature sensors to guide planning, but their placement was uneven. About 60% were in parks or tree-lined avenues where cooling was expected, while industrial zones and dense housing had few sensors. An initial analysis that averaged all sensors equally suggested parks lowered nearby temperatures by 2.1°C on hot afternoons.\n\nResearchers argued this figure was inflated because cooler, greener locations were over-represented. They re-analysed the data by weighting each sensor according to the type of land it represented, so that under-sampled built-up areas counted more. They also compared sensor readings with satellite surface-temperature maps, which cover the whole city but are less precise at street level. The weighted estimate was about 1.2°C of cooling within 200 metres of a park, with a smaller effect further away. The authors stressed this is still an average; cooling varied with park size, wind, and time of day, and the satellite comparison could not confirm exact street-level differences.\n\nA similar problem affects long-term bird counts. For twenty years, volunteers have recorded garden birds each winter weekend. Headlines reported a 15% decline in a common sparrow species, raising concern. However, the number and experience of volunteers changed over time. In the first five years, fewer people took part and some misidentified similar species, while later years had more observers and better training, plus a mobile app that prompted careful checks.\n\nWhen analysts accounted for observer effort — the hours spent counting — and excluded uncertain identifications, the estimated decline fell to about 8%. Moreover, the trend was not uniform. In suburban gardens the numbers were stable, while the drop was concentrated in rural edges where farmland management had changed. The researchers noted the remaining 8% decline might still reflect real change, but the range of uncertainty was wide, and they could not rule out a smaller or larger shift without more standardised surveys.\n\nBoth cases illustrate a broader point. Raw averages can mislead when coverage is uneven or methods evolve. Adjusting for bias and comparing independent sources gives a more cautious picture, but it also introduces its own limitations. The authors recommend reporting both the initial and adjusted figures, explaining what each omits, rather than presenting a single headline number as certain.",
+      "questions": [
+        {
+          "title": "General Problem",
+          "prompt": "What problem does the author identify with environmental datasets?",
+          "options": [
+            "They often rely on uneven or changing collection methods",
+            "They are rarely available for cities",
+            "They focus only on temperature",
+            "They are collected mainly by professionals"
+          ],
+          "answer": 0,
+          "explanation": "The opening frames both cases as data not collected for research with uneven coverage. The city-only option is too narrow."
+        },
+        {
+          "title": "Cooling Bias",
+          "prompt": "Why was the initial urban cooling estimate inflated?",
+          "options": [
+            "Satellite maps were less precise",
+            "Sensors measured only at night",
+            "Parks were smaller than assumed",
+            "Green areas were over-represented in sample"
+          ],
+          "answer": 3,
+          "explanation": "The passage says 60% of sensors were in parks/avenues, inflating the 2.1°C average. Satellite precision is a separate limitation, not the cause."
+        },
+        {
+          "title": "Adjusted Finding",
+          "prompt": "According to the passage, what did the adjusted cooling analysis conclude?",
+          "options": [
+            "Cooling reached 2.1°C across entire city",
+            "Cooling averaged about 1.2°C near parks with variation",
+            "Satellite data proved street-level cooling exactly",
+            "Industrial zones were cooler than parks"
+          ],
+          "answer": 1,
+          "explanation": "The weighted estimate was ~1.2°C within 200m, varying by size/wind/time. The 2.1°C figure was the unadjusted example, not the authors' claim."
+        },
+        {
+          "title": "Bird Trend Inference",
+          "prompt": "What can reasonably be inferred about the sparrow decline?",
+          "options": [
+            "Decline was definitely 15% nationwide",
+            "Suburban gardens showed the steepest drop",
+            "About 8% decline remains but uncertainty is wide",
+            "Volunteer counts prove farming caused decline"
+          ],
+          "answer": 2,
+          "explanation": "After adjusting for effort, ~8% remains but authors note wide uncertainty and non-uniform trends. The 15% headline and suburban-drop options contradict the adjusted analysis."
+        },
+        {
+          "title": "Reporting Recommendation",
+          "prompt": "What do authors recommend for reporting such results?",
+          "options": [
+            "Present both raw and adjusted figures with limits",
+            "Use only satellite data for future studies",
+            "Avoid citizen science due to errors",
+            "Report single headline figure for clarity"
+          ],
+          "answer": 0,
+          "explanation": "The conclusion advises reporting both initial and adjusted figures with explanations. Using only one source or a single headline opposes that qualified approach."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-2",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Commuter Travel Survey Discussion",
+      "focus": "understanding seasonal patterns and survey limits",
+      "part": "Part 3",
+      "script": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "wordCount": 374
+    },
+    "reading": {
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "wordCount": 415
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-2-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Commuter Travel Survey Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "understanding seasonal patterns and survey limits",
+      "transcript": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "prompt": "What is the final total of completed questionnaires?",
+      "options": [
+        "340 completed forms",
+        "360 completed forms",
+        "380 completed forms",
+        "420 completed forms"
+      ],
+      "answer": 2,
+      "explanation": "Jonas corrects 340 to 380 after including evening-class returns. The strongest distractor 340 fails because it was the initial miscount before the correction."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Commuter Travel Survey Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "understanding seasonal patterns and survey limits",
+      "transcript": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "prompt": "What comparison was the survey designed to make?",
+      "options": [
+        "Travel by bus, cycling and car-sharing in February versus June",
+        "Travel costs for staff versus second-year students",
+        "Parking permits for cars versus bicycles",
+        "Evening-class attendance in winter versus summer"
+      ],
+      "answer": 0,
+      "explanation": "Jonas confirms three travel options and the same form in February and June to compare cold and warm months. The staff-versus-students distractor fails because those groups were both included in the same sample, not compared on costs."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Commuter Travel Survey Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "understanding seasonal patterns and survey limits",
+      "transcript": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "prompt": "What change was found between February and June?",
+      "options": [
+        "Car-sharing rose sharply while bus use stayed stable",
+        "Bus use fell while cycling rose markedly",
+        "Cycling fell while car-sharing replaced bus travel",
+        "Bus and cycling both increased equally"
+      ],
+      "answer": 1,
+      "explanation": "The script gives bus use 42% to 28% and cycling 11% to 31%, with car-sharing steady. The car-sharing-rose option fails because car-sharing is explicitly described as fairly steady at 18 to 20%."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Commuter Travel Survey Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "understanding seasonal patterns and survey limits",
+      "transcript": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "prompt": "What limitation do the speakers identify in the seasonal comparison?",
+      "options": [
+        "The February form used different questions",
+        "Bus arrival times were not recorded",
+        "Interview answers were too short to analyse",
+        "The June sample under-represented first-year students"
+      ],
+      "answer": 3,
+      "explanation": "Maya and Jonas agree June had far fewer first-years due to placements, so summer figures mainly reflect continuing students and staff. The different-questions distractor fails because they stress they sent the same form in both months."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Commuter Travel Survey Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "understanding seasonal patterns and survey limits",
+      "transcript": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "prompt": "What is the speakers' conclusion about a subsidised bus pass?",
+      "options": [
+        "It would increase bus use only if morning frequency improved",
+        "It is unnecessary because most students prefer cycling",
+        "It should be offered only to car-sharers",
+        "It would succeed because price is the main concern"
+      ],
+      "answer": 0,
+      "explanation": "Jonas reports conditional support: cheaper fare alone would not change habits without buses every 15 minutes before 9 a.m. The price-is-main-concern distractor fails because passengers were less concerned about price than late arrivals."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "prompt": "What was the main design of the study?",
+      "options": [
+        "A laboratory test of saltmarsh grass growth",
+        "A comparison of two restoration methods on the same estuary",
+        "A survey of farmers' views on seawalls",
+        "A history of sea-level rise since 2019"
+      ],
+      "answer": 1,
+      "explanation": "The passage introduces North Marsh tidal reconnection and South Inlet replanting on the same estuary. The laboratory-test distractor fails because all measurements were field monitoring of plots, birds and sediment."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "prompt": "How did the restoration methods differ?",
+      "options": [
+        "Both sites removed seawalls in the same year",
+        "Both sites relied only on natural seed dispersal",
+        "One site restored tidal flow while the other planted and fenced grasses",
+        "One site focused on birds while the other focused on sediment"
+      ],
+      "answer": 3,
+      "explanation": "North Marsh lowered a seawall section in 2019; South Inlet replanted grasses in 2020-2021 and fenced against grazing. The both-removed-seawalls distractor fails because South Inlet remained behind a bank."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "prompt": "According to the 2020-2024 results, which contrast is accurate?",
+      "options": [
+        "North Marsh gained cover and bird diversity faster, but suffered greater storm seedling loss",
+        "South Inlet had higher plant cover and more rare waders than North Marsh",
+        "Both sites reached identical plant cover and sediment rates",
+        "North Marsh had lower sediment gain and fewer bird species"
+      ],
+      "answer": 0,
+      "explanation": "North Marsh reached 68% cover and 22 species versus South Inlet's 34% cover and 14 species, but lost a third of seedlings in the 2022 storm compared with under 10% in fenced plots. The South-Inlet-higher distractor fails because its cover was patchy and its birds were mostly common species."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "prompt": "What is the author's general claim, and how does the North Marsh storm example function?",
+      "options": [
+        "Planting always fails; the storm proves fences are useless",
+        "Storms never affect fenced sites; the example proves total protection",
+        "Success should mean resilience under disturbance, not cover alone; the 2021-2022 loss illustrates high cover without stability",
+        "Sea-level rise has stopped; sediment gain proves the threat is over"
+      ],
+      "answer": 2,
+      "explanation": "The authors claim functional resilience matters more than cover alone, using high 2021 cover followed by heavy 2022 losses as an illustration. The planting-always-fails distractor fails because fenced planting had 74% survival and is described as more predictable on sheltered ground."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "pathwayStage": "band-6-5",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "prompt": "What limited inference is supported about future stability?",
+      "options": [
+        "Both projects are proven stable for the next fifty years",
+        "Longer monitoring beyond five years is needed because storm frequency may test early gains",
+        "South Inlet will certainly develop rare wader habitat within one year",
+        "Incomplete baselines prove the results have no value"
+      ],
+      "answer": 1,
+      "explanation": "The conclusion calls for monitoring beyond five years to assess stability under more frequent storms, a qualified inference. The proven-stable-for-fifty-years distractor fails because the authors stress different starting conditions, incomplete baselines and storm vulnerability."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Museum Visitor-Flow Evaluation",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing dwell time, congestion and satisfaction across galleries",
+      "prompt": "This is an original practice task. You should spend about 20 minutes on this task. The table below shows results from a visitor-flow evaluation at Harbridge Museum during three weekends in March 2025. The data combine sensor counts with 412 exit questionnaires. The South Gallery was closed for maintenance during the second weekend, so its figures are based on two weekends only. Gallery | Average visitors per hour | Average dwell time in minutes | Visitors rating crowding as high | Visitors rating experience as good or excellent: Entrance Hall | 210 | 8 | 18% | 82% | North Wing - Local History | 95 | 22 | 12% | 88% | East Wing - Natural World | 165 | 19 | 47% | 64% | South Gallery - Temporary Exhibition | 140 | 26 | 52% | 71% | Riverside Cafe and Shop | 120 | 15 | 21% | 90%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Note any important qualifications or limits in the data. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · University Research-Participant Recruitment Plan",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing recruitment channels by response, eligibility and enrolment",
+      "prompt": "This is an original practice task. You should spend about 20 minutes on this task. The table below shows the recruitment plan and early outcomes for a Westfield University project on sleep and study habits in February 2025. The team aimed to enrol 120 first-year undergraduates. Channel | Students contacted | Responses received | Eligible after screening | Finally enrolled: Direct email invitation | 800 | 132 | 68 | 54 | Brief announcement in lectures | 600 | 98 | 61 | 48 | Posters in library and dormitories | contacts estimated 450 | 41 | 22 | 15 | Student society social media posts | contacts estimated 900 | 76 | 28 | 19. Screening excluded students working night shifts and those already in another sleep study. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Local River-Access Survey",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing use, ratings and barriers at three River Cole points",
+      "prompt": "This is an original practice task. You should spend about 20 minutes on this task. The table below shows results from a local survey about public access to the River Cole in April 2025. A total of 380 residents living within 2 km of the river completed the questionnaire. Access point | Used at least monthly | Average access rating out of 10 | Most commonly reported barrier with share of users: Mill Lane Steps | 34% | 6.8 | Limited parking reported by 38% | Alder Park Slipway | 52% | 7.9 | Litter and unclear swimming rules reported by 29% | Stonebridge Meadow Path | 27% | 5.4 | Muddy path and poor lighting reported by 51%. The survey was distributed online and at Alder Park, so regular park users may be over-represented. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Museums and Visitor Limits",
+      "pathwayStage": "band-6-5",
+      "focus": "Discussing timed entry, learning quality and public access",
+      "prompt": "This is an original practice task. You should spend about 40 minutes on this task. Some people suggest that popular museums such as Harbridge Museum should use timed tickets and strict limits on visitor numbers to reduce crowding and improve learning. Others argue that such limits reduce public access and that crowding can be managed in other ways, such as better information, wider paths, or extended opening hours. Discuss both views and give your own opinion. Support your points with reasons and examples. Compare the strength of the evidence for each side and qualify your claims where the evidence is incomplete or uncertain. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · River Access and Environmental Care",
+      "pathwayStage": "band-6-5",
+      "focus": "Balancing recreation, safety and protection of riversides",
+      "prompt": "This is an original practice task. You should spend about 40 minutes on this task. Many local councils want to improve public access to rivers like the River Cole by building paths, steps, parking and signs. Some residents welcome easier access for walking, paddling and fishing. Others worry that more visitors will cause litter, disturbance to wildlife and safety problems if maintenance budgets are limited. To what extent do you agree that councils should expand river access even when long-term maintenance cannot be fully guaranteed? Give reasons for your answer and include relevant examples. Acknowledge limitations and situations where your argument may not apply. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Museums and Public Spaces",
+      "pathwayStage": "band-6-5",
+      "focus": "Everyday habits, preferences and short explanations",
+      "prompt": "This is original practice. Answer in 2-3 sentences for each question. 1. How often do you visit museums or galleries, and why? 2. What kind of public space do you most enjoy spending time in? 3. Do you prefer visiting busy popular places or quieter places? Why? 4. How do you usually find information before visiting a new place in your area?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Study, Help and Outdoor Life",
+      "pathwayStage": "band-6-5",
+      "focus": "Routines, volunteering and use of riversides",
+      "prompt": "This is original practice. Answer in 2-3 sentences for each question. 1. What is your current study or work routine like during the week? 2. Have you ever volunteered to help with a university project or community survey? Why or why not? 3. How often do you walk or spend time near a river, lake or park? 4. What would make outdoor places near your home more pleasant to use?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Crowded Public Visit",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing an experience and evaluating its effect",
+      "prompt": "This is original practice. Describe a visit to a museum, gallery or other public building where the number of visitors affected your experience. You should say: • where you went and when you went there • what you saw or did there • how the number of other visitors influenced what happened • and explain how this visit changed your view of that place, if at all. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Riverside Place for Improvement",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing a place and suggesting qualified improvements",
+      "prompt": "This is original practice. Describe a riverside, park or other outdoor place in your area that you think could be improved for public access. You should say: • where this place is and what it is like now • how people currently use it • what problems or limits affect its use • and explain what changes you would suggest and why they would help. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Using Surveys and Volunteers in Research",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating methods, bias and practical limits",
+      "prompt": "This is original practice. Discuss the following questions, giving reasons and evaluation rather than memorised facts. 1. Why might university researchers find it difficult to recruit enough participants for studies? 2. What are the advantages and limitations of using online surveys to understand how people use museums or riversides? 3. How can organisers judge whether evidence from a small local survey is strong enough to support a decision? 4. In what situations should public access be limited to protect an environment, even if many people want to visit?"
+    }
+  ]
+}

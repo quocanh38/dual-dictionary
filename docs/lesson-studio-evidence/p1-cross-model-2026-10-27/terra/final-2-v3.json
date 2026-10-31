@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "cc786a681c105226a8f87876f8c5a79aca60f123f6ffc49b79bba86debfab612",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-terra (configured local reviewer)",
+  "reviewedAt": "2026-10-27T04:15:48.290264+00:00",
+  "note": "AI-assisted complete re-review of this exact final payload, not human certification. I inadvertently read the historical quality-review.md pilot review before the previous round; therefore this review is not fully blinded to earlier findings. Source rights rely on pack provenance assertions, without independent chain-of-title verification.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Metadata identifies the project as author, states AI-assisted original source and no learner data; reading contains no apparent PII. Authorship and permission for distribution are declared, not independently verified."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 uses keep track of for customer requests throughout a trial."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Stay informed by monitoring over time fits the requests in context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Theo dõi để nắm được thông tin cập nhật về điều gì conveys the meaning with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 includes take into account training time before choosing the launch date."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Considering something while deciding or planning captures the phrase in s2."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Cân nhắc, tính đến điều gì khi đưa ra quyết định hoặc kế hoạch accurately conveys the sense."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a means monitoring and staying aware; b ignoring and c completing in a day do not define monitoring."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a and c correctly state that notes are optional; b contrasts ignoring with monitoring without requiring recording; summary is consistent."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b correctly says keeps track of hours; a uses on where this expression needs of, c omits of."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Every option identifies the actual preposition issue or natural usage; spreadsheet is correctly described as one method."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c describes considering training time for launch planning; a ignores it and b describes training speed, neither means consideration."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations and summary distinguish ignoring and speed from considering a factor, identifying c."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a naturally considers travel time; b adds of after account, c changes the fixed word order."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a gives the sense; b identifies extraneous of and c identifies the order error; summary matches."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Advice to a friend buying a laptop changes recipient and purpose from workplace launch planning."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Model gives two friendly advice sentences and uses the exact phrase naturally; checklist covers phrase, purpose, length and factor, with self-assessment only."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "uncertain",
+      "resolved": true,
+      "evidence": "Current q2c omits of and q4c changes word order; these objective errors replace the previously flagged intention-based distractors."
+    }
+  ],
+  "editorialDecision": "ready-for-approval"
+}

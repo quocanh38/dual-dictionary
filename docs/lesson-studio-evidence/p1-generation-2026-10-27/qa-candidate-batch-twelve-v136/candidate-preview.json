@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-10-27T09:33:47.646Z",
+  "results": [
+    {
+      "id": "east-dock-refill-shop-stock-check",
+      "status": "PASS",
+      "candidateSha256": "4f994d95dd9bc3af8ea6fcc6efa22e38c1c8868fb58a098817ab7e36847864ea",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "staggered-start-time-policy-rollout",
+      "status": "PASS",
+      "candidateSha256": "585209460808922f22ca9ca21b732da68913503305d6177dbd527cfb9d1630b2",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "student-podcast-interview-editing",
+      "status": "PASS",
+      "candidateSha256": "3d2d447057fff8eb9aaac184a96a8b161ba7faad210dd67ca3d9797b4be50b9d",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

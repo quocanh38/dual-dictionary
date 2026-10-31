@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "bring forward",
+        "meaningEn": "to move an event to an earlier time or date",
+        "meaningVi": "dời lên sớm hơn",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "put off",
+        "meaningEn": "to postpone something to a later time",
+        "meaningVi": "hoãn lại",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 533,
+    "outputTokens": 698,
+    "totalTokens": 1231
+  },
+  "status": 200,
+  "latencyMs": 4734,
+  "model": "muse-spark-1.3"
+}

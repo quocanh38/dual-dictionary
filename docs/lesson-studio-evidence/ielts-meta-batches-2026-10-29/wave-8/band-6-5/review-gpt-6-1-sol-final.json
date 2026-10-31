@@ -1,0 +1,85 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "348fbf3cd5425a65f4c4ee2e45b85bfdf262bbe8402303fb40e0d5322b0c2930",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "sharedContexts.listening.script; listening-04/05 explanations",
+      "severity": "minor",
+      "issue": "Distinguish concentration (mg/litre) from seasonal load (mass over time) more clearly: the adjusted load should be compared with an unadjusted load estimate, rather than a simple concentration average. The script does state flow data were used; no key ambiguity results."
+    },
+    {
+      "item": "writingPrompts",
+      "severity": "minor",
+      "issue": "Three Task1 prompts and two Task2 prompts are consistent internally; confirm intended practice mix."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking; complete contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete 321-word river project dialogue read. Verified 3 missingAprilweeksoutof 16 fromfloodedaccess,2.1 mg/litreinitialmean,peakflow/nonrandomgap,4.5 mg/litreprediction/almost 30%loadincrease,unverifiedfloodpeak and automatedsampler recommendation. All keys [0,1,2,3,1],20 options/explanations supported;concentration/load comparison clarity noted separately.",
+    "reading": "Complete 412-word mentoring evaluation read. Verifiedfirstyear 80%confidence/92 vs 85 retentionselectionlimits,secondyearcapacitycomparison/belongingbenefit/notselfefficacy/generalgrades,Engineeringsmallsubgroup,thirdyearattendance 40%/Juneadvantagefadesbyyear 2,initialtransitionclaimversuslongtermoutcomes. Keys [0,1,2,0,3],alloptions/explanations supported.",
+    "writing": "All five Writing prompts read. Mentoring 120/150 groups provide retention/GPA/satisfaction/meetings and self-selection/scope note. Health 2 cities×3 measures complete participation/improvement percentages with explicit adult-survey denominators 1200/1150. Waste 820=210+340+270,760=180+310+270,690=140+280+270;recycling/attendeecountscomplete. TwoTask 2 prompts support qualified expansion/wasteevaluation. All 150/20 and 250/40 instructions/metadata correct.",
+    "speaking": "All five Speaking prompts read:2 personal-basedPart 1 sets,guidancePart 2 with 4 visiblebullets/prep/duration/follow-up,2 Part 3 setsreasonthroughprogramme/waste evidence. Advanced practice difficulty coherent,technicaldetailsavailableincontexts.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "wordCounts": {
+        "listening": 321,
+        "reading": 412
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API, model meta-models/muse-spark-open-1026, wave8-v1 prompt versions and repair provenance read. No recognisable official-question copying or score guarantee found; no exhaustive plagiarism audit. Fictional study statistics assessed for consistency. Band7 real-city policy dates were checked against municipal sources and conflict with passage. Stage labels are practice targets, not validated attainment.",
+    "independence": "No initial or final reports by other reviewers read. Final content reviewed directly in full.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-6-5-listening-01",
+      "ielts-meta-wave-8-band-6-5-listening-02",
+      "ielts-meta-wave-8-band-6-5-listening-03",
+      "ielts-meta-wave-8-band-6-5-listening-04",
+      "ielts-meta-wave-8-band-6-5-listening-05",
+      "ielts-meta-wave-8-band-6-5-reading-01",
+      "ielts-meta-wave-8-band-6-5-reading-02",
+      "ielts-meta-wave-8-band-6-5-reading-03",
+      "ielts-meta-wave-8-band-6-5-reading-04",
+      "ielts-meta-wave-8-band-6-5-reading-05",
+      "ielts-meta-wave-8-band-6-5-writing-01",
+      "ielts-meta-wave-8-band-6-5-writing-02",
+      "ielts-meta-wave-8-band-6-5-writing-03",
+      "ielts-meta-wave-8-band-6-5-writing-04",
+      "ielts-meta-wave-8-band-6-5-writing-05",
+      "ielts-meta-wave-8-band-6-5-speaking-01",
+      "ielts-meta-wave-8-band-6-5-speaking-02",
+      "ielts-meta-wave-8-band-6-5-speaking-03",
+      "ielts-meta-wave-8-band-6-5-speaking-04",
+      "ielts-meta-wave-8-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

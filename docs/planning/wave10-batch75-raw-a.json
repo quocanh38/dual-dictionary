@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 75,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after round off; reviewed against local OALD 10 and LDOCE 6. All Vietnamese definitions, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Prioritize common phrasal verbs and useful publishing, sports, food, household and business terms; distinguish particles, transitivity, register and regional usage.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1360,
+    "remainingRawOnlyAfter": 1340
+  },
+  "selected": [
+    "round robin",
+    "round table",
+    "round trip",
+    "round up",
+    "royal jelly",
+    "rub out",
+    "rubber band",
+    "rubber plant",
+    "rubber stamp",
+    "run away",
+    "run down",
+    "run in",
+    "run into",
+    "run off",
+    "run on",
+    "run out",
+    "run over",
+    "run up",
+    "runner bean",
+    "running head"
+  ],
+  "references": [
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458499-2/general-information",
+    "https://www.rhs.org.uk/plants/106215/phaseolus-coccineus/details"
+  ]
+}

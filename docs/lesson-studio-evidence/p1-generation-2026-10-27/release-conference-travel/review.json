@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "2cb36b3695d9742c7c5c80818892cb47e3eb98e711baa956f1d16041e3862b60",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor (synthesized independent gpt-6-luna and gpt-5.6-terra route reviews)",
+  "reviewedAt": "2026-10-27T07:51:00.417Z",
+  "note": "Full 17-criterion review of the exact final pack hash. The review tools were routed as gpt-6-luna and gpt-5.6-terra; the reviewers’ runtime-visible identifier was only GPT-6, with no finer ID exposed. This is AI-assisted review, not human review. Rights are supported only by local declarations. Initial q4 critical and q1 minor issues were resolved; see initial-cross-model-review.json and editorial-change-record-v1.json.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers checked the local source/provenance consistency. Pack and sources-batch-2 declare this an AI-assisted original, distribution authorized, with no copied exam/external text or learner data. This is a declaration, not independent proof of authorship or copyright; no PII is visible."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "The exact phrase make arrangements for appears in cited sentence s1: the department will make arrangements for students to attend a conference."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm to plan and organize something so it can happen matches organizing what is needed for conference attendance and is not too narrow."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm sắp xếp, tổ chức cho việc gì is natural, accented Vietnamese and fits the contextual meaning."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "The exact phrase provide evidence of appears in cited sentence s2 about showing how the event relates to the applicant’s research."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm supplying proof or details that show truth/relevance fits the research-connection context."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm cung cấp bằng chứng về việc gì is natural, accented Vietnamese and accurate."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers identify a as the only paraphrase of planning and organizing necessary details for attendance. b cancels attendance; c asks for speaker preferences without organizing attendance."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm a/b/c explanations match the corrected choices: organizing attendance, cancellation, and collecting speaker opinions. Earlier unsupported travel/registration/support wording was removed."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm a is natural (made arrangements for visitors to park); b has the wrong preposition of in this construction; c omits infinitival to. Only a is correct."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the option notes identify the exact for/to-infinitive construction and the specific corrections without claiming all arrangements require an infinitive."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm a supplies proof/details of research relevance; b promises attendance and c pays a fee, neither of which provides such evidence."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm each explanation correctly distinguishes research-relevance evidence from attendance promises or fee payment."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm a alone is correct: improved safety is a noun phrase after of. b incorrectly puts a finite that-clause after of; c uses the bare verb improve where the noun-phrase complement is required."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm b’s specific correction (evidence that safety improved / evidence of improved safety) and c’s correction to improved safety. The earlier evidences distractor was removed after checking Oxford’s academic-English exception."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the transfer changes from departmental conference travel to a personal weekend trip with friends, with accommodation and transport planning."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both reviewers confirm the two-sentence sample naturally uses made arrangements for, covers accommodation and transport, and the checklist supports self-assessment without automatic grading."
+    }
+  ],
+  "findings": [
+    {
+      "id": "initial-q4-academic-plural",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "On the initial hash, q4 treated evidences as always wrong. Oxford notes evidences is sometimes used in academic English. Replaced it with an objectively invalid of + finite-clause construction and a bare-verb complement error; both final reviewers confirm the corrected q4 has one defensible answer."
+    },
+    {
+      "id": "initial-q1-unsupported-specifics",
+      "severity": "minor",
+      "resolved": true,
+      "evidence": "On the initial hash, q1 added unsupported travel/registration/support details. Rewrote options and explanations to focus only on planning attendance, cancellation, and speaker preferences; both final reviewers confirm the revised wording."
+    }
+  ]
+}

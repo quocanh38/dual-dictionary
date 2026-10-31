@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-a4411c05-13de-4d44-9e29-f908436c97f3",
+    "version": 1,
+    "title": "Workplace Safety Practice",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:25:36.090Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Workplace Safety Practice",
+        "objective": "Learners will understand and use fire drill and assembly point in workplace safety contexts.",
+        "reading": {
+          "text": "Northside community centre will hold a fire drill on Thursday at 10:30 a.m. Staff should keep the east exit clear and guide visitors to the assembly point beside the library. In case of a real alarm, leave bags behind and do not use the lifts. The floor warden will sign off the checklist after confirming that each room is empty. Anyone who needs step-free assistance should tell the front desk before the drill so the team can arrange a partner and use the north ramp. The exercise is only practice; normal classes will resume after a short briefing. Staff should report blocked routes to the centre manager before the drill begins.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "Northside community centre will hold a fire drill on Thursday at 10:30 a.m."
+            },
+            {
+              "id": "s2",
+              "text": "Staff should keep the east exit clear and guide visitors to the assembly point beside the library."
+            },
+            {
+              "id": "s3",
+              "text": "In case of a real alarm, leave bags behind and do not use the lifts."
+            },
+            {
+              "id": "s4",
+              "text": "The floor warden will sign off the checklist after confirming that each room is empty."
+            },
+            {
+              "id": "s5",
+              "text": "Anyone who needs step-free assistance should tell the front desk before the drill so the team can arrange a partner and use the north ramp."
+            },
+            {
+              "id": "s6",
+              "text": "The exercise is only practice; normal classes will resume after a short briefing."
+            },
+            {
+              "id": "s7",
+              "text": "Staff should report blocked routes to the centre manager before the drill begins."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "fire drill",
+            "meaningEn": "a practice evacuation for a fire emergency",
+            "meaningVi": "buổi diễn tập phòng cháy chữa cháy",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "assembly point",
+            "meaningEn": "a designated safe place where people gather during an evacuation",
+            "meaningVi": "điểm tập trung an toàn",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In 'Northside community centre will hold a fire drill on Thursday at 10:30 a.m.', what does 'fire drill' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a practice evacuation for a fire emergency.",
+                "explanation": "This is correct because the centre is planning practice before any real alarm."
+              },
+              {
+                "id": "b",
+                "text": "It means a real fire that damaged the building.",
+                "explanation": "This is wrong because the sentence describes planned practice, not a real fire."
+              },
+              {
+                "id": "c",
+                "text": "It means a short class about library books and schedules.",
+                "explanation": "This is wrong because the sentence is about emergency practice, not a library class."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "A fire drill is a practice evacuation, not a real fire or a class."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the natural sentence using 'fire drill'.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Our office held a fire drill last week to practise leaving the building safely.",
+                "explanation": "This is correct because grammar, articles and word forms are natural."
+              },
+              {
+                "id": "b",
+                "text": "Our office held a fire drill last week to practising leaving the building safely.",
+                "explanation": "This is wrong because to practising should be corrected to to practise."
+              },
+              {
+                "id": "c",
+                "text": "Our office held an fire drill last week to practise leaving the building safely.",
+                "explanation": "This is wrong because an fire drill should be corrected to a fire drill."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses correct grammar with fire drill."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In 'Staff should keep the east exit clear and guide visitors to the assembly point beside the library.', what does 'assembly point' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a designated safe place where people gather during an evacuation.",
+                "explanation": "This is correct because staff guide visitors there to stay safe during the drill."
+              },
+              {
+                "id": "b",
+                "text": "It means a small office where the manager keeps checklists.",
+                "explanation": "This is wrong because the sentence describes a gathering place beside the library, not an office."
+              },
+              {
+                "id": "c",
+                "text": "It means a busy entrance where visitors borrow library books.",
+                "explanation": "This is wrong because the sentence describes a safe evacuation place, not a borrowing desk."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "An assembly point is a safe gathering place during an evacuation."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the natural sentence using 'assembly point'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "During the evacuation, everyone waited calmly at the assembly point behind the office.",
+                "explanation": "This is correct because grammar, articles and prepositions are natural."
+              },
+              {
+                "id": "b",
+                "text": "During the evacuation, everyone waited calmly at assembly point behind the office.",
+                "explanation": "This is wrong because at assembly point should be corrected to at the assembly point."
+              },
+              {
+                "id": "c",
+                "text": "During the evacuation, everyone waited calmly at the assembly point behind of the office.",
+                "explanation": "This is wrong because behind of the office should be corrected to behind the office."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses correct grammar with assembly point."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are writing a message to a friend who is nervous about starting work in a big office building. Reassure them by describing what helped you feel safe during your first week. Write 2-3 sentences and use the phrase assembly point naturally.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "When I started my new job, my team showed me the emergency exits on my first day. They also showed me the assembly point in the car park where we meet during an evacuation, so I felt much calmer.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used assembly point to describe a safe meeting place.",
+              "My message reassures a friend about starting work."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

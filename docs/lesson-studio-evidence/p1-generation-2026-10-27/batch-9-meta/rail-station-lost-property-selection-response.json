@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "hand it in",
+        "meaningEn": "to give something you found to staff at an official desk",
+        "meaningVi": "giao nộp vật nhặt được cho nhân viên hoặc quầy thông tin",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "proof of ownership",
+        "meaningEn": "evidence showing that you are the owner of something",
+        "meaningVi": "bằng chứng chứng minh quyền sở hữu",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 561,
+    "outputTokens": 893,
+    "totalTokens": 1454
+  },
+  "status": 200,
+  "latencyMs": 7383,
+  "model": "muse-spark-1.3"
+}

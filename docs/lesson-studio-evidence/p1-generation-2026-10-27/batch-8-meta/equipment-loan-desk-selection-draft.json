@@ -1,0 +1,73 @@
+{
+  "id": "draft-0645fa42-23cd-4d84-9c50-a828962ea712",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Borrowing Equipment for a Meeting",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Teams using the training rooms can check out a portable projector from the equipment desk. Before leaving, write the serial number and team name on the checkout sheet so staff can track each loan. The projector is due back by 5 p.m. on the same day, even if a meeting ends early. Keep it in the padded case and return the charger with the device. If a session is likely to run late, call the desk before 4 p.m. to request an extension. Staff will confirm the new return time by email. Equipment left in a room after closing is treated as unreturned until the desk records it, so teams should allow a few minutes to complete the handover.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "Teams using the training rooms can check out a portable projector from the equipment desk. Before leaving, write the serial number and team name on the checkout sheet so staff can track each loan. The projector is due back by 5 p.m. on the same day, even if a meeting ends early. Keep it in the padded case and return the charger with the device. If a session is likely to run late, call the desk before 4 p.m. to request an extension. Staff will confirm the new return time by email. Equipment left in a room after closing is treated as unreturned until the desk records it, so teams should allow a few minutes to complete the handover.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Teams using the training rooms can check out a portable projector from the equipment desk."
+      },
+      {
+        "id": "s2",
+        "text": "Before leaving, write the serial number and team name on the checkout sheet so staff can track each loan."
+      },
+      {
+        "id": "s3",
+        "text": "The projector is due back by 5 p.m."
+      },
+      {
+        "id": "s4",
+        "text": "on the same day, even if a meeting ends early."
+      },
+      {
+        "id": "s5",
+        "text": "Keep it in the padded case and return the charger with the device."
+      },
+      {
+        "id": "s6",
+        "text": "If a session is likely to run late, call the desk before 4 p.m."
+      },
+      {
+        "id": "s7",
+        "text": "to request an extension."
+      },
+      {
+        "id": "s8",
+        "text": "Staff will confirm the new return time by email."
+      },
+      {
+        "id": "s9",
+        "text": "Equipment left in a room after closing is treated as unreturned until the desk records it, so teams should allow a few minutes to complete the handover."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "check out",
+      "meaningEn": "to borrow equipment temporarily after recording the loan",
+      "meaningVi": "mượn tạm thiết bị có ghi lại thông tin mượn",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "run late",
+      "meaningEn": "to continue beyond the scheduled end time",
+      "meaningVi": "kéo dài quá giờ dự kiến",
+      "sourceSentenceId": "s6"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

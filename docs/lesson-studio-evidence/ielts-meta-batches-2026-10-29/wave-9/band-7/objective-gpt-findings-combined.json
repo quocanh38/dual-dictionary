@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-9-band-7-reading-05",
+      "severity": "critical",
+      "issue": "Key A says modest gains for attendees cannot be generalised to likely dropouts, but the passage specifically cautions against generalising the larger unadjusted 15% gain. It does not rule out generalising the modest adjusted gain under suitable assumptions. Change the key to Larger unadjusted gains should not be assumed for learners likely to drop out and align the explanation.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

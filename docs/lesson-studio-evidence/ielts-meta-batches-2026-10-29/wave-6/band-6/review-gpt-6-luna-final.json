@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "c5aee8e1cf9987eb3aff12744d4d474280594794cd520f08fb047c206df6b086",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-6-band-6-reading-context / reading-03",
+      "issue": "The described audit method measures diners scraping leftovers into containers, but the revised weekend explanation attributes higher per-person waste to kitchen-prepared surplus discarded unserved. The method never says kitchen surplus was collected, weighed, or included in the per-person denominator; the explanation is therefore not evidenced by the stated audit. Specify that unserved kitchen food was separately included and explain the denominator, or remove/reframe the causal explanation and dependent question/key.",
+      "severity": "major"
+    }
+  ],
+  "observations": [
+    "Listening/Reading contexts are 334/441 words. The other objective answers and explanations are supported; positions are balanced. Task 1 family-event table has all counts and ratings. The digital-skills Task 1 figures are present but completion percentages have an unclear denominator (within attendees, within age cohorts, or share of all participants); clarify if desired. Writing minimums/timings and Speaking part coverage/cue cards are complete. Provenance says original content; no official-item or score claims."
+  ],
+  "coverage": "Full review of provenance/metadata, both contexts, all 10 objective prompts/options/keys/explanations, both Task 1 datasets/units/denominator clarity, all five Writing prompts/timing, and all five Speaking prompts including cue cards and part fit.",
+  "reviewerType": "AI-assisted"
+}

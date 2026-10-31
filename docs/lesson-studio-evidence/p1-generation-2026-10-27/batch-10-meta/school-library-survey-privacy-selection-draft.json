@@ -1,0 +1,65 @@
+{
+  "id": "draft-b984407d-d36b-4251-b7a7-3d53d5a3ba51",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Privacy in a School Library Survey",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A school committee is asking students how they use the quiet study area in the library. The short survey does not request names, student numbers or contact details. Participation is optional, and students may opt out at any time without giving a reason. Two committee coordinators can read the original responses, which will be kept confidential while the results are reviewed. The final report will combine comments into broad themes and will not quote a response that could identify a student. Teachers will receive the summary after the committee checks it for private details. Students can ask the librarian how the information will be used before they decide whether to take part.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A school committee is asking students how they use the quiet study area in the library. The short survey does not request names, student numbers or contact details. Participation is optional, and students may opt out at any time without giving a reason. Two committee coordinators can read the original responses, which will be kept confidential while the results are reviewed. The final report will combine comments into broad themes and will not quote a response that could identify a student. Teachers will receive the summary after the committee checks it for private details. Students can ask the librarian how the information will be used before they decide whether to take part.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A school committee is asking students how they use the quiet study area in the library."
+      },
+      {
+        "id": "s2",
+        "text": "The short survey does not request names, student numbers or contact details."
+      },
+      {
+        "id": "s3",
+        "text": "Participation is optional, and students may opt out at any time without giving a reason."
+      },
+      {
+        "id": "s4",
+        "text": "Two committee coordinators can read the original responses, which will be kept confidential while the results are reviewed."
+      },
+      {
+        "id": "s5",
+        "text": "The final report will combine comments into broad themes and will not quote a response that could identify a student."
+      },
+      {
+        "id": "s6",
+        "text": "Teachers will receive the summary after the committee checks it for private details."
+      },
+      {
+        "id": "s7",
+        "text": "Students can ask the librarian how the information will be used before they decide whether to take part."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "opt out",
+      "meaningEn": "to choose not to participate in something or to withdraw from it",
+      "meaningVi": "chọn không tham gia; rút khỏi",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "contact details",
+      "meaningEn": "information such as a phone number, email address, or home address used to reach someone",
+      "meaningVi": "thông tin liên lạc",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

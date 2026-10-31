@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-6",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-6-v1",
+  "completedAt": "2026-10-29T05:28:34.729Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2933,
+    "outputTokens": 9655,
+    "totalTokens": 12588
+  },
+  "latencyMs": 25730,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listening\":{\"title\":\"Campus Canteen Allergy Information Desk\",\"focus\":\"understanding allergy information and service details\",\"part\":\"Part 1\",\"script\":\"STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts as ingredients. However, for your serious allergy, please check with the kitchen about preparation and cross-contact controls before ordering to confirm if it is suitable for you.\\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\\nMAYA: I understand. And how can I check the allergy information myself next time?\\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\\nMAYA: Thank you. Is there any charge for the allergy cards?\\nSTAFF: No, there is no charge at all. You can take a card with you for free.\\nMAYA: Great, thanks for your help.\\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.\",\"questions\":[{\"title\":\"Reason for calling\",\"prompt\":\"Why is Maya calling the allergy desk?\",\"options\":[\"To apply for a canteen job\",\"To complain about yesterday's meal\",\"To check if lunch is safe for her allergy\",\"To book a table for friends\"],\"answer\":2,\"explanation\":\"Maya says she has a serious nut allergy and wants to ask about food before ordering lunch. Option A fails because no job is mentioned.\"},{\"title\":\"Chicken pasta ingredients\",\"prompt\":\"What does David say about the chicken pasta?\",\"options\":[\"It has milk and wheat but no nuts\",\"It has nuts and milk but no wheat\",\"It is free from all major allergens\",\"It contains eggs and peanuts\"],\"answer\":0,\"explanation\":\"David says the pasta contains milk and wheat but no nuts or peanuts as ingredients. Option C describes the vegetable soup, not the pasta.\"},{\"title\":\"Special meal request\",\"prompt\":\"What must Maya do for a special meal?\",\"options\":[\"Pay extra at the counter\",\"Tell the kitchen one hour ahead\",\"Bring her own ingredients\",\"Order only on weekends\"],\"answer\":1,\"explanation\":\"Staff says a special meal without milk or wheat requires informing the kitchen at least one hour before. Option A fails because no extra charge is mentioned.\"},{\"title\":\"Finding information\",\"prompt\":\"How can students find allergy information themselves?\",\"options\":[\"Ask the security guard\",\"Call the manager at home\",\"Check the canteen website only\",\"Look at green cards and QR codes\"],\"answer\":3,\"explanation\":\"Staff says green cards are next to dishes and QR codes on tables show ingredients. Option C fails because the website alone is not mentioned.\"},{\"title\":\"Weekday closing time\",\"prompt\":\"When does weekday lunch service end?\",\"options\":[\"At 2 p.m.\",\"At 3 p.m.\",\"At 3:30 p.m.\",\"At 4 p.m.\"],\"answer\":2,\"explanation\":\"Staff corrects the first time of 3 p.m. to 3:30 p.m. on weekdays. Option A is the weekend closing time.\"}]},\"reading\":{\"title\":\"The Campus Garden Tool-Loan Service\",\"focus\":\"how the service works and its benefits\",\"passage\":\"The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\\n\\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\\n\\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\\n\\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\\n\\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.\",\"questions\":[{\"title\":\"Who can use service\",\"prompt\":\"Who is allowed to use the tool-loan service?\",\"options\":[\"All registered students\",\"Only agriculture students\",\"Only Environment Office staff\",\"Students with own gardens\"],\"answer\":0,\"explanation\":\"The passage says the service is open to all registered students, not only gardening students. Option B fails because it limits access incorrectly.\"},{\"title\":\"Loan period\",\"prompt\":\"How long can most tools be borrowed?\",\"options\":[\"For one day only\",\"For seven days, extendable if free\",\"For one month without extension\",\"For two days maximum\"],\"answer\":1,\"explanation\":\"Most tools can be borrowed for seven days with a possible seven-day extension if not booked. Option A fails because the period is longer.\"},{\"title\":\"Tools not available\",\"prompt\":\"Which item does the service NOT lend?\",\"options\":[\"Spades and forks\",\"Watering cans\",\"Wheelbarrows\",\"Petrol lawnmowers\"],\"answer\":3,\"explanation\":\"The service does not lend large machines such as petrol lawnmowers. Option C fails because wheelbarrows are listed as available.\"},{\"title\":\"Claim versus example\",\"prompt\":\"What is the author's claim in paragraph four?\",\"options\":[\"One group returned muddy tools late last term\",\"Other students could not use tools for two days\",\"Clean and on-time returns keep service working well\",\"Safety sessions last 20 minutes\"],\"answer\":2,\"explanation\":\"The author claims the clean and on-time rule is the most important reason the service works. Option A is the example used to support it, not the claim.\"},{\"title\":\"Survey inference\",\"prompt\":\"What can be inferred from the survey results?\",\"options\":[\"The service will close next year\",\"Most users saved money by borrowing\",\"All students now garden at home\",\"The library garden is still empty\"],\"answer\":1,\"explanation\":\"The survey showed 80% saved money, so most users saved. Option C fails because the passage says more students garden, not all.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Campus Canteen Allergy Information Desk",
+      "focus": "understanding allergy information and service details",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Campus Canteen Allergy Information Desk, this is David speaking. How can I help you today?\nMAYA: Hello, I'm Maya, a new student in Environmental Science. I have a serious nut allergy, so I wanted to ask about the food before I order lunch.\nSTAFF: Of course, Maya, I'm happy to help. We keep a detailed allergy list for every dish we serve. Is there a particular meal you are interested in?\nMAYA: Yes, I was looking at today's menu. I wanted the chicken pasta, but I'm not sure if it's safe for me.\nSTAFF: Let me check the list for you. Today's chicken pasta contains milk and wheat, but it does not have any nuts or peanuts as ingredients. However, for your serious allergy, please check with the kitchen about preparation and cross-contact controls before ordering to confirm if it is suitable for you.\nMAYA: That's a relief. What about the vegetable soup? My friend said it is very good.\nSTAFF: The vegetable soup is a good choice. It is free from all of the main allergens — no milk, no wheat, no nuts, and no eggs.\nMAYA: Wonderful. Do I need to book my lunch in advance because of my allergy?\nSTAFF: Not for the regular menu. You can just order at the main counter. However, if you need a special meal made without milk or wheat, you should inform the kitchen at least one hour before you want to eat.\nMAYA: I understand. And how can I check the allergy information myself next time?\nSTAFF: That's easy. We place small green allergy cards next to every dish at the counter, and you can also scan the QR code on each table to see the full ingredient list on your phone.\nMAYA: That's very helpful. One last question — what time do you stop serving lunch?\nSTAFF: Lunch service finishes at 3 p.m. — sorry, I mean 3:30 p.m. on weekdays. At the weekend, we close earlier, at 2 p.m.\nMAYA: Thank you. Is there any charge for the allergy cards?\nSTAFF: No, there is no charge at all. You can take a card with you for free.\nMAYA: Great, thanks for your help.\nSTAFF: You're welcome, Maya. Please come back anytime if you have more questions.",
+      "questions": [
+        {
+          "title": "Reason for calling",
+          "prompt": "Why is Maya calling the allergy desk?",
+          "options": [
+            "To apply for a canteen job",
+            "To complain about yesterday's meal",
+            "To check if lunch is safe for her allergy",
+            "To book a table for friends"
+          ],
+          "answer": 2,
+          "explanation": "Maya says she has a serious nut allergy and wants to ask about food before ordering lunch. Option A fails because no job is mentioned."
+        },
+        {
+          "title": "Chicken pasta ingredients",
+          "prompt": "What does David say about the chicken pasta?",
+          "options": [
+            "It has milk and wheat but no nuts",
+            "It has nuts and milk but no wheat",
+            "It is free from all major allergens",
+            "It contains eggs and peanuts"
+          ],
+          "answer": 0,
+          "explanation": "David says the pasta contains milk and wheat but no nuts or peanuts as ingredients. Option C describes the vegetable soup, not the pasta."
+        },
+        {
+          "title": "Special meal request",
+          "prompt": "What must Maya do for a special meal?",
+          "options": [
+            "Pay extra at the counter",
+            "Tell the kitchen one hour ahead",
+            "Bring her own ingredients",
+            "Order only on weekends"
+          ],
+          "answer": 1,
+          "explanation": "Staff says a special meal without milk or wheat requires informing the kitchen at least one hour before. Option A fails because no extra charge is mentioned."
+        },
+        {
+          "title": "Finding information",
+          "prompt": "How can students find allergy information themselves?",
+          "options": [
+            "Ask the security guard",
+            "Call the manager at home",
+            "Check the canteen website only",
+            "Look at green cards and QR codes"
+          ],
+          "answer": 3,
+          "explanation": "Staff says green cards are next to dishes and QR codes on tables show ingredients. Option C fails because the website alone is not mentioned."
+        },
+        {
+          "title": "Weekday closing time",
+          "prompt": "When does weekday lunch service end?",
+          "options": [
+            "At 2 p.m.",
+            "At 3 p.m.",
+            "At 3:30 p.m.",
+            "At 4 p.m."
+          ],
+          "answer": 2,
+          "explanation": "Staff corrects the first time of 3 p.m. to 3:30 p.m. on weekdays. Option A is the weekend closing time."
+        }
+      ]
+    },
+    "reading": {
+      "title": "The Campus Garden Tool-Loan Service",
+      "focus": "how the service works and its benefits",
+      "passage": "The Campus Garden Tool-Loan Service was started two years ago by the university's Environment Office. It is located in a small building behind the Science Centre and is open to all registered students, not only those studying gardening or agriculture. The main aim is to help students grow plants without buying expensive equipment. Staff at the office say the idea came from student requests for cheaper ways to garden in small flats and dormitories.\n\nTo use the service, students must first register once at the office with their student ID card. After registration, they can book tools online through the university website. Most tools can be borrowed for seven days, and students can extend the loan for another seven days if no one else has booked the same item. If tools are returned late, there is a small fee of two dollars per day. This system keeps the tools available for everyone.\n\nThe service offers many useful hand tools such as spades, forks, rakes, and watering cans. Larger items like wheelbarrows are also available, but the service does not lend large machines such as petrol lawnmowers because they need special training and are difficult to store. Students can see photos and availability of each tool on the booking page before they choose. Every tool is checked by staff when it is returned, and broken tools are repaired quickly so they are ready for the next user.\n\nBefore borrowing for the first time, each student must attend a short 20-minute safety session. In this session, staff explain how to use and clean the tools correctly. Students must return all tools clean and on time. The author claims that this simple rule is the most important reason the service works well. For example, last term one group returned muddy tools late, and other students could not use them for two days. This example shows what happens when the rule is not followed, but the claim itself is about the importance of the rule in general.\n\nSince the service began, more students have started gardening on campus and at home. A recent survey of 200 users showed that 80% saved money by borrowing instead of buying, and many said they learned new practical skills. The garden behind the library, which was empty before, is now full of student plots. Overall, the tool-loan service has created a stronger sense of community and made gardening easier for beginners. The Environment Office plans to add more tools next year if funding is approved.",
+      "questions": [
+        {
+          "title": "Who can use service",
+          "prompt": "Who is allowed to use the tool-loan service?",
+          "options": [
+            "All registered students",
+            "Only agriculture students",
+            "Only Environment Office staff",
+            "Students with own gardens"
+          ],
+          "answer": 0,
+          "explanation": "The passage says the service is open to all registered students, not only gardening students. Option B fails because it limits access incorrectly."
+        },
+        {
+          "title": "Loan period",
+          "prompt": "How long can most tools be borrowed?",
+          "options": [
+            "For one day only",
+            "For seven days, extendable if free",
+            "For one month without extension",
+            "For two days maximum"
+          ],
+          "answer": 1,
+          "explanation": "Most tools can be borrowed for seven days with a possible seven-day extension if not booked. Option A fails because the period is longer."
+        },
+        {
+          "title": "Tools not available",
+          "prompt": "Which item does the service NOT lend?",
+          "options": [
+            "Spades and forks",
+            "Watering cans",
+            "Wheelbarrows",
+            "Petrol lawnmowers"
+          ],
+          "answer": 3,
+          "explanation": "The service does not lend large machines such as petrol lawnmowers. Option C fails because wheelbarrows are listed as available."
+        },
+        {
+          "title": "Claim versus example",
+          "prompt": "What is the author's claim in paragraph four?",
+          "options": [
+            "One group returned muddy tools late last term",
+            "Other students could not use tools for two days",
+            "Clean and on-time returns keep service working well",
+            "Safety sessions last 20 minutes"
+          ],
+          "answer": 2,
+          "explanation": "The author claims the clean and on-time rule is the most important reason the service works. Option A is the example used to support it, not the claim."
+        },
+        {
+          "title": "Survey inference",
+          "prompt": "What can be inferred from the survey results?",
+          "options": [
+            "The service will close next year",
+            "Most users saved money by borrowing",
+            "All students now garden at home",
+            "The library garden is still empty"
+          ],
+          "answer": 1,
+          "explanation": "The survey showed 80% saved money, so most users saved. Option C fails because the passage says more students garden, not all."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1-v2",
+    "status": "ready-for-approval",
+    "ready": true,
+    "sha256": "a9ccaa996c1c3aa67ff4ccea2470a2f4d36cbfab6091d1a5d1a3cf6e06a35210",
+    "reviewerType": "ai-assisted-editor",
+    "errors": []
+  },
+  {
+    "id": "2-v2",
+    "status": "ready-for-approval",
+    "ready": true,
+    "sha256": "0cf868d01f48a08b034eacb1aa0c8ba9602dd05a88cb8459790fe9ab5707389f",
+    "reviewerType": "ai-assisted-editor",
+    "errors": []
+  },
+  {
+    "id": "3-v3",
+    "status": "ready-for-approval",
+    "ready": true,
+    "sha256": "e841bd0cc9935c3338b2221e08077568498c9ab7b6ba4ab9a5739f83b686a811",
+    "reviewerType": "ai-assisted-editor",
+    "errors": []
+  }
+]

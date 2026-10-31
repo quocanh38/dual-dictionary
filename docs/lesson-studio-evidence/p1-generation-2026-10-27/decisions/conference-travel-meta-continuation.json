@@ -1,0 +1,16 @@
+{
+  "authorizedAt": "2026-10-27T07:46:00Z",
+  "ownerInstruction": [
+    "gọi Meta thoải mái đi bạn, tôi tự chịu trách nhiệm credits",
+    "bạn ko cần check meta usage nữa, để tôi lo"
+  ],
+  "scope": "One deliberate repair-exercises call for conference-travel using the retained selection draft after its earlier exercise-generation timeout. The prior timeout and unknown usage remain recorded and are not relabelled or deleted. No automatic retry. This call uses the locally configured Muse Spark 1.3 launcher; no external Billing/usage lookup because the owner expressly assumed credit responsibility.",
+  "preservedPriorStopReason": "Provider/network stop: unknown; inspect before deliberate continuation.",
+  "backupLedger": "docs/lesson-studio-evidence/p1-generation-2026-10-27/batch-2/ledger-before-owner-authorized-repair.json",
+  "sourceId": "conference-travel",
+  "initialAttempt": "../batch-2/manifest.json; failed exercise call ID 7983ddde-2240-42e0-aa29-e637b2e00e7f; usage unknown; original $1 reservation remains recorded",
+  "plannedRepairLimit": 1,
+  "maximumOutputTokens": 10000,
+  "paidOveragePolicy": "Existing allocated ledger and safety reserve still apply; this decision does not authorize automatic retries or removal of safety reserves.",
+  "doNotPrintOrPersistApiKey": true
+}

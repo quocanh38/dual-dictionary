@@ -1,0 +1,25 @@
+{
+  "wave": 10,
+  "batch": 100,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after town house in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover urban planning, chemistry, business and international trade, then road transport and aircraft terminology. Clarify closely related economics terms, phrasal-verb patterns and British/North American usage.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 860,
+    "remainingRawOnlyAfter": 840
+  },
+  "selected": [
+    "town planning", "trace element", "tracing paper", "track record", "trade balance",
+    "trade discount", "trade gap", "trade in", "trade name", "trade off",
+    "trade route", "trade secret", "trade union", "trade wind", "trading post",
+    "traffic circle", "traffic island", "traffic jam", "traffic light", "trailing edge"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NOAA National Ocean Service, What are the trade winds? (https://oceanservice.noaa.gov/facts/tradewinds.html)"
+  ]
+}

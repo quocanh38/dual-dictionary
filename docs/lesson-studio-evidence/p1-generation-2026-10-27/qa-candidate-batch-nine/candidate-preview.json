@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-10-27T08:41:39.383Z",
+  "results": [
+    {
+      "id": "community-kitchen-volunteer-shift",
+      "status": "PASS",
+      "candidateSha256": "239059717add867b60ceb55cc7d5a47c84f1e482e1645e47c996c5e5b98a04b1",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "rail-station-lost-property",
+      "status": "PASS",
+      "candidateSha256": "193bb9647b047eed854a08abb8d3de7ad03689fbd2807015e0c0cf5ff2ba58d3",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "urban-heat-survey-method",
+      "status": "PASS",
+      "candidateSha256": "955db47f5cc4be10b420577e3572384c56cae3ba5b038b057c5ad9eb8e9eadf7",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

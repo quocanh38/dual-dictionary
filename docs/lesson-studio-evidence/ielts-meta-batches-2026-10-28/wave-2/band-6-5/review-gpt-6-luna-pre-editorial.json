@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "fad4f5e47ae84549745eaa2b0a62577f1a18a55be62fc19919f2f11caaa996e4",
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-2-band-6-5-reading shared passage",
+      "skill": "Reading",
+      "issue": "The passage is 415 words, which is short for a standalone IELTS Academic Reading Passage 1. The five questions are answerable, but the passage offers substantially less sustained reading than a full passage-level practice task.",
+      "suggestion": "Expand the passage to a more representative length (roughly 700–900 words) or label it clearly as a short excerpt/practice set."
+    }
+  ]
+}

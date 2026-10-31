@@ -1,0 +1,61 @@
+{
+  "id": "draft-4627bb92-0afb-42fb-83c1-88a23a7390c4",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Changes to Clinic Appointments",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "At the Riverside clinic, the front desk has changed its appointment process for the winter. Patients who need another time should call reception at least one day in advance so staff can offer the unused slot to someone else. Anyone arriving with a new prescription should bring the medicine list from their last visit. If a patient cannot attend, the clinic asks them to cancel rather than leave a space empty. On busy mornings, the waiting-room display shows estimated delays; staff update it every thirty minutes. Patients with urgent symptoms should speak directly to reception instead of waiting for a routine appointment.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "At the Riverside clinic, the front desk has changed its appointment process for the winter. Patients who need another time should call reception at least one day in advance so staff can offer the unused slot to someone else. Anyone arriving with a new prescription should bring the medicine list from their last visit. If a patient cannot attend, the clinic asks them to cancel rather than leave a space empty. On busy mornings, the waiting-room display shows estimated delays; staff update it every thirty minutes. Patients with urgent symptoms should speak directly to reception instead of waiting for a routine appointment.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "At the Riverside clinic, the front desk has changed its appointment process for the winter."
+      },
+      {
+        "id": "s2",
+        "text": "Patients who need another time should call reception at least one day in advance so staff can offer the unused slot to someone else."
+      },
+      {
+        "id": "s3",
+        "text": "Anyone arriving with a new prescription should bring the medicine list from their last visit."
+      },
+      {
+        "id": "s4",
+        "text": "If a patient cannot attend, the clinic asks them to cancel rather than leave a space empty."
+      },
+      {
+        "id": "s5",
+        "text": "On busy mornings, the waiting-room display shows estimated delays; staff update it every thirty minutes."
+      },
+      {
+        "id": "s6",
+        "text": "Patients with urgent symptoms should speak directly to reception instead of waiting for a routine appointment."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "in advance",
+      "meaningEn": "before the appointment time, with notice given ahead of time",
+      "meaningVi": "trước giờ hẹn, báo trước",
+      "sourceSentenceId": "s2"
+    },
+    {
+      "id": "t2",
+      "phrase": "routine appointment",
+      "meaningEn": "a regular, non-urgent scheduled visit with a doctor",
+      "meaningVi": "cuộc hẹn khám thông thường, không khẩn cấp",
+      "sourceSentenceId": "s6"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

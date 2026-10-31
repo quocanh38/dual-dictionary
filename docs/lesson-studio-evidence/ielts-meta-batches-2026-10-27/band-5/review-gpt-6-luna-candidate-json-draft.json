@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e397158a48d2816200aea60b536df9624eca097a695169abcb942a52d2787d7f",
+  "verdict": "repair",
+  "findings": [
+    {
+      "id": "ielts-meta-band-5-listening-01",
+      "severity": "major",
+      "issue": "Listening items 01–05 are labeled Part 4, but their shared script is a two-person service conversation. Part 4 is a single-speaker academic talk, so the section label does not match the script format.",
+      "suggestedFix": "Relabel the five items as Part 1, or rewrite the script as an academic monologue and revise the questions accordingly."
+    }
+  ]
+}

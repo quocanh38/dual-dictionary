@@ -1,0 +1,336 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-6",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-6-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-6-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Flood Sensor Comparison – Tutorial Discussion",
+      "focus": "comparing flood sensors across two districts",
+      "part": "Part 3",
+      "script": "Dr. Ellis: So, Maya and Jon, how did your comparison of the flood sensors turn out?\nMaya: We've been analysing the trial in Riverside City from January to June 2023. The city council installed two different systems in two districts to see which performs better.\nJon: Right. North District got ultrasonic sensors fixed above the water channels – 28 units in total. South District got pressure sensors placed underwater. I wrote 40 in the draft, sorry, that's wrong – it was actually 32 units.\nMaya: We compared accuracy using the council's alert logs. North had more unreliable alerts – about 12% of warnings were false positives caused by floating debris or birds, not by rising water.\nJon: South was better on that measure, only about 7% false alerts. But it missed two minor overflow events in late April, so it was less sensitive to small floods.\nDr. Ellis: So South was more stable but less sensitive?\nMaya: Exactly. And maintenance differed. North's batteries drained quickly in the cold and needed replacing roughly every three months. The council's cost sheets show North units were £420 each.\nJon: South's batteries lasted longer, about five months on average, and the units were cheaper at £310 each. However, four of the South sensors had to be cleaned every month because silt blocked the water inlet. That added labour time.\nMaya: So the data tentatively suggests pressure sensors are cheaper to run but need more physical upkeep. This may be linked to temperature effects on battery chemistry and to the river's sediment load.\nDr. Ellis: Can you generalise from this to the whole city?\nJon: Not really. Our data only covers winter and spring. Summer thunderstorms are usually heavier and more sudden, but they weren't in the study period.\nMaya: Exactly. With only six months and a fairly small sample, we can't claim one system is definitively better overall. We'd need a full 12-month follow-up, ideally testing a hybrid system.\nDr. Ellis: That sounds like a well-qualified conclusion. Good work noting the limitations.",
+      "wordCount": 338
+    },
+    "reading": {
+      "title": "Seasonal Output from Campus Solar Panels",
+      "focus": "seasonal output from campus solar panels",
+      "passage": "Campus Solar Output Across Seasons\n\nIn March 2022, Midfield University installed 120 photovoltaic panels on the flat roof of the Science Building to investigate how seasonal changes affect energy production. The aim was not to power the entire campus, but to compare actual monthly output with the output predicted by a standard model used by the estates office.\n\nThe model estimated production from expected sunlight hours, assuming panels tilted at 30 degrees – an angle chosen to maximise summer capture – and assuming no shading from nearby structures. Researchers recorded actual kilowatt-hours (kWh) each month from June 2022 to May 2023 and compared the figures to the modelled estimates. Previous work at Greenfield College had found only a 20% winter drop, so the team wanted to see if Midfield showed a similar pattern.\n\nResults showed clear seasonal divergence. In summer (June to August), actual output was about 5% above the model, averaging 4,850 kWh per month against a predicted 4,620 kWh. Autumn (September to November) was close to expectations, within 2% below the forecast. Winter (December to February) was markedly lower, with actual production around 40% below the model, at 1,120 kWh versus 1,860 kWh predicted. Spring (March to May) was also below, by roughly 15%. This pattern tentatively suggests the tilt optimisation favours summer at the expense of winter, but the evidence is limited to a single site and one year.\n\nSeveral factors help explain the gap. In winter, panels were covered by snow for 18 days in January, and the low sun angle meant the adjacent library tower cast a shadow over part of the array in the early afternoon – a factor not included in the model. The shortfall may also be linked to shorter daylight hours, though the model already accounted for this. In spring, dust accumulation from nearby construction reduced efficiency until a scheduled cleaning in late April restored output. Summer benefited from frequent rain that washed the panels and from long daylight hours that matched the tilt optimisation.\n\nThe authors conclude that seasonal variation is significant and that models should be adjusted for local conditions. However, they qualify this claim carefully. The study covers only one year, and that winter was cloudier than average, with 15% fewer sun hours than the ten-year mean for the region. Therefore, the 40% winter deficit cannot be generalised to every year or to other sites with different shading or angles. The example of snow cover illustrates a specific, temporary cause, not proof that winter performance will always be that low. The researchers recommend multi-year monitoring and an updated model that incorporates snow days, shading patterns, and cleaning schedules before making investment decisions.",
+      "wordCount": 444
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-6-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Flood Sensor Comparison – Tutorial Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing flood sensors across two districts",
+      "transcript": "Dr. Ellis: So, Maya and Jon, how did your comparison of the flood sensors turn out?\nMaya: We've been analysing the trial in Riverside City from January to June 2023. The city council installed two different systems in two districts to see which performs better.\nJon: Right. North District got ultrasonic sensors fixed above the water channels – 28 units in total. South District got pressure sensors placed underwater. I wrote 40 in the draft, sorry, that's wrong – it was actually 32 units.\nMaya: We compared accuracy using the council's alert logs. North had more unreliable alerts – about 12% of warnings were false positives caused by floating debris or birds, not by rising water.\nJon: South was better on that measure, only about 7% false alerts. But it missed two minor overflow events in late April, so it was less sensitive to small floods.\nDr. Ellis: So South was more stable but less sensitive?\nMaya: Exactly. And maintenance differed. North's batteries drained quickly in the cold and needed replacing roughly every three months. The council's cost sheets show North units were £420 each.\nJon: South's batteries lasted longer, about five months on average, and the units were cheaper at £310 each. However, four of the South sensors had to be cleaned every month because silt blocked the water inlet. That added labour time.\nMaya: So the data tentatively suggests pressure sensors are cheaper to run but need more physical upkeep. This may be linked to temperature effects on battery chemistry and to the river's sediment load.\nDr. Ellis: Can you generalise from this to the whole city?\nJon: Not really. Our data only covers winter and spring. Summer thunderstorms are usually heavier and more sudden, but they weren't in the study period.\nMaya: Exactly. With only six months and a fairly small sample, we can't claim one system is definitively better overall. We'd need a full 12-month follow-up, ideally testing a hybrid system.\nDr. Ellis: That sounds like a well-qualified conclusion. Good work noting the limitations.",
+      "prompt": "What is the main purpose of the students' comparison?",
+      "options": [
+        "To test a new sensor design for rivers",
+        "To compare accuracy and upkeep in two areas",
+        "To measure flood damage costs in Riverside City",
+        "To evaluate council response times to floods"
+      ],
+      "answer": 1,
+      "explanation": "The students say they compared accuracy using alert logs and maintenance across districts. Option A is wrong because they tested existing council systems, not a new design."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Flood Sensor Comparison – Tutorial Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing flood sensors across two districts",
+      "transcript": "Dr. Ellis: So, Maya and Jon, how did your comparison of the flood sensors turn out?\nMaya: We've been analysing the trial in Riverside City from January to June 2023. The city council installed two different systems in two districts to see which performs better.\nJon: Right. North District got ultrasonic sensors fixed above the water channels – 28 units in total. South District got pressure sensors placed underwater. I wrote 40 in the draft, sorry, that's wrong – it was actually 32 units.\nMaya: We compared accuracy using the council's alert logs. North had more unreliable alerts – about 12% of warnings were false positives caused by floating debris or birds, not by rising water.\nJon: South was better on that measure, only about 7% false alerts. But it missed two minor overflow events in late April, so it was less sensitive to small floods.\nDr. Ellis: So South was more stable but less sensitive?\nMaya: Exactly. And maintenance differed. North's batteries drained quickly in the cold and needed replacing roughly every three months. The council's cost sheets show North units were £420 each.\nJon: South's batteries lasted longer, about five months on average, and the units were cheaper at £310 each. However, four of the South sensors had to be cleaned every month because silt blocked the water inlet. That added labour time.\nMaya: So the data tentatively suggests pressure sensors are cheaper to run but need more physical upkeep. This may be linked to temperature effects on battery chemistry and to the river's sediment load.\nDr. Ellis: Can you generalise from this to the whole city?\nJon: Not really. Our data only covers winter and spring. Summer thunderstorms are usually heavier and more sudden, but they weren't in the study period.\nMaya: Exactly. With only six months and a fairly small sample, we can't claim one system is definitively better overall. We'd need a full 12-month follow-up, ideally testing a hybrid system.\nDr. Ellis: That sounds like a well-qualified conclusion. Good work noting the limitations.",
+      "prompt": "How many pressure sensors were actually installed in South District?",
+      "options": [
+        "28",
+        "32",
+        "40",
+        "36"
+      ],
+      "answer": 1,
+      "explanation": "Jon corrects his draft figure from 40 to the actual 32. Option C is the initial error he withdraws."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Flood Sensor Comparison – Tutorial Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing flood sensors across two districts",
+      "transcript": "Dr. Ellis: So, Maya and Jon, how did your comparison of the flood sensors turn out?\nMaya: We've been analysing the trial in Riverside City from January to June 2023. The city council installed two different systems in two districts to see which performs better.\nJon: Right. North District got ultrasonic sensors fixed above the water channels – 28 units in total. South District got pressure sensors placed underwater. I wrote 40 in the draft, sorry, that's wrong – it was actually 32 units.\nMaya: We compared accuracy using the council's alert logs. North had more unreliable alerts – about 12% of warnings were false positives caused by floating debris or birds, not by rising water.\nJon: South was better on that measure, only about 7% false alerts. But it missed two minor overflow events in late April, so it was less sensitive to small floods.\nDr. Ellis: So South was more stable but less sensitive?\nMaya: Exactly. And maintenance differed. North's batteries drained quickly in the cold and needed replacing roughly every three months. The council's cost sheets show North units were £420 each.\nJon: South's batteries lasted longer, about five months on average, and the units were cheaper at £310 each. However, four of the South sensors had to be cleaned every month because silt blocked the water inlet. That added labour time.\nMaya: So the data tentatively suggests pressure sensors are cheaper to run but need more physical upkeep. This may be linked to temperature effects on battery chemistry and to the river's sediment load.\nDr. Ellis: Can you generalise from this to the whole city?\nJon: Not really. Our data only covers winter and spring. Summer thunderstorms are usually heavier and more sudden, but they weren't in the study period.\nMaya: Exactly. With only six months and a fairly small sample, we can't claim one system is definitively better overall. We'd need a full 12-month follow-up, ideally testing a hybrid system.\nDr. Ellis: That sounds like a well-qualified conclusion. Good work noting the limitations.",
+      "prompt": "What difference in accuracy did the students find?",
+      "options": [
+        "North had more false alerts than South",
+        "South missed all major floods",
+        "Both districts had identical error rates",
+        "North detected every minor overflow"
+      ],
+      "answer": 0,
+      "explanation": "North had 12% false positives versus South's 7%, though South missed two small overflows. Option B overstates the misses as all major floods."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Flood Sensor Comparison – Tutorial Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing flood sensors across two districts",
+      "transcript": "Dr. Ellis: So, Maya and Jon, how did your comparison of the flood sensors turn out?\nMaya: We've been analysing the trial in Riverside City from January to June 2023. The city council installed two different systems in two districts to see which performs better.\nJon: Right. North District got ultrasonic sensors fixed above the water channels – 28 units in total. South District got pressure sensors placed underwater. I wrote 40 in the draft, sorry, that's wrong – it was actually 32 units.\nMaya: We compared accuracy using the council's alert logs. North had more unreliable alerts – about 12% of warnings were false positives caused by floating debris or birds, not by rising water.\nJon: South was better on that measure, only about 7% false alerts. But it missed two minor overflow events in late April, so it was less sensitive to small floods.\nDr. Ellis: So South was more stable but less sensitive?\nMaya: Exactly. And maintenance differed. North's batteries drained quickly in the cold and needed replacing roughly every three months. The council's cost sheets show North units were £420 each.\nJon: South's batteries lasted longer, about five months on average, and the units were cheaper at £310 each. However, four of the South sensors had to be cleaned every month because silt blocked the water inlet. That added labour time.\nMaya: So the data tentatively suggests pressure sensors are cheaper to run but need more physical upkeep. This may be linked to temperature effects on battery chemistry and to the river's sediment load.\nDr. Ellis: Can you generalise from this to the whole city?\nJon: Not really. Our data only covers winter and spring. Summer thunderstorms are usually heavier and more sudden, but they weren't in the study period.\nMaya: Exactly. With only six months and a fairly small sample, we can't claim one system is definitively better overall. We'd need a full 12-month follow-up, ideally testing a hybrid system.\nDr. Ellis: That sounds like a well-qualified conclusion. Good work noting the limitations.",
+      "prompt": "What maintenance issue affected South District sensors?",
+      "options": [
+        "Batteries failed after three months",
+        "Birds damaged ultrasonic fittings",
+        "Sensors needed complete replacement",
+        "Silt blockage required monthly cleaning"
+      ],
+      "answer": 3,
+      "explanation": "Four South sensors needed monthly cleaning because silt blocked the inlet. Option A describes North's battery problem, not South's."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Flood Sensor Comparison – Tutorial Discussion",
+      "pathwayStage": "band-6-5",
+      "focus": "comparing flood sensors across two districts",
+      "transcript": "Dr. Ellis: So, Maya and Jon, how did your comparison of the flood sensors turn out?\nMaya: We've been analysing the trial in Riverside City from January to June 2023. The city council installed two different systems in two districts to see which performs better.\nJon: Right. North District got ultrasonic sensors fixed above the water channels – 28 units in total. South District got pressure sensors placed underwater. I wrote 40 in the draft, sorry, that's wrong – it was actually 32 units.\nMaya: We compared accuracy using the council's alert logs. North had more unreliable alerts – about 12% of warnings were false positives caused by floating debris or birds, not by rising water.\nJon: South was better on that measure, only about 7% false alerts. But it missed two minor overflow events in late April, so it was less sensitive to small floods.\nDr. Ellis: So South was more stable but less sensitive?\nMaya: Exactly. And maintenance differed. North's batteries drained quickly in the cold and needed replacing roughly every three months. The council's cost sheets show North units were £420 each.\nJon: South's batteries lasted longer, about five months on average, and the units were cheaper at £310 each. However, four of the South sensors had to be cleaned every month because silt blocked the water inlet. That added labour time.\nMaya: So the data tentatively suggests pressure sensors are cheaper to run but need more physical upkeep. This may be linked to temperature effects on battery chemistry and to the river's sediment load.\nDr. Ellis: Can you generalise from this to the whole city?\nJon: Not really. Our data only covers winter and spring. Summer thunderstorms are usually heavier and more sudden, but they weren't in the study period.\nMaya: Exactly. With only six months and a fairly small sample, we can't claim one system is definitively better overall. We'd need a full 12-month follow-up, ideally testing a hybrid system.\nDr. Ellis: That sounds like a well-qualified conclusion. Good work noting the limitations.",
+      "prompt": "What limitation do the students acknowledge about their data?",
+      "options": [
+        "Council reports were unavailable for analysis",
+        "Sensors were installed incorrectly in North",
+        "Data covered only winter and spring months",
+        "Cost data was not recorded accurately"
+      ],
+      "answer": 2,
+      "explanation": "They note data from January to June excludes heavier summer thunderstorms, limiting generalisation. Option A is incorrect because they used council logs throughout."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Seasonal Output from Campus Solar Panels",
+      "pathwayStage": "band-6-5",
+      "focus": "seasonal output from campus solar panels",
+      "passage": "Campus Solar Output Across Seasons\n\nIn March 2022, Midfield University installed 120 photovoltaic panels on the flat roof of the Science Building to investigate how seasonal changes affect energy production. The aim was not to power the entire campus, but to compare actual monthly output with the output predicted by a standard model used by the estates office.\n\nThe model estimated production from expected sunlight hours, assuming panels tilted at 30 degrees – an angle chosen to maximise summer capture – and assuming no shading from nearby structures. Researchers recorded actual kilowatt-hours (kWh) each month from June 2022 to May 2023 and compared the figures to the modelled estimates. Previous work at Greenfield College had found only a 20% winter drop, so the team wanted to see if Midfield showed a similar pattern.\n\nResults showed clear seasonal divergence. In summer (June to August), actual output was about 5% above the model, averaging 4,850 kWh per month against a predicted 4,620 kWh. Autumn (September to November) was close to expectations, within 2% below the forecast. Winter (December to February) was markedly lower, with actual production around 40% below the model, at 1,120 kWh versus 1,860 kWh predicted. Spring (March to May) was also below, by roughly 15%. This pattern tentatively suggests the tilt optimisation favours summer at the expense of winter, but the evidence is limited to a single site and one year.\n\nSeveral factors help explain the gap. In winter, panels were covered by snow for 18 days in January, and the low sun angle meant the adjacent library tower cast a shadow over part of the array in the early afternoon – a factor not included in the model. The shortfall may also be linked to shorter daylight hours, though the model already accounted for this. In spring, dust accumulation from nearby construction reduced efficiency until a scheduled cleaning in late April restored output. Summer benefited from frequent rain that washed the panels and from long daylight hours that matched the tilt optimisation.\n\nThe authors conclude that seasonal variation is significant and that models should be adjusted for local conditions. However, they qualify this claim carefully. The study covers only one year, and that winter was cloudier than average, with 15% fewer sun hours than the ten-year mean for the region. Therefore, the 40% winter deficit cannot be generalised to every year or to other sites with different shading or angles. The example of snow cover illustrates a specific, temporary cause, not proof that winter performance will always be that low. The researchers recommend multi-year monitoring and an updated model that incorporates snow days, shading patterns, and cleaning schedules before making investment decisions.",
+      "prompt": "Why were the panels installed on the Science Building?",
+      "options": [
+        "To replace all campus electricity supply",
+        "To test seasonal variation against predictions",
+        "To compare two different panel brands",
+        "To provide power for library tower"
+      ],
+      "answer": 1,
+      "explanation": "The passage states the aim was to compare actual monthly output with modelled predictions. Option A misstates the scope as full campus supply."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Seasonal Output from Campus Solar Panels",
+      "pathwayStage": "band-6-5",
+      "focus": "seasonal output from campus solar panels",
+      "passage": "Campus Solar Output Across Seasons\n\nIn March 2022, Midfield University installed 120 photovoltaic panels on the flat roof of the Science Building to investigate how seasonal changes affect energy production. The aim was not to power the entire campus, but to compare actual monthly output with the output predicted by a standard model used by the estates office.\n\nThe model estimated production from expected sunlight hours, assuming panels tilted at 30 degrees – an angle chosen to maximise summer capture – and assuming no shading from nearby structures. Researchers recorded actual kilowatt-hours (kWh) each month from June 2022 to May 2023 and compared the figures to the modelled estimates. Previous work at Greenfield College had found only a 20% winter drop, so the team wanted to see if Midfield showed a similar pattern.\n\nResults showed clear seasonal divergence. In summer (June to August), actual output was about 5% above the model, averaging 4,850 kWh per month against a predicted 4,620 kWh. Autumn (September to November) was close to expectations, within 2% below the forecast. Winter (December to February) was markedly lower, with actual production around 40% below the model, at 1,120 kWh versus 1,860 kWh predicted. Spring (March to May) was also below, by roughly 15%. This pattern tentatively suggests the tilt optimisation favours summer at the expense of winter, but the evidence is limited to a single site and one year.\n\nSeveral factors help explain the gap. In winter, panels were covered by snow for 18 days in January, and the low sun angle meant the adjacent library tower cast a shadow over part of the array in the early afternoon – a factor not included in the model. The shortfall may also be linked to shorter daylight hours, though the model already accounted for this. In spring, dust accumulation from nearby construction reduced efficiency until a scheduled cleaning in late April restored output. Summer benefited from frequent rain that washed the panels and from long daylight hours that matched the tilt optimisation.\n\nThe authors conclude that seasonal variation is significant and that models should be adjusted for local conditions. However, they qualify this claim carefully. The study covers only one year, and that winter was cloudier than average, with 15% fewer sun hours than the ten-year mean for the region. Therefore, the 40% winter deficit cannot be generalised to every year or to other sites with different shading or angles. The example of snow cover illustrates a specific, temporary cause, not proof that winter performance will always be that low. The researchers recommend multi-year monitoring and an updated model that incorporates snow days, shading patterns, and cleaning schedules before making investment decisions.",
+      "prompt": "What assumption did the original model make?",
+      "options": [
+        "Panels would have no shading",
+        "Snow would cover panels monthly",
+        "Dust would reduce spring output",
+        "Angle suited winter sun best"
+      ],
+      "answer": 0,
+      "explanation": "The model assumed no shading from nearby structures, later contradicted by the library tower shadow. Option D reverses the tilt which was optimised for summer."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Seasonal Output from Campus Solar Panels",
+      "pathwayStage": "band-6-5",
+      "focus": "seasonal output from campus solar panels",
+      "passage": "Campus Solar Output Across Seasons\n\nIn March 2022, Midfield University installed 120 photovoltaic panels on the flat roof of the Science Building to investigate how seasonal changes affect energy production. The aim was not to power the entire campus, but to compare actual monthly output with the output predicted by a standard model used by the estates office.\n\nThe model estimated production from expected sunlight hours, assuming panels tilted at 30 degrees – an angle chosen to maximise summer capture – and assuming no shading from nearby structures. Researchers recorded actual kilowatt-hours (kWh) each month from June 2022 to May 2023 and compared the figures to the modelled estimates. Previous work at Greenfield College had found only a 20% winter drop, so the team wanted to see if Midfield showed a similar pattern.\n\nResults showed clear seasonal divergence. In summer (June to August), actual output was about 5% above the model, averaging 4,850 kWh per month against a predicted 4,620 kWh. Autumn (September to November) was close to expectations, within 2% below the forecast. Winter (December to February) was markedly lower, with actual production around 40% below the model, at 1,120 kWh versus 1,860 kWh predicted. Spring (March to May) was also below, by roughly 15%. This pattern tentatively suggests the tilt optimisation favours summer at the expense of winter, but the evidence is limited to a single site and one year.\n\nSeveral factors help explain the gap. In winter, panels were covered by snow for 18 days in January, and the low sun angle meant the adjacent library tower cast a shadow over part of the array in the early afternoon – a factor not included in the model. The shortfall may also be linked to shorter daylight hours, though the model already accounted for this. In spring, dust accumulation from nearby construction reduced efficiency until a scheduled cleaning in late April restored output. Summer benefited from frequent rain that washed the panels and from long daylight hours that matched the tilt optimisation.\n\nThe authors conclude that seasonal variation is significant and that models should be adjusted for local conditions. However, they qualify this claim carefully. The study covers only one year, and that winter was cloudier than average, with 15% fewer sun hours than the ten-year mean for the region. Therefore, the 40% winter deficit cannot be generalised to every year or to other sites with different shading or angles. The example of snow cover illustrates a specific, temporary cause, not proof that winter performance will always be that low. The researchers recommend multi-year monitoring and an updated model that incorporates snow days, shading patterns, and cleaning schedules before making investment decisions.",
+      "prompt": "How did actual output compare to modelled output?",
+      "options": [
+        "Winter matched predictions closely",
+        "Autumn was far below predictions",
+        "Spring was highest of all",
+        "Summer slightly exceeded predictions"
+      ],
+      "answer": 3,
+      "explanation": "Summer averaged 4,850 kWh versus 4,620 kWh predicted, about 5% above. Option A is incorrect because winter was 40% below."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Seasonal Output from Campus Solar Panels",
+      "pathwayStage": "band-6-5",
+      "focus": "seasonal output from campus solar panels",
+      "passage": "Campus Solar Output Across Seasons\n\nIn March 2022, Midfield University installed 120 photovoltaic panels on the flat roof of the Science Building to investigate how seasonal changes affect energy production. The aim was not to power the entire campus, but to compare actual monthly output with the output predicted by a standard model used by the estates office.\n\nThe model estimated production from expected sunlight hours, assuming panels tilted at 30 degrees – an angle chosen to maximise summer capture – and assuming no shading from nearby structures. Researchers recorded actual kilowatt-hours (kWh) each month from June 2022 to May 2023 and compared the figures to the modelled estimates. Previous work at Greenfield College had found only a 20% winter drop, so the team wanted to see if Midfield showed a similar pattern.\n\nResults showed clear seasonal divergence. In summer (June to August), actual output was about 5% above the model, averaging 4,850 kWh per month against a predicted 4,620 kWh. Autumn (September to November) was close to expectations, within 2% below the forecast. Winter (December to February) was markedly lower, with actual production around 40% below the model, at 1,120 kWh versus 1,860 kWh predicted. Spring (March to May) was also below, by roughly 15%. This pattern tentatively suggests the tilt optimisation favours summer at the expense of winter, but the evidence is limited to a single site and one year.\n\nSeveral factors help explain the gap. In winter, panels were covered by snow for 18 days in January, and the low sun angle meant the adjacent library tower cast a shadow over part of the array in the early afternoon – a factor not included in the model. The shortfall may also be linked to shorter daylight hours, though the model already accounted for this. In spring, dust accumulation from nearby construction reduced efficiency until a scheduled cleaning in late April restored output. Summer benefited from frequent rain that washed the panels and from long daylight hours that matched the tilt optimisation.\n\nThe authors conclude that seasonal variation is significant and that models should be adjusted for local conditions. However, they qualify this claim carefully. The study covers only one year, and that winter was cloudier than average, with 15% fewer sun hours than the ten-year mean for the region. Therefore, the 40% winter deficit cannot be generalised to every year or to other sites with different shading or angles. The example of snow cover illustrates a specific, temporary cause, not proof that winter performance will always be that low. The researchers recommend multi-year monitoring and an updated model that incorporates snow days, shading patterns, and cleaning schedules before making investment decisions.",
+      "prompt": "Which distinguishes the authors' overall claim from a specific example?",
+      "options": [
+        "Claim: dust explains all differences; example: library shadow",
+        "Claim: panels work best in autumn; example: model was accurate",
+        "Claim: seasonal variation is significant; example: snow cover in winter",
+        "Claim: snow caused failure; example: seasonal variation exists"
+      ],
+      "answer": 2,
+      "explanation": "The authors claim variation is significant but qualified, with 18 days of snow as one temporary example. Option D swaps the claim and the example."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Seasonal Output from Campus Solar Panels",
+      "pathwayStage": "band-6-5",
+      "focus": "seasonal output from campus solar panels",
+      "passage": "Campus Solar Output Across Seasons\n\nIn March 2022, Midfield University installed 120 photovoltaic panels on the flat roof of the Science Building to investigate how seasonal changes affect energy production. The aim was not to power the entire campus, but to compare actual monthly output with the output predicted by a standard model used by the estates office.\n\nThe model estimated production from expected sunlight hours, assuming panels tilted at 30 degrees – an angle chosen to maximise summer capture – and assuming no shading from nearby structures. Researchers recorded actual kilowatt-hours (kWh) each month from June 2022 to May 2023 and compared the figures to the modelled estimates. Previous work at Greenfield College had found only a 20% winter drop, so the team wanted to see if Midfield showed a similar pattern.\n\nResults showed clear seasonal divergence. In summer (June to August), actual output was about 5% above the model, averaging 4,850 kWh per month against a predicted 4,620 kWh. Autumn (September to November) was close to expectations, within 2% below the forecast. Winter (December to February) was markedly lower, with actual production around 40% below the model, at 1,120 kWh versus 1,860 kWh predicted. Spring (March to May) was also below, by roughly 15%. This pattern tentatively suggests the tilt optimisation favours summer at the expense of winter, but the evidence is limited to a single site and one year.\n\nSeveral factors help explain the gap. In winter, panels were covered by snow for 18 days in January, and the low sun angle meant the adjacent library tower cast a shadow over part of the array in the early afternoon – a factor not included in the model. The shortfall may also be linked to shorter daylight hours, though the model already accounted for this. In spring, dust accumulation from nearby construction reduced efficiency until a scheduled cleaning in late April restored output. Summer benefited from frequent rain that washed the panels and from long daylight hours that matched the tilt optimisation.\n\nThe authors conclude that seasonal variation is significant and that models should be adjusted for local conditions. However, they qualify this claim carefully. The study covers only one year, and that winter was cloudier than average, with 15% fewer sun hours than the ten-year mean for the region. Therefore, the 40% winter deficit cannot be generalised to every year or to other sites with different shading or angles. The example of snow cover illustrates a specific, temporary cause, not proof that winter performance will always be that low. The researchers recommend multi-year monitoring and an updated model that incorporates snow days, shading patterns, and cleaning schedules before making investment decisions.",
+      "prompt": "What can be inferred about improving winter predictions?",
+      "options": [
+        "Including snow and shading would increase accuracy",
+        "Changing panel angle would eliminate winter shortfall",
+        "One year of data is enough for generalization",
+        "Summer results prove model is flawless"
+      ],
+      "answer": 0,
+      "explanation": "The authors recommend an updated model incorporating snow days and shading patterns. Option B overstates the effect as eliminating the shortfall entirely."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Biodiversity Garden Funding",
+      "pathwayStage": "band-6-5",
+      "focus": "Summarising and comparing funding data with qualified claims",
+      "prompt": "You should spend about 20 minutes on this task. Write at least 150 words.\n\nThe table below shows the funding plan for a proposed campus biodiversity garden at Greenfield University for the academic year 2024-2025.\n\nFunding source | Amount pledged (USD) | Status and conditions\nUniversity Sustainability Fund | 18,000 | Confirmed; can be used only for native plants, soil and irrigation\nStudent Union Grant | 7,500 | Pending approval, decision expected November 2024\nLocal business sponsorship (3 companies combined) | 9,000 | Confirmed; sponsors require logo display at garden entrance for two years\nAlumni donations | 4,200 | Collected by June 2024; amount may vary if further donations arrive\nEstimated total cost of project | 42,000 | Includes design, planting and two years of maintenance\n\nSummarise the information by selecting and reporting the main features, making comparisons where relevant and noting any uncertainties or limitations in the funding.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Student Health Survey Results and Limitations",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing survey results and accurately handling limitations",
+      "prompt": "You should spend about 20 minutes on this task. Write at least 150 words.\n\nThe table below summarises results from an online health and wellbeing survey of undergraduates at Greenfield University, conducted in March 2024.\n\nSurvey details: Invitations sent to 1,200 students; 300 responded (25% response rate). Participation was voluntary.\n\nIndicator | Result among respondents\nAverage sleep less than 6 hours per night | 38%\nExercise three or more times per week | 42%\nReported high stress in the past two weeks | 61%\nVisited campus health centre in the past month | 24%\n\nAdditional information about the sample: 68% of respondents were female, compared with 51% in the overall undergraduate population. First-year students made up 48% of respondents but only 32% of the student body.\n\nSummarise the information by selecting and reporting the main features, comparing the figures where relevant and explaining the limitations of the data.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Funding a Campus Biodiversity Garden",
+      "pathwayStage": "band-6-5",
+      "focus": "Discussing competing priorities with balanced, evidence-based argument",
+      "prompt": "You should spend about 40 minutes on this task. Write at least 250 words.\n\nAt Greenfield University, a proposal to build a campus biodiversity garden (estimated cost $42,000) has divided opinion. Supporters argue it will support wellbeing, education and local ecology. Critics argue that with limited budgets, universities should prioritise laboratories, libraries and student support services.\n\nDiscuss both views and give your own opinion. Support your argument with reasons and examples, using qualified language where claims are uncertain and referring to evidence cautiously.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Using Imperfect Health Survey Evidence",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating evidence and handling uncertainty in recommendations",
+      "prompt": "You should spend about 40 minutes on this task. Write at least 250 words.\n\nA university health survey of 300 students (25% response rate, voluntary online participation) found that 61% reported high stress and 38% slept less than six hours per night. Some staff claim this proves poor sleep causes stress and demand immediate funding for new services. Others say the survey is too limited to support major decisions.\n\nTo what extent should universities act on limited survey evidence of this kind? Discuss how such data should be interpreted, what its limitations are, and what further evidence might be needed before making policy changes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Proposing Safer Walking Routes Near Schools",
+      "pathwayStage": "band-6-5",
+      "focus": "Proposing and evaluating practical solutions with consideration of trade-offs",
+      "prompt": "You should spend about 40 minutes on this task. Write at least 250 words.\n\nThe city council near Greenfield University proposes to create safer walking routes to three local schools by adding two new pedestrian crossings, widening 800 metres of pavement, introducing a 20 km/h speed limit between 7:30-9:00 and 14:30-16:00, and organising parent volunteers to supervise crossings. Some residents support the plan for safety and health reasons, while others oppose it due to traffic delays and inconvenience for drivers.\n\nDiscuss the possible benefits and drawbacks of this proposal and suggest how its effectiveness could be evaluated. Give reasons for your answer and include any relevant examples from your own experience or knowledge.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Green Spaces and Campus Life",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing personal habits and preferences related to nature",
+      "prompt": "Answer the following questions in 2-3 sentences each. Do not give memorised answers.\n1. Do you have access to a garden or green space where you study or live?\n2. How often do you spend time in parks or natural areas?\n3. What do you think a biodiversity garden could offer to students?\n4. Has your attitude to nature changed since you were younger?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Health, Sleep and Daily Routines",
+      "pathwayStage": "band-6-5",
+      "focus": "Talking about personal health habits with qualified descriptions",
+      "prompt": "Answer the following questions in 2-3 sentences each.\n1. How would you describe your current sleep habits?\n2. What kind of exercise do you do, if any?\n3. What helps you manage stress during busy periods?\n4. Do you think students pay enough attention to their health? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Walk to School or University",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing a route with detail and reflection",
+      "prompt": "Describe a walking route you use or used to get to school, university or work.\n\nYou should say:\n- where the route starts and ends\n- what you see or experience along the way\n- who you usually walk with, if anyone\n- and explain why this route is or was important to you.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Interpreting Surveys and Health Information",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating reliability, bias and cautious use of evidence",
+      "prompt": "Discuss the following questions, giving reasons and examples.\n1. Why might voluntary health surveys give a misleading picture of student wellbeing?\n2. How should universities decide whether survey evidence is strong enough to act on?\n3. What other types of evidence could complement a small survey before making policy changes?\n4. Do you think people are becoming more cautious about health information online? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Funding Public Projects and Road Safety",
+      "pathwayStage": "band-6-5",
+      "focus": "Weighing priorities, stakeholder views and measuring success",
+      "prompt": "Discuss the following questions, giving reasons and evaluation.\n1. Who should pay for projects like a campus biodiversity garden or safer school walking routes, and why?\n2. How can planners balance driver convenience with pedestrian safety near schools?\n3. What are the challenges of evaluating whether a safety project has actually worked?\n4. Should local communities have a direct say in how such projects are funded and designed? Why or why not?"
+    }
+  ]
+}

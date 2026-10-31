@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e397158a48d2816200aea60b536df9624eca097a695169abcb942a52d2787d7f",
+  "verdict": "repair",
+  "findings": [
+    {
+      "id": "ielts-meta-band-5-listening-01",
+      "severity": "major",
+      "issue": "Five Listening items were labelled Part 4, but the shared transcript is a two-speaker student/librarian service conversation. The questions and answers are supported.",
+      "suggestedFix": "Relabel to the suitable conversation part or rewrite the transcript as a Part 4 monologue."
+    }
+  ]
+}

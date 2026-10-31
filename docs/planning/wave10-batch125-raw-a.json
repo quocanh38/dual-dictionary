@@ -1,0 +1,44 @@
+{
+  "wave": 10,
+  "batch": 125,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after colour scheme in the manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section with newspapers, painting, advertising units, grooming, locks, figurative language, spaceflight, commerce, mathematics, optical media, workplace leave, finance, computing, economics, price statistics and vision. Clarify technical meanings, register, regional usage and the limits of statistical or security terms without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 368,
+    "remainingRawOnlyAfter": 348
+  },
+  "selected": [
+    "colour supplement",
+    "colour wash",
+    "column inch",
+    "comb out",
+    "combination lock",
+    "comfort zone",
+    "command module",
+    "commercial traveller",
+    "common denominator",
+    "compact disc",
+    "compassionate leave",
+    "complex number",
+    "compound interest",
+    "computer-aided design",
+    "computer virus",
+    "conspicuous consumption",
+    "consumer credit",
+    "consumer goods",
+    "consumer price index",
+    "contact lens"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NASA: The Apollo Program and spacecraft modules (https://www.nasa.gov/the-apollo-program/)",
+    "NIST CSRC: Virus glossary (https://csrc.nist.gov/glossary/term/virus)",
+    "US Bureau of Labor Statistics: Consumer Price Index FAQs (https://www.bls.gov/cpi/questions-and-answers.htm)",
+    "UK Office for National Statistics: CPI basket of goods and services (https://www.ons.gov.uk/economy/inflationandpriceindices/articles/ukconsumerpriceinflationbasketofgoodsandservices/2017)"
+  ]
+}

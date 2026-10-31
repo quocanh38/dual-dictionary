@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 30,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after free trade, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Independently written Vietnamese meanings, collocations, original bilingual examples and useful learner notes. Regional, technical and pragmatic distinctions are labeled; no source dictionary wording/examples copied.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2240,
+    "remainingRawOnlyAfter": 2220
+  },
+  "selected": [
+    "free will",
+    "french window",
+    "front end",
+    "front line",
+    "front man",
+    "full back",
+    "full dress",
+    "full house",
+    "full point",
+    "full stop",
+    "full time",
+    "futures market",
+    "game theory",
+    "gas station",
+    "get about",
+    "get across",
+    "get ahead",
+    "get along",
+    "get at",
+    "get away"
+  ]
+}

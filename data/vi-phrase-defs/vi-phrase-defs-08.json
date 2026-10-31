@@ -1,0 +1,1169 @@
+[
+  {
+    "phrase": "break in",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đột nhập (vào nhà, cửa hàng bằng cách phá)",
+        "ex": [
+          ["Burglars broke in through the back window.", "Kẻ trộm đột nhập qua cửa sổ phía sau."]
+        ]
+      },
+      {
+        "m": "cắt ngang, xen ngang vào câu chuyện/cuộc họp",
+        "pat": "break in (on something)",
+        "ex": [
+          ["Sorry to break in on your meeting.", "Xin lỗi đã xen ngang cuộc họp của anh."]
+        ]
+      },
+      {
+        "m": "đi cho giãn ra (giày mới); chạy rà cho quen máy móc",
+        "ex": [
+          ["These new shoes need breaking in.", "Đôi giày mới này phải đi một thời gian mới giãn ra."]
+        ]
+      }
+    ],
+    "note": "Phân biệt: không có tân ngữ thì dùng 'break in' (đột nhập), có tân ngữ thì dùng 'break into somewhere': break into a house. Ngoài ra 'break in a horse' = thuần hoá ngựa (cùng cấu trúc break in + tân ngữ)."
+  },
+  {
+    "phrase": "break out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "bùng phát, bùng nổ (chiến tranh, dịch bệnh, hoả hoạn)",
+        "ex": [
+          ["A fire broke out in the warehouse last night.", "Đêm qua một đám cháy bùng phát ở kho hàng."]
+        ]
+      },
+      {
+        "m": "vượt ngục, trốn thoát",
+        "pat": "break out of somewhere",
+        "ex": [
+          ["Three prisoners broke out of jail.", "Ba tù nhân đã vượt ngục."]
+        ]
+      },
+      {
+        "m": "nổi đầy (mẩn, mồ hôi) trên người",
+        "pat": "break out in/into something",
+        "ex": [
+          ["She broke out in a rash after eating shellfish.", "Cô ấy nổi mẩn khắp người sau khi ăn hải sản."]
+        ]
+      }
+    ],
+    "note": "Danh từ 'breakout' = sự bùng phát hoặc thành công vang dội: a breakout role (vai diễn đưa tên tuổi lên)."
+  },
+  {
+    "phrase": "call off",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "huỷ (sự kiện, kế hoạch, cuộc tìm kiếm)",
+        "ex": [
+          ["They called off the match because of the storm.", "Họ huỷ trận đấu vì bão."],
+          ["The search was called off at nightfall.", "Cuộc tìm kiếm được dừng lại khi trời tối."]
+        ]
+      },
+      {
+        "m": "gọi (chó) ngừng tấn công, tránh ra",
+        "ex": [
+          ["Call off your dog!", "Gọi con chó của anh tránh ra!"]
+        ]
+      }
+    ],
+    "note": "Đừng nhầm với 'put off' (hoãn sang lúc khác) — 'call off' là huỷ hẳn."
+  },
+  {
+    "phrase": "call out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "gọi to, nói vọng lại",
+        "ex": [
+          ["He called out her name in the crowd.", "Anh ấy gọi to tên cô ấy giữa đám đông."]
+        ]
+      },
+      {
+        "m": "(Mỹ) công khai chỉ trích, 'gọi tên' ai đó",
+        "ex": [
+          ["She called out the company for misleading ads.", "Cô ấy công khai lên án công ty vì quảng cáo gây hiểu lầm."]
+        ]
+      },
+      {
+        "m": "điều động, gọi lực lượng tới (cảnh sát, quân đội)",
+        "ex": [
+          ["The mayor called out the National Guard.", "Thị trưởng đã điều Vệ binh Quốc gia tới."]
+        ]
+      }
+    ],
+    "note": "Trong ngữ cảnh công đoàn: call the workers out (on strike) = kêu gọi công nhân đình công."
+  },
+  {
+    "phrase": "check in",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "làm thủ tục nhận phòng (khách sạn), làm thủ tục lên máy bay",
+        "ex": [
+          ["We checked in at the airport two hours early.", "Chúng tôi làm thủ tục ở sân bay sớm hai tiếng."]
+        ]
+      },
+      {
+        "m": "báo tin, liên lạc để cập nhật tình hình",
+        "pat": "check in (with somebody)",
+        "ex": [
+          ["Check in with me when you get there.", "Tới nơi thì nhắn cho mình một câu nhé."]
+        ]
+      }
+    ],
+    "note": "Danh từ viết 'check-in': the check-in desk (quầy làm thủ tục). Khi có nơi cụ thể: check into a hotel = nhận phòng khách sạn."
+  },
+  {
+    "phrase": "check up on",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "kiểm tra, theo dõi (ai/cái gì) — thường là ngầm hoặc để chắc mọi việc ổn",
+        "pat": "check up on somebody/something",
+        "ex": [
+          ["She checked up on her son's homework every evening.", "Tối nào cô ấy cũng kiểm tra bài tập của con trai."],
+          ["The manager kept checking up on us.", "Quản lý cứ theo dõi, kiểm tra chúng tôi suốt."]
+        ]
+      }
+    ],
+    "note": "Khác 'check out' (trả phòng; xem xét ai đó) và 'check on somebody' (ghé xem ai có sao không — nhẹ nhàng, quan tâm hơn)."
+  },
+  {
+    "phrase": "come down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "giảm (giá, nhiệt độ, mức độ)",
+        "ex": [
+          ["House prices have come down a lot.", "Giá nhà đã giảm nhiều."]
+        ]
+      },
+      {
+        "m": "(nhà, trần, cây) đổ sập",
+        "ex": [
+          ["Part of the ceiling came down in the storm.", "Một phần trần nhà đổ sập trong cơn bão."]
+        ]
+      },
+      {
+        "m": "chung quy là, cốt ở chỗ",
+        "pat": "come down to something",
+        "ex": [
+          ["It all comes down to money.", "Chung quy lại cũng chỉ vì tiền."]
+        ]
+      },
+      {
+        "m": "mắc bệnh (đổ bệnh)",
+        "pat": "come down with something",
+        "ex": [
+          ["He came down with flu before the exam.", "Cậu ấy bị cúm ngay trước kỳ thi."]
+        ]
+      }
+    ],
+    "note": "'Come down on somebody' = mắng, trừng phạt ai nặng; 'come down in favour of' = ngả về phía, ủng hộ phương án nào."
+  },
+  {
+    "phrase": "come over",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "ghé qua nhà ai đó",
+        "ex": [
+          ["Come over for dinner on Friday.", "Thứ Sáu qua nhà mình ăn tối nhé."]
+        ]
+      },
+      {
+        "m": "(cảm xúc) ập đến với ai",
+        "ex": [
+          ["I don't know what came over him — he just started shouting.", "Không hiểu cái gì xảy ra với anh ấy — tự nhiên gào lên."]
+        ]
+      },
+      {
+        "m": "đổi phe, ngả sang phía khác",
+        "pat": "come over to something",
+        "ex": [
+          ["He finally came over to our point of view.", "Cuối cùng anh ấy ngả theo quan điểm của chúng tôi."]
+        ]
+      }
+    ],
+    "note": "Khác 'come across': tình cờ gặp hoặc tạo ấn tượng. 'Come over as' = gây ấn tượng là người thế nào: She comes over as shy."
+  },
+  {
+    "phrase": "cover up",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "che đậy (sai phạm, sự thật)",
+        "ex": [
+          ["They tried to cover up the accident.", "Họ cố che đậy vụ tai nạn."]
+        ]
+      },
+      {
+        "m": "đắp/che kín cho ấm hoặc khỏi bị nhìn thấy",
+        "ex": [
+          ["Cover up — it's freezing outside.", "Mặc thêm vào đi — ngoài trời lạnh buốt."]
+        ]
+      }
+    ],
+    "note": "Danh từ 'cover-up' = sự che đậy: a cover-up of the scandal (một màn che đậy vụ bê bối)."
+  },
+  {
+    "phrase": "die away",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(âm thanh, tiếng động) nhỏ dần rồi tắt hẳn",
+        "ex": [
+          ["The music died away as the guests left.", "Tiếng nhạc nhỏ dần rồi tắt hẳn khi khách ra về."]
+        ]
+      }
+    ],
+    "note": "Phân biệt bộ ba: die down = lắng dịu sau khi sôi động (gió, tin đồn); die out = biến mất hoàn toàn (loài, phong tục); die off = chết dần từng nhóm."
+  },
+  {
+    "phrase": "die down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "lắng dịu, hạ nhiệt (gió, tiếng ồn, tin đồn, cơn giận)",
+        "ex": [
+          ["The wind died down after the storm.", "Gió lặng dần sau cơn bão."],
+          ["The controversy will die down in a few days.", "Mấy ngày nữa dư luận sẽ lắng xuống."]
+        ]
+      }
+    ],
+    "note": "Không dùng cho sự vật/loài biến mất hẳn — trường hợp đó dùng 'die out'."
+  },
+  {
+    "phrase": "die out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "tuyệt chủng, mất hẳn (loài, ngôn ngữ, phong tục)",
+        "ex": [
+          ["Many species will die out if we do nothing.", "Nhiều loài sẽ tuyệt chủng nếu chúng ta không làm gì."],
+          ["That custom died out long ago.", "Phong tục đó đã mất từ lâu rồi."]
+        ]
+      }
+    ],
+    "note": "Trang này là 1 trong 4 cụm 'die + tiểu từ' — xem thêm die away, die down, die off trên cùng từ điển."
+  },
+  {
+    "phrase": "eat away",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "ăn mòn dần (kim loại, đất đá)",
+        "ex": [
+          ["The sea has eaten away the cliffs.", "Biển đã bào mòn vách đá."]
+        ]
+      },
+      {
+        "m": "gặm nhấm, dằn vặt ai (lo lắng, ân hận)",
+        "pat": "eat away at somebody",
+        "ex": [
+          ["Guilt was eating away at her.", "Nỗi ân hận cứ gặm nhấm cô ấy."]
+        ]
+      }
+    ],
+    "note": "Khi có tân ngữ chỉ cảm xúc thường dùng 'eat away at': Jealousy was eating away at him."
+  },
+  {
+    "phrase": "fall back",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "rút lui (quân đội, đám đông)",
+        "ex": [
+          ["The troops fell back to the river.", "Quân lính rút lui về phía con sông."]
+        ]
+      },
+      {
+        "m": "phải nhờ đến, dùng đến (khi hết cách)",
+        "pat": "fall back on something",
+        "ex": [
+          ["If the sale fails, we can fall back on our savings.", "Nếu không bán được, chúng tôi còn khoản tiết kiệm để xoay."]
+        ]
+      }
+    ],
+    "note": "'Fallback' (danh từ/tính từ) = phương án dự phòng: a fallback plan."
+  },
+  {
+    "phrase": "get behind",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "chậm tiến độ, bị tồn đọng việc",
+        "pat": "get behind (with/on something)",
+        "ex": [
+          ["I've got behind with my emails.", "Mình đang bị tồn đọng email."]
+        ]
+      },
+      {
+        "m": "ủng hộ, hậu thuẫn (ai, kế hoạch)",
+        "ex": [
+          ["The whole team got behind the new project.", "Cả nhóm đều hậu thuẫn dự án mới."]
+        ]
+      }
+    ],
+    "note": "Anh-Anh: get behind WITH something; Mỹ: get behind ON something — cùng nghĩa chậm tiến độ."
+  },
+  {
+    "phrase": "give back",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "trả lại (đồ đã mượn, đồ nhặt được)",
+        "ex": [
+          ["Give the book back when you've finished.", "Đọc xong thì trả lại cuốn sách nhé."]
+        ]
+      },
+      {
+        "m": "cống hiến lại, đền đáp (cho cộng đồng, trường cũ…)",
+        "pat": "give back to somebody/something",
+        "ex": [
+          ["He gives back to his old school every year.", "Năm nào anh ấy cũng đóng góp lại cho trường cũ."]
+        ]
+      }
+    ],
+    "note": "Tân ngữ đại từ chen giữa: give it back (không nói 'give back it')."
+  },
+  {
+    "phrase": "go around",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đi một vòng quanh; đi quanh khu vực",
+        "ex": [
+          ["We went around the old town on foot.", "Chúng tôi đi bộ một vòng quanh phố cổ."]
+        ]
+      },
+      {
+        "m": "lan truyền, lây lan (bệnh, tin đồn)",
+        "ex": [
+          ["There's a flu going around at school.", "Ở trường đang có đợt cúm lây lan."]
+        ]
+      },
+      {
+        "m": "đủ để chia cho mọi người",
+        "pat": "enough to go around",
+        "ex": [
+          ["Are there enough chairs to go around?", "Số ghế có đủ cho mọi người không?"]
+        ]
+      }
+    ],
+    "note": "Anh-Anh viết 'go round'; 'go around with somebody' = hẹn hò với ai (hơi cũ)."
+  },
+  {
+    "phrase": "grow up",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "lớn lên, trưởng thành (ở đâu, thế nào)",
+        "ex": [
+          ["I grew up in a small town.", "Mình lớn lên ở một thị trấn nhỏ."]
+        ]
+      },
+      {
+        "m": "(mệnh lệnh, thông tục) thôi trẻ con đi!",
+        "ex": [
+          ["Oh, grow up!", "Thôi đi, đừng trẻ con nữa!"]
+        ]
+      }
+    ],
+    "note": "'Grow up' = lớn lên (người); đừng nhầm với 'bring up' (nuôi nấng — việc bố mẹ làm) và 'raise' (Mỹ)."
+  },
+  {
+    "phrase": "hang out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đi chơi, tụ tập, la cà với bạn bè",
+        "pat": "hang out (with somebody)",
+        "ex": [
+          ["We hung out at the café all afternoon.", "Cả buổi chiều bọn mình la cà ở quán cà phê."]
+        ]
+      },
+      {
+        "m": "phơi (quần áo) ra ngoài",
+        "ex": [
+          ["Hang the washing out to dry.", "Phơi đồ giặt ra cho khô."]
+        ]
+      },
+      {
+        "m": "thò ra ngoài (cửa sổ, miệng…)",
+        "pat": "hang out of something",
+        "ex": [
+          ["The dog's tongue was hanging out of its mouth.", "Lưỡi con chó thè ra ngoài miệng."]
+        ]
+      }
+    ],
+    "note": "Thành ngữ 'hang somebody out to dry' = bỏ rơi ai cho tự chịu trận."
+  },
+  {
+    "phrase": "hold down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "giữ được, làm được (một công việc)",
+        "pat": "hold down a job",
+        "ex": [
+          ["She's holding down two jobs to pay for school.", "Cô ấy đang cáng đáng hai việc để trang trải việc học."]
+        ]
+      },
+      {
+        "m": "kìm bớt, giữ thấp (chi phí, giá cả)",
+        "ex": [
+          ["We must hold down costs this quarter.", "Quý này chúng ta phải kìm chi phí xuống."]
+        ]
+      }
+    ],
+    "note": "Còn nghĩa giữ chặt ai đó không cho đứng dậy: It took three of us to hold him down."
+  },
+  {
+    "phrase": "knock off",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(thông tục) tan ca, nghỉ việc",
+        "ex": [
+          ["What time do you knock off?", "Mấy giờ anh tan ca?"]
+        ]
+      },
+      {
+        "m": "làm nhanh, làm vội cho xong",
+        "ex": [
+          ["She knocked off the report in an hour.", "Cô ấy làm xong bản báo cáo trong một tiếng."]
+        ]
+      },
+      {
+        "m": "bớt giá, giảm giá",
+        "ex": [
+          ["They knocked 20% off the price.", "Họ giảm 20% giá."]
+        ]
+      }
+    ],
+    "note": "Danh từ 'knock-off' = hàng nhái: a knock-off handbag. Cẩn thận: knock off còn có nghĩa lóng Mỹ là 'giết' — tình huống hiếm, nhưng nên biết để không hiểu sai."
+  },
+  {
+    "phrase": "let up",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "ngớt, giảm bớt (mưa, công việc căng, ồn ào)",
+        "ex": [
+          ["The rain didn't let up all day.", "Cả ngày trời mưa không ngớt."],
+          ["Work never lets up in December.", "Tháng 12 lúc nào công việc cũng căng."]
+        ]
+      }
+    ],
+    "note": "Đừng nhầm với 'give up' (từ bỏ). 'Let up' nội động từ — không có tân ngữ."
+  },
+  {
+    "phrase": "look back",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "nhìn lại đằng sau",
+        "ex": [
+          ["She looked back and waved.", "Cô ấy ngoái nhìn lại phía sau và vẫy tay."]
+        ]
+      },
+      {
+        "m": "nhìn lại (quá khứ), hồi tưởng",
+        "ex": [
+          ["Looking back, I don't regret anything.", "Nhìn lại thì mình không hối tiếc điều gì."]
+        ]
+      },
+      {
+        "m": "không ngoái lại nữa, thành công rực rỡ từ đó",
+        "pat": "never look back",
+        "ex": [
+          ["After the award, she never looked back.", "Sau giải thưởng đó, sự nghiệp của cô ấy thăng tiến không ngừng."]
+        ]
+      }
+    ],
+    "note": "Phân biệt 'look back at' (nhìn lại cái gì) và 'look back on' (hồi tưởng một giai đoạn): look back on childhood."
+  },
+  {
+    "phrase": "look over",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "xem qua, kiểm tra nhanh (tài liệu, nhà cửa, bài vở)",
+        "ex": [
+          ["Could you look over my essay before I submit it?", "Cậu xem qua bài luận giúp mình trước khi nộp nhé?"]
+        ]
+      },
+      {
+        "m": "nhìn về phía (ai/cái gì)",
+        "pat": "look over at somebody/something",
+        "ex": [
+          ["He looked over at me and smiled.", "Anh ấy nhìn về phía mình và cười."]
+        ]
+      }
+    ],
+    "note": "Đừng nhầm với 'overlook' — nghĩa là bỏ sót hoặc đứng cao nhìn xuống."
+  },
+  {
+    "phrase": "mark down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "ghi lại, chép lại (để nhớ)",
+        "ex": [
+          ["Mark down the address before you forget.", "Ghi lại địa chỉ đi trước khi quên."]
+        ]
+      },
+      {
+        "m": "giảm giá (thường ở cửa hàng)",
+        "ex": [
+          ["All summer clothes have been marked down.", "Quần áo hè đều đã được giảm giá."]
+        ]
+      },
+      {
+        "m": "trừ điểm (giáo viên chấm)",
+        "ex": [
+          ["The teacher marked him down for poor spelling.", "Cô giáo trừ điểm cậu ấy vì viết sai chính tả."]
+        ]
+      }
+    ],
+    "note": "'Mark somebody down as' = coi ai là kiểu người gì: I had him marked down as a troublemaker."
+  },
+  {
+    "phrase": "pull out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "rút ra, kéo ra (khỏi vật gì)",
+        "ex": [
+          ["He pulled out a pen and wrote a note.", "Anh ấy rút bút ra và viết mấy dòng."]
+        ]
+      },
+      {
+        "m": "rút lui khỏi việc gì (giao dịch, giải đấu, dự án)",
+        "pat": "pull out of something",
+        "ex": [
+          ["Two teams pulled out of the tournament.", "Hai đội đã rút khỏi giải đấu."]
+        ]
+      },
+      {
+        "m": "(xe) lách ra làn/xuất hiện trước đầu xe khác",
+        "ex": [
+          ["A car suddenly pulled out in front of me.", "Một chiếc xe bỗng nhiên lách ra chắn trước đầu xe tôi."]
+        ]
+      }
+    ],
+    "note": "'Pull out all the stops' = dốc toàn lực. Danh từ 'pull-out' = phần rời (tờ rời, bàn xếp) — khác 'pullover' (áo len chui đầu)."
+  },
+  {
+    "phrase": "pull over",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "tấp xe vào lề (thường vì cảnh sát yêu cầu)",
+        "ex": [
+          ["The police pulled us over on the highway.", "Cảnh sát yêu cầu chúng tôi dừng xe vào lề đường cao tốc."],
+          ["Let's pull over and check the map.", "Mình tấp vào lề xem lại bản đồ đi."]
+        ]
+      }
+    ],
+    "note": "Phân biệt với 'pull out' (rút ra, lách vào làn): bị cảnh sát cho dừng là pull over."
+  },
+  {
+    "phrase": "put down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đặt xuống",
+        "ex": [
+          ["Put the box down gently.", "Đặt cái hộp xuống nhẹ thôi."]
+        ]
+      },
+      {
+        "m": "sỉ nhục, dìm hàng ai",
+        "pat": "put somebody down",
+        "ex": [
+          ["Stop putting me down in front of people.", "Đừng có dìm mình trước mặt người khác nữa."]
+        ]
+      },
+      {
+        "m": "ghi tên, đăng ký",
+        "ex": [
+          ["I've put my name down for the course.", "Mình đã ghi tên vào khoá học rồi."]
+        ]
+      },
+      {
+        "m": "quy cho, lý giải là",
+        "pat": "put something down to something",
+        "ex": [
+          ["I put it down to tiredness.", "Mình cho rằng tại vì mệt."]
+        ]
+      }
+    ],
+    "note": "'Put-down' (danh từ) = lời dìm hàng: a cruel put-down. Với thú cưng: put a pet down = cho ra đi nhẹ nhàng (không dùng cho người)."
+  },
+  {
+    "phrase": "put off",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "hoãn lại sang lúc khác",
+        "ex": [
+          ["The meeting was put off till Monday.", "Cuộc họp bị hoãn tới thứ Hai."],
+          ["Don't put off what you can do today.", "Đừng để việc hôm nay sang ngày mai."]
+        ]
+      },
+      {
+        "m": "làm cho mất hứng, sinh ác cảm",
+        "ex": [
+          ["The smell of the food put me off.", "Mùi đồ ăn làm mình mất hết cảm giác thèm."]
+        ]
+      },
+      {
+        "m": "(Anh) làm ai xao nhãng, mất tập trung",
+        "ex": [
+          ["Stop talking — you're putting me off.", "Đừng nói nữa — cậu làm mình phân tâm đấy."]
+        ]
+      }
+    ],
+    "note": "Đừng nhầm với 'call off' (huỷ hẳn). Tính từ 'off-putting' = gây ác cảm."
+  },
+  {
+    "phrase": "put together",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "lắp ráp, ghép lại",
+        "ex": [
+          ["We put the table together in ten minutes.", "Bọn mình lắp cái bàn trong mười phút."]
+        ]
+      },
+      {
+        "m": "gom lại, soạn, chuẩn bị (từ nhiều nguồn)",
+        "ex": [
+          ["She put together a great presentation.", "Cô ấy soạn được một bài trình bày rất tốt."]
+        ]
+      }
+    ],
+    "note": "Còn dùng khen ai chỉn chu: He's very well put together. Nghĩa 'cộng lại': more than all the rest put together."
+  },
+  {
+    "phrase": "run across",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "tình cờ gặp, bắt gặp",
+        "ex": [
+          ["I ran across an old friend at the market.", "Mình tình cờ gặp lại một người bạn cũ ở chợ."],
+          ["She ran across the article while tidying up.", "Cô ấy bắt gặp bài báo khi đang dọn dẹp."]
+        ]
+      }
+    ],
+    "note": "Khác 'run into' (tình cờ gặp — thông dụng hơn) và 'run over' (cán qua)."
+  },
+  {
+    "phrase": "run through",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "xem qua, điểm lại nhanh từ đầu đến cuối",
+        "ex": [
+          ["Let's run through the plan once more.", "Mình điểm lại kế hoạch một lượt nữa nhé."]
+        ]
+      },
+      {
+        "m": "(cảm giác, ý nghĩ) chạy dọc, ùa qua người",
+        "ex": [
+          ["A shiver ran through her.", "Một cơn rùng mình chạy dọc người cô ấy."]
+        ]
+      },
+      {
+        "m": "tiêu hết (tiền của) nhanh chóng",
+        "ex": [
+          ["He ran through his inheritance in a year.", "Anh ta tiêu hết số tài sản thừa kế trong một năm."]
+        ]
+      }
+    ],
+    "note": "Còn nghĩa đâm xuyên: The sword ran him through."
+  },
+  {
+    "phrase": "show off",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "khoe khoang (phô trương cái mình có, mình giỏi)",
+        "ex": [
+          ["He's always showing off his new watch.", "Anh ta suốt ngày khoe chiếc đồng hồ mới."]
+        ]
+      },
+      {
+        "m": "phô ra, tôn lên (vẻ đẹp, điểm mạnh)",
+        "ex": [
+          ["The dress shows off her figure.", "Chiếc váy tôn lên vóc dáng của cô ấy."]
+        ]
+      }
+    ],
+    "note": "Danh từ 'show-off' = người thích khoe khoang: He's such a show-off."
+  },
+  {
+    "phrase": "sign in",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đăng nhập (tài khoản)",
+        "ex": [
+          ["Sign in with your email address.", "Đăng nhập bằng địa chỉ email của bạn."]
+        ]
+      },
+      {
+        "m": "ký tên, ghi danh khi đến (khách, khách sạn, toà nhà)",
+        "ex": [
+          ["All visitors must sign in at reception.", "Khách đến phải ký tên ở quầy lễ tân."]
+        ]
+      }
+    ],
+    "note": "Khác 'sign up' (đăng ký tài khoản/tham gia) và 'sign out' (đăng xuất)."
+  },
+  {
+    "phrase": "step down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "từ chức, rút lui khỏi vị trí",
+        "pat": "step down (as something)",
+        "ex": [
+          ["The CEO stepped down after the scandal.", "Giám đốc điều hành từ chức sau vụ bê bối."]
+        ]
+      }
+    ],
+    "note": "Còn nghĩa bước xuống (khỏi bục): She stepped down from the platform."
+  },
+  {
+    "phrase": "step up",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "tăng cường, đẩy mạnh (nỗ lực, hoạt động)",
+        "ex": [
+          ["The company stepped up production.", "Công ty đẩy mạnh sản xuất."]
+        ]
+      },
+      {
+        "m": "bước lên, tiến lên phía trước",
+        "ex": [
+          ["He stepped up to the microphone.", "Anh ấy bước lên chỗ micrô."]
+        ]
+      }
+    ],
+    "note": "Còn nghĩa sẵn sàng đứng ra nhận trách nhiệm: When she left, he stepped up (as team leader)."
+  },
+  {
+    "phrase": "top up",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(Anh) châm thêm, rót thêm (đồ uống)",
+        "ex": [
+          ["Let me top up your glass.", "Để mình rót thêm cho cậu."]
+        ]
+      },
+      {
+        "m": "nạp thêm (tiền điện thoại, thẻ, tài khoản, pin)",
+        "ex": [
+          ["I need to top up my phone credit.", "Mình cần nạp thêm tiền điện thoại."]
+        ]
+      }
+    ],
+    "note": "Danh từ 'top-up' = khoản nạp thêm: a top-up card (thẻ nạp). Với đồ uống, Mỹ hay dùng 'refill'."
+  },
+  {
+    "phrase": "try on",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "mặc thử, đi thử (quần áo, giày)",
+        "ex": [
+          ["Can I try on these shoes?", "Tôi mặc thử đôi giày này được không?"]
+        ]
+      },
+      {
+        "m": "(Anh, thông tục) làm mình làm mẩy để thử lòng",
+        "pat": "try it on (with somebody)",
+        "ex": [
+          ["Don't let him try it on with you.", "Đừng để nó làm mình làm mẩy với cậu."]
+        ]
+      }
+    ],
+    "note": "Phân biệt 'try out' = thử nghiệm (thiết bị, ý tưởng, đội tuyển)."
+  },
+  {
+    "phrase": "watch out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "coi chừng, cẩn thận",
+        "pat": "watch out (for somebody/something)",
+        "ex": [
+          ["Watch out — the floor is wet!", "Coi chừng — sàn ướt đấy!"],
+          ["Watch out for pickpockets in the crowd.", "Cẩn thận kẻ móc túi trong đám đông."]
+        ]
+      }
+    ],
+    "note": "'Watch out for somebody' còn nghĩa để mắt chăm sóc ai: She watches out for her little brother."
+  },
+  {
+    "phrase": "write down",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "ghi lại, chép lại (để nhớ)",
+        "ex": [
+          ["Write down her number before you forget.", "Ghi lại số của cô ấy đi trước khi quên."]
+        ]
+      }
+    ],
+    "note": "Tân ngữ đại từ chen giữa: write it down. Gần nghĩa với 'note down' (ghi chép nhanh)."
+  },
+  {
+    "phrase": "black and blue",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "bầm tím khắp người (vì bị đánh, bị va đập)",
+        "pat": "be black and blue",
+        "ex": [
+          ["He was black and blue after the match.", "Sau trận đấu, người anh ấy bầm tím hết."],
+          ["She beat him black and blue.", "Cô ấy đánh anh ta một trận bầm dập."]
+        ]
+      }
+    ],
+    "note": "Chỉ dùng cho người/vết thương — không dùng để tả màu sắc đồ vật."
+  },
+  {
+    "phrase": "down to earth",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "thực tế, giản dị, không tự cao",
+        "ex": [
+          ["Despite her fame, she's very down to earth.", "Nổi tiếng vậy mà cô ấy rất giản dị, thực tế."]
+        ]
+      },
+      {
+        "m": "thực tế, khả thi (lời khuyên, cách làm)",
+        "ex": [
+          ["He gave me some down-to-earth advice.", "Anh ấy cho mình vài lời khuyên rất thực tế."]
+        ]
+      }
+    ],
+    "note": "Viết có gạch nối khi đứng trước danh từ: down-to-earth advice."
+  },
+  {
+    "phrase": "dark horse",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "kẻ ngầm ẩn tài, bất ngờ giành thắng lợi (tương đương 'ngựa ô')",
+        "ex": [
+          ["He was the dark horse of the tournament.", "Anh ấy là 'ngựa ô' của giải đấu."]
+        ]
+      },
+      {
+        "m": "(chính trị) ứng viên ít tên tuổi bất ngờ nổi lên",
+        "ex": [
+          ["A dark horse candidate won the nomination.", "Một ứng viên 'ngựa ô' đã thắng đề cử."]
+        ]
+      }
+    ],
+    "note": "'Ngựa ô' trong tiếng Việt là tương đương gần nhất."
+  },
+  {
+    "phrase": "dog days",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "những ngày nóng oi bức nhất mùa hè (tháng 7–8)",
+        "ex": [
+          ["We stayed indoors during the dog days of August.", "Tháng Tám nóng bức, chúng tôi ở lì trong nhà."]
+        ]
+      },
+      {
+        "m": "thời kỳ trì trệ, kém sôi động",
+        "ex": [
+          ["The dog days of the campaign are over.", "Giai đoạn ảm đạm của chiến dịch đã qua."]
+        ]
+      }
+    ],
+    "note": "Nghĩa gốc từ sao Sirius (Dog Star) — thời kỳ sao này mọc cùng mặt trời."
+  },
+  {
+    "phrase": "better half",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "(thông tục, đùa) nửa kia — vợ/chồng, bạn đời",
+        "ex": [
+          ["I'd like you to meet my better half.", "Để mình giới thiệu với mọi người nửa kia của mình."]
+        ]
+      }
+    ],
+    "note": "Dùng với sắc thái hài hước, thân mật; không dùng trong văn trang trọng."
+  },
+  {
+    "phrase": "best man",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "phù rể (bạn thân đứng cạnh chú rể trong lễ cưới)",
+        "ex": [
+          ["His brother was his best man.", "Anh trai anh ấy làm phù rể."]
+        ]
+      }
+    ],
+    "note": "Đừng lẫn với 'bridesmaid' (phù dâu) hay 'maid of honour' — người đứng cạnh cô dâu."
+  },
+  {
+    "phrase": "near miss",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "cú suýt trúng, suýt va chạm; tai nạn suýt xảy ra",
+        "ex": [
+          ["The plane had a near miss with another aircraft.", "Chiếc máy bay suýt đụng một chiếc khác."],
+          ["It was a near miss — the car missed the child by inches.", "Suýt nữa thì — xe chỉ cách đứa bé vài phân."]
+        ]
+      },
+      {
+        "m": "suýt thành công nhưng trượt",
+        "ex": [
+          ["She was a near miss for the gold medal.", "Cô ấy suýt giành được huy chương vàng."]
+        ]
+      }
+    ],
+    "note": "Trong quân sự: bom rơi sát mục tiêu nhưng không trúng."
+  },
+  {
+    "phrase": "old hand",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "người lão luyện, dày dạn kinh nghiệm",
+        "pat": "an old hand at something",
+        "ex": [
+          ["She's an old hand at negotiating contracts.", "Cô ấy là tay dày dạn trong đàm phán hợp đồng."]
+        ]
+      }
+    ],
+    "note": "Ngược nghĩa: a green hand / new hand = người mới."
+  },
+  {
+    "phrase": "second nature",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "thành phản xạ, thành bản năng thứ hai (quen đến mức tự nhiên)",
+        "pat": "be second nature (to somebody)",
+        "ex": [
+          ["After a month, driving became second nature.", "Sau một tháng, lái xe thành phản xạ tự nhiên."]
+        ]
+      }
+    ],
+    "note": "Thường đi với 'become': It has become second nature to me."
+  },
+  {
+    "phrase": "loose end",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "việc còn dang dở, chưa khép lại",
+        "pat": "tie up a loose end / loose ends",
+        "ex": [
+          ["Let's tie up the loose ends before the launch.", "Mình chốt nốt những việc còn dang dở trước khi ra mắt nhé."]
+        ]
+      }
+    ],
+    "note": "Thành ngữ hay gặp ở Anh: at a loose end = rảnh rỗi không biết làm gì."
+  },
+  {
+    "phrase": "old hat",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "(thông tục) lỗi thời, cũ rích, không còn mới",
+        "ex": [
+          ["Fax machines are old hat now.", "Máy fax giờ đã lỗi thời rồi."],
+          ["His jokes are all old hat.", "Mấy câu đùa của ông ấy cũ rích cả rồi."]
+        ]
+      }
+    ],
+    "note": "Không liên quan đến 'old hand' (người lão luyện) — đừng lẫn."
+  },
+  {
+    "phrase": "red-letter day",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "ngày trọng đại, ngày đáng nhớ",
+        "ex": [
+          ["Graduation was a red-letter day for the family.", "Lễ tốt nghiệp là ngày trọng đại của cả gia đình."]
+        ]
+      }
+    ],
+    "note": "Gốc từ lịch xưa in ngày lễ bằng mực đỏ."
+  },
+  {
+    "phrase": "of course",
+    "pos": "adverb phrase",
+    "senses": [
+      {
+        "m": "tất nhiên, đương nhiên (đồng ý, cho phép)",
+        "ex": [
+          ["Of course you can stay for dinner.", "Tất nhiên là cậu ở lại ăn tối được."]
+        ]
+      },
+      {
+        "m": "dĩ nhiên (điều ai cũng biết)",
+        "ex": [
+          ["He was late, of course.", "Dĩ nhiên là anh ta lại muộn."]
+        ]
+      }
+    ],
+    "note": "Nói với giọng mỉa có thể mang ý nghi ngờ. Đừng nhầm với 'in the course of' (trong quá trình)."
+  },
+  {
+    "phrase": "cold war",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "chiến tranh lạnh (đối đầu căng thẳng nhưng không giao chiến; đặc biệt Mỹ–Liên Xô 1947–1991)",
+        "ex": [
+          ["Berlin was a flashpoint of the Cold War.", "Berlin là điểm nóng của Chiến tranh Lạnh."]
+        ]
+      },
+      {
+        "m": "cuộc đối đầu ngấm ngầm giữa hai phe",
+        "ex": [
+          ["There's a cold war between the two departments.", "Giữa hai phòng ban đang có một cuộc chiến tranh lạnh."]
+        ]
+      }
+    ],
+    "note": "Viết hoa 'the Cold War' khi nói giai đoạn lịch sử cụ thể."
+  },
+  {
+    "phrase": "heart attack",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "cơn đau tim, nhồi máu cơ tim",
+        "ex": [
+          ["He had a heart attack last year.", "Năm ngoái ông ấy bị một cơn đau tim."],
+          ["She died of a heart attack at 60.", "Bà ấy qua đời vì nhồi máu cơ tim ở tuổi 60."]
+        ]
+      }
+    ],
+    "note": "Phân biệt 'heart failure' (suy tim) và 'cardiac arrest' (ngừng tim)."
+  },
+  {
+    "phrase": "hard drive",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "ổ cứng (thiết bị lưu trữ của máy tính)",
+        "ex": [
+          ["I need to back up my hard drive.", "Mình cần sao lưu ổ cứng."]
+        ]
+      }
+    ],
+    "note": "So sánh 'hard disk' (đĩa cứng — phần vật lý) và 'flash drive' (USB)."
+  },
+  {
+    "phrase": "first name",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tên gọi, tên riêng (khác với họ)",
+        "ex": [
+          ["Her first name is Lan.", "Tên cô ấy là Lan."]
+        ]
+      }
+    ],
+    "note": "'On a first-name basis' = thân tới mức gọi nhau bằng tên riêng. Ở phương Tây, first name đứng trước, họ (last name/family name/surname) đứng sau — ngược với tiếng Việt."
+  },
+  {
+    "phrase": "day off",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "ngày nghỉ (không phải đi làm, đi học)",
+        "ex": [
+          ["I'm taking a day off tomorrow.", "Mai mình nghỉ một ngày."],
+          ["How many days off do you get a year?", "Một năm anh được nghỉ mấy ngày?"]
+        ]
+      }
+    ],
+    "note": "Số nhiều 'days off'. Phân biệt 'off day' = ngày kém hiệu suất: It was just an off day."
+  },
+  {
+    "phrase": "made to order",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "làm theo yêu cầu, đóng theo số đo (không phải hàng sẵn)",
+        "ex": [
+          ["Her wedding dress was made to order.", "Váy cưới của cô ấy được đặt may theo số đo."]
+        ]
+      },
+      {
+        "m": "vừa vặn hoàn hảo, hợp như đo may (nghĩa bóng)",
+        "ex": [
+          ["This job is made to order for you.", "Công việc này hợp với cậu như đo may vậy."]
+        ]
+      }
+    ],
+    "note": "Viết gạch nối khi đứng trước danh từ: made-to-order furniture (nội thất đóng theo yêu cầu)."
+  },
+  {
+    "phrase": "lost and found",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "phòng đồ thất lạc, nơi nhận lại đồ bỏ quên (Mỹ; Anh dùng 'lost property')",
+        "ex": [
+          ["I left my umbrella at the lost and found.", "Mình để quên cái ô ở phòng đồ thất lạc."]
+        ]
+      }
+    ],
+    "note": "Anh-Anh: lost property office. Cũng dùng làm tính từ: a lost-and-found box."
+  },
+  {
+    "phrase": "small talk",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "chuyện phiếm xã giao, chuyện dạo đầu (thời tiết, gia đình…)",
+        "pat": "make small talk (with somebody)",
+        "ex": [
+          ["We made small talk while waiting for the bus.", "Chờ xe buýt, bọn mình nói vài câu chuyện phiếm."]
+        ]
+      }
+    ],
+    "note": "Chỉ là trao đổi xã giao — không dùng cho chuyện quan trọng, sâu sắc."
+  },
+  {
+    "phrase": "happy hour",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "giờ vàng (thời gian quán bar, khách sạn giảm giá đồ uống)",
+        "ex": [
+          ["The bar has happy hour from five to seven.", "Quán bar có giờ vàng từ năm đến bảy giờ."]
+        ]
+      }
+    ],
+    "note": "Không phải 'giờ vui vẻ' theo nghĩa đen — đây là thuật ngữ chỉ khuyến mãi đồ uống."
+  }
+]

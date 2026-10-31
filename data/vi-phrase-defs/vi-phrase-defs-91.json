@@ -1,0 +1,442 @@
+[
+  {
+    "phrase": "stage left",
+    "pos": "adverb phrase",
+    "hideOvdp": true,
+    "note": "Stage left chỉ phía bên trái sân khấu theo góc nhìn của diễn viên đang quay mặt về khán giả; vì vậy, phía này thường nằm bên phải của người ngồi xem. Từ này thường xuất hiện trong chỉ dẫn sân khấu như enter hoặc exit stage left.",
+    "senses": [
+      {
+        "m": "phía bên trái sân khấu theo hướng nhìn của diễn viên quay về phía khán giả",
+        "pat": "enter/exit stage left · move across stage left · stand stage left",
+        "ex": [
+          ["The actor entered stage left as the music began.", "Diễn viên bước vào từ cánh trái sân khấu khi nhạc bắt đầu."],
+          ["The director asked the dancer to move farther stage left.", "Đạo diễn yêu cầu vũ công di chuyển xa hơn về phía trái sân khấu."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stage manager",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Stage manager là người điều phối công việc hậu trường để buổi diễn diễn ra đúng kế hoạch, chẳng hạn quản lý lịch diễn, sân khấu và các tín hiệu kỹ thuật. Vai trò cụ thể khác nhau giữa các đoàn; không nên nhầm với director, người chịu trách nhiệm về định hướng nghệ thuật.",
+    "senses": [
+      {
+        "m": "quản lý sân khấu, người điều phối các công việc hậu trường của một buổi diễn",
+        "pat": "work as a stage manager · the stage manager calls a cue · a theatre's stage manager",
+        "ex": [
+          ["The stage manager checked the lighting cues before the audience came in.", "Quản lý sân khấu kiểm tra các tín hiệu ánh sáng trước khi khán giả vào rạp."],
+          ["Ask the stage manager if the scene change is ready.", "Hãy hỏi quản lý sân khấu xem việc chuyển cảnh đã sẵn sàng chưa."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stage right",
+    "pos": "adverb phrase",
+    "hideOvdp": true,
+    "note": "Stage right chỉ phía bên phải sân khấu theo góc nhìn của diễn viên đang quay mặt về khán giả; phía này thường nằm bên trái của người xem. Đây là quy ước trong chỉ dẫn sân khấu, không phải bên phải theo góc nhìn khán giả.",
+    "senses": [
+      {
+        "m": "phía bên phải sân khấu theo hướng nhìn của diễn viên quay về phía khán giả",
+        "pat": "enter/exit stage right · move stage right · wait stage right",
+        "ex": [
+          ["The singer exited stage right after the final song.", "Ca sĩ rời sân khấu từ cánh phải sau bài hát cuối."],
+          ["Keep the table stage right so it does not block the entrance.", "Đặt chiếc bàn về phía phải sân khấu để không chắn lối vào."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stage whisper",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Stage whisper trên sân khấu là lời nói đủ lớn để khán giả nghe nhưng được diễn như thể các nhân vật khác không nghe thấy. Nghĩa bóng chỉ lời nói nhỏ hoặc giả vờ kín đáo nhưng thực ra được nói để người khác nghe.",
+    "senses": [
+      {
+        "m": "lời thì thầm có chủ ý để khán giả nghe trong khi nhân vật khác trên sân khấu giả vờ không nghe",
+        "pat": "speak in a stage whisper · deliver a stage whisper · a line said in a stage whisper",
+        "ex": [
+          ["The actor warned the audience in a stage whisper while the other characters faced away.", "Diễn viên cảnh báo khán giả bằng giọng thì thầm sân khấu trong khi các nhân vật khác quay đi."],
+          ["She delivered the secret in a stage whisper that everyone in the theatre could hear.", "Cô nói điều bí mật bằng giọng thì thầm sân khấu mà mọi người trong rạp đều nghe thấy."]
+        ]
+      },
+      {
+        "m": "lời nói nhỏ nhưng cố ý để người khác nghe thấy (nghĩa bóng)",
+        "pat": "say something in a stage whisper · mutter in a stage whisper · an obvious stage whisper",
+        "ex": [
+          ["He made a stage-whispered comment about the surprise, hoping the birthday girl would hear.", "Anh nói nhỏ một câu về món quà bất ngờ, cố ý để cô gái sinh nhật nghe thấy."],
+          ["Their stage whisper about the late arrival reached the whole meeting room.", "Lời thì thầm giả kín đáo của họ về người đến muộn vang tới cả phòng họp."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stalking horse",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Stalking horse là người hoặc vật được dùng làm bình phong để che mục đích thật của một hành động. Trong chính trị, cụm có thể chỉ ứng viên thách thức người đứng đầu chủ yếu để đo mức ủng hộ trước khi một đối thủ mạnh hơn ra tranh cử; cách dùng này thường mang sắc thái nghi ngờ.",
+    "senses": [
+      {
+        "m": "người hoặc phương án làm bình phong, che giấu mục đích hay kế hoạch thật",
+        "pat": "use somebody as a stalking horse · serve as a stalking horse for a plan · a stalking-horse candidate",
+        "ex": [
+          ["Critics said the proposal was a stalking horse for a much larger spending plan.", "Những người chỉ trích cho rằng đề xuất đó chỉ là bình phong cho một kế hoạch chi tiêu lớn hơn nhiều."],
+          ["The small company was used as a stalking horse while the larger buyer negotiated privately.", "Công ty nhỏ được dùng làm bình phong trong khi bên mua lớn hơn âm thầm đàm phán."]
+        ]
+      },
+      {
+        "m": "ứng viên thách thức người đứng đầu chủ yếu để thăm dò mức ủng hộ trong nội bộ",
+        "pat": "a stalking horse in a leadership contest · run as a stalking horse · a stalking-horse candidate",
+        "ex": [
+          ["She entered the leadership race as a stalking horse for a more popular challenger.", "Cô tham gia cuộc đua lãnh đạo như một ứng viên thăm dò cho đối thủ được ủng hộ hơn."],
+          ["The party suspected that the candidate was a stalking horse rather than a serious rival.", "Đảng nghi ngờ ứng viên đó chỉ đóng vai trò thăm dò chứ không phải đối thủ thực sự."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stamp act",
+    "pos": "proper noun phrase (historical)",
+    "hideOvdp": true,
+    "note": "The Stamp Act thường chỉ đạo luật năm 1765 của Anh áp thuế lên nhiều tài liệu in tại các thuộc địa Bắc Mỹ. Thuế này góp phần làm gia tăng phản đối sự cai trị của Anh; tên luật được viết hoa khi nói riêng về sự kiện lịch sử đó.",
+    "senses": [
+      {
+        "m": "Đạo luật Tem năm 1765 của Anh, áp thuế lên một số tài liệu in ở các thuộc địa Bắc Mỹ",
+        "pat": "the Stamp Act of 1765 · protest against/repeal the Stamp Act · the Stamp Act imposed a tax",
+        "ex": [
+          ["The Stamp Act required many printed documents in the colonies to carry a paid stamp.", "Đạo luật Tem yêu cầu nhiều tài liệu in tại các thuộc địa phải có tem đã nộp thuế."],
+          ["Opposition to the Stamp Act became part of the wider protest against British rule.", "Sự phản đối Đạo luật Tem trở thành một phần của phong trào phản kháng rộng hơn chống lại sự cai trị của Anh."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stamp duty",
+    "pos": "noun phrase (British English)",
+    "hideOvdp": true,
+    "note": "Stamp duty là thuế đánh lên một số văn bản hoặc giao dịch; cụm đặc biệt gắn với hệ thống thuế của Anh và thường được nhắc đến khi chuyển nhượng bất động sản. Tên gọi, đối tượng chịu thuế và cách tính thay đổi theo thời điểm và khu vực, nên không thể suy ra mức thuế chỉ từ cụm từ này.",
+    "senses": [
+      {
+        "m": "thuế tem, thuế áp lên một số văn bản pháp lý hoặc giao dịch (đặc biệt trong tiếng Anh-Anh)",
+        "pat": "pay/be liable for stamp duty · stamp duty on a property transfer · stamp-duty rules/rates",
+        "ex": [
+          ["The buyer checked whether stamp duty applied to the property transfer.", "Người mua kiểm tra xem giao dịch chuyển nhượng bất động sản có chịu thuế tem hay không."],
+          ["The solicitor explained that stamp duty rules depend on the type and value of the transaction.", "Luật sư giải thích rằng quy định về thuế tem phụ thuộc vào loại và giá trị giao dịch."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stand by",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Stand by có nhiều cấu trúc: stand by and watch thường hàm ý đứng nhìn mà không can thiệp; stand by to do something là sẵn sàng hành động; stand by somebody là ủng hộ họ; stand by something là tiếp tục bảo vệ lời nói, quyết định hoặc quan điểm của mình.",
+    "senses": [
+      {
+        "m": "đứng nhìn mà không can thiệp khi việc xấu xảy ra",
+        "pat": "stand by and watch/let something happen · stand idly by · refuse to stand by",
+        "ex": [
+          ["We cannot stand by and watch the local library close without speaking up.", "Chúng ta không thể đứng nhìn thư viện địa phương đóng cửa mà không lên tiếng."],
+          ["Several people stood by while the argument became more aggressive.", "Một số người đứng nhìn khi cuộc cãi vã ngày càng gay gắt."]
+        ]
+      },
+      {
+        "m": "sẵn sàng hành động hoặc hỗ trợ khi cần",
+        "pat": "stand by to help/act · stand by for instructions · troops/emergency teams stand by",
+        "ex": [
+          ["The medical team stood by in case the climbers needed urgent help.", "Đội y tế túc trực phòng khi những người leo núi cần trợ giúp khẩn cấp."],
+          ["Stand by for further instructions from the control room.", "Hãy sẵn sàng chờ chỉ dẫn tiếp theo từ phòng điều khiển."]
+        ]
+      },
+      {
+        "m": "ủng hộ hoặc tiếp tục ở bên ai đó, nhất là lúc khó khăn",
+        "pat": "stand by somebody · stand by a friend/partner · promise to stand by someone",
+        "ex": [
+          ["Her colleagues stood by her when the decision was questioned.", "Đồng nghiệp vẫn ủng hộ cô khi quyết định đó bị chất vấn."],
+          ["He promised to stand by his friend throughout the investigation.", "Anh hứa sẽ ở bên và ủng hộ bạn mình suốt cuộc điều tra."]
+        ]
+      },
+      {
+        "m": "tiếp tục tin hoặc bảo vệ điều mình đã nói, quyết định hay đồng ý",
+        "pat": "stand by a statement/decision · stand by your word · continue to stand by something",
+        "ex": [
+          ["The company stands by its decision to recall the product.", "Công ty vẫn bảo vệ quyết định thu hồi sản phẩm của mình."],
+          ["Despite criticism, the researcher stood by the conclusions of the report.", "Dù bị chỉ trích, nhà nghiên cứu vẫn giữ vững các kết luận trong báo cáo."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stand for",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Stand for thường có tân ngữ. Với chữ viết tắt hoặc ký hiệu, nó hỏi/cho biết chúng đại diện cho từ gì; với tổ chức hoặc giá trị, nó chỉ điều được ủng hộ; trong cấu trúc not stand for something, nó nghĩa là không chấp nhận hoặc không dung thứ điều đó.",
+    "senses": [
+      {
+        "m": "là chữ viết tắt hoặc ký hiệu đại diện cho một từ/khái niệm",
+        "pat": "What does X stand for? · X stands for something · letters that stand for a name",
+        "ex": [
+          ["Do you know what the letters UN stand for?", "Bạn có biết các chữ cái UN là viết tắt của cụm nào không?"],
+          ["In this diagram, the blue line stands for the main railway route.", "Trong sơ đồ này, đường màu xanh biểu thị tuyến đường sắt chính."]
+        ]
+      },
+      {
+        "m": "đại diện cho hoặc ủng hộ một ý tưởng, nguyên tắc hay mục tiêu",
+        "pat": "stand for equality/freedom · represent what a group stands for · everything somebody stands for",
+        "ex": [
+          ["The badge stands for the values shared by all the volunteers.", "Huy hiệu đại diện cho những giá trị mà tất cả tình nguyện viên cùng chia sẻ."],
+          ["She disagreed with the policy and everything it stood for.", "Cô không đồng tình với chính sách đó và những tư tưởng mà nó đại diện."]
+        ]
+      },
+      {
+        "m": "không chấp nhận hoặc không dung thứ một hành vi/tình huống (thường dùng dạng phủ định)",
+        "pat": "not stand for something · will not stand for bullying · refuse to stand for it",
+        "ex": [
+          ["The manager said she would not stand for harassment in the workplace.", "Quản lý nói rằng cô sẽ không dung thứ hành vi quấy rối tại nơi làm việc."],
+          ["I won't stand for people being treated unfairly on my team.", "Tôi sẽ không chấp nhận việc mọi người trong nhóm mình bị đối xử bất công."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stand in",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Stand in thường đi với for somebody/something và nghĩa là tạm thời thay thế họ/điều đó. Danh từ stand-in viết có gạch nối, nhưng cụm động từ stand in viết tách; trong phim ảnh, stand-in có thể là người thay diễn viên ở một số cảnh hoặc lúc chuẩn bị máy quay.",
+    "senses": [
+      {
+        "m": "tạm thời thay thế ai đó hoặc một thứ gì đó",
+        "pat": "stand in for somebody · stand in as chairperson/goalkeeper · ask somebody to stand in",
+        "ex": [
+          ["My colleague will stand in for me while I am away next week.", "Đồng nghiệp sẽ tạm thay tôi trong lúc tôi vắng mặt tuần tới."],
+          ["A local actor stood in for the lead during the camera rehearsal.", "Một diễn viên địa phương thay vai chính trong buổi tập máy quay."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stand out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Stand out có thể nói một người/vật dễ nhận ra so với xung quanh, hoặc nổi bật vì tốt hơn/quan trọng hơn những thứ khác. Cấu trúc stand out from/against something chỉ nền hoặc nhóm tạo nên sự tương phản; stand out as something nêu vai trò/đặc điểm nổi bật.",
+    "senses": [
+      {
+        "m": "dễ thấy hoặc dễ nhận ra vì khác biệt với xung quanh",
+        "pat": "stand out from a crowd · stand out against a background · make something stand out",
+        "ex": [
+          ["The white sign stands out against the dark wall.", "Tấm biển trắng nổi bật trên bức tường tối."],
+          ["Her bright yellow coat made her stand out in the crowd.", "Chiếc áo khoác vàng rực khiến cô dễ nhận ra giữa đám đông."]
+        ]
+      },
+      {
+        "m": "nổi trội hoặc quan trọng hơn những người/vật khác trong một nhóm",
+        "pat": "stand out as the best · one feature stands out · stand out from the competition",
+        "ex": [
+          ["One candidate stood out because of her clear communication skills.", "Một ứng viên nổi bật nhờ kỹ năng giao tiếp rõ ràng."],
+          ["The final chapter stands out as the most original part of the book.", "Chương cuối nổi bật là phần độc đáo nhất của cuốn sách."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "stand up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Stand up có nghĩa đen là đứng dậy hoặc ở tư thế đứng. Các cấu trúc cần chú ý: stand somebody up (thân mật) là không đến cuộc hẹn; stand up to something là vẫn có giá trị/đứng vững khi bị thử thách hoặc xem xét kỹ. Người Anh/Mỹ cũng dùng stand up to somebody với nghĩa chống lại người đó.",
+    "senses": [
+      {
+        "m": "đứng dậy từ tư thế ngồi/nằm; ở tư thế đứng",
+        "pat": "stand up from a chair · stand up straight · have to stand up",
+        "ex": [
+          ["Please stand up when your name is called.", "Vui lòng đứng lên khi nghe gọi tên."],
+          ["There were no seats left, so we had to stand up for the entire journey.", "Không còn chỗ ngồi nên chúng tôi phải đứng suốt chuyến đi."]
+        ]
+      },
+      {
+        "m": "không đến gặp người mà mình đã hẹn (thân mật, có tân ngữ là người bị lỡ hẹn)",
+        "pat": "stand somebody up · get stood up · be stood up on a date",
+        "ex": [
+          ["He stood me up at the café and did not answer his phone.", "Anh ấy cho tôi leo cây ở quán cà phê rồi không nghe điện thoại."],
+          ["She was stood up on their first date, but he apologized the next day.", "Cô bị cho leo cây trong buổi hẹn đầu, nhưng hôm sau anh ấy đã xin lỗi."]
+        ]
+      },
+      {
+        "m": "vẫn đúng, đáng tin hoặc chấp nhận được khi bị kiểm tra/thử thách kỹ",
+        "pat": "stand up to scrutiny/testing · an argument stands up in court · fail to stand up",
+        "ex": [
+          ["The figures in the report did not stand up to close scrutiny.", "Các số liệu trong báo cáo không đứng vững khi được xem xét kỹ."],
+          ["The agreement should stand up in court if it is properly documented.", "Thỏa thuận sẽ có giá trị trước tòa nếu được lập hồ sơ đúng cách."]
+        ]
+      },
+      {
+        "m": "chống lại hoặc không bị khuất phục trước một người (stand up to somebody)",
+        "pat": "stand up to a bully · stand up to somebody in authority · learn to stand up for yourself",
+        "ex": [
+          ["The younger players learned to stand up to the aggressive captain.", "Các cầu thủ trẻ học cách chống lại đội trưởng hung hăng."],
+          ["She finally stood up to her landlord and asked for the repairs in writing.", "Cuối cùng cô cũng lên tiếng đối mặt với chủ nhà và yêu cầu việc sửa chữa bằng văn bản."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "standard deviation",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Standard deviation là thước đo mức độ phân tán của dữ liệu quanh giá trị trung bình; nó được biểu diễn bằng cùng đơn vị với dữ liệu gốc. Độ lệch chuẩn nhỏ thường cho thấy các giá trị tập trung gần trung bình hơn, còn độ lệch chuẩn lớn cho thấy chúng phân tán rộng hơn.",
+    "senses": [
+      {
+        "m": "độ lệch chuẩn, đại lượng thống kê đo mức độ phân tán của dữ liệu quanh giá trị trung bình",
+        "pat": "calculate/report the standard deviation · a high/low standard deviation · mean and standard deviation",
+        "ex": [
+          ["The researchers reported the mean and standard deviation for each group.", "Các nhà nghiên cứu báo cáo giá trị trung bình và độ lệch chuẩn cho từng nhóm."],
+          ["A larger standard deviation showed that the test scores varied more widely.", "Độ lệch chuẩn lớn hơn cho thấy điểm kiểm tra phân tán rộng hơn."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "standard of living",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Standard of living nói về mức thu nhập và sự tiện nghi vật chất mà một cá nhân hoặc nhóm người có thể đạt được. Cụm thường đi với high/low, improve, rise/fall; quality of life rộng hơn vì còn tính đến sức khỏe, môi trường và mức độ hài lòng.",
+    "senses": [
+      {
+        "m": "mức sống, mức thu nhập và tiện nghi vật chất của một người hoặc cộng đồng",
+        "pat": "a high/low standard of living · improve/raise the standard of living · a fall in living standards",
+        "ex": [
+          ["The new jobs helped raise the standard of living in the town.", "Những việc làm mới giúp nâng mức sống trong thị trấn."],
+          ["Many families saw their standard of living fall as housing costs increased.", "Nhiều gia đình thấy mức sống giảm khi chi phí nhà ở tăng."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "standard time",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Standard time là giờ chính thức được áp dụng tại một khu vực hoặc múi giờ. Ở nơi có giờ mùa hè, standard time thường chỉ giờ được dùng ngoài giai đoạn daylight saving time; quy định thay đổi theo quốc gia và một số nơi không đổi giờ theo mùa.",
+    "senses": [
+      {
+        "m": "giờ chuẩn, giờ chính thức được quy định cho một khu vực hoặc múi giờ",
+        "pat": "local standard time · return to standard time · standard time in a time zone",
+        "ex": [
+          ["The broadcast starts at 8 p.m. local standard time.", "Chương trình phát sóng bắt đầu lúc 8 giờ tối theo giờ chuẩn địa phương."],
+          ["The clocks return to standard time after the daylight-saving period ends.", "Đồng hồ trở lại giờ chuẩn sau khi giai đoạn áp dụng giờ mùa hè kết thúc."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "standing order",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Standing order có nhiều nghĩa. Trong ngân hàng Anh, đó là lệnh yêu cầu ngân hàng chuyển một khoản tiền cố định theo lịch lặp lại; cụm cũng chỉ đơn đặt hàng định kỳ, mệnh lệnh quân sự thường trực, hoặc quy tắc điều hành của nghị viện/ủy ban. Nghĩa đúng thường rõ từ ngữ cảnh.",
+    "senses": [
+      {
+        "m": "lệnh chuyển khoản định kỳ với số tiền cố định (ngân hàng, Anh-Anh)",
+        "pat": "set up/cancel a standing order · pay by standing order · a monthly standing order",
+        "ex": [
+          ["I set up a standing order to pay the rent on the first day of each month.", "Tôi lập lệnh chuyển khoản định kỳ để trả tiền thuê nhà vào ngày đầu mỗi tháng."],
+          ["You can cancel the standing order through your bank's mobile app.", "Bạn có thể hủy lệnh chuyển khoản định kỳ qua ứng dụng ngân hàng."]
+        ]
+      },
+      {
+        "m": "đơn đặt hàng được lặp lại theo lịch đều đặn",
+        "pat": "place a standing order for something · a weekly/monthly standing order · fulfil a standing order",
+        "ex": [
+          ["The restaurant placed a standing order for fresh bread every morning.", "Nhà hàng đặt mua bánh mì tươi theo đơn định kỳ mỗi sáng."],
+          ["The supplier delivers the firm's standing order on the first Monday of each month.", "Nhà cung cấp giao đơn hàng định kỳ của công ty vào thứ Hai đầu tiên mỗi tháng."]
+        ]
+      },
+      {
+        "m": "mệnh lệnh quân sự thường trực phải luôn được tuân thủ",
+        "pat": "a standing order to do something · issue/follow standing orders · under standing orders",
+        "ex": [
+          ["The patrol had a standing order not to cross the border without permission.", "Đội tuần tra có mệnh lệnh thường trực là không được qua biên giới nếu chưa được phép."],
+          ["The soldiers followed a standing order to keep the emergency exit clear.", "Các binh sĩ tuân theo mệnh lệnh thường trực là phải giữ lối thoát hiểm thông thoáng."]
+        ]
+      },
+      {
+        "m": "quy tắc quy định cách một nghị viện, ủy ban hoặc tổ chức vận hành",
+        "pat": "parliamentary standing orders · under the standing orders · amend the standing orders",
+        "ex": [
+          ["The committee's standing orders require members to declare any conflict of interest.", "Quy tắc hoạt động của ủy ban yêu cầu các thành viên khai báo mọi xung đột lợi ích."],
+          ["The chair checked the standing orders before allowing the debate to continue.", "Chủ tọa kiểm tra quy tắc điều hành trước khi cho phép cuộc tranh luận tiếp tục."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "star chamber",
+    "pos": "noun phrase (British English)",
+    "hideOvdp": true,
+    "note": "Star chamber thường chỉ một nhóm nhỏ họp kín và đưa ra quyết định quan trọng mà người khác không được tham gia. Cách nói thường mang sắc thái chê trách, gợi ý rằng quy trình bí mật hoặc thiếu minh bạch; không nhất thiết chỉ một căn phòng theo nghĩa đen.",
+    "senses": [
+      {
+        "m": "nhóm kín tự đưa ra quyết định quan trọng, thường bị xem là thiếu minh bạch",
+        "pat": "a secretive star chamber · decisions made by a star chamber · meet behind closed doors",
+        "ex": [
+          ["Staff complained that the promotion list had been decided by a star chamber.", "Nhân viên phàn nàn rằng danh sách thăng chức được một nhóm kín quyết định."],
+          ["The proposal was sent to a star chamber instead of being debated in public.", "Đề xuất được chuyển cho một nhóm họp kín thay vì được thảo luận công khai."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "star sign",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Star sign là một trong mười hai cung hoàng đạo mà chiêm tinh học gán cho mỗi người dựa trên ngày sinh. Cụm này thông dụng trong đời thường, nhất là tiếng Anh-Anh; trong tiếng Anh-Mỹ, zodiac sign cũng rất phổ biến. Đây là thuật ngữ chiêm tinh, không phải phân loại thiên văn học.",
+    "senses": [
+      {
+        "m": "cung hoàng đạo gắn với ngày sinh theo chiêm tinh học",
+        "pat": "What is your star sign? · find out somebody's star sign · the twelve star signs",
+        "ex": [
+          ["The magazine asked readers to submit their star sign with their birthday.", "Tạp chí yêu cầu độc giả gửi cung hoàng đạo cùng ngày sinh."],
+          ["She knows her brother's star sign but does not follow astrology closely.", "Cô biết cung hoàng đạo của anh trai nhưng không theo dõi chiêm tinh nhiều."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "start up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Start up viết tách là cụm động từ: máy móc bắt đầu hoạt động, hoặc ai đó khởi động máy/thiết bị; nó cũng dùng khi bắt đầu một cuộc trò chuyện. Danh từ/tính từ start-up thường viết có gạch nối và mang nghĩa công ty mới thành lập hoặc liên quan đến giai đoạn khởi nghiệp.",
+    "senses": [
+      {
+        "m": "bắt đầu hoạt động hoặc bắt đầu diễn ra",
+        "pat": "an engine/computer starts up · the system starts up automatically · hear something start up",
+        "ex": [
+          ["The engine started up on the second attempt.", "Động cơ khởi động thành công ở lần thử thứ hai."],
+          ["A loud alarm started up in the control room.", "Một chuông báo động lớn bắt đầu vang lên trong phòng điều khiển."]
+        ]
+      },
+      {
+        "m": "khởi động thiết bị hoặc bắt đầu một hoạt động/cuộc trò chuyện",
+        "pat": "start a machine/system up · start up a conversation · start something up",
+        "ex": [
+          ["Start up the backup generator before the storm reaches the island.", "Hãy khởi động máy phát điện dự phòng trước khi cơn bão tới đảo."],
+          ["He started up a conversation with the person sitting next to him.", "Anh bắt chuyện với người ngồi bên cạnh."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "starting gate",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Starting gate là hàng rào/cổng xuất phát được mở để ngựa hoặc chó bắt đầu cuộc đua. Nghĩa bóng thường xuất hiện trong cụm leave the starting gate, nói một kế hoạch hoặc chiến dịch đã thực sự khởi động; if it never leaves the starting gate thì nó chưa bắt đầu tiến triển.",
+    "senses": [
+      {
+        "m": "cổng xuất phát trong cuộc đua ngựa hoặc chó, được mở khi cuộc đua bắt đầu",
+        "pat": "line up at the starting gate · leave the starting gate · a horse breaks from the starting gate",
+        "ex": [
+          ["The horses waited quietly behind the starting gate.", "Những con ngựa đứng chờ yên lặng phía sau cổng xuất phát."],
+          ["The gate opened and the horses charged down the track.", "Cổng mở ra và những con ngựa lao xuống đường đua."]
+        ]
+      }
+    ]
+  }
+]

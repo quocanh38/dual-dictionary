@@ -1,0 +1,11 @@
+{
+  "validator": "ielts-meta-normalize.mjs",
+  "findings": [
+    {
+      "id": "Speaking Part 2 prompts 3 and 4",
+      "severity": "major",
+      "issue": "The cue-card prompt criteria are written inline without separated bullets, so learners may not see the task points clearly in the app.",
+      "suggestedFix": "Keep the cue-card topic and criteria but format each required point as a visible numbered or bulleted line. Preserve other prompts unless needed for the exact five-per-skill batch."
+    }
+  ]
+}

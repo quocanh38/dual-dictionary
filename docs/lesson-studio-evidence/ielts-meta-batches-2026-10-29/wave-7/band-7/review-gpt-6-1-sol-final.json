@@ -1,0 +1,95 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "e38b085749af3fff23f4c48fe6807fa04540160855daaa83e6ce8ff53df5e044",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-7-band-7-listening-01",
+      "severity": "minor",
+      "issue": "Explanation says national-averages option confuses the later matched-comparison idea; national averages are never discussed. Explain simply that the initial plan used before/after data and no national comparison is proposed."
+    },
+    {
+      "item": "ielts-meta-wave-7-band-7-writing-02",
+      "severity": "minor",
+      "issue": "Label percentages as shares within each session group and state allocation of900residents or that group sizes are unspecified. Current comparative percentages remain readable, but precise sample denominators should be clearer."
+    },
+    {
+      "item": "ielts-meta-wave-7-band-7-speaking-01",
+      "severity": "minor",
+      "issue": "Question about whether students can always judge a method is more general than typical Part1; surrounding questions are personal and the question remains answerable without specialist knowledge."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final rereview of candidate-final-v2.json: all20items, complete script and passage, all40options,10keys/10explanations and5Writing/5Speaking prompts/metadata. Entire final content reread, not only repair deltas. Repeated contexts verified identical. No other final-review reports read, no provider calls or candidate edits.",
+    "listening": "Full351-word school-meal methods dialogue read:12pilot schools before/after, matched size/deprivation/history,20→18excluded merger records, nonrandom council selection, flu/bus-route confounds and observations-as-association. Keys[0,1,2,3,1] unique; every option/explanation read. Minor unsupported distractor description recorded.",
+    "reading": "Full445-word satellite passage read:NDVI definition/cost/coverage, Kenya5seasons/pest-greenness example, cloud interpolation/mixedpixels/saturation/input confounding, early-warning rather than standalone resilience, field verification/funding limits. Keys[0,1,2,3,0] supported; all alternatives/explanations tested for overclaim.",
+    "writing": "Task1 education2studies includes300+300matched versus280unmatched,6month gains14/9/13points andteacher62/48/71%; flood900survey2024 has3methods×3complete percentages, group-denominator observation noted. ThreeTask2 prompts on comparisons/uncertainty/adaptation coherent advanced evidence practice.150/250 minima20/40 timing metadata correct; prompts omit prose repetition.",
+    "speaking": "All5Speaking read:2mostly personal Part1 sets (one general question noted), uncertain-event Part2 has4visible cues and preparation/duration,2Part3 reasoned educational/climate discussion sets. Advanced vocabulary self-contained; no requirement for external memorised statistics.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 351,
+        "reading": 445
+      },
+      "metadataWordCounts": {
+        "listening": 351,
+        "reading": 445
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten/meta-models/muse-spark-open-1026, wave7v1 prompt versions and originalContent=true read. No recognisable official-question copying or score guarantee found; not an exhaustive plagiarism audit. Fictional research statistics assessed for consistency, not empirically verified. Intended stage is practice progression, not certified band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-7-band-7-listening-01",
+      "ielts-meta-wave-7-band-7-listening-02",
+      "ielts-meta-wave-7-band-7-listening-03",
+      "ielts-meta-wave-7-band-7-listening-04",
+      "ielts-meta-wave-7-band-7-listening-05",
+      "ielts-meta-wave-7-band-7-reading-01",
+      "ielts-meta-wave-7-band-7-reading-02",
+      "ielts-meta-wave-7-band-7-reading-03",
+      "ielts-meta-wave-7-band-7-reading-04",
+      "ielts-meta-wave-7-band-7-reading-05",
+      "ielts-meta-wave-7-band-7-writing-01",
+      "ielts-meta-wave-7-band-7-writing-02",
+      "ielts-meta-wave-7-band-7-writing-03",
+      "ielts-meta-wave-7-band-7-writing-04",
+      "ielts-meta-wave-7-band-7-writing-05",
+      "ielts-meta-wave-7-band-7-speaking-01",
+      "ielts-meta-wave-7-band-7-speaking-02",
+      "ielts-meta-wave-7-band-7-speaking-03",
+      "ielts-meta-wave-7-band-7-speaking-04",
+      "ielts-meta-wave-7-band-7-speaking-05"
+    ],
+    "independence": "Same reviewer performed initial review; own findings used to verify closure, while rereading all final content. No other reviewer findings inspected.",
+    "resolvedInitialFindings": [
+      "No blocking findings in initial review; full final reread confirms no new blocker. Final bytes identical to the fully reviewed initial candidate."
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

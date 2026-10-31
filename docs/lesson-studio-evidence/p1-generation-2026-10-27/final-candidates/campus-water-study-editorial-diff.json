@@ -1,0 +1,11 @@
+{
+  "sourceCandidate": "recovered/campus-water-study-candidate.json",
+  "editorialChanges": [
+    {
+      "path": "targets/0/meaningVi",
+      "before": "thu thập bằng chứng, thu thập thông tin để chứng minh",
+      "after": "thu thập bằng chứng hoặc dữ liệu để hỗ trợ một nhận định"
+    }
+  ],
+  "newProviderCallsForTheseEdits": 0
+}

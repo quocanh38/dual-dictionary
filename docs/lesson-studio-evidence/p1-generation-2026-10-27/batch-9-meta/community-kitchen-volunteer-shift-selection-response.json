@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "take turns",
+        "meaningEn": "to do something alternately with another person, one after the other",
+        "meaningVi": "thay phiên nhau làm việc gì",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "is responsible for",
+        "meaningEn": "to have the duty to take care of a particular area or task",
+        "meaningVi": "chịu trách nhiệm về một khu vực hoặc công việc cụ thể",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 565,
+    "outputTokens": 1015,
+    "totalTokens": 1580
+  },
+  "status": 200,
+  "latencyMs": 8725,
+  "model": "muse-spark-1.3"
+}

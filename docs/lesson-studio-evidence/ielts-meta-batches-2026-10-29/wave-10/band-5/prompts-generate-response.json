@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-10",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:21:12.861Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 635,
+    "outputTokens": 5826,
+    "totalTokens": 6461
+  },
+  "latencyMs": 25226,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Campus First-Aid Workshop Attendance\",\"focus\":\"clear overview, direct comparisons, familiar academic context\",\"prompt\":\"The table below shows the number of students who attended a voluntary campus first-aid workshop at Parkside College in March, April and May 2024, and the main skill each student chose to practise. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task. Write at least 150 words.\\n\\nData:\\nMarch 2024 – Total 42 students: Basic bandaging 14, CPR practice 18, Recovery position 10\\nApril 2024 – Total 58 students: Basic bandaging 20, CPR practice 22, Recovery position 16\\nMay 2024 – Total 65 students: Basic bandaging 18, CPR practice 30, Recovery position 17\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Reasons for Replacing Student Access Cards\",\"focus\":\"clear main trends, direct evidence, simple explanations\",\"prompt\":\"The chart below shows the number of student access cards replaced at Greenfield College for four different reasons in 2023 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task. Write at least 150 words.\\n\\nData for 2023 / 2024:\\nLost card: 120 / 95\\nDamaged card: 45 / 60\\nStolen card: 20 / 15\\nName or course change: 10 / 25\\nTotal replacements: 195 in 2023, 195 in 2024\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Learning from a Neighbourhood Market Visit\",\"focus\":\"clear position, direct evidence, familiar academic context\",\"prompt\":\"Some teachers organise a visit to a local neighbourhood market to help students learn about food, prices and local culture. Others think students can learn the same things in the classroom and a visit is not necessary. Discuss both views and give your own opinion. Give reasons and examples from your own experience. You should spend about 40 minutes on this task. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Compulsory First-Aid Training on Campus\",\"focus\":\"clear main ideas, accurate simple explanations, direct support\",\"prompt\":\"Some people think every university student should attend a basic first-aid workshop during their first year. Others think this training should be optional and only for students who are interested. Do you agree or disagree that first-aid training should be compulsory for all students? Give reasons for your answer and include examples from your own experience or knowledge. You should spend about 40 minutes on this task. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Fees for Replacing a Student Access Card\",\"focus\":\"advantages and disadvantages, clear opinion, simple explanations\",\"prompt\":\"At many colleges, students have to pay a small fee, for example $10 or $15, to replace a lost or damaged access card. Some students think this fee is fair because it teaches responsibility. Others think the college should replace cards for free. Discuss the advantages and disadvantages of charging a fee for replacement cards and give your own opinion. You should spend about 40 minutes on this task. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Neighbourhood Markets and Shopping\",\"focus\":\"familiar everyday topics, short personal answers\",\"prompt\":\"Answer the following questions with short, clear answers. Give a reason or example for each answer.\\n1. Do you like visiting local markets? Why or why not?\\n2. How often do you go to a market or small shop in your neighbourhood?\\n3. What do you usually buy at a market?\\n4. Do you prefer markets or supermarkets? Why?\"},{\"task\":\"Part 1 · Campus Life and Student Cards\",\"focus\":\"familiar academic context, simple explanations\",\"prompt\":\"Answer the following questions with short, clear answers. Give a reason or example for each answer.\\n1. Do you use a student card or ID card every day?\\n2. What do you use your student card for?\\n3. Have you ever lost an important card? What happened?\\n4. Is it easy to get help on your campus if you have a problem with your card?\"},{\"task\":\"Part 2 · Cue card · Describe a Visit to a Neighbourhood Market\",\"focus\":\"clear description, direct evidence, simple explanation of why it was useful\",\"prompt\":\"Describe a visit you made to a neighbourhood market or local market. You will have one minute to prepare and should speak for one to two minutes.\\n\\nYou should say:\\n• when and where you went\\n• who you went with\\n• what you saw and did there\\n• and explain why this visit was interesting or useful for you.\\n\\nYou can make notes in your preparation time.\"},{\"task\":\"Part 3 · Learning Practical Skills Outside the Classroom\",\"focus\":\"reasons and evaluation, comparing classroom and real-world learning\",\"prompt\":\"Discuss the following questions more fully. Give reasons, compare ideas, and explain your opinions.\\n1. Why do some teachers take students to places like markets or workshops outside the classroom?\\n2. What are the advantages of learning practical skills such as first aid at college?\\n3. Should practical workshops be compulsory for all students? Why or why not?\\n4. How can colleges make outside visits more useful for students who are not very interested?\"},{\"task\":\"Part 3 · Campus Rules and Student Responsibility\",\"focus\":\"evaluation of fairness, reasons for rules and fees\",\"prompt\":\"Discuss the following questions more fully. Give reasons and evaluate different opinions.\\n1. Why do colleges charge a fee when students need to replace a lost access card?\\n2. Do you think a small fee helps students be more responsible? Why or why not?\\n3. What is a fair way for a college to deal with students who lose their cards many times?\\n4. How can colleges help new students understand and follow campus rules better?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Campus First-Aid Workshop Attendance",
+        "focus": "clear overview, direct comparisons, familiar academic context",
+        "prompt": "The table below shows the number of students who attended a voluntary campus first-aid workshop at Parkside College in March, April and May 2024, and the main skill each student chose to practise. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task. Write at least 150 words.\n\nData:\nMarch 2024 – Total 42 students: Basic bandaging 14, CPR practice 18, Recovery position 10\nApril 2024 – Total 58 students: Basic bandaging 20, CPR practice 22, Recovery position 16\nMay 2024 – Total 65 students: Basic bandaging 18, CPR practice 30, Recovery position 17",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Reasons for Replacing Student Access Cards",
+        "focus": "clear main trends, direct evidence, simple explanations",
+        "prompt": "The chart below shows the number of student access cards replaced at Greenfield College for four different reasons in 2023 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task. Write at least 150 words.\n\nData for 2023 / 2024:\nLost card: 120 / 95\nDamaged card: 45 / 60\nStolen card: 20 / 15\nName or course change: 10 / 25\nTotal replacements: 195 in 2023, 195 in 2024",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Learning from a Neighbourhood Market Visit",
+        "focus": "clear position, direct evidence, familiar academic context",
+        "prompt": "Some teachers organise a visit to a local neighbourhood market to help students learn about food, prices and local culture. Others think students can learn the same things in the classroom and a visit is not necessary. Discuss both views and give your own opinion. Give reasons and examples from your own experience. You should spend about 40 minutes on this task. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Compulsory First-Aid Training on Campus",
+        "focus": "clear main ideas, accurate simple explanations, direct support",
+        "prompt": "Some people think every university student should attend a basic first-aid workshop during their first year. Others think this training should be optional and only for students who are interested. Do you agree or disagree that first-aid training should be compulsory for all students? Give reasons for your answer and include examples from your own experience or knowledge. You should spend about 40 minutes on this task. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Fees for Replacing a Student Access Card",
+        "focus": "advantages and disadvantages, clear opinion, simple explanations",
+        "prompt": "At many colleges, students have to pay a small fee, for example $10 or $15, to replace a lost or damaged access card. Some students think this fee is fair because it teaches responsibility. Others think the college should replace cards for free. Discuss the advantages and disadvantages of charging a fee for replacement cards and give your own opinion. You should spend about 40 minutes on this task. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Neighbourhood Markets and Shopping",
+        "focus": "familiar everyday topics, short personal answers",
+        "prompt": "Answer the following questions with short, clear answers. Give a reason or example for each answer.\n1. Do you like visiting local markets? Why or why not?\n2. How often do you go to a market or small shop in your neighbourhood?\n3. What do you usually buy at a market?\n4. Do you prefer markets or supermarkets? Why?"
+      },
+      {
+        "task": "Part 1 · Campus Life and Student Cards",
+        "focus": "familiar academic context, simple explanations",
+        "prompt": "Answer the following questions with short, clear answers. Give a reason or example for each answer.\n1. Do you use a student card or ID card every day?\n2. What do you use your student card for?\n3. Have you ever lost an important card? What happened?\n4. Is it easy to get help on your campus if you have a problem with your card?"
+      },
+      {
+        "task": "Part 2 · Cue card · Describe a Visit to a Neighbourhood Market",
+        "focus": "clear description, direct evidence, simple explanation of why it was useful",
+        "prompt": "Describe a visit you made to a neighbourhood market or local market. You will have one minute to prepare and should speak for one to two minutes.\n\nYou should say:\n• when and where you went\n• who you went with\n• what you saw and did there\n• and explain why this visit was interesting or useful for you.\n\nYou can make notes in your preparation time."
+      },
+      {
+        "task": "Part 3 · Learning Practical Skills Outside the Classroom",
+        "focus": "reasons and evaluation, comparing classroom and real-world learning",
+        "prompt": "Discuss the following questions more fully. Give reasons, compare ideas, and explain your opinions.\n1. Why do some teachers take students to places like markets or workshops outside the classroom?\n2. What are the advantages of learning practical skills such as first aid at college?\n3. Should practical workshops be compulsory for all students? Why or why not?\n4. How can colleges make outside visits more useful for students who are not very interested?"
+      },
+      {
+        "task": "Part 3 · Campus Rules and Student Responsibility",
+        "focus": "evaluation of fairness, reasons for rules and fees",
+        "prompt": "Discuss the following questions more fully. Give reasons and evaluate different opinions.\n1. Why do colleges charge a fee when students need to replace a lost access card?\n2. Do you think a small fee helps students be more responsible? Why or why not?\n3. What is a fair way for a college to deal with students who lose their cards many times?\n4. How can colleges help new students understand and follow campus rules better?"
+      }
+    ]
+  }
+}

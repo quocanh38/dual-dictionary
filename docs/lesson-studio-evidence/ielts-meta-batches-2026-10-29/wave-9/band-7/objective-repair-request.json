@@ -1,0 +1,156 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-9",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Keep each option under 12 words and each explanation to 1–2 sentences; do not repeat source paragraphs in explanations. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 6.5 to 7.0: nuanced inference, scope and causality limits, competing evidence, and precise evaluation without overclaiming. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: transport-policy effects under phased implementation, robustness of biodiversity rankings to indicator choice, and non-random attrition in adult-learning research. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-7",
+    "batchId": "wave-9",
+    "repairRound": 1,
+    "currentBatch": {
+      "listening": {
+        "title": "Riverdale Low-Emission Zone Case Study",
+        "focus": "Phased transport policy and challenges of evaluating early effects",
+        "part": "Part 3",
+        "script": "Maya: So for our transport policy case study, are we still focusing on Riverdale's low-emission zone?\nJon: Yes, the phased rollout makes it interesting. Phase 1 started last January, right? Just the central district with daily charges for older, high-polluting vehicles.\nMaya: Exactly. And Phase 2 expands to the inner suburbs. I initially noted it was launching in March, but actually the council website says it's been delayed until late April because they need more time to install signage and cameras.\nJon: Good catch — I'll correct our timeline to late April. What did you find about Phase 1 effects so far?\nMaya: The results are mixed. Bus ridership in the central district went up by 12% in the first six months, which looks like a clear success. But when you look at citywide figures, total car trips barely changed at all.\nJon: So people switched to buses inside the zone but continued driving elsewhere?\nMaya: That's what the interim report suggests. It also recorded a 9% fall in car entries to the central district, but that reduction was only on weekdays. At weekends, entries were almost unchanged.\nJon: Did they see any improvement in air quality?\nMaya: Nitrogen dioxide in the centre fell by about 7%, but the authors qualify that finding. They note the winter was unusually windy, which also disperses pollution, so you can't attribute the drop solely to fewer cars.\nJon: So we have to be careful about causality. The phased implementation must make evaluation harder.\nMaya: Exactly. The report stresses that because the charge was introduced gradually and a new tram line opened in February, it's difficult to isolate the policy's independent effect. Seasonal travel patterns add further noise.\nJon: So what's their recommendation?\nMaya: They argue we need at least a full year of data after Phase 2 is operating to judge whether the central reduction spreads outward or simply displaces traffic to the periphery.\nJon: That makes sense. For our presentation, we should emphasize that phased rollout may be politically smoother but analytically messy, and that early gains were geographically limited rather than citywide.\nMaya: Perfect. Let's structure it around that tension between implementation and evidence.",
+        "questions": [
+          {
+            "title": "Project Focus",
+            "prompt": "Why did they choose Riverdale's low-emission zone as a case?",
+            "options": [
+              "Its charges apply only to older vehicles",
+              "Its staged introduction complicates impact assessment",
+              "Its central district has the worst pollution",
+              "Its tram line opened before the zone"
+            ],
+            "answer": 1,
+            "explanation": "They highlight the phased rollout as analytically interesting and messy for evaluation. The older-vehicle detail describes the charge but not why it was chosen."
+          },
+          {
+            "title": "Phase 1 Outcome",
+            "prompt": "What does the interim report show about Phase 1?",
+            "options": [
+              "Bus use rose centrally but citywide driving stayed flat",
+              "Car entries fell equally on weekdays and weekends",
+              "Air quality improved solely due to fewer cars",
+              "Total car trips fell 12% across the city"
+            ],
+            "answer": 0,
+            "explanation": "The report notes a 12% central bus rise while citywide car trips barely changed. The 12% car-trip fall misattributes the bus figure."
+          },
+          {
+            "title": "Phase 2 Timing",
+            "prompt": "What is the corrected start date for Phase 2?",
+            "options": [
+              "Early January",
+              "February after tram opening",
+              "Late April after delay",
+              "Early March as first planned"
+            ],
+            "answer": 2,
+            "explanation": "Maya corrects her initial March note to late April due to signage and camera installation. March was the uncorrected expectation."
+          },
+          {
+            "title": "Air Quality Qualification",
+            "prompt": "How do the authors qualify the 7% nitrogen dioxide fall?",
+            "options": [
+              "It was caused entirely by windy weather",
+              "It was measured only on weekdays",
+              "It was smaller than the bus ridership rise",
+              "It may partly reflect unusually windy conditions"
+            ],
+            "answer": 3,
+            "explanation": "They note an unusually windy winter also disperses pollution, so attribution is uncertain. Entirely caused overstates this qualified caution."
+          },
+          {
+            "title": "Evaluation Challenge",
+            "prompt": "What do the students conclude about evaluating the phased policy?",
+            "options": [
+              "Early central gains prove citywide success",
+              "A full year after Phase 2 is needed to judge effects",
+              "Seasonal patterns have no impact on results",
+              "Displacement to periphery has already been ruled out"
+            ],
+            "answer": 1,
+            "explanation": "They agree a full year of post-Phase 2 data is needed to distinguish spread from displacement. Early gains were described as geographically limited, not citywide proof."
+          }
+        ]
+      },
+      "reading": {
+        "title": "When Methods Shape Conclusions",
+        "focus": "Robustness of rankings to indicator choice and bias from non-random attrition",
+        "passage": "Evaluating the robustness of findings has become central in both environmental and educational research, where conclusions can shift markedly with methodological choices. Without explicit checks, policymakers and practitioners may overstate confidence in a single result. Two distinct cases illustrate why sensitivity to indicators and sample composition matters.\n\nIn conservation planning, priority rankings of regions for protection often depend on which biodiversity indicator is selected. A recent analysis of 40 regions compared three common measures: total species richness, number of threatened species, and extent of intact habitat. Rankings proved unstable across these alternatives. A region that placed first on species richness fell to the middle of the table when threatened species were emphasized, while another rose sharply when habitat intactness was weighted heavily. Only three regions remained in the top ten across all three indicators, suggesting that most positions are indicator-dependent rather than absolute. The Coastal Basin exemplifies this volatility: it ranked highest for overall species count but only fourteenth for threatened species, because its diversity is dominated by widespread rather than at-risk taxa.\n\nThe authors do not argue that ranking exercises are futile. Their central claim is that rankings should be communicated with explicit uncertainty — for example, as bands or ranges reflecting alternative indicators — rather than as definitive league tables. The Coastal Basin case is presented merely as an illustration of how a single indicator can mislead, not as proof that the region lacks conservation value.\n\nA parallel sensitivity arises in research on adult learning, where non-random attrition can distort estimated effects. In a 12-month community literacy programme, nearly 30% of enrolled adults did not complete final assessments. Those who left were not a random subset; they had lower baseline literacy scores, more irregular attendance, and reported greater work and caregiving constraints. An analysis limited to completers suggested an average gain of 15% in reading proficiency. However, when researchers applied weighting adjustments to account for the characteristics of those who dropped out, the estimated average gain fell to 6%.\n\nThis does not mean field studies in adult education are invalid. The authors contend that attrition is often unavoidable but must be addressed through transparent reporting of dropout patterns and sensitivity analyses that test whether conclusions hold under different assumptions about missing participants. Consequently, while the programme likely produced modest benefits for persistent attendees, caution is warranted in generalising the larger, unadjusted gain to the most disadvantaged learners who were most likely to leave.",
+        "questions": [
+          {
+            "title": "Passage Purpose",
+            "prompt": "What is the passage's main aim?",
+            "options": [
+              "To propose new biodiversity indicators for conservation",
+              "To promote literacy programmes in disadvantaged areas",
+              "To show how methods shape conclusions in two fields",
+              "To argue field studies are too flawed to use"
+            ],
+            "answer": 2,
+            "explanation": "The passage uses two cases to show conclusions shift with indicator choice and attrition handling. Proposing new indicators mistakes illustration for advocacy."
+          },
+          {
+            "title": "Biodiversity Rankings",
+            "prompt": "What does the 40-region analysis demonstrate?",
+            "options": [
+              "Most rankings change when the indicator changes",
+              "Habitat intactness is the most reliable indicator",
+              "Coastal Basin has little conservation value",
+              "Three regions have no threatened species"
+            ],
+            "answer": 0,
+            "explanation": "Only three regions stayed top ten across all measures, showing most positions are indicator-dependent. The low-value reading confuses volatility with lack of worth."
+          },
+          {
+            "title": "Claim Versus Example",
+            "prompt": "How does the Coastal Basin function in the argument?",
+            "options": [
+              "It proves rankings should be abandoned entirely",
+              "It illustrates why single-indicator rankings can mislead",
+              "It shows the authors' preferred ranking method",
+              "It demonstrates habitat intactness is superior"
+            ],
+            "answer": 1,
+            "explanation": "The authors' claim is for uncertainty bands; the Basin is an example of misleading single-indicator results. Abandoning rankings overstates their position."
+          },
+          {
+            "title": "Attrition Effect",
+            "prompt": "What happened in the literacy programme analysis?",
+            "options": [
+              "Dropouts had higher baseline scores than completers",
+              "Weighting adjustments increased the estimated gain",
+              "Attrition was random and did not affect results",
+              "Completers-only estimate exceeded adjusted estimate"
+            ],
+            "answer": 3,
+            "explanation": "The completers-only 15% gain dropped to 6% after weighting for non-random dropout characteristics. The increased-gain option reverses the reported direction."
+          },
+          {
+            "title": "Limited Inference",
+            "prompt": "What cautious inference is warranted about the programme's benefits?",
+            "options": [
+              "Modest gains for attendees cannot be generalised to likely dropouts",
+              "The programme had no benefit for any participants",
+              "Adjusted 6% gain proves long-term citywide success",
+              "Dropouts left mainly due to lack of interest"
+            ],
+            "answer": 0,
+            "explanation": "The authors limit generalisation of the larger unadjusted gain to disadvantaged learners most likely to leave. No benefit overclaims beyond the modest adjusted gain."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "ielts-meta-wave-9-band-7-reading-05",
+          "severity": "critical",
+          "issue": "Key A says modest gains for attendees cannot be generalised to likely dropouts, but the passage specifically cautions against generalising the larger unadjusted 15% gain. It does not rule out generalising the modest adjusted gain under suitable assumptions. Change the key to Larger unadjusted gains should not be assumed for learners likely to drop out and align the explanation.",
+          "reviewer": "gpt-6.1-sol"
+        }
+      ]
+    }
+  }
+}

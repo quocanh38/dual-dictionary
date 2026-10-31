@@ -1,0 +1,53 @@
+{
+  "id": "draft-200d40dc-d233-4ee2-9dad-d3d8164643bd",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Planning conference travel",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The department will make arrangements for students to attend a regional conference. Each applicant must provide evidence of how the event relates to their research. Because the travel fund is limited, the panel will compare the purpose and expected benefit of each visit. Students should describe a specific session they plan to attend rather than simply listing the speakers they admire.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "The department will make arrangements for students to attend a regional conference. Each applicant must provide evidence of how the event relates to their research. Because the travel fund is limited, the panel will compare the purpose and expected benefit of each visit. Students should describe a specific session they plan to attend rather than simply listing the speakers they admire.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The department will make arrangements for students to attend a regional conference."
+      },
+      {
+        "id": "s2",
+        "text": "Each applicant must provide evidence of how the event relates to their research."
+      },
+      {
+        "id": "s3",
+        "text": "Because the travel fund is limited, the panel will compare the purpose and expected benefit of each visit."
+      },
+      {
+        "id": "s4",
+        "text": "Students should describe a specific session they plan to attend rather than simply listing the speakers they admire."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "make arrangements for",
+      "meaningEn": "to plan and organize something so it can happen",
+      "meaningVi": "sắp xếp, tổ chức cho việc gì",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "provide evidence of",
+      "meaningEn": "to supply proof or details showing that something is true or relevant",
+      "meaningVi": "cung cấp bằng chứng về việc gì",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

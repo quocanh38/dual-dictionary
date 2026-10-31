@@ -1,0 +1,15 @@
+{
+  "wave": 10,
+  "batch": 88,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after spare part; reviewed against local OALD 10/LDOCE 6. Medical description of spina bifida checked against NHS England. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover transport, post, military, science, health, technical tools, grammar, time expressions and phrasal verbs; explain spelling variation, legal usage and figurative extensions without overclaiming.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1100, "remainingRawOnlyAfter": 1080},
+  "selected": ["spark plug", "sparking plug", "special delivery", "special forces", "specific gravity", "speech therapy", "speed limit", "speed up", "sperm whale", "spick and span", "spill over", "spin off", "spina bifida", "spinal column", "spinal cord", "spirit level", "splash guard", "split infinitive", "split second", "split up"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "https://www.england.nhs.uk/2025/01/call-the-midwife-storyline-sees-nhs-website-searches-for-spina-bifida-spiral/"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "d39139134fab8237e4cb25966ace61008d8ab1aa4f2eb651f9a1123704add7fb",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-7-band-5-listening-02",
+      "severity": "critical",
+      "issue": "Explanation says $25 is the colour price, but the script says25 cents per page ($0.25), not$25. Correct the explanation so it does not equate these amounts; key$20 remains correct."
+    },
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-03; speaking-04; normalizationFindings",
+      "severity": "major",
+      "issue": "Both Part2 cards present their hyphen prompts in one inline paragraph; the two visible-cue-bullet normalization failures remain unresolved. Put each cue on its own newline with bullet marker, retaining one-minute preparation and1–2-minute talk."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-7-band-5-listening-05",
+      "severity": "minor",
+      "issue": "Within two hours by email conflates credit activation and email notification. Prefer Within two hours; explanation already distinguishes them."
+    },
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-04",
+      "severity": "minor",
+      "issue": "Card permits a session the learner merely saw but asks what you did there; allow what participants did if describing an observed session."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all20items:5Listening,5Reading,5Writing,5Speaking; entire contexts,40options,10keys/explanations and all productive prompts/metadata. Repeated transcript/passage copies verified equal shared contexts; no other reviewers reports inspected, no candidate edits/provider calls.",
+    "listening": "Full335-word IT dialogue read: missing$20balance, old/new printer location,10cents mono/25cents colour, receipt204 versus240 correction, opening9–5/Friday4, credit within2hours. Keys[0,1,2,3,0] supported; all20options and5explanations checked. Wrong-unit explanation blocks.",
+    "reading": "Full424-word route passage read:2022reason,1.5km/45minutes, MainGate→StudentCentre→Library→Science→SportsHall; building-example versus community claim; first-week booking/times10/14, next-group provision,85%feedback/future evenings. Keys[2,0,1,3,0] supported and all alternatives/explanations checked.",
+    "writing": "Two Task1 datasets complete: nine tour counts acrossMarch–May2024 and3groups;120student survey40+30+25+25=120 inMay2024. Task2 gardening, online/in-person tours and board-game benefits permit clear reasons/opinions.150words/20minutes and250/40 explicit in prose/metadata.",
+    "speaking": "Two personal Part1 sets, two Part2 event cards with prep/duration/content cues but failed visible formatting, onePart3 broader learning discussion. Accessible band5 language; no empirical band-score validation implied.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 335,
+        "reading": 424
+      },
+      "metadataWordCounts": {
+        "listening": 335,
+        "reading": 424
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          2,
+          0,
+          1,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": [
+        "Speaking Part 2 prompt 3 needs visible cue-card bullets.",
+        "Speaking Part 2 prompt 4 needs visible cue-card bullets."
+      ]
+    },
+    "originalityAndProvenance": "Baseten/meta-models/muse-spark-open-1026, wave7v1 prompt versions and originalContent=true read. No recognisable official-question copying or score guarantee found; not an exhaustive plagiarism audit. Fictional research statistics assessed for consistency, not empirically verified. Intended stage is practice progression, not certified band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-7-band-5-listening-01",
+      "ielts-meta-wave-7-band-5-listening-02",
+      "ielts-meta-wave-7-band-5-listening-03",
+      "ielts-meta-wave-7-band-5-listening-04",
+      "ielts-meta-wave-7-band-5-listening-05",
+      "ielts-meta-wave-7-band-5-reading-01",
+      "ielts-meta-wave-7-band-5-reading-02",
+      "ielts-meta-wave-7-band-5-reading-03",
+      "ielts-meta-wave-7-band-5-reading-04",
+      "ielts-meta-wave-7-band-5-reading-05",
+      "ielts-meta-wave-7-band-5-writing-01",
+      "ielts-meta-wave-7-band-5-writing-02",
+      "ielts-meta-wave-7-band-5-writing-03",
+      "ielts-meta-wave-7-band-5-writing-04",
+      "ielts-meta-wave-7-band-5-writing-05",
+      "ielts-meta-wave-7-band-5-speaking-01",
+      "ielts-meta-wave-7-band-5-speaking-02",
+      "ielts-meta-wave-7-band-5-speaking-03",
+      "ielts-meta-wave-7-band-5-speaking-04",
+      "ielts-meta-wave-7-band-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

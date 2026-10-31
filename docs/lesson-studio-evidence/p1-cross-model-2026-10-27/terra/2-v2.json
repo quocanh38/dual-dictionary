@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "0cf868d01f48a08b034eacb1aa0c8ba9602dd05a88cb8459790fe9ab5707389f",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-terra (configured local reviewer)",
+  "reviewedAt": "2026-10-27T04:13:40.223039+00:00",
+  "note": "Independent AI-assisted full-content review of the exact candidate payload. Not independent human or teacher certification. Rights and origin are assessed from the pack declaration; no external chain-of-title verification. The gate hash binds the parsed pack; candidate wrapper carries draft metadata.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The pack declares an AI-assisted original reading, project author, pilot use and no learner data; no PII appears in the reading. This is a provenance assertion, not independent verification of authorship or distribution rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains keep track of; tracking requests during a trial supports staying aware over time."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Monitoring over time to remain informed matches this context; it does not require written records."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Theo dõi để nắm được thông tin cập nhật về điều gì conveys the sense with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains take into account; training time is a factor when choosing a launch date."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Considering something when making a decision or plan accurately captures s2."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Cân nhắc, tính đến điều gì khi đưa ra quyết định hoặc kế hoạch is natural and accurate."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a means monitoring and staying informed; b ignoring and c completing within a day describe different actions."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a explicitly says records are optional; b correctly contrasts ignoring with monitoring but mentions recording, which may imply a requirement; c correctly distinguishes completion and notes that notes are optional. Overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b naturally uses keep track of; a substitutes on for of in this expression; c omits of."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations for a, b, c and the overall item correctly specify the preposition and optional spreadsheet method."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c means considering training time in planning; a ignoring and b finishing training fast are different ideas."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All three explanations distinguish the stated actions from the contextual sense; overall correctly identifies c."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a correctly considers travel time; b adds of after account; c reverses the fixed word order."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option and overall explanation correctly specifies extra of or wrong word order, and identifies a as natural."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Advice to a college-bound friend buying a laptop changes recipient, purpose and setting from launch planning."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Model uses the phrase naturally in two useful advice sentences; checklist checks phrase, situation, length and considered factor; no automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "uncertain",
+      "resolved": true,
+      "evidence": "The q2c and q4c options now contain objective errors: missing of after keep track and incorrect word order take account into. The earlier presumed-intent concern is not present in these options."
+    },
+    {
+      "id": "q1b-recording",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "q1b explanation contrasts ignoring with “monitoring and recording”; recording is optional. Reword as monitoring and staying informed for consistency with q1a, although q1a and q1c explicitly clarify that notes are not required."
+    }
+  ],
+  "editorialDecision": "ready-for-approval"
+}

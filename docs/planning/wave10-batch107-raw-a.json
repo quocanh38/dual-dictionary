@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 107,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after wear off in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Prioritize frequent phrasal verbs, web/weather and public-policy vocabulary, then explain nuanced well-compounds with register, hyphenation and meaning contrasts.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 720,
+    "remainingRawOnlyAfter": 700
+  },
+  "selected": [
+    "wear out",
+    "weasel word",
+    "weather forecast",
+    "weaver bird",
+    "web page",
+    "weigh down",
+    "welfare state",
+    "well advised",
+    "well balanced",
+    "well behaved",
+    "well connected",
+    "well defined",
+    "well disposed",
+    "well formed",
+    "well founded",
+    "well heeled",
+    "well informed",
+    "well intentioned",
+    "well meaning",
+    "well meant"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

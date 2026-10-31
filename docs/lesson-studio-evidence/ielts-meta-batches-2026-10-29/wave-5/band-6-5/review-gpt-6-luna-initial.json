@@ -1,0 +1,20 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e9853b005fdd0ec44474e4ad07cfbd75c8efd09bab32dd696e74bdb9bbedcf16",
+  "verdict": "fail",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-5-band-6-5-listening-04",
+      "issue": "The answer key is 3, which selects “Surveys were conducted in different years.” The script gives no such difference. The explanation supports option 1 (“Eastfield had a low response rate of 35%”), which is the defensible answer. Correct the key to 1.",
+      "severity": "critical"
+    },
+    {
+      "item": "normalizationFindings.answerPositions",
+      "issue": "The payload flags that neither objective skill uses all four answer positions. Listening keys are [1,0,1,3,1] (position 2 absent); Reading keys are [0,1,1,1,0] (positions 2 and 3 absent). Rebalance answer positions across each five-item set to reduce a predictable response pattern, while preserving valid keys.",
+      "severity": "minor"
+    }
+  ],
+  "observations": [],
+  "coverage": "Full review of candidate-initial-v1.json exact bytes: 314-word listening script and 408-word reading passage, all 10 objective questions with every option/key/explanation, all five Writing prompts and five Speaking prompts, plus both normalizationFindings and provenance. Checked answer uniqueness and evidence, every distractor and explanation, natural English and stage fit, Task 1 visible numerical data/units/timing, Speaking Parts/cue-card structure, originality disclosure and score claims. Listening 04 is mis-keyed as detailed in findings. The other objective keys are supported. Reading passages and Task 1 shade/data-download tables have clear units and complete series; prompts specify time/word limits. Speaking covers Parts 1, 2 and 3. Provenance declares originalContent:true; no official-question or learner-score claims appear. The answer-position warnings are confirmed.",
+  "reviewerType": "AI-assisted"
+}

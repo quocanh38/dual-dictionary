@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-9",
+  "segment": "prompts",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-9-v1",
+  "completedAt": "2026-10-29T05:34:57.512Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 1940,
+    "outputTokens": 3912,
+    "totalTokens": 5852
+  },
+  "latencyMs": 10354,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · River Restoration Outcomes and Uncertainty\",\"focus\":\"summarising projections with qualified claims and uncertainty ranges\",\"prompt\":\"The table below shows projected outcomes for the River Lenton Restoration Plan (2025–2030) prepared by the city environment agency. The figures are estimates based on modelling and pilot studies. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table: Intervention | Projected increase in native fish numbers by 2030 | Uncertainty range | Evidence quality | Estimated cost (USD) — Re-meandering 2km channel | +18% | +8% to +28% | Moderate – based on one pilot site | 420,000 — Creating 5-hectare wetland buffer | +25% | +15% to +30% | Strong – three comparable rivers | 610,000 — Installing fish pass at weir | +12% | +2% to +22% | Limited – laboratory and overseas data only | 180,000. You should explain what the uncertainty ranges and evidence quality suggest about confidence in each projection.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Survey Methods for Playground Shade Study\",\"focus\":\"comparing sampling methods and handling limitations and bias\",\"prompt\":\"The table below compares three survey methods considered by Riverton Council to understand public opinion on funding shade structures at 12 public playgrounds. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table: Method | Sample size achieved in trial | Response rate | Age group most represented | Key limitation noted by researchers — A: Door-to-door near playgrounds | 320 | 78% | Parents aged 25–40 | High cost and limited to nearby residents — B: Open online survey via council website | 1,150 | 22% of viewers | Adults aged 18–30 without children | Self-selection bias; under-represents older adults and non-internet users — C: Stratified random sample at playgrounds, schools and clinics | 500 | 65% | Balanced across age and parental status | Requires more time to recruit; needs trained interviewers.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Funding Shade at Public Playgrounds\",\"focus\":\"evaluating funding priorities and fairness with qualified arguments\",\"prompt\":\"Some people argue that local governments should fully fund shade structures at all public playgrounds to protect children’s health, while others believe funding should be shared with community groups, businesses, or parents because budgets are limited. Discuss both views, compare the evidence and arguments for each, and give your own opinion. Support your position with reasons and examples, and acknowledge any limitations or trade-offs in your argument.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Communicating Uncertainty in a River Restoration Plan\",\"focus\":\"explaining how to present uncertain evidence clearly and honestly\",\"prompt\":\"Scientists advising on a river restoration plan have incomplete evidence and wide uncertainty ranges for some outcomes. Some people say experts should present only the most likely results to avoid confusing the public, while others say they should show the full range of uncertainty even if it makes decisions harder. Discuss both views and give your own opinion. Use qualified language, compare the strengths and weaknesses of each approach, and explain how limitations should be handled.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Choosing a Fair Survey Sample\",\"focus\":\"comparing evidence quality and justifying methodological choices\",\"prompt\":\"When councils conduct surveys about public facilities, the way participants are selected can affect the fairness and usefulness of the results. Some argue that large online surveys are best because they collect many responses quickly, while others argue that smaller, carefully balanced samples give more reliable evidence for decision-making. To what extent do you agree or disagree? Compare the two approaches, discuss issues of bias and representativeness, and support your view with reasons and examples while acknowledging limitations.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Outdoor Spaces and Playgrounds\",\"focus\":\"personal experience and preferences related to public parks\",\"prompt\":\"I would like to ask you about outdoor spaces. Do you have a park or playground near where you live? How often do you visit public parks? What do you think makes a playground comfortable and safe in hot weather? Has your use of outdoor spaces changed in recent years?\"},{\"task\":\"Part 1 · Surveys and Giving Opinions\",\"focus\":\"attitudes to surveys and participation\",\"prompt\":\"Let us talk about surveys. Have you ever taken part in a survey for your local area? How do you feel when you are asked to give your opinion online or in person? Do you think most people answer surveys honestly? Why or why not?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"describing an experience of explaining uncertain information\",\"prompt\":\"Describe a time when you had to explain something uncertain or incomplete to other people.\\n\\nYou should say:\\n• what the information was about\\n• who you were explaining it to\\n• how you explained the uncertainty or limitations\\n• and explain how the other person or people reacted and how you felt about it.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Funding Public Facilities\",\"focus\":\"evaluating priorities and fairness in public spending\",\"prompt\":\"Let us consider funding for public facilities like playground shade. Why might some people support full government funding while others prefer shared funding? How should councils decide which parks get improvements first when budgets are limited? What are the advantages and disadvantages of asking local businesses to contribute? Do you think decisions about public money should always follow survey results? Why or why not?\"},{\"task\":\"Part 3 · Science Communication and Uncertainty\",\"focus\":\"comparing ways to present evidence and handling limitations\",\"prompt\":\"Let us talk about how experts share uncertain information. Why is it sometimes difficult for scientists to give clear answers about environmental projects? What are the risks of only showing the most positive predictions to the public? How can showing uncertainty help or hinder public trust? In your view, what makes an explanation of complex evidence both honest and understandable?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · River Restoration Outcomes and Uncertainty",
+        "focus": "summarising projections with qualified claims and uncertainty ranges",
+        "prompt": "The table below shows projected outcomes for the River Lenton Restoration Plan (2025–2030) prepared by the city environment agency. The figures are estimates based on modelling and pilot studies. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table: Intervention | Projected increase in native fish numbers by 2030 | Uncertainty range | Evidence quality | Estimated cost (USD) — Re-meandering 2km channel | +18% | +8% to +28% | Moderate – based on one pilot site | 420,000 — Creating 5-hectare wetland buffer | +25% | +15% to +30% | Strong – three comparable rivers | 610,000 — Installing fish pass at weir | +12% | +2% to +22% | Limited – laboratory and overseas data only | 180,000. You should explain what the uncertainty ranges and evidence quality suggest about confidence in each projection.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Survey Methods for Playground Shade Study",
+        "focus": "comparing sampling methods and handling limitations and bias",
+        "prompt": "The table below compares three survey methods considered by Riverton Council to understand public opinion on funding shade structures at 12 public playgrounds. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Table: Method | Sample size achieved in trial | Response rate | Age group most represented | Key limitation noted by researchers — A: Door-to-door near playgrounds | 320 | 78% | Parents aged 25–40 | High cost and limited to nearby residents — B: Open online survey via council website | 1,150 | 22% of viewers | Adults aged 18–30 without children | Self-selection bias; under-represents older adults and non-internet users — C: Stratified random sample at playgrounds, schools and clinics | 500 | 65% | Balanced across age and parental status | Requires more time to recruit; needs trained interviewers.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Funding Shade at Public Playgrounds",
+        "focus": "evaluating funding priorities and fairness with qualified arguments",
+        "prompt": "Some people argue that local governments should fully fund shade structures at all public playgrounds to protect children’s health, while others believe funding should be shared with community groups, businesses, or parents because budgets are limited. Discuss both views, compare the evidence and arguments for each, and give your own opinion. Support your position with reasons and examples, and acknowledge any limitations or trade-offs in your argument.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Communicating Uncertainty in a River Restoration Plan",
+        "focus": "explaining how to present uncertain evidence clearly and honestly",
+        "prompt": "Scientists advising on a river restoration plan have incomplete evidence and wide uncertainty ranges for some outcomes. Some people say experts should present only the most likely results to avoid confusing the public, while others say they should show the full range of uncertainty even if it makes decisions harder. Discuss both views and give your own opinion. Use qualified language, compare the strengths and weaknesses of each approach, and explain how limitations should be handled.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Choosing a Fair Survey Sample",
+        "focus": "comparing evidence quality and justifying methodological choices",
+        "prompt": "When councils conduct surveys about public facilities, the way participants are selected can affect the fairness and usefulness of the results. Some argue that large online surveys are best because they collect many responses quickly, while others argue that smaller, carefully balanced samples give more reliable evidence for decision-making. To what extent do you agree or disagree? Compare the two approaches, discuss issues of bias and representativeness, and support your view with reasons and examples while acknowledging limitations.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Outdoor Spaces and Playgrounds",
+        "focus": "personal experience and preferences related to public parks",
+        "prompt": "I would like to ask you about outdoor spaces. Do you have a park or playground near where you live? How often do you visit public parks? What do you think makes a playground comfortable and safe in hot weather? Has your use of outdoor spaces changed in recent years?"
+      },
+      {
+        "task": "Part 1 · Surveys and Giving Opinions",
+        "focus": "attitudes to surveys and participation",
+        "prompt": "Let us talk about surveys. Have you ever taken part in a survey for your local area? How do you feel when you are asked to give your opinion online or in person? Do you think most people answer surveys honestly? Why or why not?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "describing an experience of explaining uncertain information",
+        "prompt": "Describe a time when you had to explain something uncertain or incomplete to other people.\n\nYou should say:\n• what the information was about\n• who you were explaining it to\n• how you explained the uncertainty or limitations\n• and explain how the other person or people reacted and how you felt about it.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Funding Public Facilities",
+        "focus": "evaluating priorities and fairness in public spending",
+        "prompt": "Let us consider funding for public facilities like playground shade. Why might some people support full government funding while others prefer shared funding? How should councils decide which parks get improvements first when budgets are limited? What are the advantages and disadvantages of asking local businesses to contribute? Do you think decisions about public money should always follow survey results? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Science Communication and Uncertainty",
+        "focus": "comparing ways to present evidence and handling limitations",
+        "prompt": "Let us talk about how experts share uncertain information. Why is it sometimes difficult for scientists to give clear answers about environmental projects? What are the risks of only showing the most positive predictions to the public? How can showing uncertainty help or hinder public trust? In your view, what makes an explanation of complex evidence both honest and understandable?"
+      }
+    ]
+  }
+}

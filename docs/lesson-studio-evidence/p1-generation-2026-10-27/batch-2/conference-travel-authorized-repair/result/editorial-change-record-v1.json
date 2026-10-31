@@ -1,0 +1,34 @@
+{
+  "createdAt": "2026-10-27T07:49:41.588Z",
+  "kind": "local-editorial-revision",
+  "source": "Meta-generated pack preserved without edits at result/candidate.json",
+  "originalPackSha256": "1d547c08a2a9d986a26025ee6dba0e09dbbcb960e085a48d14bdf9f3017f98f0",
+  "editedPackSha256": "2cb36b3695d9742c7c5c80818892cb47e3eb98e711baa956f1d16041e3862b60",
+  "editor": "Codex AI-assisted editor",
+  "providerCallsForThisRevision": 0,
+  "changes": [
+    {
+      "exerciseId": "q1",
+      "reason": "Remove unsupported travel/registration/support specifics and strengthen distractor explanations.",
+      "fields": [
+        "options"
+      ],
+      "status": "edited"
+    },
+    {
+      "exerciseId": "q4",
+      "reason": "Luna identified a critical overgeneralization: Oxford records occasional plural evidences in academic English. Replace that distractor with objective complement errors and explain the exact grammar.",
+      "fields": [
+        "options",
+        "explanations",
+        "exercise explanation"
+      ],
+      "evidence": "https://www.oxfordlearnersdictionaries.com/us/definition/english/evidence_1",
+      "status": "edited"
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

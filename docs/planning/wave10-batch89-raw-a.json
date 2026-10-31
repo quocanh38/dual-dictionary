@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 89,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after split up; reviewed against local OALD 10/LDOCE 6. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover travel and household vocabulary, checks and tools, science, dance and mathematics, idioms, phrasal verbs, nationalities and military ranks; explain British/American variants and register where useful.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1080, "remainingRawOnlyAfter": 1060},
+  "selected": ["sponge bag", "spontaneous combustion", "sports car", "spot check", "spray gun", "spread out", "spring balance", "spring chicken", "spring clean", "spring tide", "squad car", "square away", "square bracket", "square dance", "square root", "squeeze out", "sri lankan", "stable boy", "stable companion", "staff sergeant"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

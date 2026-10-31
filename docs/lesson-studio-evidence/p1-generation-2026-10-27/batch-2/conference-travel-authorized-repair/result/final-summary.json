@@ -1,0 +1,59 @@
+{
+  "updatedAt": "2026-10-27T07:58:20.402Z",
+  "packId": "pack-200d40dc-d233-4ee2-9dad-d3d8164643bd",
+  "title": "Planning Academic Travel",
+  "sourceId": "conference-travel",
+  "generation": "Meta Muse Spark draft retained unchanged; q1 and q4 revised locally after review findings; no claim that local edits were Meta-generated.",
+  "rawMetaCandidateSha256": "1d547c08a2a9d986a26025ee6dba0e09dbbcb960e085a48d14bdf9f3017f98f0",
+  "finalReviewedPayloadSha256": "2cb36b3695d9742c7c5c80818892cb47e3eb98e711baa956f1d16041e3862b60",
+  "finalReviewSha256": "76fa409ffafae575a35700830a365c66dec8b8a2b70b04d28826a3cd5b030167",
+  "finalReview": {
+    "status": "PASS",
+    "criteria": 17,
+    "reviewers": 2,
+    "routesRequested": [
+      "gpt-6-luna",
+      "gpt-5.6-terra"
+    ],
+    "runtimeReportedModelLabels": [
+      "GPT-6",
+      "GPT-6"
+    ],
+    "unresolvedFindings": 0,
+    "limitations": [
+      "AI-assisted review, not human review",
+      "source rights remain supported by declarations, not independently verified"
+    ]
+  },
+  "resolvedInitialFindings": [
+    "q4: evidences can occur in academic English; distractors and explanations revised to objective complement errors",
+    "q1: removed unsupported travel/registration/support details"
+  ],
+  "approvedPackSha256": "607757049cac69cb81ca11a2070579000b275f1c404227e4eee0be5674c977ac",
+  "releaseDirectory": "docs/lesson-studio-evidence/p1-generation-2026-10-27/release-conference-travel",
+  "localLibraryFile": "lessons/library/conference-travel.json",
+  "libraryCount": 14,
+  "releaseQa": {
+    "status": "PASS",
+    "packs": 14,
+    "contexts": 28,
+    "cleanAndPreseeded": true,
+    "device": "Chrome mobile emulation 390x844",
+    "physicalDevice": false,
+    "externalRequests": 0,
+    "realProviderRequests": 0
+  },
+  "cacheVersion": "mdx-dict-v130",
+  "deployed": false,
+  "checks": [
+    "quality-gate audit ready-for-approval",
+    "quality-gate explicit approval",
+    "library import contracts PASS",
+    "27 lesson contract groups PASS",
+    "offline shell exact pack hashes and paths PASS",
+    "tutor contract suite PASS",
+    "JavaScript syntax PASS",
+    "git diff --check PASS",
+    "14 approved packs × clean/preseeded Chrome QA PASS"
+  ]
+}

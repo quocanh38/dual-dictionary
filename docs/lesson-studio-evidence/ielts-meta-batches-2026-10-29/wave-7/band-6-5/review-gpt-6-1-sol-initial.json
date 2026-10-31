@@ -1,0 +1,92 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "0502b57e78f4aee1d5309bbb6223fe1498d001e778a85a7b2c81615de98a3713",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-7-band-6-5-writing-02",
+      "severity": "uncertain",
+      "issue": "Automated gate counters alone cannot measure Percentage of students cycling daily: they count entries, including repeat riders/staff/visitors, without unique-student identity or enrolled-student denominator. Yet this indicator is labelled High reliability. Either change it to bicycle entries per day with count units and coherent values, or specify unique-student identification, daily frequency criterion and student denominator."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-7-band-6-5-speaking-04",
+      "severity": "minor",
+      "issue": "Final Part2 cue asks abstract effects of non-response rather than personal reflection; an optional simpler reflection and moving survey-bias analysis to Part3 would improve realism."
+    },
+    {
+      "item": "ielts-meta-wave-7-band-6-5-writing-01",
+      "severity": "minor",
+      "issue": "State that community-support percentages use the consultation respondent base for each site (or give per-site sample sizes), rather than an ambiguous single n=1200."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all20items:5Listening,5Reading,5Writing,5Speaking; entire contexts,40options,10keys/explanations and all productive prompts/metadata. Repeated transcript/passage copies verified equal shared contexts; no other reviewers reports inspected, no candidate edits/provider calls.",
+    "listening": "Full331-word tree-water dialogue read:80litres/3weeks versus sensor daily moisture20%;18%survival versus control, location confounds, annual15%cost correction, install/ongoing distinction,10%canopy versus trunk and small120tree limits. Keys[2,0,1,3,1] supported; all distractors/explanations checked.",
+    "reading": "Full447-word two-study passage read:2011–2023 erosion,2019GPS change,0.8/1.4/1.0m rates and storms;420student68%stress recruitment/selection, respondent associations versus prevalence limits. Keys[1,3,0,2,0] supported, all options/claims/examples/explanations reviewed.",
+    "writing": "Task1 coastal4site table contains risk/score10/costUSD/support/rank; travel5indicator table has baseline2023/target2026/method/reliability and units. Gate-count student-percentage validity is blocker; denominator clarity separately noted. ThreeTask2 prompts advanced but self-contained qualified-survey/priorities/indicator discussion. Minima150/250 and timings20/40 fields correct.",
+    "speaking": "Two personal Part1 sets; natural-area and survey-refusal Part2 cards include newline bullets/preparation/duration; Part3 asks broader evidence/policy evaluations. Survey-refusal abstract final cue noted as minor practice-design limitation.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 331,
+        "reading": 447
+      },
+      "metadataWordCounts": {
+        "listening": 331,
+        "reading": 447
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          1
+        ],
+        "Reading": [
+          1,
+          3,
+          0,
+          2,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten/meta-models/muse-spark-open-1026, wave7v1 prompt versions and originalContent=true read. No recognisable official-question copying or score guarantee found; not an exhaustive plagiarism audit. Fictional research statistics assessed for consistency, not empirically verified. Intended stage is practice progression, not certified band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-7-band-6-5-listening-01",
+      "ielts-meta-wave-7-band-6-5-listening-02",
+      "ielts-meta-wave-7-band-6-5-listening-03",
+      "ielts-meta-wave-7-band-6-5-listening-04",
+      "ielts-meta-wave-7-band-6-5-listening-05",
+      "ielts-meta-wave-7-band-6-5-reading-01",
+      "ielts-meta-wave-7-band-6-5-reading-02",
+      "ielts-meta-wave-7-band-6-5-reading-03",
+      "ielts-meta-wave-7-band-6-5-reading-04",
+      "ielts-meta-wave-7-band-6-5-reading-05",
+      "ielts-meta-wave-7-band-6-5-writing-01",
+      "ielts-meta-wave-7-band-6-5-writing-02",
+      "ielts-meta-wave-7-band-6-5-writing-03",
+      "ielts-meta-wave-7-band-6-5-writing-04",
+      "ielts-meta-wave-7-band-6-5-writing-05",
+      "ielts-meta-wave-7-band-6-5-speaking-01",
+      "ielts-meta-wave-7-band-6-5-speaking-02",
+      "ielts-meta-wave-7-band-6-5-speaking-03",
+      "ielts-meta-wave-7-band-6-5-speaking-04",
+      "ielts-meta-wave-7-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

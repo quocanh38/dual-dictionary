@@ -1,0 +1,224 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-74344d60-30a2-42a5-adcd-cdb3cf478ce7",
+    "version": 1,
+    "title": "Helping at the Hillview Open Day",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T09:04:07.286Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Helping at the Hillview Open Day",
+        "objective": "Learners will understand and use 'take part in' and 'in charge of' to describe participation and responsibility at work.",
+        "reading": {
+          "text": "The Hillview Arts Centre will hold an open day next month so residents can see its new workshop rooms. Volunteers may take part in a short welcome session before visitors arrive. One coordinator is in charge of the welcome desk, while other volunteers guide people to the printmaking and pottery rooms. The centre will provide signs, name badges and a simple room map. Volunteers who cannot attend the session can read the same instructions in the shared folder. The event is free, but visitors need to register at the entrance because each workshop has limited space. After the open day, the team will meet briefly to note which signs were easy to follow and which rooms need clearer directions.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The Hillview Arts Centre will hold an open day next month so residents can see its new workshop rooms."
+            },
+            {
+              "id": "s2",
+              "text": "Volunteers may take part in a short welcome session before visitors arrive."
+            },
+            {
+              "id": "s3",
+              "text": "One coordinator is in charge of the welcome desk, while other volunteers guide people to the printmaking and pottery rooms."
+            },
+            {
+              "id": "s4",
+              "text": "The centre will provide signs, name badges and a simple room map."
+            },
+            {
+              "id": "s5",
+              "text": "Volunteers who cannot attend the session can read the same instructions in the shared folder."
+            },
+            {
+              "id": "s6",
+              "text": "The event is free, but visitors need to register at the entrance because each workshop has limited space."
+            },
+            {
+              "id": "s7",
+              "text": "After the open day, the team will meet briefly to note which signs were easy to follow and which rooms need clearer directions."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "take part in",
+            "meaningEn": "to participate in an activity or event",
+            "meaningVi": "tham gia vào một hoạt động hoặc sự kiện",
+            "sourceSentenceId": "s2"
+          },
+          {
+            "id": "t2",
+            "phrase": "in charge of",
+            "meaningEn": "responsible for managing or looking after something",
+            "meaningVi": "phụ trách, chịu trách nhiệm về việc gì",
+            "sourceSentenceId": "s3"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In s2 'Volunteers may take part in a short welcome session before visitors arrive,' what does 'take part in' mean here?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to participate in the welcome session.",
+                "explanation": "It is correct because volunteers will join and participate in the session."
+              },
+              {
+                "id": "b",
+                "text": "It means to watch the welcome session without joining it.",
+                "explanation": "It is wrong because the phrase means active participation, not only watching."
+              },
+              {
+                "id": "c",
+                "text": "It means to cancel the welcome session for visitors.",
+                "explanation": "It is wrong because the sentence is about joining the session, not cancelling it."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The phrase describes participating in the welcome session."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'take part in' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Many students took part in the school clean-up day last Saturday.",
+                "explanation": "It is correct because past tense 'took part in' is used naturally with an event."
+              },
+              {
+                "id": "b",
+                "text": "She take part in the training workshop every Friday.",
+                "explanation": "It is wrong because 'take' should be 'takes' to agree with 'She'."
+              },
+              {
+                "id": "c",
+                "text": "They took part on the charity run last month.",
+                "explanation": "It is wrong because 'on' should be 'in' in the fixed phrase 'took part in'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the correct verb form and preposition."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In s3 'One coordinator is in charge of the welcome desk,' what does 'in charge of' mean here?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to visit the welcome desk as a guest.",
+                "explanation": "It is wrong because the phrase means responsibility, not visiting as a guest."
+              },
+              {
+                "id": "b",
+                "text": "It means to be responsible for managing the welcome desk.",
+                "explanation": "It is correct because the coordinator is responsible for managing the desk."
+              },
+              {
+                "id": "c",
+                "text": "It means to leave the welcome desk without help.",
+                "explanation": "It is wrong because the phrase means looking after the desk, not leaving it."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The phrase describes responsibility for the welcome desk."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'in charge of' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "She is in charge for the new project team.",
+                "explanation": "It is wrong because 'for' should be 'of' in the fixed phrase 'in charge of'."
+              },
+              {
+                "id": "b",
+                "text": "Mr. Lee is in charge of the evening shift at the restaurant.",
+                "explanation": "It is correct because 'in charge of' is used naturally to show responsibility."
+              },
+              {
+                "id": "c",
+                "text": "They are in charges of organizing the conference.",
+                "explanation": "It is wrong because 'charges' should be 'charge' in the fixed phrase."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only one sentence uses the correct fixed phrase and grammar."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You are an office worker writing a short message to a friend about a company sports event. Write 2–3 sentences describing what you did and inviting your friend next time. Use a form of 'take part in' in your answer.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "I took part in our company football tournament last Saturday. It was fun and our team played well. You should join us next time!",
+            "selfCheck": [
+              "I wrote 2–3 sentences.",
+              "I used a correct form of 'take part in' naturally.",
+              "My message is from an office worker to a friend about a sports event, not about the arts centre welcome session."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "gpt-5.6-terra; 2026-10-27T09:06:06Z. Full independent content review of this exact candidate: source/citations, both target glosses, all 15 options and explanations, and transfer. Rights and authorship are declaration-only: the supplied original-source declaration states permitted distribution and no learner PII, but were not independently verified.",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": []
+    }
+  },
+  "sha256": "259fe9caae6e124a926b41cafdcba23ffc585dec3c53a09da314c0fe2376df80"
+}

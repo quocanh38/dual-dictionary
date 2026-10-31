@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "b955f78fe7f6023ca6d5cdcfe063d8353e030d09e36082e55030c3a8f9b48b27",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna + gpt-6.1-sol; Codex editorial consolidation",
+  "reviewedAt": "2026-10-27T07:33:12.821Z",
+  "note": "Full-pack cross-model review at this exact stableJSON pack hash: Luna first/re-review and Sol final. Every source, meaning EN/VI, exercise option, explanation, answer key, transfer and self-check was reviewed. Rights rely on author-supplied provenance; AI-assisted editorial review only, not independent human or learner review, independent rights verification, or evidence of learning efficacy.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Original AI-assisted source and distribution rights are declared in provenance; no learner PII or copied exam text appears. Rights not independently verified beyond the declaration."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“carry out a quarterly audit” occurs verbatim in s1."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“perform or complete a task such as an audit” matches the verb phrase in context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“thực hiện” is natural and accurate Vietnamese for completing the audit."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 uses “account for each device” and describes matching labels against the inventory record."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“make sure each item is included in a count or record” fits checking inventory completeness, without overclaiming about status or location."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“kiểm kê đầy đủ từng thiết bị” is natural and specific to this context."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a means perform the audit; b describes transport and c delay, not the phrase in s1."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations distinguish the task sense from literal carrying and delay without overgeneralizing other uses."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c is grammatical; a adds “to” before the object and b uses “carries” after “will”."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations correctly remove “to” in a and use base-form “carry” after “will” in b."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b checks that every device appears in the record; a buying replacements and c sharing devices do not express that meaning."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation is grounded in the inventory-record sense supported by s2."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural; b omits “for” in “account for”, and c uses “accounts” after “must”."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The correct sentence uses “can mean” within context; corrections to b and c are specific and grammatical."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Learner moves from a lab audit to a volunteer recycling-habits survey for a friend, changing role and purpose."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model uses “carry out a door-to-door survey about…” naturally; checklist is actionable and does not auto-grade writing."
+    }
+  ],
+  "findings": []
+}

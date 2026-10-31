@@ -1,0 +1,100 @@
+{
+  "completedAt": "2026-10-27T08:36:30Z",
+  "batch": "P1 offline lesson generation batch 8",
+  "sourceFile": "sources-batch-8.json",
+  "sourceSha256": "8ff773078fc25709014e957c358bed4305b0b4f8a7862227aa31ec54220ffc78",
+  "generationPrompt": "lesson-studio-2026-10-27-v5",
+  "generationStatus": "three raw Meta candidates preserved; equipment lesson has three locally versioned revisions; no local revision claimed as Meta-generated",
+  "packs": [
+    {
+      "sourceId": "community-centre-emergency-drill",
+      "packId": "pack-a4411c05-13de-4d44-9e29-f908436c97f3",
+      "title": "Workplace Safety Practice",
+      "levelEstimate": "B1",
+      "rawMetaCandidateSha256": "b3cf0328ef18ded56c51fd6d523660871b93f794c474a4644f49516298f6c0bf",
+      "finalEditorialCandidateFile": "community-centre-emergency-drill-candidate-editorial-v1.json",
+      "finalReviewedPayloadSha256": "b3cf0328ef18ded56c51fd6d523660871b93f794c474a4644f49516298f6c0bf",
+      "finalReviewSha256": "32f335df4c85c6c6115b6ce123eaa122dd96a611c33caf517d4f28e94621d844",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "e0012ffb349c534b4514672769cc25aae1be915f2a98775b27f84e8575d5117a",
+      "releaseDirectory": "release-community-centre-emergency-drill",
+      "libraryFile": "lessons/library/community-centre-emergency-drill.json"
+    },
+    {
+      "sourceId": "equipment-loan-desk",
+      "packId": "pack-0645fa42-23cd-4d84-9c50-a828962ea712",
+      "title": "Borrowing Equipment and Managing Time at Work",
+      "levelEstimate": "B1",
+      "rawMetaCandidateSha256": "a8ca865871fc5777cb643516a9e204e05392da4bda3c30626c149e5e7e0e4370",
+      "finalEditorialCandidateFile": "equipment-loan-desk-candidate-editorial-v3.json",
+      "finalReviewedPayloadSha256": "a352dc83540e5f37171b507ab4300fe8acd4abed8f9d9374cd9868962e117a89",
+      "finalReviewSha256": "4dc3cb816bb9aa6f17f9c3df4d0fde76cc175da3471ef47446d4d070f711a9e0",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "6ad069dc1d4e5c5ab46f1e330f2cebbb57eda1bf3c7a74e1975f6f176462b1fa",
+      "releaseDirectory": "release-equipment-loan-desk",
+      "libraryFile": "lessons/library/equipment-loan-desk.json"
+    },
+    {
+      "sourceId": "coastal-temperature-sampling",
+      "packId": "pack-d1f70c2f-90d8-4080-a616-7783c6f06d12",
+      "title": "Comparing Data Carefully with Weekly Averages and Consistent Patterns",
+      "levelEstimate": "B2",
+      "rawMetaCandidateSha256": "5ef6ea6a9a65a41fa6958ccab5a36589d916d8f815184a0a59d06514fba7fc58",
+      "finalEditorialCandidateFile": "coastal-temperature-sampling-candidate-editorial-v1.json",
+      "finalReviewedPayloadSha256": "5ef6ea6a9a65a41fa6958ccab5a36589d916d8f815184a0a59d06514fba7fc58",
+      "finalReviewSha256": "5bcd3c740aad15d4cad4b6ca1501db87de8d650be8afab64458137b9cf1f11d0",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "69f707c735d93be66e925fa1a59046098b3a33d7f719abdd1a6cb28d44865073",
+      "releaseDirectory": "release-coastal-temperature-sampling",
+      "libraryFile": "lessons/library/coastal-temperature-sampling.json"
+    }
+  ],
+  "equipmentEditorialHistory": {
+    "v1": "Merged sentence fragments after p.m. abbreviations; corrected q4 distractor; Terra classified the q3 s6 reference as critical and Luna as minor. Review intentionally blocked.",
+    "v2": "Corrected q3 source reference from s6 to s5; both reviewers passed structure and 17 criteria; Luna noted minor target-gloss scope issue for bus-delay transfer. Not used to approve.",
+    "v3": "Broadened run late EN/VI gloss to cover delayed transport and session overruns; both reviewers passed 17/17 with no findings. This exact hash was approved."
+  },
+  "reviewRoutesRequested": [
+    "gpt-6-luna (requested; configured route not exposed by runtime)",
+    "gpt-5.6-terra"
+  ],
+  "reviewRuntimeLabels": [
+    "GPT-6",
+    "Codex GPT-6"
+  ],
+  "reviewLimitations": [
+    "AI-assisted editorial review, not human or learner review",
+    "Rights/authorship supported only by local declarations, not independently verified"
+  ],
+  "approval": "Three exact-hash local approvals recorded under delegated editorial authority; only final equipment v3 is approved.",
+  "qa": {
+    "finalUnapprovedPreview": "PASS for all three final editorial hashes, mobile offline emulation 390x844; no Vault writes; zero provider calls",
+    "approvedReleaseQa": "PASS, 42 contexts across 21 exact approved packs; clean and preseeded Chrome mobile emulation 390x844",
+    "catalogueOfflineInstall": "PASS for all 21 indexed packs; malformed index and tampered pack rejected; Vault/Review history preserved",
+    "providerRequestsDuringQa": 0,
+    "externalRequests": 0,
+    "physicalDevice": false
+  },
+  "library": {
+    "packCount": 21,
+    "newPacks": 3,
+    "cache": "mdx-dict-v133"
+  },
+  "metaUsageOrBillingLookup": "not performed, per owner instruction",
+  "deployment": "not performed; local candidate only",
+  "checks": [
+    "exact-hash quality-gate audit and explicit delegated approval",
+    "index/envelope hashes and offline allowlists",
+    "21-pack offline shell contract PASS",
+    "quality-gate, library and schema tests PASS",
+    "approved-library-check 42 contexts PASS",
+    "catalogue offline UI 21 installs PASS",
+    "git diff --check PASS"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "wave": 10,
+  "batch": 143,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Final 8 raw-only pages in the phrase manifest; consulted local OALD 10/LDOCE 6, NHS for heat-exhaustion terminology, and CDC for herpes-simplex terminology. Vietnamese meanings, notes and examples independently written.",
+  "selectionRationale": "Close the remaining raw-only phrase pages with accessible definitions of hearing and thermal equipment, a medical condition, music/science senses, and a finance term. Notes distinguish related technical terms and avoid implying medical or investment advice.",
+  "counts": {
+    "selected": 8,
+    "rawPagesUpgraded": 8,
+    "rawOnlyBefore": 8,
+    "remainingRawOnlyAfter": 0
+  },
+  "selected": [
+    "hearing aid",
+    "heat capacity",
+    "heat exchanger",
+    "heat exhaustion",
+    "heat pump",
+    "heavy metal",
+    "hedge fund",
+    "herpes simplex"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NHS: Heat exhaustion and heatstroke (https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/)",
+    "CDC: About Genital Herpes (https://www.cdc.gov/herpes/about/index.html)"
+  ]
+}

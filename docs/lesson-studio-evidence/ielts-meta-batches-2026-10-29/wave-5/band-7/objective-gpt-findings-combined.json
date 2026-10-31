@@ -1,0 +1,21 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; all Listening transcripts; ielts-meta-wave-5-band-7-listening-05 explanation",
+      "issue": "Internal arithmetic/cohort contradiction: the rollout has three cities in2018 and four more in2020, but later the script says two2020 cities lack data and the estimate uses five of seven later cities. Four later cities minus two missing leaves two complete, not five. Seven is the total across both waves. Correct the cohort/counts consistently in script and listening05 explanation, preserving which group has missing data.",
+      "severity": "critical"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-7-writing-01; writing-04; speaking-02",
+      "issue": "Specialist synthetic-control terminology and required interpretation of pre-intervention fit/causal evidence create a subject-knowledge burden beyond language difficulty. Consider accessible definitions or broader public research reporting framing. Speaking Part1 question about missing information affecting school judgements also approaches Part3 abstraction. These are practice-design concerns, not additional answer-key blockers.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "sharedContexts.reading.passage, paragraph4",
+      "issue": "Regional education comparisons sentence interrupts an otherwise ecological argument without development; remove or connect it more naturally.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    }
+  ]
+}

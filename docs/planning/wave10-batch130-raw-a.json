@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 130,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after Don Juan in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover D-section physics and architecture, printing, chemistry, windows, insurance, idioms, British political and theatrical terms, folklore, phrasal verbs, theatre criticism, household vocabulary and medical phrasing. Notes flag outdated technology, regional vocabulary, contextual meanings and evidence limits.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 268,
+    "remainingRawOnlyAfter": 248
+  },
+  "selected": [
+    "doppler shift",
+    "dormer window",
+    "dot matrix printer",
+    "dotted line",
+    "double dealing",
+    "double decomposition",
+    "double glazing",
+    "double indemnity",
+    "double standard",
+    "doubting thomas",
+    "downing street",
+    "dowsing rod",
+    "drag on",
+    "dramatic irony",
+    "drawing card",
+    "drawing pin",
+    "drawing room",
+    "dress circle",
+    "dressing gown",
+    "drip feed"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "USGS: Water dowsing (https://www.usgs.gov/water-science-school/science/water-dowsing)"
+  ]
+}

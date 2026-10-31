@@ -1,0 +1,153 @@
+{
+  "at": "2026-10-27T04:47:49.648732+00:00",
+  "baselineCommit": "43384c336abce52298d2f36979ce0faecf3220a8",
+  "newApprovedPackCount": 3,
+  "totalLocalLibraryPacks": 33,
+  "generationSourcesAttempted": 4,
+  "sourcesInFirstCompleteBatch": 3,
+  "providerRequests": 9,
+  "responsesReceived": 8,
+  "timeouts": 1,
+  "deliberateRepairCalls": 1,
+  "automaticRetries": 0,
+  "knownInputTokens": 6283,
+  "knownOutputTokens": 23311,
+  "knownUsageEstimatedUsd": 0.10692549999999999,
+  "unknownUsageReservationUsd": 1,
+  "safetyReserveUsd": 5,
+  "billingBalanceBeforeCallsUsd": 149.26,
+  "billingIsDelayed": true,
+  "providerChargesAfterTimeout": "unknown; reservation retained, not treated as zero",
+  "stopReason": "Provider/network stop: unknown; inspect before deliberate continuation.",
+  "firstPassStructure": "2accepted;1grammatical gathered evidence sample falsely rejected by controlled inflection list, recovered after schema fix without another call",
+  "reviewModels": [
+    "gpt-6-luna",
+    "gpt-6.1-sol"
+  ],
+  "contentFindings": [
+    "Transitive follow up is valid; one Meta repair changed the distractor",
+    "VI gather evidence gloss revised from prove to support a claim",
+    "Workshop explanation about inspection of scoped to object examined; nonblocking matches-to wording limitation retained honestly"
+  ],
+  "candidateCache": "mdx-dict-v137",
+  "deployed": false,
+  "fileSha256": {
+    "lessons/app.js": "99bb718be65312518670889c3639984f68912f4bd538953ae6eb68bd27219145",
+    "lessons/schema.js": "840dc711c7ff9f25b1a4ee7059b5150da05cc170602c6b303db179ca10bbf2e7",
+    "lessons/generator.js": "ce84c31f1b1cd3f6772608dda78582fe47fd23578e8cca8013011184c23db346",
+    "sw.js": "3b1ce086ac818f315c49c764605e525c6a55ffcc792b13a17c71febc450460da"
+  },
+  "next": "Continue P1 offline lesson generation and exact-hash review under the owner’s Meta-credit instruction; do not deploy without owner instruction.",
+  "qa": {
+    "allSixExactApprovedPacks": "PASS in12clean/preseededcontexts",
+    "sixOfflineCatalogueInstalls": "PASS",
+    "malformedIndexAndTamperedPackRejections": "PASS",
+    "mainBrowserGroups": 14,
+    "libraryContracts": "PASS",
+    "offlinePaths": 48,
+    "serviceWorkerGuard": "PASS125to126",
+    "externalProviderRequestsInQa": 0,
+    "latestApprovedPackQa": "PASS 66 clean/preseeded Chrome mobile emulation contexts across 33 exact approved packs; zero provider/external requests and zero JS errors",
+    "catalogueOfflineInstallQa": "PASS all 33 indexed packs installed offline; malformed index and tampered pack rejected; Vault/Review history preserved",
+    "providerRequestsDuringReviewAndQa": 0
+  },
+  "currentLibraryStatus": {
+    "localLibraryPackCount": 33,
+    "approvedCount": 33,
+    "latestReviewBatch": "batch-12-meta/final-summary.json",
+    "latestPacks": [
+      "east-dock-refill-shop-stock-check",
+      "student-podcast-interview-editing",
+      "staggered-start-time-policy-rollout"
+    ],
+    "allFourteenExactApprovedPackQa": "PASS 28 clean/preseeded Chrome emulation contexts; 14 unique approved packs; zero external/provider requests during QA",
+    "contentReview": "33/33 packs have exact-hash AI-assisted editorial approvals; no critical or uncertain findings remain. Batch 12 Refill Shop has one recorded non-blocking minor wording note. Rights declarations remain unverified; B1/B2 are estimates, not calibrated CEFR ratings.",
+    "deployed": false,
+    "allFifteenExactApprovedPackQa": "PASS 30 clean/preseeded Chrome contexts; zero provider or external requests; zero JS errors",
+    "catalogueOfflineInstallQa": "PASS all 33 indexed packs installed offline; malformed index and tampered pack rejected; Vault/Review history preserved",
+    "allEighteenExactApprovedPackQa": "PASS 36 clean/preseeded Chrome contexts; zero provider/external requests; zero JS errors",
+    "latestContinuationNote": "Batch 12 added refill shop stock practice (B1 estimate), student podcast editing (B1 estimate) and flexible start times at work (B2 estimate). Both Luna and Terra passed all 17 criteria on each final hash; Refill Shop q2b was locally corrected after Terra found a critical v1 explanation issue and rereviewed. One non-blocking Luna wording note remains. All three packs are approved locally. Release QA passed 66 clean/preseeded contexts across 33 packs; all 33 catalogue installs passed offline. Cache v137, 48 offline paths. No provider usage/Billing lookup and no deployment.",
+    "allTwentyOneExactApprovedPackQa": "PASS 42 clean/preseeded Chrome contexts; zero provider/external requests; zero JS errors",
+    "allTwentyFourExactApprovedPackQa": "PASS 48 clean/preseeded Chrome mobile emulation contexts across 24 exact approved packs; zero external/provider requests and zero JS errors",
+    "allTwentySevenExactApprovedPackQa": "PASS 54 clean/preseeded Chrome mobile emulation contexts across 27 exact approved packs; zero external/provider requests and zero JS errors",
+    "allThirtyExactApprovedPackQa": "PASS 60 clean/preseeded Chrome mobile emulation contexts across 30 exact approved packs; zero provider/external requests and zero JS errors",
+    "allThirtyThreeExactApprovedPackQa": "PASS 66 clean/preseeded Chrome mobile emulation contexts across 33 exact approved packs; zero provider/external requests and zero JS errors"
+  },
+  "currentCache": "mdx-dict-v137",
+  "currentFileSha256": {
+    "lessonsApp": "63ca29fef45544c9ed7d4d9a0e47504fd4c11ae93ae871a2d0cf7d9876b9f283",
+    "serviceWorker": "94fce349edd1a161533aa3c2192894dcb4eba4dafe5d75c5b9c94c4136a96755"
+  },
+  "updatedAt": "2026-10-27T09:43:58.085Z",
+  "ownerInstruction": "Owner handles Meta credits and asked Codex not to check Meta usage/Billing.",
+  "latestContinuation": {
+    "updatedAt": "2026-10-27T09:43:58.085Z",
+    "batch": "batch-12-meta",
+    "packIds": [
+      "pack-e9701317-1107-440d-818c-b8e47aed37fc",
+      "pack-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+      "pack-44150ff8-e9c3-4d89-9c1b-f5ce7c5e2f90"
+    ],
+    "titles": [
+      "Refill Shop Supplies",
+      "Podcast Notes: Off the Record and Time Stamp",
+      "Testing Flexible Start Times at Work"
+    ],
+    "sourceIds": [
+      "east-dock-refill-shop-stock-check",
+      "student-podcast-interview-editing",
+      "staggered-start-time-policy-rollout"
+    ],
+    "generation": "Three original Meta candidates; 6 bounded selection/exercise requests, no automatic retries or repair calls.",
+    "reviewers": 2,
+    "criteriaPerReviewer": 17,
+    "reviewRoutesRequested": [
+      "gpt-6-luna",
+      "gpt-5.6-terra"
+    ],
+    "unresolvedCriticalOrUncertainFindings": 0,
+    "nonBlockingMinorFindings": [
+      {
+        "packId": "east-dock-refill-shop-stock-check",
+        "reviewer": "gpt-6-luna",
+        "evidence": "The q1 option-a explanation says the stock “must be reordered”; the source says the shift lead contacts the supplier before the weekend but does not explicitly state that a reorder is mandatory. This is a minor overstatement in the explanation, not an answer-key or meaning error."
+      }
+    ],
+    "reviewLimitations": [
+      "AI-assisted editorial review, not human or learner review",
+      "Rights/authorship supported only by local declarations, not independently verified",
+      "B1/B2 are estimates, not calibrated CEFR ratings",
+      "One non-blocking minor wording finding on the Refill Shop pack was recorded by Luna; no critical or uncertain findings remain."
+    ],
+    "approval": "Three exact-hash approvals after both models passed 17/17; one minor wording finding accepted as non-blocking.",
+    "releaseQa": "PASS, 66 clean/preseeded Chrome mobile emulation contexts across all 33 exact approved packs; 0 provider/external requests and 0 JS errors",
+    "catalogueOfflineInstallQa": "PASS, all 33 indexed packs installed offline; malformed/tampered rejected; Vault/Review history preserved; 0 external/provider requests",
+    "cache": "mdx-dict-v137",
+    "offlinePaths": 48,
+    "deployed": false
+  },
+  "batch12": {
+    "generationSources": 3,
+    "providerRequests": 6,
+    "responsesReceived": 6,
+    "automaticRetries": 0,
+    "repairs": 0,
+    "newApprovedPacks": 3,
+    "reviewModels": [
+      "gpt-6-luna",
+      "gpt-5.6-terra"
+    ],
+    "criteriaPerReview": 17,
+    "releaseQaContexts": 66,
+    "catalogueInstalledPacks": 33,
+    "cache": "mdx-dict-v137",
+    "nonBlockingMinorFindings": [
+      {
+        "packId": "east-dock-refill-shop-stock-check",
+        "reviewer": "gpt-6-luna",
+        "evidence": "The q1 option-a explanation says the stock “must be reordered”; the source says the shift lead contacts the supplier before the weekend but does not explicitly state that a reorder is mandatory. This is a minor overstatement in the explanation, not an answer-key or meaning error."
+      }
+    ],
+    "metaUsageOrBillingLookup": "not performed per owner instruction"
+  }
+}

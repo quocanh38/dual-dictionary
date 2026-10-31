@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 32,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after go in, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese meanings, usage patterns, bilingual examples and learner notes; historical, regional, legal and policy labels are made explicit. No source dictionary wording/examples are reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2200,
+    "remainingRawOnlyAfter": 2180
+  },
+  "selected": [
+    "go into",
+    "go off",
+    "go on",
+    "go out",
+    "go over",
+    "go round",
+    "go through",
+    "go under",
+    "go up",
+    "go with",
+    "go without",
+    "gold rush",
+    "good faith",
+    "good sense",
+    "grand tour",
+    "great war",
+    "green card",
+    "green light",
+    "green paper",
+    "ground crew"
+  ]
+}

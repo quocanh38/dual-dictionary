@@ -1,0 +1,154 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "batchId": "wave-3",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-replacement-v1",
+  "completedAt": "2026-10-28T07:03:43.972Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 586,
+    "outputTokens": 8591,
+    "totalTokens": 9177
+  },
+  "latencyMs": 36873,
+  "result": {
+    "listening": {
+      "title": "Collecting a Parcel at the Campus Desk",
+      "focus": "Everyday details, times, places and instructions",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, campus parcel desk. How can I help you?\nSTUDENT: Good morning. I received a text yesterday saying my parcel has arrived. Can I collect it now?\nSTAFF: Yes, of course. Can I have your full name and student number, please?\nSTUDENT: I'm Anna Lee, student number 45281.\nSTAFF: Let me check... Yes, Anna Lee, we have a medium box for you from Green Books. Can you confirm the last three numbers of your phone? We have 340 on the system.\nSTUDENT: Yes, 340 is correct. That's my phone number.\nSTAFF: Great. To collect it, you need to show identification. Please bring your student card or your passport.\nSTUDENT: I have my student card with me today.\nSTAFF: Perfect. Also, you need to sign the collection form at the desk.\nSTUDENT: Okay. What time do you close today? I thought it was 5 o'clock.\nSTAFF: Actually, on Fridays we close a little earlier, at 4:30, not 5. So please come before then.\nSTUDENT: I see. I can come at 3 o'clock this afternoon. Is that okay?\nSTAFF: Yes, that's fine. When you come, please go to Counter B on the ground floor of the Student Centre. That's where small and medium parcels are.\nSTUDENT: What about large parcels? My friend is waiting for a bicycle.\nSTAFF: Large items like bicycles are at the back store near the car park. But your box is medium, so Counter B is correct.\nSTUDENT: Good. Do I need to pay anything?\nSTAFF: No, there is no fee for the first seven days. After that, there is a small storage charge of one dollar per day.\nSTUDENT: That's clear. So I'll bring my student card and sign the form at Counter B before 4:30 today.\nSTAFF: Exactly. And please bring the collection message on your phone as well, so we can check the code quickly.\nSTUDENT: Okay, I'll do that. Thank you for your help.\nSTAFF: You're welcome. See you this afternoon.",
+      "questions": [
+        {
+          "title": "Reason for contact",
+          "prompt": "Why does Anna contact the parcel desk in the morning?",
+          "options": [
+            "To send a box of books to Green Books",
+            "To collect a parcel that arrived yesterday",
+            "To ask for a new student number",
+            "To report a missing student card"
+          ],
+          "answer": 1,
+          "explanation": "The script says she received a text yesterday saying her parcel arrived and asks if she can collect it now. The send option fails because Green Books is the sender, not the place she wants to send to."
+        },
+        {
+          "title": "Identification needed",
+          "prompt": "What must Anna show to collect her parcel?",
+          "options": [
+            "Her student card or passport",
+            "Her phone bill and home address",
+            "Her course books and shop receipt",
+            "Her friend's bicycle key"
+          ],
+          "answer": 0,
+          "explanation": "Staff says to collect it you need to show identification and to bring your student card or passport. The phone bill option fails because the phone is only needed to show the collection message code, not as identification."
+        },
+        {
+          "title": "Closing time",
+          "prompt": "What is the closing time on Friday?",
+          "options": [
+            "3:00",
+            "5:00",
+            "4:30",
+            "11:30"
+          ],
+          "answer": 2,
+          "explanation": "Anna thought it was 5 o'clock, but staff corrects this: on Fridays they close at 4:30, not 5. The 5:00 option fails because it is the mistaken time that is corrected."
+        },
+        {
+          "title": "Collection place",
+          "prompt": "Where should Anna go for her medium box?",
+          "options": [
+            "To the back store near the car park",
+            "To the library help desk",
+            "To the market collection point",
+            "To Counter B on the ground floor"
+          ],
+          "answer": 3,
+          "explanation": "Staff says to go to Counter B on the ground floor of the Student Centre for small and medium parcels. The back store option fails because that place is for large items like bicycles."
+        },
+        {
+          "title": "Extra instruction",
+          "prompt": "What else should Anna bring in the afternoon?",
+          "options": [
+            "A bicycle and a large box",
+            "The collection message with the code on her phone",
+            "One dollar to pay for the first day",
+            "A new collection form from home"
+          ],
+          "answer": 1,
+          "explanation": "Staff asks her to bring the collection message on her phone so they can check the code quickly. The one dollar option fails because there is no fee for the first seven days."
+        }
+      ]
+    },
+    "reading": {
+      "title": "A Neighbourhood Cooking Demonstration",
+      "focus": "Main ideas, details and examples in a community event text",
+      "passage": "The Maple Street Community Centre holds a free cooking demonstration on the first Saturday of every month. The morning event starts at 10 a.m. and finishes at 11:30 a.m. in the main hall. The aim is simple: to show local people how to make healthy meals that do not cost a lot of money. Anyone who lives in the area can join, and no cooking experience is needed. Two volunteers welcome visitors at the door and give each person a printed recipe sheet to take home.\nThis month, volunteer cook Maya Patel showed about thirty visitors how to make two dishes: red lentil soup and vegetable rice. She bought all the ingredients that morning from the Maple Street market for less than fifteen dollars in total. The shopping list was short and clear: onions, carrots, garlic, red lentils, rice, cooking oil, and a little salt. Maya explained each step slowly and showed how to cut vegetables safely with a small knife. Between the two dishes, she cleaned the table and washed the pots, and she explained why clean tools are important for health.\nDuring the demonstration, visitors stood around the large cooking table and watched closely. After each dish was ready, helpers gave everyone a small cup to taste. People could ask questions at any time. For example, an older man asked if he could use less salt, and Maya said yes and suggested lemon juice for extra flavour. A young girl asked why the carrots changed colour in the soup, and Maya explained that they become soft and darker when they are cooked for a long time. The helpers wrote the questions and answers on a white board so everyone could see them.\nThe organiser, Mr Tom Ellis, says these events help people feel more confident about cooking at home. As one example, he talked about a college student who came in March, watched the soup demonstration, and then made the same soup in his flat the next week. The student told staff that the recipe sheet and the tasting experience helped him try it alone. Mr Ellis believes this kind of success is more important than the number of visitors. The centre also wants to reduce waste, so visitors are asked to bring their own cup and food box if they want to take food home. Everyone must wash their hands before tasting, and children under twelve must stay with an adult.\nThe next demonstration will be on 7 November, when a different volunteer will show how to make bean salad and fruit dessert. People who want to come should write their name on the list at the centre office by Thursday evening. The centre can take forty people at most, so early booking is important. Those who miss the list can watch the next month, because the programme will continue through the winter.",
+      "questions": [
+        {
+          "title": "Main aim",
+          "prompt": "What is the main aim of the monthly demonstration?",
+          "options": [
+            "To sell food from the local market",
+            "To train people to become professional cooks",
+            "To show how to make healthy low-cost meals",
+            "To raise money for the community centre"
+          ],
+          "answer": 2,
+          "explanation": "The first paragraph says the aim is simple: to show local people how to make healthy meals that do not cost a lot. The sell food option fails because the market is only where ingredients are bought."
+        },
+        {
+          "title": "Shopping details",
+          "prompt": "What does the passage say about Maya's ingredients?",
+          "options": [
+            "They were bought at Maple Street market for under fifteen dollars",
+            "They were brought by visitors from their homes",
+            "They included lemon juice and fruit dessert",
+            "They cost forty dollars in total"
+          ],
+          "answer": 0,
+          "explanation": "The second paragraph says she bought all ingredients that morning from Maple Street market for less than fifteen dollars. The fruit dessert option fails because that dish is planned for November, not this month."
+        },
+        {
+          "title": "Visitor activity",
+          "prompt": "What did visitors do after each dish was ready?",
+          "options": [
+            "They cleaned the table and washed the pots",
+            "They received a small cup to taste the food",
+            "They wrote a new recipe on the white board",
+            "They went to the office to book places"
+          ],
+          "answer": 1,
+          "explanation": "The third paragraph says helpers gave everyone a small cup to taste after each dish was ready. The cleaned the table option fails because Maya did the cleaning between dishes."
+        },
+        {
+          "title": "Claim and example",
+          "prompt": "Why does the passage mention the college student from March?",
+          "options": [
+            "To state the main rule about hand washing",
+            "To give an example of greater confidence about cooking at home",
+            "To claim that March had the most visitors",
+            "To describe what bean salad tastes like"
+          ],
+          "answer": 1,
+          "explanation": "The organiser claims events help confidence at home, and the student who made the soup in his flat is presented as one example of this. The most visitors option fails because the passage never makes that claim about March."
+        },
+        {
+          "title": "November event",
+          "prompt": "What can be inferred about the November demonstration?",
+          "options": [
+            "It will charge visitors for recipe sheets",
+            "It will be held in a different town",
+            "It will stop during the winter months",
+            "It may become full, so booking early is wise"
+          ],
+          "answer": 3,
+          "explanation": "The last paragraph says the centre can take forty people at most, so early booking is important, which supports limited places. The stop during winter option fails because the passage says the programme will continue through the winter."
+        }
+      ]
+    }
+  }
+}

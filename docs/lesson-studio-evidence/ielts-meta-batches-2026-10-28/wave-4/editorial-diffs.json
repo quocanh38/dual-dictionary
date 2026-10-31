@@ -1,0 +1,91 @@
+{
+  "recordedAt": "2026-10-28T08:39:26.358Z",
+  "scope": "Only changes made after the single permitted Meta repair call. Original Meta responses and normalized repaired candidates remain immutable. Candidate-final-v2 also records three grammar/idiom copy edits after the single Meta repair allowance.",
+  "changes": [
+    {
+      "stage": "band-7",
+      "item": "Listening · What approach do the authors recommend?",
+      "reason": "Meta repair left answer-index coverage missing position 2; moved the verified correct option from index 3 to index 2 without changing text.",
+      "before": {
+        "options": [
+          "Replace ticket data with app data",
+          "Use app data only in suburbs",
+          "Avoid app data for central areas",
+          "Combine app patterns with boarding counts"
+        ],
+        "answer": 3
+      },
+      "after": {
+        "options": [
+          "Replace ticket data with app data",
+          "Use app data only in suburbs",
+          "Combine app patterns with boarding counts",
+          "Avoid app data for central areas"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "stage": "band-7",
+      "item": "Reading · What can reasonably be inferred about savings?",
+      "reason": "Meta repair left answer-index coverage missing position 2; moved the verified correct option from index 3 to index 2 without changing text.",
+      "before": {
+        "options": [
+          "Existing staff always guarantee lower costs",
+          "Overtime never affected programme budgets",
+          "Cost data were identical in all schools",
+          "Savings occurred only with genuinely spare staff capacity"
+        ],
+        "answer": 3
+      },
+      "after": {
+        "options": [
+          "Existing staff always guarantee lower costs",
+          "Overtime never affected programme budgets",
+          "Savings occurred only with genuinely spare staff capacity",
+          "Cost data were identical in all schools"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "stage": "band-6-5",
+      "item": "Reading · How did Models A and B perform when dry?",
+      "reason": "Corrected an awkward comparison for idiomatic academic English; answer and meaning are unchanged.",
+      "before": {
+        "option": "Both matched reference within 15% error",
+        "answer": 2
+      },
+      "after": {
+        "option": "Both were within 15% of the reference values",
+        "answer": 2
+      }
+    },
+    {
+      "stage": "band-7",
+      "item": "Reading · What did the synthesis find overall?",
+      "reason": "Corrected the noun phrase while preserving the passage-supported answer.",
+      "before": {
+        "option": "Average gain of three months progress",
+        "answer": 0
+      },
+      "after": {
+        "option": "An average gain of three additional months of progress",
+        "answer": 0
+      }
+    },
+    {
+      "stage": "band-7",
+      "item": "Reading · How does the author use the Year 6 case?",
+      "reason": "Added the missing article for grammatical correctness; answer and meaning are unchanged.",
+      "before": {
+        "option": "As illustration of implementation differences",
+        "answer": 1
+      },
+      "after": {
+        "option": "An illustration of implementation differences",
+        "answer": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "416f49e30f5abfe2c6d3fcc31192ddb789caf151d66ddfa9a26ad2bd9b63c6a2",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "sharedContexts.reading.passage",
+      "severity": "minor",
+      "issue": "About one in five deliveries was returned late should refer to books/loans, since users return borrowed items, not the delivery itself."
+    },
+    {
+      "item": "ielts-meta-wave-7-band-6-writing-02",
+      "severity": "minor",
+      "issue": "Clarify whether the same500residents responded in both February/April or each survey sampled500. Percentages are interpretable for comparison, but sample design is underspecified."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final rereview of candidate-final-v2.json: all20items, complete script and passage, all40options,10keys/10explanations and5Writing/5Speaking prompts/metadata. Entire final content reread, not only repair deltas. Repeated contexts verified identical. No other final-review reports read, no provider calls or candidate edits.",
+    "listening": "Full319-word student scheme dialogue read: Spanish/Mandarin aims, equal30minute languages, weekly logSunday correction, Thursday4RoomB correction, optional pronunciation, interaction/confidence. Keys[0,1,2,3,1] supported, every option/explanation tested; academic peer discussion is credible Part3 though relatively straightforward.",
+    "reading": "Full413-word delivery trial read:Jan–Mar/access purpose, fiveitems/web/phone/TueFri/3weeks/reminder,120households/85%satisfaction/late loans and February shortage, equal quantity/wider genres with selection caveat, MrsLee illustration versus access/quality claim, funding/June decision. Keys[0,1,2,3,0] unique and explained.",
+    "writing": "Task1 workshop2022/2023 includes6participant counts and6return percentages; transport survey500/FebApril2023 supplies6awareness percentages, units/time visible. All3Task2 topics coherent and balanced. Minimum/time fields150/20 and250/40 correct; prose omits word/time repetition but fields supply them.",
+    "speaking": "All5Speaking prompts read: familiar travel/skills Part1; workshop/talk card has4newline cues and prep1minute/talk1–2; twoPart3 sets ask reasons/evaluation of learning/campaigns. Natural stage progression.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 319,
+        "reading": 413
+      },
+      "metadataWordCounts": {
+        "listening": 319,
+        "reading": 413
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten/meta-models/muse-spark-open-1026, wave7v1 prompt versions and originalContent=true read. No recognisable official-question copying or score guarantee found; not an exhaustive plagiarism audit. Fictional research statistics assessed for consistency, not empirically verified. Intended stage is practice progression, not certified band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-7-band-6-listening-01",
+      "ielts-meta-wave-7-band-6-listening-02",
+      "ielts-meta-wave-7-band-6-listening-03",
+      "ielts-meta-wave-7-band-6-listening-04",
+      "ielts-meta-wave-7-band-6-listening-05",
+      "ielts-meta-wave-7-band-6-reading-01",
+      "ielts-meta-wave-7-band-6-reading-02",
+      "ielts-meta-wave-7-band-6-reading-03",
+      "ielts-meta-wave-7-band-6-reading-04",
+      "ielts-meta-wave-7-band-6-reading-05",
+      "ielts-meta-wave-7-band-6-writing-01",
+      "ielts-meta-wave-7-band-6-writing-02",
+      "ielts-meta-wave-7-band-6-writing-03",
+      "ielts-meta-wave-7-band-6-writing-04",
+      "ielts-meta-wave-7-band-6-writing-05",
+      "ielts-meta-wave-7-band-6-speaking-01",
+      "ielts-meta-wave-7-band-6-speaking-02",
+      "ielts-meta-wave-7-band-6-speaking-03",
+      "ielts-meta-wave-7-band-6-speaking-04",
+      "ielts-meta-wave-7-band-6-speaking-05"
+    ],
+    "independence": "Same reviewer performed initial review; own findings used to verify closure, while rereading all final content. No other reviewer findings inspected.",
+    "resolvedInitialFindings": [
+      "No blocking findings in initial review; full final reread confirms no new blocker. Final bytes identical to the fully reviewed initial candidate."
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

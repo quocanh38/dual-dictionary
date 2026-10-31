@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "648bcb0624766940c35fb51c0f7cfc1b1657e8f0c4a7316dfa02ff84e3fc4183",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-5.6-terra",
+  "reviewedAt": "2026-10-27T09:52:35Z",
+  "note": "Full independent review of the current exact v2 pack, bound to lessons/schema.js digest. Reviewed source/citations, both EN/VI target glosses, every option and explanation, and transfer. Rights/authorship are local declarations only and were not independently verified; B1 is an estimate; this is not human or learner validation.",
+  "criteria": [
+    {"id":"rights","prompt":"Original/permitted source, author, distribution rights and no learner PII checked.","status":"pass","evidence":"The matching frozen source and provenance declare an original AI-assisted source, permitted distribution and no learner PII; those rights assertions are declaration-only."},
+    {"id":"lesson-1/t1/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s3 explicitly permits a refund to the original payment method for a faulty item, supporting return to the initial way of payment."},
+    {"id":"lesson-1/t1/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"The gloss accurately identifies the same first payment method, such as the original card or cash."},
+    {"id":"lesson-1/t1/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘phương thức thanh toán ban đầu’ is accurate, natural Vietnamese with diacritics."},
+    {"id":"lesson-1/t2/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s5 says the assistant enters the refund reason in the service log, establishing a record of service actions and reasons."},
+    {"id":"lesson-1/t2/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"The gloss accurately describes a written staff record where service actions and reasons are noted."},
+    {"id":"lesson-1/t2/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘sổ ghi chép dịch vụ’ is an accurate, understandable Vietnamese rendering with diacritics."},
+    {"id":"lesson-1/q1/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"b alone states the same initial card or cash; a is a later gift card and c is the shop’s supplier-payment account."},
+    {"id":"lesson-1/q1/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"All q1 explanations correctly distinguish the customer’s initial payment method from a voucher and the shop’s account."},
+    {"id":"lesson-1/q2/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"a alone naturally sends the refund to the original payment method; b lacks the determiner and c uses a non-destination preposition."},
+    {"id":"lesson-1/q2/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q2 accurately identifies the missing ‘the’ and destination preposition ‘to’; a is natural payment-service wording."},
+    {"id":"lesson-1/q3/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"c alone is the written staff record described in s5; a is a receipt and b is a timetable."},
+    {"id":"lesson-1/q3/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q3 accurately contrasts a service-action record with a customer receipt and a schedule."},
+    {"id":"lesson-1/q4/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"b alone enters the details in the specific shop record. a omits the article required before singular countable ‘service log’; c only places the action near the log rather than in the record."},
+    {"id":"lesson-1/q4/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q4 explanations correctly explain the required article and why physical proximity is not a record entry. They do not repeat the v1 categorical ‘in, not on’ claim."},
+    {"id":"lesson-1/q5/new-situation","prompt":"Role or purpose differs meaningfully from the source; not merely rewriting it.","status":"pass","evidence":"The transfer changes setting, recipient and purpose to a hotel receptionist reporting a maintenance problem to a manager."},
+    {"id":"lesson-1/q5/self-check","prompt":"Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.","status":"pass","evidence":"The two-sentence model naturally uses ‘service log’; the checks cover length, target use and changed setting, and the explanation says it is self-assessed rather than automatically graded."}
+  ],
+  "findings": [
+    {"id":"q4-c-plausible-on-variant","severity":"critical","resolved":true,"evidence":"Resolved in the current v2: the previous ambiguous ‘on the service log’ option is replaced by ‘near the service log’, which cannot mean recording the information in the log. The explanation now makes a semantic distinction and does not prescribe a false categorical preposition rule."}
+  ]
+}

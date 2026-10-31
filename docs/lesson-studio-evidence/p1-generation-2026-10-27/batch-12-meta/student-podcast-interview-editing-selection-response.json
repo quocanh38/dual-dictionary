@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "off the record",
+        "meaningEn": "not to be published or shared publicly",
+        "meaningVi": "không được công bố công khai",
+        "sourceSentenceId": "s4"
+      },
+      {
+        "id": "t2",
+        "phrase": "time stamp",
+        "meaningEn": "a recorded time that shows where a part is in an audio file",
+        "meaningVi": "mốc thời gian",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 508,
+    "outputTokens": 1225,
+    "totalTokens": 1733
+  },
+  "status": 200,
+  "latencyMs": 3906,
+  "model": "muse-spark-1.3"
+}

@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 140,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after glandular fever in the current phrase manifest; consulted local OALD 10/LDOCE 6 and NASA Science for the current distinction between global warming and climate change. Vietnamese meanings, notes and examples independently written.",
+  "selectionRationale": "Enrich material science and navigation terms, environmental and sports vocabulary, colloquial expressions, monetary and mathematical concepts, education and legal institutions, and computing. Notes distinguish senses, regional variants, figurative meanings and key conceptual contrasts.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 68,
+    "remainingRawOnlyAfter": 48
+  },
+  "selected": [
+    "glass fibre",
+    "global positioning system",
+    "global warming",
+    "goal kick",
+    "gold brick",
+    "gold digger",
+    "gold plate",
+    "gold standard",
+    "golden rule",
+    "golden section",
+    "golf club",
+    "goose egg",
+    "gordian knot",
+    "grade crossing",
+    "grammar school",
+    "grand jury",
+    "grandfather clause",
+    "graph paper",
+    "graphical user interface",
+    "grappling iron"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NASA Science: What Is Climate Change? (https://science.nasa.gov/climate-change/what-is-climate-change/)"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Planning Academic Travel",
+    "objective": "Learners will understand and correctly use make arrangements for and provide evidence of in academic contexts.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In 'The department will make arrangements for students to attend a regional conference,' what does 'make arrangements for' mean here?",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The department will plan and organize travel and registration so students can attend.",
+            "explanation": "Correct because it matches planning and organizing so attendance can happen."
+          },
+          {
+            "id": "b",
+            "text": "The department will cancel the conference because few students are interested.",
+            "explanation": "Wrong because cancelling is the opposite of organizing attendance."
+          },
+          {
+            "id": "c",
+            "text": "The department will ask students to pay for everything without any help.",
+            "explanation": "Wrong because the sentence describes the department organizing support, not withdrawing help."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "The department is planning and organizing so students can attend."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'make arrangements for' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The office made arrangements for visitors to park in the nearby garage during the event.",
+            "explanation": "Correct because it uses the fixed collocation for plus the to-infinitive correctly."
+          },
+          {
+            "id": "b",
+            "text": "The office made arrangements of visitors to park in the nearby garage during the event.",
+            "explanation": "Wrong because the fixed collocation requires for, so change of to for."
+          },
+          {
+            "id": "c",
+            "text": "The office made arrangements for visitors park in the nearby garage during the event.",
+            "explanation": "Wrong because the verb needs to, so change park to to park."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option keeps for plus the to-infinitive correctly."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In 'Each applicant must provide evidence of how the event relates to their research,' what does 'provide evidence of' mean here?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Each applicant must supply details or proof showing the connection to their research.",
+            "explanation": "Correct because it matches supplying proof showing relevance."
+          },
+          {
+            "id": "b",
+            "text": "Each applicant must promise to attend every session at the event.",
+            "explanation": "Wrong because promising attendance does not mean supplying proof of relevance."
+          },
+          {
+            "id": "c",
+            "text": "Each applicant must pay a fee to confirm their interest in the event.",
+            "explanation": "Wrong because paying a fee does not mean supplying proof of relevance."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Applicants must supply proof showing how the event relates to research."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'provide evidence of' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The team provided evidence of improved safety after the new training program.",
+            "explanation": "Correct because it uses evidence as uncountable with of plus a noun phrase correctly."
+          },
+          {
+            "id": "b",
+            "text": "The team provided evidences of improved safety after the new training program.",
+            "explanation": "Wrong because evidence is uncountable, so change evidences to evidence."
+          },
+          {
+            "id": "c",
+            "text": "The team provided evidence of improve safety after the new training program.",
+            "explanation": "Wrong because of needs a noun form, so change improve to improved."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option uses uncountable evidence with correct of plus noun phrase."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t1",
+        "prompt": "You are planning a weekend trip with friends. Write 2-3 sentences to a friend explaining what you have organized for accommodation and transport. Use make arrangements for or a natural inflection of it.",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "sampleAnswer": "I have made arrangements for our stay at a guesthouse near the beach. I also booked a minibus so we can travel together on Saturday morning.",
+        "selfCheck": [
+          "I wrote 2-3 sentences about a weekend trip with friends, not a conference application.",
+          "I used made arrangements for or another natural form of the phrase correctly.",
+          "My sentences are clear, natural, and describe accommodation and transport."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1083,
+    "outputTokens": 4634,
+    "totalTokens": 5717
+  },
+  "status": 200,
+  "latencyMs": 24927,
+  "model": "muse-spark-1.3"
+}

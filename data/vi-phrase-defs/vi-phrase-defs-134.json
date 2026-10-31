@@ -1,0 +1,442 @@
+[
+  {
+    "phrase": "epsom salts",
+    "pos": "noun phrase (plural)",
+    "hideOvdp": true,
+    "note": "Epsom salts là muối magnesium sulfate kết tinh, tên gọi bắt nguồn từ thị trấn Epsom ở Anh; tiếng Việt thường gọi muối Epsom. Cụm được dùng trong ngữ cảnh hóa học, sản phẩm tắm hoặc một số sản phẩm y tế; tên gọi không đồng nghĩa với lời khuyên uống hay dùng để điều trị, vì cách dùng phụ thuộc sản phẩm và chỉ dẫn chuyên môn.",
+    "senses": [
+      {
+        "m": "muối Epsom (magnesium sulfate kết tinh)",
+        "pat": "a packet of Epsom salts · dissolve Epsom salts in water · Epsom-salt crystals",
+        "ex": [
+          [
+            "The label identifies the crystals as Epsom salts.",
+            "Nhãn ghi những tinh thể này là muối Epsom."
+          ],
+          [
+            "The chemist explained that Epsom salts are a form of magnesium sulfate.",
+            "Nhà hóa học giải thích muối Epsom là một dạng magnesium sulfate."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "escape velocity",
+    "pos": "noun phrase (countable or uncountable; physics)",
+    "hideOvdp": true,
+    "note": "Escape velocity là tốc độ tối thiểu để một vật thoát khỏi trường hấp dẫn của một thiên thể mà không cần tiếp tục được đẩy, theo các giả định của mô hình vật lý. Giá trị phụ thuộc thiên thể và vị trí xuất phát; vì thế không có một escape velocity duy nhất áp dụng cho mọi hành tinh hay mọi độ cao.",
+    "senses": [
+      {
+        "m": "vận tốc thoát/vận tốc vũ trụ cấp 2",
+        "pat": "reach/exceed escape velocity · the escape velocity of a planet · escape velocity from Earth",
+        "ex": [
+          [
+            "A spacecraft must reach escape velocity to leave Earth’s gravitational field.",
+            "Tàu vũ trụ phải đạt vận tốc thoát để rời khỏi trường hấp dẫn của Trái Đất."
+          ],
+          [
+            "Escape velocity depends on the planet’s mass and the distance from its centre.",
+            "Vận tốc thoát phụ thuộc vào khối lượng hành tinh và khoảng cách tới tâm của nó."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "essential oil",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Essential oil là tinh dầu thơm chiết xuất từ thực vật, thường dùng trong nước hoa, hương liệu hoặc aromatherapy. “Essential” ở đây nói về tinh chất/hương thơm chứ không có nghĩa là thiết yếu cho cơ thể; sản phẩm tự nhiên vẫn có thể gây kích ứng hoặc không phù hợp, nên không suy ra rằng mọi cách dùng đều an toàn.",
+    "senses": [
+      {
+        "m": "tinh dầu thực vật",
+        "pat": "extract/use an essential oil · essential oils from lavender · a drop of essential oil",
+        "ex": [
+          [
+            "The soap is scented with lavender essential oil.",
+            "Xà phòng được tạo hương bằng tinh dầu oải hương."
+          ],
+          [
+            "Only a small amount of essential oil was added to the mixture.",
+            "Chỉ một lượng nhỏ tinh dầu được thêm vào hỗn hợp."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "estate agent",
+    "pos": "noun phrase (countable; British English)",
+    "hideOvdp": true,
+    "note": "Estate agent là người làm nghề môi giới bán hoặc cho thuê nhà đất cho khách hàng; tiếng Anh Bắc Mỹ thường dùng real estate agent. Ở Anh, estate agent cũng có thể chỉ công ty/văn phòng môi giới; cụm không nhất thiết là chủ sở hữu bất động sản.",
+    "senses": [
+      {
+        "m": "nhân viên/công ty môi giới bất động sản (Anh-Anh)",
+        "pat": "use/instruct an estate agent · an estate agent sells a house · contact a local estate agent",
+        "ex": [
+          [
+            "We asked an estate agent to value the house before putting it on the market.",
+            "Chúng tôi nhờ một môi giới định giá căn nhà trước khi rao bán."
+          ],
+          [
+            "The estate agent arranged a viewing for Saturday morning.",
+            "Môi giới sắp xếp buổi xem nhà vào sáng thứ Bảy."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "estate car",
+    "pos": "noun phrase (countable; British English)",
+    "hideOvdp": true,
+    "note": "Estate car là kiểu ô tô có khoang hành lý kéo dài phía sau hàng ghế sau và cửa sau lớn để chở đồ; tiếng Anh Bắc Mỹ gọi station wagon. Cụm chỉ kiểu thân xe, không phải xe thuộc sở hữu của một bất động sản hay xe chuyên dùng trong một khu điền trang.",
+    "senses": [
+      {
+        "m": "xe hơi kiểu wagon có khoang sau rộng (Anh-Anh)",
+        "pat": "drive an estate car · an estate car with a large boot · an estate-car model",
+        "ex": [
+          [
+            "They rented an estate car for the family trip.",
+            "Họ thuê một chiếc xe wagon cho chuyến đi gia đình."
+          ],
+          [
+            "The estate car had enough room for the camping equipment.",
+            "Chiếc xe estate đủ chỗ cho đồ cắm trại."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "et al",
+    "pos": "abbreviation (formal; Latin)",
+    "hideOvdp": true,
+    "note": "Et al. là viết tắt Latin của et alii/aliae/alia, nghĩa là “và những người khác” hoặc “và các cộng sự”; thường đứng sau tên tác giả trong trích dẫn học thuật khi danh sách dài. Et không có dấu chấm, al. có dấu chấm vì được rút gọn; số tác giả được phép lược tùy quy chuẩn trích dẫn.",
+    "senses": [
+      {
+        "m": "và những người khác/các đồng tác giả",
+        "pat": "Smith et al. · cite a study by Lee et al. · the results reported by X et al.",
+        "ex": [
+          [
+            "The paper by Nguyen et al. examines language learning in adults.",
+            "Bài báo của Nguyen và các cộng sự nghiên cứu việc học ngôn ngữ ở người trưởng thành."
+          ],
+          [
+            "The citation lists the first author followed by “et al.”",
+            "Trích dẫn ghi tên tác giả đầu tiên rồi đến “et al.”"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "ethyl alcohol",
+    "pos": "noun phrase (uncountable; chemistry)",
+    "hideOvdp": true,
+    "note": "Ethyl alcohol là tên hóa học thông dụng của ethanol, loại alcohol có trong đồ uống có cồn và cũng được dùng làm dung môi hoặc nhiên liệu. Không nhầm ethanol với methanol hay các alcohol khác; trong nhãn sản phẩm và tài liệu hiện đại, ethanol thường là tên gọn, rõ hơn.",
+    "senses": [
+      {
+        "m": "ethyl alcohol/ethanol",
+        "pat": "ethyl alcohol (ethanol) · ethyl alcohol used as a solvent/fuel · a solution of ethyl alcohol",
+        "ex": [
+          [
+            "The laboratory used ethyl alcohol as a solvent.",
+            "Phòng thí nghiệm dùng ethanol làm dung môi."
+          ],
+          [
+            "Ethyl alcohol is the alcohol found in beer and wine.",
+            "Ethanol là loại alcohol có trong bia và rượu vang."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "euclidean geometry",
+    "pos": "noun phrase (uncountable; mathematics)",
+    "hideOvdp": true,
+    "note": "Euclidean geometry là hệ hình học dựa trên các định nghĩa và tiên đề của Euclid, đặc biệt hình học phẳng quen thuộc và các dạng không gian tương ứng. Trong đó, hai đường thẳng song song không cắt nhau; các hình học phi Euclid thay đổi một số giả định nền tảng, nên không phải mọi kết luận đều giống nhau.",
+    "senses": [
+      {
+        "m": "hình học Euclid/hình học Euclid",
+        "pat": "study Euclidean geometry · Euclidean geometry in the plane · the axioms of Euclidean geometry",
+        "ex": [
+          [
+            "The students used Euclidean geometry to calculate the triangle’s angles.",
+            "Học sinh dùng hình học Euclid để tính các góc của tam giác."
+          ],
+          [
+            "Euclidean geometry assumes that parallel lines do not meet.",
+            "Hình học Euclid giả định rằng các đường thẳng song song không giao nhau."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "european community",
+    "pos": "proper noun phrase (historical; abbreviation EC)",
+    "hideOvdp": true,
+    "note": "European Community (EC) là tên lịch sử của tổ chức cộng đồng châu Âu; theo Hiệp ước Maastricht, European Economic Community được đổi tên thành European Community khi Hiệp ước có hiệu lực năm 1993. Hiệp ước Lisbon có hiệu lực năm 2009, EU thay thế và kế thừa European Community về tư cách pháp lý; vì vậy tài liệu hiện nay thường dùng European Union (EU).",
+    "senses": [
+      {
+        "m": "Cộng đồng châu Âu (EC; tên gọi lịch sử)",
+        "pat": "the European Community (EC) · a former European Community member · European Community law/treaties",
+        "ex": [
+          [
+            "The European Community became the European Union’s predecessor in the later treaty structure.",
+            "Cộng đồng châu Âu trở thành tiền thân trong cấu trúc hiệp ước về sau của Liên minh châu Âu."
+          ],
+          [
+            "The document refers to a law adopted by the European Community.",
+            "Tài liệu nhắc đến một đạo luật được Cộng đồng châu Âu thông qua."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "european union",
+    "pos": "proper noun phrase (abbreviation EU)",
+    "hideOvdp": true,
+    "note": "European Union (EU) là liên minh chính trị và kinh tế của các quốc gia thành viên châu Âu, có các thể chế chung và hợp tác trong những lĩnh vực được quy định bằng hiệp ước. EU không đồng nghĩa với toàn bộ châu Âu hay với Hội đồng châu Âu (Council of Europe), một tổ chức quốc tế riêng.",
+    "senses": [
+      {
+        "m": "Liên minh châu Âu (EU)",
+        "pat": "a member state of the European Union · EU policy/law · the European Union’s institutions",
+        "ex": [
+          [
+            "The European Union has common institutions established by treaties.",
+            "Liên minh châu Âu có các thể chế chung được thành lập theo các hiệp ước."
+          ],
+          [
+            "The company exports goods to several European Union countries.",
+            "Công ty xuất khẩu hàng hóa tới một số quốc gia thuộc Liên minh châu Âu."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "ex officio",
+    "pos": "adjective or adverb (formal; Latin)",
+    "hideOvdp": true,
+    "note": "Ex officio nghĩa là “do chức vụ/vị trí đảm nhiệm”: một người có quyền hoặc được đưa vào một ủy ban vì đang giữ một chức vụ khác. Cụm không nhất thiết có nghĩa người đó được bầu riêng cho vai trò thứ hai; quyền biểu quyết hay trách nhiệm tùy điều lệ của tổ chức.",
+    "senses": [
+      {
+        "m": "theo chức vụ; đương nhiên do đang giữ một vị trí khác",
+        "pat": "an ex officio member · serve ex officio · be entitled to attend ex officio",
+        "ex": [
+          [
+            "The university president is an ex officio member of the board.",
+            "Hiệu trưởng là thành viên đương nhiên của hội đồng theo chức vụ."
+          ],
+          [
+            "She attended the committee meeting ex officio as department head.",
+            "Bà tham dự cuộc họp ủy ban với tư cách đương nhiên do là trưởng khoa."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "exchange rate",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Exchange rate là tỷ giá giữa hai đồng tiền, cho biết cần bao nhiêu đơn vị tiền này để đổi lấy một đơn vị tiền kia. Tỷ giá có thể thay đổi theo thị trường, thời điểm và loại giao dịch; khi so sánh, cần kiểm tra chiều niêm yết, phí và tỷ giá mua/bán.",
+    "senses": [
+      {
+        "m": "tỷ giá hối đoái",
+        "pat": "the exchange rate between two currencies · a favourable exchange rate · exchange rates fluctuate",
+        "ex": [
+          [
+            "The exchange rate between the two currencies changed overnight.",
+            "Tỷ giá giữa hai đồng tiền thay đổi qua đêm."
+          ],
+          [
+            "Check the exchange rate and fees before converting your money.",
+            "Hãy kiểm tra tỷ giá và phí trước khi đổi tiền."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "exclamation mark",
+    "pos": "noun phrase (countable; especially British English)",
+    "hideOvdp": true,
+    "note": "Exclamation mark là dấu chấm than (!), thường đặt cuối câu cảm thán hoặc lời gọi mạnh; tiếng Anh Mỹ thường gọi exclamation point. Trong văn viết trang trọng, dùng quá nhiều dấu này có thể làm giọng văn có vẻ cường điệu; tên dấu câu là hai biến thể vùng miền của cùng một ký hiệu.",
+    "senses": [
+      {
+        "m": "dấu chấm than (!)",
+        "pat": "put an exclamation mark after a sentence · an exclamation mark (! ) · end with an exclamation mark",
+        "ex": [
+          [
+            "The sentence ends with an exclamation mark.",
+            "Câu kết thúc bằng dấu chấm than."
+          ],
+          [
+            "In American English, the same punctuation mark is usually called an exclamation point.",
+            "Trong tiếng Anh-Mỹ, dấu câu này thường được gọi là exclamation point."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "exhaust pipe",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Exhaust pipe là ống dẫn khí thải ra khỏi động cơ/xe; trong tiếng Anh Bắc Mỹ, đoạn ống ở phía sau xe thường gọi tailpipe. Exhaust system rộng hơn, gồm nhiều bộ phận như ống góp, bộ xử lý khí thải và ống xả; exhaust pipe chỉ một phần của hệ thống.",
+    "senses": [
+      {
+        "m": "ống xả/ống dẫn khí thải",
+        "pat": "a car’s exhaust pipe · gases leave through the exhaust pipe · a blocked/rusted exhaust pipe",
+        "ex": [
+          [
+            "The exhaust pipe was damaged by corrosion.",
+            "Ống xả bị hư hại do ăn mòn."
+          ],
+          [
+            "Snow blocked the car’s exhaust pipe while it was parked.",
+            "Tuyết làm tắc ống xả của chiếc xe đang đỗ."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "expansion slot",
+    "pos": "noun phrase (countable; computing)",
+    "hideOvdp": true,
+    "note": "Expansion slot là khe cắm trên bo mạch chủ để lắp card mở rộng, bổ sung chức năng như đồ họa hoặc kết nối mạng. Loại khe phải tương thích với card và bo mạch (ví dụ chuẩn giao tiếp/kích thước); máy tính mới có thể dùng khe hoặc chuẩn tích hợp khác thay vì card rời.",
+    "senses": [
+      {
+        "m": "khe cắm mở rộng trên bo mạch chủ",
+        "pat": "install a card in an expansion slot · a free expansion slot · an expansion slot on the motherboard",
+        "ex": [
+          [
+            "The graphics card fits into an expansion slot on the motherboard.",
+            "Card đồ họa được lắp vào một khe mở rộng trên bo mạch chủ."
+          ],
+          [
+            "The technician checked whether the computer had a free expansion slot.",
+            "Kỹ thuật viên kiểm tra xem máy tính còn khe mở rộng trống hay không."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "expense account",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Expense account là cơ chế/tài khoản ghi nhận các khoản chi phát sinh khi làm việc để người sử dụng được công ty hoàn trả theo chính sách; cụm cũng chỉ bản ghi các khoản đó. To be on an expense account thường hàm ý công ty chi trả bữa ăn/chuyến đi công tác, nhưng giới hạn và khoản được duyệt tùy nơi làm việc.",
+    "senses": [
+      {
+        "m": "tài khoản/cơ chế hoàn trả chi phí công tác",
+        "pat": "claim/put something on an expense account · submit expenses to an expense account · an expense-account lunch",
+        "ex": [
+          [
+            "She put the train fare on her expense account.",
+            "Cô kê tiền vé tàu vào khoản chi công tác để được hoàn lại."
+          ],
+          [
+            "The company requires receipts for every expense-account claim.",
+            "Công ty yêu cầu hóa đơn cho mọi yêu cầu hoàn trả chi phí."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "exposure meter",
+    "pos": "noun phrase (countable; photography)",
+    "hideOvdp": true,
+    "note": "Exposure meter là thiết bị đo cường độ ánh sáng để giúp nhiếp ảnh gia chọn phơi sáng phù hợp; có thể tích hợp trong máy ảnh hoặc là máy đo cầm tay. Máy đo cung cấp thông tin về ánh sáng, còn khẩu độ, tốc độ màn trập và ISO là các thiết lập được người chụp lựa chọn.",
+    "senses": [
+      {
+        "m": "máy đo sáng/đo phơi sáng",
+        "pat": "use an exposure meter · a built-in/hand-held exposure meter · take a reading with the exposure meter",
+        "ex": [
+          [
+            "The photographer used an exposure meter before setting the camera.",
+            "Nhiếp ảnh gia dùng máy đo sáng trước khi cài đặt máy ảnh."
+          ],
+          [
+            "A hand-held exposure meter gave a reading for the shaded scene.",
+            "Máy đo sáng cầm tay đưa ra số đo cho khung cảnh có bóng râm."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "exterior angle",
+    "pos": "noun phrase (countable; geometry)",
+    "hideOvdp": true,
+    "note": "Exterior angle là góc nằm ngoài một đa giác, thường tạo bởi một cạnh và phần kéo dài của cạnh kề. Với đa giác lồi, tổng một góc ngoài tại mỗi đỉnh theo cùng chiều là 360°; cần nói rõ cạnh nào được kéo dài vì tại một đỉnh có thể xét nhiều góc ngoài.",
+    "senses": [
+      {
+        "m": "góc ngoài của đa giác",
+        "pat": "an exterior angle of a polygon · calculate/measure the exterior angle · the sum of exterior angles",
+        "ex": [
+          [
+            "The exterior angle is supplementary to the adjacent interior angle.",
+            "Góc ngoài bù với góc trong kề nó."
+          ],
+          [
+            "The students calculated the exterior angles of the convex polygon.",
+            "Học sinh tính các góc ngoài của đa giác lồi."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "extra-sensory perception",
+    "pos": "noun phrase (uncountable; abbreviation ESP)",
+    "hideOvdp": true,
+    "note": "Extra-sensory perception (ESP), còn viết liền extrasensory perception, là tên gọi cho khả năng được cho là tiếp nhận thông tin mà không dùng các giác quan thông thường, như thần giao cách cảm hoặc biết trước. Cách định nghĩa mô tả một tuyên bố/paranormal claim; bản thân thuật ngữ không chứng minh khả năng đó đã được xác nhận khoa học.",
+    "senses": [
+      {
+        "m": "nhận thức ngoại cảm/ESP (khả năng được cho là vượt ngoài giác quan thông thường)",
+        "pat": "claim to have extra-sensory perception · research into ESP · extra-sensory perception (ESP)",
+        "ex": [
+          [
+            "The novel’s central character claims to have extra-sensory perception.",
+            "Nhân vật trung tâm của tiểu thuyết tuyên bố mình có khả năng nhận thức ngoại cảm."
+          ],
+          [
+            "The article distinguishes belief in ESP from evidence for the claim.",
+            "Bài viết phân biệt niềm tin vào ESP với bằng chứng cho tuyên bố đó."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "extrasensory perception",
+    "pos": "noun phrase (uncountable; abbreviation ESP; variant spelling)",
+    "hideOvdp": true,
+    "note": "Extrasensory perception là biến thể chính tả viết liền của extra-sensory perception, cùng viết tắt ESP và cùng chỉ khả năng được cho là tiếp nhận thông tin ngoài các giác quan thông thường. Xem mục “extra-sensory perception”; dạng viết có gạch nối cũng phổ biến.",
+    "senses": [
+      {
+        "m": "nhận thức ngoại cảm/ESP (biến thể viết liền)",
+        "pat": "extrasensory perception (ESP) · claims of extrasensory perception · research on extrasensory perception",
+        "ex": [
+          [
+            "The book discusses claims of extrasensory perception.",
+            "Cuốn sách bàn về những tuyên bố về khả năng nhận thức ngoại cảm."
+          ],
+          [
+            "Extrasensory perception is also written with a hyphen.",
+            "Extrasensory perception cũng được viết có gạch nối."
+          ]
+        ]
+      }
+    ]
+  }
+]

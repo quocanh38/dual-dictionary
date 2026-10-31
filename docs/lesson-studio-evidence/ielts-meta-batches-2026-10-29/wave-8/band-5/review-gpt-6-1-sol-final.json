@@ -1,0 +1,95 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "2a3489b5d5ea4bbc934876c22306cd94bf39b9258aa564529564202f71fa9b6a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-01 explanation",
+      "severity": "minor",
+      "issue": "The statement that selling bicycles was the bike shop job is not in the passage. Explain simply that selling bicycles is not given as the workshop purpose."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-speaking-01; speaking-02",
+      "severity": "minor",
+      "issue": "Fixed30–60seconds for every Part1 answer encourages overlong responses and is less realistic than short natural answers with a reason/example."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-writing-01",
+      "severity": "minor",
+      "issue": "Clarify whether film-enjoyment percentages pool all March–May attendees or use another respondent base; attendance data itself is complete."
+    },
+    {
+      "item": "writingPrompts",
+      "severity": "minor",
+      "issue": "Three Task1 prompts and two Task2 prompts are internally consistent; confirm this intentional practice mix."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking; complete contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete 331-word reservation dialogue read. Verified RoomB grand piano,3–5 request corrected to 4–6 Thursday,2×$5=$10,ID/no food-drinks,one quiet guest and bookingM-442. All keys [0,1,2,3,0],20 options and five explanations supported.",
+    "reading": "Complete 409-word cycle workshop passage read. Verified accident-prevention purpose, police/mechanic leaders, marked outdoor course, explicit Lisa prior helmet belief and adjustment, confidence claim versus individual example, calmer participants and future checks/lights. All keys [0,1,2,3,1], options/explanations supported; invented distractor explanation detail noted.",
+    "writing": "All five Writing prompts read. Film table contains nine attendance values and three enjoyment percentages. Museum 2020/2025 textual maps fully specify entrance,desk,gallery/filmroom exchange,central bicycle area and café enlargement. Bicycle-check process supplies six sequential steps. Two Task 2 prompts are coherent opinion/discussion tasks.150/20 and 250/40 instructions/metadata consistent.",
+    "speaking": "All five Speaking prompts read. Two familiar personal Part 1 sets with overlong answer-duration guidance noted; film-experience Part 2 has four visible bullets, one-minute preparation/one-to-two-minute talk and follow-up; two Part 3 sets ask reasons/evaluation. Accessible introductory stage fit.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "wordCounts": {
+        "listening": 331,
+        "reading": 409
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API, model meta-models/muse-spark-open-1026, wave8-v1 prompt versions and repair provenance read. No recognisable official-question copying or score guarantee found; no exhaustive plagiarism audit. Fictional study statistics assessed for consistency. Band7 real-city policy dates were checked against municipal sources and conflict with passage. Stage labels are practice targets, not validated attainment.",
+    "independence": "No initial or final reports by other reviewers read. Final content reviewed directly in full.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-5-listening-01",
+      "ielts-meta-wave-8-band-5-listening-02",
+      "ielts-meta-wave-8-band-5-listening-03",
+      "ielts-meta-wave-8-band-5-listening-04",
+      "ielts-meta-wave-8-band-5-listening-05",
+      "ielts-meta-wave-8-band-5-reading-01",
+      "ielts-meta-wave-8-band-5-reading-02",
+      "ielts-meta-wave-8-band-5-reading-03",
+      "ielts-meta-wave-8-band-5-reading-04",
+      "ielts-meta-wave-8-band-5-reading-05",
+      "ielts-meta-wave-8-band-5-writing-01",
+      "ielts-meta-wave-8-band-5-writing-02",
+      "ielts-meta-wave-8-band-5-writing-03",
+      "ielts-meta-wave-8-band-5-writing-04",
+      "ielts-meta-wave-8-band-5-writing-05",
+      "ielts-meta-wave-8-band-5-speaking-01",
+      "ielts-meta-wave-8-band-5-speaking-02",
+      "ielts-meta-wave-8-band-5-speaking-03",
+      "ielts-meta-wave-8-band-5-speaking-04",
+      "ielts-meta-wave-8-band-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

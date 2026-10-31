@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-9",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-9-v1",
+  "completedAt": "2026-10-29T05:21:31.820Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 765,
+    "outputTokens": 9283,
+    "totalTokens": 10048
+  },
+  "latencyMs": 43307,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"University Open Day Visitor Route\",\"focus\":\"Listening for times, locations and instructions\",\"part\":\"Part 1\",\"script\":\"Maya: Good morning, welcome to Westfield University open day. How can I help you today?\\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\\nDaniel: Great. How long is the tour and what will we see?\\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\\nDaniel: Thanks so much, that's really helpful.\\nMaya: You're welcome. Enjoy your visit!\",\"questions\":[{\"title\":\"Tour Start Time\",\"prompt\":\"What is the new start time for the general campus tour?\",\"options\":[\"10:00\",\"10:30\",\"11:00\",\"11:30\"],\"answer\":1,\"explanation\":\"The staff corrects the visitor's 10:00 assumption to 10:30 due to a guide delay, so 10:00 is the outdated time.\"},{\"title\":\"Meeting Point Location\",\"prompt\":\"Where should visitors go for the tour?\",\"options\":[\"Welcome Hall next to the library\",\"Business School Room B12\",\"North Car Park entrance\",\"Central Cafe ground floor\"],\"answer\":0,\"explanation\":\"Maya directs visitors past reception to the Welcome Hall next to the library; the other places are for talks, parking or lunch.\"},{\"title\":\"Tour Contents\",\"prompt\":\"What does the general tour include?\",\"options\":[\"Business School and library only\",\"Food market and cafe\",\"Science labs, accommodation, sports centre\",\"North Car Park and reception\"],\"answer\":2,\"explanation\":\"The tour is described as labs, accommodation and sports centre; the Business School is on a separate route.\"},{\"title\":\"Business School Talk\",\"prompt\":\"What must visitors do to attend the Business School presentation?\",\"options\":[\"Pay at the Central Cafe\",\"Go directly to Room B12\",\"Book parking in North Car Park\",\"Register at information desk first\"],\"answer\":3,\"explanation\":\"Maya says registration at the information desk is required for the 1 p.m. talk; going directly is not allowed.\"},{\"title\":\"Visitor Parking\",\"prompt\":\"What is true about parking for visitors today?\",\"options\":[\"Free in North Car Park with validation\",\"Free in any car park all day\",\"Paid parking next to library\",\"Only available until 2 p.m.\"],\"answer\":0,\"explanation\":\"Parking is free only in North Car Park after ticket validation at the Welcome Hall; it is not free everywhere.\"}]},\"reading\":{\"title\":\"City Household Recycling Feedback Scheme\",\"focus\":\"Understanding purpose, details and comparisons\",\"passage\":\"The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\\n\\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\\n\\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\\n\\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\\n\\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.\",\"questions\":[{\"title\":\"Purpose of Scheme\",\"prompt\":\"Why did Riverton council start the feedback scheme?\",\"options\":[\"To replace fines with feedback\",\"To address low sorting and contamination\",\"To test a new mobile app\",\"To support neighbouring areas\"],\"answer\":1,\"explanation\":\"The passage links the launch to 34% correct sorting and high contamination; the app is a future plan, not the initial reason.\"},{\"title\":\"Feedback Card Details\",\"prompt\":\"What information is on the monthly feedback card?\",\"options\":[\"Weight, error rate, street comparison\",\"App login and calendar dates\",\"Fines and collection times\",\"Tips only without numbers\"],\"answer\":0,\"explanation\":\"The card lists weight, incorrect-item percentage and street average; fines are explicitly avoided.\"},{\"title\":\"Elmwood Example\",\"prompt\":\"How does the report use the Elmwood neighbourhood?\",\"options\":[\"As proof families always recycle more\",\"As example of strong engagement\",\"As main claim about feedback\",\"As average for whole city\"],\"answer\":1,\"explanation\":\"Elmwood's 27% rise is presented as an example of engagement, while the main claim is that personalised feedback encourages habits.\"},{\"title\":\"Effective Feedback Type\",\"prompt\":\"Which group showed the greatest improvement?\",\"options\":[\"Numbers only group\",\"Numbers plus tips group\",\"Numbers, tips and neighbour comparison\",\"No feedback group\"],\"answer\":2,\"explanation\":\"The third group with neighbour comparison rose 24% versus 11% for numbers only, showing social comparison adds motivation.\"},{\"title\":\"Renters' Results\",\"prompt\":\"What can be inferred about households in rented accommodation?\",\"options\":[\"They were not included in scheme\",\"They had highest recycling increase\",\"They preferred fines to feedback\",\"They improved less, needing targeted support\"],\"answer\":3,\"explanation\":\"The passage notes renters improved less and the council plans more direct inclusion, implying targeted support is needed; they did participate.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "University Open Day Visitor Route",
+      "focus": "Listening for times, locations and instructions",
+      "part": "Part 1",
+      "script": "Maya: Good morning, welcome to Westfield University open day. How can I help you today?\nDaniel: Hi, I have a booking for the general campus tour. I thought it started at 10 o'clock?\nMaya: Good question. We actually moved the start time to 10:30 this morning because one of the guides was delayed. So please go to the Welcome Hall for 10:30.\nDaniel: Okay, 10:30 at the Welcome Hall. Where exactly is that?\nMaya: It's very easy to find. Come through the main entrance, walk straight past the reception, and it's right next to the library. There will be student helpers with blue shirts to show you the way.\nDaniel: Great. How long is the tour and what will we see?\nMaya: The tour lasts about an hour and a half. You'll visit the science laboratories, see an example of student accommodation, and finish at the sports centre where you can try the facilities.\nDaniel: That sounds good. I'm also interested in the Business School. Is that part of the same route?\nMaya: Not on the general route, no. But there is a separate Business School presentation at 1 p.m. in Room B12. For that one, you need to register first at the information desk in the Welcome Hall.\nDaniel: I'll do that. Is there anywhere to get lunch on campus?\nMaya: Yes, the Central Cafe on the ground floor of the Welcome Hall is open until 2 p.m. for visitors, and there's also an outdoor food market on the central square until 3 o'clock.\nDaniel: Perfect. And finally, I drove here – is parking free for visitors today?\nMaya: Yes, you can park for free in the North Car Park. Just take a ticket when you enter and then validate it – I mean, get it approved – at the Welcome Hall desk before you leave.\nDaniel: Thanks so much, that's really helpful.\nMaya: You're welcome. Enjoy your visit!",
+      "questions": [
+        {
+          "title": "Tour Start Time",
+          "prompt": "What is the new start time for the general campus tour?",
+          "options": [
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30"
+          ],
+          "answer": 1,
+          "explanation": "The staff corrects the visitor's 10:00 assumption to 10:30 due to a guide delay, so 10:00 is the outdated time."
+        },
+        {
+          "title": "Meeting Point Location",
+          "prompt": "Where should visitors go for the tour?",
+          "options": [
+            "Welcome Hall next to the library",
+            "Business School Room B12",
+            "North Car Park entrance",
+            "Central Cafe ground floor"
+          ],
+          "answer": 0,
+          "explanation": "Maya directs visitors past reception to the Welcome Hall next to the library; the other places are for talks, parking or lunch."
+        },
+        {
+          "title": "Tour Contents",
+          "prompt": "What does the general tour include?",
+          "options": [
+            "Business School and library only",
+            "Food market and cafe",
+            "Science labs, accommodation, sports centre",
+            "North Car Park and reception"
+          ],
+          "answer": 2,
+          "explanation": "The tour is described as labs, accommodation and sports centre; the Business School is on a separate route."
+        },
+        {
+          "title": "Business School Talk",
+          "prompt": "What must visitors do to attend the Business School presentation?",
+          "options": [
+            "Pay at the Central Cafe",
+            "Go directly to Room B12",
+            "Book parking in North Car Park",
+            "Register at information desk first"
+          ],
+          "answer": 3,
+          "explanation": "Maya says registration at the information desk is required for the 1 p.m. talk; going directly is not allowed."
+        },
+        {
+          "title": "Visitor Parking",
+          "prompt": "What is true about parking for visitors today?",
+          "options": [
+            "Free in North Car Park with validation",
+            "Free in any car park all day",
+            "Paid parking next to library",
+            "Only available until 2 p.m."
+          ],
+          "answer": 0,
+          "explanation": "Parking is free only in North Car Park after ticket validation at the Welcome Hall; it is not free everywhere."
+        }
+      ]
+    },
+    "reading": {
+      "title": "City Household Recycling Feedback Scheme",
+      "focus": "Understanding purpose, details and comparisons",
+      "passage": "The city of Riverton introduced a household recycling-feedback scheme in early 2023 to address low recycling rates. Before the scheme, only 34% of household waste was correctly sorted, and collection teams reported high levels of contamination, such as food waste mixed with paper and unwashed containers. The council wanted a low-cost way to change behaviour without introducing fines, which had been unpopular in neighbouring areas. The council spent less than expected on printing and postage.\n\nUnder the new system, each participating household receives a monthly feedback card. The card shows three pieces of information: the total weight of correctly sorted recycling, the percentage of incorrect items, and a comparison with the average for their street. Households also receive short practical suggestions, for example rinsing containers before disposal and keeping paper dry. Participation is voluntary, and about 12,000 households joined in the first year. Cards are delivered together with the collection calendar, so residents do not need to use an app.\n\nAfter six months, the council reported clear improvements. On average, correctly sorted recycling rose by 18% among participants, while contamination dropped from 22% to 14%. The improvement was not equal everywhere. In Elmwood, a neighbourhood with many young families, recycling increased by 27%, which the report presents as an example of strong engagement rather than proof that family households always recycle more. The council's main claim is that regular personalised feedback itself encourages better habits, not that any single neighbourhood represents the whole city.\n\nThe scheme also tested different types of feedback. One group received only numbers, a second group received numbers plus practical tips, and a third group received numbers, tips, and a comparison with neighbours. The third group improved the most, with a 24% increase, compared to 11% for the first group. This suggests that social comparison adds motivation beyond information alone. Surveys showed that many residents did not know that dirty packaging could spoil an entire batch of recycling, so the tips addressed a real gap in knowledge.\n\nHowever, the scheme has limits. Households in rented accommodation improved less, possibly because they move more often and feel less connection to local programmes. The council now plans to develop a mobile app to provide weekly updates and to include renters more directly. Officials stress that feedback is a support tool, not a replacement for reliable collection services, and that long-term success will depend on both. Future funding will depend on whether these gains continue into the second year.",
+      "questions": [
+        {
+          "title": "Purpose of Scheme",
+          "prompt": "Why did Riverton council start the feedback scheme?",
+          "options": [
+            "To replace fines with feedback",
+            "To address low sorting and contamination",
+            "To test a new mobile app",
+            "To support neighbouring areas"
+          ],
+          "answer": 1,
+          "explanation": "The passage links the launch to 34% correct sorting and high contamination; the app is a future plan, not the initial reason."
+        },
+        {
+          "title": "Feedback Card Details",
+          "prompt": "What information is on the monthly feedback card?",
+          "options": [
+            "Weight, error rate, street comparison",
+            "App login and calendar dates",
+            "Fines and collection times",
+            "Tips only without numbers"
+          ],
+          "answer": 0,
+          "explanation": "The card lists weight, incorrect-item percentage and street average; fines are explicitly avoided."
+        },
+        {
+          "title": "Elmwood Example",
+          "prompt": "How does the report use the Elmwood neighbourhood?",
+          "options": [
+            "As proof families always recycle more",
+            "As example of strong engagement",
+            "As main claim about feedback",
+            "As average for whole city"
+          ],
+          "answer": 1,
+          "explanation": "Elmwood's 27% rise is presented as an example of engagement, while the main claim is that personalised feedback encourages habits."
+        },
+        {
+          "title": "Effective Feedback Type",
+          "prompt": "Which group showed the greatest improvement?",
+          "options": [
+            "Numbers only group",
+            "Numbers plus tips group",
+            "Numbers, tips and neighbour comparison",
+            "No feedback group"
+          ],
+          "answer": 2,
+          "explanation": "The third group with neighbour comparison rose 24% versus 11% for numbers only, showing social comparison adds motivation."
+        },
+        {
+          "title": "Renters' Results",
+          "prompt": "What can be inferred about households in rented accommodation?",
+          "options": [
+            "They were not included in scheme",
+            "They had highest recycling increase",
+            "They preferred fines to feedback",
+            "They improved less, needing targeted support"
+          ],
+          "answer": 3,
+          "explanation": "The passage notes renters improved less and the council plans more direct inclusion, implying targeted support is needed; they did participate."
+        }
+      ]
+    }
+  }
+}

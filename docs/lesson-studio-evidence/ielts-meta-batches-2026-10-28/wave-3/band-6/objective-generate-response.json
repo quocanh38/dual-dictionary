@@ -1,0 +1,154 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6",
+  "batchId": "wave-3",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:11:07.713Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 605,
+    "outputTokens": 8586,
+    "totalTokens": 9191
+  },
+  "latencyMs": 30350,
+  "result": {
+    "listening": {
+      "title": "Extended Library Hours Trial Discussion",
+      "focus": "Paraphrase, linked ideas and corrected details in academic discussion",
+      "part": "Part 3",
+      "script": "TUTOR: Thanks for meeting today. As part of your study skills module, you two are evaluating the trial of extended library opening hours, is that right? MIA: Yes. The library is testing late opening because many part-time students said they cannot use it after work. JOSH: Exactly. At the moment the main library closes at 8 p.m. on weekdays. During the six-week trial, it will stay open until midnight, Monday to Thursday. TUTOR: And weekends? MIA: No change at weekends - still 10 a.m. to 4 p.m. on Saturday, closed Sunday. I first thought the trial started on the 12th of May, but the notice says the 19th of May, so I corrected my notes. JOSH: Right, 19th May to 27th June. We looked at how the space will be managed. The ground floor will stay as group work, but the top floor will become a quiet zone after 8 p.m. - no conversations, only silent study. MIA: That was a response to the survey. Students worried late hours would mean more noise, so staff promised extra checks and a clear rule: after 8, food is not allowed upstairs, only water in closed bottles. TUTOR: What about booking rooms? JOSH: Small group rooms can still be booked, but only for 45 minutes in the evening instead of the usual two hours, to give more groups a chance. I thought it was still two hours, but Mia pointed out the shorter evening limit. MIA: For our evaluation, we plan to compare door counts before 8 p.m. and after 8 p.m., and interview ten evening users about travel safety and concentration. TUTOR: Good. Will you also look at staffing costs? JOSH: Yes, we will ask the library manager about security and energy costs, then present the advantages and problems in next week's seminar. TUTOR: Make sure you link the findings to access for working students. MIA: We will, and we will also note the step-free evening entrance, because the side gate closes at nine so wheelchair users must use the main ramp after that.",
+      "questions": [
+        {
+          "title": "Reason for trial",
+          "prompt": "Why is the library trialling late opening?",
+          "options": [
+            "To provide quiet morning space for full-time students",
+            "To improve access for part-time students who work during the day",
+            "To test a new evening cafe service",
+            "To reduce crowding on Saturday mornings"
+          ],
+          "answer": 1,
+          "explanation": "Mia says the library is testing late opening because many part-time students cannot use it after work. The morning-space option fails because no morning need is mentioned."
+        },
+        {
+          "title": "Corrected start date",
+          "prompt": "According to the corrected information, when does the trial start?",
+          "options": [
+            "19th May",
+            "12th May",
+            "27th June",
+            "Early April"
+          ],
+          "answer": 0,
+          "explanation": "Mia corrects her notes from 12th May to 19th May as shown on the notice. The 12th May option is the initial error she rejects."
+        },
+        {
+          "title": "Top floor rule",
+          "prompt": "What is the rule for the top floor after 8 p.m. during the trial?",
+          "options": [
+            "Group discussion is encouraged there",
+            "A food service will operate there",
+            "Only silent study is allowed and only water in closed bottles",
+            "Seats must be booked a day in advance"
+          ],
+          "answer": 2,
+          "explanation": "Josh and Mia state the top floor becomes a quiet zone after 8 p.m. with no conversations and only water in closed bottles. The group-discussion option contradicts the silent-study rule."
+        },
+        {
+          "title": "Group room bookings",
+          "prompt": "What is the evening rule for small group rooms?",
+          "options": [
+            "They cannot be booked in the evening",
+            "They are reserved for staff only",
+            "They are available without booking",
+            "Bookings are limited to 45 minutes instead of two hours"
+          ],
+          "answer": 3,
+          "explanation": "Josh states evening bookings are only 45 minutes instead of the usual two hours to share access. The no-booking option fails because booking is still allowed with a shorter limit."
+        },
+        {
+          "title": "Evaluation plan",
+          "prompt": "What do Mia and Josh plan to do for their evaluation?",
+          "options": [
+            "Count visitors at the weekend",
+            "Compare entry numbers before and after 8 p.m. and interview evening users",
+            "Survey cafe staff about drink sales",
+            "Review book borrowing records from last year"
+          ],
+          "answer": 1,
+          "explanation": "Mia plans to compare door counts before and after 8 p.m. and interview ten evening users about travel and concentration. The weekend-count option fails because weekends are unchanged and not the focus."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Campus Reusable-Cup Return Scheme",
+      "focus": "Linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Greenfield University launched a reusable-cup return scheme in January to reduce waste from single-use cups. Last year the campus cafes sold over 300,000 hot drinks, and most cups were thrown away because the mixed plastic lining made recycling difficult. The student union argued that a practical alternative was needed, rather than simply asking people to remember their own mugs. The system is simple. Customers pay a one-pound deposit when they buy a drink in a reusable cup from any campus cafe. They can then return the empty cup to collection points in the library, the science building and the main canteen. At the collection point, they receive the deposit back as cash credit on their student card. The cups are washed centrally and used again. Collection bins are checked twice daily, and cups are tracked by a simple code to measure return times. Unlike a discount for bringing your own mug, the deposit applies to everyone, so even visitors take part. Early figures suggest a clear change. In the first term, about 72 percent of reusable cups were returned, and orders for single-use cups fell by more than half compared with the previous autumn. The canteen showed the largest drop, while the small kiosk near the sports hall showed the smallest, partly because athletes often took cups to training sessions and forgot to bring them back. Staff also reported fewer overflowing bins around seating areas. There are still problems. About a quarter of cups are kept in offices or dormitory rooms for days, which means more cups must be bought to keep the system running. Some students said they were unsure where the nearest collection point was, especially in the evening. Washing and transport add costs, and damaged cups must be replaced. The facilities team notes that if return rates stay below 60 percent, the scheme may cost more and create similar waste levels to single-use cups. Clear signs and more collection points are planned for next term. The project report argues that the scheme can succeed only if returning cups becomes a normal habit, not just a rule. As an example, it describes the chemistry department cafe, where staff remind every customer where to return the cup and display the weekly return rate on a board. That cafe reached a 90 percent return rate. The report claims this shows that regular reminders and visible results matter more than the size of the deposit. The university plans to extend the scheme to cold drinks next year if return rates remain above 70 percent.",
+      "questions": [
+        {
+          "title": "Reason for scheme",
+          "prompt": "According to the passage, why was the reusable-cup scheme introduced?",
+          "options": [
+            "Because recycling single-use cups on campus was difficult",
+            "Because students requested cheaper hot drinks",
+            "Because cafes wanted to increase drink sales",
+            "Because the library requested fewer bins"
+          ],
+          "answer": 0,
+          "explanation": "The passage links most cups being thrown away to the lining making recycling difficult, prompting the alternative. The cheaper-drinks option fails because price is never given as a reason."
+        },
+        {
+          "title": "Deposit return",
+          "prompt": "What happens when a customer returns a reusable cup?",
+          "options": [
+            "They receive a free hot drink",
+            "They can keep the cup without extra charge",
+            "They receive a discount for bringing their own mug",
+            "They get the deposit back as credit on their student card"
+          ],
+          "answer": 3,
+          "explanation": "The passage states the deposit is returned as cash credit on the student card at collection points. The own-mug discount option describes a different system contrasted in the passage."
+        },
+        {
+          "title": "Comparison of locations",
+          "prompt": "What did early figures show about different locations?",
+          "options": [
+            "All cafes had identical results",
+            "The canteen had the largest fall in single-use orders, while the sports kiosk had the smallest",
+            "The library stopped selling drinks completely",
+            "The sports kiosk returned every cup"
+          ],
+          "answer": 1,
+          "explanation": "The passage compares the canteen with the largest drop and the sports kiosk with the smallest because cups were taken to training. The identical-results option contradicts this stated comparison."
+        },
+        {
+          "title": "Limited inference on return rate",
+          "prompt": "What can be inferred from the facilities team note about 60 percent?",
+          "options": [
+            "Washing costs will disappear if rates improve",
+            "Students prefer single-use cups for sport",
+            "The scheme needs high return rates to stay better than single-use cups",
+            "The university will close the canteen collection point"
+          ],
+          "answer": 2,
+          "explanation": "The note says below 60 percent the scheme may cost more and create similar waste, implying high returns are needed for benefit. The close-the-canteen option is unsupported because more points are planned."
+        },
+        {
+          "title": "Claim versus example",
+          "prompt": "What distinction does the final paragraph make?",
+          "options": [
+            "The general claim is that habit and reminders matter most; the chemistry cafe is one example of this",
+            "The claim is that the deposit should be raised; the chemistry cafe proves deposits fail",
+            "The chemistry cafe created the whole scheme; the report only copied it",
+            "The report claims cold drinks are included now; the chemistry cafe opposes this"
+          ],
+          "answer": 0,
+          "explanation": "The report argues success needs normal habit, and the chemistry cafe with reminders and a display board is presented as an example reaching 90 percent. The raised-deposit option fails because the report says reminders matter more than deposit size."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "2427d184c823c547f6a3e65d8cc288c3fc072f8882717eed066a1c53f647b8d8",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte review of candidate-final-v2.json: listening script is 379 words and the reading passage 449 words; all 10 Listening/Reading questions with every option, key and explanation; all five Writing and five Speaking prompts; and metadata/provenance. Confirmed the initial overlength finding is resolved (379 words, within 300–400) and the initial Reading 04 wording concern is resolved: the answer now states only the passage-supported reduction in transport costs and packaging waste. Objective answers are uniquely supported and distractors are credible. Task 1 bake-sale values, prices, counts and revenue are complete and arithmetically consistent; queue chart gives day/time values and units; tasks include word targets and suggested timing. Speaking has two Part 1 sets, a Part 2 cue card with prep/speaking time, and two Part 3 sets. Language and demands suit band 5. Provenance declares originalContent:true; there are no official-question or learner-score claims. No unresolved critical, major or uncertain issue.",
+  "reviewerType": "AI-assisted"
+}

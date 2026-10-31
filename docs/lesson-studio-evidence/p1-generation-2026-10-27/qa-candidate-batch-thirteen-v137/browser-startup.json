@@ -1,0 +1,6 @@
+{
+  "status": "BLOCKED",
+  "mode": "headed",
+  "reason": "Browser startup failed; no browser assertions ran.",
+  "fallback": "Use DD_BROWSER_HEADED=1 or DD_CDP_ENDPOINT with a dedicated local QA Chrome; otherwise record manual Chrome UI evidence separately."
+}

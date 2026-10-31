@@ -1,0 +1,94 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "635598939599ce8c52ff8c21bfb0bfa2e8462df32129e79225ff5707e273cda0",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-10-band-6-reading-04; sharedContexts.reading history-student example",
+      "severity": "uncertain",
+      "issue": "Question calls the history-student anecdote an illustration of long-term confidence, but that anecdote only reports reorganising an argument rather than grammar correction. It gives no later confidence/self-correction result; confidence is supported separately by repeat-user comparison. Either extend anecdote with explicit longer-term confidence/independence evidence, or ask which finding supports the confidence claim and key the repeat-user finding."
+    }
+  ],
+  "observations": [
+    {
+      "item": "writingPrompts task distribution",
+      "severity": "minor",
+      "issue": "This stage has 3 Task 1 prompts and 2 Task 2 prompts rather than the common 2/3 mix in the other stages. All five are internally labelled consistently; confirm this intended practice mix."
+    },
+    {
+      "item": "ielts-meta-wave-10-band-6-writing-03",
+      "severity": "minor",
+      "issue": "Clarify whether consultation had 500 respondents in each year or same 500 surveyed twice. Response shares total 100% in both years and remain comparable as proportions."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking. Read entire contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical to shared contexts. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete museum-booking dialogue read. Verified Egypt workshop/March 18,30 pupils after two absences, three adults, confirmation deadline, cancellation condition, pre-booked lunch, accessible rooms and arrival correction 10:00 to 10:30. All five keys [0,1,2,3,0],20 options and five explanations checked.",
+    "reading": "Complete drop-in evaluation read, including 12-week records,180 questionnaire users, afternoon 62% versus morning 38%, postgraduate 35% versus 20% population,85% helpfulness,70% return intention, booked/drop-in access, confidence claim, history example and limitations. All five keys/options/explanations reviewed; reading 04 claim-example connection is the blocking uncertainty.",
+    "writing": "All five prompts read: three Task 1 tables have complete museum indicators, support-session attendance and consultation response shares; both consultation years sum to 100%. Two Task 2 prompts clearly ask discussion/opinion. All minima and 20/40-minute metadata are correct; the 3/2 task mix and sample-design clarity are observations.",
+    "speaking": "All five prompts read. Two personal studies/transport Part 1 sets, an educational-visit cue card with four newline bullets plus preparation/duration, and two broader Part 3 sets on support and consultation. Generally natural stage 6 practice.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 312,
+        "reading": 419
+      },
+      "metadataWordCounts": {
+        "listening": 312,
+        "reading": 419
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          2,
+          0,
+          3,
+          1,
+          2
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Read Baseten Model API provenance, model meta-models/muse-spark-open-1026, wave10-v1 prompt versions and originalContent=true. No recognisable copied official question or score guarantee found; this is not an exhaustive plagiarism audit. Fictional study data assessed for internal consistency, not empirical validation. Stage labels indicate intended practice progression, not validated attainment.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-6-listening-01",
+      "ielts-meta-wave-10-band-6-listening-02",
+      "ielts-meta-wave-10-band-6-listening-03",
+      "ielts-meta-wave-10-band-6-listening-04",
+      "ielts-meta-wave-10-band-6-listening-05",
+      "ielts-meta-wave-10-band-6-reading-01",
+      "ielts-meta-wave-10-band-6-reading-02",
+      "ielts-meta-wave-10-band-6-reading-03",
+      "ielts-meta-wave-10-band-6-reading-04",
+      "ielts-meta-wave-10-band-6-reading-05",
+      "ielts-meta-wave-10-band-6-writing-01",
+      "ielts-meta-wave-10-band-6-writing-02",
+      "ielts-meta-wave-10-band-6-writing-03",
+      "ielts-meta-wave-10-band-6-writing-04",
+      "ielts-meta-wave-10-band-6-writing-05",
+      "ielts-meta-wave-10-band-6-speaking-01",
+      "ielts-meta-wave-10-band-6-speaking-02",
+      "ielts-meta-wave-10-band-6-speaking-03",
+      "ielts-meta-wave-10-band-6-speaking-04",
+      "ielts-meta-wave-10-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

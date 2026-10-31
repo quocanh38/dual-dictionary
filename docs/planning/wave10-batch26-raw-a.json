@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 26,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after double time, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese explanations, patterns, bilingual examples and learner notes; no dictionary wording/examples copied. Regional, legal, medical, technical and register distinctions are explained when useful.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2320,
+    "remainingRawOnlyAfter": 2300
+  },
+  "selected": [
+    "down and out",
+    "draw back",
+    "draw off",
+    "draw out",
+    "draw up",
+    "drop in",
+    "drop kick",
+    "drop off",
+    "drop out",
+    "dry cell",
+    "dry ice",
+    "dry land",
+    "dry out",
+    "dry run",
+    "dry wall",
+    "due process of law",
+    "emergency room",
+    "end point",
+    "end up",
+    "engine room"
+  ]
+}

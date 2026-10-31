@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-2517b71f-6c30-44eb-97ab-94e69d81d1d9",
+    "version": 1,
+    "title": "Handling Returns and Keeping Records",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T09:47:38.431Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Handling Returns and Keeping Records",
+        "objective": "By the end of the lesson, learners will understand and correctly use 'original payment method' and 'service log' in workplace service situations.",
+        "reading": {
+          "text": "At a neighborhood bicycle shop, a customer brings back a helmet with a broken strap two days after purchase. The service assistant checks the receipt and inspects the item before offering options. Store policy allows a refund to the original payment method when an item is faulty; a different color can be exchanged if stock is available. The assistant explains that a repair would take three days, then asks which solution the customer prefers. After agreeing on a refund, she enters the reason in the service log and gives the customer a copy. At the end of each month, the supervisor reviews similar cases to find repeated product faults. If several helmets show the same problem, the shop contacts the supplier and pauses new sales until the issue is checked.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "At a neighborhood bicycle shop, a customer brings back a helmet with a broken strap two days after purchase."
+            },
+            {
+              "id": "s2",
+              "text": "The service assistant checks the receipt and inspects the item before offering options."
+            },
+            {
+              "id": "s3",
+              "text": "Store policy allows a refund to the original payment method when an item is faulty; a different color can be exchanged if stock is available."
+            },
+            {
+              "id": "s4",
+              "text": "The assistant explains that a repair would take three days, then asks which solution the customer prefers."
+            },
+            {
+              "id": "s5",
+              "text": "After agreeing on a refund, she enters the reason in the service log and gives the customer a copy."
+            },
+            {
+              "id": "s6",
+              "text": "At the end of each month, the supervisor reviews similar cases to find repeated product faults."
+            },
+            {
+              "id": "s7",
+              "text": "If several helmets show the same problem, the shop contacts the supplier and pauses new sales until the issue is checked."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "original payment method",
+            "meaningEn": "the same way the customer first paid, such as the same card or cash",
+            "meaningVi": "phương thức thanh toán ban đầu",
+            "sourceSentenceId": "s3"
+          },
+          {
+            "id": "t2",
+            "phrase": "service log",
+            "meaningEn": "a written record where staff note service actions and reasons",
+            "meaningVi": "sổ ghi chép dịch vụ",
+            "sourceSentenceId": "s5"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s3 about store policy, what does 'original payment method' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means a new gift card the shop offers for the next purchase.",
+                "explanation": "It is wrong because a gift card for next time is different from the way the customer first paid."
+              },
+              {
+                "id": "b",
+                "text": "It means the same card or cash the customer used to pay first.",
+                "explanation": "It is correct because it matches the refund to the first way of paying in s3."
+              },
+              {
+                "id": "c",
+                "text": "It means the shop's account for paying the supplier at the end of the month.",
+                "explanation": "It is wrong because it describes the shop paying the supplier, not the customer’s first payment."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The phrase refers to the same way the customer first paid."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'original payment method' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The shop will send the refund to the original payment method.",
+                "explanation": "It is correct because article, preposition, and singular noun are all natural."
+              },
+              {
+                "id": "b",
+                "text": "The shop will send the refund to original payment method.",
+                "explanation": "It is wrong because the article 'the' is missing before 'original payment method.'"
+              },
+              {
+                "id": "c",
+                "text": "The shop will send the refund on the original payment method.",
+                "explanation": "It is wrong because the preposition should be 'to,' not 'on.'"
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the fixed collocation correctly."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s5 about the refund, what does 'service log' mean?",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the printed receipt that the customer takes home after paying.",
+                "explanation": "It is wrong because a receipt is given to the customer, not the staff record of actions."
+              },
+              {
+                "id": "b",
+                "text": "It means the monthly schedule that shows when supervisors review cases.",
+                "explanation": "It is wrong because a schedule shows timing, not a record of what staff did."
+              },
+              {
+                "id": "c",
+                "text": "It means the written record where staff note what they did and why.",
+                "explanation": "It is correct because it matches entering the reason in the record in s5."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "The phrase refers to the staff record of service actions and reasons."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'service log' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "She recorded the broken helmet strap and the refund request in service log.",
+                "explanation": "It is wrong because the specific shop record needs the article the: in the service log."
+              },
+              {
+                "id": "b",
+                "text": "She recorded the broken helmet strap and the refund request in the service log.",
+                "explanation": "It is correct because it records the refund request in the shop record, as described in s5."
+              },
+              {
+                "id": "c",
+                "text": "She recorded the broken helmet strap and the refund request near the service log.",
+                "explanation": "It is wrong because near only describes a location; the source says the assistant enters the reason in the record."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only one sentence uses the fixed collocation correctly."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a hotel receptionist. A guest reports a broken lamp. Write 2-3 sentences to your manager explaining what you noted in the service log and what will happen next. Use the phrase 'service log'.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "sampleAnswer": "A guest in room 204 reported a broken bedside lamp this morning. I noted the room number and the issue in the service log for maintenance to check.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used the phrase 'service log' naturally.",
+              "I describe a hotel situation, not the bicycle shop."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

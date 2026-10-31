@@ -1,0 +1,108 @@
+{
+  "completedAt": "2026-10-27T08:48:30.980Z",
+  "batch": "P1 offline lesson generation batch 9",
+  "sourceFile": "sources-batch-9.json",
+  "sourceSha256": "b2ca070c33fba8a419fb9293221a0ce8b687d79f3c7457aff3e9adc24155a7de",
+  "generationPrompt": "lesson-studio-2026-10-27-v5",
+  "generationStatus": "Three raw Meta candidates are preserved unchanged; local editorial revisions are separately versioned and are not attributed to Meta.",
+  "packs": [
+    {
+      "id": "community-kitchen-volunteer-shift",
+      "packId": "pack-89a2a594-120e-4d83-8acc-03b6c9be7405",
+      "version": 1,
+      "title": "Sharing Closing Duties in the Community Kitchen",
+      "levelEstimate": "B1",
+      "originalMetaCandidateSha256": "5608077682a7e5a58d41f85b03a40bffbd90020bdcc07871753b6ddbf6b9922b",
+      "candidateSha256": "239059717add867b60ceb55cc7d5a47c84f1e482e1645e47c996c5e5b98a04b1",
+      "reviewSha256": "09322f44a00f5e685bd6f02515105331b12a142979b12ee1afdba0ddec1cfccc",
+      "approvedPayloadSha256": "772964a98a91e0ae4162527d0ce8065f870a21e833939ac7a20cfadf67133d15",
+      "editorialCandidateFile": "community-kitchen-volunteer-shift-candidate-editorial-v1.json",
+      "editorialChangeFile": "community-kitchen-volunteer-shift-editorial-change-v1.json",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "releaseDirectory": "../p1-generation-2026-10-27/release-community-kitchen-volunteer-shift",
+      "libraryFile": "lessons/library/community-kitchen-volunteer-shift.json"
+    },
+    {
+      "id": "urban-heat-survey-method",
+      "packId": "pack-41cea0c9-7d1c-4980-b4c1-78832b701194",
+      "version": 1,
+      "title": "Fair Comparisons and Provisional Estimates in Field Research",
+      "levelEstimate": "B2",
+      "originalMetaCandidateSha256": "955db47f5cc4be10b420577e3572384c56cae3ba5b038b057c5ad9eb8e9eadf7",
+      "candidateSha256": "955db47f5cc4be10b420577e3572384c56cae3ba5b038b057c5ad9eb8e9eadf7",
+      "reviewSha256": "4df1bdca5741f2c4fe29e54965cfcc85b18341e12fce47cb704614b2c3a99173",
+      "approvedPayloadSha256": "74fa7c8e9c8bbe95bfbbf2b7774ece730155cfdfda50606455c83aab2d6fd7b4",
+      "editorialCandidateFile": "urban-heat-survey-method-candidate-editorial-v1.json",
+      "editorialChangeFile": "urban-heat-survey-method-editorial-change-v1.json",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "releaseDirectory": "../p1-generation-2026-10-27/release-urban-heat-survey-method",
+      "libraryFile": "lessons/library/urban-heat-survey-method.json"
+    },
+    {
+      "id": "rail-station-lost-property",
+      "packId": "pack-0ecba08e-7198-4bb5-ab2e-57eef26115e6",
+      "version": 1,
+      "title": "Lost Property at Central Station",
+      "levelEstimate": "B1",
+      "originalMetaCandidateSha256": "d762fd44ca1a7a73e6bc5166c9557f9a134493a290f7321d877529ca5e2b96bb",
+      "candidateSha256": "193bb9647b047eed854a08abb8d3de7ad03689fbd2807015e0c0cf5ff2ba58d3",
+      "reviewSha256": "becc780f305506379503b7c01c73667a0757b3a9c92c6189b4c20fe7add344ea",
+      "approvedPayloadSha256": "b1e95a0b3551da8eaa9f2933fc0f268afbc769ee1d72f4e3ea4f04b826378294",
+      "editorialCandidateFile": "rail-station-lost-property-candidate-editorial-v2.json",
+      "editorialChangeFile": "rail-station-lost-property-editorial-change-v2.json",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "releaseDirectory": "../p1-generation-2026-10-27/release-rail-station-lost-property",
+      "libraryFile": "lessons/library/rail-station-lost-property.json"
+    }
+  ],
+  "editorialHistory": {
+    "community-kitchen-volunteer-shift": "v1 joined the sentence incorrectly fragmented after “7 p.m.” and renumbered the following sentence; all 17 criteria passed on the final hash.",
+    "urban-heat-survey-method": "v1 preserves the Meta candidate unchanged; all 17 criteria passed on the final hash.",
+    "rail-station-lost-property": "v1 was blocked by a critical mismatch: the transfer prompt did not require the target phrase while the model/checklist did. v2 explicitly requires “proof of ownership”; both reviewers passed the exact v2 hash at 17/17 with no findings."
+  },
+  "reviewRoutesRequested": [
+    "gpt-6-luna (requested; configured route not exposed by runtime)",
+    "gpt-5.6-terra"
+  ],
+  "reviewRuntimeLabels": [
+    "GPT-6",
+    "Codex GPT-6"
+  ],
+  "reviewLimitations": [
+    "AI-assisted editorial review, not human or learner review",
+    "Rights/authorship supported only by local declarations, not independently verified"
+  ],
+  "approval": "Three exact-hash local approvals recorded under the owner’s delegated editorial authority; only the final editorial revisions listed above are approved.",
+  "qa": {
+    "finalUnapprovedPreview": "PASS for all three exact final editorial hashes in Chrome mobile offline emulation 390x844; no Vault writes, zero paid/provider requests, no JS errors",
+    "approvedReleaseQa": "PASS, 48 clean and preseeded Chrome mobile emulation contexts across all 24 approved packs; zero external requests or provider calls; no JS errors",
+    "catalogueOfflineInstall": "PASS, all 24 indexed packs installed offline; malformed index and tampered pack rejected; existing Vault/Review history preserved; zero external/provider requests",
+    "providerRequestsDuringReviewAndQa": 0,
+    "externalRequests": 0,
+    "physicalDevice": false
+  },
+  "library": {
+    "packCount": 24,
+    "newPacks": 3,
+    "cache": "mdx-dict-v134"
+  },
+  "ownerInstruction": "Owner handles Meta credits and asked Codex not to check Meta usage/Billing.",
+  "metaUsageOrBillingLookup": "not performed, per owner instruction",
+  "deployment": "not performed; local candidate only",
+  "checks": [
+    "exact-hash quality-gate audit and delegated approval",
+    "three independent 17-criterion reviews from requested Luna and Terra routes; exact hashes confirmed",
+    "candidate mobile offline preview PASS",
+    "24-pack offline shell contract PASS (39 paths)",
+    "schema, quality-gate and library checks PASS",
+    "approved-library-check: 48 exact-pack contexts PASS",
+    "catalogue offline UI: 24 pack installs plus malformed/tampered rejection PASS",
+    "git diff --check PASS"
+  ]
+}

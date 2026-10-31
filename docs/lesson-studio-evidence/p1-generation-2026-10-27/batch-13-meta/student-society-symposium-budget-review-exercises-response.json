@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Budgeting for a Student Symposium",
+    "objective": "Learners will understand and use sets aside and revise the forecast to describe reserving money and updating expected costs.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s3, 'The treasurer sets aside part of the grant for accessibility services,' what does 'sets aside' mean here?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means she reserves part of the grant to use for accessibility services later.",
+            "explanation": "Correct because it matches reserving part of the money for a specific purpose."
+          },
+          {
+            "id": "b",
+            "text": "It means she spends the whole grant on accessibility services at once.",
+            "explanation": "Wrong because she keeps only part for later rather than spending everything at once."
+          },
+          {
+            "id": "c",
+            "text": "It means she moves the grant to a different account without a planned purpose.",
+            "explanation": "Wrong because the sentence states a clear purpose for the reserved money."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only the correct choice describes reserving part of the money for a specific purpose."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'sets aside' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Our club sets aside part of its budget for printing costs each term.",
+            "explanation": "Correct because it uses sets aside with for to show the purpose of the reserved money."
+          },
+          {
+            "id": "b",
+            "text": "Our club sets aside part of its budget to printing costs each term.",
+            "explanation": "Wrong because to printing costs should be for printing costs."
+          },
+          {
+            "id": "c",
+            "text": "Our club sets aside part of its budget for printing costs every terms.",
+            "explanation": "Wrong because every terms should be every term."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only the correct sentence uses the phrase with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s5, 'They ask the venue whether a weekday rate is available and revise the forecast after the reply,' what does 'revise the forecast' mean here?",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means they update the expected costs after receiving the venue's reply.",
+            "explanation": "Correct because it matches updating expected costs after new information."
+          },
+          {
+            "id": "b",
+            "text": "It means they cancel the symposium because the venue's reply was late.",
+            "explanation": "Wrong because the sentence describes updating costs rather than cancelling the event."
+          },
+          {
+            "id": "c",
+            "text": "It means they approve all orders before checking the new prices.",
+            "explanation": "Wrong because they update the costs after the reply rather than approving orders before it."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only the correct choice describes updating expected costs after new information."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'revise the forecast' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "After the supplier replied, we revised the forecast to include delivery fees.",
+            "explanation": "Correct because it uses the past tense and to plus base verb naturally."
+          },
+          {
+            "id": "b",
+            "text": "After the supplier replied, we revised the forecast to included delivery fees.",
+            "explanation": "Wrong because to included should be to include."
+          },
+          {
+            "id": "c",
+            "text": "After the supplier replied, we have revise the forecast to include delivery fees.",
+            "explanation": "Wrong because have revise should be have revised."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only the correct sentence uses the phrase with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t1",
+        "prompt": "You are a part-time tutor writing a friendly message to a friend about your monthly pay, not a symposium budget. Explain how you handle the money. Write 2-3 sentences using a correct form of 'sets aside'.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "sampleAnswer": "I got paid for tutoring last Friday. I set aside part of the pay for my monthly train pass.",
+        "selfCheck": [
+          "I wrote 2-3 sentences.",
+          "I used a correct form of set aside to show reserving money.",
+          "I named the specific purpose for the reserved money."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1047,
+    "outputTokens": 5734,
+    "totalTokens": 6781
+  },
+  "status": 200,
+  "latencyMs": 18721,
+  "model": "muse-spark-1.3"
+}

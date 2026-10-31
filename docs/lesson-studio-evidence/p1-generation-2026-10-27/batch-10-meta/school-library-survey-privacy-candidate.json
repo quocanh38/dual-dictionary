@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-b984407d-d36b-4251-b7a7-3d53d5a3ba51",
+    "version": 1,
+    "title": "Library Survey: Choosing to Participate and Sharing Information",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:50:21.161Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Library Survey: Choosing to Participate and Sharing Information",
+        "objective": "By the end of the lesson, learners will understand the meanings of opt out and contact details and use them accurately in everyday messages.",
+        "reading": {
+          "text": "A school committee is asking students how they use the quiet study area in the library. The short survey does not request names, student numbers or contact details. Participation is optional, and students may opt out at any time without giving a reason. Two committee coordinators can read the original responses, which will be kept confidential while the results are reviewed. The final report will combine comments into broad themes and will not quote a response that could identify a student. Teachers will receive the summary after the committee checks it for private details. Students can ask the librarian how the information will be used before they decide whether to take part.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A school committee is asking students how they use the quiet study area in the library."
+            },
+            {
+              "id": "s2",
+              "text": "The short survey does not request names, student numbers or contact details."
+            },
+            {
+              "id": "s3",
+              "text": "Participation is optional, and students may opt out at any time without giving a reason."
+            },
+            {
+              "id": "s4",
+              "text": "Two committee coordinators can read the original responses, which will be kept confidential while the results are reviewed."
+            },
+            {
+              "id": "s5",
+              "text": "The final report will combine comments into broad themes and will not quote a response that could identify a student."
+            },
+            {
+              "id": "s6",
+              "text": "Teachers will receive the summary after the committee checks it for private details."
+            },
+            {
+              "id": "s7",
+              "text": "Students can ask the librarian how the information will be used before they decide whether to take part."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "opt out",
+            "meaningEn": "to choose not to participate in something or to withdraw from it",
+            "meaningVi": "chọn không tham gia; rút khỏi",
+            "sourceSentenceId": "s3"
+          },
+          {
+            "id": "t2",
+            "phrase": "contact details",
+            "meaningEn": "information such as a phone number, email address, or home address used to reach someone",
+            "meaningVi": "thông tin liên lạc",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence 3, what does 'opt out' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To agree to join the survey and complete it soon.",
+                "explanation": "This is wrong because it describes joining, which is the opposite of choosing not to participate."
+              },
+              {
+                "id": "b",
+                "text": "To choose not to take part in the survey.",
+                "explanation": "This is correct because it matches choosing to withdraw from participation."
+              },
+              {
+                "id": "c",
+                "text": "To pause the survey and finish it at another time.",
+                "explanation": "This is wrong because it describes delaying, not choosing not to participate."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b correctly captures choosing not to participate in sentence 3."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Which sentence uses 'opt out' correctly?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Employees can opt out of the health plan during open enrollment.",
+                "explanation": "This is correct because opt out of is the natural collocation for withdrawing."
+              },
+              {
+                "id": "b",
+                "text": "She decided to opt out from the mailing list yesterday.",
+                "explanation": "This is wrong because from should be corrected to of after opt out."
+              },
+              {
+                "id": "c",
+                "text": "He opted out the training course without telling his manager.",
+                "explanation": "This is wrong because of is missing and should be added after opted out."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a correctly uses opt out of to mean withdraw from participation."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence 2, what does 'contact details' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Grades and attendance records used to evaluate a student.",
+                "explanation": "This is wrong because it describes academic results, not information used to reach someone."
+              },
+              {
+                "id": "b",
+                "text": "Rules and opening hours for using the library.",
+                "explanation": "This is wrong because it describes regulations, not information used to reach someone."
+              },
+              {
+                "id": "c",
+                "text": "Information such as a phone number or email used to reach someone.",
+                "explanation": "This is correct because it matches information used to contact a person."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Option c correctly captures information used to reach someone in sentence 2."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Which sentence uses 'contact details' correctly?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Please check that your contact details are correct before you submit the form.",
+                "explanation": "This is correct because the plural subject takes are and the phrase is used naturally."
+              },
+              {
+                "id": "b",
+                "text": "Your contact details is up to date in our system.",
+                "explanation": "This is wrong because is should be corrected to are to agree with the plural subject."
+              },
+              {
+                "id": "c",
+                "text": "He left his contact details for send you the schedule.",
+                "explanation": "This is wrong because for send should be corrected to to send."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a correctly uses contact details with natural grammar and collocation."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You signed up for weekend cooking classes but now you are too busy. Write a polite message to the organizer in 2-3 sentences explaining your decision. Use 'opt out'.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "sampleAnswer": "Thank you for organizing the weekend cooking classes. My schedule has become very busy, so I need to opt out for now.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used 'opt out' correctly to show withdrawing from the classes.",
+              "My message is polite and clear for the organizer."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

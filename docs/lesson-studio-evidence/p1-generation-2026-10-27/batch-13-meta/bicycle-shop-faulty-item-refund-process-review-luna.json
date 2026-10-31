@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "8eb454e6694bbb4f912362e49a415dc0bc1ccdb81159d724a6c03440f1326540",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:49:23Z",
+  "note": "Independent full-pack review of this exact candidate: source sentences, both EN/VI target meanings, every option/explanation, answer uniqueness, and transfer. Rights/authorship/permission are local declarations only and were not independently verified. B1 is an estimate, not calibrated. This is AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack and frozen source declare an AI-assisted original passage, authorization for distribution, and no learner PII; declarations match. This is a local declaration check only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "‘original payment method’ occurs verbatim in s3, where policy allows the refund to go to the customer’s original method; the contextual sense is supported."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘the same way the customer first paid, such as the same card or cash’ accurately explains the contextual refund method."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘phương thức thanh toán ban đầu’ is an accurate, natural Vietnamese gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "‘service log’ appears verbatim in s5: the assistant enters the reason there after agreeing on a refund, supporting a staff record of service activity."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘a written record where staff note service actions and reasons’ is supported by the assistant entering the refund reason in s5."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘sổ ghi chép dịch vụ’ is a clear and accurate Vietnamese rendering with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B alone identifies the customer’s first payment method. A is a new store gift card and C concerns the shop paying a supplier; neither is the customer’s original method."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The option explanations correctly distinguish the customer’s initial payment from a future gift card and the shop’s supplier account."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is idiomatic. B omits the determiner in this definite reference, and C’s ‘send a refund on the method’ is not the normal construction; ‘to’ is used for refund destination."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The article and preposition explanations are accurate for the sentence’s intended reading; the fixed-collocation wording is slightly strong, but no second answer is plausible here."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "C alone describes the staff record of actions/reasons. A is a customer receipt and B is a schedule; neither fits the record described in s5."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations correctly separate the internal record of service actions from a customer receipt or a schedule, consistent with s5."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "This item has two plausible natural answers: B ‘recorded ... in the service log’ and C ‘recorded ... on the service log.’ ‘On the service log’ is idiomatic when writing/recording information on a log/document, so C cannot be ruled out as the explanation claims. The key selecting only B is ambiguous."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The claim that the preposition must be ‘in,’ not ‘on,’ is overgeneralized. ‘Record it on the log’ is standard usage; this makes the distractor explanation inaccurate and the keyed response non-unique. Blocking pending rewrite and fresh review."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The transfer changes from a bicycle-shop refund to a hotel receptionist reporting a broken lamp to a manager for maintenance, a meaningfully different situation and purpose."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence sample is idiomatic, uses ‘service log,’ and states an actionable next step. Checklist covers length, target use, and changed context; writing is self-assessed, not automatically graded."
+    }
+  ],
+  "findings": [
+    {
+      "id": "q4-on-log-plausible-distractor",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "In q4 option C, “She recorded ... on the service log” is a natural construction when recording information on a log/document. The explanation falsely says the preposition must be “in,” making both B and C acceptable and the single-answer key ambiguous. Rewrite the distractor or prompt and obtain full exact-hash reviews before approval."
+    }
+  ]
+}

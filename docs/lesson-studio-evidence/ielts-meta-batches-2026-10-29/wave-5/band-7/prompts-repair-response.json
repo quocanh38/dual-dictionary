@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-5",
+  "segment": "prompts",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-5-v1",
+  "completedAt": "2026-10-29T05:04:01.531Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2058,
+    "outputTokens": 4820,
+    "totalTokens": 6878
+  },
+  "latencyMs": 13870,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Synthetic-control estimates and uncertainty intervals\",\"focus\":\"summarising point estimates with uncertainty intervals and evaluating reliability and scope\",\"prompt\":\"The table below shows the estimated effect of a recycling incentive scheme introduced in 2022 in three cities (City A, City B and City C). The comparison for each city is an estimate of what would have happened without the scheme, created by combining data from other cities that did not have the scheme.\\n\\nThe table shows the estimated reduction in landfill waste one year after the scheme, the 95% uncertainty interval (the range where the true effect is likely to lie), how closely each city matched its comparison before the scheme started, and the number of other cities used to create the comparison.\\n\\nCity A: estimated reduction 12%, 95% uncertainty interval 6% to 18% reduction, match before scheme: good, other cities used: 15.\\nCity B: estimated reduction 8%, 95% uncertainty interval from 1% increase to 15% reduction, match before scheme: moderate, other cities used: 12.\\nCity C: estimated reduction 4%, 95% uncertainty interval from 2% increase to 9% reduction, match before scheme: poor, other cities used: 8.\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the uncertainty intervals and the quality of the match before the scheme suggest about the strength of evidence in each case.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Regional school performance with incomplete reporting\",\"focus\":\"comparing averages while accounting for missing data and participation limits\",\"prompt\":\"The table below shows average test scores (out of 100) for secondary schools in five regions in 2023, together with the proportion of schools that reported data, the student participation rate, and the change from 2022.\\n\\nNorth: average score 78, schools reporting 98%, participation 95%, change +2 points.\\nCentral: average score 81, schools reporting 92%, participation 88%, change +4 points.\\nSouth: average score 74, schools reporting 75%, participation 70%, change -1 point.\\nEast: average score 79, schools reporting 85%, participation 82%, change +1 point.\\nWest: average score 76, schools reporting 60%, participation 65%, change +3 points.\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider how reporting coverage and participation might affect interpretation of the scores and rankings.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Choosing biodiversity indicators across sites\",\"focus\":\"evaluating competing evidence for single versus multiple indicators with precise limits\",\"prompt\":\"Some conservation organisations argue that a single biodiversity indicator, such as the number of bird species recorded, is sufficient to compare the ecological health of different sites. Others argue that multiple indicators, such as plant diversity, insect abundance and water quality, are needed for a fair comparison.\\n\\nDiscuss both views and give your own opinion. Support your position with reasons and relevant examples, and consider the limits of what different indicators can and cannot show about overall biodiversity. Avoid overclaiming about causality or generalising beyond the evidence.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Reporting uncertainty in synthetic-control studies\",\"focus\":\"nuanced inference and causality limits when reporting uncertainty intervals\",\"prompt\":\"In studies that estimate the effect of a policy by comparing one area that introduced the policy with a comparison group created by combining data from other areas without the policy (to estimate what would have happened without it), some researchers report only the single best estimate of the effect. Others argue that the uncertainty range (the range where the true effect is likely to lie) and information about how closely the comparison matched the treated area before the policy started should always be reported, even if this makes the conclusions less definite.\\n\\nTo what extent do you agree that reporting uncertainty should be required? Give reasons for your answer and include any relevant examples from your knowledge or experience, while acknowledging the limits of what can be claimed about cause and effect from this type of study.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Interpreting regional school rankings with missing data\",\"focus\":\"interpreting rankings with missing data and evaluating scope without overclaiming\",\"prompt\":\"Governments often publish rankings of schools or regions based on average test scores, even when some schools have not reported data or student participation rates vary. Some people say publishing incomplete rankings is misleading and should be avoided. Others say publication encourages transparency and improvement, even with gaps.\\n\\nDiscuss both views and give your own opinion. Evaluate the competing evidence and explain how far conclusions can be drawn when data are missing, avoiding overclaiming.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Local nature and biodiversity\",\"focus\":\"personal experience with local natural spaces and observed changes\",\"prompt\":\"Let's talk about nature where you live.\\nWhat kinds of natural spaces are near your home?\\nHow often do you visit them?\\nHave you noticed any changes in plants or animals in recent years?\\nHow do people in your area learn about environmental issues?\"},{\"task\":\"Part 1 · Schools and information about performance\",\"focus\":\"personal experience with school information and interpreting rankings\",\"prompt\":\"Let's discuss schools and information about them.\\nWhat information did you have about schools when you were choosing where to study?\\nHow useful were test scores or rankings in your decision?\\nDo you think missing information affects how people judge a school? Why or why not?\\nWhere do you usually find reliable information about education?\"},{\"task\":\"Part 2 · Cue card: Decision with uncertain information\",\"focus\":\"describing a decision under uncertainty and evaluating limited evidence\",\"prompt\":\"Describe a situation where you had to make a decision based on incomplete or uncertain information. You should say:\\n• what the situation was\\n• what information was available and what was missing\\n• how you evaluated the uncertainty before deciding\\n• and explain what you learned about making judgements with limited evidence.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Reporting uncertainty and trust in research\",\"focus\":\"evaluating reasons for uncertainty reporting and trust in competing evidence\",\"prompt\":\"Let's consider how research findings are reported.\\nWhy might some studies appear more certain than they really are?\\nHow should researchers balance clarity with honesty about uncertainty?\\nWhen competing studies show different results, how can the public decide what to believe?\\nDo you think showing uncertainty increases or decreases trust in science? Why?\"},{\"task\":\"Part 3 · Choosing indicators and comparing places fairly\",\"focus\":\"evaluating single versus multiple indicators and limits of rankings with missing data\",\"prompt\":\"Let's discuss how we compare places or policies.\\nWhat are the advantages and risks of using a single indicator to judge success?\\nHow can using multiple indicators improve or complicate comparisons across different sites?\\nWhen data are missing for some regions, to what extent can rankings still be useful?\\nHow should decision-makers avoid overclaiming when evidence is limited?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Synthetic-control estimates and uncertainty intervals",
+        "focus": "summarising point estimates with uncertainty intervals and evaluating reliability and scope",
+        "prompt": "The table below shows the estimated effect of a recycling incentive scheme introduced in 2022 in three cities (City A, City B and City C). The comparison for each city is an estimate of what would have happened without the scheme, created by combining data from other cities that did not have the scheme.\n\nThe table shows the estimated reduction in landfill waste one year after the scheme, the 95% uncertainty interval (the range where the true effect is likely to lie), how closely each city matched its comparison before the scheme started, and the number of other cities used to create the comparison.\n\nCity A: estimated reduction 12%, 95% uncertainty interval 6% to 18% reduction, match before scheme: good, other cities used: 15.\nCity B: estimated reduction 8%, 95% uncertainty interval from 1% increase to 15% reduction, match before scheme: moderate, other cities used: 12.\nCity C: estimated reduction 4%, 95% uncertainty interval from 2% increase to 9% reduction, match before scheme: poor, other cities used: 8.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the uncertainty intervals and the quality of the match before the scheme suggest about the strength of evidence in each case.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Regional school performance with incomplete reporting",
+        "focus": "comparing averages while accounting for missing data and participation limits",
+        "prompt": "The table below shows average test scores (out of 100) for secondary schools in five regions in 2023, together with the proportion of schools that reported data, the student participation rate, and the change from 2022.\n\nNorth: average score 78, schools reporting 98%, participation 95%, change +2 points.\nCentral: average score 81, schools reporting 92%, participation 88%, change +4 points.\nSouth: average score 74, schools reporting 75%, participation 70%, change -1 point.\nEast: average score 79, schools reporting 85%, participation 82%, change +1 point.\nWest: average score 76, schools reporting 60%, participation 65%, change +3 points.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider how reporting coverage and participation might affect interpretation of the scores and rankings.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Choosing biodiversity indicators across sites",
+        "focus": "evaluating competing evidence for single versus multiple indicators with precise limits",
+        "prompt": "Some conservation organisations argue that a single biodiversity indicator, such as the number of bird species recorded, is sufficient to compare the ecological health of different sites. Others argue that multiple indicators, such as plant diversity, insect abundance and water quality, are needed for a fair comparison.\n\nDiscuss both views and give your own opinion. Support your position with reasons and relevant examples, and consider the limits of what different indicators can and cannot show about overall biodiversity. Avoid overclaiming about causality or generalising beyond the evidence.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Reporting uncertainty in synthetic-control studies",
+        "focus": "nuanced inference and causality limits when reporting uncertainty intervals",
+        "prompt": "In studies that estimate the effect of a policy by comparing one area that introduced the policy with a comparison group created by combining data from other areas without the policy (to estimate what would have happened without it), some researchers report only the single best estimate of the effect. Others argue that the uncertainty range (the range where the true effect is likely to lie) and information about how closely the comparison matched the treated area before the policy started should always be reported, even if this makes the conclusions less definite.\n\nTo what extent do you agree that reporting uncertainty should be required? Give reasons for your answer and include any relevant examples from your knowledge or experience, while acknowledging the limits of what can be claimed about cause and effect from this type of study.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Interpreting regional school rankings with missing data",
+        "focus": "interpreting rankings with missing data and evaluating scope without overclaiming",
+        "prompt": "Governments often publish rankings of schools or regions based on average test scores, even when some schools have not reported data or student participation rates vary. Some people say publishing incomplete rankings is misleading and should be avoided. Others say publication encourages transparency and improvement, even with gaps.\n\nDiscuss both views and give your own opinion. Evaluate the competing evidence and explain how far conclusions can be drawn when data are missing, avoiding overclaiming.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Local nature and biodiversity",
+        "focus": "personal experience with local natural spaces and observed changes",
+        "prompt": "Let's talk about nature where you live.\nWhat kinds of natural spaces are near your home?\nHow often do you visit them?\nHave you noticed any changes in plants or animals in recent years?\nHow do people in your area learn about environmental issues?"
+      },
+      {
+        "task": "Part 1 · Schools and information about performance",
+        "focus": "personal experience with school information and interpreting rankings",
+        "prompt": "Let's discuss schools and information about them.\nWhat information did you have about schools when you were choosing where to study?\nHow useful were test scores or rankings in your decision?\nDo you think missing information affects how people judge a school? Why or why not?\nWhere do you usually find reliable information about education?"
+      },
+      {
+        "task": "Part 2 · Cue card: Decision with uncertain information",
+        "focus": "describing a decision under uncertainty and evaluating limited evidence",
+        "prompt": "Describe a situation where you had to make a decision based on incomplete or uncertain information. You should say:\n• what the situation was\n• what information was available and what was missing\n• how you evaluated the uncertainty before deciding\n• and explain what you learned about making judgements with limited evidence.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Reporting uncertainty and trust in research",
+        "focus": "evaluating reasons for uncertainty reporting and trust in competing evidence",
+        "prompt": "Let's consider how research findings are reported.\nWhy might some studies appear more certain than they really are?\nHow should researchers balance clarity with honesty about uncertainty?\nWhen competing studies show different results, how can the public decide what to believe?\nDo you think showing uncertainty increases or decreases trust in science? Why?"
+      },
+      {
+        "task": "Part 3 · Choosing indicators and comparing places fairly",
+        "focus": "evaluating single versus multiple indicators and limits of rankings with missing data",
+        "prompt": "Let's discuss how we compare places or policies.\nWhat are the advantages and risks of using a single indicator to judge success?\nHow can using multiple indicators improve or complicate comparisons across different sites?\nWhen data are missing for some regions, to what extent can rankings still be useful?\nHow should decision-makers avoid overclaiming when evidence is limited?"
+      }
+    ]
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-5",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "normalizationFindings": [
+    "Listening script has 410 words; expected 300–400."
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-5-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-5-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Riverside Community Pool Swimming Classes",
+      "focus": "Understanding timetable details, corrections and booking information",
+      "part": "Part 1",
+      "script": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+      "wordCount": 410
+    },
+    "reading": {
+      "title": "Campus Greenhouse Open Day",
+      "focus": "Identifying main ideas, examples and practical information",
+      "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+      "wordCount": 449
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-5-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Community Pool Swimming Classes",
+      "pathwayStage": "band-5",
+      "focus": "Understanding timetable details, corrections and booking information",
+      "transcript": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+      "prompt": "What does Mark say about Maya's swimming?",
+      "options": [
+        "She is a complete beginner",
+        "She is intermediate",
+        "She swims very well",
+        "She had lessons before"
+      ],
+      "answer": 0,
+      "explanation": "Mark says Maya has never had lessons and is a complete beginner. The distractor about lessons before is opposite to what he says."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Community Pool Swimming Classes",
+      "pathwayStage": "band-5",
+      "focus": "Understanding timetable details, corrections and booking information",
+      "transcript": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+      "prompt": "What time is the Saturday beginner class?",
+      "options": [
+        "9:30 am",
+        "10:00 am",
+        "10:30 am",
+        "11:30 am"
+      ],
+      "answer": 2,
+      "explanation": "Anna corrects the old 10:00 time to 10:30 due to staff training. 10:00 was the previous time, not the current one."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Community Pool Swimming Classes",
+      "pathwayStage": "band-5",
+      "focus": "Understanding timetable details, corrections and booking information",
+      "transcript": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+      "prompt": "Where are the children's classes held?",
+      "options": [
+        "Large outdoor pool",
+        "River nearby",
+        "School swimming pool",
+        "Small indoor pool"
+      ],
+      "answer": 3,
+      "explanation": "Anna states all children's classes are in the small indoor pool. The outdoor pool is never mentioned as a location."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Community Pool Swimming Classes",
+      "pathwayStage": "band-5",
+      "focus": "Understanding timetable details, corrections and booking information",
+      "transcript": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+      "prompt": "What does Anna say students should bring?",
+      "options": [
+        "Kickboards and noodles",
+        "Swimwear, goggles and towel",
+        "Food and drinks",
+        "Swimming teacher"
+      ],
+      "answer": 1,
+      "explanation": "Anna lists swimwear, goggles and towel as required. Kickboards are provided by the pool, so they are not needed."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Community Pool Swimming Classes",
+      "pathwayStage": "band-5",
+      "focus": "Understanding timetable details, corrections and booking information",
+      "transcript": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+      "prompt": "What must parents do on the first day?",
+      "options": [
+        "Pay extra money",
+        "Arrive 15 minutes early to register",
+        "Bring a doctor's letter",
+        "Swim with children"
+      ],
+      "answer": 1,
+      "explanation": "Anna asks parents to arrive 15 minutes early to fill in a form at reception. Paying extra is not mentioned for the first day."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Greenhouse Open Day",
+      "pathwayStage": "band-5",
+      "focus": "Identifying main ideas, examples and practical information",
+      "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+      "prompt": "Why was the greenhouse first built?",
+      "options": [
+        "Mainly for biology students' studies",
+        "For local families to visit",
+        "As a university café",
+        "To save rainwater"
+      ],
+      "answer": 0,
+      "explanation": "The passage says it was built mainly for biology students to grow plants. Families visiting came later, so that distractor is incorrect."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Greenhouse Open Day",
+      "pathwayStage": "band-5",
+      "focus": "Identifying main ideas, examples and practical information",
+      "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+      "prompt": "What grows in the warm and humid area?",
+      "options": [
+        "Cactus and rosemary",
+        "Tomatoes and lettuce",
+        "Banana trees and orchids",
+        "Salad leaves only"
+      ],
+      "answer": 2,
+      "explanation": "The warm area is described as containing banana trees and orchids. Cactus is in the cooler dry area, not the warm one."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Greenhouse Open Day",
+      "pathwayStage": "band-5",
+      "focus": "Identifying main ideas, examples and practical information",
+      "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+      "prompt": "Which is the author's main claim, not an example?",
+      "options": [
+        "Students grow lettuce with less water",
+        "Greenhouse helps all students understand responsibility",
+        "Students test light levels for tomatoes",
+        "Volunteers clean the glass roof"
+      ],
+      "answer": 1,
+      "explanation": "The author states the broader claim is about all students learning responsibility. The lettuce test is presented as one example of research."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Greenhouse Open Day",
+      "pathwayStage": "band-5",
+      "focus": "Identifying main ideas, examples and practical information",
+      "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+      "prompt": "What can be inferred about food for the café?",
+      "options": [
+        "It is sold to local families",
+        "It is grown only in winter",
+        "It needs more packaging",
+        "It is fresher and reduces transport waste"
+      ],
+      "answer": 3,
+      "explanation": "Supplying the café from the greenhouse means short travel, which implies less transport and packaging. More packaging contradicts this benefit."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Greenhouse Open Day",
+      "pathwayStage": "band-5",
+      "focus": "Identifying main ideas, examples and practical information",
+      "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+      "prompt": "What must visitors do before the Open Day?",
+      "options": [
+        "Pay for entry tickets",
+        "Book online in advance",
+        "Bring 100 people",
+        "Arrive at 11 am only"
+      ],
+      "answer": 1,
+      "explanation": "Entry is free but booking online is required due to the 100-person limit. Paying for tickets is incorrect because entry is free."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-5-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Student-Club Bake Sale Table",
+      "pathwayStage": "band-5",
+      "focus": "Describing clear main ideas and direct comparisons from a table",
+      "prompt": "The table below shows the results of a student-club bake sale on 15 March at Greenfield College. It shows the price of each item, how many were made, how many were sold, and the total money raised.\n\nCookies | Price $1.50 | Made 80 | Sold 72 | Raised $108\nBrownies | Price $2.00 | Made 60 | Sold 45 | Raised $90\nCupcakes | Price $2.50 | Made 50 | Sold 48 | Raised $120\nLemon Bars | Price $1.00 | Made 40 | Sold 30 | Raised $30\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Printing Queue Bar Chart",
+      "pathwayStage": "band-5",
+      "focus": "Reporting main trends and simple comparisons across time",
+      "prompt": "The bar chart below shows the average number of students waiting in the campus printing queue at four times of day on Monday and Friday in the second week of October.\n\nMonday: 9 a.m. 4 students, 12 p.m. 12 students, 3 p.m. 8 students, 6 p.m. 3 students.\nFriday: 9 a.m. 2 students, 12 p.m. 6 students, 3 p.m. 5 students, 6 p.m. 1 student.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Beginner Classes at Local Sports Centres",
+      "pathwayStage": "band-5",
+      "focus": "Presenting clear main ideas with simple reasons and examples",
+      "prompt": "Some people think that beginner classes at local sports centres, such as swimming or badminton, are a good way for students to stay healthy and meet new people. Others think students are too busy with study to join these classes.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Waiting Times for Campus Services",
+      "pathwayStage": "band-5",
+      "focus": "Explaining causes and suggesting simple solutions",
+      "prompt": "At many colleges, students have to wait a long time to use the campus printing service, especially around midday. This wastes time and causes stress.\n\nWhat do you think are the causes of this problem? What can colleges and students do to reduce waiting times? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Fundraising for Student Clubs",
+      "pathwayStage": "band-5",
+      "focus": "Expressing an opinion with direct evidence and clear organisation",
+      "prompt": "Some people believe student clubs should raise their own money through activities like bake sales and small events. Others believe colleges should provide all the money clubs need.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-5-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Life and Campus Services",
+      "pathwayStage": "band-5",
+      "focus": "Talking about familiar routines and simple preferences",
+      "prompt": "Answer the following questions about your daily life. Give short, clear answers with a reason or example where you can.\n1. Do you often need to print documents for your studies?\n2. Where do you usually study on campus?\n3. How do you usually spend your lunch break?\n4. Do you prefer to study alone or with other students? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Food and Small Events",
+      "pathwayStage": "band-5",
+      "focus": "Describing familiar experiences with simple details",
+      "prompt": "Answer the following questions about food and events. Give short, clear answers with a reason or example where you can.\n1. Do you enjoy baking or cooking at home?\n2. Have you ever been to a bake sale or food fair at school?\n3. What kind of small events do students enjoy at your college?\n4. Do you prefer buying snacks or making them yourself? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Beginner Class You Attended",
+      "pathwayStage": "band-5",
+      "focus": "Describing an experience in clear order with simple explanation",
+      "prompt": "Describe a beginner class you attended at a local sports centre or college. You should say:\n• what the class was\n• where and when it was\n• who was in the class with you\n• why you decided to join it\nand explain what you learned from the class and how you felt about it. You will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Organising Student Events and Clubs",
+      "pathwayStage": "band-5",
+      "focus": "Evaluating advantages and giving reasons for opinions",
+      "prompt": "Consider the following questions about student clubs and events. Give reasons and examples to support your ideas.\n1. Why do colleges support student clubs to organise events like bake sales?\n2. What are the advantages of learning new skills outside the classroom?\n3. Should colleges give money to clubs or should clubs raise money themselves? Why?\n4. Do small campus events help students make friends? In what ways?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Waiting Times and Time Management",
+      "pathwayStage": "band-5",
+      "focus": "Comparing solutions and explaining causes",
+      "prompt": "Consider the following questions about waiting and managing time on campus. Give reasons and examples to support your ideas.\n1. Why do students have to wait a long time for services like printing at certain times of day?\n2. What can colleges do to reduce queues for campus services?\n3. Is it better to book a service online or wait in a queue? Why?\n4. How does waiting a long time affect students’ study and stress?"
+    }
+  ]
+}

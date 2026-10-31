@@ -1,0 +1,46 @@
+[
+  {
+    "name": "consistent snapshot includes all four stores",
+    "status": "PASS"
+  },
+  {
+    "name": "backup integrity round trip",
+    "status": "PASS"
+  },
+  {
+    "name": "tampered backup rejected before write",
+    "status": "PASS"
+  },
+  {
+    "name": "existing local records kept on repeated restore",
+    "status": "PASS"
+  },
+  {
+    "name": "pack conflict rolls back records in all stores",
+    "status": "PASS"
+  },
+  {
+    "name": "orphaned progress rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "credential fields rejected from arbitrary model output",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid answer references rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "restore into clean browser preserves draft revision, pack, progress and unknown usage",
+    "status": "PASS"
+  },
+  {
+    "name": "UI inspect then explicit restore; no automatic upload",
+    "status": "PASS"
+  },
+  {
+    "name": "backup module cached for offline reload; no page errors",
+    "status": "PASS"
+  }
+]

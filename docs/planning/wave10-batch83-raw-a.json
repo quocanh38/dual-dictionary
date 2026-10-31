@@ -1,0 +1,15 @@
+{
+  "wave": 10,
+  "batch": 83,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after side whiskers; reviewed against local OALD 10/LDOCE 6. Sinn Féin's current Irish-unity platform checked on its official site. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover business and workplace language, basic science and finance, mathematics, religion/culture, home and leisure vocabulary; clarify regional variants and distinguish related technical terms.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1200, "remainingRawOnlyAfter": 1180},
+  "selected": ["sign off", "sign on", "signal box", "signal-to-noise ratio", "silent partner", "silica gel", "silicon chip", "silk screen", "silver plate", "simple interest", "simultaneous equations", "single combat", "single cream", "sinking fund", "sinn fein", "sit down", "sit up", "sitting room", "situation comedy", "ski jump"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "https://sinnfein.ie/irish-unity/"
+  ]
+}

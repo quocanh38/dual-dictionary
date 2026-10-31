@@ -1,0 +1,65 @@
+{
+  "id": "draft-74344d60-30a2-42a5-adcd-cdb3cf478ce7",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Volunteers at a Community Arts Open Day",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The Hillview Arts Centre will hold an open day next month so residents can see its new workshop rooms. Volunteers may take part in a short welcome session before visitors arrive. One coordinator is in charge of the welcome desk, while other volunteers guide people to the printmaking and pottery rooms. The centre will provide signs, name badges and a simple room map. Volunteers who cannot attend the session can read the same instructions in the shared folder. The event is free, but visitors need to register at the entrance because each workshop has limited space. After the open day, the team will meet briefly to note which signs were easy to follow and which rooms need clearer directions.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The Hillview Arts Centre will hold an open day next month so residents can see its new workshop rooms. Volunteers may take part in a short welcome session before visitors arrive. One coordinator is in charge of the welcome desk, while other volunteers guide people to the printmaking and pottery rooms. The centre will provide signs, name badges and a simple room map. Volunteers who cannot attend the session can read the same instructions in the shared folder. The event is free, but visitors need to register at the entrance because each workshop has limited space. After the open day, the team will meet briefly to note which signs were easy to follow and which rooms need clearer directions.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The Hillview Arts Centre will hold an open day next month so residents can see its new workshop rooms."
+      },
+      {
+        "id": "s2",
+        "text": "Volunteers may take part in a short welcome session before visitors arrive."
+      },
+      {
+        "id": "s3",
+        "text": "One coordinator is in charge of the welcome desk, while other volunteers guide people to the printmaking and pottery rooms."
+      },
+      {
+        "id": "s4",
+        "text": "The centre will provide signs, name badges and a simple room map."
+      },
+      {
+        "id": "s5",
+        "text": "Volunteers who cannot attend the session can read the same instructions in the shared folder."
+      },
+      {
+        "id": "s6",
+        "text": "The event is free, but visitors need to register at the entrance because each workshop has limited space."
+      },
+      {
+        "id": "s7",
+        "text": "After the open day, the team will meet briefly to note which signs were easy to follow and which rooms need clearer directions."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "take part in",
+      "meaningEn": "to participate in an activity or event",
+      "meaningVi": "tham gia vào một hoạt động hoặc sự kiện",
+      "sourceSentenceId": "s2"
+    },
+    {
+      "id": "t2",
+      "phrase": "in charge of",
+      "meaningEn": "responsible for managing or looking after something",
+      "meaningVi": "phụ trách, chịu trách nhiệm về việc gì",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

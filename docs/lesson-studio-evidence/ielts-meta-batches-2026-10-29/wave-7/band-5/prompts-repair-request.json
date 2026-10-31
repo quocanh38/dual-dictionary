@@ -1,0 +1,103 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-prompts-wave-7",
+  "instructions": "Return JSON only, no markdown, with exactly {\"writing\":[{\"task\":\"Task 1 · ... or Task 2 · ...\",\"focus\":\"...\",\"prompt\":\"...\",\"minimumWords\":150,\"suggestedMinutes\":20}],\"speaking\":[{\"task\":\"Part 1 · ... or Part 2 · Cue card or Part 3 · ...\",\"focus\":\"...\",\"prompt\":\"...\"}]}. Generate exactly five Writing and five Speaking prompts. Writing: use either two Task 1 + three Task 2 or three Task 1 + two Task 2. Give complete original data directly in each Task 1 prompt (no image dependency), with minimum words (Task 1: 150; Task 2: 250) and realistic times (20/40 minutes). Speaking: include at least one prompt for each of Parts 1, 2 and 3; Part 2 must include visible cue-card bullet points; Part 3 needs reasons/evaluation, not memorised facts. Prompts must be distinct and answerable without hidden material. Keep prompts concise and complete; do not add sample answers or band estimates. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage around IELTS 5.0: clear main ideas, direct evidence, familiar academic contexts, and accurate simple explanations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a weekend campus tour, a student board-game event, and a community gardening session. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied writing and speaking prompts against the findings. Preserve every valid unflagged prompt and keep exactly five per skill. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-5",
+    "batchId": "wave-7",
+    "currentBatch": {
+      "writing": [
+        {
+          "task": "Task 1 · Weekend Campus Tour Attendance",
+          "focus": "clear main ideas and direct comparisons from a table",
+          "prompt": "The table below shows the number of visitors who joined the weekend campus tour at Greenfield College in March, April and May 2024. The table lists three visitor groups: local new students, parents, and international visitors. In March, there were 45 local new students, 30 parents and 15 international visitors. In April, there were 60 local new students, 35 parents and 25 international visitors. In May, there were 50 local new students, 40 parents and 20 international visitors. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 1 · Student Board-Game Event Preferences",
+          "focus": "clear main ideas and simple explanations of survey data",
+          "prompt": "The bar chart below shows the results of a survey of 120 students at Greenfield College about their favourite type of game at the monthly board-game event in May 2024. 40 students chose strategy games, 30 chose word games, 25 chose cooperative games, and 25 chose classic board games such as chess and checkers. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 2 · Community Gardening and Student Life",
+          "focus": "clear position and direct evidence from a familiar context",
+          "prompt": "Some people think that all college students should take part in a community gardening session at least once a month to learn about teamwork and nature. Others think students are too busy with their studies. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Weekend Campus Tours Online or In Person",
+          "focus": "simple evaluation and accurate explanations of an everyday academic idea",
+          "prompt": "Some colleges now offer weekend campus tours online with videos and live chats, instead of face-to-face tours. Some people think online tours are better because they are easy and cheap. Others think visiting the campus in person is more useful. To what extent do you agree or disagree that online tours are better than in-person tours? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Board Games and Learning",
+          "focus": "clear main ideas and accurate simple explanations of advantages and disadvantages",
+          "prompt": "At Greenfield College, the student club organises a board-game event every weekend. Some students say board games are a good way to relax and learn useful skills like planning and communication. Others say board games are a waste of time. Do the advantages of regular board-game events for students outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Part 1 · Weekend Activities",
+          "focus": "familiar topics and short personal answers",
+          "prompt": "Answer the following questions about yourself. Give short, clear answers with a reason or example where you can. 1. What do you usually do at the weekend? 2. Have you ever joined a campus tour? What was it like? 3. Do you prefer spending free time indoors or outdoors? Why? 4. How often do you take part in group activities with other students?"
+        },
+        {
+          "task": "Part 1 · Games and Hobbies",
+          "focus": "everyday familiar context and simple explanations",
+          "prompt": "Answer the following questions about yourself. Give short, clear answers with a reason or example where you can. 1. Do you like playing board games? Why or why not? 2. Who do you usually play games with? 3. What kind of games did you play when you were younger? 4. Do you think games can help students learn new skills?"
+        },
+        {
+          "task": "Part 2 · Cue card · A Weekend Campus Tour",
+          "focus": "describe a familiar experience with clear main ideas",
+          "prompt": "Describe a weekend campus tour you went on. You will have one minute to prepare and should speak for one to two minutes. You should say: - when and where the tour was - who you went with - what you saw and did on the tour - and explain why you remember this tour. You can add one or two more details if you want."
+        },
+        {
+          "task": "Part 2 · Cue card · A Community Gardening Session",
+          "focus": "describe a practical group activity with direct evidence",
+          "prompt": "Describe a community gardening session you took part in or saw. You will have one minute to prepare and should speak for one to two minutes. You should say: - where the gardening session was - what you did there - who was with you - and explain how you felt about the experience. You can add one or two more details if you want."
+        },
+        {
+          "task": "Part 3 · Learning Outside the Classroom",
+          "focus": "reasons and evaluation of community and leisure activities",
+          "prompt": "Discuss the following questions more fully. Give reasons and examples to support your ideas. 1. Why do some students enjoy joining community activities like gardening while others do not? 2. Are outdoor group activities more useful for learning teamwork than indoor games like board games? Why? 3. How can colleges encourage more students to take part in weekend events? 4. Do you think practical activities outside class will become more important for students in the future? Why or why not?"
+        }
+      ]
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "ielts-meta-wave-7-band-5-speaking-03",
+          "issue": "Formatting issue: cue-card points are run together in one paragraph with hyphen separators. Put each cue-card bullet on its own visible line.",
+          "severity": "minor"
+        },
+        {
+          "item": "ielts-meta-wave-7-band-5-speaking-04",
+          "issue": "Formatting issue: cue-card points are run together in one paragraph with hyphen separators. Put each cue-card bullet on its own visible line.",
+          "severity": "minor"
+        },
+        {
+          "item": "ielts-meta-wave-7-band-5-speaking-03; speaking-04; normalizationFindings",
+          "severity": "major",
+          "issue": "Both Part2 cards present their hyphen prompts in one inline paragraph; the two visible-cue-bullet normalization failures remain unresolved. Put each cue on its own newline with bullet marker, retaining one-minute preparation and1–2-minute talk."
+        },
+        {
+          "item": "normalizationFindings",
+          "issue": "Productive prompt structural issue: Speaking Part 2 prompt 3 needs visible cue-card bullets.",
+          "severity": "major"
+        },
+        {
+          "item": "normalizationFindings",
+          "issue": "Productive prompt structural issue: Speaking Part 2 prompt 4 needs visible cue-card bullets.",
+          "severity": "major"
+        }
+      ]
+    }
+  }
+}

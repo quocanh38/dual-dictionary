@@ -1,0 +1,25 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e86186306f92009073d72b687fd0f2e3b3541260c797f964289c455df19b79e4",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Shared listening (321 words) and reading (412 words) meet their target ranges and declared counts.",
+    "All keys and explanations are supported. The materials use appropriate intermediate-to-upper-intermediate reasoning, including missing-data bias and limits on causal/general claims. Writing data are internally consistent; Task 1/2 timing and minimum word counts are supplied. Speaking includes a 1–2 minute Part 2 cue card and all five prompts.",
+    "Provenance and originality metadata are present; no obvious copied source material or cross-stage duplication was apparent."
+  ],
+  "coverage": {
+    "itemsReviewed": 20,
+    "listeningExercises": 5,
+    "readingExercises": 5,
+    "writingPrompts": 5,
+    "speakingPrompts": 5,
+    "sharedListeningWordCount": 321,
+    "sharedReadingWordCount": 412,
+    "answersOptionsExplanations": "reviewed",
+    "writingDataTimingWordTargets": "reviewed",
+    "speakingCueCardAndStageLevel": "reviewed",
+    "provenanceOriginalityMetadata": "reviewed"
+  },
+  "reviewerType": "AI-assisted"
+}

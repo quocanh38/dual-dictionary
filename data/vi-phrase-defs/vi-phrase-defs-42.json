@@ -1,0 +1,624 @@
+[
+  {
+    "phrase": "junk bond",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "trái phiếu lợi suất cao do tổ chức phát hành có mức tín nhiệm thấp hơn, vì vậy thường có nguy cơ không trả được nợ cao hơn trái phiếu được xếp hạng tốt",
+        "pat": "issue/buy a junk bond · junk-bond market/yield · invest in high-yield bonds",
+        "ex": [
+          [
+            "The company issued junk bonds to finance its expansion.",
+            "Công ty phát hành trái phiếu lợi suất cao để tài trợ việc mở rộng."
+          ],
+          [
+            "Investors demanded a higher yield for holding the risky junk bonds.",
+            "Nhà đầu tư đòi lợi suất cao hơn khi nắm giữ các trái phiếu rủi ro đó."
+          ]
+        ]
+      }
+    ],
+    "note": "Junk bond là cách gọi thân mật; trong tài liệu tài chính thường dùng high-yield bond. Rủi ro, xếp hạng tín dụng và lợi suất thay đổi theo tổ chức phát hành và thị trường."
+  },
+  {
+    "phrase": "junk shop",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(đặc biệt Anh-Anh) cửa hàng bán đồ cũ, đồ lặt vặt hoặc đồ nội thất đã qua sử dụng với giá thường thấp",
+        "pat": "a junk shop · browse in a junk shop · buy/sell something at a junk shop",
+        "ex": [
+          [
+            "She found a set of old brass handles in a junk shop.",
+            "Cô tìm thấy một bộ tay nắm bằng đồng cũ trong cửa hàng đồ cũ."
+          ],
+          [
+            "The junk shop sells used furniture and household objects.",
+            "Cửa hàng đồ cũ bán đồ nội thất và vật dụng gia đình đã qua sử dụng."
+          ]
+        ]
+      }
+    ],
+    "note": "Junk shop có thể gợi một cửa hàng bán nhiều món cũ không đồng bộ; antique shop thường nhấn mạnh đồ cổ có giá trị sưu tầm hơn."
+  },
+  {
+    "phrase": "juvenile court",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tòa án vị thành niên — tòa hoặc bộ phận xét xử các vụ việc liên quan đến người chưa thành niên theo quy định của một hệ thống pháp luật",
+        "pat": "appear before a juvenile court · juvenile-court proceedings · a juvenile court judge",
+        "ex": [
+          [
+            "The case was referred to juvenile court because the defendant was under eighteen.",
+            "Vụ việc được chuyển tới tòa vị thành niên vì bị cáo chưa đủ mười tám tuổi."
+          ],
+          [
+            "The juvenile court considered both public safety and the young person’s circumstances.",
+            "Tòa vị thành niên cân nhắc cả an toàn công cộng lẫn hoàn cảnh của người trẻ."
+          ]
+        ]
+      }
+    ],
+    "note": "Tuổi chịu thẩm quyền, thủ tục và cách xử lý khác nhau giữa các quốc gia; juvenile court không phải lúc nào cũng chỉ giải quyết tội phạm, mà có thể xử lý các vấn đề bảo vệ hoặc chăm sóc trẻ em."
+  },
+  {
+    "phrase": "keep down",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "giữ người/vật ở vị trí thấp hoặc cúi xuống để tránh bị nhìn thấy hay bị thương",
+        "pat": "keep your head down · keep somebody down · keep down behind a wall",
+        "ex": [
+          [
+            "Keep your head down while the workers move the equipment.",
+            "Hãy cúi thấp đầu khi công nhân di chuyển thiết bị."
+          ],
+          [
+            "The coach told the players to keep down behind the barrier.",
+            "Huấn luyện viên bảo các cầu thủ cúi thấp phía sau rào chắn."
+          ]
+        ]
+      },
+      {
+        "m": "ngăn mức giá, chi phí hoặc số lượng tăng cao",
+        "pat": "keep costs/prices down · keep something down to a minimum · keep inflation down",
+        "ex": [
+          [
+            "The team redesigned the packaging to keep costs down.",
+            "Nhóm thiết kế lại bao bì để giữ chi phí thấp."
+          ],
+          [
+            "The new policy aims to keep energy use down.",
+            "Chính sách mới nhằm hạn chế mức tiêu thụ năng lượng."
+          ]
+        ]
+      },
+      {
+        "m": "giữ thức ăn hoặc thuốc trong dạ dày, không nôn ra",
+        "pat": "keep food/medicine down · be unable to keep anything down",
+        "ex": [
+          [
+            "She could not keep the medicine down after the journey.",
+            "Cô không thể giữ thuốc trong dạ dày sau chuyến đi."
+          ],
+          [
+            "Try small sips of water if you cannot keep food down.",
+            "Hãy thử uống từng ngụm nước nhỏ nếu bạn không giữ được thức ăn."
+          ]
+        ]
+      }
+    ],
+    "note": "Keep something down có thể tách được; đại từ đứng giữa: keep it down. Cụm cũng có nghĩa “giữ âm lượng thấp” (keep the noise down), tùy tân ngữ."
+  },
+  {
+    "phrase": "keep on",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tiếp tục làm hoặc duy trì một hoạt động",
+        "pat": "keep on doing something · keep on with something · keep something on",
+        "ex": [
+          [
+            "She kept on working until the report was finished.",
+            "Cô tiếp tục làm việc cho đến khi hoàn tất báo cáo."
+          ],
+          [
+            "The company plans to keep on with the pilot programme.",
+            "Công ty dự định tiếp tục chương trình thí điểm."
+          ]
+        ]
+      },
+      {
+        "m": "(Anh-Anh, thân mật) liên tục nhắc nhở, phàn nàn hoặc thúc giục ai đó",
+        "pat": "keep on at somebody · keep on about something · stop keeping on",
+        "ex": [
+          [
+            "My manager kept on at me to submit the form earlier.",
+            "Quản lý liên tục thúc giục tôi nộp biểu mẫu sớm hơn."
+          ],
+          [
+            "He kept on about the same issue throughout lunch.",
+            "Anh ấy cứ nói mãi về cùng một vấn đề suốt bữa trưa."
+          ]
+        ]
+      }
+    ],
+    "note": "Keep on doing something nhấn mạnh sự tiếp diễn; keep on at somebody thường mang sắc thái khó chịu vì thúc giục hoặc cằn nhằn. Keep on còn có thể chỉ việc tiếp tục một quãng đường: Keep on past the bridge."
+  },
+  {
+    "phrase": "kick back",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(thân mật, đặc biệt Anh-Mỹ) thư giãn và nghỉ ngơi, thường sau khi làm việc",
+        "pat": "kick back and relax · kick back after work · a place to kick back",
+        "ex": [
+          [
+            "We kicked back by the pool after the conference.",
+            "Chúng tôi thư giãn bên hồ bơi sau hội nghị."
+          ],
+          [
+            "Put your feet up and kick back for a while.",
+            "Gác chân lên và nghỉ ngơi một lúc đi."
+          ]
+        ]
+      },
+      {
+        "m": "đá hoặc bật ngược trở lại một cách đột ngột",
+        "pat": "the tool kicks back · kick back violently · be ready for a weapon to kick back",
+        "ex": [
+          [
+            "The saw can kick back if the blade catches in the wood.",
+            "Cưa có thể bật ngược nếu lưỡi mắc vào gỗ."
+          ],
+          [
+            "The engine kicked back when he tried to start it.",
+            "Động cơ bật ngược khi anh cố khởi động."
+          ]
+        ]
+      }
+    ],
+    "note": "Kick back nghĩa “thư giãn” là tiếng lóng thân mật; nghĩa bật ngược thường nói về dụng cụ hoặc động cơ. Kickback (danh từ, viết liền) cũng có thể chỉ tiền hoa hồng bất hợp pháp."
+  },
+  {
+    "phrase": "kick off",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bắt đầu một trận bóng đá bằng cú đá giao bóng; mở đầu một sự kiện hoặc hoạt động",
+        "pat": "kick off a match/event · the meeting kicks off at noon · kick off with something",
+        "ex": [
+          [
+            "The final will kick off at seven in the evening.",
+            "Trận chung kết sẽ bắt đầu lúc bảy giờ tối."
+          ],
+          [
+            "The workshop kicked off with a short introduction.",
+            "Buổi hội thảo mở đầu bằng phần giới thiệu ngắn."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) bất ngờ nổi giận hoặc gây tranh cãi",
+        "pat": "kick off about something · kick off when · a row kicks off",
+        "ex": [
+          [
+            "He kicked off when he saw the incorrect charge on the bill.",
+            "Anh nổi nóng khi thấy khoản phí sai trên hóa đơn."
+          ],
+          [
+            "An argument kicked off outside the station.",
+            "Một cuộc cãi vã bùng lên bên ngoài nhà ga."
+          ]
+        ]
+      },
+      {
+        "m": "cởi giày hoặc một món đồ đang mang ở chân bằng động tác đá",
+        "pat": "kick off your shoes · kick something off · kick off a boot",
+        "ex": [
+          [
+            "She kicked off her shoes as soon as she got home.",
+            "Cô đá giày ra ngay khi vừa về đến nhà."
+          ],
+          [
+            "He kicked off one muddy boot by the door.",
+            "Anh đá chiếc ủng lấm bùn ra cạnh cửa."
+          ]
+        ]
+      }
+    ],
+    "note": "Kick off a match/event thường trung tính; nghĩa “nổi nóng” mang tính thân mật, phổ biến trong Anh-Anh. Danh từ kick-off có thể chỉ giờ bắt đầu hoặc cú giao bóng."
+  },
+  {
+    "phrase": "kick up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "làm bụi, lá hoặc vật nhẹ bay lên khỏi mặt đất bằng cách đi, chạy hoặc tác động mạnh",
+        "pat": "kick up dust/leaves · a vehicle kicks up dirt · kick something up",
+        "ex": [
+          [
+            "The truck kicked up dust along the unpaved road.",
+            "Chiếc xe tải tung bụi lên dọc con đường chưa trải nhựa."
+          ],
+          [
+            "The horses kicked up leaves as they galloped through the field.",
+            "Đàn ngựa tung lá lên khi phi qua cánh đồng."
+          ]
+        ]
+      },
+      {
+        "m": "(đặc biệt Bắc Mỹ) gió, bão hoặc hoạt động nào đó mạnh lên",
+        "pat": "the wind/storm kicks up · kick up suddenly · conditions kick up",
+        "ex": [
+          [
+            "The wind kicked up before the rain began.",
+            "Gió mạnh lên trước khi trời đổ mưa."
+          ],
+          [
+            "A storm kicked up offshore during the night.",
+            "Một cơn bão nổi lên ngoài khơi trong đêm."
+          ]
+        ]
+      },
+      {
+        "m": "gây ra phản ứng, ồn ào hoặc một vấn đề",
+        "pat": "kick up a fuss/stink · kick up trouble · kick up dust",
+        "ex": [
+          [
+            "The residents kicked up a fuss about the sudden rent increase.",
+            "Cư dân phản đối ầm ĩ việc tăng tiền thuê đột ngột."
+          ],
+          [
+            "The rumour kicked up trouble across the department.",
+            "Tin đồn gây rắc rối khắp phòng ban."
+          ]
+        ]
+      }
+    ],
+    "note": "Kick something up là ngoại động từ tách được; gió/bão có thể là chủ ngữ trong nghĩa tăng cường độ. Kick up a fuss là cách nói thân mật, nghĩa là phản đối hoặc làm ầm lên."
+  },
+  {
+    "phrase": "kidney bean",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đậu thận — loại đậu lớn hình giống quả thận, thường có màu đỏ sẫm nhưng cũng có giống trắng hoặc màu khác",
+        "pat": "red kidney beans · soak/cook kidney beans · a tin/can of kidney beans",
+        "ex": [
+          [
+            "Soak dried kidney beans overnight before cooking them.",
+            "Ngâm đậu thận khô qua đêm trước khi nấu."
+          ],
+          [
+            "The salad contains kidney beans, corn and fresh herbs.",
+            "Món salad có đậu thận, ngô và rau thơm."
+          ]
+        ]
+      }
+    ],
+    "note": "Đậu thận khô cần được nấu chín kỹ theo hướng dẫn an toàn thực phẩm; không ăn sống hoặc nấu chưa chín vì có thể gây ngộ độc. Kidney bean cũng gọi là red bean trong một số ngữ cảnh, nhưng tên địa phương dễ gây nhầm với loại đậu khác."
+  },
+  {
+    "phrase": "kilowatt hour",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "kilowatt giờ — đơn vị năng lượng bằng công suất một kilowatt được duy trì trong một giờ; ký hiệu kWh",
+        "pat": "a kilowatt hour (kWh) · use/pay for kilowatt hours · electricity consumption in kWh",
+        "ex": [
+          [
+            "The household used 240 kilowatt hours of electricity in June.",
+            "Hộ gia đình dùng 240 kilowatt giờ điện trong tháng Sáu."
+          ],
+          [
+            "The bill shows the price charged for each kilowatt hour.",
+            "Hóa đơn ghi giá tính cho mỗi kilowatt giờ."
+          ]
+        ]
+      }
+    ],
+    "note": "Kilowatt hour đo năng lượng, không phải công suất; 1 kWh = 3,6 megajoule. Ký hiệu chuẩn kWh viết liền và phân biệt chữ hoa-thường."
+  },
+  {
+    "phrase": "kit bag",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(đặc biệt Anh-Anh) túi lớn, thường hình trụ hoặc thuôn dài, để đựng quần áo và đồ dùng cá nhân, nhất là khi đi tập hoặc phục vụ quân đội",
+        "pat": "pack/carry a kit bag · a sports kit bag · an army kit bag",
+        "ex": [
+          [
+            "He packed his football boots and training clothes in a kit bag.",
+            "Anh xếp giày bóng đá và quần áo tập vào túi đồ thể thao."
+          ],
+          [
+            "The recruits left their kit bags beside the barracks.",
+            "Các tân binh để túi quân trang cạnh doanh trại."
+          ]
+        ]
+      }
+    ],
+    "note": "Kit bag đôi khi viết liền là kitbag. Ở Anh, kit thường chỉ quần áo/trang bị cho một hoạt động; túi du lịch thông thường có thể gọi là duffel bag."
+  },
+  {
+    "phrase": "kitchen cabinet",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tủ bếp — tủ gắn hoặc đặt trong bếp để cất bát đĩa, dụng cụ và thực phẩm",
+        "pat": "a kitchen cabinet · install/paint kitchen cabinets · a cabinet door/shelf",
+        "ex": [
+          [
+            "The contractor installed new kitchen cabinets above the counter.",
+            "Nhà thầu lắp các tủ bếp mới phía trên mặt bàn."
+          ],
+          [
+            "Store cleaning products separately from food in the kitchen cabinet.",
+            "Cất chất tẩy rửa riêng khỏi thực phẩm trong tủ bếp."
+          ]
+        ]
+      },
+      {
+        "m": "(lịch sử Mỹ, thường viết hoa) nhóm cố vấn thân cận không chính thức của Tổng thống Andrew Jackson, nằm ngoài nội các chính thức",
+        "pat": "Jackson’s Kitchen Cabinet · the political Kitchen Cabinet · members of the Kitchen Cabinet",
+        "ex": [
+          [
+            "Historians debate the influence of Jackson’s Kitchen Cabinet.",
+            "Các sử gia tranh luận về ảnh hưởng của nhóm cố vấn thân cận của Jackson."
+          ],
+          [
+            "The term Kitchen Cabinet later came to describe informal advisers.",
+            "Về sau, thuật ngữ Kitchen Cabinet được dùng cho các cố vấn không chính thức."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa thông thường là tủ đựng đồ trong bếp; nghĩa lịch sử chính trị Mỹ là tên gọi ẩn dụ cho nhóm cố vấn thân tín ngoài nội các. Viết hoa khi chỉ nhóm lịch sử cụ thể."
+  },
+  {
+    "phrase": "kitchen garden",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh) vườn rau quả nhỏ gần nhà, nơi trồng rau, trái cây và thảo mộc chủ yếu để gia đình sử dụng",
+        "pat": "a kitchen garden · grow vegetables in a kitchen garden · kitchen-garden produce",
+        "ex": [
+          [
+            "They grow herbs and tomatoes in the kitchen garden.",
+            "Họ trồng rau thơm và cà chua trong vườn rau gia đình."
+          ],
+          [
+            "The restaurant uses vegetables from its own kitchen garden.",
+            "Nhà hàng sử dụng rau từ khu vườn của mình."
+          ]
+        ]
+      }
+    ],
+    "note": "Kitchen garden thường là khu trồng thực phẩm phục vụ gia đình hoặc cơ sở; vegetable garden là cách gọi rộng và phổ biến ở nhiều vùng."
+  },
+  {
+    "phrase": "knee cap",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "xương bánh chè — xương nhỏ nằm phía trước khớp gối, thường viết liền là kneecap",
+        "pat": "the kneecap · fracture/dislocate a kneecap · pain around the kneecap",
+        "ex": [
+          [
+            "The fall injured the tissue around his kneecap.",
+            "Cú ngã làm tổn thương mô quanh xương bánh chè."
+          ],
+          [
+            "The doctor checked whether the kneecap had moved out of place.",
+            "Bác sĩ kiểm tra xem xương bánh chè có bị lệch vị trí không."
+          ]
+        ]
+      }
+    ],
+    "note": "Kneecap là cách viết liền thường gặp; patella là thuật ngữ giải phẫu. Knee cap cũng có thể chỉ miếng bảo vệ đầu gối trong một số ngữ cảnh, nên cần xét chủ đề."
+  },
+  {
+    "phrase": "knock down",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "làm người hoặc vật ngã xuống bằng một cú đánh, va chạm hoặc lực mạnh",
+        "pat": "knock somebody down · be knocked down by a car · knock down a door",
+        "ex": [
+          [
+            "The strong wind knocked down several road signs.",
+            "Gió mạnh làm đổ một số biển báo giao thông."
+          ],
+          [
+            "A cyclist was knocked down at the crossing.",
+            "Một người đi xe đạp bị xe tông ngã tại vạch qua đường."
+          ]
+        ]
+      },
+      {
+        "m": "phá dỡ một công trình hoặc cấu trúc",
+        "pat": "knock down a building/wall · be knocked down to make way for something · knock a house down",
+        "ex": [
+          [
+            "The council plans to knock down the unsafe warehouse.",
+            "Hội đồng dự định phá dỡ nhà kho không an toàn."
+          ],
+          [
+            "They knocked down the old wall to create a wider entrance.",
+            "Họ phá bức tường cũ để tạo lối vào rộng hơn."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) giảm giá hoặc giảm mức được yêu cầu",
+        "pat": "knock down the price · knock something down by a sum · knock somebody down to a lower rate",
+        "ex": [
+          [
+            "The seller knocked down the price after the inspection.",
+            "Người bán giảm giá sau khi kiểm định."
+          ],
+          [
+            "The store knocked the chair down by twenty per cent.",
+            "Cửa hàng giảm giá chiếc ghế hai mươi phần trăm."
+          ]
+        ]
+      }
+    ],
+    "note": "Knock something down có thể tách được: knock the wall down / knock it down. Nghĩa giá cả thân mật; knock-down cũng có thể là tính từ chỉ loại được tháo rời để vận chuyển."
+  },
+  {
+    "phrase": "knock out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "làm ai bất tỉnh hoặc khiến họ không thể tiếp tục hoạt động",
+        "pat": "knock somebody out · be knocked out by a blow · knock somebody unconscious",
+        "ex": [
+          [
+            "The boxer was knocked out in the final round.",
+            "Võ sĩ bị đánh bất tỉnh ở hiệp cuối."
+          ],
+          [
+            "The strong medicine knocked him out for several hours.",
+            "Thuốc mạnh khiến anh ngủ li bì vài giờ."
+          ]
+        ]
+      },
+      {
+        "m": "loại một đối thủ khỏi cuộc thi hoặc một đội khỏi giải đấu",
+        "pat": "knock a team out of a competition · be knocked out in the semi-final · knock out the defending champion",
+        "ex": [
+          [
+            "The underdogs knocked the defending champions out of the cup.",
+            "Đội bị đánh giá thấp loại nhà đương kim vô địch khỏi cúp."
+          ],
+          [
+            "She was knocked out in the second round of qualifying.",
+            "Cô bị loại ở vòng loại thứ hai."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) làm ai vô cùng ngạc nhiên hoặc ấn tượng",
+        "pat": "be knocked out by something · knock somebody out · absolutely knock somebody out",
+        "ex": [
+          [
+            "The audience was knocked out by the orchestra’s performance.",
+            "Khán giả vô cùng ấn tượng trước màn trình diễn của dàn nhạc."
+          ],
+          [
+            "The view from the summit really knocked us out.",
+            "Quang cảnh từ đỉnh núi thực sự làm chúng tôi choáng ngợp."
+          ]
+        ]
+      }
+    ],
+    "note": "Knock somebody out có thể nghĩa đen là làm bất tỉnh hoặc nghĩa bóng là gây ấn tượng mạnh; trong thể thao, cũng dùng cho việc bị loại. Ngữ cảnh xác định nghĩa."
+  },
+  {
+    "phrase": "kola nut",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "hạt kola — hạt của một số cây kola ở Tây Phi, chứa caffeine và được nhai trong một số tập quán hoặc dùng làm nguyên liệu tạo hương",
+        "pat": "a kola nut · chew kola nuts · kola-nut extract",
+        "ex": [
+          [
+            "Kola nuts have cultural importance in some West African communities.",
+            "Hạt kola có ý nghĩa văn hóa trong một số cộng đồng Tây Phi."
+          ],
+          [
+            "The product label lists kola-nut extract as an ingredient.",
+            "Nhãn sản phẩm liệt kê chiết xuất hạt kola là một thành phần."
+          ]
+        ]
+      }
+    ],
+    "note": "Kola nut chứa caffeine; lượng caffeine và cách sử dụng tùy sản phẩm. Cola nut là biến thể chính tả; đừng nhầm hạt kola tự nhiên với mọi loại nước giải khát cola."
+  },
+  {
+    "phrase": "ku klux klan",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Ku Klux Klan (KKK) — tổ chức thượng đẳng da trắng ở Hoa Kỳ, nổi tiếng với bạo lực và khủng bố nhằm duy trì sự áp bức chủng tộc, đặc biệt đối với người Mỹ gốc Phi",
+        "pat": "the Ku Klux Klan (KKK) · a member of the Ku Klux Klan · Klan violence/terror",
+        "ex": [
+          [
+            "The museum documents the Ku Klux Klan’s campaigns of racial terror.",
+            "Bảo tàng ghi lại các chiến dịch khủng bố chủng tộc của Ku Klux Klan."
+          ],
+          [
+            "Federal investigations exposed violence carried out by the Klan.",
+            "Các cuộc điều tra liên bang phơi bày bạo lực do Klan thực hiện."
+          ]
+        ]
+      }
+    ],
+    "note": "Đây là tổ chức phân biệt chủng tộc và bạo lực; tên thường viết hoa. Khi đề cập, cần giữ rõ bối cảnh lịch sử và hệ tư tưởng thượng đẳng da trắng, không trình bày như một hội nhóm chính trị thông thường."
+  },
+  {
+    "phrase": "lactic acid",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "axit lactic — axit hữu cơ được tạo ra trong một số quá trình lên men và chuyển hóa; có mặt trong thực phẩm lên men và mô cơ",
+        "pat": "lactic acid · lactic-acid bacteria · produce/measure lactic acid",
+        "ex": [
+          [
+            "Lactic acid bacteria help ferment the vegetables.",
+            "Vi khuẩn axit lactic giúp lên men rau củ."
+          ],
+          [
+            "The laboratory measured lactic acid in the sample.",
+            "Phòng thí nghiệm đo axit lactic trong mẫu."
+          ]
+        ]
+      }
+    ],
+    "note": "Lactic acid là thuật ngữ hóa học/sinh học. Cảm giác đau cơ muộn sau khi tập không đơn giản do axit lactic còn lưu lại; nồng độ lactate thường trở về mức nền khá nhanh sau vận động."
+  },
+  {
+    "phrase": "lady day",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh, lịch sử) ngày 25 tháng Ba, Lễ Truyền Tin trong lịch Kitô giáo; từng là một trong các ngày quý để bắt đầu kỳ thuê hoặc thanh toán",
+        "pat": "Lady Day · on Lady Day · a Lady Day quarter day",
+        "ex": [
+          [
+            "The old lease required payment on Lady Day.",
+            "Hợp đồng thuê cũ yêu cầu thanh toán vào ngày Lady Day."
+          ],
+          [
+            "The parish held a service on Lady Day.",
+            "Giáo xứ tổ chức buổi lễ vào ngày Lễ Truyền Tin."
+          ]
+        ]
+      }
+    ],
+    "note": "Lady Day là tên truyền thống ở Anh, thường chỉ Lễ Truyền Tin ngày 25/3; trong lịch sử pháp lý, ngày này cũng là một quarter day. Không nhầm với các ngày lễ mang tên Lady Day ở những nước khác."
+  }
+]

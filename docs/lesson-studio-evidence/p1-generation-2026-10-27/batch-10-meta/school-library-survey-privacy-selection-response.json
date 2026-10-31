@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "opt out",
+        "meaningEn": "to choose not to participate in something or to withdraw from it",
+        "meaningVi": "chọn không tham gia; rút khỏi",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "contact details",
+        "meaningEn": "information such as a phone number, email address, or home address used to reach someone",
+        "meaningVi": "thông tin liên lạc",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 530,
+    "outputTokens": 1171,
+    "totalTokens": 1701
+  },
+  "status": 200,
+  "latencyMs": 8672,
+  "model": "muse-spark-1.3"
+}

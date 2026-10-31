@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "05e4fcd193fa9045fbfbaf86f34f8bcd54c7803d81afa765f1fe12102fa26fae",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-5.6-terra",
+  "reviewedAt": "2026-10-27T09:29:19Z",
+  "note": "Full independent review of this exact candidate: source/citations, both EN/VI target glosses, all 12 options and explanations, and transfer. Rights/authorship are declaration-only: the supplied original-source declaration states permitted distribution and no learner PII, but it was not independently verified. The B1 estimate was not independently calibrated.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Provenance declares an original AI-assisted source, authorized distribution, and no learner PII; this rights/authorship evidence is declaration-only."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s3 says soap or oil ‘starts to run low’ before the supplier is contacted, directly supporting a nearly depleted supply."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘to become nearly empty and need more soon’ accurately gives the stock-level sense in s3."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘sắp hết, gần cạn’ naturally and accurately conveys the s3 meaning with Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s4 says volunteers ‘top up’ display bottles from sealed containers, so they add liquid to replenish them."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘to add more liquid to fill a container to the top again’ accurately captures the replenishing sense used for the bottles in s4."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘châm thêm cho đầy lại’ is a natural Vietnamese gloss with diacritics for replenishing a bottle."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q1 a alone describes a supply becoming nearly empty; b concerns running to a shelf and c lowering a price, neither matching s3."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q1’s option and overall explanations correctly distinguish a stock level from physical movement and price reduction."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q2 a is the sole fully natural sentence. b has the nonstandard ‘low of stock’ construction and c mismatches singular ‘paper’ with ‘are’."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "q2 b correctly identifies ‘low of stock’ as wrong, but its claimed correction ‘running low on stock’ does not correctly repair the stated singular-subject sentence. Natural repairs are ‘Our stock of printer paper is running low’ or ‘We are running low on printer paper’; the explanation therefore teaches an inaccurate correction."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q3 a alone means replenishing bottles with liquid; b is closing with a lid and c is shelf placement, neither described by s4."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q3 explanations accurately contrast refilling from containers with closing a lid or moving bottles to a high shelf."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q4 a alone has an imperative/base verb after ‘Could you’ and a single natural ‘top up’; b duplicates ‘up’ and c wrongly inflects the verb as ‘top ups’."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q4 explanations accurately identify the duplicated particle in b and base-verb requirement after ‘could you’ in c."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The transfer changes role, recipient, and purpose: a guest writes to a host about picnic drinks rather than a volunteer managing refill-shop stock."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The three-sentence model naturally uses ‘top up’ for bottles; the checks cover length, target meaning, and the changed context, and the explanation states there is no automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "q2-b-inaccurate-repair",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "q2 option b explanation tells the learner that ‘Our office printer paper is running low on stock’ is the correction for ‘... running low of stock’. That proposed repair is itself not a natural expression for the stated subject and can misteach the construction; revise the explanation and rerun full exact-hash review."
+    }
+  ]
+}

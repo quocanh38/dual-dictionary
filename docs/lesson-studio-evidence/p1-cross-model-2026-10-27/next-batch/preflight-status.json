@@ -1,0 +1,12 @@
+{
+  "status": "prepared-not-generated",
+  "sourceCount": 3,
+  "purpose": "development",
+  "maxInitialCalls": 6,
+  "maxRepairCallsPerDraft": 1,
+  "realMetaCalls": 0,
+  "reason": "DD_META_KEY absent from secure environment; no credential extraction or new key creation attempted",
+  "billingObservationUsd": 149.26,
+  "billingIsDelayed": true,
+  "paidOverageAuthorized": false
+}

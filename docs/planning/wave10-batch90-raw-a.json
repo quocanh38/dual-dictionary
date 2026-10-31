@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 90,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after staff sergeant; reviewed against local OALD 10/LDOCE 6. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover theatre directions and roles, historical and current taxation, phrasal verbs, statistics, living conditions, banking and institutional language, astrology and racing; distinguish senses and regional usage.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1060, "remainingRawOnlyAfter": 1040},
+  "selected": ["stage left", "stage manager", "stage right", "stage whisper", "stalking horse", "stamp act", "stamp duty", "stand by", "stand for", "stand in", "stand out", "stand up", "standard deviation", "standard of living", "standard time", "standing order", "star chamber", "star sign", "start up", "starting gate"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

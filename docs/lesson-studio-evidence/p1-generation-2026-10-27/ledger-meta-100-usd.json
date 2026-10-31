@@ -1,0 +1,626 @@
+{
+  "schemaVersion": 1,
+  "balanceAtStartUsd": 149.12,
+  "balanceSource": "Authenticated official Meta Billing UI: free credits in use; 27 October 2026; displayed balance $149.12; activity can lag up to one hour.",
+  "balanceRecordedAt": "2026-10-27T05:43:10.556Z",
+  "safetyReserveUsd": 49.12,
+  "pricing": {
+    "model": "muse-spark-1.3",
+    "inputPerMillion": 1.25,
+    "outputPerMillion": 4.25,
+    "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "checkedOn": "2026-10-27"
+  },
+  "scope": "New user-authorized P1 original-content allocation: maximum $100 from the verified $149.12 free-credit balance; $49.12 held back; excludes the previously recorded session, whose timeout remains preserved in its original ledger. Free credits only; no paid overage; bounded sequential requests; stop on unknown usage.",
+  "requests": [
+    {
+      "id": "c1e4533b-12a5-47d6-97e1-327c739063e2",
+      "purpose": "select-targets",
+      "sourceId": "supplier-delivery",
+      "at": "2026-10-27T05:43:44.200Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.004238,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 395,
+        "outputTokens": 881,
+        "totalTokens": 1276
+      },
+      "latencyMs": 16321
+    },
+    {
+      "id": "31d3aabd-3d04-40f5-a755-97a5d23150bb",
+      "purpose": "generate-exercises",
+      "sourceId": "supplier-delivery",
+      "at": "2026-10-27T05:44:00.527Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02268525,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 883,
+        "outputTokens": 5078,
+        "totalTokens": 5961
+      },
+      "latencyMs": 20515
+    },
+    {
+      "id": "08c6bce3-65e5-416b-b147-f54644cdf4f0",
+      "purpose": "select-targets",
+      "sourceId": "museum-access",
+      "at": "2026-10-27T05:44:21.051Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00391475,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 388,
+        "outputTokens": 807,
+        "totalTokens": 1195
+      },
+      "latencyMs": 5824
+    },
+    {
+      "id": "a2038d69-4e14-437e-bc17-3eb1c104aa83",
+      "purpose": "generate-exercises",
+      "sourceId": "museum-access",
+      "at": "2026-10-27T05:44:26.881Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0209275,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 881,
+        "outputTokens": 4665,
+        "totalTokens": 5546
+      },
+      "latencyMs": 15472
+    },
+    {
+      "id": "6a906e25-440d-4e30-b763-ecd135fc7354",
+      "purpose": "select-targets",
+      "sourceId": "remote-team-handover",
+      "at": "2026-10-27T05:46:05.892Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.004602,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 421,
+        "outputTokens": 959,
+        "totalTokens": 1380
+      },
+      "latencyMs": 5427
+    },
+    {
+      "id": "6393303d-6bee-4068-b6e0-10966975569f",
+      "purpose": "generate-exercises",
+      "sourceId": "remote-team-handover",
+      "at": "2026-10-27T05:46:11.326Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.03205725,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 904,
+        "outputTokens": 7277,
+        "totalTokens": 8181
+      },
+      "latencyMs": 24844
+    },
+    {
+      "id": "aabcee03-74a1-463b-9b6b-3a01dcadefa6",
+      "purpose": "select-targets",
+      "sourceId": "urban-tree-survey",
+      "at": "2026-10-27T05:46:36.181Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00538925,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 398,
+        "outputTokens": 1151,
+        "totalTokens": 1549
+      },
+      "latencyMs": 3720
+    },
+    {
+      "id": "c73f379d-963b-4a49-a122-4b2834d63afc",
+      "purpose": "generate-exercises",
+      "sourceId": "urban-tree-survey",
+      "at": "2026-10-27T05:46:39.908Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.028127,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 881,
+        "outputTokens": 6359,
+        "totalTokens": 7240
+      },
+      "latencyMs": 24282
+    },
+    {
+      "id": "57372124-1ea9-47c5-8ee7-e42859b7fdd9",
+      "purpose": "select-targets",
+      "sourceId": "food-bank-volunteer-briefing",
+      "at": "2026-10-27T06:52:37.452Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00491675,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 411,
+        "outputTokens": 1036,
+        "totalTokens": 1447
+      },
+      "latencyMs": 6418
+    },
+    {
+      "id": "63f7af68-cd03-4e72-af43-e9ebbdb037cf",
+      "purpose": "generate-exercises",
+      "sourceId": "food-bank-volunteer-briefing",
+      "at": "2026-10-27T06:52:43.883Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.023619,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 899,
+        "outputTokens": 5293,
+        "totalTokens": 6192
+      },
+      "latencyMs": 25267
+    },
+    {
+      "id": "e5372e48-5b03-46a8-b13f-1c6ecfe5e6df",
+      "purpose": "select-targets",
+      "sourceId": "lab-equipment-audit",
+      "at": "2026-10-27T06:53:09.161Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0041345,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 404,
+        "outputTokens": 854,
+        "totalTokens": 1258
+      },
+      "latencyMs": 7758
+    },
+    {
+      "id": "d0813cc3-a212-4352-9902-9eece371afac",
+      "purpose": "generate-exercises",
+      "sourceId": "lab-equipment-audit",
+      "at": "2026-10-27T06:53:16.925Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01955425,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 884,
+        "outputTokens": 4341,
+        "totalTokens": 5225
+      },
+      "latencyMs": 20175
+    },
+    {
+      "id": "b1055801-3fef-4261-b9d9-3e770e3e2877",
+      "purpose": "select-targets",
+      "sourceId": "station-maintenance-notice",
+      "at": "2026-10-27T06:53:37.109Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00403375,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 405,
+        "outputTokens": 830,
+        "totalTokens": 1235
+      },
+      "latencyMs": 3985
+    },
+    {
+      "id": "04ecfdd8-0021-45a0-a6ac-94a0b417d189",
+      "purpose": "generate-exercises",
+      "sourceId": "station-maintenance-notice",
+      "at": "2026-10-27T06:53:41.099Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.024021,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 884,
+        "outputTokens": 5392,
+        "totalTokens": 6276
+      },
+      "latencyMs": 30823
+    },
+    {
+      "id": "fdf9cec7-38aa-4680-8a82-d7609514841a",
+      "purpose": "select-targets",
+      "sourceId": "clinic-appointment-process",
+      "at": "2026-10-27T08:11:13.690Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.004464,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 501,
+        "outputTokens": 903,
+        "totalTokens": 1404
+      },
+      "latencyMs": 6006
+    },
+    {
+      "id": "5f76ceeb-1849-49ce-bf94-2978f8653ca2",
+      "purpose": "generate-exercises",
+      "sourceId": "clinic-appointment-process",
+      "at": "2026-10-27T08:11:19.704Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01908025,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 991,
+        "outputTokens": 4198,
+        "totalTokens": 5189
+      },
+      "latencyMs": 21178
+    },
+    {
+      "id": "175c8052-f8e5-4774-8f21-90887893ce98",
+      "purpose": "select-targets",
+      "sourceId": "city-bus-temporary-diversion",
+      "at": "2026-10-27T08:11:40.895Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00462025,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 507,
+        "outputTokens": 938,
+        "totalTokens": 1445
+      },
+      "latencyMs": 5515
+    },
+    {
+      "id": "3f8165af-902b-4803-a86d-e1195c9fdfb7",
+      "purpose": "generate-exercises",
+      "sourceId": "city-bus-temporary-diversion",
+      "at": "2026-10-27T08:11:46.416Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.024192,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 997,
+        "outputTokens": 5399,
+        "totalTokens": 6396
+      },
+      "latencyMs": 27876
+    },
+    {
+      "id": "4eae91cc-8401-41dc-b8bd-f7c5069d33c9",
+      "purpose": "select-targets",
+      "sourceId": "coastal-bird-count-method",
+      "at": "2026-10-27T08:12:14.303Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.004595,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 514,
+        "outputTokens": 930,
+        "totalTokens": 1444
+      },
+      "latencyMs": 9423
+    },
+    {
+      "id": "cf5e9d58-90d2-4b8e-888f-9e9d30c882a8",
+      "purpose": "generate-exercises",
+      "sourceId": "coastal-bird-count-method",
+      "at": "2026-10-27T08:12:23.733Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0225355,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1008,
+        "outputTokens": 5006,
+        "totalTokens": 6014
+      },
+      "latencyMs": 25840
+    },
+    {
+      "id": "6d0487ac-ca97-4bf0-8db7-a4e28b5580e6",
+      "purpose": "select-targets",
+      "sourceId": "community-centre-emergency-drill",
+      "at": "2026-10-27T08:25:06.926Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00489575,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 537,
+        "outputTokens": 994,
+        "totalTokens": 1531
+      },
+      "latencyMs": 7169
+    },
+    {
+      "id": "6939be76-7acf-419b-b9a0-c29b7826f89a",
+      "purpose": "generate-exercises",
+      "sourceId": "community-centre-emergency-drill",
+      "at": "2026-10-27T08:25:14.118Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02041875,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1018,
+        "outputTokens": 4505,
+        "totalTokens": 5523
+      },
+      "latencyMs": 21963
+    },
+    {
+      "id": "5ffa3d0a-7408-4345-acf2-7f4da61be69a",
+      "purpose": "select-targets",
+      "sourceId": "equipment-loan-desk",
+      "at": "2026-10-27T08:25:36.097Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00490075,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 575,
+        "outputTokens": 984,
+        "totalTokens": 1559
+      },
+      "latencyMs": 8046
+    },
+    {
+      "id": "8a9cdf94-a604-4fe5-84d0-bf28f2b99011",
+      "purpose": "generate-exercises",
+      "sourceId": "equipment-loan-desk",
+      "at": "2026-10-27T08:25:44.147Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02291375,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1059,
+        "outputTokens": 5080,
+        "totalTokens": 6139
+      },
+      "latencyMs": 25166
+    },
+    {
+      "id": "2058329f-f68b-4d52-9ffd-963b1fa3d70d",
+      "purpose": "select-targets",
+      "sourceId": "coastal-temperature-sampling",
+      "at": "2026-10-27T08:26:09.323Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00423375,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 548,
+        "outputTokens": 835,
+        "totalTokens": 1383
+      },
+      "latencyMs": 6463
+    },
+    {
+      "id": "bf17bf33-1762-4013-aea7-1b80fad66482",
+      "purpose": "generate-exercises",
+      "sourceId": "coastal-temperature-sampling",
+      "at": "2026-10-27T08:26:15.791Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0243175,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1026,
+        "outputTokens": 5420,
+        "totalTokens": 6446
+      },
+      "latencyMs": 34563
+    },
+    {
+      "id": "5a43e4a1-ea80-4cc1-b08f-f1654779c0e9",
+      "purpose": "select-targets",
+      "sourceId": "community-kitchen-volunteer-shift",
+      "at": "2026-10-27T08:37:10.153Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00502,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 565,
+        "outputTokens": 1015,
+        "totalTokens": 1580
+      },
+      "latencyMs": 8725
+    },
+    {
+      "id": "51ff32ba-e16e-4428-bb09-d955a031fc3d",
+      "purpose": "generate-exercises",
+      "sourceId": "community-kitchen-volunteer-shift",
+      "at": "2026-10-27T08:37:18.887Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01877075,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1063,
+        "outputTokens": 4104,
+        "totalTokens": 5167
+      },
+      "latencyMs": 19839
+    },
+    {
+      "id": "bf7641ab-eb34-450f-b5ff-e1639fcd1c7a",
+      "purpose": "select-targets",
+      "sourceId": "urban-heat-survey-method",
+      "at": "2026-10-27T08:37:38.735Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0053365,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 536,
+        "outputTokens": 1098,
+        "totalTokens": 1634
+      },
+      "latencyMs": 7318
+    },
+    {
+      "id": "4bdd462b-b041-4166-88c1-ac8891192318",
+      "purpose": "generate-exercises",
+      "sourceId": "urban-heat-survey-method",
+      "at": "2026-10-27T08:37:46.058Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.03192675,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1024,
+        "outputTokens": 7211,
+        "totalTokens": 8235
+      },
+      "latencyMs": 34324
+    },
+    {
+      "id": "8962269b-39f5-4e31-935d-56ce88587d28",
+      "purpose": "select-targets",
+      "sourceId": "rail-station-lost-property",
+      "at": "2026-10-27T08:38:20.393Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0044965,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 561,
+        "outputTokens": 893,
+        "totalTokens": 1454
+      },
+      "latencyMs": 7383
+    },
+    {
+      "id": "b84726c0-e4e9-4eaa-8f94-a85fee6417af",
+      "purpose": "generate-exercises",
+      "sourceId": "rail-station-lost-property",
+      "at": "2026-10-27T08:38:27.792Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0229865,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1056,
+        "outputTokens": 5098,
+        "totalTokens": 6154
+      },
+      "latencyMs": 28653
+    },
+    {
+      "id": "08c2fe65-6a31-4fe7-86bc-4721377dcbfe",
+      "purpose": "select-targets",
+      "sourceId": "east-market-repair-cafe-volunteer-shift",
+      "at": "2026-10-27T08:49:13.750Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0050155,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 541,
+        "outputTokens": 1021,
+        "totalTokens": 1562
+      },
+      "latencyMs": 7052
+    },
+    {
+      "id": "abf6ab16-60cc-42f3-ac50-da887730af42",
+      "purpose": "generate-exercises",
+      "sourceId": "east-market-repair-cafe-volunteer-shift",
+      "at": "2026-10-27T08:49:20.811Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.022718,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1035,
+        "outputTokens": 5041,
+        "totalTokens": 6076
+      },
+      "latencyMs": 26712
+    },
+    {
+      "id": "8111c8fb-8a51-49df-bce9-17a50b94f13a",
+      "purpose": "select-targets",
+      "sourceId": "school-library-survey-privacy",
+      "at": "2026-10-27T08:49:47.536Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00563925,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 530,
+        "outputTokens": 1171,
+        "totalTokens": 1701
+      },
+      "latencyMs": 8672
+    },
+    {
+      "id": "546e04c1-75a6-48d9-95d8-73c292a854dc",
+      "purpose": "generate-exercises",
+      "sourceId": "school-library-survey-privacy",
+      "at": "2026-10-27T08:49:56.214Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02128225,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1022,
+        "outputTokens": 4707,
+        "totalTokens": 5729
+      },
+      "latencyMs": 24942
+    },
+    {
+      "id": "84d5f76d-643a-4595-b6dd-f0d36b2f2245",
+      "purpose": "select-targets",
+      "sourceId": "riverside-centre-class-registration",
+      "at": "2026-10-27T08:50:21.165Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00606725,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 529,
+        "outputTokens": 1272,
+        "totalTokens": 1801
+      },
+      "latencyMs": 8838
+    },
+    {
+      "id": "0b395648-6f13-4477-b8e3-bdaacdebab7f",
+      "purpose": "generate-exercises",
+      "sourceId": "riverside-centre-class-registration",
+      "at": "2026-10-27T08:50:30.010Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0263025,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1016,
+        "outputTokens": 5890,
+        "totalTokens": 6906
+      },
+      "latencyMs": 29487
+    }
+  ],
+  "stopReason": null
+}

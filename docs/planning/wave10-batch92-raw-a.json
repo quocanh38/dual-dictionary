@@ -1,0 +1,16 @@
+{
+  "wave": 10,
+  "batch": 92,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after stop light; reviewed against local OALD 10/LDOCE 6. Strip mining and the strong force were cross-checked against official EPA and CERN resources. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover travel, energy storage, tools, elections, argument and polling, literary technique, mining, physics, film and computing, law and food; clarify particles, regional usage and sensitive legal or medical terminology.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1020, "remainingRawOnlyAfter": 1000},
+  "selected": ["stop over", "storage battery", "storm lantern", "stow away", "straight edge", "straight ticket", "straw man", "straw poll", "stream of consciousness", "stretch out", "strip lighting", "strip mine", "strip search", "strobe light", "strong force", "stunt man", "stunt woman", "style sheet", "sub judice", "submarine sandwich"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "US EPA, Environmental Protection in Surface Mining of Coal, https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=91017M72.TXT",
+    "CERN, LHC the guide (Strong Force), https://home.cern/sites/default/files/2018-07/CERN-Brochure-2017-002-Eng.pdf"
+  ]
+}

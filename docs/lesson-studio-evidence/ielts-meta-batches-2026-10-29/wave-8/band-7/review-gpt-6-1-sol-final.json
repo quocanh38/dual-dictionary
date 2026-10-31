@@ -1,0 +1,91 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "8f1018dcea479e3b92df48f7a327d81f6965cae45519a6bef1d8f5752882f8dd",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "sharedContexts.reading.passage; all Reading passage copies",
+      "severity": "critical",
+      "issue": "Passage presents LEZs as introduced2019–2021 in six real cities including Warsaw and Brussels. Official municipal sources date Warsaw first LEZ to1July2024 and Brussels to1January2018, outside that window. Make study/cities explicitly fictional (prefer invented city names), or use verified implementation dates and coherent study periods/results throughout. Sources: https://warszawa19115.pl/-/low-emission-zone-lez- and https://www.brussels.be/lez ."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-7-speaking-01; speaking-02",
+      "severity": "minor",
+      "issue": "Questions about community interest in open data and childrens access to nature are broader than usual personal Part1. They remain answerable, but personal experience/preferences would improve realism."
+    },
+    {
+      "item": "sharedContexts.listening.script",
+      "severity": "minor",
+      "issue": "Measurement-invariance terminology is highly specialised, though the script explains basic shared structure versus differential item functioning. Suitable as advanced academic practice rather than evidence that band7 requires specialist psychometrics."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking; complete contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete 317-word language-survey dialogue read. VerifiedEnglish-motivationaim,Vancouver/Lima/Seoul,200→240 correction 80 each,sharedconfiguralstructureversustwoLima-itemmetricfailure,culturalinterpretationhypothesis and no direct meancomparisonbefore revision/retest. Keys [0,1,2,3,1],all 20 options andfiveexplanations supported.",
+    "reading": "Complete 429-word air-policy passage read. Verifiedrawfourcity 8–12%declines,industrial/weather/coalretrofitconfounds,matchedcontrols shrinkBarcelona/Milanto 3–5%withwideintervals,Brussels 10%pollutionversus 4%traffic/hubrelocation and limitedattributionclaim. Keys [0,2,1,3,0],options/explanations textuallysupported. Real-city implementation chronology is factually inconsistent and blocks release unless fictionalised/corrected.",
+    "writing": "All five Writing prompts read. Portaltrust fourcities 2019/2023 percentages/usersper 1000 andsurvey 1000 percitycomplete;reserve 3 sites 2022 complete visitors/USDconservationbudget/incidents/public-openpercentages. ThreeTask 2 topics self-contained qualifiedopen-data/conservation/multisiteevidencearguments. All 150/20 and 250/40 explicitinstructions/fields consistent.",
+    "speaking": "All five Speaking prompts read:2 personal-basedPart 1 setswith 2 broaderquestionsnoted;questioned-informationPart 2 has 4 visiblecues/prep/duration;2 Part 3 sets evaluate transparency/conservation/contexttransfer. Advancedlanguagepractice self-contained;specialistListening framing noted as observation.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "wordCounts": {
+        "listening": 317,
+        "reading": 429
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          2,
+          1,
+          3,
+          0
+        ]
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API, model meta-models/muse-spark-open-1026, wave8-v1 prompt versions and repair provenance read. No recognisable official-question copying or score guarantee found; no exhaustive plagiarism audit. Fictional study statistics assessed for consistency. Band7 real-city policy dates were checked against municipal sources and conflict with passage. Stage labels are practice targets, not validated attainment.",
+    "independence": "No initial or final reports by other reviewers read. Final content reviewed directly in full.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-7-listening-01",
+      "ielts-meta-wave-8-band-7-listening-02",
+      "ielts-meta-wave-8-band-7-listening-03",
+      "ielts-meta-wave-8-band-7-listening-04",
+      "ielts-meta-wave-8-band-7-listening-05",
+      "ielts-meta-wave-8-band-7-reading-01",
+      "ielts-meta-wave-8-band-7-reading-02",
+      "ielts-meta-wave-8-band-7-reading-03",
+      "ielts-meta-wave-8-band-7-reading-04",
+      "ielts-meta-wave-8-band-7-reading-05",
+      "ielts-meta-wave-8-band-7-writing-01",
+      "ielts-meta-wave-8-band-7-writing-02",
+      "ielts-meta-wave-8-band-7-writing-03",
+      "ielts-meta-wave-8-band-7-writing-04",
+      "ielts-meta-wave-8-band-7-writing-05",
+      "ielts-meta-wave-8-band-7-speaking-01",
+      "ielts-meta-wave-8-band-7-speaking-02",
+      "ielts-meta-wave-8-band-7-speaking-03",
+      "ielts-meta-wave-8-band-7-speaking-04",
+      "ielts-meta-wave-8-band-7-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

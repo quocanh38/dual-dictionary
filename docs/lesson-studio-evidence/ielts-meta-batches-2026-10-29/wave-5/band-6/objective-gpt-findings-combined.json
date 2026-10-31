@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-5-band-6-listening-04",
+      "issue": "The stem asks only what the attendance summary shows, while all four options use undefined They. It never identifies weekend groups as the subject of the larger/smaller/completion comparison. The intended index2 is supported only after supplying that missing subject. Ask explicitly how weekend morning groups compare with weekday evening groups, and describe completion rates rather than groups finishing more often.",
+      "severity": "uncertain"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-6-writing-01",
+      "issue": "Museum tour times are labelled daily while Monday is closed. Daily can reasonably mean each open day, but on opening days is clearer. The mixed family-ticket/individual-visitor share denominator could also be labelled more explicitly.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-6-writing-02",
+      "issue": "Reasons percentages are not explicitly labelled as shares of all400 surveyed students or recording users. The multiple-response note is present and comparisons remain possible, but make the denominator explicit.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-6-listening-04",
+      "issue": "Ambiguous answer stem: the question says “They” without naming weekend morning groups, so the comparison subject is missing. Ask directly how weekend morning groups compare with weekday evening groups.",
+      "severity": "major"
+    }
+  ]
+}

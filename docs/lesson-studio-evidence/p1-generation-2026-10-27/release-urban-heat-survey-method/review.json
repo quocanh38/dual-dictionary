@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "955db47f5cc4be10b420577e3572384c56cae3ba5b038b057c5ad9eb8e9eadf7",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews",
+  "reviewedAt": "2026-10-27T08:42:10.754Z",
+  "note": "Two independent AI-assisted reviewers evaluated the exact pack hash, matching source row, and schema. The recorded evidence synthesizes their findings and a source-level consistency check. Review is not human or learner validation. The rights/authorship statement is locally declared and not independently verified. Requested Luna route was not exposed (runtime-visible model label GPT-6); Terra route was gpt-5.6-terra (runtime label Codex GPT-6).",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both independent reviewers checked the local provenance declaration for AI-assisted original educational text, authorized distribution, no copied exam/external source or learner PII; no PII is visible. This is a local declaration check, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “fair comparison” appears verbatim in cited s3 and the reading grounds it in observing both routes at the same time on several clear days."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the English gloss accurately describes comparison under equal conditions, matching the survey procedure."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “sự so sánh công bằng” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “provisional estimate” appears verbatim in cited s4 and is supported by the missing sensor interval."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the English gloss correctly describes a temporary approximate value subject to revision after checking more information."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “ước tính tạm thời” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only answer about equal conditions. Preference in b and making only one visit in c do not fit the source context."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all option explanations accurately distinguish equal-condition comparison from preference or inadequate sampling."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the sole grammatical, natural sentence: a is missing “the” before “same conditions”; c incorrectly pluralizes “comparison” after “a fair”."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the article and singular-noun explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify c as the only meaning: a is final rather than provisional and b is about repairing equipment rather than an estimate."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the key and distractor explanations accurately express temporary/revisable value versus a final result or repair method."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b needs an article before the singular count noun and c needs base verb “change” after modal “may”."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the article and modal-verb explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer moves from geography field measurements to a school-club treasurer estimating charity-fair costs."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the model naturally uses “provisional estimate” in two sentences and explains why the amount may change; the checklist supports self-assessment without automatic grading."
+    }
+  ],
+  "findings": []
+}

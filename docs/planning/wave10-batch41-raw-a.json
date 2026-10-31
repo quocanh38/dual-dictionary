@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 41,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after jumping-off point, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, usage patterns, bilingual examples and learner notes. Historical, legal, financial, cultural and regional labels are explicit; stigmatizing and racist terms are contextualized; source wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2020,
+    "remainingRawOnlyAfter": 2000
+  },
+  "selected": [
+    "junk bond",
+    "junk shop",
+    "juvenile court",
+    "keep down",
+    "keep on",
+    "kick back",
+    "kick off",
+    "kick up",
+    "kidney bean",
+    "kilowatt hour",
+    "kit bag",
+    "kitchen cabinet",
+    "kitchen garden",
+    "knee cap",
+    "knock down",
+    "knock out",
+    "kola nut",
+    "ku klux klan",
+    "lactic acid",
+    "lady day"
+  ]
+}

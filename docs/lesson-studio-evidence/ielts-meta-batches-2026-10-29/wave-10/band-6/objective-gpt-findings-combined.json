@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-10-band-6-reading-04; sharedContexts.reading history-student example",
+      "severity": "uncertain",
+      "issue": "Question calls the history-student anecdote an illustration of long-term confidence, but that anecdote only reports reorganising an argument rather than grammar correction. It gives no later confidence/self-correction result; confidence is supported separately by repeat-user comparison. Either extend anecdote with explicit longer-term confidence/independence evidence, or ask which finding supports the confidence claim and key the repeat-user finding.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

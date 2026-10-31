@@ -1,0 +1,582 @@
+[
+  {
+    "phrase": "magic eye",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thiết bị cảm biến quang điện phát hiện ánh sáng hoặc vật đi qua, từng được dùng trong radio, cửa tự động và một số thiết bị điều khiển",
+        "pat": "a magic eye sensor · a magic eye in a radio · the magic eye detects light",
+        "ex": [
+          [
+            "The old radio used a magic eye to help tune the signal.",
+            "Chiếc radio cũ dùng ống chỉ thị quang để hỗ trợ dò sóng."
+          ],
+          [
+            "A magic eye sensor turns the lights on when someone enters.",
+            "Cảm biến quang tự bật đèn khi có người bước vào."
+          ]
+        ]
+      },
+      {
+        "m": "(thường số nhiều) tranh ảo ảnh tự lập thể, trong đó người xem điều chỉnh tiêu điểm để nhìn thấy hình ba chiều ẩn",
+        "pat": "a Magic Eye picture · look at a magic eye image · see the hidden shape in a magic eye",
+        "ex": [
+          [
+            "She relaxed her focus until the shape appeared in the Magic Eye picture.",
+            "Cô thả lỏng tiêu điểm cho đến khi hình hiện ra trong tranh ảo ảnh."
+          ],
+          [
+            "The poster contains a hidden dolphin that is hard to see in the magic eye image.",
+            "Tấm áp phích có hình cá heo ẩn khó nhìn thấy trong ảnh ảo ảnh."
+          ]
+        ]
+      }
+    ],
+    "note": "Magic eye có thể chỉ cảm biến điện tử cũ hoặc tranh ảo ảnh 3D; tranh loại này thường được gọi là autostereogram. Ngữ cảnh quyết định nghĩa."
+  },
+  {
+    "phrase": "magna carta",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Magna Carta (Đại Hiến chương) — văn kiện được vua John của Anh chấp thuận năm 1215, về sau có ảnh hưởng lớn đến lịch sử hiến pháp và tư tưởng giới hạn quyền lực nhà nước",
+        "pat": "the Magna Carta · sign/issue Magna Carta · Magna Carta’s constitutional legacy",
+        "ex": [
+          [
+            "The exhibition examines the political context in which Magna Carta was issued.",
+            "Triển lãm khảo sát bối cảnh chính trị khi Đại Hiến chương được ban hành."
+          ],
+          [
+            "Magna Carta later became an important symbol in debates about legal limits on power.",
+            "Về sau, Magna Carta trở thành biểu tượng quan trọng trong các tranh luận về giới hạn pháp lý của quyền lực."
+          ]
+        ]
+      }
+    ],
+    "note": "Magna Carta là tên riêng Latin nghĩa là “Đại Hiến chương”; văn kiện ban đầu không trao quyền bình đẳng cho mọi người như cách diễn giải hiện đại đôi khi ngụ ý."
+  },
+  {
+    "phrase": "magnetic compass",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "la bàn từ — dụng cụ có kim nam châm tự do quay, thường chỉ gần hướng bắc từ để giúp xác định phương hướng",
+        "pat": "use/read a magnetic compass · a compass needle · navigate with a magnetic compass",
+        "ex": [
+          [
+            "The hikers used a magnetic compass when the trail markers disappeared.",
+            "Những người đi bộ dùng la bàn từ khi các dấu đường biến mất."
+          ],
+          [
+            "Keep the magnetic compass away from large metal objects.",
+            "Hãy để la bàn từ xa các vật kim loại lớn."
+          ]
+        ]
+      }
+    ],
+    "note": "Kim la bàn chỉ về phía bắc từ, không trùng chính xác với bắc địa lý; sai lệch từ và nhiễu từ cục bộ cần được tính đến khi định hướng."
+  },
+  {
+    "phrase": "magnetic field",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "từ trường — vùng quanh nam châm, dòng điện hoặc vật thể có từ tính, nơi lực từ có thể tác dụng lên vật phù hợp",
+        "pat": "a magnetic field · generate/measure a magnetic field · the Earth’s magnetic field",
+        "ex": [
+          [
+            "The compass needle responds to the Earth’s magnetic field.",
+            "Kim la bàn phản ứng với từ trường Trái Đất."
+          ],
+          [
+            "Researchers measured the magnetic field around the coil.",
+            "Các nhà nghiên cứu đo từ trường quanh cuộn dây."
+          ]
+        ]
+      }
+    ],
+    "note": "Từ trường là đại lượng vật lý có độ lớn và hướng; cách biểu diễn bằng đường sức chỉ là mô hình trực quan, không phải các đường vật chất tồn tại trong không gian."
+  },
+  {
+    "phrase": "magnetic flux",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "từ thông — đại lượng đo lượng từ trường xuyên qua một bề mặt; phụ thuộc cường độ từ trường, diện tích và góc giữa trường với bề mặt",
+        "pat": "magnetic flux through a coil · change/increase magnetic flux · magnetic-flux density",
+        "ex": [
+          [
+            "The changing magnetic flux induced a voltage in the coil.",
+            "Từ thông biến thiên tạo ra điện áp trong cuộn dây."
+          ],
+          [
+            "The experiment measured magnetic flux through a small loop.",
+            "Thí nghiệm đo từ thông qua một vòng dây nhỏ."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong hệ SI, đơn vị của từ thông là weber (Wb); không nhầm với mật độ từ thông, thường ký hiệu B và đo bằng tesla."
+  },
+  {
+    "phrase": "magnetic pole",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cực từ — một trong hai vùng ở đầu nam châm nơi tác dụng từ mạnh nhất; nam châm có cực bắc và cực nam",
+        "pat": "a north/south magnetic pole · opposite magnetic poles · the Earth’s magnetic poles",
+        "ex": [
+          [
+            "Opposite magnetic poles attract each other.",
+            "Hai cực từ trái dấu hút nhau."
+          ],
+          [
+            "The Earth’s magnetic poles do not remain perfectly fixed.",
+            "Các cực từ của Trái Đất không đứng yên hoàn toàn."
+          ]
+        ]
+      }
+    ],
+    "note": "Cực từ của Trái Đất khác cực địa lý và có thể dịch chuyển theo thời gian; quy ước tên cực địa từ trong tài liệu chuyên môn cần được đọc theo định nghĩa được dùng."
+  },
+  {
+    "phrase": "magnetic tape",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "băng từ — dải vật liệu phủ lớp từ tính dùng để ghi và lưu âm thanh, hình ảnh hoặc dữ liệu số",
+        "pat": "record/store data on magnetic tape · a magnetic-tape drive · magnetic-tape archive",
+        "ex": [
+          [
+            "The archive stores historical recordings on magnetic tape.",
+            "Kho lưu trữ lưu các bản ghi lịch sử trên băng từ."
+          ],
+          [
+            "The system backs up large data sets to magnetic tape.",
+            "Hệ thống sao lưu các bộ dữ liệu lớn lên băng từ."
+          ]
+        ]
+      }
+    ],
+    "note": "Magnetic tape là công nghệ lưu trữ lâu đời nhưng vẫn được dùng cho một số kho dữ liệu; tuổi thọ và khả năng đọc lại phụ thuộc điều kiện bảo quản và thiết bị."
+  },
+  {
+    "phrase": "magnifying glass",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "kính lúp — thấu kính hội tụ thường gắn tay cầm, giúp nhìn vật nhỏ có vẻ lớn hơn",
+        "pat": "look through a magnifying glass · use a magnifying glass to read · a handheld magnifying glass",
+        "ex": [
+          [
+            "She used a magnifying glass to read the tiny label.",
+            "Cô dùng kính lúp để đọc nhãn chữ rất nhỏ."
+          ],
+          [
+            "The investigator examined the fabric through a magnifying glass.",
+            "Điều tra viên xem xét sợi vải qua kính lúp."
+          ]
+        ]
+      }
+    ],
+    "note": "Magnifying glass làm vật trông lớn hơn khi đặt ở khoảng cách phù hợp; độ phóng đại và chất lượng phụ thuộc thấu kính."
+  },
+  {
+    "phrase": "mailing list",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "danh sách địa chỉ của những người thường nhận thư, thông báo hoặc tài liệu gửi định kỳ",
+        "pat": "join/be on a mailing list · add somebody to a mailing list · unsubscribe from a mailing list",
+        "ex": [
+          [
+            "Customers can join the mailing list to receive product updates.",
+            "Khách hàng có thể đăng ký danh sách gửi thư để nhận cập nhật sản phẩm."
+          ],
+          [
+            "The organizer removed inactive addresses from the mailing list.",
+            "Ban tổ chức xóa các địa chỉ không còn hoạt động khỏi danh sách gửi thư."
+          ]
+        ]
+      },
+      {
+        "m": "(tin học) nhóm địa chỉ email được dùng để gửi một thư đến nhiều người cùng lúc",
+        "pat": "an email/mailing list · post a message to a mailing list · mailing-list members",
+        "ex": [
+          [
+            "The announcement was sent to the project mailing list.",
+            "Thông báo được gửi tới danh sách email của dự án."
+          ],
+          [
+            "Only members can post messages to the mailing list.",
+            "Chỉ thành viên mới có thể đăng thư lên danh sách email."
+          ]
+        ]
+      }
+    ],
+    "note": "Mailing list cần được quản lý theo quy định quyền riêng tư và đồng ý nhận thư; danh sách gửi thư không đồng nghĩa với nhóm thảo luận công khai."
+  },
+  {
+    "phrase": "main line",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(đường sắt) tuyến đường sắt chính nối các thành phố hoặc khu vực lớn, trái với nhánh phụ",
+        "pat": "a main-line railway · travel on the main line · a main-line station",
+        "ex": [
+          [
+            "The main line was closed for repairs over the weekend.",
+            "Tuyến đường sắt chính đóng cửa để sửa chữa vào cuối tuần."
+          ],
+          [
+            "The village station is connected to the main line.",
+            "Ga làng được nối với tuyến chính."
+          ]
+        ]
+      },
+      {
+        "m": "(điện/viễn thông) đường hoặc mạch chính cung cấp dịch vụ cho một khu vực hoặc tòa nhà",
+        "pat": "a main-line connection · connect something to the main line · a main line failure",
+        "ex": [
+          [
+            "The backup generator starts if the main line loses power.",
+            "Máy phát dự phòng khởi động nếu đường điện chính mất nguồn."
+          ],
+          [
+            "The technician checked the main line before replacing the branch cable.",
+            "Kỹ thuật viên kiểm tra đường dây chính trước khi thay cáp nhánh."
+          ]
+        ]
+      }
+    ],
+    "note": "Main line có các nghĩa chuyên ngành khác nhau; trong tin học/tài chính có thể có nghĩa riêng. Xét ngữ cảnh đường sắt, điện hoặc liên lạc để hiểu đúng."
+  },
+  {
+    "phrase": "main road",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đường chính — tuyến đường lớn hoặc quan trọng dùng để đi qua một khu vực, thường nối các khu dân cư hay dẫn tới trung tâm",
+        "pat": "a busy main road · cross the main road · a house on the main road",
+        "ex": [
+          [
+            "The hotel is located on the main road into town.",
+            "Khách sạn nằm trên đường chính dẫn vào thị trấn."
+          ],
+          [
+            "Children should cross the main road at the traffic lights.",
+            "Trẻ em nên qua đường chính tại đèn giao thông."
+          ]
+        ]
+      }
+    ],
+    "note": "Main road thường là cách mô tả thông thường, không nhất thiết là tên phân loại hành chính chính thức; giới hạn tốc độ và quyền ưu tiên tùy địa phương."
+  },
+  {
+    "phrase": "main street",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Bắc Mỹ) phố chính của một thị trấn, thường tập trung cửa hàng và dịch vụ; tương tự high street trong Anh-Anh",
+        "pat": "on Main Street · a Main Street shop · the town’s main street",
+        "ex": [
+          [
+            "The bakery has served the town from Main Street for decades.",
+            "Tiệm bánh phục vụ thị trấn từ phố chính suốt nhiều thập kỷ."
+          ],
+          [
+            "New apartments are planned along the town’s main street.",
+            "Các căn hộ mới được quy hoạch dọc phố chính của thị trấn."
+          ]
+        ]
+      },
+      {
+        "m": "(Mỹ, nghĩa bóng) doanh nghiệp nhỏ, cộng đồng địa phương hoặc người dân bình thường, đối lập với giới tài chính lớn",
+        "pat": "Main Street businesses · Main Street versus Wall Street · support Main Street",
+        "ex": [
+          [
+            "The policy was presented as support for Main Street businesses.",
+            "Chính sách được giới thiệu là nhằm hỗ trợ các doanh nghiệp địa phương."
+          ],
+          [
+            "The debate contrasted Main Street concerns with Wall Street priorities.",
+            "Cuộc tranh luận đối chiếu mối quan tâm của người dân với ưu tiên của giới tài chính."
+          ]
+        ]
+      }
+    ],
+    "note": "Main Street thường viết hoa khi là tên đường cụ thể; nghĩa bóng viết hoa trong cách dùng chính trị/kinh tế Mỹ. Ở Anh, high street thường tự nhiên hơn."
+  },
+  {
+    "phrase": "majority rule",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "nguyên tắc đa số — cách ra quyết định trong đó phương án nhận được nhiều phiếu hơn sẽ được thông qua",
+        "pat": "majority rule · govern by majority rule · majority-rule decision",
+        "ex": [
+          [
+            "The committee adopted majority rule for routine decisions.",
+            "Ủy ban áp dụng nguyên tắc đa số cho các quyết định thường lệ."
+          ],
+          [
+            "Majority rule does not remove the need to protect minority rights.",
+            "Nguyên tắc đa số không loại bỏ nhu cầu bảo vệ quyền của nhóm thiểu số."
+          ]
+        ]
+      }
+    ],
+    "note": "Majority rule là nguyên tắc biểu quyết, không nhất thiết bảo đảm đồng thuận hoặc công bằng với nhóm thiểu số; hiến pháp và quy chế có thể đặt thêm giới hạn."
+  },
+  {
+    "phrase": "make out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "nhìn, nghe hoặc đọc được điều gì không rõ ràng",
+        "pat": "make out a shape/word · make something out in the distance · can/cannot make out",
+        "ex": [
+          [
+            "I could just make out the lighthouse through the fog.",
+            "Tôi chỉ vừa nhận ra ngọn hải đăng qua màn sương."
+          ],
+          [
+            "She could not make out the writing on the faded label.",
+            "Cô không đọc được chữ trên nhãn đã phai."
+          ]
+        ]
+      },
+      {
+        "m": "hiểu hoặc nhận ra ý nghĩa của điều gì",
+        "pat": "make out what somebody said · make something out · make out that...",
+        "ex": [
+          [
+            "I cannot make out why the figures do not match.",
+            "Tôi không hiểu vì sao các con số không khớp."
+          ],
+          [
+            "He made out that he had never seen the document.",
+            "Anh ta nói như thể mình chưa từng thấy tài liệu đó."
+          ]
+        ]
+      },
+      {
+        "m": "điền hoặc viết một tài liệu như hóa đơn, séc hay biểu mẫu",
+        "pat": "make out a cheque/bill · make a cheque out to somebody · make out a form",
+        "ex": [
+          [
+            "Please make the cheque out to the registered company.",
+            "Vui lòng viết séc cho công ty đã đăng ký."
+          ],
+          [
+            "The supplier made out an invoice for the replacement parts.",
+            "Nhà cung cấp lập hóa đơn cho các linh kiện thay thế."
+          ]
+        ]
+      }
+    ],
+    "note": "Make out có nhiều nghĩa; riêng make out that somebody is... thường hàm ý người đó trình bày hoặc giả vờ như vậy. Cấu trúc séc có thể là make a cheque out to somebody."
+  },
+  {
+    "phrase": "make over",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "chuyển giao hợp pháp tài sản hoặc quyền sở hữu cho người khác",
+        "pat": "make something over to somebody · make over property/funds · be made over to",
+        "ex": [
+          [
+            "She made the property over to her daughter before moving abroad.",
+            "Bà chuyển quyền sở hữu tài sản cho con gái trước khi ra nước ngoài."
+          ],
+          [
+            "The funds were made over to the trust.",
+            "Khoản tiền được chuyển giao cho quỹ tín thác."
+          ]
+        ]
+      },
+      {
+        "m": "thay đổi diện mạo, thiết kế hoặc phong cách của người/vật một cách đáng kể",
+        "pat": "make somebody/something over · a complete make-over · make over a room/brand",
+        "ex": [
+          [
+            "The stylist made her over for the television appearance.",
+            "Nhà tạo mẫu thay đổi diện mạo của cô cho buổi xuất hiện trên truyền hình."
+          ],
+          [
+            "The team made over the lobby with new lighting and furniture.",
+            "Nhóm cải tạo sảnh bằng hệ thống chiếu sáng và đồ nội thất mới."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa chuyển tài sản thường trang trọng/pháp lý; nghĩa thay đổi diện mạo thân mật hơn. Danh từ make-over thường viết liền hoặc có gạch nối."
+  },
+  {
+    "phrase": "make up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bịa ra một câu chuyện, lý do hoặc thông tin không có thật",
+        "pat": "make something up · make up an excuse/story · make something up as you go along",
+        "ex": [
+          [
+            "He made up an excuse for missing the appointment.",
+            "Anh bịa lý do để giải thích việc lỡ cuộc hẹn."
+          ],
+          [
+            "The children made up a story about a hidden island.",
+            "Bọn trẻ nghĩ ra một câu chuyện về hòn đảo bí mật."
+          ]
+        ]
+      },
+      {
+        "m": "làm hòa sau bất đồng",
+        "pat": "make up with somebody · make it up after an argument · be made up",
+        "ex": [
+          [
+            "They made up after talking through the disagreement.",
+            "Họ làm hòa sau khi nói rõ bất đồng."
+          ],
+          [
+            "I hope the two colleagues make up soon.",
+            "Tôi mong hai đồng nghiệp sớm làm hòa."
+          ]
+        ]
+      },
+      {
+        "m": "tạo thành hoặc cấu thành một phần của tổng thể",
+        "pat": "make up a team/group · make up a percentage of something · be made up of",
+        "ex": [
+          [
+            "Women make up half of the project team.",
+            "Phụ nữ chiếm một nửa nhóm dự án."
+          ],
+          [
+            "The committee is made up of representatives from five departments.",
+            "Ủy ban gồm đại diện của năm phòng ban."
+          ]
+        ]
+      },
+      {
+        "m": "trang điểm cho bản thân hoặc người khác",
+        "pat": "make yourself/somebody up · make-up artist · be made up for a performance",
+        "ex": [
+          [
+            "She made herself up before the evening performance.",
+            "Cô trang điểm trước buổi biểu diễn tối."
+          ],
+          [
+            "A make-up artist made up the actors for the scene.",
+            "Chuyên viên hóa trang trang điểm cho các diễn viên trong cảnh quay."
+          ]
+        ]
+      }
+    ],
+    "note": "Make up nghĩa “bịa” tách được (make it up); be made up of nghĩa “gồm có”. Danh từ make-up có thể chỉ mỹ phẩm hoặc thành phần cấu tạo."
+  },
+  {
+    "phrase": "male chauvinism",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "quan điểm cho rằng nam giới quan trọng, có năng lực hoặc đáng được ưu tiên hơn nữ giới; thường thể hiện qua thái độ hoặc hành vi phân biệt giới",
+        "pat": "male chauvinism · accuse somebody of male chauvinism · challenge male chauvinism",
+        "ex": [
+          [
+            "The discussion examined how male chauvinism affected promotion decisions.",
+            "Cuộc thảo luận xem xét cách tư tưởng trọng nam ảnh hưởng đến quyết định thăng chức."
+          ],
+          [
+            "The campaign challenged male chauvinism in the workplace.",
+            "Chiến dịch phản đối tư tưởng trọng nam tại nơi làm việc."
+          ]
+        ]
+      }
+    ],
+    "note": "Male chauvinism mang sắc thái phê phán; cụm này chỉ thái độ/quan điểm chứ không nên dùng như nhãn thay cho mô tả hành vi cụ thể."
+  },
+  {
+    "phrase": "male chauvinist",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "người có quan điểm cho rằng nam giới vượt trội hoặc đáng được ưu tiên hơn nữ giới; thường là cách gọi phê phán",
+        "pat": "a male chauvinist · accuse somebody of being a male chauvinist · a male-chauvinist attitude",
+        "ex": [
+          [
+            "The play satirizes a male chauvinist who dismisses his colleagues’ ideas.",
+            "Vở kịch châm biếm một người trọng nam, luôn gạt bỏ ý tưởng của đồng nghiệp nữ."
+          ],
+          [
+            "He was criticized for a male-chauvinist comment at the meeting.",
+            "Anh bị chỉ trích vì lời bình mang tư tưởng trọng nam trong cuộc họp."
+          ]
+        ]
+      }
+    ],
+    "note": "Male chauvinist là từ phê phán, có thể nhắm vào người hoặc quan điểm; trong phân tích nghiêm túc, nên nêu hành vi hoặc niềm tin cụ thể."
+  },
+  {
+    "phrase": "management consultant",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "chuyên gia tư vấn quản lý — người được thuê để phân tích hoạt động của tổ chức và đề xuất cách cải thiện chiến lược, quy trình hoặc hiệu quả",
+        "pat": "a management consultant · hire/consult a management consultant · management-consulting firm",
+        "ex": [
+          [
+            "The company hired a management consultant to review its supply chain.",
+            "Công ty thuê chuyên gia tư vấn quản lý để rà soát chuỗi cung ứng."
+          ],
+          [
+            "A management consultant presented options for reorganizing the department.",
+            "Chuyên gia tư vấn quản lý trình bày các phương án tái tổ chức phòng ban."
+          ]
+        ]
+      }
+    ],
+    "note": "Management consultant có thể làm việc độc lập hoặc cho công ty tư vấn; phạm vi dự án và mức độ thực thi đề xuất phụ thuộc hợp đồng."
+  },
+  {
+    "phrase": "managing director",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(đặc biệt Anh-Anh) giám đốc điều hành cấp cao chịu trách nhiệm điều hành hoạt động của công ty; thường viết tắt MD",
+        "pat": "a managing director (MD) · appoint/become managing director · the managing director of a company",
+        "ex": [
+          [
+            "The managing director approved the new operating plan.",
+            "Giám đốc điều hành phê duyệt kế hoạch vận hành mới."
+          ],
+          [
+            "She became managing director after leading the regional division.",
+            "Cô trở thành giám đốc điều hành sau khi lãnh đạo bộ phận khu vực."
+          ]
+        ]
+      }
+    ],
+    "note": "Managing director thường gần với chief executive trong một số công ty Anh, nhưng chức năng và thứ bậc khác nhau theo cơ cấu doanh nghiệp; MD cũng có nhiều nghĩa khác trong y khoa."
+  }
+]

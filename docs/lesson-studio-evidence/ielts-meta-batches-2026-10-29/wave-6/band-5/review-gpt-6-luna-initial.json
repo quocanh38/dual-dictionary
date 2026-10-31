@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "f1247266ba4743d1a1e062fef13041bb7c0f4710f3cfdd608b49e1175a18a253",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-6-band-5-listening-context / listening-02",
+      "issue": "The staff tells a student with a serious nut allergy that the chicken pasta “should be safe” because nuts are not listed, with no cross-contact caveat or instruction to verify with the kitchen. Remove the safety guarantee and advise confirming ingredients and cross-contact controls before ordering.",
+      "severity": "critical"
+    },
+    {
+      "itemId": "Reading objective answer-position distribution",
+      "issue": "Reading keys use only option positions 0, 1 and 2; position 3 is never correct, matching the candidate normalization finding. Rebalance keys/options so all four positions are used without changing defensible answers.",
+      "severity": "minor"
+    }
+  ],
+  "observations": [
+    "Listening and Reading contexts are 362 and 417 words respectively, within target ranges; the 10 answer keys are supported by their contexts and explanations, with no apparent ambiguity beyond the allergy-safety issue. Task 1 tables are complete and internally consistent; all five Writing prompts specify 150/250-word minimums and 20/40-minute timing. Speaking has two Part 1, one cue-card Part 2 with all required points and prep/speaking time, and two Part 3 prompts. Provenance identifies original content; no official-item or score-guarantee claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts (listening 362 words; reading 417 words), all 10 objective items including every prompt, option, key and explanation, all five Writing prompts/data/timing, and all five Speaking prompts/part fit/cue-card completeness. Verified answer evidence and checked Task 1 totals/units.",
+  "reviewerType": "AI-assisted"
+}

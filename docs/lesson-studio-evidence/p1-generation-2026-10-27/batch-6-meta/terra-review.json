@@ -1,0 +1,27 @@
+{
+  "reviewerRouteRequested": "gpt-5.6-terra",
+  "runtimeReportedModelLabel": "GPT-6",
+  "reviewedPackSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+  "scope": "Independent exact-payload review; schema validity, rights/provenance, both EN/VI targets, all four closed exercises and transfer.",
+  "criteriaPassed": 17,
+  "criteriaTotal": 17,
+  "criticalFindings": 0,
+  "uncertainFindings": 0,
+  "minorFindings": 0,
+  "limitations": [
+    "Rights are declaration-only; no independent copyright verification.",
+    "Candidate remains draft/not-reviewed until separate approval."
+  ],
+  "decision": "pass",
+  "criteriaEvidence": [
+    "rights and rights declaration",
+    "t1 source, English gloss and Vietnamese gloss",
+    "t2 source, English gloss and Vietnamese gloss",
+    "q1 unique answer and explanations",
+    "q2 unique answer and explanations",
+    "q3 unique answer and explanations",
+    "q4 unique answer and explanations",
+    "q5 changed situation",
+    "q5 idiomatic model and self-check"
+  ]
+}

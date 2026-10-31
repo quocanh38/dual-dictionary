@@ -1,0 +1,55 @@
+{
+  "sourceId": "food-bank-volunteer-briefing",
+  "sourceFile": "food-bank-volunteer-briefing-candidate.json",
+  "priorPayloadSha256": "93e8c25d5905de94ce460529f05210f9fca54c8034e1241ca11f19556c1fcbfa",
+  "editedPayloadSha256": "4e5a5f0179ac36ee78a1e077e9396eba51f3385c1bc58ca82e8eb2522126ced4",
+  "edits": [
+    {
+      "path": "lesson-1/q4/options/c/explanation",
+      "before": "Wrong: after to should be after to remove the extra preposition to.",
+      "after": "Wrong: remove the extra preposition 'to' after 'after'. The correct phrase is 'look after'.",
+      "finding": "Luna minor: original explanation was self-contradictory."
+    }
+  ],
+  "provenance": "Editorial changes after independent gpt-6-luna first-pass review; original Meta outputs remain unchanged in the adjacent *response.json files.",
+  "reviewRequired": true,
+  "editRounds": [
+    {
+      "priorPayloadSha256": "98bc5893e075805cfc1edf0cd1e66124598386da7c8d3e5ef1e8b2bd8a6e2469",
+      "edits": [
+        {
+          "path": "lesson-1/reading/s1 + lesson-1/reading/text + lesson-1/q1/prompt",
+          "before": {
+            "readingText": "The coordinator will set aside a short briefing before the food-bank opens on Saturday. New volunteers will learn where to store donated goods and how to look after chilled items. During the first hour, a team leader will hand out labels and assign each person a shelf to check. At the end of the shift, volunteers will record low-stock items so the next team can prepare an order.",
+            "s1": "The coordinator will set aside a short briefing before the food-bank opens on Saturday.",
+            "q1": "In s1, 'The coordinator will set aside a short briefing before the food-bank opens on Saturday,' what does 'set aside' mean?",
+            "sampleAnswer": "I will be away next weekend. Could you please look after my plants and water them every morning?"
+          },
+          "after": {
+            "readingText": "The coordinator will set aside time for a short briefing before the food-bank opens on Saturday. New volunteers will learn where to store donated goods and how to look after chilled items. During the first hour, a team leader will hand out labels and assign each person a shelf to check. At the end of the shift, volunteers will record low-stock items so the next team can prepare an order.",
+            "s1": "The coordinator will set aside time for a short briefing before the food-bank opens on Saturday.",
+            "q1": "In s1, 'The coordinator will set aside a short briefing before the food-bank opens on Saturday,' what does 'set aside' mean?"
+          },
+          "finding": "Luna rereview minor: explicitly state that time is reserved, because “set aside a short briefing” can imply scheduling the event itself."
+        },
+        {
+          "path": "lesson-1/q5/sampleAnswer",
+          "before": "I will be away next weekend. Could you please look after my plants and water them every morning?",
+          "after": "I will be away next weekend. Could you please look after my plants and water them every morning? Please leave the key in the mailbox afterward.",
+          "finding": "Luna rereview minor: prompt and self-check require 2–3 sentences; model answer now has three."
+        }
+      ]
+    },
+    {
+      "priorPayloadSha256": "814ac6cd4e67c715fb4c08e196023ef88b3d8a37abb8a2bfa61008f0f77d731e",
+      "edits": [
+        {
+          "path": "lesson-1/q1/prompt",
+          "before": "In s1, 'The coordinator will set aside a short briefing before the food-bank opens on Saturday,' what does 'set aside' mean?",
+          "after": "In s1, 'The coordinator will set aside time for a short briefing before the food-bank opens on Saturday,' what does 'set aside' mean?",
+          "finding": "Luna final review critical: quoted source sentence in the prompt did not match the updated s1 text; synchronize the quote exactly."
+        }
+      ]
+    }
+  ]
+}

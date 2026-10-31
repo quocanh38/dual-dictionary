@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "2a3489b5d5ea4bbc934876c22306cd94bf39b9258aa564529564202f71fa9b6a",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-8-band-5-writing-03",
+      "issue": "The six-step bicycle safety diagram says to lower/adjust the seat until the rider can easily touch the ground. That criterion can encourage an excessively low saddle and conflicts with standard fit checks focused on safe pedal reach; the prompt is presented as a safety procedure. Replace with a qualified fit check or omit the seat-height instruction unless its safety rationale is specified.",
+      "severity": "major"
+    }
+  ],
+  "observations": [
+    "Listening/Reading contexts are 331/409 words; all 10 answer keys are uniquely supported and positions are balanced. Music-room slot, fee and booking details are internally consistent. The bicycle safety passage covers helmets, brakes, lights and practice; the concern is specifically the separate Writing step sequence. Writing Task 1 film enjoyment percentage lacks a stated respondent denominator (minor clarity). Word minimums/timing and all Speaking sections/cue cards are complete. Provenance states original content; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts, all 10 objective questions/options/keys/explanations, all five Writing prompts/data/instructions, and all five Speaking prompts including Part 2 completeness and IELTS part fit; reviewed bicycle-safety guidance for potential risk.",
+  "reviewerType": "AI-assisted"
+}

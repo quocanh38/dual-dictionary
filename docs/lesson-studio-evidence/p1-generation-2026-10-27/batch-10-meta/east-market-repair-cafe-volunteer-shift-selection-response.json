@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "sign up for a shift",
+        "meaningEn": "to register to work during a particular period of time",
+        "meaningVi": "đăng ký làm một ca làm việc",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "runs out of",
+        "meaningEn": "to have no more of something left because it has all been used",
+        "meaningVi": "hết sạch, không còn thứ gì đó",
+        "sourceSentenceId": "s5"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 541,
+    "outputTokens": 1021,
+    "totalTokens": 1562
+  },
+  "status": 200,
+  "latencyMs": 7052,
+  "model": "muse-spark-1.3"
+}

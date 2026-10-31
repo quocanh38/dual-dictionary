@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "balanceAtStartUsd": 149.26,
+  "balanceSource": "Authenticated official Meta Billing UI: free credits in use; refreshed27October2026. Activity may lag one hour.",
+  "balanceRecordedAt": "2026-10-27T04:33:54.302Z",
+  "safetyReserveUsd": 5,
+  "pricing": {
+    "model": "muse-spark-1.3",
+    "inputPerMillion": 1.25,
+    "outputPerMillion": 4.25,
+    "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "checkedOn": "2026-10-27"
+  },
+  "scope": "Active-session original lesson content generation only; no source-code review; free credits only; first batch at most6initial calls, at most1deliberate repair per draft.",
+  "requests": [
+    {
+      "id": "24d98d66-c489-4662-a5b0-00d779dc55b0",
+      "purpose": "select-targets",
+      "sourceId": "hotel-shift-handover",
+      "at": "2026-10-27T04:33:54.419Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0045735,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 405,
+        "outputTokens": 957,
+        "totalTokens": 1362
+      },
+      "latencyMs": 9894
+    },
+    {
+      "id": "da9bdf8d-a5f3-451f-82e5-e9250f4e13a8",
+      "purpose": "generate-exercises",
+      "sourceId": "hotel-shift-handover",
+      "at": "2026-10-27T04:34:04.327Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02733875,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 825,
+        "outputTokens": 6190,
+        "totalTokens": 7015
+      },
+      "latencyMs": 42677
+    },
+    {
+      "id": "5a81f9c1-1ed1-461a-9608-9cd128135ee4",
+      "purpose": "select-targets",
+      "sourceId": "campus-water-study",
+      "at": "2026-10-27T04:34:47.013Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0044015,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 400,
+        "outputTokens": 918,
+        "totalTokens": 1318
+      },
+      "latencyMs": 11056
+    },
+    {
+      "id": "dc3a6187-49c1-4df5-b8e2-460d8fdb0a27",
+      "purpose": "generate-exercises",
+      "sourceId": "campus-water-study",
+      "at": "2026-10-27T04:34:58.073Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01923125,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 833,
+        "outputTokens": 4280,
+        "totalTokens": 5113
+      },
+      "latencyMs": 42836
+    },
+    {
+      "id": "2bcc1179-7cc1-40f9-9f2e-458e90131388",
+      "purpose": "select-targets",
+      "sourceId": "workshop-safety-plan",
+      "at": "2026-10-27T04:35:40.920Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00454725,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 401,
+        "outputTokens": 952,
+        "totalTokens": 1353
+      },
+      "latencyMs": 8569
+    },
+    {
+      "id": "cc29fdbb-30d3-4121-a41b-436bc6febffd",
+      "purpose": "generate-exercises",
+      "sourceId": "workshop-safety-plan",
+      "at": "2026-10-27T04:35:49.493Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.022728,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 822,
+        "outputTokens": 5106,
+        "totalTokens": 5928
+      },
+      "latencyMs": 45074
+    },
+    {
+      "id": "533dc47d-d143-4e54-9a13-c15287d9fa1c",
+      "purpose": "repair-exercises",
+      "sourceId": "hotel-shift-handover",
+      "at": "2026-10-27T04:37:28.756Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01957175,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 2207,
+        "outputTokens": 3956,
+        "totalTokens": 6163
+      },
+      "latencyMs": 29797
+    },
+    {
+      "id": "c05d584c-fc7e-4859-86f6-995fce9d2e64",
+      "purpose": "select-targets",
+      "sourceId": "conference-travel",
+      "at": "2026-10-27T04:39:19.869Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0045335,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 390,
+        "outputTokens": 952,
+        "totalTokens": 1342
+      },
+      "latencyMs": 10397
+    },
+    {
+      "id": "7983ddde-2240-42e0-aa29-e637b2e00e7f",
+      "purpose": "generate-exercises",
+      "sourceId": "conference-travel",
+      "at": "2026-10-27T04:39:30.273Z",
+      "reservedUsd": 1,
+      "estimatedUsd": null,
+      "outcome": "failed-or-unknown",
+      "status": null,
+      "usage": null,
+      "latencyMs": 60013
+    },
+    {
+      "id": "1d011657-c9c1-4b67-a624-0a36519e174a",
+      "purpose": "repair-exercises",
+      "sourceId": "conference-travel",
+      "at": "2026-10-27T07:46:41.710Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02104825,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1083,
+        "outputTokens": 4634,
+        "totalTokens": 5717
+      },
+      "latencyMs": 24927
+    },
+    {
+      "id": "9777afc5-7b10-4577-a61f-80ba3faa0639",
+      "purpose": "select-targets",
+      "sourceId": "community-garden-water-rotation",
+      "at": "2026-10-27T08:01:01.522Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.004339,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 401,
+        "outputTokens": 903,
+        "totalTokens": 1304
+      },
+      "latencyMs": 8369
+    },
+    {
+      "id": "337e89f1-5bdc-4365-a4de-55e75f1cc968",
+      "purpose": "generate-exercises",
+      "sourceId": "community-garden-water-rotation",
+      "at": "2026-10-27T08:01:09.899Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02113825,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 883,
+        "outputTokens": 4714,
+        "totalTokens": 5597
+      },
+      "latencyMs": 26409
+    },
+    {
+      "id": "a8755316-36fe-47d5-a1b0-b340277607f0",
+      "purpose": "select-targets",
+      "sourceId": "university-photo-archive-catalogue",
+      "at": "2026-10-27T09:03:03.076Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00506475,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 560,
+        "outputTokens": 1027,
+        "totalTokens": 1587
+      },
+      "latencyMs": 8145
+    },
+    {
+      "id": "f7fb8fe0-80f2-454a-8a86-6a022a0be245",
+      "purpose": "generate-exercises",
+      "sourceId": "university-photo-archive-catalogue",
+      "at": "2026-10-27T09:03:11.227Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.021228,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1050,
+        "outputTokens": 4686,
+        "totalTokens": 5736
+      },
+      "latencyMs": 20916
+    },
+    {
+      "id": "55646ce4-d6f4-421a-936f-1ad64e662b00",
+      "purpose": "select-targets",
+      "sourceId": "community-arts-open-day-volunteers",
+      "at": "2026-10-27T09:03:32.155Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00448825,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 551,
+        "outputTokens": 894,
+        "totalTokens": 1445
+      },
+      "latencyMs": 6108
+    },
+    {
+      "id": "5f6d3c5d-9316-444f-9969-264fa4d90054",
+      "purpose": "generate-exercises",
+      "sourceId": "community-arts-open-day-volunteers",
+      "at": "2026-10-27T09:03:38.269Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0247095,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1037,
+        "outputTokens": 5509,
+        "totalTokens": 6546
+      },
+      "latencyMs": 29013
+    },
+    {
+      "id": "e5b13ec2-e311-44ff-ae39-e8ee622efee9",
+      "purpose": "select-targets",
+      "sourceId": "volunteer-rota-schedule-change",
+      "at": "2026-10-27T09:04:07.291Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00363275,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 533,
+        "outputTokens": 698,
+        "totalTokens": 1231
+      },
+      "latencyMs": 4734
+    },
+    {
+      "id": "f1e7a271-5233-417d-94fb-4e72ce53a278",
+      "purpose": "generate-exercises",
+      "sourceId": "volunteer-rota-schedule-change",
+      "at": "2026-10-27T09:04:12.030Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.019141,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 1009,
+        "outputTokens": 4207,
+        "totalTokens": 5216
+      },
+      "latencyMs": 23405
+    }
+  ],
+  "stopReason": null
+}

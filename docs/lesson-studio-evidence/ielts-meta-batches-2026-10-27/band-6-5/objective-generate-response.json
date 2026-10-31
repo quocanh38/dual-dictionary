@@ -1,0 +1,153 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+  "completedAt": "2026-10-27T12:43:20.177Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 593,
+    "outputTokens": 8864,
+    "totalTokens": 9457
+  },
+  "latencyMs": 30269,
+  "result": {
+    "listening": {
+      "title": "University Peer Mentoring Evaluation",
+      "focus": "Understanding qualified findings, evidence comparison and limitations",
+      "part": "Part 3",
+      "script": "Maya: Have you finished summarising the mentoring evaluation for Dr Patel's seminar?\n\nJonas: Mostly. The university ran it last term to check whether the new peer mentoring scheme actually helps first-year students settle in academically, not just whether they say they enjoy it.\n\nMaya: So they wanted evidence of behaviour change, not only satisfaction scores?\n\nJonas: Exactly. They sent a questionnaire to all 180 first-year students in the Faculty of Science, and they interviewed 50 mentees — actually, 48, because two withdrew before the interviews took place.\n\nMaya: That's still a reasonable number for qualitative data. Did the mentors provide information as well?\n\nJonas: Yes. Thirty-six mentors completed weekly logs recording meeting length and main topics. Most pairs met for around half an hour each week, largely to discuss study planning, time management and the first lab reports.\n\nMaya: What did the comparison show?\n\nJonas: The clearest pattern concerned deadlines. Students who attended regular one-to-one meetings submitted their first two lab reports on time more often than students who only joined the group workshops. The workshop participants said they felt supported, but their submission record was much closer to students who had no mentoring at all.\n\nMaya: So individual meetings look more useful for that specific outcome. Can we say mentoring raised final grades?\n\nJonas: The report is cautious on that point. Average end-of-term grades were slightly higher for mentees, but the authors note the gap was small and could reflect prior motivation, because students volunteered for the scheme and might already have been more organised.\n\nMaya: That is an important qualification. Were there other limitations?\n\nJonas: Two main ones. The study covered only one ten-week term, so it cannot show whether benefits continue into the second year. It also involved only science students, so the conclusions may not transfer to faculties with different assessment patterns.\n\nMaya: What is recommended for next year?\n\nJonas: To keep one-to-one mentoring for students who request it, strengthen mentor training in study skills, and conduct a longer follow-up that tracks retention and progression, rather than early submission alone.",
+      "questions": [
+        {
+          "title": "Purpose of the Evaluation",
+          "prompt": "What was the main aim of the university's mentoring evaluation?",
+          "options": [
+            "To measure whether students enjoyed meeting their mentors",
+            "To recruit more volunteers for the mentoring scheme",
+            "To find out if mentoring helped first-years manage academically",
+            "To compare science students with other faculties"
+          ],
+          "answer": 2,
+          "explanation": "Jonas says the evaluation checked whether the scheme helps students settle in academically, not just whether they enjoy it. The enjoyment option fails because satisfaction alone is explicitly described as insufficient."
+        },
+        {
+          "title": "Interview Sample Correction",
+          "prompt": "What correction does Jonas make about the interviews?",
+          "options": [
+            "48 mentees were interviewed, not 50",
+            "36 mentors were interviewed, not 48",
+            "180 students answered the questionnaire, not 150",
+            "Interviews lasted 30 minutes, not 50 minutes"
+          ],
+          "answer": 0,
+          "explanation": "Jonas first says 50 mentees, then corrects to 48 because two withdrew. The 36-mentors distractor fails because 36 refers to weekly logs completed by mentors, not interviews."
+        },
+        {
+          "title": "One-to-One versus Workshops",
+          "prompt": "According to the results, how did the two formats differ?",
+          "options": [
+            "Workshop students submitted lab reports earlier than one-to-one mentees",
+            "One-to-one mentees met deadlines more often than workshop-only students",
+            "Both groups showed the same submission pattern as each other",
+            "Workshop students received higher final grades than mentees"
+          ],
+          "answer": 1,
+          "explanation": "Jonas reports regular one-to-one students submitted the first two lab reports on time more often than workshop-only students, whose record was close to no mentoring. The identical-pattern distractor fails because similarity is claimed only between workshops and no mentoring."
+        },
+        {
+          "title": "Grades Qualification",
+          "prompt": "Why does the report qualify the small grade difference?",
+          "options": [
+            "Grades were not collected for all participants",
+            "Mentors recorded grades incorrectly in their logs",
+            "Workshops lasted only ten weeks in total",
+            "Volunteers may already have been more motivated"
+          ],
+          "answer": 3,
+          "explanation": "The report notes grades were slightly higher but the gap was small and could reflect prior motivation because students volunteered. The ten-weeks distractor fails because duration is a separate limitation about persistence, not about grades."
+        },
+        {
+          "title": "Recommendation for Next Year",
+          "prompt": "What does the report recommend for the follow-up study?",
+          "options": [
+            "Stop one-to-one mentoring and expand workshops",
+            "Track retention and progression over a longer period",
+            "Limit mentoring to lab report writing only",
+            "Compare science grades with other universities"
+          ],
+          "answer": 1,
+          "explanation": "Jonas says the recommendation is a longer follow-up tracking retention and progression, not just early submission. The expand-workshops distractor fails because the report suggests keeping one-to-one mentoring for students who request it."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Microplastics in the River Calder",
+      "focus": "Comparing evidence along an urban gradient and handling limitations",
+      "passage": "A three-month study of microplastics in the River Calder set out to compare contamination levels along a short urban gradient and to test whether rainfall increased particle counts. The project, led by environmental scientists at Northfield University, focused on a 12-kilometre stretch that passes from farmland north of Millbridge, through the town centre, and past a treated wastewater outlet south of the town.\n\nBetween March and May 2024, the team collected surface-water samples at six fixed sites twice each week. At each visit they towed a fine net for 15 minutes from a footbridge, filtered the collected material in the laboratory, and counted synthetic particles between 0.3 and 5 millimetres under a microscope. To reduce error, two researchers counted each sample independently, and fibres from their own clothing were controlled by wearing cotton laboratory coats. The method excludes particles smaller than 0.3 millimetres, so total contamination is likely underestimated.\n\nAverage concentrations rose clearly along the urban gradient. Upstream farmland sites averaged 1.2 particles per cubic metre, town-centre sites averaged 3.8, and the two sites below the wastewater outlet averaged 5.1. The authors interpret this pattern as evidence that town sources add substantially to background levels, rather than merely redistributing particles already present upstream. As an illustrative example, they describe a single morning at the Mill Road storm drain, where a tangled cluster of blue fibres was found immediately after street cleaning; this incident is presented only as an example of a possible pathway, not as proof of the overall trend.\n\nRainfall appeared to strengthen the effect. After dry periods of at least five days, counts at town-centre sites fell to around 2.0 particles per cubic metre, while samples taken within 24 hours of heavy rain averaged 6.4. The increase consisted mainly of fibres, which rose from 55% to 78% of all particles, while fragments and films changed little. The researchers suggest, with qualification, that surface runoff washes textile fibres and road dust into the river, although they note that higher river flow during rain could also disturb settled particles from the riverbed.\n\nThe study has several acknowledged limits. Sampling covered only spring, so summer low flows or autumn leaf litter, which can trap plastics, were not examined. The net mesh also missed very small fragments, and visual identification alone can misclassify some natural fibres. For these reasons, the authors present their central claim cautiously: within the size range and season studied, urban activity, especially after rain, was associated with higher microplastic concentrations. They do not claim that the wastewater outlet alone causes the increase, nor that the findings describe annual pollution loads. They recommend year-round sampling with chemical confirmation of polymer type to test whether the observed pattern persists.",
+      "questions": [
+        {
+          "title": "Main Research Aim",
+          "prompt": "What were the researchers mainly trying to test?",
+          "options": [
+            "Whether cotton coats prevent all fibre contamination",
+            "Whether contamination varies by location and rainfall",
+            "Whether wastewater treatment removes all plastics",
+            "Whether autumn leaves trap more plastics than spring flows"
+          ],
+          "answer": 1,
+          "explanation": "The opening states the study compared levels along an urban gradient and tested whether rainfall increased counts. The cotton-coats distractor fails because coats were only a contamination control, not the research aim."
+        },
+        {
+          "title": "Inference About Reported Levels",
+          "prompt": "What can reasonably be inferred about the reported concentrations?",
+          "options": [
+            "They include plastics of all sizes in the river",
+            "They were counted only once for each sample",
+            "They prove annual pollution loads for the river",
+            "They likely understate true contamination"
+          ],
+          "answer": 3,
+          "explanation": "The passage says the method excludes particles smaller than 0.3 mm, so total contamination is likely underestimated. The all-sizes distractor fails because the size range is explicitly restricted to 0.3 to 5 mm."
+        },
+        {
+          "title": "Claim Versus Example",
+          "prompt": "How does the Mill Road storm drain incident function in the passage?",
+          "options": [
+            "As an illustration of a possible pathway, not proof of the trend",
+            "As the main evidence for the urban gradient pattern",
+            "As proof that street cleaning causes all fibre pollution",
+            "As a counterexample to the wastewater outlet finding"
+          ],
+          "answer": 0,
+          "explanation": "The authors present the Mill Road cluster only as an example of a possible pathway, not as proof of the overall trend. The main-evidence distractor fails because the trend rests on averaged site data of 1.2, 3.8 and 5.1 particles."
+        },
+        {
+          "title": "Rainfall and Composition",
+          "prompt": "What happened to particle composition after heavy rain?",
+          "options": [
+            "Fragments increased while fibres decreased",
+            "Films became the largest particle category",
+            "Fibres formed a larger share, while other types changed little",
+            "All particle types rose equally in proportion"
+          ],
+          "answer": 2,
+          "explanation": "After rain, fibres rose from 55% to 78% while fragments and films changed little. The equal-rise distractor fails because the increase is described as consisting mainly of fibres."
+        },
+        {
+          "title": "Cautious Central Claim",
+          "prompt": "Which statement best reflects the authors' cautious central claim?",
+          "options": [
+            "The wastewater outlet alone causes the downstream increase",
+            "Within the studied season and size range, urban activity after rain was linked to higher counts",
+            "Spring results describe pollution levels for the whole year",
+            "Higher river flow has been ruled out as an alternative explanation"
+          ],
+          "answer": 1,
+          "explanation": "The authors limit their claim to the size range and season studied and use associated with, explicitly not claiming the outlet alone causes the increase. The outlet-alone distractor fails because that causal claim is directly disavowed."
+        }
+      ]
+    }
+  }
+}

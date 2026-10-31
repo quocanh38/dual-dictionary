@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 109,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after wildcat strike in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover household/technical and vehicle terms, tax and social vocabulary, grammar/computing, and the versatile phrasal verbs work in/work out/work over. Clarify UK/US forms, literal/figurative meanings, register, and separable grammar.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 680,
+    "remainingRawOnlyAfter": 660
+  },
+  "selected": [
+    "willow pattern",
+    "wind gauge",
+    "wind instrument",
+    "wind tunnel",
+    "window dressing",
+    "windscreen wiper",
+    "windshield wiper",
+    "wine glass",
+    "wing nut",
+    "witch hazel",
+    "withholding tax",
+    "wolf whistle",
+    "word class",
+    "word processing",
+    "word processor",
+    "work in",
+    "work in progress",
+    "work out",
+    "work over",
+    "work permit"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

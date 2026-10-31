@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Refill Shop Supplies",
+    "objective": "Learn to use 'run low' and 'top up' to talk about supplies at work.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s3, what does 'run low' mean when soap or cooking oil 'starts to run low'?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "To become nearly empty and need more soon.",
+            "explanation": "This is correct because s3 means the supply is almost finished and must be reordered."
+          },
+          {
+            "id": "b",
+            "text": "To run quickly to a low shelf to fetch something.",
+            "explanation": "This is wrong because s3 is about the amount left, not about running to a shelf."
+          },
+          {
+            "id": "c",
+            "text": "To lower the price to sell something quickly.",
+            "explanation": "This is wrong because s3 is about stock level, not about reducing prices."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "In s3, 'run low' means the stock is nearly empty."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the natural sentence using 'run low'.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Our office printer paper is running low, so I ordered another box.",
+            "explanation": "This is correct because 'running low' naturally means nearly empty."
+          },
+          {
+            "id": "b",
+            "text": "Our office printer paper is running low of stock, so I ordered another box.",
+            "explanation": "This is wrong because the fixed collocation should be 'running low on stock', not 'low of stock'."
+          },
+          {
+            "id": "c",
+            "text": "Our office printer paper are running low, so I ordered another box.",
+            "explanation": "This is wrong because the singular subject needs 'is', not 'are'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option uses 'run low' with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s4, what does 'top up' mean when volunteers 'top up the display bottles'?",
+        "sourceSentenceIds": [
+          "s4"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "To add more liquid to fill a container to the top again.",
+            "explanation": "This is correct because s4 describes refilling bottles from sealed containers."
+          },
+          {
+            "id": "b",
+            "text": "To put a lid on top of a bottle to close it.",
+            "explanation": "This is wrong because s4 is about adding liquid, not about closing a lid."
+          },
+          {
+            "id": "c",
+            "text": "To place bottles on the highest shelf for display.",
+            "explanation": "This is wrong because s4 is about refilling bottles, not about placing them high up."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "In s4, 'top up' means to refill the bottles."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the natural sentence using 'top up'.",
+        "sourceSentenceIds": [
+          "s4"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Could you top up my water bottle before we leave?",
+            "explanation": "This is correct because 'top up' naturally means add water to fill it again."
+          },
+          {
+            "id": "b",
+            "text": "Could you top up my water bottle up before we leave?",
+            "explanation": "This is wrong because the second 'up' is extra and should be removed."
+          },
+          {
+            "id": "c",
+            "text": "Could you top ups my water bottle before we leave?",
+            "explanation": "This is wrong because after 'could you' the verb should be 'top up', not 'top ups'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option uses 'top up' with correct grammar."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are staying with a friend and writing a short note to your host about drinks for tomorrow's picnic. Write 2-3 sentences offering to help and using a natural form of 'top up'.",
+        "sourceSentenceIds": [
+          "s4"
+        ],
+        "sampleAnswer": "Thanks for letting me stay over! I can top up our water bottles in the morning before we leave. Just let me know if you need anything else for the picnic.",
+        "selfCheck": [
+          "My note has 2-3 sentences.",
+          "I used a natural form of 'top up' to talk about filling bottles.",
+          "My note is an offer to a host about a picnic, not a shop routine."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 994,
+    "outputTokens": 3216,
+    "totalTokens": 4210
+  },
+  "status": 200,
+  "latencyMs": 11139,
+  "model": "muse-spark-1.3"
+}

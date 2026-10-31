@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "check the delivery against the order",
+        "meaningEn": "to compare the delivered goods with the order to see if they match",
+        "meaningVi": "đối chiếu hàng được giao với đơn đặt hàng",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "get in touch with",
+        "meaningEn": "to contact someone",
+        "meaningVi": "liên lạc với ai đó",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 395,
+    "outputTokens": 881,
+    "totalTokens": 1276
+  },
+  "status": 200,
+  "latencyMs": 16321,
+  "model": "muse-spark-1.3"
+}

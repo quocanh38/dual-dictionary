@@ -1,0 +1,12 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "3a61ff53f74ce3ba0899c6b38ff6a7c53830a89fe8ef96dadccf8fdfd33cccf5",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Declared context wordCount differs slightly from a simple whitespace/token count (Listening 382 declared vs 384 counted; Reading 407 vs 409); both passages remain within the requested 300–400 and 400–500 bounds.",
+    "The cost-per-litre comparison is explicitly based on installation cost over one semester; readers should not interpret it as a full lifecycle cost including operating/maintenance expenses."
+  ],
+  "coverage": "Full 20-item review: both shared contexts, all objective options/keys/explanations, and all Writing and Speaking prompts. Rechecked the repaired water-savings comparison and cost-per-litre calculation: both use the stated 120-day semester and the stated installation-cost basis; the arithmetic and keyed comparisons are supported. Reading preserves relevant uncertainty/bias distinctions; Task 1 units, denominators and caveats are visible; Speaking prompts are complete and suitably analytical. Listening script word count (declared/tokenized): 382/384; Reading passage: 407/409. Verified all 20 items and provenance/original-content metadata; no unresolved critical, major or uncertain content issue found.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "carry out an inspection",
+        "meaningEn": "to perform a careful check or examination",
+        "meaningVi": "tiến hành kiểm tra",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "comply with the safety rules",
+        "meaningEn": "to obey or follow the safety rules",
+        "meaningVi": "tuân thủ các quy tắc an toàn",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 401,
+    "outputTokens": 952,
+    "totalTokens": 1353
+  },
+  "status": 200,
+  "latencyMs": 8569,
+  "model": "muse-spark-1.3"
+}

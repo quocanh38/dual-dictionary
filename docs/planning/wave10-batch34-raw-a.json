@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 34,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after high church, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, usage patterns, bilingual examples and learner notes. Regional, dated, technical and register labels are supplied where relevant; dictionary wording and example sentences are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2160,
+    "remainingRawOnlyAfter": 2140
+  },
+  "selected": [
+    "high command",
+    "high commissioner",
+    "high fidelity",
+    "high gear",
+    "high rise",
+    "high school",
+    "high season",
+    "high street",
+    "high technology",
+    "high tide",
+    "high water",
+    "highly strung",
+    "hip bath",
+    "hire purchase",
+    "hit list",
+    "hit parade",
+    "hive off",
+    "hobby horse",
+    "hoi polloi",
+    "hold back"
+  ]
+}

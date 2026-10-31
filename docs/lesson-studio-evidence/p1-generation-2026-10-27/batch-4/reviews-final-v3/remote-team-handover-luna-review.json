@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "78b16f0382d991460c8b319fd60c0f0e3ba508c273f24f3c26c972016477b901",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T06:45:12Z",
+  "note": "Independent review of this exact payload, including target/source correspondence, meanings, every MCQ option and explanation, and transfer task. AI-assisted editorial judgment; no external rights audit, human review or learner testing.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack identifies an original AI-assisted project reading, declares no copied exam text, external source or learner data, and the inspected payload contains no learner PII. Rights assessment relies on the pack declaration; no external rights audit was performed."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“hand over” occurs in cited s1; the lead transfers the client schedule to her colleague before leave."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“to give responsibility for work to another person” fits the schedule handover in s1."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“bàn giao công việc cho người khác” accurately and naturally conveys transferring work, with Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“keep track of” occurs in cited s3; the colleague records and monitors incoming requests in a shared log."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The gloss accurately describes monitoring and recording something over time in this context."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“theo dõi và ghi chép” is concise, natural and accurate, with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b alone means transferring responsibility; a says the lead keeps the task, while c postpones it."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation accurately distinguishes transfer from keeping or delaying the schedule; keyed summary matches s1."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone follows the explicit requested pattern with “hand over” immediately before the object. b is grammatical but uses the alternate separated-object order; c is ungrammatical after modal will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The option b explanation correctly calls its word order grammatical while explaining why it does not meet this prompt’s pattern; c correctly identifies the modal base form. The overall explanation accurately states the criterion."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone describes monitoring and recording over time; b omits tracking and c describes ignoring requests."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations accurately contrast tracking with unrecorded completion or ignoring; the keyed summary fits s3."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b alone is grammatical and uses keep track of: singular “the colleague” agrees with “keeps.” a has the wrong preposition; c has subject–verb disagreement."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation accurately identifies the preposition or agreement issue; the overall explanation correctly says only one option combines the standard phrase and correct grammar."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "A graduating school football captain handing duties to a successor differs meaningfully from a project lead handing over a client schedule during annual leave."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence sample is idiomatic and uses hand over naturally; checklist checks length, target use and the new team context. The exercise explicitly leaves grading to self-assessment."
+    }
+  ],
+  "findings": []
+}

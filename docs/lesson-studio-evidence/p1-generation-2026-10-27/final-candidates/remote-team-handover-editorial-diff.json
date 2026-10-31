@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "sourceBatch": "batch-4",
+  "sourceCandidate": "../batch-4/remote-team-handover-candidate.json",
+  "sourceHash": "d3acc3fb1acd8a9d1124316a54f1aac5b65996ecee8207a6d83df745895e4f08",
+  "finalHash": "78b16f0382d991460c8b319fd60c0f0e3ba508c273f24f3c26c972016477b901",
+  "edits": [
+    {
+      "path": "lesson-1/q3/options",
+      "change": "Changed he to they to match the reading’s pronoun for the colleague."
+    },
+    {
+      "path": "lesson-1/q4/options",
+      "change": "Changed he to they, corrected the plural-pronoun distractor, and made the phrase explanations precise."
+    },
+    {
+      "path": "lesson-1/q2",
+      "change": "Clarified that the question asks for the word order in the reading; the separable phrasal-verb alternative is acknowledged as grammatical."
+    },
+    {
+      "path": "lesson-1/q4/options",
+      "change": "Used the neutral noun phrase the colleague, preserving one correct agreement choice."
+    },
+    {
+      "path": "lesson-1/q4/options[c].explanation",
+      "change": "Corrected the explanation to say the singular subject the colleague requires keeps."
+    }
+  ]
+}

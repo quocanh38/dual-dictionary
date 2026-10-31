@@ -1,0 +1,12 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "70f3e5ed7e64c815ce3c55ff6c496e275f081223c2e5c398c91cf42f695836fd",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Declared context wordCount differs slightly from a simple whitespace/token count (Listening 312 declared vs 316 counted; Reading 438 vs 438); both passages remain within the requested 300–400 and 400–500 bounds.",
+    "Writing Task 1 consultation sample description would be clearer if it stated whether the 500 residents are per year or across both years; this does not undermine the supplied comparisons or keyed content."
+  ],
+  "coverage": "Full 20-item review: both shared contexts, all objective options/keys/explanations, and all Writing and Speaking prompts. Confirmed the museum booking details and corrected time, headcounts and accessibility information are consistent; Reading distinguishes claims from examples and its revised evidence for weighing unserved food is explicit; Task 1 values and percentages reconcile; and Speaking parts/cue cards are complete and appropriate. Listening script word count (declared/tokenized): 312/316; Reading passage: 438/438. Verified all 20 items and provenance/original-content metadata; no unresolved critical, major or uncertain content issue found.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "8f1018dcea479e3b92df48f7a327d81f6965cae45519a6bef1d8f5752882f8dd",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 317/429 words; all 10 answer keys are supported and answer positions balanced. Measurement invariance terminology and conclusions are internally consistent; the LEZ passage appropriately distinguishes raw declines from matched-control estimates and displacement, with explanations matching evidence. Task 1 data, units/sample sizes and cautious wording are complete; Speaking sections and cue card are stage-appropriate. Original-content provenance is stated; no official-item or score claims. Observation: the LEZ passage reports >14,000 “monthly observations” for six cities without clarifying whether this counts monitoring-site/pixel records rather than city-months; label the observation unit to prevent confusion."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, all 10 objective items/options/keys/explanations, both Task 1 datasets/units/sample sizes, all five Writing prompts/timing and all five Speaking prompts including cue-card completeness and stage fit.",
+  "reviewerType": "AI-assisted"
+}

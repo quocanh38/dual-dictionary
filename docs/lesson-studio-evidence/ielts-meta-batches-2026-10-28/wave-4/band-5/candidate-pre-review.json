@@ -1,0 +1,339 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-4",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "normalizationFindings": [
+    "Reading answer positions do not cover all four options."
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-28-wave-4-v1",
+      "writingSpeaking": "ielts-practice-2026-10-28-wave-4-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Booking the Community Sports Hall",
+      "focus": "Everyday conversation: main ideas, details and a change to a booking",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+      "wordCount": 332
+    },
+    "reading": {
+      "title": "A Student Kitchen Rota That Works",
+      "focus": "Finding main ideas, details and the difference between a claim and an example",
+      "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+      "wordCount": 402
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-4-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Booking the Community Sports Hall",
+      "pathwayStage": "band-5",
+      "focus": "Everyday conversation: main ideas, details and a change to a booking",
+      "transcript": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+      "prompt": "Why does Daniel want to use the small sports hall?",
+      "options": [
+        "For weekly sports training",
+        "For a meeting about parking",
+        "For a birthday party",
+        "For a music lesson"
+      ],
+      "answer": 2,
+      "explanation": "The script says Daniel wants to book the hall 'for a birthday party'. The distractor about sports training fails because sport is the hall type, not the reason for use."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Booking the Community Sports Hall",
+      "pathwayStage": "band-5",
+      "focus": "Everyday conversation: main ideas, details and a change to a booking",
+      "transcript": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+      "prompt": "What is the final booking time?",
+      "options": [
+        "2pm to 5pm",
+        "2pm to 4pm",
+        "4pm to 6pm",
+        "12pm to 2pm"
+      ],
+      "answer": 1,
+      "explanation": "Daniel first says 'from 2 to 5' then corrects to 'from 2 to 4', and staff confirms '2pm to 4pm'. The 2 to 5 option fails because it was changed."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Booking the Community Sports Hall",
+      "pathwayStage": "band-5",
+      "focus": "Everyday conversation: main ideas, details and a change to a booking",
+      "transcript": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+      "prompt": "What must Daniel pay today?",
+      "options": [
+        "A £20 deposit",
+        "The full £50",
+        "£25 for one hour",
+        "Nothing until next month"
+      ],
+      "answer": 0,
+      "explanation": "Staff says 'You pay a £20 deposit today... and the rest on the day.' The full £50 option fails because only part is paid now."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Booking the Community Sports Hall",
+      "pathwayStage": "band-5",
+      "focus": "Everyday conversation: main ideas, details and a change to a booking",
+      "transcript": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+      "prompt": "What is the rule about shoes in the hall?",
+      "options": [
+        "Visitors can wear any shoes",
+        "Children do not need shoes",
+        "Shoes must be left at the desk",
+        "Only sports shoes can be worn"
+      ],
+      "answer": 3,
+      "explanation": "Staff says 'sports shoes must be worn in the hall - no outdoor shoes.' The any-shoes option fails because outdoor shoes are not allowed."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Booking the Community Sports Hall",
+      "pathwayStage": "band-5",
+      "focus": "Everyday conversation: main ideas, details and a change to a booking",
+      "transcript": "STAFF: Good morning, Riverside Community Centre, Anna speaking. How can I help?\nDANIEL: Hi, I'd like to book the small sports hall for a birthday party next month.\nSTAFF: Of course. Which date are you thinking about?\nDANIEL: Saturday, the 14th of November, in the afternoon.\nSTAFF: Let me check... Yes, the small hall is free on Saturday the 14th. We have a large hall too, but the small one is good for up to 30 people.\nDANIEL: That's perfect. There will be about 20 children and a few parents.\nSTAFF: How long do you need it for?\nDANIEL: Maybe from 2 to 5? Actually, sorry, from 2 to 4 - two hours is enough.\nSTAFF: So 2pm to 4pm on Saturday the 14th of November. Noted. The cost is £25 per hour, so £50 in total.\nDANIEL: That's fine. Do we need to pay now?\nSTAFF: You pay a £20 deposit today to keep the booking, and the rest on the day.\nDANIEL: Okay. Can we bring our own food and music?\nSTAFF: Yes, you can bring cold food and your own speaker for music. But please note, sports shoes must be worn in the hall - no outdoor shoes.\nDANIEL: I understand. Do you provide tables and chairs?\nSTAFF: Yes, we put out six tables and 25 chairs for free. If you need more, just tell us before Thursday the 12th.\nDANIEL: Six tables is enough. Where do we collect the key?\nSTAFF: Come to the main desk on the ground floor 15 minutes early, and bring your booking email as proof.\nDANIEL: Great. And is there parking?\nSTAFF: Yes, there is free parking behind the centre for about 40 cars.\nSTAFF: One last thing - please leave the hall tidy and put rubbish in the bins outside.\nDANIEL: Of course, we'll clean up after the party.\nSTAFF: Thanks. I'll send the booking email with the deposit link today.\nDANIEL: Thanks for your help, Anna. See you on the 14th.",
+      "prompt": "What must Daniel do to collect the key?",
+      "options": [
+        "Phone Anna on the day",
+        "Come to the main desk early with the booking email",
+        "Pay extra for parking behind the centre",
+        "Bring 40 chairs from home"
+      ],
+      "answer": 1,
+      "explanation": "Staff says 'Come to the main desk... 15 minutes early, and bring your booking email as proof.' The phone option fails because no phone call is mentioned for key collection."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "A Student Kitchen Rota That Works",
+      "pathwayStage": "band-5",
+      "focus": "Finding main ideas, details and the difference between a claim and an example",
+      "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+      "prompt": "What was the problem at the start?",
+      "options": [
+        "Students did not like cooking together",
+        "The shared kitchen was dirty and messy",
+        "There were no cleaning tools in the flat",
+        "Students argued about shopping money"
+      ],
+      "answer": 1,
+      "explanation": "The passage says dirty plates covered the table, the floor was sticky, and nobody took out rubbish. The cooking-together option fails because cooking together is a later positive result, not the first problem."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "A Student Kitchen Rota That Works",
+      "pathwayStage": "band-5",
+      "focus": "Finding main ideas, details and the difference between a claim and an example",
+      "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+      "prompt": "How does the weekly rota work?",
+      "options": [
+        "Everyone does the same job every week",
+        "Six students share five jobs, so one person is free each week",
+        "One student does all five jobs on Monday",
+        "Jobs change every Sunday evening"
+      ],
+      "answer": 1,
+      "explanation": "The passage says there are six students and only five jobs, so one person each week is free, and jobs change every Monday. The same-job option fails because jobs change weekly."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "A Student Kitchen Rota That Works",
+      "pathwayStage": "band-5",
+      "focus": "Finding main ideas, details and the difference between a claim and an example",
+      "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+      "prompt": "What is the author's main claim about why the rota works, and what is the example?",
+      "options": [
+        "Claim: swapping weeks is required; Example: rules are short and clear",
+        "Claim: rules are short and clear, not punishment; Example: Mia swapped weeks with Tom",
+        "Claim: fines are the best method; Example: Tom paid money",
+        "Claim: the free week is unfair; Example: Mia cleaned the fridge"
+      ],
+      "answer": 0,
+      "explanation": "The passage states the belief that it works 'because the rules are short and clear, not because students are punished' and gives Mia swapping with Tom as an example. The fines option fails because the group thinks swapping is better than fines."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "A Student Kitchen Rota That Works",
+      "pathwayStage": "band-5",
+      "focus": "Finding main ideas, details and the difference between a claim and an example",
+      "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+      "prompt": "What can be inferred from the Sunday evening check?",
+      "options": [
+        "Unfinished work is left until next Monday",
+        "The same person finishes any unfinished job that evening",
+        "A new rota is written every Sunday",
+        "The free student checks the kitchen alone"
+      ],
+      "answer": 1,
+      "explanation": "The passage says if a job is not finished, the same person completes it that evening, so the kitchen starts the new week clean. The left-until-Monday option fails because the text says it is completed that evening."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "A Student Kitchen Rota That Works",
+      "pathwayStage": "band-5",
+      "focus": "Finding main ideas, details and the difference between a claim and an example",
+      "passage": "Living with five other first-year students was new for Josh. At first, everyone enjoyed the freedom, but the shared kitchen quickly became a problem. Dirty plates covered the table, the floor was sticky, and nobody took out the rubbish. After two weeks, the group met and agreed to try a weekly kitchen rota.\nThe rota is simple and is fixed to the fridge door. Each student has one main job for a week, and the jobs change every Monday. The five jobs are: washing dishes, cleaning the cooker, cleaning the floor, taking out rubbish and recycling, and cleaning the fridge and shelves. Because there are six students and only five jobs, one person each week is free from kitchen work. This free week keeps the system fair and gives everyone a short break.\nThe author believes the rota works mainly because the rules are short and clear, not because students are punished. For example, Mia once forgot to clean the fridge during her week, and instead of paying money, she simply swapped weeks with Tom. The group thinks talking and swapping is better than strict fines.\nEach job has three clear steps. For instance, 'cleaning the floor' means first moving the bins, then sweeping, then washing with hot water. A box under the sink holds sponges, soap and bags, so no one can say they cannot find the tools. The group also keeps a shared list on the fridge for cleaning products. When soap or bags run out, anyone writes the item on the list. On Monday, the student who is free from kitchen jobs buys these items, and everyone pays an equal share. This small rule stops arguments about money.\nEvery Sunday evening, the group spends ten minutes checking the kitchen together. If a job is not finished, the same person completes it that evening. There have been small problems. During exam weeks, some students are too busy to do their job well. To solve this, the group allows a busy student to ask another person to help, but the busy student must do that person's shopping in return. This exchange keeps the work balanced.\nAfter two months, the kitchen is much cleaner. Josh says the best result is not just a clean room. Students now cook together more often and share food. The rota did not remove all arguments, but it gave the flat a fair way to discuss problems.",
+      "prompt": "What happened after two months of the rota?",
+      "options": [
+        "All arguments completely stopped",
+        "The kitchen was cleaner and students cooked together more",
+        "Students stopped using the rota during exams",
+        "Everyone paid different amounts for cleaning products"
+      ],
+      "answer": 1,
+      "explanation": "The passage says the kitchen is much cleaner and students now cook together more often. The all-arguments-stopped option fails because the text says it did not remove all arguments."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-4-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Volunteer Sign-up Day Table",
+      "pathwayStage": "band-5",
+      "focus": "Describing a table with clear comparisons",
+      "prompt": "The table below shows how many students signed up for five volunteer jobs at Greenfield College on Volunteer Sign-up Day on 12 March. Job type: Library help - 18 students; Park cleaning - 34 students; Food bank packing - 26 students; Animal shelter help - 14 students; Reading help for young children - 22 students. All sign-ups were for Saturday morning work in April. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Borrowing Sports Equipment Log",
+      "pathwayStage": "band-5",
+      "focus": "Summarising borrowing numbers and simple changes",
+      "prompt": "The table below shows how many times students at Riverside School borrowed four types of sports equipment from the school sports room in March and April. Footballs: March 42 times, April 55 times; Basketballs: March 38 times, April 36 times; Tennis rackets: March 20 times, April 28 times; Badminton sets: March 25 times, April 24 times. Students can borrow equipment for free for two days. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Volunteering in School Life",
+      "pathwayStage": "band-5",
+      "focus": "Giving a clear opinion with direct reasons",
+      "prompt": "Some teachers think every secondary school student should do two hours of volunteer work each month, for example cleaning a park or helping in a library. Others think students are already busy with study and should not have to volunteer. Do you agree or disagree that schools should ask all students to do regular volunteer work? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Free Sports Equipment Borrowing",
+      "pathwayStage": "band-5",
+      "focus": "Explaining advantages with simple evidence",
+      "prompt": "Many schools let students borrow sports equipment such as balls and rackets for free. Some people say this is good because more students will play sport and stay healthy. Others say free borrowing causes problems because equipment gets lost or damaged. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Planning a Small Class Picnic",
+      "pathwayStage": "band-5",
+      "focus": "Comparing choices and explaining a preference",
+      "prompt": "A class of 30 students wants to plan a small end-of-term picnic in a local park. Some students want the whole class to plan everything together, including food, transport and games. Others think it is faster and easier if the teacher makes all the decisions. Which way of planning do you think is better? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-4-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Helping and Volunteering",
+      "pathwayStage": "band-5",
+      "focus": "Talking about familiar helping activities",
+      "prompt": "Answer these short questions about helping others. Give 2-3 sentences for each answer. 1. Did you ever help as a volunteer at school? 2. What kind of volunteer work do students in your area often do? 3. Do you prefer helping alone or helping with friends? Why? 4. Do you think you will do more volunteer work next year? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Sport and Free Time",
+      "pathwayStage": "band-5",
+      "focus": "Describing everyday sport habits",
+      "prompt": "Answer these short questions about sport and free time. Give 2-3 sentences for each answer. 1. What sports do you often play or watch? 2. Do you ever borrow sports equipment from school or friends? 3. Where do people in your area usually play sport? 4. Do you prefer playing sport indoors or outdoors? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Volunteer Day You Joined",
+      "pathwayStage": "band-5",
+      "focus": "Describing a past event with clear sequence",
+      "prompt": "Talk about a volunteer sign-up day or volunteer activity you joined or saw at school. You have one minute to prepare and should speak for one to two minutes. You should say: • what the activity was • when and where it happened • who joined with you • and explain why you remember it well or what you learned from it."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · Planning a Small Picnic",
+      "pathwayStage": "band-5",
+      "focus": "Explaining a simple plan and personal role",
+      "prompt": "Talk about a time when you helped plan a small picnic or class trip. You have one minute to prepare and should speak for one to two minutes. You should say: • where you wanted to go • who planned it with you • what food, transport or games you prepared • and explain if the plan worked well and why."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · School Events and Community Help",
+      "pathwayStage": "band-5",
+      "focus": "Giving reasons and evaluating ideas",
+      "prompt": "Discuss these questions with your partner or teacher. Give reasons and examples, not just short answers. 1. Why do some students join volunteer activities while others do not? 2. What are the advantages for a school when it organises a volunteer sign-up day? 3. How can schools make borrowing sports equipment fair for all students? 4. When a class plans a picnic together, what problems can happen and how can they solve them?"
+    }
+  ]
+}

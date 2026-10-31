@@ -1,0 +1,22 @@
+{
+  "previousCandidate": "docs/lesson-studio-evidence/quality-cycle-2026-10-27/candidates/3-v3.json",
+  "candidate": "3-v4",
+  "changes": [
+    {
+      "path": "lessons/0/targets/1/meaningVi",
+      "before": "phân biệt sự khác nhau giữa",
+      "after": "chỉ ra sự khác biệt giữa"
+    },
+    {
+      "path": "lessons/0/exercises/2/options/2/explanation",
+      "before": "This is correct because they must show the difference between visitors and daily workers (phân biệt sự khác nhau giữa).",
+      "after": "Correct: They must show the difference between visitors and daily commuters (chỉ ra sự khác biệt giữa)."
+    },
+    {
+      "path": "lessons/0/exercises/0/options/2/explanation",
+      "before": "This is wrong because cancelling means stopping a survey, while carrying out means doing and completing it.",
+      "after": "Wrong: Cancelling means stopping or deciding not to conduct a survey; carrying out a survey means conducting it."
+    }
+  ],
+  "newMetaCalls": 0
+}

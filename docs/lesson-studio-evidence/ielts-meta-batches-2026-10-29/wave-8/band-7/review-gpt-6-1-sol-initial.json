@@ -1,0 +1,110 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "643806e30785e14b33ddc88b5dad8b62ea4927878fc9f32d091396a562c44a09",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "sharedContexts.reading; normalizationFindings",
+      "severity": "major",
+      "issue": "Reading has 375 whitespace-delimited words, below the required 400–500. Expand substantive content and synchronize all five passage copies."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-7-speaking-03",
+      "severity": "major",
+      "issue": "Part 2 cue points are inline in one paragraph. Put each bullet on its own newline to provide a visible cue card; retain preparation and speaking times."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-7-reading-05",
+      "severity": "critical",
+      "issue": "Explanation states the Brussels pollution/traffic falls were due to relocation. The passage reports concurrent relocation as an illustration of possible displacement, not established causation or a quantified causal explanation. Remove the causal overclaim and explain that the association alone does not establish a policy-specific reduction."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-7-writing-01; writing-02",
+      "severity": "minor",
+      "issue": "Complete numerical data are supplied as prose lists, not actual tables; label or render consistently."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-7-speaking-01; speaking-02",
+      "severity": "minor",
+      "issue": "Questions about community interest in open data and importance of access for children lean towards Part 3 rather than familiar personal Part 1."
+    },
+    {
+      "item": "sharedContexts.reading",
+      "severity": "minor",
+      "issue": "Real cities and policy dates plus invented study statistics could be mistaken for actual research; identify the passage as fictional practice material. No external historical verification performed."
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted initial review of all 20 items: 5 Listening, 5 Reading, 5 Writing, 5 Speaking; entire shared contexts, all 40 options, 10 keys/explanations, productive prompts and metadata. Prior wave-7 band-5 reviewer report viewed only as schema example; no other wave-8 reviewer reports inspected. No candidate edits or provider calls.",
+    "listening": "317-word three-city survey dialogue: 200 corrected to 240=80x3; configural supported, metric failed for two Lima items; cultural interpretation tentative; revise/retest before averages. All options/keys/explanations checked.",
+    "reading": "Entire 375-word LEZ passage read: initial four-city 8–12% falls, concurrent industrial/weather/retrofit factors, controls reducing estimates to 3–5% in two cities, uncertainty, Brussels illustration. All options/keys/explanations checked; short length and explanatory causal overclaim flagged.",
+    "writing": "Two complete comparative Task 1 datasets with denominators/years/units: trust 2019/2023 and users per 1000; coastal reserves 2022 visitors/budget/incidents/access. Three qualified Task 2 topics; all 150/20 and 250/40 consistent.",
+    "speaking": "Two Part 1 sets, one timed but inline four-cue Part 2, two abstract Part 3 sets. Band-7 reasoning challenge plausible, topic specialisation and Part 1 scope noted.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 317,
+        "reading": 375
+      },
+      "metadataWordCounts": {
+        "listening": 317,
+        "reading": 375
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          2,
+          1,
+          3,
+          0
+        ]
+      },
+      "repeatedContextsEqualShared": true,
+      "normalizationFindingsRead": [
+        "Reading passage has 375 words; expected 400–500."
+      ]
+    },
+    "originalityAndProvenance": "Baseten Model API / meta-models/muse-spark-open-1026; wave-8-v1 prompt identifiers and originalContent=true inspected. No recognisable official-question copying found; authorship declaration is not independent plagiarism verification. Fictional research data checked internally, not externally verified. Stages are estimated practice progression, not validated band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-7-listening-01",
+      "ielts-meta-wave-8-band-7-listening-02",
+      "ielts-meta-wave-8-band-7-listening-03",
+      "ielts-meta-wave-8-band-7-listening-04",
+      "ielts-meta-wave-8-band-7-listening-05",
+      "ielts-meta-wave-8-band-7-reading-01",
+      "ielts-meta-wave-8-band-7-reading-02",
+      "ielts-meta-wave-8-band-7-reading-03",
+      "ielts-meta-wave-8-band-7-reading-04",
+      "ielts-meta-wave-8-band-7-reading-05",
+      "ielts-meta-wave-8-band-7-writing-01",
+      "ielts-meta-wave-8-band-7-writing-02",
+      "ielts-meta-wave-8-band-7-writing-03",
+      "ielts-meta-wave-8-band-7-writing-04",
+      "ielts-meta-wave-8-band-7-writing-05",
+      "ielts-meta-wave-8-band-7-speaking-01",
+      "ielts-meta-wave-8-band-7-speaking-02",
+      "ielts-meta-wave-8-band-7-speaking-03",
+      "ielts-meta-wave-8-band-7-speaking-04",
+      "ielts-meta-wave-8-band-7-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

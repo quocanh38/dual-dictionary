@@ -1,0 +1,15 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "75002c7b7e08bf488503d8ccc33728a088859a76545fa7dafc80cc8fa9ad4258",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-4-band-6-reading-02",
+      "issue": "The passage says play assistants organise games on Saturday mornings, but the explanation says Saturday afternoon. The keyed duty is still unambiguous and directly supported; update the explanation for consistency.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": "Full exact-byte rereview of the shared 344-word language-exchange script and 415-word park-volunteer passage; all five Listening and five Reading questions, all options, answer keys and explanations; and all five Task 1/Task 2 Writing and five Speaking prompts. Checked answer uniqueness and source grounding, distractor validity, explanation accuracy, natural language and band fit, Task 1 data/units, and originality disclosure. Keys remain clear and supported. One minor explanation wording mismatch is recorded separately.",
+  "reviewerType": "AI-assisted"
+}

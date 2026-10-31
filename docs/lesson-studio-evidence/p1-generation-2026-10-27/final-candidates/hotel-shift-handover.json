@@ -1,0 +1,211 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-71baf4b5-06fa-42f1-97b8-e24796a4dd22",
+    "version": 1,
+    "title": "Workplace Handover: hand over and follow up on",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading composed for this project with coding-assistant assistance; no copied examination passage, third-party source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v4",
+      "generatedAt": "2026-10-27T04:37:58.561Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Workplace Handover: hand over and follow up on",
+        "objective": "Learners will understand and use hand over and follow up on to describe workplace responsibility and unfinished tasks.",
+        "reading": {
+          "text": "The evening receptionist will hand over the booking records to the night team before leaving. Staff must follow up on guest requests that were not resolved during the day. A guest who needs an early taxi should receive a clear confirmation before the morning shift begins. The shared checklist shows who is responsible for each request, so guests do not need to explain the same problem again.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The evening receptionist will hand over the booking records to the night team before leaving."
+            },
+            {
+              "id": "s2",
+              "text": "Staff must follow up on guest requests that were not resolved during the day."
+            },
+            {
+              "id": "s3",
+              "text": "A guest who needs an early taxi should receive a clear confirmation before the morning shift begins."
+            },
+            {
+              "id": "s4",
+              "text": "The shared checklist shows who is responsible for each request, so guests do not need to explain the same problem again."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "hand over",
+            "meaningEn": "to give documents or responsibility to another person or team",
+            "meaningVi": "bàn giao",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "follow up on",
+            "meaningEn": "to check and take further action on something not yet finished",
+            "meaningVi": "theo dõi và xử lý tiếp",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "Read sentence s1: The evening receptionist will hand over the booking records to the night team before leaving. What does hand over mean here?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To give the booking records and responsibility to the night team.",
+                "explanation": "This is correct because it matches giving documents and responsibility to another team."
+              },
+              {
+                "id": "b",
+                "text": "To keep the booking records hidden from the night team.",
+                "explanation": "This is wrong because hiding the records is the opposite of giving them to the team."
+              },
+              {
+                "id": "c",
+                "text": "To cancel the booking records before leaving work.",
+                "explanation": "This is wrong because cancelling the records does not involve giving them to another team."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a matches the source context of passing records to the next team."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses hand over correctly and naturally.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The assistant will hand over the files to the morning team before leaving.",
+                "explanation": "This is correct because the verb form and the preposition to are natural here."
+              },
+              {
+                "id": "b",
+                "text": "The assistant will hand over the files to the morning team before leaves.",
+                "explanation": "This is wrong because leaves should be leaving after before."
+              },
+              {
+                "id": "c",
+                "text": "The assistant will hand overs the files to the morning team before leaving.",
+                "explanation": "This is wrong because hand overs should be hand over after will."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is fully grammatical with the correct collocation."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "Read sentence s2: Staff must follow up on guest requests that were not resolved during the day. What does follow up on mean here?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "To ignore the guest requests because the day has ended.",
+                "explanation": "This is wrong because ignoring is the opposite of checking and taking further action."
+              },
+              {
+                "id": "b",
+                "text": "To check the unfinished requests and take further action on them.",
+                "explanation": "This is correct because it matches checking something not yet finished and acting on it."
+              },
+              {
+                "id": "c",
+                "text": "To make a completely new request for the first time.",
+                "explanation": "This is wrong because the requests were already made and remain unresolved."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only option b matches the source context of dealing with unresolved requests."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses follow up on correctly and naturally.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "We will follow up on your complaint tomorrow morning.",
+                "explanation": "This is correct because the verb form and the preposition on are natural here."
+              },
+              {
+                "id": "b",
+                "text": "We will follow up on your complaint on tomorrow morning.",
+                "explanation": "This is wrong because on should be removed before tomorrow morning."
+              },
+              {
+                "id": "c",
+                "text": "We will follows up on your complaint tomorrow morning.",
+                "explanation": "This is wrong because follows should be follow after will."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a is fully grammatical with the correct collocation."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You volunteer at a school charity fair but must leave early. Write a message in 2-3 sentences to a classmate who will continue your work, saying what you will give them. Use a natural form of hand over.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "sampleAnswer": "I have to leave the charity fair at 4 p.m. I will hand over the ticket box and the sales list to you before I go. Please keep the cash together so we can count it later.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used a natural form of hand over to describe giving items and work to someone else.",
+              "My role and situation are different from the hotel receptionist in the reading."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "Unapproved final candidate after development review. Original Meta outputs retained; any hand edits recorded separately. Full exact-hash cross-model review required.",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

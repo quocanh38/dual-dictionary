@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "4f994d95dd9bc3af8ea6fcc6efa22e38c1c8868fb58a098817ab7e36847864ea",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:31:00Z",
+  "note": "Full independent re-review of all 17 criteria on candidate v2 exact pack hash above, including both EN/VI targets, all options and explanations, and transfer. Rights/authorship and permission were checked only against local source/pack declarations, not independently verified. B1 is an estimate, not calibrated. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The frozen source manifest and pack consistently declare an AI-assisted original educational passage, authorized distribution, and no learner personal data. This verifies only the consistency of local declarations, not independent authorship or rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“run low” appears verbatim in cited s3 (“soap or cooking oil starts to run low”); contacting the supplier before the weekend supports the low/soon-to-be-needed stock sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“to become nearly empty and need more soon” accurately states the contextual stock-level meaning in s3; it is not a selection rationale."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“sắp hết, gần cạn” is natural Vietnamese for supplies becoming nearly empty and includes diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“top up” appears verbatim in s4 (“top up the display bottles from sealed containers”); this supports adding liquid to replenish the bottles."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The gloss describes replenishing the liquid in the bottle context. “to the top again” is narrower than some uses of “top up,” but it is a reasonable contextual reading of refilling display bottles from sealed containers; no conflicting sense appears in s4."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“châm thêm cho đầy lại” naturally describes adding liquid to refill bottles and has Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone expresses the near-empty stock sense in s3; B treats “run” literally as movement and C confuses stock level with price. Neither distractor fits soap/oil stock."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A correctly describes an almost-finished supply; B and C explanations accurately distinguish stock quantity from movement and price reduction. The option rationale says “must be reordered,” while s3 only says the lead contacts the supplier; this is a small unsupported strengthening, recorded as a minor finding. It does not affect A as the unique answer."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A (“printer paper is running low”) is grammatical and natural. B’s “printer is running low of paper” uses the wrong preposition; C mismatches singular “paper” with “are.” A is the only correct option as written."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The A explanation correctly gives the dwindling-supply sense. B correctly contrasts “low of paper” with the natural “low on paper”; C correctly identifies subject–verb disagreement. These statements are scoped to the sentences and do not overgeneralize."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone describes adding liquid to replenish the bottles. B means closing a bottle with a lid and C means placing bottles high; neither is the action in s4."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A matches s4’s refill action; B and C correctly distinguish lid placement and shelf placement from adding liquid. The stem explanation “refill the bottles” is supported by the source."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is a natural request. B repeats the particle “up”; C incorrectly adds -s after modal “could.” No other choice is grammatical and natural as written."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The B rationale correctly removes the redundant second “up”; the C rationale correctly requires the base verb after “could.” A is a natural request to add water to a bottle."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source is a volunteer shop procedure; the transfer changes the role to a guest writing to a host and the purpose to offering help with drinks for a picnic."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The three-sentence model is natural, uses “top up” for replenishing water bottles, and offers help. Checklist checks length, target use, and the changed host/picnic context; it requests self-assessment, not automatic grading."
+    }
+  ],
+  "findings": [
+    {
+      "id": "minor-q1-reordered",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "The q1 option-a explanation says the stock “must be reordered”; the source says the shift lead contacts the supplier before the weekend but does not explicitly state that a reorder is mandatory. This is a minor overstatement in the explanation, not an answer-key or meaning error."
+    }
+  ]
+}

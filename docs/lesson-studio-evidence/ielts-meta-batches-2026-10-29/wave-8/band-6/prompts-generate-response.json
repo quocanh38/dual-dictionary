@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-8",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:21:05.782Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 644,
+    "outputTokens": 5287,
+    "totalTokens": 5931
+  },
+  "latencyMs": 18693,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Community Health-Information Evening Attendance\",\"focus\":\"Paraphrasing figures and comparing changes over time\",\"prompt\":\"The table below shows the number of people who attended three sessions at a community health-information evening held at Riverside Community Centre on three dates in 2024.\\n\\nDate | Nutrition Talk | Exercise Workshop | Sleep Advice Session | Total Visitors\\n15 March 2024 | 45 | 30 | 25 | 100\\n14 June 2024 | 50 | 55 | 35 | 140\\n18 October 2024 | 60 | 40 | 50 | 150\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · City Park Volunteer Rota Hours\",\"focus\":\"Describing linked data and correcting details in comparisons\",\"prompt\":\"The table below shows the total volunteer hours recorded for three tasks in Greenfield City Park from January to April 2024.\\n\\nTask | January | February | March | April\\nPlanting and Gardening | 20 hours | 25 hours | 40 hours | 35 hours\\nLitter Collection | 30 hours | 28 hours | 32 hours | 30 hours\\nGuiding Visitors | 15 hours | 18 hours | 22 hours | 30 hours\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · College Project Showcase Judging\",\"focus\":\"Presenting linked ideas and a clear position with support\",\"prompt\":\"Some people think that projects at a college showcase should be judged only by teachers, while others believe that students and visitors should also have a vote.\\nDiscuss both views and give your own opinion.\\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\\nWrite at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Community Health-Information Evenings and Online Information\",\"focus\":\"Comparing ideas and evaluating effectiveness\",\"prompt\":\"Some people believe that community health-information evenings are one of the best ways to help people stay healthy, while others think that getting health information online is more practical and useful.\\nDiscuss both views and give your own opinion.\\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\\nWrite at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Compulsory Park Volunteering for Students\",\"focus\":\"Explaining advantages and disadvantages with linked examples\",\"prompt\":\"Some colleges require students to complete a number of volunteer hours in local parks, for example helping with planting, cleaning, or guiding visitors.\\nWhat are the advantages and disadvantages of this requirement?\\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\\nWrite at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Health and Everyday Life\",\"focus\":\"Paraphrasing familiar answers and linking ideas\",\"prompt\":\"Let's talk about health and daily routines.\\n- What do you usually do to stay healthy?\\n- Where do you prefer to get information about health?\\n- Have your health habits changed compared to a few years ago?\\n- Do you think community events can help people learn about health?\"},{\"task\":\"Part 1 · College and Projects\",\"focus\":\"Giving extended answers with comparisons\",\"prompt\":\"Let's talk about your studies and college life.\\n- What kind of projects do you enjoy working on?\\n- Do you prefer working alone or with other students?\\n- Have you ever shown your work to other people? How did you feel?\\n- What do you think makes a good project presentation?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"Describing an event with linked details and clear sequencing\",\"prompt\":\"Describe a community health-information evening, college project showcase, or park volunteer activity you attended or heard about.\\nYou should say:\\n- when and where it took place\\n- what happened during the event\\n- who organised it or who you went with\\n- and explain what you learned from it or why it was memorable.\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Evaluating Community Learning Events\",\"focus\":\"Giving reasons and evaluating different approaches\",\"prompt\":\"Let's discuss community learning events.\\n- Why do some people attend community health or education evenings while others do not?\\n- What makes a community event more useful than simply reading information online?\\n- How can organisers make sure information is accurate and easy to understand?\\n- Do you think local events will become more or less important in the future? Why?\"},{\"task\":\"Part 3 · Volunteering and Public Spaces\",\"focus\":\"Comparing views and justifying opinions about volunteering\",\"prompt\":\"Let's talk about volunteering in public places like city parks.\\n- What are the benefits of volunteer rotas for parks and for volunteers themselves?\\n- Should volunteering be voluntary or should colleges make it compulsory? Why?\\n- How does volunteering in a park compare to other forms of community service?\\n- What can be done to encourage more young people to volunteer regularly?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Community Health-Information Evening Attendance",
+        "focus": "Paraphrasing figures and comparing changes over time",
+        "prompt": "The table below shows the number of people who attended three sessions at a community health-information evening held at Riverside Community Centre on three dates in 2024.\n\nDate | Nutrition Talk | Exercise Workshop | Sleep Advice Session | Total Visitors\n15 March 2024 | 45 | 30 | 25 | 100\n14 June 2024 | 50 | 55 | 35 | 140\n18 October 2024 | 60 | 40 | 50 | 150\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · City Park Volunteer Rota Hours",
+        "focus": "Describing linked data and correcting details in comparisons",
+        "prompt": "The table below shows the total volunteer hours recorded for three tasks in Greenfield City Park from January to April 2024.\n\nTask | January | February | March | April\nPlanting and Gardening | 20 hours | 25 hours | 40 hours | 35 hours\nLitter Collection | 30 hours | 28 hours | 32 hours | 30 hours\nGuiding Visitors | 15 hours | 18 hours | 22 hours | 30 hours\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · College Project Showcase Judging",
+        "focus": "Presenting linked ideas and a clear position with support",
+        "prompt": "Some people think that projects at a college showcase should be judged only by teachers, while others believe that students and visitors should also have a vote.\nDiscuss both views and give your own opinion.\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Community Health-Information Evenings and Online Information",
+        "focus": "Comparing ideas and evaluating effectiveness",
+        "prompt": "Some people believe that community health-information evenings are one of the best ways to help people stay healthy, while others think that getting health information online is more practical and useful.\nDiscuss both views and give your own opinion.\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Compulsory Park Volunteering for Students",
+        "focus": "Explaining advantages and disadvantages with linked examples",
+        "prompt": "Some colleges require students to complete a number of volunteer hours in local parks, for example helping with planting, cleaning, or guiding visitors.\nWhat are the advantages and disadvantages of this requirement?\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Health and Everyday Life",
+        "focus": "Paraphrasing familiar answers and linking ideas",
+        "prompt": "Let's talk about health and daily routines.\n- What do you usually do to stay healthy?\n- Where do you prefer to get information about health?\n- Have your health habits changed compared to a few years ago?\n- Do you think community events can help people learn about health?"
+      },
+      {
+        "task": "Part 1 · College and Projects",
+        "focus": "Giving extended answers with comparisons",
+        "prompt": "Let's talk about your studies and college life.\n- What kind of projects do you enjoy working on?\n- Do you prefer working alone or with other students?\n- Have you ever shown your work to other people? How did you feel?\n- What do you think makes a good project presentation?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "Describing an event with linked details and clear sequencing",
+        "prompt": "Describe a community health-information evening, college project showcase, or park volunteer activity you attended or heard about.\nYou should say:\n- when and where it took place\n- what happened during the event\n- who organised it or who you went with\n- and explain what you learned from it or why it was memorable.\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Community Learning Events",
+        "focus": "Giving reasons and evaluating different approaches",
+        "prompt": "Let's discuss community learning events.\n- Why do some people attend community health or education evenings while others do not?\n- What makes a community event more useful than simply reading information online?\n- How can organisers make sure information is accurate and easy to understand?\n- Do you think local events will become more or less important in the future? Why?"
+      },
+      {
+        "task": "Part 3 · Volunteering and Public Spaces",
+        "focus": "Comparing views and justifying opinions about volunteering",
+        "prompt": "Let's talk about volunteering in public places like city parks.\n- What are the benefits of volunteer rotas for parks and for volunteers themselves?\n- Should volunteering be voluntary or should colleges make it compulsory? Why?\n- How does volunteering in a park compare to other forms of community service?\n- What can be done to encourage more young people to volunteer regularly?"
+      }
+    ]
+  }
+}

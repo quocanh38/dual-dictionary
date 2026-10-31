@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-10-27T09:03:03.070Z",
+  "promptVersion": "lesson-studio-2026-10-27-v5",
+  "requestParameters": {
+    "model": "muse-spark-1.3",
+    "temperature": 0.2,
+    "maxOutputTokens": 10000,
+    "reasoningEffort": "medium"
+  },
+  "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+  "sourcesSha256": "fef0597ea0d2158ec935d5c4c0b131fa0c2bc79728d39bff831afabe86f2e677",
+  "results": [
+    {
+      "sourceId": "university-photo-archive-catalogue",
+      "purpose": "development",
+      "draftId": "draft-9d62218e-ce0c-4f8d-8710-2774f188153b",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "a8755316-36fe-47d5-a1b0-b340277607f0",
+        "f7fb8fe0-80f2-454a-8a86-6a022a0be245"
+      ]
+    },
+    {
+      "sourceId": "community-arts-open-day-volunteers",
+      "purpose": "development",
+      "draftId": "draft-74344d60-30a2-42a5-adcd-cdb3cf478ce7",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "55646ce4-d6f4-421a-936f-1ad64e662b00",
+        "5f6d3c5d-9316-444f-9969-264fa4d90054"
+      ]
+    },
+    {
+      "sourceId": "volunteer-rota-schedule-change",
+      "purpose": "development",
+      "draftId": "draft-80b0637b-59e9-4e66-9717-6752a793bcdf",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "e5b13ec2-e311-44ff-ae39-e8ee622efee9",
+        "f1e7a271-5233-417d-94fb-4e72ce53a278"
+      ]
+    }
+  ]
+}

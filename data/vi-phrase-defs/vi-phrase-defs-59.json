@@ -1,0 +1,190 @@
+[
+  {
+    "phrase": "open up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "note": "Open up có nhiều nghĩa tùy tân ngữ và ngữ cảnh: mở vật chứa hoặc lối vào; bắt đầu hoạt động; chia sẻ điều riêng tư; đôi khi là nổ súng. Phân biệt open up a shop (mở cửa kinh doanh) với open a shop (mở một cửa hàng/cửa ra vào).",
+    "senses": [
+      {"m":"mở rộng hoặc làm thông một vật chứa, lối vào hay khu vực; trở nên mở hơn","pat":"open up a box/road/view · open something up · The door opened up","ex":[["They opened up the old road to traffic.","Họ mở lại con đường cũ cho xe cộ lưu thông."],["A narrow path opens up behind the station.","Một lối đi hẹp mở ra phía sau nhà ga."]] },
+      {"m":"bắt đầu hoạt động hoặc mở cửa đón khách; mở một cơ sở kinh doanh","pat":"open up a shop/business · open up for business · The café opens up at…","ex":[["The bakery opens up before sunrise.","Tiệm bánh mở cửa trước khi mặt trời mọc."],["They plan to open up a second branch downtown.","Họ dự định mở thêm chi nhánh thứ hai ở trung tâm thành phố."]] },
+      {"m":"cởi mở hơn và bắt đầu chia sẻ suy nghĩ hoặc cảm xúc","pat":"open up to somebody · open up about something","ex":[["He gradually opened up to his new teammates.","Anh ấy dần cởi mở với các đồng đội mới."],["She opened up about the pressure she had been feeling.","Cô ấy bắt đầu chia sẻ về áp lực mình đã cảm nhận."]] },
+      {"m":"bắt đầu bắn súng; thường dùng trong tường thuật về xung đột hoặc sự việc nguy hiểm","pat":"open up on somebody · open up with a weapon","ex":[["The guards opened up when they heard the signal.","Những người lính gác bắt đầu nổ súng khi nghe tín hiệu."]] }
+    ]
+  },
+  {
+    "phrase": "operating room",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Operating room là cách gọi phổ biến ở Mỹ; operating theatre thường gặp trong tiếng Anh Anh. Cả hai chỉ phòng vô trùng nơi phẫu thuật được tiến hành, không phải toàn bộ khoa phẫu thuật.",
+    "senses": [
+      {"m":"phòng mổ; phòng chuyên dụng trong bệnh viện nơi bác sĩ thực hiện phẫu thuật","pat":"in the operating room · an operating room team · operating-room staff","ex":[["The patient was taken to the operating room.","Bệnh nhân được đưa vào phòng mổ."],["Only authorized staff may enter the operating room.","Chỉ nhân viên được phép mới có thể vào phòng mổ."]] }
+    ]
+  },
+  {
+    "phrase": "operating system",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Operating system (OS) quản lý phần cứng, bộ nhớ, tệp và các tài nguyên của thiết bị, đồng thời cung cấp môi trường để ứng dụng chạy. Nó khác với một ứng dụng riêng lẻ như trình duyệt hay trình soạn thảo văn bản.",
+    "senses": [
+      {"m":"hệ điều hành; phần mềm nền tảng điều phối hoạt động của máy tính hoặc thiết bị và hỗ trợ chạy ứng dụng","pat":"an operating system (OS) · install/update an operating system · run on an operating system","ex":[["The new operating system uses less memory.","Hệ điều hành mới sử dụng ít bộ nhớ hơn."],["This application runs on several operating systems.","Ứng dụng này chạy trên một số hệ điều hành."]] }
+    ]
+  },
+  {
+    "phrase": "operating theatre",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Operating theatre thường dùng trong tiếng Anh Anh; tiếng Anh Mỹ thường dùng operating room. Nghĩa chính là phòng mổ, không đồng nghĩa với cả bộ phận cấp cứu hay toàn bộ khoa phẫu thuật.",
+    "senses": [
+      {"m":"phòng mổ; căn phòng trong bệnh viện được trang bị để tiến hành phẫu thuật","pat":"in the operating theatre · an operating-theatre team · theatre staff","ex":[["The operation will take place in the main operating theatre.","Ca phẫu thuật sẽ diễn ra tại phòng mổ chính."],["The operating theatre was prepared before the patient arrived.","Phòng mổ đã được chuẩn bị trước khi bệnh nhân đến."]] }
+    ]
+  },
+  {
+    "phrase": "operation code",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Trong kiến trúc máy tính, operation code thường được gọi tắt là opcode: phần của lệnh máy cho biết thao tác cần thực hiện; các phần khác của lệnh có thể chỉ toán hạng hoặc dữ liệu liên quan. Cách gọi cụ thể tùy kiến trúc bộ xử lý.",
+    "senses": [
+      {"m":"mã thao tác (opcode); phần mã trong một lệnh máy xác định phép xử lý mà bộ xử lý cần thực hiện","pat":"an operation code/opcode · decode an operation code · an instruction's operation code","ex":[["The processor decodes the operation code before carrying out the instruction.","Bộ xử lý giải mã mã thao tác trước khi thực hiện lệnh."],["The operation code identifies the instruction type.","Mã thao tác xác định loại lệnh."]] }
+    ]
+  },
+  {
+    "phrase": "opportunity cost",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Trong kinh tế học, opportunity cost là giá trị của phương án tốt nhất bị bỏ lỡ khi chọn một phương án khác; đó không nhất thiết chỉ là khoản tiền phải trả. Khái niệm này áp dụng cho thời gian và nguồn lực hữu hạn.",
+    "senses": [
+      {"m":"chi phí cơ hội; lợi ích của phương án thay thế tốt nhất mà ta từ bỏ khi đưa ra một lựa chọn","pat":"the opportunity cost of something · consider/calculate an opportunity cost · at an opportunity cost","ex":[["The opportunity cost of studying full-time was the salary she gave up.","Chi phí cơ hội của việc học toàn thời gian là khoản lương cô ấy phải từ bỏ."],["When comparing the projects, include the opportunity cost of using the equipment.","Khi so sánh các dự án, hãy tính cả chi phí cơ hội của việc sử dụng thiết bị."]] }
+    ]
+  },
+  {
+    "phrase": "optical fibre",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Optical fibre (cách viết Anh-Anh; Mỹ: optical fiber) truyền tín hiệu dưới dạng ánh sáng trong sợi thủy tinh hoặc nhựa rất mảnh. Nhiều sợi ghép thành cáp quang; cụm này cũng xuất hiện trong ngữ cảnh viễn thông và kết nối Internet.",
+    "senses": [
+      {"m":"sợi quang; sợi thủy tinh hoặc nhựa mảnh dùng để truyền tín hiệu ánh sáng","pat":"an optical fibre · fibre-optic cable · transmit data through optical fibre","ex":[["The network uses optical fibre to carry data over long distances.","Mạng sử dụng sợi quang để truyền dữ liệu trên quãng đường dài."],["A damaged optical fibre can interrupt the connection.","Một sợi quang bị hỏng có thể làm gián đoạn kết nối."]] }
+    ]
+  },
+  {
+    "phrase": "order book",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Trong kinh doanh, order book thường ghi những đơn hàng hoặc hợp đồng khách đã đặt nhưng doanh nghiệp còn phải cung cấp; tổng giá trị đơn hàng tồn có thể dùng để đánh giá triển vọng hoạt động. Trong tài chính, order book cũng có thể là sổ lệnh mua-bán đang chờ khớp.",
+    "senses": [
+      {"m":"sổ đơn hàng; hồ sơ ghi các đơn hàng sản phẩm hoặc dịch vụ mà doanh nghiệp đã nhận","pat":"a strong/full order book · add to the order book · an order book for something","ex":[["The manufacturer has a healthy order book for the next six months.","Nhà sản xuất có lượng đơn hàng khả quan cho sáu tháng tới."],["New contracts have added to the company's order book.","Các hợp đồng mới đã làm tăng lượng đơn hàng của công ty."]] },
+      {"m":"sổ lệnh; danh sách các lệnh mua và bán đang chờ xử lý trên thị trường tài chính","pat":"a stock-market order book · an order-book imbalance · orders in the book","ex":[["Traders watched the order book for changes in demand.","Các nhà giao dịch theo dõi sổ lệnh để xem nhu cầu thay đổi ra sao."]] }
+    ]
+  },
+  {
+    "phrase": "order of magnitude",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Trong cách dùng định lượng, chênh lệch một order of magnitude thường có nghĩa là chênh lệch khoảng mười lần; hai bậc thường tương ứng khoảng một trăm lần. Trong văn phong không quá chính xác, cụm này đôi khi chỉ sự khác biệt rất lớn, nên cần xem ngữ cảnh.",
+    "senses": [
+      {"m":"bậc độ lớn; mức trên thang đo theo lũy thừa của mười, hoặc mức chênh lệch khoảng mười lần","pat":"an order of magnitude larger/smaller · differ by an order of magnitude · the same order of magnitude","ex":[["The new sensor is an order of magnitude more sensitive.","Cảm biến mới nhạy hơn khoảng một bậc độ lớn, tức chừng mười lần."],["The two estimates are in the same order of magnitude.","Hai ước tính nằm trong cùng một bậc độ lớn."]] }
+    ]
+  },
+  {
+    "phrase": "organic chemistry",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Organic chemistry nghiên cứu cấu trúc, tính chất, phản ứng và cách điều chế các hợp chất hữu cơ, đặc biệt là hợp chất chứa carbon. Không phải mọi hợp chất có carbon đều được xếp vào hóa học hữu cơ; nhiều nhóm vô cơ chứa carbon là ngoại lệ theo quy ước chuyên ngành.",
+    "senses": [
+      {"m":"hóa học hữu cơ; ngành hóa học nghiên cứu các hợp chất hữu cơ, phần lớn dựa trên carbon","pat":"study organic chemistry · an organic-chemistry course · organic chemistry research","ex":[["She is taking organic chemistry this semester.","Học kỳ này cô ấy đang học hóa học hữu cơ."],["The course introduces reactions commonly studied in organic chemistry.","Khóa học giới thiệu các phản ứng thường được nghiên cứu trong hóa học hữu cơ."]] }
+    ]
+  },
+  {
+    "phrase": "organization chart",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Organization chart (cũng viết organizational chart; thường gọi organigram) biểu diễn các vị trí, bộ phận và quan hệ báo cáo trong một tổ chức. Sơ đồ cho thấy cấu trúc chính thức, không nhất thiết phản ánh mọi mối quan hệ ảnh hưởng thực tế.",
+    "senses": [
+      {"m":"sơ đồ tổ chức; sơ đồ cho thấy các bộ phận hoặc vị trí và mối quan hệ báo cáo giữa chúng","pat":"an organization chart · draw/update an organization chart · a company organization chart","ex":[["The organization chart shows who reports to the director.","Sơ đồ tổ chức cho biết ai báo cáo trực tiếp cho giám đốc."],["They updated the organization chart after the merger.","Họ cập nhật sơ đồ tổ chức sau vụ sáp nhập."]] }
+    ]
+  },
+  {
+    "phrase": "organization of american states",
+    "pos": "proper noun",
+    "hideOvdp": true,
+    "note": "Tên chính thức của một tổ chức liên chính phủ khu vực châu Mỹ; thường viết hoa Organization of American States và viết tắt OAS. Không nhầm OAS với các tổ chức khác có cùng chữ viết tắt trong ngữ cảnh ngoài châu Mỹ.",
+    "senses": [
+      {"m":"Tổ chức các Quốc gia châu Mỹ (OAS); tổ chức liên chính phủ khu vực quy tụ các quốc gia ở châu Mỹ","pat":"the Organization of American States (OAS) · an OAS member state · the OAS General Assembly","ex":[["The Organization of American States held its annual meeting in the region.","Tổ chức các Quốc gia châu Mỹ tổ chức cuộc họp thường niên trong khu vực."],["Several OAS member states signed the declaration.","Một số quốc gia thành viên OAS đã ký tuyên bố."]] }
+    ]
+  },
+  {
+    "phrase": "original sin",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Trong thần học Kitô giáo, Original Sin (Tội Nguyên tổ) là giáo lý về tình trạng tội lỗi gắn với nhân loại sau sự sa ngã của Adam và Eve; cách giải thích khác nhau giữa các truyền thống. Nghĩa bóng chỉ một sai lầm ban đầu gây hệ quả kéo dài.",
+    "senses": [
+      {"m":"Tội Nguyên tổ; khái niệm thần học Kitô giáo về tình trạng tội lỗi mà con người thừa hưởng từ sự sa ngã đầu tiên","pat":"the doctrine of original sin · belief in Original Sin · original sin and redemption","ex":[["The lecture compares different Christian accounts of original sin.","Bài giảng so sánh các cách giải thích khác nhau của Kitô giáo về Tội Nguyên tổ."]] },
+      {"m":"(nghĩa bóng) sai lầm hoặc khiếm khuyết ban đầu làm phát sinh những vấn đề về sau","pat":"the original sin of something · trace a problem to its original sin","ex":[["The policy's original sin was its reliance on unrealistic forecasts.","Sai lầm gốc của chính sách là dựa vào những dự báo thiếu thực tế."]] }
+    ]
+  },
+  {
+    "phrase": "out of date",
+    "pos": "adjective phrase",
+    "hideOvdp": true,
+    "note": "Out of date có thể nói thông tin không còn mới/chính xác, đồ vật hoặc quan điểm lỗi thời, hay giấy tờ không còn hiệu lực. Phân biệt out of date (cũ, không còn phù hợp) với up to date (cập nhật, mới nhất); thường đứng sau be hoặc sau danh từ trong cấu trúc a(n) out-of-date…",
+    "senses": [
+      {"m":"lỗi thời, không còn phù hợp với hiện tại; dùng cho ý tưởng, phong cách, thiết bị hoặc phương pháp","pat":"an out-of-date idea/style/system · become/go out of date · be out of date","ex":[["The manual is out of date and needs a complete revision.","Cuốn hướng dẫn đã lỗi thời và cần được sửa đổi toàn diện."],["Some of the equipment has become out of date.","Một số thiết bị đã trở nên lạc hậu."]] },
+      {"m":"không còn chứa thông tin mới nhất hoặc không còn chính xác","pat":"out-of-date information/details · keep something up to date","ex":[["The website still lists out-of-date prices.","Trang web vẫn niêm yết mức giá không còn cập nhật."]] },
+      {"m":"hết hạn hoặc không còn hiệu lực; dùng cho một số giấy tờ, giấy phép hoặc dữ liệu","pat":"a passport/licence is out of date · an out-of-date document","ex":[["Her passport was out of date, so she could not travel.","Hộ chiếu của cô ấy đã hết hạn nên cô ấy không thể đi du lịch."]] }
+    ]
+  },
+  {
+    "phrase": "out of doors",
+    "pos": "adverb phrase",
+    "hideOvdp": true,
+    "note": "Out of doors nghĩa là ở ngoài trời, bên ngoài một tòa nhà; cách nói này thường mang sắc thái trang trọng hoặc kiểu cũ hơn outdoors. Không dùng để chỉ riêng cửa ra vào.",
+    "senses": [
+      {"m":"ở ngoài trời, không ở trong nhà hoặc công trình có mái che","pat":"spend time out of doors · work/eat out of doors · life out of doors","ex":[["The children spent most of the afternoon out of doors.","Bọn trẻ dành phần lớn buổi chiều ở ngoài trời."],["In summer, we often eat out of doors.","Vào mùa hè, chúng tôi thường ăn ngoài trời."]] }
+    ]
+  },
+  {
+    "phrase": "out of work",
+    "pos": "adjective phrase",
+    "hideOvdp": true,
+    "note": "Out of work mô tả người hiện không có việc làm, thường vì đã mất hoặc chưa tìm được việc; sắc thái trung tính và thường gặp trong giao tiếp. Có thể nói be/put somebody out of work.",
+    "senses": [
+      {"m":"thất nghiệp, không có việc làm vào thời điểm nói","pat":"be out of work · put/leave somebody out of work · remain out of work","ex":[["He has been out of work since the factory closed.","Anh ấy thất nghiệp kể từ khi nhà máy đóng cửa."],["The closure left dozens of people out of work.","Việc đóng cửa khiến hàng chục người mất việc."]] }
+    ]
+  },
+  {
+    "phrase": "outboard motor",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Outboard motor là động cơ gắn bên ngoài ở đuôi thuyền nhỏ; cụm này đôi khi chỉ cả bộ động cơ liền chân vịt có thể quay để điều hướng. Khác với inboard motor, được lắp bên trong thân thuyền.",
+    "senses": [
+      {"m":"động cơ ngoài; động cơ gắn ở phía sau, bên ngoài thân một chiếc thuyền nhỏ","pat":"an outboard motor · fit a boat with an outboard motor · an outboard-motor boat","ex":[["They started the outboard motor and moved away from the dock.","Họ khởi động động cơ ngoài và rời khỏi cầu tàu."],["The small boat is powered by a four-stroke outboard motor.","Chiếc thuyền nhỏ chạy bằng động cơ ngoài bốn kỳ."]] }
+    ]
+  },
+  {
+    "phrase": "outer space",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Outer space là không gian ngoài bầu khí quyển Trái Đất, nơi có các thiên thể. Đây là khái niệm phổ thông; ranh giới pháp lý chính xác giữa khí quyển và không gian chưa có một mốc quốc tế duy nhất được mọi quốc gia thống nhất.",
+    "senses": [
+      {"m":"không gian vũ trụ; vùng ngoài khí quyển Trái Đất, nơi các hành tinh, sao và thiên thể chuyển động","pat":"in outer space · explore outer space · outer-space research/travel","ex":[["The probe sent back images from outer space.","Tàu thăm dò gửi về những hình ảnh từ không gian vũ trụ."],["The film imagines how people might live in outer space.","Bộ phim hình dung con người có thể sống trong vũ trụ như thế nào."]] }
+    ]
+  },
+  {
+    "phrase": "outward bound",
+    "pos": "adjective phrase",
+    "hideOvdp": true,
+    "note": "Viết thường, outward-bound mô tả hành trình đang đi xa khỏi một địa điểm hoặc bờ biển, đối lập với homeward-bound. Viết hoa trong Outward Bound thường chỉ tên riêng của các tổ chức/chương trình giáo dục trải nghiệm ngoài trời; ý nghĩa cụ thể tùy quốc gia.",
+    "senses": [
+      {"m":"đang trên đường rời xa một nơi, thường là rời bến hoặc đi khỏi nhà","pat":"an outward-bound ship/train · outward-bound traffic · be outward bound for…","ex":[["The outward-bound ferry left the harbour at dawn.","Chiếc phà rời bến lúc bình minh để đi xa khỏi cảng."],["We joined an outward-bound convoy heading north.","Chúng tôi tham gia đoàn xe đang hướng ra phía bắc."]] },
+      {"m":"(Outward Bound) thuộc chương trình giáo dục trải nghiệm, thường phát triển kỹ năng và tinh thần đồng đội thông qua hoạt động ngoài trời","pat":"an Outward Bound course/programme · take part in Outward Bound","ex":[["She completed an Outward Bound course with her classmates.","Cô ấy hoàn thành một khóa Outward Bound cùng các bạn cùng lớp."]] }
+    ]
+  },
+  {
+    "phrase": "oxygen mask",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Oxygen mask là mặt nạ đưa oxy đến người đeo trong môi trường hoặc tình huống cần hỗ trợ hô hấp, chẳng hạn hàng không hay chăm sóc y tế. Đây là tên thiết bị; lựa chọn và cách sử dụng trong cấp cứu cần theo hướng dẫn chuyên môn.",
+    "senses": [
+      {"m":"mặt nạ dưỡng khí; thiết bị che mũi và miệng để cung cấp oxy cho người đeo","pat":"put on/use an oxygen mask · an oxygen mask drops down · wear an oxygen mask","ex":[["Passengers were told to put on their oxygen masks first.","Hành khách được hướng dẫn đeo mặt nạ dưỡng khí trước."],["The nurse fitted an oxygen mask over his nose and mouth.","Y tá đặt mặt nạ dưỡng khí lên mũi và miệng anh ấy."]] }
+    ]
+  }
+]

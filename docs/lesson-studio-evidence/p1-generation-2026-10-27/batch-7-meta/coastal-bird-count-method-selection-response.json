@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "account for",
+        "meaningEn": "to consider and include the length of each visit when comparing totals",
+        "meaningVi": "tính đến, xem xét đến thời lượng của mỗi lần quan sát",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "long-term decline",
+        "meaningEn": "a gradual decrease over a long period of time",
+        "meaningVi": "sự suy giảm trong thời gian dài",
+        "sourceSentenceId": "s6"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 514,
+    "outputTokens": 930,
+    "totalTokens": 1444
+  },
+  "status": 200,
+  "latencyMs": 9423,
+  "model": "muse-spark-1.3"
+}

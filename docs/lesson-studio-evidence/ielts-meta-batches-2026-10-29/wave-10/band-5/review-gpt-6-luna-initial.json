@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "2c6194c5665d6da99c24d161354a467b9ea1514dc4927a96ff87a59360a8c36f",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-10-band-5-reading-03 / Student First-Aid Course Timetable",
+      "issue": "The passage teaches cooling a burn with water for 10 minutes. This conflicts with current NHS first-aid guidance to cool a burn under cool running water for 20 minutes; update the course detail and any dependent answer/explanation. https://www.nhs.uk/conditions/Burns-and-scalds/",
+      "severity": "critical"
+    }
+  ],
+  "observations": [
+    "The first-aid course context also mentions recovery position, back blows, CPR and defibrillator practice at a high level without detailed potentially unsafe procedural steps. The other 9 objective keys are uniquely supported. Listening/Reading are 339/409 words; Task 1 counts sum correctly (42, 58 and 65) and replacement totals reconcile to 195 in both years. Writing timings/word minimums and Speaking parts/cue cards are complete. Original-content provenance is stated; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, every objective item/options/key/explanation, both Task 1 datasets/totals/units, all five Writing prompts/timing, and all five Speaking prompts/Part 2 cue cards. Safety review included first-aid claims on burns, choking, recovery position, CPR and defibrillator.",
+  "reviewerType": "AI-assisted"
+}

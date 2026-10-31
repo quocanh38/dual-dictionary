@@ -1,0 +1,15 @@
+[
+  {
+    "case": 3,
+    "promptVersion": "lesson-studio-2026-10-27-v3",
+    "purpose": "repair-exercises",
+    "usage": {
+      "inputTokens": 2166,
+      "outputTokens": 5762,
+      "totalTokens": 7928
+    },
+    "latencyMs": 21205,
+    "status": 200,
+    "outcome": "validated-unreviewed-draft"
+  }
+]

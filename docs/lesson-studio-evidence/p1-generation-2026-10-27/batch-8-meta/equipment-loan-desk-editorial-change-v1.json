@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "equipment-loan-desk",
+  "rawCandidateFile": "equipment-loan-desk-candidate.json",
+  "editorialCandidateFile": "equipment-loan-desk-candidate-editorial-v1.json",
+  "editedLocally": true,
+  "generatedByMeta": false,
+  "changes": [
+    {
+      "part": "reading.sentences s3-s4",
+      "before": "The full source sentence was split after “5 p.m.”; s4 began “on the same day...”",
+      "after": "Merged into one complete sentence, preserving every source word and internal abbreviation."
+    },
+    {
+      "part": "reading.sentences s6-s7",
+      "before": "The source sentence was split after “4 p.m.”; s7 began “to request an extension.”",
+      "after": "Merged into one complete sentence; following sentence IDs were renumbered and all affected target/exercise citations now point to s5."
+    },
+    {
+      "part": "q3 prompt/source citation",
+      "before": "Quoted an incomplete fragment ending at “4 p.m.” and cited s6.",
+      "after": "Uses complete sentence s5 and asks for the contextual meaning of “run late”."
+    },
+    {
+      "part": "q4 option b and explanation",
+      "before": "“Our workshop was run late...” could invite an alternate passive interpretation.",
+      "after": "Uses a clear past-tense form error (“Our workshop run late...”); explanation says completed event requires “ran”."
+    }
+  ],
+  "reason": "Correct source segmentation or maintain an independently reviewable exact-text lesson; all original provider output is preserved unchanged."
+}

@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "ee125c253be0b6580d82c883f9c95d727d56b2d8440dcb06df9987f3da40af12",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full review of candidate-initial-v1.json exact bytes: 347-word listening script and 448-word reading passage, all 10 objective questions with every option/key/explanation, all five Writing prompts and five Speaking prompts. Checked answer uniqueness, text support, distractors, explanation accuracy, natural language, stage fit, Task 1 data/units and timing, Speaking Parts/cue-card structure, normalization metadata, originality disclosure and score claims. All objective keys are supported by the script/passage. Task 1 provides complete access-guide/ticket data and a lecture-recording survey with its sample size, percentages and multi-response note. Speaking includes Parts 1, 2 and 3. Provenance declares originalContent:true; no official-question or score-estimation claims appear. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

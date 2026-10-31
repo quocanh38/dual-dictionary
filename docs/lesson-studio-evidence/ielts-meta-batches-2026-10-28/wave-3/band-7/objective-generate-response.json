@@ -1,0 +1,154 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-7",
+  "batchId": "wave-3",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:12:53.102Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 610,
+    "outputTokens": 5666,
+    "totalTokens": 6276
+  },
+  "latencyMs": 27223,
+  "result": {
+    "listening": {
+      "title": "Maths Club Results",
+      "focus": "causal limits and survey bias in an after-school study",
+      "part": "Part 3",
+      "script": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — randomly invite half the year to the club next term and track homework time properly.",
+      "questions": [
+        {
+          "title": "Q1",
+          "prompt": "What was the main test-score finding reported in the paper?",
+          "options": [
+            "Club members and non-members improved by the same amount.",
+            "Club members improved by about eleven percent, non-members by about four percent.",
+            "Non-members improved more than club members.",
+            "Club members improved by four percent from June to January."
+          ],
+          "answer": 1,
+          "explanation": "The script states club members improved by eleven percent and non-members by four percent January to June. The strongest distractor reverses the period, but the order is January to June, not June to January."
+        },
+        {
+          "title": "Q2",
+          "prompt": "Why do the students doubt a direct causal claim about the club?",
+          "options": [
+            "Joining was voluntary, so members may already have been more motivated.",
+            "The club met too rarely to affect learning.",
+            "Teachers gave extra help only to non-members.",
+            "Exam papers were different for the two groups."
+          ],
+          "answer": 0,
+          "explanation": "Maya and Jonas discuss self-selection: motivated students both join and practise more, so motivation confounds the effect. No evidence is given about meeting frequency or different papers."
+        },
+        {
+          "title": "Q3",
+          "prompt": "What correction does Maya make about the study size?",
+          "options": [
+            "The study followed 180 pupils equally split between groups.",
+            "The study was conducted over two years, not one term.",
+            "The study followed 140 pupils, 60 in the club and 80 outside.",
+            "The study included only 60 pupils in total."
+          ],
+          "answer": 2,
+          "explanation": "Maya corrects her earlier note of 180 to 140, with 60 in the club and 80 outside. The 180 figure is the initial error she explicitly revises."
+        },
+        {
+          "title": "Q4",
+          "prompt": "What concern is raised about the study-habits questionnaire?",
+          "options": [
+            "No incentive was offered, so few students tried hard.",
+            "The voucher caused all students to exaggerate equally.",
+            "Only 55% replied despite a voucher, likely biasing results toward organised students.",
+            "The questionnaire was completed only by non-members."
+          ],
+          "answer": 3,
+          "explanation": "The script says 55% returned it despite a five-pound book voucher and respondents may have been more organised. The distractor about no incentive fails because an incentive was offered."
+        },
+        {
+          "title": "Q5",
+          "prompt": "What conclusion do they agree is most justified?",
+          "options": [
+            "The club has been proven to have no effect on progress.",
+            "Attendance was associated with greater improvement, but causation requires a randomised comparison.",
+            "Low response rates prove the test scores were inaccurate.",
+            "Matching on prior grades removes all background differences."
+          ],
+          "answer": 1,
+          "explanation": "They agree to say attendance was linked to improvement but causation cannot be claimed without randomisation. The distractor about matching fails because they note homework hours and family support were not measured."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Two Maps for One Street",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "questions": [
+        {
+          "title": "Q1",
+          "prompt": "What was the basis of the city engineering assessment?",
+          "options": [
+            "Projected 2050 rainfall and blocked drains.",
+            "Historical gauge records from 1970 to 2020 assuming upgraded drains work as designed.",
+            "A count of insurance claims after the 2019 library flood.",
+            "Laser elevation data with separate counting of flats."
+          ],
+          "answer": 1,
+          "explanation": "The passage states the city used 1970-2020 gauges and assumed 2022 upgrades function fully, with no climate allowance. The laser data and blocked-drain assumption belong to the university study."
+        },
+        {
+          "title": "Q2",
+          "prompt": "Why is the university estimate substantially higher?",
+          "options": [
+            "It assumes heavier future rainfall, partly blocked drains, and counts flats separately.",
+            "It covers a larger town and a longer historical period.",
+            "It ignores elevation and uses only resident interviews.",
+            "It predicts the same flood will occur every year."
+          ],
+          "answer": 0,
+          "explanation": "The passage attributes most of the extra 220 homes to 15% more rainfall, 30% drain blockage, plus different counting. The distractor about a larger town fails because both concern the same neighbourhood."
+        },
+        {
+          "title": "Q3",
+          "prompt": "How does the overview treat the 2019 library basement flood?",
+          "options": [
+            "As proof that the city estimate is correct.",
+            "As proof that the university estimate will occur by 2050.",
+            "As conclusive evidence that upgrades have failed.",
+            "As an example each team interprets to illustrate its own mechanism, not as proof of either forecast."
+          ],
+          "answer": 3,
+          "explanation": "The passage distinguishes the author's claim from the example: both reports cite the library incident differently, and it does not prove either future estimate. Distractors claiming proof overstate the example."
+        },
+        {
+          "title": "Q4",
+          "prompt": "What limited inference can be made about a house shown only on the university map?",
+          "options": [
+            "It will definitely flood within five years.",
+            "It has higher exposure under plausible future rainfall with imperfect maintenance, but flooding is not certain.",
+            "It is safe because the city map excludes it.",
+            "It flooded in 2019 and will flood identically again."
+          ],
+          "answer": 1,
+          "explanation": "The passage allows only a conditional inference: higher exposure if projections and blockages hold, not certainty. The distractor about safety overclaims by treating absence from the city map as proof of safety."
+        },
+        {
+          "title": "Q5",
+          "prompt": "What is the author's main evaluation of the two estimates?",
+          "options": [
+            "They are conditional forecasts valid under different stated assumptions and should not be compared directly without alignment.",
+            "The university study is factually wrong because it uses projections.",
+            "The city study is useless for maintenance planning.",
+            "Both numbers describe certain present facts and residents should average them."
+          ],
+          "answer": 0,
+          "explanation": "The author argues each is valid only within its conditions and direct comparison is misleading unless time period, drainage state, and counting are aligned. The averaging distractor fails because the passage warns against treating them as present facts."
+        }
+      ]
+    }
+  }
+}

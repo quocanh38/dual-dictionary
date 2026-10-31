@@ -1,0 +1,53 @@
+{
+  "id": "draft-c9e4b2e8-edd5-4af7-a463-690a755f33ba",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Community Garden Water Rotation",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Before the dry season, the community garden team will allocate water to each plot according to the crops and the weekly forecast. Volunteers record the volume used so they can adjust the schedule in line with changes in rainfall. The coordinator asks each grower to report leaks as soon as they are found. This helps the team conserve water without leaving young plants dry.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "Before the dry season, the community garden team will allocate water to each plot according to the crops and the weekly forecast. Volunteers record the volume used so they can adjust the schedule in line with changes in rainfall. The coordinator asks each grower to report leaks as soon as they are found. This helps the team conserve water without leaving young plants dry.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Before the dry season, the community garden team will allocate water to each plot according to the crops and the weekly forecast."
+      },
+      {
+        "id": "s2",
+        "text": "Volunteers record the volume used so they can adjust the schedule in line with changes in rainfall."
+      },
+      {
+        "id": "s3",
+        "text": "The coordinator asks each grower to report leaks as soon as they are found."
+      },
+      {
+        "id": "s4",
+        "text": "This helps the team conserve water without leaving young plants dry."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "allocate water to",
+      "meaningEn": "to distribute and assign water to each plot for use",
+      "meaningVi": "phân bổ nước cho",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "in line with",
+      "meaningEn": "in agreement with or according to changes in rainfall",
+      "meaningVi": "phù hợp với; theo",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

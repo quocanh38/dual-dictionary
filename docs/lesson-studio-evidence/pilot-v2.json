@@ -1,0 +1,28 @@
+[
+  {
+    "case": 1,
+    "promptVersion": "lesson-studio-2026-10-27-v2",
+    "purpose": "repair-exercises",
+    "usage": {
+      "inputTokens": 1918,
+      "outputTokens": 5964,
+      "totalTokens": 7882
+    },
+    "latencyMs": 22427,
+    "status": 200,
+    "outcome": "validated-unreviewed-draft"
+  },
+  {
+    "case": 2,
+    "promptVersion": "lesson-studio-2026-10-27-v2",
+    "purpose": "generate-exercises",
+    "usage": {
+      "inputTokens": 677,
+      "outputTokens": 4731,
+      "totalTokens": 5408
+    },
+    "latencyMs": 21870,
+    "status": 200,
+    "outcome": "validated-unreviewed-draft"
+  }
+]

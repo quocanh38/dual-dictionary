@@ -1,0 +1,17 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "9f9f926aee3e7c5a773a892acbffd788d343496c793590dd30c67ec1a1510546",
+  "verdict": "repair",
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-6-band-5-listening-context / listening-02",
+      "issue": "The chicken-pasta response now correctly says the listed ingredients omit nuts and tells Maya to verify kitchen cross-contact, but the same serious-allergy exchange then calls the vegetable soup “a good choice” and categorically says it is free from main allergens without clarifying cross-contact or verifying suitability. Qualify this as ingredient-list information and direct Maya to confirm preparation/cross-contact with the kitchen before either meal; do not imply safety from ingredient absence alone.",
+      "severity": "critical"
+    }
+  ],
+  "observations": [
+    "The earlier pasta reassurance was materially improved with a cross-contact warning. Listening/Reading contexts are 381/417 words; all 10 objective keys are supported, with balanced position distribution. Writing Task 1 totals reconcile (185, 220, 250 and 32, 48, 54, 42, 68); all prompts have suitable word minimums/timing. Speaking includes two Part 1, one cue-card Part 2 and two Part 3 prompts. Provenance says original content; no official item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, every objective prompt/options/key/explanation, all five Writing prompts and visible data/units/timing, and all five Speaking prompts including Part 2 points and IELTS part fit. Safety review covered serious allergy advice, ingredient claims and cross-contact.",
+  "reviewerType": "AI-assisted"
+}

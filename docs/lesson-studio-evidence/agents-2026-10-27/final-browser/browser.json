@@ -1,0 +1,58 @@
+[
+  {
+    "name": "authored example installs without API/key",
+    "status": "PASS"
+  },
+  {
+    "name": "offline cache finishes for candidate version",
+    "status": "PASS"
+  },
+  {
+    "name": "wrong then correct answers; transfer self-assessment",
+    "status": "PASS"
+  },
+  {
+    "name": "Vault adapter deduplicates meaning without grading review",
+    "status": "PASS"
+  },
+  {
+    "name": "offline reload retains completed progress",
+    "status": "PASS"
+  },
+  {
+    "name": "mobile has no horizontal overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "author consent and two explicit mock calls create unapproved draft",
+    "status": "PASS"
+  },
+  {
+    "name": "editor review and approval are separate explicit actions",
+    "status": "PASS"
+  },
+  {
+    "name": "optimistic draft conflict and immutable same-version install",
+    "status": "PASS"
+  },
+  {
+    "name": "402 records one attempt, no retry and keeps source",
+    "status": "PASS"
+  },
+  {
+    "name": "cancelled late response cannot replace draft; ledger survives reload",
+    "status": "PASS"
+  },
+  {
+    "name": "versioned progress and literal rendering of imported markup",
+    "status": "PASS"
+  },
+  {
+    "name": "mobile author form and consent fit viewport",
+    "status": "PASS"
+  },
+  {
+    "name": "no uncaught browser exceptions",
+    "status": "PASS"
+  }
+]

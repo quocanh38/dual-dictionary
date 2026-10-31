@@ -1,0 +1,1049 @@
+{
+  "date": "2026-10-30T07:03:01.261Z",
+  "startedAt": "2026-10-30T06:59:25.589Z",
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "promptVersion": "TUTOR_FEEDBACK_INSTRUCTIONS current local source",
+  "sweepMode": "continue-past-error-no-retry (B sweep 30 Oct 2026: per-case errors recorded, run continues; budget caps unchanged)",
+  "requestBound": {
+    "maxCalls": 24,
+    "maxTokensPerCall": 32768,
+    "perCallEstimateLimitUsd": 0.05,
+    "totalEstimateLimitUsd": 0.3,
+    "automaticRetries": 0
+  },
+  "denominators": {
+    "authoredCases": 24,
+    "casesAttempted": 24,
+    "providerCalls": 24,
+    "questions": 24,
+    "successfulResponses": 24,
+    "verdictScored": 24,
+    "verdictMatched": 24,
+    "quoteScored": 24,
+    "quoteValid": 24,
+    "explanationQualityScored": 0,
+    "latencySamples": 24,
+    "errorTypes": []
+  },
+  "estimatedUsd": 0.20476599999999998,
+  "billingConfirmed": false,
+  "note": "Synthetic authored evaluation payloads only; no learner data or repository source sent. Estimated cost uses documented standard token rates; Meta Billing may lag and was not billed as a confirmed amount. Evaluation request includes max_tokens=32768 matching production js/ai-client.js, so this resweep mirrors the production Tutor request. Explanation-quality and relevance are unscored; provider output quality is not reduced to verdict match.",
+  "stopReason": null,
+  "cases": [
+    {
+      "caseId": "natural-use",
+      "status": "success",
+      "elapsedMs": 6286,
+      "usage": {
+        "inputTokens": 403,
+        "outputTokens": 1209,
+        "totalTokens": 1612
+      },
+      "estimatedUsd": 0.005642,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "Careful practice helped me notice small mistakes, and I now review a little every day."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "Careful practice helped me notice small mistakes",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Bạn dùng “careful practice” rất tự nhiên và trả lời đúng yêu cầu kể cách cải thiện tiếng Anh. Làm tốt lắm!",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "Careful practice helped me notice small mistakes",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Bạn dùng “careful practice” rất tự nhiên và trả lời đúng yêu cầu kể cách cải thiện tiếng Anh. Làm tốt lắm!",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "incorrect-use",
+      "status": "success",
+      "elapsedMs": 10019,
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 1964,
+        "totalTokens": 2361
+      },
+      "estimatedUsd": 0.00884325,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I careful practice every evening and it make me improve fast."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "I careful practice every evening",
+        "issue": "'careful practice' is a noun phrase but is used here as a verb phrase after 'I'",
+        "suggestion": "I improved my English through careful practice every evening, and it helped me improve fast.",
+        "explanation_vi": "Cụm 'careful practice' là cụm danh từ nên không thể dùng như động từ sau 'I'. Muốn bổ nghĩa cho động từ cần trạng từ 'carefully', còn muốn giữ cụm danh từ thì cần cấu trúc danh từ như 'through careful practice'. Câu của bạn cũng sai chia động từ 'it make'.",
+        "retry_prompt": "Hãy viết lại câu của bạn để kể bạn đã cải thiện tiếng Anh thế nào, dùng 'careful practice' như một cụm danh từ."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "I careful practice every evening",
+        "issue": "'careful practice' is a noun phrase but is used here as a verb phrase after 'I'",
+        "suggestion": "I improved my English through careful practice every evening, and it helped me improve fast.",
+        "explanation_vi": "Cụm 'careful practice' là cụm danh từ nên không thể dùng như động từ sau 'I'. Muốn bổ nghĩa cho động từ cần trạng từ 'carefully', còn muốn giữ cụm danh từ thì cần cấu trúc danh từ như 'through careful practice'. Câu của bạn cũng sai chia động từ 'it make'.",
+        "retry_prompt": "Hãy viết lại câu của bạn để kể bạn đã cải thiện tiếng Anh thế nào, dùng 'careful practice' như một cụm danh từ."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "off-topic",
+      "status": "success",
+      "elapsedMs": 6368,
+      "usage": {
+        "inputTokens": 399,
+        "outputTokens": 1687,
+        "totalTokens": 2086
+      },
+      "estimatedUsd": 0.0076685,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "My bus leaves at seven, and the weather was sunny this morning."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "My bus leaves at seven, and the weather was sunny this morning.",
+        "issue": "The answer does not use the phrase “careful practice” and does not tell how you improved your English.",
+        "suggestion": "I improved my English through careful practice speaking with my friends every evening.",
+        "explanation_vi": "Câu của bạn chưa dùng cụm “careful practice” và chưa nói về cách bạn cải thiện tiếng Anh. Ví dụ sửa ở trên kể rõ cách học và dùng cụm này một cách tự nhiên.",
+        "retry_prompt": "Hãy viết lại một câu kể cho bạn nghe bạn đã cải thiện tiếng Anh như thế nào, nhớ dùng cụm “careful practice” một cách tự nhiên nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "My bus leaves at seven, and the weather was sunny this morning.",
+        "issue": "The answer does not use the phrase “careful practice” and does not tell how you improved your English.",
+        "suggestion": "I improved my English through careful practice speaking with my friends every evening.",
+        "explanation_vi": "Câu của bạn chưa dùng cụm “careful practice” và chưa nói về cách bạn cải thiện tiếng Anh. Ví dụ sửa ở trên kể rõ cách học và dùng cụm này một cách tự nhiên.",
+        "retry_prompt": "Hãy viết lại một câu kể cho bạn nghe bạn đã cải thiện tiếng Anh như thế nào, nhớ dùng cụm “careful practice” một cách tự nhiên nhé."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "missing-required-phrase",
+      "status": "success",
+      "elapsedMs": 10961,
+      "usage": {
+        "inputTokens": 399,
+        "outputTokens": 2329,
+        "totalTokens": 2728
+      },
+      "estimatedUsd": 0.010397,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I did that more often after class, and it seemed to help."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "I did that more often after class, and it seemed to help.",
+        "issue": "The answer does not use the required phrase careful practice and does not say how English improved.",
+        "suggestion": "I improved my English through careful practice after class, reviewing new vocabulary until I could use it confidently.",
+        "explanation_vi": "Câu của bạn đúng ngữ pháp nhưng chưa dùng cụm careful practice theo yêu cầu của đề, nên chưa kể rõ bạn đã cải thiện tiếng Anh như thế nào.",
+        "retry_prompt": "Hãy viết lại câu này, giữ ý sau giờ học của bạn và thêm cụm careful practice để kể bạn đã cải thiện tiếng Anh như thế nào."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "I did that more often after class, and it seemed to help.",
+        "issue": "The answer does not use the required phrase careful practice and does not say how English improved.",
+        "suggestion": "I improved my English through careful practice after class, reviewing new vocabulary until I could use it confidently.",
+        "explanation_vi": "Câu của bạn đúng ngữ pháp nhưng chưa dùng cụm careful practice theo yêu cầu của đề, nên chưa kể rõ bạn đã cải thiện tiếng Anh như thế nào.",
+        "retry_prompt": "Hãy viết lại câu này, giữ ý sau giờ học của bạn và thêm cụm careful practice để kể bạn đã cải thiện tiếng Anh như thế nào."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "quoted-grammar-error",
+      "status": "success",
+      "elapsedMs": 8351,
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 1969,
+        "totalTokens": 2366
+      },
+      "estimatedUsd": 0.0088645,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I careful practice every evening and it make me improve fast."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "I careful practice every evening",
+        "issue": "Uses the noun phrase 'careful practice' as a verb phrase without a main verb, which is ungrammatical.",
+        "suggestion": "I improved my English through careful practice every evening.",
+        "explanation_vi": "'careful practice' là cụm danh từ, không thể dùng trực tiếp sau 'I' như động từ. Cần thêm động từ/giới từ để câu đúng ngữ pháp, ví dụ dùng 'through careful practice'.",
+        "retry_prompt": "Hãy viết lại câu kể bạn đã cải thiện tiếng Anh thế nào, dùng đúng cụm 'careful practice' nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "I careful practice every evening",
+        "issue": "Uses the noun phrase 'careful practice' as a verb phrase without a main verb, which is ungrammatical.",
+        "suggestion": "I improved my English through careful practice every evening.",
+        "explanation_vi": "'careful practice' là cụm danh từ, không thể dùng trực tiếp sau 'I' như động từ. Cần thêm động từ/giới từ để câu đúng ngữ pháp, ví dụ dùng 'through careful practice'.",
+        "retry_prompt": "Hãy viết lại câu kể bạn đã cải thiện tiếng Anh thế nào, dùng đúng cụm 'careful practice' nhé."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "missing-required-detail",
+      "status": "success",
+      "elapsedMs": 13762,
+      "usage": {
+        "inputTokens": 391,
+        "outputTokens": 2922,
+        "totalTokens": 3313
+      },
+      "estimatedUsd": 0.01290725,
+      "payload": {
+        "phrase": "keep track of",
+        "sourceSentence": "I keep track of project tasks in a shared checklist.",
+        "prompt": "Tell your colleague which project item you monitor and how. Use “keep track of” naturally.",
+        "answer": "I keep track of it every day."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "it",
+        "issue": "Uses a vague pronoun and does not name which project item is monitored, though the prompt asks for the specific item.",
+        "suggestion": "I keep track of the testing tasks in a shared checklist every day.",
+        "explanation_vi": "Bạn dùng cụm từ đúng và có nêu cách theo dõi, nhưng chưa nêu rõ mục dự án cụ thể mà chỉ dùng đại từ chung. Cần nêu tên mục cụ thể và cách theo dõi.",
+        "retry_prompt": "Please revise your sentence to name the specific project item you monitor and say how you monitor it."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "it",
+        "issue": "Uses a vague pronoun and does not name which project item is monitored, though the prompt asks for the specific item.",
+        "suggestion": "I keep track of the testing tasks in a shared checklist every day.",
+        "explanation_vi": "Bạn dùng cụm từ đúng và có nêu cách theo dõi, nhưng chưa nêu rõ mục dự án cụ thể mà chỉ dùng đại từ chung. Cần nêu tên mục cụ thể và cách theo dõi.",
+        "retry_prompt": "Please revise your sentence to name the specific project item you monitor and say how you monitor it."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "wrong-sense",
+      "status": "success",
+      "elapsedMs": 10298,
+      "usage": {
+        "inputTokens": 394,
+        "outputTokens": 1994,
+        "totalTokens": 2388
+      },
+      "estimatedUsd": 0.008967,
+      "payload": {
+        "phrase": "take off",
+        "sourceSentence": "Our flight took off twenty minutes late because of heavy rain.",
+        "prompt": "Tell a friend about your delayed flight. Use “take off” naturally.",
+        "answer": "We took off our flight at 8am and waited at the gate."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "took off our flight",
+        "issue": "Used 'take off' transitively for a flight, but in the aviation sense it is intransitive and the sequence is illogical.",
+        "suggestion": "Our flight was supposed to take off at 8am, but we waited at the gate for hours because of the delay.",
+        "explanation_vi": "Với nghĩa máy bay cất cánh, 'take off' là nội động từ nên không thể nói 'took off our flight'. Em nên nói chuyến bay cất cánh (the flight took off) và nêu rõ sự chậm trễ.",
+        "retry_prompt": "Hãy viết lại câu này về chuyến bay bị trễ, dùng 'take off' mà không thêm tân ngữ sau nó."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "took off our flight",
+        "issue": "Used 'take off' transitively for a flight, but in the aviation sense it is intransitive and the sequence is illogical.",
+        "suggestion": "Our flight was supposed to take off at 8am, but we waited at the gate for hours because of the delay.",
+        "explanation_vi": "Với nghĩa máy bay cất cánh, 'take off' là nội động từ nên không thể nói 'took off our flight'. Em nên nói chuyến bay cất cánh (the flight took off) và nêu rõ sự chậm trễ.",
+        "retry_prompt": "Hãy viết lại câu này về chuyến bay bị trễ, dùng 'take off' mà không thêm tân ngữ sau nó."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "wrong-register",
+      "status": "success",
+      "elapsedMs": 8648,
+      "usage": {
+        "inputTokens": 393,
+        "outputTokens": 2048,
+        "totalTokens": 2441
+      },
+      "estimatedUsd": 0.00919525,
+      "payload": {
+        "phrase": "take into account",
+        "sourceSentence": "The committee will take into account all submitted proposals.",
+        "prompt": "Write one formal sentence for a committee email. Use “take into account” naturally.",
+        "answer": "We gotta take into account the costs, dude, before Friday."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "We gotta take into account the costs, dude, before Friday.",
+        "issue": "The sentence is informal and not suitable for a formal committee email",
+        "suggestion": "The committee will take into account all costs before Friday.",
+        "explanation_vi": "Bạn dùng take into account đúng, nhưng gotta và dude quá thân mật nên không phù hợp với email trang trọng cho ủy ban.",
+        "retry_prompt": "Hãy viết lại câu này với giọng trang trọng phù hợp cho email ủy ban."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "We gotta take into account the costs, dude, before Friday.",
+        "issue": "The sentence is informal and not suitable for a formal committee email",
+        "suggestion": "The committee will take into account all costs before Friday.",
+        "explanation_vi": "Bạn dùng take into account đúng, nhưng gotta và dude quá thân mật nên không phù hợp với email trang trọng cho ủy ban.",
+        "retry_prompt": "Hãy viết lại câu này với giọng trang trọng phù hợp cho email ủy ban."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "third-person-s",
+      "status": "success",
+      "elapsedMs": 8247,
+      "usage": {
+        "inputTokens": 385,
+        "outputTokens": 1908,
+        "totalTokens": 2293
+      },
+      "estimatedUsd": 0.00859025,
+      "payload": {
+        "phrase": "take care of",
+        "sourceSentence": "She takes care of her younger brother after school.",
+        "prompt": "Describe her routine. Use “take care of” naturally.",
+        "answer": "She take care of her younger brother every evening."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "She take care of",
+        "issue": "Third-person singular subject 'She' requires 'takes', not 'take'.",
+        "suggestion": "She takes care of her younger brother every evening.",
+        "explanation_vi": "Với chủ ngữ 'She' ở thì hiện tại đơn, động từ phải thêm -s: 'takes care of'.",
+        "retry_prompt": "Hãy viết lại câu này với dạng đúng của động từ sau 'She' nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "She take care of",
+        "issue": "Third-person singular subject 'She' requires 'takes', not 'take'.",
+        "suggestion": "She takes care of her younger brother every evening.",
+        "explanation_vi": "Với chủ ngữ 'She' ở thì hiện tại đơn, động từ phải thêm -s: 'takes care of'.",
+        "retry_prompt": "Hãy viết lại câu này với dạng đúng của động từ sau 'She' nhé."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "wrong-preposition",
+      "status": "success",
+      "elapsedMs": 13165,
+      "usage": {
+        "inputTokens": 389,
+        "outputTokens": 2289,
+        "totalTokens": 2678
+      },
+      "estimatedUsd": 0.0102145,
+      "payload": {
+        "phrase": "take advantage of",
+        "sourceSentence": "They took advantage of the big sale to buy laptops.",
+        "prompt": "Tell a friend how you saved money. Use “take advantage of” naturally.",
+        "answer": "They took advantage on the big sale yesterday."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "took advantage on",
+        "issue": "Wrong preposition after the phrase and the sentence does not tell how you saved money",
+        "suggestion": "I took advantage of the big sale yesterday to save money on a laptop.",
+        "explanation_vi": "Cụm này phải dùng với of mới đúng và câu cần kể về chính bạn đã tiết kiệm tiền như thế nào.",
+        "retry_prompt": "Please try again telling how you saved money?"
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "took advantage on",
+        "issue": "Wrong preposition after the phrase and the sentence does not tell how you saved money",
+        "suggestion": "I took advantage of the big sale yesterday to save money on a laptop.",
+        "explanation_vi": "Cụm này phải dùng với of mới đúng và câu cần kể về chính bạn đã tiết kiệm tiền như thế nào.",
+        "retry_prompt": "Please try again telling how you saved money?"
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "empty-answer",
+      "status": "success",
+      "elapsedMs": 13876,
+      "usage": {
+        "inputTokens": 378,
+        "outputTokens": 2552,
+        "totalTokens": 2930
+      },
+      "estimatedUsd": 0.0113185,
+      "payload": {
+        "phrase": "take turns",
+        "sourceSentence": "We take turns to clean the classroom every Friday.",
+        "prompt": "Tell a classmate how you share cleaning. Use “take turns” naturally.",
+        "answer": ""
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "uncertain",
+        "quote": "",
+        "issue": "The answer is empty so there is nothing to evaluate",
+        "suggestion": "",
+        "explanation_vi": "Bạn chưa viết câu trả lời nên tôi không thể đánh giá cách dùng take turns.",
+        "retry_prompt": "Hãy viết một câu nói với bạn cùng lớp về việc chia nhau dọn dẹp, dùng take turns một cách tự nhiên."
+      },
+      "feedback": {
+        "evidenceStatus": "not-required",
+        "verdict": "uncertain",
+        "correct": false,
+        "quote": "",
+        "issue": "The answer is empty so there is nothing to evaluate",
+        "suggestion": "",
+        "explanation_vi": "Bạn chưa viết câu trả lời nên tôi không thể đánh giá cách dùng take turns.",
+        "retry_prompt": "Hãy viết một câu nói với bạn cùng lớp về việc chia nhau dọn dẹp, dùng take turns một cách tự nhiên."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "too-short",
+      "status": "success",
+      "elapsedMs": 11364,
+      "usage": {
+        "inputTokens": 382,
+        "outputTokens": 2241,
+        "totalTokens": 2623
+      },
+      "estimatedUsd": 0.01000175,
+      "payload": {
+        "phrase": "take turns",
+        "sourceSentence": "We take turns to clean the classroom every Friday.",
+        "prompt": "Tell a classmate how you share cleaning. Use “take turns” naturally.",
+        "answer": "We take turns."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "We take turns.",
+        "issue": "The phrase is used correctly but the answer does not mention cleaning, so it does not fully tell how you share cleaning.",
+        "suggestion": "We take turns cleaning the classroom.",
+        "explanation_vi": "Bạn dùng đúng cụm “take turns”, nhưng câu chưa nhắc đến việc dọn dẹp nên chưa trả lời đủ yêu cầu. Hãy nói rõ các bạn thay phiên nhau làm gì.",
+        "retry_prompt": "Can you try again and add what you take turns doing for cleaning?"
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "We take turns.",
+        "issue": "The phrase is used correctly but the answer does not mention cleaning, so it does not fully tell how you share cleaning.",
+        "suggestion": "We take turns cleaning the classroom.",
+        "explanation_vi": "Bạn dùng đúng cụm “take turns”, nhưng câu chưa nhắc đến việc dọn dẹp nên chưa trả lời đủ yêu cầu. Hãy nói rõ các bạn thay phiên nhau làm gì.",
+        "retry_prompt": "Can you try again and add what you take turns doing for cleaning?"
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "off-topic-redirect",
+      "status": "success",
+      "elapsedMs": 7979,
+      "usage": {
+        "inputTokens": 385,
+        "outputTokens": 1604,
+        "totalTokens": 1989
+      },
+      "estimatedUsd": 0.00729825,
+      "payload": {
+        "phrase": "take notes",
+        "sourceSentence": "Good students take notes during every lecture.",
+        "prompt": "Tell a friend your lecture habit. Use “take notes” naturally.",
+        "answer": "Football is on tonight and my team will definitely win."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "Football is on tonight and my team will definitely win.",
+        "issue": "The answer is about football and does not use 'take notes' or describe a lecture habit.",
+        "suggestion": "I always take notes during lectures so I can review the key points later.",
+        "explanation_vi": "Bạn viết về bóng đá, chưa dùng cụm 'take notes' và chưa nói về thói quen nghe giảng.",
+        "retry_prompt": "Hãy viết lại câu này để kể về thói quen nghe giảng của bạn, nhớ dùng 'take notes' một cách tự nhiên."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "Football is on tonight and my team will definitely win.",
+        "issue": "The answer is about football and does not use 'take notes' or describe a lecture habit.",
+        "suggestion": "I always take notes during lectures so I can review the key points later.",
+        "explanation_vi": "Bạn viết về bóng đá, chưa dùng cụm 'take notes' và chưa nói về thói quen nghe giảng.",
+        "retry_prompt": "Hãy viết lại câu này để kể về thói quen nghe giảng của bạn, nhớ dùng 'take notes' một cách tự nhiên."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "wrong-tense",
+      "status": "success",
+      "elapsedMs": 8190,
+      "usage": {
+        "inputTokens": 388,
+        "outputTokens": 1476,
+        "totalTokens": 1864
+      },
+      "estimatedUsd": 0.006758,
+      "payload": {
+        "phrase": "take off",
+        "sourceSentence": "Our flight took off twenty minutes late because of heavy rain.",
+        "prompt": "Tell a friend about a future flight. Use “take off” naturally.",
+        "answer": "Our flight will takes off late tomorrow morning."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "will takes off",
+        "issue": "Incorrect verb form after 'will' — 'takes' should be base form 'take'.",
+        "suggestion": "Our flight will take off late tomorrow morning.",
+        "explanation_vi": "Sau 'will' phải dùng động từ nguyên mẫu 'take', không thêm 's'. Bạn đã dùng đúng cụm 'take off' cho chuyến bay tương lai, chỉ cần sửa lỗi chia động từ.",
+        "retry_prompt": "Hãy viết lại câu của bạn, sửa lỗi sau 'will' thành dạng đúng của 'take off' nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "will takes off",
+        "issue": "Incorrect verb form after 'will' — 'takes' should be base form 'take'.",
+        "suggestion": "Our flight will take off late tomorrow morning.",
+        "explanation_vi": "Sau 'will' phải dùng động từ nguyên mẫu 'take', không thêm 's'. Bạn đã dùng đúng cụm 'take off' cho chuyến bay tương lai, chỉ cần sửa lỗi chia động từ.",
+        "retry_prompt": "Hãy viết lại câu của bạn, sửa lỗi sau 'will' thành dạng đúng của 'take off' nhé."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "correct-formal",
+      "status": "success",
+      "elapsedMs": 5859,
+      "usage": {
+        "inputTokens": 392,
+        "outputTokens": 1256,
+        "totalTokens": 1648
+      },
+      "estimatedUsd": 0.005828,
+      "payload": {
+        "phrase": "take into account",
+        "sourceSentence": "The committee will take into account all submitted proposals.",
+        "prompt": "Write one formal sentence for a committee email. Use “take into account” naturally.",
+        "answer": "The committee will take into account all submitted proposals before Friday."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Tuyệt vời! Câu của bạn trang trọng, đúng ngữ pháp và dùng “take into account” rất tự nhiên cho email ủy ban.",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "not-required",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Tuyệt vời! Câu của bạn trang trọng, đúng ngữ pháp và dùng “take into account” rất tự nhiên cho email ủy ban.",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "subject-verb",
+      "status": "success",
+      "elapsedMs": 8073,
+      "usage": {
+        "inputTokens": 386,
+        "outputTokens": 1493,
+        "totalTokens": 1879
+      },
+      "estimatedUsd": 0.00682775,
+      "payload": {
+        "phrase": "take turns",
+        "sourceSentence": "We take turns to clean the classroom every Friday.",
+        "prompt": "Tell a classmate how you share cleaning. Use “take turns” naturally.",
+        "answer": "We takes turns to clean the room."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "We takes turns",
+        "issue": "Subject-verb agreement error: We cannot go with takes",
+        "suggestion": "We take turns to clean the room.",
+        "explanation_vi": "Chủ ngữ We phải đi với take, không thêm s. Câu đúng là We take turns...",
+        "retry_prompt": "Hãy viết lại câu của bạn, sửa động từ đi với We cho đúng nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "We takes turns",
+        "issue": "Subject-verb agreement error: We cannot go with takes",
+        "suggestion": "We take turns to clean the room.",
+        "explanation_vi": "Chủ ngữ We phải đi với take, không thêm s. Câu đúng là We take turns...",
+        "retry_prompt": "Hãy viết lại câu của bạn, sửa động từ đi với We cho đúng nhé."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "pronoun-placement",
+      "status": "success",
+      "elapsedMs": 11788,
+      "usage": {
+        "inputTokens": 390,
+        "outputTokens": 2700,
+        "totalTokens": 3090
+      },
+      "estimatedUsd": 0.0119625,
+      "payload": {
+        "phrase": "take off",
+        "sourceSentence": "Please take off your muddy boots before entering the house.",
+        "prompt": "Tell a guest what to do with dirty shoes. Use “take off” naturally.",
+        "answer": "He took off them quickly at the door."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "took off them",
+        "issue": "The pronoun is placed after the particle, which sounds unnatural, and the sentence describes another person instead of telling the guest what to do.",
+        "suggestion": "Please take off your dirty shoes at the door.",
+        "explanation_vi": "Cụm từ đặt đại từ sai vị trí nên nghe không tự nhiên, và câu chưa trực tiếp dặn khách cần làm gì.",
+        "retry_prompt": "Hãy viết lại câu trực tiếp dặn khách làm gì với giày bẩn."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "took off them",
+        "issue": "The pronoun is placed after the particle, which sounds unnatural, and the sentence describes another person instead of telling the guest what to do.",
+        "suggestion": "Please take off your dirty shoes at the door.",
+        "explanation_vi": "Cụm từ đặt đại từ sai vị trí nên nghe không tự nhiên, và câu chưa trực tiếp dặn khách cần làm gì.",
+        "retry_prompt": "Hãy viết lại câu trực tiếp dặn khách làm gì với giày bẩn."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "correct-separable",
+      "status": "success",
+      "elapsedMs": 7204,
+      "usage": {
+        "inputTokens": 386,
+        "outputTokens": 1671,
+        "totalTokens": 2057
+      },
+      "estimatedUsd": 0.00758425,
+      "payload": {
+        "phrase": "take off",
+        "sourceSentence": "Please take off your muddy boots before entering the house.",
+        "prompt": "Describe what she did before dinner. Use “take off” naturally.",
+        "answer": "She took her coat off before dinner."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Tuyệt vời! Bạn đã dùng took her coat off rất tự nhiên, đúng ngữ pháp và đúng yêu cầu mô tả việc cô ấy làm trước bữa tối.",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "not-required",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Tuyệt vời! Bạn đã dùng took her coat off rất tự nhiên, đúng ngữ pháp và đúng yêu cầu mô tả việc cô ấy làm trước bữa tối.",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "missing-detail-2",
+      "status": "success",
+      "elapsedMs": 8281,
+      "usage": {
+        "inputTokens": 381,
+        "outputTokens": 1994,
+        "totalTokens": 2375
+      },
+      "estimatedUsd": 0.00895075,
+      "payload": {
+        "phrase": "take notes",
+        "sourceSentence": "Good students take notes during every lecture.",
+        "prompt": "Tell a friend where and how you take notes. Use “take notes” naturally.",
+        "answer": "I take notes."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "I take notes.",
+        "issue": "Answer does not tell where and how you take notes as required by the prompt.",
+        "suggestion": "I take notes in my notebook during class.",
+        "explanation_vi": "Bạn dùng cụm 'take notes' đúng, nhưng câu chưa trả lời yêu cầu 'where and how' (ở đâu và bằng cách nào). Bạn cần thêm địa điểm và cách ghi chép.",
+        "retry_prompt": "Hãy viết lại câu này, giữ nguyên cụm take notes và thêm where và how bạn ghi chép."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "I take notes.",
+        "issue": "Answer does not tell where and how you take notes as required by the prompt.",
+        "suggestion": "I take notes in my notebook during class.",
+        "explanation_vi": "Bạn dùng cụm 'take notes' đúng, nhưng câu chưa trả lời yêu cầu 'where and how' (ở đâu và bằng cách nào). Bạn cần thêm địa điểm và cách ghi chép.",
+        "retry_prompt": "Hãy viết lại câu này, giữ nguyên cụm take notes và thêm where và how bạn ghi chép."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "correct-detail",
+      "status": "success",
+      "elapsedMs": 6009,
+      "usage": {
+        "inputTokens": 396,
+        "outputTokens": 1347,
+        "totalTokens": 1743
+      },
+      "estimatedUsd": 0.00621975,
+      "payload": {
+        "phrase": "keep track of",
+        "sourceSentence": "I keep track of project tasks in a shared checklist.",
+        "prompt": "Tell your colleague which project item you monitor and how. Use “keep track of” naturally.",
+        "answer": "I keep track of project deadlines in a shared checklist every morning."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "I keep track of project deadlines in a shared checklist every morning.",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Rất tốt! Bạn đã nêu rõ mục theo dõi (project deadlines) và cách theo dõi (in a shared checklist every morning), dùng “keep track of” tự nhiên và đúng ngữ pháp.",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "I keep track of project deadlines in a shared checklist every morning.",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Rất tốt! Bạn đã nêu rõ mục theo dõi (project deadlines) và cách theo dõi (in a shared checklist every morning), dùng “keep track of” tự nhiên và đúng ngữ pháp.",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "confused-phrase",
+      "status": "success",
+      "elapsedMs": 7363,
+      "usage": {
+        "inputTokens": 388,
+        "outputTokens": 1892,
+        "totalTokens": 2280
+      },
+      "estimatedUsd": 0.008526,
+      "payload": {
+        "phrase": "take part in",
+        "sourceSentence": "She took part in the school play last spring.",
+        "prompt": "Tell a friend about the contest. Use “take part in” naturally.",
+        "answer": "I will take place in the contest next month."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "take place in",
+        "issue": "Used 'take place' meaning happen instead of the required 'take part in' meaning participate.",
+        "suggestion": "I will take part in the contest next month.",
+        "explanation_vi": "Bạn dùng nhầm 'take place in' (diễn ra) thay vì 'take part in' (tham gia). Để nói về việc tham gia cuộc thi cần dùng 'take part in'.",
+        "retry_prompt": "Hãy viết lại câu nói với bạn về cuộc thi, dùng đúng cụm 'take part in' nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "take place in",
+        "issue": "Used 'take place' meaning happen instead of the required 'take part in' meaning participate.",
+        "suggestion": "I will take part in the contest next month.",
+        "explanation_vi": "Bạn dùng nhầm 'take place in' (diễn ra) thay vì 'take part in' (tham gia). Để nói về việc tham gia cuộc thi cần dùng 'take part in'.",
+        "retry_prompt": "Hãy viết lại câu nói với bạn về cuộc thi, dùng đúng cụm 'take part in' nhé."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "correct-part",
+      "status": "success",
+      "elapsedMs": 7476,
+      "usage": {
+        "inputTokens": 389,
+        "outputTokens": 1454,
+        "totalTokens": 1843
+      },
+      "estimatedUsd": 0.00666575,
+      "payload": {
+        "phrase": "take part in",
+        "sourceSentence": "She took part in the school play last spring.",
+        "prompt": "Tell a friend about the school play. Use “take part in” naturally.",
+        "answer": "She took part in the school play last spring."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Tuyệt vời! Bạn đã dùng “took part in” rất tự nhiên và đúng yêu cầu kể về vở kịch ở trường.",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "not-required",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Tuyệt vời! Bạn đã dùng “took part in” rất tự nhiên và đúng yêu cầu kể về vở kịch ở trường.",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "spelling-slip",
+      "status": "success",
+      "elapsedMs": 9471,
+      "usage": {
+        "inputTokens": 395,
+        "outputTokens": 1921,
+        "totalTokens": 2316
+      },
+      "estimatedUsd": 0.008658,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "Careful practive helped me improve a lot."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "Careful practive",
+        "issue": "spelling error: practice is misspelled as practive",
+        "suggestion": "Careful practice helped me improve my English a lot.",
+        "explanation_vi": "Bạn đã dùng đúng ý nhưng viết sai chính tả của cụm từ mục tiêu, nên cần sửa lại cho đúng chính tả.",
+        "retry_prompt": "Hãy viết lại câu này với chính tả đúng của cụm từ mục tiêu."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "Careful practive",
+        "issue": "spelling error: practice is misspelled as practive",
+        "suggestion": "Careful practice helped me improve my English a lot.",
+        "explanation_vi": "Bạn đã dùng đúng ý nhưng viết sai chính tả của cụm từ mục tiêu, nên cần sửa lại cho đúng chính tả.",
+        "retry_prompt": "Hãy viết lại câu này với chính tả đúng của cụm từ mục tiêu."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "correct-informal",
+      "status": "success",
+      "elapsedMs": 6605,
+      "usage": {
+        "inputTokens": 395,
+        "outputTokens": 1502,
+        "totalTokens": 1897
+      },
+      "estimatedUsd": 0.00687725,
+      "payload": {
+        "phrase": "take it easy",
+        "sourceSentence": "He told me to take it easy before the interview.",
+        "prompt": "Calm a nervous friend down. Use “take it easy” naturally.",
+        "answer": "Take it easy — the exam is next month, just review a bit daily."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Làm tốt lắm! Bạn đã dùng “take it easy” rất tự nhiên để trấn an bạn đang lo lắng.",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "not-required",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Làm tốt lắm! Bạn đã dùng “take it easy” rất tự nhiên để trấn an bạn đang lo lắng.",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    }
+  ]
+}

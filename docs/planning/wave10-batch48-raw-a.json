@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 48,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after look out, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, usage patterns, bilingual examples and learner notes. Historical, medical, technical and safety labels are explicit; source wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1880,
+    "remainingRawOnlyAfter": 1860
+  },
+  "selected": [
+    "look up",
+    "lounge lizard",
+    "loving cup",
+    "low countries",
+    "low gear",
+    "low tide",
+    "low water",
+    "low water mark",
+    "lower case",
+    "lowest common multiple",
+    "lucky dip",
+    "luggage van",
+    "lumbar puncture",
+    "lump sum",
+    "lunar day",
+    "luncheon voucher",
+    "machine code",
+    "machine gun",
+    "machine shop",
+    "machine translation"
+  ]
+}

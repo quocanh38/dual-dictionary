@@ -1,0 +1,164 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-8",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Keep each option under 12 words and each explanation to 1–2 sentences; do not repeat source paragraphs in explanations. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage around IELTS 5.0: clear main ideas, direct evidence, familiar academic contexts, and accurate simple explanations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a campus music-room reservation, a local history club archive visit, and a student bicycle safety workshop. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-5",
+    "batchId": "wave-8",
+    "currentBatch": {
+      "listening": {
+        "title": "Campus Music Room Reservation",
+        "focus": "booking details and conditions",
+        "part": "Part 1",
+        "script": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+        "questions": [
+          {
+            "title": "Reason for Calling",
+            "prompt": "What does Maya want to do?",
+            "options": [
+              "Reserve a practice room for piano",
+              "Cancel a music lesson on Friday",
+              "Buy a grand piano for home",
+              "Join the campus music club"
+            ],
+            "answer": 0,
+            "explanation": "She says she wants to book a room for piano practice. The lesson option is wrong because she is booking, not cancelling."
+          },
+          {
+            "title": "Room Choice",
+            "prompt": "Why does Maya choose Room B?",
+            "options": [
+              "It is cheaper than Room A",
+              "It has a grand piano",
+              "It is free all afternoon",
+              "It is near the reception desk"
+            ],
+            "answer": 1,
+            "explanation": "She prefers the grand piano, which is in Room B. Price is not mentioned as a difference between rooms."
+          },
+          {
+            "title": "Final Booking Time",
+            "prompt": "What is Maya's final booking time?",
+            "options": [
+              "2 p.m. to 4 p.m.",
+              "3 p.m. to 5 p.m.",
+              "4 p.m. to 6 p.m.",
+              "5 p.m. to 7 p.m."
+            ],
+            "answer": 2,
+            "explanation": "The receptionist corrects the first request and confirms 4 to 6 p.m. The 3 to 5 slot was requested but unavailable."
+          },
+          {
+            "title": "Payment Amount",
+            "prompt": "How much will Maya pay for her booking?",
+            "options": [
+              "$5 in total",
+              "$15 in total",
+              "$20 in total",
+              "$10 in total"
+            ],
+            "answer": 3,
+            "explanation": "The fee is $5 per hour for two hours, totalling $10. $5 would be for one hour only."
+          },
+          {
+            "title": "Rules to Follow",
+            "prompt": "What must Maya bring and follow?",
+            "options": [
+              "Bring student ID and no food or drinks",
+              "Bring own piano and pay online",
+              "Bring two guests and arrive early",
+              "Bring booking number M-442 only"
+            ],
+            "answer": 0,
+            "explanation": "She must show her ID and not bring food or drinks. The booking number is given but not the only requirement."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Student Bicycle Safety Workshop",
+        "focus": "main ideas and supporting examples",
+        "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to college and cycling saves money and time every day in town together. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, found that her helmet was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+        "questions": [
+          {
+            "title": "Purpose of Workshop",
+            "prompt": "Why did Student Services organise the workshop?",
+            "options": [
+              "To reduce accidents near campus gates",
+              "To sell bicycles to new students",
+              "To build a new sports hall",
+              "To train police officers in town"
+            ],
+            "answer": 0,
+            "explanation": "The text links recent accidents near the gates to the decision to help students stay safe. Selling bicycles was the bike shop's job, not the college's purpose."
+          },
+          {
+            "title": "Workshop Leaders",
+            "prompt": "Who led the bicycle safety workshop?",
+            "options": [
+              "Two college teachers",
+              "A police officer and a bike mechanic",
+              "Forty student volunteers",
+              "Sports hall managers"
+            ],
+            "answer": 1,
+            "explanation": "The passage names Officer White and mechanic Sam Lee as leaders. Teachers and volunteers attended but did not lead."
+          },
+          {
+            "title": "Practical Activity",
+            "prompt": "What did students do during practical training?",
+            "options": [
+              "Watched videos inside the hall",
+              "Repaired the campus gates",
+              "Rode a marked course in the car park",
+              "Wrote a booklet about helmets"
+            ],
+            "answer": 2,
+            "explanation": "They rode a cone-marked course outside while leaders gave advice. The booklet was given to them, not written by them."
+          },
+          {
+            "title": "Understanding Lisa's Experience",
+            "prompt": "What can be inferred about Lisa before the workshop?",
+            "options": [
+              "She worked at the bike shop",
+              "She taught other students safety",
+              "She never owned a bicycle before",
+              "She thought her helmet fitted correctly"
+            ],
+            "answer": 3,
+            "explanation": "She only discovered the looseness when checking on the course, implying she believed it was fine. There is no evidence she worked at the shop."
+          },
+          {
+            "title": "Author's Main Point",
+            "prompt": "Which is the author's claim, not just an example?",
+            "options": [
+              "Lisa's helmet was loose during practice",
+              "The workshop mainly built student confidence",
+              "Cones marked turns in the car park",
+              "The next workshop is in November"
+            ],
+            "answer": 1,
+            "explanation": "The writer states confidence-building as the main value, while Lisa's helmet is presented as one example. The November date is a future plan, not the claim."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "issue": "The reading passage contains an ungrammatical and unclear sentence: “Many students live close to college and cycling saves money and time every day in town together.” The phrase “in town together” has no clear meaning and the clause is awkwardly joined. Revise for natural, accurate prose.",
+          "severity": "major",
+          "item": "sharedContexts.reading.passage (also repeated in reading exercise passages)"
+        },
+        {
+          "item": "ielts-meta-wave-8-band-5-reading-02",
+          "severity": "critical",
+          "issue": "The explanation invents that teachers and volunteers attended. The passage says about forty students attended and teachers later asked for a similar staff session. Remove unsupported attendance claims."
+        },
+        {
+          "item": "ielts-meta-wave-8-band-5-reading-04",
+          "severity": "uncertain",
+          "issue": "Finding a loose helmet during practice does not establish that Lisa previously thought it fitted correctly. She could already have known or been unsure. Add explicit prior belief to the passage or ask about the observed problem; the current keyed inference is insufficiently supported."
+        }
+      ]
+    }
+  }
+}

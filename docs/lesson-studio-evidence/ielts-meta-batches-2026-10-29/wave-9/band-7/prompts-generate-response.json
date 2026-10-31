@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-9",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-9-v1",
+  "completedAt": "2026-10-29T05:21:15.045Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 658,
+    "outputTokens": 8184,
+    "totalTokens": 8842
+  },
+  "latencyMs": 26672,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Phased Transport Changes in Riverton\",\"focus\":\"comparing phased changes and handling missing observations without overclaiming causality\",\"prompt\":\"The table below shows average weekday trips (in thousands) by mode in Riverton before and after two transport phases. Phase 1 (2019) introduced a central bus lane; Phase 2 (2022) extended the tram network. Cycling data for 2020 is marked n/a because the survey was suspended during roadworks.\\n\\nYear | Bus | Tram | Bicycle | Car\\n2018 (baseline) | 45 | 22 | 18 | 110\\n2020 (after Phase 1) | 58 | 23 | n/a | 102\\n2024 (after Phase 2) | 52 | 41 | 31 | 95\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note overall trends and differences between phases, and acknowledge where data is missing rather than estimating it.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Composite Liveability Scores in Harbridge\",\"focus\":\"describing a composite indicator and its components with precise, limited claims\",\"prompt\":\"The table below shows the 2023 Liveability Score (out of 100) for four districts of Harbridge. The composite score is the simple average of three equally weighted components: Access to Services, Green Space, and Air Quality.\\n\\nDistrict | Composite Score | Access to Services | Green Space | Air Quality\\nNorthfield | 72 | 85 | 60 | 71\\nEaston | 68 | 62 | 78 | 64\\nSouthgate | 75 | 70 | 68 | 87\\nWestford | 61 | 55 | 58 | 70\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider how the composite score relates to its components and where a single score hides differences.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Evaluating Phased Transport Evidence\",\"focus\":\"nuanced inference, scope and causality limits when comparing before-and-after data\",\"prompt\":\"Some cities introduce transport changes in phases and then point to later changes in travel behaviour as proof that the changes worked. Others argue that phased data alone cannot show what caused the change.\\n\\nDiscuss both views and give your own opinion. Refer to issues such as time lags, other factors that may affect travel, and the limits of before-and-after comparisons. Avoid claiming direct cause and effect unless the evidence clearly supports it.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · The Value and Limits of Composite Indicators\",\"focus\":\"competing evidence and precise evaluation of single-score summaries\",\"prompt\":\"Governments and media often use single composite scores (for example, a city liveability index or a university ranking) to compare places or institutions. Some people think these scores are useful summaries, while others believe they hide important differences.\\n\\nTo what extent do you agree that composite indicators are useful for public decision-making? Support your view with reasons and examples, and consider when a single score may be misleading and when detailed component data is needed.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Representing Missing Observations in Public Reports\",\"focus\":\"honest communication of incomplete evidence and trade-offs in visualisation\",\"prompt\":\"When data is missing for a period (for example, because a survey was cancelled or a sensor failed), some reports leave a gap or mark the data as unavailable, while others estimate the missing value to keep the trend line complete.\\n\\nDiscuss the advantages and disadvantages of each approach. What principles should guide how missing observations are shown to the public? Give reasons for your answer and support them with examples, considering clarity, honesty, and the risk of misleading the audience.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Daily Travel and Local Changes\",\"focus\":\"personal observation of transport change and limits of personal evidence\",\"prompt\":\"Let's talk about getting around where you live.\\nHow do you usually travel to work or study?\\nHave you noticed any recent changes to transport in your area, such as new routes or cycle lanes?\\nHow easy is it to tell whether those changes have made a difference?\\nDo you prefer to see detailed information about travel options or just a simple summary?\"},{\"task\":\"Part 1 · Information and Missing Data\",\"focus\":\"attitudes to incomplete information and trust in reports\",\"prompt\":\"Let's discuss information you see in reports or the news.\\nHow often do you see charts or scores that compare cities or schools?\\nWhen you notice that some information is missing, how does that affect your trust in the report?\\nDo you prefer a report that leaves a gap or one that gives an estimate with an explanation?\\nHow important is it for you to know how data was collected?\"},{\"task\":\"Part 2 · Cue card · Describing a Change That Happened in Stages\",\"focus\":\"describing phased change with cautious interpretation and competing explanations\",\"prompt\":\"Describe a transport or public service change in your city or town that happened in stages.\\nYou should say:\\n• what the change was and when the stages happened\\n• how people responded or how use changed after each stage\\n• what other factors might also explain any changes you noticed\\n• and explain how certain you can be about whether the change itself caused the difference.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Evaluating Composite Scores\",\"focus\":\"value and limits of composite indicators, balancing simplicity and detail\",\"prompt\":\"Let's consider how composite scores are used to compare places.\\nWhy do governments and media like to use a single score to rank cities or neighbourhoods?\\nIn what situations might a single score hide more than it reveals?\\nHow should decision-makers balance a simple overall ranking with more detailed information about its parts?\\nIs it ever justified to make a major decision based only on a composite indicator? Why or why not?\"},{\"task\":\"Part 3 · Honesty and Clarity in Public Data\",\"focus\":\"representing missing observations, scope limits, and ethical communication\",\"prompt\":\"Let's talk about how missing information should be handled in public reports.\\nWhat are the risks of filling in missing data with an estimate without clearly labelling it?\\nHow might leaving a gap in a chart affect how the public understands a trend?\\nWho should be responsible for explaining the limits of the data — the researchers, the media, or the audience?\\nHow can reports remain both honest and easy to understand when evidence is incomplete?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Phased Transport Changes in Riverton",
+        "focus": "comparing phased changes and handling missing observations without overclaiming causality",
+        "prompt": "The table below shows average weekday trips (in thousands) by mode in Riverton before and after two transport phases. Phase 1 (2019) introduced a central bus lane; Phase 2 (2022) extended the tram network. Cycling data for 2020 is marked n/a because the survey was suspended during roadworks.\n\nYear | Bus | Tram | Bicycle | Car\n2018 (baseline) | 45 | 22 | 18 | 110\n2020 (after Phase 1) | 58 | 23 | n/a | 102\n2024 (after Phase 2) | 52 | 41 | 31 | 95\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note overall trends and differences between phases, and acknowledge where data is missing rather than estimating it.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Composite Liveability Scores in Harbridge",
+        "focus": "describing a composite indicator and its components with precise, limited claims",
+        "prompt": "The table below shows the 2023 Liveability Score (out of 100) for four districts of Harbridge. The composite score is the simple average of three equally weighted components: Access to Services, Green Space, and Air Quality.\n\nDistrict | Composite Score | Access to Services | Green Space | Air Quality\nNorthfield | 72 | 85 | 60 | 71\nEaston | 68 | 62 | 78 | 64\nSouthgate | 75 | 70 | 68 | 87\nWestford | 61 | 55 | 58 | 70\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider how the composite score relates to its components and where a single score hides differences.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Evaluating Phased Transport Evidence",
+        "focus": "nuanced inference, scope and causality limits when comparing before-and-after data",
+        "prompt": "Some cities introduce transport changes in phases and then point to later changes in travel behaviour as proof that the changes worked. Others argue that phased data alone cannot show what caused the change.\n\nDiscuss both views and give your own opinion. Refer to issues such as time lags, other factors that may affect travel, and the limits of before-and-after comparisons. Avoid claiming direct cause and effect unless the evidence clearly supports it.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · The Value and Limits of Composite Indicators",
+        "focus": "competing evidence and precise evaluation of single-score summaries",
+        "prompt": "Governments and media often use single composite scores (for example, a city liveability index or a university ranking) to compare places or institutions. Some people think these scores are useful summaries, while others believe they hide important differences.\n\nTo what extent do you agree that composite indicators are useful for public decision-making? Support your view with reasons and examples, and consider when a single score may be misleading and when detailed component data is needed.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Representing Missing Observations in Public Reports",
+        "focus": "honest communication of incomplete evidence and trade-offs in visualisation",
+        "prompt": "When data is missing for a period (for example, because a survey was cancelled or a sensor failed), some reports leave a gap or mark the data as unavailable, while others estimate the missing value to keep the trend line complete.\n\nDiscuss the advantages and disadvantages of each approach. What principles should guide how missing observations are shown to the public? Give reasons for your answer and support them with examples, considering clarity, honesty, and the risk of misleading the audience.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Travel and Local Changes",
+        "focus": "personal observation of transport change and limits of personal evidence",
+        "prompt": "Let's talk about getting around where you live.\nHow do you usually travel to work or study?\nHave you noticed any recent changes to transport in your area, such as new routes or cycle lanes?\nHow easy is it to tell whether those changes have made a difference?\nDo you prefer to see detailed information about travel options or just a simple summary?"
+      },
+      {
+        "task": "Part 1 · Information and Missing Data",
+        "focus": "attitudes to incomplete information and trust in reports",
+        "prompt": "Let's discuss information you see in reports or the news.\nHow often do you see charts or scores that compare cities or schools?\nWhen you notice that some information is missing, how does that affect your trust in the report?\nDo you prefer a report that leaves a gap or one that gives an estimate with an explanation?\nHow important is it for you to know how data was collected?"
+      },
+      {
+        "task": "Part 2 · Cue card · Describing a Change That Happened in Stages",
+        "focus": "describing phased change with cautious interpretation and competing explanations",
+        "prompt": "Describe a transport or public service change in your city or town that happened in stages.\nYou should say:\n• what the change was and when the stages happened\n• how people responded or how use changed after each stage\n• what other factors might also explain any changes you noticed\n• and explain how certain you can be about whether the change itself caused the difference.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Composite Scores",
+        "focus": "value and limits of composite indicators, balancing simplicity and detail",
+        "prompt": "Let's consider how composite scores are used to compare places.\nWhy do governments and media like to use a single score to rank cities or neighbourhoods?\nIn what situations might a single score hide more than it reveals?\nHow should decision-makers balance a simple overall ranking with more detailed information about its parts?\nIs it ever justified to make a major decision based only on a composite indicator? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Honesty and Clarity in Public Data",
+        "focus": "representing missing observations, scope limits, and ethical communication",
+        "prompt": "Let's talk about how missing information should be handled in public reports.\nWhat are the risks of filling in missing data with an estimate without clearly labelling it?\nHow might leaving a gap in a chart affect how the public understands a trend?\nWho should be responsible for explaining the limits of the data — the researchers, the media, or the audience?\nHow can reports remain both honest and easy to understand when evidence is incomplete?"
+      }
+    ]
+  }
+}

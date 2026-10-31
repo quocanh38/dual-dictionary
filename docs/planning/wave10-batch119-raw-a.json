@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 119,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after buzz saw; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the B-section with transport, business, food, construction, military, history, medicine, computing and workshop vocabulary. Clarify region, register, historical labels, legal variation, and related terms without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 488,
+    "remainingRawOnlyAfter": 468
+  },
+  "selected": [
+    "brake shoe",
+    "brand name",
+    "bread and butter",
+    "bread sauce",
+    "breeze block",
+    "bridle path",
+    "brigadier general",
+    "british commonwealth",
+    "broad bean",
+    "bubble and squeak",
+    "bubonic plague",
+    "buffet car",
+    "bugger all",
+    "building site",
+    "bulletin board",
+    "bunsen burner",
+    "bust up",
+    "butter bean",
+    "buyer's market",
+    "buzz saw"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "CDC: Signs and Symptoms of Plague (https://www.cdc.gov/plague/signs-symptoms/)",
+    "Commonwealth: Our history (https://thecommonwealth.org/history?hl=en-US)"
+  ]
+}

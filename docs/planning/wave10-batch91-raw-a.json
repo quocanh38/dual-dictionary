@@ -1,0 +1,16 @@
+{
+  "wave": 10,
+  "batch": 91,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after starting gate; reviewed against local OALD 10/LDOCE 6. The cosmology entry was cross-checked against the original 1948 Bondi–Gold steady-state paper. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover government and legal terms, transport, organizational roles, theatre, statistical and cosmological concepts, corporate finance, healthcare and idiomatic phrasal verbs; distinguish British/American variants, historical context and physical versus figurative senses.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1040, "remainingRawOnlyAfter": 1020},
+  "selected": ["state department", "state of the art", "station house", "station wagon", "statute law", "steady state theory", "steering committee", "steering wheel", "step by step", "stepping stone", "stick out", "sticking point", "stock certificate", "stock company", "stock exchange", "stock market", "stock option", "stomach pump", "stool pigeon", "stop light"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "Bondi & Gold, The Steady-State Theory of the Expanding Universe (1948), Monthly Notices of the Royal Astronomical Society, https://doi.org/10.1093/mnras/108.3.252",
+    "Hoyle, A New Model for the Expanding Universe (1948), Monthly Notices of the Royal Astronomical Society, https://doi.org/10.1093/mnras/108.5.372"
+  ]
+}

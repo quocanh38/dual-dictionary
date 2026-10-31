@@ -1,0 +1,22 @@
+{
+  "previousCandidate": "docs/lesson-studio-evidence/quality-cycle-2026-10-27/candidates/1-v2.json",
+  "candidate": "1-v3",
+  "changes": [
+    {
+      "path": "lessons/0/exercises/1/options/0/text",
+      "before": "Our club will allocate resources to organizing the weekend workshop.",
+      "after": "Our club will allocates resources to organize the weekend workshop."
+    },
+    {
+      "path": "lessons/0/exercises/1/options/0/explanation",
+      "before": "Wrong: The infinitive after to must be organize, not organizing, in this sentence.",
+      "after": "Wrong: After the modal will, use the base form allocate, not allocates."
+    },
+    {
+      "path": "lessons/0/exercises/1/explanation",
+      "before": "Option b uses to + base verb correctly; a uses an -ing form after infinitival to, while c uses a bare verb after for.",
+      "after": "Option b is grammatical and describes assigning support for a purpose. In a, will must be followed by allocate, not allocates. In c, for must be followed by organizing, not organize. Both allocate resources to organizing and allocate resources to organize can be grammatical; that distinction is not used to reject an answer."
+    }
+  ],
+  "newMetaCalls": 0
+}

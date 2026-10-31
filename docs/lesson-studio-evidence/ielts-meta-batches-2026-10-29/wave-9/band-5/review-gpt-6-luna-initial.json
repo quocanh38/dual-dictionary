@@ -1,0 +1,25 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "b4dc5ea4a2aafc43889684f0581857e88da156e9cde75706a8a8f5beb43c1712",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "All objective items have a single supported key; each option, answer index and explanation was checked against the shared source context.",
+    "Writing prompts provide internally consistent source data where applicable, appropriate IELTS task requirements and timing; speaking prompts cover Parts 1–3, with Part 2 cue cards giving clear points and preparation/speaking times.",
+    "Provenance declares originalContent=true and records the provider, model and prompt versions. No copied-source claim or learner score claim appears in the candidate."
+  ],
+  "coverage": {
+    "itemsReviewed": 20,
+    "listeningExercises": 5,
+    "readingExercises": 5,
+    "writingPrompts": 5,
+    "speakingPrompts": 5,
+    "sharedListeningWordCount": 354,
+    "sharedReadingWordCount": 408,
+    "answersOptionsExplanations": "reviewed",
+    "writingDataTimingWordTargets": "reviewed",
+    "speakingCueCardAndStageLevel": "reviewed",
+    "provenanceOriginalityMetadata": "reviewed"
+  },
+  "reviewerType": "AI-assisted"
+}

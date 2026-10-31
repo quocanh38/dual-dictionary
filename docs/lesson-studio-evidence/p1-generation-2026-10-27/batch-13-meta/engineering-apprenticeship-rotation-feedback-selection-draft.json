@@ -1,0 +1,65 @@
+{
+  "id": "draft-2a3e8318-874a-465b-9c28-2dc7f7df8ea3",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Reviewing an Engineering Apprenticeship Programme",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "An engineering firm is updating its apprenticeship programme to help trainees move through design, testing, and customer-support teams. Each apprentice begins with two weeks of safety training, then takes on supervised tasks that match their current skills. Mentors set out a goal for every rotation and meet trainees at the midpoint to review progress. If a trainee has already mastered a task, the mentor arranges a more demanding assignment instead of repeating the same exercise. Supervisors compare written feedback with practical assessments before agreeing on the next placement. Trainees are encouraged to work towards a professional certificate, while managers track whether the rotations provide enough experience in every department. The programme lead will follow up with mentors after each cycle and adjust the schedule where necessary.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "An engineering firm is updating its apprenticeship programme to help trainees move through design, testing, and customer-support teams. Each apprentice begins with two weeks of safety training, then takes on supervised tasks that match their current skills. Mentors set out a goal for every rotation and meet trainees at the midpoint to review progress. If a trainee has already mastered a task, the mentor arranges a more demanding assignment instead of repeating the same exercise. Supervisors compare written feedback with practical assessments before agreeing on the next placement. Trainees are encouraged to work towards a professional certificate, while managers track whether the rotations provide enough experience in every department. The programme lead will follow up with mentors after each cycle and adjust the schedule where necessary.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "An engineering firm is updating its apprenticeship programme to help trainees move through design, testing, and customer-support teams."
+      },
+      {
+        "id": "s2",
+        "text": "Each apprentice begins with two weeks of safety training, then takes on supervised tasks that match their current skills."
+      },
+      {
+        "id": "s3",
+        "text": "Mentors set out a goal for every rotation and meet trainees at the midpoint to review progress."
+      },
+      {
+        "id": "s4",
+        "text": "If a trainee has already mastered a task, the mentor arranges a more demanding assignment instead of repeating the same exercise."
+      },
+      {
+        "id": "s5",
+        "text": "Supervisors compare written feedback with practical assessments before agreeing on the next placement."
+      },
+      {
+        "id": "s6",
+        "text": "Trainees are encouraged to work towards a professional certificate, while managers track whether the rotations provide enough experience in every department."
+      },
+      {
+        "id": "s7",
+        "text": "The programme lead will follow up with mentors after each cycle and adjust the schedule where necessary."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "takes on",
+      "meaningEn": "to accept and start doing a task or responsibility",
+      "meaningVi": "đảm nhận một công việc hoặc trách nhiệm",
+      "sourceSentenceId": "s2"
+    },
+    {
+      "id": "t2",
+      "phrase": "work towards",
+      "meaningEn": "to make steady efforts over time to achieve a goal",
+      "meaningVi": "nỗ lực phấn đấu để đạt được một mục tiêu",
+      "sourceSentenceId": "s6"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

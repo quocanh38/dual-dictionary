@@ -1,0 +1,65 @@
+{
+  "id": "draft-a4411c05-13de-4d44-9e29-f908436c97f3",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Preparing for a Building Drill",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Northside community centre will hold a fire drill on Thursday at 10:30 a.m. Staff should keep the east exit clear and guide visitors to the assembly point beside the library. In case of a real alarm, leave bags behind and do not use the lifts. The floor warden will sign off the checklist after confirming that each room is empty. Anyone who needs step-free assistance should tell the front desk before the drill so the team can arrange a partner and use the north ramp. The exercise is only practice; normal classes will resume after a short briefing. Staff should report blocked routes to the centre manager before the drill begins.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "Northside community centre will hold a fire drill on Thursday at 10:30 a.m. Staff should keep the east exit clear and guide visitors to the assembly point beside the library. In case of a real alarm, leave bags behind and do not use the lifts. The floor warden will sign off the checklist after confirming that each room is empty. Anyone who needs step-free assistance should tell the front desk before the drill so the team can arrange a partner and use the north ramp. The exercise is only practice; normal classes will resume after a short briefing. Staff should report blocked routes to the centre manager before the drill begins.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Northside community centre will hold a fire drill on Thursday at 10:30 a.m."
+      },
+      {
+        "id": "s2",
+        "text": "Staff should keep the east exit clear and guide visitors to the assembly point beside the library."
+      },
+      {
+        "id": "s3",
+        "text": "In case of a real alarm, leave bags behind and do not use the lifts."
+      },
+      {
+        "id": "s4",
+        "text": "The floor warden will sign off the checklist after confirming that each room is empty."
+      },
+      {
+        "id": "s5",
+        "text": "Anyone who needs step-free assistance should tell the front desk before the drill so the team can arrange a partner and use the north ramp."
+      },
+      {
+        "id": "s6",
+        "text": "The exercise is only practice; normal classes will resume after a short briefing."
+      },
+      {
+        "id": "s7",
+        "text": "Staff should report blocked routes to the centre manager before the drill begins."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "fire drill",
+      "meaningEn": "a practice evacuation for a fire emergency",
+      "meaningVi": "buổi diễn tập phòng cháy chữa cháy",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "assembly point",
+      "meaningEn": "a designated safe place where people gather during an evacuation",
+      "meaningVi": "điểm tập trung an toàn",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

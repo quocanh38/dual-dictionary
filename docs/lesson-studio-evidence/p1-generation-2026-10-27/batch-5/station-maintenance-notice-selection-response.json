@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "carry out maintenance",
+        "meaningEn": "to perform work to repair or keep equipment in good condition",
+        "meaningVi": "thực hiện bảo trì",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "out of service",
+        "meaningEn": "not working or not available for use",
+        "meaningVi": "ngừng hoạt động",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 405,
+    "outputTokens": 830,
+    "totalTokens": 1235
+  },
+  "status": 200,
+  "latencyMs": 3985,
+  "model": "muse-spark-1.3"
+}

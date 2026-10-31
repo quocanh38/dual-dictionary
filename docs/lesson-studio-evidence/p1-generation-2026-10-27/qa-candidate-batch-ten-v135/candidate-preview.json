@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-10-27T08:59:07.598Z",
+  "results": [
+    {
+      "id": "east-market-repair-cafe-volunteer-shift",
+      "status": "PASS",
+      "candidateSha256": "269cd70f8c0f433dd64cd14f7c73522b044873beb36556adc8d5d689374ad95c",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "riverside-centre-class-registration",
+      "status": "PASS",
+      "candidateSha256": "945bf46a4f85e4548c757055e8020edd13a4ef35dc8cf541ac6a777ef670fdd3",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "school-library-survey-privacy",
+      "status": "PASS",
+      "candidateSha256": "683b36a9cb6aa5ed6791537f8d8e2bc29ffc5c7cc296b1870e4a0d04face2643",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

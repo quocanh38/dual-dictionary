@@ -1,0 +1,24 @@
+{
+  "wave": 10,
+  "batch": 99,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after time sheet in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover common time, office, technology and housing vocabulary alongside idioms and specialist terms. Separate phrasal-verb senses, mark British/North American usage and explain cultural or technical context where it helps learners.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 880,
+    "remainingRawOnlyAfter": 860
+  },
+  "selected": [
+    "time zone", "tin can", "tin pan alley", "tip off", "tip over",
+    "title bar", "title page", "to and fro", "toby jug", "toffee apple",
+    "tone language", "tone poem", "tongue twister", "top out", "totem pole",
+    "touch down", "touch screen", "tower block", "town hall", "town house"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

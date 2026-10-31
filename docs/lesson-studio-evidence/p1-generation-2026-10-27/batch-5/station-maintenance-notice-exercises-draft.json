@@ -1,0 +1,261 @@
+{
+  "id": "draft-8ad96ec0-b0ce-4cc3-bc80-70a877b48f56",
+  "revision": 0,
+  "stage": "draft",
+  "source": {
+    "title": "Planning maintenance at a bus station",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The station manager will carry out maintenance on the north entrance escalator next Tuesday. While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts. Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager. The notice asks passengers to allow a few extra minutes when changing platforms.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The station manager will carry out maintenance on the north entrance escalator next Tuesday. While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts. Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager. The notice asks passengers to allow a few extra minutes when changing platforms.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The station manager will carry out maintenance on the north entrance escalator next Tuesday."
+      },
+      {
+        "id": "s2",
+        "text": "While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts."
+      },
+      {
+        "id": "s3",
+        "text": "Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager."
+      },
+      {
+        "id": "s4",
+        "text": "The notice asks passengers to allow a few extra minutes when changing platforms."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "carry out maintenance",
+      "meaningEn": "to perform work to repair or keep equipment in good condition",
+      "meaningVi": "thực hiện bảo trì",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "out of service",
+      "meaningEn": "not working or not available for use",
+      "meaningVi": "ngừng hoạt động",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-8ad96ec0-b0ce-4cc3-bc80-70a877b48f56",
+    "version": 1,
+    "title": "Station Notices: Maintenance and Service Updates",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T06:54:11.926Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Station Notices: Maintenance and Service Updates",
+        "objective": "Learners will understand the meanings of carry out maintenance and out of service in a station notice and use them in natural workplace messages.",
+        "reading": {
+          "text": "The station manager will carry out maintenance on the north entrance escalator next Tuesday. While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts. Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager. The notice asks passengers to allow a few extra minutes when changing platforms.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The station manager will carry out maintenance on the north entrance escalator next Tuesday."
+            },
+            {
+              "id": "s2",
+              "text": "While the work is underway, the escalator will be out of service and signs will direct passengers to the lifts."
+            },
+            {
+              "id": "s3",
+              "text": "Staff will inspect the warning boards before the morning rush and report any blocked route to the duty manager."
+            },
+            {
+              "id": "s4",
+              "text": "The notice asks passengers to allow a few extra minutes when changing platforms."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "carry out maintenance",
+            "meaningEn": "to perform work to repair or keep equipment in good condition",
+            "meaningVi": "thực hiện bảo trì",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "out of service",
+            "meaningEn": "not working or not available for use",
+            "meaningVi": "ngừng hoạt động",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s1, 'The station manager will carry out maintenance on the north entrance escalator next Tuesday,' what does 'carry out maintenance' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to check and repair the escalator to keep it in good condition.",
+                "explanation": "Correct because it matches performing work to keep equipment in good condition."
+              },
+              {
+                "id": "b",
+                "text": "It means to build a new north entrance for the station.",
+                "explanation": "Wrong because building a new entrance means construction, not keeping equipment in good condition."
+              },
+              {
+                "id": "c",
+                "text": "It means to close the whole station and stop all trains on Tuesday.",
+                "explanation": "Wrong because closing the station means stopping service, not performing repair work."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The context is repair work on the escalator to keep it working."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the natural sentence using 'carry out maintenance'.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The technicians will carries out maintenance on the air conditioners tomorrow.",
+                "explanation": "Wrong because after 'will' the verb must be 'carry', not 'carries'."
+              },
+              {
+                "id": "b",
+                "text": "The technicians will carry out a maintenance on the air conditioners tomorrow.",
+                "explanation": "Wrong because 'maintenance' is uncountable here, so remove 'a'."
+              },
+              {
+                "id": "c",
+                "text": "The technicians will carry out maintenance on the air conditioners tomorrow.",
+                "explanation": "Correct because verb form, collocation, and word order are natural."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Only one option uses the phrase with correct grammar and collocation."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s2, 'While the work is underway, the escalator will be out of service,' what does 'out of service' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the escalator will run more slowly during the morning rush.",
+                "explanation": "Wrong because running slowly still means working, not unavailable for use."
+              },
+              {
+                "id": "b",
+                "text": "It means the escalator will not be working and cannot be used.",
+                "explanation": "Correct because it matches not working or not available for use."
+              },
+              {
+                "id": "c",
+                "text": "It means the escalator will be open only for station staff.",
+                "explanation": "Wrong because limited access for staff still means working, not unavailable for use."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The context is that passengers cannot use the escalator during the work."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the natural sentence using 'out of service'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The lift is out of services, so please take the stairs to the second floor.",
+                "explanation": "Wrong because the fixed phrase needs singular 'service', not 'services'."
+              },
+              {
+                "id": "b",
+                "text": "The lift is out of service, so please take the stairs to the second floor.",
+                "explanation": "Correct because grammar, spelling, and the fixed phrase are natural."
+              },
+              {
+                "id": "c",
+                "text": "The lift out of service, so please take the stairs to the second floor.",
+                "explanation": "Wrong because the sentence is missing 'is' before 'out of service'."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only one option uses the fixed phrase with correct grammar."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are an office assistant. Write 2-3 sentences to a colleague explaining that the main office printer is unavailable and suggesting another printer to use.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "Our main printer is out of service this morning. Please use the printer on the second floor until it is fixed.",
+            "selfCheck": [
+              "I wrote 2-3 sentences.",
+              "I used the phrase 'out of service' to describe the printer.",
+              "I suggested a clear alternative."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  },
+  "selectionModel": "muse-spark-1.3",
+  "repairCount": 0
+}

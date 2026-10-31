@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "9402ecf7d0b0381cad5bd5c42ed8a7f0bda2bd299c10f765766db0de871b490c",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full review of candidate-initial-v1.json exact bytes: 322-word listening script and 404-word reading passage, all 10 objective questions with every option/key/explanation, all five Writing prompts and five Speaking prompts. Checked answer uniqueness and support in the discussion/passages, distractor validity, explanations, natural English and stage fit, Task 1 data/units/intervals and timing, Speaking Parts/cue-card structure, normalization metadata, originality disclosure and score claims. Objective keys are uniquely supported, including treatment timing, placebo limitations, missing retail data, indicator findings and claims about baseline gaps. Both Task 1 tables provide complete values with units/context; Task 2 prompts are suitably evaluative, and Speaking includes Parts 1, 2 and 3. Provenance declares originalContent:true; no official-question or score-estimation claims appear. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 27,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after engine room, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Independently written Vietnamese meanings, usage patterns, fresh bilingual examples and learner notes. Regional, historical, legal and register labels are noted; source dictionary wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2300,
+    "remainingRawOnlyAfter": 2280
+  },
+  "selected": [
+    "even up",
+    "face card",
+    "fair game",
+    "fair trade",
+    "fair use",
+    "fall guy",
+    "fall in",
+    "fall off",
+    "fall out",
+    "family planning",
+    "fan out",
+    "fancy man",
+    "fancy woman",
+    "farm out",
+    "fast break",
+    "fast food",
+    "father figure",
+    "feed back",
+    "field day",
+    "field hospital"
+  ]
+}

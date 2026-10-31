@@ -1,0 +1,101 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "f1247266ba4743d1a1e062fef13041bb7c0f4710f3cfdd608b49e1175a18a253",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "normalizationFindings; Reading exercises",
+      "severity": "major",
+      "issue": "Reading keys [0,1,2,2,1] omit index3, confirming unresolved normalization failure. Reorder an item options/key to cover all four positions, preserving meaning and explanation alignment."
+    },
+    {
+      "item": "sharedContexts.listening.script; all Listening transcripts",
+      "severity": "critical",
+      "issue": "For a serious nut allergy, staff infer pasta should be safe solely because ingredients list has no nuts/peanuts. Ingredient absence does not establish absence of allergen cross-contact. Replace safety assurance with checking kitchen preparation/cross-contact controls before confirming suitability; keep ingredient answer clear. FSA source: https://www.food.gov.uk/print/pdf/node/172 ."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-6-band-5-speaking-01",
+      "severity": "minor",
+      "issue": "Eating outside can mean outdoors; eating out is the natural phrase if contrasting cooking at home with restaurants."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-5-listening-04",
+      "severity": "minor",
+      "issue": "Call the manager at home is an implausible distractor; a plausible incorrect official information route would improve the item."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review:20items, entire script/passage, all40options,10keys/10explanations,5Writing/5Speaking andmetadata. Per-item copied contexts verified identical to shared contexts. No other reviewer outputs inspected; no candidates edited or provider calls.",
+    "listening": "Full362-word canteen call: nut-allergy purpose, pasta milk/wheat/no nuts, soup/major-allergen claim,1hour special-meal notice,green cards/QR,3→3:30weekday correction/2weekend,free cards. All five keys[2,0,1,3,2] match script;20Listening options and5explanations checked. Safety inference issue recorded.",
+    "reading": "Full417-word tool-loan passage: all registered students,IDregistration/onlinebooking,7day loan+conditional7extension,$2latefee,handtools/wheelbarrows versus no petrolmowers,20minute safety,clean/on-time rule versus muddy-tools example,200survey80%savings/community/funding. Keys[0,1,2,2,1] supported;20options/5explanations checked; distribution blocks.",
+    "writing": "All5Writing read: picnic counts9cells/3years plus totals185/220/250 correctly sum; sports5monthly borrowingsJan–May2024 complete. Task2 welcomeevents/borrowing/cooking tasks coherent with reasons/opinions.150/250 minima visible and20/40 timing metadata correct.",
+    "speaking": "All5Speaking read: personal cooking/campus Part1 sets; campus-event Part2 has4newline bullets,prep1minute/talk1–2; twoPart3 broader events/sharing discussions. Introductory language and clear examples suit intended stage.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItemCount": 20,
+      "wordCounts": {
+        "listening": 362,
+        "reading": 417
+      },
+      "metadataWordCounts": {
+        "listening": 362,
+        "reading": 417
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          2
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      "normalizationFindingsRead": [
+        "Reading answer positions do not cover all four options."
+      ]
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026, wave6v1 prompt versions, originalContent=true read. No recognisable official exam copying or guaranteed-score claim found; originality is not exhaustively independently proven. Fictional study data assessed for internal consistency,not empirical validation. Stage labels treated as practice targets,not measured attainment.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-5-listening-01",
+      "ielts-meta-wave-6-band-5-listening-02",
+      "ielts-meta-wave-6-band-5-listening-03",
+      "ielts-meta-wave-6-band-5-listening-04",
+      "ielts-meta-wave-6-band-5-listening-05",
+      "ielts-meta-wave-6-band-5-reading-01",
+      "ielts-meta-wave-6-band-5-reading-02",
+      "ielts-meta-wave-6-band-5-reading-03",
+      "ielts-meta-wave-6-band-5-reading-04",
+      "ielts-meta-wave-6-band-5-reading-05",
+      "ielts-meta-wave-6-band-5-writing-01",
+      "ielts-meta-wave-6-band-5-writing-02",
+      "ielts-meta-wave-6-band-5-writing-03",
+      "ielts-meta-wave-6-band-5-writing-04",
+      "ielts-meta-wave-6-band-5-writing-05",
+      "ielts-meta-wave-6-band-5-speaking-01",
+      "ielts-meta-wave-6-band-5-speaking-02",
+      "ielts-meta-wave-6-band-5-speaking-03",
+      "ielts-meta-wave-6-band-5-speaking-04",
+      "ielts-meta-wave-6-band-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

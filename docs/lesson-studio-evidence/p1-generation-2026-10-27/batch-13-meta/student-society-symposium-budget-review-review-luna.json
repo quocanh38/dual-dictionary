@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "1b50b15c459fa856c3cd27f6d9b4f2bc387a450994256e75a671ccd68f7b3afa",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:49:23Z",
+  "note": "Independent full-pack review of this exact candidate: source sentences, both EN/VI target meanings, every option/explanation, answer uniqueness, and transfer. Rights/authorship/permission are local declarations only and were not independently verified. B1 is an estimate, not calibrated. This is AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack and frozen source declare an AI-assisted original passage, authorization for distribution, and no learner PII; declarations match. This is a local declaration check only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Target ‘sets aside’ appears verbatim in source s3: the treasurer sets aside grant money for accessibility services. The source supports reserving money for a specified purpose."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘reserves part of the money for a specific purpose’ accurately states the contextual meaning in s3."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘trích ra một phần tiền để dành cho mục đích cụ thể’ is accurate, natural Vietnamese and includes diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "‘revise the forecast’ appears verbatim in s5 after the venue replies about a weekday rate, supporting updating expected costs in light of new information."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "‘update the expected costs after receiving new information’ accurately captures the use in s5."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘điều chỉnh dự báo chi phí sau khi nhận được thông tin mới’ accurately and naturally conveys the s5 meaning with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone describes reserving part of a grant for the stated accessibility purpose. B spends the whole grant, while C moves it without a purpose; neither matches s3."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation accurately distinguishes reserving a portion for later use from spending the whole amount or moving money without the specified purpose."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is the only grammatical option: ‘set aside ... for’ a purpose and ‘every term’ are correct. B uses ‘to’ before a noun phrase; C incorrectly pluralizes ‘term’ after ‘every.’"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations accurately identify the purpose preposition and singular noun after ‘every’; the collocation claim is appropriately limited to these sentences."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone describes updating expected costs after the venue response. B cancels the symposium and C approves orders before checking prices, neither supported by s5."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The correct and distractor explanations match the sequence and meaning of s5 without unsupported linguistic claims."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is grammatical and natural. B incorrectly uses past ‘included’ after infinitival ‘to’; C uses ‘have revise’ instead of the participle ‘have revised.’"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations accurately describe the verb-form errors; A’s ‘revise the forecast to include delivery fees’ is idiomatic."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The prompt shifts from a student society symposium to personal monthly pay and a tutor writing to a friend, a meaningful role and purpose change."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model is natural and uses ‘set aside’ for reserving money for a train pass. The checklist checks length, phrase meaning, and stated purpose; no automatic grade is implied."
+    }
+  ],
+  "findings": []
+}

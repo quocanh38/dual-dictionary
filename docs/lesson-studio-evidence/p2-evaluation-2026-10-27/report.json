@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-27",
+  "status": "local-fixtures-and-bounded-live-evaluation-complete",
+  "purpose": "Bounded product evaluation separate from lesson authoring",
+  "fixtureEvaluation": {
+    "provenance": "Authored deterministic development fixtures; not provider responses or unseen evaluation.",
+    "feedbackCases": 6,
+    "feedbackAccepted": 5,
+    "feedbackRejected": 1,
+    "apiFailureCases": 2,
+    "mockRequests": 2,
+    "realProviderCalls": 0,
+    "automaticRetries": 0,
+    "providerAccuracy": "not-measured",
+    "learningOutcomes": "not-measured"
+  },
+  "liveEvaluationPreparation": {
+    "authoredCases": 6,
+    "coverage": [
+      "natural correct use",
+      "incorrect grammar",
+      "off-topic answer",
+      "missing required phrase",
+      "missing required detail",
+      "quoted grammar error"
+    ],
+    "additionalFixtureCoverage": ["missing exact quote", "ambiguous pronoun context", "fabricated quote", "provider failures"],
+    "perCaseConsent": true,
+    "syntheticLearnerData": true
+  },
+  "liveProviderEvaluation": {
+    "status": "complete-with-case-adjudication",
+    "provider": "Meta Model API (muse-spark-1.3)",
+    "totalProviderCalls": 13,
+    "callsByRun": {"initialHarness": 1, "shortCapHarness": 5, "correctedMainRun": 6, "deliberateRetest": 1},
+    "automaticRetries": 0,
+    "correctedCasesAttempted": 6,
+    "correctedResponsesInitiallyValid": 5,
+    "oneRetest": "The 2,000-token-cap response was invalid; one deliberate retest at the raised 10,000-token cap returned a valid response after 1,736 output tokens.",
+    "validResponsesAfterRetest": 6,
+    "rawExpectedVerdictMatches": "4/5 among initially valid responses; expected labels for two cases needed adjudication.",
+    "adjudicatedVerdictMatches": "6/6 among six valid outputs; small synthetic sample, AI-assisted case review, not a provider-accuracy estimate.",
+    "exactQuoteValidity": "6/6 valid outputs",
+    "explanationQuality": {"reviewerType": "AI-assisted, not independent human review", "scale": "1 = incorrect/unhelpful; 5 = accurate, specific, helpful", "scores": {"natural-use": 5, "incorrect-use": 5, "off-topic": 5, "missing-required-phrase": 5, "ambiguous-reference": 4, "quoted-grammar-error": 2}, "mean": 4.33, "note": "The retest explanation misdiagnosed the grammar error; the issue is a noun phrase used as a predicate without a verb."},
+    "latencySamples": 13,
+    "estimatedCostUsd": 0.0699605,
+    "billingConfirmed": false,
+    "costNote": "Token-rate estimate from provider usage; not a confirmed Meta Billing charge. Billing page showed free credits in use, but activity may lag.",
+    "evidence": ["meta-live-run.json", "meta-live-run-continuation.json", "meta-live-run-corrected.json", "meta-live-run-missing-quote-retest.json", "adjudication.json", "summary.md"]
+  },
+  "checks": {
+    "tools/tutor-live-eval-check.mjs": "PASS",
+    "tools/lessons/product-evaluation-check.mjs": "PASS",
+    "tools/tutor/check.mjs": "PASS",
+    "tools/tutor/reliability-check.mjs": "PASS",
+    "tools/tutor/ai-client-check.mjs": "PASS",
+    "syntaxChecks": "PASS",
+    "serviceWorkerCacheGuard": "PASS mdx-dict-v128; 60 precached files",
+    "gitDiffCheck": "PASS"
+  },
+  "deployment": "not performed"
+}

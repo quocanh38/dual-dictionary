@@ -1,0 +1,336 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-5",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-5-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-5-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "City Cycle-Skills Course Enquiry",
+      "focus": "paraphrase, linked ideas, corrected details, and clear comparisons",
+      "part": "Part 1",
+      "script": "Maya: Good morning, Riverside Community Centre, Maya speaking. How can I help you?\nJon: Good morning. I'm calling about the city cycle-skills course. I saw a poster for beginners and I'd like to join the next group.\nMaya: Great. We have a new four-week course starting next month. It's designed for adults who haven't cycled for a long time or want more confidence on roads.\nJon: That's exactly me. I haven't ridden since school. When does it meet?\nMaya: The sessions are on Saturday mornings, from 9 to 11, at Riverside Park. Actually, sorry, let me correct that — we moved them to Sunday mornings, same time, because of park maintenance on Saturdays.\nJon: Sunday 9 to 11, got it. Where exactly in the park?\nMaya: By the south entrance, near the café. We provide bikes, but you can bring your own if you prefer. The fee is £40 for the whole course, and that includes bike hire, a safety check, and a printed guide to take home.\nJon: That's reasonable. Do I need any special equipment?\nMaya: Just comfortable clothes and closed shoes. We lend helmets and lights if you need them. Also, you don't need to be very fit — we start with basic control in a quiet area before going on short local roads.\nJon: Good to know. Is the course popular?\nMaya: Yes, last term's attendance summary was very positive. Weekday evening groups had about 12 people on average, but weekend morning groups were larger, around 20, and had better completion rates.\nJon: So weekends are busier but more people finish?\nMaya: Exactly. People find it easier to attend regularly on weekends.\nJon: How do I sign up?\nMaya: I can send you the online registration form by email. You'll need to complete it and bring photo ID to the first session. We also ask you to arrive 15 minutes early for a quick bike fitting.\nJon: Perfect. My email is jon dot harper at mail dot com.\nMaya: Thanks, Jon. I'll send that today, and you can reply if you have questions.",
+      "wordCount": 347
+    },
+    "reading": {
+      "title": "Millbridge Voices Oral History Project",
+      "focus": "paraphrase, linked ideas, and distinguishing claims from evidence",
+      "passage": "The town of Millbridge in northern England was once a centre for textile production. By the 1980s most mills had closed, and many workers moved to other jobs or left the area. Although official records list dates and employment numbers, they say little about daily life during this period of change. To fill this gap, Millbridge Library and the history department at Northfield University started an oral-recording project in January 2023.\n\nThe project, called Millbridge Voices, invites residents aged 70 and over to share memories in recorded interviews. Volunteers from the university and the local community carry out the interviews after a short training course on listening skills and recording equipment. Each interview lasts between 45 and 60 minutes and takes place in the library or, if preferred, in the participant's home. At first, the team planned to record all interviews automatically unless someone objected. After discussion with an ethics group, they changed to an opt-in system, where participants give clear written permission before any recording starts and can pause or delete sections at any time. This change reduced the number of recordings slightly but increased trust.\n\nThe organisers argue that the main value of the project is not simply collecting facts, but understanding how people interpreted events. For example, official reports describe the closure of the Bridge Mill in 1984 as an economic decision affecting 300 jobs. In her interview, 78-year-old Elena Alvarez, who worked there for 22 years, spoke less about the date and more about the quiet in the town afterwards and how neighbours supported each other with food and childcare. Her account, like many others, shows the social effects that do not appear in employment statistics.\n\nParticipation has grown steadily. In the first six months, 28 interviews were completed, mostly with former mill workers. In the next six months, the number rose to 41, including more women who had worked at home or in shops, and several people who had moved to Millbridge in the 1970s from Pakistan and India. The team notes that weekend sessions have higher attendance than weekday ones, and that interviews conducted at home tend to be longer, averaging 58 minutes compared with 46 minutes in the library. All recordings are stored in the library archive, with copies available online only when participants agree.\n\nThe project team now plans to use the material in schools and in a small exhibition next spring. They believe that listening to personal stories helps younger people connect with local history more directly than reading textbooks alone. If funding continues, they hope to extend the project to include residents in their 60s, whose memories of the town's regeneration in the 1990s are not yet recorded.",
+      "wordCount": 448
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-5-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "City Cycle-Skills Course Enquiry",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, corrected details, and clear comparisons",
+      "transcript": "Maya: Good morning, Riverside Community Centre, Maya speaking. How can I help you?\nJon: Good morning. I'm calling about the city cycle-skills course. I saw a poster for beginners and I'd like to join the next group.\nMaya: Great. We have a new four-week course starting next month. It's designed for adults who haven't cycled for a long time or want more confidence on roads.\nJon: That's exactly me. I haven't ridden since school. When does it meet?\nMaya: The sessions are on Saturday mornings, from 9 to 11, at Riverside Park. Actually, sorry, let me correct that — we moved them to Sunday mornings, same time, because of park maintenance on Saturdays.\nJon: Sunday 9 to 11, got it. Where exactly in the park?\nMaya: By the south entrance, near the café. We provide bikes, but you can bring your own if you prefer. The fee is £40 for the whole course, and that includes bike hire, a safety check, and a printed guide to take home.\nJon: That's reasonable. Do I need any special equipment?\nMaya: Just comfortable clothes and closed shoes. We lend helmets and lights if you need them. Also, you don't need to be very fit — we start with basic control in a quiet area before going on short local roads.\nJon: Good to know. Is the course popular?\nMaya: Yes, last term's attendance summary was very positive. Weekday evening groups had about 12 people on average, but weekend morning groups were larger, around 20, and had better completion rates.\nJon: So weekends are busier but more people finish?\nMaya: Exactly. People find it easier to attend regularly on weekends.\nJon: How do I sign up?\nMaya: I can send you the online registration form by email. You'll need to complete it and bring photo ID to the first session. We also ask you to arrive 15 minutes early for a quick bike fitting.\nJon: Perfect. My email is jon dot harper at mail dot com.\nMaya: Thanks, Jon. I'll send that today, and you can reply if you have questions.",
+      "prompt": "Why is Jon contacting the centre?",
+      "options": [
+        "To join a beginner cycling course",
+        "To hire a bike for the park",
+        "To complain about park maintenance",
+        "To apply for a job as instructor"
+      ],
+      "answer": 0,
+      "explanation": "He says he saw a poster for beginners and wants to join the next group. Bike hire is offered as part of the course, not his reason for calling."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "City Cycle-Skills Course Enquiry",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, corrected details, and clear comparisons",
+      "transcript": "Maya: Good morning, Riverside Community Centre, Maya speaking. How can I help you?\nJon: Good morning. I'm calling about the city cycle-skills course. I saw a poster for beginners and I'd like to join the next group.\nMaya: Great. We have a new four-week course starting next month. It's designed for adults who haven't cycled for a long time or want more confidence on roads.\nJon: That's exactly me. I haven't ridden since school. When does it meet?\nMaya: The sessions are on Saturday mornings, from 9 to 11, at Riverside Park. Actually, sorry, let me correct that — we moved them to Sunday mornings, same time, because of park maintenance on Saturdays.\nJon: Sunday 9 to 11, got it. Where exactly in the park?\nMaya: By the south entrance, near the café. We provide bikes, but you can bring your own if you prefer. The fee is £40 for the whole course, and that includes bike hire, a safety check, and a printed guide to take home.\nJon: That's reasonable. Do I need any special equipment?\nMaya: Just comfortable clothes and closed shoes. We lend helmets and lights if you need them. Also, you don't need to be very fit — we start with basic control in a quiet area before going on short local roads.\nJon: Good to know. Is the course popular?\nMaya: Yes, last term's attendance summary was very positive. Weekday evening groups had about 12 people on average, but weekend morning groups were larger, around 20, and had better completion rates.\nJon: So weekends are busier but more people finish?\nMaya: Exactly. People find it easier to attend regularly on weekends.\nJon: How do I sign up?\nMaya: I can send you the online registration form by email. You'll need to complete it and bring photo ID to the first session. We also ask you to arrive 15 minutes early for a quick bike fitting.\nJon: Perfect. My email is jon dot harper at mail dot com.\nMaya: Thanks, Jon. I'll send that today, and you can reply if you have questions.",
+      "prompt": "What does Maya correct about the sessions?",
+      "options": [
+        "They now run on Sunday mornings",
+        "They now start at 8 a.m.",
+        "They now meet at north entrance",
+        "They now last for three hours"
+      ],
+      "answer": 0,
+      "explanation": "She first says Saturday then corrects to Sunday mornings due to maintenance. The time remains 9 to 11, so the 8 a.m. option is incorrect."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "City Cycle-Skills Course Enquiry",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, corrected details, and clear comparisons",
+      "transcript": "Maya: Good morning, Riverside Community Centre, Maya speaking. How can I help you?\nJon: Good morning. I'm calling about the city cycle-skills course. I saw a poster for beginners and I'd like to join the next group.\nMaya: Great. We have a new four-week course starting next month. It's designed for adults who haven't cycled for a long time or want more confidence on roads.\nJon: That's exactly me. I haven't ridden since school. When does it meet?\nMaya: The sessions are on Saturday mornings, from 9 to 11, at Riverside Park. Actually, sorry, let me correct that — we moved them to Sunday mornings, same time, because of park maintenance on Saturdays.\nJon: Sunday 9 to 11, got it. Where exactly in the park?\nMaya: By the south entrance, near the café. We provide bikes, but you can bring your own if you prefer. The fee is £40 for the whole course, and that includes bike hire, a safety check, and a printed guide to take home.\nJon: That's reasonable. Do I need any special equipment?\nMaya: Just comfortable clothes and closed shoes. We lend helmets and lights if you need them. Also, you don't need to be very fit — we start with basic control in a quiet area before going on short local roads.\nJon: Good to know. Is the course popular?\nMaya: Yes, last term's attendance summary was very positive. Weekday evening groups had about 12 people on average, but weekend morning groups were larger, around 20, and had better completion rates.\nJon: So weekends are busier but more people finish?\nMaya: Exactly. People find it easier to attend regularly on weekends.\nJon: How do I sign up?\nMaya: I can send you the online registration form by email. You'll need to complete it and bring photo ID to the first session. We also ask you to arrive 15 minutes early for a quick bike fitting.\nJon: Perfect. My email is jon dot harper at mail dot com.\nMaya: Thanks, Jon. I'll send that today, and you can reply if you have questions.",
+      "prompt": "What is included in the £40 fee?",
+      "options": [
+        "Helmet purchase and lights",
+        "Bike hire, safety check and guide",
+        "Park café vouchers and repair kit",
+        "Insurance and fitness test"
+      ],
+      "answer": 1,
+      "explanation": "Maya lists bike hire, a safety check and a printed guide as included. Helmets are lent, not sold, so purchase is wrong."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "City Cycle-Skills Course Enquiry",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, corrected details, and clear comparisons",
+      "transcript": "Maya: Good morning, Riverside Community Centre, Maya speaking. How can I help you?\nJon: Good morning. I'm calling about the city cycle-skills course. I saw a poster for beginners and I'd like to join the next group.\nMaya: Great. We have a new four-week course starting next month. It's designed for adults who haven't cycled for a long time or want more confidence on roads.\nJon: That's exactly me. I haven't ridden since school. When does it meet?\nMaya: The sessions are on Saturday mornings, from 9 to 11, at Riverside Park. Actually, sorry, let me correct that — we moved them to Sunday mornings, same time, because of park maintenance on Saturdays.\nJon: Sunday 9 to 11, got it. Where exactly in the park?\nMaya: By the south entrance, near the café. We provide bikes, but you can bring your own if you prefer. The fee is £40 for the whole course, and that includes bike hire, a safety check, and a printed guide to take home.\nJon: That's reasonable. Do I need any special equipment?\nMaya: Just comfortable clothes and closed shoes. We lend helmets and lights if you need them. Also, you don't need to be very fit — we start with basic control in a quiet area before going on short local roads.\nJon: Good to know. Is the course popular?\nMaya: Yes, last term's attendance summary was very positive. Weekday evening groups had about 12 people on average, but weekend morning groups were larger, around 20, and had better completion rates.\nJon: So weekends are busier but more people finish?\nMaya: Exactly. People find it easier to attend regularly on weekends.\nJon: How do I sign up?\nMaya: I can send you the online registration form by email. You'll need to complete it and bring photo ID to the first session. We also ask you to arrive 15 minutes early for a quick bike fitting.\nJon: Perfect. My email is jon dot harper at mail dot com.\nMaya: Thanks, Jon. I'll send that today, and you can reply if you have questions.",
+      "prompt": "What does the attendance summary show?",
+      "options": [
+        "They were smaller than weekday groups",
+        "They had lower completion rates",
+        "They were larger and finished more often",
+        "They met less regularly"
+      ],
+      "answer": 2,
+      "explanation": "Weekend groups averaged 20 versus 12 on weekdays and had better completion rates. The lower completion option reverses this finding."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "City Cycle-Skills Course Enquiry",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, corrected details, and clear comparisons",
+      "transcript": "Maya: Good morning, Riverside Community Centre, Maya speaking. How can I help you?\nJon: Good morning. I'm calling about the city cycle-skills course. I saw a poster for beginners and I'd like to join the next group.\nMaya: Great. We have a new four-week course starting next month. It's designed for adults who haven't cycled for a long time or want more confidence on roads.\nJon: That's exactly me. I haven't ridden since school. When does it meet?\nMaya: The sessions are on Saturday mornings, from 9 to 11, at Riverside Park. Actually, sorry, let me correct that — we moved them to Sunday mornings, same time, because of park maintenance on Saturdays.\nJon: Sunday 9 to 11, got it. Where exactly in the park?\nMaya: By the south entrance, near the café. We provide bikes, but you can bring your own if you prefer. The fee is £40 for the whole course, and that includes bike hire, a safety check, and a printed guide to take home.\nJon: That's reasonable. Do I need any special equipment?\nMaya: Just comfortable clothes and closed shoes. We lend helmets and lights if you need them. Also, you don't need to be very fit — we start with basic control in a quiet area before going on short local roads.\nJon: Good to know. Is the course popular?\nMaya: Yes, last term's attendance summary was very positive. Weekday evening groups had about 12 people on average, but weekend morning groups were larger, around 20, and had better completion rates.\nJon: So weekends are busier but more people finish?\nMaya: Exactly. People find it easier to attend regularly on weekends.\nJon: How do I sign up?\nMaya: I can send you the online registration form by email. You'll need to complete it and bring photo ID to the first session. We also ask you to arrive 15 minutes early for a quick bike fitting.\nJon: Perfect. My email is jon dot harper at mail dot com.\nMaya: Thanks, Jon. I'll send that today, and you can reply if you have questions.",
+      "prompt": "What must Jon do to enrol?",
+      "options": [
+        "Pay in cash at the café",
+        "Complete a fitness test beforehand",
+        "Buy his own bicycle",
+        "Bring photo ID to first session"
+      ],
+      "answer": 3,
+      "explanation": "Maya says he must complete the online form and bring photo ID to the first session. Paying at the café is never mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Millbridge Voices Oral History Project",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, and distinguishing claims from evidence",
+      "passage": "The town of Millbridge in northern England was once a centre for textile production. By the 1980s most mills had closed, and many workers moved to other jobs or left the area. Although official records list dates and employment numbers, they say little about daily life during this period of change. To fill this gap, Millbridge Library and the history department at Northfield University started an oral-recording project in January 2023.\n\nThe project, called Millbridge Voices, invites residents aged 70 and over to share memories in recorded interviews. Volunteers from the university and the local community carry out the interviews after a short training course on listening skills and recording equipment. Each interview lasts between 45 and 60 minutes and takes place in the library or, if preferred, in the participant's home. At first, the team planned to record all interviews automatically unless someone objected. After discussion with an ethics group, they changed to an opt-in system, where participants give clear written permission before any recording starts and can pause or delete sections at any time. This change reduced the number of recordings slightly but increased trust.\n\nThe organisers argue that the main value of the project is not simply collecting facts, but understanding how people interpreted events. For example, official reports describe the closure of the Bridge Mill in 1984 as an economic decision affecting 300 jobs. In her interview, 78-year-old Elena Alvarez, who worked there for 22 years, spoke less about the date and more about the quiet in the town afterwards and how neighbours supported each other with food and childcare. Her account, like many others, shows the social effects that do not appear in employment statistics.\n\nParticipation has grown steadily. In the first six months, 28 interviews were completed, mostly with former mill workers. In the next six months, the number rose to 41, including more women who had worked at home or in shops, and several people who had moved to Millbridge in the 1970s from Pakistan and India. The team notes that weekend sessions have higher attendance than weekday ones, and that interviews conducted at home tend to be longer, averaging 58 minutes compared with 46 minutes in the library. All recordings are stored in the library archive, with copies available online only when participants agree.\n\nThe project team now plans to use the material in schools and in a small exhibition next spring. They believe that listening to personal stories helps younger people connect with local history more directly than reading textbooks alone. If funding continues, they hope to extend the project to include residents in their 60s, whose memories of the town's regeneration in the 1990s are not yet recorded.",
+      "prompt": "Why was Millbridge Voices started?",
+      "options": [
+        "To replace official employment records",
+        "To record daily life missing from records",
+        "To celebrate the textile industry's success",
+        "To train students in recording equipment"
+      ],
+      "answer": 1,
+      "explanation": "The passage says official records lack daily life details and the project fills that gap. Replacing records misstates its supplementary purpose."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Millbridge Voices Oral History Project",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, and distinguishing claims from evidence",
+      "passage": "The town of Millbridge in northern England was once a centre for textile production. By the 1980s most mills had closed, and many workers moved to other jobs or left the area. Although official records list dates and employment numbers, they say little about daily life during this period of change. To fill this gap, Millbridge Library and the history department at Northfield University started an oral-recording project in January 2023.\n\nThe project, called Millbridge Voices, invites residents aged 70 and over to share memories in recorded interviews. Volunteers from the university and the local community carry out the interviews after a short training course on listening skills and recording equipment. Each interview lasts between 45 and 60 minutes and takes place in the library or, if preferred, in the participant's home. At first, the team planned to record all interviews automatically unless someone objected. After discussion with an ethics group, they changed to an opt-in system, where participants give clear written permission before any recording starts and can pause or delete sections at any time. This change reduced the number of recordings slightly but increased trust.\n\nThe organisers argue that the main value of the project is not simply collecting facts, but understanding how people interpreted events. For example, official reports describe the closure of the Bridge Mill in 1984 as an economic decision affecting 300 jobs. In her interview, 78-year-old Elena Alvarez, who worked there for 22 years, spoke less about the date and more about the quiet in the town afterwards and how neighbours supported each other with food and childcare. Her account, like many others, shows the social effects that do not appear in employment statistics.\n\nParticipation has grown steadily. In the first six months, 28 interviews were completed, mostly with former mill workers. In the next six months, the number rose to 41, including more women who had worked at home or in shops, and several people who had moved to Millbridge in the 1970s from Pakistan and India. The team notes that weekend sessions have higher attendance than weekday ones, and that interviews conducted at home tend to be longer, averaging 58 minutes compared with 46 minutes in the library. All recordings are stored in the library archive, with copies available online only when participants agree.\n\nThe project team now plans to use the material in schools and in a small exhibition next spring. They believe that listening to personal stories helps younger people connect with local history more directly than reading textbooks alone. If funding continues, they hope to extend the project to include residents in their 60s, whose memories of the town's regeneration in the 1990s are not yet recorded.",
+      "prompt": "What changed about recording permission?",
+      "options": [
+        "Recordings became automatic for everyone",
+        "Only library interviews are now allowed",
+        "Participants must give clear written permission first",
+        "Volunteers can delete recordings without asking"
+      ],
+      "answer": 2,
+      "explanation": "The team moved from automatic recording to opt-in with clear written permission. Automatic recording was the earlier plan, not the current system."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Millbridge Voices Oral History Project",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, and distinguishing claims from evidence",
+      "passage": "The town of Millbridge in northern England was once a centre for textile production. By the 1980s most mills had closed, and many workers moved to other jobs or left the area. Although official records list dates and employment numbers, they say little about daily life during this period of change. To fill this gap, Millbridge Library and the history department at Northfield University started an oral-recording project in January 2023.\n\nThe project, called Millbridge Voices, invites residents aged 70 and over to share memories in recorded interviews. Volunteers from the university and the local community carry out the interviews after a short training course on listening skills and recording equipment. Each interview lasts between 45 and 60 minutes and takes place in the library or, if preferred, in the participant's home. At first, the team planned to record all interviews automatically unless someone objected. After discussion with an ethics group, they changed to an opt-in system, where participants give clear written permission before any recording starts and can pause or delete sections at any time. This change reduced the number of recordings slightly but increased trust.\n\nThe organisers argue that the main value of the project is not simply collecting facts, but understanding how people interpreted events. For example, official reports describe the closure of the Bridge Mill in 1984 as an economic decision affecting 300 jobs. In her interview, 78-year-old Elena Alvarez, who worked there for 22 years, spoke less about the date and more about the quiet in the town afterwards and how neighbours supported each other with food and childcare. Her account, like many others, shows the social effects that do not appear in employment statistics.\n\nParticipation has grown steadily. In the first six months, 28 interviews were completed, mostly with former mill workers. In the next six months, the number rose to 41, including more women who had worked at home or in shops, and several people who had moved to Millbridge in the 1970s from Pakistan and India. The team notes that weekend sessions have higher attendance than weekday ones, and that interviews conducted at home tend to be longer, averaging 58 minutes compared with 46 minutes in the library. All recordings are stored in the library archive, with copies available online only when participants agree.\n\nThe project team now plans to use the material in schools and in a small exhibition next spring. They believe that listening to personal stories helps younger people connect with local history more directly than reading textbooks alone. If funding continues, they hope to extend the project to include residents in their 60s, whose memories of the town's regeneration in the 1990s are not yet recorded.",
+      "prompt": "What do organisers claim is the main value?",
+      "options": [
+        "Collecting exact dates of mill closures",
+        "Understanding how people interpreted events",
+        "Proving economic reports were incorrect",
+        "Recording Elena Alvarez's employment history"
+      ],
+      "answer": 1,
+      "explanation": "They argue value is understanding interpretation, not just facts. Elena's account is an example illustrating that claim, not the claim itself."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Millbridge Voices Oral History Project",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, and distinguishing claims from evidence",
+      "passage": "The town of Millbridge in northern England was once a centre for textile production. By the 1980s most mills had closed, and many workers moved to other jobs or left the area. Although official records list dates and employment numbers, they say little about daily life during this period of change. To fill this gap, Millbridge Library and the history department at Northfield University started an oral-recording project in January 2023.\n\nThe project, called Millbridge Voices, invites residents aged 70 and over to share memories in recorded interviews. Volunteers from the university and the local community carry out the interviews after a short training course on listening skills and recording equipment. Each interview lasts between 45 and 60 minutes and takes place in the library or, if preferred, in the participant's home. At first, the team planned to record all interviews automatically unless someone objected. After discussion with an ethics group, they changed to an opt-in system, where participants give clear written permission before any recording starts and can pause or delete sections at any time. This change reduced the number of recordings slightly but increased trust.\n\nThe organisers argue that the main value of the project is not simply collecting facts, but understanding how people interpreted events. For example, official reports describe the closure of the Bridge Mill in 1984 as an economic decision affecting 300 jobs. In her interview, 78-year-old Elena Alvarez, who worked there for 22 years, spoke less about the date and more about the quiet in the town afterwards and how neighbours supported each other with food and childcare. Her account, like many others, shows the social effects that do not appear in employment statistics.\n\nParticipation has grown steadily. In the first six months, 28 interviews were completed, mostly with former mill workers. In the next six months, the number rose to 41, including more women who had worked at home or in shops, and several people who had moved to Millbridge in the 1970s from Pakistan and India. The team notes that weekend sessions have higher attendance than weekday ones, and that interviews conducted at home tend to be longer, averaging 58 minutes compared with 46 minutes in the library. All recordings are stored in the library archive, with copies available online only when participants agree.\n\nThe project team now plans to use the material in schools and in a small exhibition next spring. They believe that listening to personal stories helps younger people connect with local history more directly than reading textbooks alone. If funding continues, they hope to extend the project to include residents in their 60s, whose memories of the town's regeneration in the 1990s are not yet recorded.",
+      "prompt": "What does the passage say about interviews?",
+      "options": [
+        "Home interviews average longer than library ones",
+        "Weekday sessions had higher attendance",
+        "First six months had more interviews",
+        "Most recent participants were former mill workers"
+      ],
+      "answer": 0,
+      "explanation": "Home interviews average 58 minutes versus 46 in the library. Weekday attendance was lower, so that distractor contradicts the data."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Millbridge Voices Oral History Project",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas, and distinguishing claims from evidence",
+      "passage": "The town of Millbridge in northern England was once a centre for textile production. By the 1980s most mills had closed, and many workers moved to other jobs or left the area. Although official records list dates and employment numbers, they say little about daily life during this period of change. To fill this gap, Millbridge Library and the history department at Northfield University started an oral-recording project in January 2023.\n\nThe project, called Millbridge Voices, invites residents aged 70 and over to share memories in recorded interviews. Volunteers from the university and the local community carry out the interviews after a short training course on listening skills and recording equipment. Each interview lasts between 45 and 60 minutes and takes place in the library or, if preferred, in the participant's home. At first, the team planned to record all interviews automatically unless someone objected. After discussion with an ethics group, they changed to an opt-in system, where participants give clear written permission before any recording starts and can pause or delete sections at any time. This change reduced the number of recordings slightly but increased trust.\n\nThe organisers argue that the main value of the project is not simply collecting facts, but understanding how people interpreted events. For example, official reports describe the closure of the Bridge Mill in 1984 as an economic decision affecting 300 jobs. In her interview, 78-year-old Elena Alvarez, who worked there for 22 years, spoke less about the date and more about the quiet in the town afterwards and how neighbours supported each other with food and childcare. Her account, like many others, shows the social effects that do not appear in employment statistics.\n\nParticipation has grown steadily. In the first six months, 28 interviews were completed, mostly with former mill workers. In the next six months, the number rose to 41, including more women who had worked at home or in shops, and several people who had moved to Millbridge in the 1970s from Pakistan and India. The team notes that weekend sessions have higher attendance than weekday ones, and that interviews conducted at home tend to be longer, averaging 58 minutes compared with 46 minutes in the library. All recordings are stored in the library archive, with copies available online only when participants agree.\n\nThe project team now plans to use the material in schools and in a small exhibition next spring. They believe that listening to personal stories helps younger people connect with local history more directly than reading textbooks alone. If funding continues, they hope to extend the project to include residents in their 60s, whose memories of the town's regeneration in the 1990s are not yet recorded.",
+      "prompt": "What can be inferred about future recordings?",
+      "options": [
+        "They will focus only on the 1980s",
+        "They will no longer be stored online",
+        "They will stop if schools lose interest",
+        "They may include people in their sixties"
+      ],
+      "answer": 3,
+      "explanation": "The team hopes to extend to residents in their 60s if funding continues. There is no evidence they will limit focus to the 1980s."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-5-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Museum Access Guide and Visitors",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and clear comparisons",
+      "prompt": "The table below shows information from the City Heritage Museum Access Guide for 2024 and the share of visitors by ticket type in 2023. Opening hours: Tuesday to Friday 10:00-17:00, Saturday and Sunday 10:00-18:00, closed on Monday. Guided tours at 11:00 and 14:00 daily, booking required. Ticket prices: Adult $12, Student $8 (student ID required), Family $28 for 2 adults and up to 3 children under 16, Children under 12 free when with an adult. All tickets include wheelchair access, audio guide in 4 languages, cloakroom and cafe access. Share of visitors in 2023: Adult 42%, Student 28%, Family 18%, Children under 12 (free) 12%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Lecture-Recording Use",
+      "pathwayStage": "band-6",
+      "focus": "corrected details, linked ideas and clear comparisons",
+      "prompt": "The bar chart below shows the results of a survey of 400 university students in March 2024 about how they use lecture recordings. Frequency of use: Regularly (every week) 35%, Sometimes (2-3 times a month) 40%, Rarely 15%, Never 10%. Main reasons for using recordings (students could choose more than one reason): to review difficult ideas 68%, to catch up after missing a class 55%, to improve notes 48%, to prepare for exams 72%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Free Access to Museums",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and balanced comparison",
+      "prompt": "Some people think museums should be free for all visitors. Others think museums need to charge an entry fee to stay open and provide good services. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Campus Lecture-Recording Policy",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas, corrected details and clear comparisons",
+      "prompt": "At some universities, students must ask for permission before recording a lecture. Some students think they should be free to record any lecture for personal study. Others think the permission rule protects teachers and other students. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Heritage Interview Project",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and evaluation of accuracy",
+      "prompt": "A community heritage project asks young people to interview older people in their community about their lives and local history. Some people think this is a valuable way to learn about the past. Others think information from interviews is not always accurate or useful. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-5-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Museums and Visiting",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase and linked ideas in short answers",
+      "prompt": "Let's talk about museums. 1. How often do you visit museums? 2. What kind of museum do you enjoy most? 3. Did you visit museums when you were a child? 4. Do you prefer visiting museums alone or with other people? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Study Habits and Recordings",
+      "pathwayStage": "band-6",
+      "focus": "corrected details and linked ideas",
+      "prompt": "Let's talk about your studies. 1. How do you usually take notes in lectures or classes? 2. Do you ever watch or listen to recorded lectures? Why or why not? 3. What helps you remember information from a class? 4. Has technology changed how you study compared to a few years ago?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, clear comparison and extended linked ideas",
+      "prompt": "Describe a visit to a museum or heritage place that you remember well. You should say: • where it was and when you went • who you went with • what you saw and learned there • and explain why this visit was memorable for you. You will have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Access to Culture and Education",
+      "pathwayStage": "band-6",
+      "focus": "reasons, evaluation and comparison",
+      "prompt": "Let's discuss access to museums and education. 1. Why do some people think museums should be free for everyone? 2. What are the advantages and disadvantages of putting museum collections online? 3. Should governments give more money to museums or to other public services? Why? 4. How can museums attract more young visitors?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Heritage and Memory",
+      "pathwayStage": "band-6",
+      "focus": "evaluation, reasons and linked ideas",
+      "prompt": "Let's discuss community heritage projects. 1. Why is it important to record older people's memories of local history? 2. How can we check if information from interviews is accurate? 3. What are the benefits for young people who take part in heritage interview projects? 4. Is it better to learn history from people or from books and the internet? Why?"
+    }
+  ]
+}

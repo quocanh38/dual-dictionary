@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "b91d11fc8707fda89b60ebba111cb0ffb14d99f1eb25eed0b0765b8e2a658d04",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T06:44:08Z",
+  "note": "Independent review of the exact candidate payload and its source links, target meanings, MCQ keys/explanations and transfer task. AI-assisted editorial judgment; no external rights audit, human review or learner testing.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack attributes an original AI-assisted reading to the project, states no copied exam text/external source/learner data, and the inspected payload contains no learner PII; rights are based on this declaration, not external provenance verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact phrase appears in cited s1; receiving goods are compared with the order before receipt signature."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately describes comparing delivered goods with the order to see whether they match."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“đối chiếu hàng được giao với đơn đặt hàng” is natural, accurate Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact phrase appears in cited s2; the supervisor contacts the supplier about a missing item."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“to contact someone” is the contextual meaning of get in touch with."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“liên lạc với ai đó” is a natural, accurate gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone means comparing goods with the order; b reverses the sequence and c invents returning all goods unopened."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option and overall explanations accurately distinguish comparison from signing first or returning the shipment."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is grammatical; b has “before we signing” and c omits the article in “against order.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each explanation accurately identifies the verb-form error or missing article; article use is contextually appropriate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone paraphrases contacting the supplier about the missing item; b and c describe avoiding or blaming."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations correctly distinguish contact from avoidance and blame."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone uses get in touch with plus a grammatical third-person singular conditional clause; b has wrong preposition and c wrong agreement."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations accurately identify with, not to, and arrives agreeing with singular parcel."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Office assistant arranging a team lunch is a distinct purpose and setting from warehouse delivery."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence model is idiomatic and uses target naturally; checks cover length, target use and scenario; self-assessment is explicit."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "message": "The short reading and target phrases appear closer to A2–B1 than a clearly demonstrated B1 level; the workplace context remains clear and useful.",
+      "resolved": false
+    }
+  ]
+}

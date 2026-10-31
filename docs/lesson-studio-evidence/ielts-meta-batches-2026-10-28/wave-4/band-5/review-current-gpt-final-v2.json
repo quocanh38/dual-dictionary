@@ -1,0 +1,10 @@
+{
+  "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+  "reviewScope": "Exact-hash delta review: this candidate is byte-identical to its prior single-model-reviewed version except for the recorded editorial corrections in editorial-diffs.json. This record reviews those corrections and their answer grounding only.",
+  "candidateSha256": "da1f0cd65cbac0157a01020d19a31f994c53e3fd8694c23e7c22cf1ee7b76073",
+  "sidecarMatches": true,
+  "verdict": "focused-single-model-pass",
+  "reviewedChanges": [],
+  "reviewedAt": "2026-10-28T08:39:54.457Z",
+  "crossModelStatus": "pending; this does not substitute for independent gpt-6-luna and gpt-6.1-sol exact-hash reviews."
+}

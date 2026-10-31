@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-10-27T03:52:56.641Z",
+  "base": "http://127.0.0.1:8877",
+  "historicalCommit": "8b7e0f267",
+  "appCommit": "85b61c651c4bca9275150ddc085aa953d4899f5d",
+  "fileSha256": {
+    "lessons/storage.js": "12ca575784ba44cc0238b7fe6a5834d5b771314df390a7e268b789a6157e0684",
+    "lessons/backup.js": "95f5fcefeaf0b6d10699603148d4d8b9ac82a21609d169c178970f42f7012637",
+    "lessons/app.js": "ac12912bc785f172ce6aba32d0eb59bb3a313370e8b03adc0789bee98fd45cb3",
+    "js/store.js": "89733c825ea51bac8c57de3821669866f0ef8dc49f3261a15991cbc9cfa3b280",
+    "js/db.js": "dcd07fb1a9a35f0a3fe3cc057ce15e075e034b31799108036cae13b7fa8f82af"
+  },
+  "scope": "Isolated Chrome contexts; no real user profile, Meta calls, approval or deployment; historical Studio schema v1 compatibility, not database migration.",
+  "results": [
+    {
+      "name": "Original Studio generator/storage from 8b7e0f267 create older records in isolated browser",
+      "status": "PASS"
+    },
+    {
+      "name": "Mixed historical/current records create and validate complete backup",
+      "status": "PASS"
+    },
+    {
+      "name": "Restore keeps newer local draft revision and original progress without overwrite",
+      "status": "PASS"
+    },
+    {
+      "name": "Installing a newer pack version retains historical installed version",
+      "status": "PASS"
+    },
+    {
+      "name": "Fresh second context restores every mixed record byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "name": "Mixed merge conflict rolls back additions in every Studio store",
+      "status": "PASS"
+    },
+    {
+      "name": "Stale draft write rejects without altering any Studio record",
+      "status": "PASS"
+    },
+    {
+      "name": "Injected IndexedDB open denial rejects backup; restored open permits retry without record changes",
+      "status": "PASS"
+    },
+    {
+      "name": "Real library pack import keeps historical learner progress exactly",
+      "status": "PASS"
+    },
+    {
+      "name": "Real pack import/player duplicate Vault save preserves existing card",
+      "status": "PASS"
+    },
+    {
+      "name": "Vault notes, due date, FSRS memory state and review log remain exactly unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing learner records survive reload without page errors",
+      "status": "PASS"
+    }
+  ]
+}

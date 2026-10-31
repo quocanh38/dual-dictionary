@@ -1,0 +1,27 @@
+{
+  "wave": 10,
+  "batch": 103,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after united kingdom in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover international and technical proper nouns, mathematical and mechanical terminology, common learner grammar, regional vocabulary, and taxation. Highlight contrasts and register, and add precise explanations for UPC, VAT, vampire bats and perspective.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 800,
+    "remainingRawOnlyAfter": 780
+  },
+  "selected": [
+    "united nations", "united states of america", "universal joint", "universal product code", "universal set",
+    "unlooked for", "up to date", "upper case", "upside down", "urban renewal",
+    "use up", "used to", "user interface", "v sign", "vacuum flask",
+    "vacuum tube", "vade mecum", "value added tax", "vampire bat", "vanishing point"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "GS1, Barcodes overview and UPC product identification (https://www.gs1.org/standards/barcodes)",
+    "GOV.UK, VAT guide (https://www.gov.uk/guidance/vat-guide-notice-700)",
+    "Smithsonian Institution, Bat Facts: Vampire Bats (https://www.si.edu/spotlight/bats/batfacts)"
+  ]
+}

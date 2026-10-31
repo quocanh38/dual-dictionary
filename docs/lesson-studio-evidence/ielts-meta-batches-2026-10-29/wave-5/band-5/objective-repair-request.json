@@ -1,0 +1,187 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-5",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Keep each option under 12 words and each explanation to 1–2 sentences; do not repeat source paragraphs in explanations. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage around IELTS 5.0: clear main ideas, direct evidence, familiar academic contexts, and accurate simple explanations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a campus greenhouse open day, a student printing allowance, and a neighbourhood swimming-class timetable. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-5",
+    "batchId": "wave-5",
+    "currentBatch": {
+      "listening": {
+        "title": "Riverside Community Pool Swimming Classes",
+        "focus": "Understanding timetable details, corrections and booking information",
+        "part": "Part 1",
+        "script": "Anna: Good morning, Riverside Community Pool, this is Anna speaking, how can I help you?\nMark: Good morning, Anna. My name is Mark. I'm calling about swimming classes for my children.\nAnna: Of course, Mark. I can help with that. How old are your children?\nMark: My daughter Maya is seven, and my son Jon is ten.\nAnna: And what is their swimming level?\nMark: Maya is a complete beginner. She has never had lessons before. Jon can swim a short distance but he needs to improve.\nAnna: I see. For beginners aged six to eight, we have three classes each week. They are on Tuesday and Thursday at four o'clock in the afternoon, and on Saturday morning. The Saturday class was at ten o'clock, but we changed it to ten thirty last week because of staff training.\nMark: Oh, thank you for telling me. Saturday at ten thirty is actually better for us. How long does each class last?\nAnna: Every children's class is forty-five minutes long. They are all in the small indoor pool, which is warm and not deep.\nMark: That sounds perfect for Maya. What about Jon? He is ten and at intermediate level.\nAnna: For intermediate swimmers aged nine to twelve, we have classes on Monday and Wednesday at five pm, and also on Saturday at eleven thirty am. The teacher for that group is Mr Davis, he is very experienced.\nMark: Wednesday at five pm would work well for Jon. Do we need to bring any equipment?\nAnna: Just swimming costumes, goggles and a towel. We provide all other equipment like kickboards and noodles. Also, please bring a small lock for the changing room locker.\nMark: I understand. And what is the price?\nAnna: It is twelve dollars for one class. Or you can pay forty dollars for four classes together. Many parents choose the four-class option because it saves money.\nMark: We will take the four-class option for both children. How can I book?\nAnna: I can book you now. I just need your full name and phone number. Also, please arrive fifteen minutes early on the first day to fill in a registration form at reception.\nMark: Sure, it's Mark Lee, and my number is 555-0148.\nAnna: Thank you, Mr Lee. So I have booked Maya for the beginner class on Saturday at ten thirty, and Jon for the intermediate class on Wednesday at five pm. We look forward to seeing you.",
+        "questions": [
+          {
+            "title": "Maya's Level",
+            "prompt": "What does Mark say about Maya's swimming?",
+            "options": [
+              "She is a complete beginner",
+              "She is intermediate",
+              "She swims very well",
+              "She had lessons before"
+            ],
+            "answer": 0,
+            "explanation": "Mark says Maya has never had lessons and is a complete beginner. The distractor about lessons before is opposite to what he says."
+          },
+          {
+            "title": "Saturday Time",
+            "prompt": "What time is the Saturday beginner class?",
+            "options": [
+              "9:30 am",
+              "10:00 am",
+              "10:30 am",
+              "11:30 am"
+            ],
+            "answer": 2,
+            "explanation": "Anna corrects the old 10:00 time to 10:30 due to staff training. 10:00 was the previous time, not the current one."
+          },
+          {
+            "title": "Pool Location",
+            "prompt": "Where are the children's classes held?",
+            "options": [
+              "Large outdoor pool",
+              "River nearby",
+              "School swimming pool",
+              "Small indoor pool"
+            ],
+            "answer": 3,
+            "explanation": "Anna states all children's classes are in the small indoor pool. The outdoor pool is never mentioned as a location."
+          },
+          {
+            "title": "What to Bring",
+            "prompt": "What does Anna say students should bring?",
+            "options": [
+              "Kickboards and noodles",
+              "Swimwear, goggles and towel",
+              "Food and drinks",
+              "Swimming teacher"
+            ],
+            "answer": 1,
+            "explanation": "Anna lists swimwear, goggles and towel as required. Kickboards are provided by the pool, so they are not needed."
+          },
+          {
+            "title": "First Day Instruction",
+            "prompt": "What must parents do on the first day?",
+            "options": [
+              "Pay extra money",
+              "Arrive 15 minutes early to register",
+              "Bring a doctor's letter",
+              "Swim with children"
+            ],
+            "answer": 1,
+            "explanation": "Anna asks parents to arrive 15 minutes early to fill in a form at reception. Paying extra is not mentioned for the first day."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Campus Greenhouse Open Day",
+        "focus": "Identifying main ideas, examples and practical information",
+        "passage": "The campus greenhouse at Greenfield University will open its doors to the public next Saturday. It was built five years ago mainly for biology students to grow plants for their studies. At first, only science students used it, but now students from many subjects and local families visit. The Open Day is a chance for everyone to learn about plants and sustainability.\n\nThe greenhouse has two main areas with different climates. The first area is warm and humid. It contains tropical plants such as banana trees and orchids, which need high temperatures and a lot of water. The second area is cooler and dry. It contains plants from desert regions, such as cactus and rosemary herbs. Student volunteers work in both areas every week. They water the plants, check the temperature, and clean the glass roof. During the Open Day, these volunteers will give short guided tours every thirty minutes.\n\nA key purpose of the greenhouse is education. Biology students use it to grow vegetables for experiments. For example, one student group is growing lettuce with less water to test if it can still grow well. Another group is testing how different light levels affect tomato growth. These are useful examples of student research. However, the author's main claim is broader: the greenhouse helps all students, not only biology students, to understand environmental responsibility and to think about sustainable living.\n\nThe greenhouse also supports the environment in practical ways. It collects rainwater from its roof and uses it for watering, which saved over 5,000 litres of water last year. It also uses solar panels on the roof to make electricity for heating and lights. In addition, the greenhouse supplies fresh herbs and salad leaves to the university café every week. Because the food travels only a short distance, it reduces transport costs and packaging waste. This shows how a small project can have real environmental benefits.\n\nThe Open Day will offer several activities for visitors. At 11 am, there will be a planting workshop for children, where they can plant seeds in a small pot to take home. At 2 pm, there will be a talk about composting and how to make soil from food waste. Entry to the Open Day is free, but visitors must book online in advance. This is because space is limited to 100 people per hour for safety reasons. The greenhouse is open from 10 am to 4 pm, and a free university bus will run every 20 minutes from the city centre to the campus.\n\nOverall, the Open Day is a good opportunity to see how a campus project can teach practical skills, provide fresh food, and encourage greener habits for the future.",
+        "questions": [
+          {
+            "title": "Original Purpose",
+            "prompt": "Why was the greenhouse first built?",
+            "options": [
+              "Mainly for biology students' studies",
+              "For local families to visit",
+              "As a university café",
+              "To save rainwater"
+            ],
+            "answer": 0,
+            "explanation": "The passage says it was built mainly for biology students to grow plants. Families visiting came later, so that distractor is incorrect."
+          },
+          {
+            "title": "Warm Area Plants",
+            "prompt": "What grows in the warm and humid area?",
+            "options": [
+              "Cactus and rosemary",
+              "Tomatoes and lettuce",
+              "Banana trees and orchids",
+              "Salad leaves only"
+            ],
+            "answer": 2,
+            "explanation": "The warm area is described as containing banana trees and orchids. Cactus is in the cooler dry area, not the warm one."
+          },
+          {
+            "title": "Claim vs Example",
+            "prompt": "Which is the author's main claim, not an example?",
+            "options": [
+              "Students grow lettuce with less water",
+              "Greenhouse helps all students understand responsibility",
+              "Students test light levels for tomatoes",
+              "Volunteers clean the glass roof"
+            ],
+            "answer": 1,
+            "explanation": "The author states the broader claim is about all students learning responsibility. The lettuce test is presented as one example of research."
+          },
+          {
+            "title": "Café Food Inference",
+            "prompt": "What can be inferred about food for the café?",
+            "options": [
+              "It is sold to local families",
+              "It is grown only in winter",
+              "It needs more packaging",
+              "It is fresher and reduces transport waste"
+            ],
+            "answer": 3,
+            "explanation": "Supplying the café from the greenhouse means short travel, which implies less transport and packaging. More packaging contradicts this benefit."
+          },
+          {
+            "title": "Booking Requirement",
+            "prompt": "What must visitors do before the Open Day?",
+            "options": [
+              "Pay for entry tickets",
+              "Book online in advance",
+              "Bring 100 people",
+              "Arrive at 11 am only"
+            ],
+            "answer": 1,
+            "explanation": "Entry is free but booking online is required due to the 100-person limit. Paying for tickets is incorrect because entry is free."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "sharedContexts.listening.script",
+          "issue": "The script contains 410 whitespace-delimited words (the payload declares 410), exceeding the requested 300–400-word range and matching normalizationFindings. Shorten it by at least 10 words and update the count.",
+          "severity": "major"
+        },
+        {
+          "item": "ielts-meta-wave-5-band-5-reading-04",
+          "issue": "The keyed option says café produce “is fresher,” but the passage only identifies fresh herbs/leaves and says short transport reduces transport costs and packaging waste. The comparative freshness claim is not established; consider removing “fresher” and wording the option to match the passage.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        },
+        {
+          "item": "sharedContexts.listening.script; normalizationFindings",
+          "issue": "Listening has 410 whitespace-delimited words, matching wordCount410 and the normalization finding, exceeding the required300–400 range. Shorten the complete script to at most400 and keep all repeated exercise transcripts and wordCount synchronised.",
+          "severity": "critical"
+        },
+        {
+          "item": "sharedContexts.reading.passage, paragraph2; all Reading passage copies",
+          "issue": "The passage classifies rosemary with cacti as plants from desert regions. Kew describes rosemary habitat as dry Mediterranean scrubland, not a desert habitat. Use a clear desert example or describe the area as containing plants from dry regions, preserving the warm/dry contrast. Source: https://www.kew.org/plants/rosemary .",
+          "severity": "uncertain"
+        },
+        {
+          "item": "ielts-meta-wave-5-band-5-listening-04; reading-05",
+          "issue": "Several distractors are implausible or almost nonsensical in the role, e.g. bring Swimming teacher and Bring100people. They do not threaten unique keys but weaken discrimination even at this introductory stage.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        },
+        {
+          "item": "ielts-meta-wave-5-band-5-reading-04",
+          "issue": "The keyed fresh/short-transport inference is reasonable from fresh herbs and salad leaves plus short travel, but transport waste is less precise than the passage wording transport costs and packaging waste. Prefer that wording.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        },
+        {
+          "item": "normalizationFindings",
+          "issue": "Listening script has 410 words; expected 300–400.",
+          "severity": "critical"
+        }
+      ]
+    }
+  }
+}

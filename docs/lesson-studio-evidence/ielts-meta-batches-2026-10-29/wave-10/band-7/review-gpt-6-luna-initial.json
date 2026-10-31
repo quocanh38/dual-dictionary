@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "1d291ef42ecaca212f078d0603fbb5798307977f4a891ab070086d1e51ab751a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 335/463 words; all 10 objective answers are uniquely supported, and explanations correctly distinguish transportability, subgroup/composite effects, corrections and causal limits. Task 1 tables show participants, comparison groups, units/scales and subgroup sizes; Speaking parts and cue card are complete and stage-appropriate. The two evidence contexts use related but distinct examples for competing causal explanations (district funding increase in Listening; transport subsidy in Reading); answer keys are grounded in their own respective contexts. Minor clarity: the wellbeing survey gives n=2,400 and a 62% response rate without the invitation denominator. Original-content provenance is stated; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts (335-word listening script; 463-word reading passage), all 10 objective prompts/options/keys/explanations, all three Task 1 data sets/units/sample information, all five Writing prompts/timing, and all five Speaking prompts including cue-card completeness and Part 3 fit.",
+  "reviewerType": "AI-assisted"
+}

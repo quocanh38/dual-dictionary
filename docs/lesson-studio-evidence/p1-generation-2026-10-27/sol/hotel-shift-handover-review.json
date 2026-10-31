@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "8e3203a631ea43c77e5e86e443df709c9e7e4122083c8e03ea09f894532d81c1",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-sol — AI-assisted final content reviewer",
+  "reviewedAt": "2026-10-27T04:42:30.462Z",
+  "note": "Independent full final-candidate audit of supplied source, both EN/VI meanings, every choice and explanation, transfer model and checklist, including realistic alternate readings. Configured model: gpt-6.1-sol. No Luna reviews or prior pack editorial judgments read before this audit. Required process/board read for workflow context only. AI-assisted review, not human review or proof of learning effectiveness; no approval, provider call or deployment performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Provenance identifies an AI-assisted original project reading, permits generation/distribution, and discloses no copied examination passage or learner PII. The generic receptionist scenario contains no personal data; rights judgment relies on that supplied provenance."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains hand over verbatim. Passing booking records to the next shift supports the transfer sense; no physical hand-position reading fits the object and recipient."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Giving documents or responsibility accurately describes this contextual transfer. The gloss permits either documents or responsibility and does not require a formal ceremony."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Bàn giao is natural Vietnamese with correct diacritics for shift-to-shift records/responsibility."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains follow up on verbatim; unresolved guest requests require subsequent checking/action, not following a person spatially."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Checking and taking further action on unfinished matters matches the unresolved-request context. This is a contextual gloss rather than a claim that all follow-up concerns unfinished tasks."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Theo dõi và xử lý tiếp naturally conveys continued attention/action and has correct diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q1 a is the contextual answer: records pass to the night team, with ordinary shift responsibility implied. b hiding is opposite; c cancellation does not mean transfer. Hidden/cancelled records could be events elsewhere, but neither paraphrases s1."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q1 a accurately relates documents/responsibility to the handover; b and c explanations correctly distinguish hiding and cancellation. Overall explanation correctly centers passing records to the next team."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q2 a is grammatical and idiomatic. b before leaves lacks the subject needed for a finite clause; before leaving repairs it. c hand overs after will has an invalid inflection. No reasonable workplace context licenses these exact sentence forms."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q2 a correctly identifies verb and to-recipient construction; b gives a valid local repair to leaving (before the assistant leaves is also possible, not excluded); c correctly restores base-form hand over after will. Overall sole grammatical answer claim holds."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q3 b matches revisiting unresolved requests. a ignoring them and c making a first request do not convey follow-up, even if those actions could occur in another situation."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q3 explanations accurately contrast ignoring and a new first request against further attention/action to existing requests; the overall explanation is supported by unresolved during the day."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q4 a is natural. b on tomorrow morning adds an inappropriate preposition before this time expression; c will follows incorrectly inflects the modal complement. A different complaint context does not cure either form."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q4 a correctly uses follow up on; b deletion of on before tomorrow morning and c follows to follow are accurate local corrections. The overall answer claim does not depend on assumed intentions."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "q5 changes hotel receptionist/night team duties into a school charity volunteer leaving work with a classmate; the message recipient, items and purpose are substantively different."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The three-sentence model naturally uses will hand over with ticket box/sales list and to you. The checklist verifies length, transfer meaning and changed role/situation. Self-assessment is explicit; no automatic writing/CEFR score is claimed."
+    }
+  ],
+  "findings": []
+}

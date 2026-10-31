@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 22,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after call up, selected by current phrase slug and frequency metadata, and cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Independent Vietnamese meanings, usage patterns, original bilingual examples and learner notes; no dictionary wording or examples reproduced. Notes clarify regional labels, register, spelling and particle behavior where useful.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2420,
+    "remainingRawOnlyAfter": 2400
+  },
+  "selected": [
+    "call waiting",
+    "calling card",
+    "calm down",
+    "carry off",
+    "carry on",
+    "carry over",
+    "case history",
+    "case law",
+    "case study",
+    "cat suit",
+    "catch up",
+    "cell phone",
+    "change over",
+    "charge account",
+    "charge card",
+    "check into",
+    "check off",
+    "check out",
+    "chicken feed",
+    "chief of state"
+  ]
+}

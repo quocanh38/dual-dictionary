@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "134d30e8ee09ede60d49effa92babd40b77e87f848b97307439250c94fbcbe35",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Prior counter/denominator concern is resolved: the travel-plan Task 1 reports daily bicycle entries from calibrated gate counters, without claiming a rate or proportion of students cycling. Listening/Reading contexts are 331/447 words; all 10 objective answers are uniquely supported and answer positions are balanced. Task 1 values, units, reliability labels and methods are visible; the environmental priority table includes its consultation n=1,200. Writing minimums/timing and Speaking parts/cue cards are complete and appropriately staged. Original-content provenance is declared; no official-item or score claims."
+  ],
+  "coverage": "Full rereview of exact candidate bytes, provenance/metadata, both contexts, all 10 objective prompts/options/keys/explanations, both Task 1 datasets/denominators/units (including counter interpretation), all five Writing prompts/timing and all five Speaking prompts/part fit/cue-card completeness.",
+  "reviewerType": "AI-assisted"
+}

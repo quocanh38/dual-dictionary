@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-10",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:21:09.642Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 646,
+    "outputTokens": 5877,
+    "totalTokens": 6523
+  },
+  "latencyMs": 20698,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Museum Schools Programme\",\"focus\":\"paraphrase, linked ideas and clear comparisons\",\"prompt\":\"The table below shows information about the Hillford City Museum schools programme in 2022 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\\n\\nData:\\n- Primary school visits: 45 in 2022, 62 in 2024\\n- Secondary school visits: 30 in 2022, 28 in 2024\\n- Total students participating: 3,200 in 2022, 4,100 in 2024\\n- Workshops offered: 18 in 2022, 25 in 2024\\n- Average teacher rating (out of 10): 7.8 in 2022, 8.4 in 2024\\n\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · University Study-Support Sessions\",\"focus\":\"paraphrase, corrected details and clear comparisons\",\"prompt\":\"The bar chart below compares attendance at four study-support sessions at Westfield University in Term 1 and Term 2 in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\\n\\nAttendance (number of students):\\n- Academic Writing: 80 in Term 1, 110 in Term 2\\n- Time Management: 65 in Term 1, 70 in Term 2\\n- Research Skills: 95 in Term 1, 85 in Term 2\\n- Exam Preparation: 50 in Term 1, 90 in Term 2\\n\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Public Bicycle-Dock Consultation\",\"focus\":\"paraphrase, linked ideas and clear comparisons\",\"prompt\":\"The table below shows the results of a public consultation with 500 residents in Hillford about a proposed bicycle dock near Central Park in 2023 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\\n\\nShare of responses:\\n- Support the proposal: 42% in 2023, 55% in 2024\\n- Oppose the proposal: 35% in 2023, 25% in 2024\\n- Undecided: 23% in 2023, 20% in 2024\\n\\nMost common reason given:\\n- For support: convenient for commuting (2023 and 2024)\\n- For opposition: concern about loss of parking space (2023 and 2024)\\n\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Museums and Education\",\"focus\":\"linked ideas, balanced discussion and clear opinion\",\"prompt\":\"Some people think museums should focus mainly on entertaining visitors, while others believe their main purpose should be to educate. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Bicycle Facilities in Cities\",\"focus\":\"paraphrase, reasons and evaluation\",\"prompt\":\"Some people say governments should spend more money on bicycle facilities, such as docks and lanes, than on other forms of public transport. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Studies and Free Time\",\"focus\":\"paraphrase and linked ideas on familiar topics\",\"prompt\":\"Answer the following questions about yourself. Give short, connected answers.\\n1. What do you study or work on at the moment?\\n2. How do you usually organise your study time?\\n3. Do you enjoy visiting museums? Why or why not?\\n4. What do you like to do when you have free time in the evening?\"},{\"task\":\"Part 1 · Transport and Your Area\",\"focus\":\"paraphrase and linked ideas on familiar topics\",\"prompt\":\"Answer the following questions about yourself. Give short, connected answers.\\n1. How do you usually travel around your local area?\\n2. Is cycling popular where you live?\\n3. What is one thing you like about your neighbourhood?\\n4. Has transport in your area changed in recent years?\"},{\"task\":\"Part 2 · Cue card · An Educational Visit\",\"focus\":\"linked ideas, corrected details and clear description\",\"prompt\":\"Describe a museum, library or educational centre you visited and found interesting. You will have one minute to prepare and should speak for one to two minutes.\\n\\nYou should say:\\n- where it was\\n- when you went there\\n- what you did or learned there\\n- and explain why you found the visit interesting or useful.\\n\\nYou may make notes while you prepare.\"},{\"task\":\"Part 3 · University Support and Independent Learning\",\"focus\":\"reasons, evaluation and comparison\",\"prompt\":\"Answer the following questions with reasons and examples. Do not give memorised facts.\\n1. Why do some university students use extra study-support sessions while others prefer to study alone?\\n2. What are the advantages and disadvantages of group study sessions compared to individual study?\\n3. How can universities encourage students to become more independent learners?\\n4. Do you think online support can be as effective as face-to-face support? Why or why not?\"},{\"task\":\"Part 3 · Public Facilities and Consultation\",\"focus\":\"reasons, evaluation and balancing views\",\"prompt\":\"Answer the following questions with reasons and evaluation. Do not give memorised facts.\\n1. Why is it important for local councils to consult the public before building new facilities like bicycle docks?\\n2. How should decision-makers balance different opinions when some residents support and others oppose a project?\\n3. What are the benefits and possible problems of encouraging more cycling in cities?\\n4. Do you think public consultations lead to better decisions in the long term? Why or why not?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Museum Schools Programme",
+        "focus": "paraphrase, linked ideas and clear comparisons",
+        "prompt": "The table below shows information about the Hillford City Museum schools programme in 2022 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nData:\n- Primary school visits: 45 in 2022, 62 in 2024\n- Secondary school visits: 30 in 2022, 28 in 2024\n- Total students participating: 3,200 in 2022, 4,100 in 2024\n- Workshops offered: 18 in 2022, 25 in 2024\n- Average teacher rating (out of 10): 7.8 in 2022, 8.4 in 2024\n\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · University Study-Support Sessions",
+        "focus": "paraphrase, corrected details and clear comparisons",
+        "prompt": "The bar chart below compares attendance at four study-support sessions at Westfield University in Term 1 and Term 2 in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nAttendance (number of students):\n- Academic Writing: 80 in Term 1, 110 in Term 2\n- Time Management: 65 in Term 1, 70 in Term 2\n- Research Skills: 95 in Term 1, 85 in Term 2\n- Exam Preparation: 50 in Term 1, 90 in Term 2\n\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Public Bicycle-Dock Consultation",
+        "focus": "paraphrase, linked ideas and clear comparisons",
+        "prompt": "The table below shows the results of a public consultation with 500 residents in Hillford about a proposed bicycle dock near Central Park in 2023 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nShare of responses:\n- Support the proposal: 42% in 2023, 55% in 2024\n- Oppose the proposal: 35% in 2023, 25% in 2024\n- Undecided: 23% in 2023, 20% in 2024\n\nMost common reason given:\n- For support: convenient for commuting (2023 and 2024)\n- For opposition: concern about loss of parking space (2023 and 2024)\n\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Museums and Education",
+        "focus": "linked ideas, balanced discussion and clear opinion",
+        "prompt": "Some people think museums should focus mainly on entertaining visitors, while others believe their main purpose should be to educate. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Bicycle Facilities in Cities",
+        "focus": "paraphrase, reasons and evaluation",
+        "prompt": "Some people say governments should spend more money on bicycle facilities, such as docks and lanes, than on other forms of public transport. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Studies and Free Time",
+        "focus": "paraphrase and linked ideas on familiar topics",
+        "prompt": "Answer the following questions about yourself. Give short, connected answers.\n1. What do you study or work on at the moment?\n2. How do you usually organise your study time?\n3. Do you enjoy visiting museums? Why or why not?\n4. What do you like to do when you have free time in the evening?"
+      },
+      {
+        "task": "Part 1 · Transport and Your Area",
+        "focus": "paraphrase and linked ideas on familiar topics",
+        "prompt": "Answer the following questions about yourself. Give short, connected answers.\n1. How do you usually travel around your local area?\n2. Is cycling popular where you live?\n3. What is one thing you like about your neighbourhood?\n4. Has transport in your area changed in recent years?"
+      },
+      {
+        "task": "Part 2 · Cue card · An Educational Visit",
+        "focus": "linked ideas, corrected details and clear description",
+        "prompt": "Describe a museum, library or educational centre you visited and found interesting. You will have one minute to prepare and should speak for one to two minutes.\n\nYou should say:\n- where it was\n- when you went there\n- what you did or learned there\n- and explain why you found the visit interesting or useful.\n\nYou may make notes while you prepare."
+      },
+      {
+        "task": "Part 3 · University Support and Independent Learning",
+        "focus": "reasons, evaluation and comparison",
+        "prompt": "Answer the following questions with reasons and examples. Do not give memorised facts.\n1. Why do some university students use extra study-support sessions while others prefer to study alone?\n2. What are the advantages and disadvantages of group study sessions compared to individual study?\n3. How can universities encourage students to become more independent learners?\n4. Do you think online support can be as effective as face-to-face support? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Public Facilities and Consultation",
+        "focus": "reasons, evaluation and balancing views",
+        "prompt": "Answer the following questions with reasons and evaluation. Do not give memorised facts.\n1. Why is it important for local councils to consult the public before building new facilities like bicycle docks?\n2. How should decision-makers balance different opinions when some residents support and others oppose a project?\n3. What are the benefits and possible problems of encouraging more cycling in cities?\n4. Do you think public consultations lead to better decisions in the long term? Why or why not?"
+      }
+    ]
+  }
+}

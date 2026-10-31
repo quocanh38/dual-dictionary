@@ -1,0 +1,266 @@
+[
+  {
+    "phrase": "accounts payable",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "các khoản phải trả; công nợ doanh nghiệp cần thanh toán cho nhà cung cấp",
+        "pat": "accounts payable (AP) · accounts payable balance · review/pay accounts payable",
+        "ex": [
+          [
+            "The finance team reviews accounts payable every Friday.",
+            "Nhóm tài chính rà soát các khoản phải trả vào mỗi thứ Sáu."
+          ],
+          [
+            "Accounts payable increased after the company extended its payment terms.",
+            "Các khoản phải trả tăng sau khi công ty kéo dài thời hạn thanh toán."
+          ]
+        ]
+      }
+    ],
+    "note": "Không dịch theo nghĩa đen thành “tài khoản thu”. Accounts payable có thể chỉ khoản nợ doanh nghiệp phải trả nhà cung cấp hoặc bộ phận phụ trách xử lý các khoản thanh toán này; phía đối ứng là accounts receivable (các khoản phải thu)."
+  },
+  {
+    "phrase": "balance sheet",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bảng cân đối kế toán — báo cáo tài sản, nợ phải trả và vốn chủ sở hữu tại một thời điểm",
+        "pat": "prepare/review a balance sheet · balance-sheet date",
+        "ex": [
+          [
+            "The board reviewed the balance sheet at the end of the quarter.",
+            "Ban lãnh đạo xem xét bảng cân đối kế toán vào cuối quý."
+          ],
+          [
+            "The balance sheet lists the company’s assets and liabilities.",
+            "Bảng cân đối kế toán liệt kê tài sản và nợ phải trả của công ty."
+          ]
+        ]
+      }
+    ],
+    "note": "Khác income statement (báo cáo kết quả kinh doanh), vốn tóm tắt doanh thu và chi phí trong một kỳ."
+  },
+  {
+    "phrase": "bill of lading",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vận đơn — chứng từ vận tải xác nhận hàng đã được người chuyên chở nhận để giao",
+        "pat": "issue/sign a bill of lading · bill of lading number · a bill of lading for the shipment",
+        "ex": [
+          [
+            "The carrier issued a bill of lading after receiving the containers.",
+            "Đơn vị vận tải phát hành vận đơn sau khi nhận các container."
+          ],
+          [
+            "Please send the importer a copy of the bill of lading.",
+            "Vui lòng gửi cho nhà nhập khẩu một bản sao vận đơn."
+          ]
+        ]
+      }
+    ],
+    "note": "Chứng từ vận tải trong logistics; không phải invoice (hóa đơn yêu cầu thanh toán)."
+  },
+  {
+    "phrase": "cash flow",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "dòng tiền — lượng tiền mặt đi vào và đi ra khỏi doanh nghiệp trong một khoảng thời gian",
+        "pat": "positive/negative cash flow · cash flow from operations · cash-flow forecast",
+        "ex": [
+          [
+            "The expansion put pressure on the company’s cash flow.",
+            "Việc mở rộng gây áp lực lên dòng tiền của công ty."
+          ],
+          [
+            "We prepare a monthly cash-flow forecast for each project.",
+            "Chúng tôi lập dự báo dòng tiền hằng tháng cho từng dự án."
+          ]
+        ]
+      }
+    ],
+    "note": "Dòng tiền khác lợi nhuận trên sổ sách: doanh nghiệp có thể có lãi nhưng vẫn thiếu tiền mặt đúng lúc cần thanh toán."
+  },
+  {
+    "phrase": "down payment",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "khoản tiền trả trước khi mua hàng giá trị lớn; phần còn lại được trả sau hoặc vay",
+        "pat": "make/pay a down payment on something · a 10% down payment",
+        "ex": [
+          [
+            "We paid a 20 percent down payment on the equipment.",
+            "Chúng tôi trả trước 20% giá trị thiết bị."
+          ],
+          [
+            "A smaller down payment may mean higher monthly instalments.",
+            "Khoản trả trước thấp hơn có thể đồng nghĩa với các kỳ trả góp hằng tháng cao hơn."
+          ]
+        ]
+      }
+    ],
+    "note": "Là phần trả ban đầu của tổng giá, không nhất thiết là tiền đặt cọc có thể hoàn lại."
+  },
+  {
+    "phrase": "fiscal year",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "năm tài chính — chu kỳ 12 tháng dùng để lập ngân sách và báo cáo kế toán",
+        "pat": "the fiscal year begins/ends in … · fiscal year 2026 · FY 2026",
+        "ex": [
+          [
+            "The company’s fiscal year ends on 30 June.",
+            "Năm tài chính của công ty kết thúc vào ngày 30 tháng 6."
+          ],
+          [
+            "Revenue rose during the first quarter of fiscal year 2026.",
+            "Doanh thu tăng trong quý đầu tiên của năm tài chính 2026."
+          ]
+        ]
+      }
+    ],
+    "note": "Chu kỳ này có thể không trùng năm dương lịch. Trong Anh-Anh thường gặp financial year; tax year là kỳ tính thuế theo quy định của từng nước."
+  },
+  {
+    "phrase": "fringe benefit",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "phúc lợi ngoài lương — quyền lợi bổ sung do người sử dụng lao động cung cấp",
+        "pat": "fringe benefits · offer/provide fringe benefits · a benefits package",
+        "ex": [
+          [
+            "Health insurance is one of the fringe benefits offered to full-time staff.",
+            "Bảo hiểm y tế là một trong những phúc lợi dành cho nhân viên toàn thời gian."
+          ],
+          [
+            "The job pays well and includes several fringe benefits.",
+            "Công việc có mức lương tốt và kèm theo một số phúc lợi ngoài lương."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong ngữ cảnh việc làm thường gặp dạng số nhiều fringe benefits. Employee benefits là cách gọi bao quát, trung tính hơn trong văn bản nhân sự hiện nay."
+  },
+  {
+    "phrase": "foreign direct investment",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đầu tư trực tiếp nước ngoài (FDI) — khoản đầu tư vào doanh nghiệp ở một quốc gia khác nhằm tạo lợi ích và ảnh hưởng lâu dài trong hoạt động kinh doanh",
+        "pat": "attract/receive foreign direct investment · foreign direct investment in … · FDI inflows",
+        "ex": [
+          [
+            "The government introduced tax incentives to attract foreign direct investment.",
+            "Chính phủ đưa ra ưu đãi thuế để thu hút đầu tư trực tiếp nước ngoài."
+          ],
+          [
+            "Foreign direct investment has created jobs in the region.",
+            "Đầu tư trực tiếp nước ngoài đã tạo việc làm trong khu vực."
+          ]
+        ]
+      }
+    ],
+    "note": "Thường viết tắt là FDI; trong bài luận, nên viết đầy đủ trước rồi mới dùng chữ viết tắt."
+  },
+  {
+    "phrase": "interest rate",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "lãi suất — tỷ lệ phần trăm tiền lãi phải trả hoặc được hưởng trong một khoảng thời gian",
+        "pat": "interest rate on a loan/savings · fixed/variable interest rate · raise/lower interest rates",
+        "ex": [
+          [
+            "The bank offered us a lower interest rate on the business loan.",
+            "Ngân hàng đề nghị mức lãi suất thấp hơn cho khoản vay kinh doanh."
+          ],
+          [
+            "Higher interest rates can discourage households from borrowing.",
+            "Lãi suất cao hơn có thể khiến các hộ gia đình ngại vay tiền."
+          ]
+        ]
+      }
+    ],
+    "note": "Dùng rate on something khi nêu khoản vay hoặc tiền gửi cụ thể."
+  },
+  {
+    "phrase": "public transport",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "giao thông công cộng — hệ thống xe buýt, tàu và các phương tiện dùng chung phục vụ việc đi lại của công chúng",
+        "pat": "use/take public transport · public-transport system · improve public transport",
+        "ex": [
+          [
+            "Reliable public transport can reduce the number of cars in city centres.",
+            "Giao thông công cộng đáng tin cậy có thể giảm số ô tô trong trung tâm thành phố."
+          ],
+          [
+            "The new housing area is not well served by public transport.",
+            "Khu nhà ở mới chưa được phục vụ tốt bởi phương tiện công cộng."
+          ]
+        ]
+      }
+    ],
+    "note": "Public transport phổ biến trong Anh-Anh; Anh-Mỹ thường dùng public transportation. Cụm danh từ này thường không có mạo từ a."
+  },
+  {
+    "phrase": "service industry",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ngành dịch vụ — nhóm ngành chủ yếu cung cấp dịch vụ thay vì sản xuất hàng hóa",
+        "pat": "work in the service industry · service-industry jobs · the service sector",
+        "ex": [
+          [
+            "Tourism is an important part of the local service industry.",
+            "Du lịch là một phần quan trọng của ngành dịch vụ địa phương."
+          ],
+          [
+            "Many graduates find their first jobs in the service industry.",
+            "Nhiều sinh viên mới tốt nghiệp tìm được công việc đầu tiên trong ngành dịch vụ."
+          ]
+        ]
+      }
+    ],
+    "note": "Service sector là cách gọi tương đương thường gặp trong văn bản kinh tế; ngành này gồm nhiều lĩnh vực như du lịch, tài chính và y tế."
+  },
+  {
+    "phrase": "tax break",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ưu đãi thuế; khoản giảm thuế giúp cá nhân hoặc doanh nghiệp giảm số thuế phải nộp",
+        "pat": "offer/grant a tax break · a tax break for businesses · benefit from a tax break",
+        "ex": [
+          [
+            "Small businesses may receive a tax break for hiring apprentices.",
+            "Doanh nghiệp nhỏ có thể được ưu đãi thuế khi tuyển người học nghề."
+          ],
+          [
+            "The proposed tax break is intended to encourage investment.",
+            "Ưu đãi thuế được đề xuất nhằm khuyến khích đầu tư."
+          ]
+        ]
+      }
+    ],
+    "note": "Tên gọi chung cho một hình thức giảm thuế hoặc ưu đãi thuế; điều kiện cụ thể tùy luật thuế từng nước và không mặc nhiên có nghĩa là hoàn thuế."
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "b293fbeaaaaf6b42eed1eabc30a7631e61a7f26a5894802874575bb7930562cc",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte rereview of the shared 332-word booking script and 402-word kitchen-rota passage; all five Listening and five Reading questions, all options, answer keys and explanations; and all five Task 1/Task 2 Writing and five Speaking prompts. Checked answer uniqueness and source grounding, distractor validity, explanation accuracy, natural language and band fit, Task 1 data/units, and originality disclosure. The revised Reading 04 explanation now limits its claim to the job not being postponed until Monday. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

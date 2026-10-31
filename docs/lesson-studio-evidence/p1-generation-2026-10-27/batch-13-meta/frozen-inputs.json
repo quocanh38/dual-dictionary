@@ -1,0 +1,53 @@
+{
+  "manifest": {
+    "startedAt": "2026-10-27T09:46:52.882Z",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "requestParameters": {
+      "model": "muse-spark-1.3",
+      "temperature": 0.2,
+      "maxOutputTokens": 10000,
+      "reasoningEffort": "medium"
+    },
+    "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+    "sourcesSha256": "7b65f2e8a350174e39864821c92222f7a221b3c9a4fc1338349d4156472e48b5",
+    "results": []
+  },
+  "sources": [
+    {
+      "sourceId": "student-society-symposium-budget-review",
+      "purpose": "development",
+      "title": "Planning a Student Society Symposium",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "The student policy society is organizing an evening symposium on local housing. Before confirming the room, the committee compares three venue quotes and estimates the cost of captioning, printed programmes and refreshments. The treasurer sets aside part of the grant for accessibility services and tracks each estimate in a shared budget. When the first catering quote is higher than expected, members discuss reducing refreshments rather than removing captioning. They ask the venue whether a weekday rate is available and revise the forecast after the reply. One student records the reason for each change so next year's committee can understand how the final total was reached. The chair will approve orders only after the revised budget stays within the grant.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "sourceType": "original",
+      "topic": "academic",
+      "levelEstimate": "B1"
+    },
+    {
+      "sourceId": "bicycle-shop-faulty-item-refund-process",
+      "purpose": "development",
+      "title": "Handling a Faulty Item at a Bicycle Shop",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "At a neighborhood bicycle shop, a customer brings back a helmet with a broken strap two days after purchase. The service assistant checks the receipt and inspects the item before offering options. Store policy allows a refund to the original payment method when an item is faulty; a different color can be exchanged if stock is available. The assistant explains that a repair would take three days, then asks which solution the customer prefers. After agreeing on a refund, she enters the reason in the service log and gives the customer a copy. At the end of each month, the supervisor reviews similar cases to find repeated product faults. If several helmets show the same problem, the shop contacts the supplier and pauses new sales until the issue is checked.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "sourceType": "original",
+      "topic": "workplace",
+      "levelEstimate": "B1"
+    },
+    {
+      "sourceId": "engineering-apprenticeship-rotation-feedback",
+      "purpose": "development",
+      "title": "Reviewing an Engineering Apprenticeship Programme",
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "article": "An engineering firm is updating its apprenticeship programme to help trainees move through design, testing, and customer-support teams. Each apprentice begins with two weeks of safety training, then takes on supervised tasks that match their current skills. Mentors set out a goal for every rotation and meet trainees at the midpoint to review progress. If a trainee has already mastered a task, the mentor arranges a more demanding assignment instead of repeating the same exercise. Supervisors compare written feedback with practical assessments before agreeing on the next placement. Trainees are encouraged to work towards a professional certificate, while managers track whether the rotations provide enough experience in every department. The programme lead will follow up with mentors after each cycle and adjust the schedule where necessary.",
+      "rightsConfirmed": true,
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "sourceType": "original",
+      "topic": "workplace",
+      "levelEstimate": "B2"
+    }
+  ]
+}

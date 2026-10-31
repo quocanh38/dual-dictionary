@@ -1,0 +1,94 @@
+{
+  "completedAt": "2026-10-27T08:22:26.599Z",
+  "batch": "P1 offline lesson generation batch 7",
+  "sourceFile": "sources-batch-7.json",
+  "sourceSha256": "ce405e4cc2b2e314899e0b1c3e3e7f2d722d5546d2780b7c9478ba645de2ccf0",
+  "generationPrompt": "lesson-studio-2026-10-27-v5",
+  "generationStatus": "three Meta-generated raw candidates retained; two underwent local editorial revisions; no deployment",
+  "packs": [
+    {
+      "sourceId": "clinic-appointment-process",
+      "packId": "pack-4627bb92-0afb-42fb-83c1-88a23a7390c4",
+      "title": "Planning Ahead at Work and at the Clinic",
+      "levelEstimate": "B1",
+      "rawMetaCandidateSha256": "596c7b2a3151847d64020854c268e717879012d61e800b119513fb472700195e",
+      "finalReviewedPayloadSha256": "311d151c245c2ebd3abc94677b3f9eb61452338b6758ceea29c4090036bdc433",
+      "finalReviewSha256": "e2b4699a7019f1946fcf61bea5cad6a5c1a550ad15659db75bd1033cbfba4a00",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 1,
+      "approvedEnvelopeSha256": "610f3a42419979718e155832953e79bf733e7cabeab8c25eec9145df021f9824",
+      "releaseDirectory": "release-clinic-appointment-process",
+      "libraryFile": "lessons/library/clinic-appointment-process.json"
+    },
+    {
+      "sourceId": "city-bus-temporary-diversion",
+      "packId": "pack-63392e53-907d-42bd-8c5d-524ba2cb8012",
+      "title": "Temporary Routes and Building Access",
+      "levelEstimate": "B1",
+      "rawMetaCandidateSha256": "fb5d05efcb59ff974fe32797f5192f703d59eaecb5b8c4d9f7b9d8985e1fd8f6",
+      "finalReviewedPayloadSha256": "86c81bda8df20469418d193989332ff5d17c5c77ea59977a13ecd536b4e24581",
+      "finalReviewSha256": "3994c029721026ebca223063e5240005bdf4407ac2f166e2ccc70e5f9802268d",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "c19731ccc67340501976c8b15d111bac45068dd51fa873f566a21a6793794f9b",
+      "releaseDirectory": "release-city-bus-temporary-diversion",
+      "libraryFile": "lessons/library/city-bus-temporary-diversion.json"
+    },
+    {
+      "sourceId": "coastal-bird-count-method",
+      "packId": "pack-c6f5556f-e4c1-45e3-9be2-4b8a0c8bde38",
+      "title": "Comparing Counts and Describing Trends",
+      "levelEstimate": "B2",
+      "rawMetaCandidateSha256": "858f31947e0ec3ae7eaa29f2e6d5d2a83a51a412c49bf7fa691b8acbc68dadab",
+      "finalReviewedPayloadSha256": "6bb7f0007ceb46970b13dd08d821f6b5c5b444b0e9edff64cb71b1769fab6b0d",
+      "finalReviewSha256": "dbb56cda41ba3da270d5d3835bb0ef7cb15470c9ad852eba3440e00d4c4cae52",
+      "reviewers": 2,
+      "criteriaPerReviewer": 17,
+      "unresolvedFindings": 0,
+      "approvedEnvelopeSha256": "397d1934f3f7e950a423875624d2b652c1b25cdf7daad7bf88b50bf433a47077",
+      "releaseDirectory": "release-coastal-bird-count-method",
+      "libraryFile": "lessons/library/coastal-bird-count-method.json"
+    }
+  ],
+  "review": "Two independent reviewers checked each exact final hash across all 17 criteria; clinic and bus v2 rereviewed after fixes; coastal v1 exact hash reviewed.",
+  "reviewRoutesRequested": [
+    "gpt-6-luna (requested; configured route not exposed by runtime)",
+    "gpt-5.6-terra"
+  ],
+  "reviewRuntimeLabels": [
+    "GPT-6",
+    "Codex GPT-6"
+  ],
+  "reviewLimitations": [
+    "AI-assisted editorial review, not human or learner review",
+    "Rights/authorship supported only by local declarations, not independently verified",
+    "Clinic: one non-blocking minor provider-specificity wording note, no answer ambiguity"
+  ],
+  "approval": "Three exact-hash local approvals written to separate release directories under delegated editorial authority.",
+  "qa": {
+    "offlinePreview": "PASS for three final candidate hashes; two updated after review, previewed again at v2",
+    "approvedReleaseQa": "PASS, 36 contexts across 18 exact approved packs; clean and preseeded Chrome mobile emulation 390x844",
+    "catalogueOfflineInstall": "PASS for all 18 indexed packs; malformed index and tampered pack rejected; Vault/Review history preserved",
+    "providerRequestsDuringQa": 0,
+    "externalRequests": 0,
+    "physicalDevice": false
+  },
+  "library": {
+    "packCount": 18,
+    "newPacks": 3,
+    "cache": "mdx-dict-v132"
+  },
+  "metaUsageOrBillingLookup": "not performed, per owner instruction",
+  "deployment": "not performed; local candidate only",
+  "checks": [
+    "exact-hash quality-gate audit and explicit delegated approval",
+    "index/envelope hashes and offline allowlists",
+    "18-pack offline shell contract PASS",
+    "quality-gate, library and schema tests PASS",
+    "approved-library-check 36 contexts PASS",
+    "catalogue offline UI 18 installs PASS",
+    "git diff --check PASS"
+  ]
+}

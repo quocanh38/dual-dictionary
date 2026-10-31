@@ -1,0 +1,106 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "1029d7923c7fe78c2d7f4df75b002e141e9de571eb2ea2292f52bbd58972d7ef",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "writingPrompts",
+      "severity": "minor",
+      "issue": "Minimum word counts and 20/40-minute timings are metadata only. Ensure they remain visible to learners."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-7-speaking-03",
+      "severity": "minor",
+      "issue": "The card requires a real phased transport/public-service change and detailed causal evaluation. Allow an observed or imagined example for learners without such a local experience; much of the causality questioning resembles Part 3."
+    },
+    {
+      "item": "sharedContexts.reading",
+      "severity": "minor",
+      "issue": "The fictional literacy study has no stated counterfactual comparison, so likely produced benefits is stronger than the described before/after design establishes. Prefer participants showed gains, with uncertainty about attribution."
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted final rereview of all20items:5Listening,5Reading,5Writing,5Speaking; entire shared contexts,all40options,10keys/explanations and all productive prompts/metadata assessed against exact final file. Previously performed this stage initial review; no other reviewer report inspected. Initial/final diffs checked as supplementary evidence, not a replacement for full content review. No candidate edits or provider calls.",
+    "listening": "363-word phased LEZ discussion read: January Phase1, March corrected to late April Phase2, central bus +12/weekday entries -9/NO2 -7, citywide trips unchanged, wind/tram/season confounds, full year after Phase2 recommendation. All alternatives, keys and explanations checked.",
+    "reading": "405-word two-case passage read:40 regions/three indicators/three common top-ten, Coastal Basin first/fourteenth, uncertainty-band claim, literacy attrition30%, completers15%/weighted6%, limits for disadvantaged dropouts. All alternatives/keys/explanations checked; revised final key accurately limits generalisation of the larger unadjusted gain.",
+    "writing": "Two complete Task 1 tables: 2018/2020/2024 modal trips in thousands with bicycle n/a explicitly preserved; 2023 composite scores72/68/75/61 exactly equal component averages216/204/225/183 divided by3. Three nuanced Task 2s cover phased policy, composites and missingness. 150/250 and20/40 metadata correct.",
+    "speaking": "Two Part 1 sets, one visible timed four-cue Part 2, two abstract Part 3 sets. Advanced interpretation focus plausible; no empirical band calibration claimed.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 363,
+        "reading": 405
+      },
+      "metadataWordCounts": {
+        "listening": 363,
+        "reading": 405
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "repeatedContextsEqualShared": true,
+      "answerPositions": {
+        "Listening": [
+          1,
+          0,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          2,
+          0,
+          1,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026 and wave9-v1 objective/writingSpeaking identifiers, originalContent=true inspected. No recognisable official-question copying found; not an exhaustive plagiarism audit or independent rights verification. Fictional study figures checked internally, not externally verified. Stage difficulty is estimated practice progression, not validated IELTS attainment.",
+    "itemIds": [
+      "ielts-meta-wave-9-band-7-listening-01",
+      "ielts-meta-wave-9-band-7-listening-02",
+      "ielts-meta-wave-9-band-7-listening-03",
+      "ielts-meta-wave-9-band-7-listening-04",
+      "ielts-meta-wave-9-band-7-listening-05",
+      "ielts-meta-wave-9-band-7-reading-01",
+      "ielts-meta-wave-9-band-7-reading-02",
+      "ielts-meta-wave-9-band-7-reading-03",
+      "ielts-meta-wave-9-band-7-reading-04",
+      "ielts-meta-wave-9-band-7-reading-05",
+      "ielts-meta-wave-9-band-7-writing-01",
+      "ielts-meta-wave-9-band-7-writing-02",
+      "ielts-meta-wave-9-band-7-writing-03",
+      "ielts-meta-wave-9-band-7-writing-04",
+      "ielts-meta-wave-9-band-7-writing-05",
+      "ielts-meta-wave-9-band-7-speaking-01",
+      "ielts-meta-wave-9-band-7-speaking-02",
+      "ielts-meta-wave-9-band-7-speaking-03",
+      "ielts-meta-wave-9-band-7-speaking-04",
+      "ielts-meta-wave-9-band-7-speaking-05"
+    ],
+    "finalRepairAssessment": "Reading05 now limits warning to larger unadjusted gains for likely dropouts, matching passage; key0 and explanation supported. All other content reassessed.",
+    "repairMetadata": [
+      {
+        "field": "GPT findings on Listening/Reading content",
+        "provider": "Baseten Model API",
+        "model": "meta-models/muse-spark-open-1026",
+        "usage": {
+          "inputTokens": 2834,
+          "outputTokens": 7153,
+          "totalTokens": 9987
+        },
+        "round": 1
+      }
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

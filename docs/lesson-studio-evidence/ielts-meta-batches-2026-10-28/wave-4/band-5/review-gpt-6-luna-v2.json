@@ -1,0 +1,14 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "da1f0cd65cbac0157a01020d19a31f994c53e3fd8694c23e7c22cf1ee7b76073",
+  "verdict": "pass",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-4-band-5-reading-04",
+      "issue": "The explanation adds “so the new week starts clean,” which is not stated or guaranteed by the passage. The keyed answer itself is directly supported: the same person completes unfinished work that evening.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": "Full exact-byte review of both shared contexts (332-word booking script; 402-word kitchen-rota passage), all 10 Listening/Reading stems, options, keys and explanations, and all five Task 1/Task 2 Writing and five Speaking prompts. Confirmed unique, text-grounded objective keys and plausible distractors; natural, stage-appropriate language; Task 1 quantities and units are clear (student counts and borrow counts); originalContent provenance and wave disclosure identify original formative practice, not official IELTS material. One non-blocking explanation overstates an implication as noted.",
+  "reviewerType": "AI-assisted"
+}

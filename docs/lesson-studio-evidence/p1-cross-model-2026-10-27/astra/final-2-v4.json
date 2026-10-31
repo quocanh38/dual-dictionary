@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "202bcd3f8c0cfae42230c81f4c0f47313c0ee7efcaa50e550fe35f408e987147",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-astra — independent AI-assisted editorial audit",
+  "reviewedAt": "2026-10-27T04:18:02.771Z",
+  "note": "Fresh full review of final candidate 2-v4: source, both EN/VI targets, every option and explanation, and complete transfer/model/checklist reread. Configured model identity gpt-6-astra; not independently verified Meta identity or human review. Other-model findings and prior standalone reviews by other reviewers were not read. Own earlier findings and parent-described corrections were known during this re-review. No candidate edits, Meta calls, approval, deployment or browser QA performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Provenance names the project and declares an original AI-assisted source with no learner personal data. The source is generic workplace fiction about customer requests, staff training and a project report, without personal identifiers or third-party excerpts. Rights accepted from this declaration; this is not legal or independent authorship certification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Keep track of occurs verbatim in s1 and concerns continued monitoring of customer requests during a trial."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The English gloss correctly means staying informed by monitoring over time, and does not make writing records compulsory."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Theo dõi để nắm được thông tin cập nhật về điều gì accurately and naturally conveys monitoring for current awareness, with full Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Take into account occurs verbatim in s2 and introduces training time as a factor before choosing a launch date."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The English gloss accurately states considering a factor in a decision or plan; the source planning context supports this directly."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Cân nhắc, tính đến điều gì khi đưa ra quyết định hoặc kế hoạch is idiomatic Vietnamese and faithfully conveys the contextual sense."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q1: a alone means monitoring requests and maintaining awareness. b says ignore/forget, reversing that sense. c describes rapid completion rather than monitoring; taking no notes is not by itself disqualifying, but the stated completion is a different meaning."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q1a correctly makes records optional; revised b rejects ignoring while also making written records optional; c distinguishes completion from tracking and likewise avoids requiring notes. The overall explanation accurately summarizes ongoing awareness. No recording requirement remains."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q2: b naturally uses keeps track of working hours with a plausible spreadsheet method. a uses on instead of of; c omits of. Only b is defensible in the intended standard construction."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q2a identifies the wrong preposition, b correctly treats the spreadsheet as a method and c identifies missing of. The overall explanation states these same objective errors without assuming intentions."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q3: c alone gives considering training time in a launch plan. a says ignore the factor, its opposite. b says finish training quickly, a different action and not the phrase’s meaning."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q3a accurately contrasts ignoring with considering, b rejects a speed-of-completion description and c explains consideration in planning. The overall explanation correctly selects c."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q4: a naturally uses take into account the travel time. b wrongly adds of after take into account; c misorders account into. Only a is grammatical with the stated target."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q4a correctly explains consideration of travel time. b correctly identifies an extra of after this expression; the separate valid expression take account of is not ruled out. c correctly identifies the order. Overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Transfer moves from workplace launch planning to friendly advice for a college laptop purchase. It changes the audience, goal and setting while retaining consideration of relevant factors."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model correctly uses take into account with battery life and weight. Long battery life is now idiomatic, and the lighter model’s portability supports the practical advice. The checklist tests exact phrase, friendly advice, 2–3 sentences and an explicit factor. The explanation invites self-assessment with no automated grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "uncertain",
+      "resolved": true,
+      "evidence": "Current q2c omits of and q4c misorders account into, rather than relying on an assumed contradiction of intentions. Review of every current option and explanation confirms objective errors and unique correct answers."
+    },
+    {
+      "id": "astra-2-q1-recording-wording",
+      "severity": "minor",
+      "resolved": true,
+      "evidence": "Revised q1b says monitoring and staying informed, then explicitly states written records are optional. It is consistent with a, c and the target gloss."
+    },
+    {
+      "id": "astra-2-q5-long-battery",
+      "severity": "minor",
+      "resolved": true,
+      "evidence": "The model now uses long battery life, the idiomatic expression for charge duration, eliminating the previous physical-length wording."
+    }
+  ],
+  "candidateFile": "docs/lesson-studio-evidence/p1-cross-model-2026-10-27/candidates/2-v4.json",
+  "candidateFileSha256": "b817ed69a0fb3d887b619dcb3247dd0e0c0334d8d320c99bc0ea6842d639a85c",
+  "decision": "ready-for-approval",
+  "optionAudit": [
+    {
+      "exerciseId": "q1",
+      "storedCorrectOptionId": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "It means to monitor customer requests and stay informed about them over time.",
+          "explanation": "Correct: The team monitors customer requests to stay aware of them; making written records is one possible method, not part of the required meaning.",
+          "judgment": "correct"
+        },
+        {
+          "id": "b",
+          "text": "It means to ignore customer requests and forget them quickly.",
+          "explanation": "Wrong: Ignoring requests is the opposite of monitoring them and staying informed. Written records are optional.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "c",
+          "text": "It means to finish customer requests in one day without taking notes.",
+          "explanation": "Wrong: Completing requests is different from monitoring them over time; the phrase does not require written notes.",
+          "judgment": "incorrect"
+        }
+      ],
+      "overallExplanationReviewed": "Keep track of means monitoring something to stay informed about it, as the team does with customer requests.",
+      "answerEvidence": "q1: a alone means monitoring requests and maintaining awareness. b says ignore/forget, reversing that sense. c describes rapid completion rather than monitoring; taking no notes is not by itself disqualifying, but the stated completion is a different meaning.",
+      "explanationEvidence": "q1a correctly makes records optional; revised b rejects ignoring while also making written records optional; c distinguishes completion from tracking and likewise avoids requiring notes. The overall explanation accurately summarizes ongoing awareness. No recording requirement remains."
+    },
+    {
+      "exerciseId": "q2",
+      "storedCorrectOptionId": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "He keeps track on his working hours in a spreadsheet every week.",
+          "explanation": "This is wrong because it uses the incorrect preposition on instead of of.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "b",
+          "text": "He keeps track of his working hours in a spreadsheet every week.",
+          "explanation": "Correct: He monitors his working hours; the spreadsheet is one way of keeping track of them.",
+          "judgment": "correct"
+        },
+        {
+          "id": "c",
+          "text": "He keeps track his working hours in a spreadsheet every week.",
+          "explanation": "Wrong: The fixed expression is keep track of something; of is missing before his working hours.",
+          "judgment": "incorrect"
+        }
+      ],
+      "overallExplanationReviewed": "Only b uses keep track of; a substitutes on for of, and c omits of.",
+      "answerEvidence": "q2: b naturally uses keeps track of working hours with a plausible spreadsheet method. a uses on instead of of; c omits of. Only b is defensible in the intended standard construction.",
+      "explanationEvidence": "q2a identifies the wrong preposition, b correctly treats the spreadsheet as a method and c identifies missing of. The overall explanation states these same objective errors without assuming intentions."
+    },
+    {
+      "exerciseId": "q3",
+      "storedCorrectOptionId": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "It means to ignore the training time and set the date immediately.",
+          "explanation": "This is wrong because ignoring is the opposite of considering something in a plan.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "b",
+          "text": "It means to finish the training in a few minutes without planning.",
+          "explanation": "This is wrong because it describes speed rather than considering a factor in a decision.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "c",
+          "text": "It means to consider the training time when making the launch plan.",
+          "explanation": "This is correct because it matches considering something when making a decision or plan.",
+          "judgment": "correct"
+        }
+      ],
+      "overallExplanationReviewed": "Only option C reflects considering training time when planning.",
+      "answerEvidence": "q3: c alone gives considering training time in a launch plan. a says ignore the factor, its opposite. b says finish training quickly, a different action and not the phrase’s meaning.",
+      "explanationEvidence": "q3a accurately contrasts ignoring with considering, b rejects a speed-of-completion description and c explains consideration in planning. The overall explanation correctly selects c."
+    },
+    {
+      "exerciseId": "q4",
+      "storedCorrectOptionId": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Please take into account the travel time when you plan your commute.",
+          "explanation": "This is correct because it means considering travel time when making a plan.",
+          "judgment": "correct"
+        },
+        {
+          "id": "b",
+          "text": "Please take into account of the travel time when you plan your commute.",
+          "explanation": "This is wrong because it adds the extra preposition of after the fixed phrase.",
+          "judgment": "incorrect"
+        },
+        {
+          "id": "c",
+          "text": "Please take account into the travel time when you plan your commute.",
+          "explanation": "Wrong: The fixed expression has the order take into account, not take account into.",
+          "judgment": "incorrect"
+        }
+      ],
+      "overallExplanationReviewed": "Only a uses take into account with the correct order and without an extra of.",
+      "answerEvidence": "q4: a naturally uses take into account the travel time. b wrongly adds of after take into account; c misorders account into. Only a is grammatical with the stated target.",
+      "explanationEvidence": "q4a correctly explains consideration of travel time. b correctly identifies an extra of after this expression; the separate valid expression take account of is not ruled out. c correctly identifies the order. Overall explanation is accurate."
+    }
+  ],
+  "transferAudit": {
+    "exerciseId": "q5",
+    "type": "transfer",
+    "targetId": "t2",
+    "prompt": "You are texting a friend who wants to buy a new laptop for college. Write 2-3 sentences giving friendly advice about what to consider. Use the phrase 'take into account'.",
+    "sourceSentenceIds": [
+      "s2"
+    ],
+    "sampleAnswer": "If you buy a laptop for college, you should take into account the battery life and weight. A lighter model with long battery life will be much easier to carry to classes.",
+    "selfCheck": [
+      "I used the exact phrase 'take into account'.",
+      "I wrote 2-3 sentences as friendly advice, not a workplace report.",
+      "I clearly state what factor should be considered."
+    ],
+    "explanation": "Compare with the model and self-assess; no automatic grade.",
+    "newSituationEvidence": "Transfer moves from workplace launch planning to friendly advice for a college laptop purchase. It changes the audience, goal and setting while retaining consideration of relevant factors.",
+    "modelAndChecklistEvidence": "The two-sentence model correctly uses take into account with battery life and weight. Long battery life is now idiomatic, and the lighter model’s portability supports the practical advice. The checklist tests exact phrase, friendly advice, 2–3 sentences and an explicit factor. The explanation invites self-assessment with no automated grade."
+  }
+}

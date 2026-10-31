@@ -1,0 +1,46 @@
+{
+  "wave": 10,
+  "batch": 123,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after china clay in the manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section across food, informal occupations and verbs, construction, electrical engineering, journalism, law, public administration, retail and household/medical terms. Clarify regional senses, polysemy, technical distinctions and jurisdiction-specific usage without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 408,
+    "remainingRawOnlyAfter": 388
+  },
+  "selected": [
+    "chop suey",
+    "chucker out",
+    "churn out",
+    "cigarette paper",
+    "cinder block",
+    "circuit board",
+    "circuit breaker",
+    "circular saw",
+    "city editor",
+    "civil disobedience",
+    "civil engineer",
+    "civil engineering",
+    "civil law",
+    "civil service",
+    "classified ad",
+    "claw hammer",
+    "clearance sale",
+    "clearing house",
+    "cling film",
+    "clinical thermometer"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "US CPSC: Home wiring hazards and circuit breakers (https://www.cpsc.gov/s3fs-public/518.pdf)",
+    "Investor.gov: Stock Market Circuit Breakers (https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-market-circuit-breakers)",
+    "GOV.UK: About the Civil Service (https://www.gov.uk/government/organisations/civil-service/about)",
+    "US Courts: Civil or Criminal? (https://www.flmd.uscourts.gov/civil-or-criminal)",
+    "Federal Reserve: Check clearing house definition (https://www.federalreserve.gov/frrs/regulations/section-2332-definitions.htm)",
+    "FDA: Clinical electronic thermometer definition (https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPCD/classification.cfm?ID=3051)"
+  ]
+}

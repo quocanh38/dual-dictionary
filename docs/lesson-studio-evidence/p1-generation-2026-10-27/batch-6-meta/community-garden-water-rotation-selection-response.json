@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "allocate water to",
+        "meaningEn": "to distribute and assign water to each plot for use",
+        "meaningVi": "phân bổ nước cho",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "in line with",
+        "meaningEn": "in agreement with or according to changes in rainfall",
+        "meaningVi": "phù hợp với; theo",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 401,
+    "outputTokens": 903,
+    "totalTokens": 1304
+  },
+  "status": 200,
+  "latencyMs": 8369,
+  "model": "muse-spark-1.3"
+}

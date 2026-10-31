@@ -1,0 +1,17 @@
+{
+  "wave": 10,
+  "batch": 77,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after sales talk; reviewed against local OALD 10/LDOCE 6. Scarlet fever, sand-fly transmission, pangolin/scaly anteater, Salvation Army and Scotland Yard details cross-checked against CDC, WHO, Singapore NParks/WWF, Salvation Army International and Metropolitan Police references. All Vietnamese definitions, usage notes and examples are independently written.",
+  "selectionRationale": "Cover business, finance, natural science, health, education, public institutions and computing; clarify region-specific terms, brand names, and literal versus figurative uses.",
+  "counts": {"selected":20,"rawPagesUpgraded":20,"rawOnlyBefore":1320,"remainingRawOnlyAfter":1300},
+  "selected": ["sales tax","salt water","salvation army","sand fly","sand trap","sandwich board","santa claus","saturation point","savings and loan association","savings bank","savoir faire","scaly anteater","scarlet fever","school day","scorched earth policy","scotch tape","scotland yard","scratch pad","screen door","screen saver"],
+  "references": [
+    "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/scarlet-fever.html",
+    "https://www.who.int/news-room/fact-sheets/detail/leishmaniasis",
+    "https://avs.nparks.gov.sg/wildlife/encountering-wildlife/pangolins/",
+    "https://www.salvationarmy.org/about",
+    "https://www.met.police.uk/SysSiteAssets/foi-media/metropolitan-police/disclosure_2024/april_2024/why-metropolitan-police-called-scotland-yard.pdf"
+  ]
+}

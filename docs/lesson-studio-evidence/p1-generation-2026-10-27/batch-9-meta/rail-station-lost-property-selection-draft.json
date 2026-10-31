@@ -1,0 +1,65 @@
+{
+  "id": "draft-0ecba08e-7198-4bb5-ab2e-57eef26115e6",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Reporting a Lost Item at the Station",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Passengers who find a wallet or bag at Central Station should hand it in to the information desk rather than leave it on a seat. Staff attach a numbered tag and record the time and location where the item was found. A person collecting it may need to give proof of ownership, such as a clear description of an item inside, before staff release it. The desk stores small objects in a locked cabinet and keeps larger bags in a supervised room. Items are recorded in a daily register so the next shift can answer questions. If a passenger thinks they have lost something, they should describe it without sharing sensitive account numbers in public. The station will contact the owner if a safe contact detail is available.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "Passengers who find a wallet or bag at Central Station should hand it in to the information desk rather than leave it on a seat. Staff attach a numbered tag and record the time and location where the item was found. A person collecting it may need to give proof of ownership, such as a clear description of an item inside, before staff release it. The desk stores small objects in a locked cabinet and keeps larger bags in a supervised room. Items are recorded in a daily register so the next shift can answer questions. If a passenger thinks they have lost something, they should describe it without sharing sensitive account numbers in public. The station will contact the owner if a safe contact detail is available.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Passengers who find a wallet or bag at Central Station should hand it in to the information desk rather than leave it on a seat."
+      },
+      {
+        "id": "s2",
+        "text": "Staff attach a numbered tag and record the time and location where the item was found."
+      },
+      {
+        "id": "s3",
+        "text": "A person collecting it may need to give proof of ownership, such as a clear description of an item inside, before staff release it."
+      },
+      {
+        "id": "s4",
+        "text": "The desk stores small objects in a locked cabinet and keeps larger bags in a supervised room."
+      },
+      {
+        "id": "s5",
+        "text": "Items are recorded in a daily register so the next shift can answer questions."
+      },
+      {
+        "id": "s6",
+        "text": "If a passenger thinks they have lost something, they should describe it without sharing sensitive account numbers in public."
+      },
+      {
+        "id": "s7",
+        "text": "The station will contact the owner if a safe contact detail is available."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "hand it in",
+      "meaningEn": "to give something you found to staff at an official desk",
+      "meaningVi": "giao nộp vật nhặt được cho nhân viên hoặc quầy thông tin",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "proof of ownership",
+      "meaningEn": "evidence showing that you are the owner of something",
+      "meaningVi": "bằng chứng chứng minh quyền sở hữu",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

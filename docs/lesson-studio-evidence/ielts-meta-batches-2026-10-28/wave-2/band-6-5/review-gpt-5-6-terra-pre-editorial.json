@@ -1,0 +1,8 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "4404e61122d66ea0cc6214dd3441a4558a0273e00f245cafe94dc3246b640f99",
+  "verdict": "changes_required",
+  "findings": [
+    "ielts-meta-wave-2-band-6-5-reading-02 (Reading): The answer key is wrong. Option C (index 2), ‘One site restored tidal flow while the other planted and fenced grasses’, is the only option supported by both the passage and the explanation. The stored index 3 selects the unsupported claim that one site focused on birds while the other focused on sediment. Change answer to 2 and complete a new exact-hash review."
+  ]
+}

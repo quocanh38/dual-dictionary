@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "take part in",
+        "meaningEn": "to participate in an activity or event",
+        "meaningVi": "tham gia vào một hoạt động hoặc sự kiện",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "in charge of",
+        "meaningEn": "responsible for managing or looking after something",
+        "meaningVi": "phụ trách, chịu trách nhiệm về việc gì",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 551,
+    "outputTokens": 894,
+    "totalTokens": 1445
+  },
+  "status": 200,
+  "latencyMs": 6108,
+  "model": "muse-spark-1.3"
+}

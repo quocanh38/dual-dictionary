@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 49,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after machine translation, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese meanings, patterns, bilingual examples and learner notes. Historical, scientific, technical and gender-related usage is contextualized; source wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1880,
+    "remainingRawOnlyAfter": 1860
+  },
+  "selected": [
+    "magic eye",
+    "magna carta",
+    "magnetic compass",
+    "magnetic field",
+    "magnetic flux",
+    "magnetic pole",
+    "magnetic tape",
+    "magnifying glass",
+    "mailing list",
+    "main line",
+    "main road",
+    "main street",
+    "majority rule",
+    "make out",
+    "make over",
+    "make up",
+    "male chauvinism",
+    "male chauvinist",
+    "management consultant",
+    "managing director"
+  ]
+}

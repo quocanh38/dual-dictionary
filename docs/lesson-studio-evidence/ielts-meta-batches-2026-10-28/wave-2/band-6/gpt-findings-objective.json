@@ -1,0 +1,16 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening",
+      "issue": "Listening script has 402 words; expected 300–400. Cross-review counted 402–403 whitespace/word tokens. Trim at least three words to reach no more than 400 and update sharedContexts.listening.wordCount."
+    },
+    {
+      "item": "ielts-meta-wave-2-band-6-listening-04",
+      "issue": "Ambiguous answer: the daughter needs general admission as well as the £2 workshop-materials fee, but the keyed option gives only £2. Rewrite the stem to ask specifically for the additional materials fee or key an answer that includes all required charges. Keep the evidence explicit and the answer unique."
+    },
+    {
+      "item": "sharedContexts.listening",
+      "issue": "Unnatural English: change “about five minutes walk away” to “about a five-minute walk away” or “about five minutes’ walk away” and preserve meaning."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "draft-80b0637b-59e9-4e66-9717-6752a793bcdf",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Updating a Volunteer Rota",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "After reviewing the volunteer rota, the project coordinator decided to bring forward the equipment check by one day because the meeting room is booked on Friday. The change does not affect the public event, which remains on Sunday. If delivery of the display boards is delayed, the team may put off the optional walkthrough until more volunteers are available. The coordinator will confirm any change by email, so volunteers should not rely on an old printed schedule. Anyone unable to attend can suggest another time, but the shared calendar will be updated only after the venue approves it. Volunteers are asked to reply by Wednesday so the coordinator can arrange enough people for each task.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "After reviewing the volunteer rota, the project coordinator decided to bring forward the equipment check by one day because the meeting room is booked on Friday. The change does not affect the public event, which remains on Sunday. If delivery of the display boards is delayed, the team may put off the optional walkthrough until more volunteers are available. The coordinator will confirm any change by email, so volunteers should not rely on an old printed schedule. Anyone unable to attend can suggest another time, but the shared calendar will be updated only after the venue approves it. Volunteers are asked to reply by Wednesday so the coordinator can arrange enough people for each task.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "After reviewing the volunteer rota, the project coordinator decided to bring forward the equipment check by one day because the meeting room is booked on Friday."
+      },
+      {
+        "id": "s2",
+        "text": "The change does not affect the public event, which remains on Sunday."
+      },
+      {
+        "id": "s3",
+        "text": "If delivery of the display boards is delayed, the team may put off the optional walkthrough until more volunteers are available."
+      },
+      {
+        "id": "s4",
+        "text": "The coordinator will confirm any change by email, so volunteers should not rely on an old printed schedule."
+      },
+      {
+        "id": "s5",
+        "text": "Anyone unable to attend can suggest another time, but the shared calendar will be updated only after the venue approves it."
+      },
+      {
+        "id": "s6",
+        "text": "Volunteers are asked to reply by Wednesday so the coordinator can arrange enough people for each task."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "bring forward",
+      "meaningEn": "to move an event to an earlier time or date",
+      "meaningVi": "dời lên sớm hơn",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "put off",
+      "meaningEn": "to postpone something to a later time",
+      "meaningVi": "hoãn lại",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

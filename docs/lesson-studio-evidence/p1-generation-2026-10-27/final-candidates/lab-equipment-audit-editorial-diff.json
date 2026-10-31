@@ -1,0 +1,40 @@
+{
+  "sourceId": "lab-equipment-audit",
+  "sourceFile": "lab-equipment-audit-candidate.json",
+  "priorPayloadSha256": "89a9c7b56f29af7452dfa7d16b7b96176e7f4433e8bec6c8b031d2b7409d49bb",
+  "editedPayloadSha256": "b955f78fe7f6023ca6d5cdcfe063d8353e030d09e36082e55030c3a8f9b48b27",
+  "edits": [
+    {
+      "path": "lesson-1/t2/meaningEn",
+      "before": "to record and explain the status or location of each item",
+      "after": "to make sure each item is included in a count or record",
+      "finding": "Luna major: source sentence only supports inventory reconciliation, not explaining status/location."
+    },
+    {
+      "path": "lesson-1/t2/meaningVi",
+      "before": "kiểm kê và giải trình",
+      "after": "kiểm kê đầy đủ từng thiết bị",
+      "finding": "Aligned Vietnamese meaning with the contextual inventory sense."
+    },
+    {
+      "path": "lesson-1/q3/options/b",
+      "before": "The team will record and explain the status of each device.",
+      "after": "The team will check that every device is included in the inventory record by matching its label.",
+      "finding": "Grounded the keyed answer in the exact cited sentence."
+    },
+    {
+      "path": "lesson-1/q3/explanations",
+      "before": "Explanations referenced recording/explaining item status.",
+      "after": "Explanations now describe verifying every device is counted or recorded.",
+      "finding": "Reconciled all option and item explanations with revised contextual meaning."
+    },
+    {
+      "path": "lesson-1/q4/explanations",
+      "before": "Broadly described recording items.",
+      "after": "Explains account for here as ensuring listed laptops are included in the record.",
+      "finding": "Kept usage explanation tied to the inventory-count sense."
+    }
+  ],
+  "provenance": "Editorial changes after independent gpt-6-luna first-pass review; original Meta outputs remain unchanged in the adjacent *response.json files.",
+  "reviewRequired": true
+}

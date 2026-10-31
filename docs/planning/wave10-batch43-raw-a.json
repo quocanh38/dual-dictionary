@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 43,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after lay off, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese meanings, patterns, bilingual examples and learner notes. Regional, legal, mathematical, religious and botanical labels are explicit; examples and definitions are independently written.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1980,
+    "remainingRawOnlyAfter": 1960
+  },
+  "selected": [
+    "lay out",
+    "lay over",
+    "lay reader",
+    "lay up",
+    "lead off",
+    "lead story",
+    "lead time",
+    "leading edge",
+    "leading light",
+    "leading question",
+    "lean to",
+    "leap year",
+    "learning curve",
+    "least common multiple",
+    "left bank",
+    "legal age",
+    "legal tender",
+    "lemon balm",
+    "lemon grass",
+    "lemon sole"
+  ]
+}

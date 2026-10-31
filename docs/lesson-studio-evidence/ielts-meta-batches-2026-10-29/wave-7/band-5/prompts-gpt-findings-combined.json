@@ -1,0 +1,29 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-03",
+      "issue": "Formatting issue: cue-card points are run together in one paragraph with hyphen separators. Put each cue-card bullet on its own visible line.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-04",
+      "issue": "Formatting issue: cue-card points are run together in one paragraph with hyphen separators. Put each cue-card bullet on its own visible line.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-03; speaking-04; normalizationFindings",
+      "severity": "major",
+      "issue": "Both Part2 cards present their hyphen prompts in one inline paragraph; the two visible-cue-bullet normalization failures remain unresolved. Put each cue on its own newline with bullet marker, retaining one-minute preparation and1–2-minute talk."
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Productive prompt structural issue: Speaking Part 2 prompt 3 needs visible cue-card bullets.",
+      "severity": "major"
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Productive prompt structural issue: Speaking Part 2 prompt 4 needs visible cue-card bullets.",
+      "severity": "major"
+    }
+  ]
+}

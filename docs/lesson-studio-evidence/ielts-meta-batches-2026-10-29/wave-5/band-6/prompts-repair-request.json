@@ -1,0 +1,88 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-prompts-wave-5",
+  "instructions": "Return JSON only, no markdown, with exactly {\"writing\":[{\"task\":\"Task 1 · ... or Task 2 · ...\",\"focus\":\"...\",\"prompt\":\"...\",\"minimumWords\":150,\"suggestedMinutes\":20}],\"speaking\":[{\"task\":\"Part 1 · ... or Part 2 · Cue card or Part 3 · ...\",\"focus\":\"...\",\"prompt\":\"...\"}]}. Generate exactly five Writing and five Speaking prompts. Writing: use either two Task 1 + three Task 2 or three Task 1 + two Task 2. Give complete original data directly in each Task 1 prompt (no image dependency), with minimum words (Task 1: 150; Task 2: 250) and realistic times (20/40 minutes). Speaking: include at least one prompt for each of Parts 1, 2 and 3; Part 2 must include visible cue-card bullet points; Part 3 needs reasons/evaluation, not memorised facts. Prompts must be distinct and answerable without hidden material. Keep prompts concise and complete; do not add sample answers or band estimates. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 5.0 to 6.0: paraphrase, linked ideas, corrected details, and clear comparisons across familiar academic topics. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a museum access guide, a campus lecture-recording policy, and a community heritage interview project. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied writing and speaking prompts against the findings. Preserve every valid unflagged prompt and keep exactly five per skill. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-6",
+    "batchId": "wave-5",
+    "currentBatch": {
+      "writing": [
+        {
+          "task": "Task 1 · Museum Access Guide and Visitors",
+          "focus": "paraphrase, linked ideas and clear comparisons",
+          "prompt": "The table below shows information from the City Heritage Museum Access Guide for 2024 and the share of visitors by ticket type in 2023. Opening hours: Tuesday to Friday 10:00-17:00, Saturday and Sunday 10:00-18:00, closed on Monday. Guided tours at 11:00 and 14:00 daily, booking required. Ticket prices: Adult $12, Student $8 (student ID required), Family $28 for 2 adults and up to 3 children under 16, Children under 12 free when with an adult. All tickets include wheelchair access, audio guide in 4 languages, cloakroom and cafe access. Share of visitors in 2023: Adult 42%, Student 28%, Family 18%, Children under 12 (free) 12%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 1 · Campus Lecture-Recording Use",
+          "focus": "corrected details, linked ideas and clear comparisons",
+          "prompt": "The bar chart below shows the results of a survey of 400 university students in March 2024 about how they use lecture recordings. Frequency of use: Regularly (every week) 35%, Sometimes (2-3 times a month) 40%, Rarely 15%, Never 10%. Main reasons for using recordings (students could choose more than one reason): to review difficult ideas 68%, to catch up after missing a class 55%, to improve notes 48%, to prepare for exams 72%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 2 · Free Access to Museums",
+          "focus": "paraphrase, linked ideas and balanced comparison",
+          "prompt": "Some people think museums should be free for all visitors. Others think museums need to charge an entry fee to stay open and provide good services. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Campus Lecture-Recording Policy",
+          "focus": "linked ideas, corrected details and clear comparisons",
+          "prompt": "At some universities, students must ask for permission before recording a lecture. Some students think they should be free to record any lecture for personal study. Others think the permission rule protects teachers and other students. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Community Heritage Interview Project",
+          "focus": "paraphrase, linked ideas and evaluation of accuracy",
+          "prompt": "A community heritage project asks young people to interview older people in their community about their lives and local history. Some people think this is a valuable way to learn about the past. Others think information from interviews is not always accurate or useful. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Part 1 · Museums and Visiting",
+          "focus": "paraphrase and linked ideas in short answers",
+          "prompt": "Let's talk about museums. 1. How often do you visit museums? 2. What kind of museum do you enjoy most? 3. Did you visit museums when you were a child? 4. Do you prefer visiting museums alone or with other people? Why?"
+        },
+        {
+          "task": "Part 1 · Study Habits and Recordings",
+          "focus": "corrected details and linked ideas",
+          "prompt": "Let's talk about your studies. 1. How do you usually take notes in lectures or classes? 2. Do you ever watch or listen to recorded lectures? Why or why not? 3. What helps you remember information from a class? 4. Has technology changed how you study compared to a few years ago?"
+        },
+        {
+          "task": "Part 2 · Cue card",
+          "focus": "paraphrase, clear comparison and extended linked ideas",
+          "prompt": "Describe a visit to a museum or heritage place that you remember well. You should say: • where it was and when you went • who you went with • what you saw and learned there • and explain why this visit was memorable for you. You will have one minute to prepare and should speak for one to two minutes."
+        },
+        {
+          "task": "Part 3 · Access to Culture and Education",
+          "focus": "reasons, evaluation and comparison",
+          "prompt": "Let's discuss access to museums and education. 1. Why do some people think museums should be free for everyone? 2. What are the advantages and disadvantages of putting museum collections online? 3. Should governments give more money to museums or to other public services? Why? 4. How can museums attract more young visitors?"
+        },
+        {
+          "task": "Part 3 · Community Heritage and Memory",
+          "focus": "evaluation, reasons and linked ideas",
+          "prompt": "Let's discuss community heritage projects. 1. Why is it important to record older people's memories of local history? 2. How can we check if information from interviews is accurate? 3. What are the benefits for young people who take part in heritage interview projects? 4. Is it better to learn history from people or from books and the internet? Why?"
+        }
+      ]
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "ielts-meta-wave-5-band-6-writing-01",
+          "issue": "Clarify that daily museum-tour times apply on open days because the museum is closed Mondays; label the family-ticket/individual-visitor denominator explicitly.",
+          "severity": "minor"
+        },
+        {
+          "item": "ielts-meta-wave-5-band-6-writing-02",
+          "issue": "Label each reasons percentage denominator as all 400 surveyed students or recording users, preserving the multiple-response note.",
+          "severity": "minor"
+        }
+      ]
+    }
+  }
+}

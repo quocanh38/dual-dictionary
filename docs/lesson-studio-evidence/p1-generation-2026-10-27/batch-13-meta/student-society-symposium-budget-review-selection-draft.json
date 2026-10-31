@@ -1,0 +1,65 @@
+{
+  "id": "draft-b7a20c87-9d58-4f18-8b8c-37151b74e386",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Planning a Student Society Symposium",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The student policy society is organizing an evening symposium on local housing. Before confirming the room, the committee compares three venue quotes and estimates the cost of captioning, printed programmes and refreshments. The treasurer sets aside part of the grant for accessibility services and tracks each estimate in a shared budget. When the first catering quote is higher than expected, members discuss reducing refreshments rather than removing captioning. They ask the venue whether a weekday rate is available and revise the forecast after the reply. One student records the reason for each change so next year's committee can understand how the final total was reached. The chair will approve orders only after the revised budget stays within the grant.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The student policy society is organizing an evening symposium on local housing. Before confirming the room, the committee compares three venue quotes and estimates the cost of captioning, printed programmes and refreshments. The treasurer sets aside part of the grant for accessibility services and tracks each estimate in a shared budget. When the first catering quote is higher than expected, members discuss reducing refreshments rather than removing captioning. They ask the venue whether a weekday rate is available and revise the forecast after the reply. One student records the reason for each change so next year's committee can understand how the final total was reached. The chair will approve orders only after the revised budget stays within the grant.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The student policy society is organizing an evening symposium on local housing."
+      },
+      {
+        "id": "s2",
+        "text": "Before confirming the room, the committee compares three venue quotes and estimates the cost of captioning, printed programmes and refreshments."
+      },
+      {
+        "id": "s3",
+        "text": "The treasurer sets aside part of the grant for accessibility services and tracks each estimate in a shared budget."
+      },
+      {
+        "id": "s4",
+        "text": "When the first catering quote is higher than expected, members discuss reducing refreshments rather than removing captioning."
+      },
+      {
+        "id": "s5",
+        "text": "They ask the venue whether a weekday rate is available and revise the forecast after the reply."
+      },
+      {
+        "id": "s6",
+        "text": "One student records the reason for each change so next year's committee can understand how the final total was reached."
+      },
+      {
+        "id": "s7",
+        "text": "The chair will approve orders only after the revised budget stays within the grant."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "sets aside",
+      "meaningEn": "reserves part of the money for a specific purpose",
+      "meaningVi": "trích ra một phần tiền để dành cho mục đích cụ thể",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "revise the forecast",
+      "meaningEn": "update the expected costs after receiving new information",
+      "meaningVi": "điều chỉnh dự báo chi phí sau khi nhận được thông tin mới",
+      "sourceSentenceId": "s5"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

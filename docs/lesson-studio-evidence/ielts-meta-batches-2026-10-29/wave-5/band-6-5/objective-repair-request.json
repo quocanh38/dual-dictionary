@@ -1,0 +1,191 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-5",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Keep each option under 12 words and each explanation to 1–2 sentences; do not repeat source paragraphs in explanations. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 6.0 to 6.5: denser academic information, qualified claims, evidence comparison, and accurate handling of limitations. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: comparing shade interventions in two school playgrounds, estimating stream-restoration outcomes from uneven monitoring, and response bias in an employee wellbeing survey. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-6-5",
+    "batchId": "wave-5",
+    "currentBatch": {
+      "listening": {
+        "title": "Comparing Shade Interventions in Two School Playgrounds",
+        "focus": "Comparing effectiveness and limitations of shade interventions",
+        "part": "Part 3",
+        "script": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+        "questions": [
+          {
+            "title": "Intervention Types",
+            "prompt": "What did each school install as a shade intervention?",
+            "options": [
+              "Northwood planted trees; Eastfield built sails",
+              "Northwood installed sails; Eastfield planted trees and a pergola",
+              "Both schools installed identical shade sails",
+              "Both schools relied only on existing buildings"
+            ],
+            "answer": 1,
+            "explanation": "The script states Northwood installed three sails and Eastfield planted trees plus a pergola. The first distractor reverses the schools."
+          },
+          {
+            "title": "Temperature Result",
+            "prompt": "What temperature difference was found at Northwood?",
+            "options": [
+              "Surface under sails was about 8 degrees cooler",
+              "Air temperature rose by 8 degrees",
+              "No measurable temperature change occurred",
+              "Trees cooled the area more than sails"
+            ],
+            "answer": 0,
+            "explanation": "Liam reports surfaces under sails were about eight degrees lower than exposed asphalt. The last option misattributes the effect to trees."
+          },
+          {
+            "title": "Usage Comparison",
+            "prompt": "Why might Eastfield's usage figure be understated?",
+            "options": [
+              "Teachers forced children into the sun",
+              "Monitoring included three rainy days",
+              "Only 35% of children were counted",
+              "The pergola was closed for repair"
+            ],
+            "answer": 1,
+            "explanation": "Liam qualifies the 45% figure by noting three rainy days during Eastfield's monitoring. The teacher-direction point inflated Northwood's figure, not Eastfield's."
+          },
+          {
+            "title": "Parent Survey Limitation",
+            "prompt": "What limits the parent satisfaction comparison?",
+            "options": [
+              "Northwood parents were not surveyed",
+              "Eastfield had a low response rate of 35%",
+              "Both schools had identical satisfaction levels",
+              "Surveys were conducted in different years"
+            ],
+            "answer": 3,
+            "explanation": "Maya notes Eastfield's 62% satisfaction came from only a 35% response rate, limiting comparability. The identical-levels option contradicts the reported 80% vs 62%."
+          },
+          {
+            "title": "Presentation Schedule",
+            "prompt": "When will the students present their findings?",
+            "options": [
+              "On Tuesday as originally planned",
+              "On Wednesday after a correction",
+              "On Thursday after rescheduling",
+              "On Friday in the seminar"
+            ],
+            "answer": 1,
+            "explanation": "Maya corrects herself from Tuesday to Wednesday, which the tutor confirms. The Tuesday option ignores the self-correction."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+        "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+        "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+        "questions": [
+          {
+            "title": "Study Design Purpose",
+            "prompt": "Why was the Lower Reach left unrestored?",
+            "options": [
+              "To provide a comparison for the Upper Reach",
+              "Because restoration funds were insufficient",
+              "To test a different restoration method",
+              "Due to lack of ecological value"
+            ],
+            "answer": 0,
+            "explanation": "The passage states the Lower Reach served as a comparison for the restored Upper Reach. The funds option is not mentioned."
+          },
+          {
+            "title": "Source of Uneven Data",
+            "prompt": "What caused the uneven monitoring between reaches?",
+            "options": [
+              "Different researchers monitored each reach",
+              "Quarterly access limits and logger failure",
+              "Upper Reach was sampled only in winter",
+              "Lower Reach had more frequent sampling"
+            ],
+            "answer": 1,
+            "explanation": "The passage cites quarterly sampling due to permission delays and logger failure in August-September. The last option reverses the frequency."
+          },
+          {
+            "title": "Qualified Temperature Claim",
+            "prompt": "How do authors interpret the 1.2°C cooling?",
+            "options": [
+              "Definitive proof willows cooled the stream",
+              "Possibly from willows but limited by gaps and weather",
+              "Caused entirely by a cooler summer",
+              "No change occurred at either reach"
+            ],
+            "answer": 1,
+            "explanation": "Authors attribute cooling to willows but qualify it with incomplete data and a cooler summer overall. The definitive-proof option ignores those qualifications."
+          },
+          {
+            "title": "Claim Versus Example",
+            "prompt": "What is the role of the March 2022 flood?",
+            "options": [
+              "Central claim that restoration failed",
+              "Example of natural variability, not failure",
+              "Evidence of long-term ecological decline",
+              "Proof that monitoring was unnecessary"
+            ],
+            "answer": 1,
+            "explanation": "The flood is explicitly framed as an example of variability, distinct from the central claim of modest likely improvement. The failure option confuses example with claim."
+          },
+          {
+            "title": "Limited Inference for Future Work",
+            "prompt": "What can be inferred about future evaluations?",
+            "options": [
+              "They should be tentative without balanced, longer data",
+              "They will always show 22% diversity gains",
+              "Access restrictions improve data quality",
+              "Single flood events prove restoration success"
+            ],
+            "answer": 0,
+            "explanation": "The authors recommend tentative conclusions until longer consistent datasets and balanced schedules exist. The 22% option overgeneralizes one result."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "ielts-meta-wave-5-band-6-5-listening-04",
+          "issue": "The answer key is 3, which selects “Surveys were conducted in different years.” The script gives no such difference. The explanation supports option 1 (“Eastfield had a low response rate of 35%”), which is the defensible answer. Correct the key to 1.",
+          "severity": "critical"
+        },
+        {
+          "item": "normalizationFindings.answerPositions",
+          "issue": "The payload flags that neither objective skill uses all four answer positions. Listening keys are [1,0,1,3,1] (position 2 absent); Reading keys are [0,1,1,1,0] (positions 2 and 3 absent). Rebalance answer positions across each five-item set to reduce a predictable response pattern, while preserving valid keys.",
+          "severity": "minor"
+        },
+        {
+          "item": "ielts-meta-wave-5-band-6-5-listening-04",
+          "issue": "Wrong key: answer3 selects surveys conducted in different years, which is unsupported. Both the complete dialogue and explanation support index1, Eastfield had a low35% response rate. Correct the key, then revalidate it after any answer-position shuffling.",
+          "severity": "critical"
+        },
+        {
+          "item": "normalizationFindings; Listening and Reading option/key distributions",
+          "issue": "Both unresolved structural findings are real: Listening keys cover only indices0,1,3 (and correcting listening04 currently leaves only0,1); Reading keys cover only0,1. Neither five-item set covers all four answer positions. Reorder options and synchronise keys/explanations without changing meaning; verify all indices0–3 in each skill.",
+          "severity": "critical"
+        },
+        {
+          "item": "sharedContexts.listening.script; ielts-meta-wave-5-band-6-5-listening-02",
+          "issue": "The measured eight-degree temperature difference lacks Celsius/Fahrenheit units. Surface-versus-air distinction and comparative key are otherwise clear; specify degrees Celsius for scientific precision.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        },
+        {
+          "item": "sharedContexts.reading.passage",
+          "issue": "14to17 is21.43%, so about22% is loose approximation; about21% or just over21% is more accurate. This does not change any key.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        },
+        {
+          "item": "normalizationFindings",
+          "issue": "Listening answer positions do not cover all four options.",
+          "severity": "critical"
+        },
+        {
+          "item": "normalizationFindings",
+          "issue": "Reading answer positions do not cover all four options.",
+          "severity": "critical"
+        }
+      ]
+    }
+  }
+}

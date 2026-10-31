@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "3560af2fe77289392b46e95addadf318a3d4c6288d3b88b1412635876c4d5cef",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte rereview of the shared 344-word language-exchange script and 415-word park-volunteer passage; all five Listening and five Reading questions, all options, answer keys and explanations; and all five Task 1/Task 2 Writing and five Speaking prompts. Checked answer uniqueness and source grounding, distractor validity, explanation accuracy, natural language and band fit, Task 1 data/units, and originality disclosure. Reading 02 now correctly says Saturday morning, matching the passage. All keys and explanations are supported; the Task 1 attendance totals, workshop times, capacities and fees are complete and clear. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

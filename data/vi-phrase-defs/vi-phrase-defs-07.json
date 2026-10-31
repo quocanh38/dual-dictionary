@@ -1,0 +1,680 @@
+[
+  {
+    "phrase": "beat yourself up",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "tự dằn vặt, tự trách mình quá mức",
+        "pat": "beat yourself up (about/over something)",
+        "ex": [
+          ["Don't beat yourself up over one bad exam.", "Đừng dằn vặt mình chỉ vì một bài kiểm tra điểm kém."],
+          ["I kept beating myself up for forgetting her birthday.", "Tự nhiên mình cứ trách mãi vì quên sinh nhật cô ấy."]
+        ]
+      }
+    ],
+    "note": "Cẩn thận: 'beat somebody up' nghĩa khác hẳn — đánh ai đó: The gang beat him up. (Bọn côn đồ đánh anh ta.)"
+  },
+  {
+    "phrase": "catch up with",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đuổi kịp, theo kịp (ai/cái gì đang đi trước)",
+        "ex": [
+          ["Run faster — they're catching up with us!", "Chạy nhanh lên — họ sắp đuổi kịp mình rồi!"]
+        ]
+      },
+      {
+        "m": "gặp lại để cập nhật chuyện đời (sau lâu không gặp)",
+        "ex": [
+          ["Let's grab a coffee and catch up with each other.", "Mình đi uống cà phê rồi kể cho nhau nghe dạo này thế nào nhé."]
+        ]
+      },
+      {
+        "m": "(hậu quả) rồi cũng đến với người đã né tránh — thường chủ ngữ là lies/the past",
+        "ex": [
+          ["His lies finally caught up with him.", "Cuối cùng những lời nói dối cũng đuổi kịp anh ta."]
+        ]
+      }
+    ],
+    "note": "'catch up on' = bù lại việc còn nợ: catch up on sleep (ngủ bù), catch up on work (xử nốt công việc)."
+  },
+  {
+    "phrase": "cry out for",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "kêu gào, van xin (vì đau hay vì sợ)",
+        "ex": [
+          ["The lost child cried out for his mother.", "Đứa bé lạc đường khóc gào gọi mẹ."]
+        ]
+      },
+      {
+        "m": "rất cần, nhìn là thấy thiếu (cái gì đó phải giải quyết ngay)",
+        "ex": [
+          ["This room cries out for a fresh coat of paint.", "Căn phòng này nhìn là thấy cần được sơn lại ngay."]
+        ]
+      }
+    ],
+    "note": "Dạng ngắn 'cry for' cũng dùng: The garden is crying for rain. (Vườn đang khát nước.)"
+  },
+  {
+    "phrase": "go out to",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(lời cảm thông, lời chúc) được gửi đến ai",
+        "pat": "my heart/thoughts go out to somebody",
+        "ex": [
+          ["Our thoughts go out to everyone affected by the storm.", "Chúng tôi xin gửi lời chia sẻ tới tất cả những người bị ảnh hưởng bởi cơn bão."]
+        ]
+      },
+      {
+        "m": "đi ra ngoài để làm gì đó; đi làm (khác với làm việc ở nhà)",
+        "ex": [
+          ["Both parents go out to work.", "Bố mẹ cháu đều đi làm cả."]
+        ]
+      }
+    ],
+    "note": "Đừng nhầm với 'go out with somebody' = hẹn hò ai đó."
+  },
+  {
+    "phrase": "go over to",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "ghé sang nhà ai, đến chỗ ai",
+        "ex": [
+          ["Let's go over to Lan's place after class.", "Tan học mình qua nhà Lan chơi nhé."]
+        ]
+      },
+      {
+        "m": "chuyển sang (kênh, phe, hệ thống khác)",
+        "ex": [
+          ["The station went over to the news at seven.", "Bảy giờ đài chuyển sang bản tin thời sự."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "go round with",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đi lại, hẹn hò với ai (cách nói Anh-Anh; Mỹ hay dùng 'go around with')",
+        "pat": "go round with somebody",
+        "ex": [
+          ["She's been going round with him since the summer.", "Cô ấy hẹn hò với anh ấy từ mùa hè."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "go through with",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "làm cho trọn, thực hiện đến cùng (việc khó hoặc đã định rồi)",
+        "pat": "go through with something",
+        "ex": [
+          ["She nearly cancelled, but she went through with the wedding.", "Cô ấy suýt hủy, nhưng cuối cùng vẫn làm đám cưới đến cùng."],
+          ["Are you sure you want to go through with the deal?", "Anh chắc chắn muốn ký thỏa thuận này đến cùng chứ?"]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "hand over to",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "bàn giao, trao lại cho ai (quyền, công việc, đồ vật)",
+        "pat": "hand something over to somebody / hand over to somebody",
+        "ex": [
+          ["He handed the keys over to the new owner.", "Anh ấy trao chìa khóa cho người chủ mới."]
+        ]
+      },
+      {
+        "m": "nhường lời, chuyển máy (trong chương trình, cuộc gọi)",
+        "ex": [
+          ["Now I'll hand over to my colleague in Hanoi.", "Giờ tôi xin nhường lời cho đồng nghiệp của tôi ở Hà Nội."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "look to for",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "trông cậy vào ai/cái gì để có được điều gì",
+        "pat": "look to somebody/something for something",
+        "ex": [
+          ["Students look to their teachers for guidance.", "Học sinh trông cậy vào thầy cô để được chỉ dẫn."]
+        ]
+      }
+    ],
+    "note": "'look to' không có 'for' thì nghĩa khác: look to the future (hướng về tương lai)."
+  },
+  {
+    "phrase": "throw back on",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "buộc ai phải quay về dựa vào (cái gì) khi không còn lựa chọn — thường ở bị động",
+        "pat": "be thrown back on something",
+        "ex": [
+          ["With no internet, we were thrown back on old paper maps.", "Không có mạng, chúng tôi đành phải quay về dùng bản đồ giấy."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "add up to",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "tổng cộng lại là, cộng ra",
+        "ex": [
+          ["The bill adds up to two million dong.", "Hóa đơn cộng lại là hai triệu đồng."]
+        ]
+      },
+      {
+        "m": "(tổng kết quả) hóa ra là, dẫn đến — hay dùng phủ định: not add up to much",
+        "ex": [
+          ["All that effort didn't add up to much.", "Bao nhiêu công sức mà chẳng đi đến đâu."]
+        ]
+      }
+    ],
+    "note": "'add up' (không có to) = hợp lý, có vẻ đúng: The numbers don't add up. (Số liệu này không khớp.)"
+  },
+  {
+    "phrase": "blow itself out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(bão, cơn) tự tan dần rồi hết; (căng thẳng) tự lắng xuống",
+        "pat": "the storm/argument blew itself out",
+        "ex": [
+          ["The typhoon blew itself out before reaching the coast.", "Cơn bão tan dần trước khi vào đến bờ."],
+          ["The argument blew itself out by morning.", "Sáng hôm sau cuộc cãi vã tự nguội dần."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "play itself out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(việc, căng thẳng) tự diễn tiến đến hồi kết mà không cần ai can thiệp",
+        "ex": [
+          ["Let the drama play itself out.", "Cứ để mọi chuyện tự diễn ra đến hết."],
+          ["We watched the crisis play itself out on the news.", "Chúng tôi dõi theo cuộc khủng hoảng tự diễn tiến qua bản tin."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "sort itself out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(vấn đề) tự được giải quyết ổn thỏa",
+        "ex": [
+          ["Don't worry — it'll sort itself out.", "Đừng lo — rồi mọi chuyện sẽ tự ổn thôi."]
+        ]
+      }
+    ],
+    "note": "'sort yourself out' = tự thu xếp bản thân: Give him time to sort himself out. (Cho cậu ấy thời gian tự chỉnh đốn lại.)"
+  },
+  {
+    "phrase": "burn itself out",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "(đám cháy) cháy đến khi tự tắt vì hết nhiên liệu",
+        "ex": [
+          ["Firefighters let the fire burn itself out.", "Lính cứu hỏa để đám lửa tự cháy hết."]
+        ]
+      },
+      {
+        "m": "(dịch bệnh, cơn sốt việc, đam mê) tự hạ nhiệt rồi kết thúc",
+        "ex": [
+          ["The epidemic burned itself out within months.", "Dịch bệnh lắng xuống rồi tự hết sau vài tháng."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "start on about",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "bắt đầu ca cẩm, lải nhải mãi về chuyện gì (Anh-Anh, suồng sã)",
+        "pat": "start on about something",
+        "ex": [
+          ["He started on about the traffic again.", "Ông ấy lại bắt đầu càm ràm về chuyện kẹt xe."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "start on at",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "mắng mỏ, chỉ trích ai liên tục (Anh-Anh, suồng sã)",
+        "pat": "start on at somebody (about something)",
+        "ex": [
+          ["My mum started on at me about my room.", "Mẹ tôi bắt đầu mắng tôi về chuyện phòng ốc."]
+        ]
+      }
+    ],
+    "note": "'start on' + việc = bắt tay vào làm: Let's start on the report. (Mình bắt đầu làm báo cáo nhé.)"
+  },
+  {
+    "phrase": "dig yourself in",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "đào công sự trú ẩn, cố thủ vào vị trí (quân đội)",
+        "ex": [
+          ["The soldiers dug themselves in before nightfall.", "Lính đào hầm trú ẩn trước khi trời tối."]
+        ]
+      },
+      {
+        "m": "cắm cứng vào lập trường, từ chối nhượng bộ",
+        "ex": [
+          ["The company dug itself in and refused to negotiate.", "Công ty cố thủ và từ chối đàm phán."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "guilt into doing",
+    "pos": "phrasal verb",
+    "senses": [
+      {
+        "m": "làm cho ai áy náy để buộc họ phải làm gì",
+        "pat": "guilt somebody into doing something",
+        "ex": [
+          ["She guilted me into driving her home.", "Cô ấy làm tôi áy náy để rồi phải chở cô ấy về."]
+        ]
+      }
+    ],
+    "note": "'guilt-trip somebody into…' (lóng) nghĩa tương tự nhưng nặng tính thao túng hơn."
+  },
+  {
+    "phrase": "age of reason",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tuổi biết suy nghĩ, tuổi bắt đầu phân biệt phải trái (khoảng lên 7 ở trẻ em)",
+        "ex": [
+          ["By seven, most children reach the age of reason.", "Lên bảy, đa số trẻ đã biết suy nghĩ phải trái."]
+        ]
+      },
+      {
+        "m": "Thời đại Khai sáng — thời kỳ đề cao lý trí ở châu Âu (thế kỷ 17–18)",
+        "ex": [
+          ["The Age of Reason reshaped European thinking.", "Thời đại Khai sáng đã định hình lại tư duy châu Âu."]
+        ]
+      }
+    ],
+    "note": "Viết hoa 'the Age of Reason' khi nói về thời kỳ Khai sáng; viết thường khi nói về lứa tuổi."
+  },
+  {
+    "phrase": "court of law",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tòa án, phiên tòa — nơi xét xử theo pháp luật",
+        "pat": "in a court of law",
+        "ex": [
+          ["The evidence must be presented in a court of law.", "Bằng chứng phải được trình bày trước tòa."]
+        ]
+      }
+    ],
+    "note": "Thành ngữ quen gặp 'in a court of law' nhấn mạnh tính pháp lý — khác 'to go to court' (kiện ra tòa)."
+  },
+  {
+    "phrase": "fact of life",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "lẽ thường, chuyện đương nhiên phải chấp nhận dù không thích",
+        "pat": "a fact of life",
+        "ex": [
+          ["Traffic jams are a fact of life in big cities.", "Kẹt xe là chuyện đương nhiên ở các thành phố lớn."]
+        ]
+      }
+    ],
+    "note": "Số nhiều 'the facts of life' có nghĩa riêng: những điều cơ bản về giới tính (khi dạy trẻ)."
+  },
+  {
+    "phrase": "walk of life",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tầng lớp, giới người trong xã hội",
+        "pat": "people from all walks of life",
+        "ex": [
+          ["People from all walks of life joined the march.", "Người từ mọi tầng lớp xã hội đều tham gia cuộc tuần hành."]
+        ]
+      }
+    ],
+    "note": "Gần luôn dùng trong cấu trúc 'from all walks of life' — nghĩa là đủ mọi thành phần."
+  },
+  {
+    "phrase": "war of words",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "cuộc khẩu chiến, tranh cãi gay gắt bằng lời (trên báo chí, mạng xã hội)",
+        "ex": [
+          ["The two companies are locked in a war of words.", "Hai công ty đang sa vào một cuộc khẩu chiến."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "way of life",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "lối sống, cách sống gắn với bản sắc (của một người, vùng, dân tộc)",
+        "ex": [
+          ["Fishing is a way of life here.", "Đánh cá là lối sống ở vùng này."]
+        ]
+      }
+    ],
+    "note": "'way of life' sâu và bền hơn; 'lifestyle' thiên về phong cách sinh hoạt cá nhân, gắn với tiêu dùng hiện đại."
+  },
+  {
+    "phrase": "course of action",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "phương án, đường lối hành động (chọn trong số các lựa chọn)",
+        "pat": "decide on/choose a course of action",
+        "ex": [
+          ["We need to choose the best course of action.", "Chúng ta cần chọn phương án hành động tốt nhất."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "duty of care",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "nghĩa vụ bảo đảm an toàn, nghĩa vụ chăm sóc (theo luật hoặc đạo đức nghề nghiệp)",
+        "pat": "a duty of care towards somebody",
+        "ex": [
+          ["Schools have a duty of care to their students.", "Nhà trường có nghĩa vụ bảo đảm an toàn cho học sinh."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "vote of thanks",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "lời cảm ơn chính thức được đề xuất trong hội nghị, lễ kỷ niệm",
+        "pat": "propose/move a vote of thanks",
+        "ex": [
+          ["The chairman proposed a vote of thanks to the volunteers.", "Chủ tịch đề nghị gửi lời cảm ơn chính thức tới các tình nguyện viên."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "chief of staff",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tham mưu trưởng (quân đội); chánh văn phòng (nhà lãnh đạo)",
+        "ex": [
+          ["She is the president's chief of staff.", "Bà ấy là chánh văn phòng của tổng thống."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "master of science",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "bằng thạc sĩ khoa học (MSc); người có bằng đó",
+        "ex": [
+          ["She has a Master of Science in chemistry.", "Cô ấy có bằng thạc sĩ khoa học ngành hóa."]
+        ]
+      }
+    ],
+    "note": "Viết tắt MSc; đối lại là 'Master of Arts' (MA) — thạc sĩ xã hội/nghệ thuật."
+  },
+  {
+    "phrase": "minister of state",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "quốc vụ khanh — chức trong nội các, đứng dưới bộ trưởng",
+        "ex": [
+          ["He was appointed minister of state for trade.", "Ông ấy được bổ nhiệm làm quốc vụ khanh phụ trách thương mại."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "captain of industry",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "trùm công nghiệp, nhà kinh doanh lớn có tiếng",
+        "ex": [
+          ["He ended up a captain of industry.", "Cuối cùng ông ấy trở thành một trùm công nghiệp."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "coat of arms",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "huy hiệu, quốc huy, gia huy — biểu tượng truyền thống trên lá chắn",
+        "ex": [
+          ["The lion on their coat of arms stands for courage.", "Con sư tử trên huy hiệu của họ tượng trưng cho lòng dũng cảm."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "council of war",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "hội nghị khẩn bàn đối sách (giữ lối nói quân đội, dùng đùa cả trong công việc)",
+        "ex": [
+          ["The managers held a council of war before the launch.", "Các quản lý họp khẩn bàn đối sách trước ngày ra mắt."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "court of appeal",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tòa phúc thẩm — tòa xét lại bản án cấp dưới",
+        "ex": [
+          ["The case went to the court of appeal.", "Vụ án được đưa lên tòa phúc thẩm."]
+        ]
+      }
+    ],
+    "note": "Mỹ thường viết 'court of appeals'."
+  },
+  {
+    "phrase": "frame of mind",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "tâm trạng, đầu óc (ảnh hưởng đến cách mình nghĩ và hành xử)",
+        "pat": "in a good/right/wrong frame of mind",
+        "ex": [
+          ["I'm not in the right frame of mind to study now.", "Bây giờ đầu óc mình chưa thoải mái để học."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "presence of mind",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "sự nhanh trí, bình tĩnh sáng suốt (lúc khẩn cấp)",
+        "ex": [
+          ["He had the presence of mind to call for help.", "Anh ấy kịp nhanh trí gọi cứu giúp."]
+        ]
+      }
+    ],
+    "note": "Thường đi với 'have the presence of mind to do something'."
+  },
+  {
+    "phrase": "soldier of fortune",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "lính đánh thuê; kẻ sống bằng nghề phiêu lưu mạo hiểm kiếm tiền",
+        "ex": [
+          ["He fought in three wars as a soldier of fortune.", "Ông từng tham chiến ba cuộc với thân phận lính đánh thuê."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "show of hands",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "biểu quyết bằng cách giơ tay",
+        "pat": "decide by a show of hands",
+        "ex": [
+          ["Let's decide by a show of hands.", "Mình quyết định bằng cách giơ tay nhé."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "in cold blood",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "một cách lạnh lùng, tàn nhẫn, không chút do dự (thường với tội ác)",
+        "ex": [
+          ["The shooter acted in cold blood.", "Kẻ nổ súng hành động hoàn toàn lạnh lùng."]
+        ]
+      }
+    ],
+    "note": "Cấu trúc quen: kill somebody in cold blood (giết người không ghê tay)."
+  },
+  {
+    "phrase": "off the record",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "ngoài lề, không chính thức — thông tin nói để nghe chứ không cho ghi nguồn",
+        "ex": [
+          ["The minister spoke off the record.", "Vị bộ trưởng phát biểu ngoài lề, không cho ghi nguồn."]
+        ]
+      }
+    ],
+    "note": "Đối lại là 'on the record' — nói chính thức, được ghi và trích dẫn."
+  },
+  {
+    "phrase": "on the road",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "đang trên đường đi, đi đây đi đó (lưu diễn, chạy xe, vận tải)",
+        "ex": [
+          ["The band has been on the road for months.", "Ban nhạc đã đi lưu diễn liên tục mấy tháng nay."]
+        ]
+      },
+      {
+        "m": "đang trên con đường (đạt được gì đó, hồi phục…)",
+        "pat": "on the road to something",
+        "ex": [
+          ["She's on the road to recovery.", "Cô ấy đang dần hồi phục."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nine to five",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "giờ hành chính 9 giờ sáng đến 5 giờ chiều; công việc văn phòng đều đặn",
+        "pat": "a nine-to-five (job)",
+        "ex": [
+          ["He just wants a quiet nine-to-five.", "Anh ấy chỉ muốn một công việc giờ hành chính êm đềm."]
+        ]
+      }
+    ],
+    "note": "Khi làm tính từ viết 'nine-to-five' có gạch nối: a nine-to-five job."
+  },
+  {
+    "phrase": "house of cards",
+    "pos": "idiom",
+    "senses": [
+      {
+        "m": "kế hoạch/tổ chức mong manh, dễ sụp đổ (như ngôi nhà xếp bằng bài)",
+        "pat": "collapse like a house of cards",
+        "ex": [
+          ["The whole scheme collapsed like a house of cards.", "Cả kế hoạch sụp đổ như ngôi nhà xếp bài."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "freedom of speech",
+    "pos": "noun phrase",
+    "senses": [
+      {
+        "m": "quyền tự do ngôn luận, tự do phát biểu ý kiến",
+        "ex": [
+          ["Freedom of speech has limits under the law.", "Tự do ngôn luận cũng có giới hạn theo pháp luật."]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "the past perfect",
+    "pos": "grammar term",
+    "senses": [
+      {
+        "m": "thì quá khứ hoàn thành (had + V3) — việc đã xong trước một mốc quá khứ khác",
+        "ex": [
+          ["Use the past perfect for the earlier of two past actions.", "Dùng quá khứ hoàn thành cho hành động xảy ra trước trong hai hành động quá khứ."]
+        ]
+      }
+    ],
+    "note": "Khác 'past perfect continuous' (had been doing) — nhấn mạnh độ kéo dài."
+  },
+  {
+    "phrase": "the past tense",
+    "pos": "grammar term",
+    "senses": [
+      {
+        "m": "thì quá khứ (tên gọi chung cho các thì kể về quá khứ)",
+        "ex": [
+          ["The story is told in the past tense.", "Câu chuyện được kể ở thì quá khứ."]
+        ]
+      }
+    ],
+    "note": "'Past tense' là tên chung; 'past simple' (quá khứ đơn) là một thì cụ thể trong nhóm đó."
+  }
+]

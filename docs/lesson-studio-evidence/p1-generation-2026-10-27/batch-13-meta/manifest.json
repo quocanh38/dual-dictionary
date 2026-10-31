@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-10-27T09:46:52.882Z",
+  "promptVersion": "lesson-studio-2026-10-27-v5",
+  "requestParameters": {
+    "model": "muse-spark-1.3",
+    "temperature": 0.2,
+    "maxOutputTokens": 10000,
+    "reasoningEffort": "medium"
+  },
+  "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+  "sourcesSha256": "7b65f2e8a350174e39864821c92222f7a221b3c9a4fc1338349d4156472e48b5",
+  "results": [
+    {
+      "sourceId": "student-society-symposium-budget-review",
+      "purpose": "development",
+      "draftId": "draft-b7a20c87-9d58-4f18-8b8c-37151b74e386",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "64b6058d-3ffb-404c-a1f8-2334ad387d58",
+        "2d25972f-ac7f-4cc1-8cc6-8f06d3306ff0"
+      ]
+    },
+    {
+      "sourceId": "bicycle-shop-faulty-item-refund-process",
+      "purpose": "development",
+      "draftId": "draft-2517b71f-6c30-44eb-97ab-94e69d81d1d9",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "3acfc021-9834-4fcf-b4bb-5911aef1e6ae",
+        "ac2c98c4-bb8f-4ac8-8807-f61ddfb06dee"
+      ]
+    },
+    {
+      "sourceId": "engineering-apprenticeship-rotation-feedback",
+      "purpose": "development",
+      "draftId": "draft-2a3e8318-874a-465b-9c28-2dc7f7df8ea3",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "99c02e6a-2213-4da4-9e1f-bcebcd12abc0",
+        "cefc6df8-5bfa-4342-9407-ae6d8379b356"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+{
+ "v": 3,
+ "updated": "2026-10-16",
+ "note": "VI-P2 = nghĩa tiếng Việt biên soạn tay cho cụm từ. Từ 16/10: cơ chế ENRICHMENT WAVES — hồi sinh dần pool 2.888 cụm máy-mỏng đã remove ở thin gate v120. Mỗi lô ~50-100 cụm = 1 version: draft → rebuild → owner review → push (push = deploy). Hand defs được miễn thin gate nên trang tự quay lại hub + sitemap.",
+ "pool": {
+  "total": "2.888 (remove ở v120)",
+  "remaining": 2824,
+  "tiers": {
+   "A": {
+    "count": 706,
+    "desc": "mọi token top-2k — giá trị người học cao nhất (ưu tiên các wave kế tiếp)"
+   },
+   "B": {
+    "count": 759,
+    "desc": "token top-5k"
+   },
+   "C": {
+    "count": 552,
+    "desc": "token top-10k"
+   },
+   "D": {
+    "count": 807,
+    "desc": "có token ngoài top-10k — thuật ngữ hẹp/tên riêng, ưu tiên cuối"
+   }
+  },
+  "file": "docs/vi-p2-pool.json"
+ },
+ "batches": [
+  {
+   "batch": 7,
+   "file": "data/vi-phrase-defs/vi-phrase-defs-07.json",
+   "drafted": 47,
+   "status": "built 16/10 (commit e5f24014a) + AI review PASS 16/10 (3 sửa nhỏ) — chờ owner duyệt cuối để push (v121)",
+   "skipped": [
+    {
+     "phrase": "blue on blue",
+     "reason": "jargon quân sự"
+    },
+    {
+     "phrase": "children in need",
+     "reason": "tên tổ chức/compositional"
+    },
+    {
+     "phrase": "city of david",
+     "reason": "tên địa danh"
+    },
+    {
+     "phrase": "group of eight",
+     "reason": "tên khối G8"
+    },
+    {
+     "phrase": "house of god",
+     "reason": "tên gọi tôn giáo"
+    },
+    {
+     "phrase": "life on earth",
+     "reason": "compositional, không phải đơn vị từ vựng"
+    },
+    {
+     "phrase": "listen with mother",
+     "reason": "tên chương trình BBC"
+    },
+    {
+     "phrase": "mother of god",
+     "reason": "tên gọi tôn giáo"
+    },
+    {
+     "phrase": "piece of eight",
+     "reason": "đồng xu lịch sử"
+    },
+    {
+     "phrase": "point of use",
+     "reason": "thuật ngữ kỹ thuật hẹp"
+    },
+    {
+     "phrase": "right to life",
+     "reason": "compositional (khẩu hiệu)"
+    },
+    {
+     "phrase": "son of god",
+     "reason": "tên gọi tôn giáo"
+    },
+    {
+     "phrase": "star of david",
+     "reason": "tên biểu tượng"
+    },
+    {
+     "phrase": "voice of america",
+     "reason": "tên hãng"
+    },
+    {
+     "phrase": "war on want",
+     "reason": "tên tổ chức"
+    },
+    {
+     "phrase": "welcome to country",
+     "reason": "nghi lễ Úc"
+    },
+    {
+     "phrase": "women in love",
+     "reason": "tên tác phẩm"
+    },
+    {
+     "phrase": "buy to rent",
+     "reason": "thuật ngữ BĐS hẹp"
+    },
+    {
+     "phrase": "camp it up",
+     "reason": "compositional/junk"
+    },
+    {
+     "phrase": "carry on film",
+     "reason": "tên loạt phim"
+    },
+    {
+     "phrase": "cash for questions",
+     "reason": "tên vụ bê bối"
+    },
+    {
+     "phrase": "church of england",
+     "reason": "tên tổ chức"
+    },
+    {
+     "phrase": "fire of london",
+     "reason": "tên sự kiện"
+    },
+    {
+     "phrase": "gang of four",
+     "reason": "tên nhóm lịch sử"
+    },
+    {
+     "phrase": "heart of england",
+     "reason": "biệt danh vùng"
+    },
+    {
+     "phrase": "knock around together",
+     "reason": "quá hiếm/suồng sã"
+    },
+    {
+     "phrase": "lay about you",
+     "reason": "văn chương cổ"
+    },
+    {
+     "phrase": "prince of peace",
+     "reason": "compositional/junk"
+    },
+    {
+     "phrase": "society of friends",
+     "reason": "compositional/junk"
+    },
+    {
+     "phrase": "society of jesus",
+     "reason": "compositional/junk"
+    },
+    {
+     "phrase": "spread yourself out",
+     "reason": "compositional/junk"
+    },
+    {
+     "phrase": "world in action",
+     "reason": "tên chương trình"
+    },
+    {
+     "phrase": "act of union",
+     "reason": "tên luật lịch sử"
+    },
+    {
+     "phrase": "bank of scotland",
+     "reason": "tên ngân hàng"
+    },
+    {
+     "phrase": "bill of costs",
+     "reason": "thuật ngữ pháp lý hẹp"
+    },
+    {
+     "phrase": "brain of britain",
+     "reason": "tên chương trình"
+    },
+    {
+     "phrase": "c of e",
+     "reason": "viết tắt"
+    },
+    {
+     "phrase": "church of scotland",
+     "reason": "compositional/junk"
+    },
+    {
+     "phrase": "court of claims",
+     "reason": "tòa cụ thể Mỹ"
+    },
+    {
+     "phrase": "court of session",
+     "reason": "tòa cụ thể Scotland"
+    },
+    {
+     "phrase": "crack on to",
+     "reason": "lóng lỗi thời"
+    },
+    {
+     "phrase": "day of judgment",
+     "reason": "tôn giáo"
+    },
+    {
+     "phrase": "department of defense",
+     "reason": "tên cơ quan"
+    },
+    {
+     "phrase": "department of health",
+     "reason": "tên cơ quan"
+    },
+    {
+     "phrase": "department of justice",
+     "reason": "tên cơ quan"
+    },
+    {
+     "phrase": "duke of york",
+     "reason": "tước hiệu"
+    },
+    {
+     "phrase": "feast of weeks",
+     "reason": "lễ tôn giáo"
+    },
+    {
+     "phrase": "garden of england",
+     "reason": "biệt danh vùng"
+    },
+    {
+     "phrase": "heart of darkness",
+     "reason": "tên tác phẩm"
+    },
+    {
+     "phrase": "heart of palm",
+     "reason": "nguyên liệu ẩm thực hẹp"
+    },
+    {
+     "phrase": "lamb of god",
+     "reason": "tôn giáo"
+    },
+    {
+     "phrase": "mall of america",
+     "reason": "tên thương mại"
+    },
+    {
+     "phrase": "man of kent",
+     "reason": "biệt danh vùng"
+    },
+    {
+     "phrase": "mayor of london",
+     "reason": "chức danh theo tên riêng"
+    },
+    {
+     "phrase": "medal of honor",
+     "reason": "tên giải thưởng"
+    },
+    {
+     "phrase": "pipe of peace",
+     "reason": "quá hiếm"
+    },
+    {
+     "phrase": "queen of hearts",
+     "reason": "nhân vật bài"
+    },
+    {
+     "phrase": "rock of ages",
+     "reason": "thánh ca"
+    },
+    {
+     "phrase": "south of france",
+     "reason": "địa lý compositional"
+    },
+    {
+     "phrase": "university of london",
+     "reason": "tên tổ chức"
+    },
+    {
+     "phrase": "victory at sea",
+     "reason": "tên phim tài liệu"
+    },
+    {
+     "phrase": "war in iraq",
+     "reason": "sự kiện"
+    }
+   ]
+  },
+  {
+   "batch": 8,
+   "wave": 1,
+   "version": "v122",
+   "file": "data/vi-phrase-defs/vi-phrase-defs-08.json",
+   "drafted": 62,
+   "status": "built 16/10 + AI review PASS 16/10 (4 sửa nhỏ) — chờ owner duyệt cuối để push (v122); words tb 155/min 110, 0 trang <60",
+   "byPos": {
+    "phrasal verb": 40,
+    "idiom": 7,
+    "noun phrase": 14,
+    "adverb phrase": 1
+   },
+   "phrases": [
+    "break in",
+    "break out",
+    "call off",
+    "call out",
+    "check in",
+    "check up on",
+    "come down",
+    "come over",
+    "cover up",
+    "die away",
+    "die down",
+    "die out",
+    "eat away",
+    "fall back",
+    "get behind",
+    "give back",
+    "go around",
+    "grow up",
+    "hang out",
+    "hold down",
+    "knock off",
+    "let up",
+    "look back",
+    "look over",
+    "mark down",
+    "pull out",
+    "pull over",
+    "put down",
+    "put off",
+    "put together",
+    "run across",
+    "run through",
+    "show off",
+    "sign in",
+    "step down",
+    "step up",
+    "top up",
+    "try on",
+    "watch out",
+    "write down",
+    "black and blue",
+    "down to earth",
+    "dark horse",
+    "dog days",
+    "better half",
+    "best man",
+    "near miss",
+    "old hand",
+    "second nature",
+    "loose end",
+    "old hat",
+    "red-letter day",
+    "of course",
+    "cold war",
+    "heart attack",
+    "hard drive",
+    "first name",
+    "day off",
+    "made to order",
+    "lost and found",
+    "small talk",
+    "happy hour"
+   ],
+   "selection": "tier A pool (thin-gate removals), 40 phrasal verb + collocation/idiom phổ biến; ví dụ gốc tự viết",
+   "review": "AI review 16/10: 0 lỗi schema/dup/encoding trên 375 entry; 375/375 trang đủ chip+canonical+hub+sitemap; 7 sửa nhỏ ngôn ngữ đã rebuild lại"
+  },
+  {
+   "batch": 9,
+   "wave": 2,
+   "version": "v123",
+   "file": "data/vi-phrase-defs/vi-phrase-defs-09.json",
+   "drafted": 66,
+   "status": "built 16/10 — LOCAL, chờ owner review (built 2.886→2.952; hand 376→442 = 15,0% trang cụm)",
+   "byPos": {
+    "adverb phrase": 15,
+    "idiom": 5,
+    "conjunction": 2,
+    "collocation": 37,
+    "phrasal verb": 1,
+    "noun phrase": 6
+   },
+   "phrases": [
+    "in the long run",
+    "in the short term",
+    "on the other hand",
+    "as a result",
+    "in terms of",
+    "to some extent",
+    "by and large",
+    "on balance",
+    "at the expense of",
+    "in favour of",
+    "with regard to",
+    "as opposed to",
+    "given that",
+    "provided that",
+    "in light of",
+    "on the contrary",
+    "for the sake of",
+    "in conclusion",
+    "raise awareness",
+    "raise concerns",
+    "take measures",
+    "take action",
+    "play a role",
+    "play a crucial role",
+    "give rise to",
+    "pose a threat",
+    "place emphasis on",
+    "put pressure on",
+    "come under pressure",
+    "meet the needs of",
+    "reach a consensus",
+    "draw a conclusion",
+    "make a contribution to",
+    "make progress",
+    "make the most of",
+    "take into account",
+    "have an impact on",
+    "have access to",
+    "be conducive to",
+    "be detrimental to",
+    "be prone to",
+    "be subject to",
+    "be faced with",
+    "be exposed to",
+    "address the issue",
+    "allocate resources",
+    "bridge the gap",
+    "come to light",
+    "bear fruit",
+    "bring about",
+    "stem from",
+    "attribute to",
+    "cut down on",
+    "cope with",
+    "contribute to",
+    "benefit from",
+    "in demand",
+    "at a disadvantage",
+    "a wide range of",
+    "far-reaching consequences",
+    "adverse effects",
+    "pressing issue",
+    "double-edged sword",
+    "a blessing in disguise",
+    "job security",
+    "work-life balance"
+   ],
+   "selection": "Trục IELTS collocations (owner duyệt sau review ngoài): 66 cụm giá trị thi cao KHÔNG có trong wordlist nguồn — 18 linker essay + 37 collocation động từ/mẫu câu + 6 noun phrase + 5 idiom; gồm 2 ví dụ reviewer nêu (play a crucial role, in the long run); 4 cụm wordlist được hồi sinh (given that, bring about, stem from, work-life balance)",
+   "standard": "Chuẩn soạn mới: mọi entry có pat (49/66 phù hợp có mẫu kết hợp) + note sắc thái/văn phong (66/66) + tối thiểu 2 ví dụ gốc (132/66=2,0)"
+  },
+  {
+   "batch": 10,
+   "wave": 3,
+   "version": "v124",
+   "file": "data/vi-phrase-defs/vi-phrase-defs-10.json",
+   "drafted": 70,
+   "status": "built 16/10 — LOCAL, chờ owner review (built 2.952→3.022; hand 442→512 = 16,9% trang cụm)",
+   "byPos": {
+    "phrasal verb": 38,
+    "idiom": 19,
+    "noun phrase": 13
+   },
+   "phrases": [
+    "act upon",
+    "bear out",
+    "bottom out",
+    "call back",
+    "clear away",
+    "close out",
+    "close up",
+    "count out",
+    "die off",
+    "fall away",
+    "go to",
+    "have on",
+    "knock back",
+    "knock up",
+    "lay down",
+    "lie down",
+    "lie in",
+    "look at",
+    "pass over",
+    "pay up",
+    "pull away",
+    "pull in",
+    "put in",
+    "run by",
+    "screw up",
+    "send out",
+    "settle on",
+    "shoot up",
+    "start off",
+    "step in",
+    "stick up",
+    "strike out",
+    "throw in",
+    "touch off",
+    "try for",
+    "wear on",
+    "wind up",
+    "write out",
+    "dead heat",
+    "dead weight",
+    "death blow",
+    "double take",
+    "green fingers",
+    "hard line",
+    "hard sell",
+    "hard up",
+    "hat trick",
+    "home truth",
+    "hot cake",
+    "house arrest",
+    "lost cause",
+    "old school",
+    "rough and ready",
+    "second best",
+    "sell-by date",
+    "small fortune",
+    "soul mate",
+    "age group",
+    "arms race",
+    "birth control",
+    "car park",
+    "child support",
+    "day care",
+    "mother tongue",
+    "pocket money",
+    "question mark",
+    "rain forest",
+    "sick leave",
+    "security guard",
+    "help desk"
+   ],
+   "selection": "Tier A (706→636): 38 phrasal verb + 19 idiom + 13 noun collocation — ưu tiên giá trị người học, bỏ junk/tên riêng/thuật ngữ hẹp (enter on, jack off, balls up…)"
+  }
+ ],
+ "releaseNote": "Khi push: landing /vi/ đang ghi 2.777 cụm (số live v120) → cập nhật 2.886 lúc release; batch 7 có built-words.json +40 rows nên cần SW bump (đã ghi ở 4.3).",
+ "reviewFollowups": "Review ngoài #2 — ĐÃ XỬ LÝ HẾT: (1) 4 chỉnh nội dung (commit ec9e46876); (2) hub bớt overclaim thông dụng; (3) FEATURE NHÃN TẦN SUẤT đã build (owner duyệt 17/10): chip \"Phổ biến\" (tier A — mọi token top-2k freq-en) trên trang + hub filter [Tất cả|★ Biên soạn riêng|Phổ biến] + builtByTier trong qa (A 1.249/B 699/C 462/D 612) — gate 60 từ KHÔNG đổi (chip loại khỏi phép đo). Còn lại: topic tags soạn tay theo wave; wave 4 tier A (636)."
+}

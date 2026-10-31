@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-7",
+  "segment": "prompts",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-7-v1",
+  "completedAt": "2026-10-29T05:26:26.624Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2257,
+    "outputTokens": 6029,
+    "totalTokens": 8286
+  },
+  "latencyMs": 19101,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Coastal Restoration Prioritisation Table\",\"focus\":\"Summarising multi-criteria evidence and comparing qualified priorities\",\"prompt\":\"The table below shows information used by the Bayford Coastal Authority in 2024 to prioritise restoration work at four sites. The data includes erosion risk, biodiversity value, estimated cost, and community support.\\n\\nSite | Erosion risk | Biodiversity score /10 (ecologist assessment) | Estimated cost (USD) | Community support % (public consultation, n=1,200) | Proposed priority rank\\nNorth Bay | High | 8.2 | 420,000 | 78% | 1\\nSouth Marsh | Medium | 9.1 | 310,000 | 62% | 2\\nEast Dune | High | 6.5 | 180,000 | 85% | 3\\nWest Estuary | Low | 7.8 | 550,000 | 45% | 4\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Discuss how the different criteria relate to the proposed ranking. Write at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Campus Travel Plan Indicators Table\",\"focus\":\"Selecting key trends and handling differences in data reliability\",\"prompt\":\"The table below shows five proposed indicators for monitoring the Green Campus Travel Plan at Midford University, with baseline data for 2023, targets for 2026, and an assessment of data reliability.\\n\\nIndicator | Baseline 2023 | Target 2026 | Data reliability | Collection method\\nDaily bicycle entries on campus | 340 | 680 | High | Automated gate counters (calibrated daily counts)\\nWeekly bus trips by students and staff | 8,400 | 12,000 | High | Electronic ticket records\\nAverage car occupancy (people per car) | 1.3 | 1.8 | Medium | Annual travel survey (n=800)\\nEstimated CO2 from commuting (tonnes/year) | 1,150 | 850 | Low | Modelled from survey and fuel estimates\\nSatisfaction with travel options (/10) | 6.1 | 7.5 | Medium | Annual travel survey (n=800)\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the reliability ratings suggest about interpreting progress. Write at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Interpreting Non-Response in a Wellbeing Study\",\"focus\":\"Evaluating survey limitations and qualified interpretation of results\",\"prompt\":\"A university wellbeing survey in 2024 reported that 78% of respondents felt positive about their mental health. However, only 45% of the 2,000 students invited to take part responded, and previous research suggests that students experiencing stress are less likely to complete such surveys.\\n\\nTo what extent can the university confidently conclude that most students have good wellbeing? Discuss the possible effects of non-response, how the findings should be qualified, and what additional evidence would strengthen the conclusions. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Prioritising Coastal Restoration Work\",\"focus\":\"Comparing ecological, economic and social arguments with evidence awareness\",\"prompt\":\"Some people argue that coastal restoration projects should give highest priority to sites with the greatest biodiversity value, while others believe priority should go to sites where restoration most reduces economic damage from erosion and flooding.\\n\\nDiscuss both views, considering how decision-makers should weigh ecological, economic and community factors. Give your own opinion on how priorities should be set, with attention to the strengths and limitations of different types of evidence. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Choosing Indicators for a Campus Travel Plan\",\"focus\":\"Critical evaluation of measurement choices and unintended consequences\",\"prompt\":\"Many universities use simple indicators, such as the number of bicycles counted on campus or total bus ticket sales, to judge whether a sustainable travel plan is successful.\\n\\nDiscuss the advantages and disadvantages of relying on such indicators. What problems might arise if indicators are poorly chosen, and how should a university select a more balanced set of measures? Refer to issues of accuracy, reliability and possible unintended effects in your answer. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Daily Travel and Campus Life\",\"focus\":\"Describing habits and frequency with qualified detail\",\"prompt\":\"Let's talk about travel and daily life.\\n- How do you usually travel to work or study? Has this changed recently?\\n- How often do you use public transport, cycling or walking?\\n- What do you like or dislike about travelling in your area?\\n- Do you think your travel habits will change in the next few years? Why or why not?\"},{\"task\":\"Part 1 · Wellbeing and Study Routines\",\"focus\":\"Talking about personal wellbeing with balanced, non-absolute language\",\"prompt\":\"Let's talk about wellbeing and routines.\\n- How do you usually manage stress during busy periods?\\n- Do you take part in any activities that help your mental or physical health?\\n- How important is it for universities or workplaces to support wellbeing?\\n- Have your ideas about a healthy lifestyle changed over time?\"},{\"task\":\"Part 2 · Cue card · A Coastal or Natural Area You Visited\",\"focus\":\"Descriptive narrative with reflective evaluation\",\"prompt\":\"Describe a coastal or other natural area that you have visited and found interesting.\\nYou should say:\\n- where the area is and when you went there\\n- what the area looks like and what you did there\\n- who you went with, if anyone\\n- and explain why you found the visit memorable and what, if anything, you learned about the environment there.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 2 · Cue card · A Time You Did Not Respond to a Survey\",\"focus\":\"Explaining reasons for non-response and considering wider implications\",\"prompt\":\"Describe a time when you were asked to complete a survey or questionnaire but chose not to respond.\\nYou should say:\\n- what the survey was about and who was conducting it\\n- how you were asked to take part\\n- why you decided not to respond\\n- and explain how you think your decision, and similar decisions by others, might affect the usefulness of the survey results.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Evaluating Evidence for Environmental and Wellbeing Policies\",\"focus\":\"Comparing evidence types, justifying priorities, and handling uncertainty\",\"prompt\":\"Let's discuss how evidence is used for environmental and wellbeing decisions.\\n- How reliable do you think surveys are for understanding wellbeing? What are their strengths and limitations?\\n- When resources are limited, how should authorities decide which coastal or environmental projects to fund first? What criteria matter most?\\n- What makes a good indicator for measuring the success of a policy like a campus travel plan? Can poor indicators lead to poor decisions?\\n- How should decision-makers communicate uncertainty or gaps in evidence to the public?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Coastal Restoration Prioritisation Table",
+        "focus": "Summarising multi-criteria evidence and comparing qualified priorities",
+        "prompt": "The table below shows information used by the Bayford Coastal Authority in 2024 to prioritise restoration work at four sites. The data includes erosion risk, biodiversity value, estimated cost, and community support.\n\nSite | Erosion risk | Biodiversity score /10 (ecologist assessment) | Estimated cost (USD) | Community support % (public consultation, n=1,200) | Proposed priority rank\nNorth Bay | High | 8.2 | 420,000 | 78% | 1\nSouth Marsh | Medium | 9.1 | 310,000 | 62% | 2\nEast Dune | High | 6.5 | 180,000 | 85% | 3\nWest Estuary | Low | 7.8 | 550,000 | 45% | 4\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Discuss how the different criteria relate to the proposed ranking. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Campus Travel Plan Indicators Table",
+        "focus": "Selecting key trends and handling differences in data reliability",
+        "prompt": "The table below shows five proposed indicators for monitoring the Green Campus Travel Plan at Midford University, with baseline data for 2023, targets for 2026, and an assessment of data reliability.\n\nIndicator | Baseline 2023 | Target 2026 | Data reliability | Collection method\nDaily bicycle entries on campus | 340 | 680 | High | Automated gate counters (calibrated daily counts)\nWeekly bus trips by students and staff | 8,400 | 12,000 | High | Electronic ticket records\nAverage car occupancy (people per car) | 1.3 | 1.8 | Medium | Annual travel survey (n=800)\nEstimated CO2 from commuting (tonnes/year) | 1,150 | 850 | Low | Modelled from survey and fuel estimates\nSatisfaction with travel options (/10) | 6.1 | 7.5 | Medium | Annual travel survey (n=800)\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the reliability ratings suggest about interpreting progress. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Interpreting Non-Response in a Wellbeing Study",
+        "focus": "Evaluating survey limitations and qualified interpretation of results",
+        "prompt": "A university wellbeing survey in 2024 reported that 78% of respondents felt positive about their mental health. However, only 45% of the 2,000 students invited to take part responded, and previous research suggests that students experiencing stress are less likely to complete such surveys.\n\nTo what extent can the university confidently conclude that most students have good wellbeing? Discuss the possible effects of non-response, how the findings should be qualified, and what additional evidence would strengthen the conclusions. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Prioritising Coastal Restoration Work",
+        "focus": "Comparing ecological, economic and social arguments with evidence awareness",
+        "prompt": "Some people argue that coastal restoration projects should give highest priority to sites with the greatest biodiversity value, while others believe priority should go to sites where restoration most reduces economic damage from erosion and flooding.\n\nDiscuss both views, considering how decision-makers should weigh ecological, economic and community factors. Give your own opinion on how priorities should be set, with attention to the strengths and limitations of different types of evidence. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Choosing Indicators for a Campus Travel Plan",
+        "focus": "Critical evaluation of measurement choices and unintended consequences",
+        "prompt": "Many universities use simple indicators, such as the number of bicycles counted on campus or total bus ticket sales, to judge whether a sustainable travel plan is successful.\n\nDiscuss the advantages and disadvantages of relying on such indicators. What problems might arise if indicators are poorly chosen, and how should a university select a more balanced set of measures? Refer to issues of accuracy, reliability and possible unintended effects in your answer. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Travel and Campus Life",
+        "focus": "Describing habits and frequency with qualified detail",
+        "prompt": "Let's talk about travel and daily life.\n- How do you usually travel to work or study? Has this changed recently?\n- How often do you use public transport, cycling or walking?\n- What do you like or dislike about travelling in your area?\n- Do you think your travel habits will change in the next few years? Why or why not?"
+      },
+      {
+        "task": "Part 1 · Wellbeing and Study Routines",
+        "focus": "Talking about personal wellbeing with balanced, non-absolute language",
+        "prompt": "Let's talk about wellbeing and routines.\n- How do you usually manage stress during busy periods?\n- Do you take part in any activities that help your mental or physical health?\n- How important is it for universities or workplaces to support wellbeing?\n- Have your ideas about a healthy lifestyle changed over time?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Coastal or Natural Area You Visited",
+        "focus": "Descriptive narrative with reflective evaluation",
+        "prompt": "Describe a coastal or other natural area that you have visited and found interesting.\nYou should say:\n- where the area is and when you went there\n- what the area looks like and what you did there\n- who you went with, if anyone\n- and explain why you found the visit memorable and what, if anything, you learned about the environment there.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 2 · Cue card · A Time You Did Not Respond to a Survey",
+        "focus": "Explaining reasons for non-response and considering wider implications",
+        "prompt": "Describe a time when you were asked to complete a survey or questionnaire but chose not to respond.\nYou should say:\n- what the survey was about and who was conducting it\n- how you were asked to take part\n- why you decided not to respond\n- and explain how you think your decision, and similar decisions by others, might affect the usefulness of the survey results.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Evidence for Environmental and Wellbeing Policies",
+        "focus": "Comparing evidence types, justifying priorities, and handling uncertainty",
+        "prompt": "Let's discuss how evidence is used for environmental and wellbeing decisions.\n- How reliable do you think surveys are for understanding wellbeing? What are their strengths and limitations?\n- When resources are limited, how should authorities decide which coastal or environmental projects to fund first? What criteria matter most?\n- What makes a good indicator for measuring the success of a policy like a campus travel plan? Can poor indicators lead to poor decisions?\n- How should decision-makers communicate uncertainty or gaps in evidence to the public?"
+      }
+    ]
+  }
+}

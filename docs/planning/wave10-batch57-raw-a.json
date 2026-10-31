@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 57,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only phrase pages after off limits, selected by comparing builder slugs with all hand-definition files; cross-checked against local OALD 10 and LDOCE 6 where matching entries exist. NHS and NLRB references consulted for medical and labor terminology.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes; dated, informal, pejorative and regional labels are explicit. Medical, relationship and gambling entries are neutral lexical explanations, not advice.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1720,
+    "remainingRawOnlyAfter": 1700
+  },
+  "selected": [
+    "off season",
+    "off year",
+    "office building",
+    "office holder",
+    "oil rig",
+    "oil well",
+    "old maid",
+    "old man",
+    "old salt",
+    "old timer",
+    "old woman",
+    "olive drab",
+    "olympic games",
+    "one-armed bandit",
+    "one-night stand",
+    "open door",
+    "open-heart surgery",
+    "open marriage",
+    "open shop",
+    "open university"
+  ]
+}

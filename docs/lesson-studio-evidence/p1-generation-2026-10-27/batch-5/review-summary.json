@@ -1,0 +1,134 @@
+{
+  "reviewedAt": "2026-10-27T07:33:12.821Z",
+  "batch": "P1 offline-content batch 5 — food bank, lab equipment and station maintenance",
+  "generation": {
+    "model": "muse-spark-1.3",
+    "promptVersion": "lesson-studio-2026-10-27-v5",
+    "sources": 3,
+    "providerRequests": 6,
+    "requestDetails": "Selection and exercise calls per source; all requests/results preserved in batch-5 manifest and raw response files.",
+    "purpose": "development",
+    "newMetaCallsDuringReview": 0
+  },
+  "reviewModels": [
+    "gpt-6-luna first pass and exact-hash rereview for edited packs",
+    "gpt-6.1-sol final cross-model review; exact-hash rereview after station edit"
+  ],
+  "packs": [
+    {
+      "id": "food-bank-volunteer-briefing",
+      "packId": "pack-f453802c-cc42-47cf-9b3c-de60532027d4",
+      "version": 1,
+      "title": "Reserving Time and Taking Care at the Food Bank",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "4e5a5f0179ac36ee78a1e077e9396eba51f3385c1bc58ca82e8eb2522126ced4",
+      "reviewSha256": "b961882a843cc9e73f222d05417e6ce4a5c97acc6e24349c6ccbd38c97e4d162",
+      "approvedPayloadSha256": "85f1bef6bccb1119f672733fa8ffee1f04a6802c62cdd03cfaf1974d051e84ae",
+      "releasePackFileSha256": "85f1bef6bccb1119f672733fa8ffee1f04a6802c62cdd03cfaf1974d051e84ae",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "criteria": 17,
+      "minorFindings": [],
+      "resolvedFindings": [],
+      "releaseQa": "pass-exact-thirteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-food-bank-volunteer-briefing",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-thirteen/approved-library-tests.json",
+      "newMetaCallsDuringReviewAndQa": 0
+    },
+    {
+      "id": "lab-equipment-audit",
+      "packId": "pack-eddc15b5-2b20-4dd5-9859-3abedd7a3968",
+      "version": 1,
+      "title": "Lab Audits: Using carry out and account for",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "b955f78fe7f6023ca6d5cdcfe063d8353e030d09e36082e55030c3a8f9b48b27",
+      "reviewSha256": "fff1ca63c9b375a1168d2830c0b408d985322e209741c3671178534d1150e3fe",
+      "approvedPayloadSha256": "bc3b500a25f9c0220febbcadf5dd1ed6755b757851c73ff545496eaac88997fd",
+      "releasePackFileSha256": "bc3b500a25f9c0220febbcadf5dd1ed6755b757851c73ff545496eaac88997fd",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "criteria": 17,
+      "minorFindings": [],
+      "resolvedFindings": [],
+      "releaseQa": "pass-exact-thirteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-lab-equipment-audit",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-thirteen/approved-library-tests.json",
+      "newMetaCallsDuringReviewAndQa": 0
+    },
+    {
+      "id": "station-maintenance-notice",
+      "packId": "pack-8ad96ec0-b0ce-4cc3-bc80-70a877b48f56",
+      "version": 1,
+      "title": "Station Notices: Maintenance and Service Updates",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "cc0d043663d251952fa5dc44f8739ac06fa832ec9ecbb57417bccf7a8b2e3f2b",
+      "reviewSha256": "99823e417d447730b0b440dc7ef62698ee6b53fc7342eb1b7e38273be0ac8db4",
+      "approvedPayloadSha256": "8febf3979e8ad06b71b7ad80bf00d294ebb2381f183ddbe8a438cb0d28000819",
+      "releasePackFileSha256": "8febf3979e8ad06b71b7ad80bf00d294ebb2381f183ddbe8a438cb0d28000819",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "criteria": 17,
+      "minorFindings": [],
+      "resolvedFindings": [
+        {
+          "id": "station-q3-availability-explanation",
+          "severity": "uncertain",
+          "resolved": true,
+          "evidence": "An earlier review flagged original q3 wording for conflating mechanical operation with passenger availability. The options and explanations were revised; Luna and Sol reviewed the full current hash and agree b is uniquely supported by the notice. See editorial diff."
+        }
+      ],
+      "releaseQa": "pass-exact-thirteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-station-maintenance-notice",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-thirteen/approved-library-tests.json",
+      "newMetaCallsDuringReviewAndQa": 0
+    }
+  ],
+  "scope": {
+    "independentModelReview": true,
+    "reviewType": "AI-assisted editorial review, not human or learner review",
+    "mutatedPayloadsAfterFinalReview": 0,
+    "newMetaCallsDuringReviewAndQa": 0,
+    "rightsVerification": "Author-supplied provenance only; not independently verified"
+  },
+  "aggregate": {
+    "newlyApprovedPacks": 3,
+    "localLibraryPacks": 13,
+    "qualityGateAudits": "PASS for all three exact candidate hashes",
+    "approvedPackBrowserResults": 26,
+    "allCleanAndPreseededPass": true,
+    "physicalDevice": false,
+    "device": "Chrome mobile emulation 390x844",
+    "providerCallsDuringQa": 0,
+    "blockedExternalRequests": 0,
+    "uncaughtExceptions": 0
+  },
+  "serviceWorker": {
+    "currentCache": "mdx-dict-v129",
+    "offlineReadyPaths": 28,
+    "contract": "PASS"
+  },
+  "limits": [
+    "AI-assisted review is not independent human or learner review.",
+    "Rights are based on source declarations; no independent rights check.",
+    "Chrome mobile emulation is not a physical device.",
+    "Packs are local and not deployed."
+  ],
+  "next": "Continue with existing generated drafts for offline practice only; Meta provider stop due prior unknown-usage timeout remains until deliberate provider/billing inspection. Deploy only on owner instruction.",
+  "releaseQaTestedAt": "2026-10-27T07:36:26.579Z",
+  "reviewedBy": "gpt-6-luna + gpt-6.1-sol; Codex editorial consolidation"
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "gather evidence",
+        "meaningEn": "to collect information or facts to support a finding or idea",
+        "meaningVi": "thu thập bằng chứng, thu thập thông tin để chứng minh",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "take into consideration",
+        "meaningEn": "to think about something carefully when making a decision or judgment",
+        "meaningVi": "xem xét, cân nhắc đến điều gì",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 400,
+    "outputTokens": 918,
+    "totalTokens": 1318
+  },
+  "status": 200,
+  "latencyMs": 11056,
+  "model": "muse-spark-1.3"
+}

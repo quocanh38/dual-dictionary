@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "b8cd92aabf48785e01b23dfe80e076fbd74d732641fdf0b65716a6f6f28f278b",
+  "verdict": "changes_required",
+  "findings": [
+    "sharedContexts.listening (Listening Part 1): the embedded normalization finding correctly identifies a 402-word script against the required 300–400 range. Remove at least two counted words, then recompute and update wordCount before resubmission.",
+    "ielts-meta-wave-2-band-6-listening-04 (Listening Part 1): 'What must Daniel pay for his daughter to join the kitchen chemistry workshop?' is ambiguous because the daughter needs general admission as well as the £2 workshop-materials fee; the keyed £2 option is only the additional workshop fee. Rewrite the stem to ask for the additional materials fee, or key an option that accounts for entry and workshop costs."
+  ]
+}

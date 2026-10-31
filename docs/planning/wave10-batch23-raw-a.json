@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 23,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after chief of state, selected by current phrase slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Independently written Vietnamese meanings, patterns, bilingual examples and learner notes; dictionary wording and example sentences are not reproduced. Regional, technical and register notes are supplied where helpful. One phrase with a slug already represented by a previously enriched entry was excluded and replaced by the next raw-only phrase.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2400,
+    "remainingRawOnlyAfter": 2380
+  },
+  "selected": [
+    "christmas tree",
+    "church school",
+    "city desk",
+    "city planning",
+    "clean out",
+    "clean up",
+    "clear out",
+    "close down",
+    "close in",
+    "close off",
+    "closed shop",
+    "clothes horse",
+    "club foot",
+    "coffee break",
+    "come on",
+    "cold front",
+    "come about",
+    "come along",
+    "come back",
+    "come off"
+  ]
+}

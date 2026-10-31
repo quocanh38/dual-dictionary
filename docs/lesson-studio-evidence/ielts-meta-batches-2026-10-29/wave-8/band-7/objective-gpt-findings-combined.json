@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "issue": "The shared Reading passage is 375 words, below the required 400–500 word range. The declared wordCount is accurate but does not meet the length requirement; expand the passage with relevant material and update all repeated copies/metadata.",
+      "severity": "major",
+      "item": "sharedContexts.reading.passage"
+    },
+    {
+      "item": "sharedContexts.reading; normalizationFindings",
+      "severity": "major",
+      "issue": "Reading has 375 whitespace-delimited words, below the required 400–500. Expand substantive content and synchronize all five passage copies."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-7-reading-05",
+      "severity": "critical",
+      "issue": "Explanation states the Brussels pollution/traffic falls were due to relocation. The passage reports concurrent relocation as an illustration of possible displacement, not established causation or a quantified causal explanation. Remove the causal overclaim and explain that the association alone does not establish a policy-specific reduction."
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "objective structural issue: Reading passage has 375 words; expected 400–500.",
+      "severity": "major"
+    }
+  ]
+}

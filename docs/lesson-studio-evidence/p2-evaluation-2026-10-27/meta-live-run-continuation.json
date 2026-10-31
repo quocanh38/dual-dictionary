@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-27T07:05:18.784Z",
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "priorRun": "meta-live-run.json; attempted case IDs are excluded from this continuation",
+  "requestBound": {
+    "maxCalls": 5,
+    "maxTokensPerCall": 500,
+    "perCallEstimateLimitUsd": 0.05,
+    "totalEstimateLimitUsd": 0.25,
+    "automaticRetries": 0
+  },
+  "denominators": {
+    "remainingAuthoredCases": 5,
+    "casesAttempted": 5,
+    "providerCalls": 5,
+    "questions": 5,
+    "successfulResponses": 0,
+    "verdictScored": 0,
+    "verdictMatched": 0,
+    "quoteScored": 0,
+    "quoteValid": 0,
+    "explanationQualityScored": 0,
+    "latencySamples": 5,
+    "errorTypes": [
+      "invalid-format",
+      "invalid-format",
+      "invalid-format",
+      "invalid-format",
+      "invalid-format"
+    ]
+  },
+  "estimatedUsd": 0.01310375,
+  "billingConfirmed": false,
+  "note": "Only previously unattempted synthetic cases were sent; no retry of a failed case, learner data, or source code. max_tokens=500 is a bounded request. Raw provider text and usage are retained for each successful HTTP response. Token-rate estimate is not a confirmed Billing charge.",
+  "stopReason": null,
+  "cases": [
+    {
+      "caseId": "incorrect-use",
+      "status": "error",
+      "elapsedMs": 3775,
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 500,
+        "totalTokens": 897
+      },
+      "estimatedUsd": 0.00262125,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I careful practice every evening and it make me improve fast."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawOutput": null,
+      "error": "The provider returned invalid feedback. Please retry.",
+      "errorCategory": "invalid-format"
+    },
+    {
+      "caseId": "off-topic",
+      "status": "error",
+      "elapsedMs": 3949,
+      "usage": {
+        "inputTokens": 399,
+        "outputTokens": 500,
+        "totalTokens": 899
+      },
+      "estimatedUsd": 0.00262375,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "My bus leaves at seven, and the weather was sunny this morning."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawOutput": null,
+      "error": "The provider returned invalid feedback. Please retry.",
+      "errorCategory": "invalid-format"
+    },
+    {
+      "caseId": "missing-required-phrase",
+      "status": "error",
+      "elapsedMs": 3952,
+      "usage": {
+        "inputTokens": 399,
+        "outputTokens": 500,
+        "totalTokens": 899
+      },
+      "estimatedUsd": 0.00262375,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I did that more often after class, and it seemed to help."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawOutput": null,
+      "error": "The provider returned invalid feedback. Please retry.",
+      "errorCategory": "invalid-format"
+    },
+    {
+      "caseId": "missing-quote",
+      "status": "error",
+      "elapsedMs": 3113,
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 500,
+        "totalTokens": 897
+      },
+      "estimatedUsd": 0.00262125,
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I careful practice every evening and it make me improve fast."
+      },
+      "expectedVerdicts": [
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawOutput": null,
+      "error": "The provider returned invalid feedback. Please retry.",
+      "errorCategory": "invalid-format"
+    },
+    {
+      "caseId": "ambiguous-reference",
+      "status": "error",
+      "elapsedMs": 2457,
+      "usage": {
+        "inputTokens": 391,
+        "outputTokens": 500,
+        "totalTokens": 891
+      },
+      "estimatedUsd": 0.00261375,
+      "payload": {
+        "phrase": "keep track of",
+        "sourceSentence": "I keep track of project tasks in a shared checklist.",
+        "prompt": "Tell your colleague which project item you monitor and how. Use “keep track of” naturally.",
+        "answer": "I keep track of it every day."
+      },
+      "expectedVerdicts": [
+        "uncertain"
+      ],
+      "quoteRequired": false,
+      "rawOutput": null,
+      "error": "The provider returned invalid feedback. Please retry.",
+      "errorCategory": "invalid-format"
+    }
+  ]
+}

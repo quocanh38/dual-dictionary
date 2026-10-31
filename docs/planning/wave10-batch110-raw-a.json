@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 110,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after work permit in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover workplace, finance, international institutions/history, common phrasal verbs, material terms and biology. Explain regional variants, technical distinctions, context-sensitive proper nouns and separable-verb patterns.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 660,
+    "remainingRawOnlyAfter": 640
+  },
+  "selected": [
+    "work surface",
+    "working capital",
+    "working class",
+    "working day",
+    "working papers",
+    "working party",
+    "works council",
+    "world bank",
+    "world health organization",
+    "world trade center",
+    "world war",
+    "world war i",
+    "world war ii",
+    "world wide web",
+    "wrap up",
+    "write in",
+    "write off",
+    "write up",
+    "wrought iron",
+    "x chromosome"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

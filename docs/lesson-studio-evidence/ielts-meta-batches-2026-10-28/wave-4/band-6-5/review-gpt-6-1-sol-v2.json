@@ -1,0 +1,49 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "a1ebfa886d1ea6a388d2cc8146e0fe82ae8183da3759a9d30a343ea9acecd93f",
+  "verdict": "changes-required",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-4-band-6-5-reading-02",
+      "issue": "The keyed option says both models were within 15% of reference values, but the source establishes only average errors below 15% in dry stable conditions. An average does not establish that individual readings stay within that bound. Change the option to explicitly preserve average errors and dry/stable qualification.",
+      "severity": "uncertain"
+    },
+    {
+      "item": "ielts-meta-wave-4-band-6-5-listening-05",
+      "issue": "The explanation says the volunteers-only option misidentifies survey respondents, but the script does not explicitly identify all respondents. Explain instead that volunteers-only sampling is not stated and self-selection is explicitly the largest limitation.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted final review of 20 items: 5 Listening, 5 Reading, 5 Writing and 5 Speaking. Entire shared script and passage read; all 40 options, zero-based keys and 10 explanations evaluated. All repeated item contexts verified byte-for-string identical to shared context. No other reviewer outputs inspected; no candidates edited.",
+    "listening": "counselling overload and non-clinical purpose; 180/200=90%; no significant coursework difference; work clashes; self-selection and causality limitation; every distractor tested against full dialogue",
+    "reading": "three models/reference/twelve-week design; average-versus-pointwise wording blocker; humidity bias and ModelB inference; school example patterns versus precise levels; co-location/reporting recommendation",
+    "writing": "campaign complete five-source percentages across 2023/2025, adult samples and multiple-response note; field-course plans each sum100%, equal48000-dollar totals and 60 students/10 days specified; three Task2 topics allow qualified arguments; Task1 minimum150 words/20 minutes and Task2 minimum250 words/40 minutes verified.",
+    "speaking": "two everyday Part1 sets; walking-route cue card has complete descriptive bullets, preparation and duration; two Part3 sets appropriately ask behaviour/evidence/funding/public-space evaluation",
+    "languageAndStage": "Reviewed natural language, unsupported claims, distractor uniqueness/plausibility, stage suitability and task realism. These are staged short-form practice items, not a complete official IELTS paper or a validated band-score measure.",
+    "itemIds": [
+      "ielts-meta-wave-4-band-6-5-listening-01",
+      "ielts-meta-wave-4-band-6-5-listening-02",
+      "ielts-meta-wave-4-band-6-5-listening-03",
+      "ielts-meta-wave-4-band-6-5-listening-04",
+      "ielts-meta-wave-4-band-6-5-listening-05",
+      "ielts-meta-wave-4-band-6-5-reading-01",
+      "ielts-meta-wave-4-band-6-5-reading-02",
+      "ielts-meta-wave-4-band-6-5-reading-03",
+      "ielts-meta-wave-4-band-6-5-reading-04",
+      "ielts-meta-wave-4-band-6-5-reading-05",
+      "ielts-meta-wave-4-band-6-5-writing-01",
+      "ielts-meta-wave-4-band-6-5-writing-02",
+      "ielts-meta-wave-4-band-6-5-writing-03",
+      "ielts-meta-wave-4-band-6-5-writing-04",
+      "ielts-meta-wave-4-band-6-5-writing-05",
+      "ielts-meta-wave-4-band-6-5-speaking-01",
+      "ielts-meta-wave-4-band-6-5-speaking-02",
+      "ielts-meta-wave-4-band-6-5-speaking-03",
+      "ielts-meta-wave-4-band-6-5-speaking-04",
+      "ielts-meta-wave-4-band-6-5-speaking-05"
+    ],
+    "priorReviewExposure": "No other reviewer reports inspected. Parent sent confirmation of proposed average-error blocker after this review independently identified and reported it."
+  },
+  "reviewerType": "AI-assisted"
+}

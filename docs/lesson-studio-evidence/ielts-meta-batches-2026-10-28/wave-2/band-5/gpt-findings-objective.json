@@ -1,0 +1,8 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-2-band-5-reading-05",
+      "issue": "Unsupported answer inference: the keyed option claims the playground is probably hot and uncomfortable in summer. The passage only says the playground has little shade and that shade is associated with more people staying in the park; it does not support heat or discomfort. Replace the key/option/explanation with an inference directly supported by the passage, or add explicit evidence while preserving a single defensible answer."
+    }
+  ]
+}

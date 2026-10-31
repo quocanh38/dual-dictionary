@@ -1,0 +1,12 @@
+{
+  "candidateSha256": "cf8215014ddcafc5e202050fcfd3955be186ab293fcae352709385ea5b304fd3",
+  "reviewers": ["gpt-6-luna", "gpt-5.6-terra"],
+  "findings": [
+    {
+      "id": "ielts-meta-band-6-writing-03",
+      "severity": "major",
+      "issue": "The table labels both March and September values as item counts, but the Recorded interviews row gives 25 and 48 in hours, so its unit does not match the column headings.",
+      "suggestedFix": "Use a neutral amount heading or explicitly label the recorded-interview row in hours, and make the dataset units unambiguous. Preserve other valid prompts."
+    }
+  ]
+}

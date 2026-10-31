@@ -1,0 +1,82 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+  "completedAt": "2026-10-27T12:33:18.823Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 471,
+    "outputTokens": 3842,
+    "totalTokens": 4313
+  },
+  "latencyMs": 15036,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · University Seed Library Borrowing",
+        "focus": "Clear main ideas and direct comparison from table data",
+        "prompt": "This is original practice material. The table below shows the number of seed packets borrowed from the Greenfield University seed library from March to May 2026. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Vegetables - March 120, April 150, May 180; Flowers - March 80, April 95, May 110; Herbs - March 60, April 70, May 65. All figures are numbers of packets borrowed by students.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Sleep-and-Study Diary Habits",
+        "focus": "Clear opinion with direct evidence from familiar student life",
+        "prompt": "This is original practice material. Some students at Greenfield University keep a sleep-and-study diary for one month. They write down their bedtime, wake-up time, and study hours each day. Some people think this is a good way to improve study habits. Do you agree or disagree? Give reasons for your answer and include examples from your own experience or studies. Write in clear paragraphs with a simple introduction and conclusion. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 1 · Campus Repair Workshop Use",
+        "focus": "Accurate simple description of changes in familiar academic context",
+        "prompt": "This is original practice material. The table below shows the number of items brought by students to the Greenfield University campus repair workshop in Semester 1 2025 and Semester 2 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Bicycles - Semester 1 45, Semester 2 70; Laptop computers - Semester 1 60, Semester 2 55; Clothes and bags - Semester 1 30, Semester 2 85. All figures are numbers of items brought for repair.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Repair Workshops on Campus",
+        "focus": "Simple explanation of advantages with clear main ideas",
+        "prompt": "This is original practice material. Many old bicycles, laptops and clothes are thrown away by students. Greenfield University has opened a free campus repair workshop where students can learn to fix these things with help from staff. Some people think all universities should have this kind of workshop. Do you agree or disagree? Give reasons for your answer and include examples from your own life or studies. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Seed Libraries and Student Community",
+        "focus": "Balanced discussion with accurate simple explanations",
+        "prompt": "This is original practice material. Greenfield University has a seed library where students can borrow vegetable, flower and herb seeds for free, grow plants at home, and return new seeds later. Some people think this helps students learn about nature and community life. Others think the university should spend money on books and computers instead. Discuss both views and give your own opinion. Give reasons and examples from your experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Sleep and Study Routine",
+        "focus": "Familiar academic context and simple personal explanations",
+        "prompt": "This is original practice material for Part 1, 4-5 minutes. Answer in short, clear sentences. 1. What time do you usually go to bed and get up? 2. Where do you like to study, at home or at the university? 3. Do you ever write down your study hours or sleep hours? Why or why not? 4. What helps you concentrate when you study?"
+      },
+      {
+        "task": "Part 1 · Plants and Green Spaces",
+        "focus": "Familiar topics with direct personal evidence",
+        "prompt": "This is original practice material for Part 1, 4-5 minutes. Answer in short, clear sentences. 1. Do you like growing plants or vegetables? Why or why not? 2. Is there a garden or green space near your home or university? 3. Have you ever borrowed books or seeds from a library? 4. Do you like to fix or reuse old things?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Record You Kept",
+        "focus": "Clear description with simple sequence and reason",
+        "prompt": "This is original practice material for Part 2. You have one minute to prepare and should speak for one to two minutes. Describe a diary or record you kept about your sleep, study, or daily life. You should say: what you recorded and for how long, when and where you did it, what you learned from the record, and explain why it was useful or not useful for you."
+      },
+      {
+        "task": "Part 3 · Sleep, Study and Learning",
+        "focus": "Giving reasons and simple evaluation, not memorised facts",
+        "prompt": "This is original practice material for Part 3, 4-5 minutes. Give reasons and explain your ideas. 1. Why do some university students sleep late and feel tired in class? 2. How can keeping a sleep-and-study diary help students understand their habits? 3. Do you think universities should teach students about sleep and health? Why? 4. Which is more important for good study results, longer study hours or better sleep? Why?"
+      },
+      {
+        "task": "Part 3 · Repair, Reuse and Campus Life",
+        "focus": "Reasons and evaluation of community ideas",
+        "prompt": "This is original practice material for Part 3, 4-5 minutes. Give reasons and evaluate ideas. 1. Why do many students throw away things that could be repaired? 2. What are the advantages of a campus repair workshop for students and the community? 3. Are there any problems with running a free repair service at a university? 4. How can activities like a seed library or a repair workshop change student life in the future?"
+      }
+    ]
+  }
+}

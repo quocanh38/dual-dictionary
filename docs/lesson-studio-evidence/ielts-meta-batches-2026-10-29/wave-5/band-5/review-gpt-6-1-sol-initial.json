@@ -1,0 +1,100 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "8439ab29c8dfa12974322bd3b4e7d56c68022d2152d3eeb1734a29fe7c1f6f6c",
+  "verdict": "fail",
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; normalizationFindings",
+      "issue": "Listening has 410 whitespace-delimited words, matching wordCount410 and the normalization finding, exceeding the required300–400 range. Shorten the complete script to at most400 and keep all repeated exercise transcripts and wordCount synchronised.",
+      "severity": "critical"
+    },
+    {
+      "item": "sharedContexts.reading.passage, paragraph2; all Reading passage copies",
+      "issue": "The passage classifies rosemary with cacti as plants from desert regions. Kew describes rosemary habitat as dry Mediterranean scrubland, not a desert habitat. Use a clear desert example or describe the area as containing plants from dry regions, preserving the warm/dry contrast. Source: https://www.kew.org/plants/rosemary .",
+      "severity": "uncertain"
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-5-band-5-listening-04; reading-05",
+      "issue": "Several distractors are implausible or almost nonsensical in the role, e.g. bring Swimming teacher and Bring100people. They do not threaten unique keys but weaken discrimination even at this introductory stage.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-5-reading-04",
+      "issue": "The keyed fresh/short-transport inference is reasonable from fresh herbs and salad leaves plus short travel, but transport waste is less precise than the passage wording transport costs and packaging waste. Prefer that wording.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "listening": "Read full410-word pool booking conversation: Maya beginner, corrected Saturday10:30, all classes small indoor pool, supplied versus brought equipment including locker lock, twelve-dollar single versus forty-dollar four-class price,15-minute registration. All five keys0/2/3/1/1 uniquely supported; every distractor and explanation checked; weak distractors recorded separately.",
+    "reading": "Read full449-word greenhouse passage: original biology purpose, tropical/dry areas, lettuce/light experiments versus broader responsibility claim, rainwater5000litres/solar/café benefits, timed events/free entry/100perhour booking/bus. All five keys0/2/1/3/1 supported; botanical habitat concern remains blocking until corrected.",
+    "writing": "Both Task1 datasets fully visible: bake-sale four price/made/sold/revenue rows, all revenue products correct(108/90/120/30), event15March; queue eight student counts across Monday/Friday at09/12/15/18 in October. Three Task2 prompts provide clear discuss/opinion, causes/solutions and funding comparison tasks.150/250-word minima and20/40-minute fields verified.",
+    "speaking": "Both Part1 sets familiar and personal; beginner-class Part2 has full personal-event bullets, one-minute preparation and1–2-minute talk; two Part3 sets ask reasons, cause, options and broader evaluation. Appropriate accessible band5 practice scaffolding.",
+    "scope": "Full AI-assisted independent initial review:20items (5Listening,5Reading,5Writing,5Speaking); all shared contexts, all40options,10zero-based keys and10explanations, every productive prompt and metadata read. Per-item transcript/passage copies verified exactly equal shared contexts. No other reviewer outputs inspected, no provider generation/repair calls, no candidate edits.",
+    "structuralChecks": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "normalizationFindingsRead": [
+        "Listening script has 410 words; expected 300–400."
+      ],
+      "wordCounts": {
+        "listening": {
+          "actualWhitespaceWords": 410,
+          "metadata": 410,
+          "requiredRange": [
+            300,
+            400
+          ]
+        },
+        "reading": {
+          "actualWhitespaceWords": 449,
+          "metadata": 449,
+          "requiredRange": [
+            400,
+            500
+          ]
+        }
+      },
+      "answerPositionCoverage": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "originalityAndClaims": "Provenance records Baseten/meta-models/muse-spark-open-1026 and originalContent=true. No recognisable copied official exam question or promised IELTS score found in this full read; no exhaustive external plagiarism comparison performed. Stage labels treated as intended practice difficulty, not validated attainment claims. Fictional project statistics assessed for internal consistency, not represented as verified empirical research.",
+    "itemIds": [
+      "ielts-meta-wave-5-band-5-listening-01",
+      "ielts-meta-wave-5-band-5-listening-02",
+      "ielts-meta-wave-5-band-5-listening-03",
+      "ielts-meta-wave-5-band-5-listening-04",
+      "ielts-meta-wave-5-band-5-listening-05",
+      "ielts-meta-wave-5-band-5-reading-01",
+      "ielts-meta-wave-5-band-5-reading-02",
+      "ielts-meta-wave-5-band-5-reading-03",
+      "ielts-meta-wave-5-band-5-reading-04",
+      "ielts-meta-wave-5-band-5-reading-05",
+      "ielts-meta-wave-5-band-5-writing-01",
+      "ielts-meta-wave-5-band-5-writing-02",
+      "ielts-meta-wave-5-band-5-writing-03",
+      "ielts-meta-wave-5-band-5-writing-04",
+      "ielts-meta-wave-5-band-5-writing-05",
+      "ielts-meta-wave-5-band-5-speaking-01",
+      "ielts-meta-wave-5-band-5-speaking-02",
+      "ielts-meta-wave-5-band-5-speaking-03",
+      "ielts-meta-wave-5-band-5-speaking-04",
+      "ielts-meta-wave-5-band-5-speaking-05"
+    ],
+    "independence": "Reviewer did not inspect other agents review outputs. Parent received early independent issue reports and asked continuation, without supplying other reviewer findings. Prior wave4 reviews are unrelated content and were not consulted for judgments here."
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "band-7",
+  "segment": "objective",
+  "findings": [
+    { "reviewer": "gpt-6-luna", "item": "Listening · Q4 · Study-habits questionnaire", "severity": "high", "issue": "Incorrect answer key: the keyed option claims that only non-club students completed the questionnaire, which is absent from the script. The script supports the option stating that only 55% responded despite vouchers, which may bias the sample toward more organised students.", "recommendedRepair": "Set the answer to index 2 and retain an explanation grounded in the 55% response rate." },
+    { "reviewer": "gpt-5.6-terra", "item": "Listening · Maths Club Results · closing recommendation", "severity": "medium", "issue": "The causal study design says to randomly invite half the year to the club. Random invitation alone still permits voluntary uptake and therefore does not remove the self-selection problem the dialogue identifies.", "recommendedRepair": "Use random assignment to an offered place or a lottery among eligible oversubscribed students and measure attendance and homework time; or state that random invitation estimates the effect of an offer rather than participation." }
+  ]
+}

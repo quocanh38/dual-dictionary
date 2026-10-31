@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 113,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after air brake; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the audited A-section with household, transport, science, computing, idiomatic and regional vocabulary. Clarify near-synonyms, dated terms, register and key contrasts such as AC/DC and device/system.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 608,
+    "remainingRawOnlyAfter": 588
+  },
+  "selected": [
+    "air conditioner",
+    "air conditioning",
+    "air pump",
+    "air terminal",
+    "aircraft carrier",
+    "al fresco",
+    "alimentary canal",
+    "alligator pear",
+    "alpha test",
+    "alternating current",
+    "ambulance chaser",
+    "amusement park",
+    "angle bracket",
+    "anonymous ftp",
+    "answering machine",
+    "ant lion",
+    "apple cart",
+    "apple sauce",
+    "arab league",
+    "arctic circle"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

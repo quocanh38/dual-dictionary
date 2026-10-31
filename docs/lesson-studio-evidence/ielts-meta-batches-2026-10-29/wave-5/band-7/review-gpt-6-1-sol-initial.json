@@ -1,0 +1,93 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "9402ecf7d0b0381cad5bd5c42ed8a7f0bda2bd299c10f765766db0de871b490c",
+  "verdict": "fail",
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; all Listening transcripts; ielts-meta-wave-5-band-7-listening-05 explanation",
+      "issue": "Internal arithmetic/cohort contradiction: the rollout has three cities in2018 and four more in2020, but later the script says two2020 cities lack data and the estimate uses five of seven later cities. Four later cities minus two missing leaves two complete, not five. Seven is the total across both waves. Correct the cohort/counts consistently in script and listening05 explanation, preserving which group has missing data.",
+      "severity": "critical"
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-5-band-7-writing-01; writing-04; speaking-02",
+      "issue": "Specialist synthetic-control terminology and required interpretation of pre-intervention fit/causal evidence create a subject-knowledge burden beyond language difficulty. Consider accessible definitions or broader public research reporting framing. Speaking Part1 question about missing information affecting school judgements also approaches Part3 abstraction. These are practice-design concerns, not additional answer-key blockers.",
+      "severity": "minor"
+    },
+    {
+      "item": "sharedContexts.reading.passage, paragraph4",
+      "issue": "Regional education comparisons sentence interrupts an otherwise ecological argument without development; remove or connect it more naturally.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "listening": "Read full322-word policy-evaluation dialogue: staggered2018/2020 versus2021 survey correction,12% estimate, recycling confounding, placebo with no levy, wide intervals/later missing data, suggestive conclusion. Five keys2/0/1/3/1 are individually supported by stated lines, but later-cohort arithmetic and explanation contradiction are a blocker; all distractors and qualifications checked.",
+    "reading": "Read full404-word restoration-indicator passage: species11to19 example, context/seasonal volatility,40%of78 discordance, missing baselines/ArdenHeath monitoring, complementary indicators/site goals. Five keys0/1/2/3/0 uniquely supported; examples distinct from central caution and recommendations; unrelated education sentence noted.",
+    "writing": "Synthetic-control table has2022 introduction/one-year estimates12/8/4%,95%intervals including possible increases, fit and donor counts all visible. Regional scores2023/outof100 cover five scores, reporting%,participation% and point changes from2022.150/250 minima and20/40minute fields are present though not repeated in prompt prose. Three Task2 prompts answerable as evaluative practice, with specialist framing concern noted rather than treating English band as statistical certification.",
+    "speaking": "Two Part1 sets (nature; school-information judgement), decision-under-uncertainty Part2 includes full bullets/one-minute preparation/1–2minute response; two Part3 sets evaluate trust/indicators/rankings. Mostly natural advanced language; Part1 abstract boundary and technical subject burden noted.",
+    "scope": "Full AI-assisted independent initial review:20items (5Listening,5Reading,5Writing,5Speaking); all shared contexts, all40options,10zero-based keys and10explanations, every productive prompt and metadata read. Per-item transcript/passage copies verified exactly equal shared contexts. No other reviewer outputs inspected, no provider generation/repair calls, no candidate edits.",
+    "structuralChecks": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "normalizationFindingsRead": [],
+      "wordCounts": {
+        "listening": {
+          "actualWhitespaceWords": 322,
+          "metadata": 322,
+          "requiredRange": [
+            300,
+            400
+          ]
+        },
+        "reading": {
+          "actualWhitespaceWords": 404,
+          "metadata": 404,
+          "requiredRange": [
+            400,
+            500
+          ]
+        }
+      },
+      "answerPositionCoverage": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "originalityAndClaims": "Provenance records Baseten/meta-models/muse-spark-open-1026 and originalContent=true. No recognisable copied official exam question or promised IELTS score found in this full read; no exhaustive external plagiarism comparison performed. Stage labels treated as intended practice difficulty, not validated attainment claims. Fictional project statistics assessed for internal consistency, not represented as verified empirical research.",
+    "itemIds": [
+      "ielts-meta-wave-5-band-7-listening-01",
+      "ielts-meta-wave-5-band-7-listening-02",
+      "ielts-meta-wave-5-band-7-listening-03",
+      "ielts-meta-wave-5-band-7-listening-04",
+      "ielts-meta-wave-5-band-7-listening-05",
+      "ielts-meta-wave-5-band-7-reading-01",
+      "ielts-meta-wave-5-band-7-reading-02",
+      "ielts-meta-wave-5-band-7-reading-03",
+      "ielts-meta-wave-5-band-7-reading-04",
+      "ielts-meta-wave-5-band-7-reading-05",
+      "ielts-meta-wave-5-band-7-writing-01",
+      "ielts-meta-wave-5-band-7-writing-02",
+      "ielts-meta-wave-5-band-7-writing-03",
+      "ielts-meta-wave-5-band-7-writing-04",
+      "ielts-meta-wave-5-band-7-writing-05",
+      "ielts-meta-wave-5-band-7-speaking-01",
+      "ielts-meta-wave-5-band-7-speaking-02",
+      "ielts-meta-wave-5-band-7-speaking-03",
+      "ielts-meta-wave-5-band-7-speaking-04",
+      "ielts-meta-wave-5-band-7-speaking-05"
+    ],
+    "independence": "Reviewer did not inspect other agents review outputs. Parent received early independent issue reports and asked continuation, without supplying other reviewer findings. Prior wave4 reviews are unrelated content and were not consulted for judgments here."
+  },
+  "reviewerType": "AI-assisted"
+}

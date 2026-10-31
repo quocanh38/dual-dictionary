@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 115,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after automatic transmission; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the A/B border with finance, business, travel, cooking, data presentation, health, culture, and engineering vocabulary. Clarify terminology, register, regional variants, and easily confused concepts without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 568,
+    "remainingRawOnlyAfter": 548
+  },
+  "selected": [
+    "aversion therapy",
+    "bad debt",
+    "baggage car",
+    "bain marie",
+    "baking soda",
+    "balance of payments",
+    "balance of trade",
+    "ball-and-socket joint",
+    "ball bearing",
+    "ballroom dancing",
+    "banana republic",
+    "bang up",
+    "bank of england",
+    "bank rate",
+    "bar billiards",
+    "bar chart",
+    "bar graph",
+    "bar mitzvah",
+    "barrier reef",
+    "base metal"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

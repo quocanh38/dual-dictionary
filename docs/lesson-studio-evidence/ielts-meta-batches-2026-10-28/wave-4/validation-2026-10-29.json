@@ -1,0 +1,24 @@
+{
+  "completedAt": "2026-10-29T04:24:45.074Z",
+  "status": "local-integration-and-browser-QA-pass",
+  "packVersion": "2.7.0",
+  "serviceWorkerCache": "mdx-dict-v145",
+  "newItems": 80,
+  "totalMetaItems": 320,
+  "stableIds": 440,
+  "outputSha256": "48d9a6f463d1b07e0bbed793d2a7073ce97cd896694b941b96436fb86f6d8fd4",
+  "checks": {
+    "exactHashCrossReview": "gpt-6-luna + gpt-6.1-sol, all four v4 candidates pass",
+    "integrationGate": "pass",
+    "contentSchema": "pass",
+    "offlineStudyChrome": "pass: stage/format/diagnostic/timed resume/Writing/Speaking/media/JSON+encrypted backups",
+    "offlineCacheChrome": "pass at 1280px and 390px with network disabled",
+    "pageErrors": 0
+  },
+  "limitations": [
+    "AI-assisted review; no independent human certification",
+    "Desktop/mobile browser emulation, not physical phone",
+    "Formative pathway targets, not calibrated IELTS band estimates"
+  ],
+  "deployment": "not requested in this turn; local only"
+}

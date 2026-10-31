@@ -1,0 +1,211 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-d15f0d67-d556-4420-bde1-f31155ac1e79",
+    "version": 1,
+    "title": "Workplace Safety: Inspections and Rules",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading composed for this project with coding-assistant assistance; no copied examination passage, third-party source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v4",
+      "generatedAt": "2026-10-27T04:36:34.573Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Workplace Safety: Inspections and Rules",
+        "objective": "Learners will understand and use carry out an inspection and comply with the safety rules in workplace contexts.",
+        "reading": {
+          "text": "The workshop supervisor will carry out an inspection before a new machine is used. The team must comply with the safety rules, even when several orders are waiting. A short training session will show staff where to stop the machine and whom to contact if something goes wrong. The supervisor will ask a colleague to check that the written instructions match the controls on the machine.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The workshop supervisor will carry out an inspection before a new machine is used."
+            },
+            {
+              "id": "s2",
+              "text": "The team must comply with the safety rules, even when several orders are waiting."
+            },
+            {
+              "id": "s3",
+              "text": "A short training session will show staff where to stop the machine and whom to contact if something goes wrong."
+            },
+            {
+              "id": "s4",
+              "text": "The supervisor will ask a colleague to check that the written instructions match the controls on the machine."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "carry out an inspection",
+            "meaningEn": "to perform a careful check or examination",
+            "meaningVi": "tiến hành kiểm tra",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "comply with the safety rules",
+            "meaningEn": "to obey or follow the safety rules",
+            "meaningVi": "tuân thủ các quy tắc an toàn",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In \"The workshop supervisor will carry out an inspection before a new machine is used,\" what does \"carry out an inspection\" mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means he will perform a careful check of the machine before use.",
+                "explanation": "This is correct because it matches to perform a careful check or examination."
+              },
+              {
+                "id": "b",
+                "text": "It means he will cancel the planned check because the machine is new.",
+                "explanation": "This is wrong because cancel is the opposite of performing a check."
+              },
+              {
+                "id": "c",
+                "text": "It means he will move the machine to another room for storage.",
+                "explanation": "This is wrong because moving for storage does not mean performing a check."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The phrase means to perform a careful check before use."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the natural sentence using \"carry out an inspection\".",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The engineer will carry out an inspection of the bridge tomorrow morning.",
+                "explanation": "This is correct because the verb form and collocation inspection of are natural."
+              },
+              {
+                "id": "b",
+                "text": "The engineer will carry out an inspection about the bridge tomorrow morning.",
+                "explanation": "This is wrong because about should be corrected to of after inspection."
+              },
+              {
+                "id": "c",
+                "text": "The engineer will carries out an inspection of the bridge tomorrow morning.",
+                "explanation": "This is wrong because carries should be corrected to carry after will."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the phrase with correct grammar and collocation."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In \"The team must comply with the safety rules, even when several orders are waiting,\" what does \"comply with the safety rules\" mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the team must obey and follow the safety rules despite the pressure.",
+                "explanation": "This is correct because it matches to obey or follow the safety rules."
+              },
+              {
+                "id": "b",
+                "text": "It means the team may ignore the safety rules to finish orders faster.",
+                "explanation": "This is wrong because ignore is the opposite of obeying the rules."
+              },
+              {
+                "id": "c",
+                "text": "It means the team must write new safety rules for future orders.",
+                "explanation": "This is wrong because writing new rules does not mean following existing rules."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The phrase means to obey and follow the safety rules."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the natural sentence using \"comply with the safety rules\".",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "All visitors must comply to the safety rules in the laboratory.",
+                "explanation": "This is wrong because to should be corrected to with after comply."
+              },
+              {
+                "id": "b",
+                "text": "All visitors must comply with the safety rules in the laboratory.",
+                "explanation": "This is correct because the verb form and collocation comply with are natural."
+              },
+              {
+                "id": "c",
+                "text": "All visitors must complies with the safety rules in the laboratory.",
+                "explanation": "This is wrong because complies should be corrected to comply after must."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only one sentence uses the phrase with correct grammar and collocation."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a hotel guest writing a short message to a friend about the swimming pool. Write 2-3 sentences describing the pool rules and what guests do. Use the phrase 'comply with the safety rules'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "I tried the hotel pool yesterday and the lifeguards are very strict. Everyone has to comply with the safety rules, so we watched a short safety video before swimming.",
+            "selfCheck": [
+              "I wrote 2-3 sentences.",
+              "I used 'comply with the safety rules' naturally.",
+              "My message is clear with correct grammar."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

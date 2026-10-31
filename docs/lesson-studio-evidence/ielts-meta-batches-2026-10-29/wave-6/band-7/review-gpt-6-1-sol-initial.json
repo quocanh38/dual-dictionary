@@ -1,0 +1,99 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "3bcc6f9f8d6fe4a0802986d45771aba0a8587d6a9e5c5625558fa2fb8df07be1",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "sharedContexts.reading.passage paragraph2; ielts-meta-wave-6-band-7-reading-02 explanation",
+      "severity": "uncertain",
+      "issue": "Biased volunteer handheld street-temperature mean31.4°C is contrasted with satellite peaks38.1°C as evidence of understatement. Mean versus hotspot peak and handheld air temperature versus unspecified satellite surface temperature are not comparable measures. Preserve the sampling-bias point but use independent matched air-temperature observations at comparable times/statistic, or explicitly state satellite peaks cannot validate bias magnitude; align the question/explanation with sampling evidence alone."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-6-band-7-speaking-03",
+      "severity": "minor",
+      "issue": "Cue content uses inline Unicode bullets. Put each cue on a separate line for easier cue-card reading; prep/duration already explicit."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-7-speaking-01",
+      "severity": "minor",
+      "issue": "Question4 on universities institutional responsibility is broader than typical personal Part1. Personal experience of explanations would fit more naturally."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-7-writing-01",
+      "severity": "minor",
+      "issue": "Whole-percent release shares imply fractional counts when multiplied by totals. Label percentages as rounded if learners may compare approximate counts."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review:20items, entire script/passage, all40options,10keys/10explanations,5Writing/5Speaking andmetadata. Per-item copied contexts verified identical to shared contexts. No other reviewer outputs inspected; no candidates edited or provider calls.",
+    "listening": "Full328-word buspilot seminar:50%farecut,April–Junecorrection,18%ridershipversusJan–March,22%petrolconfound,nocontrol,78%self-selectedterminalsurvey,controlledlonger/randomsampling recommendation. Keys[0,1,2,3,1] supported;all20options/5explanations assessed.",
+    "reading": "Full435-word heat/education passage:140volunteers,68%north/12%south coverage bias,31.4mean versus38.1satellitepeaks comparability blocker,qualifiedhotspotvalue and weighting,89/82completiondefinitions/time-seriescomparability,general caution. Keys[1,0,2,3,0] align with intended claims;all20options/5explanations checked;underlying measurement argument requires repair.",
+    "writing": "All5Writing read:3universities×3years2018/2021/2024 providecompletepercentages/release totals;wetlandMarch–August2024 has6visitor/incidentpairs andJuneinterventiontiming,avoidscausalclaim. ThreeTask2 publicity/wildlifeaccess/pilotpolicy tasks self-contained and nuanced.150/20 and250/40 explicit/consistent.",
+    "speaking": "All5Speaking read:2personal-basedPart1sets(oneabstractresponsibilityquestion noted),scientific-claim Part2 has all4cues/prep/duration though inlineformat;2Part3sets consider wildlife/policy evidence scope. Appropriate advanced language practice with design observations,not certified band measure.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItemCount": 20,
+      "wordCounts": {
+        "listening": 328,
+        "reading": 435
+      },
+      "metadataWordCounts": {
+        "listening": 328,
+        "reading": 435
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          1,
+          0,
+          2,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026, wave6v1 prompt versions, originalContent=true read. No recognisable official exam copying or guaranteed-score claim found; originality is not exhaustively independently proven. Fictional study data assessed for internal consistency,not empirical validation. Stage labels treated as practice targets,not measured attainment.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-7-listening-01",
+      "ielts-meta-wave-6-band-7-listening-02",
+      "ielts-meta-wave-6-band-7-listening-03",
+      "ielts-meta-wave-6-band-7-listening-04",
+      "ielts-meta-wave-6-band-7-listening-05",
+      "ielts-meta-wave-6-band-7-reading-01",
+      "ielts-meta-wave-6-band-7-reading-02",
+      "ielts-meta-wave-6-band-7-reading-03",
+      "ielts-meta-wave-6-band-7-reading-04",
+      "ielts-meta-wave-6-band-7-reading-05",
+      "ielts-meta-wave-6-band-7-writing-01",
+      "ielts-meta-wave-6-band-7-writing-02",
+      "ielts-meta-wave-6-band-7-writing-03",
+      "ielts-meta-wave-6-band-7-writing-04",
+      "ielts-meta-wave-6-band-7-writing-05",
+      "ielts-meta-wave-6-band-7-speaking-01",
+      "ielts-meta-wave-6-band-7-speaking-02",
+      "ielts-meta-wave-6-band-7-speaking-03",
+      "ielts-meta-wave-6-band-7-speaking-04",
+      "ielts-meta-wave-6-band-7-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

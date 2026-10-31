@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:06:09Z",
+  "note": "Independent full-pack review of the exact packSha256 listed above, including both target phrases, all options and explanations, citations, and transfer. Rights/authorship were checked only as declarations in the source manifest; they were not independently verified. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Matched this pack to the source manifest: it declares an AI-assisted original educational passage, distribution authorization, and no learner personal data. These are project declarations checked for consistency, not independently verified ownership/rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“work in pairs” appears in cited s2 (“Students work in pairs”); doing the cataloguing task with one partner is the supported sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss describes doing the task with one other person as a team, matching s2 rather than giving a selection rationale."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“làm việc theo cặp” is natural Vietnamese and accurately conveys work in pairs; diacritics are present."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“in chronological order” appears in cited s5 and is supported by known-date records being separated from uncertain dates."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss “arranged from earliest to latest according to date or time” accurately gives the contextual date ordering."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“theo thứ tự thời gian từ sớm đến muộn” naturally conveys chronological ordering and has correct Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone describes working with one partner; B says alone and C describes leading a larger group. Both distractors are incompatible with the phrase as asked."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A correctly identifies collaboration with a partner; B correctly contrasts working alone; C correctly distinguishes a large group/leadership role. Stem explanation matches the source."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is grammatical (“They work … to check”); B has the objective error “to checking”; C has the objective agreement error “They works.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation identifies its actual issue: correct plural verb/infinitive in A, bare infinitive after “to” in B, and subject-verb agreement in C."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B alone states ordering from earliest to latest by date; A omits dates and C says random, each contradicting the cited context."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "B and the stem explanation accurately describe time sorting; A and C explanations state the contrast with date-based ordering without overclaiming."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A has the correct phrase and grammar; B incorrectly pluralizes “order” in this expression, while C has subject-verb disagreement (“archive list”)."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A explanation correctly identifies the form; B and C each point to their specific objective form error. “Fixed phrase” here correctly refers to singular “order.”"
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Prompt shifts from students cataloguing archive records to a sports-club leader explaining past newsletters to members, with a new audience and purpose."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Model answer is natural, uses “in chronological order” with years, and explains reader benefit. Checklist checks length, target use, and changed context; no automatic scoring."
+    }
+  ],
+  "findings": []
+}

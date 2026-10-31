@@ -1,0 +1,27 @@
+{
+  "wave": 10,
+  "batch": 101,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after trailing edge in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover travel and sales vocabulary, finance and measurement, sport, technology metaphors, and common phrasal verbs. Mark dated or regional usage, distinguish literal and figurative meanings, and clarify technical details for Treasury bills, troy weight and tropical trade winds.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 840,
+    "remainingRawOnlyAfter": 820
+  },
+  "selected": [
+    "train set", "travel agency", "travel agent", "travelling salesman", "treasure trove",
+    "treasury bill", "trial run", "triple jump", "trojan horse", "trolley car",
+    "trouble spot", "troy weight", "trump card", "trunk call", "trust fund",
+    "try out", "tug of war", "tunnel vision", "turkish bath", "turn around"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NOAA National Ocean Service, What are the trade winds? (https://oceanservice.noaa.gov/facts/tradewinds.html)",
+    "U.S. TreasuryDirect, Treasury Bills (https://www.treasurydirect.gov/marketable-securities/treasury-bills/)",
+    "U.S. Mint, American Eagle Silver Proof specifications (https://www.usmint.gov/learn/coins-and-medals/collectible-coins/american-eagle/silver-proof)"
+  ]
+}

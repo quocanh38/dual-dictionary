@@ -1,0 +1,226 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-4627bb92-0afb-42fb-83c1-88a23a7390c4",
+    "version": 1,
+    "title": "Planning Ahead at Work and at the Clinic",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:11:40.887Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Planning Ahead at Work and at the Clinic",
+        "objective": "Learners will understand and use in advance and routine appointment to manage time and bookings politely.",
+        "reading": {
+          "text": "At the Riverside clinic, the front desk has changed its appointment process for the winter. Patients who need another time should call reception at least one day in advance so staff can offer the unused slot to someone else. Anyone arriving with a new prescription should bring the medicine list from their last visit. If a patient cannot attend, the clinic asks them to cancel rather than leave a space empty. On busy mornings, the waiting-room display shows estimated delays; staff update it every thirty minutes. Patients with urgent symptoms should speak directly to reception instead of waiting for a routine appointment.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "At the Riverside clinic, the front desk has changed its appointment process for the winter."
+            },
+            {
+              "id": "s2",
+              "text": "Patients who need another time should call reception at least one day in advance so staff can offer the unused slot to someone else."
+            },
+            {
+              "id": "s3",
+              "text": "Anyone arriving with a new prescription should bring the medicine list from their last visit."
+            },
+            {
+              "id": "s4",
+              "text": "If a patient cannot attend, the clinic asks them to cancel rather than leave a space empty."
+            },
+            {
+              "id": "s5",
+              "text": "On busy mornings, the waiting-room display shows estimated delays; staff update it every thirty minutes."
+            },
+            {
+              "id": "s6",
+              "text": "Patients with urgent symptoms should speak directly to reception instead of waiting for a routine appointment."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "in advance",
+            "meaningEn": "before a particular time or event",
+            "meaningVi": "trước một thời điểm hoặc sự kiện đã nêu",
+            "sourceSentenceId": "s2"
+          },
+          {
+            "id": "t2",
+            "phrase": "routine appointment",
+            "meaningEn": "a scheduled non-urgent visit at the clinic",
+            "meaningVi": "cuộc hẹn khám thông thường, không khẩn cấp",
+            "sourceSentenceId": "s6"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In s2, Patients who need another time should call reception at least one day in advance, what does in advance mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "After the appointment has finished, when the time is free.",
+                "explanation": "Wrong because it means after the event, not with notice before the appointment time."
+              },
+              {
+                "id": "b",
+                "text": "Before the appointment time, with notice given ahead of time.",
+                "explanation": "Correct because it matches calling at least one day before so staff can reuse the slot."
+              },
+              {
+                "id": "c",
+                "text": "During the appointment, while speaking to reception.",
+                "explanation": "Wrong because it means during the visit, not with notice before the appointment time."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b correctly captures the before-with-notice meaning in s2."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses in advance correctly and naturally.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Please order the office supplies in advance so they arrive before the workshop.",
+                "explanation": "Correct because ordering the supplies ahead of time helps them arrive before the workshop."
+              },
+              {
+                "id": "b",
+                "text": "Please order the office supplies in advanced so they arrive before the workshop.",
+                "explanation": "Wrong because in advanced should be corrected to in advance."
+              },
+              {
+                "id": "c",
+                "text": "Please order the office supplies in advance for to arrive before the workshop.",
+                "explanation": "Wrong because for to arrive should be corrected to to arrive by removing for."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a is the only fully grammatical and natural use of in advance."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In s6, Patients with urgent symptoms should speak directly to reception instead of waiting for a routine appointment, what does routine appointment mean?",
+            "sourceSentenceIds": [
+              "s6"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "An urgent visit for sudden and serious symptoms.",
+                "explanation": "Wrong because it describes urgent care, not a regular non-urgent scheduled visit."
+              },
+              {
+                "id": "b",
+                "text": "A regular, non-urgent scheduled visit with a doctor.",
+                "explanation": "Correct because it matches a normal scheduled visit contrasted with urgent symptoms."
+              },
+              {
+                "id": "c",
+                "text": "A call to reception to change the date of a future appointment.",
+                "explanation": "Wrong because it is an administrative call, not a scheduled visit with a doctor."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b correctly captures the regular non-urgent visit meaning in s6."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses routine appointment correctly and naturally.",
+            "sourceSentenceIds": [
+              "s6"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "I booked a routine appointment for my annual health check next week.",
+                "explanation": "Correct because a routine appointment naturally describes a regular non-urgent check."
+              },
+              {
+                "id": "b",
+                "text": "I booked a routine appointments for my annual health check next week.",
+                "explanation": "Wrong because appointments should be corrected to singular appointment after a routine."
+              },
+              {
+                "id": "c",
+                "text": "I booked routine appointment for my annual health check next week.",
+                "explanation": "Wrong because routine appointment should be corrected to a routine appointment by adding a."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a is the only fully grammatical and natural use of routine appointment."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You are a team member organizing a workplace training session. Write a short message of 2-3 sentences to colleagues asking them to confirm attendance early so you can prepare materials. Use the phrase in advance.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "We are holding a training session on Friday morning. Please confirm your attendance in advance so I can prepare enough handouts.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used in advance correctly to ask for early confirmation.",
+              "I explain that early confirmation helps prepare materials."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "Codex AI-assisted editor synthesizing two independent model-route reviews; 2026-10-27T08:18:31Z. Two independent reviewers examined this exact payload hash, the corresponding source row and the lesson schema. Both reported 17/17 criteria PASS with no critical or uncertain findings. Review is AI-assisted editorial review, not human or learner review. Rights/authorship are supported only by local declarations and were not independently verified. Reviewer route requests: Luna (gpt-6-luna requested; runtime exposed only GPT-6 and did not expose configured route) and Terra (gpt-5.6-terra requested and confirmed; runtime label Codex GPT-6).",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": [
+        {
+          "severity": "minor",
+          "resolved": false,
+          "message": "Luna noted q3 option b says “with a doctor” while the source does not specify a provider, and two small prompt/explanation phrasings could be clearer (“after a routine” → “after the article a”; q1 prompt punctuation). Terra found no issue. Both reviewers still passed all 17 criteria and confirmed a unique correct answer; the remaining scope note is minor and does not affect meaning, safety or offline use."
+        }
+      ]
+    }
+  },
+  "sha256": "610f3a42419979718e155832953e79bf733e7cabeab8c25eec9145df021f9824"
+}

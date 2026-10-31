@@ -1,0 +1,224 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-fd14f5d3-1f53-4f59-b9a4-781b7f2e9856",
+    "version": 1,
+    "title": "Tracking Work and Planning Ahead",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original AI-assisted source; no personal learner data.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v2",
+      "generatedAt": "2026-10-27T00:28:39.186Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Tracking Work and Planning Ahead",
+        "objective": "Learners will understand and use keep track of and take into account in workplace and everyday contexts.",
+        "reading": {
+          "text": "Our team will keep track of customer requests during the software trial. We need to take into account the time required to train new staff before setting a launch date. The project manager will share a short progress report every Friday.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "Our team will keep track of customer requests during the software trial."
+            },
+            {
+              "id": "s2",
+              "text": "We need to take into account the time required to train new staff before setting a launch date."
+            },
+            {
+              "id": "s3",
+              "text": "The project manager will share a short progress report every Friday."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "keep track of",
+            "meaningEn": "to stay informed about something by monitoring it over time",
+            "meaningVi": "theo dõi để nắm được thông tin cập nhật về điều gì",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "take into account",
+            "meaningEn": "to consider something when making a decision or plan",
+            "meaningVi": "cân nhắc, tính đến điều gì khi đưa ra quyết định hoặc kế hoạch",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In the sentence 'Our team will keep track of customer requests during the software trial,' what does 'keep track of' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to monitor customer requests and stay informed about them over time.",
+                "explanation": "Correct: The team monitors customer requests to stay aware of them; making written records is one possible method, not part of the required meaning."
+              },
+              {
+                "id": "b",
+                "text": "It means to ignore customer requests and forget them quickly.",
+                "explanation": "Wrong: Ignoring requests is the opposite of monitoring them and staying informed. Written records are optional."
+              },
+              {
+                "id": "c",
+                "text": "It means to finish customer requests in one day without taking notes.",
+                "explanation": "Wrong: Completing requests is different from monitoring them over time; the phrase does not require written notes."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Keep track of means monitoring something to stay informed about it, as the team does with customer requests."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'keep track of' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "He keeps track on his working hours in a spreadsheet every week.",
+                "explanation": "This is wrong because it uses the incorrect preposition on instead of of."
+              },
+              {
+                "id": "b",
+                "text": "He keeps track of his working hours in a spreadsheet every week.",
+                "explanation": "Correct: He monitors his working hours; the spreadsheet is one way of keeping track of them."
+              },
+              {
+                "id": "c",
+                "text": "He keeps track his working hours in a spreadsheet every week.",
+                "explanation": "Wrong: The fixed expression is keep track of something; of is missing before his working hours."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only b uses keep track of; a substitutes on for of, and c omits of."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In the sentence 'We need to take into account the time required to train new staff before setting a launch date,' what does 'take into account' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to ignore the training time and set the date immediately.",
+                "explanation": "This is wrong because ignoring is the opposite of considering something in a plan."
+              },
+              {
+                "id": "b",
+                "text": "It means to finish the training in a few minutes without planning.",
+                "explanation": "This is wrong because it describes speed rather than considering a factor in a decision."
+              },
+              {
+                "id": "c",
+                "text": "It means to consider the training time when making the launch plan.",
+                "explanation": "This is correct because it matches considering something when making a decision or plan."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Only option C reflects considering training time when planning."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'take into account' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Please take into account the travel time when you plan your commute.",
+                "explanation": "This is correct because it means considering travel time when making a plan."
+              },
+              {
+                "id": "b",
+                "text": "Please take into account of the travel time when you plan your commute.",
+                "explanation": "This is wrong because it adds the extra preposition of after the fixed phrase."
+              },
+              {
+                "id": "c",
+                "text": "Please take account into the travel time when you plan your commute.",
+                "explanation": "Wrong: The fixed expression has the order take into account, not take account into."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only a uses take into account with the correct order and without an extra of."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are texting a friend who wants to buy a new laptop for college. Write 2-3 sentences giving friendly advice about what to consider. Use the phrase 'take into account'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "If you buy a laptop for college, you should take into account the battery life and weight. A lighter model with long battery life will be much easier to carry to classes.",
+            "selfCheck": [
+              "I used the exact phrase 'take into account'.",
+              "I wrote 2-3 sentences as friendly advice, not a workplace report.",
+              "I clearly state what factor should be considered."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "Codex delegated editorial adjudicator; cross-review gpt-6-astra + gpt-6.1-terra; 2026-10-27T04:19:06.852Z. Explicit delegated editorial approval decision after full source/meanings/options/explanations/transfer review and cross-model reconciliation. All critical/uncertain findings resolved. Astra reviewed independently; Terra disclosed prior historical pilot-review exposure. Original Meta outputs retained; edits are not new Meta responses. AI-assisted review only, no independent human review or learning-efficacy claim. Deployment not authorized.",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": [
+        {
+          "severity": "uncertain",
+          "resolved": true,
+          "message": "Current q2c omits of and q4c misorders account into, rather than relying on an assumed contradiction of intentions. Review of every current option and explanation confirms objective errors and unique correct answers."
+        },
+        {
+          "severity": "minor",
+          "resolved": true,
+          "message": "Revised q1b says monitoring and staying informed, then explicitly states written records are optional. It is consistent with a, c and the target gloss."
+        },
+        {
+          "severity": "minor",
+          "resolved": true,
+          "message": "The model now uses long battery life, the idiomatic expression for charge duration, eliminating the previous physical-length wording."
+        }
+      ]
+    }
+  },
+  "sha256": "750cc3cdd654b854fe38a09da6639116efa5cac6748e520bebc1c8168da48d35"
+}

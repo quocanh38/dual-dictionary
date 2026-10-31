@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 104,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after vanishing point in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover anatomy, retail and medical terminology, set theory, business, nautical history, computing, education and common learner expressions. Clarify outdated/register-sensitive meanings, technical contrasts, grammar patterns and British/North American variants.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 780,
+    "remainingRawOnlyAfter": 760
+  },
+  "selected": [
+    "vas deferens",
+    "vena cava",
+    "vending machine",
+    "venereal disease",
+    "venn diagram",
+    "venture capital",
+    "vertical integration",
+    "very light",
+    "vice versa",
+    "vietnam war",
+    "virginia creeper",
+    "virtual memory",
+    "virtual reality",
+    "visiting card",
+    "visiting professor",
+    "vital statistics",
+    "viva voce",
+    "vote down",
+    "waffle iron",
+    "waiting list"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

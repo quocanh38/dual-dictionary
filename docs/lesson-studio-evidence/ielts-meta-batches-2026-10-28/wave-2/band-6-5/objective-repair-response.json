@@ -1,0 +1,154 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "batchId": "wave-2",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+  "completedAt": "2026-10-28T03:01:31.155Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 3001,
+    "outputTokens": 5160,
+    "totalTokens": 8161
+  },
+  "latencyMs": 19988,
+  "result": {
+    "listening": {
+      "title": "Commuter Travel Survey Discussion",
+      "focus": "understanding seasonal patterns and survey limits",
+      "part": "Part 3",
+      "script": "Maya: Have you finished sorting the results from our commuter travel survey for the geography project?\nJonas: Almost. We have 340 completed questionnaires — actually, sorry, 380. I missed the evening-class returns when I counted yesterday.\nMaya: That is a solid return. Just to confirm, we targeted staff and second-year students living between three and fifteen kilometres from campus?\nJonas: Yes, and we asked about three main options: regular bus use, cycling, and car-sharing. We sent the same online form in February and again in June to compare cold and warm months.\nMaya: What did the comparison show?\nJonas: The clearest shift was between bus and bicycle. Bus use was reported by 42% of respondents in February but only 28% in June. Cycling went the opposite way, from 11% up to 31%. Car-sharing stayed fairly steady at about 18 to 20% in both months.\nMaya: Did people explain why they changed?\nJonas: In the follow-up interviews, summer cyclists said the riverside path was quicker and more enjoyable, while winter cyclists mentioned icy lanes and darkness as deterrents. Bus passengers were less concerned about ticket prices than about late morning arrivals in February. Car-sharers said splitting fuel costs mattered all year, although limited parking permits restricted wider uptake.\nMaya: We need to be cautious about the seasonal claim, though. Our June sample included far fewer first-year students because many had left for field placements.\nJonas: Exactly. So the summer figures mainly represent continuing students and staff. We should state that limitation clearly rather than suggesting the whole university cycles more in summer.\nMaya: Agreed. What about the proposed subsidised bus pass?\nJonas: Support was conditional. Around 60% said they might use buses more, but only if services ran at least every fifteen minutes before nine in the morning. Without that frequency, most said a cheaper fare alone would not alter their routine.\nMaya: So our recommendation should connect any discount to timetable reliability, not present it as a solution on its own.\nJonas: Right. I will draft that section and suggest collecting October data to see if cycling declines when term restarts and daylight shortens.\nMaya: Good idea. The tutor also asked for response rates by group, so please include that table as an appendix.",
+      "questions": [
+        {
+          "title": "Question 1",
+          "prompt": "What is the final total of completed questionnaires?",
+          "options": [
+            "340 completed forms",
+            "360 completed forms",
+            "380 completed forms",
+            "420 completed forms"
+          ],
+          "answer": 2,
+          "explanation": "Jonas corrects 340 to 380 after including evening-class returns. The strongest distractor 340 fails because it was the initial miscount before the correction."
+        },
+        {
+          "title": "Question 2",
+          "prompt": "What comparison was the survey designed to make?",
+          "options": [
+            "Travel by bus, cycling and car-sharing in February versus June",
+            "Travel costs for staff versus second-year students",
+            "Parking permits for cars versus bicycles",
+            "Evening-class attendance in winter versus summer"
+          ],
+          "answer": 0,
+          "explanation": "Jonas confirms three travel options and the same form in February and June to compare cold and warm months. The staff-versus-students distractor fails because those groups were both included in the same sample, not compared on costs."
+        },
+        {
+          "title": "Question 3",
+          "prompt": "What change was found between February and June?",
+          "options": [
+            "Car-sharing rose sharply while bus use stayed stable",
+            "Bus use fell while cycling rose markedly",
+            "Cycling fell while car-sharing replaced bus travel",
+            "Bus and cycling both increased equally"
+          ],
+          "answer": 1,
+          "explanation": "The script gives bus use 42% to 28% and cycling 11% to 31%, with car-sharing steady. The car-sharing-rose option fails because car-sharing is explicitly described as fairly steady at 18 to 20%."
+        },
+        {
+          "title": "Question 4",
+          "prompt": "What limitation do the speakers identify in the seasonal comparison?",
+          "options": [
+            "The February form used different questions",
+            "Bus arrival times were not recorded",
+            "Interview answers were too short to analyse",
+            "The June sample under-represented first-year students"
+          ],
+          "answer": 3,
+          "explanation": "Maya and Jonas agree June had far fewer first-years due to placements, so summer figures mainly reflect continuing students and staff. The different-questions distractor fails because they stress they sent the same form in both months."
+        },
+        {
+          "title": "Question 5",
+          "prompt": "What is the speakers' conclusion about a subsidised bus pass?",
+          "options": [
+            "It would increase bus use only if morning frequency improved",
+            "It is unnecessary because most students prefer cycling",
+            "It should be offered only to car-sharers",
+            "It would succeed because price is the main concern"
+          ],
+          "answer": 0,
+          "explanation": "Jonas reports conditional support: cheaper fare alone would not change habits without buses every 15 minutes before 9 a.m. The price-is-main-concern distractor fails because passengers were less concerned about price than late arrivals."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Comparing Two Coastal Wetland Restorations",
+      "focus": "evaluating evidence and limits of recovery claims",
+      "passage": "Coastal wetlands reduce storm damage, store carbon and provide habitat, but many have been drained for farming or blocked by seawalls. A recent university study compared two restoration projects on the same estuary that used different approaches. North Marsh, a 60-hectare site, was reconnected to the tide in 2019 when a section of seawall was lowered. South Inlet, a 45-hectare site, remained behind a bank but was replanted with native saltmarsh grasses between 2020 and 2021 and fenced to reduce grazing by livestock.\nResearchers monitored both sites from 2020 to 2024. They measured plant cover in fixed plots, counted waterbirds monthly, and recorded sediment height to track whether the marsh surface was keeping pace with sea-level rise. Baseline data before restoration were incomplete, particularly at South Inlet, where early plant surveys used different plot sizes.\nBy 2024, North Marsh showed faster vegetation spread. Native cover increased from 15% to 68% of sampled plots, and winter counts recorded 22 waterbird species, compared with 12 before breaching. Sediment accumulated at an average of 7 millimetres per year, which the authors describe as sufficient to match current local sea-level rise. South Inlet developed more slowly. Planted grasses survived well inside fences, with 74% survival after three years, but cover between planted rows remained patchy at 34%. Bird diversity rose modestly from 10 to 14 species, mostly common reeds dwellers rather than the rarer waders seen at North Marsh.\nThe authors caution that direct comparison is limited by different starting conditions. North Marsh had lower elevation and more frequent tidal flooding, which favours rapid colonisation but also makes young plants vulnerable to storms. In fact, a severe storm in 2022 washed away nearly a third of new seedlings at North Marsh, while fenced plots at South Inlet lost less than 10%. Maintenance also differed: fences at South Inlet required regular repair, and two unfenced trial plots were heavily grazed and failed to establish.\nOverall, the authors claim that success should be judged by functional resilience — the ability to support wildlife and maintain elevation under disturbance — rather than by plant cover alone. They illustrate this general claim with the example of North Marsh, where high cover in 2021 did not prevent heavy storm losses the following year. They conclude that tidal reconnection can produce quicker ecological gains where conditions allow, while planting with protection may be more predictable on higher, sheltered ground, but that longer monitoring beyond five years is needed to assess stability under more frequent storms.",
+      "questions": [
+        {
+          "title": "Question 1",
+          "prompt": "What was the main design of the study?",
+          "options": [
+            "A laboratory test of saltmarsh grass growth",
+            "A comparison of two restoration methods on the same estuary",
+            "A survey of farmers' views on seawalls",
+            "A history of sea-level rise since 2019"
+          ],
+          "answer": 1,
+          "explanation": "The passage introduces North Marsh tidal reconnection and South Inlet replanting on the same estuary. The laboratory-test distractor fails because all measurements were field monitoring of plots, birds and sediment."
+        },
+        {
+          "title": "Question 2",
+          "prompt": "How did the restoration methods differ?",
+          "options": [
+            "Both sites removed seawalls in the same year",
+            "Both sites relied only on natural seed dispersal",
+            "One site restored tidal flow while the other planted and fenced grasses",
+            "One site focused on birds while the other focused on sediment"
+          ],
+          "answer": 2,
+          "explanation": "North Marsh lowered a seawall section in 2019 to restore tidal flow, while South Inlet stayed behind a bank and was replanted with fenced grasses in 2020-2021. The birds-versus-sediment distractor fails because researchers measured plants, birds and sediment at both sites."
+        },
+        {
+          "title": "Question 3",
+          "prompt": "According to the 2020-2024 results, which contrast is accurate?",
+          "options": [
+            "North Marsh gained cover and bird diversity faster, but suffered greater storm seedling loss",
+            "South Inlet had higher plant cover and more rare waders than North Marsh",
+            "Both sites reached identical plant cover and sediment rates",
+            "North Marsh had lower sediment gain and fewer bird species"
+          ],
+          "answer": 0,
+          "explanation": "North Marsh reached 68% cover and 22 species versus South Inlet's 34% cover and 14 species, but lost a third of seedlings in the 2022 storm compared with under 10% in fenced plots. The South-Inlet-higher distractor fails because its cover was patchy and its birds were mostly common species."
+        },
+        {
+          "title": "Question 4",
+          "prompt": "What is the author's general claim, and how does the North Marsh storm example function?",
+          "options": [
+            "Planting always fails; the storm proves fences are useless",
+            "Storms never affect fenced sites; the example proves total protection",
+            "Success should mean resilience under disturbance, not cover alone; the 2021-2022 loss illustrates high cover without stability",
+            "Sea-level rise has stopped; sediment gain proves the threat is over"
+          ],
+          "answer": 2,
+          "explanation": "The authors claim functional resilience matters more than cover alone, using high 2021 cover followed by heavy 2022 losses as an illustration. The planting-always-fails distractor fails because fenced planting had 74% survival and is described as more predictable on sheltered ground."
+        },
+        {
+          "title": "Question 5",
+          "prompt": "What limited inference is supported about future stability?",
+          "options": [
+            "Both projects are proven stable for the next fifty years",
+            "Longer monitoring beyond five years is needed because storm frequency may test early gains",
+            "South Inlet will certainly develop rare wader habitat within one year",
+            "Incomplete baselines prove the results have no value"
+          ],
+          "answer": 1,
+          "explanation": "The conclusion calls for monitoring beyond five years to assess stability under more frequent storms, a qualified inference. The proven-stable-for-fifty-years distractor fails because the authors stress different starting conditions, incomplete baselines and storm vulnerability."
+        }
+      ]
+    }
+  }
+}

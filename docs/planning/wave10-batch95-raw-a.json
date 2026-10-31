@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 95,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after switch on in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover business/IT roles and processes, tableware and traffic vocabulary, net income, and high-frequency take phrasal verbs. Separate senses by grammatical pattern and explain regional wording and transitive separability.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 960,
+    "remainingRawOnlyAfter": 940
+  },
+  "selected": [
+    "systems analysis",
+    "systems analyst",
+    "table mat",
+    "table napkin",
+    "tail back",
+    "tail end",
+    "tail light",
+    "take away",
+    "take back",
+    "take down",
+    "take-home pay",
+    "take in",
+    "take off",
+    "take out",
+    "take over",
+    "take up",
+    "talent scout",
+    "tap dance",
+    "tape deck",
+    "tape measure"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

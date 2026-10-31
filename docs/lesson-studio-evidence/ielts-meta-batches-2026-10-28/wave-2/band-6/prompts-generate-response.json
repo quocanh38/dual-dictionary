@@ -1,0 +1,83 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6",
+  "batchId": "wave-2",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+  "completedAt": "2026-10-28T02:53:59.872Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 515,
+    "outputTokens": 4694,
+    "totalTokens": 5209
+  },
+  "latencyMs": 17114,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Science-Fair Volunteer Team Table",
+        "focus": "paraphrase data and make clear comparisons with linked ideas",
+        "prompt": "The table below shows the number of volunteers and total volunteer hours for three teams at the Riverside Public Science Fair in March 2025 and March 2026. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. This is original practice material, not an official test question. Table data: Welcome Desk - 2025: 18 volunteers, 216 hours; 2026: 22 volunteers, 286 hours. Exhibit Support - 2025: 25 volunteers, 375 hours; 2026: 28 volunteers, 448 hours. Clean-up Crew - 2025: 15 volunteers, 135 hours; 2026: 20 volunteers, 200 hours. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Station Shared Bicycle Parking Counts",
+        "focus": "correct details and compare changes over time with linked sentences",
+        "prompt": "The chart below shows the average number of bicycles parked per day in the shared parking area at Maple Grove Station in 2023, 2024 and 2025, divided into morning (7-10 am) and evening (5-8 pm). Summarise the information by selecting and reporting the main features, and make comparisons where relevant. This is original practice material, not an official test question. Data: 2023 - morning 120 bicycles, evening 95 bicycles; 2024 - morning 165 bicycles, evening 140 bicycles; 2025 - morning 210 bicycles, evening 195 bicycles. The parking area has 230 marked spaces. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · College Career-Guidance Event Discussion",
+        "focus": "paraphrase opinions and link ideas with reasons and examples",
+        "prompt": "Many colleges organise an annual career-guidance event where local workers visit and talk to students about different jobs. Some people say these events are more useful than classroom lessons about careers, while others say they use too much time and money. Discuss both views and give your own opinion. This is original practice material, not an official test question. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Public Science-Fair Volunteer Team Discussion",
+        "focus": "compare two views and correct common misunderstandings with clear organisation",
+        "prompt": "In some towns, public science fairs depend on teams of volunteers rather than paid staff. Some people believe volunteering in this way is good for both the community and the volunteers themselves. Others think important public events should not depend on unpaid work. Discuss both views and give your own opinion. This is original practice material, not an official test question. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Shared Bicycle Parking at Stations Discussion",
+        "focus": "evaluate choices and compare spending priorities with linked arguments",
+        "prompt": "In many cities, railway stations now provide large shared bicycle parking areas to encourage people to cycle to the station instead of driving. Some people think cities should spend more money on this kind of parking, while others think the money should be used to improve bus and train services instead. Discuss both views and give your own opinion. This is original practice material, not an official test question. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Travel and Bicycles",
+        "focus": "paraphrase familiar habits and give linked short answers",
+        "prompt": "This is original practice material. Please answer in short, natural answers of 2-4 sentences. 1. How do you usually travel to college, work, or the town centre? 2. Is cycling popular where you live? Why or why not? 3. Have you ever parked a bicycle at a station or public parking area? 4. Would you like to use a shared bicycle in the future? Why or why not? 5. Has the way you travel changed in the last few years?"
+      },
+      {
+        "task": "Part 1 · College Events and Advice",
+        "focus": "describe familiar events and link ideas with simple reasons",
+        "prompt": "This is original practice material. Please answer in short, natural answers of 2-4 sentences. 1. Did your school or college ever organise a career-guidance event? 2. What kind of job advice is most useful for students? 3. Do you enjoy working in a team with other students or volunteers? 4. Have you ever visited a science fair or public exhibition? 5. Do you prefer learning from talks, books, or practical activities? Why?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Science Fair You Visited",
+        "focus": "retell corrected details in order and explain personal meaning",
+        "prompt": "This is original practice material. Describe a science fair or public science event you visited or helped with. You have one minute to prepare and should speak for one to two minutes. • What the event was and where it took place • What you saw or did there • Who you went with or worked with • And explain what you learned from the event."
+      },
+      {
+        "task": "Part 2 · Cue card - Useful Career Advice",
+        "focus": "paraphrase advice received and compare before and after",
+        "prompt": "This is original practice material. Describe a useful piece of career advice you received at college, at work, or at a guidance event. You have one minute to prepare and should speak for one to two minutes. • When and where you received the advice • Who gave you the advice • What the advice was • And explain why you found it useful or not useful."
+      },
+      {
+        "task": "Part 3 · Community Volunteering and Shared Transport",
+        "focus": "give reasons and evaluate solutions for familiar community topics",
+        "prompt": "This is original practice material for discussion. Please give reasons and evaluate ideas, not memorised facts. 1. Why do some people choose to join a volunteer team for public events like science fairs? 2. What are the advantages and disadvantages for students of volunteering compared with part-time paid work? 3. How can colleges make career-guidance events more useful for all students? 4. Should cities spend more on shared bicycle parking at stations or on other transport services? Why? 5. How might shared bicycle parking change the way people travel in the future?"
+      }
+    ]
+  }
+}

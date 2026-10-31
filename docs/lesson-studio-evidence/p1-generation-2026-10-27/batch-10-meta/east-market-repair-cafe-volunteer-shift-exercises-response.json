@@ -1,0 +1,164 @@
+{
+  "result": {
+    "title": "Repair Café Work: Shifts and Supplies",
+    "objective": "Learners will understand and correctly use sign up for a shift and runs out of in workplace contexts.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s3 'New volunteers sign up for a shift using the schedule beside the entrance,' what does 'sign up for a shift' mean?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "They write their names to register to work during a particular period of time.",
+            "explanation": "This is correct because it paraphrases registering to work during a particular period."
+          },
+          {
+            "id": "b",
+            "text": "They arrive late and leave their work to other volunteers.",
+            "explanation": "This is wrong because the sentence describes registering for work, not arriving late."
+          },
+          {
+            "id": "c",
+            "text": "They cancel their work plan and go home early.",
+            "explanation": "This is wrong because the sentence describes joining a work period, not cancelling it."
+          },
+          {
+            "id": "d",
+            "text": "They check tools for damage after the session ends.",
+            "explanation": "This is wrong because checking tools describes the shift lead's task, not signing up."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "In s3 the phrase means registering to work during a particular period."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'sign up for a shift' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "I signed up for a shift on Saturday morning to help at the food bank.",
+            "explanation": "This is correct because the verb form, article, and infinitive are all natural."
+          },
+          {
+            "id": "b",
+            "text": "She sign up for a shift every weekend at the community clinic.",
+            "explanation": "This is wrong because it should be signs up instead of sign up with She."
+          },
+          {
+            "id": "c",
+            "text": "They signed up for a shift to helping at the shelter yesterday.",
+            "explanation": "This is wrong because it should be to help instead of to helping."
+          },
+          {
+            "id": "d",
+            "text": "We have signed up for shift on Friday evening at the library.",
+            "explanation": "This is wrong because it should be for a shift instead of for shift."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one sentence uses the phrase with correct grammar and collocation."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s5 'If the café runs out of a common part, volunteers record the item,' what does 'runs out of' mean?",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It orders more of the part before the stock becomes low.",
+            "explanation": "This is wrong because ordering more happens after stock is gone, not the meaning itself."
+          },
+          {
+            "id": "b",
+            "text": "It has no more of the part left because it has all been used.",
+            "explanation": "This is correct because it paraphrases having nothing left after use."
+          },
+          {
+            "id": "c",
+            "text": "It finds a replacement part in the labelled tray.",
+            "explanation": "This is wrong because finding a part is different from having none left."
+          },
+          {
+            "id": "d",
+            "text": "It repairs the part quickly for the waiting visitor.",
+            "explanation": "This is wrong because repairing describes fixing, not having no stock left."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "In s5 the phrase means having no more left after all has been used."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'runs out of' naturally and correctly.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The shop run out of milk yesterday afternoon and closed early.",
+            "explanation": "This is wrong because it should be ran out instead of run out for yesterday."
+          },
+          {
+            "id": "b",
+            "text": "Our office runs out of printer paper at the end of every month.",
+            "explanation": "This is correct because the present simple form agrees with the routine meaning."
+          },
+          {
+            "id": "c",
+            "text": "We runs out of bread every morning at the bakery counter.",
+            "explanation": "This is wrong because it should be run instead of runs with We."
+          },
+          {
+            "id": "d",
+            "text": "She runs out of time yesterday during the final test.",
+            "explanation": "This is wrong because it should be ran out instead of runs out for yesterday."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only one sentence uses the phrase with correct tense and subject agreement."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are a roommate leaving a note for your housemate about kitchen supplies. Write 2–3 sentences explaining what is gone and what you will do next.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "sampleAnswer": "We ran out of cooking oil last night. I will buy a new bottle after class today.",
+        "selfCheck": [
+          "I wrote 2–3 sentences.",
+          "I used a natural form of runs out of correctly.",
+          "I said what is gone and what I will do next."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1035,
+    "outputTokens": 5041,
+    "totalTokens": 6076
+  },
+  "status": 200,
+  "latencyMs": 26712,
+  "model": "muse-spark-1.3"
+}

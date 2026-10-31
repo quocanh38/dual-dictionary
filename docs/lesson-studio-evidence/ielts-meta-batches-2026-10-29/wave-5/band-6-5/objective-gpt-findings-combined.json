@@ -1,0 +1,46 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-5-band-6-5-listening-04",
+      "issue": "The answer key is 3, which selects “Surveys were conducted in different years.” The script gives no such difference. The explanation supports option 1 (“Eastfield had a low response rate of 35%”), which is the defensible answer. Correct the key to 1.",
+      "severity": "critical"
+    },
+    {
+      "item": "normalizationFindings.answerPositions",
+      "issue": "The payload flags that neither objective skill uses all four answer positions. Listening keys are [1,0,1,3,1] (position 2 absent); Reading keys are [0,1,1,1,0] (positions 2 and 3 absent). Rebalance answer positions across each five-item set to reduce a predictable response pattern, while preserving valid keys.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-6-5-listening-04",
+      "issue": "Wrong key: answer3 selects surveys conducted in different years, which is unsupported. Both the complete dialogue and explanation support index1, Eastfield had a low35% response rate. Correct the key, then revalidate it after any answer-position shuffling.",
+      "severity": "critical"
+    },
+    {
+      "item": "normalizationFindings; Listening and Reading option/key distributions",
+      "issue": "Both unresolved structural findings are real: Listening keys cover only indices0,1,3 (and correcting listening04 currently leaves only0,1); Reading keys cover only0,1. Neither five-item set covers all four answer positions. Reorder options and synchronise keys/explanations without changing meaning; verify all indices0–3 in each skill.",
+      "severity": "critical"
+    },
+    {
+      "item": "sharedContexts.listening.script; ielts-meta-wave-5-band-6-5-listening-02",
+      "issue": "The measured eight-degree temperature difference lacks Celsius/Fahrenheit units. Surface-versus-air distinction and comparative key are otherwise clear; specify degrees Celsius for scientific precision.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "sharedContexts.reading.passage",
+      "issue": "14to17 is21.43%, so about22% is loose approximation; about21% or just over21% is more accurate. This does not change any key.",
+      "severity": "minor",
+      "kind": "reviewer observation to address where safe"
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Listening answer positions do not cover all four options.",
+      "severity": "critical"
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Reading answer positions do not cover all four options.",
+      "severity": "critical"
+    }
+  ]
+}

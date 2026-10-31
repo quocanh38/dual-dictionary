@@ -1,0 +1,10 @@
+{
+  "wave": 10,
+  "batch": 79,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after see through; reviewed against local OALD 10/LDOCE 6. The unusual catalogue headword `self, will` was resolved against LDOCE's entry for British writer Will Self and explicitly treated as a name, not the unrelated term self-will. All Vietnamese definitions, usage notes and examples are independently written.",
+  "selectionRationale": "Prioritize startup, business, transport, services and phrasal-verb vocabulary; clarify US/UK terms, financial/legal senses, and the inverted surname-first display of a proper-name entry.",
+  "counts": {"selected":20,"rawPagesUpgraded":20,"rawOnlyBefore":1280,"remainingRawOnlyAfter":1260},
+  "selected": ["seed money","select committee","self-raising flour","self, will","sell off","sell out","seller's market","selling point","send off","send up","sense organ","septic tank","sergeant major","serial port","service area","service charge","service road","service station","set aside","set back"]
+}

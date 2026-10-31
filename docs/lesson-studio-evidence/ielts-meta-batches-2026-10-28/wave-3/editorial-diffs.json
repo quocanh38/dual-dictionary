@@ -1,0 +1,36 @@
+{
+  "editor": "AI-assisted editor",
+  "purpose": "Resolve structural normalization findings without changing the evidence basis or Meta source responses.",
+  "changes": [
+    {
+      "stage": "band-5",
+      "itemIds": ["ielts-meta-wave-3-band-5-speaking-03", "ielts-meta-wave-3-band-5-speaking-04"],
+      "change": "Reformatted the existing Part 2 cue-card prompts from inline hyphen-separated text into visible, separate bullet points.",
+      "reason": "The normalizer requires visible cue-card bullets; all four original prompt cues and the task meaning were preserved."
+    },
+    {
+      "stage": "band-6-5",
+      "itemIds": ["ielts-meta-wave-3-band-6-5-reading-05"],
+      "change": "Moved the correct option text from index 0 to index 3 and changed the answer key from 0 to 3.",
+      "reason": "The normalizer requires answer positions across all four choices; wording, evidence and explanation were preserved."
+    },
+    {
+      "stage": "band-7",
+      "itemIds": ["ielts-meta-wave-3-band-7-listening-01"],
+      "change": "Moved the correct option text from index 1 to index 3 and changed the answer key from 1 to 3.",
+      "reason": "The normalizer requires answer positions across all four choices; wording, evidence and explanation were preserved."
+    },
+    {
+      "stage": "band-7",
+      "itemIds": ["ielts-meta-wave-3-band-7-reading-05"],
+      "change": "Reordered the correct option text from the Meta response's index 0 to index 3; the answer field was set to index 2 during structural answer-position balancing.",
+      "reason": "The final cross-review found that the recorded answer index did not match the reordered correct option. The answer-key correction is recorded separately below."
+    },
+    {
+      "stage": "band-7",
+      "itemIds": ["ielts-meta-wave-3-band-7-reading-05"],
+      "change": "Corrected the answer key from index 2 to index 3, matching the correct option. Passage, question, option wording and explanation are preserved.",
+      "reason": "GPT-6-Luna and GPT-5.6-Terra independently confirmed that the passage and explanation support option index 3 and contradict the previous key."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "batchId": "wave-4",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-28-wave-4-v2",
+  "completedAt": "2026-10-28T08:31:01.135Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2739,
+    "outputTokens": 3879,
+    "totalTokens": 6618
+  },
+  "latencyMs": 12622,
+  "reasoningEffort": "low",
+  "maxOutputTokens": 32768,
+  "result": {
+    "listening": {
+      "title": "Evaluating the Campus Peer-Support Programme",
+      "focus": "Understanding evaluation findings and limitations",
+      "part": "Part 3",
+      "script": "Maya: So for our psychology methods presentation, we need to summarise the evaluation of the campus peer-support programme. Do you remember why it was set up? Josh: Yes, the counselling service was overloaded last year, so the university trained second-year volunteers to offer weekly listening sessions for first-year students feeling isolated. Maya: Right, mainly loneliness and study stress, not clinical treatment. I looked at the mid-year report. They ran an online survey and two focus groups. Josh: How many students actually responded to the survey? I wrote down two hundred. Maya: Actually, wait — the report first says two hundred were invited, but only one hundred and eighty completed it. So the response rate was still high, about ninety percent. Josh: Got it, one-eighty completed. What did they find? Maya: Overall satisfaction was quite positive. Around three-quarters said they felt more connected after four sessions. But the academic impact was less clear. Josh: You mean grades didn't really improve? Maya: Exactly. The report says there was no significant difference in average coursework marks between users and non-users. The authors suggest four sessions may be too short to affect performance. Josh: That makes sense. Did the focus groups explain why some students stopped coming? Maya: Yes. Several mentioned timetable clashes with part-time jobs, and a few said they wanted more practical study advice rather than just listening. One student said she expected tutoring, which was never the aim. Josh: So there's a mismatch in expectations. What limitation should we highlight? Maya: The biggest one is selection bias. Students chose to join, so they may have been more motivated than average. The report admits it cannot prove the programme caused the improvement in wellbeing. Josh: And it only covered one term, from October to December, so we don't know if benefits last. Maya: Perfect. Let's conclude that the evidence supports social benefits, but claims about academic results should remain cautious until a longer controlled study is done.",
+      "questions": [
+        {
+          "title": "Q1",
+          "prompt": "Why was the peer-support programme originally introduced?",
+          "options": [
+            "To replace professional counselling services",
+            "To reduce pressure on counselling services",
+            "To improve first-year examination results",
+            "To train counsellors for clinical work"
+          ],
+          "answer": 1,
+          "explanation": "The overloaded service prompted volunteer listening sessions, not replacement. The grades option confuses social support with academic aims."
+        },
+        {
+          "title": "Q2",
+          "prompt": "What is corrected about the survey figures?",
+          "options": [
+            "Only 180 of 200 invited completed it",
+            "Only 90 of 200 invited completed it",
+            "200 volunteers completed the training",
+            "180 volunteers left the programme"
+          ],
+          "answer": 0,
+          "explanation": "Maya corrects 200 invited to 180 completions, about ninety percent. The 90 figure mistakes the percentage rate for a count."
+        },
+        {
+          "title": "Q3",
+          "prompt": "What was the main academic finding?",
+          "options": [
+            "Users gained significantly higher coursework marks",
+            "Four sessions raised grades substantially",
+            "No clear difference in coursework marks",
+            "Non-users performed better than users"
+          ],
+          "answer": 2,
+          "explanation": "No significant mark difference was found, possibly because exposure was short. The higher-marks option overstates this qualified result."
+        },
+        {
+          "title": "Q4",
+          "prompt": "Why did some students stop attending sessions?",
+          "options": [
+            "Volunteers lacked listening skills",
+            "Sessions were held too frequently",
+            "Support groups were too large",
+            "Sessions clashed with work commitments"
+          ],
+          "answer": 3,
+          "explanation": "Timetable clashes with part-time jobs are stated directly. The skills option is unsupported; students wanted tutoring instead."
+        },
+        {
+          "title": "Q5",
+          "prompt": "What limitation of the evaluation is emphasised?",
+          "options": [
+            "Focus groups were never conducted",
+            "Participants self-selected into the programme",
+            "Only volunteers were surveyed",
+            "The term studied was unusually quiet"
+          ],
+          "answer": 1,
+          "explanation": "Self-selected joiners may be more motivated, blocking causal claims. The volunteers-only option misidentifies who completed the survey."
+        }
+      ]
+    },
+    "reading": {
+      "title": "How Reliable Are Low-Cost Air-Quality Monitors?",
+      "focus": "Comparing evidence and recognising limitations",
+      "passage": "Cities increasingly rely on low-cost air-quality sensors to supplement official monitoring stations. Costing under three hundred dollars, these portable devices promise street-level data on fine particles known as PM2.5. A recent university study compared three popular models, labelled A, B and C, against a reference-grade analyser over twelve weeks in autumn. All three were placed on the same rooftop to ensure identical exposure to traffic and weather. The team recorded hourly averages and flagged periods of rain, fog and nearby construction. In dry, stable conditions, Models A and B tracked the reference instrument closely, with average errors below fifteen percent. Model C consistently overestimated pollution, particularly in the morning, suggesting a calibration problem rather than random variation. The pattern changed markedly during humid weeks. When relative humidity exceeded eighty percent, all low-cost sensors reported higher values than the reference analyser. The researchers attribute this to water droplets being mistaken for particles by the optical counting method. Model A included a simple humidity correction in its software, which reduced but did not eliminate the bias. Model B had no correction, so its readings doubled on two foggy nights, even though reference levels remained moderate. These results illustrate a broader trade-off. Low-cost monitors provide far denser spatial coverage than the sparse official network, revealing differences between busy roads and parks that a single station would miss. However, their accuracy depends strongly on environmental conditions and maintenance. Dust accumulation on the sensor inlet, for example, gradually lowered readings in week ten until the devices were cleaned. Technicians also found that low battery voltage on cold nights slightly slowed response times, although normal function returned after recharging. Wind direction was logged to check for interference from nearby building work, but no consistent effect on afternoon peaks was observed. The authors therefore argue that low-cost sensors are best viewed as complementary tools, not replacements for reference stations. They recommend regular co-location checks, where portable units are placed beside an official station to adjust their output, and transparent reporting of humidity and cleaning dates. As an example, the study describes a community group that mapped pollution near a school using Model A. The group correctly identified higher exposure during drop-off hours, but its absolute numbers were about twenty percent too high on damp days. The authors stress that this does not invalidate community monitoring; it means results should be interpreted as indicating patterns rather than precise legal exceedances. In conclusion, with careful calibration and qualified interpretation, low-cost monitors can extend public understanding, provided users acknowledge their limits.",
+      "questions": [
+        {
+          "title": "Q1",
+          "prompt": "What was the design of the university comparison?",
+          "options": [
+            "Three models beside a reference analyser",
+            "One sensor tested in three cities",
+            "Three reference stations on one roof",
+            "Twelve models tested for one week"
+          ],
+          "answer": 0,
+          "explanation": "Three models shared a rooftop with one reference instrument for twelve weeks. The stations option reverses test and reference roles."
+        },
+        {
+          "title": "Q2",
+          "prompt": "How did Models A and B perform when dry?",
+          "options": [
+            "Both failed without humidity correction",
+            "Only Model C gave stable readings",
+            "Both matched reference within 15% error",
+            "All models doubled foggy-night values"
+          ],
+          "answer": 2,
+          "explanation": "Average errors below fifteen percent are reported for A and B in stable air. The doubling describes Model B only during humidity."
+        },
+        {
+          "title": "Q3",
+          "prompt": "What can be inferred about Model B on foggy nights?",
+          "options": [
+            "Its high readings reflected real pollution spikes",
+            "Its readings were inflated by moisture",
+            "Its software correction worked effectively",
+            "Its inlet was blocked by dust"
+          ],
+          "answer": 1,
+          "explanation": "Reference levels stayed moderate while B doubled, implying moisture misreading. The real-spike option ignores that reference comparison."
+        },
+        {
+          "title": "Q4",
+          "prompt": "What is the authors' main claim illustrated by the school example?",
+          "options": [
+            "Sensors should replace official stations",
+            "School drop-off causes no real pollution",
+            "Model A is accurate in all weather",
+            "Community data show patterns not precise levels"
+          ],
+          "answer": 3,
+          "explanation": "The example shows correct pattern detection but 20% overestimation on damp days. The replacement option contradicts the complementary-tools argument."
+        },
+        {
+          "title": "Q5",
+          "prompt": "What do the authors recommend for reliable use?",
+          "options": [
+            "Use sensors only in autumn",
+            "Regular calibration checks and open reporting",
+            "Clean sensors once per year",
+            "Avoid mapping near busy roads"
+          ],
+          "answer": 1,
+          "explanation": "Co-location checks and reporting humidity and cleaning are explicitly recommended. The autumn-only option mistakes the study period for a usage rule."
+        }
+      ]
+    }
+  }
+}

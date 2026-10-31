@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "672991f1a60ff5f8e66ddec90fb44bbda34db070ce7e06a9fabf461c14e953c3",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:06:09Z",
+  "note": "Independent full-pack review of the exact packSha256 listed above, including both target phrases, all options and explanations, citations, and transfer. Rights/authorship were checked only as declarations in the source manifest; they were not independently verified. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Matched this pack to the source manifest: it declares an AI-assisted original educational passage, distribution authorization, and no learner personal data. These are project declarations checked for consistency, not independently verified ownership/rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“bring forward” occurs in cited s1 for moving the equipment check by one day earlier; the contextual sense is supported."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately states moving an event to an earlier time or date, matching the equipment-check context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“dời lên sớm hơn” is concise, natural Vietnamese for moving something earlier and includes diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“put off” occurs in cited s3 for delaying the optional walkthrough until more volunteers are available."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately describes postponing something to a later time and matches s3."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“hoãn lại” is natural and accurate Vietnamese for postponing, with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone moves the check earlier; B moves it later and C cancels it, both contrary to “bring forward” in s1."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All options and stem explanation correctly distinguish earlier rescheduling from later delay and cancellation."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is grammatical and uses the phrase for an earlier date; B has “She bring” agreement error and C incorrectly uses “on next Tuesday.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A explanation matches its meaning and grammar; B identifies subject agreement; C correctly notes that “next Tuesday” takes no “on” here."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B alone means postponing; A describes the opposite and C permanent cancellation, which the source does not assert."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A and C explanations accurately distinguish earlier start and cancellation from postponement; B and stem match the delayed-until context."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A is natural and grammatical; B has subject-verb agreement error (“They has”); C has incorrect “in Monday morning.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations identify the actual errors in B and C; A and stem accurately define postponing without overgeneralization."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Prompt moves from coordinating volunteer rota/equipment tasks to an office assistant emailing a client about a product meeting and proposing a new arrangement."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Model email is natural, uses “put off” to postpone and offers a later date. Checklist checks length, target meaning, and new message purpose; no automatic writing score."
+    }
+  ],
+  "findings": []
+}

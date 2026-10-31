@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "b7893fc59b476ea00c02e6ba3a97001c3f578023571f8ed35ff955e7395ae2aa",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 316/434 words. All 10 objective answers are uniquely supported and explanations appropriately distinguish examples, claims, corrections and qualified inferences. Wetland Site B’s correction from 42 to 32 is explicit and the key matches; the library passage’s 2018–23 and 2021–23 trends, group figures and survey-response timing are internally consistent. Task 1 projections/uncertainty ranges/costs and survey sample/response limitations are fully visible; no arithmetic inconsistency found. Writing and Speaking word targets/timing, Part 2 cue card and Part 3 fit are complete. Original-content provenance is declared; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts, all 10 objective prompts/options/keys/explanations, all five Writing prompts including data units, denominators and ranges, and all five Speaking prompts including Part 2 completeness and stage fit.",
+  "reviewerType": "AI-assisted"
+}

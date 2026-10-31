@@ -1,0 +1,36 @@
+{
+  "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+  "reviewedAt": "2026-10-28T08:30:33.462Z",
+  "reviewScope": "Pre-repair single-model GPT content review; findings are issue-focused; no claim of independent cross-model review.",
+  "candidateSha256": "1dd99b53a84232cd1c8b28b1dfa36ff353146eb2ef7cb9a8e7832497c74c68e9",
+  "rawResponseSha256": {
+    "objective-generate-response.json": "306a43c10822da63a6ab25d165672ffcb0d2aa0f9f9beecb4f1da9d43283c6e3",
+    "prompts-generate-response.json": "8fa574e55a857a9e3b05aa79d66e11dc486c00479db5638df42bd13b0bd3a8f5"
+  },
+  "findings": [
+    {
+      "item": "Listening · shared script · dataset-size correction",
+      "severity": "high",
+      "issue": "The script says “about 12,000 taps, sorry, I mean taps, not trips,” so the speaker corrects a word to itself and the intended contrast is unclear.",
+      "recommendedRepair": "Make the correction meaningful (for example, “12,000 trips—sorry, I mean taps, not trips”) and preserve the distinction between taps/searches and roughly 8,000 merged journeys."
+    },
+    {
+      "item": "Reading · shared passage length",
+      "severity": "medium",
+      "issue": "The Reading passage has 382 words, below the required 400–500-word practice range.",
+      "recommendedRepair": "Expand the passage without adding claims that change the study results or the scope of the authors’ recommendations."
+    },
+    {
+      "item": "Listening · answer-index coverage",
+      "severity": "medium",
+      "issue": "Listening answer indexes use only 0, 1, and 2; the required coverage of all four answer positions is missing.",
+      "recommendedRepair": "Reorder suitable options and update each answer index and explanation so indexes 0–3 are represented while all keys remain supported."
+    },
+    {
+      "item": "Reading · answer-index coverage",
+      "severity": "medium",
+      "issue": "Reading answer indexes use only 0, 1, and 2; the required coverage of all four answer positions is missing.",
+      "recommendedRepair": "Reorder suitable options and update each answer index and explanation so indexes 0–3 are represented while all keys remain supported."
+    }
+  ]
+}

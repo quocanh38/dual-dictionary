@@ -1,0 +1,10015 @@
+{
+  "generatedAt": "2026-10-01T03:29:39.772Z",
+  "total": 2000,
+  "counts": {
+    "lemma": 1609,
+    "fragment": 26,
+    "irregular-inflection": 93,
+    "inflection": 242,
+    "vulgar": 12,
+    "abbreviation": 17,
+    "proper-noun": 1
+  },
+  "words": {
+    "a": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "able": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "about": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "absolutely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "accept": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "accident": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "across": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "act": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "actually": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "afraid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "after": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "afternoon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "again": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "against": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "age": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "agent": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ago": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "agree": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ah": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": false
+    },
+    "ahead": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "air": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "all": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "almost": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "along": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "already": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alright": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "also": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "always": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "am": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "amazing": {
+      "label": "inflection",
+      "lemma": "amaze",
+      "hasIpa": true
+    },
+    "america": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "american": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "an": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "and": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "angry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "another": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "answer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "any": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anybody": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anymore": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anyone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anything": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anyway": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anywhere": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "are": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "area": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "army": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "around": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "art": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "as": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ask": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ass": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "at": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attack": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attention": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "away": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "baby": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "back": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bag": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ball": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bank": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bar": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bastard": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "be": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beautiful": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "became": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "because": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "become": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bed": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "been": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "before": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "behind": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "being": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "believe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ben": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "besides": {
+      "label": "inflection",
+      "lemma": "beside",
+      "hasIpa": true
+    },
+    "best": {
+      "label": "irregular-inflection",
+      "lemma": "good",
+      "hasIpa": true
+    },
+    "bet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "better": {
+      "label": "irregular-inflection",
+      "lemma": "good",
+      "hasIpa": true
+    },
+    "between": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "big": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bill": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "birthday": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bit": {
+      "label": "irregular-inflection",
+      "lemma": "bite",
+      "hasIpa": true
+    },
+    "bitch": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "black": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blood": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bloody": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blue": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "body": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "book": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "born": {
+      "label": "irregular-inflection",
+      "lemma": "bear",
+      "hasIpa": true
+    },
+    "boss": {
+      "label": "inflection",
+      "lemma": "bos",
+      "hasIpa": true
+    },
+    "both": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bought": {
+      "label": "irregular-inflection",
+      "lemma": "buy",
+      "hasIpa": true
+    },
+    "box": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boyfriend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "break": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bring": {
+      "label": "inflection",
+      "lemma": "br",
+      "hasIpa": true
+    },
+    "broke": {
+      "label": "irregular-inflection",
+      "lemma": "break",
+      "hasIpa": true
+    },
+    "broken": {
+      "label": "irregular-inflection",
+      "lemma": "break",
+      "hasIpa": true
+    },
+    "brother": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brought": {
+      "label": "irregular-inflection",
+      "lemma": "bring",
+      "hasIpa": true
+    },
+    "buddy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "building": {
+      "label": "inflection",
+      "lemma": "build",
+      "hasIpa": true
+    },
+    "business": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "busy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "but": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "buy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "by": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bye": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "call": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "called": {
+      "label": "inflection",
+      "lemma": "call",
+      "hasIpa": true
+    },
+    "calling": {
+      "label": "inflection",
+      "lemma": "call",
+      "hasIpa": true
+    },
+    "calm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "came": {
+      "label": "irregular-inflection",
+      "lemma": "come",
+      "hasIpa": true
+    },
+    "camera": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "can": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cannot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "captain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "car": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "card": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "care": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "careful": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "case": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "catch": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "caught": {
+      "label": "irregular-inflection",
+      "lemma": "catch",
+      "hasIpa": true
+    },
+    "cause": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cell": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "certain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "certainly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "change": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "charge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "charlie": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "check": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chief": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "child": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "children": {
+      "label": "irregular-inflection",
+      "lemma": "child",
+      "hasIpa": true
+    },
+    "choice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "christmas": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "church": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "city": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "class": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "clean": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "clear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "close": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "clothes": {
+      "label": "inflection",
+      "lemma": "cloth",
+      "hasIpa": true
+    },
+    "club": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "coffee": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cold": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "college": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "come": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "comes": {
+      "label": "inflection",
+      "lemma": "com",
+      "hasIpa": true
+    },
+    "coming": {
+      "label": "inflection",
+      "lemma": "com",
+      "hasIpa": true
+    },
+    "company": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "completely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "control": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cool": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "could": {
+      "label": "irregular-inflection",
+      "lemma": "can",
+      "hasIpa": true
+    },
+    "count": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "country": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "couple": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "course": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "court": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cover": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "crazy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "crime": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "crying": {
+      "label": "inflection",
+      "lemma": "cry",
+      "hasIpa": true
+    },
+    "cut": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "d": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "daddy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "damn": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dangerous": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dare": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dark": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "darling": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "date": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "daughter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "david": {
+      "label": "proper-noun",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "day": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dead": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "deal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "death": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "decided": {
+      "label": "inflection",
+      "lemma": "decide",
+      "hasIpa": true
+    },
+    "deep": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "definitely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "detective": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "did": {
+      "label": "irregular-inflection",
+      "lemma": "do",
+      "hasIpa": true
+    },
+    "die": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "different": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "difficult": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dinner": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "do": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "doctor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "does": {
+      "label": "irregular-inflection",
+      "lemma": "do",
+      "hasIpa": true
+    },
+    "dog": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "doing": {
+      "label": "inflection",
+      "lemma": "do",
+      "hasIpa": true
+    },
+    "don": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "done": {
+      "label": "irregular-inflection",
+      "lemma": "do",
+      "hasIpa": true
+    },
+    "door": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "down": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dream": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dress": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "drink": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "drive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "drop": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "drunk": {
+      "label": "irregular-inflection",
+      "lemma": "drink",
+      "hasIpa": true
+    },
+    "dude": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "during": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "each": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "early": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "earth": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "easy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "eat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "eh": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": false
+    },
+    "eight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "either": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "else": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "em": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "end": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "english": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "enjoy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "enough": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "entire": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "especially": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "even": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "evening": {
+      "label": "inflection",
+      "lemma": "even",
+      "hasIpa": true
+    },
+    "ever": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "every": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "everybody": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "everyone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "everything": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "evidence": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "exactly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "except": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "excuse": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "expect": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "explain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "eye": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "face": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fact": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fair": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fall": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "family": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "far": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fast": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "father": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fault": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "feel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "feeling": {
+      "label": "inflection",
+      "lemma": "feel",
+      "hasIpa": true
+    },
+    "feet": {
+      "label": "irregular-inflection",
+      "lemma": "foot",
+      "hasIpa": true
+    },
+    "fell": {
+      "label": "irregular-inflection",
+      "lemma": "fall",
+      "hasIpa": true
+    },
+    "felt": {
+      "label": "irregular-inflection",
+      "lemma": "feel",
+      "hasIpa": true
+    },
+    "few": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fighting": {
+      "label": "inflection",
+      "lemma": "fight",
+      "hasIpa": true
+    },
+    "figure": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "film": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "finally": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "find": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "finish": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "finished": {
+      "label": "inflection",
+      "lemma": "finish",
+      "hasIpa": true
+    },
+    "fire": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "first": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fish": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "five": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fix": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "floor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "follow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "food": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fool": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "for": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "force": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forever": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forget": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forgive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forgot": {
+      "label": "irregular-inflection",
+      "lemma": "forget",
+      "hasIpa": true
+    },
+    "forward": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "found": {
+      "label": "irregular-inflection",
+      "lemma": "find",
+      "hasIpa": true
+    },
+    "four": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "frank": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "free": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "french": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "friend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "from": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "front": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fuck": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fucking": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "full": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fun": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "funny": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "future": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "game": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gave": {
+      "label": "irregular-inflection",
+      "lemma": "give",
+      "hasIpa": true
+    },
+    "general": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "george": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "get": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "getting": {
+      "label": "inflection",
+      "lemma": "get",
+      "hasIpa": true
+    },
+    "girl": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "give": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "given": {
+      "label": "irregular-inflection",
+      "lemma": "give",
+      "hasIpa": true
+    },
+    "giving": {
+      "label": "inflection",
+      "lemma": "give",
+      "hasIpa": true
+    },
+    "glad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "go": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "god": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "going": {
+      "label": "inflection",
+      "lemma": "go",
+      "hasIpa": true
+    },
+    "gold": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gone": {
+      "label": "irregular-inflection",
+      "lemma": "go",
+      "hasIpa": true
+    },
+    "gonna": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "good": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "goodbye": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "got": {
+      "label": "irregular-inflection",
+      "lemma": "get",
+      "hasIpa": true
+    },
+    "gotta": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "government": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "great": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ground": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "group": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "guess": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gun": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "guy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ha": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "had": {
+      "label": "irregular-inflection",
+      "lemma": "have",
+      "hasIpa": true
+    },
+    "hair": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "half": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hand": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "handle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hang": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "happen": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "happening": {
+      "label": "inflection",
+      "lemma": "happen",
+      "hasIpa": true
+    },
+    "happy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hard": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "has": {
+      "label": "irregular-inflection",
+      "lemma": "have",
+      "hasIpa": true
+    },
+    "hate": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "have": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "haven": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "he": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "head": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "heard": {
+      "label": "irregular-inflection",
+      "lemma": "hear",
+      "hasIpa": true
+    },
+    "heart": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hell": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hello": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "help": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "her": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "here": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hey": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hi": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hide": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "high": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "him": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "himself": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "his": {
+      "label": "inflection",
+      "lemma": "hi",
+      "hasIpa": true
+    },
+    "history": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hold": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "home": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "honest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "honey": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "honor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hope": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "horse": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hospital": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hotel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hour": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "house": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "how": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "huh": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "human": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hungry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hurry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hurt": {
+      "label": "irregular-inflection",
+      "lemma": "hurt",
+      "hasIpa": true
+    },
+    "husband": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "i": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "idea": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "idiot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "if": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "imagine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "important": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "impossible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "in": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "information": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "inside": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "instead": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "interested": {
+      "label": "inflection",
+      "lemma": "interest",
+      "hasIpa": true
+    },
+    "interesting": {
+      "label": "inflection",
+      "lemma": "interest",
+      "hasIpa": true
+    },
+    "into": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "involved": {
+      "label": "inflection",
+      "lemma": "involve",
+      "hasIpa": true
+    },
+    "is": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "it": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "its": {
+      "label": "inflection",
+      "lemma": "it",
+      "hasIpa": true
+    },
+    "jack": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jesus": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "job": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "joe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "john": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "join": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "judge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "just": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "keep": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "kept": {
+      "label": "irregular-inflection",
+      "lemma": "keep",
+      "hasIpa": true
+    },
+    "key": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "kid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "kill": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "killed": {
+      "label": "inflection",
+      "lemma": "kill",
+      "hasIpa": true
+    },
+    "killer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "killing": {
+      "label": "inflection",
+      "lemma": "kill",
+      "hasIpa": true
+    },
+    "kind": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "king": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "kiss": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "knew": {
+      "label": "irregular-inflection",
+      "lemma": "know",
+      "hasIpa": true
+    },
+    "know": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "known": {
+      "label": "irregular-inflection",
+      "lemma": "know",
+      "hasIpa": true
+    },
+    "l": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ladies": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lady": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "land": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "last": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "late": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "later": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "laugh": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "laughing": {
+      "label": "inflection",
+      "lemma": "laugh",
+      "hasIpa": true
+    },
+    "law": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lead": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "learn": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "least": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "leave": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "left": {
+      "label": "irregular-inflection",
+      "lemma": "leave",
+      "hasIpa": true
+    },
+    "less": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "let": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "letter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lie": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lieutenant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "life": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "light": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "like": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "line": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "list": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "listen": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "little": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "live": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lives": {
+      "label": "inflection",
+      "lemma": "live",
+      "hasIpa": true
+    },
+    "living": {
+      "label": "inflection",
+      "lemma": "live",
+      "hasIpa": true
+    },
+    "long": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "longer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "look": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lord": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lost": {
+      "label": "irregular-inflection",
+      "lemma": "lose",
+      "hasIpa": true
+    },
+    "lot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "love": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "loved": {
+      "label": "inflection",
+      "lemma": "love",
+      "hasIpa": true
+    },
+    "lovely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "luck": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lucky": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lunch": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lying": {
+      "label": "inflection",
+      "lemma": "lye",
+      "hasIpa": true
+    },
+    "ma": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "machine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "made": {
+      "label": "irregular-inflection",
+      "lemma": "make",
+      "hasIpa": true
+    },
+    "major": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "make": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "making": {
+      "label": "inflection",
+      "lemma": "make",
+      "hasIpa": true
+    },
+    "mama": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "man": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "many": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mark": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "marriage": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "married": {
+      "label": "inflection",
+      "lemma": "marry",
+      "hasIpa": true
+    },
+    "marry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "master": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "matter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "may": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "maybe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "me": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mean": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "means": {
+      "label": "inflection",
+      "lemma": "mean",
+      "hasIpa": true
+    },
+    "meant": {
+      "label": "irregular-inflection",
+      "lemma": "mean",
+      "hasIpa": true
+    },
+    "meet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "meeting": {
+      "label": "inflection",
+      "lemma": "meet",
+      "hasIpa": true
+    },
+    "men": {
+      "label": "irregular-inflection",
+      "lemma": "man",
+      "hasIpa": true
+    },
+    "mess": {
+      "label": "inflection",
+      "lemma": "mes",
+      "hasIpa": true
+    },
+    "message": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "met": {
+      "label": "irregular-inflection",
+      "lemma": "meet",
+      "hasIpa": true
+    },
+    "middle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "might": {
+      "label": "irregular-inflection",
+      "lemma": "may",
+      "hasIpa": true
+    },
+    "mike": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "million": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mind": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "minute": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "minutes": {
+      "label": "inflection",
+      "lemma": "minute",
+      "hasIpa": true
+    },
+    "miss": {
+      "label": "inflection",
+      "lemma": "mis",
+      "hasIpa": true
+    },
+    "missing": {
+      "label": "inflection",
+      "lemma": "miss",
+      "hasIpa": true
+    },
+    "mistake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "moment": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "money": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "month": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "more": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "morning": {
+      "label": "inflection",
+      "lemma": "morn",
+      "hasIpa": true
+    },
+    "most": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mother": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mouth": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "move": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "movie": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "moving": {
+      "label": "inflection",
+      "lemma": "move",
+      "hasIpa": true
+    },
+    "mr": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "much": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mum": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "murder": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "music": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "must": {
+      "label": "irregular-inflection",
+      "lemma": "must",
+      "hasIpa": true
+    },
+    "my": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "myself": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "name": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "near": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "need": {
+      "label": "inflection",
+      "lemma": "nee",
+      "hasIpa": true
+    },
+    "needs": {
+      "label": "inflection",
+      "lemma": "need",
+      "hasIpa": true
+    },
+    "neither": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "never": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "new": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "news": {
+      "label": "inflection",
+      "lemma": "new",
+      "hasIpa": true
+    },
+    "next": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "night": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "no": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nobody": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "none": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "normal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "not": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nothing": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "now": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "number": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "o": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "obviously": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "of": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "off": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "offer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "office": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "officer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "often": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "oh": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ok": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "okay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "old": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "on": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "once": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "one": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "only": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "open": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "or": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "order": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "other": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "others": {
+      "label": "inflection",
+      "lemma": "other",
+      "hasIpa": true
+    },
+    "our": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "out": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "outside": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "over": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "own": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "paid": {
+      "label": "irregular-inflection",
+      "lemma": "pay",
+      "hasIpa": true
+    },
+    "pain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "paper": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "park": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "part": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "party": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pass": {
+      "label": "inflection",
+      "lemma": "pas",
+      "hasIpa": true
+    },
+    "past": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "paul": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "peace": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "people": {
+      "label": "irregular-inflection",
+      "lemma": "person",
+      "hasIpa": true
+    },
+    "perfect": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "perhaps": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "person": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "personal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "peter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "phone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "picture": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "piece": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "place": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "plan": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "play": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "please": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pleasure": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "point": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "police": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "poor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "position": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "possible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "power": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "present": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "president": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pretty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "prison": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "private": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "probably": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "problem": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "promise": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "protect": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "proud": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "prove": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "public": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pull": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "put": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "queen": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "question": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "quick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "quickly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "quiet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "quite": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "radio": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ran": {
+      "label": "irregular-inflection",
+      "lemma": "run",
+      "hasIpa": true
+    },
+    "rather": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "read": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ready": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "real": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "realize": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "really": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "reason": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "record": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "red": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "relationship": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "relax": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "remember": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "report": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "respect": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "return": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rich": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ride": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "right": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ring": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "road": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rock": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "room": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "round": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "run": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "running": {
+      "label": "inflection",
+      "lemma": "run",
+      "hasIpa": true
+    },
+    "s": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "safe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "said": {
+      "label": "irregular-inflection",
+      "lemma": "say",
+      "hasIpa": true
+    },
+    "sam": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "same": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "save": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "saw": {
+      "label": "irregular-inflection",
+      "lemma": "see",
+      "hasIpa": true
+    },
+    "say": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "saying": {
+      "label": "inflection",
+      "lemma": "say",
+      "hasIpa": true
+    },
+    "scared": {
+      "label": "inflection",
+      "lemma": "scar",
+      "hasIpa": true
+    },
+    "scene": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "school": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "screaming": {
+      "label": "inflection",
+      "lemma": "scream",
+      "hasIpa": true
+    },
+    "sea": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "seat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "second": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "secret": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "security": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "see": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "seeing": {
+      "label": "inflection",
+      "lemma": "see",
+      "hasIpa": true
+    },
+    "seem": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "seen": {
+      "label": "irregular-inflection",
+      "lemma": "see",
+      "hasIpa": true
+    },
+    "sell": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "send": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sense": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sent": {
+      "label": "irregular-inflection",
+      "lemma": "send",
+      "hasIpa": true
+    },
+    "serious": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "seriously": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "service": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "set": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "seven": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sex": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shall": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "share": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "she": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ship": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shit": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shoot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "short": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shot": {
+      "label": "irregular-inflection",
+      "lemma": "shoot",
+      "hasIpa": true
+    },
+    "should": {
+      "label": "irregular-inflection",
+      "lemma": "shall",
+      "hasIpa": true
+    },
+    "show": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shut": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "side": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sign": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "simple": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "since": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sing": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "single": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sir": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sister": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sitting": {
+      "label": "inflection",
+      "lemma": "sit",
+      "hasIpa": true
+    },
+    "situation": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "six": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sleep": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "small": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "smart": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "smell": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "so": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "some": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "somebody": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "someone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "something": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sometimes": {
+      "label": "inflection",
+      "lemma": "sometime",
+      "hasIpa": true
+    },
+    "somewhere": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "son": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "song": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "soon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sorry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sort": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "soul": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sound": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "space": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "speak": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "speaking": {
+      "label": "inflection",
+      "lemma": "speak",
+      "hasIpa": true
+    },
+    "special": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spent": {
+      "label": "irregular-inflection",
+      "lemma": "spend",
+      "hasIpa": true
+    },
+    "stand": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "standing": {
+      "label": "inflection",
+      "lemma": "stand",
+      "hasIpa": true
+    },
+    "star": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "start": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "starting": {
+      "label": "inflection",
+      "lemma": "start",
+      "hasIpa": true
+    },
+    "state": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "station": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "step": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "still": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stop": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "story": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "straight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "strange": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "street": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "strong": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stuff": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stupid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "such": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sun": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suppose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "supposed": {
+      "label": "inflection",
+      "lemma": "suppose",
+      "hasIpa": true
+    },
+    "sure": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "surprise": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "swear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sweet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "system": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "t": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "table": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "take": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "taken": {
+      "label": "irregular-inflection",
+      "lemma": "take",
+      "hasIpa": true
+    },
+    "taking": {
+      "label": "inflection",
+      "lemma": "take",
+      "hasIpa": true
+    },
+    "talk": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "talking": {
+      "label": "inflection",
+      "lemma": "talk",
+      "hasIpa": true
+    },
+    "tea": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "team": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tell": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "telling": {
+      "label": "inflection",
+      "lemma": "tell",
+      "hasIpa": true
+    },
+    "ten": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "terrible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "test": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "than": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thank": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thanks": {
+      "label": "inflection",
+      "lemma": "thank",
+      "hasIpa": true
+    },
+    "that": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "the": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "their": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "them": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "then": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "there": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "these": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "they": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thing": {
+      "label": "inflection",
+      "lemma": "the",
+      "hasIpa": true
+    },
+    "think": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thinking": {
+      "label": "inflection",
+      "lemma": "think",
+      "hasIpa": true
+    },
+    "third": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "this": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "those": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "though": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thought": {
+      "label": "irregular-inflection",
+      "lemma": "think",
+      "hasIpa": true
+    },
+    "three": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "through": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "throw": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "till": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "time": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "times": {
+      "label": "inflection",
+      "lemma": "time",
+      "hasIpa": true
+    },
+    "tired": {
+      "label": "inflection",
+      "lemma": "tir",
+      "hasIpa": true
+    },
+    "to": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "today": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "together": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "told": {
+      "label": "irregular-inflection",
+      "lemma": "tell",
+      "hasIpa": true
+    },
+    "tom": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tomorrow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tonight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "too": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "took": {
+      "label": "irregular-inflection",
+      "lemma": "take",
+      "hasIpa": true
+    },
+    "top": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "totally": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "touch": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tough": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "town": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "train": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tried": {
+      "label": "inflection",
+      "lemma": "try",
+      "hasIpa": true
+    },
+    "trip": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "trouble": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "true": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "trust": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "truth": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "try": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "trying": {
+      "label": "inflection",
+      "lemma": "try",
+      "hasIpa": true
+    },
+    "turn": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "turned": {
+      "label": "inflection",
+      "lemma": "turn",
+      "hasIpa": true
+    },
+    "tv": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "two": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "um": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "uncle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "under": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "understand": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "unless": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "until": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "up": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "us": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "use": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "used": {
+      "label": "inflection",
+      "lemma": "us",
+      "hasIpa": true
+    },
+    "very": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "visit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "voice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wait": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "waiting": {
+      "label": "inflection",
+      "lemma": "wait",
+      "hasIpa": true
+    },
+    "wake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "walk": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "walking": {
+      "label": "inflection",
+      "lemma": "walk",
+      "hasIpa": true
+    },
+    "wall": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wanna": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "want": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wanted": {
+      "label": "inflection",
+      "lemma": "want",
+      "hasIpa": true
+    },
+    "wants": {
+      "label": "inflection",
+      "lemma": "want",
+      "hasIpa": true
+    },
+    "war": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "was": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "watch": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "watching": {
+      "label": "inflection",
+      "lemma": "watch",
+      "hasIpa": true
+    },
+    "water": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "way": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "we": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wearing": {
+      "label": "inflection",
+      "lemma": "wear",
+      "hasIpa": true
+    },
+    "wedding": {
+      "label": "inflection",
+      "lemma": "wed",
+      "hasIpa": true
+    },
+    "week": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "weird": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "welcome": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "well": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "went": {
+      "label": "irregular-inflection",
+      "lemma": "go",
+      "hasIpa": true
+    },
+    "were": {
+      "label": "irregular-inflection",
+      "lemma": "be",
+      "hasIpa": true
+    },
+    "what": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whatever": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "when": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "where": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whether": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "which": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "while": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "white": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "who": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whoa": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whole": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "why": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wife": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "will": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "win": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "window": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wish": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "with": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "within": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "without": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "woman": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "women": {
+      "label": "irregular-inflection",
+      "lemma": "woman",
+      "hasIpa": true
+    },
+    "won": {
+      "label": "irregular-inflection",
+      "lemma": "win",
+      "hasIpa": true
+    },
+    "wonder": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wonderful": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "word": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "work": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "worked": {
+      "label": "inflection",
+      "lemma": "work",
+      "hasIpa": true
+    },
+    "working": {
+      "label": "inflection",
+      "lemma": "work",
+      "hasIpa": true
+    },
+    "works": {
+      "label": "inflection",
+      "lemma": "work",
+      "hasIpa": true
+    },
+    "world": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "worried": {
+      "label": "inflection",
+      "lemma": "worry",
+      "hasIpa": true
+    },
+    "worry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "worse": {
+      "label": "irregular-inflection",
+      "lemma": "bad",
+      "hasIpa": true
+    },
+    "worth": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "would": {
+      "label": "irregular-inflection",
+      "lemma": "will",
+      "hasIpa": true
+    },
+    "wow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "write": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wrong": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "y": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "yeah": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "year": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "yes": {
+      "label": "inflection",
+      "lemma": "ye",
+      "hasIpa": true
+    },
+    "yesterday": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "yet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "york": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "you": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "young": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "your": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "yours": {
+      "label": "inflection",
+      "lemma": "your",
+      "hasIpa": true
+    },
+    "yourself": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "above": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "access": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "according": {
+      "label": "inflection",
+      "lemma": "accord",
+      "hasIpa": true
+    },
+    "account": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "acting": {
+      "label": "inflection",
+      "lemma": "act",
+      "hasIpa": true
+    },
+    "action": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "adam": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "add": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "address": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "admit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "advice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "afford": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "airport": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "al": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alarm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "allow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "allowed": {
+      "label": "inflection",
+      "lemma": "allow",
+      "hasIpa": true
+    },
+    "although": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "among": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "amount": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ancient": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "angel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "animal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anna": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apart": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apartment": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apologize": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apparently": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "applause": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appreciate": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arms": {
+      "label": "inflection",
+      "lemma": "arm",
+      "hasIpa": true
+    },
+    "arrest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arrested": {
+      "label": "inflection",
+      "lemma": "arrest",
+      "hasIpa": true
+    },
+    "artist": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "asleep": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "assistant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ate": {
+      "label": "irregular-inflection",
+      "lemma": "eat",
+      "hasIpa": true
+    },
+    "audience": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aunt": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "avoid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aware": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "awesome": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "awful": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aye": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "babe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "balls": {
+      "label": "inflection",
+      "lemma": "ball",
+      "hasIpa": true
+    },
+    "band": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "barely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "base": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "basically": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bathroom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "battle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beach": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beauty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bedroom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beg": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "began": {
+      "label": "irregular-inflection",
+      "lemma": "begin",
+      "hasIpa": true
+    },
+    "begin": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beginning": {
+      "label": "inflection",
+      "lemma": "begin",
+      "hasIpa": true
+    },
+    "bell": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "belong": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beyond": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bike": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "billy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bird": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "birth": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bite": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blame": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bleep": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bless": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blind": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "block": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "board": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bob": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bobby": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bomb": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boring": {
+      "label": "inflection",
+      "lemma": "bore",
+      "hasIpa": true
+    },
+    "bother": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bottle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bottom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brave": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bread": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "breakfast": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "breaking": {
+      "label": "inflection",
+      "lemma": "break",
+      "hasIpa": true
+    },
+    "breath": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "breathe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "breathing": {
+      "label": "inflection",
+      "lemma": "breath",
+      "hasIpa": true
+    },
+    "bridge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bright": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brilliant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bringing": {
+      "label": "inflection",
+      "lemma": "bring",
+      "hasIpa": true
+    },
+    "british": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brown": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "build": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "built": {
+      "label": "irregular-inflection",
+      "lemma": "build",
+      "hasIpa": true
+    },
+    "bullet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bullshit": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bunch": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "buried": {
+      "label": "inflection",
+      "lemma": "bury",
+      "hasIpa": true
+    },
+    "burn": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "burning": {
+      "label": "inflection",
+      "lemma": "burn",
+      "hasIpa": true
+    },
+    "bus": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "c": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "camp": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cancer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cards": {
+      "label": "inflection",
+      "lemma": "card",
+      "hasIpa": true
+    },
+    "career": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "carry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cash": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "castle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "center": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "century": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chair": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "challenge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "changes": {
+      "label": "inflection",
+      "lemma": "change",
+      "hasIpa": true
+    },
+    "character": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cheap": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "checked": {
+      "label": "inflection",
+      "lemma": "check",
+      "hasIpa": true
+    },
+    "cheering": {
+      "label": "inflection",
+      "lemma": "cheer",
+      "hasIpa": true
+    },
+    "cheese": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chef": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chicken": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "china": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "chinese": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "choose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "christ": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "clearly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "client": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "clock": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "closed": {
+      "label": "inflection",
+      "lemma": "close",
+      "hasIpa": true
+    },
+    "closer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "coach": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "coat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "code": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "colonel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "color": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "comfortable": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "command": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "commander": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "common": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "community": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "competition": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "complete": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "complicated": {
+      "label": "inflection",
+      "lemma": "complicate",
+      "hasIpa": true
+    },
+    "computer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "concerned": {
+      "label": "inflection",
+      "lemma": "concern",
+      "hasIpa": true
+    },
+    "condition": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "connection": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "consider": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "contact": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "continue": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "contract": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "conversation": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cook": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cop": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "copy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "corner": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "correct": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cos": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cost": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cousin": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "covered": {
+      "label": "inflection",
+      "lemma": "cover",
+      "hasIpa": true
+    },
+    "crap": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "crash": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cream": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "create": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "credit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "crew": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "criminal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cross": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "crowd": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cup": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "cute": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "da": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "damage": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dan": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dancing": {
+      "label": "inflection",
+      "lemma": "dance",
+      "hasIpa": true
+    },
+    "danger": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "daniel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dating": {
+      "label": "inflection",
+      "lemma": "date",
+      "hasIpa": true
+    },
+    "decide": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "decision": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "defense": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "delicious": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "department": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "deserve": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "desk": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "destroy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "details": {
+      "label": "inflection",
+      "lemma": "detail",
+      "hasIpa": true
+    },
+    "devil": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dick": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "difference": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dig": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "director": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dirty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "discuss": {
+      "label": "inflection",
+      "lemma": "discus",
+      "hasIpa": true
+    },
+    "distance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "divorce": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dna": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "doc": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "double": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "doubt": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "downstairs": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "draw": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dressed": {
+      "label": "inflection",
+      "lemma": "dress",
+      "hasIpa": true
+    },
+    "drinking": {
+      "label": "inflection",
+      "lemma": "drink",
+      "hasIpa": true
+    },
+    "drinks": {
+      "label": "inflection",
+      "lemma": "drink",
+      "hasIpa": true
+    },
+    "driver": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "driving": {
+      "label": "inflection",
+      "lemma": "drive",
+      "hasIpa": true
+    },
+    "dropped": {
+      "label": "inflection",
+      "lemma": "drop",
+      "hasIpa": true
+    },
+    "drug": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "due": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dumb": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "duty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "dying": {
+      "label": "inflection",
+      "lemma": "dye",
+      "hasIpa": true
+    },
+    "e": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "easily": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "east": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "eating": {
+      "label": "inflection",
+      "lemma": "eat",
+      "hasIpa": true
+    },
+    "emergency": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "empty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ends": {
+      "label": "inflection",
+      "lemma": "end",
+      "hasIpa": true
+    },
+    "enemy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "energy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "engine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "enter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "er": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "escape": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "europe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "event": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "everywhere": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "evil": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "example": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "excellent": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "excited": {
+      "label": "inflection",
+      "lemma": "excite",
+      "hasIpa": true
+    },
+    "exciting": {
+      "label": "inflection",
+      "lemma": "excite",
+      "hasIpa": true
+    },
+    "exist": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "expected": {
+      "label": "inflection",
+      "lemma": "expect",
+      "hasIpa": true
+    },
+    "expensive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "experience": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "extra": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "faith": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "falling": {
+      "label": "inflection",
+      "lemma": "fall",
+      "hasIpa": true
+    },
+    "familiar": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "famous": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fan": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fancy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fantastic": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "farm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fate": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "favor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "favorite": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fbi": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "feed": {
+      "label": "inflection",
+      "lemma": "fee",
+      "hasIpa": true
+    },
+    "fellow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "female": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "field": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "figured": {
+      "label": "inflection",
+      "lemma": "figure",
+      "hasIpa": true
+    },
+    "file": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fill": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "filled": {
+      "label": "inflection",
+      "lemma": "fill",
+      "hasIpa": true
+    },
+    "final": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "finding": {
+      "label": "inflection",
+      "lemma": "find",
+      "hasIpa": true
+    },
+    "finger": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fired": {
+      "label": "inflection",
+      "lemma": "fir",
+      "hasIpa": true
+    },
+    "fit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "flat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "flight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "flying": {
+      "label": "inflection",
+      "lemma": "fly",
+      "hasIpa": true
+    },
+    "focus": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "following": {
+      "label": "inflection",
+      "lemma": "follow",
+      "hasIpa": true
+    },
+    "foot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "football": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forced": {
+      "label": "inflection",
+      "lemma": "force",
+      "hasIpa": true
+    },
+    "foreign": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "forgotten": {
+      "label": "irregular-inflection",
+      "lemma": "forget",
+      "hasIpa": true
+    },
+    "form": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fortune": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "france": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "freedom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "fresh": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "friday": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "funeral": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "further": {
+      "label": "irregular-inflection",
+      "lemma": "far",
+      "hasIpa": true
+    },
+    "gang": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "garden": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gas": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gate": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "genius": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gentleman": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "german": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ghost": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "giant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gift": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "glass": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "goddamn": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "goodness": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gosh": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "gotten": {
+      "label": "irregular-inflection",
+      "lemma": "get",
+      "hasIpa": true
+    },
+    "grab": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "grace": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "grand": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "grandfather": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "grandma": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "grandpa": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "greatest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "green": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "grew": {
+      "label": "irregular-inflection",
+      "lemma": "grow",
+      "hasIpa": true
+    },
+    "groaning": {
+      "label": "inflection",
+      "lemma": "groan",
+      "hasIpa": true
+    },
+    "grow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "growing": {
+      "label": "inflection",
+      "lemma": "grow",
+      "hasIpa": true
+    },
+    "grown": {
+      "label": "irregular-inflection",
+      "lemma": "grow",
+      "hasIpa": true
+    },
+    "guard": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "guest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "guilty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "h": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hall": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "handsome": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hanging": {
+      "label": "inflection",
+      "lemma": "hang",
+      "hasIpa": true
+    },
+    "happiness": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hardly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "harm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "harry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "heading": {
+      "label": "inflection",
+      "lemma": "head",
+      "hasIpa": true
+    },
+    "heads": {
+      "label": "inflection",
+      "lemma": "head",
+      "hasIpa": true
+    },
+    "health": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hearing": {
+      "label": "inflection",
+      "lemma": "hear",
+      "hasIpa": true
+    },
+    "heat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "heaven": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "heavy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "held": {
+      "label": "irregular-inflection",
+      "lemma": "hold",
+      "hasIpa": true
+    },
+    "helping": {
+      "label": "inflection",
+      "lemma": "help",
+      "hasIpa": true
+    },
+    "henry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hero": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "herself": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hidden": {
+      "label": "irregular-inflection",
+      "lemma": "hide",
+      "hasIpa": true
+    },
+    "hiding": {
+      "label": "inflection",
+      "lemma": "hid",
+      "hasIpa": true
+    },
+    "higher": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hill": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ho": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "holding": {
+      "label": "inflection",
+      "lemma": "hold",
+      "hasIpa": true
+    },
+    "hole": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "holy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "honestly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hoping": {
+      "label": "inflection",
+      "lemma": "hop",
+      "hasIpa": true
+    },
+    "horrible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "however": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "huge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "hundred": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ill": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "immediately": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "including": {
+      "label": "inflection",
+      "lemma": "include",
+      "hasIpa": true
+    },
+    "incredible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "indeed": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "indistinct": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "innocent": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "insane": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "inspector": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "insurance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "interest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "interview": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "introduce": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "investigation": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "invite": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "island": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "issue": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "itself": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jail": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "james": {
+      "label": "inflection",
+      "lemma": "jam",
+      "hasIpa": true
+    },
+    "jane": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "japanese": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jealous": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jerry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jimmy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "johnny": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "joke": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "journey": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "joy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "jump": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "justice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "keeping": {
+      "label": "inflection",
+      "lemma": "keep",
+      "hasIpa": true
+    },
+    "keeps": {
+      "label": "inflection",
+      "lemma": "keep",
+      "hasIpa": true
+    },
+    "kelly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "keys": {
+      "label": "inflection",
+      "lemma": "key",
+      "hasIpa": true
+    },
+    "kick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "kitchen": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "knife": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "knock": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "knocking": {
+      "label": "inflection",
+      "lemma": "knock",
+      "hasIpa": true
+    },
+    "knowing": {
+      "label": "inflection",
+      "lemma": "know",
+      "hasIpa": true
+    },
+    "la": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lab": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "language": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "large": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "larry": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lately": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "laughter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "laura": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lawyer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "leader": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "learned": {
+      "label": "inflection",
+      "lemma": "learn",
+      "hasIpa": true
+    },
+    "leaves": {
+      "label": "inflection",
+      "lemma": "leave",
+      "hasIpa": true
+    },
+    "lee": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "leg": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "legal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lesson": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "letting": {
+      "label": "inflection",
+      "lemma": "lett",
+      "hasIpa": true
+    },
+    "level": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "liar": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lied": {
+      "label": "inflection",
+      "lemma": "li",
+      "hasIpa": true
+    },
+    "lift": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lights": {
+      "label": "inflection",
+      "lemma": "light",
+      "hasIpa": true
+    },
+    "likely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lines": {
+      "label": "inflection",
+      "lemma": "line",
+      "hasIpa": true
+    },
+    "listening": {
+      "label": "inflection",
+      "lemma": "listen",
+      "hasIpa": true
+    },
+    "local": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lock": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "locked": {
+      "label": "inflection",
+      "lemma": "lock",
+      "hasIpa": true
+    },
+    "lonely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "loose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "losing": {
+      "label": "inflection",
+      "lemma": "lose",
+      "hasIpa": true
+    },
+    "loss": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "loud": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lover": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "low": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "lower": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "m": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "madam": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "madame": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "magic": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "main": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "majesty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "male": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "manage": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "manager": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "market": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "martin": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "match": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mate": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "matt": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "max": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mayor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "meaning": {
+      "label": "inflection",
+      "lemma": "mean",
+      "hasIpa": true
+    },
+    "meat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "medical": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "medicine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "member": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "members": {
+      "label": "inflection",
+      "lemma": "member",
+      "hasIpa": true
+    },
+    "memory": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mention": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "military": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "milk": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "minister": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mission": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mister": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "model": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mommy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "monster": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mood": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "moon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "mountain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "movies": {
+      "label": "inflection",
+      "lemma": "movie",
+      "hasIpa": true
+    },
+    "mrs": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "murderer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "n": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "naked": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "named": {
+      "label": "inflection",
+      "lemma": "name",
+      "hasIpa": true
+    },
+    "narrator": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "national": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "natural": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nature": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nearly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "necessary": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "neck": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nervous": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nights": {
+      "label": "inflection",
+      "lemma": "night",
+      "hasIpa": true
+    },
+    "nine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "noise": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nonsense": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nope": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "north": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "note": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "notice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nowhere": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nurse": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "nuts": {
+      "label": "inflection",
+      "lemma": "nut",
+      "hasIpa": true
+    },
+    "obvious": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ocean": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "oil": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "onto": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "opening": {
+      "label": "inflection",
+      "lemma": "open",
+      "hasIpa": true
+    },
+    "operation": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "opinion": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "opportunity": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ordered": {
+      "label": "inflection",
+      "lemma": "order",
+      "hasIpa": true
+    },
+    "original": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "otherwise": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ought": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ours": {
+      "label": "inflection",
+      "lemma": "our",
+      "hasIpa": true
+    },
+    "ourselves": {
+      "label": "inflection",
+      "lemma": "ourself",
+      "hasIpa": true
+    },
+    "ow": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "owe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "owner": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pack": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "page": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "paint": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "painting": {
+      "label": "inflection",
+      "lemma": "paint",
+      "hasIpa": true
+    },
+    "pair": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pants": {
+      "label": "inflection",
+      "lemma": "pant",
+      "hasIpa": true
+    },
+    "papa": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pardon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "particular": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "partner": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "passed": {
+      "label": "inflection",
+      "lemma": "pass",
+      "hasIpa": true
+    },
+    "path": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "patient": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "paying": {
+      "label": "inflection",
+      "lemma": "pay",
+      "hasIpa": true
+    },
+    "perfectly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "period": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "permission": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "personally": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "photo": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "photos": {
+      "label": "inflection",
+      "lemma": "photo",
+      "hasIpa": true
+    },
+    "pieces": {
+      "label": "inflection",
+      "lemma": "piece",
+      "hasIpa": true
+    },
+    "pig": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "plane": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "planet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "planned": {
+      "label": "inflection",
+      "lemma": "plan",
+      "hasIpa": true
+    },
+    "planning": {
+      "label": "inflection",
+      "lemma": "plan",
+      "hasIpa": true
+    },
+    "plant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "player": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pleased": {
+      "label": "inflection",
+      "lemma": "please",
+      "hasIpa": true
+    },
+    "plenty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "plus": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pocket": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "points": {
+      "label": "inflection",
+      "lemma": "point",
+      "hasIpa": true
+    },
+    "political": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pool": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pop": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "possibly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "post": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "powerful": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "practice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pray": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "prefer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pregnant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "prepare": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "prepared": {
+      "label": "inflection",
+      "lemma": "prepare",
+      "hasIpa": true
+    },
+    "press": {
+      "label": "inflection",
+      "lemma": "pres",
+      "hasIpa": true
+    },
+    "pressure": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "pretend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "price": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "priest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "prince": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "princess": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "process": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "professional": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "professor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "program": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "project": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "proof": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "proper": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "property": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "purpose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "push": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "quit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "race": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "raise": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ray": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "re": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "reach": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "reading": {
+      "label": "inflection",
+      "lemma": "read",
+      "hasIpa": true
+    },
+    "reality": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "received": {
+      "label": "inflection",
+      "lemma": "receive",
+      "hasIpa": true
+    },
+    "recently": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "recognize": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "records": {
+      "label": "inflection",
+      "lemma": "record",
+      "hasIpa": true
+    },
+    "regret": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "release": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "remain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "remind": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rent": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "repeat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "research": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "responsibility": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "responsible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "restaurant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "revenge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ridiculous": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rights": {
+      "label": "inflection",
+      "lemma": "right",
+      "hasIpa": true
+    },
+    "ringing": {
+      "label": "inflection",
+      "lemma": "ring",
+      "hasIpa": true
+    },
+    "risk": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "river": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "robert": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "roger": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "roll": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "romantic": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "roof": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rose": {
+      "label": "irregular-inflection",
+      "lemma": "rise",
+      "hasIpa": true
+    },
+    "rough": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "royal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ruin": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rule": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "rules": {
+      "label": "inflection",
+      "lemma": "rule",
+      "hasIpa": true
+    },
+    "rush": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "russian": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "safety": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sarah": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "saturday": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "scare": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "science": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "screw": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "search": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "season": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "seconds": {
+      "label": "inflection",
+      "lemma": "second",
+      "hasIpa": true
+    },
+    "secretary": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "selling": {
+      "label": "inflection",
+      "lemma": "sell",
+      "hasIpa": true
+    },
+    "sending": {
+      "label": "inflection",
+      "lemma": "send",
+      "hasIpa": true
+    },
+    "sergeant": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "serve": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "settle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "several": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shame": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shape": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sheriff": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shirt": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shooting": {
+      "label": "inflection",
+      "lemma": "shoot",
+      "hasIpa": true
+    },
+    "shop": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "shouting": {
+      "label": "inflection",
+      "lemma": "shout",
+      "hasIpa": true
+    },
+    "shower": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "showing": {
+      "label": "inflection",
+      "lemma": "show",
+      "hasIpa": true
+    },
+    "sight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "signal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "signed": {
+      "label": "inflection",
+      "lemma": "sign",
+      "hasIpa": true
+    },
+    "silence": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "silly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "silver": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "simply": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "singing": {
+      "label": "inflection",
+      "lemma": "sing",
+      "hasIpa": true
+    },
+    "size": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "skin": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sky": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sleeping": {
+      "label": "inflection",
+      "lemma": "sleep",
+      "hasIpa": true
+    },
+    "slept": {
+      "label": "irregular-inflection",
+      "lemma": "sleep",
+      "hasIpa": true
+    },
+    "slow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "slowly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "smile": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "smith": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "smoke": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "snow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "social": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "society": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "soft": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sold": {
+      "label": "irregular-inflection",
+      "lemma": "sell",
+      "hasIpa": true
+    },
+    "soldier": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "soldiers": {
+      "label": "inflection",
+      "lemma": "soldier",
+      "hasIpa": true
+    },
+    "somehow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sooner": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "south": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spanish": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spare": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "speech": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "speed": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spirit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "split": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spoke": {
+      "label": "irregular-inflection",
+      "lemma": "speak",
+      "hasIpa": true
+    },
+    "spot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spread": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "spring": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "square": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "staff": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stage": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stars": {
+      "label": "inflection",
+      "lemma": "star",
+      "hasIpa": true
+    },
+    "statement": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stayed": {
+      "label": "inflection",
+      "lemma": "stay",
+      "hasIpa": true
+    },
+    "staying": {
+      "label": "inflection",
+      "lemma": "stay",
+      "hasIpa": true
+    },
+    "steal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stole": {
+      "label": "irregular-inflection",
+      "lemma": "steal",
+      "hasIpa": true
+    },
+    "stolen": {
+      "label": "irregular-inflection",
+      "lemma": "steal",
+      "hasIpa": true
+    },
+    "stomach": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "store": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "storm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "strength": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "strike": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "stuck": {
+      "label": "irregular-inflection",
+      "lemma": "stick",
+      "hasIpa": true
+    },
+    "student": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "study": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "style": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "subject": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "success": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suck": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sudden": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suddenly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sugar": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suggest": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suicide": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "summer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sunday": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "super": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "support": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "surely": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "surgery": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "surprised": {
+      "label": "inflection",
+      "lemma": "surprise",
+      "hasIpa": true
+    },
+    "survive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "suspect": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sweetheart": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sweetie": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "sword": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tape": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "target": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "taste": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "taught": {
+      "label": "irregular-inflection",
+      "lemma": "teach",
+      "hasIpa": true
+    },
+    "teach": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "teacher": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tears": {
+      "label": "inflection",
+      "lemma": "tear",
+      "hasIpa": true
+    },
+    "teeth": {
+      "label": "irregular-inflection",
+      "lemma": "tooth",
+      "hasIpa": true
+    },
+    "telephone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "themselves": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "theory": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thief": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "thousand": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "threw": {
+      "label": "irregular-inflection",
+      "lemma": "throw",
+      "hasIpa": true
+    },
+    "throat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ticket": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tie": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tiny": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "toilet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tommy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tongue": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tony": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "total": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tour": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "towards": {
+      "label": "inflection",
+      "lemma": "toward",
+      "hasIpa": true
+    },
+    "track": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "trade": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "training": {
+      "label": "inflection",
+      "lemma": "train",
+      "hasIpa": true
+    },
+    "travel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "treat": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "tree": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "trial": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "trick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "truck": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "truly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "turning": {
+      "label": "inflection",
+      "lemma": "turn",
+      "hasIpa": true
+    },
+    "twice": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "type": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ugh": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ugly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "understood": {
+      "label": "irregular-inflection",
+      "lemma": "understand",
+      "hasIpa": true
+    },
+    "unfortunately": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "unit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "united": {
+      "label": "inflection",
+      "lemma": "unit",
+      "hasIpa": true
+    },
+    "universe": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "university": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "upon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "upset": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "upstairs": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "usual": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "usually": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "van": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "victim": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "video": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "view": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "village": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "vote": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "walked": {
+      "label": "inflection",
+      "lemma": "walk",
+      "hasIpa": true
+    },
+    "warm": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "warning": {
+      "label": "inflection",
+      "lemma": "warn",
+      "hasIpa": true
+    },
+    "wash": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "waste": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ways": {
+      "label": "inflection",
+      "lemma": "way",
+      "hasIpa": true
+    },
+    "weak": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "weapon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "weather": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "weekend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "weight": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "west": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wet": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whenever": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whoever": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whoo": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "whose": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wild": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "willing": {
+      "label": "inflection",
+      "lemma": "will",
+      "hasIpa": true
+    },
+    "wind": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wine": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "winter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "witness": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "wondering": {
+      "label": "inflection",
+      "lemma": "wonder",
+      "hasIpa": true
+    },
+    "worst": {
+      "label": "irregular-inflection",
+      "lemma": "bad",
+      "hasIpa": true
+    },
+    "writing": {
+      "label": "inflection",
+      "lemma": "writ",
+      "hasIpa": true
+    },
+    "written": {
+      "label": "irregular-inflection",
+      "lemma": "write",
+      "hasIpa": true
+    },
+    "wrote": {
+      "label": "irregular-inflection",
+      "lemma": "write",
+      "hasIpa": true
+    },
+    "younger": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "abandon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "abandoned": {
+      "label": "inflection",
+      "lemma": "abandon",
+      "hasIpa": true
+    },
+    "ability": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aboard": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "abroad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "absolute": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "absurd": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "abuse": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "academy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "accent": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "accepted": {
+      "label": "inflection",
+      "lemma": "accept",
+      "hasIpa": true
+    },
+    "accidentally": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "accounts": {
+      "label": "inflection",
+      "lemma": "account",
+      "hasIpa": true
+    },
+    "accused": {
+      "label": "inflection",
+      "lemma": "accuse",
+      "hasIpa": true
+    },
+    "ace": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "achieve": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "acid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "active": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "activity": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "actor": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "actress": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "acts": {
+      "label": "inflection",
+      "lemma": "act",
+      "hasIpa": true
+    },
+    "actual": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ad": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "addition": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "admiral": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "admire": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "admitted": {
+      "label": "inflection",
+      "lemma": "admit",
+      "hasIpa": true
+    },
+    "adorable": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "adult": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "advance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "advanced": {
+      "label": "inflection",
+      "lemma": "advance",
+      "hasIpa": true
+    },
+    "advantage": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "adventure": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "advise": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "affair": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "affairs": {
+      "label": "inflection",
+      "lemma": "affair",
+      "hasIpa": true
+    },
+    "affect": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "affected": {
+      "label": "inflection",
+      "lemma": "affect",
+      "hasIpa": true
+    },
+    "african": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "afterwards": {
+      "label": "inflection",
+      "lemma": "afterward",
+      "hasIpa": true
+    },
+    "agency": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aggressive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "agreement": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ahem": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": false
+    },
+    "aid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aim": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "aircraft": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "albert": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "album": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alcohol": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alert": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alibi": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alien": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alike": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alley": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alliance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ally": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alpha": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "alternative": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ambassador": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "amber": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ambulance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "amen": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "amongst": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "analysis": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anger": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "angle": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anniversary": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "announce": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "announcement": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "announcer": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "annoying": {
+      "label": "inflection",
+      "lemma": "annoy",
+      "hasIpa": true
+    },
+    "anonymous": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "answering": {
+      "label": "inflection",
+      "lemma": "answer",
+      "hasIpa": true
+    },
+    "anthony": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anxious": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "anytime": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apology": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appeal": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appear": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appearance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appetite": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apple": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "application": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "apply": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appointment": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "approach": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "appropriate": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "approve": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "april": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "argue": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "argument": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "armed": {
+      "label": "inflection",
+      "lemma": "arm",
+      "hasIpa": true
+    },
+    "arrange": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arrival": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arrive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arrow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "arse": {
+      "label": "vulgar",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "article": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ash": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ashamed": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ashes": {
+      "label": "inflection",
+      "lemma": "ash",
+      "hasIpa": true
+    },
+    "aside": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "assault": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "assigned": {
+      "label": "inflection",
+      "lemma": "assign",
+      "hasIpa": true
+    },
+    "assignment": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "assistance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "association": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "assume": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "assumed": {
+      "label": "inflection",
+      "lemma": "assume",
+      "hasIpa": true
+    },
+    "assuming": {
+      "label": "inflection",
+      "lemma": "assume",
+      "hasIpa": true
+    },
+    "assure": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "atmosphere": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attached": {
+      "label": "inflection",
+      "lemma": "attach",
+      "hasIpa": true
+    },
+    "attempt": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attitude": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attorney": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "attractive": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "audition": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "august": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "auntie": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "authority": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "autopsy": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "available": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "avenue": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "average": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "awake": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "award": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "awfully": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "awkward": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "ay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "b": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "background": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "backup": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "backwards": {
+      "label": "inflection",
+      "lemma": "backward",
+      "hasIpa": true
+    },
+    "bacon": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "badge": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "badly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bail": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bailey": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bait": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "baker": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "balance": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "banana": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bang": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bargain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "barking": {
+      "label": "inflection",
+      "lemma": "bark",
+      "hasIpa": true
+    },
+    "barn": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "barney": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "baron": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "barrel": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "baseball": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "basement": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "basic": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "basis": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "basket": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "basketball": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bat": {
+      "label": "abbreviation",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bath": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "batman": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "battery": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bay": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beam": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beard": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beast": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beaten": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beating": {
+      "label": "inflection",
+      "lemma": "beat",
+      "hasIpa": true
+    },
+    "becky": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "becoming": {
+      "label": "inflection",
+      "lemma": "become",
+      "hasIpa": true
+    },
+    "bee": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beef": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beep": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "begun": {
+      "label": "irregular-inflection",
+      "lemma": "begin",
+      "hasIpa": true
+    },
+    "behalf": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "behave": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "behavior": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "belief": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "belly": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beloved": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "below": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "belt": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bench": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bend": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beneath": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "benefit": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "benny": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "beside": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "betray": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "betty": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bible": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bid": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "billion": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bin": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bingo": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bishop": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bitter": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blackmail": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blade": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blah": {
+      "label": "fragment",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blank": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blanket": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blast": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bleed": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bleeding": {
+      "label": "inflection",
+      "lemma": "bleed",
+      "hasIpa": true
+    },
+    "blessed": {
+      "label": "inflection",
+      "lemma": "bless",
+      "hasIpa": true
+    },
+    "blessing": {
+      "label": "inflection",
+      "lemma": "bless",
+      "hasIpa": true
+    },
+    "blew": {
+      "label": "irregular-inflection",
+      "lemma": "blow",
+      "hasIpa": true
+    },
+    "blocks": {
+      "label": "inflection",
+      "lemma": "block",
+      "hasIpa": true
+    },
+    "bloke": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blonde": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "blowing": {
+      "label": "inflection",
+      "lemma": "blow",
+      "hasIpa": true
+    },
+    "blown": {
+      "label": "irregular-inflection",
+      "lemma": "blow",
+      "hasIpa": true
+    },
+    "bo": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boarding": {
+      "label": "inflection",
+      "lemma": "board",
+      "hasIpa": true
+    },
+    "bold": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bond": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bone": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boo": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "booked": {
+      "label": "inflection",
+      "lemma": "book",
+      "hasIpa": true
+    },
+    "boom": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boot": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "booth": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boots": {
+      "label": "inflection",
+      "lemma": "boot",
+      "hasIpa": true
+    },
+    "booze": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "border": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "borrow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "borrowed": {
+      "label": "inflection",
+      "lemma": "borrow",
+      "hasIpa": true
+    },
+    "bound": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bout": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bow": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bowl": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "boxes": {
+      "label": "inflection",
+      "lemma": "box",
+      "hasIpa": true
+    },
+    "brad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "branch": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brand": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bravo": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "breast": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brick": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bride": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brief": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "britain": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "broad": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "brush": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "buck": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bucket": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bud": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "budget": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bug": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bugs": {
+      "label": "inflection",
+      "lemma": "bug",
+      "hasIpa": true
+    },
+    "buildings": {
+      "label": "inflection",
+      "lemma": "building",
+      "hasIpa": true
+    },
+    "bull": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bum": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    },
+    "bump": {
+      "label": "lemma",
+      "lemma": null,
+      "hasIpa": true
+    }
+  }
+}

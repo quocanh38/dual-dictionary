@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "cc0d043663d251952fa5dc44f8739ac06fa832ec9ecbb57417bccf7a8b2e3f2b",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna + gpt-6.1-sol; Codex editorial consolidation",
+  "reviewedAt": "2026-10-27T07:33:12.821Z",
+  "note": "Full-pack cross-model review at this exact stableJSON pack hash: Luna first/re-review and Sol final. Every source, meaning EN/VI, exercise option, explanation, answer key, transfer and self-check was reviewed. Rights rely on author-supplied provenance; AI-assisted editorial review only, not independent human or learner review, independent rights verification, or evidence of learning efficacy.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Original AI-assisted source and distribution rights are declared in provenance; no learner PII or copied exam text appears. Rights not independently verified beyond the declaration."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“carry out maintenance” occurs verbatim in s1 about the escalator."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Performing repair or upkeep to keep equipment in good condition matches the maintenance context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“thực hiện bảo trì” is natural, accented Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 includes “out of service” and directs passengers to lifts during the work."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“not working or not available for use” captures the alternatives without asserting the escalator must be broken."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“ngừng hoạt động” is natural for the temporary passenger-service context."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a describes escalator maintenance; b construction of an entrance and c station closure are distinct."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All options distinguish equipment maintenance from construction and station closure."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c is natural; a uses “carries” after “will” and b treats “maintenance” as countable in this sentence."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations identify the base form after “will” and the uncountable use here without overgeneralizing."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b states passengers cannot use the escalator during work; a says it remains open at a slower speed and c says it remains available to passengers, both contrary to the notice."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Corrected options and explanation focus on passenger availability and the direction to use lifts, without assuming the unit cannot operate mechanically or for staff."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is correct; a uses “services” instead of the fixed phrase and c omits “is” in a full sentence."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The explanations correctly change services to service and add the missing copula; the prompt is a full sentence, not a headline."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Transfer changes from a passenger-facing station notice to an office assistant messaging a colleague about a printer and alternative."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model naturally uses “out of service” and provides another printer; checklist is usable and no automatic grade is claimed."
+    }
+  ],
+  "findings": [
+    {
+      "id": "station-q3-availability-explanation",
+      "severity": "uncertain",
+      "resolved": true,
+      "evidence": "An earlier review flagged original q3 wording for conflating mechanical operation with passenger availability. The options and explanations were revised; Luna and Sol reviewed the full current hash and agree b is uniquely supported by the notice. See editorial diff."
+    }
+  ]
+}

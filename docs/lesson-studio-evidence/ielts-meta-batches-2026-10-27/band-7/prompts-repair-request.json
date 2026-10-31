@@ -1,0 +1,91 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-prompts-batch",
+  "instructions": "Return JSON only, no markdown, with exactly {\"writing\":[{\"task\":\"Task 1 · ... or Task 2 · ...\",\"focus\":\"...\",\"prompt\":\"...\",\"minimumWords\":150,\"suggestedMinutes\":20}],\"speaking\":[{\"task\":\"Part 1 · ... or Part 2 · Cue card or Part 3 · ...\",\"focus\":\"...\",\"prompt\":\"...\"}]}. Generate exactly five Writing and five Speaking prompts. Writing: create distinct Academic Task 1 and Task 2 prompts, giving complete original table data directly in each Task 1 prompt (no image dependency), valid minimum word counts (Task 1: 150; Task 2: 250) and realistic times (20/40 minutes). Speaking: cover Parts 1, 2 and 3; Part 2 must include cue-card bullet points; Part 3 needs reasons/evaluation, not memorised facts. Prompts must be distinct and answerable without hidden material. Do not include model responses or band estimates. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 6.5 to 7.0: nuanced inference, scope and causality limits, competing evidence, and precise evaluation without overclaiming. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: replication in social research, the limits of remote-learning metrics, and community heat-risk modelling. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied writing and speaking prompts against the findings. Preserve every valid unflagged prompt and keep exactly five per skill. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-7",
+    "currentBatch": {
+      "writing": [
+        {
+          "task": "Task 1 · Replication Reviews in Social Research",
+          "focus": "selecting key contrasts and describing scope limits without overstating causality",
+          "prompt": "The table below shows the outcomes of three university reviews of published social research studies, conducted between 2021 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Field of study | Studies reviewed | Fully replicated (%) | Partly replicated (%) | Did not replicate (%). Education motivation: 48 studies | 32% | 28% | 40%. Household recycling behaviour: 52 studies | 25% | 35% | 40%. Neighbourhood trust surveys: 60 studies | 38% | 30% | 32%. All percentages refer to share of studies reviewed in that field.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 1 · Remote-Learning Participation Indicators",
+          "focus": "comparing competing measures and noting what metrics cannot show",
+          "prompt": "The table below compares remote-learning participation in three secondary school districts during the spring term of 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: District | Students enrolled | Average logins per student per week | Assignments submitted on time (%) | Live sessions attended (%) | Discussion posts per student per week. Northvale: 1200 students | 4.2 logins | 68% | 55% | 1.8 posts. Eastmere: 950 students | 5.1 logins | 74% | 61% | 2.4 posts. Southfield: 1100 students | 3.6 logins | 62% | 48% | 1.2 posts.",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 2 · Replication and Trust in Social Research",
+          "focus": "evaluating competing evidence and limiting causal claims",
+          "prompt": "Some people argue that if a social research finding cannot be replicated in a new study, the original finding should no longer be trusted. Others argue that differences in context, methods and samples can explain inconsistent results without invalidating the original work. Discuss both views and give your own opinion. Give reasons for your answer and include relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes. This is original practice material.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · The Limits of Remote-Learning Metrics",
+          "focus": "nuanced inference about what attendance and score data can and cannot prove",
+          "prompt": "Schools increasingly use login counts, attendance records and online test scores to judge the quality of remote learning. Some people believe these metrics give a clear picture of student learning. Others believe they miss important aspects such as understanding, motivation and home conditions. To what extent do you agree that remote-learning metrics alone are insufficient to evaluate learning? Give reasons for your answer and include relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes. This is original practice material.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 2 · Community Heat-Risk Modelling",
+          "focus": "precise evaluation of uncertain models and competing priorities",
+          "prompt": "Some cities now use heat-risk maps, which combine temperature forecasts, housing type and age data, to decide where to open cooling centres and plant trees. Some people think local authorities should follow these models closely. Others think the models are too uncertain and that direct consultation with residents is more important. Discuss both views and give your own opinion. Give reasons for your answer and include relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes. This is original practice material.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Part 1 · Learning and Study Routines",
+          "focus": "giving precise personal responses without overgeneralising",
+          "prompt": "Answer each question briefly and naturally, giving reasons where possible. 1. How do you usually organise your study time? 2. Have your study habits changed when learning online? 3. What helps you concentrate when you study at home? 4. Do you prefer to check your progress with tests or with practical tasks? Why?"
+        },
+        {
+          "task": "Part 1 · Local Weather and Community Life",
+          "focus": "describing local experience with careful scope",
+          "prompt": "Answer each question briefly and naturally. 1. What is hot weather like in the area where you live? 2. How do people in your community usually cope with very hot days? 3. Are there public places where people can cool down near you? 4. Has your view of local climate changed in recent years? Why or why not?"
+        },
+        {
+          "task": "Part 2 · Cue card - Checking Conflicting Information",
+          "focus": "narrating uncertainty and explaining careful verification",
+          "prompt": "Describe a time when you read or heard conflicting information and wanted to check it more carefully. You should say: what the information was about, where you found it, why you felt uncertain about it, and explain what you did to reach a clearer view. You have one minute to prepare and should speak for one to two minutes."
+        },
+        {
+          "task": "Part 2 · Cue card - A Community Response to Hot Weather",
+          "focus": "describing local action while noting limits of evidence",
+          "prompt": "Describe a project or activity in your community that helps people during hot weather. You should say: what the project or activity is, who organises or takes part in it, how it works in practice, and explain how useful you think it is and why. You have one minute to prepare and should speak for one to two minutes."
+        },
+        {
+          "task": "Part 3 · Evidence, Measurement and Local Action",
+          "focus": "evaluating competing evidence and explaining reasoning with caution",
+          "prompt": "Discuss the following questions, giving reasons and examples rather than memorised facts. 1. Why might two careful studies on the same social topic reach different conclusions? 2. What can school login data and test scores show about remote learning, and what might they fail to show? 3. When a heat-risk map and residents opinions point in different directions, how should a local council decide what to do? 4. How can ordinary people judge whether research claims reported in the media are trustworthy?"
+        }
+      ]
+    },
+    "gptFindings": {
+      "reviewer": "local-structural-validator",
+      "candidateStage": "band-7",
+      "findings": [
+        {
+          "severity": "major",
+          "item": "Speaking prompt 3",
+          "issue": "Part 2 cue-card prompt is missing visible bullet points.",
+          "requiredFix": "Add four concise, separate cue-card bullets that guide the long turn without supplying a sample answer."
+        },
+        {
+          "severity": "major",
+          "item": "Speaking prompt 4",
+          "issue": "Part 2 cue-card prompt is missing visible bullet points.",
+          "requiredFix": "Add four concise, separate cue-card bullets that guide the long turn without supplying a sample answer."
+        }
+      ]
+    }
+  }
+}

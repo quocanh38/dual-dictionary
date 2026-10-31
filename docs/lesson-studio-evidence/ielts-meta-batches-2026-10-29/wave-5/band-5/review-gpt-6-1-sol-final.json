@@ -1,0 +1,71 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "2427d184c823c547f6a3e65d8cc288c3fc072f8882717eed066a1c53f647b8d8",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": {
+    "listening": "Full revised pool conversation read: beginner Maya; corrected Saturday 10:30; children all use small indoor pool; brought swimwear/goggles/towel/locker lock versus provided kickboards/noodles; $12 single versus $40 four classes; 15-minute registration. All five keys [0,2,3,1,1] explicit and unique; all 20 distractor/key options and five explanations checked.",
+    "reading": "Full greenhouse passage read: original biology purpose; warm humid banana/orchid area versus dry cactus/rosemary area; lettuce and tomato examples versus environmental-responsibility claim; water/solar/café benefits; free entry and advance booking at 100 per hour. All five keys [0,2,1,3,1] supported; all options and explanations read. Cafe key now exactly matches transport costs/packaging waste.",
+    "writing": "All five prompts read. Bake sale contains four complete price/made/sold/revenue rows for 15 March; 72×1.5=108,45×2=90,48×2.5=120,30×1=30. Printing data has all eight student counts across Monday/Friday and four clock times in October. Task2 sports, queues and funding prompts support clear opinion/comparison/solutions at this stage. Task1 minimum150/time20 and Task2 minimum250/time40 fields consistent; prose supplies word minimum, timing resides in suggestedMinutes.",
+    "speaking": "All five prompts read: two personal Part1 sets, beginner-class Part2 with detailed personal-event bullets plus one-minute preparation/1–2-minute talk, and two broader Part3 events/time-management sets. Natural accessible stage practice; no memorised specialist facts necessary.",
+    "resolvedInitialIssues": [
+      "Listening length reduced from410 to379; metadata matches exact whitespace count and satisfies300–400.",
+      "Rosemary now described as a plant from dry regions; previous desert-habitat classification removed in shared and all copied passages.",
+      "Implausible teacher/100people distractors replaced by plausible equipment/booking alternatives.",
+      "Cafe inference key now describes transport costs and packaging waste directly, with matching explanation."
+    ],
+    "scope": "Full independent AI-assisted final rereview of candidate-final-v2.json: all20items (5Listening,5Reading,5Writing,5Speaking), complete shared contexts, all40options,10keys/10explanations and all productive prompts/metadata. Repeated contexts verified string-identical to shared contexts. Entire payload reviewed, not only repair deltas. No other final reviewer reports read; no provider calls or candidate edits.",
+    "structure": {
+      "itemCount": 20,
+      "wordCounts": {
+        "listening": 379,
+        "reading": 449
+      },
+      "wordCountConvention": "Whitespace-delimited, including speaker labels; matches payload wordCount.",
+      "answerPositions": {
+        "Listening": [
+          0,
+          2,
+          3,
+          1,
+          1
+        ],
+        "Reading": [
+          0,
+          2,
+          1,
+          3,
+          1
+        ]
+      },
+      "normalizationFindings": [],
+      "taskTiming": "Task1 minimumWords150/suggestedMinutes20; Task2 minimumWords250/suggestedMinutes40; timing sometimes in metadata rather than prompt prose."
+    },
+    "itemIds": [
+      "ielts-meta-wave-5-band-5-listening-01",
+      "ielts-meta-wave-5-band-5-listening-02",
+      "ielts-meta-wave-5-band-5-listening-03",
+      "ielts-meta-wave-5-band-5-listening-04",
+      "ielts-meta-wave-5-band-5-listening-05",
+      "ielts-meta-wave-5-band-5-reading-01",
+      "ielts-meta-wave-5-band-5-reading-02",
+      "ielts-meta-wave-5-band-5-reading-03",
+      "ielts-meta-wave-5-band-5-reading-04",
+      "ielts-meta-wave-5-band-5-reading-05",
+      "ielts-meta-wave-5-band-5-writing-01",
+      "ielts-meta-wave-5-band-5-writing-02",
+      "ielts-meta-wave-5-band-5-writing-03",
+      "ielts-meta-wave-5-band-5-writing-04",
+      "ielts-meta-wave-5-band-5-writing-05",
+      "ielts-meta-wave-5-band-5-speaking-01",
+      "ielts-meta-wave-5-band-5-speaking-02",
+      "ielts-meta-wave-5-band-5-speaking-03",
+      "ielts-meta-wave-5-band-5-speaking-04",
+      "ielts-meta-wave-5-band-5-speaking-05"
+    ],
+    "originalityAndClaims": "No recognisable copied official question or score guarantee found. Provenance identifies Baseten/meta-models/muse-spark-open-1026 and originalContent=true; no exhaustive external plagiarism audit or empirical verification of fictional study statistics performed. Stage labels indicate practice progression, not validated score attainment.",
+    "independence": "Same reviewer performed initial review. Prior own findings considered for closure, while full final content reread independently. Other reviewers final findings not read."
+  },
+  "reviewerType": "AI-assisted"
+}

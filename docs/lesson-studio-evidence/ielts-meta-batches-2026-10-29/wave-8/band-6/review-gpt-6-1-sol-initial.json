@@ -1,0 +1,103 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "f75933f5c7355a9f639f6f8925bccc797dc64def8a8bc32d73a1d4c97d8808c2",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-8-band-6-listening-04",
+      "severity": "critical",
+      "issue": "The question asks what David MUST do to confirm and keys replying YES, but the script explicitly allows confirmation during the phone call instead. Ask how he can confirm by text, or include both permitted methods in the key."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-6-listening-05",
+      "severity": "minor",
+      "issue": "What must David bring and when to arrive? is awkward; use What should David bring, and when should he arrive?"
+    },
+    {
+      "item": "ielts-meta-wave-8-band-6-reading-03",
+      "severity": "minor",
+      "issue": "Seven parks lacked available accessible toilets on a visit day; explanation should preserve available for use rather than imply no such toilets existed."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-6-reading-05",
+      "severity": "minor",
+      "issue": "The answer is explicitly stated, so label this a detail question rather than an inference question. Use older people and families instead of elderly and families."
+    },
+    {
+      "item": "writingPrompts",
+      "severity": "minor",
+      "issue": "20/40-minute timing is present in metadata but absent from prompt prose; ensure the UI exposes it."
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted initial review of all 20 items: 5 Listening, 5 Reading, 5 Writing, 5 Speaking; entire shared contexts, all 40 options, 10 keys/explanations, productive prompts and metadata. Prior wave-7 band-5 reviewer report viewed only as schema example; no other wave-8 reviewer reports inspected. No candidate edits or provider calls.",
+    "listening": "386-word clinic dialogue: Tuesday 14 May 9:30 correction, Group B Sunday text/Monday call, YES or call confirmation, 24-hour cancellation, free/private reminders, 15-minute early arrival with health card and medication list. All options/keys/explanations read.",
+    "reading": "431-word twelve-park audit read: methods, Central/Northside contrast, ten uneven paths/seven unavailable toilets/four readable maps, maintenance over age, quick and long-term recommendations. All keys/options/explanations checked.",
+    "writing": "Two complete Task 1 tables: health session totals 100/140/150 all add correctly, twelve volunteer-hour cells January–April; three Task 2 topics. Minimum words/timing metadata correct.",
+    "speaking": "Two Part 1 sets, one visible four-bullet timed Part 2, two reasoned Part 3 sets. Band-6 linking/comparison focus plausible; no certified calibration.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 386,
+        "reading": 431
+      },
+      "metadataWordCounts": {
+        "listening": 386,
+        "reading": 431
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          1,
+          1,
+          2,
+          0,
+          3
+        ],
+        "Reading": [
+          1,
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      "repeatedContextsEqualShared": true,
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API / meta-models/muse-spark-open-1026; wave-8-v1 prompt identifiers and originalContent=true inspected. No recognisable official-question copying found; authorship declaration is not independent plagiarism verification. Fictional research data checked internally, not externally verified. Stages are estimated practice progression, not validated band attainment.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-6-listening-01",
+      "ielts-meta-wave-8-band-6-listening-02",
+      "ielts-meta-wave-8-band-6-listening-03",
+      "ielts-meta-wave-8-band-6-listening-04",
+      "ielts-meta-wave-8-band-6-listening-05",
+      "ielts-meta-wave-8-band-6-reading-01",
+      "ielts-meta-wave-8-band-6-reading-02",
+      "ielts-meta-wave-8-band-6-reading-03",
+      "ielts-meta-wave-8-band-6-reading-04",
+      "ielts-meta-wave-8-band-6-reading-05",
+      "ielts-meta-wave-8-band-6-writing-01",
+      "ielts-meta-wave-8-band-6-writing-02",
+      "ielts-meta-wave-8-band-6-writing-03",
+      "ielts-meta-wave-8-band-6-writing-04",
+      "ielts-meta-wave-8-band-6-writing-05",
+      "ielts-meta-wave-8-band-6-speaking-01",
+      "ielts-meta-wave-8-band-6-speaking-02",
+      "ielts-meta-wave-8-band-6-speaking-03",
+      "ielts-meta-wave-8-band-6-speaking-04",
+      "ielts-meta-wave-8-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

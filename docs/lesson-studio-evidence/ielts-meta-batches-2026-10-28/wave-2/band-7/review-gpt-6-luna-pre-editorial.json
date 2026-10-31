@@ -1,0 +1,19 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "2e887eb72c45bfcc08c5e52116f9505bacb0b66b9570ce9e42ab49c88906daff",
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-2-band-7-listening-04",
+      "skill": "Listening",
+      "issue": "The keyed answer D (Sunday-evening reminders) is supported as helping more than the extra voucher, but the stem asks broadly what helped retention “most.” The same script also says shortening the survey made half-finished surveys fall sharply, so a learner could reasonably choose the questionnaire reduction as the more effective intervention.",
+      "suggestion": "Narrow the stem to the explicit comparison, e.g. “Which incentive did Tom say helped more than the extra money?”"
+    },
+    {
+      "item": "ielts-meta-wave-2-band-7-reading shared passage",
+      "skill": "Reading",
+      "issue": "The passage is 492 words, short for a standalone IELTS Academic Reading Passage 1. Its five questions are answerable, but the passage gives much less sustained reading practice than a full passage-level task.",
+      "suggestion": "Expand the passage to a more representative length (roughly 700–900 words) or label it clearly as a short excerpt/practice set."
+    }
+  ]
+}

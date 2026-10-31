@@ -1,4 +1,15 @@
-.DS_Store
 .netlify/
+.DS_Store
+_review-phrases.html
 node_modules/
-*.log
+
+# Local credentials, browser state and working artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.playwright/
+playwright/.auth/
+/outputs/
+/work/

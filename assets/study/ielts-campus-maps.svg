@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title desc">
+  <title id="title">Northport University riverside campus in 2005 and 2025</title>
+  <desc id="desc">Side-by-side campus maps. The northern car park becomes a student residence, the central library expands west, eastern grassland becomes a riverside walkway and cafe, and the southern footpath remains.</desc>
+  <rect width="900" height="440" rx="18" fill="#f5f8f6"/>
+  <g font-family="system-ui, sans-serif" fill="#173b34">
+    <text x="220" y="38" text-anchor="middle" font-size="22" font-weight="700">2005</text>
+    <text x="680" y="38" text-anchor="middle" font-size="22" font-weight="700">2025</text>
+    <g stroke="#72877d" stroke-width="2">
+      <rect x="30" y="58" width="390" height="338" rx="12" fill="#edf2e8"/>
+      <rect x="480" y="58" width="390" height="338" rx="12" fill="#edf2e8"/>
+    </g>
+    <g font-size="14" text-anchor="middle">
+      <rect x="58" y="82" width="126" height="82" rx="8" fill="#d9dfe0" stroke="#65777a"/><text x="121" y="116"><tspan x="121">Main entrance</tspan><tspan x="121" dy="20">and car park</tspan></text>
+      <rect x="208" y="170" width="126" height="84" rx="8" fill="#d9e7f0" stroke="#567e94"/><text x="271" y="207"><tspan x="271">Library</tspan><tspan x="271" dy="20">(small)</tspan></text>
+      <rect x="342" y="82" width="60" height="270" rx="8" fill="#a9d9e6" stroke="#4e8ea2"/><text x="373" y="192" transform="rotate(90 373 192)">Riverside</text>
+      <rect x="280" y="82" width="52" height="70" rx="8" fill="#d8ebc7" stroke="#72945e"/><text x="306" y="112"><tspan x="306">Open</tspan><tspan x="306" dy="18">grass</tspan></text>
+      <rect x="58" y="352" width="268" height="20" rx="10" fill="#e1d5b8" stroke="#9e8655"/><text x="192" y="367" font-size="12">Southern footpath</text>
+
+      <rect x="508" y="82" width="126" height="82" rx="8" fill="#e9d9c7" stroke="#967856"/><text x="571" y="116"><tspan x="571">Student</tspan><tspan x="571" dy="20">residence</tspan></text>
+      <rect x="640" y="154" width="126" height="112" rx="8" fill="#d9e7f0" stroke="#567e94"/><text x="703" y="205"><tspan x="703">Expanded</tspan><tspan x="703" dy="20">library</tspan></text>
+      <rect x="792" y="82" width="54" height="270" rx="8" fill="#a9d9e6" stroke="#4e8ea2"/><text x="819" y="192" transform="rotate(90 819 192)">Riverside</text>
+      <rect x="680" y="82" width="96" height="58" rx="8" fill="#d7edd0" stroke="#72945e"/><text x="728" y="106"><tspan x="728">Walkway</tspan><tspan x="728" dy="18">and café</tspan></text>
+      <rect x="508" y="352" width="268" height="20" rx="10" fill="#e1d5b8" stroke="#9e8655"/><text x="642" y="367" font-size="12">Southern footpath · unchanged</text>
+    </g>
+    <g font-size="12" fill="#4c6257"><text x="44" y="78">N ↑</text><text x="494" y="78">N ↑</text></g>
+  </g>
+</svg>

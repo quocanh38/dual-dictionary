@@ -1,0 +1,61 @@
+{
+  "id": "draft-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Selecting Excerpts for a Student Podcast",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A student media group is preparing a short podcast about how older buildings are reused. After recording three interviews with local planners, the students listen to the files together. They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part. If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode. The editor checks each excerpt against the full conversation to make sure its meaning has not changed. Before release, the team sends the final audio to the speakers for a factual check.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "A student media group is preparing a short podcast about how older buildings are reused. After recording three interviews with local planners, the students listen to the files together. They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part. If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode. The editor checks each excerpt against the full conversation to make sure its meaning has not changed. Before release, the team sends the final audio to the speakers for a factual check.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A student media group is preparing a short podcast about how older buildings are reused."
+      },
+      {
+        "id": "s2",
+        "text": "After recording three interviews with local planners, the students listen to the files together."
+      },
+      {
+        "id": "s3",
+        "text": "They pick out brief sections that explain a design choice clearly, then note the time stamp so the editor can find each part."
+      },
+      {
+        "id": "s4",
+        "text": "If an interviewee asks for a comment to stay off the record, the group leaves that section out of the public episode."
+      },
+      {
+        "id": "s5",
+        "text": "The editor checks each excerpt against the full conversation to make sure its meaning has not changed."
+      },
+      {
+        "id": "s6",
+        "text": "Before release, the team sends the final audio to the speakers for a factual check."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "off the record",
+      "meaningEn": "not to be published or shared publicly",
+      "meaningVi": "không được công bố công khai",
+      "sourceSentenceId": "s4"
+    },
+    {
+      "id": "t2",
+      "phrase": "time stamp",
+      "meaningEn": "a recorded time that shows where a part is in an audio file",
+      "meaningVi": "mốc thời gian",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

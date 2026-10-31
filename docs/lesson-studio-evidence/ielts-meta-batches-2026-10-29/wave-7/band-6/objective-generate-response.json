@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-7",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-7-v1",
+  "completedAt": "2026-10-29T05:21:13.653Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 763,
+    "outputTokens": 7996,
+    "totalTokens": 8759
+  },
+  "latencyMs": 37571,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"University Language-Partner Matching Scheme\",\"focus\":\"Understanding paraphrase, linked ideas and corrected details in an academic discussion\",\"part\":\"Part 3\",\"script\":\"Maya: Hi Jon, have you signed up for the university's language-partner matching scheme this term?\\nJon: Yes, I applied last week. I wanted to improve my Spanish, so they matched me with Sofia, an exchange student from Argentina.\\nMaya: That's great. I requested a Mandarin partner because I'm going to Beijing on an exchange programme next year and I need more speaking practice.\\nJon: How often do you meet? Sofia and I meet twice a week, for about an hour each time in the main library.\\nMaya: Same here. We use the conversation room on the second floor. We divide the hour equally — thirty minutes in English and thirty minutes in Mandarin.\\nJon: We do the same, thirty minutes per language. The coordinator, Dr Evans, told us to prepare a topic before each meeting, like hobbies, food, or travel plans.\\nMaya: Right, and we have to keep a short weekly log of what we talked about and any new vocabulary. It's not marked, but she reviews it to give advice.\\nJon: I thought the log had to be sent every Friday, but actually the email says it's due every Sunday evening.\\nMaya: Thanks for correcting me — I had Friday in my notes too. Do you also go to the monthly group session?\\nJon: Yes, the first one is next Thursday at four o'clock in Room B. I initially thought it was Wednesday, but the updated timetable shows Thursday.\\nMaya: I'll be there. I heard the coordinator discusses common difficulties, such as speaking too quickly or not asking follow-up questions.\\nJon: And she offers extra pronunciation workshops for anyone who wants them. I'm considering joining the Spanish one.\\nMaya: Me too for Mandarin. Overall, I think this scheme is much more helpful than just using a language app, because you have real interaction.\\nJon: I agree. I've only had three meetings, but I already feel more confident speaking.\",\"questions\":[{\"title\":\"Reason for joining\",\"prompt\":\"Why did Maya request a Mandarin partner?\",\"options\":[\"To prepare for an exchange in Beijing\",\"To teach English in China\",\"To pass a written exam\",\"To join a pronunciation workshop\"],\"answer\":0,\"explanation\":\"Maya says she needs speaking practice for her Beijing exchange next year. Teaching English is not mentioned, so that distractor confuses the direction of learning.\"},{\"title\":\"Meeting structure\",\"prompt\":\"How do the partners divide their one-hour meeting?\",\"options\":[\"One hour per language\",\"30 minutes per language\",\"Only speaking English\",\"Only speaking Mandarin\"],\"answer\":1,\"explanation\":\"Both students confirm they split the hour equally, 30 minutes in each language. The one-hour-per-language option misreads the total meeting length.\"},{\"title\":\"Weekly log deadline\",\"prompt\":\"When is the weekly log actually due?\",\"options\":[\"Every Friday morning\",\"Every Monday evening\",\"Every Sunday evening\",\"Every Thursday afternoon\"],\"answer\":2,\"explanation\":\"Jon corrects his first thought of Friday and states the email says Sunday evening. Friday is the initial error, not the final deadline.\"},{\"title\":\"Group session details\",\"prompt\":\"When and where is the first group session?\",\"options\":[\"Wednesday at 4 pm in Room B\",\"Thursday at 10 am in the library\",\"Friday at 4 pm in Room B\",\"Thursday at 4 pm in Room B\"],\"answer\":3,\"explanation\":\"Jon clarifies the updated timetable shows Thursday at four in Room B, correcting Wednesday. Wednesday reflects his earlier mistake.\"},{\"title\":\"Comparison with apps\",\"prompt\":\"What do both students agree about the scheme compared to an app?\",\"options\":[\"App is cheaper than the scheme\",\"Scheme gives real interaction and confidence\",\"Scheme requires no preparation\",\"App offers pronunciation workshops\"],\"answer\":1,\"explanation\":\"They agree the scheme is more helpful than an app because of real interaction and increased confidence. The workshops are offered by the coordinator, not an app.\"}]},\"reading\":{\"title\":\"Riverside Neighbourhood Library Delivery Trial\",\"focus\":\"Following linked ideas, comparisons, and distinguishing claims from examples\",\"passage\":\"Riverside Neighbourhood Library began a three-month home delivery trial in January to help residents who find it difficult to visit the building. The library wanted to reach older people, parents with young children, and shift workers with limited free time. Before the trial, these groups borrowed fewer books than regular visitors, even though surveys showed they wanted to read more.\\n\\nThe service was simple. Residents could request up to five items at a time through the library website or by telephone. A small team of trained volunteers then delivered books to homes twice a week, on Tuesdays and Fridays. Each delivery included a return bag for books that were finished. The loan period was the same as in the library — three weeks — and users received a reminder message two days before the due date. Unlike the normal self-service system, volunteers also offered brief recommendations based on previous choices.\\n\\nBy the end of March, 120 households had used the delivery service at least once. A questionnaire showed that 85% of users were satisfied or very satisfied, and many said they read more often than before. However, the trial also revealed problems. About one in five deliveries was returned late, often because users forgot the collection day. In addition, the volunteer team was sometimes too small to cover all requests quickly, especially during the school holidays in February when two volunteers were away.\\n\\nThe library compared delivery users with people who continued to visit in person. Both groups borrowed a similar number of books on average, but delivery users tried a wider range of genres. For example, regular visitors mostly chose fiction, while delivery users more often added history, science, and cookery books after receiving suggestions. This suggests that personal recommendations had a positive effect, although the library notes that delivery users may already have had broader interests.\\n\\nOne example often mentioned is Mrs Lee, a 72-year-old resident who had not visited the library for two years due to mobility issues. Through the trial, she received large-print novels and audiobooks every two weeks and said the service reduced her sense of isolation. Her experience illustrates an individual benefit, but the library's overall claim is that the trial was successful because it increased access without reducing the quality of the service. To continue, the library states it will need stable funding to pay for transport and to recruit more volunteers. The council will decide in June whether to extend the scheme for another year.\",\"questions\":[{\"title\":\"Purpose of trial\",\"prompt\":\"What was the main purpose of the delivery trial?\",\"options\":[\"To increase access for residents unable to visit\",\"To reduce number of visitors to library\",\"To test a new library website\",\"To lend more fiction books\"],\"answer\":0,\"explanation\":\"The passage states the trial aimed to help those who find visiting difficult. Reducing visitors contradicts the stated aim of increasing access.\"},{\"title\":\"Ordering method\",\"prompt\":\"How could residents request books during the trial?\",\"options\":[\"Only through the website\",\"Through website or telephone\",\"Only by visiting the library\",\"Through volunteers in person\"],\"answer\":1,\"explanation\":\"The service allowed requests via website or telephone. The website-only option omits the telephone alternative mentioned.\"},{\"title\":\"Volunteer availability\",\"prompt\":\"What can be inferred about the volunteer team in February?\",\"options\":[\"Team worked only on Fridays\",\"Team stopped all deliveries\",\"Team was smaller than usual\",\"Team had no holidays\"],\"answer\":2,\"explanation\":\"The text notes two volunteers were away in February and the team was sometimes too small. Stopping deliveries overstates a temporary shortage.\"},{\"title\":\"Claim versus example\",\"prompt\":\"What is the library's overall claim, distinct from Mrs Lee's example?\",\"options\":[\"Mrs Lee's isolation was reduced\",\"Delivery users borrowed fiction\",\"Volunteers offered recommendations\",\"Trial increased access without lowering quality\"],\"answer\":3,\"explanation\":\"The library's general claim is success through increased access without lower quality, while Mrs Lee is a single illustration. Her reduced isolation is the example, not the overall claim.\"},{\"title\":\"Future requirement\",\"prompt\":\"What does the library say is needed to continue the service?\",\"options\":[\"Stable funding for transport and volunteers\",\"Higher late return fees\",\"Shorter three-week loan period\",\"Closing the main library building\"],\"answer\":0,\"explanation\":\"Continuation depends on stable funding for transport and recruiting volunteers. Higher fees are not proposed as a solution in the passage.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "University Language-Partner Matching Scheme",
+      "focus": "Understanding paraphrase, linked ideas and corrected details in an academic discussion",
+      "part": "Part 3",
+      "script": "Maya: Hi Jon, have you signed up for the university's language-partner matching scheme this term?\nJon: Yes, I applied last week. I wanted to improve my Spanish, so they matched me with Sofia, an exchange student from Argentina.\nMaya: That's great. I requested a Mandarin partner because I'm going to Beijing on an exchange programme next year and I need more speaking practice.\nJon: How often do you meet? Sofia and I meet twice a week, for about an hour each time in the main library.\nMaya: Same here. We use the conversation room on the second floor. We divide the hour equally — thirty minutes in English and thirty minutes in Mandarin.\nJon: We do the same, thirty minutes per language. The coordinator, Dr Evans, told us to prepare a topic before each meeting, like hobbies, food, or travel plans.\nMaya: Right, and we have to keep a short weekly log of what we talked about and any new vocabulary. It's not marked, but she reviews it to give advice.\nJon: I thought the log had to be sent every Friday, but actually the email says it's due every Sunday evening.\nMaya: Thanks for correcting me — I had Friday in my notes too. Do you also go to the monthly group session?\nJon: Yes, the first one is next Thursday at four o'clock in Room B. I initially thought it was Wednesday, but the updated timetable shows Thursday.\nMaya: I'll be there. I heard the coordinator discusses common difficulties, such as speaking too quickly or not asking follow-up questions.\nJon: And she offers extra pronunciation workshops for anyone who wants them. I'm considering joining the Spanish one.\nMaya: Me too for Mandarin. Overall, I think this scheme is much more helpful than just using a language app, because you have real interaction.\nJon: I agree. I've only had three meetings, but I already feel more confident speaking.",
+      "questions": [
+        {
+          "title": "Reason for joining",
+          "prompt": "Why did Maya request a Mandarin partner?",
+          "options": [
+            "To prepare for an exchange in Beijing",
+            "To teach English in China",
+            "To pass a written exam",
+            "To join a pronunciation workshop"
+          ],
+          "answer": 0,
+          "explanation": "Maya says she needs speaking practice for her Beijing exchange next year. Teaching English is not mentioned, so that distractor confuses the direction of learning."
+        },
+        {
+          "title": "Meeting structure",
+          "prompt": "How do the partners divide their one-hour meeting?",
+          "options": [
+            "One hour per language",
+            "30 minutes per language",
+            "Only speaking English",
+            "Only speaking Mandarin"
+          ],
+          "answer": 1,
+          "explanation": "Both students confirm they split the hour equally, 30 minutes in each language. The one-hour-per-language option misreads the total meeting length."
+        },
+        {
+          "title": "Weekly log deadline",
+          "prompt": "When is the weekly log actually due?",
+          "options": [
+            "Every Friday morning",
+            "Every Monday evening",
+            "Every Sunday evening",
+            "Every Thursday afternoon"
+          ],
+          "answer": 2,
+          "explanation": "Jon corrects his first thought of Friday and states the email says Sunday evening. Friday is the initial error, not the final deadline."
+        },
+        {
+          "title": "Group session details",
+          "prompt": "When and where is the first group session?",
+          "options": [
+            "Wednesday at 4 pm in Room B",
+            "Thursday at 10 am in the library",
+            "Friday at 4 pm in Room B",
+            "Thursday at 4 pm in Room B"
+          ],
+          "answer": 3,
+          "explanation": "Jon clarifies the updated timetable shows Thursday at four in Room B, correcting Wednesday. Wednesday reflects his earlier mistake."
+        },
+        {
+          "title": "Comparison with apps",
+          "prompt": "What do both students agree about the scheme compared to an app?",
+          "options": [
+            "App is cheaper than the scheme",
+            "Scheme gives real interaction and confidence",
+            "Scheme requires no preparation",
+            "App offers pronunciation workshops"
+          ],
+          "answer": 1,
+          "explanation": "They agree the scheme is more helpful than an app because of real interaction and increased confidence. The workshops are offered by the coordinator, not an app."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Riverside Neighbourhood Library Delivery Trial",
+      "focus": "Following linked ideas, comparisons, and distinguishing claims from examples",
+      "passage": "Riverside Neighbourhood Library began a three-month home delivery trial in January to help residents who find it difficult to visit the building. The library wanted to reach older people, parents with young children, and shift workers with limited free time. Before the trial, these groups borrowed fewer books than regular visitors, even though surveys showed they wanted to read more.\n\nThe service was simple. Residents could request up to five items at a time through the library website or by telephone. A small team of trained volunteers then delivered books to homes twice a week, on Tuesdays and Fridays. Each delivery included a return bag for books that were finished. The loan period was the same as in the library — three weeks — and users received a reminder message two days before the due date. Unlike the normal self-service system, volunteers also offered brief recommendations based on previous choices.\n\nBy the end of March, 120 households had used the delivery service at least once. A questionnaire showed that 85% of users were satisfied or very satisfied, and many said they read more often than before. However, the trial also revealed problems. About one in five deliveries was returned late, often because users forgot the collection day. In addition, the volunteer team was sometimes too small to cover all requests quickly, especially during the school holidays in February when two volunteers were away.\n\nThe library compared delivery users with people who continued to visit in person. Both groups borrowed a similar number of books on average, but delivery users tried a wider range of genres. For example, regular visitors mostly chose fiction, while delivery users more often added history, science, and cookery books after receiving suggestions. This suggests that personal recommendations had a positive effect, although the library notes that delivery users may already have had broader interests.\n\nOne example often mentioned is Mrs Lee, a 72-year-old resident who had not visited the library for two years due to mobility issues. Through the trial, she received large-print novels and audiobooks every two weeks and said the service reduced her sense of isolation. Her experience illustrates an individual benefit, but the library's overall claim is that the trial was successful because it increased access without reducing the quality of the service. To continue, the library states it will need stable funding to pay for transport and to recruit more volunteers. The council will decide in June whether to extend the scheme for another year.",
+      "questions": [
+        {
+          "title": "Purpose of trial",
+          "prompt": "What was the main purpose of the delivery trial?",
+          "options": [
+            "To increase access for residents unable to visit",
+            "To reduce number of visitors to library",
+            "To test a new library website",
+            "To lend more fiction books"
+          ],
+          "answer": 0,
+          "explanation": "The passage states the trial aimed to help those who find visiting difficult. Reducing visitors contradicts the stated aim of increasing access."
+        },
+        {
+          "title": "Ordering method",
+          "prompt": "How could residents request books during the trial?",
+          "options": [
+            "Only through the website",
+            "Through website or telephone",
+            "Only by visiting the library",
+            "Through volunteers in person"
+          ],
+          "answer": 1,
+          "explanation": "The service allowed requests via website or telephone. The website-only option omits the telephone alternative mentioned."
+        },
+        {
+          "title": "Volunteer availability",
+          "prompt": "What can be inferred about the volunteer team in February?",
+          "options": [
+            "Team worked only on Fridays",
+            "Team stopped all deliveries",
+            "Team was smaller than usual",
+            "Team had no holidays"
+          ],
+          "answer": 2,
+          "explanation": "The text notes two volunteers were away in February and the team was sometimes too small. Stopping deliveries overstates a temporary shortage."
+        },
+        {
+          "title": "Claim versus example",
+          "prompt": "What is the library's overall claim, distinct from Mrs Lee's example?",
+          "options": [
+            "Mrs Lee's isolation was reduced",
+            "Delivery users borrowed fiction",
+            "Volunteers offered recommendations",
+            "Trial increased access without lowering quality"
+          ],
+          "answer": 3,
+          "explanation": "The library's general claim is success through increased access without lower quality, while Mrs Lee is a single illustration. Her reduced isolation is the example, not the overall claim."
+        },
+        {
+          "title": "Future requirement",
+          "prompt": "What does the library say is needed to continue the service?",
+          "options": [
+            "Stable funding for transport and volunteers",
+            "Higher late return fees",
+            "Shorter three-week loan period",
+            "Closing the main library building"
+          ],
+          "answer": 0,
+          "explanation": "Continuation depends on stable funding for transport and recruiting volunteers. Higher fees are not proposed as a solution in the passage."
+        }
+      ]
+    }
+  }
+}

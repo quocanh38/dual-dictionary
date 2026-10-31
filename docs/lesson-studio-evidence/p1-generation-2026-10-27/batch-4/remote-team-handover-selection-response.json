@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "hand over",
+        "meaningEn": "to give responsibility for work to another person",
+        "meaningVi": "bàn giao công việc cho người khác",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "keep track of",
+        "meaningEn": "to monitor and record the progress of something over time",
+        "meaningVi": "theo dõi và ghi chép",
+        "sourceSentenceId": "s3"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 421,
+    "outputTokens": 959,
+    "totalTokens": 1380
+  },
+  "status": 200,
+  "latencyMs": 5427,
+  "model": "muse-spark-1.3"
+}

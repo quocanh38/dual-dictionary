@@ -1,0 +1,12 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "3a61ff53f74ce3ba0899c6b38ff6a7c53830a89fe8ef96dadccf8fdfd33cccf5",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-10-band-6-5-listening-04",
+      "severity": "uncertain",
+      "issue": "Distractor A currently says irrigation saved less water overall, which is true because it saved 96,000 litres versus 144,000 litres for showerheads. Change option A to an objectively false whole-semester volume comparison, while preserving option D as the sole correct answer and keeping the explanation accurate. Keep all other already-reviewed material unchanged."
+    }
+  ]
+}

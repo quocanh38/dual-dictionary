@@ -1,0 +1,36 @@
+{
+  "reviewedAt": "2026-10-28T08:39:54.457Z",
+  "status": "prior single-model review inherited for unchanged items; editorial delta pass recorded; independent cross-model gate pending",
+  "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+  "stages": [
+    {
+      "stage": "band-5",
+      "sha256": "da1f0cd65cbac0157a01020d19a31f994c53e3fd8694c23e7c22cf1ee7b76073",
+      "priorFullReviewFile": "review-current-gpt-final.json",
+      "deltaReviewFile": "review-current-gpt-final-v2.json",
+      "crossModelStatus": "pending; both independent reviewers must review this exact candidate hash."
+    },
+    {
+      "stage": "band-6",
+      "sha256": "37e1c7ac3a98fd561d9efdd6d66e16b2e99b855d030a24abf6ba6f83a458b0c1",
+      "priorFullReviewFile": "review-current-gpt-final.json",
+      "deltaReviewFile": "review-current-gpt-final-v2.json",
+      "crossModelStatus": "pending; both independent reviewers must review this exact candidate hash."
+    },
+    {
+      "stage": "band-6-5",
+      "sha256": "a1ebfa886d1ea6a388d2cc8146e0fe82ae8183da3759a9d30a343ea9acecd93f",
+      "priorFullReviewFile": "review-current-gpt-final.json",
+      "deltaReviewFile": "review-current-gpt-final-v2.json",
+      "crossModelStatus": "pending; both independent reviewers must review this exact candidate hash."
+    },
+    {
+      "stage": "band-7",
+      "sha256": "6fede567440b44dd00744a7354e78206dd576b7fa18f3b58d027277d950fe74a",
+      "priorFullReviewFile": "review-current-gpt-final.json",
+      "deltaReviewFile": "review-current-gpt-final-v2.json",
+      "crossModelStatus": "pending; both independent reviewers must review this exact candidate hash."
+    }
+  ],
+  "limitation": "No claim of GPT-6-Luna, GPT-6.1-Sol, independent reviewer, or human review."
+}

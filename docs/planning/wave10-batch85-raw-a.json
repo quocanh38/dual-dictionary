@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 85,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after slush fund; reviewed against local OALD 10/LDOCE 6. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Enrich practical contract, payment, workplace, technology, health, household and social-science language; clarify idioms, regional variants, old-fashioned terms and the difference between everyday descriptions and formal systems.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1160, "remainingRawOnlyAfter": 1140},
+  "selected": ["small beer", "small fry", "small print", "smart card", "smash hit", "smash up", "smelling salts", "smoking jacket", "smoking room", "smooth muscle", "snail mail", "snarl up", "sneak thief", "snow blind", "soap flakes", "soap opera", "social contract", "social science", "social security", "social service"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

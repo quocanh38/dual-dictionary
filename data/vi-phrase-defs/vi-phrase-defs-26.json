@@ -1,0 +1,596 @@
+[
+  {
+    "phrase": "credit card",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thẻ tín dụng cho phép chủ thẻ mua hàng hoặc vay trong hạn mức do đơn vị phát hành cấp, rồi thanh toán theo kỳ",
+        "pat": "pay by/with a credit card · credit-card bill/limit · apply for a credit card",
+        "ex": [
+          [
+            "You can pay for the booking by credit card.",
+            "Bạn có thể thanh toán đặt chỗ bằng thẻ tín dụng."
+          ],
+          [
+            "She paid her credit-card bill before the due date.",
+            "Cô thanh toán hóa đơn thẻ tín dụng trước hạn."
+          ]
+        ]
+      }
+    ],
+    "note": "Credit card thường cho phép trả một phần dư nợ và tính lãi theo điều kiện hợp đồng; charge card truyền thống thường yêu cầu trả toàn bộ mỗi kỳ. Điều khoản tùy sản phẩm và quốc gia."
+  },
+  {
+    "phrase": "credit line",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "hạn mức tín dụng — số tiền tối đa một tổ chức cho phép khách hàng vay hoặc sử dụng",
+        "pat": "a credit line of $X · extend/increase/reduce a credit line · a line of credit",
+        "ex": [
+          [
+            "The bank approved a credit line for the small business.",
+            "Ngân hàng phê duyệt hạn mức tín dụng cho doanh nghiệp nhỏ."
+          ],
+          [
+            "The company asked its lender to increase the credit line.",
+            "Công ty đề nghị bên cho vay tăng hạn mức tín dụng."
+          ]
+        ]
+      }
+    ],
+    "note": "Credit line gần nghĩa line of credit; đây là hạn mức được cấp, không nhất thiết là số tiền đã vay. Điều kiện rút vốn, lãi và phí phụ thuộc hợp đồng."
+  },
+  {
+    "phrase": "cross head",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đầu vít có rãnh hình chữ thập để vặn bằng tua-vít đầu chữ thập",
+        "pat": "a cross-head screw · cross-head screwdriver · a cross-shaped screw head",
+        "ex": [
+          [
+            "Use a cross-head screwdriver to remove the cover.",
+            "Dùng tua-vít đầu chữ thập để tháo nắp."
+          ],
+          [
+            "The cross-head screw is easier to grip with the correct tool.",
+            "Vít đầu chữ thập dễ vặn hơn khi dùng đúng dụng cụ."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong Anh-Mỹ thường viết Phillips head/screw; cross-head phổ biến trong Anh-Anh. Cách gọi có thể phụ thuộc kiểu rãnh cụ thể, vì vậy hãy chọn đầu vặn vừa khít."
+  },
+  {
+    "phrase": "cross over",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "di chuyển hoặc chuyển sang phía, lĩnh vực hay nhóm khác",
+        "pat": "cross over to/into something · cross over from one group to another",
+        "ex": [
+          [
+            "The path crosses over to the other side of the river.",
+            "Lối đi băng sang bờ bên kia của con sông."
+          ],
+          [
+            "Several researchers crossed over from industry to academia.",
+            "Một số nhà nghiên cứu chuyển từ doanh nghiệp sang giới học thuật."
+          ]
+        ]
+      },
+      {
+        "m": "được đón nhận hoặc có ảnh hưởng ở một nhóm khán giả/thể loại khác",
+        "pat": "cross over to a new audience/genre · a crossover hit",
+        "ex": [
+          [
+            "The singer crossed over from jazz to pop.",
+            "Ca sĩ chuyển từ jazz sang nhạc pop."
+          ],
+          [
+            "The show has crossed over to a much younger audience.",
+            "Chương trình đã thu hút thêm nhóm khán giả trẻ hơn nhiều."
+          ]
+        ]
+      }
+    ],
+    "note": "Cross over to/into nêu hướng chuyển đổi; trong giải trí, cụm thường nói nghệ sĩ/tác phẩm vượt khỏi thể loại hoặc nhóm khán giả ban đầu. Danh từ crossover viết liền."
+  },
+  {
+    "phrase": "cs gas",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "khí CS — chất gây kích ứng mắt và đường hô hấp, được dùng làm chất kiểm soát bạo loạn hoặc thiết bị tự vệ ở một số nơi",
+        "pat": "CS gas · be exposed to CS gas · CS gas canisters",
+        "ex": [
+          [
+            "The report described the use of CS gas during the demonstration.",
+            "Báo cáo mô tả việc sử dụng khí CS trong cuộc biểu tình."
+          ],
+          [
+            "Several people sought medical attention after exposure to CS gas.",
+            "Một số người tìm trợ giúp y tế sau khi tiếp xúc với khí CS."
+          ]
+        ]
+      }
+    ],
+    "note": "CS gas là thuật ngữ về một chất gây kích ứng; mức độ nguy hiểm phụ thuộc liều lượng và điều kiện phơi nhiễm. Cụm không đồng nghĩa với mọi loại tear gas."
+  },
+  {
+    "phrase": "cut away",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cắt bỏ một phần để lộ hoặc làm gọn phần còn lại",
+        "pat": "cut something away · cut away dead/damaged material · cut something away from something",
+        "ex": [
+          [
+            "The surgeon removed the damaged tissue around the wound.",
+            "Bác sĩ cắt bỏ phần mô tổn thương quanh vết thương."
+          ],
+          [
+            "Cut away the loose fabric before sewing the seam.",
+            "Cắt bỏ phần vải thừa trước khi may đường nối."
+          ]
+        ]
+      },
+      {
+        "m": "(phim/truyền hình) chuyển cảnh đột ngột sang hình ảnh khác",
+        "pat": "cut away to a scene/view · the camera cuts away",
+        "ex": [
+          [
+            "The film cuts away to a view of the city.",
+            "Bộ phim chuyển cảnh sang hình ảnh thành phố."
+          ],
+          [
+            "The camera cut away before the interview ended.",
+            "Máy quay chuyển sang cảnh khác trước khi buổi phỏng vấn kết thúc."
+          ]
+        ]
+      }
+    ],
+    "note": "Cut something away thường có thể tách tân ngữ: cut away the damaged part / cut the damaged part away. Trong dựng phim, chủ thể thường là camera hoặc film."
+  },
+  {
+    "phrase": "cut back",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "giảm mức chi tiêu, sản lượng, hoạt động hoặc lượng sử dụng",
+        "pat": "cut back on spending/staff · cut something back · cut back to a level",
+        "ex": [
+          [
+            "The department had to cut back on travel costs.",
+            "Phòng ban phải cắt giảm chi phí đi lại."
+          ],
+          [
+            "We are cutting back production until demand improves.",
+            "Chúng tôi đang giảm sản lượng cho đến khi nhu cầu phục hồi."
+          ]
+        ]
+      },
+      {
+        "m": "tỉa bớt cành hoặc lá của cây",
+        "pat": "cut back a plant/shrub · cut something back in spring",
+        "ex": [
+          [
+            "Cut the roses back after they finish flowering.",
+            "Tỉa bớt hoa hồng sau khi chúng nở xong."
+          ],
+          [
+            "The gardener cut back the overgrown hedge.",
+            "Người làm vườn tỉa bớt hàng rào cây mọc um tùm."
+          ]
+        ]
+      }
+    ],
+    "note": "Cut back on something thường là giảm mức tiêu thụ/chi tiêu; cut something back là cắt tỉa hoặc giảm trực tiếp một thứ. Danh từ cutback thường chỉ việc cắt giảm."
+  },
+  {
+    "phrase": "cut in",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ngắt lời hoặc chen ngang cuộc trò chuyện",
+        "pat": "cut in on a conversation · cut in before somebody finishes",
+        "ex": [
+          [
+            "She cut in before I could finish the explanation.",
+            "Cô chen ngang trước khi tôi kịp giải thích xong."
+          ],
+          [
+            "Sorry to cut in, but we are out of time.",
+            "Xin lỗi vì ngắt lời, nhưng chúng ta hết giờ rồi."
+          ]
+        ]
+      },
+      {
+        "m": "bắt đầu hoạt động hoặc tự động tham gia vào một hệ thống",
+        "pat": "an engine/motor cuts in · the heating cuts in",
+        "ex": [
+          [
+            "The backup generator cuts in if the main power fails.",
+            "Máy phát dự phòng tự khởi động nếu nguồn điện chính bị mất."
+          ],
+          [
+            "The cooling fan cuts in when the engine gets hot.",
+            "Quạt làm mát tự bật khi động cơ nóng lên."
+          ]
+        ]
+      }
+    ],
+    "note": "Cut in on somebody thường là chen ngang người đang nói; cut in (without an object) cũng dùng khi máy móc tự khởi động hoặc một bộ phận bắt đầu hoạt động."
+  },
+  {
+    "phrase": "cut off",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ngừng cung cấp hoặc ngắt kết nối điện, nước, liên lạc hay nguồn lực",
+        "pat": "cut off the supply/power/water · be cut off from a service",
+        "ex": [
+          [
+            "The storm cut off electricity to several villages.",
+            "Cơn bão làm mất điện ở một số ngôi làng."
+          ],
+          [
+            "The customer was cut off during the call.",
+            "Cuộc gọi của khách hàng bị ngắt giữa chừng."
+          ]
+        ]
+      },
+      {
+        "m": "cô lập, chặn đường hoặc ngăn ai tiếp cận/tiếp tục",
+        "pat": "cut somebody off from somewhere · cut off a road/route · cut somebody off mid-sentence",
+        "ex": [
+          [
+            "Floodwater cut the village off from the main road.",
+            "Nước lũ cô lập ngôi làng khỏi đường lớn."
+          ],
+          [
+            "The interviewer cut him off before he could answer.",
+            "Người phỏng vấn ngắt lời anh trước khi anh kịp trả lời."
+          ]
+        ]
+      }
+    ],
+    "note": "Cut off có nhiều nghĩa; chú ý tân ngữ: nguồn cung bị ngắt, nơi bị cô lập, hoặc người bị ngắt lời. Be cut off from thường nêu thứ không còn tiếp cận được."
+  },
+  {
+    "phrase": "cut out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cắt một hình/phần ra khỏi vật liệu hoặc loại bỏ phần không cần thiết",
+        "pat": "cut out a shape/picture · cut something out of something",
+        "ex": [
+          [
+            "The students cut out paper stars for the display.",
+            "Học sinh cắt những ngôi sao giấy để trang trí."
+          ],
+          [
+            "She cut the damaged section out of the document.",
+            "Cô loại bỏ phần bị hỏng khỏi tài liệu."
+          ]
+        ]
+      },
+      {
+        "m": "đột ngột ngừng hoạt động; hoặc yêu cầu ai chấm dứt hành động gây phiền",
+        "pat": "an engine/sound cuts out · cut it out! · be cut out for something",
+        "ex": [
+          [
+            "The engine cut out at the traffic lights.",
+            "Động cơ đột ngột tắt ở đèn giao thông."
+          ],
+          [
+            "Cut it out and let your sister concentrate.",
+            "Thôi đi để em gái con tập trung."
+          ]
+        ]
+      }
+    ],
+    "note": "Cut out (of) còn có thể nghĩa là loại trừ; be cut out for something nghĩa là có tố chất phù hợp. Mệnh lệnh Cut it out! thân mật và có thể nghe gay gắt."
+  },
+  {
+    "phrase": "cut up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cắt hoặc chia thứ gì thành nhiều miếng nhỏ",
+        "pat": "cut something up · cut something up into pieces",
+        "ex": [
+          [
+            "Cut up the vegetables before adding them to the pan.",
+            "Cắt rau thành miếng trước khi cho vào chảo."
+          ],
+          [
+            "He cut the old map up into sections for the project.",
+            "Anh cắt tấm bản đồ cũ thành nhiều phần cho dự án."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật, nhất là Anh-Mỹ) rất buồn hoặc tổn thương vì một việc xảy ra",
+        "pat": "be cut up about/over something · feel cut up",
+        "ex": [
+          [
+            "She was deeply cut up about leaving her colleagues.",
+            "Cô rất buồn vì phải rời xa đồng nghiệp."
+          ],
+          [
+            "He felt cut up over the rejection.",
+            "Anh thấy tổn thương vì bị từ chối."
+          ]
+        ]
+      }
+    ],
+    "note": "Cut up something là cắt thành nhiều phần; be cut up about something là cách nói thân mật về nỗi buồn/tổn thương. Không nhầm với cut off (ngắt hoặc cô lập)."
+  },
+  {
+    "phrase": "date line",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đường đổi ngày quốc tế — ranh giới quy ước gần kinh tuyến 180 độ, nơi ngày lịch thay đổi khi đi qua",
+        "pat": "cross the International Date Line · east/west of the Date Line",
+        "ex": [
+          [
+            "The flight crossed the International Date Line during the night.",
+            "Chuyến bay vượt qua Đường đổi ngày quốc tế trong đêm."
+          ],
+          [
+            "The ship changed its calendar date after crossing the Date Line.",
+            "Con tàu đổi ngày trên lịch sau khi vượt qua Đường đổi ngày."
+          ]
+        ]
+      },
+      {
+        "m": "dòng ghi địa điểm và ngày tháng ở đầu một bản tin hoặc bài báo",
+        "pat": "a news dateline/date line · put a date line on a report",
+        "ex": [
+          [
+            "The report's date line showed that it was filed in Nairobi.",
+            "Dòng ghi địa điểm và ngày tháng của bản tin cho biết tin được gửi từ Nairobi."
+          ],
+          [
+            "The editor corrected the date line before publication.",
+            "Biên tập viên sửa dòng địa điểm và ngày tháng trước khi xuất bản."
+          ]
+        ]
+      }
+    ],
+    "note": "Tên địa lý chuẩn thường viết International Date Line; trong báo chí, dateline thường được viết liền và có thể gồm địa điểm cùng ngày tháng. Đường đổi ngày không thẳng tuyệt đối vì có chỗ uốn theo ranh giới quốc gia."
+  },
+  {
+    "phrase": "dead end",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đường hoặc lối đi không thông sang nơi khác",
+        "pat": "a dead-end street/road · at the end of a dead end",
+        "ex": [
+          [
+            "Our street is a dead end, so there is very little through traffic.",
+            "Phố chúng tôi là đường cụt nên rất ít xe đi xuyên qua."
+          ],
+          [
+            "The delivery driver turned around at the dead end.",
+            "Tài xế giao hàng quay đầu ở cuối đường cụt."
+          ]
+        ]
+      },
+      {
+        "m": "tình huống không thể tiến triển hoặc giải pháp không dẫn đến kết quả",
+        "pat": "reach a dead end · a dead-end job · a dead end in negotiations",
+        "ex": [
+          [
+            "The investigation reached a dead end when the witness disappeared.",
+            "Cuộc điều tra đi vào ngõ cụt khi nhân chứng biến mất."
+          ],
+          [
+            "The negotiations reached a dead end after three rounds.",
+            "Cuộc đàm phán đi vào ngõ cụt sau ba vòng."
+          ]
+        ]
+      }
+    ],
+    "note": "Dead end thường dùng nghĩa bóng cho tiến trình không còn hướng giải quyết; dead-end đứng trước danh từ có thể mô tả công việc ít cơ hội thăng tiến."
+  },
+  {
+    "phrase": "dead letter",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thư không thể giao đến người nhận và thường được chuyển vào bộ phận xử lý thư thất lạc",
+        "pat": "a dead-letter office · dead-letter mail · be returned as a dead letter",
+        "ex": [
+          [
+            "The undeliverable parcel was sent to the dead-letter office.",
+            "Bưu kiện không thể giao được chuyển đến bộ phận xử lý thư thất lạc."
+          ],
+          [
+            "Several dead letters were traced to an outdated address list.",
+            "Một số thư thất lạc được xác định là do danh sách địa chỉ đã cũ."
+          ]
+        ]
+      },
+      {
+        "m": "quy định, luật hoặc thỏa thuận không còn hiệu lực thực tế",
+        "pat": "become a dead letter · a dead letter in practice",
+        "ex": [
+          [
+            "Without enforcement, the rule became a dead letter.",
+            "Nếu không được thực thi, quy định ấy trở nên vô hiệu trên thực tế."
+          ],
+          [
+            "The agreement remains on paper but is effectively a dead letter.",
+            "Thỏa thuận vẫn còn trên giấy nhưng thực tế đã mất hiệu lực."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa pháp lý/chính sách là nghĩa bóng: văn bản vẫn tồn tại nhưng không còn được áp dụng. Dead-letter office là cách gọi lịch sử/nghiệp vụ bưu chính; tên bộ phận hiện nay tùy dịch vụ."
+  },
+  {
+    "phrase": "deep south",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vùng cực nam của miền Nam Hoa Kỳ, thường gồm các bang như Alabama, Georgia, Louisiana, Mississippi và South Carolina",
+        "pat": "the Deep South · in the Deep South · culture/history of the Deep South",
+        "ex": [
+          [
+            "The novel is set in the Deep South during the 1930s.",
+            "Tiểu thuyết lấy bối cảnh miền Nam sâu của Hoa Kỳ vào thập niên 1930."
+          ],
+          [
+            "The museum explores the music and history of the Deep South.",
+            "Bảo tàng giới thiệu âm nhạc và lịch sử vùng Deep South."
+          ]
+        ]
+      }
+    ],
+    "note": "Tên vùng thường viết hoa: the Deep South. Danh sách bang được tính vào vùng có thể thay đổi theo nguồn; cụm gắn với bối cảnh lịch sử và văn hóa miền Nam Hoa Kỳ."
+  },
+  {
+    "phrase": "department store",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cửa hàng bách hóa lớn, có nhiều quầy/khu bán các nhóm hàng khác nhau như quần áo, mỹ phẩm và đồ gia dụng",
+        "pat": "a department store · shop at/in a department store · department-store chain",
+        "ex": [
+          [
+            "The department store is holding a sale on household goods.",
+            "Cửa hàng bách hóa đang giảm giá đồ gia dụng."
+          ],
+          [
+            "She bought the gift at a department store downtown.",
+            "Cô mua món quà tại một cửa hàng bách hóa ở trung tâm."
+          ]
+        ]
+      }
+    ],
+    "note": "Department store thường có nhiều bộ phận bán hàng trong cùng một cửa hàng; khác với supermarket vốn tập trung chủ yếu vào thực phẩm và hàng tiêu dùng."
+  },
+  {
+    "phrase": "die back",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(cây) phần thân, lá hoặc chồi phía trên chết đi theo mùa hoặc do bệnh, trong khi gốc/rễ có thể còn sống",
+        "pat": "a plant dies back · die back in winter · be cut back after dying back",
+        "ex": [
+          [
+            "The leaves die back in winter, but the roots survive underground.",
+            "Lá cây chết đi vào mùa đông nhưng rễ vẫn sống dưới đất."
+          ],
+          [
+            "Some perennials die back after flowering.",
+            "Một số cây lâu năm tàn phần thân lá sau khi ra hoa."
+          ]
+        ]
+      }
+    ],
+    "note": "Die back thường nói về cây và không nhất thiết có nghĩa toàn bộ cây chết; danh từ dieback viết liền thường chỉ hiện tượng/bệnh cây gây chết cành."
+  },
+  {
+    "phrase": "double cross",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "lừa hoặc phản bội người đã tin tưởng hay hợp tác với mình",
+        "pat": "double-cross somebody · be double-crossed by a partner",
+        "ex": [
+          [
+            "The agent double-crossed his partners and kept the payment.",
+            "Đặc vụ phản bội các cộng sự rồi giữ lấy khoản tiền."
+          ],
+          [
+            "The smaller firm feared that its partner would double-cross it.",
+            "Công ty nhỏ lo đối tác sẽ phản bội mình."
+          ]
+        ]
+      }
+    ],
+    "note": "Động từ double-cross thường mang sắc thái thân mật, nhất là trong truyện tội phạm; danh từ double-cross (có gạch nối) là hành vi phản bội. Quá khứ thường viết double-crossed."
+  },
+  {
+    "phrase": "double quick",
+    "pos": "adverb phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh, thân mật hoặc mang sắc thái quân sự) rất nhanh, với tốc độ khẩn trương",
+        "pat": "at double quick · move/march at double quick",
+        "ex": [
+          [
+            "The team moved at double quick to prepare the room.",
+            "Cả nhóm làm thật nhanh để chuẩn bị căn phòng."
+          ],
+          [
+            "The soldiers were ordered to march at double quick.",
+            "Các binh sĩ được lệnh hành quân với tốc độ khẩn trương."
+          ]
+        ]
+      }
+    ],
+    "note": "Double quick là cách nói khá cũ và đặc biệt phổ biến trong Anh-Anh; trong giao tiếp hiện nay, very quickly hoặc at a fast pace thường tự nhiên hơn."
+  },
+  {
+    "phrase": "double time",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tốc độ gấp đôi mức thông thường; trong một số ngữ cảnh quân sự là nhịp chạy/hành quân nhanh",
+        "pat": "at double time · march/run at double time · move at double time",
+        "ex": [
+          [
+            "The unit covered the final distance at double time.",
+            "Đơn vị hoàn thành quãng đường cuối với nhịp hành quân nhanh."
+          ],
+          [
+            "The band shifted into double time for the final section.",
+            "Ban nhạc chuyển sang nhịp nhanh gấp đôi ở đoạn cuối."
+          ]
+        ]
+      },
+      {
+        "m": "(Mỹ) mức lương gấp đôi cho số giờ làm việc đặc biệt, theo quy định hoặc thỏa thuận",
+        "pat": "be paid double time · work for double time",
+        "ex": [
+          [
+            "The contract pays double time for work on public holidays.",
+            "Hợp đồng trả lương gấp đôi cho giờ làm vào ngày lễ."
+          ],
+          [
+            "They offered double time to employees who covered the overnight shift.",
+            "Họ trả gấp đôi cho nhân viên nhận ca đêm."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa phụ thuộc lĩnh vực: tốc độ/nhịp trong âm nhạc hoặc quân đội, hay mức trả lương trong lao động. Quy tắc lương làm thêm không giống nhau giữa các hợp đồng và khu vực."
+  }
+]

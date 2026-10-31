@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+  <title id="title">Household food waste compost process</title>
+  <desc id="desc">Five stages: collect food scraps, sort and chop them, mix with dry leaves and water, aerate for six weeks, then screen the finished compost for gardens.</desc>
+  <rect width="900" height="260" rx="18" fill="#f5f8f6"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#173b34">
+    <g font-size="15" font-weight="700">
+      <rect x="24" y="70" width="148" height="112" rx="14" fill="#d9eee2" stroke="#3d8164" stroke-width="2"/><text x="98" y="112"><tspan x="98">1 · Collect</tspan><tspan x="98" dy="24" font-weight="400">food scraps</tspan></text>
+      <rect x="204" y="70" width="148" height="112" rx="14" fill="#e6f0dc" stroke="#668849" stroke-width="2"/><text x="278" y="112"><tspan x="278">2 · Sort</tspan><tspan x="278" dy="24" font-weight="400">and chop</tspan></text>
+      <rect x="384" y="70" width="148" height="112" rx="14" fill="#f4edcf" stroke="#a88a3b" stroke-width="2"/><text x="458" y="106"><tspan x="458">3 · Mix with</tspan><tspan x="458" dy="22" font-weight="400">dry leaves</tspan><tspan x="458" dy="22" font-weight="400">and water</tspan></text>
+      <rect x="564" y="70" width="148" height="112" rx="14" fill="#e9e1d0" stroke="#8a7550" stroke-width="2"/><text x="638" y="106"><tspan x="638">4 · Aerate</tspan><tspan x="638" dy="22" font-weight="400">for six</tspan><tspan x="638" dy="22" font-weight="400">weeks</tspan></text>
+      <rect x="744" y="70" width="132" height="112" rx="14" fill="#d8e9ef" stroke="#477b8e" stroke-width="2"/><text x="810" y="106"><tspan x="810">5 · Screen</tspan><tspan x="810" dy="22" font-weight="400">and use in</tspan><tspan x="810" dy="22" font-weight="400">gardens</tspan></text>
+    </g>
+    <g fill="none" stroke="#466b5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M176 126h20m-8-8 8 8-8 8"/><path d="M356 126h20m-8-8 8 8-8 8"/><path d="M536 126h20m-8-8 8 8-8 8"/><path d="M716 126h20m-8-8 8 8-8 8"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 118,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after blue peter; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the B-section with awards, idioms, domestic objects, science, finance, language, entertainment, and transport. Clarify regional terms, formal vs informal senses, and common conceptual contrasts without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 508,
+    "remainingRawOnlyAfter": 488
+  },
+  "selected": [
+    "blue ribbon",
+    "bo peep",
+    "bobby pin",
+    "bobby socks",
+    "boil down",
+    "boiling point",
+    "bomb shelter",
+    "bomb site",
+    "bon vivant",
+    "bona fide",
+    "boob tube",
+    "booby trap",
+    "book token",
+    "book value",
+    "boric acid",
+    "bounty hunter",
+    "bow window",
+    "bowling alley",
+    "brain drain",
+    "brake light"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

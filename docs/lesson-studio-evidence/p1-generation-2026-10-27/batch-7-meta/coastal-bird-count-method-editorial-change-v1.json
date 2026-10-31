@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-27T08:14:11.960Z",
+  "kind": "local-editorial-revision",
+  "rawMetaCandidate": "coastal-bird-count-method-candidate.json",
+  "rawMetaCandidatePackSha256": "858f31947e0ec3ae7eaa29f2e6d5d2a83a51a412c49bf7fa691b8acbc68dadab",
+  "editedCandidate": "coastal-bird-count-method-candidate-editorial-v1.json",
+  "editedPackSha256": "6bb7f0007ceb46970b13dd08d821f6b5c5b444b0e9edff64cb71b1769fab6b0d",
+  "editor": "Codex AI-assisted editor",
+  "providerCallsForRevision": 0,
+  "changes": [
+    {
+      "id": "coastal-bird-count-method-edit-1",
+      "reason": "Replaced a plausible statistical adjustment (using an average) with a clear distractor that lists visit length but does not include it in the comparison."
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "163e93250e7aa832822ebbad6d61ce2d88371941d8e621cf3871e123b7bb513d",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-terra (configured local reviewer)",
+  "reviewedAt": "2026-10-27T04:16:45.255361+00:00",
+  "note": "AI-assisted full reread of this exact revised payload, not human certification. I inadvertently read historical quality-review.md before the first review round, so this review is not fully blinded to earlier findings. Source rights rest on the pack declaration; no independent chain-of-title verification.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Metadata identifies the project as author, states AI-assisted original source and no learner data; reading contains no apparent PII. Authorship and permission for distribution are declared, not independently verified."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains allocate resources in context of extending library opening hours."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Providing time, staff or money for a purpose is appropriate to the extension."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Phân bổ nguồn lực conveys allocating resources naturally with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains meet the deadline for submitting survey findings."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Finishing or submitting by the required time captures meeting this deadline."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Hoàn thành đúng thời hạn conveys finishing on time naturally."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a captures providing support; b is reducing services and c arranging books, neither defines allocation."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a relates support to longer hours; b distinguishes reduction and c shelving; overall explanation identifies a accurately."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is natural; a has inflected allocates after will, c has bare organize after preposition for. Both distractors have objective grammatical errors."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a requires base allocate after will, c requires organizing after for; b is correct. Overall also accurately notes that both to organizing and to organize can be grammatical."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c means submit by required time; a discussing without submission and b postponing are different actions."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a, b, c explanations and the overall explanation correctly distinguish discussing and postponement from timely submission."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a naturally uses met the deadline; b has nonstandard meeted and c omits a determiner before singular deadline."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Correct option and corrections met and the deadline are explained accurately in all options and the summary."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The assistant reports a stock list to a manager, changing occupation, audience and task from the student survey."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The revised model naturally says checking the stock, uses meet the deadline in a two-sentence polite manager message, and the checklist covers phrase, workplace, length and tone. No automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "The coffee/leisure distractor described in the historical pack finding is absent; q2 now tests objective modal and preposition grammar."
+    },
+    {
+      "id": "q2-previous-gerund",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "Prior candidate incorrectly rejected to organizing; this version replaces it with will allocates and correctly acknowledges both to organizing and to organize as grammatical."
+    }
+  ],
+  "editorialDecision": "ready-for-approval"
+}

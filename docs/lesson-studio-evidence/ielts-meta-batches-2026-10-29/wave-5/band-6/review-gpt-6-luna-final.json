@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "7c18b72f239cf21cfcbdabcf0eb3658842de0c05757d40f9a3463909c9804a55",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte review of candidate-final-v2.json: listening script is 347 words and the reading passage 448 words; all 10 Listening/Reading questions with every option, key and explanation; all five Writing and five Speaking prompts; and metadata/provenance. Objective keys are unique and supported by the full contexts; distractors and explanations are sound. Task 1 museum access data specify opening days/hours, tour schedule, prices, ticket categories, visitor-share denominator and how family-ticket visitors are counted. Lecture-recording survey gives sample size, frequency denominator, user denominator for reason percentages and multiple-response instruction. Both Task 1 prompts specify 150 words and about 20 minutes. Speaking has two Part 1 sets, one Part 2 cue card with one-minute preparation and 1–2-minute response, and two Part 3 sets. Language and inference demands fit band 6. Provenance declares originalContent:true; no official-question or learner-score claims appear. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

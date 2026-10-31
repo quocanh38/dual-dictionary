@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Weekly travel modes used by Northport University first-year students, 2018–2023</title>
+  <desc id="desc">Line graph showing shuttle bus use rising from 28 to 48 percent, cycling rising from 12 to 25 percent after a peak of 27, and walking falling from 45 to 27 percent between 2018 and 2023.</desc>
+  <rect width="760" height="430" rx="18" fill="#fff"/>
+  <g font-family="system-ui, sans-serif" fill="#173b34">
+    <text x="380" y="32" text-anchor="middle" font-size="18" font-weight="700">Weekly travel modes · first-year students</text>
+    <text x="380" y="55" text-anchor="middle" font-size="13">Northport University, 2018–2023</text>
+    <g font-size="12" fill="#344a40">
+      <line x1="110" y1="84" x2="140" y2="84" stroke="#2478a5" stroke-width="4"/><text x="148" y="88">Shuttle bus</text>
+      <line x1="290" y1="84" x2="320" y2="84" stroke="#5b8f45" stroke-width="4"/><text x="328" y="88">Cycling</text>
+      <line x1="430" y1="84" x2="460" y2="84" stroke="#c47736" stroke-width="4"/><text x="468" y="88">Walking</text>
+    </g>
+    <g stroke="#d8e0dc" stroke-width="1">
+      <line x1="96" y1="320" x2="680" y2="320"/><line x1="96" y1="276" x2="680" y2="276"/><line x1="96" y1="232" x2="680" y2="232"/><line x1="96" y1="188" x2="680" y2="188"/><line x1="96" y1="144" x2="680" y2="144"/><line x1="96" y1="100" x2="680" y2="100"/>
+    </g>
+    <g font-size="12" text-anchor="end" fill="#344a40">
+      <text x="84" y="324">0</text><text x="84" y="280">10</text><text x="84" y="236">20</text><text x="84" y="192">30</text><text x="84" y="148">40</text><text x="84" y="104">50</text>
+    </g>
+    <text x="26" y="215" transform="rotate(-90 26 215)" text-anchor="middle" font-size="13">Percentage of students</text>
+    <g stroke="#87968d" stroke-width="1.5"><line x1="96" y1="100" x2="96" y2="320"/><line x1="96" y1="320" x2="680" y2="320"/></g>
+    <g font-size="12" text-anchor="middle" fill="#344a40">
+      <text x="110" y="344">2018</text><text x="220" y="344">2019</text><text x="330" y="344">2020</text><text x="440" y="344">2021</text><text x="550" y="344">2022</text><text x="660" y="344">2023</text>
+    </g>
+    <polyline points="110,197 220,184 330,171 440,175 550,135 660,109" fill="none" stroke="#2478a5" stroke-width="4" stroke-linejoin="round"/>
+    <polyline points="110,267 220,254 330,241 440,214 550,201 660,210" fill="none" stroke="#5b8f45" stroke-width="4" stroke-linejoin="round"/>
+    <polyline points="110,122 220,131 330,144 440,162 550,188 660,201" fill="none" stroke="#c47736" stroke-width="4" stroke-linejoin="round"/>
+    <g fill="#2478a5"><circle cx="110" cy="197" r="4"/><circle cx="220" cy="184" r="4"/><circle cx="330" cy="171" r="4"/><circle cx="440" cy="175" r="4"/><circle cx="550" cy="135" r="4"/><circle cx="660" cy="109" r="4"/></g>
+    <g fill="#5b8f45"><circle cx="110" cy="267" r="4"/><circle cx="220" cy="254" r="4"/><circle cx="330" cy="241" r="4"/><circle cx="440" cy="214" r="4"/><circle cx="550" cy="201" r="4"/><circle cx="660" cy="210" r="4"/></g>
+    <g fill="#c47736"><circle cx="110" cy="122" r="4"/><circle cx="220" cy="131" r="4"/><circle cx="330" cy="144" r="4"/><circle cx="440" cy="162" r="4"/><circle cx="550" cy="188" r="4"/><circle cx="660" cy="201" r="4"/></g>
+  </g>
+</svg>

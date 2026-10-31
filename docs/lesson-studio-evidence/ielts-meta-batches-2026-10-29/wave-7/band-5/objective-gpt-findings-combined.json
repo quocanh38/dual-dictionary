@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-7-band-5-listening-02",
+      "severity": "critical",
+      "issue": "Explanation says $25 is the colour price, but the script says25 cents per page ($0.25), not$25. Correct the explanation so it does not equate these amounts; key$20 remains correct."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Comparing Data Carefully with Weekly Averages and Consistent Patterns",
+    "objective": "Learners will interpret weekly averages and consistent with in the reading context and use them accurately in new situations.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s3, what does 'weekly averages' mean when the analyst calculates them after aligning time windows?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means mean values calculated over a one-week period.",
+            "explanation": "This is correct because it matches calculating overall mean values for each week in s3."
+          },
+          {
+            "id": "b",
+            "text": "It means the highest single readings recorded during each week.",
+            "explanation": "This is wrong because s3 concerns overall mean values, not only the highest readings."
+          },
+          {
+            "id": "c",
+            "text": "It means the daily time windows chosen for sensor maintenance.",
+            "explanation": "This is wrong because the phrase refers to calculated values, not maintenance windows."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "In s3 weekly averages refers to mean values over a week calculated after aligning time windows."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'weekly averages' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The analyst compared weekly averages from both bays after aligning the time windows.",
+            "explanation": "This is correct because verb agreement and preposition use are natural and accurate."
+          },
+          {
+            "id": "b",
+            "text": "The analyst compare weekly averages from both bays after aligning the time windows.",
+            "explanation": "This is wrong because compare should be compares to agree with the singular subject analyst."
+          },
+          {
+            "id": "c",
+            "text": "The analyst compared weekly averages from both bays by align the time windows.",
+            "explanation": "This is wrong because align should be aligning after the preposition by."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a uses weekly averages with fully correct grammar and natural collocation."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s6, what does 'consistent with local weather' mean when describing a pattern?",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means the pattern matches and is supported by local weather.",
+            "explanation": "This is correct because it expresses agreement between the pattern and local weather in s6."
+          },
+          {
+            "id": "b",
+            "text": "It means the pattern causes local weather despite conflicting evidence.",
+            "explanation": "This is wrong because s6 describes agreement, not causing weather despite conflict."
+          },
+          {
+            "id": "c",
+            "text": "It means the pattern is unrelated to and independent of local weather.",
+            "explanation": "This is wrong because consistent with means matching, not unrelated or independent."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "In s6 consistent with means the pattern agrees with and is supported by local weather."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'consistent with' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The temperature pattern is consistent with the station log from last spring.",
+            "explanation": "This is correct because is agrees with the subject and with correctly follows consistent."
+          },
+          {
+            "id": "b",
+            "text": "The temperature pattern is consistent to the station log from last spring.",
+            "explanation": "This is wrong because to should be with in the fixed collocation consistent with."
+          },
+          {
+            "id": "c",
+            "text": "The temperature pattern are consistent with the station log from last spring.",
+            "explanation": "This is wrong because are should be is to agree with the singular subject pattern."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a combines correct subject-verb agreement with the fixed collocation consistent with."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are a school running club captain writing a message to new members about training results. Write 2-3 sentences explaining whether the results fit your training plan. Use the phrase 'consistent with'.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "sampleAnswer": "We compared this month's race times to our training plan. The steady improvement is consistent with the extra hill sessions we added in March.",
+        "selfCheck": [
+          "My response has 2-3 sentences.",
+          "My response uses the phrase consistent with correctly to show agreement.",
+          "My response uses a new role and purpose different from the marine science comparison."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1026,
+    "outputTokens": 5420,
+    "totalTokens": 6446
+  },
+  "status": 200,
+  "latencyMs": 34563,
+  "model": "muse-spark-1.3"
+}

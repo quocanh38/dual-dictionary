@@ -1,0 +1,8 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "a1ebfa886d1ea6a388d2cc8146e0fe82ae8183da3759a9d30a343ea9acecd93f",
+  "verdict": "pass",
+  "findings": [],
+  "coverage": "Full exact-byte review of both shared contexts (325-word peer-support evaluation script; 421-word air-monitor passage), all 10 Listening/Reading stems, options, keys and explanations, and all five Task 1/Task 2 Writing and five Speaking prompts. Confirmed unique, evidence-grounded keys on survey corrections, evaluation limits, sensor comparisons and qualified conclusions; distractors are objectively contradicted or unsupported, and explanations track the contexts. Language and inference demands suit the stated upper-intermediate stage. Task 1 campaign recall percentages include adult age group, sample sizes, multi-select caveat and years; funding percentages include both plans and total dollar cost. OriginalContent provenance and wave disclosure identify original formative practice, not official IELTS material.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "provenance": "Authored deterministic development fixtures; not provider responses or unseen evaluation.",
+  "feedbackCases": [
+    {
+      "id": "correct",
+      "answer": "I keep track of project tasks in a shared checklist.",
+      "raw": {
+        "verdict": "correct",
+        "quote": ""
+      },
+      "expected": {
+        "verdict": "correct",
+        "evidenceStatus": "not-required"
+      },
+      "rationale": "Natural target phrase use and an explicit monitoring method.",
+      "prompt": "Tell your colleague how you monitor a project. Use keep track of naturally.",
+      "phrase": "keep track of"
+    },
+    {
+      "id": "incorrect",
+      "answer": "I keeps track of project tasks every day.",
+      "raw": {
+        "verdict": "incorrect",
+        "quote": "I keeps",
+        "issue": "Subject–verb agreement",
+        "suggestion": "I keep track of project tasks every day."
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "evidenceStatus": "quoted"
+      },
+      "rationale": "First-person subject requires keep, not keeps.",
+      "prompt": "Tell your colleague how you monitor a project. Use keep track of naturally.",
+      "phrase": "keep track of"
+    },
+    {
+      "id": "off-topic",
+      "answer": "My bus leaves at seven.",
+      "raw": {
+        "verdict": "incorrect",
+        "quote": "My bus leaves at seven.",
+        "issue": "The answer does not address project monitoring or use the required phrase."
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "evidenceStatus": "quoted"
+      },
+      "rationale": "A grammatical sentence can fail the task; this is task relevance, not a grammar diagnosis.",
+      "prompt": "Tell your colleague how you monitor a project. Use keep track of naturally.",
+      "phrase": "keep track of"
+    },
+    {
+      "id": "ambiguous-context",
+      "answer": "I keep track of it every day.",
+      "raw": {
+        "verdict": "incorrect",
+        "quote": "it",
+        "issue": "The pronoun has no identified referent, so the reference is unclear.",
+        "suggestion": "I keep track of the project every day."
+      },
+      "expected": {
+        "verdict": "uncertain",
+        "evidenceStatus": "context-ambiguity",
+        "suggestion": "",
+        "issue": ""
+      },
+      "rationale": "Unspecified referent alone does not establish a language error.",
+      "prompt": "Tell your colleague how you monitor a project. Use keep track of naturally.",
+      "phrase": "keep track of"
+    },
+    {
+      "id": "missing-quote",
+      "answer": "I keeps track of project tasks.",
+      "raw": {
+        "verdict": "incorrect",
+        "quote": "",
+        "issue": "Subject–verb agreement",
+        "suggestion": "I keep track of project tasks."
+      },
+      "expected": {
+        "verdict": "uncertain",
+        "evidenceStatus": "missing-quote",
+        "suggestion": "",
+        "issue": ""
+      },
+      "rationale": "Even a plausible diagnosis cannot be confirmed without exact answer evidence.",
+      "prompt": "Tell your colleague how you monitor a project. Use keep track of naturally.",
+      "phrase": "keep track of"
+    },
+    {
+      "id": "fabricated-quote",
+      "answer": "I keep track of project tasks.",
+      "raw": {
+        "verdict": "incorrect",
+        "quote": "I tracks tasks"
+      },
+      "error": "quote did not match",
+      "rationale": "A fabricated quotation must be rejected, not normalized into evidence.",
+      "prompt": "Tell your colleague how you monitor a project. Use keep track of naturally.",
+      "phrase": "keep track of"
+    }
+  ],
+  "apiCases": [
+    {
+      "id": "failed-api-401",
+      "status": 401,
+      "error": "rejected the key"
+    },
+    {
+      "id": "failed-api-500",
+      "status": 500,
+      "error": "Provider request failed"
+    }
+  ]
+}

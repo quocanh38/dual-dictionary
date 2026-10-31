@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-6",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-6-v1",
+  "completedAt": "2026-10-29T05:20:45.254Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 658,
+    "outputTokens": 8227,
+    "totalTokens": 8885
+  },
+  "latencyMs": 31862,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · University press releases and uncertainty statements\",\"focus\":\"selecting main trends, comparing proportions and totals, avoiding causal overclaim\",\"prompt\":\"The table below shows the proportion of university press releases that included an explicit uncertainty statement (mentioning limitations, small sample size, or need for further research) at three universities in 2018, 2021 and 2024, along with the total number of press releases issued. Data: Northfield University – 2018: 22% of 180 releases included uncertainty; 2021: 31% of 210; 2024: 38% of 195. Westlake University – 2018: 18% of 150; 2021: 24% of 165; 2024: 29% of 170. Southridge University – 2018: 35% of 120; 2021: 33% of 140; 2024: 41% of 135. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words in about 20 minutes. All data is provided here; no external information is needed.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Urban wetland visitors and wildlife incidents\",\"focus\":\"describing correlated trends, noting timing of intervention, limits of causality\",\"prompt\":\"The chart below shows monthly visitor numbers and reported wildlife disturbance incidents at Riverton Urban Wetland Reserve from March to August 2024. In June, the reserve introduced voluntary path restrictions near nesting areas. Data: March – 8,200 visitors, 12 incidents; April – 11,500 visitors, 18 incidents; May – 15,000 visitors, 31 incidents; June – 18,400 visitors, 42 incidents; July – 19,100 visitors, 38 incidents; August – 14,300 visitors, 22 incidents. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider the relationship between visitor numbers and incidents without assuming direct causation. You should write at least 150 words in about 20 minutes. All data is provided here.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · How universities should report uncertain findings\",\"focus\":\"discussing competing views, evaluating evidence, precise language without overgeneralising\",\"prompt\":\"Some people argue that universities should not publicise research findings to the public until results have been peer-reviewed and replicated, because early publicity risks misleading people. Others argue that universities should share preliminary findings promptly, provided they clearly explain uncertainties and limitations, especially for health or environmental issues. Discuss both views and give your own opinion. Support your position with reasons and examples, and avoid overclaiming about the effects of either approach. You should write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Balancing public access with urban wildlife protection\",\"focus\":\"weighing competing interests, scope of restrictions, evaluating voluntary versus strict measures\",\"prompt\":\"In many cities, urban parks and wetlands are valued both as habitats for wildlife and as places for recreation. Some people believe public access should be strictly limited during sensitive periods, such as breeding seasons, even if this reduces enjoyment for visitors. Others argue that education and voluntary guidelines are enough and that strict closures are unnecessary. Discuss both views and give your own opinion. Evaluate the competing evidence and consider the limits of each approach. You should write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Whether short pilots justify permanent policy\",\"focus\":\"scope, seasonality and causality limits, using short-term evidence for long-term decisions\",\"prompt\":\"A city council ran a three-month pilot closing a central shopping street to cars. During the pilot, footfall increased by 12% and nitrogen dioxide levels fell by 15% compared with the same three months the previous year, but delivery drivers and some shop owners reported difficulties. The council now proposes to make the closure permanent based on these results. To what extent does evidence from a short pilot justify a permanent policy change? Discuss the strengths and limitations of using short-term data for long-term decisions, including issues of scope, seasonality and causality. Give your own view with precise reasoning. You should write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · University research and news\",\"focus\":\"personal habits and evaluating uncertain claims\",\"prompt\":\"Answer in short, natural responses as in Part 1. 1) Do you often see news about university research? Where do you see it? 2) How do you decide whether a scientific finding is trustworthy? 3) Have you ever shared news about a discovery and later found it was uncertain? 4) Do you think universities have a responsibility to explain the limits of their findings?\"},{\"task\":\"Part 1 · Urban parks and wildlife\",\"focus\":\"personal experience and attitudes to access rules\",\"prompt\":\"Answer in short, natural responses as in Part 1. 1) Are there parks or nature reserves near where you live? How often do you visit them? 2) What do people usually do there? 3) Have you noticed any rules designed to protect wildlife? Do people follow them? 4) Would you be willing to avoid parts of a park to protect nesting birds? Why or why not?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"describing an experience with uncertain information and reflecting on inference\",\"prompt\":\"Describe a time when you learned about a scientific finding or news claim that later turned out to be uncertain or incomplete. You will have one minute to prepare and should speak for one to two minutes. You should say: • what the finding or claim was • where and when you first heard about it • why it seemed important or convincing at first • and explain what you learned about interpreting uncertain information.\"},{\"task\":\"Part 3 · Balancing public access and wildlife protection\",\"focus\":\"reasons and evaluation of competing policies, limits of evidence\",\"prompt\":\"Consider the following questions in depth, giving reasons and evaluation rather than memorised facts. 1) Why is it difficult for cities to both encourage public access to urban nature reserves and protect wildlife? 2) What are the advantages and disadvantages of strict seasonal closures compared with voluntary guidelines and education? 3) How can authorities assess whether an access policy is working, and what are the limits of visitor and incident data? 4) Who should have the final say in balancing recreation and conservation – local government, scientists, or the public? Why?\"},{\"task\":\"Part 3 · Short pilots and permanent policy\",\"focus\":\"scope, causality and handling competing evidence without overclaiming\",\"prompt\":\"Consider the following questions in depth, giving reasons and evaluation rather than memorised facts. 1) Why do governments often use short pilot schemes before making permanent policy changes? 2) What are the limitations of using three to six months of pilot data to predict long-term outcomes? Consider seasonality and causality. 3) How should decision-makers weigh competing evidence from a pilot, such as environmental gains versus economic complaints? 4) When, if ever, is it reasonable to make a pilot permanent despite incomplete evidence? What safeguards would you recommend?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · University press releases and uncertainty statements",
+        "focus": "selecting main trends, comparing proportions and totals, avoiding causal overclaim",
+        "prompt": "The table below shows the proportion of university press releases that included an explicit uncertainty statement (mentioning limitations, small sample size, or need for further research) at three universities in 2018, 2021 and 2024, along with the total number of press releases issued. Data: Northfield University – 2018: 22% of 180 releases included uncertainty; 2021: 31% of 210; 2024: 38% of 195. Westlake University – 2018: 18% of 150; 2021: 24% of 165; 2024: 29% of 170. Southridge University – 2018: 35% of 120; 2021: 33% of 140; 2024: 41% of 135. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words in about 20 minutes. All data is provided here; no external information is needed.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Urban wetland visitors and wildlife incidents",
+        "focus": "describing correlated trends, noting timing of intervention, limits of causality",
+        "prompt": "The chart below shows monthly visitor numbers and reported wildlife disturbance incidents at Riverton Urban Wetland Reserve from March to August 2024. In June, the reserve introduced voluntary path restrictions near nesting areas. Data: March – 8,200 visitors, 12 incidents; April – 11,500 visitors, 18 incidents; May – 15,000 visitors, 31 incidents; June – 18,400 visitors, 42 incidents; July – 19,100 visitors, 38 incidents; August – 14,300 visitors, 22 incidents. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Consider the relationship between visitor numbers and incidents without assuming direct causation. You should write at least 150 words in about 20 minutes. All data is provided here.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · How universities should report uncertain findings",
+        "focus": "discussing competing views, evaluating evidence, precise language without overgeneralising",
+        "prompt": "Some people argue that universities should not publicise research findings to the public until results have been peer-reviewed and replicated, because early publicity risks misleading people. Others argue that universities should share preliminary findings promptly, provided they clearly explain uncertainties and limitations, especially for health or environmental issues. Discuss both views and give your own opinion. Support your position with reasons and examples, and avoid overclaiming about the effects of either approach. You should write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Balancing public access with urban wildlife protection",
+        "focus": "weighing competing interests, scope of restrictions, evaluating voluntary versus strict measures",
+        "prompt": "In many cities, urban parks and wetlands are valued both as habitats for wildlife and as places for recreation. Some people believe public access should be strictly limited during sensitive periods, such as breeding seasons, even if this reduces enjoyment for visitors. Others argue that education and voluntary guidelines are enough and that strict closures are unnecessary. Discuss both views and give your own opinion. Evaluate the competing evidence and consider the limits of each approach. You should write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Whether short pilots justify permanent policy",
+        "focus": "scope, seasonality and causality limits, using short-term evidence for long-term decisions",
+        "prompt": "A city council ran a three-month pilot closing a central shopping street to cars. During the pilot, footfall increased by 12% and nitrogen dioxide levels fell by 15% compared with the same three months the previous year, but delivery drivers and some shop owners reported difficulties. The council now proposes to make the closure permanent based on these results. To what extent does evidence from a short pilot justify a permanent policy change? Discuss the strengths and limitations of using short-term data for long-term decisions, including issues of scope, seasonality and causality. Give your own view with precise reasoning. You should write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · University research and news",
+        "focus": "personal habits and evaluating uncertain claims",
+        "prompt": "Answer in short, natural responses as in Part 1. 1) Do you often see news about university research? Where do you see it? 2) How do you decide whether a scientific finding is trustworthy? 3) Have you ever shared news about a discovery and later found it was uncertain? 4) Do you think universities have a responsibility to explain the limits of their findings?"
+      },
+      {
+        "task": "Part 1 · Urban parks and wildlife",
+        "focus": "personal experience and attitudes to access rules",
+        "prompt": "Answer in short, natural responses as in Part 1. 1) Are there parks or nature reserves near where you live? How often do you visit them? 2) What do people usually do there? 3) Have you noticed any rules designed to protect wildlife? Do people follow them? 4) Would you be willing to avoid parts of a park to protect nesting birds? Why or why not?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "describing an experience with uncertain information and reflecting on inference",
+        "prompt": "Describe a time when you learned about a scientific finding or news claim that later turned out to be uncertain or incomplete. You will have one minute to prepare and should speak for one to two minutes. You should say: • what the finding or claim was • where and when you first heard about it • why it seemed important or convincing at first • and explain what you learned about interpreting uncertain information."
+      },
+      {
+        "task": "Part 3 · Balancing public access and wildlife protection",
+        "focus": "reasons and evaluation of competing policies, limits of evidence",
+        "prompt": "Consider the following questions in depth, giving reasons and evaluation rather than memorised facts. 1) Why is it difficult for cities to both encourage public access to urban nature reserves and protect wildlife? 2) What are the advantages and disadvantages of strict seasonal closures compared with voluntary guidelines and education? 3) How can authorities assess whether an access policy is working, and what are the limits of visitor and incident data? 4) Who should have the final say in balancing recreation and conservation – local government, scientists, or the public? Why?"
+      },
+      {
+        "task": "Part 3 · Short pilots and permanent policy",
+        "focus": "scope, causality and handling competing evidence without overclaiming",
+        "prompt": "Consider the following questions in depth, giving reasons and evaluation rather than memorised facts. 1) Why do governments often use short pilot schemes before making permanent policy changes? 2) What are the limitations of using three to six months of pilot data to predict long-term outcomes? Consider seasonality and causality. 3) How should decision-makers weigh competing evidence from a pilot, such as environmental gains versus economic complaints? 4) When, if ever, is it reasonable to make a pilot permanent despite incomplete evidence? What safeguards would you recommend?"
+      }
+    ]
+  }
+}

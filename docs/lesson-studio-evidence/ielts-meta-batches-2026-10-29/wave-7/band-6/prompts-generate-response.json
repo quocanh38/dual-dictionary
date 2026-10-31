@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-7",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-7-v1",
+  "completedAt": "2026-10-29T05:20:51.023Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 642,
+    "outputTokens": 4271,
+    "totalTokens": 4913
+  },
+  "latencyMs": 15137,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Community Workshop Participation\",\"focus\":\"Paraphrase and compare participation data across familiar workshop topics\",\"prompt\":\"The table below shows the number of participants in three session types at the Riverside Community Workshop in 2022 and 2023, and the percentage of participants who said they would return.\\n\\nRiverside Community Workshop:\\n2022 - Woodwork: 120 participants, 68% would return | Digital Skills: 95 participants, 72% would return | Gardening: 80 participants, 85% would return\\n2023 - Woodwork: 135 participants, 75% would return | Digital Skills: 140 participants, 78% would return | Gardening: 110 participants, 82% would return\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Public Transport Information Campaign Survey\",\"focus\":\"Correct details and clear comparisons from survey results before and after a campaign\",\"prompt\":\"The table below shows the results of a survey of 500 residents in Westfield City before and after a public transport information campaign in March 2023. The survey asked if people were aware of three services.\\n\\nPercentage who answered Yes, I am aware:\\nBefore campaign (February 2023) - City Bus Map: 42% | Mobile Ticket App: 35% | Night Bus Service: 28%\\nAfter campaign (April 2023) - City Bus Map: 61% | Mobile Ticket App: 58% | Night Bus Service: 44%\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · College Alumni Panel Advice\",\"focus\":\"Linked ideas and balanced comparison of two views on alumni advice\",\"prompt\":\"Some people think college alumni panels are very useful for current students when choosing a career. Others think advice from former students is often outdated and not relevant to today's job market.\\n\\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Funding for Shared Community Workshops\",\"focus\":\"Paraphrase the issue and develop a clear position with linked reasons\",\"prompt\":\"Many local councils fund shared community workshops where people can learn practical skills such as woodwork, repair, and digital skills together. Some people argue this money should be spent on traditional classroom education instead.\\n\\nTo what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Effectiveness of Public Transport Campaigns\",\"focus\":\"Evaluation and comparison of effectiveness with corrected detail and examples\",\"prompt\":\"Public transport information campaigns often encourage people to use buses and trains instead of cars. Some people believe these campaigns are effective in changing travel habits, while others think they have little impact.\\n\\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Daily Travel and Public Transport\",\"focus\":\"Paraphrase and give short linked answers on familiar travel topics\",\"prompt\":\"Let's talk about travel and public transport.\\n- How do you usually travel to college or work?\\n- How often do you use buses or trains?\\n- Is public transport information clear in your city?\\n- Would you like to use public transport more in the future?\"},{\"task\":\"Part 1 · Learning New Skills\",\"focus\":\"Corrected details and simple comparisons about learning experiences\",\"prompt\":\"Let's talk about learning new skills.\\n- What kind of practical skills would you like to learn?\\n- Do you prefer learning alone or with other people?\\n- Have you ever attended a workshop or training session?\\n- How useful is it to learn from people with experience?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"Describe a workshop or talk with clear structure and linked ideas\",\"prompt\":\"Describe a talk or workshop you attended at your college or in your community, such as an alumni panel or a community workshop.\\nYou should say:\\n- what the event was and when it happened\\n- who organised it and who spoke\\n- what you learned or did there\\n- and explain how useful it was for you\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Value of Alumni Panels and Community Learning\",\"focus\":\"Reasons and evaluation of different ways of learning from others\",\"prompt\":\"Let's consider community learning more broadly.\\n- Why do some students find advice from alumni more helpful than advice from teachers?\\n- What are the advantages and disadvantages of learning practical skills in a shared workshop compared to learning online?\\n- How can colleges make alumni panels more useful for all students?\\n- Do you think community workshops can help people of different ages learn from each other? Why or why not?\"},{\"task\":\"Part 3 · Public Information Campaigns and Behaviour Change\",\"focus\":\"Evaluation and comparison of campaign methods and their impact\",\"prompt\":\"Let's talk about public information campaigns.\\n- Why do some public transport campaigns succeed in changing behaviour while others do not?\\n- What makes information about public services clear and easy to use?\\n- Is it better for campaigns to use online messages, posters, or community events? Why?\\n- How can cities evaluate whether a campaign has been effective?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Community Workshop Participation",
+        "focus": "Paraphrase and compare participation data across familiar workshop topics",
+        "prompt": "The table below shows the number of participants in three session types at the Riverside Community Workshop in 2022 and 2023, and the percentage of participants who said they would return.\n\nRiverside Community Workshop:\n2022 - Woodwork: 120 participants, 68% would return | Digital Skills: 95 participants, 72% would return | Gardening: 80 participants, 85% would return\n2023 - Woodwork: 135 participants, 75% would return | Digital Skills: 140 participants, 78% would return | Gardening: 110 participants, 82% would return\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Public Transport Information Campaign Survey",
+        "focus": "Correct details and clear comparisons from survey results before and after a campaign",
+        "prompt": "The table below shows the results of a survey of 500 residents in Westfield City before and after a public transport information campaign in March 2023. The survey asked if people were aware of three services.\n\nPercentage who answered Yes, I am aware:\nBefore campaign (February 2023) - City Bus Map: 42% | Mobile Ticket App: 35% | Night Bus Service: 28%\nAfter campaign (April 2023) - City Bus Map: 61% | Mobile Ticket App: 58% | Night Bus Service: 44%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · College Alumni Panel Advice",
+        "focus": "Linked ideas and balanced comparison of two views on alumni advice",
+        "prompt": "Some people think college alumni panels are very useful for current students when choosing a career. Others think advice from former students is often outdated and not relevant to today's job market.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Funding for Shared Community Workshops",
+        "focus": "Paraphrase the issue and develop a clear position with linked reasons",
+        "prompt": "Many local councils fund shared community workshops where people can learn practical skills such as woodwork, repair, and digital skills together. Some people argue this money should be spent on traditional classroom education instead.\n\nTo what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Effectiveness of Public Transport Campaigns",
+        "focus": "Evaluation and comparison of effectiveness with corrected detail and examples",
+        "prompt": "Public transport information campaigns often encourage people to use buses and trains instead of cars. Some people believe these campaigns are effective in changing travel habits, while others think they have little impact.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Travel and Public Transport",
+        "focus": "Paraphrase and give short linked answers on familiar travel topics",
+        "prompt": "Let's talk about travel and public transport.\n- How do you usually travel to college or work?\n- How often do you use buses or trains?\n- Is public transport information clear in your city?\n- Would you like to use public transport more in the future?"
+      },
+      {
+        "task": "Part 1 · Learning New Skills",
+        "focus": "Corrected details and simple comparisons about learning experiences",
+        "prompt": "Let's talk about learning new skills.\n- What kind of practical skills would you like to learn?\n- Do you prefer learning alone or with other people?\n- Have you ever attended a workshop or training session?\n- How useful is it to learn from people with experience?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "Describe a workshop or talk with clear structure and linked ideas",
+        "prompt": "Describe a talk or workshop you attended at your college or in your community, such as an alumni panel or a community workshop.\nYou should say:\n- what the event was and when it happened\n- who organised it and who spoke\n- what you learned or did there\n- and explain how useful it was for you\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Value of Alumni Panels and Community Learning",
+        "focus": "Reasons and evaluation of different ways of learning from others",
+        "prompt": "Let's consider community learning more broadly.\n- Why do some students find advice from alumni more helpful than advice from teachers?\n- What are the advantages and disadvantages of learning practical skills in a shared workshop compared to learning online?\n- How can colleges make alumni panels more useful for all students?\n- Do you think community workshops can help people of different ages learn from each other? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Public Information Campaigns and Behaviour Change",
+        "focus": "Evaluation and comparison of campaign methods and their impact",
+        "prompt": "Let's talk about public information campaigns.\n- Why do some public transport campaigns succeed in changing behaviour while others do not?\n- What makes information about public services clear and easy to use?\n- Is it better for campaigns to use online messages, posters, or community events? Why?\n- How can cities evaluate whether a campaign has been effective?"
+      }
+    ]
+  }
+}

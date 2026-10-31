@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "d1ee73bd7febf0c152ec31ba325dd5536ca0b066dc65f52314f5f46bb1c4ac8d",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading are 317/434 words, within range. All objective answers are uniquely supported; explanations accurately handle measurement invariance, corrected sample size, matched controls and causal limits. Reading now clearly labels the six LEZ cities as fictional for this illustrative study, avoiding presentation as real-world findings. Task 1 data are complete and units/sample information visible; writing/speaking levels and cue card are appropriate. Provenance is original; no score or official-item claims. Minor clarity: “more than 14,000 monthly observations” could identify the observation unit (e.g. monitors or satellite records) rather than leave city-month counts ambiguous."
+  ],
+  "coverage": "Full review of provenance/structure, both contexts and word limits, all 10 objective questions/options/keys/explanations, both Task 1 datasets/units, all five Writing prompts/timing, and all five Speaking prompts including cue-card completeness and stage fit.",
+  "reviewerType": "AI-assisted"
+}

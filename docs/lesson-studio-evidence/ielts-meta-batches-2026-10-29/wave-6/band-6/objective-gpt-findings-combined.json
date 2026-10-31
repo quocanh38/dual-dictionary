@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "itemId": "Reading objective answer-position distribution",
+      "issue": "Reading keys are [2,0,1,2,1]; position 3 is never correct, matching the candidate normalization finding. Rebalance options/keys while preserving the passage-supported answers.",
+      "severity": "minor"
+    },
+    {
+      "item": "normalizationFindings; Reading exercises",
+      "severity": "major",
+      "issue": "Reading keys [2,0,1,2,1] omit index3. Reorder options/key to cover all four positions and synchronise explanation references."
+    },
+    {
+      "item": "sharedContexts.reading.passage paragraph3; ielts-meta-wave-6-band-6-reading-03",
+      "severity": "critical",
+      "issue": "Fewer diners with unchanged per-person portion sizes does not explain higher waste per person. Passage and key/explanation infer a per-capita increase from fewer diners alone. State a supported mechanism, e.g. the kitchen prepared the same total quantity and excess leftovers were discarded, then align question/key/explanation; or give evidence individual portions exceeded weekend needs."
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Objective content issue: Reading answer positions do not cover all four options.",
+      "severity": "major"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "reviewerType": "AI-assisted review by Codex; not independent human review",
+  "rubrics": {
+    "relevance": "1 = unrelated to the task; 5 = directly addresses the prompt and learner answer",
+    "explanationQuality": "1 = incorrect or unhelpful; 5 = accurate, specific, and helpful"
+  },
+  "cases": [
+    {"caseId":"natural-use","expectedVerdict":"correct","returnedVerdict":"correct","adjudicatedVerdict":"correct","labelAdjusted":false,"quoteValid":true,"relevance":5,"explanationQuality":5,"note":"Affirms correct natural use and explains why."},
+    {"caseId":"incorrect-use","expectedVerdict":"incorrect","returnedVerdict":"incorrect","adjudicatedVerdict":"incorrect","labelAdjusted":false,"quoteValid":true,"relevance":5,"explanationQuality":5,"note":"Identifies the noun phrase used without a main verb and provides a grammatical revision."},
+    {"caseId":"off-topic","expectedVerdicts":["incorrect","uncertain"],"returnedVerdict":"incorrect","adjudicatedVerdict":"incorrect","labelAdjusted":false,"quoteValid":true,"relevance":5,"explanationQuality":5,"note":"The response is unrelated to the requested language task and phrase."},
+    {"caseId":"missing-required-phrase","expectedVerdict":"incorrect","returnedVerdict":"incorrect","adjudicatedVerdict":"incorrect","labelAdjusted":false,"quoteValid":true,"relevance":5,"explanationQuality":5,"note":"Correctly notes that the required phrase is absent."},
+    {"caseId":"ambiguous-reference","originalCaseId":"ambiguous-reference","expectedVerdict":"uncertain","returnedVerdict":"incorrect","adjudicatedVerdict":"incorrect","labelAdjusted":true,"quoteValid":true,"relevance":5,"explanationQuality":4,"note":"The prompt explicitly asks which project item and how it is monitored; the answer only says 'it'. The original expected label was mis-keyed. The authored case is now named missing-required-detail."},
+    {"caseId":"missing-quote","renamedCaseId":"quoted-grammar-error","expectedVerdict":"uncertain","returnedVerdict":"incorrect","adjudicatedVerdict":"incorrect","labelAdjusted":true,"quoteValid":true,"relevance":5,"explanationQuality":2,"note":"This was not a true missing-quote test: the answer contains grammar errors and the provider returned an exact quote. The expected label was mis-keyed. The explanation's claim that 'careful' is used as a verb is inaccurate; the noun phrase is used as a predicate without a verb. A true missing-quote scenario remains covered by deterministic fixtures, not the live provider sample."}
+  ],
+  "aggregate": {
+    "validOutputs": 6,
+    "adjudicatedVerdictMatches": 6,
+    "exactQuotesValid": 6,
+    "meanRelevance": 5,
+    "meanExplanationQuality": 4.33,
+    "interpretation": "Descriptive review of six synthetic valid outputs only; not independent validation, provider accuracy, or learning-outcome evidence."
+  }
+}

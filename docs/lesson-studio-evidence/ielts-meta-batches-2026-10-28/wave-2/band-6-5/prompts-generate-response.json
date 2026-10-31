@@ -1,0 +1,83 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "batchId": "wave-2",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+  "completedAt": "2026-10-28T02:55:34.020Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 512,
+    "outputTokens": 4842,
+    "totalTokens": 5354
+  },
+  "latencyMs": 25928,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Museum Visitor-Flow Evaluation",
+        "focus": "Comparing dwell time, congestion and satisfaction across galleries",
+        "prompt": "This is an original practice task. You should spend about 20 minutes on this task. The table below shows results from a visitor-flow evaluation at Harbridge Museum during three weekends in March 2025. The data combine sensor counts with 412 exit questionnaires. The South Gallery was closed for maintenance during the second weekend, so its figures are based on two weekends only. Gallery | Average visitors per hour | Average dwell time in minutes | Visitors rating crowding as high | Visitors rating experience as good or excellent: Entrance Hall | 210 | 8 | 18% | 82% | North Wing - Local History | 95 | 22 | 12% | 88% | East Wing - Natural World | 165 | 19 | 47% | 64% | South Gallery - Temporary Exhibition | 140 | 26 | 52% | 71% | Riverside Cafe and Shop | 120 | 15 | 21% | 90%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Note any important qualifications or limits in the data. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · University Research-Participant Recruitment Plan",
+        "focus": "Comparing recruitment channels by response, eligibility and enrolment",
+        "prompt": "This is an original practice task. You should spend about 20 minutes on this task. The table below shows the recruitment plan and early outcomes for a Westfield University project on sleep and study habits in February 2025. The team aimed to enrol 120 first-year undergraduates. Channel | Students contacted | Responses received | Eligible after screening | Finally enrolled: Direct email invitation | 800 | 132 | 68 | 54 | Brief announcement in lectures | 600 | 98 | 61 | 48 | Posters in library and dormitories | contacts estimated 450 | 41 | 22 | 15 | Student society social media posts | contacts estimated 900 | 76 | 28 | 19. Screening excluded students working night shifts and those already in another sleep study. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Local River-Access Survey",
+        "focus": "Comparing use, ratings and barriers at three River Cole points",
+        "prompt": "This is an original practice task. You should spend about 20 minutes on this task. The table below shows results from a local survey about public access to the River Cole in April 2025. A total of 380 residents living within 2 km of the river completed the questionnaire. Access point | Used at least monthly | Average access rating out of 10 | Most commonly reported barrier with share of users: Mill Lane Steps | 34% | 6.8 | Limited parking reported by 38% | Alder Park Slipway | 52% | 7.9 | Litter and unclear swimming rules reported by 29% | Stonebridge Meadow Path | 27% | 5.4 | Muddy path and poor lighting reported by 51%. The survey was distributed online and at Alder Park, so regular park users may be over-represented. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Museums and Visitor Limits",
+        "focus": "Discussing timed entry, learning quality and public access",
+        "prompt": "This is an original practice task. You should spend about 40 minutes on this task. Some people suggest that popular museums such as Harbridge Museum should use timed tickets and strict limits on visitor numbers to reduce crowding and improve learning. Others argue that such limits reduce public access and that crowding can be managed in other ways, such as better information, wider paths, or extended opening hours. Discuss both views and give your own opinion. Support your points with reasons and examples. Compare the strength of the evidence for each side and qualify your claims where the evidence is incomplete or uncertain. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · River Access and Environmental Care",
+        "focus": "Balancing recreation, safety and protection of riversides",
+        "prompt": "This is an original practice task. You should spend about 40 minutes on this task. Many local councils want to improve public access to rivers like the River Cole by building paths, steps, parking and signs. Some residents welcome easier access for walking, paddling and fishing. Others worry that more visitors will cause litter, disturbance to wildlife and safety problems if maintenance budgets are limited. To what extent do you agree that councils should expand river access even when long-term maintenance cannot be fully guaranteed? Give reasons for your answer and include relevant examples. Acknowledge limitations and situations where your argument may not apply. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Museums and Public Spaces",
+        "focus": "Everyday habits, preferences and short explanations",
+        "prompt": "This is original practice. Answer in 2-3 sentences for each question. 1. How often do you visit museums or galleries, and why? 2. What kind of public space do you most enjoy spending time in? 3. Do you prefer visiting busy popular places or quieter places? Why? 4. How do you usually find information before visiting a new place in your area?"
+      },
+      {
+        "task": "Part 1 · Study, Help and Outdoor Life",
+        "focus": "Routines, volunteering and use of riversides",
+        "prompt": "This is original practice. Answer in 2-3 sentences for each question. 1. What is your current study or work routine like during the week? 2. Have you ever volunteered to help with a university project or community survey? Why or why not? 3. How often do you walk or spend time near a river, lake or park? 4. What would make outdoor places near your home more pleasant to use?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Crowded Public Visit",
+        "focus": "Describing an experience and evaluating its effect",
+        "prompt": "This is original practice. Describe a visit to a museum, gallery or other public building where the number of visitors affected your experience. You should say: • where you went and when you went there • what you saw or did there • how the number of other visitors influenced what happened • and explain how this visit changed your view of that place, if at all. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 2 · Cue card · A Riverside Place for Improvement",
+        "focus": "Describing a place and suggesting qualified improvements",
+        "prompt": "This is original practice. Describe a riverside, park or other outdoor place in your area that you think could be improved for public access. You should say: • where this place is and what it is like now • how people currently use it • what problems or limits affect its use • and explain what changes you would suggest and why they would help. You have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Using Surveys and Volunteers in Research",
+        "focus": "Evaluating methods, bias and practical limits",
+        "prompt": "This is original practice. Discuss the following questions, giving reasons and evaluation rather than memorised facts. 1. Why might university researchers find it difficult to recruit enough participants for studies? 2. What are the advantages and limitations of using online surveys to understand how people use museums or riversides? 3. How can organisers judge whether evidence from a small local survey is strong enough to support a decision? 4. In what situations should public access be limited to protect an environment, even if many people want to visit?"
+      }
+    ]
+  }
+}

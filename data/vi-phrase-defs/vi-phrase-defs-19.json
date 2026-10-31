@@ -1,0 +1,540 @@
+[
+  {
+    "phrase": "above board",
+    "pos": "adjective / adverb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "minh bạch, trung thực và đúng quy định; dùng như tính từ hoặc trạng từ",
+        "pat": "an above-board deal · keep something above board · act above board",
+        "ex": [
+          [
+            "The audit confirmed that every payment was above board.",
+            "Cuộc kiểm toán xác nhận mọi khoản thanh toán đều minh bạch và đúng quy định."
+          ],
+          [
+            "We want to keep the hiring process above board.",
+            "Chúng tôi muốn giữ quy trình tuyển dụng minh bạch."
+          ]
+        ]
+      }
+    ],
+    "note": "Khi đứng trước danh từ, tính từ thường viết có gạch nối: an above-board transaction; trạng từ thường viết rời: act above board."
+  },
+  {
+    "phrase": "access road",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "đường nhánh cho phép xe đi vào hoặc đi ra một địa điểm, khu công nghiệp hay tuyến đường lớn",
+        "pat": "an access road to a site · build/improve the access road",
+        "ex": [
+          [
+            "A new access road will connect the warehouse to the highway.",
+            "Một tuyến đường nhánh mới sẽ nối nhà kho với đường cao tốc."
+          ],
+          [
+            "Heavy traffic blocked the access road to the airport.",
+            "Giao thông đông đúc làm tắc đường vào sân bay."
+          ]
+        ]
+      }
+    ],
+    "note": "Access road nhấn vào chức năng kết nối một địa điểm; tùy hệ thống đường bộ, slip road có thể chỉ đoạn nối lên hoặc rời đường cao tốc."
+  },
+  {
+    "phrase": "access time",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thời gian hệ thống máy tính cần để tìm và truy xuất dữ liệu đã lưu",
+        "pat": "average access time · reduce/improve access time · data access time",
+        "ex": [
+          [
+            "The new drive has a much shorter access time.",
+            "Ổ đĩa mới có thời gian truy xuất ngắn hơn nhiều."
+          ],
+          [
+            "The software reduces database access time by indexing large files.",
+            "Phần mềm rút ngắn thời gian truy xuất cơ sở dữ liệu bằng cách lập chỉ mục các tệp lớn."
+          ]
+        ]
+      }
+    ],
+    "note": "Đây là thuật ngữ tin học; thông số có thể được đo bằng mili giây và phụ thuộc loại bộ nhớ, thiết bị cùng cách truy cập."
+  },
+  {
+    "phrase": "action painting",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "trường phái/kỹ thuật hội họa nhấn mạnh cử chỉ và quá trình vẽ, thường tạo nét bằng cách vẩy, đổ hoặc quét sơn mạnh",
+        "pat": "a work of action painting · an action-painting technique · action painting by …",
+        "ex": [
+          [
+            "The exhibition traces the development of action painting after the war.",
+            "Triển lãm lần theo sự phát triển của hội họa hành động sau chiến tranh."
+          ],
+          [
+            "The artist used broad, energetic gestures in an action-painting series.",
+            "Nghệ sĩ dùng những động tác rộng và giàu năng lượng trong một loạt tranh hội họa hành động."
+          ]
+        ]
+      }
+    ],
+    "note": "Thuật ngữ mỹ thuật, thường gắn với chủ nghĩa Biểu hiện Trừu tượng; đây là tên một cách tiếp cận sáng tác, không chỉ một loại chất liệu."
+  },
+  {
+    "phrase": "add in",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thêm một khoản hoặc yếu tố vào phép tính, danh sách hay kế hoạch",
+        "pat": "add something in · add in the cost/time/fee",
+        "ex": [
+          [
+            "Please add in the delivery charge before approving the estimate.",
+            "Vui lòng cộng phí giao hàng vào trước khi duyệt báo giá."
+          ],
+          [
+            "The schedule does not add in the time needed for testing.",
+            "Lịch trình chưa tính phần thời gian cần cho việc kiểm thử."
+          ]
+        ]
+      }
+    ],
+    "note": "Động từ có tân ngữ; add in sth và add sth in đều dùng được. Trong văn phong trang trọng, include hoặc take something into account thường tự nhiên hơn."
+  },
+  {
+    "phrase": "add on",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thêm hoặc gắn một phần/phụ phí vào thứ đã có",
+        "pat": "add something on to something · add on a fee/feature/room",
+        "ex": [
+          [
+            "The supplier added a handling fee on to the invoice.",
+            "Nhà cung cấp cộng thêm phí xử lý vào hóa đơn."
+          ],
+          [
+            "We can add another module on to the existing system.",
+            "Chúng tôi có thể bổ sung một mô-đun vào hệ thống hiện tại."
+          ]
+        ]
+      }
+    ],
+    "note": "Động từ thường có tân ngữ; danh từ add-on chỉ phần bổ sung hoặc tiện ích mua thêm."
+  },
+  {
+    "phrase": "add up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cộng các số/khoản lại để tính tổng",
+        "pat": "add up the figures · add something up · add up to a total",
+        "ex": [
+          [
+            "Could you add up the expenses from all three departments?",
+            "Bạn cộng giúp chi phí của cả ba phòng ban được không?"
+          ],
+          [
+            "The small charges add up to more than we expected.",
+            "Các khoản phí nhỏ cộng lại thành số tiền cao hơn chúng tôi dự tính."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) hợp lý, có vẻ đúng khi xem xét các dữ kiện",
+        "pat": "something adds up · something does not add up",
+        "ex": [
+          [
+            "Her explanation does not add up, so we checked the records again.",
+            "Lời giải thích của cô ấy không hợp lý nên chúng tôi kiểm tra lại hồ sơ."
+          ],
+          [
+            "The dates add up when you include the travel day.",
+            "Các mốc thời gian trở nên hợp lý khi tính cả ngày di chuyển."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa “có vẻ hợp lý” thường gặp trong câu phủ định hoặc nghi vấn: the figures/story do not add up."
+  },
+  {
+    "phrase": "air letter",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thư hàng không dạng một tờ giấy nhẹ có thể gấp lại để gửi thư quốc tế",
+        "pat": "send/write an air letter · an air-letter form",
+        "ex": [
+          [
+            "Her grandfather sent an air letter from overseas.",
+            "Ông của cô gửi một bức thư hàng không từ nước ngoài."
+          ],
+          [
+            "The museum displayed an old air letter beside the postmark.",
+            "Bảo tàng trưng bày một bức thư hàng không cũ bên cạnh dấu bưu điện."
+          ]
+        ]
+      }
+    ],
+    "note": "Từ chỉ một hình thức thư tín cũ, hiện ít gặp vì thư điện tử và các dịch vụ bưu chính hiện đại; không nên dùng như tên chung cho thư gửi bằng máy bay ngày nay."
+  },
+  {
+    "phrase": "air pocket",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vùng không khí có áp suất thấp khiến máy bay bất ngờ hạ độ cao khi bay",
+        "pat": "hit/encounter an air pocket · turbulence caused by an air pocket",
+        "ex": [
+          [
+            "The aircraft dropped briefly after hitting an air pocket.",
+            "Máy bay bất ngờ hạ thấp trong chốc lát sau khi gặp vùng nhiễu động."
+          ],
+          [
+            "Passengers were asked to keep their seat belts fastened because of possible air pockets.",
+            "Hành khách được yêu cầu thắt dây an toàn vì có thể gặp vùng nhiễu động."
+          ]
+        ]
+      },
+      {
+        "m": "khoảng rỗng chứa không khí bên trong đất hoặc vật liệu",
+        "pat": "air pockets in the soil/material · remove/trap an air pocket",
+        "ex": [
+          [
+            "Press the soil gently to remove air pockets around the roots.",
+            "Ấn nhẹ đất để loại bỏ các khoảng rỗng quanh rễ cây."
+          ],
+          [
+            "The technician checked the coating for trapped air pockets.",
+            "Kỹ thuật viên kiểm tra lớp phủ để tìm các túi khí bị mắc lại."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong hàng không, cụm này thường mô tả vùng nhiễu động; cách giải thích “hố không khí” dễ khiến người học hình dung sai."
+  },
+  {
+    "phrase": "all out",
+    "pos": "adverb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "hết sức, dốc toàn lực để đạt một mục tiêu",
+        "pat": "go all out to do something · go all out for something",
+        "ex": [
+          [
+            "The team is going all out to meet the launch date.",
+            "Cả nhóm đang dốc toàn lực để kịp ngày ra mắt."
+          ],
+          [
+            "The city went all out for the international festival.",
+            "Thành phố tổ chức lễ hội quốc tế với quy mô và nỗ lực tối đa."
+          ]
+        ]
+      }
+    ],
+    "note": "Cụm trạng từ thường đi với go; khi đứng trước danh từ, dạng tính từ thường có gạch nối: an all-out effort."
+  },
+  {
+    "phrase": "all right",
+    "pos": "adjective / adverb / exclamation",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ổn, chấp nhận được hoặc không có vấn đề nghiêm trọng",
+        "pat": "be all right · feel/look all right · Is it all right if …?",
+        "ex": [
+          [
+            "The revised schedule is all right with the client.",
+            "Khách hàng chấp nhận lịch trình đã chỉnh sửa."
+          ],
+          [
+            "Are you all right after the long journey?",
+            "Sau chuyến đi dài, bạn vẫn ổn chứ?"
+          ]
+        ]
+      },
+      {
+        "m": "được rồi; dùng để đồng ý, xác nhận hoặc kiểm tra người nghe đã hiểu",
+        "pat": "All right, … · ..., all right? · all right with you?",
+        "ex": [
+          [
+            "“Can we move the meeting to Friday?” “All right.”",
+            "“Chúng ta chuyển cuộc họp sang thứ Sáu được không?” “Được.”"
+          ],
+          [
+            "Keep a copy of the receipt, all right?",
+            "Nhớ giữ lại một bản hóa đơn nhé, được chứ?"
+          ]
+        ]
+      }
+    ],
+    "note": "All right là cách viết chuẩn trong văn bản biên tập; alright xuất hiện trong văn phong thân mật nhưng thường bị xem là không chuẩn trong bài viết trang trọng."
+  },
+  {
+    "phrase": "any more",
+    "pos": "adverb / determiner",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "nữa, thêm nữa; ở nghĩa “không còn… nữa”, thường đứng cuối câu phủ định hoặc câu hỏi",
+        "pat": "not … any more · do not need any more · any more questions?",
+        "ex": [
+          [
+            "The branch does not accept cash payments any more.",
+            "Chi nhánh không còn nhận thanh toán tiền mặt nữa."
+          ],
+          [
+            "Do you need any more information before signing?",
+            "Bạn có cần thêm thông tin nào trước khi ký không?"
+          ]
+        ]
+      }
+    ],
+    "note": "Anh-Anh thường viết any more thành hai từ; Anh-Mỹ thường viết anymore khi mang nghĩa “không còn… nữa”. Trong any more questions, cụm này vẫn có nghĩa “thêm”."
+  },
+  {
+    "phrase": "area code",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mã vùng điện thoại xác định một khu vực địa lý trong hệ thống quay số",
+        "pat": "area code + phone number · dial/use an area code · area code for …",
+        "ex": [
+          [
+            "You need the area code to call the regional office.",
+            "Bạn cần mã vùng để gọi văn phòng khu vực."
+          ],
+          [
+            "The company kept its old area code after moving its headquarters.",
+            "Công ty giữ mã vùng cũ sau khi chuyển trụ sở."
+          ]
+        ]
+      }
+    ],
+    "note": "Area code phổ biến trong hệ thống điện thoại Bắc Mỹ; Anh-Anh thường dùng dialling code."
+  },
+  {
+    "phrase": "back door",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cửa ở phía sau hoặc bên hông một tòa nhà",
+        "pat": "enter/leave through the back door · lock the back door",
+        "ex": [
+          [
+            "Staff can enter through the back door after the main entrance closes.",
+            "Nhân viên có thể vào bằng cửa sau sau khi lối vào chính đóng cửa."
+          ],
+          [
+            "The delivery driver left the parcel by the back door.",
+            "Nhân viên giao hàng để bưu kiện cạnh cửa sau."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) cách làm kín đáo hoặc không theo con đường chính thức",
+        "pat": "gain access through the back door · a back-door deal/route",
+        "ex": [
+          [
+            "The proposal would give the company a back-door route into the market.",
+            "Đề xuất này sẽ mở cho công ty một con đường vòng để thâm nhập thị trường."
+          ],
+          [
+            "The committee rejected any attempt to change the rules through the back door.",
+            "Ủy ban bác bỏ mọi nỗ lực lách luật để thay đổi quy định."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa bóng thường mang sắc thái không chính thức hoặc lén lút; tính từ đứng trước danh từ có thể viết back-door hoặc backdoor tùy quy ước biên tập."
+  },
+  {
+    "phrase": "back end",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "phần phía sau hoặc phần xử lý không trực tiếp hiện ra với người dùng, nhất là trong hệ thống máy tính",
+        "pat": "back-end system/software · work on the back end · back-end processing",
+        "ex": [
+          [
+            "The redesign improved the back end without changing the user interface.",
+            "Bản thiết kế lại cải thiện phần xử lý phía sau mà không thay đổi giao diện người dùng."
+          ],
+          [
+            "A separate team maintains the back end of the booking platform.",
+            "Một nhóm riêng bảo trì phần hậu trường của nền tảng đặt chỗ."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong công nghệ, back end thường chỉ phần máy chủ, dữ liệu hoặc xử lý; dạng tính từ đứng trước danh từ thường viết back-end."
+  },
+  {
+    "phrase": "back off",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "lùi ra hoặc ngừng gây sức ép, đe dọa hay can thiệp",
+        "pat": "back off · back off from someone/something · tell someone to back off",
+        "ex": [
+          [
+            "The manager backed off after the team explained the delay.",
+            "Quản lý ngừng gây sức ép sau khi nhóm giải thích về sự chậm trễ."
+          ],
+          [
+            "The company backed off from its demand for an immediate decision.",
+            "Công ty rút lại yêu cầu phải có quyết định ngay lập tức."
+          ]
+        ]
+      }
+    ],
+    "note": "Câu mệnh lệnh Back off! thường gay gắt, có nghĩa “tránh ra/đừng gây sức ép nữa”; dùng thận trọng trong giao tiếp công việc."
+  },
+  {
+    "phrase": "back out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "rút khỏi thỏa thuận, kế hoạch hoặc cam kết đã tham gia",
+        "pat": "back out of an agreement/deal · back out of doing something",
+        "ex": [
+          [
+            "The buyer backed out of the deal at the last minute.",
+            "Người mua rút khỏi thỏa thuận vào phút chót."
+          ],
+          [
+            "She agreed to help and then backed out without warning.",
+            "Cô ấy đồng ý giúp rồi lại rút lui mà không báo trước."
+          ]
+        ]
+      }
+    ],
+    "note": "Thường dùng back out of + danh từ hoặc V-ing; cụm này không tự nó cho biết việc rút lui là hợp pháp hay vi phạm hợp đồng."
+  },
+  {
+    "phrase": "back room",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "căn phòng ở phía sau một tòa nhà hoặc cửa hàng",
+        "pat": "in the back room · store something in the back room",
+        "ex": [
+          [
+            "The spare equipment is kept in the back room.",
+            "Thiết bị dự phòng được cất trong căn phòng phía sau."
+          ],
+          [
+            "Customers waited while the technician checked the item in the back room.",
+            "Khách chờ trong lúc kỹ thuật viên kiểm tra món hàng ở phòng phía sau."
+          ]
+        ]
+      },
+      {
+        "m": "(tính từ, thường viết back-room) diễn ra kín đáo, không công khai",
+        "pat": "back-room negotiations/dealings · back-room staff",
+        "ex": [
+          [
+            "The agreement followed weeks of back-room negotiations.",
+            "Thỏa thuận được đưa ra sau nhiều tuần đàm phán kín."
+          ],
+          [
+            "Back-room staff prepared the documents for the public meeting.",
+            "Nhân viên hậu trường chuẩn bị tài liệu cho cuộc họp công khai."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa tính từ có thể hàm ý hoạt động bí mật hoặc thiếu minh bạch tùy ngữ cảnh; không phải mọi back-room work đều mang sắc thái tiêu cực."
+  },
+  {
+    "phrase": "back seat",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ghế phía sau trong ô tô hoặc phương tiện có nhiều hàng ghế",
+        "pat": "sit in the back seat · the back seat of a car",
+        "ex": [
+          [
+            "The children sat in the back seat during the trip.",
+            "Bọn trẻ ngồi ở hàng ghế sau trong chuyến đi."
+          ],
+          [
+            "A bag was left on the back seat of the taxi.",
+            "Một chiếc túi bị bỏ quên trên ghế sau xe taxi."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) vị trí ít quyền lực hoặc ít được ưu tiên hơn",
+        "pat": "take a back seat · put something on the back seat",
+        "ex": [
+          [
+            "Safety must not take a back seat to speed.",
+            "Không được để an toàn bị xem nhẹ so với tốc độ."
+          ],
+          [
+            "After the merger, the old project took a back seat.",
+            "Sau vụ sáp nhập, dự án cũ không còn được ưu tiên."
+          ]
+        ]
+      }
+    ],
+    "note": "Cụm thường gặp trong thành ngữ take a back seat, nghĩa là lùi về vai trò thứ yếu hoặc ít được chú ý."
+  },
+  {
+    "phrase": "ball park",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "sân chơi bóng chày",
+        "pat": "at/in a ball park · a major-league ball park",
+        "ex": [
+          [
+            "The family watched the game from seats near the ball park entrance.",
+            "Gia đình xem trận đấu từ những ghế gần lối vào sân bóng chày."
+          ],
+          [
+            "The city plans to renovate its historic ball park.",
+            "Thành phố dự định cải tạo sân bóng chày lâu đời."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật) khoảng ước lượng gần đúng",
+        "pat": "a ballpark figure/estimate · in the right ballpark · a ballpark estimate",
+        "ex": [
+          [
+            "Could you give us a ballpark estimate by Friday?",
+            "Bạn có thể cho chúng tôi con số ước tính sơ bộ trước thứ Sáu không?"
+          ],
+          [
+            "The initial quote is in the right ballpark, but we need a detailed breakdown.",
+            "Báo giá ban đầu khá sát mức dự kiến, nhưng chúng tôi cần bảng phân tích chi tiết."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa “ước lượng” là cách dùng thân mật, đặc biệt phổ biến trong giao tiếp công việc Bắc Mỹ; trong báo cáo chính thức nên ghi rõ estimated/approximate."
+  }
+]

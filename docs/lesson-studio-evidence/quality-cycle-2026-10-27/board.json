@@ -1,0 +1,1139 @@
+{
+  "updatedAt": "2026-10-27T09:43:58.085Z",
+  "entries": [
+    {
+      "id": "1-v4",
+      "packId": "pack-7b561abd-993e-415e-9304-0baa103ddf2c",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v2",
+      "originalSha256": "ff9940d66015c970b0372879e860a462aec62ed651204abb0775ebc9dc4e926f",
+      "candidateSha256": "163e93250e7aa832822ebbad6d61ce2d88371941d8e621cf3871e123b7bb513d",
+      "reviewSha256": "91b2d9e1718bb6fbe05b8836023471b6dcf03ca4b97950ce37a1ef2566f4f359",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "releaseQa": "pass-final-six-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "newMetaCalls": 0,
+      "nextAction": "Local reviewed library ready; deployment requires owner instruction. New Meta generation needs secure DD_META_KEY and current free-credit checks.",
+      "previousQualityCycle": {
+        "id": "1-v2",
+        "candidateSha256": "a9ccaa996c1c3aa67ff4ccea2470a2f4d36cbfab6091d1a5d1a3cf6e06a35210",
+        "reviewSha256": "bf91edd5e37483ba4c05bdb5be320a3e08b63089374aa9e2698660f99e07d79d",
+        "editorialStatus": "ready-for-approval",
+        "releaseQa": "pending-approved-pack-import-and-regression",
+        "approval": "not-performed",
+        "unapprovedPreview": {
+          "status": "PASS",
+          "testedAt": "2026-10-27T01:38:26.011Z",
+          "appCommit": "8b7e0f2679cb3766be1b29115279039fdb6c4bba",
+          "appFileSha256": "362acfc888d9ebac453d15e3f9c4ec3f2c5640a890cb60049fdde0e4df95924d",
+          "device": "Chrome mobile emulation 390x844; not physical phone"
+        }
+      },
+      "approvedPayloadSha256": "011e985f434bee1e080a6dc8174570d01db1fc695ce0a5f09679f1f80b73d3df",
+      "releaseDirectory": "../p1-cross-model-2026-10-27/release-1-v4",
+      "crossReviewModels": [
+        "gpt-6-astra",
+        "gpt-6.1-terra"
+      ],
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-six/approved-library-tests.json"
+    },
+    {
+      "id": "2-v4",
+      "packId": "pack-fd14f5d3-1f53-4f59-b9a4-781b7f2e9856",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v2",
+      "originalSha256": "759db70b95cb0ca7b08c7f2253d2005664b629fcc9ffbc2fc4a4a6fe527362dc",
+      "candidateSha256": "202bcd3f8c0cfae42230c81f4c0f47313c0ee7efcaa50e550fe35f408e987147",
+      "reviewSha256": "9f0ee43d4a22a5580367f57e0bd346fc83a1d4836ce65b5a649b180136bf1255",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "releaseQa": "pass-final-six-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "newMetaCalls": 0,
+      "nextAction": "Local reviewed library ready; deployment requires owner instruction. New Meta generation needs secure DD_META_KEY and current free-credit checks.",
+      "previousQualityCycle": {
+        "id": "2-v2",
+        "candidateSha256": "0cf868d01f48a08b034eacb1aa0c8ba9602dd05a88cb8459790fe9ab5707389f",
+        "reviewSha256": "6db0ba687795e09c2c0302c08687db039897149abac5e947dd86beca46dca4fe",
+        "editorialStatus": "ready-for-approval",
+        "releaseQa": "pending-approved-pack-import-and-regression",
+        "approval": "not-performed",
+        "unapprovedPreview": {
+          "status": "PASS",
+          "testedAt": "2026-10-27T01:38:26.011Z",
+          "appCommit": "8b7e0f2679cb3766be1b29115279039fdb6c4bba",
+          "appFileSha256": "362acfc888d9ebac453d15e3f9c4ec3f2c5640a890cb60049fdde0e4df95924d",
+          "device": "Chrome mobile emulation 390x844; not physical phone"
+        }
+      },
+      "approvedPayloadSha256": "750cc3cdd654b854fe38a09da6639116efa5cac6748e520bebc1c8168da48d35",
+      "releaseDirectory": "../p1-cross-model-2026-10-27/release-2-v4",
+      "crossReviewModels": [
+        "gpt-6-astra",
+        "gpt-6.1-terra"
+      ],
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-six/approved-library-tests.json"
+    },
+    {
+      "id": "3-v4",
+      "packId": "pack-c765f334-1b00-43c2-a398-d63570e04d21",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v3",
+      "originalSha256": "cde761fd10b217f8875207ae4d146ad54ef091d7ec9dc7d213c2a24beb643e19",
+      "candidateSha256": "2203c4622e566dff68111bc71ec68f4622cc535ecc7d89d8f2014149e87df2e5",
+      "reviewSha256": "9a22f146cb47412756770684277df5a588a0abafde258e00e3048fef15b67762",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "releaseQa": "pass-final-six-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "newMetaCalls": 0,
+      "nextAction": "Local reviewed library ready; deployment requires owner instruction. New Meta generation needs secure DD_META_KEY and current free-credit checks.",
+      "previousQualityCycle": {
+        "id": "3-v3",
+        "candidateSha256": "e841bd0cc9935c3338b2221e08077568498c9ab7b6ba4ab9a5739f83b686a811",
+        "reviewSha256": "8f444604666bbaa544a98d9c92467ee83d6a09207cf64f2aad51b49af6292ce0",
+        "editorialStatus": "ready-for-approval",
+        "releaseQa": "pending-approved-pack-import-and-regression",
+        "approval": "not-performed",
+        "unapprovedPreview": {
+          "status": "PASS",
+          "testedAt": "2026-10-27T01:38:26.011Z",
+          "appCommit": "8b7e0f2679cb3766be1b29115279039fdb6c4bba",
+          "appFileSha256": "362acfc888d9ebac453d15e3f9c4ec3f2c5640a890cb60049fdde0e4df95924d",
+          "device": "Chrome mobile emulation 390x844; not physical phone"
+        }
+      },
+      "approvedPayloadSha256": "a8d2f90f5dc11f86ae27c4290e77f19ddecff14fa0318d81480ed4a4a52528ee",
+      "releaseDirectory": "../p1-cross-model-2026-10-27/release-3-v4",
+      "crossReviewModels": [
+        "gpt-6-astra",
+        "gpt-6.1-terra"
+      ],
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-six/approved-library-tests.json"
+    },
+    {
+      "id": "hotel-shift-handover",
+      "packId": "pack-71baf4b5-06fa-42f1-97b8-e24796a4dd22",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v4",
+      "candidateSha256": "8e3203a631ea43c77e5e86e443df709c9e7e4122083c8e03ea09f894532d81c1",
+      "reviewSha256": "a1a86aa038d19c8af6165fad20af1db3257b8512496875d72c7b4396ea240d85",
+      "approvedPayloadSha256": "abf826498ab1908545fb6114bf0b72ebff3462542b61bacf16a1a720cad554ce",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-six-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-hotel-shift-handover",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-six/approved-library-tests.json"
+    },
+    {
+      "id": "campus-water-study",
+      "packId": "pack-898c63a0-049e-45cd-bd59-bd890e81691c",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v4",
+      "candidateSha256": "67095ea484efd7c0f358629bc81f08de4ee0134190b95cedc02cad5d7fa3a256",
+      "reviewSha256": "bfd86f243a3530df00b8017790ba9b36a26c479c65522fe1754af3e380a0fa92",
+      "approvedPayloadSha256": "4703a2b464ec0dbb71897dba1c3df027c332374c19872ac160a58afea1bd5ccd",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-six-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-campus-water-study",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-six/approved-library-tests.json"
+    },
+    {
+      "id": "workshop-safety-plan",
+      "packId": "pack-d15f0d67-d556-4420-bde1-f31155ac1e79",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v4",
+      "candidateSha256": "ee22798605f2bc50695a3c2d1e0ddc7ccc25dc1baa2d93a1c922d205e3261567",
+      "reviewSha256": "22e1e136ba9138c7f76017220e1820ee5c91e9d157296983c2f88efd27638ea8",
+      "approvedPayloadSha256": "1257e16f113eff56138952ae5b0a6ed4d752b617187e0b74628f63c48ab8c887",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-six-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-workshop-safety-plan",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-six/approved-library-tests.json"
+    },
+    {
+      "id": "supplier-delivery",
+      "packId": "pack-3203d64e-13cf-400f-a639-33b27efb90bc",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "b91d11fc8707fda89b60ebba111cb0ffb14d99f1eb25eed0b0765b8e2a658d04",
+      "reviewSha256": "88512fb5945a97bda66fa0fcf34687176f331e1bddba22da2edf82df6e8b8527",
+      "approvedPayloadSha256": "d753c55e70d77d8ec6e5b32b7bd07576dd2ee7a619c53b85ebdcd2e939918552",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-ten-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-supplier-delivery",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-ten/approved-library-tests.json",
+      "minorFindings": [
+        "Luna: The short reading and target phrases appear closer to A2–B1 than a clearly demonstrated B1 level; the workplace context remains clear and useful."
+      ]
+    },
+    {
+      "id": "museum-access",
+      "packId": "pack-8a955f70-327f-4eab-a145-13d4d849c2e8",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "9418d62ef8d883d222c80e6c7ade38ff79f5902bcecfe53fe1620e3d93665783",
+      "reviewSha256": "7e1ce562005a75312cc7876f77ca4ef114bbb110b83b4ba04def98ef8cff9140",
+      "approvedPayloadSha256": "8a815b049a3798d5a31f393b91b63b85a1c809aecaefd08e67a168693069d746",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-ten-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-museum-access",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-ten/approved-library-tests.json",
+      "minorFindings": [
+        "Luna: The reading and target phrases appear closer to B1 than a clearly demonstrated B2 level. No source, meaning, answer-key or explanation defect was found in q4: option a is grammatical; b and c each contain subject–verb agreement errors."
+      ]
+    },
+    {
+      "id": "remote-team-handover",
+      "packId": "pack-0e754c61-b77f-41b3-a7ed-1b4efc7f62ea",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "78b16f0382d991460c8b319fd60c0f0e3ba508c273f24f3c26c972016477b901",
+      "reviewSha256": "ddfa5dfc5b306e9e783a71be59270785264ded372d55a05da24d95e7dc6ab9eb",
+      "approvedPayloadSha256": "19440dcb6eaaa3af87d5edf0e57a6b99a3a656d5583150b07bdb60be9352050d",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-ten-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-remote-team-handover",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-ten/approved-library-tests.json",
+      "minorFindings": []
+    },
+    {
+      "id": "urban-tree-survey",
+      "packId": "pack-97eb5b4b-1d2e-419a-8e5d-299406ee638e",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "4297d21344629e0e0122967b9dd1869290ca5c8fe0c36ae8f285af37ec46cf87",
+      "reviewSha256": "fde8de035df63d6dac1bebd18514bc23e6fce84b9161c731cd236775b84bf696",
+      "approvedPayloadSha256": "09fc34e27abe5eeb05e785348c0ee147860e73845a5a55eab91f0505f0a27036",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-final-ten-pack-exact-envelope-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-urban-tree-survey",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-ten/approved-library-tests.json",
+      "minorFindings": []
+    },
+    {
+      "id": "food-bank-volunteer-briefing",
+      "packId": "pack-f453802c-cc42-47cf-9b3c-de60532027d4",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "4e5a5f0179ac36ee78a1e077e9396eba51f3385c1bc58ca82e8eb2522126ced4",
+      "reviewSha256": "b961882a843cc9e73f222d05417e6ce4a5c97acc6e24349c6ccbd38c97e4d162",
+      "approvedPayloadSha256": "85f1bef6bccb1119f672733fa8ffee1f04a6802c62cdd03cfaf1974d051e84ae",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-food-bank-volunteer-briefing",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-thirteen/approved-library-tests.json",
+      "newMetaCallsDuringReviewAndQa": 0,
+      "minorFindings": [],
+      "resolvedFindings": []
+    },
+    {
+      "id": "lab-equipment-audit",
+      "packId": "pack-eddc15b5-2b20-4dd5-9859-3abedd7a3968",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "b955f78fe7f6023ca6d5cdcfe063d8353e030d09e36082e55030c3a8f9b48b27",
+      "reviewSha256": "fff1ca63c9b375a1168d2830c0b408d985322e209741c3671178534d1150e3fe",
+      "approvedPayloadSha256": "bc3b500a25f9c0220febbcadf5dd1ed6755b757851c73ff545496eaac88997fd",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-lab-equipment-audit",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-thirteen/approved-library-tests.json",
+      "newMetaCallsDuringReviewAndQa": 0,
+      "minorFindings": [],
+      "resolvedFindings": []
+    },
+    {
+      "id": "station-maintenance-notice",
+      "packId": "pack-8ad96ec0-b0ce-4cc3-bc80-70a877b48f56",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "candidateSha256": "cc0d043663d251952fa5dc44f8739ac06fa832ec9ecbb57417bccf7a8b2e3f2b",
+      "reviewSha256": "99823e417d447730b0b440dc7ef62698ee6b53fc7342eb1b7e38273be0ac8db4",
+      "approvedPayloadSha256": "8febf3979e8ad06b71b7ad80bf00d294ebb2381f183ddbe8a438cb0d28000819",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-station-maintenance-notice",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-thirteen/approved-library-tests.json",
+      "newMetaCallsDuringReviewAndQa": 0,
+      "minorFindings": [],
+      "resolvedFindings": [
+        {
+          "id": "station-q3-availability-explanation",
+          "severity": "uncertain",
+          "resolved": true,
+          "evidence": "An earlier review flagged original q3 wording for conflating mechanical operation with passenger availability. The options and explanations were revised; Luna and Sol reviewed the full current hash and agree b is uniquely supported by the notice. See editorial diff."
+        }
+      ]
+    },
+    {
+      "id": "conference-travel",
+      "packId": "pack-200d40dc-d233-4ee2-9dad-d3d8164643bd",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "1d547c08a2a9d986a26025ee6dba0e09dbbcb960e085a48d14bdf9f3017f98f0",
+      "candidateSha256": "2cb36b3695d9742c7c5c80818892cb47e3eb98e711baa956f1d16041e3862b60",
+      "reviewSha256": "76fa409ffafae575a35700830a365c66dec8b8a2b70b04d28826a3cd5b030167",
+      "approvedPayloadSha256": "607757049cac69cb81ca11a2070579000b275f1c404227e4eee0be5674c977ac",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-fourteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-conference-travel",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-fourteen/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-2/conference-travel-authorized-repair/result/review-editorial-v1.json",
+      "resolvedFindings": [
+        {
+          "id": "initial-q4-academic-plural",
+          "severity": "critical",
+          "resolved": true,
+          "evidence": "Initial q4 falsely treated evidences as always uncountable; Oxford confirms an occasional academic plural. Replaced with objective complement errors and both final reviewers confirm a unique answer."
+        },
+        {
+          "id": "initial-q1-unsupported-specifics",
+          "severity": "minor",
+          "resolved": true,
+          "evidence": "Removed unsupported travel, registration and support specifics; final reviewers confirm corrected options and explanations."
+        }
+      ],
+      "newProviderCallsDuringReviewAndQa": 0,
+      "nextAction": "Continue owner-authorized P1 offline lesson work. Do not check Meta usage/Billing on the owner’s behalf. Deployment requires owner instruction."
+    },
+    {
+      "id": "community-garden-water-rotation",
+      "packId": "pack-c9e4b2e8-edd5-4af7-a463-690a755f33ba",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "11b782817902d5dd09615b3fc2049bc2e371f7183e7fd2418bc23128e5a3cbca",
+      "candidateSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+      "reviewSha256": "d98dab10955f22f422a184d0d3cd6c209401eb15bd4852866c2d191f3cc04688",
+      "approvedPayloadSha256": "eadd5188e872312b9448c5644949b5cc07c369c4faa9a0a11da015ae6762020e",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-fifteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-community-garden-water-rotation",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-fifteen/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-6-meta/community-garden-water-rotation-review-v1.json",
+      "scopeLimitation": "The short reading and simple B2 practice are a recorded non-blocking limitation; source rights/authorship are declaration-only.",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-fifteen/library-ui-tests.json",
+      "releaseQaContexts": 30,
+      "catalogueInstalledPacks": 15,
+      "newProviderCallsDuringReviewAndQa": 0
+    },
+    {
+      "id": "clinic-appointment-process",
+      "packId": "pack-4627bb92-0afb-42fb-83c1-88a23a7390c4",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "596c7b2a3151847d64020854c268e717879012d61e800b119513fb472700195e",
+      "candidateSha256": "311d151c245c2ebd3abc94677b3f9eb61452338b6758ceea29c4090036bdc433",
+      "reviewSha256": "e2b4699a7019f1946fcf61bea5cad6a5c1a550ad15659db75bd1033cbfba4a00",
+      "approvedPayloadSha256": "610f3a42419979718e155832953e79bf733e7cabeab8c25eec9145df021f9824",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-eighteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-clinic-appointment-process",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-eighteen/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-7-meta/clinic-appointment-process-review-v2.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-7.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-eighteen/library-ui-tests.json",
+      "releaseQaContexts": 36,
+      "catalogueInstalledPacks": 18,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Source originality/rights remain local declarations and were not independently verified"
+      ],
+      "scopeLimitation": "Luna reviewer retained one non-blocking minor note: q3 “with a doctor” is narrower than the provider-unspecified clinic source; both reviewers passed 17/17 and confirmed unique answer. A minor prompt/explanation phrasing note also does not affect correctness."
+    },
+    {
+      "id": "city-bus-temporary-diversion",
+      "packId": "pack-63392e53-907d-42bd-8c5d-524ba2cb8012",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "fb5d05efcb59ff974fe32797f5192f703d59eaecb5b8c4d9f7b9d8985e1fd8f6",
+      "candidateSha256": "86c81bda8df20469418d193989332ff5d17c5c77ea59977a13ecd536b4e24581",
+      "reviewSha256": "3994c029721026ebca223063e5240005bdf4407ac2f166e2ccc70e5f9802268d",
+      "approvedPayloadSha256": "c19731ccc67340501976c8b15d111bac45068dd51fa873f566a21a6793794f9b",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-eighteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-city-bus-temporary-diversion",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-eighteen/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-7-meta/city-bus-temporary-diversion-review-v2.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-7.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-eighteen/library-ui-tests.json",
+      "releaseQaContexts": 36,
+      "catalogueInstalledPacks": 18,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Source originality/rights remain local declarations and were not independently verified"
+      ]
+    },
+    {
+      "id": "coastal-bird-count-method",
+      "packId": "pack-c6f5556f-e4c1-45e3-9be2-4b8a0c8bde38",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "858f31947e0ec3ae7eaa29f2e6d5d2a83a51a412c49bf7fa691b8acbc68dadab",
+      "candidateSha256": "6bb7f0007ceb46970b13dd08d821f6b5c5b444b0e9edff64cb71b1769fab6b0d",
+      "reviewSha256": "dbb56cda41ba3da270d5d3835bb0ef7cb15470c9ad852eba3440e00d4c4cae52",
+      "approvedPayloadSha256": "397d1934f3f7e950a423875624d2b652c1b25cdf7daad7bf88b50bf433a47077",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-eighteen-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-coastal-bird-count-method",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-eighteen/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-7-meta/coastal-bird-count-method-review-v1.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-7.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-eighteen/library-ui-tests.json",
+      "releaseQaContexts": 36,
+      "catalogueInstalledPacks": 18,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Source originality/rights remain local declarations and were not independently verified"
+      ]
+    },
+    {
+      "id": "community-centre-emergency-drill",
+      "packId": "pack-a4411c05-13de-4d44-9e29-f908436c97f3",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "b3cf0328ef18ded56c51fd6d523660871b93f794c474a4644f49516298f6c0bf",
+      "candidateSha256": "b3cf0328ef18ded56c51fd6d523660871b93f794c474a4644f49516298f6c0bf",
+      "reviewSha256": "32f335df4c85c6c6115b6ce123eaa122dd96a611c33caf517d4f28e94621d844",
+      "approvedPayloadSha256": "e0012ffb349c534b4514672769cc25aae1be915f2a98775b27f84e8575d5117a",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-one-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-community-centre-emergency-drill",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-one/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-8-meta/community-centre-emergency-drill-review-v1.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-8.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-one/library-ui-tests.json",
+      "releaseQaContexts": 42,
+      "catalogueInstalledPacks": 21,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Rights and authorship are declaration-only, not independently verified"
+      ]
+    },
+    {
+      "id": "equipment-loan-desk",
+      "packId": "pack-0645fa42-23cd-4d84-9c50-a828962ea712",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "a8ca865871fc5777cb643516a9e204e05392da4bda3c30626c149e5e7e0e4370",
+      "candidateSha256": "a352dc83540e5f37171b507ab4300fe8acd4abed8f9d9374cd9868962e117a89",
+      "reviewSha256": "4dc3cb816bb9aa6f17f9c3df4d0fde76cc175da3471ef47446d4d070f711a9e0",
+      "approvedPayloadSha256": "6ad069dc1d4e5c5ab46f1e330f2cebbb57eda1bf3c7a74e1975f6f176462b1fa",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-one-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-equipment-loan-desk",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-one/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-8-meta/equipment-loan-desk-review-v3.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-8.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-one/library-ui-tests.json",
+      "releaseQaContexts": 42,
+      "catalogueInstalledPacks": 21,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Rights and authorship are declaration-only, not independently verified"
+      ],
+      "resolvedFindings": [
+        {
+          "id": "q3-overall-explanation-wrong-source-reference",
+          "severity": "critical",
+          "resolved": true,
+          "evidence": "The initial local v1 explanation cited s6 after the phrase moved to s5; corrected to s5 and reviewed on the exact v3 hash."
+        },
+        {
+          "id": "target-run-late-gloss-transfer-scope",
+          "severity": "minor",
+          "resolved": true,
+          "evidence": "v2 gloss covered session overruns but not the valid delayed-bus transfer sense; v3 EN/VI gloss now covers both and both reviewers passed all 17 criteria."
+        }
+      ]
+    },
+    {
+      "id": "coastal-temperature-sampling",
+      "packId": "pack-d1f70c2f-90d8-4080-a616-7783c6f06d12",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "5ef6ea6a9a65a41fa6958ccab5a36589d916d8f815184a0a59d06514fba7fc58",
+      "candidateSha256": "5ef6ea6a9a65a41fa6958ccab5a36589d916d8f815184a0a59d06514fba7fc58",
+      "reviewSha256": "5bcd3c740aad15d4cad4b6ca1501db87de8d650be8afab64458137b9cf1f11d0",
+      "approvedPayloadSha256": "69f707c735d93be66e925fa1a59046098b3a33d7f719abdd1a6cb28d44865073",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-one-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-coastal-temperature-sampling",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-one/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-8-meta/coastal-temperature-sampling-review-v1.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-8.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-one/library-ui-tests.json",
+      "releaseQaContexts": 42,
+      "catalogueInstalledPacks": 21,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Rights and authorship are declaration-only, not independently verified"
+      ]
+    },
+    {
+      "id": "community-kitchen-volunteer-shift",
+      "packId": "pack-89a2a594-120e-4d83-8acc-03b6c9be7405",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "5608077682a7e5a58d41f85b03a40bffbd90020bdcc07871753b6ddbf6b9922b",
+      "candidateSha256": "239059717add867b60ceb55cc7d5a47c84f1e482e1645e47c996c5e5b98a04b1",
+      "reviewSha256": "09322f44a00f5e685bd6f02515105331b12a142979b12ee1afdba0ddec1cfccc",
+      "approvedPayloadSha256": "772964a98a91e0ae4162527d0ce8065f870a21e833939ac7a20cfadf67133d15",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-four-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-community-kitchen-volunteer-shift",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-four/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-9-meta/community-kitchen-volunteer-shift-review.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-9.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-four/library-ui-tests.json",
+      "releaseQaContexts": 48,
+      "catalogueInstalledPacks": 24,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Rights and authorship are declaration-only, not independently verified"
+      ],
+      "localEditorialNote": "Merged the sentence fragment after “7 p.m.”; raw Meta candidate remains preserved."
+    },
+    {
+      "id": "urban-heat-survey-method",
+      "packId": "pack-41cea0c9-7d1c-4980-b4c1-78832b701194",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "955db47f5cc4be10b420577e3572384c56cae3ba5b038b057c5ad9eb8e9eadf7",
+      "candidateSha256": "955db47f5cc4be10b420577e3572384c56cae3ba5b038b057c5ad9eb8e9eadf7",
+      "reviewSha256": "4df1bdca5741f2c4fe29e54965cfcc85b18341e12fce47cb704614b2c3a99173",
+      "approvedPayloadSha256": "74fa7c8e9c8bbe95bfbbf2b7774ece730155cfdfda50606455c83aab2d6fd7b4",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-four-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-urban-heat-survey-method",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-four/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-9-meta/urban-heat-survey-method-review.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-9.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-four/library-ui-tests.json",
+      "releaseQaContexts": 48,
+      "catalogueInstalledPacks": 24,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Rights and authorship are declaration-only, not independently verified"
+      ]
+    },
+    {
+      "id": "rail-station-lost-property",
+      "packId": "pack-0ecba08e-7198-4bb5-ab2e-57eef26115e6",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "d762fd44ca1a7a73e6bc5166c9557f9a134493a290f7321d877529ca5e2b96bb",
+      "candidateSha256": "193bb9647b047eed854a08abb8d3de7ad03689fbd2807015e0c0cf5ff2ba58d3",
+      "reviewSha256": "becc780f305506379503b7c01c73667a0757b3a9c92c6189b4c20fe7add344ea",
+      "approvedPayloadSha256": "b1e95a0b3551da8eaa9f2933fc0f268afbc769ee1d72f4e3ea4f04b826378294",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-four-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-rail-station-lost-property",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-four/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-9-meta/rail-station-lost-property-review.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-9.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-four/library-ui-tests.json",
+      "releaseQaContexts": 48,
+      "catalogueInstalledPacks": 24,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted review, not human or learner review",
+        "Rights and authorship are declaration-only, not independently verified"
+      ],
+      "resolvedFindings": [
+        {
+          "id": "rail-q5-missing-target-instruction",
+          "severity": "critical",
+          "resolved": true,
+          "evidence": "v1 transfer prompt omitted the required target phrase; v2 explicitly instructs the learner to use “proof of ownership”. Both reviewers passed all 17 criteria on the exact v2 hash."
+        }
+      ]
+    },
+    {
+      "id": "east-market-repair-cafe-volunteer-shift",
+      "packId": "pack-593359c8-d912-43aa-acc3-63f4ce979bb3",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "3ecd45e5111d46068045886cb8e06c8a3612a3886eb788bacaeb5efcb8b2b07b",
+      "candidateSha256": "269cd70f8c0f433dd64cd14f7c73522b044873beb36556adc8d5d689374ad95c",
+      "reviewSha256": "62c17741bfe098a473a5948c78fc0abde4d43e86ba12e46c7c2074cedf1c64f9",
+      "approvedPayloadSha256": "252f176bc35ead4ecbf3e5f59e9d84816ac9de999d2f4f903754524c924876f7",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-seven-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-east-market-repair-cafe-volunteer-shift",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-seven/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-10-meta/east-market-repair-cafe-volunteer-shift-review.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-10.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-seven/library-ui-tests.json",
+      "releaseQaContexts": 54,
+      "catalogueInstalledPacks": 27,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified"
+      ],
+      "resolvedFindings": [
+        {
+          "id": "east-q1-source-reference",
+          "severity": "critical",
+          "resolved": true,
+          "evidence": "V1 top-level q1 explanation cited s3; v2 correctly cites s2 after the sentence merge."
+        },
+        {
+          "id": "east-q3-source-reference",
+          "severity": "critical",
+          "resolved": true,
+          "evidence": "V1 top-level q3 explanation cited s5; v2 correctly cites s4 after the sentence merge."
+        },
+        {
+          "id": "east-q5-missing-target-instruction",
+          "severity": "critical",
+          "resolved": true,
+          "evidence": "V2 transfer prompt explicitly requires “run out of” or a correct inflected form; sample/checklist align."
+        }
+      ]
+    },
+    {
+      "id": "school-library-survey-privacy",
+      "packId": "pack-b984407d-d36b-4251-b7a7-3d53d5a3ba51",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "683b36a9cb6aa5ed6791537f8d8e2bc29ffc5c7cc296b1870e4a0d04face2643",
+      "candidateSha256": "683b36a9cb6aa5ed6791537f8d8e2bc29ffc5c7cc296b1870e4a0d04face2643",
+      "reviewSha256": "17358f09386e1af70fd1a56e0285086d3d7e497ee0bca52dca7f38f06d3cf031",
+      "approvedPayloadSha256": "c4197d4a6947045e77b24be231a826d7f5329bdf6d1f5f8074137204858002aa",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-seven-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-school-library-survey-privacy",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-seven/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-10-meta/school-library-survey-privacy-review.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-10.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-seven/library-ui-tests.json",
+      "releaseQaContexts": 54,
+      "catalogueInstalledPacks": 27,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified"
+      ]
+    },
+    {
+      "id": "riverside-centre-class-registration",
+      "packId": "pack-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "945bf46a4f85e4548c757055e8020edd13a4ef35dc8cf541ac6a777ef670fdd3",
+      "candidateSha256": "945bf46a4f85e4548c757055e8020edd13a4ef35dc8cf541ac6a777ef670fdd3",
+      "reviewSha256": "0e30946a7c7aa62563ca92830041581fb0c095a7e3eefa2a9a2e2e4140753dba",
+      "approvedPayloadSha256": "7789783ed910a4554f915aa98abd3be5fe781bc6ef792109be78b175734defa5",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna (requested; configured route not exposed by runtime)",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "GPT-6",
+        "Codex GPT-6"
+      ],
+      "approval": "delegated-ai-assisted-editorial-decision",
+      "releaseQa": "pass-exact-twenty-seven-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-riverside-centre-class-registration",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-all-twenty-seven/approved-library-tests.json",
+      "reviewEvidence": "../p1-generation-2026-10-27/batch-10-meta/riverside-centre-class-registration-review.json",
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-10.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-twenty-seven/library-ui-tests.json",
+      "releaseQaContexts": 54,
+      "catalogueInstalledPacks": 27,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified"
+      ]
+    },
+    {
+      "id": "university-photo-archive-catalogue",
+      "packId": "pack-9d62218e-ce0c-4f8d-8710-2774f188153b",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+      "candidateSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+      "reviewSha256": "80c671410b4ad128df4e22de5a8c3f37dc87de34da500c0fb04c3dddc4cf0ebb",
+      "approvedPayloadSha256": "828ea4285f53c426998b2418e156105d6eeb1a6adc05a0fb7abe65554cb3a64a",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirty-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-university-photo-archive-catalogue",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-approved-batch-eleven-v136/approved-library-tests.json",
+      "reviewEvidence": [
+        "../p1-generation-2026-10-27/batch-11-meta/university-photo-archive-catalogue-review-luna.json",
+        "../p1-generation-2026-10-27/batch-11-meta/university-photo-archive-catalogue-review-terra.json"
+      ],
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-11.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-thirty-v136/library-ui-tests.json",
+      "releaseQaContexts": 60,
+      "catalogueInstalledPacks": 30,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified"
+      ]
+    },
+    {
+      "id": "community-arts-open-day-volunteers",
+      "packId": "pack-74344d60-30a2-42a5-adcd-cdb3cf478ce7",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+      "candidateSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+      "reviewSha256": "e8da7d82e8c69f3fff1cba199ec81761b0fc9f491fbd0be0c25c6298029f9140",
+      "approvedPayloadSha256": "259fe9caae6e124a926b41cafdcba23ffc585dec3c53a09da314c0fe2376df80",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirty-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-community-arts-open-day-volunteers",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-approved-batch-eleven-v136/approved-library-tests.json",
+      "reviewEvidence": [
+        "../p1-generation-2026-10-27/batch-11-meta/community-arts-open-day-volunteers-review-luna.json",
+        "../p1-generation-2026-10-27/batch-11-meta/community-arts-open-day-volunteers-review-terra.json"
+      ],
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-11.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-thirty-v136/library-ui-tests.json",
+      "releaseQaContexts": 60,
+      "catalogueInstalledPacks": 30,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified"
+      ]
+    },
+    {
+      "id": "volunteer-rota-schedule-change",
+      "packId": "pack-80b0637b-59e9-4e66-9717-6752a793bcdf",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "672991f1a60ff5f8e66ddec90fb44bbda34db070ce7e06a9fabf461c14e953c3",
+      "candidateSha256": "672991f1a60ff5f8e66ddec90fb44bbda34db070ce7e06a9fabf461c14e953c3",
+      "reviewSha256": "133a92adb4cbc7c161d4bdd6e856f5912e405ddab2cb4b3176aa7df2511b0196",
+      "approvedPayloadSha256": "8ac3d11991ead39a9408923aee29f30d5f0b63e1b60bde2c446b06aa261d0e8b",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirty-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-volunteer-rota-schedule-change",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-approved-batch-eleven-v136/approved-library-tests.json",
+      "reviewEvidence": [
+        "../p1-generation-2026-10-27/batch-11-meta/volunteer-rota-schedule-change-review-luna.json",
+        "../p1-generation-2026-10-27/batch-11-meta/volunteer-rota-schedule-change-review-terra.json"
+      ],
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-11.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-thirty-v136/library-ui-tests.json",
+      "releaseQaContexts": 60,
+      "catalogueInstalledPacks": 30,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified"
+      ]
+    },
+    {
+      "id": "east-dock-refill-shop-stock-check",
+      "packId": "pack-e9701317-1107-440d-818c-b8e47aed37fc",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "05e4fcd193fa9045fbfbaf86f34f8bcd54c7803d81afa765f1fe12102fa26fae",
+      "candidateSha256": "4f994d95dd9bc3af8ea6fcc6efa22e38c1c8868fb58a098817ab7e36847864ea",
+      "reviewSha256": "b13852e99270930974faaa76efd2b196c0b8b5286994cf487f301e302abc3420",
+      "approvedPayloadSha256": "f250bd97e09249d9ce0037e10953af8ca6f142a6b11173013cb9ea090a58c35d",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirty-three-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-east-dock-refill-shop-stock-check",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-approved-batch-twelve-v137/approved-library-tests.json",
+      "reviewEvidence": [
+        "../p1-generation-2026-10-27/batch-12-meta/east-dock-refill-shop-stock-check-review-luna-v2.json",
+        "../p1-generation-2026-10-27/batch-12-meta/east-dock-refill-shop-stock-check-review-terra-v2.json"
+      ],
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-12.json",
+      "candidatePreviewEvidence": "../p1-generation-2026-10-27/qa-candidate-batch-twelve-v136/candidate-preview.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-thirty-three-v137/library-ui-tests.json",
+      "releaseQaContexts": 66,
+      "catalogueInstalledPacks": 33,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified",
+        "B1/B2 are estimates, not calibrated CEFR ratings"
+      ],
+      "nonBlockingMinorNote": "Luna noted q1 says stock “must be reordered” while source says the lead contacts the supplier; recorded as minor. Terra passed and the answer meaning remains unique."
+    },
+    {
+      "id": "student-podcast-interview-editing",
+      "packId": "pack-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "3d2d447057fff8eb9aaac184a96a8b161ba7faad210dd67ca3d9797b4be50b9d",
+      "candidateSha256": "3d2d447057fff8eb9aaac184a96a8b161ba7faad210dd67ca3d9797b4be50b9d",
+      "reviewSha256": "cbd779605fcd9f3d3bc55d0f3294ee86cc42a4e747c7b248a93b9457f907650f",
+      "approvedPayloadSha256": "8cf75f0d83cbc344334dc73da95c8cc555c7d28def7b2d2357b3a5d05a911aed",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirty-three-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-student-podcast-interview-editing",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-approved-batch-twelve-v137/approved-library-tests.json",
+      "reviewEvidence": [
+        "../p1-generation-2026-10-27/batch-12-meta/student-podcast-interview-editing-review-luna.json",
+        "../p1-generation-2026-10-27/batch-12-meta/student-podcast-interview-editing-review-terra.json"
+      ],
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-12.json",
+      "candidatePreviewEvidence": "../p1-generation-2026-10-27/qa-candidate-batch-twelve-v136/candidate-preview.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-thirty-three-v137/library-ui-tests.json",
+      "releaseQaContexts": 66,
+      "catalogueInstalledPacks": 33,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified",
+        "B1/B2 are estimates, not calibrated CEFR ratings"
+      ]
+    },
+    {
+      "id": "staggered-start-time-policy-rollout",
+      "packId": "pack-44150ff8-e9c3-4d89-9c1b-f5ce7c5e2f90",
+      "version": 1,
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "originalMetaCandidateSha256": "585209460808922f22ca9ca21b732da68913503305d6177dbd527cfb9d1630b2",
+      "candidateSha256": "585209460808922f22ca9ca21b732da68913503305d6177dbd527cfb9d1630b2",
+      "reviewSha256": "ce6a4e9793caa207b52b34925a58e8584d27df86e2c411501045b3540ba21a18",
+      "approvedPayloadSha256": "3f30c73e3d91b7b8c67102ac5295c1f45d97d1dda08b4d8115b9093b9529b079",
+      "editorialStatus": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "crossReviewRoutesRequested": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "reviewerRuntimeLabels": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "approval": "delegated-editorial-decision",
+      "releaseQa": "pass-exact-thirty-three-pack-clean-and-preseeded-vault-review-reload-offline",
+      "releaseDirectory": "../p1-generation-2026-10-27/release-staggered-start-time-policy-rollout",
+      "deployed": false,
+      "releaseQaEvidence": "../p1-generation-2026-10-27/qa-approved-batch-twelve-v137/approved-library-tests.json",
+      "reviewEvidence": [
+        "../p1-generation-2026-10-27/batch-12-meta/staggered-start-time-policy-rollout-review-luna.json",
+        "../p1-generation-2026-10-27/batch-12-meta/staggered-start-time-policy-rollout-review-terra.json"
+      ],
+      "sourceEvidence": "../p1-generation-2026-10-27/sources-batch-12.json",
+      "candidatePreviewEvidence": "../p1-generation-2026-10-27/qa-candidate-batch-twelve-v136/candidate-preview.json",
+      "catalogueOfflineInstallQa": "../p1-generation-2026-10-27/qa-library-ui-thirty-three-v137/library-ui-tests.json",
+      "releaseQaContexts": 66,
+      "catalogueInstalledPacks": 33,
+      "newProviderCallsDuringReviewAndQa": 0,
+      "limits": [
+        "AI-assisted editorial review, not human or learner review",
+        "Rights/authorship supported only by local declarations, not independently verified",
+        "B1/B2 are estimates, not calibrated CEFR ratings"
+      ]
+    }
+  ],
+  "continuationEvidence": "../continuation-2026-10-27/summary.json",
+  "latestRegressionEvidence": "../agents-2026-10-27/summary.json",
+  "approvalAuthority": "Owner delegation recorded in ../p1-cross-model-2026-10-27/AUTHORIZATION.md",
+  "latestLibraryEvidence": "../p1-generation-2026-10-27/batch-12-meta/final-summary.json",
+  "generationStop": {
+    "sourceId": "conference-travel",
+    "reason": "60second timeout; no automatic retry; usage unknown; fullUSD1reservation retained",
+    "newProviderCallsStopped": false,
+    "ownerOverride": "Owner authorized continued Meta calls and instructed Codex not to check usage/Billing; original timeout evidence remains preserved.",
+    "authorizedRepairCompleted": true,
+    "automaticRetries": 0
+  },
+  "currentLibraryState": {
+    "packs": 33,
+    "approved": 33,
+    "cache": "mdx-dict-v137",
+    "latestReleaseQa": "PASS 66 clean/preseeded contexts across 33 approved packs; all 33 catalogue installs PASS",
+    "deployed": false
+  },
+  "ownerInstruction": {
+    "recordedAt": "2026-10-27T09:16:04.495Z",
+    "p1MetaCredits": "Owner handles Meta credits and instructed Codex not to inspect Meta usage/Billing.",
+    "deployment": "Ask only when deployment is needed."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "7eac0931ceaaa2b534a3bd50a5a412ce887ef2b6585b4f75712fa8f034757a1c",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "normalizationFindings; Reading exercises",
+      "severity": "major",
+      "issue": "Reading keys [2,0,1,2,1] omit index3. Reorder options/key to cover all four positions and synchronise explanation references."
+    },
+    {
+      "item": "sharedContexts.reading.passage paragraph3; ielts-meta-wave-6-band-6-reading-03",
+      "severity": "critical",
+      "issue": "Fewer diners with unchanged per-person portion sizes does not explain higher waste per person. Passage and key/explanation infer a per-capita increase from fewer diners alone. State a supported mechanism, e.g. the kitchen prepared the same total quantity and excess leftovers were discarded, then align question/key/explanation; or give evidence individual portions exceeded weekend needs."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-6-writing-02",
+      "severity": "uncertain",
+      "issue": "Attendance percentages sum100 across ages for each session, suggesting age shares of session attendees, while wording says percentages within age groups. Completion percentages also lack a clear base (all session attendees, each age subgroup, or all registrants). Specify the denominator for every attendance/completion series consistently and adjust wording/data if needed so meaningful comparisons are possible."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-6-band-6-listening-04",
+      "severity": "minor",
+      "issue": "StudentID is optional if she has one in script, but Maya confirms she does, so the selected booking-reference/studentID option is supported for her. Could keep optional nature explicit in explanation."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review:20items, entire script/passage, all40options,10keys/10explanations,5Writing/5Speaking andmetadata. Per-item copied contexts verified identical to shared contexts. No other reviewer outputs inspected; no candidates edited or provider calls.",
+    "listening": "Full334-word museum service call:trialthroughMay,device/headphones automatic,noapp,£4normal/freeonline/£2walkin,10→10:30correction,90minutes,reference/optionalID confirmed,returndevice/freeparkingFriday. Keys[1,0,1,3,2] supported;all20options and5explanations checked.",
+    "reading": "Full416-word audit passage:2weeks/sortedweighing/dinercounts/no advancewarning,42kg≈95g,partlyeaten>half/untouched20%,weekend/servicecomparison,portionclaim/18%motivatedhall example and qualification,recommendations/re-audit. Keys[2,0,1,2,1] textually aligned but reading03 embeds invalid per-capita mechanism; positions also deficient.",
+    "writing": "All5Writing read: museum16March2024 has4completefamily/participant/rating5rows; digital2024table has3sessions×3ages attendance+completion percentages, but denominator ambiguity blocks. All3Task2 museum/volunteering/library topics coherent;150/20 and250/40 explicit in prose/fields.",
+    "speaking": "All5Speaking read: museums/volunteering Part1; family-visit and digital-skill Part2 cards have visible bullets/prep/duration; Part3 broader community-learning comparisons. Natural accessible stage6practice.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItemCount": 20,
+      "wordCounts": {
+        "listening": 334,
+        "reading": 416
+      },
+      "metadataWordCounts": {
+        "listening": 334,
+        "reading": 416
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "answerPositions": {
+        "Listening": [
+          1,
+          0,
+          1,
+          3,
+          2
+        ],
+        "Reading": [
+          2,
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      "normalizationFindingsRead": [
+        "Reading answer positions do not cover all four options."
+      ]
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026, wave6v1 prompt versions, originalContent=true read. No recognisable official exam copying or guaranteed-score claim found; originality is not exhaustively independently proven. Fictional study data assessed for internal consistency,not empirical validation. Stage labels treated as practice targets,not measured attainment.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-6-listening-01",
+      "ielts-meta-wave-6-band-6-listening-02",
+      "ielts-meta-wave-6-band-6-listening-03",
+      "ielts-meta-wave-6-band-6-listening-04",
+      "ielts-meta-wave-6-band-6-listening-05",
+      "ielts-meta-wave-6-band-6-reading-01",
+      "ielts-meta-wave-6-band-6-reading-02",
+      "ielts-meta-wave-6-band-6-reading-03",
+      "ielts-meta-wave-6-band-6-reading-04",
+      "ielts-meta-wave-6-band-6-reading-05",
+      "ielts-meta-wave-6-band-6-writing-01",
+      "ielts-meta-wave-6-band-6-writing-02",
+      "ielts-meta-wave-6-band-6-writing-03",
+      "ielts-meta-wave-6-band-6-writing-04",
+      "ielts-meta-wave-6-band-6-writing-05",
+      "ielts-meta-wave-6-band-6-speaking-01",
+      "ielts-meta-wave-6-band-6-speaking-02",
+      "ielts-meta-wave-6-band-6-speaking-03",
+      "ielts-meta-wave-6-band-6-speaking-04",
+      "ielts-meta-wave-6-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-7",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-7-v1",
+  "completedAt": "2026-10-29T05:21:00.883Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 664,
+    "outputTokens": 6001,
+    "totalTokens": 6665
+  },
+  "latencyMs": 24657,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Education Research Design and Reported Outcomes\",\"focus\":\"Summarising comparative data and distinguishing correlation from causation\",\"prompt\":\"The table below shows results from two evaluations of a new reading programme conducted by the Riverside Education Institute in 2023 across 12 primary schools.\\n\\nStudy A (with comparison group): 300 students in the programme and 300 matched students not in the programme. Average reading score gain after 6 months: programme group +14 points, comparison group +9 points. Teachers reporting high confidence in improvement: 62% in programme schools, 48% in comparison schools.\\n\\nStudy B (without comparison group): 280 students in the programme, no comparison group. Average reading score gain after 6 months: +13 points. Teachers reporting high confidence in improvement: 71%.\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Communicating Flood Model Uncertainty to Residents\",\"focus\":\"Describing patterns in survey data and limits of interpretation\",\"prompt\":\"The table below shows results of a survey in the coastal town of Bayford in 2024. 900 residents were surveyed after attending one of three information sessions about future flood risk.\\n\\nMethod 1 - Map showing single predicted flood line: 34% correctly understood flooding was possible but not certain, 42% felt anxious but prepared, 68% said they trusted the information.\\nMethod 2 - Map showing range from best-case to worst-case with shaded uncertainty band: 58% correctly understood flooding was possible but not certain, 51% felt anxious but prepared, 61% said they trusted the information.\\nMethod 3 - Range map plus short explanation of model limits: 71% correctly understood flooding was possible but not certain, 63% felt anxious but prepared, 74% said they trusted the information.\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · The Use of Comparison Groups in Education Research\",\"focus\":\"Evaluating when causal claims are justified and when they are not\",\"prompt\":\"Some researchers argue that every evaluation of a new teaching method should include a comparison group of students who do not receive the method. Others argue that comparison groups are not always necessary or appropriate.\\n\\nDiscuss both views, consider the limits of what can be concluded with and without a comparison group, and give your own view on when a comparison group should be used. Support your position with reasons and examples, and avoid overstating what the evidence can prove.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Communicating Uncertainty in Climate Models to the Public\",\"focus\":\"Balancing honesty about uncertainty with the need for clear guidance\",\"prompt\":\"When scientists share climate predictions with local residents, models always contain some uncertainty. Some people believe experts should emphasise the range of possible outcomes and the limits of the models. Others think this confuses the public and that experts should give a single clear prediction.\\n\\nDiscuss both perspectives, evaluate the competing evidence about trust and understanding, and give your opinion on how uncertainty should be communicated. Use reasons and examples to support your view without overclaiming.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Short-Term Adaptation to Climate Change\",\"focus\":\"Assessing effectiveness and limits without overgeneralising\",\"prompt\":\"Cities facing rising temperatures and heavier rainfall often invest in short-term adaptation measures such as temporary flood barriers, cooling centres, and emergency water distribution. While these measures can reduce immediate harm, some argue they distract from longer-term solutions.\\n\\nTo what extent do you agree that short-term adaptation measures are insufficient on their own? Support your view with reasons and examples, and consider the limits of the evidence for both short-term and long-term approaches.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Learning and School Experiences\",\"focus\":\"Describing personal experience with cautious generalisation\",\"prompt\":\"Let's talk about learning at school.\\nDo you remember a teacher who tried a new or different way of teaching? What was it like?\\nHow could you tell whether you were learning better or not?\\nDo you think students can always judge if a new method is working?\\nDo you prefer to know how your progress compares to other students? Why or why not?\"},{\"task\":\"Part 1 · Information and Local Decisions\",\"focus\":\"Personal responses to uncertain information\",\"prompt\":\"Let's talk about information in your community.\\nHow do you usually receive news about local risks such as weather or health?\\nWhen information is uncertain, do you prefer more detail or a simple summary?\\nWho do you trust most to explain complicated predictions?\\nHas your approach to uncertain information changed over time?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"Narrating an experience with evaluation of evidence\",\"prompt\":\"Describe a time when you were told about a possible future problem (such as weather, health, or exams) where the outcome was uncertain.\\n\\nYou should say:\\n• what the information was and who gave it to you\\n• how the uncertainty was explained (or not explained)\\n• how you reacted and what you decided to do\\n• and explain whether, looking back, the way the information was presented was helpful or not.\\n\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Evaluating Educational Evidence\",\"focus\":\"Reasoned discussion of causality, scope, and competing explanations\",\"prompt\":\"Let's consider how we know if an education programme works.\\nWhy might a school's improvement be due to factors other than a new teaching method?\\nWhen is it fair to say a method caused better results, and when is that claim too strong?\\nHow should policymakers decide if evidence from one school can be applied to many schools?\\nWhat are the risks of demanding a comparison group in every situation?\"},{\"task\":\"Part 3 · Climate Adaptation and Communication\",\"focus\":\"Weighing short-term actions against long-term limits and public understanding\",\"prompt\":\"Let's discuss how communities respond to climate risks.\\nWhy might short-term measures like temporary barriers be attractive to local governments despite their limits?\\nHow can leaders communicate both the usefulness and the limits of these measures without causing confusion or distrust?\\nShould residents be involved in deciding between short-term and long-term options? Why or why not?\\nHow can we evaluate whether adaptation communication has been successful?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Education Research Design and Reported Outcomes",
+        "focus": "Summarising comparative data and distinguishing correlation from causation",
+        "prompt": "The table below shows results from two evaluations of a new reading programme conducted by the Riverside Education Institute in 2023 across 12 primary schools.\n\nStudy A (with comparison group): 300 students in the programme and 300 matched students not in the programme. Average reading score gain after 6 months: programme group +14 points, comparison group +9 points. Teachers reporting high confidence in improvement: 62% in programme schools, 48% in comparison schools.\n\nStudy B (without comparison group): 280 students in the programme, no comparison group. Average reading score gain after 6 months: +13 points. Teachers reporting high confidence in improvement: 71%.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Communicating Flood Model Uncertainty to Residents",
+        "focus": "Describing patterns in survey data and limits of interpretation",
+        "prompt": "The table below shows results of a survey in the coastal town of Bayford in 2024. 900 residents were surveyed after attending one of three information sessions about future flood risk.\n\nMethod 1 - Map showing single predicted flood line: 34% correctly understood flooding was possible but not certain, 42% felt anxious but prepared, 68% said they trusted the information.\nMethod 2 - Map showing range from best-case to worst-case with shaded uncertainty band: 58% correctly understood flooding was possible but not certain, 51% felt anxious but prepared, 61% said they trusted the information.\nMethod 3 - Range map plus short explanation of model limits: 71% correctly understood flooding was possible but not certain, 63% felt anxious but prepared, 74% said they trusted the information.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · The Use of Comparison Groups in Education Research",
+        "focus": "Evaluating when causal claims are justified and when they are not",
+        "prompt": "Some researchers argue that every evaluation of a new teaching method should include a comparison group of students who do not receive the method. Others argue that comparison groups are not always necessary or appropriate.\n\nDiscuss both views, consider the limits of what can be concluded with and without a comparison group, and give your own view on when a comparison group should be used. Support your position with reasons and examples, and avoid overstating what the evidence can prove.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Communicating Uncertainty in Climate Models to the Public",
+        "focus": "Balancing honesty about uncertainty with the need for clear guidance",
+        "prompt": "When scientists share climate predictions with local residents, models always contain some uncertainty. Some people believe experts should emphasise the range of possible outcomes and the limits of the models. Others think this confuses the public and that experts should give a single clear prediction.\n\nDiscuss both perspectives, evaluate the competing evidence about trust and understanding, and give your opinion on how uncertainty should be communicated. Use reasons and examples to support your view without overclaiming.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Short-Term Adaptation to Climate Change",
+        "focus": "Assessing effectiveness and limits without overgeneralising",
+        "prompt": "Cities facing rising temperatures and heavier rainfall often invest in short-term adaptation measures such as temporary flood barriers, cooling centres, and emergency water distribution. While these measures can reduce immediate harm, some argue they distract from longer-term solutions.\n\nTo what extent do you agree that short-term adaptation measures are insufficient on their own? Support your view with reasons and examples, and consider the limits of the evidence for both short-term and long-term approaches.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Learning and School Experiences",
+        "focus": "Describing personal experience with cautious generalisation",
+        "prompt": "Let's talk about learning at school.\nDo you remember a teacher who tried a new or different way of teaching? What was it like?\nHow could you tell whether you were learning better or not?\nDo you think students can always judge if a new method is working?\nDo you prefer to know how your progress compares to other students? Why or why not?"
+      },
+      {
+        "task": "Part 1 · Information and Local Decisions",
+        "focus": "Personal responses to uncertain information",
+        "prompt": "Let's talk about information in your community.\nHow do you usually receive news about local risks such as weather or health?\nWhen information is uncertain, do you prefer more detail or a simple summary?\nWho do you trust most to explain complicated predictions?\nHas your approach to uncertain information changed over time?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "Narrating an experience with evaluation of evidence",
+        "prompt": "Describe a time when you were told about a possible future problem (such as weather, health, or exams) where the outcome was uncertain.\n\nYou should say:\n• what the information was and who gave it to you\n• how the uncertainty was explained (or not explained)\n• how you reacted and what you decided to do\n• and explain whether, looking back, the way the information was presented was helpful or not.\n\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Educational Evidence",
+        "focus": "Reasoned discussion of causality, scope, and competing explanations",
+        "prompt": "Let's consider how we know if an education programme works.\nWhy might a school's improvement be due to factors other than a new teaching method?\nWhen is it fair to say a method caused better results, and when is that claim too strong?\nHow should policymakers decide if evidence from one school can be applied to many schools?\nWhat are the risks of demanding a comparison group in every situation?"
+      },
+      {
+        "task": "Part 3 · Climate Adaptation and Communication",
+        "focus": "Weighing short-term actions against long-term limits and public understanding",
+        "prompt": "Let's discuss how communities respond to climate risks.\nWhy might short-term measures like temporary barriers be attractive to local governments despite their limits?\nHow can leaders communicate both the usefulness and the limits of these measures without causing confusion or distrust?\nShould residents be involved in deciding between short-term and long-term options? Why or why not?\nHow can we evaluate whether adaptation communication has been successful?"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-8",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:21:09.579Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 635,
+    "outputTokens": 5676,
+    "totalTokens": 6311
+  },
+  "latencyMs": 22331,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Student Film-Club Screening Attendance\",\"focus\":\"clear main ideas and direct comparisons from a table\",\"prompt\":\"The table below shows the number of students who attended three film-club screenings at Greenfield College from March to May 2024, and the percentage who said they enjoyed the film. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task and write at least 150 words.\\n\\nFilm type | March | April | May | Enjoyed the film (%)\\nDocumentary about Oceans | 45 | 52 | 60 | 78%\\nShort Comedy Films | 70 | 65 | 55 | 85%\\nClassic Science Fiction | 30 | 40 | 48 | 62%\\n\\nAll screenings were on Friday evenings in Room B.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Local Museum Map Changes\",\"focus\":\"describing locations and changes clearly with simple comparisons\",\"prompt\":\"The maps below show the ground floor of Riverside City Museum in 2020 and in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task and write at least 150 words.\\n\\nIn 2020: The entrance was on the south side. Inside the entrance was a ticket desk. The Film Room was on the west side. The History Gallery was on the north-west corner. A small cafe was on the north-east corner. The gift shop was on the east side.\\n\\nIn 2025: The entrance is still on the south side. The ticket desk has moved to the east side, next to the gift shop. The Film Room is now larger and has moved to the north-west corner, where the History Gallery was. The History Gallery is now smaller and on the west side. There is a new Bicycle Display Area in the centre of the museum. The cafe is still in the north-east corner but is now larger.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Introduction to Bicycle Maintenance Process\",\"focus\":\"accurate simple explanations of a process in clear steps\",\"prompt\":\"The diagram below shows six steps to check a bicycle before riding. Summarise the information by selecting and reporting the main features. You should spend about 20 minutes on this task and write at least 150 words.\\n\\nStep 1: Check tyre pressure. If the tyres are soft, use a pump to add air.\\nStep 2: Check the brakes. Squeeze both brake levers and look at the brake pads.\\nStep 3: Check the chain. Clean the chain and add a little oil if it is dry.\\nStep 4: Check the lights and bell. Turn on the front and back lights and ring the bell to test them.\\nStep 5: Check the seat height. Sit on the seat and adjust it if your feet cannot touch the ground easily.\\nStep 6: Do a slow test ride in a safe area to make sure everything works.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Practical Skills at School\",\"focus\":\"clear main ideas with reasons and familiar examples\",\"prompt\":\"Some people think schools should teach practical skills such as bicycle maintenance, cooking and basic repairs. Others think schools should only teach academic subjects like mathematics and science. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should spend about 40 minutes on this task and write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Community Film and Museum Activities\",\"focus\":\"giving a clear position with direct evidence and simple explanations\",\"prompt\":\"Many towns offer free activities such as student film-club screenings and local museum visits. Some people say these activities are very useful for students and local communities. Do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should spend about 40 minutes on this task and write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Films and Free Time\",\"focus\":\"giving simple personal information and preferences\",\"prompt\":\"Answer the following questions about films and free time. Speak for 30-60 seconds for each answer.\\n1. How often do you watch films?\\n2. Do you prefer watching films at home or at the cinema? Why?\\n3. Did you join any clubs when you were at school?\\n4. What do you usually do with friends in the evening?\"},{\"task\":\"Part 1 · Museums and Local Places\",\"focus\":\"describing familiar places with simple explanations\",\"prompt\":\"Answer the following questions about museums and your town. Speak for 30-60 seconds for each answer.\\n1. Is there a museum near where you live?\\n2. When was the last time you visited a museum?\\n3. Do you like looking at maps when you visit a new place? Why or why not?\\n4. How do you usually travel around your town - by bicycle, bus, or on foot?\"},{\"task\":\"Part 2 · Cue card · A Film Screening You Attended\",\"focus\":\"organising a short talk with clear sequence and details\",\"prompt\":\"Describe a film screening or movie you watched together with other students or friends. You will have one minute to prepare and should speak for one to two minutes.\\n\\nYou should say:\\n• what the film was and where you watched it\\n• who you went with\\n• what happened during the screening\\n• and explain why you enjoyed it or not\\n\\nYou can finish with one short follow-up idea: Would you like to go to a similar screening again?\"},{\"task\":\"Part 3 · Learning Practical Skills\",\"focus\":\"giving reasons and evaluation about learning methods\",\"prompt\":\"Discuss the following questions about practical skills such as bicycle maintenance. Give reasons and examples for your opinions.\\n1. Why is it useful for young people to learn practical skills?\\n2. Should schools or parents teach skills like bicycle repair? Why?\\n3. Is it better to learn a practical skill from a teacher, from a video, or by trying yourself? Why?\"},{\"task\":\"Part 3 · Museums and Community Activities\",\"focus\":\"comparing ideas and evaluating benefits for the future\",\"prompt\":\"Discuss the following questions about museums and community activities. Give reasons for your opinions.\\n1. Why do some people visit museums often while others never visit them?\\n2. What are the advantages of free film-clubs and museum visits for a local community?\\n3. Will people still visit museums in the future when they can see everything online? Why or why not?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Student Film-Club Screening Attendance",
+        "focus": "clear main ideas and direct comparisons from a table",
+        "prompt": "The table below shows the number of students who attended three film-club screenings at Greenfield College from March to May 2024, and the percentage who said they enjoyed the film. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task and write at least 150 words.\n\nFilm type | March | April | May | Enjoyed the film (%)\nDocumentary about Oceans | 45 | 52 | 60 | 78%\nShort Comedy Films | 70 | 65 | 55 | 85%\nClassic Science Fiction | 30 | 40 | 48 | 62%\n\nAll screenings were on Friday evenings in Room B.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Local Museum Map Changes",
+        "focus": "describing locations and changes clearly with simple comparisons",
+        "prompt": "The maps below show the ground floor of Riverside City Museum in 2020 and in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task and write at least 150 words.\n\nIn 2020: The entrance was on the south side. Inside the entrance was a ticket desk. The Film Room was on the west side. The History Gallery was on the north-west corner. A small cafe was on the north-east corner. The gift shop was on the east side.\n\nIn 2025: The entrance is still on the south side. The ticket desk has moved to the east side, next to the gift shop. The Film Room is now larger and has moved to the north-west corner, where the History Gallery was. The History Gallery is now smaller and on the west side. There is a new Bicycle Display Area in the centre of the museum. The cafe is still in the north-east corner but is now larger.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Introduction to Bicycle Maintenance Process",
+        "focus": "accurate simple explanations of a process in clear steps",
+        "prompt": "The diagram below shows six steps to check a bicycle before riding. Summarise the information by selecting and reporting the main features. You should spend about 20 minutes on this task and write at least 150 words.\n\nStep 1: Check tyre pressure. If the tyres are soft, use a pump to add air.\nStep 2: Check the brakes. Squeeze both brake levers and look at the brake pads.\nStep 3: Check the chain. Clean the chain and add a little oil if it is dry.\nStep 4: Check the lights and bell. Turn on the front and back lights and ring the bell to test them.\nStep 5: Check the seat height. Sit on the seat and adjust it if your feet cannot touch the ground easily.\nStep 6: Do a slow test ride in a safe area to make sure everything works.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Practical Skills at School",
+        "focus": "clear main ideas with reasons and familiar examples",
+        "prompt": "Some people think schools should teach practical skills such as bicycle maintenance, cooking and basic repairs. Others think schools should only teach academic subjects like mathematics and science. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should spend about 40 minutes on this task and write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Community Film and Museum Activities",
+        "focus": "giving a clear position with direct evidence and simple explanations",
+        "prompt": "Many towns offer free activities such as student film-club screenings and local museum visits. Some people say these activities are very useful for students and local communities. Do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should spend about 40 minutes on this task and write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Films and Free Time",
+        "focus": "giving simple personal information and preferences",
+        "prompt": "Answer the following questions about films and free time. Speak for 30-60 seconds for each answer.\n1. How often do you watch films?\n2. Do you prefer watching films at home or at the cinema? Why?\n3. Did you join any clubs when you were at school?\n4. What do you usually do with friends in the evening?"
+      },
+      {
+        "task": "Part 1 · Museums and Local Places",
+        "focus": "describing familiar places with simple explanations",
+        "prompt": "Answer the following questions about museums and your town. Speak for 30-60 seconds for each answer.\n1. Is there a museum near where you live?\n2. When was the last time you visited a museum?\n3. Do you like looking at maps when you visit a new place? Why or why not?\n4. How do you usually travel around your town - by bicycle, bus, or on foot?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Film Screening You Attended",
+        "focus": "organising a short talk with clear sequence and details",
+        "prompt": "Describe a film screening or movie you watched together with other students or friends. You will have one minute to prepare and should speak for one to two minutes.\n\nYou should say:\n• what the film was and where you watched it\n• who you went with\n• what happened during the screening\n• and explain why you enjoyed it or not\n\nYou can finish with one short follow-up idea: Would you like to go to a similar screening again?"
+      },
+      {
+        "task": "Part 3 · Learning Practical Skills",
+        "focus": "giving reasons and evaluation about learning methods",
+        "prompt": "Discuss the following questions about practical skills such as bicycle maintenance. Give reasons and examples for your opinions.\n1. Why is it useful for young people to learn practical skills?\n2. Should schools or parents teach skills like bicycle repair? Why?\n3. Is it better to learn a practical skill from a teacher, from a video, or by trying yourself? Why?"
+      },
+      {
+        "task": "Part 3 · Museums and Community Activities",
+        "focus": "comparing ideas and evaluating benefits for the future",
+        "prompt": "Discuss the following questions about museums and community activities. Give reasons for your opinions.\n1. Why do some people visit museums often while others never visit them?\n2. What are the advantages of free film-clubs and museum visits for a local community?\n3. Will people still visit museums in the future when they can see everything online? Why or why not?"
+      }
+    ]
+  }
+}

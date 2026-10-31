@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "provenance": "authored-development-fixtures",
+  "feedbackCases": 6,
+  "feedbackAccepted": 5,
+  "feedbackRejected": 1,
+  "apiFailureCases": 2,
+  "mockRequests": 2,
+  "realProviderCalls": 0,
+  "providerAccuracy": "not-measured",
+  "learningOutcomes": "not-measured"
+}

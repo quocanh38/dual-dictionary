@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-6-band-5-listening-context / listening-02",
+      "issue": "The chicken-pasta response now correctly says the listed ingredients omit nuts and tells Maya to verify kitchen cross-contact, but the same serious-allergy exchange then calls the vegetable soup “a good choice” and categorically says it is free from main allergens without clarifying cross-contact or verifying suitability. Qualify this as ingredient-list information and direct Maya to confirm preparation/cross-contact with the kitchen before either meal; do not imply safety from ingredient absence alone.",
+      "severity": "critical",
+      "reviewer": "gpt-6-luna"
+    }
+  ]
+}

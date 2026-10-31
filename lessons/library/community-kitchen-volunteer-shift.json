@@ -1,0 +1,224 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-89a2a594-120e-4d83-8acc-03b6c9be7405",
+    "version": 1,
+    "title": "Sharing Closing Duties in the Community Kitchen",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:37:38.729Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Sharing Closing Duties in the Community Kitchen",
+        "objective": "Learners will understand and use 'take turns' and 'is responsible for' to describe shared workplace duties.",
+        "reading": {
+          "text": "Volunteers at River Street community kitchen share a simple closing routine. Two people take turns checking the refrigerator temperatures and noting the results on a daily sheet. Each volunteer is responsible for one part of the room: the preparation table, serving counter, or dish area. Before leaving, put sealed ingredients back in labelled storage and wipe work surfaces with the approved cleaner. If a label is missing, do not guess what is inside; place the container in the marked review tray and ask the shift lead. The lead checks the closing sheet at 7 p.m. and leaves a short message about anything that needs attention before the next team arrives. New volunteers can ask for a demonstration during handover.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "Volunteers at River Street community kitchen share a simple closing routine."
+            },
+            {
+              "id": "s2",
+              "text": "Two people take turns checking the refrigerator temperatures and noting the results on a daily sheet."
+            },
+            {
+              "id": "s3",
+              "text": "Each volunteer is responsible for one part of the room: the preparation table, serving counter, or dish area."
+            },
+            {
+              "id": "s4",
+              "text": "Before leaving, put sealed ingredients back in labelled storage and wipe work surfaces with the approved cleaner."
+            },
+            {
+              "id": "s5",
+              "text": "If a label is missing, do not guess what is inside; place the container in the marked review tray and ask the shift lead."
+            },
+            {
+              "id": "s6",
+              "text": "The lead checks the closing sheet at 7 p.m. and leaves a short message about anything that needs attention before the next team arrives."
+            },
+            {
+              "id": "s7",
+              "text": "New volunteers can ask for a demonstration during handover."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "take turns",
+            "meaningEn": "to do something alternately with another person, one after the other",
+            "meaningVi": "thay phiên nhau làm việc gì",
+            "sourceSentenceId": "s2"
+          },
+          {
+            "id": "t2",
+            "phrase": "is responsible for",
+            "meaningEn": "to have the duty to take care of a particular area or task",
+            "meaningVi": "chịu trách nhiệm về một khu vực hoặc công việc cụ thể",
+            "sourceSentenceId": "s3"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence 2, 'Two people take turns checking the refrigerator temperatures,' what does 'take turns' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "They check the temperatures together at exactly the same time.",
+                "explanation": "Wrong because it describes simultaneous action, not alternating one after the other."
+              },
+              {
+                "id": "b",
+                "text": "They check the temperatures one after the other in rotation.",
+                "explanation": "Correct because it matches the meaning of doing something alternately one after the other."
+              },
+              {
+                "id": "c",
+                "text": "They watch the shift lead check while they do nothing.",
+                "explanation": "Wrong because it describes only observing without sharing the task."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b correctly paraphrases alternating the checking task one after the other."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'take turns' correctly.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The two classmates take turns presenting their project slides.",
+                "explanation": "Correct because the plural verb and gerund make the sentence grammatical and natural."
+              },
+              {
+                "id": "b",
+                "text": "The two classmates takes turns presenting their project slides.",
+                "explanation": "Wrong because 'takes' should be 'take' to agree with the plural subject."
+              },
+              {
+                "id": "c",
+                "text": "The two classmates take turns present their project slides.",
+                "explanation": "Wrong because 'present' should be 'presenting' after the phrase 'take turns'."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a is the only fully grammatical and natural use of 'take turns'."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence 3, 'Each volunteer is responsible for one part of the room,' what does 'is responsible for' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The volunteer has the duty to take care of that part of the room.",
+                "explanation": "Correct because it matches having the duty to take care of a task or area."
+              },
+              {
+                "id": "b",
+                "text": "The volunteer happens to like that part of the room very much.",
+                "explanation": "Wrong because liking a place does not mean having a duty to take care of it."
+              },
+              {
+                "id": "c",
+                "text": "The volunteer is allowed to visit that part of the room briefly.",
+                "explanation": "Wrong because being allowed to visit does not mean having the duty to take care of it."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a correctly paraphrases having the duty to take care of an area."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'is responsible for' correctly.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "She is responsible to cleaning the meeting room on Fridays.",
+                "explanation": "Wrong because 'to' should be 'for' in the fixed collocation 'responsible for'."
+              },
+              {
+                "id": "b",
+                "text": "She is responsible for cleaning the meeting room on Fridays.",
+                "explanation": "Correct because the collocation 'responsible for' plus gerund is grammatical and natural."
+              },
+              {
+                "id": "c",
+                "text": "She is responsible for clean the meeting room on Fridays.",
+                "explanation": "Wrong because 'clean' should be 'cleaning' after the preposition 'for'."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b is the only fully grammatical and natural use of 'is responsible for'."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You share an apartment with a friend and need to share cleaning the bathroom. Write 2-3 sentences to your friend suggesting a fair plan. Use the phrase 'take turns'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "We can take turns cleaning the bathroom each weekend. You can clean it this Saturday and I will clean it next Saturday.",
+            "selfCheck": [
+              "I wrote 2-3 sentences.",
+              "I used the phrase 'take turns' to describe alternating the task.",
+              "My message suggests a fair sharing plan to a roommate."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews; 2026-10-27T08:42:10.745Z. Two independent AI-assisted reviewers evaluated the exact pack hash, matching source row, and schema. The recorded evidence synthesizes their findings and a source-level consistency check. Review is not human or learner validation. The rights/authorship statement is locally declared and not independently verified. Requested Luna route was not exposed (runtime-visible model label GPT-6); Terra route was gpt-5.6-terra (runtime label Codex GPT-6).",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": []
+    }
+  },
+  "sha256": "772964a98a91e0ae4162527d0ce8065f870a21e833939ac7a20cfadf67133d15"
+}

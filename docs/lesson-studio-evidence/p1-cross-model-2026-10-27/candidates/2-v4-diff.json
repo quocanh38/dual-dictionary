@@ -1,0 +1,12 @@
+{
+  "previousCandidate": "2-v3",
+  "candidate": "2-v4",
+  "changes": [
+    {
+      "path": "lessons/0/exercises/4/sampleAnswer",
+      "before": "If you buy a laptop for college, you should take into account the battery life and weight. A lighter model with a long battery will be much easier to carry to classes.",
+      "after": "If you buy a laptop for college, you should take into account the battery life and weight. A lighter model with long battery life will be much easier to carry to classes."
+    }
+  ],
+  "newMetaCalls": 0
+}

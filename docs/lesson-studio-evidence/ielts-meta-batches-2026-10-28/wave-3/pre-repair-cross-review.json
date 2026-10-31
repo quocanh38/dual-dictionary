@@ -1,0 +1,53 @@
+{
+  "reviewScope": "AI-assisted pre-repair review of every supplied raw Meta response; not an independent human review.",
+  "reviewers": ["gpt-6-luna", "gpt-5.6-terra"],
+  "rawInputSha256": {
+    "band-5": {
+      "objective": { "file": "objective-generate-replacement-response.json", "sha256": "a3aeeabb92f5893d072a473232a1098e7b87f28a5447e359043a2db4d525cfea" },
+      "prompts": { "file": "prompts-generate-response.json", "sha256": "e53bdd03ba08e5c4a68da557e99767cd51441392a52e68a7aa4a24450c64e5b1" }
+    },
+    "band-6": {
+      "objective": { "file": "objective-generate-response.json", "sha256": "1cd49ae020458dd9310ec5fb0a6f034e4fd03e4d2f509b49e300568cd5cb56c2" },
+      "prompts": { "file": "prompts-generate-response.json", "sha256": "0461cc7b3b3b6fa4ff971244ba27a9584b0317155e25904c354950101fa2ea32" }
+    },
+    "band-6-5": {
+      "objective": { "file": "objective-generate-response.json", "sha256": "a499592c0f2d33fcdebd393d177ebd78fc545231441a83d7fb736d7a460e0686" },
+      "prompts": { "file": "prompts-generate-response.json", "sha256": "b45f898940cdcc8c2765828ae9e64c02b4fb0b63f650d686f23634e1b3dfd0c1" }
+    },
+    "band-7": {
+      "objective": { "file": "objective-generate-response.json", "sha256": "e4f78aa627f6f50aad79d3b5ca35ea1228a6daf1938457f53c15c8937e62d04b" },
+      "prompts": { "file": "prompts-generate-response.json", "sha256": "cfb50d377b0acabfdcb446d4c0326a8de99bb1d14826eac19778d17988ccacc2" }
+    }
+  },
+  "findingsByReviewer": {
+    "gpt-6-luna": {
+      "band-5": [
+        { "segment": "prompts", "item": "speaking", "severity": "high", "issue": "Only one Speaking prompt was returned instead of the required five, leaving this stage batch at 16 items and omitting Speaking Parts 2 and 3.", "recommendedRepair": "Add four distinct prompts to complete five Speaking prompts, covering Parts 1, 2 with visible cue-card bullets, and 3." },
+        { "segment": "prompts", "item": "Task 1 · University Orientation Timetable", "severity": "medium", "issue": "The prompt lists Monday 1 September, Tuesday 2 September, and Wednesday 3 September 2026, but those dates are Tuesday, Wednesday, and Thursday.", "recommendedRepair": "Correct the weekday labels or choose dates that match Monday through Wednesday." }
+      ],
+      "band-6": [
+        { "segment": "prompts", "item": "Task 1 · Museum Volunteer Induction Timetable", "severity": "medium", "issue": "The prompt calls 7, 14, and 21 March 2025 Saturdays, but all three dates are Fridays.", "recommendedRepair": "Correct the weekday labels or use calendar dates that are Saturdays." }
+      ],
+      "band-6-5": [
+        { "segment": "objective", "item": "Reading · District comparison", "severity": "high", "issue": "Incorrect answer key: the keyed option says Southside has the higher survival rate without a care programme, but the passage reports Northside at 64% and Southside at 52%, linked to Northside watering and pruning. The correct option is index 1; the explanation also needs to match that answer.", "recommendedRepair": "Change the answer key to index 1 and align the explanation with the evidence." }
+      ],
+      "band-7": [
+        { "segment": "objective", "item": "Listening · Q4 · Study-habits questionnaire", "severity": "high", "issue": "Incorrect answer key: the keyed option claims that only non-club students completed the questionnaire, which is absent from the script. The script supports the option stating that only 55% responded despite vouchers, which may bias the sample toward more organised students.", "recommendedRepair": "Set the answer to index 2 and retain an explanation grounded in the 55% response rate." },
+        { "segment": "prompts", "item": "speaking", "severity": "high", "issue": "There are four Speaking prompts instead of five, leaving this stage batch at 19 items and omitting the required second Part 1 prompt.", "recommendedRepair": "Add a distinct fifth Speaking prompt for Part 1." }
+      ]
+    },
+    "gpt-5.6-terra": {
+      "band-5": [
+        { "segment": "prompts", "item": "speaking", "severity": "high", "issue": "The stage supplies only one Speaking Part 1 prompt and has no Part 2 cue card or Part 3 discussion. This leaves the batch at 16 items rather than the intended 20 and does not cover the full IELTS Speaking format.", "recommendedRepair": "Add four speaking prompts: one further Part 1 set, two accessible Part 2 cue cards, and one scaffolded Part 3 discussion set. Preserve beginner-level language and make the total prompt count ten." }
+      ],
+      "band-6": [
+        { "segment": "prompts", "item": "Task 1 · Museum Volunteer Induction Timetable", "severity": "medium", "issue": "The Writing Task 1 prompt identifies 7, 14, and 21 March 2025 as Saturdays; the dates are Fridays.", "recommendedRepair": "Change the dates to Saturdays or correct the weekday descriptions." }
+      ],
+      "band-6-5": [],
+      "band-7": [
+        { "segment": "objective", "item": "Listening · Maths Club Results · closing recommendation", "severity": "medium", "issue": "The causal study design says to randomly invite half the year to the club. Random invitation alone still permits voluntary uptake and therefore does not remove the self-selection problem the dialogue identifies.", "recommendedRepair": "Use random assignment to an offered place or a lottery among eligible oversubscribed students and measure attendance and homework time; or state that random invitation estimates the effect of an offer rather than participation." },
+        { "segment": "prompts", "item": "speaking", "severity": "medium", "issue": "The Speaking segment contains four prompts rather than five. It has less Part 1 breadth than the other stages.", "recommendedRepair": "Add a second distinct Band 7 Part 1 prompt." }
+      ]
+    }
+  }
+}

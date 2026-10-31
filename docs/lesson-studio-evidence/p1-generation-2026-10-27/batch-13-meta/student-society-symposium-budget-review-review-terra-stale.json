@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "6107787fefe35c05c212649232d8e724068348d13a82e0076eba2deba246995d",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-5.6-terra",
+  "reviewedAt": "2026-10-27T09:48:47Z",
+  "note": "Full independent review of this exact candidate: source/citations, both EN/VI target glosses, every option and explanation, and transfer. Rights/authorship are local declarations only and were not independently verified; the B1 estimate is not calibrated; this is not human or learner validation.",
+  "criteria": [
+    {"id":"rights","prompt":"Original/permitted source, author, distribution rights and no learner PII checked.","status":"pass","evidence":"The matching frozen source and provenance declare an original AI-assisted passage, authorized distribution, and no learner PII; that evidence is declaration-only."},
+    {"id":"lesson-1/t1/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s3 says the treasurer ‘sets aside’ part of the grant for accessibility services, directly supporting reserving money for a stated purpose."},
+    {"id":"lesson-1/t1/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"‘reserves part of the money for a specific purpose’ is the money-management sense in s3."},
+    {"id":"lesson-1/t1/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘trích ra một phần tiền để dành cho mục đích cụ thể’ accurately conveys reserving an allocation and includes diacritics."},
+    {"id":"lesson-1/t2/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s5 says the committee asks about a weekday rate and then ‘revise[s] the forecast’ after the reply, supporting an update based on new cost information."},
+    {"id":"lesson-1/t2/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"‘update the expected costs after receiving new information’ accurately gives the budget-forecast sense in s5."},
+    {"id":"lesson-1/t2/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘điều chỉnh dự báo chi phí sau khi nhận được thông tin mới’ is accurate and natural Vietnamese with diacritics."},
+    {"id":"lesson-1/q1/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q1 a alone describes reserving part of the grant for later use; b spends all funds and c has no specified purpose."},
+    {"id":"lesson-1/q1/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q1 correctly explains the contrast between reserving a portion, spending the whole grant, and moving money with no purpose."},
+    {"id":"lesson-1/q2/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q2 a alone has natural ‘sets aside ... for printing costs’; b has the wrong preposition before the noun phrase and c wrongly pluralizes after ‘every’."},
+    {"id":"lesson-1/q2/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q2 accurately identifies ‘for’ for purpose, ‘every term’, and the natural allocation construction in a."},
+    {"id":"lesson-1/q3/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q3 a alone updates expected costs after a venue reply; b cancels the event and c approves orders prematurely, neither matching s5."},
+    {"id":"lesson-1/q3/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q3 explanations accurately distinguish revising a forecast from cancellation and early approval."},
+    {"id":"lesson-1/q4/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"q4 a alone uses past ‘revised’ and infinitive ‘to include’; b wrongly inflects after to and c lacks the past participle after have."},
+    {"id":"lesson-1/q4/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"q4 accurately explains the base form after to and past participle required after have; a is natural budget language."},
+    {"id":"lesson-1/q5/new-situation","prompt":"Role or purpose differs meaningfully from the source; not merely rewriting it.","status":"pass","evidence":"The transfer changes speaker, audience, income source, and purpose: a part-time tutor discusses personal pay with a friend rather than planning a student symposium."},
+    {"id":"lesson-1/q5/self-check","prompt":"Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.","status":"pass","evidence":"The two-sentence model naturally uses the correct past form ‘set aside’; checks cover length, target meaning, and a named purpose, and the explanation explicitly avoids automatic grading."}
+  ],
+  "findings": []
+}

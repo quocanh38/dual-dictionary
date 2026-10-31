@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "701564597adec40d9316399032a1d27b92fafcf10a66ebec87cf60b4fe5f6887",
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-2-band-5-reading-05 (Reading)",
+      "issue": "The inference that the playground is probably ‘hot and uncomfortable in summer’ overstates the evidence. The passage says there is little shade there and that shade is associated with more people staying in the park; it does not establish that the playground is uncomfortable or hot. Revise the keyed option/explanation to an inference directly supported by the passage, or add supporting evidence."
+    }
+  ]
+}

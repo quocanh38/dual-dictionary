@@ -1,0 +1,218 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-7b561abd-993e-415e-9304-0baa103ddf2c",
+    "version": 1,
+    "title": "Library Hours and Student Deadlines",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading drafted with coding assistant for this pilot; no personal learner data.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v2",
+      "generatedAt": "2026-10-27T00:28:17.309Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Library Hours and Student Deadlines",
+        "objective": "Learners will understand and use allocate resources and meet the deadline in academic and everyday work contexts.",
+        "reading": {
+          "text": "The university library will allocate resources to extend its evening opening hours. A student group must meet the deadline for submitting its survey findings. The team will compare weekday and weekend visits before recommending a schedule.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "The university library will allocate resources to extend its evening opening hours."
+            },
+            {
+              "id": "s2",
+              "text": "A student group must meet the deadline for submitting its survey findings."
+            },
+            {
+              "id": "s3",
+              "text": "The team will compare weekday and weekend visits before recommending a schedule."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "allocate resources",
+            "meaningEn": "to provide money, staff, or time for a particular purpose",
+            "meaningVi": "phân bổ nguồn lực",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "meet the deadline",
+            "meaningEn": "to finish or submit something by the required time",
+            "meaningVi": "hoàn thành đúng thời hạn",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In the sentence 'The university library will allocate resources to extend its evening opening hours.', what does 'allocate resources' mean here?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "to provide money, staff, or time for a particular purpose",
+                "explanation": "Correct: It matches the library providing support to extend hours, Vietnamese: phân bổ nguồn lực."
+              },
+              {
+                "id": "b",
+                "text": "to save money by reducing evening services",
+                "explanation": "Wrong: Reducing services is not the meaning of allocating resources; the source describes support for longer hours."
+              },
+              {
+                "id": "c",
+                "text": "to arrange books on the shelves in alphabetical order",
+                "explanation": "Wrong: It describes organizing books, not providing money, staff, or time for evening hours."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The library is providing support to extend hours, so option a is correct."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Which sentence uses 'allocate resources' naturally?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Our club will allocates resources to organize the weekend workshop.",
+                "explanation": "Wrong: After the modal will, use the base form allocate, not allocates."
+              },
+              {
+                "id": "b",
+                "text": "Our club will allocate resources to organize the weekend workshop.",
+                "explanation": "Correct: It naturally means providing money, time, or people for the workshop purpose."
+              },
+              {
+                "id": "c",
+                "text": "Our club will allocate resources for organize the weekend workshop.",
+                "explanation": "Wrong: After the preposition for, use organizing rather than the bare verb organize."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Option b is grammatical and describes assigning support for a purpose. In a, will must be followed by allocate, not allocates. In c, for must be followed by organizing, not organize. Both allocate resources to organizing and allocate resources to organize can be grammatical; that distinction is not used to reject an answer."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In the sentence 'A student group must meet the deadline for submitting its survey findings.', what does 'meet the deadline' mean here?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "to discuss the deadline without submitting anything",
+                "explanation": "Wrong: Discussing without submitting does not finish anything by the required time."
+              },
+              {
+                "id": "b",
+                "text": "to change the deadline to a later date",
+                "explanation": "Wrong: Changing the date means postponing, not finishing by the required time."
+              },
+              {
+                "id": "c",
+                "text": "to finish or submit something by the required time",
+                "explanation": "Correct: It matches the group submitting findings on time, Vietnamese: hoàn thành đúng thời hạn."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "The group must submit on time, so option c is correct."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Which sentence uses 'meet the deadline' naturally?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Our team met the deadline and submitted the report before Friday.",
+                "explanation": "Correct: It naturally means finishing and submitting on time with correct collocation."
+              },
+              {
+                "id": "b",
+                "text": "Our team meeted the deadline and submitted the report before Friday.",
+                "explanation": "Wrong: The past tense of meet is met, not meeted."
+              },
+              {
+                "id": "c",
+                "text": "Our team met deadline and submitted the report before Friday.",
+                "explanation": "Wrong: The singular count noun deadline needs a determiner here; use met the deadline."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Option a uses met and the required determiner; b has the wrong past tense, and c omits the determiner."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a part-time shop assistant. Write a short polite message (2-3 sentences) to your manager about finishing the weekly stock list. Use the exact phrase 'meet the deadline'. Do not write about a library or survey.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "sampleAnswer": "Hi Ms Lee, I have finished checking the stock and I will meet the deadline for the stock list by Friday afternoon. Please let me know if you need anything else.",
+            "selfCheck": [
+              "I used the exact phrase 'meet the deadline'.",
+              "My message is about a shop job, not the library survey.",
+              "My message is 2-3 sentences and polite to a manager."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "ai-assisted-editor",
+      "note": "Edited after cross-model audit; reviews for previous payloads are stale. Original Meta output and prior candidates retained. AI-assisted editorial corrections; no new Meta generation.",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": [
+        {
+          "severity": "critical",
+          "message": "q2 rejects allocating resources for coffee/leisure as inherently wrong; these are stylistic/context judgments, not guaranteed errors.",
+          "resolved": false
+        },
+        {
+          "severity": "critical",
+          "message": "Previous candidate q2 incorrectly rejected prepositional to + organizing. Replaced that option with will allocates and corrected the explanation; full cross-model re-review required.",
+          "resolved": true
+        }
+      ]
+    }
+  }
+}

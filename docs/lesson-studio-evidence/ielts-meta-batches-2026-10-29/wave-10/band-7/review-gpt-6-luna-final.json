@@ -1,0 +1,12 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "1d291ef42ecaca212f078d0603fbb5798307977f4a891ab070086d1e51ab751a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Declared context wordCount differs slightly from a simple whitespace/token count (Listening 335 declared vs 335 counted; Reading 463 vs 465); both passages remain within the requested 300–400 and 400–500 bounds.",
+    "Task 1 reports a 62% response rate alongside 2,400 responses; the invitation denominator is not specified, so the rate cannot be independently reconstructed from the displayed count."
+  ],
+  "coverage": "Full 20-item review: both shared contexts, all objective options/keys/explanations, and all Writing and Speaking prompts. Confirmed the tutoring studies are presented as distinct settings, not conflated evidence; limitations around transportability, composite wellbeing and interrupted time-series inference are supported; keys follow the supplied passages; Writing data/subgroup totals and units are coherent; and Speaking Parts 1–3 include a complete Part 2 cue card and appropriately advanced discussion. Listening script word count (declared/tokenized): 335/335; Reading passage: 463/465. Verified all 20 items and provenance/original-content metadata; no unresolved critical, major or uncertain content issue found.",
+  "reviewerType": "AI-assisted"
+}

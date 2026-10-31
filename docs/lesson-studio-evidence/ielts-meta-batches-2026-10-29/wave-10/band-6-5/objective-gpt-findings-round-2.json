@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; all Listening transcript copies",
+      "severity": "major",
+      "issue": "The first Meta repair made the Listening script 402 whitespace-separated words, above the required 300–400 range. Trim at least two words while preserving every keyed detail and keeping the final script at 300–400 words."
+    }
+  ]
+}

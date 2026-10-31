@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "a352dc83540e5f37171b507ab4300fe8acd4abed8f9d9374cd9868962e117a89",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra route reviews",
+  "reviewedAt": "2026-10-27T08:32:30Z",
+  "note": "Two independent reviewers examined this exact payload hash with its matching batch source row and schema. AI-assisted editorial review, not human or learner review. Rights/authorship remain supported only by local declarations and were not independently verified. Routes requested: gpt-6-luna (runtime-visible label GPT-6; configured route not exposed) and gpt-5.6-terra (Terra confirmed; runtime label Codex GPT-6). Both reviewers confirm the v3 gloss change resolves the earlier minor transfer-scope note; all 17 criteria pass on this exact hash.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both reviewers checked the matching local source/candidate declaration of AI-assisted original content, authorized distribution, no copied exam/external material or learner PII; no PII visible. Declaration only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “check out” occurs verbatim in cited s1 and is used for borrowing a projector from the equipment desk."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the temporary equipment-borrowing sense; the next sentence supplies the local loan-recording procedure."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “mượn tạm thiết bị có ghi lại thông tin mượn” is natural and contextually suitable Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “run late” occurs in source s5 and the target cites the complete sentence about a session overrunning and requesting an extension."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm v3 gloss “to be delayed or to continue beyond the scheduled time” accurately covers both the source-session overrun in s5 and the delayed-bus transfer use."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “bị chậm hoặc kéo dài quá thời gian dự kiến” naturally and accurately covers both supported uses."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as borrowing temporarily; b means inspecting picture quality, another sense that does not fit the desk-loan context, and c means returning the item."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm all option explanations and the key distinguish borrowing from inspection and return accurately."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as natural; b requires the past-tense “checked out” and c contains an extra “to” after “from.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and preposition corrections are objective and accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the contextual session-overrun meaning; a refers to late arrival and c to finishing early."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the q3 source, prompt and explanation consistently cite s5. In that session context b uniquely means the meeting continues beyond its scheduled end; a is delayed arrival and c is early completion."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as natural; b requires past “ran” and c uses “lately” instead of “late.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and word-choice corrections are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from equipment-desk scheduling to apologizing to a friend for missing dinner because of a bus delay."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the two-sentence apology is idiomatic, uses “ran late,” and supports self-assessment rather than automated grading."
+    }
+  ],
+  "findings": []
+}

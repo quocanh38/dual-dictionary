@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 116,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after big dipper; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the B-section with finance, computing, cooking, botany, architecture, medicine, culture, astronomy and business vocabulary. Clarify technical definitions, regional wording, register, and overlapping terms without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 548,
+    "remainingRawOnlyAfter": 528
+  },
+  "selected": [
+    "base rate",
+    "batch processing",
+    "baud rate",
+    "bay tree",
+    "bay window",
+    "bean feast",
+    "bear hug",
+    "bell jar",
+    "belly button",
+    "belly dance",
+    "belly flop",
+    "belt up",
+    "beta blocker",
+    "beta test",
+    "betel nut",
+    "bicarbonate of soda",
+    "big bang",
+    "big bang theory",
+    "big blue",
+    "big dipper"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "MedlinePlus: Blood Pressure Medicines (https://medlineplus.gov/bloodpressuremedicines.html)"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "decision": "approve-for-local-release-qa",
+  "delegation": "Owner cross-model content-approval authorization27October2026",
+  "candidateSha256": "ee22798605f2bc50695a3c2d1e0ddc7ccc25dc1baa2d93a1c922d205e3261567",
+  "crossReviewSha256": {
+    "luna": "d2691deeb0ea9732dfec827cff25bbfeca139163857bc61eaaf7b27d23939837",
+    "sol": "5f26e95ac3f6d64d58218225e6cf332136ad41799f8fe604349fa3d14b9c9ba8"
+  },
+  "reason": "Objective grammar/collocation choices and changed scenario pass both reviews; retain the nonblocking explanation wording limitation honestly.",
+  "deployed": false
+}

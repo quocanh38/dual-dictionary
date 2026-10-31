@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 28,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after field hospital, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes; no dictionary wording/examples reproduced. Include regional terminology, practical use and sense/register distinctions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2280,
+    "remainingRawOnlyAfter": 2260
+  },
+  "selected": [
+    "field test",
+    "field trial",
+    "figure of eight",
+    "figure of speech",
+    "figure out",
+    "fill in",
+    "fill out",
+    "fill up",
+    "find out",
+    "fire alarm",
+    "fire door",
+    "fire engine",
+    "fire escape",
+    "fire station",
+    "fire truck",
+    "fire up",
+    "first base",
+    "first class",
+    "first cousin",
+    "first floor"
+  ]
+}

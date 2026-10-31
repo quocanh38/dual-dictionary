@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-6",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-6-v1",
+  "completedAt": "2026-10-29T05:20:28.652Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 631,
+    "outputTokens": 5117,
+    "totalTokens": 5748
+  },
+  "latencyMs": 15258,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Campus Welcome Picnic Attendance\",\"focus\":\"Summarising a table with trends and comparisons\",\"prompt\":\"The table below shows the number of students who attended the campus welcome picnic in 2022, 2023 and 2024, by year group.\\n\\nYear group | 2022 | 2023 | 2024\\nFirst-year students | 85 | 110 | 130\\nSecond-year students | 60 | 65 | 70\\nThird-year students | 40 | 45 | 50\\nTotal | 185 | 220 | 250\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\\n\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Borrowing Sports Kits by Month\",\"focus\":\"Describing changes over time from monthly borrowing data\",\"prompt\":\"The bar chart below shows the number of times students borrowed sports kits from the campus sports centre from January to May 2024.\\n\\nMonth | Number of borrowings\\nJanuary | 32\\nFebruary | 48\\nMarch | 54\\nApril | 42\\nMay | 68\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\\n\\nWrite at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Welcome Events for New Students\",\"focus\":\"Discussing two views and giving a clear opinion with examples\",\"prompt\":\"Some people think universities should organise a welcome picnic for new students at the start of each year. Others think it is not necessary and students can meet each other in other ways.\\n\\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.\\n\\nWrite at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Borrowing or Buying Sports Equipment\",\"focus\":\"Explaining reasons and evaluating advantages and disadvantages\",\"prompt\":\"Many universities allow students to borrow sports kits for free instead of buying their own. Some students prefer to borrow, while others prefer to buy.\\n\\nWhy do students borrow sports kits? Do the advantages of borrowing outweigh the disadvantages?\\n\\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\\n\\nWrite at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Joining a Beginner Cooking Class\",\"focus\":\"Giving a clear position with simple reasons and direct evidence\",\"prompt\":\"Some people believe that all university students should join a beginner cooking class to learn basic cooking skills. Others think students are too busy with their studies for this.\\n\\nDo you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.\\n\\nWrite at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Food and Cooking at Home\",\"focus\":\"Talking about familiar daily topics with simple explanations\",\"prompt\":\"Let's talk about food and cooking.\\nDo you like cooking at home or eating outside?\\nHow often do you cook?\\nWho taught you to cook?\\nWhat kind of food do you like to eat with friends?\"},{\"task\":\"Part 1 · Campus Life and Free Time\",\"focus\":\"Talking about familiar campus activities and free time\",\"prompt\":\"Let's talk about your campus and free time.\\nWhat do you do in your free time on campus?\\nDo you enjoy outdoor events like picnics?\\nHow often do you do sports or other activities with other students?\"},{\"task\":\"Part 2 · Cue card · A Campus Welcome Picnic\",\"focus\":\"Describing a past campus event with details, actions and feelings\",\"prompt\":\"Describe a welcome picnic or outdoor event you went to on your campus.\\nYou should say:\\n• when and where the event was\\n• who you went there with\\n• what food and activities there were\\n• and explain why you liked or did not like this event.\\n\\nYou will have one minute to prepare and you should speak for one to two minutes.\"},{\"task\":\"Part 3 · Community Events and Practical Skills\",\"focus\":\"Evaluating reasons and value of campus events and practical classes\",\"prompt\":\"Let's discuss community events and learning new skills.\\nWhy do universities organise welcome events for new students?\\nAre large campus events a good way to make new friends? Why or why not?\\nDo you think practical classes like beginner cooking are as important as academic classes? Why?\"},{\"task\":\"Part 3 · Borrowing and Sharing at University\",\"focus\":\"Discussing reasons for borrowing and evaluating university support\",\"prompt\":\"Let's talk about borrowing and sharing things at university.\\nWhy do some students prefer to borrow sports equipment instead of buying it?\\nWhat are the advantages and disadvantages of sharing university facilities?\\nShould universities provide more free services for students? Why or why not?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Campus Welcome Picnic Attendance",
+        "focus": "Summarising a table with trends and comparisons",
+        "prompt": "The table below shows the number of students who attended the campus welcome picnic in 2022, 2023 and 2024, by year group.\n\nYear group | 2022 | 2023 | 2024\nFirst-year students | 85 | 110 | 130\nSecond-year students | 60 | 65 | 70\nThird-year students | 40 | 45 | 50\nTotal | 185 | 220 | 250\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Borrowing Sports Kits by Month",
+        "focus": "Describing changes over time from monthly borrowing data",
+        "prompt": "The bar chart below shows the number of times students borrowed sports kits from the campus sports centre from January to May 2024.\n\nMonth | Number of borrowings\nJanuary | 32\nFebruary | 48\nMarch | 54\nApril | 42\nMay | 68\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Welcome Events for New Students",
+        "focus": "Discussing two views and giving a clear opinion with examples",
+        "prompt": "Some people think universities should organise a welcome picnic for new students at the start of each year. Others think it is not necessary and students can meet each other in other ways.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Borrowing or Buying Sports Equipment",
+        "focus": "Explaining reasons and evaluating advantages and disadvantages",
+        "prompt": "Many universities allow students to borrow sports kits for free instead of buying their own. Some students prefer to borrow, while others prefer to buy.\n\nWhy do students borrow sports kits? Do the advantages of borrowing outweigh the disadvantages?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Joining a Beginner Cooking Class",
+        "focus": "Giving a clear position with simple reasons and direct evidence",
+        "prompt": "Some people believe that all university students should join a beginner cooking class to learn basic cooking skills. Others think students are too busy with their studies for this.\n\nDo you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Food and Cooking at Home",
+        "focus": "Talking about familiar daily topics with simple explanations",
+        "prompt": "Let's talk about food and cooking.\nDo you like cooking at home or eating outside?\nHow often do you cook?\nWho taught you to cook?\nWhat kind of food do you like to eat with friends?"
+      },
+      {
+        "task": "Part 1 · Campus Life and Free Time",
+        "focus": "Talking about familiar campus activities and free time",
+        "prompt": "Let's talk about your campus and free time.\nWhat do you do in your free time on campus?\nDo you enjoy outdoor events like picnics?\nHow often do you do sports or other activities with other students?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Campus Welcome Picnic",
+        "focus": "Describing a past campus event with details, actions and feelings",
+        "prompt": "Describe a welcome picnic or outdoor event you went to on your campus.\nYou should say:\n• when and where the event was\n• who you went there with\n• what food and activities there were\n• and explain why you liked or did not like this event.\n\nYou will have one minute to prepare and you should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Community Events and Practical Skills",
+        "focus": "Evaluating reasons and value of campus events and practical classes",
+        "prompt": "Let's discuss community events and learning new skills.\nWhy do universities organise welcome events for new students?\nAre large campus events a good way to make new friends? Why or why not?\nDo you think practical classes like beginner cooking are as important as academic classes? Why?"
+      },
+      {
+        "task": "Part 3 · Borrowing and Sharing at University",
+        "focus": "Discussing reasons for borrowing and evaluating university support",
+        "prompt": "Let's talk about borrowing and sharing things at university.\nWhy do some students prefer to borrow sports equipment instead of buying it?\nWhat are the advantages and disadvantages of sharing university facilities?\nShould universities provide more free services for students? Why or why not?"
+      }
+    ]
+  }
+}

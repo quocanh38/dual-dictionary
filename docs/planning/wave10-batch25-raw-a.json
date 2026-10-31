@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 25,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after credit account, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese explanations, usage patterns, bilingual examples and learner notes; no source dictionary definitions/examples copied. Acronyms, legal/geographic labels, register and sense distinctions are made explicit.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2360,
+    "remainingRawOnlyAfter": 2340
+  },
+  "selected": [
+    "credit card",
+    "credit line",
+    "cross head",
+    "cross over",
+    "cs gas",
+    "cut away",
+    "cut back",
+    "cut in",
+    "cut off",
+    "cut out",
+    "cut up",
+    "date line",
+    "dead end",
+    "dead letter",
+    "deep south",
+    "department store",
+    "die back",
+    "double cross",
+    "double quick",
+    "double time"
+  ]
+}

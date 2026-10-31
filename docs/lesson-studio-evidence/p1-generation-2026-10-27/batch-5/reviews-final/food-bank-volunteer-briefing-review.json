@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "4e5a5f0179ac36ee78a1e077e9396eba51f3385c1bc58ca82e8eb2522126ced4",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna + gpt-6.1-sol; Codex editorial consolidation",
+  "reviewedAt": "2026-10-27T07:33:12.821Z",
+  "note": "Full-pack cross-model review at this exact stableJSON pack hash: Luna first/re-review and Sol final. Every source, meaning EN/VI, exercise option, explanation, answer key, transfer and self-check was reviewed. Rights rely on author-supplied provenance; AI-assisted editorial review only, not independent human or learner review, independent rights verification, or evidence of learning efficacy.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Original AI-assisted source and distribution rights are declared in provenance; no learner PII or copied exam text appears. Rights not independently verified beyond the declaration."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“set aside” occurs verbatim in s1 with “time” and the briefing purpose."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“reserve time for a specific activity or purpose” matches s1."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“dành ra (thời gian cho một việc gì đó)” is natural, accented Vietnamese for this sense."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“look after” occurs in s2 with chilled items as its object."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Taking care of something and keeping it in good condition fits the chilled goods context."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“trông nom, bảo quản” is natural, accented and contextually apt."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Only a means reserving time; b means cancelling and c postponing. The prompt quotes s1 exactly."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All options and the summary distinguish reserving time from cancelling or postponing."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is natural; a “for pay” and c “to saving” contain objective form errors."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a identifies the gerund after “for”; c identifies the infinitive after “to”; b correctly describes object + for + noun phrase."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Only b means taking care; a is merely looking and c is moving items, not the phrase meaning."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations distinguish caring from glancing or moving without claiming care can never involve moving."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is correct; a needs “looks” for a singular subject and c adds an unnecessary “to” after “after”."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each explanation identifies the specific agreement or preposition issue and gives the correct form."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The learner moves from food-bank volunteers to asking a neighbour to care for plants during travel, changing role and purpose."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The three-sentence model uses “look after” naturally and explains watering; checklist is usable and states no automatic grade."
+    }
+  ],
+  "findings": []
+}

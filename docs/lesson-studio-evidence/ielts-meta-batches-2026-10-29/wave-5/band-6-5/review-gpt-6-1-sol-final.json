@@ -1,0 +1,71 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "c5be88754dc7fc822c49f02403cc7530f01e3cff7374cb258b5b44986cf912f3",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": {
+    "listening": "Full shade-intervention discussion read: Northwood3 sails versus Eastfield12trees/pergola, surface8°C, usage68/45%, rain and teacher-direction confounds, parent80/62% with Eastfield35% response, Wednesday correction. Five keys [2,0,3,1,2] all explicit and unique; every option/explanation checked after reordering; low-response key index1 now correct.",
+    "reading": "Full stream-restoration passage read:800m restored/600m comparison, monthly versus quarterly permissions, both-site August/September logger gaps, families14to17≈21%,1.2°C cooling and cooler-weather caveat,40% temporary flood effect as example, qualified improvement claim and monitoring recommendations. Five keys [0,1,2,3,0] uniquely supported; all options and explanations checked after reordering.",
+    "writing": "All five prompts read.2024 shade table contains six complete options across three schools with USD initial costs, years to full shade, annual USD maintenance, plus no-action baseline. Portal table provides nine thousand-download observations for2021–23, January2022 launch and fixed40dataset scope. All three Task2 topics allow qualified trade-off arguments without external evidence requirements.150/250-word and20/40-minute instructions/fields complete.",
+    "speaking": "All five prompts read: two personal Part1 outdoor/public-information sets, transport experience cue card with concrete bullets/preparation/duration, and two Part3 public-data/funding/measurement sets. Advanced qualifying language fits intended practice progression.",
+    "resolvedInitialIssues": [
+      "Listening04 key changed from unsupported index3 to explicit low-response answer index1; explanation matches reordered options.",
+      "Listening positions now [2,0,3,1,2], Reading [0,1,2,3,0], both cover all four indices.",
+      "Surface temperature now explicitly Celsius in script/key/explanation.",
+      "14to17 family increase corrected to approximately21% throughout relevant passage/distractor."
+    ],
+    "scope": "Full independent AI-assisted final rereview of candidate-final-v2.json: all20items (5Listening,5Reading,5Writing,5Speaking), complete shared contexts, all40options,10keys/10explanations and all productive prompts/metadata. Repeated contexts verified string-identical to shared contexts. Entire payload reviewed, not only repair deltas. No other final reviewer reports read; no provider calls or candidate edits.",
+    "structure": {
+      "itemCount": 20,
+      "wordCounts": {
+        "listening": 315,
+        "reading": 408
+      },
+      "wordCountConvention": "Whitespace-delimited, including speaker labels; matches payload wordCount.",
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          3,
+          1,
+          2
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "normalizationFindings": [],
+      "taskTiming": "Task1 minimumWords150/suggestedMinutes20; Task2 minimumWords250/suggestedMinutes40; timing sometimes in metadata rather than prompt prose."
+    },
+    "itemIds": [
+      "ielts-meta-wave-5-band-6-5-listening-01",
+      "ielts-meta-wave-5-band-6-5-listening-02",
+      "ielts-meta-wave-5-band-6-5-listening-03",
+      "ielts-meta-wave-5-band-6-5-listening-04",
+      "ielts-meta-wave-5-band-6-5-listening-05",
+      "ielts-meta-wave-5-band-6-5-reading-01",
+      "ielts-meta-wave-5-band-6-5-reading-02",
+      "ielts-meta-wave-5-band-6-5-reading-03",
+      "ielts-meta-wave-5-band-6-5-reading-04",
+      "ielts-meta-wave-5-band-6-5-reading-05",
+      "ielts-meta-wave-5-band-6-5-writing-01",
+      "ielts-meta-wave-5-band-6-5-writing-02",
+      "ielts-meta-wave-5-band-6-5-writing-03",
+      "ielts-meta-wave-5-band-6-5-writing-04",
+      "ielts-meta-wave-5-band-6-5-writing-05",
+      "ielts-meta-wave-5-band-6-5-speaking-01",
+      "ielts-meta-wave-5-band-6-5-speaking-02",
+      "ielts-meta-wave-5-band-6-5-speaking-03",
+      "ielts-meta-wave-5-band-6-5-speaking-04",
+      "ielts-meta-wave-5-band-6-5-speaking-05"
+    ],
+    "originalityAndClaims": "No recognisable copied official question or score guarantee found. Provenance identifies Baseten/meta-models/muse-spark-open-1026 and originalContent=true; no exhaustive external plagiarism audit or empirical verification of fictional study statistics performed. Stage labels indicate practice progression, not validated score attainment.",
+    "independence": "Same reviewer performed initial review. Prior own findings considered for closure, while full final content reread independently. Other reviewers final findings not read."
+  },
+  "reviewerType": "AI-assisted"
+}

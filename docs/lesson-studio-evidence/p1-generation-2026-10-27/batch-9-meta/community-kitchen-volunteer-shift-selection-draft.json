@@ -1,0 +1,69 @@
+{
+  "id": "draft-89a2a594-120e-4d83-8acc-03b6c9be7405",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "A Community Kitchen Closing Routine",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "Volunteers at River Street community kitchen share a simple closing routine. Two people take turns checking the refrigerator temperatures and noting the results on a daily sheet. Each volunteer is responsible for one part of the room: the preparation table, serving counter, or dish area. Before leaving, put sealed ingredients back in labelled storage and wipe work surfaces with the approved cleaner. If a label is missing, do not guess what is inside; place the container in the marked review tray and ask the shift lead. The lead checks the closing sheet at 7 p.m. and leaves a short message about anything that needs attention before the next team arrives. New volunteers can ask for a demonstration during handover.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "Volunteers at River Street community kitchen share a simple closing routine. Two people take turns checking the refrigerator temperatures and noting the results on a daily sheet. Each volunteer is responsible for one part of the room: the preparation table, serving counter, or dish area. Before leaving, put sealed ingredients back in labelled storage and wipe work surfaces with the approved cleaner. If a label is missing, do not guess what is inside; place the container in the marked review tray and ask the shift lead. The lead checks the closing sheet at 7 p.m. and leaves a short message about anything that needs attention before the next team arrives. New volunteers can ask for a demonstration during handover.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "Volunteers at River Street community kitchen share a simple closing routine."
+      },
+      {
+        "id": "s2",
+        "text": "Two people take turns checking the refrigerator temperatures and noting the results on a daily sheet."
+      },
+      {
+        "id": "s3",
+        "text": "Each volunteer is responsible for one part of the room: the preparation table, serving counter, or dish area."
+      },
+      {
+        "id": "s4",
+        "text": "Before leaving, put sealed ingredients back in labelled storage and wipe work surfaces with the approved cleaner."
+      },
+      {
+        "id": "s5",
+        "text": "If a label is missing, do not guess what is inside; place the container in the marked review tray and ask the shift lead."
+      },
+      {
+        "id": "s6",
+        "text": "The lead checks the closing sheet at 7 p.m."
+      },
+      {
+        "id": "s7",
+        "text": "and leaves a short message about anything that needs attention before the next team arrives."
+      },
+      {
+        "id": "s8",
+        "text": "New volunteers can ask for a demonstration during handover."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "take turns",
+      "meaningEn": "to do something alternately with another person, one after the other",
+      "meaningVi": "thay phiên nhau làm việc gì",
+      "sourceSentenceId": "s2"
+    },
+    {
+      "id": "t2",
+      "phrase": "is responsible for",
+      "meaningEn": "to have the duty to take care of a particular area or task",
+      "meaningVi": "chịu trách nhiệm về một khu vực hoặc công việc cụ thể",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

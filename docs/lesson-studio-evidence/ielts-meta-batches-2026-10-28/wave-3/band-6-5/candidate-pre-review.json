@@ -1,0 +1,336 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-3",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-28-wave-3-v1",
+      "writingSpeaking": "ielts-practice-2026-10-28-wave-3-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "part": "Part 3",
+      "script": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "wordCount": 380
+    },
+    "reading": {
+      "title": "Why Some City Trees Survive Longer",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "wordCount": 416
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-3-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "pathwayStage": "band-6-5",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "transcript": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "prompt": "Why did the students choose a kitchen and a bedroom for the test?",
+      "options": [
+        "To compare two different sensor brands in the same flat",
+        "To check whether Wi-Fi connection was stable in different rooms",
+        "To contrast brief cooking particle peaks with overnight carbon dioxide build-up",
+        "To measure outdoor pollution entering through windows"
+      ],
+      "answer": 2,
+      "explanation": "The script says cooking creates brief, very high particle peaks while bedrooms show overnight accumulation. Option 3 paraphrases this. The Wi-Fi distractor fails because Wi-Fi storage is mentioned only later for Model M, not as a reason for room choice."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "pathwayStage": "band-6-5",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "transcript": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "prompt": "Why did monitoring last three weeks instead of two?",
+      "options": [
+        "Occupancy in the first week was unusually low because a family was away",
+        "The reference instrument broke and had to be replaced",
+        "The students wanted to include April as well as March",
+        "Humidity levels were too stable to test Model K"
+      ],
+      "answer": 0,
+      "explanation": "Priya corrects the plan from two to three weeks because one family was away in week one. The instrument-break distractor fails because no breakdown is mentioned; only recalibration of Model L is discussed."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "pathwayStage": "band-6-5",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "transcript": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "prompt": "What limitation did they find with Model K?",
+      "options": [
+        "Its carbon dioxide readings drifted upward after day ten",
+        "It overestimated particle levels when humidity was high",
+        "It could not store data for more than 48 hours",
+        "It failed to detect carbon dioxide overnight"
+      ],
+      "answer": 1,
+      "explanation": "Priya states Model K overestimated particles after boiling water or showering when humidity was high. The CO2 drift distractor fails because that describes Model L, not Model K."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "pathwayStage": "band-6-5",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "transcript": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "prompt": "What did the daily averages show about Model L?",
+      "options": [
+        "It recorded cooking peaks more accurately than the reference instrument",
+        "It needed Wi-Fi to avoid losing data after 48 hours",
+        "It was the cheapest model but missed all pollution patterns",
+        "It matched the reference most closely for particles but smoothed short peaks"
+      ],
+      "answer": 3,
+      "explanation": "Sam says Model L matched the reference within about twelve percent on daily averages but none of the low-cost devices captured the full height of cooking spikes. The cheapest-model distractor fails because Model K was the cheapest."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "pathwayStage": "band-6-5",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "transcript": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "prompt": "What is their main conclusion about low-cost sensors?",
+      "options": [
+        "They should replace calibrated reference instruments in research",
+        "They are useful for showing pollution patterns but less reliable for exact peaks without correction",
+        "They are unsuitable for household use because of Wi-Fi limits",
+        "They measure short cooking peaks accurately if placed near the cooker"
+      ],
+      "answer": 1,
+      "explanation": "Priya concludes sensors show when pollution rises and falls but are less reliable for exact peaks unless humidity correction and calibration are done. The replace-reference distractor fails because they used the reference to check accuracy and noted peak errors."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Why Some City Trees Survive Longer",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "prompt": "How did the researchers define survival in the follow-up visit?",
+      "options": [
+        "Any living tree present at the planting location",
+        "Only the original planted individual still alive",
+        "Any tree taller than two metres regardless of species",
+        "Only trees with complete watering records"
+      ],
+      "answer": 1,
+      "explanation": "The passage states a tree counted only if the original individual was still alive, with replacements recorded separately. The any-living-tree distractor fails because replacements were explicitly excluded from survival."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Why Some City Trees Survive Longer",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "prompt": "What did the species comparison show after ten to fourteen years?",
+      "options": [
+        "London plane survived best, followed by honey locust, with red maple lowest",
+        "Honey locust survived best, followed by red maple, with London plane lowest",
+        "All three species had survival rates close to the 58% average",
+        "Red maple survived best in small pits but worst in large pits"
+      ],
+      "answer": 0,
+      "explanation": "The passage gives 71% for London plane, 62% for honey locust and 49% for red maple. The honey-locust-best distractor reverses the order and is contradicted by those figures."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Why Some City Trees Survive Longer",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "prompt": "What does the Northside and Southside comparison suggest?",
+      "options": [
+        "Sandy soil always produces lower survival than clay-rich soil",
+        "Organised watering and pruning checks can partly offset poorer soil",
+        "Soil type has no effect on tree survival in any city",
+        "Southside had higher survival because it had no aftercare programme"
+      ],
+      "answer": 3,
+      "explanation": "Northside had poorer clay soil but higher survival at 64% versus 52%, linked to volunteer watering and pruning. The authors qualify this as partly offsetting soil, not proving soil unimportant. The no-effect distractor fails because the claim is qualified, not absolute."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Why Some City Trees Survive Longer",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "prompt": "What can reasonably be inferred about the reported 58% survival rate?",
+      "options": [
+        "It is exact because every planting location was visited",
+        "It must be higher in hotter climates",
+        "It may slightly overstate true survival because some replacements were unrecorded",
+        "It understates survival because empty pits were counted as survivors"
+      ],
+      "answer": 2,
+      "explanation": "The passage notes some dead trees were replaced without record updates, so the rate may slightly overestimate true survival. This limited inference follows directly. The exact-rate distractor fails because the authors explicitly warn about incomplete records."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Why Some City Trees Survive Longer",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "prompt": "How do the authors treat the honey locust on Carter Lane?",
+      "options": [
+        "As an unusual single case that does not overturn the general benefit of larger pits",
+        "As proof that small pits are generally better than large pits",
+        "As evidence that pit size has no link to survival",
+        "As the main basis for recommending honey locust everywhere"
+      ],
+      "answer": 0,
+      "explanation": "The passage presents the 1.5 square metre pit survivor as an unusual example, not evidence against the pattern that larger pits support higher survival. The small-pits-better distractor fails because it mistakes an exception for the authors' general claim."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-3-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Coastal Restoration Grant Outcomes",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing quantified outcomes across schemes and noting data limitations",
+      "prompt": "Three coastal restoration grants were awarded in the Meridian Bay region in 2022. The table below shows their targets and measured results after 18 months. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Note any important limitations or uncertainties in the data. Write at least 150 words. You should spend about 20 minutes on this task.\n\nMeridian Bay Restoration Grants - Awarded March 2022, reviewed September 2023:\n1. North Cove Saltmarsh Replanting - Grant: 85000 dollars - Target area: 12.0 hectares - Area actually planted: 10.5 hectares - Seedling survival at 18 months: 62% - Estimated local temporary jobs: 14 - Water quality note: monitoring incomplete for 3 of 9 months due to sensor failure.\n2. South Spit Dune Stabilisation - Grant: 62000 dollars - Target area: 8.0 hectares - Area actually planted/fenced: 8.2 hectares - Native grass survival at 18 months: 78% - Estimated local temporary jobs: 9 - Visitor footpath erosion reduced by an estimated 34%, based on two survey points.\n3. East Inlet Mangrove Trial - Grant: 110000 dollars - Target area: 6.0 hectares - Area actually planted: 5.1 hectares - Seedling survival at 18 months: 48% - Estimated local temporary jobs: 18 - Trial affected by an unusually severe storm in January 2023; replanting of 1.2 hectares was still in progress at review date.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · City Congestion-Charge Trial Monitoring Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing change over time and comparing a trial zone with a comparison area",
+      "prompt": "The city of Aldwick ran a six-month trial congestion charge for private cars entering the central zone on weekdays 7am-7pm, from January to June 2024. The table below compares the central zone with the non-charged Riverside comparison area. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Comment on what the data can and cannot show about the effects of the charge. Write at least 150 words. You should spend about 20 minutes on this task.\n\nBaseline (July-Dec 2023 average) and Trial period (Jan-Jun 2024 average):\nCentral Zone - Private car entries per weekday: 42500 baseline, 34800 trial - Average peak-hour bus journey time through centre: 28 minutes baseline, 24 minutes trial - Weekday public transport trips by residents: 61200 baseline, 68400 trial - Nitrogen dioxide monthly average: 38 micrograms per cubic metre baseline, 33 trial.\nRiverside Comparison Area (no charge) - Private car entries per weekday: 18900 baseline, 18400 trial - Average peak-hour bus journey time: 22 minutes baseline, 22 minutes trial - Weekday public transport trips by residents: 27400 baseline, 28100 trial - Nitrogen dioxide monthly average: 29 micrograms per cubic metre baseline, 28 trial.\nTrial charge: 4.50 dollars per day. Exemptions applied for emergency vehicles, adapted vehicles for disabled drivers, and residents with low income permits (about 8% of entries). Revenue data are not included here.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Funding Coastal Restoration",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating ecological versus economic criteria for grants with qualified arguments",
+      "prompt": "Some people argue that public grants for coastal restoration should only be given to projects that can demonstrate clear economic benefits within five years, such as increased tourism or fisheries income. Others argue that ecological value alone, such as protecting habitats and biodiversity, should be sufficient to justify funding, even when economic returns are uncertain or long term. Discuss both views and give your own opinion. Support your position with reasons and relevant examples. Acknowledge the limitations of the evidence where appropriate. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Information for Research Participants",
+      "pathwayStage": "band-6-5",
+      "focus": "Balancing thorough informed consent with practical constraints on research",
+      "prompt": "Universities increasingly invite students and local residents to take part in academic research studies. Some people believe researchers should always provide full, detailed information about methods, possible risks, and how data will be stored before participants agree, even if this makes studies slower, more expensive, and harder to complete. Others believe a shorter summary should be sufficient when risks appear low. To what extent do you agree that full detailed disclosure should always be required? Give reasons for your answer and include any relevant examples from study or community life. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · City Congestion-Charge Proposal",
+      "pathwayStage": "band-6-5",
+      "focus": "Weighing advantages and disadvantages of a charging policy with attention to fairness and evidence",
+      "prompt": "The council in a large city has proposed introducing a daily congestion charge for private cars entering the city centre during peak hours. The income would be used to improve bus and tram services and to support discounted travel for low-income workers. Supporters say this will reduce traffic, improve air quality, and make public transport more reliable. Critics say it will unfairly affect shift workers, small businesses, and people with limited transport options. Do the advantages of this proposal outweigh the disadvantages? Discuss with reasons, compare the likely effects on different groups, and note where evidence is incomplete or uncertain. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-3-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Travel and Local Environment",
+      "pathwayStage": "band-6-5",
+      "focus": "Giving extended personal responses with comparison and qualification",
+      "prompt": "Answer the following questions in 2-3 sentences each, giving reasons where possible. 1. How do you usually travel to work or study, and how reliable is that method? 2. Has traffic in your area changed in recent years? 3. Is there a coastal or riverside area near where you live? What is it like? 4. Do you prefer to spend free time in busy city centres or in quieter natural places? Why? 5. How important is clean air in the place where you live? 6. Would you be willing to change your travel habits to reduce congestion? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Study, Information and Decisions",
+      "pathwayStage": "band-6-5",
+      "focus": "Explaining habits and preferences with reasons and examples",
+      "prompt": "Answer the following questions in 2-3 sentences each. 1. Do you usually read information carefully before agreeing to join an activity or study? Why? 2. Where do you normally look for reliable information about health or environmental issues? 3. Have you ever taken part in a survey, volunteer project, or university study? What happened? 4. Do you find it easy to understand forms that explain risks and privacy? What helps you? 5. When you need to make an important decision, do you prefer detailed data or a short summary? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: Coastal Restoration Project",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing a project coherently while comparing expectations and results",
+      "prompt": "Describe a coastal or natural restoration project you have heard about, read about, or visited. You should say: • where the project is and what problem it aimed to address • what actions were taken and who was involved • what results were reported or observed • and explain why you think the project was or was not successful, noting any limitations in what is known. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: Traffic Reduction Idea",
+      "pathwayStage": "band-6-5",
+      "focus": "Presenting a proposal with possible effects on different people",
+      "prompt": "Describe a proposal or change intended to reduce traffic or pollution in a city you know. You should say: • what the proposal is and where it would apply • how it would work in practice • who would benefit most and who might face difficulties • and explain whether you would support it and why. You have one minute to prepare and should speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Environmental Funding and Transport Policy",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing evidence, qualifying claims, and evaluating fairness and limitations",
+      "prompt": "Discuss the following questions, giving reasons and evaluating different viewpoints. 1. How should governments decide which coastal restoration projects deserve limited grant funding? What kinds of evidence are most convincing, and why? 2. What are the limitations of using short-term measurements, such as 18-month survival rates, to judge environmental success? 3. When researchers ask the public to join studies, how much information is enough for a fair decision? How should this balance change if risks are higher? 4. Are charges for driving into city centres a fair way to reduce congestion? How might the effects differ for low-income workers, small businesses, and residents with limited public transport? 5. How can cities tell whether a transport policy has worked, rather than reflecting other changes? What additional information would you want before supporting a permanent scheme?"
+    }
+  ]
+}

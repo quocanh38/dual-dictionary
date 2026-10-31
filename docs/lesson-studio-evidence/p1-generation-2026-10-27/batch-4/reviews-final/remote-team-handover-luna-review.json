@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "8805675db8ab2f162def24bc3c891f25d97c8393eed3b1887874ff1f91e12af7",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T06:42:49Z",
+  "note": "Independent review of the exact candidate payload and its source links, target meanings, MCQ keys/explanations and transfer task. AI-assisted editorial judgment; no external rights audit, human review or learner testing.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Pack attributes an original AI-assisted reading to the project, states no copied exam text/external source/learner data, and the inspected payload contains no learner PII; rights are based on this declaration, not external provenance verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact phrase occurs in s1; the lead transfers the client schedule to a colleague before leave."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss correctly expresses transferring work responsibility to another person."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“bàn giao công việc cho người khác” is natural and accurate with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Exact phrase occurs in s3; requests are monitored and recorded in a shared log."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately captures ongoing monitoring and recording over time."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“theo dõi và ghi chép” is accurate Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b alone transfers responsibility; a keeps it with the lead and c postpones it."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All explanations distinguish transfer from retention or delay."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is correct; b uses with instead of to for the recipient, and c inflects the verb after modal will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Object/recipient pattern and modal base-form explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a alone describes monitoring and recording over time; b/c omit or contradict tracking."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations accurately contrast tracking with unrecorded completion or ignoring."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "fail",
+      "evidence": "Declared answer b is ungrammatical: “They keeps” conflicts with plural they. Option c, “They keep track of…”, is grammatical and is the sole correct answer; therefore the key is wrong."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "Option b is incorrectly labelled correct despite subject–verb disagreement; option a explanation mentions “on” but overlooks its additional “They keeps” error. Option c is incorrectly labelled wrong."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Passing team duties to a successor is meaningfully different from covering a colleague’s client work during annual leave."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence model uses hand over naturally; checks address length, meaning and new context; writing is self-assessed."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "message": "lesson-1/q4 answer key is wrong: option b “They keeps track of new requests…” is ungrammatical; option c “They keep track of new requests…” is the sole grammatical option. Option a also has subject–verb disagreement beyond the preposition error noted in its explanation.",
+      "resolved": false
+    }
+  ]
+}

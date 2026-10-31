@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "fill in the online form",
+        "meaningEn": "to complete a form by writing the required information",
+        "meaningVi": "điền vào biểu mẫu trực tuyến",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "waiting list",
+        "meaningEn": "a list of people waiting to be offered a place if one becomes available",
+        "meaningVi": "danh sách chờ",
+        "sourceSentenceId": "s5"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 529,
+    "outputTokens": 1272,
+    "totalTokens": 1801
+  },
+  "status": 200,
+  "latencyMs": 8838,
+  "model": "muse-spark-1.3"
+}

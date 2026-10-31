@@ -1,0 +1,368 @@
+{
+  "date": "2026-10-27T07:08:09.282Z",
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "promptVersion": "TUTOR_FEEDBACK_INSTRUCTIONS current local source",
+  "correctedRequestShape": {
+    "max_tokens": 2000,
+    "reasoning_effort": "medium",
+    "matches": "Muse Spark request settings in Lesson Studio; Tutor adapter now also uses these bounded settings"
+  },
+  "priorRuns": [
+    "meta-live-run.json: natural-use failed; harness used max_tokens=900 without Muse Spark reasoning_effort",
+    "meta-live-run-continuation.json: five distinct cases failed; harness used max_tokens=500 without Muse Spark reasoning_effort"
+  ],
+  "requestBound": {
+    "maxCalls": 6,
+    "maxTokensPerCall": 2000,
+    "perCallEstimateLimitUsd": 0.02,
+    "totalEstimateLimitUsd": 0.12,
+    "automaticRetries": 0
+  },
+  "denominators": {
+    "authoredCases": 6,
+    "casesAttempted": 6,
+    "providerCalls": 6,
+    "questions": 6,
+    "successfulResponses": 5,
+    "verdictScored": 5,
+    "verdictMatched": 4,
+    "quoteScored": 5,
+    "quoteValid": 5,
+    "explanationQualityScored": 0,
+    "latencySamples": 6,
+    "errorTypes": [
+      "invalid-format"
+    ]
+  },
+  "estimatedUsd": 0.044653750000000006,
+  "billingConfirmed": false,
+  "note": "Deliberate rerun of the six authored synthetic cases after the earlier harness request-shape mismatch; all earlier responses remain in separate reports and are excluded from quality denominators. No learner data or repository source sent. Billing estimate uses returned token counts and published standard rates; it is not a confirmed charge. Explanation quality/relevance remain unscored unless explicitly reviewed.",
+  "stopReason": null,
+  "cases": [
+    {
+      "caseId": "natural-use",
+      "status": "success",
+      "elapsedMs": 8571,
+      "usage": {
+        "inputTokens": 403,
+        "outputTokens": 1434,
+        "totalTokens": 1837
+      },
+      "estimatedUsd": 0.00659825,
+      "providerResponseKeys": [
+        "id",
+        "choices",
+        "created",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choiceKeys": [
+        "finish_reason",
+        "index",
+        "message",
+        "logprobs"
+      ],
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "Careful practice helped me notice small mistakes, and I now review a little every day."
+      },
+      "expectedVerdicts": [
+        "correct"
+      ],
+      "quoteRequired": false,
+      "rawOutput": "{\"verdict\":\"correct\",\"quote\":\"Careful practice helped me notice small mistakes\",\"issue\":\"\",\"suggestion\":\"\",\"explanation_vi\":\"Bạn dùng cụm “careful practice” rất tự nhiên và kể rõ cách bạn đã cải thiện tiếng Anh. Làm tốt lắm!\",\"retry_prompt\":\"\"}",
+      "rawFeedback": {
+        "verdict": "correct",
+        "quote": "Careful practice helped me notice small mistakes",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Bạn dùng cụm “careful practice” rất tự nhiên và kể rõ cách bạn đã cải thiện tiếng Anh. Làm tốt lắm!",
+        "retry_prompt": ""
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "correct",
+        "correct": true,
+        "quote": "Careful practice helped me notice small mistakes",
+        "issue": "",
+        "suggestion": "",
+        "explanation_vi": "Bạn dùng cụm “careful practice” rất tự nhiên và kể rõ cách bạn đã cải thiện tiếng Anh. Làm tốt lắm!",
+        "retry_prompt": ""
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "incorrect-use",
+      "status": "success",
+      "elapsedMs": 8062,
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 1496,
+        "totalTokens": 1893
+      },
+      "estimatedUsd": 0.00685425,
+      "providerResponseKeys": [
+        "id",
+        "choices",
+        "created",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choiceKeys": [
+        "finish_reason",
+        "index",
+        "message",
+        "logprobs"
+      ],
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I careful practice every evening and it make me improve fast."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawOutput": "{\"verdict\":\"incorrect\",\"quote\":\"I careful practice every evening\",\"issue\":\"\\\"careful practice\\\" is a noun phrase, but here it is used as if it were a verb phrase with no main verb.\",\"suggestion\":\"I improved my English with careful practice every evening.\",\"explanation_vi\":\"\\\"careful practice\\\" là cụm danh từ (sự luyện tập cẩn thận), không thể dùng trực tiếp sau chủ ngữ \\\"I\\\" như động từ. Em cần thêm động từ/giới từ để dùng nó như danh từ, ví dụ \\\"with careful practice\\\".\",\"retry_prompt\":\"Hãy viết lại câu của bạn, vẫn kể cách bạn đã cải thiện tiếng Anh và dùng 'careful practice' như một cụm danh từ.\"}",
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "I careful practice every evening",
+        "issue": "\"careful practice\" is a noun phrase, but here it is used as if it were a verb phrase with no main verb.",
+        "suggestion": "I improved my English with careful practice every evening.",
+        "explanation_vi": "\"careful practice\" là cụm danh từ (sự luyện tập cẩn thận), không thể dùng trực tiếp sau chủ ngữ \"I\" như động từ. Em cần thêm động từ/giới từ để dùng nó như danh từ, ví dụ \"with careful practice\".",
+        "retry_prompt": "Hãy viết lại câu của bạn, vẫn kể cách bạn đã cải thiện tiếng Anh và dùng 'careful practice' như một cụm danh từ."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "I careful practice every evening",
+        "issue": "\"careful practice\" is a noun phrase, but here it is used as if it were a verb phrase with no main verb.",
+        "suggestion": "I improved my English with careful practice every evening.",
+        "explanation_vi": "\"careful practice\" là cụm danh từ (sự luyện tập cẩn thận), không thể dùng trực tiếp sau chủ ngữ \"I\" như động từ. Em cần thêm động từ/giới từ để dùng nó như danh từ, ví dụ \"with careful practice\".",
+        "retry_prompt": "Hãy viết lại câu của bạn, vẫn kể cách bạn đã cải thiện tiếng Anh và dùng 'careful practice' như một cụm danh từ."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "off-topic",
+      "status": "success",
+      "elapsedMs": 7076,
+      "usage": {
+        "inputTokens": 399,
+        "outputTokens": 1406,
+        "totalTokens": 1805
+      },
+      "estimatedUsd": 0.00647425,
+      "providerResponseKeys": [
+        "id",
+        "choices",
+        "created",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choiceKeys": [
+        "finish_reason",
+        "index",
+        "message",
+        "logprobs"
+      ],
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "My bus leaves at seven, and the weather was sunny this morning."
+      },
+      "expectedVerdicts": [
+        "incorrect",
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawOutput": "{\"verdict\":\"incorrect\",\"quote\":\"My bus leaves at seven, and the weather was sunny this morning.\",\"issue\":\"The answer does not use the phrase 'careful practice' and does not tell how you improved your English.\",\"suggestion\":\"I improved my English through careful practice with short stories every night.\",\"explanation_vi\":\"Câu của bạn không có cụm 'careful practice' và không kể cách bạn đã cải thiện tiếng Anh.\",\"retry_prompt\":\"Please try again and tell me how you improved your English using 'careful practice'.\"}",
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "My bus leaves at seven, and the weather was sunny this morning.",
+        "issue": "The answer does not use the phrase 'careful practice' and does not tell how you improved your English.",
+        "suggestion": "I improved my English through careful practice with short stories every night.",
+        "explanation_vi": "Câu của bạn không có cụm 'careful practice' và không kể cách bạn đã cải thiện tiếng Anh.",
+        "retry_prompt": "Please try again and tell me how you improved your English using 'careful practice'."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "My bus leaves at seven, and the weather was sunny this morning.",
+        "issue": "The answer does not use the phrase 'careful practice' and does not tell how you improved your English.",
+        "suggestion": "I improved my English through careful practice with short stories every night.",
+        "explanation_vi": "Câu của bạn không có cụm 'careful practice' và không kể cách bạn đã cải thiện tiếng Anh.",
+        "retry_prompt": "Please try again and tell me how you improved your English using 'careful practice'."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "missing-required-phrase",
+      "status": "success",
+      "elapsedMs": 10486,
+      "usage": {
+        "inputTokens": 399,
+        "outputTokens": 1628,
+        "totalTokens": 2027
+      },
+      "estimatedUsd": 0.00741775,
+      "providerResponseKeys": [
+        "id",
+        "choices",
+        "created",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choiceKeys": [
+        "finish_reason",
+        "index",
+        "message",
+        "logprobs"
+      ],
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I did that more often after class, and it seemed to help."
+      },
+      "expectedVerdicts": [
+        "incorrect"
+      ],
+      "quoteRequired": true,
+      "rawOutput": "{\"verdict\":\"incorrect\",\"quote\":\"I did that more often after class\",\"issue\":\"The answer does not include the required phrase \\\"careful practice\\\".\",\"suggestion\":\"I improved my English through careful practice after class, reviewing new words every day.\",\"explanation_vi\":\"Câu của bạn chưa chứa cụm từ yêu cầu \\\"careful practice\\\". Câu gợi ý kể cách bạn cải thiện tiếng Anh và dùng cụm này một cách tự nhiên.\",\"retry_prompt\":\"Please try again and tell me how you improved your English using the phrase 'careful practice'.\"}",
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "I did that more often after class",
+        "issue": "The answer does not include the required phrase \"careful practice\".",
+        "suggestion": "I improved my English through careful practice after class, reviewing new words every day.",
+        "explanation_vi": "Câu của bạn chưa chứa cụm từ yêu cầu \"careful practice\". Câu gợi ý kể cách bạn cải thiện tiếng Anh và dùng cụm này một cách tự nhiên.",
+        "retry_prompt": "Please try again and tell me how you improved your English using the phrase 'careful practice'."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "I did that more often after class",
+        "issue": "The answer does not include the required phrase \"careful practice\".",
+        "suggestion": "I improved my English through careful practice after class, reviewing new words every day.",
+        "explanation_vi": "Câu của bạn chưa chứa cụm từ yêu cầu \"careful practice\". Câu gợi ý kể cách bạn cải thiện tiếng Anh và dùng cụm này một cách tự nhiên.",
+        "retry_prompt": "Please try again and tell me how you improved your English using the phrase 'careful practice'."
+      },
+      "expectedVerdictPass": true,
+      "quoteExact": true,
+      "quoteValid": true
+    },
+    {
+      "caseId": "missing-quote",
+      "status": "error",
+      "elapsedMs": 15002,
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 2000,
+        "totalTokens": 2397
+      },
+      "estimatedUsd": 0.00899625,
+      "providerResponseKeys": [
+        "id",
+        "choices",
+        "created",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choiceKeys": [
+        "finish_reason",
+        "index",
+        "message",
+        "logprobs"
+      ],
+      "payload": {
+        "phrase": "careful practice",
+        "sourceSentence": "Teachers can encourage careful practice by asking students to explain their choices.",
+        "prompt": "Tell a friend how you improved your English. Use the phrase “careful practice” naturally.",
+        "answer": "I careful practice every evening and it make me improve fast."
+      },
+      "expectedVerdicts": [
+        "uncertain"
+      ],
+      "quoteRequired": true,
+      "rawOutput": null,
+      "error": "The provider returned invalid feedback. Please retry.",
+      "errorCategory": "invalid-format"
+    },
+    {
+      "caseId": "ambiguous-reference",
+      "status": "success",
+      "elapsedMs": 10137,
+      "usage": {
+        "inputTokens": 391,
+        "outputTokens": 1841,
+        "totalTokens": 2232
+      },
+      "estimatedUsd": 0.008313,
+      "providerResponseKeys": [
+        "id",
+        "choices",
+        "created",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choiceKeys": [
+        "finish_reason",
+        "index",
+        "message",
+        "logprobs"
+      ],
+      "payload": {
+        "phrase": "keep track of",
+        "sourceSentence": "I keep track of project tasks in a shared checklist.",
+        "prompt": "Tell your colleague which project item you monitor and how. Use “keep track of” naturally.",
+        "answer": "I keep track of it every day."
+      },
+      "expectedVerdicts": [
+        "uncertain"
+      ],
+      "quoteRequired": false,
+      "rawOutput": "{\"verdict\":\"incorrect\",\"quote\":\"it\",\"issue\":\"The pronoun 'it' does not name which project item you monitor as required by the prompt.\",\"suggestion\":\"I keep track of the delivery deadlines in our shared checklist every day.\",\"explanation_vi\":\"Bạn dùng 'keep track of' đúng và tự nhiên, nhưng chưa nêu rõ bạn theo dõi mục dự án nào. Hãy thay 'it' bằng tên cụ thể.\",\"retry_prompt\":\"Hãy viết lại câu này, nêu rõ tên mục dự án bạn theo dõi và cách bạn theo dõi nhé.\"}",
+      "rawFeedback": {
+        "verdict": "incorrect",
+        "quote": "it",
+        "issue": "The pronoun 'it' does not name which project item you monitor as required by the prompt.",
+        "suggestion": "I keep track of the delivery deadlines in our shared checklist every day.",
+        "explanation_vi": "Bạn dùng 'keep track of' đúng và tự nhiên, nhưng chưa nêu rõ bạn theo dõi mục dự án nào. Hãy thay 'it' bằng tên cụ thể.",
+        "retry_prompt": "Hãy viết lại câu này, nêu rõ tên mục dự án bạn theo dõi và cách bạn theo dõi nhé."
+      },
+      "feedback": {
+        "evidenceStatus": "quoted",
+        "verdict": "incorrect",
+        "correct": false,
+        "quote": "it",
+        "issue": "The pronoun 'it' does not name which project item you monitor as required by the prompt.",
+        "suggestion": "I keep track of the delivery deadlines in our shared checklist every day.",
+        "explanation_vi": "Bạn dùng 'keep track of' đúng và tự nhiên, nhưng chưa nêu rõ bạn theo dõi mục dự án nào. Hãy thay 'it' bằng tên cụ thể.",
+        "retry_prompt": "Hãy viết lại câu này, nêu rõ tên mục dự án bạn theo dõi và cách bạn theo dõi nhé."
+      },
+      "expectedVerdictPass": false,
+      "quoteExact": true,
+      "quoteValid": true
+    }
+  ]
+}

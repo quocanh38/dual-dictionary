@@ -1,0 +1,8 @@
+{
+  "stage": "band-7",
+  "segment": "prompts",
+  "findings": [
+    { "reviewer": "gpt-6-luna", "item": "speaking", "severity": "high", "issue": "There are four Speaking prompts instead of five, leaving this stage batch at 19 items and omitting the required second Part 1 prompt.", "recommendedRepair": "Add a distinct fifth Speaking prompt for Part 1." },
+    { "reviewer": "gpt-5.6-terra", "item": "speaking", "severity": "medium", "issue": "The Speaking segment contains four prompts rather than five. It has less Part 1 breadth than the other stages.", "recommendedRepair": "Add a second distinct Band 7 Part 1 prompt." }
+  ]
+}

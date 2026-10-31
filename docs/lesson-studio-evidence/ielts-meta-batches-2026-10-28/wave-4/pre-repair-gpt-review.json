@@ -1,0 +1,39 @@
+{
+  "reviewScope": "AI-assisted pre-repair content review of every complete normalized candidate, including every question, option, answer key, explanation, Writing prompt, and Speaking prompt. This is a single-model GPT review by the current Codex GPT runtime, not a cross-model or human review.",
+  "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+  "reviewedAt": "2026-10-28T08:30:33.462Z",
+  "stages": {
+    "band-5": {
+      "candidate": "candidate-pre-review.json",
+      "candidateSha256": "6ebf1dca28db9213cf6127a7f8e6cdf276aece930f2083264b07ae990c2cce06",
+      "rawResponseSha256": {
+        "objective-generate-response.json": "ccf05b08dec5ea9f5ef246c91b69f52824992a5c14047abf067851434c628c09",
+        "prompts-generate-response.json": "d4986ea27d512fc5e51067e4f9eb24865296cb18c1d652f6fac9dac561155022"
+      }
+    },
+    "band-6": {
+      "candidate": "candidate-pre-review.json",
+      "candidateSha256": "cf3120b173f586d45d78cc265917a11971714a2d9a3cf754db53dea381a8a3f4",
+      "rawResponseSha256": {
+        "objective-generate-3-response.json": "f84153d1bc127549d60c931b9f620833a8ef0d8e4e288fc603cb1e211122a006",
+        "prompts-generate-response.json": "4ca9e25d5faade805b7662cc807110033fbb14577b4314b094b30dc2ffd11d4b"
+      }
+    },
+    "band-6-5": {
+      "candidate": "candidate-pre-review.json",
+      "candidateSha256": "f9644c0f6aa0f62bbedf8c81a7f467daf9b57dc8f897dbee5fae3e4c17476887",
+      "rawResponseSha256": {
+        "objective-generate-response.json": "5d549f57f3535526fa85d1ee09f7f2861d766304e17048ede2079061b1dff7a8",
+        "prompts-generate-response.json": "b2cf2ca0c4dbd073b300bfab755b327b3bf6b88deab61928abfaead1af4613c7"
+      }
+    },
+    "band-7": {
+      "candidate": "candidate-pre-review.json",
+      "candidateSha256": "1dd99b53a84232cd1c8b28b1dfa36ff353146eb2ef7cb9a8e7832497c74c68e9",
+      "rawResponseSha256": {
+        "objective-generate-response.json": "306a43c10822da63a6ab25d165672ffcb0d2aa0f9f9beecb4f1da9d43283c6e3",
+        "prompts-generate-response.json": "8fa574e55a857a9e3b05aa79d66e11dc486c00479db5638df42bd13b0bd3a8f5"
+      }
+    }
+  }
+}

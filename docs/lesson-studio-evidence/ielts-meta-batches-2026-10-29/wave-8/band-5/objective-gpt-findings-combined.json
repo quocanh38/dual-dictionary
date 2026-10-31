@@ -1,0 +1,19 @@
+{
+  "findings": [
+    {
+      "issue": "The reading passage contains an ungrammatical and unclear sentence: “Many students live close to college and cycling saves money and time every day in town together.” The phrase “in town together” has no clear meaning and the clause is awkwardly joined. Revise for natural, accurate prose.",
+      "severity": "major",
+      "item": "sharedContexts.reading.passage (also repeated in reading exercise passages)"
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-02",
+      "severity": "critical",
+      "issue": "The explanation invents that teachers and volunteers attended. The passage says about forty students attended and teachers later asked for a similar staff session. Remove unsupported attendance claims."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-5-reading-04",
+      "severity": "uncertain",
+      "issue": "Finding a loose helmet during practice does not establish that Lisa previously thought it fitted correctly. She could already have known or been unsure. Add explicit prior belief to the passage or ask about the observed problem; the current keyed inference is insufficiently supported."
+    }
+  ]
+}

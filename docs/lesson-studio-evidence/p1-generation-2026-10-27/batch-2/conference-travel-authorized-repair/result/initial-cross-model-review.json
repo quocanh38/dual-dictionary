@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T07:49:51.483Z",
+  "scope": "Initial cross-model review of the unedited Meta candidate; retained as historical evidence only. It does not approve the edited hash.",
+  "packSha256": "1d547c08a2a9d986a26025ee6dba0e09dbbcb960e085a48d14bdf9f3017f98f0",
+  "reviews": [
+    {
+      "reviewer": "gpt-6-luna",
+      "result": "15/17 pass; q4 unique-answer and explanations failed as critical.",
+      "evidence": "Oxford Advanced Learner’s Dictionary notes that while evidence is normally uncountable in general English, evidences is sometimes used in academic English. Thus q4 option b could be valid and its absolute explanation was overgeneralized. q1 explanation adds some unsupported specifics."
+    },
+    {
+      "reviewer": "gpt-5.6-terra",
+      "result": "17/17 pass; no critical or uncertain findings; one minor q1 explanation wording note.",
+      "evidence": "Initially accepted q4 option b under the common uncountable rule, but did not address the Oxford academic-English exception. The disagreement was resolved by verifying the Oxford entry, which supports Luna’s finding."
+    }
+  ],
+  "editorialResolution": "Confirmed the academic-English exception using Oxford Advanced Learner’s Dictionary. Revised q4 distractors and explanations to test objective complement errors; also tightened q1 wording to avoid unsupported travel, registration, and support details. The raw Meta candidate is preserved unchanged; a new full review is required for the new hash.",
+  "reference": "https://www.oxfordlearnersdictionaries.com/us/definition/english/evidence_1"
+}

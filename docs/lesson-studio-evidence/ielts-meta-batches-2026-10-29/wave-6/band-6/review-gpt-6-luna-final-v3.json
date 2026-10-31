@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e706b7b3d2e549bab153e5e0f0e8a8580b6a2a061b14e75ec03c7398654bdf3a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading are 334/468 words, within range. The Reading method now explicitly records kitchen unserved food separately and adds it to the daily total, supporting the weekend-waste explanation and answer. All objective keys/explanations are evidence-based and answer positions balanced. Museum table values/rating units are complete. The age-group session table still does not clearly state the denominator for “completed task” percentages; retain these as stated percentages without claiming conditional completion rates. Writing minimums/timing and Speaking parts/cue cards are complete. Provenance is original; no score or official-item claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts and word limits, all 10 objective questions/options/keys/explanations, both Task 1 datasets and denominators/units, all five Writing prompts/timing and all five Speaking prompts including cue cards and part fit.",
+  "reviewerType": "AI-assisted"
+}

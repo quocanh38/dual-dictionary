@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 106,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after waste pipe in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover environmental and household terms, water infrastructure and sports, then prioritize frequent wear phrasal verbs. Distinguish technical meanings, regional usage, literal/figurative senses and commonly confused phrasal verbs.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 740,
+    "remainingRawOnlyAfter": 720
+  },
+  "selected": [
+    "waste product",
+    "water cannon",
+    "water jump",
+    "water level",
+    "water meter",
+    "water pipe",
+    "water polo",
+    "water power",
+    "water rat",
+    "water softener",
+    "water supply",
+    "water table",
+    "water wings",
+    "watering can",
+    "watering place",
+    "way station",
+    "ways and means committee",
+    "wear away",
+    "wear down",
+    "wear off"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

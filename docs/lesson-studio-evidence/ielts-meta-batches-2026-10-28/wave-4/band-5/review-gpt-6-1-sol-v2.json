@@ -1,0 +1,38 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "da1f0cd65cbac0157a01020d19a31f994c53e3fd8694c23e7c22cf1ee7b76073",
+  "verdict": "pass",
+  "findings": [],
+  "coverage": {
+    "scope": "Full AI-assisted final review of 20 items: 5 Listening, 5 Reading, 5 Writing and 5 Speaking. Entire shared script and passage read; all 40 options, zero-based keys and 10 explanations evaluated. All repeated item contexts verified byte-for-string identical to shared context. No other reviewer outputs inspected; no candidates edited.",
+    "listening": "birthday purpose; corrected 2–4 time; £20 deposit rather than total; sports shoes rule; main-desk/email key collection",
+    "reading": "initial dirty kitchen; six people/five rotating jobs; clear-rules claim and Mia example; Sunday completion; cleaner kitchen and social cooking",
+    "writing": "Volunteer table five complete counts (18,34,26,14,22), sign-up date 12 March and April work; equipment eight borrowing frequencies for March/April; three Task2 prompts answerable and appropriately concrete; Task1 minimum150 words/20 minutes and Task2 minimum250 words/40 minutes verified.",
+    "speaking": "two Part1 sets, two personal-event cue cards with one-minute preparation and 1–2-minute talk, and one reasoned Part3 set",
+    "languageAndStage": "Reviewed natural language, unsupported claims, distractor uniqueness/plausibility, stage suitability and task realism. These are staged short-form practice items, not a complete official IELTS paper or a validated band-score measure.",
+    "itemIds": [
+      "ielts-meta-wave-4-band-5-listening-01",
+      "ielts-meta-wave-4-band-5-listening-02",
+      "ielts-meta-wave-4-band-5-listening-03",
+      "ielts-meta-wave-4-band-5-listening-04",
+      "ielts-meta-wave-4-band-5-listening-05",
+      "ielts-meta-wave-4-band-5-reading-01",
+      "ielts-meta-wave-4-band-5-reading-02",
+      "ielts-meta-wave-4-band-5-reading-03",
+      "ielts-meta-wave-4-band-5-reading-04",
+      "ielts-meta-wave-4-band-5-reading-05",
+      "ielts-meta-wave-4-band-5-writing-01",
+      "ielts-meta-wave-4-band-5-writing-02",
+      "ielts-meta-wave-4-band-5-writing-03",
+      "ielts-meta-wave-4-band-5-writing-04",
+      "ielts-meta-wave-4-band-5-writing-05",
+      "ielts-meta-wave-4-band-5-speaking-01",
+      "ielts-meta-wave-4-band-5-speaking-02",
+      "ielts-meta-wave-4-band-5-speaking-03",
+      "ielts-meta-wave-4-band-5-speaking-04",
+      "ielts-meta-wave-4-band-5-speaking-05"
+    ],
+    "priorReviewExposure": "No other reviewer reports inspected. Parent sent confirmation of proposed average-error blocker after this review independently identified and reported it."
+  },
+  "reviewerType": "AI-assisted"
+}

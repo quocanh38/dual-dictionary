@@ -1,0 +1,78 @@
+{
+  "editor": "Codex coding assistant — AI-assisted editor",
+  "newMetaCalls": 0,
+  "changes": [
+    {
+      "path": "/lessons/0/exercises/0/options/1/explanation",
+      "before": "Wrong: It describes the opposite action of cutting services, not providing support.",
+      "after": "Wrong: Reducing services is not the meaning of allocating resources; the source describes support for longer hours."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/0/text",
+      "before": "I will allocate resources to buy a coffee on my way to work.",
+      "after": "Our club will allocate resources to organizing the weekend workshop."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/0/explanation",
+      "before": "Wrong: Buying a single coffee is too trivial to need formal provision of money, staff, or time.",
+      "after": "Wrong: The infinitive after to must be organize, not organizing, in this sentence."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/2/text",
+      "before": "They allocated resources to enjoy the weekend together.",
+      "after": "Our club will allocate resources for organize the weekend workshop."
+    },
+    {
+      "path": "/lessons/0/exercises/1/options/2/explanation",
+      "before": "Wrong: Enjoying the weekend is general leisure, not a specific purpose needing provision of support.",
+      "after": "Wrong: After the preposition for, use organizing rather than the bare verb organize."
+    },
+    {
+      "path": "/lessons/0/exercises/1/explanation",
+      "before": "Only b shows providing support for a clear purpose with natural collocation.",
+      "after": "Option b uses to + base verb correctly; a uses an -ing form after infinitival to, while c uses a bare verb after for."
+    },
+    {
+      "path": "/lessons/0/exercises/3/options/1/text",
+      "before": "Our team met the deadline and submitted the report three weeks late.",
+      "after": "Our team meeted the deadline and submitted the report before Friday."
+    },
+    {
+      "path": "/lessons/0/exercises/3/options/1/explanation",
+      "before": "Wrong: Submitting three weeks late contradicts finishing by the required time.",
+      "after": "Wrong: The past tense of meet is met, not meeted."
+    },
+    {
+      "path": "/lessons/0/exercises/3/options/2/text",
+      "before": "She met the deadline with her friends at the café yesterday.",
+      "after": "Our team met deadline and submitted the report before Friday."
+    },
+    {
+      "path": "/lessons/0/exercises/3/options/2/explanation",
+      "before": "Wrong: It confuses meeting people with the idiom for finishing by the required time.",
+      "after": "Wrong: The singular count noun deadline needs a determiner here; use met the deadline."
+    },
+    {
+      "path": "/lessons/0/exercises/3/explanation",
+      "before": "Only a shows finishing on time with correct grammar and meaning.",
+      "after": "Option a uses met and the required determiner; b has the wrong past tense, and c omits the determiner."
+    },
+    {
+      "path": "/review/note",
+      "before": "Reviewed by coding assistant; no independent human review. See quality-review.md.",
+      "after": "Candidate prepared for the hackathon quality process. Original Meta output retained separately; corrections are coding-assistant editorial changes, not another Meta response. No independent human review."
+    },
+    {
+      "path": "/review/checks/rights",
+      "before": true,
+      "after": false
+    },
+    {
+      "path": "/review/checks/meaning",
+      "before": true,
+      "after": false
+    }
+  ],
+  "originalSha256": "ff9940d66015c970b0372879e860a462aec62ed651204abb0775ebc9dc4e926f",
+  "correctedSha256": "a9ccaa996c1c3aa67ff4ccea2470a2f4d36cbfab6091d1a5d1a3cf6e06a35210"
+}

@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 36,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after hopped up, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese meanings, usage patterns, bilingual examples and learner notes. Regional, historical, social, food, sports and chemistry labels are supplied where relevant; dictionary wording and examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2120,
+    "remainingRawOnlyAfter": 2100
+  },
+  "selected": [
+    "horse chestnut",
+    "horse mackerel",
+    "hot air",
+    "hot cross bun",
+    "hot dog",
+    "hot pants",
+    "hot spot",
+    "hot spring",
+    "hot stuff",
+    "hot tub",
+    "hot up",
+    "hot-water bottle",
+    "house husband",
+    "housing and urban development",
+    "housing estate",
+    "housing project",
+    "human nature",
+    "human race",
+    "humpty dumpty",
+    "hydrochloric acid"
+  ]
+}

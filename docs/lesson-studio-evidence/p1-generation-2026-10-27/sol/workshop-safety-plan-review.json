@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "ee22798605f2bc50695a3c2d1e0ddc7ccc25dc1baa2d93a1c922d205e3261567",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-sol — AI-assisted final content reviewer",
+  "reviewedAt": "2026-10-27T04:42:30.485Z",
+  "note": "Independent full final-candidate audit of supplied source, both EN/VI meanings, every choice and explanation, transfer model and checklist, including realistic alternate readings. Configured model: gpt-6.1-sol. No Luna reviews or prior pack editorial judgments read before this audit. Required process/board read for workflow context only. AI-assisted review, not human review or proof of learning effectiveness; no approval, provider call or deployment performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The provenance identifies a permitted AI-assisted original project source, discloses its origin and authorizes distribution. Generic supervisor/team details reveal no learner PII. Rights review relies on the supplied provenance statement."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 includes carry out an inspection verbatim, naturally meaning perform a check before a machine is used."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Performing a careful check or examination is accurate in this machinery context; no unsupported legal certification requirement is added."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Tiến hành kiểm tra is natural Vietnamese with diacritics and accurately renders the action."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 includes comply with the safety rules verbatim; the obligation despite queued orders supports obeying the rules."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "To obey or follow the safety rules accurately states the contextual sense without adding an implication that compliance eliminates all risk."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Tuân thủ các quy tắc an toàn is a precise, natural and correctly accented Vietnamese gloss."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q1 a performs a careful machine check and is correct. b cancels the check; c moves the machine for storage. Neither action means carrying out an inspection, although an inspection could incidentally involve moving a machine."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q1 each explanation accurately distinguishes performance from cancellation/storage. The overall before-use gloss follows the source; the option pronoun he is incidental to the meaning and does not alter the answer."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q2 a is the natural sentence. b inspection about the bridge is not the natural object-of-examination relation; a hypothetical report about a bridge would require different wording and does not make this an equal natural answer. c will carries is objectively malformed."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q2 a correctly accepts inspection of; b explicitly limits its claim to the object examined here and provides of as correction rather than banning about universally; c correctly restores carry after will. Overall single natural answer claim holds."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q3 a obeys rules despite pressure and is correct. b permits ignoring them and contradicts must comply; c requires writing future rules rather than following existing ones. Writing rules may coexist with compliance but is not its meaning."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q3 explanations accurately contrast obeying with ignoring and distinguish writing rules from following them. Overall explanation faithfully states the target meaning."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q4 b has standard comply with plus base comply after must. a comply to is the wrong complement preposition in this rule-following use; c must complies has invalid modal inflection. Alternative lab circumstances do not repair those forms."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q4 a to-to-with and c complies-to-comply corrections are accurate in the displayed sentences; b and overall explanations correctly identify standard grammar/collocation without relying on stylistic preference."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "q5 moves a workshop team under work pressure to a hotel guest telling a friend about pool behaviour. The guest role, recipient and descriptive purpose constitute substantive transfer."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model naturally uses has to comply with the safety rules and describes a plausible video requirement at this hotel, not a universal pool practice. The checklist supports length, target use and clarity/grammar; explicit self-assessment carries no automatic grade."
+    }
+  ],
+  "findings": []
+}

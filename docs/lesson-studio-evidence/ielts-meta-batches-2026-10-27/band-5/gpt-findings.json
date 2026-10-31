@@ -1,0 +1,12 @@
+{
+  "candidateSha256": "e397158a48d2816200aea60b536df9624eca097a695169abcb942a52d2787d7f",
+  "reviewers": ["gpt-6-luna", "gpt-5.6-terra"],
+  "findings": [
+    {
+      "id": "ielts-meta-band-5-listening-01 through ielts-meta-band-5-listening-05",
+      "severity": "major",
+      "issue": "The items are labeled Part 4, but the shared transcript is a two-speaker service conversation between a student and a librarian; Part 4 uses a single-speaker academic talk.",
+      "suggestedFix": "Choose the appropriate IELTS Listening part for this interaction, or rewrite the entire script as a Part 4 monologue and update questions if needed. Both reviewers found the current questions and keyed answers supported by the dialogue."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "remain in effect",
+        "meaningEn": "to continue to be valid or active until changed or cancelled",
+        "meaningVi": "tiếp tục có hiệu lực",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "step-free access",
+        "meaningEn": "the ability to enter or move through a place without using steps or stairs",
+        "meaningVi": "lối đi không có bậc thang",
+        "sourceSentenceId": "s6"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 507,
+    "outputTokens": 938,
+    "totalTokens": 1445
+  },
+  "status": 200,
+  "latencyMs": 5515,
+  "model": "muse-spark-1.3"
+}

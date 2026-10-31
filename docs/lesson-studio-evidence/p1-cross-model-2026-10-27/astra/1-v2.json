@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "a9ccaa996c1c3aa67ff4ccea2470a2f4d36cbfab6091d1a5d1a3cf6e06a35210",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-astra — independent AI-assisted editorial audit",
+  "reviewedAt": "2026-10-27T04:15:46.240Z",
+  "note": "Independent full-content review of this exact candidate payload. Configured reviewer model identity: gpt-6-astra; this is not independently verified Meta provider identity and is not human review. Prior standalone review files and other models’ findings were not read. Required process and board were read; embedded pack review metadata was visible and its legacy findings are explicitly assessed. No Meta calls, candidate edits, approval, import QA or deployment performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Accepted the project’s explicit original AI-assisted source and rights declaration for this editorial gate. Text inspected contains generic fictional contexts and no learner personal data, external attributed excerpt or copied exam branding. This is not an independent authorship investigation or legal certification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "The exact phrase allocate resources occurs in s1. Extending evening opening hours plausibly requires assigning staff, time or funding."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "The English gloss gives the intended assignment/provision of resources for a purpose. Money, staff and time are examples, not an exhaustive claim."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Phân bổ nguồn lực is the standard natural Vietnamese expression for this contextual sense and includes correct diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "The exact phrase meet the deadline occurs in s2 and concerns submitting survey findings on time."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Finishing or submitting by the required time accurately includes completion before or on the deadline."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Hoàn thành đúng thời hạn naturally conveys timely completion here; the gloss need not repeat the survey-submission context."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: correct. Matches the allocation of money, staff or time for the stated purpose. b: incorrect. Saving money by reducing services is neither the phrase meaning nor the stated extension of opening hours. c: incorrect. Alphabetizing books is a different specific task, not the meaning of allocating resources."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All three explanations accurately distinguish the intended meaning from reduction of services and shelf organization. The overall answer explanation matches s1."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "fail",
+      "evidence": "a: also-correct. Allocate resources to organizing the workshop is grammatical: to can be a preposition and organizing the workshop its gerund-participial complement, naming the activity receiving resources. b: correct. Allocate resources to organize the workshop is also natural: the infinitive states the purpose. c: incorrect. For organize is ungrammatical in this clause; for organizing or to organize repairs it."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "The explanation for a incorrectly asserts that to must be infinitival, and the overall explanation repeats this false rule. The explanations for b and c are accurate. Two defensible answers invalidate the single-answer item."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: incorrect. Discussing a deadline without submitting does not mean meeting it. b: incorrect. Moving a deadline later is postponement, not meeting the required time. c: correct. Finishing or submitting by the required time is the contextual meaning."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation and the overall explanation accurately contrast discussion, postponement and timely submission."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: correct. Met is the past form of meet; the deadline supplies the singular determiner. Submitting before Friday is compatible with timely completion. b: incorrect. Meeted is not the standard past tense; met is required. c: incorrect. In this ordinary complete sentence singular count deadline requires a determiner: met the deadline."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations identify the actual errors; the determiner claim is explicitly limited to this sentence rather than headlines or special registers. The overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source is a student survey deadline; the task changes role to a shop assistant, recipient to a manager and purpose to a weekly stock list. This is meaningful transfer despite retaining the deadline concept."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The model is two sentences, polite to a manager and correctly uses meet the deadline. The checklist tests phrase, shop context, length and tone; self-assessment is explicit with no automatic grade. Counting the shelves is grammatical but less apt for inventory than counting the items on the shelves; this is a minor example-quality issue, not a target-phrase error."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "The embedded legacy finding concerns rejecting coffee/leisure resource allocation. None of the current q2 options mention those activities, so that specific issue no longer applies. This closure does not clear the new multi-answer problem recorded below."
+    },
+    {
+      "id": "astra-1-q2-multiple-answers",
+      "severity": "critical",
+      "resolved": false,
+      "criterionIds": [
+        "lesson-1/q2/unique-answer",
+        "lesson-1/q2/explanations"
+      ],
+      "evidence": "q2 a and b are both grammatical and natural. In a, to is a preposition introducing organizing the weekend workshop; in b, to introduces an infinitive of purpose. Marking a wrong and teaching that to must take organize misinforms the learner.",
+      "suggestedRepair": "Replace a with an objective agreement error, for example Our club allocate resources to organize the weekend workshop, and explain that the singular subject Our club takes allocates in this sentence. Preserve b and c, then re-review the whole changed payload."
+    },
+    {
+      "id": "astra-1-q5-inventory-wording",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "Counting the shelves refers to counting shelf units, while the stock-list task normally requires counting stock. The target phrase and message structure remain correct.",
+      "suggestedRepair": "Use I have finished counting the items on the shelves, or I have finished checking the stock."
+    }
+  ],
+  "candidateFile": "docs/lesson-studio-evidence/quality-cycle-2026-10-27/candidates/1-v2.json",
+  "candidateFileSha256": "8b82f827203c029f19a2453fcc13479ca35fa6839c0f5e2842b331bee04a2ad1",
+  "decision": "changes-required",
+  "rightsScope": "Accepted the project’s explicit original AI-assisted source and rights declaration for this editorial gate. Text inspected contains generic fictional contexts and no learner personal data, external attributed excerpt or copied exam branding. This is not an independent authorship investigation or legal certification.",
+  "optionAudit": [
+    {
+      "exerciseId": "q1",
+      "storedCorrectOptionId": "a",
+      "verdict": "pass",
+      "overallExplanationReviewed": "The library is providing support to extend hours, so option a is correct.",
+      "options": [
+        {
+          "id": "a",
+          "text": "to provide money, staff, or time for a particular purpose",
+          "explanation": "Correct: It matches the library providing support to extend hours, Vietnamese: phân bổ nguồn lực.",
+          "judgment": "correct",
+          "evidence": "Matches the allocation of money, staff or time for the stated purpose."
+        },
+        {
+          "id": "b",
+          "text": "to save money by reducing evening services",
+          "explanation": "Wrong: Reducing services is not the meaning of allocating resources; the source describes support for longer hours.",
+          "judgment": "incorrect",
+          "evidence": "Saving money by reducing services is neither the phrase meaning nor the stated extension of opening hours."
+        },
+        {
+          "id": "c",
+          "text": "to arrange books on the shelves in alphabetical order",
+          "explanation": "Wrong: It describes organizing books, not providing money, staff, or time for evening hours.",
+          "judgment": "incorrect",
+          "evidence": "Alphabetizing books is a different specific task, not the meaning of allocating resources."
+        }
+      ]
+    },
+    {
+      "exerciseId": "q2",
+      "storedCorrectOptionId": "b",
+      "verdict": "fail",
+      "overallExplanationReviewed": "Option b uses to + base verb correctly; a uses an -ing form after infinitival to, while c uses a bare verb after for.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Our club will allocate resources to organizing the weekend workshop.",
+          "explanation": "Wrong: The infinitive after to must be organize, not organizing, in this sentence.",
+          "judgment": "also-correct",
+          "evidence": "Allocate resources to organizing the workshop is grammatical: to can be a preposition and organizing the workshop its gerund-participial complement, naming the activity receiving resources."
+        },
+        {
+          "id": "b",
+          "text": "Our club will allocate resources to organize the weekend workshop.",
+          "explanation": "Correct: It naturally means providing money, time, or people for the workshop purpose.",
+          "judgment": "correct",
+          "evidence": "Allocate resources to organize the workshop is also natural: the infinitive states the purpose."
+        },
+        {
+          "id": "c",
+          "text": "Our club will allocate resources for organize the weekend workshop.",
+          "explanation": "Wrong: After the preposition for, use organizing rather than the bare verb organize.",
+          "judgment": "incorrect",
+          "evidence": "For organize is ungrammatical in this clause; for organizing or to organize repairs it."
+        }
+      ]
+    },
+    {
+      "exerciseId": "q3",
+      "storedCorrectOptionId": "c",
+      "verdict": "pass",
+      "overallExplanationReviewed": "The group must submit on time, so option c is correct.",
+      "options": [
+        {
+          "id": "a",
+          "text": "to discuss the deadline without submitting anything",
+          "explanation": "Wrong: Discussing without submitting does not finish anything by the required time.",
+          "judgment": "incorrect",
+          "evidence": "Discussing a deadline without submitting does not mean meeting it."
+        },
+        {
+          "id": "b",
+          "text": "to change the deadline to a later date",
+          "explanation": "Wrong: Changing the date means postponing, not finishing by the required time.",
+          "judgment": "incorrect",
+          "evidence": "Moving a deadline later is postponement, not meeting the required time."
+        },
+        {
+          "id": "c",
+          "text": "to finish or submit something by the required time",
+          "explanation": "Correct: It matches the group submitting findings on time, Vietnamese: hoàn thành đúng thời hạn.",
+          "judgment": "correct",
+          "evidence": "Finishing or submitting by the required time is the contextual meaning."
+        }
+      ]
+    },
+    {
+      "exerciseId": "q4",
+      "storedCorrectOptionId": "a",
+      "verdict": "pass",
+      "overallExplanationReviewed": "Option a uses met and the required determiner; b has the wrong past tense, and c omits the determiner.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Our team met the deadline and submitted the report before Friday.",
+          "explanation": "Correct: It naturally means finishing and submitting on time with correct collocation.",
+          "judgment": "correct",
+          "evidence": "Met is the past form of meet; the deadline supplies the singular determiner. Submitting before Friday is compatible with timely completion."
+        },
+        {
+          "id": "b",
+          "text": "Our team meeted the deadline and submitted the report before Friday.",
+          "explanation": "Wrong: The past tense of meet is met, not meeted.",
+          "judgment": "incorrect",
+          "evidence": "Meeted is not the standard past tense; met is required."
+        },
+        {
+          "id": "c",
+          "text": "Our team met deadline and submitted the report before Friday.",
+          "explanation": "Wrong: The singular count noun deadline needs a determiner here; use met the deadline.",
+          "judgment": "incorrect",
+          "evidence": "In this ordinary complete sentence singular count deadline requires a determiner: met the deadline."
+        }
+      ]
+    }
+  ],
+  "transferAudit": {
+    "exerciseId": "q5",
+    "type": "transfer",
+    "targetId": "t2",
+    "prompt": "You are a part-time shop assistant. Write a short polite message (2-3 sentences) to your manager about finishing the weekly stock list. Use the exact phrase 'meet the deadline'. Do not write about a library or survey.",
+    "sourceSentenceIds": [
+      "s2"
+    ],
+    "sampleAnswer": "Hi Ms Lee, I have finished counting the shelves and I will meet the deadline for the stock list by Friday afternoon. Please let me know if you need anything else.",
+    "selfCheck": [
+      "I used the exact phrase 'meet the deadline'.",
+      "My message is about a shop job, not the library survey.",
+      "My message is 2-3 sentences and polite to a manager."
+    ],
+    "explanation": "Compare with the model and self-assess; no automatic grade.",
+    "newSituationEvidence": "The source is a student survey deadline; the task changes role to a shop assistant, recipient to a manager and purpose to a weekly stock list. This is meaningful transfer despite retaining the deadline concept.",
+    "modelAndChecklistEvidence": "The model is two sentences, polite to a manager and correctly uses meet the deadline. The checklist tests phrase, shop context, length and tone; self-assessment is explicit with no automatic grade. Counting the shelves is grammatical but less apt for inventory than counting the items on the shelves; this is a minor example-quality issue, not a target-phrase error."
+  },
+  "references": [
+    {
+      "title": "Oxford Advanced Learner’s Dictionary — allocate",
+      "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/allocate",
+      "supports": "The dictionary lists both allocation to a recipient/activity expressed as something and allocation to do something. The application to the candidate’s gerund clause is the reviewer’s grammatical analysis."
+    },
+    {
+      "title": "Cambridge Grammar for English Language Teachers — Prepositions",
+      "url": "https://www.cambridge.org/core/books/grammar-for-english-language-teachers/prepositions/406D795BCD3026E260BEC855E1F49A6F",
+      "supports": "Prepositions can precede noun or -ing forms. This supports distinguishing prepositional to from infinitival to."
+    }
+  ]
+}

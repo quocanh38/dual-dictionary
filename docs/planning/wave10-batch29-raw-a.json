@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 29,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after first floor, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese meanings, usage patterns, bilingual examples and learner notes. Regional, historical and specialist senses are labeled; no dictionary wording or examples reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2260,
+    "remainingRawOnlyAfter": 2240
+  },
+  "selected": [
+    "first lady",
+    "fish farm",
+    "fit in",
+    "fit out",
+    "fix up",
+    "flight path",
+    "floor plan",
+    "flying boat",
+    "follow on",
+    "follow through",
+    "follow up",
+    "foot fault",
+    "foot soldier",
+    "form letter",
+    "free agent",
+    "free and easy",
+    "free fall",
+    "free house",
+    "free state",
+    "free trade"
+  ]
+}

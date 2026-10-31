@@ -1,0 +1,32 @@
+{
+  "wave": 10,
+  "batch": 111,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Final 12 raw-only pages after X chromosome in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Complete the final Y/Z dictionary entries with biology, calendar/cultural, postal, road, and photography vocabulary; clarify historical signal usage, US/UK variants and technical distinctions.",
+  "counts": {
+    "selected": 12,
+    "rawPagesUpgraded": 12,
+    "rawOnlyBefore": 640,
+    "remainingRawOnlyAfter": 628
+  },
+  "selected": [
+    "y chromosome",
+    "year end",
+    "yellow flag",
+    "yellow jacket",
+    "yellow pages",
+    "yom kippur",
+    "zebra crossing",
+    "zero hour",
+    "zero-sum game",
+    "zinc oxide",
+    "zip code",
+    "zoom lens"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "wave": 10,
+  "batch": 121,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages in the manifest after central nervous system; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section with banking, retail, materials, transport, agriculture, electronics, chemical safety, legal language, and anatomy. Clarify phrasal-verb senses, regional terms and the distinction between related materials or institutions without reproducing source definitions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 448,
+    "remainingRawOnlyAfter": 428
+  },
+  "selected": [
+    "cash dispenser",
+    "cash register",
+    "cast iron",
+    "cast off",
+    "castor oil",
+    "catalytic converter",
+    "catch crop",
+    "catchment area",
+    "catherine wheel",
+    "cathode ray tube",
+    "cattle grid",
+    "caustic soda",
+    "caveat emptor",
+    "cayenne pepper",
+    "cd player",
+    "cellular phone",
+    "cement mixer",
+    "central bank",
+    "central heating",
+    "central nervous system"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "MedlinePlus: Central nervous system (https://www.medlineplus.gov/ency/article/002311.htm)",
+    "UK HSE: Sodium hydroxide / caustic soda (https://www.hse.gov.uk/pubns/biodiesel.htm)",
+    "US EPA: Catalytic converter systems (https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9101XSS9.txt)"
+  ]
+}

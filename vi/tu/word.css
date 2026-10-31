@@ -1,0 +1,70 @@
+/* Word pages - same teal/ink visual language as the app's entry renderer */
+:root{--ink:#172026;--muted:#53616c;--paper:#fff;--soft:#f6f4ef;--line:#dedbd2;--teal:#0f766e;--teal-dark:#115e59;--coral:#e85d4f}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit}
+.breadcrumb{max-width:860px;margin:0 auto;padding:16px 20px 0;color:var(--muted);font-size:.9rem}
+.breadcrumb a{text-decoration:none;color:var(--teal);font-weight:700}
+.page{max-width:860px;margin:0 auto;padding:24px 20px 60px}
+.word-kicker{margin:0 0 6px;color:var(--coral);font-weight:800;text-transform:uppercase;font-size:.84rem;letter-spacing:.04em}
+h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
+.word-ipa{margin:0 0 18px;color:var(--muted);font-size:1.05rem}
+.ipa-label{display:inline-block;padding:2px 8px;margin-right:6px;border-radius:999px;background:var(--soft);color:var(--teal-dark);font-size:.75rem;font-weight:800;text-transform:uppercase}
+.entry-body{border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:22px 24px;box-shadow:0 10px 30px rgba(23,32,38,.06)}
+.entry-lemma-note{margin:0 0 10px;color:var(--muted);font-size:.92rem}
+.entry-lemma-note a{color:var(--teal);font-weight:700}
+.mtd-pos{font-weight:700;color:var(--teal);margin:12px 0 4px;font-size:.95rem}
+.entry-body .mtd-pos:first-child{margin-top:0}
+.mtd-domain{font-weight:600;color:var(--muted);margin:12px 0 4px;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.mtd-sense{padding-left:14px;position:relative;margin:4px 0}
+.mtd-sense::before{content:'-';position:absolute;left:0;color:var(--teal)}
+/* v104: ví dụ tách khỏi nghĩa (P2) — "=English+ dịch" của OVDP thành dòng riêng */
+.mtd-ex{padding-left:14px;position:relative;margin:2px 0;color:var(--muted);font-size:.95rem}
+.mtd-ex-en{font-style:italic;color:var(--teal-dark)}
+.mtd-ex-vi{color:var(--muted)}
+.mtd-idiom{margin:6px 0;padding-left:14px}
+.mtd-idiom b{color:#134e4a}
+.mtd-line{margin:4px 0}
+.word-cta{margin-top:26px;padding:20px 22px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
+.word-cta-actions{display:flex;flex-wrap:wrap;gap:10px}
+.word-cta-btn{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:8px;background:var(--coral);color:#fff;font-weight:800;text-decoration:none}
+.word-cta-btn-practice{background:var(--teal)}
+.word-cta-note{margin:12px 0 0;color:var(--muted);font-size:.92rem}
+.word-report{margin:10px 0 0}
+.word-report a{color:var(--muted);font-size:.9rem;text-decoration:underline;text-underline-offset:3px}
+.related{margin-top:34px}
+.related h2{font-size:1.3rem;margin:0 0 12px}
+.related-list{display:flex;flex-wrap:wrap;gap:10px}
+.related-chip{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--teal-dark);font-weight:700;text-decoration:none}
+.related-chip:hover{border-color:var(--teal)}
+@media (max-width:560px){h1{font-size:2.2rem}.page{padding:16px 14px 48px}}
+
+/* Ghi chú sử dụng (usage notes) — hand-written + auto-generated */
+.word-note{margin-top:34px;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;background:var(--soft);padding:20px 22px;position:relative}
+.word-note h2{margin:0 0 10px;font-size:1.25rem}
+.word-note p{margin:8px 0;color:#2c3a42;font-size:.98rem}
+.word-note b{color:var(--teal-dark)}
+.word-note ul{margin:8px 0;padding-left:20px}
+.word-note li{margin:5px 0}
+.word-note h3{margin:14px 0 6px;font-size:1.02rem;color:var(--teal-dark)}
+.note-badge{position:absolute;top:14px;right:16px;padding:3px 10px;border-radius:999px;background:var(--teal);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.03em}
+.note-badge{position:static;display:inline-block;margin-left:10px;vertical-align:middle}
+.word-note code{background:#eef4f2;padding:1px 6px;border-radius:4px;font-size:.9em;color:var(--teal-dark)}
+
+/* P1: nhãn nhóm / tần suất / trạng thái biên tập */
+.word-badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.chip{display:inline-flex;align-items:center;min-height:28px;padding:0 12px;border-radius:999px;font-size:.78rem;font-weight:700}
+.chip-band{background:var(--soft);color:var(--muted);border:1px solid var(--line)}
+.chip-core{background:#e6f4f2;color:var(--teal-dark);border:1px solid var(--teal)}
+.chip-infl{background:var(--soft);color:var(--teal-dark);border:1px solid var(--line)}
+.chip-infl a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.chip-off{background:#f1f2f4;color:#4b5563;border:1px solid #d1d5db}
+.chip-awl{background:#fdf3e3;color:#92400e;border:1px solid #e7c88f}
+.chip-learn{background:var(--teal);color:#fff}
+.chip-learn2{background:#eef4f2;color:var(--teal-dark);border:1px solid var(--teal)}
+.note-badge-auto{background:#6b7280}
+.hub-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 14px}
+.hub-filters input,.hub-filters select{min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:8px;font:inherit;color:var(--ink);background:var(--paper)}
+.hub-filters input{min-width:200px;flex:1}
+#hub-count{color:var(--muted);font-size:.88rem}
+.hub-ipa{color:var(--muted);font-size:.9em}

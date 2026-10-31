@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Lost Property at Central Station",
+    "objective": "Learners will understand and use two phrases for reporting and claiming lost items in service settings.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s1, what does 'hand it in' mean?",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means to give a found wallet or bag to the information desk.",
+            "explanation": "Correct - it matches giving a found item to staff at an official desk."
+          },
+          {
+            "id": "b",
+            "text": "It means to leave a found wallet or bag on a seat for others.",
+            "explanation": "Wrong - it describes the opposite action warned against in s1."
+          },
+          {
+            "id": "c",
+            "text": "It means to keep a found wallet or bag for personal use.",
+            "explanation": "Wrong - it describes keeping the item instead of giving it to staff."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a matches giving a found item to staff in s1."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'hand it in' correctly.",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "I found a wallet in the hall, so I handed it in to the information desk.",
+            "explanation": "Correct - past tense and prepositions are natural and accurate."
+          },
+          {
+            "id": "b",
+            "text": "She hand it in to the office yesterday morning.",
+            "explanation": "Wrong - 'hand' must be corrected to 'handed' for past time."
+          },
+          {
+            "id": "c",
+            "text": "He handed it in to a information desk this morning.",
+            "explanation": "Wrong - 'a information' must be corrected to 'an information'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a is grammatically correct and natural."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s3, what does 'proof of ownership' mean?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means a numbered tag that staff attach to a found item.",
+            "explanation": "Wrong - it describes staff labelling in s2, not owner evidence."
+          },
+          {
+            "id": "b",
+            "text": "It means evidence such as a clear description showing you own the item.",
+            "explanation": "Correct - it matches evidence showing you are the owner."
+          },
+          {
+            "id": "c",
+            "text": "It means a daily register that helps the next shift answer questions.",
+            "explanation": "Wrong - it describes the record in s5, not owner evidence."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only option b matches evidence of ownership in s3."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'proof of ownership' correctly.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The desk asked for proof of ownership before returning the lost bag.",
+            "explanation": "Correct - the phrase and sentence grammar are natural and accurate."
+          },
+          {
+            "id": "b",
+            "text": "He show proof of ownership when he collected the parcel.",
+            "explanation": "Wrong - 'show' must be corrected to 'showed' for past time."
+          },
+          {
+            "id": "c",
+            "text": "She provided proof of ownerships to claim her camera.",
+            "explanation": "Wrong - 'ownerships' must be corrected to 'ownership'."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only option a is grammatically correct and natural."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are a resident emailing your apartment manager about a parcel you left in the lobby. Write 2-3 sentences explaining what happened and what evidence you can show to collect it.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "sampleAnswer": "I think I left my small parcel in the lobby on Monday evening. I can show proof of ownership with the order confirmation and a description of the contents when I collect it.",
+        "selfCheck": [
+          "My message has 2-3 sentences.",
+          "I used 'proof of ownership' to describe my evidence.",
+          "I mention what evidence I can show to collect the parcel."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1056,
+    "outputTokens": 5098,
+    "totalTokens": 6154
+  },
+  "status": 200,
+  "latencyMs": 28653,
+  "model": "muse-spark-1.3"
+}

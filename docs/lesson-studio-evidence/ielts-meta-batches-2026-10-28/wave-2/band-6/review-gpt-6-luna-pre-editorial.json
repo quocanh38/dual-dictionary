@@ -1,0 +1,15 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "b8cd92aabf48785e01b23dfe80e076fbd74d732641fdf0b65716a6f6f28f278b",
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "item": "Listening shared script and ielts-meta-wave-2-band-6-listening-01 through -05",
+      "issue": "The embedded normalizationFindings already flags the script at 402 words against a 300–400 target. Counting the full script yields 403 whitespace-delimited tokens (and 403 words with a standard word-token count), so the concern remains. Trim the script to at most 400 words and update its wordCount/normalizationFindings before approval."
+    },
+    {
+      "item": "Listening shared script (visitor parking direction)",
+      "issue": "The phrase ‘about five minutes walk away’ is unnatural English; revise to ‘about a five-minute walk away’ or ‘about five minutes’ walk away.’"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "0837b71b019530ec9caa32f7ee628aa61fa10fcce80e08e1d8149ab3058081a2",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 386/431 words; all objective keys are supported, explanations correctly distinguish facts, author claims/examples and inferences, and option positions are balanced. The clinic reminder content avoids inappropriate diagnostic advice and correctly separates confirmation and cancellation steps. Task 1 values/units are complete for event attendance and volunteer hours; Writing minimums/timing and Speaking part/cue-card coverage are present. Original-content provenance is stated; no official-item or score claims. Minor clarity: wording “survey of 500 residents ... in 2023 and 2024” does not specify whether 500 applies to each wave or combined, or whether the samples are repeated."
+  ],
+  "coverage": "Full review of metadata/provenance, both contexts, all 10 objective questions/options/keys/explanations, both Task 1 datasets/units, all five Writing prompts/timing and all five Speaking prompts including cue-card completeness and part fit.",
+  "reviewerType": "AI-assisted"
+}

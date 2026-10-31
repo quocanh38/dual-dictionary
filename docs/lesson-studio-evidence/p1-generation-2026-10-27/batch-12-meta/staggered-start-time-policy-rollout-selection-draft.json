@@ -1,0 +1,61 @@
+{
+  "id": "draft-44150ff8-e9c3-4d89-9c1b-f5ce7c5e2f90",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Introducing Staggered Start Times at Work",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A regional design firm will test flexible start times at its two largest offices. Managers plan to phase in the change over six weeks so staff can report problems before it applies to every team. The new schedule will take effect on 1 December, after the trial and a review with employee representatives. Staff may begin between 7:30 and 9:30, but each team must keep its client-support hours covered. Supervisors will compare attendance patterns and service records with the previous month. If the arrangement creates gaps at reception, the firm will adjust the team rota before extending the policy to other offices.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A regional design firm will test flexible start times at its two largest offices. Managers plan to phase in the change over six weeks so staff can report problems before it applies to every team. The new schedule will take effect on 1 December, after the trial and a review with employee representatives. Staff may begin between 7:30 and 9:30, but each team must keep its client-support hours covered. Supervisors will compare attendance patterns and service records with the previous month. If the arrangement creates gaps at reception, the firm will adjust the team rota before extending the policy to other offices.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A regional design firm will test flexible start times at its two largest offices."
+      },
+      {
+        "id": "s2",
+        "text": "Managers plan to phase in the change over six weeks so staff can report problems before it applies to every team."
+      },
+      {
+        "id": "s3",
+        "text": "The new schedule will take effect on 1 December, after the trial and a review with employee representatives."
+      },
+      {
+        "id": "s4",
+        "text": "Staff may begin between 7:30 and 9:30, but each team must keep its client-support hours covered."
+      },
+      {
+        "id": "s5",
+        "text": "Supervisors will compare attendance patterns and service records with the previous month."
+      },
+      {
+        "id": "s6",
+        "text": "If the arrangement creates gaps at reception, the firm will adjust the team rota before extending the policy to other offices."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "phase in",
+      "meaningEn": "to introduce a change gradually in stages",
+      "meaningVi": "triển khai dần từng bước",
+      "sourceSentenceId": "s2"
+    },
+    {
+      "id": "t2",
+      "phrase": "take effect",
+      "meaningEn": "to start to apply or become official",
+      "meaningVi": "có hiệu lực; bắt đầu được áp dụng",
+      "sourceSentenceId": "s3"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

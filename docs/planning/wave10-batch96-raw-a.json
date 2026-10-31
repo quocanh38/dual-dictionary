@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 96,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after tape measure in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover recording devices, translation terminology, work groups, taste vocabulary, general tax terms and British daily-life expressions. Explain part of speech, common compounds, regional variants and distinctions between nearby financial/legal terms.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 940,
+    "remainingRawOnlyAfter": 920
+  },
+  "selected": [
+    "tape recorder",
+    "tape recording",
+    "target language",
+    "task force",
+    "taste bud",
+    "tax bracket",
+    "tax credit",
+    "tax evasion",
+    "tax exempt",
+    "tax haven",
+    "tax return",
+    "tax shelter",
+    "taxi rank",
+    "tea break",
+    "tea leaf",
+    "tea room",
+    "tea shop",
+    "team spirit",
+    "teddy boy",
+    "telephone booth"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

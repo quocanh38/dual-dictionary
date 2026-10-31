@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": [
+    "storage failure visible; advance rolled back; retry works",
+    "reload before each exercise",
+    "keyboard Space selects radio; focus restored",
+    "answer selection and checked state survive reload",
+    "transfer writing and revealed checklist survive reload",
+    "completed no-key lesson survives offline reload",
+    "390px emulation no overflow"
+  ],
+  "providerCalls": 0,
+  "physicalDevice": false
+}

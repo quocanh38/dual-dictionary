@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "community-kitchen-volunteer-shift",
+  "rawCandidateFile": "community-kitchen-volunteer-shift-candidate.json",
+  "editorialCandidateFile": "community-kitchen-volunteer-shift-candidate-editorial-v1.json",
+  "editedLocally": true,
+  "generatedByMeta": false,
+  "changes": [
+    {
+      "path": "pack.lessons[0].reading.sentences",
+      "before": "A single sentence was incorrectly split after the abbreviation “p.m.”, leaving the continuation as a fragment.",
+      "after": "Merged the two fragments into one sentence and renumbered the following sentence.",
+      "reason": "Keep sentence segmentation grammatical and consistent with the full reading text."
+    }
+  ],
+  "reason": "Local editorial cleanup of sentence segmentation; all other Meta content is preserved."
+}

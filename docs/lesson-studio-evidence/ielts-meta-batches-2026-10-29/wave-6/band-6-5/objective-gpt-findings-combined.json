@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; ielts-meta-wave-6-band-6-5-listening-05 and explanation",
+      "severity": "critical",
+      "issue": "Trial is January–June yet described as only winter and spring, excluding summer; June is included in summer in this wave own seasonal framework. Make dates and season limitation consistent, e.g. January–May excluding summer, or January–June covers winter/spring/early summer but excludes later summer thunderstorms. Update question/key/explanation and all transcript copies."
+    }
+  ]
+}

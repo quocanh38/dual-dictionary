@@ -1,0 +1,16 @@
+{
+  "wave": 11,
+  "batch": 146,
+  "generated": "2026-10-22",
+  "tier": "B",
+  "source": "First 20 remaining entries in docs/vi-p2-pool.json Tier B after batch 145. Consulted local OALD 10 and LDOCE 6 as editorial references; original Vietnamese wording and bilingual examples.",
+  "counts": {"poolBefore": 658, "selected": 20, "poolAfter": 638},
+  "selected": ["absolute alcohol","absolute temperature","agent orange","air marshal","allen screw","alpha radiation","american indian","april fool","ash wednesday","bailey bridge","band aid","bath chair","beef tea","billy goat","black diamond","blue whale","boat hook","bond paper","boy scout","brick red"],
+  "references": [
+    "Local Oxford Advanced Learner's Dictionary 10 (editorial reference only)",
+    "Local Longman Dictionary of Contemporary English 6 (editorial reference only)",
+    "U.S. Department of Veterans Affairs, Agent Orange herbicide facts: https://www.publichealth.va.gov/exposures/agentorange/basics.asp",
+    "International Atomic Energy Agency, Radiation, People and the Environment: https://www.iaea.org/sites/default/files/radiation0204.pdf",
+    "U.S. Census Bureau, race and ethnicity standards: https://www.census.gov/newsroom/blogs/random-samplings/2024/04/updates-race-ethnicity-standards.html"
+  ]
+}

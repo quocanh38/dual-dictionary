@@ -1,0 +1,26 @@
+{
+  "decision": "approve-for-local-release-qa",
+  "delegation": "Owner cross-model content-approval authorization recorded 2026-10-27",
+  "candidateSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+  "reviewSha256": "d98dab10955f22f422a184d0d3cd6c209401eb15bd4852866c2d191f3cc04688",
+  "reviewers": [
+    {
+      "routeRequested": "gpt-6-luna",
+      "runtimeReportedModelLabel": "GPT-6",
+      "criteria": "17/17 pass",
+      "findings": 0
+    },
+    {
+      "routeRequested": "gpt-5.6-terra",
+      "runtimeReportedModelLabel": "GPT-6",
+      "criteria": "17/17 pass",
+      "findings": 0
+    }
+  ],
+  "reason": "Both reviewers checked the exact final hash. Reviewed all target phrases, source/context meanings, English and Vietnamese glosses, every option and explanation, transfer prompt/model/checklist. Rights and authorship are declaration-only. Short, relatively simple B2 practice is a recorded scope limitation. No critical, uncertain or minor findings.",
+  "approvedPayloadSha256": "eadd5188e872312b9448c5644949b5cc07c369c4faa9a0a11da015ae6762020e",
+  "releaseDirectory": "release-community-garden-water-rotation",
+  "libraryFile": "lessons/library/community-garden-water-rotation.json",
+  "deployed": false,
+  "reviewedAt": "2026-10-27T08:05:03.904Z"
+}

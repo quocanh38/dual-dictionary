@@ -1,0 +1,12 @@
+{
+  "decision": "approve-content-for-local-release-qa",
+  "authority": "Owner delegation in AUTHORIZATION.md",
+  "packSha256": "2203c4622e566dff68111bc71ec68f4622cc535ecc7d89d8f2014149e87df2e5",
+  "reviewSha256": "9a22f146cb47412756770684277df5a588a0abafde258e00e3048fef15b67762",
+  "crossReviewHashes": {
+    "astra": "0c255770851284f6df308cfb92276bd99f85be6ba71f53cf1579187120507668",
+    "terra": "451539c535281cb0fae7016e6965f629591e07c42fe2b6e9be239e7eed4400bc"
+  },
+  "rationale": "Contextual survey meaning and source citations agree; between A and B usage options have one defensible answer; Vietnamese gloss and new library transfer are natural.",
+  "deploymentApproved": false
+}

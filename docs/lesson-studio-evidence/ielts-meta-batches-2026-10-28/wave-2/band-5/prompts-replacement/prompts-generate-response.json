@@ -1,0 +1,83 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "batchId": "wave-2",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+  "completedAt": "2026-10-28T02:52:57.718Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 492,
+    "outputTokens": 3606,
+    "totalTokens": 4098
+  },
+  "latencyMs": 15910,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Neighbourhood Food Market Stalls",
+        "focus": "Clear main ideas and direct comparison from a simple table",
+        "prompt": "The table below shows the number of stalls at Green Lane Neighbourhood Food Market in 2020 and 2025.\n\nIn 2020: Fresh fruit - 12 stalls, Fresh vegetables - 15 stalls, Bread and cakes - 8 stalls, Hot drinks and juices - 6 stalls. Total - 41 stalls.\nIn 2025: Fresh fruit - 18 stalls, Fresh vegetables - 20 stalls, Bread and cakes - 10 stalls, Hot drinks and juices - 12 stalls. Total - 60 stalls.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. You should spend about 20 minutes on this task.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Student Study-Group Timetable",
+        "focus": "Accurate simple description of a weekly timetable",
+        "prompt": "The table below shows the weekly timetable of a student study group at Parkside Library in March 2026.\n\nMonday 16:00-17:30: Maths problem practice, 6 students\nTuesday 16:00-17:00: English reading, 8 students\nWednesday 16:00-17:30: Science homework, 5 students\nThursday 16:00-17:00: English writing, 7 students\nFriday 16:00-17:00: Music club review and weekly test preparation, 10 students\n\nAll sessions are led by two older student helpers. Friday has the highest attendance.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. You should spend about 20 minutes on this task.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Local Food Markets and Supermarkets",
+        "focus": "Clear opinion with direct everyday evidence",
+        "prompt": "Some people prefer to buy food at a small neighbourhood food market, while others prefer to buy food at a large supermarket.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words. You should spend about 40 minutes on this task.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Studying Alone and Studying in a Group",
+        "focus": "Simple comparison with familiar academic examples",
+        "prompt": "Some students like to study alone at home, while others like to join a study group with a fixed weekly timetable.\n\nDo the advantages of studying in a group outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words. You should spend about 40 minutes on this task.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Community Music Clubs for Young People",
+        "focus": "Clear ideas and simple explanation of benefits",
+        "prompt": "In many towns, a community music club meets once a week so young people can learn an instrument, sing, and play together.\n\nSome people think local councils should give more money to support these clubs. Others think young people can learn music by themselves online.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words. You should spend about 40 minutes on this task.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Food and Local Markets",
+        "focus": "Familiar everyday answers about food shopping",
+        "prompt": "Answer the following questions. Give short, clear answers with one or two reasons or examples.\n1. Where do you usually buy your food?\n2. How often do you visit a local food market?\n3. What kind of fresh food do you like most?\n4. Do you like cooking at home or eating outside? Why?"
+      },
+      {
+        "task": "Part 1 · Study Habits and Free Time",
+        "focus": "Simple personal answers about study and music",
+        "prompt": "Answer the following questions. Give short, clear answers with one or two reasons or examples.\n1. Do you prefer to study in the morning or in the evening? Why?\n2. Do you usually study alone or with friends?\n3. Do you enjoy listening to music while you study?\n4. What do you usually do after your study time finishes?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Visit to a Neighbourhood Food Market",
+        "focus": "Clear description of a familiar event with explanation",
+        "prompt": "Describe a visit you made to a neighbourhood food market. You should say:\n• where the market was and when you went there\n• who you went with\n• what you saw, heard, or bought there\n• and explain why you remember this visit.\n\nYou have one minute to prepare. Then speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Local Markets and Community Life",
+        "focus": "Giving reasons and simple evaluation about local shops",
+        "prompt": "Discuss the following ideas. Give reasons and compare ideas, not only facts from memory.\n1. Why do some people prefer small food markets to large supermarkets?\n2. How can neighbourhood markets help the local community?\n3. Do you think online food shopping will replace local markets in the future? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Music Clubs and Learning Together",
+        "focus": "Explaining benefits and evaluating group learning",
+        "prompt": "Discuss the following ideas. Give reasons and compare ideas, not only facts from memory.\n1. What are the benefits of joining a community music club for young people?\n2. Is it better to learn music in a group or alone? Why?\n3. Should schools give more time for group activities like music and study groups? Why or why not?"
+      }
+    ]
+  }
+}

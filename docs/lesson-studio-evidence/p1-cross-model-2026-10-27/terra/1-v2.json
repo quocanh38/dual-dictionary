@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "a9ccaa996c1c3aa67ff4ccea2470a2f4d36cbfab6091d1a5d1a3cf6e06a35210",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-terra (configured local reviewer)",
+  "reviewedAt": "2026-10-27T04:13:40.222444+00:00",
+  "note": "Independent AI-assisted full-content review of the exact candidate payload. Not independent human or teacher certification. Rights and origin are assessed from the pack declaration; no external chain-of-title verification. The gate hash binds the parsed pack; candidate wrapper carries draft metadata.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The pack declares an AI-assisted original reading, project author, pilot use and no learner data; no PII appears in the reading. This is a provenance assertion, not independent verification of authorship or distribution rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains allocate resources; context assigns support to longer opening hours."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Providing money, staff or time for a purpose matches allocation in s1."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Phân bổ nguồn lực is natural, accented and matches the contextual sense."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains meet the deadline for submitting findings, so completing on time is supported."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Finish or submit by the required time captures the contextual deadline."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Hoàn thành đúng thời hạn naturally captures completion on time."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is the contextual allocation sense; b describes reducing services, c organizing shelves, neither defines allocation."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a correctly identifies support; b and c distinguish the alternative meanings; overall explanation is consistent."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "fail",
+      "evidence": "Both b (to organize as infinitive of purpose) and a (to organizing as preposition plus gerund) are grammatical and natural; c uses bare organize after for and is incorrect. The keyed b is not unique."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "fail",
+      "evidence": "The explanation for a and the overall explanation falsely treat to as necessarily infinitival. To can be a preposition followed by a gerund: allocate resources to organizing. b and c explanations are appropriate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c correctly describes completion by the required time; a discussing and b postponing are different actions."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a, b and c explanations accurately distinguish discussing, postponing and meeting the deadline."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural; b uses nonstandard meeted for met; c lacks a determiner for singular deadline."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a explains the meaning; b corrects past tense to met; c correctly supplies the determiner; overall explanation matches."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Shop assistant reporting stock-list progress to a manager changes occupation, recipient and purpose from student survey."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Model is polite, two sentences and uses the exact phrase naturally; checklist addresses phrase, situation and tone/length. No automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "The earlier coffee/leisure distractor described in pack metadata is absent from this candidate; its previous rationale no longer applies. A different q2 defect remains open."
+    },
+    {
+      "id": "q2-gerund",
+      "severity": "critical",
+      "resolved": false,
+      "evidence": "q2a “allocate resources to organizing the weekend workshop” is valid: to is a preposition taking the gerund organizing. q2b is also valid with an infinitive of purpose. Replace a with an objectively incorrect distractor and correct both the option and overall explanation, then re-review the full revised candidate."
+    }
+  ],
+  "editorialDecision": "changes-required"
+}

@@ -1,0 +1,162 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-batch",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 6.5 to 7.0: nuanced inference, scope and causality limits, competing evidence, and precise evaluation without overclaiming. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: replication in social research, the limits of remote-learning metrics, and community heat-risk modelling. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-7",
+    "currentBatch": {
+      "listening": {
+        "title": "Replicating a Study Group Survey",
+        "focus": "following a replication plan and interpreting results cautiously",
+        "part": "Part 3",
+        "script": "JONAS: Have you finished reading the original study we want to replicate for our methods assignment?\nMAYA: The one on peer study groups and first-year motivation? Yes. They surveyed 420 students in 2021 and found that weekly group study was linked to higher confidence.\nJONAS: Right. Our plan is to repeat the survey this term with psychology undergraduates. I emailed the original authors for the questionnaire.\nMAYA: Did they reply?\nJONAS: Yes, yesterday. They sent version two of the questionnaire — sorry, version three. Version two had a faulty scale where two response options overlapped, so they fixed it in version three.\nMAYA: Good catch. Should we use version three then?\nJONAS: I think so, but we need to note the change in our report because the wording of two items is slightly different. Our tutor said replication doesn't mean identical in every detail, but we must document adaptations.\nMAYA: That makes sense. What about sample size? The original had 420, but we can't reach that many.\nJONAS: No. We contacted 32 departments — I mean, 32 seminar groups — and we expect about 180 responses. That's smaller, so our results will be less precise.\nMAYA: Will that be a problem for comparison?\nJONAS: Partly. If we find a weaker link between group study and confidence, it might be due to the smaller sample, or because student habits changed after remote learning. We can't separate those easily.\nMAYA: So we should be cautious about claiming the original finding was wrong.\nJONAS: Exactly. A different result doesn't automatically disprove the first study. It could reflect sampling variation or a genuine shift in context.\nMAYA: How should we analyse it?\nJONAS: We'll run the same correlation first, then add tutorial attendance as an extra check. If the pattern holds after that adjustment, our confidence in the link increases a bit.\nMAYA: Okay. I'll draft the pre-registration note today so we record our plan before collecting data.\nJONAS: Perfect. That way we can't be accused of changing our hypotheses after seeing the results.\nMAYA: Should we also upload our anonymised dataset to the department archive?\nJONAS: Yes, and include our coding notes. That transparency lets others verify our cleaning decisions.",
+        "questions": [
+          {
+            "title": "Original finding",
+            "prompt": "What did the original study report?",
+            "options": [
+              "Weekly group study caused higher grades.",
+              "Weekly group study improved tutorial attendance.",
+              "Regular group study was associated with greater self-assurance.",
+              "First-year students preferred group study to lectures."
+            ],
+            "answer": 2,
+            "explanation": "Maya says weekly group study was linked to higher confidence, paraphrased as greater self-assurance. The grades option fails because grades are never mentioned."
+          },
+          {
+            "title": "Questionnaire version",
+            "prompt": "Why will the students use version three of the questionnaire?",
+            "options": [
+              "It corrected overlapping response options in the scale.",
+              "It added questions about remote learning.",
+              "It shortened the survey to increase returns.",
+              "It translated items for international students."
+            ],
+            "answer": 0,
+            "explanation": "Jonas explains version two had overlapping options and this was fixed in version three. The remote-learning option fails because remote learning is mentioned only as a possible context change, not a questionnaire change."
+          },
+          {
+            "title": "Contacted groups",
+            "prompt": "How many groups did the students contact for the replication?",
+            "options": [
+              "420 seminar groups",
+              "180 seminar groups",
+              "32 departments",
+              "32 seminar groups"
+            ],
+            "answer": 3,
+            "explanation": "Jonas corrects himself from 32 departments to 32 seminar groups. The departments option fails because it was the initial error he explicitly corrected."
+          },
+          {
+            "title": "Interpreting differences",
+            "prompt": "What do the students conclude about a possible different result?",
+            "options": [
+              "It would prove the original authors made an error.",
+              "It would not by itself disprove the original study.",
+              "It would show remote learning caused the change.",
+              "It would mean the replication method was faulty."
+            ],
+            "answer": 1,
+            "explanation": "Jonas says a different result doesn't automatically disprove the first study and could reflect sampling variation or context shift. The remote-learning option fails because they say that cause cannot be separated easily."
+          },
+          {
+            "title": "Pre-registration purpose",
+            "prompt": "What is the purpose of the pre-registration note?",
+            "options": [
+              "To request permission to use version three.",
+              "To summarise results for the department archive.",
+              "To record the analysis plan before collecting data.",
+              "To document cleaning decisions after analysis."
+            ],
+            "answer": 2,
+            "explanation": "Maya will draft the note to record the plan before collecting data so hypotheses cannot be changed after results. The cleaning-decisions option fails because that refers to the later dataset upload, not pre-registration."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Mapping Heat Risk in Merivale",
+        "focus": "evaluating what a community model can and cannot show",
+        "passage": "Merivale, a city of about 620,000 residents, has experienced longer summer heat episodes since 2018. In response, the public health team built a neighbourhood heat-risk map to decide where to place shade structures, drinking-water points, and mobile cooling units. The map combines four sources: satellite estimates of surface temperature, readings from 48 low-cost street sensors, emergency-clinic records for heat-related illness during the summers of 2021 to 2023, and housing data on age of buildings, tree cover, and access to home cooling.\nEach source contributes a different view, and each has limits. Satellite images cover the entire city every few days, but they largely capture rooftop and road-surface temperatures in the early afternoon, not the air people breathe at street level in the evening. The street sensors record air temperature hourly, which is closer to lived experience, yet only 48 devices were available, and most were installed along main roads for practical reasons. Areas away from those roads are therefore thinly measured. Clinic records show where diagnosed illness occurred, but they miss residents who felt unwell and stayed home.\nTo combine these sources, analysts scored each neighbourhood on factors linked to vulnerability, such as a high proportion of older residents, outdoor manual work, limited tree shade, and older housing that retains heat. The resulting model ranked South Docks and the Elm Quarter as highest risk. In a 2023 pilot, the city placed two mobile cooling units in the Elm Quarter because the model highlighted it, and staff recorded high visitor numbers on very hot days.\nThe report is careful about what this pilot shows. It claims the example demonstrates that the map can guide practical outreach to places where need is likely to be high. It does not claim the pilot proves the units reduced hospital admissions. Establishing that health effect would require a comparison with similar hot periods or neighbourhoods without units, which the pilot did not include. Distinguishing these points matters: usefulness for targeting is supported, while a causal health benefit remains untested.\nOther evidence complicates the picture. Interviews with 60 residents in high-ranked areas suggested that indoor night-time heat was a greater concern than afternoon street heat, especially in upper-floor flats with poor ventilation. Because the model gives considerable weight to daytime surface temperatures, it may undervalue buildings where nights stay hot. A community survey also found that travel distance and opening hours kept some residents from using cooling units, factors the model does not capture.\nThe authors therefore recommend using the map as an initial screening tool rather than a final verdict on risk. A high score should trigger a site visit, checks of building conditions, and conversations with local groups before resources are committed. A low score in a poorly measured area should not be read as safety; it may simply reflect missing sensor or clinic data. Updating housing information and spreading sensors more evenly, the report concludes, would help more than adding complexity to the scoring.",
+        "questions": [
+          {
+            "title": "Map purpose",
+            "prompt": "What was the main purpose of the Merivale heat-risk map?",
+            "options": [
+              "To prove that heat episodes have lengthened since 2018.",
+              "To help decide where to locate heat-relief resources.",
+              "To replace street sensors with satellite estimates.",
+              "To record every case of heat illness in the city."
+            ],
+            "answer": 1,
+            "explanation": "The passage states the map was built to decide where to place shade, water and cooling units. The lengthened-episodes option fails because that is background context, not the map's purpose."
+          },
+          {
+            "title": "Satellite limit",
+            "prompt": "What limitation of satellite data is identified?",
+            "options": [
+              "It is available only for South Docks and Elm Quarter.",
+              "It measures clinic visits rather than temperature.",
+              "It records temperatures only during winter.",
+              "It captures afternoon surface heat rather than evening street-level air."
+            ],
+            "answer": 3,
+            "explanation": "The passage contrasts rooftop and road-surface afternoon temperatures with evening street-level air people breathe. The clinic-visits option fails because clinic records are a separate source."
+          },
+          {
+            "title": "Pilot claim",
+            "prompt": "According to the report, what does the Elm Quarter pilot demonstrate?",
+            "options": [
+              "The map can direct outreach, but health benefit is unproven.",
+              "High visitor numbers prove admissions fell.",
+              "Two units are sufficient for the whole city.",
+              "The model ranking was incorrect."
+            ],
+            "answer": 0,
+            "explanation": "The author claims the example shows usefulness for targeting, explicitly not proof of reduced admissions without a comparison. The admissions-fell option fails because it confuses the example with the unsupported causal claim."
+          },
+          {
+            "title": "Competing concern",
+            "prompt": "What concern from resident interviews may the model undervalue?",
+            "options": [
+              "Lack of drinking-water points near main roads.",
+              "Afternoon heat on tree-lined streets.",
+              "Indoor night-time heat in poorly ventilated flats.",
+              "Cost of low-cost street sensors."
+            ],
+            "answer": 2,
+            "explanation": "Interviews suggested indoor night-time heat was a greater concern, especially in upper-floor flats, while the model weights daytime surface temperatures. The drinking-water option fails because placement of resources is an application, not the interview concern."
+          },
+          {
+            "title": "Low-score inference",
+            "prompt": "What can reasonably be inferred about a low-score area with few sensors?",
+            "options": [
+              "It has been proven safe from heat risk.",
+              "It requires a comparison with 2018 data.",
+              "It may appear low risk due to missing data and needs checking.",
+              "It should receive resources before high-score areas."
+            ],
+            "answer": 2,
+            "explanation": "The passage warns a low score in poorly measured areas should not be read as safety and should trigger verification. The proven-safe option fails because the author explicitly limits the inference to missing data, not safety."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "reviewer": "local-structural-validator",
+      "candidateStage": "band-7",
+      "findings": [
+        {
+          "severity": "major",
+          "item": "Listening script",
+          "issue": "Listening script has 413 whitespace-separated words; expected 300–400 words.",
+          "requiredFix": "Reduce the script to 330–380 words while retaining the supported facts, qualifications, and question evidence."
+        },
+        {
+          "severity": "critical",
+          "item": "Reading question 5 · Low-score inference",
+          "issue": "The answer key points to option 2, but the explanation supports option 3: a low-score area with few sensors may appear low-risk due to missing data and needs checking.",
+          "requiredFix": "Set the answer index to 2 (zero-based) so it points to the existing supported option, and keep the explanation aligned with that option. Do not change the other questions or options."
+        }
+      ]
+    }
+  }
+}

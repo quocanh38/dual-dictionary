@@ -1,0 +1,85 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6",
+  "batchId": "wave-4",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-4-v2",
+  "completedAt": "2026-10-28T08:26:59.928Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 511,
+    "outputTokens": 2002,
+    "totalTokens": 2513
+  },
+  "latencyMs": 10753,
+  "reasoningEffort": "low",
+  "maxOutputTokens": 10000,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Community Garden Open Day Attendance",
+        "focus": "paraphrase and clear comparisons of linked figures",
+        "prompt": "The table below shows attendance at the Maple Street Community Garden Open Day in 2023 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table: Activity - Guided Planting Tour (2023: 85 visitors, 2024: 120 visitors); Seed-Swap Stall (2023: 110 visitors, 2024: 95 visitors); Children's Composting Workshop (2023: 60 visitors, 2024: 105 visitors); Garden Cafe (2023: 140 visitors, 2024: 150 visitors). Total visitors: 2023: 395, 2024: 470.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Local Museum Workshop Schedule",
+        "focus": "corrected details and linked ideas across a timetable",
+        "prompt": "The table below shows the Saturday workshop schedule at Harlow Local Museum for March and April. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. March: Pottery Basics, 10:00-11:30, 18 places, fee 6 pounds; Photo Archive Talk, 13:00-14:00, 30 places, free; Family Fossil Hunt, 15:00-16:00, 24 places, fee 4 pounds. April: Pottery Basics, 10:00-11:30, 18 places, fee 6 pounds; Textile Repair Workshop, 13:00-14:30, 20 places, fee 5 pounds; Family Fossil Hunt, 15:00-16:00, 24 places, fee 4 pounds.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · University Careers Panel Value",
+        "focus": "linked ideas and reasons across familiar academic topics",
+        "prompt": "A university held a careers panel where three graduates described their jobs in teaching, environmental work, and small business. Some students say such panels are more useful than online careers information. Others say online information is enough. Discuss both views and give your own opinion. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Volunteering in Community Gardens",
+        "focus": "paraphrase and comparison of two approaches",
+        "prompt": "Some people think community gardens should depend on volunteers from the local area. Others think the local council should pay workers to maintain them. Discuss both views and give your own opinion. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · School Visits to Local Museums",
+        "focus": "evaluation of linked ideas with clear comparison",
+        "prompt": "Some schools organise regular workshops at local museums, while other schools prefer classroom activities only. Do the advantages of museum workshops outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Study and Free Time",
+        "focus": "paraphrase of familiar questions with linked answers",
+        "prompt": "Let's talk about your studies and free time. What subject are you studying at the moment? What do you enjoy most about it? How do you usually spend your weekends? Have your leisure activities changed compared to last year? Do you prefer spending free time indoors or outdoors? Why? This part takes 4 to 5 minutes."
+      },
+      {
+        "task": "Part 1 · Gardens and Local Areas",
+        "focus": "corrected details in short personal answers",
+        "prompt": "Let's talk about gardens and your local area. Is there a park or garden near where you live? How often do you visit it? Did you enjoy gardening or outdoor activities as a child? Would you like to join a community garden open day in the future? Why or why not? This part takes 4 to 5 minutes."
+      },
+      {
+        "task": "Part 2 · Cue card – A Useful Talk or Panel You Attended",
+        "focus": "linked ideas in a 1 to 2 minute talk",
+        "prompt": "Describe a useful talk or panel discussion you attended at school, university, or in your community. You should say: where and when it took place, who the speakers were, what main ideas they shared, and explain why you found it useful. You have 1 minute to prepare and should speak for 1 to 2 minutes. Possible follow-up: Would you attend a similar event again?."
+      },
+      {
+        "task": "Part 3 · Careers Advice for Young People",
+        "focus": "reasons and evaluation, not memorised facts",
+        "prompt": "Let's discuss careers advice. Why do some students find a university careers panel more helpful than reading online? How can schools help students compare different job options clearly? Do you think work experience is more important than careers talks? Why? How might careers advice change in the next ten years? This discussion takes 4 to 5 minutes."
+      },
+      {
+        "task": "Part 3 · Museums and Community Learning",
+        "focus": "comparison and evaluation of community activities",
+        "prompt": "Let's discuss museums and community learning. What are the benefits of local museum workshops compared to learning at home? Should museums offer more free activities for families? Why? How can a community garden open day and a museum workshop both support local learning? Which is more important for a town: preserving old objects or creating new green spaces? Why? This discussion takes 4 to 5 minutes."
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-10",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:21:27.732Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 773,
+    "outputTokens": 9789,
+    "totalTokens": 10562
+  },
+  "latencyMs": 40407,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"Tutoring Trial Transportability and Wellbeing Measures Discussion\",\"focus\":\"Evaluating whether trial effects transfer, limits of composite scores, and causal claims\",\"part\":\"Part 3\",\"script\":\"Professor: So, how are you planning to apply the Riverdale tutoring trial to your proposal for the northern districts?\\nMaya: The trial reported a 0.3 standard deviation improvement in maths after eight weeks of small-group tutoring. We hoped to replicate that model in the north.\\nJon: The challenge is transportability. Riverdale is urban, well-funded, with experienced tutors. The northern districts are rural, with multi-grade classrooms and frequent tutor turnover.\\nProfessor: Precisely. An effect in one setting does not automatically transfer. Which factors might change the outcome?\\nMaya: Tutor expertise is one. Also, baseline attainment is lower in the north. That could mean greater potential for growth, or it could mean students need more foundational support before tutoring helps.\\nJon: We also examined wellbeing. The trial created a composite wellbeing score from attendance, student mood questionnaires, and teacher ratings, and found no overall change.\\nProfessor: And what is the risk of relying on that composite?\\nMaya: It hides divergent patterns. Attendance rose slightly, but self-reported anxiety increased for a subgroup. Averaging them produced a flat result and masked the trade-off.\\nJon: So we will present the three components separately in our analysis.\\nProfessor: Good. What about your second piece of evidence, the city-wide mentoring policy evaluated with an interrupted time series?\\nMaya: Dropout rates fell by four percent in the semester after the policy began, which we initially took as causal evidence.\\nJon: Actually, let me correct that — the data show a four percent fall over the full year after implementation, not a single semester. And the decline had already started beforehand.\\nProfessor: So how strong is the causal claim?\\nMaya: Weak. An interrupted time series can support causality if there is a sharp change at the interruption point and no other major changes, but here a district funding increase happened at the same time.\\nJon: So we have competing explanations and cannot isolate the policy effect without further controls.\\nProfessor: Exactly. Acknowledge those limits and propose a pilot that tracks each wellbeing measure separately.\",\"questions\":[{\"title\":\"Riverdale Trial Outcome\",\"prompt\":\"What improvement did the Riverdale trial report?\",\"options\":[\"0.3 standard deviation gain in maths\",\"0.3 grade level increase in reading\",\"Four percent drop in dropout rates\",\"Higher attendance across all schools\"],\"answer\":0,\"explanation\":\"The script states the trial found a 0.3 SD improvement in maths after eight weeks. Option C confuses this with the later mentoring policy dropout figure.\"},{\"title\":\"Applying Results to the North\",\"prompt\":\"Why might the tutoring effect not transfer to northern districts?\",\"options\":[\"Differences in tutor experience and classroom structure\",\"Lack of student interest in maths tutoring\",\"Northern students already have higher attainment\",\"Riverdale trial used a different subject\"],\"answer\":0,\"explanation\":\"Jon contrasts Riverdale's experienced tutors and urban funding with the north's multi-grade classes and turnover. Option C reverses the stated baseline difference.\"},{\"title\":\"Problem with Composite Score\",\"prompt\":\"What is the limitation of the composite wellbeing score?\",\"options\":[\"It was based on too few students\",\"It relied only on teacher ratings\",\"It averaged opposing trends into a flat result\",\"It showed a large wellbeing improvement\"],\"answer\":2,\"explanation\":\"Maya explains attendance rose while anxiety increased, averaging to a flat result that masked the trade-off. Option B is wrong because the composite used three sources.\"},{\"title\":\"Dropout Data Correction\",\"prompt\":\"What correction does Jon make about the dropout fall?\",\"options\":[\"The fall was larger than first reported\",\"The data came from a different city\",\"The policy had no effect on dropouts\",\"The fall occurred over a year, not one semester\"],\"answer\":3,\"explanation\":\"Jon corrects Maya's semester claim, noting the four percent fall was over the full year. Option A misstates the correction's direction.\"},{\"title\":\"Interrupted Time Series Claim\",\"prompt\":\"Why is the causal claim about the mentoring policy weak?\",\"options\":[\"The sample size was too small to analyse\",\"A concurrent funding increase offers an alternative explanation\",\"The researchers used the wrong statistical method\",\"Dropout rates increased after the policy\"],\"answer\":1,\"explanation\":\"Maya notes a district funding increase at the same time provides a competing explanation. Option C is incorrect as no method error is mentioned.\"}]},\"reading\":{\"title\":\"When Evidence Travels: Tutoring Gains, Wellbeing Composites, and Time Series\",\"focus\":\"Transportability of trial effects, limits of composite wellbeing indices, and qualifying causal claims\",\"passage\":\"The Bright Futures tutoring programme was trialled in the Central Valley during 2022-23. Twenty-four primary schools were randomly assigned to receive small-group maths tutoring three times per week for ten weeks, delivered by trained graduates. Compared with control schools, pupils in tutoring schools gained an average of 0.35 standard deviations in maths, equivalent to about three months of additional progress. Implementation was strong: attendance at sessions exceeded 90%, and tutors received weekly coaching.\\nPolicymakers now ask whether this result can be transported to the Highlands, a sparsely populated region 400 kilometres to the north. Transportability depends not on whether the trial was internally valid, but on whether the conditions that made it work exist elsewhere. The Highlands differ in several potential effect modifiers. Baseline maths attainment is markedly lower, classes are often multi-grade, and qualified tutors are scarce, leading to higher turnover. In addition, many pupils speak a minority language at home, while tutoring materials were developed in the majority language. These differences do not guarantee failure, but they suggest the average effect could be smaller, larger, or more variable. Without a local pilot that adapts training and materials, extrapolating the 0.35 gain is speculative.\\nThe trial also measured wellbeing using a composite score that combined attendance, a sense-of-belonging questionnaire, and a reverse-scored anxiety scale into a single index. The composite showed no significant difference between groups. The authors concluded that tutoring had no adverse wellbeing effects. This interpretation illustrates a key limit of composites: they can obscure opposing movements. Disaggregated data, reported in an appendix, showed attendance improved by two percentage points, belonging was unchanged, and anxiety scores worsened slightly among lower-attaining pupils. Averaging these components produced a neutral overall value, hiding a possible trade-off that merits attention. For policy, the components matter more than the index, because interventions may be justified only if gains in learning are not offset by heightened anxiety.\\nA separate evaluation examined a Highland mentoring policy introduced in January 2023 to reduce secondary dropout. Researchers used an interrupted time series with 48 monthly observations, 24 before and 24 after the policy. Dropout rates fell after the interruption, but the series also revealed a gradual downward trend already underway before January 2023. Moreover, a regional transport subsidy that improved school access began in the same month. Interrupted time series designs can support causal inference when a sharp, sustained change coincides precisely with the interruption and no other major events occur. Here, neither condition was clearly met. The authors therefore described the association as suggestive rather than causal, noting that competing explanations could not be ruled out.\\nTogether, the cases show that evidence travels poorly without attention to context, that composite wellbeing indices can mask important harms or benefits, and that time-based evaluations require careful qualification of causal language.\",\"questions\":[{\"title\":\"Trial Result in Central Valley\",\"prompt\":\"What did the Central Valley trial find?\",\"options\":[\"No change in maths attainment\",\"Tutors needed more coaching\",\"0.35 SD gain in maths for tutoring schools\",\"Highlands schools improved without tutoring\"],\"answer\":2,\"explanation\":\"The passage reports a 0.35 SD gain versus controls with strong implementation. Option A contradicts this positive finding.\"},{\"title\":\"Transportability to Highlands\",\"prompt\":\"What can be inferred about applying the 0.35 gain to Highlands?\",\"options\":[\"The same gain is guaranteed in Highlands\",\"Extrapolation is speculative without a local pilot\",\"Highlands will show a larger gain due to lower baseline\",\"Language differences have no effect on outcomes\"],\"answer\":1,\"explanation\":\"The passage says differences in modifiers make extrapolation speculative without an adapted pilot. Option C overclaims a larger gain as certain when the effect could vary.\"},{\"title\":\"Composite Wellbeing Score\",\"prompt\":\"How does the passage distinguish the authors' conclusion from underlying data?\",\"options\":[\"Authors claimed no adverse effects, but anxiety worsened for some\",\"Authors reported improved belonging, but attendance fell\",\"Authors found large wellbeing gains, but data were missing\",\"Authors rejected composites, but used one anyway\"],\"answer\":0,\"explanation\":\"The authors concluded no adverse effects from the neutral composite, yet disaggregated data showed worsened anxiety for lower-attainers. Option B reverses the reported attendance and belonging results.\"},{\"title\":\"Interrupted Time Series Requirements\",\"prompt\":\"When can an interrupted time series support causal inference?\",\"options\":[\"When dropout rates fall gradually over time\",\"When sample includes at least 48 observations\",\"When policy is introduced in January\",\"When sharp change aligns with interruption and no other events\"],\"answer\":3,\"explanation\":\"The passage states causality is supported when a sharp sustained change coincides with the interruption and no other major events occur. Option B mistakes the example's 48 observations for a general rule.\"},{\"title\":\"Mentoring Policy Evaluation\",\"prompt\":\"Why did authors call the mentoring-dropout link suggestive?\",\"options\":[\"Pre-existing downward trend and concurrent transport subsidy\",\"Composite score hid the true dropout change\",\"Trial was not randomised in Highlands\",\"Data covered only 24 months after policy\"],\"answer\":0,\"explanation\":\"The authors cited the pre-existing downward trend and same-month transport subsidy as competing explanations. Option B confuses the composite issue from the tutoring trial with this evaluation.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Tutoring Trial Transportability and Wellbeing Measures Discussion",
+      "focus": "Evaluating whether trial effects transfer, limits of composite scores, and causal claims",
+      "part": "Part 3",
+      "script": "Professor: So, how are you planning to apply the Riverdale tutoring trial to your proposal for the northern districts?\nMaya: The trial reported a 0.3 standard deviation improvement in maths after eight weeks of small-group tutoring. We hoped to replicate that model in the north.\nJon: The challenge is transportability. Riverdale is urban, well-funded, with experienced tutors. The northern districts are rural, with multi-grade classrooms and frequent tutor turnover.\nProfessor: Precisely. An effect in one setting does not automatically transfer. Which factors might change the outcome?\nMaya: Tutor expertise is one. Also, baseline attainment is lower in the north. That could mean greater potential for growth, or it could mean students need more foundational support before tutoring helps.\nJon: We also examined wellbeing. The trial created a composite wellbeing score from attendance, student mood questionnaires, and teacher ratings, and found no overall change.\nProfessor: And what is the risk of relying on that composite?\nMaya: It hides divergent patterns. Attendance rose slightly, but self-reported anxiety increased for a subgroup. Averaging them produced a flat result and masked the trade-off.\nJon: So we will present the three components separately in our analysis.\nProfessor: Good. What about your second piece of evidence, the city-wide mentoring policy evaluated with an interrupted time series?\nMaya: Dropout rates fell by four percent in the semester after the policy began, which we initially took as causal evidence.\nJon: Actually, let me correct that — the data show a four percent fall over the full year after implementation, not a single semester. And the decline had already started beforehand.\nProfessor: So how strong is the causal claim?\nMaya: Weak. An interrupted time series can support causality if there is a sharp change at the interruption point and no other major changes, but here a district funding increase happened at the same time.\nJon: So we have competing explanations and cannot isolate the policy effect without further controls.\nProfessor: Exactly. Acknowledge those limits and propose a pilot that tracks each wellbeing measure separately.",
+      "questions": [
+        {
+          "title": "Riverdale Trial Outcome",
+          "prompt": "What improvement did the Riverdale trial report?",
+          "options": [
+            "0.3 standard deviation gain in maths",
+            "0.3 grade level increase in reading",
+            "Four percent drop in dropout rates",
+            "Higher attendance across all schools"
+          ],
+          "answer": 0,
+          "explanation": "The script states the trial found a 0.3 SD improvement in maths after eight weeks. Option C confuses this with the later mentoring policy dropout figure."
+        },
+        {
+          "title": "Applying Results to the North",
+          "prompt": "Why might the tutoring effect not transfer to northern districts?",
+          "options": [
+            "Differences in tutor experience and classroom structure",
+            "Lack of student interest in maths tutoring",
+            "Northern students already have higher attainment",
+            "Riverdale trial used a different subject"
+          ],
+          "answer": 0,
+          "explanation": "Jon contrasts Riverdale's experienced tutors and urban funding with the north's multi-grade classes and turnover. Option C reverses the stated baseline difference."
+        },
+        {
+          "title": "Problem with Composite Score",
+          "prompt": "What is the limitation of the composite wellbeing score?",
+          "options": [
+            "It was based on too few students",
+            "It relied only on teacher ratings",
+            "It averaged opposing trends into a flat result",
+            "It showed a large wellbeing improvement"
+          ],
+          "answer": 2,
+          "explanation": "Maya explains attendance rose while anxiety increased, averaging to a flat result that masked the trade-off. Option B is wrong because the composite used three sources."
+        },
+        {
+          "title": "Dropout Data Correction",
+          "prompt": "What correction does Jon make about the dropout fall?",
+          "options": [
+            "The fall was larger than first reported",
+            "The data came from a different city",
+            "The policy had no effect on dropouts",
+            "The fall occurred over a year, not one semester"
+          ],
+          "answer": 3,
+          "explanation": "Jon corrects Maya's semester claim, noting the four percent fall was over the full year. Option A misstates the correction's direction."
+        },
+        {
+          "title": "Interrupted Time Series Claim",
+          "prompt": "Why is the causal claim about the mentoring policy weak?",
+          "options": [
+            "The sample size was too small to analyse",
+            "A concurrent funding increase offers an alternative explanation",
+            "The researchers used the wrong statistical method",
+            "Dropout rates increased after the policy"
+          ],
+          "answer": 1,
+          "explanation": "Maya notes a district funding increase at the same time provides a competing explanation. Option C is incorrect as no method error is mentioned."
+        }
+      ]
+    },
+    "reading": {
+      "title": "When Evidence Travels: Tutoring Gains, Wellbeing Composites, and Time Series",
+      "focus": "Transportability of trial effects, limits of composite wellbeing indices, and qualifying causal claims",
+      "passage": "The Bright Futures tutoring programme was trialled in the Central Valley during 2022-23. Twenty-four primary schools were randomly assigned to receive small-group maths tutoring three times per week for ten weeks, delivered by trained graduates. Compared with control schools, pupils in tutoring schools gained an average of 0.35 standard deviations in maths, equivalent to about three months of additional progress. Implementation was strong: attendance at sessions exceeded 90%, and tutors received weekly coaching.\nPolicymakers now ask whether this result can be transported to the Highlands, a sparsely populated region 400 kilometres to the north. Transportability depends not on whether the trial was internally valid, but on whether the conditions that made it work exist elsewhere. The Highlands differ in several potential effect modifiers. Baseline maths attainment is markedly lower, classes are often multi-grade, and qualified tutors are scarce, leading to higher turnover. In addition, many pupils speak a minority language at home, while tutoring materials were developed in the majority language. These differences do not guarantee failure, but they suggest the average effect could be smaller, larger, or more variable. Without a local pilot that adapts training and materials, extrapolating the 0.35 gain is speculative.\nThe trial also measured wellbeing using a composite score that combined attendance, a sense-of-belonging questionnaire, and a reverse-scored anxiety scale into a single index. The composite showed no significant difference between groups. The authors concluded that tutoring had no adverse wellbeing effects. This interpretation illustrates a key limit of composites: they can obscure opposing movements. Disaggregated data, reported in an appendix, showed attendance improved by two percentage points, belonging was unchanged, and anxiety scores worsened slightly among lower-attaining pupils. Averaging these components produced a neutral overall value, hiding a possible trade-off that merits attention. For policy, the components matter more than the index, because interventions may be justified only if gains in learning are not offset by heightened anxiety.\nA separate evaluation examined a Highland mentoring policy introduced in January 2023 to reduce secondary dropout. Researchers used an interrupted time series with 48 monthly observations, 24 before and 24 after the policy. Dropout rates fell after the interruption, but the series also revealed a gradual downward trend already underway before January 2023. Moreover, a regional transport subsidy that improved school access began in the same month. Interrupted time series designs can support causal inference when a sharp, sustained change coincides precisely with the interruption and no other major events occur. Here, neither condition was clearly met. The authors therefore described the association as suggestive rather than causal, noting that competing explanations could not be ruled out.\nTogether, the cases show that evidence travels poorly without attention to context, that composite wellbeing indices can mask important harms or benefits, and that time-based evaluations require careful qualification of causal language.",
+      "questions": [
+        {
+          "title": "Trial Result in Central Valley",
+          "prompt": "What did the Central Valley trial find?",
+          "options": [
+            "No change in maths attainment",
+            "Tutors needed more coaching",
+            "0.35 SD gain in maths for tutoring schools",
+            "Highlands schools improved without tutoring"
+          ],
+          "answer": 2,
+          "explanation": "The passage reports a 0.35 SD gain versus controls with strong implementation. Option A contradicts this positive finding."
+        },
+        {
+          "title": "Transportability to Highlands",
+          "prompt": "What can be inferred about applying the 0.35 gain to Highlands?",
+          "options": [
+            "The same gain is guaranteed in Highlands",
+            "Extrapolation is speculative without a local pilot",
+            "Highlands will show a larger gain due to lower baseline",
+            "Language differences have no effect on outcomes"
+          ],
+          "answer": 1,
+          "explanation": "The passage says differences in modifiers make extrapolation speculative without an adapted pilot. Option C overclaims a larger gain as certain when the effect could vary."
+        },
+        {
+          "title": "Composite Wellbeing Score",
+          "prompt": "How does the passage distinguish the authors' conclusion from underlying data?",
+          "options": [
+            "Authors claimed no adverse effects, but anxiety worsened for some",
+            "Authors reported improved belonging, but attendance fell",
+            "Authors found large wellbeing gains, but data were missing",
+            "Authors rejected composites, but used one anyway"
+          ],
+          "answer": 0,
+          "explanation": "The authors concluded no adverse effects from the neutral composite, yet disaggregated data showed worsened anxiety for lower-attainers. Option B reverses the reported attendance and belonging results."
+        },
+        {
+          "title": "Interrupted Time Series Requirements",
+          "prompt": "When can an interrupted time series support causal inference?",
+          "options": [
+            "When dropout rates fall gradually over time",
+            "When sample includes at least 48 observations",
+            "When policy is introduced in January",
+            "When sharp change aligns with interruption and no other events"
+          ],
+          "answer": 3,
+          "explanation": "The passage states causality is supported when a sharp sustained change coincides with the interruption and no other major events occur. Option B mistakes the example's 48 observations for a general rule."
+        },
+        {
+          "title": "Mentoring Policy Evaluation",
+          "prompt": "Why did authors call the mentoring-dropout link suggestive?",
+          "options": [
+            "Pre-existing downward trend and concurrent transport subsidy",
+            "Composite score hid the true dropout change",
+            "Trial was not randomised in Highlands",
+            "Data covered only 24 months after policy"
+          ],
+          "answer": 0,
+          "explanation": "The authors cited the pre-existing downward trend and same-month transport subsidy as competing explanations. Option B confuses the composite issue from the tutoring trial with this evaluation."
+        }
+      ]
+    }
+  }
+}

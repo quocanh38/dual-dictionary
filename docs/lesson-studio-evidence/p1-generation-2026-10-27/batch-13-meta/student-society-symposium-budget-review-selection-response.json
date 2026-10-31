@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "sets aside",
+        "meaningEn": "reserves part of the money for a specific purpose",
+        "meaningVi": "trích ra một phần tiền để dành cho mục đích cụ thể",
+        "sourceSentenceId": "s3"
+      },
+      {
+        "id": "t2",
+        "phrase": "revise the forecast",
+        "meaningEn": "update the expected costs after receiving new information",
+        "meaningVi": "điều chỉnh dự báo chi phí sau khi nhận được thông tin mới",
+        "sourceSentenceId": "s5"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 550,
+    "outputTokens": 1016,
+    "totalTokens": 1566
+  },
+  "status": 200,
+  "latencyMs": 4672,
+  "model": "muse-spark-1.3"
+}

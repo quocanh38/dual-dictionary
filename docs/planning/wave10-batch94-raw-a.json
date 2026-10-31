@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 94,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after supreme court in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Enrich scientific and technical terms, US/UK variants, household and food vocabulary, idiomatic senses and phrasal verbs. Separate literal/figurative meanings, grammar patterns and regional labels where useful.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 980,
+    "remainingRawOnlyAfter": 960
+  },
+  "selected": [
+    "surface area",
+    "surface tension",
+    "surge protector",
+    "surgeon general",
+    "surgical spirit",
+    "suspender belt",
+    "suspension bridge",
+    "swaddling clothes",
+    "swallow dive",
+    "swallow hole",
+    "swan dive",
+    "swear word",
+    "sweet gum",
+    "sweet potato",
+    "sweet talk",
+    "swing shift",
+    "swinging door",
+    "swiss roll",
+    "switch off",
+    "switch on"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

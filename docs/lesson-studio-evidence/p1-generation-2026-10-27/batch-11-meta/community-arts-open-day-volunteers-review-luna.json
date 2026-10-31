@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna",
+  "reviewedAt": "2026-10-27T09:06:09Z",
+  "note": "Independent full-pack review of the exact packSha256 listed above, including both target phrases, all options and explanations, citations, and transfer. Rights/authorship were checked only as declarations in the source manifest; they were not independently verified. AI-assisted editorial review, not human or learner validation.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Matched this pack to the source manifest: it declares an AI-assisted original educational passage, distribution authorization, and no learner personal data. These are project declarations checked for consistency, not independently verified ownership/rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“take part in” occurs in cited s2 (“take part in a short welcome session”); participation is the supported sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "“to participate in an activity or event” directly gives the phrase meaning in the welcome-session context."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“tham gia vào một hoạt động hoặc sự kiện” is natural, accurate Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "“in charge of” occurs in cited s3 for the coordinator and welcome desk; responsibility for managing/looking after it is supported."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Gloss accurately states responsibility for managing or looking after something, not mere presence."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "“phụ trách, chịu trách nhiệm về việc gì” naturally conveys responsibility and includes Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A alone means participating; B is only watching and C cancelling, so neither distractor fits the phrase in s2."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A correctly identifies joining the session; B and C explanations accurately distinguish passive watching and cancellation from participation."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "A uses the past form “took part in”; B has subject agreement error (“She take”); C uses the wrong preposition (“on” rather than “in”)."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations identify the actual verb-form or preposition issue and do not claim that other event collocations are invalid."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B alone means responsibility for managing the welcome desk; A describes visiting and C leaving, neither expresses responsibility."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "B and the stem explanation correctly state the responsibility sense; A and C explanations accurately distinguish guest attendance and leaving."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "B is grammatical and natural; A has “in charge for” instead of the target construction and C incorrectly pluralizes “charge.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "A explanation pinpoints the preposition error and C the noun form error; B and stem explanations accurately describe responsibility."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Prompt changes from volunteering at an arts-centre welcome session to an office worker messaging a friend about a company sports event and invitation."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Model answer is idiomatic, uses past “took part in,” and invites the recipient. Checklist covers length, target form, and changed role/topic; it does not grade automatically."
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "east-market-repair-cafe-volunteer-shift",
+  "rawCandidateFile": "east-market-repair-cafe-volunteer-shift-candidate.json",
+  "editorialCandidateFile": "east-market-repair-cafe-volunteer-shift-candidate-editorial-v1.json",
+  "editedLocally": true,
+  "generatedByMeta": false,
+  "changes": [
+    {
+      "path": "pack.lessons[0].reading.sentences",
+      "before": "Source sentence “At the East Market repair café, volunteers meet at 9 a.m.” was split from the continuation “to prepare shared tools for a free repair session.”",
+      "after": "Merged the abbreviation-fragment into one complete sentence and renumbered the following sentences.",
+      "reason": "Keep sentence segmentation grammatical and aligned to the complete reading."
+    },
+    {
+      "path": "pack.lessons[0].targets[].sourceSentenceId, pack.lessons[0].exercises[].sourceSentenceIds, prompts",
+      "before": "Targets/exercises cited the old sentence IDs.",
+      "after": "Updated IDs to match the merged sentence list.",
+      "reason": "Preserve exact source grounding after the sentence merge."
+    }
+  ],
+  "reason": "Local editorial cleanup; all other Meta content is preserved."
+}

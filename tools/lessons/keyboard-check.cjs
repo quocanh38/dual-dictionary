@@ -1,0 +1,40 @@
+const {openBrowser,qaUrl}=require('./browser-runtime.cjs');
+const {chromium}=require('playwright-core');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await openBrowser(chromium);
+ try {
+  const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage();
+  let calls=0;await context.route(/\/chat\/completions/,r=>{calls++;return r.abort();});
+  const button=name=>page.getByRole('button',{name,exact:true});
+  const headingFocus=()=>page.waitForFunction(()=>document.activeElement?.matches('#app > h2'));
+  await page.goto(qaUrl('/lessons/'));await headingFocus();
+  await page.getByRole('link',{name:'Author a pack',exact:true}).focus();await page.keyboard.press('Enter');await headingFocus();
+  const fields=await page.locator('#app input:not([type=checkbox]), #app textarea, #app select').evaluateAll(inputs=>inputs.map(input=>({id:input.id,label:input.labels?.length||0})));
+  assert.ok(fields.length>5);assert.ok(fields.every(f=>f.label>0),JSON.stringify(fields));
+  await button('Use authored source example').focus();await page.keyboard.press('Enter');
+  await page.waitForFunction(()=>document.querySelector('#source-title')?.value.length>0);
+  await page.locator('#source-confirmed').focus();await page.keyboard.press('Space');
+  await button('Create draft and inspect selection request').focus();await page.keyboard.press('Enter');
+  await page.getByRole('heading',{name:'Inspect before sending to Baseten Muse Spark Open · Hackathon',exact:true}).waitFor();await headingFocus();
+  await page.locator('#request-consent').focus();await page.keyboard.press('Space');assert.equal(await page.locator('#request-consent').isChecked(),true);
+  await button('Back without sending').focus();await page.keyboard.press('Enter');await button('Inspect selection request').waitFor();await headingFocus();
+  await page.getByRole('link',{name:'Lesson library',exact:true}).focus();await page.keyboard.press('Enter');await button('Load authored example').waitFor();
+  await button('Load authored example').focus();await page.keyboard.press('Enter');await page.getByRole('button',{name:/^Study:/}).waitFor();
+  await page.getByRole('button',{name:/^Study:/}).focus();await page.keyboard.press('Enter');await headingFocus();
+  await button('Start exercises').focus();await page.keyboard.press('Enter');await page.locator('input[type=radio]').first().waitFor();await headingFocus();
+  await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Back to library');
+  await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.type),'radio');
+  await page.keyboard.press('ArrowDown');
+  await page.waitForFunction(()=>document.activeElement?.matches('input[type=radio]:checked'));
+  const selected=await page.evaluate(()=>document.activeElement.value);
+  await page.waitForFunction(async value=>{const S=await import('./storage.js');return(await S.listRecords('progress')).some(p=>Object.values(p.answers).some(a=>a.optionId===value));},selected);
+  await page.waitForFunction(()=>document.activeElement?.matches('input[type=radio]:checked'));
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  assert.equal(calls,0);
+  fs.mkdirSync(process.env.DD_QA_OUTPUT,{recursive:true});
+  fs.writeFileSync(process.env.DD_QA_OUTPUT+'/keyboard-tests.json',JSON.stringify({status:'PASS',checks:['screen transitions focus their visible heading','authoring inputs have associated labels','keyboard Enter activates navigation and authoring actions','Space toggles rights and per-request consent','consent is inline, no modal focus trap applies','Tab reaches player controls and native radio group','ArrowDown changes answer and retains focused checked radio after save/render','390px emulation without overflow'],providerCalls:0,physicalDevice:false},null,2));
+  console.log('PASS keyboard navigation, labels, consent, heading focus and radio arrow-key persistence');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

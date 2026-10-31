@@ -1,0 +1,43 @@
+{
+  "wave": 11,
+  "batch": 145,
+  "generated": "2026-10-22",
+  "tier": "B — TOEIC/IELTS, workplace, travel, education and everyday vocabulary",
+  "source": "Remaining docs/vi-p2-pool.json Tier B candidates after excluding existing phrase pages; OALD 10 and LDOCE 6 consulted locally as editorial references. Vietnamese definitions, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Prioritize reusable terms for workplace communication, travel, education, finance, health and academic discussion. Each entry includes a focused Vietnamese meaning, useful collocations, a learner note and two original bilingual examples. Regional labels and distinctions are stated where relevant.",
+  "counts": {
+    "tierBPoolBefore": 678,
+    "selected": 20,
+    "tierBPoolAfter": 658,
+    "phrasePagesBefore": 3508,
+    "phrasePagesAfter": 3528,
+    "handPagesBefore": 3508,
+    "handPagesAfter": 3528
+  },
+  "selected": [
+    "boarding card",
+    "blood vessel",
+    "civil war",
+    "conference call",
+    "credit union",
+    "culture shock",
+    "data point",
+    "death penalty",
+    "debt ceiling",
+    "direct mail",
+    "direct object",
+    "dry cleaning",
+    "economy class",
+    "electrical engineer",
+    "electric blanket",
+    "end product",
+    "executive director",
+    "financial aid",
+    "flash card",
+    "general knowledge"
+  ],
+  "references": [
+    "Local Oxford Advanced Learner's Dictionary, 10th edition (editorial reference only)",
+    "Local Longman Dictionary of Contemporary English, 6th edition (editorial reference only)"
+  ]
+}

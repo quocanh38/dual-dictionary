@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-8",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:21:26.716Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 765,
+    "outputTokens": 9778,
+    "totalTokens": 10543
+  },
+  "latencyMs": 39888,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"Clinic Appointment Reminder Trial\",\"focus\":\"Understanding details, changes and arrangements\",\"part\":\"Part 1\",\"script\":\"Anna: Good morning, Riverside Public Clinic, you're speaking with Anna. How can I help you today?\\nDavid: Good morning, Anna. My name is David Chen. I got a letter about my appointment next Tuesday and something about a reminder trial.\\nAnna: Thank you, Mr. Chen. Let me pull up your record. Yes, you have an appointment with Dr. Patel in Room 4 on Tuesday, 14th May.\\nDavid: I thought it was at 9 a.m. Is that right?\\nAnna: Let me double-check the schedule. Actually, the morning clinic now starts a bit later, so your appointment is at 9:30 a.m., not 9. Sorry for the confusion.\\nDavid: No problem, 9:30 on Tuesday, Room 4. Got it. Can you tell me more about this reminder trial?\\nAnna: Of course. We're trying to reduce missed appointments. Last month, 18 percent of patients didn't come. The trial runs for three months, from May to July, and includes about 400 patients. We're testing two reminder methods.\\nDavid: What are the two methods?\\nAnna: Group A gets just one text message two days before. Group B gets a text two days before and also a phone call the day before.\\nDavid: Which group am I in?\\nAnna: You're in Group B, so you'll receive a text on Sunday and a phone call on Monday afternoon.\\nDavid: Do I need to do anything when I get them?\\nAnna: Yes, please reply YES to the text to confirm, or confirm during the phone call. If we don't hear from you, we keep your slot but list you as unconfirmed.\\nDavid: And if I need to cancel?\\nAnna: You can reply CANCEL to the text or call us at least 24 hours ahead. Then we can give your appointment to another patient.\\nDavid: That's clear. Will my phone number be shared with other companies?\\nAnna: No, it's only used for the reminders and not shared. It's completely free. We will also ask for quick feedback after your visit about whether the reminders were helpful.\\nDavid: Happy to help. So just to confirm, I should arrive early and bring my health card?\\nAnna: Exactly. Please arrive 15 minutes early and bring your health card and your medication list.\\nDavid: Perfect. Thanks for your help, Anna.\\nAnna: You're welcome, Mr. Chen. See you on Tuesday at 9:30.\",\"questions\":[{\"title\":\"Appointment Details\",\"prompt\":\"What is David's appointment?\",\"options\":[\"Dental check on Monday morning\",\"With Dr. Patel on Tuesday\",\"Eye test on Sunday afternoon\",\"Vaccination on Thursday evening\"],\"answer\":1,\"explanation\":\"The script confirms the appointment is with Dr. Patel on Tuesday 14th May. Option A gives the wrong day and service.\"},{\"title\":\"Corrected Time\",\"prompt\":\"What time is David's appointment?\",\"options\":[\"9:00 a.m.\",\"9:30 a.m.\",\"10:00 a.m.\",\"2:00 p.m.\"],\"answer\":1,\"explanation\":\"Anna corrects the time from 9 to 9:30 a.m. Option A is the initial mistaken time before correction.\"},{\"title\":\"Reminder Group\",\"prompt\":\"Which reminders will David receive?\",\"options\":[\"Only a text on Sunday\",\"Only a call on Monday\",\"Text Sunday and call Monday\",\"Email reminders every day\"],\"answer\":2,\"explanation\":\"David is in Group B, receiving a text Sunday and call Monday. Option A describes Group A only.\"},{\"title\":\"Confirming Attendance\",\"prompt\":\"What must David do to confirm?\",\"options\":[\"Reply YES to the text\",\"Pay a small fee\",\"Visit the clinic early\",\"Bring a referral letter\"],\"answer\":0,\"explanation\":\"Anna asks patients to reply YES or confirm on the call. Option B incorrectly adds a fee.\"},{\"title\":\"Arrival Instructions\",\"prompt\":\"What must David bring and when to arrive?\",\"options\":[\"Arrive 5 minutes late\",\"Bring health card only\",\"Share phone number publicly\",\"Arrive 15 minutes early with documents\"],\"answer\":3,\"explanation\":\"Anna says arrive 15 minutes early with health card and medication list. Option B omits the time and second item.\"}]},\"reading\":{\"title\":\"City Park Accessibility Audit\",\"focus\":\"Understanding findings, comparisons and recommendations\",\"passage\":\"The city council commissioned an independent accessibility audit of twelve public parks in March 2024. The aim was to assess how easily people with different mobility and sensory needs could use paths, entrances, toilets and information signs. The council wanted evidence to guide future spending, rather than relying on complaints alone.\\n\\nThe audit was carried out by a team of ten people, including two wheelchair users, a volunteer with low vision, and two parents with pushchairs, along with access specialists. They visited each park twice, once on a weekday and once at the weekend, and used a detailed checklist. They measured path width and surface quality, checked step-free access at entrances, tested accessible toilets, and reviewed the clarity of maps and signs.\\n\\nResults showed clear differences between parks. Central Park, which was renovated in 2018, scored highest. It had wide, smooth paths, step-free entrances on all sides, and two accessible toilets that were clean and unlocked. In contrast, Northside Park scored lowest. Its main paths were narrow and uneven, three of its four entrances had steps with no ramp, and its only accessible toilet was locked with no sign explaining where to get a key. Across all twelve parks, ten had at least one section of uneven or damaged path, and seven had no accessible toilet available for use on the day of the visit. Only four parks had maps that could be read easily from a wheelchair height.\\n\\nWhen comparing parks by age, those built or fully updated after 2010 generally performed better than older parks. For example, Riverside Park, opened in 2015, had level entrances and clear signs with large print and symbols, while Old Town Park, opened in 1985 and not updated since, had poor signage and gravel paths that were difficult for wheelchairs and pushchairs. However, the report argues that age alone does not explain the results. The authors state that regular maintenance is the key factor. They point to Hilltop Park, built in 1998 but well maintained, which scored higher than some newer parks that had been neglected.\\n\\nThe report recommends low-cost improvements that could be made quickly, such as repairing path surfaces, adding portable ramps at stepped entrances, and providing clear information about toilet access. It also suggests longer-term actions, including staff training and involving disabled users in design decisions. The authors note that these changes would also help older visitors and families with young children. The council has announced it will prioritise improvements in three parks with the lowest scores, starting with Northside Park, and will repeat the audit in 2026 to measure progress.\",\"questions\":[{\"title\":\"Purpose of Audit\",\"prompt\":\"Why did the council commission the audit?\",\"options\":[\"To respond only to complaints\",\"To guide future spending with evidence\",\"To close poorly scored parks\",\"To increase park entrance fees\"],\"answer\":1,\"explanation\":\"The passage says the council wanted evidence to guide spending rather than relying on complaints. Option A misrepresents this purpose.\"},{\"title\":\"Audit Team\",\"prompt\":\"Who was included in the audit team?\",\"options\":[\"Only council employees\",\"Wheelchair users and parents with pushchairs\",\"Only landscape architects\",\"School children and teachers\"],\"answer\":1,\"explanation\":\"The team included wheelchair users, a low-vision volunteer and parents with pushchairs. Option A incorrectly limits it to staff.\"},{\"title\":\"Main Findings\",\"prompt\":\"What did the audit find about park facilities?\",\"options\":[\"All parks had perfect paths\",\"Most parks had new toilets\",\"Ten parks had uneven paths\",\"Central Park had locked toilets\"],\"answer\":2,\"explanation\":\"Results show ten parks had uneven paths and seven lacked accessible toilets. Option D reverses Central Park's positive result.\"},{\"title\":\"Claim Versus Example\",\"prompt\":\"What does the report argue about park age?\",\"options\":[\"Maintenance matters more than age alone\",\"Riverside Park opened in 2015\",\"Old Town Park has gravel paths\",\"All old parks scored lowest\"],\"answer\":0,\"explanation\":\"The authors claim maintenance is the key factor, not age alone. Options B and C are examples used to illustrate, not the claim.\"},{\"title\":\"Benefit of Improvements\",\"prompt\":\"What can be inferred about recommended improvements?\",\"options\":[\"They will only help wheelchair users\",\"They require closing parks for years\",\"They need no further audits\",\"They would also benefit elderly and families\"],\"answer\":3,\"explanation\":\"The report notes changes would also help older visitors and families. Option A is too narrow and contradicts this inference.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Clinic Appointment Reminder Trial",
+      "focus": "Understanding details, changes and arrangements",
+      "part": "Part 1",
+      "script": "Anna: Good morning, Riverside Public Clinic, you're speaking with Anna. How can I help you today?\nDavid: Good morning, Anna. My name is David Chen. I got a letter about my appointment next Tuesday and something about a reminder trial.\nAnna: Thank you, Mr. Chen. Let me pull up your record. Yes, you have an appointment with Dr. Patel in Room 4 on Tuesday, 14th May.\nDavid: I thought it was at 9 a.m. Is that right?\nAnna: Let me double-check the schedule. Actually, the morning clinic now starts a bit later, so your appointment is at 9:30 a.m., not 9. Sorry for the confusion.\nDavid: No problem, 9:30 on Tuesday, Room 4. Got it. Can you tell me more about this reminder trial?\nAnna: Of course. We're trying to reduce missed appointments. Last month, 18 percent of patients didn't come. The trial runs for three months, from May to July, and includes about 400 patients. We're testing two reminder methods.\nDavid: What are the two methods?\nAnna: Group A gets just one text message two days before. Group B gets a text two days before and also a phone call the day before.\nDavid: Which group am I in?\nAnna: You're in Group B, so you'll receive a text on Sunday and a phone call on Monday afternoon.\nDavid: Do I need to do anything when I get them?\nAnna: Yes, please reply YES to the text to confirm, or confirm during the phone call. If we don't hear from you, we keep your slot but list you as unconfirmed.\nDavid: And if I need to cancel?\nAnna: You can reply CANCEL to the text or call us at least 24 hours ahead. Then we can give your appointment to another patient.\nDavid: That's clear. Will my phone number be shared with other companies?\nAnna: No, it's only used for the reminders and not shared. It's completely free. We will also ask for quick feedback after your visit about whether the reminders were helpful.\nDavid: Happy to help. So just to confirm, I should arrive early and bring my health card?\nAnna: Exactly. Please arrive 15 minutes early and bring your health card and your medication list.\nDavid: Perfect. Thanks for your help, Anna.\nAnna: You're welcome, Mr. Chen. See you on Tuesday at 9:30.",
+      "questions": [
+        {
+          "title": "Appointment Details",
+          "prompt": "What is David's appointment?",
+          "options": [
+            "Dental check on Monday morning",
+            "With Dr. Patel on Tuesday",
+            "Eye test on Sunday afternoon",
+            "Vaccination on Thursday evening"
+          ],
+          "answer": 1,
+          "explanation": "The script confirms the appointment is with Dr. Patel on Tuesday 14th May. Option A gives the wrong day and service."
+        },
+        {
+          "title": "Corrected Time",
+          "prompt": "What time is David's appointment?",
+          "options": [
+            "9:00 a.m.",
+            "9:30 a.m.",
+            "10:00 a.m.",
+            "2:00 p.m."
+          ],
+          "answer": 1,
+          "explanation": "Anna corrects the time from 9 to 9:30 a.m. Option A is the initial mistaken time before correction."
+        },
+        {
+          "title": "Reminder Group",
+          "prompt": "Which reminders will David receive?",
+          "options": [
+            "Only a text on Sunday",
+            "Only a call on Monday",
+            "Text Sunday and call Monday",
+            "Email reminders every day"
+          ],
+          "answer": 2,
+          "explanation": "David is in Group B, receiving a text Sunday and call Monday. Option A describes Group A only."
+        },
+        {
+          "title": "Confirming Attendance",
+          "prompt": "What must David do to confirm?",
+          "options": [
+            "Reply YES to the text",
+            "Pay a small fee",
+            "Visit the clinic early",
+            "Bring a referral letter"
+          ],
+          "answer": 0,
+          "explanation": "Anna asks patients to reply YES or confirm on the call. Option B incorrectly adds a fee."
+        },
+        {
+          "title": "Arrival Instructions",
+          "prompt": "What must David bring and when to arrive?",
+          "options": [
+            "Arrive 5 minutes late",
+            "Bring health card only",
+            "Share phone number publicly",
+            "Arrive 15 minutes early with documents"
+          ],
+          "answer": 3,
+          "explanation": "Anna says arrive 15 minutes early with health card and medication list. Option B omits the time and second item."
+        }
+      ]
+    },
+    "reading": {
+      "title": "City Park Accessibility Audit",
+      "focus": "Understanding findings, comparisons and recommendations",
+      "passage": "The city council commissioned an independent accessibility audit of twelve public parks in March 2024. The aim was to assess how easily people with different mobility and sensory needs could use paths, entrances, toilets and information signs. The council wanted evidence to guide future spending, rather than relying on complaints alone.\n\nThe audit was carried out by a team of ten people, including two wheelchair users, a volunteer with low vision, and two parents with pushchairs, along with access specialists. They visited each park twice, once on a weekday and once at the weekend, and used a detailed checklist. They measured path width and surface quality, checked step-free access at entrances, tested accessible toilets, and reviewed the clarity of maps and signs.\n\nResults showed clear differences between parks. Central Park, which was renovated in 2018, scored highest. It had wide, smooth paths, step-free entrances on all sides, and two accessible toilets that were clean and unlocked. In contrast, Northside Park scored lowest. Its main paths were narrow and uneven, three of its four entrances had steps with no ramp, and its only accessible toilet was locked with no sign explaining where to get a key. Across all twelve parks, ten had at least one section of uneven or damaged path, and seven had no accessible toilet available for use on the day of the visit. Only four parks had maps that could be read easily from a wheelchair height.\n\nWhen comparing parks by age, those built or fully updated after 2010 generally performed better than older parks. For example, Riverside Park, opened in 2015, had level entrances and clear signs with large print and symbols, while Old Town Park, opened in 1985 and not updated since, had poor signage and gravel paths that were difficult for wheelchairs and pushchairs. However, the report argues that age alone does not explain the results. The authors state that regular maintenance is the key factor. They point to Hilltop Park, built in 1998 but well maintained, which scored higher than some newer parks that had been neglected.\n\nThe report recommends low-cost improvements that could be made quickly, such as repairing path surfaces, adding portable ramps at stepped entrances, and providing clear information about toilet access. It also suggests longer-term actions, including staff training and involving disabled users in design decisions. The authors note that these changes would also help older visitors and families with young children. The council has announced it will prioritise improvements in three parks with the lowest scores, starting with Northside Park, and will repeat the audit in 2026 to measure progress.",
+      "questions": [
+        {
+          "title": "Purpose of Audit",
+          "prompt": "Why did the council commission the audit?",
+          "options": [
+            "To respond only to complaints",
+            "To guide future spending with evidence",
+            "To close poorly scored parks",
+            "To increase park entrance fees"
+          ],
+          "answer": 1,
+          "explanation": "The passage says the council wanted evidence to guide spending rather than relying on complaints. Option A misrepresents this purpose."
+        },
+        {
+          "title": "Audit Team",
+          "prompt": "Who was included in the audit team?",
+          "options": [
+            "Only council employees",
+            "Wheelchair users and parents with pushchairs",
+            "Only landscape architects",
+            "School children and teachers"
+          ],
+          "answer": 1,
+          "explanation": "The team included wheelchair users, a low-vision volunteer and parents with pushchairs. Option A incorrectly limits it to staff."
+        },
+        {
+          "title": "Main Findings",
+          "prompt": "What did the audit find about park facilities?",
+          "options": [
+            "All parks had perfect paths",
+            "Most parks had new toilets",
+            "Ten parks had uneven paths",
+            "Central Park had locked toilets"
+          ],
+          "answer": 2,
+          "explanation": "Results show ten parks had uneven paths and seven lacked accessible toilets. Option D reverses Central Park's positive result."
+        },
+        {
+          "title": "Claim Versus Example",
+          "prompt": "What does the report argue about park age?",
+          "options": [
+            "Maintenance matters more than age alone",
+            "Riverside Park opened in 2015",
+            "Old Town Park has gravel paths",
+            "All old parks scored lowest"
+          ],
+          "answer": 0,
+          "explanation": "The authors claim maintenance is the key factor, not age alone. Options B and C are examples used to illustrate, not the claim."
+        },
+        {
+          "title": "Benefit of Improvements",
+          "prompt": "What can be inferred about recommended improvements?",
+          "options": [
+            "They will only help wheelchair users",
+            "They require closing parks for years",
+            "They need no further audits",
+            "They would also benefit elderly and families"
+          ],
+          "answer": 3,
+          "explanation": "The report notes changes would also help older visitors and families. Option A is too narrow and contradicts this inference."
+        }
+      ]
+    }
+  }
+}

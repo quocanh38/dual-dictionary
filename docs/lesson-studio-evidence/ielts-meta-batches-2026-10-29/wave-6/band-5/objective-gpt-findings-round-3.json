@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.listening.script; all Listening transcript copies",
+      "severity": "major",
+      "issue": "The latest repair leaves the Listening script at 405 whitespace-separated words, above the required 300–400 range. Trim at least five words without removing any keyed details, then confirm the final count is within range."
+    }
+  ]
+}

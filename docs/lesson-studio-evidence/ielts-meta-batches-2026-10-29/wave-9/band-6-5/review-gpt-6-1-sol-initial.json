@@ -1,0 +1,108 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "83eb793a0173655f839d162bf8cebdd4779c687af974affdffe71232132901df",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-9-band-6-5-speaking-03",
+      "severity": "major",
+      "issue": "Part 2 cue points are inline in one paragraph. Put every bullet on its own newline so the cue card is visually usable; retain preparation and speaking timing."
+    }
+  ],
+  "observations": [
+    {
+      "item": "writingPrompts",
+      "severity": "minor",
+      "issue": "150/250-word targets and 20/40-minute timings are present in metadata but absent from prompt prose. Ensure the UI displays these requirements."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-5-writing-01; writing-02",
+      "severity": "minor",
+      "issue": "Tables contain all required values but are inline prose; render rows/columns for readability."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-5-reading-04",
+      "severity": "minor",
+      "issue": "Explanation calls early responders satisfied on-campus students. Passage says predominantly full-time on/near-campus and only supports higher relative satisfaction, not universal satisfaction."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-5-listening-01; sharedContexts.listening",
+      "severity": "minor",
+      "issue": "Clarify steady native-species increase versus recovery within two years and stayed stable: specify whether stability means ecosystem condition or stable species counts."
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-5-writing-02; writing-05; speaking-05",
+      "severity": "minor",
+      "issue": "Methodological evaluation is specialised for general IELTS preparation; describe this as advanced evidence-reasoning practice, not calibrated band attainment."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted initial review of all20 items:5Listening,5Reading,5Writing,5Speaking; entire contexts,all40options,10keys/explanations and productive prompts/metadata. No other wave9 reviewer reports inspected; no candidate edits/provider calls.",
+    "listening": "316-word wetland tutorial read: three sites/four years, plants consistent, migrant gull bias, Site C nitrogen down 40% then runoff rise, Site B 42 corrected to 32 versus 16 baseline, short-term plant qualification and 5–10-year water/bird monitoring. All options, keys and explanations checked.",
+    "reading": "434-word 2018–2023 library passage read: bookings excluded after system change, gate -22%/later +9%, e-books 48000 to156000, loans -18%/qualified -6%, Engineering +14%, early62/late38 respondent bias and collection/preview limits. All 20 alternatives, five keys/explanations checked.",
+    "writing": "Two complete Task 1 datasets: three river interventions with 2030 projected effects/ranges/evidence/costs, three survey methods with achieved n/rates/representation/limits. Costs 420k/610k/180k and projected +18/+25/+12 each within stated ranges. Three Task 2s discuss funding, uncertainty and representativeness. 150/250 and 20/40 metadata consistent.",
+    "speaking": "Two Part 1 sets, one correctly timed but inline four-cue Part 2, two evaluative Part 3 sets. Stronger qualification/comparison demand than band6, specialised evidence topics noted.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 316,
+        "reading": 434
+      },
+      "metadataWordCounts": {
+        "listening": 316,
+        "reading": 434
+      },
+      "requiredListeningWords": [
+        300,
+        400
+      ],
+      "requiredReadingWords": [
+        400,
+        500
+      ],
+      "repeatedContextsEqualShared": true,
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          2,
+          0,
+          1,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API/meta-models/muse-spark-open-1026 and wave9-v1 objective/writingSpeaking identifiers, originalContent=true inspected. No recognisable official-question copying found; not an exhaustive plagiarism audit or independent rights verification. Fictional study figures checked internally, not externally verified. Stage difficulty is estimated practice progression, not validated IELTS attainment.",
+    "itemIds": [
+      "ielts-meta-wave-9-band-6-5-listening-01",
+      "ielts-meta-wave-9-band-6-5-listening-02",
+      "ielts-meta-wave-9-band-6-5-listening-03",
+      "ielts-meta-wave-9-band-6-5-listening-04",
+      "ielts-meta-wave-9-band-6-5-listening-05",
+      "ielts-meta-wave-9-band-6-5-reading-01",
+      "ielts-meta-wave-9-band-6-5-reading-02",
+      "ielts-meta-wave-9-band-6-5-reading-03",
+      "ielts-meta-wave-9-band-6-5-reading-04",
+      "ielts-meta-wave-9-band-6-5-reading-05",
+      "ielts-meta-wave-9-band-6-5-writing-01",
+      "ielts-meta-wave-9-band-6-5-writing-02",
+      "ielts-meta-wave-9-band-6-5-writing-03",
+      "ielts-meta-wave-9-band-6-5-writing-04",
+      "ielts-meta-wave-9-band-6-5-writing-05",
+      "ielts-meta-wave-9-band-6-5-speaking-01",
+      "ielts-meta-wave-9-band-6-5-speaking-02",
+      "ielts-meta-wave-9-band-6-5-speaking-03",
+      "ielts-meta-wave-9-band-6-5-speaking-04",
+      "ielts-meta-wave-9-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

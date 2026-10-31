@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": [
+    "rights required",
+    "approved input demoted and version advanced",
+    "unapproved preview only",
+    "no API calls",
+    "mobile no overflow",
+    "saving edits preserves unresolved findings",
+    "blocking findings cannot be silently deleted"
+  ]
+}

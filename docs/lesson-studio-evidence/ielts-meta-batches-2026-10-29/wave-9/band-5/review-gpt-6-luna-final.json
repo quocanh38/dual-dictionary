@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "b4dc5ea4a2aafc43889684f0581857e88da156e9cde75706a8a8f5beb43c1712",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 354/408 words. All 10 objective answer keys are supported by their contexts, explanations are accurate, and answer positions are balanced. Meal-card amounts, top-up timing, and use locations are clear; community-workshop sign-up and fee details are consistent. Task 1 numbers and units are visible; sports-day participant figures do not claim mutually exclusive participation or an unsupported total. Writing word minimums/timing and Speaking Part 1/2/3 coverage are present; the Part 2 cue card has all points and timing. Original-content provenance is declared; no official-item or score claims. Minor phrasing: hours “Monday to Friday from nine to five, but on Fridays ... four thirty” is internally redundant; say Monday–Thursday for the 9–5 hours."
+  ],
+  "coverage": "Full review of provenance/metadata, both contexts, all 10 objective prompts/options/keys/explanations, all five Writing prompts including visible datasets/units/timing, and all five Speaking prompts including cue-card completeness and part fit.",
+  "reviewerType": "AI-assisted"
+}

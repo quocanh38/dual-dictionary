@@ -1,0 +1,346 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-2",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 2870,
+        "outputTokens": 6107,
+        "totalTokens": 8977
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Community Science Exhibition Booking",
+      "focus": "Listening for details, paraphrase and corrected information",
+      "part": "Part 1",
+      "script": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more point. Our car park behind the centre is closed for repairs, so please use the Market Street car park, about a five-minute walk away.\nDaniel: Perfect. So to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+      "wordCount": 399
+    },
+    "reading": {
+      "title": "City Recycling Collection Change",
+      "focus": "Following linked ideas, comparisons and examples",
+      "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+      "wordCount": 454
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-2-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Community Science Exhibition Booking",
+      "pathwayStage": "band-6",
+      "focus": "Listening for details, paraphrase and corrected information",
+      "transcript": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more point. Our car park behind the centre is closed for repairs, so please use the Market Street car park, about a five-minute walk away.\nDaniel: Perfect. So to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+      "prompt": "On which date is the Bright Future Science Fair?",
+      "options": [
+        "Saturday 15th February",
+        "Saturday 15th March",
+        "Sunday 15th March",
+        "Saturday 5th March"
+      ],
+      "answer": 1,
+      "explanation": "Anna states it is on Saturday the fifteenth of March. The strongest distractor Saturday 15th February fails because February is not mentioned; March is clearly stated."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Community Science Exhibition Booking",
+      "pathwayStage": "band-6",
+      "focus": "Listening for details, paraphrase and corrected information",
+      "transcript": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more point. Our car park behind the centre is closed for repairs, so please use the Market Street car park, about a five-minute walk away.\nDaniel: Perfect. So to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+      "prompt": "What time does the exhibition now finish?",
+      "options": [
+        "4 p.m.",
+        "5 p.m.",
+        "6 p.m.",
+        "1:30 p.m."
+      ],
+      "answer": 0,
+      "explanation": "Anna corrects the earlier plan: it was first planned to finish at five but changed to four because of an evening concert. The distractor 5 p.m. fails because it was the old, cancelled time."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Community Science Exhibition Booking",
+      "pathwayStage": "band-6",
+      "focus": "Listening for details, paraphrase and corrected information",
+      "transcript": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more point. Our car park behind the centre is closed for repairs, so please use the Market Street car park, about a five-minute walk away.\nDaniel: Perfect. So to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+      "prompt": "Where will the exhibition now be held?",
+      "options": [
+        "Room B on the first floor",
+        "The library hall",
+        "The Main Hall on the ground floor",
+        "The Market Street hall"
+      ],
+      "answer": 2,
+      "explanation": "Anna explains they moved from Room B to the Main Hall on the ground floor for extra space. The distractor Room B fails because it was the first booking, now changed."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Community Science Exhibition Booking",
+      "pathwayStage": "band-6",
+      "focus": "Listening for details, paraphrase and corrected information",
+      "transcript": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more point. Our car park behind the centre is closed for repairs, so please use the Market Street car park, about a five-minute walk away.\nDaniel: Perfect. So to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+      "prompt": "Apart from general entry, what extra fee must be paid for the kitchen chemistry workshop?",
+      "options": [
+        "Nothing, it is free",
+        "Six pounds for entry only",
+        "Fifteen pounds for materials",
+        "Two pounds for materials on the day"
+      ],
+      "answer": 3,
+      "explanation": "Anna says there is a small fee of two pounds per child for materials, to be paid on the day, in addition to general entry. The distractor Nothing, it is free fails because that describes the robotics session, not kitchen chemistry."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Community Science Exhibition Booking",
+      "pathwayStage": "band-6",
+      "focus": "Listening for details, paraphrase and corrected information",
+      "transcript": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more point. Our car park behind the centre is closed for repairs, so please use the Market Street car park, about a five-minute walk away.\nDaniel: Perfect. So to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+      "prompt": "Where should visitors park?",
+      "options": [
+        "In the car park behind the centre",
+        "In the Market Street car park",
+        "On Library Street",
+        "In the school car park"
+      ],
+      "answer": 1,
+      "explanation": "Anna says the centre car park is closed for repairs and visitors should use the Market Street car park. The distractor behind the centre fails because that car park is closed."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "City Recycling Collection Change",
+      "pathwayStage": "band-6",
+      "focus": "Following linked ideas, comparisons and examples",
+      "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+      "prompt": "What is the main change to general rubbish collection from June?",
+      "options": [
+        "It will be collected in blue bins",
+        "It will stop completely",
+        "It will change from weekly to every two weeks",
+        "It will change from every two weeks to weekly"
+      ],
+      "answer": 2,
+      "explanation": "The passage states general rubbish currently collected every week will be collected every two weeks. The strongest distractor about changing to weekly fails because that describes recycling, not general rubbish."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "City Recycling Collection Change",
+      "pathwayStage": "band-6",
+      "focus": "Following linked ideas, comparisons and examples",
+      "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+      "prompt": "Why does the council say it is changing the system?",
+      "options": [
+        "To reduce landfill waste and lower costs",
+        "To close the recycling centre on Park Road",
+        "To stop food waste collections in summer",
+        "To increase garden waste payments"
+      ],
+      "answer": 0,
+      "explanation": "The passage gives reducing rubbish sent to landfill and lowering costs as the main reason, with figures for tonnes and cost. The distractor about closing the recycling centre fails because the centre is mentioned as a place to take glass, not to close."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "City Recycling Collection Change",
+      "pathwayStage": "band-6",
+      "focus": "Following linked ideas, comparisons and examples",
+      "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+      "prompt": "Why does the author mention glass bottles and jars?",
+      "options": [
+        "To show the main claim that recycling will become weekly",
+        "To give an example of items that must not go in the blue bin",
+        "To compare North and South Millford results",
+        "To explain why food waste is collected weekly"
+      ],
+      "answer": 1,
+      "explanation": "Glass bottles and jars are presented as an example of items that must be taken to bottle banks, not put in the blue bin. The distractor about the main claim fails because weekly recycling is the general rule, while glass is an exception used as an illustration."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "City Recycling Collection Change",
+      "pathwayStage": "band-6",
+      "focus": "Following linked ideas, comparisons and examples",
+      "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+      "prompt": "What did the six-month trial show?",
+      "options": [
+        "Both areas recycled the same amount",
+        "North Millford recycled more than South Millford",
+        "Complaints in the south stayed high",
+        "South Millford recycled more and produced less general rubbish"
+      ],
+      "answer": 3,
+      "explanation": "The passage compares 46 percent recycled in the south with 36 percent in the north, and a fall of almost a fifth in general rubbish in the south. The distractor that the north recycled more reverses this comparison."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "City Recycling Collection Change",
+      "pathwayStage": "band-6",
+      "focus": "Following linked ideas, comparisons and examples",
+      "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+      "prompt": "What can be inferred about a large family that often has extra paper and plastic?",
+      "options": [
+        "They will have to pay a fine immediately",
+        "They can request a larger blue bin and leave extra recycling in clear bags",
+        "They can put extra recycling in the grey bin",
+        "They must take all recycling to schools"
+      ],
+      "answer": 1,
+      "explanation": "The passage states larger blue bins are available on request and extra recycling in clear bags will be collected for free, which directly supports this situation. The distractor about putting extra recycling in the grey bin fails because the passage requires sorting into correct containers."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Science-Fair Volunteer Team Table",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase data and make clear comparisons with linked ideas",
+      "prompt": "The table below shows the number of volunteers and total volunteer hours for three teams at the Riverside Public Science Fair in March 2025 and March 2026. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. This is original practice material, not an official test question. Table data: Welcome Desk - 2025: 18 volunteers, 216 hours; 2026: 22 volunteers, 286 hours. Exhibit Support - 2025: 25 volunteers, 375 hours; 2026: 28 volunteers, 448 hours. Clean-up Crew - 2025: 15 volunteers, 135 hours; 2026: 20 volunteers, 200 hours. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Station Shared Bicycle Parking Counts",
+      "pathwayStage": "band-6",
+      "focus": "correct details and compare changes over time with linked sentences",
+      "prompt": "The chart below shows the average number of bicycles parked per day in the shared parking area at Maple Grove Station in 2023, 2024 and 2025, divided into morning (7-10 am) and evening (5-8 pm). Summarise the information by selecting and reporting the main features, and make comparisons where relevant. This is original practice material, not an official test question. Data: 2023 - morning 120 bicycles, evening 95 bicycles; 2024 - morning 165 bicycles, evening 140 bicycles; 2025 - morning 210 bicycles, evening 195 bicycles. The parking area has 230 marked spaces. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · College Career-Guidance Event Discussion",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase opinions and link ideas with reasons and examples",
+      "prompt": "Many colleges organise an annual career-guidance event where local workers visit and talk to students about different jobs. Some people say these events are more useful than classroom lessons about careers, while others say they use too much time and money. Discuss both views and give your own opinion. This is original practice material, not an official test question. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Public Science-Fair Volunteer Team Discussion",
+      "pathwayStage": "band-6",
+      "focus": "compare two views and correct common misunderstandings with clear organisation",
+      "prompt": "In some towns, public science fairs depend on teams of volunteers rather than paid staff. Some people believe volunteering in this way is good for both the community and the volunteers themselves. Others think important public events should not depend on unpaid work. Discuss both views and give your own opinion. This is original practice material, not an official test question. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Shared Bicycle Parking at Stations Discussion",
+      "pathwayStage": "band-6",
+      "focus": "evaluate choices and compare spending priorities with linked arguments",
+      "prompt": "In many cities, railway stations now provide large shared bicycle parking areas to encourage people to cycle to the station instead of driving. Some people think cities should spend more money on this kind of parking, while others think the money should be used to improve bus and train services instead. Discuss both views and give your own opinion. This is original practice material, not an official test question. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily Travel and Bicycles",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase familiar habits and give linked short answers",
+      "prompt": "This is original practice material. Please answer in short, natural answers of 2-4 sentences. 1. How do you usually travel to college, work, or the town centre? 2. Is cycling popular where you live? Why or why not? 3. Have you ever parked a bicycle at a station or public parking area? 4. Would you like to use a shared bicycle in the future? Why or why not? 5. Has the way you travel changed in the last few years?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · College Events and Advice",
+      "pathwayStage": "band-6",
+      "focus": "describe familiar events and link ideas with simple reasons",
+      "prompt": "This is original practice material. Please answer in short, natural answers of 2-4 sentences. 1. Did your school or college ever organise a career-guidance event? 2. What kind of job advice is most useful for students? 3. Do you enjoy working in a team with other students or volunteers? 4. Have you ever visited a science fair or public exhibition? 5. Do you prefer learning from talks, books, or practical activities? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Science Fair You Visited",
+      "pathwayStage": "band-6",
+      "focus": "retell corrected details in order and explain personal meaning",
+      "prompt": "This is original practice material. Describe a science fair or public science event you visited or helped with. You have one minute to prepare and should speak for one to two minutes. • What the event was and where it took place • What you saw or did there • Who you went with or worked with • And explain what you learned from the event."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - Useful Career Advice",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase advice received and compare before and after",
+      "prompt": "This is original practice material. Describe a useful piece of career advice you received at college, at work, or at a guidance event. You have one minute to prepare and should speak for one to two minutes. • When and where you received the advice • Who gave you the advice • What the advice was • And explain why you found it useful or not useful."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Volunteering and Shared Transport",
+      "pathwayStage": "band-6",
+      "focus": "give reasons and evaluate solutions for familiar community topics",
+      "prompt": "This is original practice material for discussion. Please give reasons and evaluate ideas, not memorised facts. 1. Why do some people choose to join a volunteer team for public events like science fairs? 2. What are the advantages and disadvantages for students of volunteering compared with part-time paid work? 3. How can colleges make career-guidance events more useful for all students? 4. Should cities spend more on shared bicycle parking at stations or on other transport services? Why? 5. How might shared bicycle parking change the way people travel in the future?"
+    }
+  ]
+}

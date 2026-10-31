@@ -1,0 +1,8 @@
+{
+  "stage": "band-6",
+  "segment": "prompts",
+  "findings": [
+    { "reviewer": "gpt-6-luna", "item": "Task 1 · Museum Volunteer Induction Timetable", "severity": "medium", "issue": "The prompt calls 7, 14, and 21 March 2025 Saturdays, but all three dates are Fridays.", "recommendedRepair": "Correct the weekday labels or use calendar dates that are Saturdays." },
+    { "reviewer": "gpt-5.6-terra", "item": "Task 1 · Museum Volunteer Induction Timetable", "severity": "medium", "issue": "The Writing Task 1 prompt identifies 7, 14, and 21 March 2025 as Saturdays; the dates are Fridays.", "recommendedRepair": "Change the dates to Saturdays or correct the weekday descriptions." }
+  ]
+}

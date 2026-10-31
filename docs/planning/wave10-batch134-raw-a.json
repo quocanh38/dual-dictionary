@@ -1,0 +1,43 @@
+{
+  "wave": 10,
+  "batch": 134,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after extrasensory perception in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover F-section dentistry, business, transport, idioms, anatomy, Cold War terminology, automotive systems, nutrition, French phrases, U.S. institutions, infant-care vocabulary, political language and phrasal verbs. Notes flag regional and potentially offensive senses, legal/institutional scope and medical terminology.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 188,
+    "remainingRawOnlyAfter": 168
+  },
+  "selected": [
+    "eye tooth",
+    "face value",
+    "factory ship",
+    "fade out",
+    "fag end",
+    "fairy tale",
+    "fallopian tube",
+    "fallout shelter",
+    "fan belt",
+    "fashion plate",
+    "fast lane",
+    "fatty acid",
+    "faux pas",
+    "feather bedding",
+    "federal bureau of investigation",
+    "federal reserve system",
+    "federal trade commission",
+    "feeding bottle",
+    "fellow traveller",
+    "fence in"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "FBI: What is the FBI? (https://www.fbi.gov/about/faqs/what-is-the-fbi)",
+    "Federal Reserve: About the Fed (https://www.federalreserve.gov/aboutthefed.htm)",
+    "FTC: What the FTC does (https://www.ftc.gov/news-events/media-resources/what-ftc-does)"
+  ]
+}

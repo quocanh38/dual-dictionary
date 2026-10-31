@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 141,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after grappling iron in the current phrase manifest; consulted local OALD 10/LDOCE 6 and NASA Science for greenhouse-effect terminology. Vietnamese meanings, notes and examples independently written.",
+  "selectionRationale": "Enrich civic, environmental, scientific, food, shift-work and transport vocabulary, plus economic indicators and legal terminology. Notes clarify geography, UK/US usage, historic context, financial definitions and the natural versus enhanced greenhouse effect.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 48,
+    "remainingRawOnlyAfter": 28
+  },
+  "selected": [
+    "grass roots",
+    "grass snake",
+    "graveyard shift",
+    "gravy train",
+    "grease gun",
+    "great britain",
+    "great depression",
+    "green bean",
+    "green belt",
+    "green revolution",
+    "greenhouse effect",
+    "greenwich mean time",
+    "gregorian calendar",
+    "grey market",
+    "grey matter",
+    "grievous bodily harm",
+    "gross domestic product",
+    "gross margin",
+    "gross national product",
+    "gross profit"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NASA Science: What Is Climate Change? (https://science.nasa.gov/climate-change/what-is-climate-change/)"
+  ]
+}

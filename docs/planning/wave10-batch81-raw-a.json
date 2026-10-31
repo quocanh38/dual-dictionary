@@ -1,0 +1,17 @@
+{
+  "wave": 10,
+  "batch": 81,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after shake up; reviewed against local OALD 10/LDOCE 6. Medical terminology checked against NHS ECT information; terminology for informal settlements checked against UN-Habitat. All Vietnamese definitions, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover high-value vocabulary in housing, product specifications, clothing, vehicle parts, manufacturing, trade and shopping; distinguish UK/US labels, literal/metaphorical senses, and dated medical terminology.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1240, "remainingRawOnlyAfter": 1220},
+  "selected": ["shanty town", "sharp shooter", "shaving cream", "sheet metal", "shelf life", "shirt front", "shirt tail", "shock absorber", "shock treatment", "shock wave", "shoe tree", "shooting star", "shop floor", "shop steward", "shop talk", "shop window", "shopping centre", "shopping list", "shopping mall", "short circuit"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "https://www.nhs.uk/mental-health/conditions/psychotic-depression/",
+    "https://www.lscft.nhs.uk/patient-information-leaflets/electroconvulsive-therapy-ect",
+    "https://unhabitat.org/sites/default/files/2025/08/definitions_-_informal_settlements_-annex_14.08.2025.pdf"
+  ]
+}

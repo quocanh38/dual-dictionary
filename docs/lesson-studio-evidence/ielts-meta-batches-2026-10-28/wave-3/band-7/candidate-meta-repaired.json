@@ -1,0 +1,360 @@
+{
+  "stage": "band-7",
+  "batchId": "wave-3",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 3121,
+        "outputTokens": 5485,
+        "totalTokens": 8606
+      },
+      "round": 1
+    },
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 2111,
+        "outputTokens": 3854,
+        "totalTokens": 5965
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-28-wave-3-v1",
+      "writingSpeaking": "ielts-practice-2026-10-28-wave-3-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Maths Club Results",
+      "focus": "causal limits and survey bias in an after-school study",
+      "part": "Part 3",
+      "script": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — run a lottery for limited club places next term and track attendance and homework time properly.",
+      "wordCount": 393
+    },
+    "reading": {
+      "title": "Two Maps for One Street",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "wordCount": 488
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-3-band-7-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Maths Club Results",
+      "pathwayStage": "band-7",
+      "focus": "causal limits and survey bias in an after-school study",
+      "transcript": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — run a lottery for limited club places next term and track attendance and homework time properly.",
+      "prompt": "What was the main test-score finding reported in the paper?",
+      "options": [
+        "Club members and non-members improved by the same amount.",
+        "Non-members improved more than club members.",
+        "Club members improved by four percent from June to January.",
+        "Club members improved by about eleven percent, non-members by about four percent."
+      ],
+      "answer": 3,
+      "explanation": "The script states club members improved by eleven percent and non-members by four percent January to June. The strongest distractor reverses the period, but the order is January to June, not June to January."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Maths Club Results",
+      "pathwayStage": "band-7",
+      "focus": "causal limits and survey bias in an after-school study",
+      "transcript": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — run a lottery for limited club places next term and track attendance and homework time properly.",
+      "prompt": "Why do the students doubt a direct causal claim about the club?",
+      "options": [
+        "Joining was voluntary, so members may already have been more motivated.",
+        "The club met too rarely to affect learning.",
+        "Teachers gave extra help only to non-members.",
+        "Exam papers were different for the two groups."
+      ],
+      "answer": 0,
+      "explanation": "Maya and Jonas discuss self-selection: motivated students both join and practise more, so motivation confounds the effect. No evidence is given about meeting frequency or different papers."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Maths Club Results",
+      "pathwayStage": "band-7",
+      "focus": "causal limits and survey bias in an after-school study",
+      "transcript": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — run a lottery for limited club places next term and track attendance and homework time properly.",
+      "prompt": "What correction does Maya make about the study size?",
+      "options": [
+        "The study followed 180 pupils equally split between groups.",
+        "The study was conducted over two years, not one term.",
+        "The study followed 140 pupils, 60 in the club and 80 outside.",
+        "The study included only 60 pupils in total."
+      ],
+      "answer": 2,
+      "explanation": "Maya corrects her earlier note of 180 to 140, with 60 in the club and 80 outside. The 180 figure is the initial error she explicitly revises."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Maths Club Results",
+      "pathwayStage": "band-7",
+      "focus": "causal limits and survey bias in an after-school study",
+      "transcript": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — run a lottery for limited club places next term and track attendance and homework time properly.",
+      "prompt": "What concern is raised about the study-habits questionnaire?",
+      "options": [
+        "No incentive was offered, so few students tried hard.",
+        "The voucher caused all students to exaggerate equally.",
+        "Only 55% replied despite a voucher, likely biasing results toward organised students.",
+        "The questionnaire was completed only by non-members."
+      ],
+      "answer": 2,
+      "explanation": "The script says 55% returned it despite a five-pound book voucher and respondents may have been more organised. The distractor about no incentive fails because an incentive was offered."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Maths Club Results",
+      "pathwayStage": "band-7",
+      "focus": "causal limits and survey bias in an after-school study",
+      "transcript": "Maya: Have you finished the paper on the after-school maths programme at Northfield School for Dr Ellis's seminar?\nJonas: Yes, I read it last night. They tracked Year 9 students and compared exam progress for those who joined the club with those who did not, right?\nMaya: That's it. The headline result looks strong. Club members improved by an average of eleven percent between January and June, while non-members improved by only four percent.\nJonas: So at first it looks like the club caused the extra progress.\nMaya: Exactly, but Dr Ellis wants us to question that causal link. Participation was completely voluntary, so the two groups may have differed from the start.\nJonas: You mean self-selection? The students who signed up were probably already more interested in maths and willing to study longer.\nMaya: Yes. If motivation leads both to joining and to practising at home, we cannot separate the effect of the club from the effect of motivation.\nJonas: I noted the sample was one hundred and eighty pupils in total.\nMaya: Actually, I need to correct that — I misread the table earlier. It was one hundred and forty pupils, sixty in the club and eighty outside it. So the evidence base is smaller than we thought.\nJonas: Good catch. A smaller group means we should be more cautious about generalising. Did they at least match students on previous attainment?\nMaya: Only partly. They paired students with similar grades last year, but they did not measure homework hours or family support. Those background factors could still explain part of the gap.\nJonas: And what about the questionnaire on study habits? I remember the response rate was not high.\nMaya: Only fifty-five percent returned it, even though the researchers offered a five-pound book voucher to encourage replies. The authors note that those who replied may have been more organised than those who did not, so the habit data may be biased toward diligent students.\nJonas: So the test scores are fairly solid, but the explanation about habits is less reliable.\nMaya: That's a fair summary. We can say attendance was linked to greater improvement, but we cannot claim the club alone produced it without a randomised comparison.\nJonas: Let's propose that for our presentation — run a lottery for limited club places next term and track attendance and homework time properly.",
+      "prompt": "What conclusion do they agree is most justified?",
+      "options": [
+        "The club has been proven to have no effect on progress.",
+        "Attendance was associated with greater improvement, but causation requires a randomised comparison.",
+        "Low response rates prove the test scores were inaccurate.",
+        "Matching on prior grades removes all background differences."
+      ],
+      "answer": 1,
+      "explanation": "They agree to say attendance was linked to improvement but causation cannot be claimed without randomisation. The distractor about matching fails because they note homework hours and family support were not measured."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Two Maps for One Street",
+      "pathwayStage": "band-7",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "prompt": "What was the basis of the city engineering assessment?",
+      "options": [
+        "Projected 2050 rainfall and blocked drains.",
+        "Historical gauge records from 1970 to 2020 assuming upgraded drains work as designed.",
+        "A count of insurance claims after the 2019 library flood.",
+        "Laser elevation data with separate counting of flats."
+      ],
+      "answer": 1,
+      "explanation": "The passage states the city used 1970-2020 gauges and assumed 2022 upgrades function fully, with no climate allowance. The laser data and blocked-drain assumption belong to the university study."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Two Maps for One Street",
+      "pathwayStage": "band-7",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "prompt": "Why is the university estimate substantially higher?",
+      "options": [
+        "It assumes heavier future rainfall, partly blocked drains, and counts flats separately.",
+        "It covers a larger town and a longer historical period.",
+        "It ignores elevation and uses only resident interviews.",
+        "It predicts the same flood will occur every year."
+      ],
+      "answer": 0,
+      "explanation": "The passage attributes most of the extra 220 homes to 15% more rainfall, 30% drain blockage, plus different counting. The distractor about a larger town fails because both concern the same neighbourhood."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Two Maps for One Street",
+      "pathwayStage": "band-7",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "prompt": "How does the overview treat the 2019 library basement flood?",
+      "options": [
+        "As proof that the city estimate is correct.",
+        "As proof that the university estimate will occur by 2050.",
+        "As conclusive evidence that upgrades have failed.",
+        "As an example each team interprets to illustrate its own mechanism, not as proof of either forecast."
+      ],
+      "answer": 3,
+      "explanation": "The passage distinguishes the author's claim from the example: both reports cite the library incident differently, and it does not prove either future estimate. Distractors claiming proof overstate the example."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Two Maps for One Street",
+      "pathwayStage": "band-7",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "prompt": "What limited inference can be made about a house shown only on the university map?",
+      "options": [
+        "It will definitely flood within five years.",
+        "It has higher exposure under plausible future rainfall with imperfect maintenance, but flooding is not certain.",
+        "It is safe because the city map excludes it.",
+        "It flooded in 2019 and will flood identically again."
+      ],
+      "answer": 1,
+      "explanation": "The passage allows only a conditional inference: higher exposure if projections and blockages hold, not certainty. The distractor about safety overclaims by treating absence from the city map as proof of safety."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Two Maps for One Street",
+      "pathwayStage": "band-7",
+      "focus": "evaluating competing flood-risk estimates and scope limits",
+      "passage": "Residents of Riverton were confused last spring when two flood-risk estimates for the same riverside neighbourhood appeared within a month. Both concerned a severe flood of the River Cole, described as a one-in-one-hundred-year event, but they put very different numbers of homes at risk. The city engineering assessment listed about 300 homes. The Rivers Research Group at Midshire University listed about 520 homes. Local discussion treated the gap as proof that one side had made an error, but the reports themselves show the difference comes mainly from different questions and assumptions.\nThe city assessment asked how many homes would flood if the drainage upgrades completed in 2022 work as designed. It used river-gauge records from 1970 to 2020 to estimate peak water levels and combined them with a street-level model of drains and embankments. It did not add any allowance for future rainfall change, stating explicitly that its purpose was to test the current defence system under historical conditions. Its scope was therefore narrow and practical: to guide maintenance budgets for the next five years.\nThe university study asked a different question: how many homes could flood by 2050 if rainfall intensifies and maintenance is imperfect. It used high-resolution laser elevation data, added a fifteen percent increase in peak rainfall based on regional climate projections, and assumed thirty percent of street drains would be partly blocked by leaves and debris during autumn storms. Those two assumptions alone account for most of the extra 220 homes. The study also counted ground-floor flats in converted houses separately, while the city counted each building once.\nBoth reports mention the basement flooding of Riverton Library in November 2019, but they use it for different purposes. The city report cites it as an example of surface-water pooling that its upgraded drains are now designed to prevent. The university report cites the same incident as an example of how blockages can raise local water levels even when river flow is moderate. The incident itself does not prove either future estimate correct; it illustrates the mechanism each team emphasises.\nThe authors of this overview argue that the estimates should be read as conditional forecasts, not as competing facts about the present. Each is valid only within its stated conditions. The city figure applies if defences are fully maintained and rainfall patterns remain close to the past. The university figure applies if rainfall rises as projected and some drains are obstructed. Because neither condition can be guaranteed, neither number alone describes what will certainly happen.\nFor residents, the careful inference is limited. A house appearing only on the university map is not certain to flood, but it faces higher exposure under plausible future conditions with imperfect maintenance. The reports agree that comparing them directly is misleading unless assumptions about time period, drainage state, and counting method are aligned. The practical lesson is to ask what each estimate assumes before using it for insurance or planning decisions.",
+      "prompt": "What is the author's main evaluation of the two estimates?",
+      "options": [
+        "The university study is factually wrong because it uses projections.",
+        "The city study is useless for maintenance planning.",
+        "Both numbers describe certain present facts and residents should average them.",
+        "They are conditional forecasts valid under different stated assumptions and should not be compared directly without alignment."
+      ],
+      "answer": 3,
+      "explanation": "The author argues each is valid only within its conditions and direct comparison is misleading unless time period, drainage state, and counting are aligned. The averaging distractor fails because the passage warns against treating them as present facts."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-3-band-7-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Reading Discovery Channels in Nortavia",
+      "pathwayStage": "band-7",
+      "focus": "summarising change over time and comparing groups without overstating causes",
+      "prompt": "The table below shows original survey data for the fictional country of Nortavia. In both 2019 and 2024, 1,200 regular readers aged 18-65 were asked which single channel they mainly used to discover books, and how many books they completed per year on average.\n\nMain discovery channel - Share in 2019 - Share in 2024 - Average books completed in 2019 - Average books completed in 2024:\nAlgorithmic recommendations (apps and websites): 22% - 41% - 7.2 books - 6.8 books\nRecommendations from friends or family: 34% - 27% - 8.1 books - 8.4 books\nRecommendations from librarians or bookshop staff: 26% - 15% - 9.4 books - 9.6 books\nOwn browsing without a recommendation: 18% - 17% - 6.5 books - 6.9 books\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Do not explain causes that are not shown by the data. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Remote and Clinic-Supported Trial Monitoring",
+      "pathwayStage": "band-7",
+      "focus": "comparing competing evidence and noting limits in missing data",
+      "prompt": "The table below shows original fictional data from a six-month 2023 trial of a non-drug sleep routine programme called RestWell. 800 adult volunteers were divided equally into two groups: a Remote group monitored by phone app and video calls, and a Clinic group with regular in-person check-ups.\n\nRemote group (400 starters): Completed the full 6 months: 268 participants (67%); Average missing diary days per participant: 18.4 days; Participants reporting mild issues such as morning tiredness: 42; Attended final follow-up: 61%\nClinic group (400 starters): Completed the full 6 months: 322 participants (80.5%); Average missing diary days per participant: 7.2 days; Participants reporting mild issues such as morning tiredness: 55; Attended final follow-up: 84%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note what the data shows and does not show about reliability. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Algorithmic Recommendations and Reading Habits",
+      "pathwayStage": "band-7",
+      "focus": "evaluating competing claims with attention to scope and causality",
+      "prompt": "Some people argue that algorithmic recommendations from apps and websites help people discover a wider range of books, while others argue that such systems narrow reading habits by suggesting only similar titles.\n\nDiscuss both views, consider what kind of evidence could and could not prove a causal effect on habits, and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Avoid overgeneralising from single examples. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Limits of Evidence in Remote Clinical Trials",
+      "pathwayStage": "band-7",
+      "focus": "weighing wider inclusion against data quality and precise claims",
+      "prompt": "Some people believe that remote clinical trials, in which participants take part from home using apps and video calls, should largely replace traditional clinic-based trials because they are cheaper and can include more diverse participants. Others argue that remote trials produce less complete data and should only support, not replace, in-person research.\n\nDiscuss both views and give your own opinion, paying careful attention to the limits of the evidence, such as dropout rates and missing information, and to what can reasonably be concluded about safety and effectiveness. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Public-Funding Trade-offs for Reading and Health",
+      "pathwayStage": "band-7",
+      "focus": "evaluating priorities under limited budgets",
+      "prompt": "Governments have limited budgets. Some argue that public money should prioritise maintaining local libraries and community health clinics, while others argue that greater long-term benefit would come from investing the same funds in affordable high-speed internet access that supports online reading and remote health services.\n\nDiscuss both views, evaluate the trade-offs and possible unintended effects, and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Be precise about what is known and what is uncertain. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-3-band-7-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Reading in Daily Life",
+      "pathwayStage": "band-7",
+      "focus": "everyday habits, preferences and light evaluation",
+      "prompt": "Answer in short, natural responses of 2-4 sentences. 1. How often do you read books, articles or news, and at what time of day? 2. How do you usually choose what to read next? 3. Has the way you find things to read changed in recent years? 4. Do you prefer recommendations from people you know or from apps and websites? Why? 5. Is there a type of reading you would like to do more of in future?"
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-speaking-02",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: An Online Recommendation You Received",
+      "pathwayStage": "band-7",
+      "focus": "describing an experience and evaluating its influence carefully",
+      "prompt": "Describe an occasion when an app or website recommended a book, article, film or product to you. You should say:\n• what was recommended and on which app or website\n• how the recommendation was presented to you\n• what you decided to do and why\n• and explain how helpful or unhelpful you found the recommendation and what this suggests about such systems.\nYou have one minute to prepare and should speak for 1-2 minutes."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: A Health Study or Trial You Heard About",
+      "pathwayStage": "band-7",
+      "focus": "reporting information with awareness of evidence limits",
+      "prompt": "Describe a health study, trial or survey you have heard or read about. You should say:\n• what the study was about and where you learned of it\n• who took part and how information was collected\n• what the main finding or claim was\n• and explain how far you think the finding can be trusted and why.\nYou have one minute to prepare and should speak for 1-2 minutes."
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Algorithms, Choice and Evidence",
+      "pathwayStage": "band-7",
+      "focus": "reasoning about causality, scope and competing evidence",
+      "prompt": "Discuss in more depth, giving reasons and evaluations rather than memorised facts. 1. How can we tell whether recommendation systems actually change what people read, rather than simply reflecting existing tastes? 2. What are the possible benefits and risks when many people rely on the same recommendation systems? 3. What kind of evidence should companies or researchers provide before claiming that a system broadens reading? 4. How should individuals balance algorithmic suggestions with other ways of choosing? 5. In what situations might it be difficult to know if an observed change was caused by an algorithm?"
+    },
+    {
+      "id": "ielts-meta-wave-3-band-7-speaking-05",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Libraries, Clinics and Going Online",
+      "pathwayStage": "band-7",
+      "focus": "everyday use of local services and internet access with careful comparison",
+      "prompt": "Answer in short, natural responses of 2-4 sentences. 1. How often do you visit a local library or community health clinic, and what do you usually do there? 2. How important is fast, affordable internet access in your daily life? 3. Have you ever used the internet for reading or health advice instead of visiting a place in person? 4. What are the advantages and disadvantages of getting books or health information online compared with in person? 5. If your local area had limited funds, should it improve physical buildings or internet access first? Why?"
+    }
+  ]
+}

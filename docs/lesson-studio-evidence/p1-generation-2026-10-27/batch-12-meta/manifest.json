@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-10-27T09:19:18.684Z",
+  "promptVersion": "lesson-studio-2026-10-27-v5",
+  "requestParameters": {
+    "model": "muse-spark-1.3",
+    "temperature": 0.2,
+    "maxOutputTokens": 10000,
+    "reasoningEffort": "medium"
+  },
+  "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+  "sourcesSha256": "76c6f9bff4e1c619e1891d6cc22594939171f4126b198fc68b98f5bfd6af070c",
+  "results": [
+    {
+      "sourceId": "east-dock-refill-shop-stock-check",
+      "purpose": "development",
+      "draftId": "draft-e9701317-1107-440d-818c-b8e47aed37fc",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "e7ab78ad-7071-4487-a38b-2fdfa14836a1",
+        "7cfbe9fc-e316-4bab-b3a3-21a123216f24"
+      ]
+    },
+    {
+      "sourceId": "student-podcast-interview-editing",
+      "purpose": "development",
+      "draftId": "draft-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "31e1e4c4-0a0c-4f53-b2fa-fe9bc52c8ac4",
+        "a008d99f-e523-4b32-bf2b-f083a2d38f16"
+      ]
+    },
+    {
+      "sourceId": "staggered-start-time-policy-rollout",
+      "purpose": "development",
+      "draftId": "draft-44150ff8-e9c3-4d89-9c1b-f5ce7c5e2f90",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "a3576479-3f84-423f-9465-eea2b700d26e",
+        "502004ed-1548-4805-981e-d394a73df799"
+      ]
+    }
+  ]
+}

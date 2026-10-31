@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-8",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:37:03.244Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 924,
+    "outputTokens": 13573,
+    "totalTokens": 14497
+  },
+  "latencyMs": 41661,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listening\":{\"title\":\"Riverside Clinic Reminder Trial Call\",\"focus\":\"appointment details, time correction and reminder arrangements\",\"part\":\"Part 1\",\"script\":\"Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\\nDavid: Yes, at about 4 pm.\\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\\nDavid: So I don't have to reply if you call?\\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\\nDavid: I think I'll wait for the call, easier for me.\\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\\nDavid: Good to know, I'll probably take the bus anyway.\\nSarah: That's probably quicker. The number 42 stops right outside.\\nDavid: And is there any cost for the appointment?\\nSarah: No, it's fully covered. The reminder trial is free as well.\\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\\nDavid: Okay, thanks for explaining everything.\\nSarah: Thank you, David. See you Tuesday at 11:30.\",\"questions\":[{\"title\":\"Purpose of Call\",\"prompt\":\"Why is David calling the clinic?\",\"options\":[\"To cancel his Tuesday appointment\",\"To ask about a reminder trial text\",\"To change his doctor to Dr. Patel\",\"To book a new health check\"],\"answer\":1,\"explanation\":\"David says he got a text about a reminder trial. Option A is wrong because he confirms he will attend.\"},{\"title\":\"Appointment Time\",\"prompt\":\"What is David's corrected appointment time?\",\"options\":[\"Tuesday at 11:30 in Room 3\",\"Tuesday at 10:30 in Room 3\",\"Monday at 11:30 in Room 3\",\"Tuesday at 11:30 in Room 2\"],\"answer\":0,\"explanation\":\"Sarah corrects the time from 10:30 to 11:30 in Room 3. Option B uses the initial time before the correction.\"},{\"title\":\"Reminder Message\",\"prompt\":\"When did David receive the SMS reminder?\",\"options\":[\"Monday afternoon\",\"Tuesday morning\",\"Yesterday at about 4 pm\",\"This morning at 10:30\"],\"answer\":2,\"explanation\":\"David confirms he received it yesterday at about 4 pm. Option A confuses this with the future phone call time.\"},{\"title\":\"Confirmation Method\",\"prompt\":\"How can David confirm his appointment?\",\"options\":[\"Only by visiting reception in person\",\"Only by fasting before the visit\",\"Only by bringing his health card early\",\"By replying YES or confirming on the phone\"],\"answer\":3,\"explanation\":\"Sarah says replying YES or confirming during the Monday call are both acceptable. Option A adds a requirement not mentioned.\"},{\"title\":\"After the Visit\",\"prompt\":\"What does Sarah say about the follow-up message?\",\"options\":[\"It must be answered to keep appointment\",\"It asks if the reminder was helpful\",\"It gives free parking for two hours\",\"It confirms the bus number 42\"],\"answer\":1,\"explanation\":\"Sarah says the follow-up checks if the reminder was helpful and can be ignored. Option A incorrectly makes it mandatory.\"}]},\"reading\":{\"title\":\"Central Park Accessibility Audit\",\"focus\":\"audit methods, access barriers and planned improvements\",\"passage\":\"The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\\n\\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\\n\\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\\n\\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\\n\\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\\n\\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.\",\"questions\":[{\"title\":\"Purpose of Audit\",\"prompt\":\"Why did the council carry out the audit?\",\"options\":[\"To check ease of use for all visitors\",\"To close the south entrance permanently\",\"To build a new café and toilets\",\"To train 40 regular park users\"],\"answer\":0,\"explanation\":\"The passage states the aim was to check ease for all visitors. Option D confuses the interview sample with the purpose.\"},{\"title\":\"Council Claim\",\"prompt\":\"What does the council report claim about recent changes?\",\"options\":[\"They fixed the lake path completely\",\"They were praised by café staff\",\"They show strong commitment to inclusion\",\"They added sand around the swing\"],\"answer\":2,\"explanation\":\"The report claims changes show strong commitment to inclusion. Option B describes an example of staff help, not the report's claim.\"},{\"title\":\"Common Complaint\",\"prompt\":\"What problem was most common in interviews?\",\"options\":[\"Poor lighting in older toilets\",\"Difficulty using the lake path\",\"Lack of large print signs\",\"High cost of café menus\"],\"answer\":1,\"explanation\":\"The audit noted the lake path was the most common complaint. Option A was mentioned but not as the most frequent.\"},{\"title\":\"Inference on Access\",\"prompt\":\"What can be inferred about visitors with limited mobility?\",\"options\":[\"They cannot enter the park at all\",\"They prefer soft sand playground surfaces\",\"They do not use the café toilets\",\"They will have easier access via the north entrance\"],\"answer\":3,\"explanation\":\"The north has a ramp and smooth paths while the south has only steps. Option A is too extreme because a detour exists.\"},{\"title\":\"Overall Conclusion\",\"prompt\":\"What does the report conclude about Central Park?\",\"options\":[\"All entrances are now fully accessible\",\"Access is still unequal despite improvements\",\"Funding for ramps was already approved\",\"The playground needs no further changes\"],\"answer\":1,\"explanation\":\"The report concludes the park is more welcoming but access remains unequal. Option C misreads plans as subject to funding.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Riverside Clinic Reminder Trial Call",
+      "focus": "appointment details, time correction and reminder arrangements",
+      "part": "Part 1",
+      "script": "Sarah: Good morning, Riverside Public Clinic, Sarah speaking, how can I help?\nDavid: Hi, it's David Chen, I have an appointment next Tuesday and I got a text about a reminder trial?\nSarah: Yes, David, I can see you. You're booked for Tuesday the 14th with Dr. Patel. Originally at 10:30, sorry, I mean 11:30, the morning clinic was moved an hour later.\nDavid: Oh, 11:30, not 10:30? Thanks for letting me know.\nSarah: Yes, 11:30 in Room 3. We're testing two reminder types. You already received an SMS yesterday, did you get it?\nDavid: Yes, at about 4 pm.\nSarah: Great. That message asks you to reply YES to confirm, or you can just confirm when we call you the day before. Either way is fine.\nDavid: So I don't have to reply if you call?\nSarah: Exactly, one confirmation is enough. If you reply YES now, we won't call. If not, we'll phone Monday afternoon.\nDavid: I think I'll wait for the call, easier for me.\nSarah: No problem. Also, please bring your health card and arrive 15 minutes early to update your details. Also, parking at the clinic is limited. The trial information sheet suggests using the bus, but the car park on Mill Street is free for patients for two hours if you bring your ticket to reception.\nDavid: Good to know, I'll probably take the bus anyway.\nSarah: That's probably quicker. The number 42 stops right outside.\nDavid: And is there any cost for the appointment?\nSarah: No, it's fully covered. The reminder trial is free as well.\nSarah: Perfect. One more thing, the trial also sends a follow-up message after the visit to check if the reminder was helpful. You can ignore it if you want.\nDavid: Okay, thanks for explaining everything.\nSarah: Thank you, David. See you Tuesday at 11:30.",
+      "questions": [
+        {
+          "title": "Purpose of Call",
+          "prompt": "Why is David calling the clinic?",
+          "options": [
+            "To cancel his Tuesday appointment",
+            "To ask about a reminder trial text",
+            "To change his doctor to Dr. Patel",
+            "To book a new health check"
+          ],
+          "answer": 1,
+          "explanation": "David says he got a text about a reminder trial. Option A is wrong because he confirms he will attend."
+        },
+        {
+          "title": "Appointment Time",
+          "prompt": "What is David's corrected appointment time?",
+          "options": [
+            "Tuesday at 11:30 in Room 3",
+            "Tuesday at 10:30 in Room 3",
+            "Monday at 11:30 in Room 3",
+            "Tuesday at 11:30 in Room 2"
+          ],
+          "answer": 0,
+          "explanation": "Sarah corrects the time from 10:30 to 11:30 in Room 3. Option B uses the initial time before the correction."
+        },
+        {
+          "title": "Reminder Message",
+          "prompt": "When did David receive the SMS reminder?",
+          "options": [
+            "Monday afternoon",
+            "Tuesday morning",
+            "Yesterday at about 4 pm",
+            "This morning at 10:30"
+          ],
+          "answer": 2,
+          "explanation": "David confirms he received it yesterday at about 4 pm. Option A confuses this with the future phone call time."
+        },
+        {
+          "title": "Confirmation Method",
+          "prompt": "How can David confirm his appointment?",
+          "options": [
+            "Only by visiting reception in person",
+            "Only by fasting before the visit",
+            "Only by bringing his health card early",
+            "By replying YES or confirming on the phone"
+          ],
+          "answer": 3,
+          "explanation": "Sarah says replying YES or confirming during the Monday call are both acceptable. Option A adds a requirement not mentioned."
+        },
+        {
+          "title": "After the Visit",
+          "prompt": "What does Sarah say about the follow-up message?",
+          "options": [
+            "It must be answered to keep appointment",
+            "It asks if the reminder was helpful",
+            "It gives free parking for two hours",
+            "It confirms the bus number 42"
+          ],
+          "answer": 1,
+          "explanation": "Sarah says the follow-up checks if the reminder was helpful and can be ignored. Option A incorrectly makes it mandatory."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Central Park Accessibility Audit",
+      "focus": "audit methods, access barriers and planned improvements",
+      "passage": "The city council carried out an accessibility audit of Central Park in March to check how easy the park is for all visitors, including wheelchair users, parents with pushchairs, and people with low vision. Two trained auditors visited on weekdays and weekends, and they also spoke to 40 regular park users. The aim was to identify barriers and suggest low-cost improvements.\n\nThe audit found clear progress since 2021. The north entrance now has a wide, flat ramp with handrails, and the main paths from there to the café and toilets are smooth and wide enough for two wheelchairs to pass. Signs along these paths use large print and simple symbols, which most users said were helpful. The council report claims that these changes show a strong commitment to inclusion.\n\nHowever, problems remain in other areas. The south entrance still has only steps, with no alternative flat route, so visitors who cannot use steps must make a long detour to the north side. Inside the park, the path to the lake is narrow, uneven, and often blocked by tree roots, making it difficult for wheelchairs and pushchairs. The audit noted that this was the most common complaint in interviews.\n\nFacilities were mixed. The new accessible toilet near the café was clean, well signed, and had enough space for a wheelchair and a helper. In contrast, the older toilets by the playground were small, poorly lit, and lacked support rails. The playground itself has one inclusive swing, but the surface around it is soft sand, which wheelchairs cannot cross easily. As an example of good practice, the auditors praised the staff at the café, who offered help with carrying trays and reading menus aloud.\n\nInformation was also uneven. The main noticeboard at the north entrance lists accessible routes in three languages, while the small board at the south entrance is out of date and hard to read. Auditors suggested standardising signs across the park.\n\nOverall, the report concludes that Central Park is becoming more welcoming, but access is still unequal. Visitors who enter from the north and stay on the main paths have a positive experience, while those who use the south side or want to reach the lake face significant barriers. The council plans to add a ramp at the south entrance and resurface the lake path next year, subject to funding. Funding will be decided in November, and work could start in spring if approved.",
+      "questions": [
+        {
+          "title": "Purpose of Audit",
+          "prompt": "Why did the council carry out the audit?",
+          "options": [
+            "To check ease of use for all visitors",
+            "To close the south entrance permanently",
+            "To build a new café and toilets",
+            "To train 40 regular park users"
+          ],
+          "answer": 0,
+          "explanation": "The passage states the aim was to check ease for all visitors. Option D confuses the interview sample with the purpose."
+        },
+        {
+          "title": "Council Claim",
+          "prompt": "What does the council report claim about recent changes?",
+          "options": [
+            "They fixed the lake path completely",
+            "They were praised by café staff",
+            "They show strong commitment to inclusion",
+            "They added sand around the swing"
+          ],
+          "answer": 2,
+          "explanation": "The report claims changes show strong commitment to inclusion. Option B describes an example of staff help, not the report's claim."
+        },
+        {
+          "title": "Common Complaint",
+          "prompt": "What problem was most common in interviews?",
+          "options": [
+            "Poor lighting in older toilets",
+            "Difficulty using the lake path",
+            "Lack of large print signs",
+            "High cost of café menus"
+          ],
+          "answer": 1,
+          "explanation": "The audit noted the lake path was the most common complaint. Option A was mentioned but not as the most frequent."
+        },
+        {
+          "title": "Inference on Access",
+          "prompt": "What can be inferred about visitors with limited mobility?",
+          "options": [
+            "They cannot enter the park at all",
+            "They prefer soft sand playground surfaces",
+            "They do not use the café toilets",
+            "They will have easier access via the north entrance"
+          ],
+          "answer": 3,
+          "explanation": "The north has a ramp and smooth paths while the south has only steps. Option A is too extreme because a detour exists."
+        },
+        {
+          "title": "Overall Conclusion",
+          "prompt": "What does the report conclude about Central Park?",
+          "options": [
+            "All entrances are now fully accessible",
+            "Access is still unequal despite improvements",
+            "Funding for ramps was already approved",
+            "The playground needs no further changes"
+          ],
+          "answer": 1,
+          "explanation": "The report concludes the park is more welcoming but access remains unequal. Option C misreads plans as subject to funding."
+        }
+      ]
+    }
+  }
+}

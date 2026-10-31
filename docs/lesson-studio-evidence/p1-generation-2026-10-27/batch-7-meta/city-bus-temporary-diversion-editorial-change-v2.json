@@ -1,0 +1,30 @@
+{
+  "createdAt": "2026-10-27T08:16:13.416Z",
+  "kind": "local-editorial-revision",
+  "parentEditorialRevision": "v1",
+  "rawMetaCandidate": "city-bus-temporary-diversion-candidate.json",
+  "rawMetaCandidatePackSha256": "fb5d05efcb59ff974fe32797f5192f703d59eaecb5b8c4d9f7b9d8985e1fd8f6",
+  "previousEditorialPackSha256": "caa5a1760250187133c78395bb5e0ed4db18ee009b2ec7cc31b798876c23ab78",
+  "editedCandidate": "city-bus-temporary-diversion-candidate-editorial-v2.json",
+  "editedPackSha256": "86c81bda8df20469418d193989332ff5d17c5c77ea59977a13ecd536b4e24581",
+  "editor": "Codex AI-assisted editor",
+  "providerCallsForRevision": 0,
+  "changes": [
+    {
+      "id": "bus-reading-sentence-boundary",
+      "before": "The first sentence was incorrectly split after the abbreviation “p.m.”, leaving “Friday while ...” as a fragment.",
+      "after": "The city transport team will close Market Street to buses from 8 p.m. Friday while crews repair a damaged drainage cover.",
+      "reason": "Keep the complete reading sentence and cited-sentence list aligned after the abbreviation."
+    },
+    {
+      "id": "bus-q3c-distractor",
+      "before": "It means passengers can reach the platform only by using a ramp, not a level path or lift.",
+      "after": "It means passengers are guaranteed a reserved seat on the bus.",
+      "reason": "Replace an over-specific ramp-only interpretation with a distinct accessibility feature that is not the meaning of step-free access."
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

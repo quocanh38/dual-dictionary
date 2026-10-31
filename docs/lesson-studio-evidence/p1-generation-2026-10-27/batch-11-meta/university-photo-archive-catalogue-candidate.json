@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-9d62218e-ce0c-4f8d-8710-2774f188153b",
+    "version": 1,
+    "title": "Cataloguing Archive Photographs Carefully",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T09:03:32.147Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Cataloguing Archive Photographs Carefully",
+        "objective": "Learners will understand and use work in pairs and in chronological order to describe academic tasks accurately.",
+        "reading": {
+          "text": "A university archive is inviting students to help catalogue photographs donated by local businesses. Students work in pairs and enter only details visible in each image, such as a shop sign or a date printed on the back. If a photograph shows a familiar street but no exact address, the catalogue entry records the uncertainty rather than guessing. Visitors can use a searchable index to find a topic and then open the original scan for context. Records with known dates appear in chronological order, while uncertain dates are kept in a separate group. When students mention a photograph in their notes, they refer to its catalogue number so another reader can locate the same item. Staff will check a sample of entries before the collection becomes available online.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A university archive is inviting students to help catalogue photographs donated by local businesses."
+            },
+            {
+              "id": "s2",
+              "text": "Students work in pairs and enter only details visible in each image, such as a shop sign or a date printed on the back."
+            },
+            {
+              "id": "s3",
+              "text": "If a photograph shows a familiar street but no exact address, the catalogue entry records the uncertainty rather than guessing."
+            },
+            {
+              "id": "s4",
+              "text": "Visitors can use a searchable index to find a topic and then open the original scan for context."
+            },
+            {
+              "id": "s5",
+              "text": "Records with known dates appear in chronological order, while uncertain dates are kept in a separate group."
+            },
+            {
+              "id": "s6",
+              "text": "When students mention a photograph in their notes, they refer to its catalogue number so another reader can locate the same item."
+            },
+            {
+              "id": "s7",
+              "text": "Staff will check a sample of entries before the collection becomes available online."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "work in pairs",
+            "meaningEn": "to do a task together with one other person as a team",
+            "meaningVi": "làm việc theo cặp",
+            "sourceSentenceId": "s2"
+          },
+          {
+            "id": "t2",
+            "phrase": "in chronological order",
+            "meaningEn": "arranged from earliest to latest according to date or time",
+            "meaningVi": "theo thứ tự thời gian từ sớm đến muộn",
+            "sourceSentenceId": "s5"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s2, Students work in pairs and enter only details visible in each image. What does work in pairs mean here?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means they do the task together with one other person as a team.",
+                "explanation": "It is correct because it matches the source meaning of collaborating with one partner."
+              },
+              {
+                "id": "b",
+                "text": "It means they do the task alone without help from anyone else.",
+                "explanation": "It is wrong because working alone is the opposite of working with a partner."
+              },
+              {
+                "id": "c",
+                "text": "It means they take turns leading a large group of classmates.",
+                "explanation": "It is wrong because leading a large group involves more than two people and a different role."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The phrase describes two students collaborating as a team on the cataloguing task."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses work in pairs correctly and naturally.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "They work in pairs to check each other's entries.",
+                "explanation": "It is correct because it uses plural work with They and the infinitive to check naturally."
+              },
+              {
+                "id": "b",
+                "text": "They work in pairs to checking each other's entries.",
+                "explanation": "It is wrong because to checking should be to check after to."
+              },
+              {
+                "id": "c",
+                "text": "They works in pairs to check each other's entries.",
+                "explanation": "It is wrong because works should be work to agree with They."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the phrase with correct agreement and infinitive form."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s5, Records with known dates appear in chronological order. What does in chronological order mean here?",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means they are grouped by topic name without considering dates.",
+                "explanation": "It is wrong because grouping by topic ignores the time-based arrangement described in the source."
+              },
+              {
+                "id": "b",
+                "text": "It means they are arranged from earliest to latest according to date.",
+                "explanation": "It is correct because it matches the source meaning of sorting by time from early to late."
+              },
+              {
+                "id": "c",
+                "text": "It means they are placed randomly with no clear system.",
+                "explanation": "It is wrong because random placement is the opposite of ordered arrangement by date."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The phrase describes records sorted by date from earliest to latest."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses in chronological order correctly and naturally.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The archive lists the photos in chronological order from 2000 to 2010.",
+                "explanation": "It is correct because it uses the fixed singular phrase and correct verb agreement."
+              },
+              {
+                "id": "b",
+                "text": "The archive lists the photos in chronological orders from 2000 to 2010.",
+                "explanation": "It is wrong because the fixed phrase needs singular order not orders."
+              },
+              {
+                "id": "c",
+                "text": "The archive list the photos in chronological order from 2000 to 2010.",
+                "explanation": "It is wrong because the singular subject archive needs lists not list."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one sentence uses the fixed phrase with correct grammar."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "Imagine you are a sports club leader telling new members how you organized past newsletters. Write 2-3 sentences explaining how you arranged them and why it helps readers. Use the phrase in chronological order.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "sampleAnswer": "I arranged our club newsletters in chronological order from 2019 to 2026. This helps new members see how our activities have developed over time.",
+            "selfCheck": [
+              "My response has 2-3 sentences.",
+              "I used the phrase in chronological order to describe date order.",
+              "I describe a new situation with a different role and purpose from the archive project."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

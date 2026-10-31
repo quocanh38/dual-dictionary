@@ -1,0 +1,55 @@
+{
+  "testedAt": "2026-10-27T03:55:53.888560+00:00",
+  "baselineCommit": "85b61c651c4bca9275150ddc085aa953d4899f5d",
+  "branch": "hackathon/offline-lesson-studio",
+  "productionCacheObserved": "mdx-dict-v123",
+  "localCandidateCache": "mdx-dict-v124",
+  "runtimeChanges": [
+    "Focus visible screen heading on Studio transitions; radio selection restores native focus",
+    "Close late IndexedDB connection after blocked-open rejection"
+  ],
+  "verification": {
+    "mainBrowserGroups": 14,
+    "backupGroups": 11,
+    "legacyMixedStorageGroups": 12,
+    "storageOpenLifecycleMockGroups": 4,
+    "authoringReload": "PASS source/selected/draft/reviewed, edit invalidation, late response, offline refusal",
+    "keyboard": "PASS headless and real dedicated loopback CDP",
+    "cdpCleanup": "PASS isolated context closed, pre-existing blank page kept",
+    "persistence": "PASS retry/reloads/offline",
+    "draftImport": "PASS",
+    "recovery": "PASS",
+    "contracts": 27,
+    "offlineShellPaths": 13,
+    "serviceWorkerGuard": "PASS cache v123 to v124; isolated copy of guard/baseline used",
+    "productEvaluation": {
+      "feedbackFixtures": 6,
+      "apiFailureFixtures": 2,
+      "mockRequests": 2,
+      "realProviderCalls": 0,
+      "accuracy": "not measured"
+    }
+  },
+  "fileSha256": {
+    "lessons/app.js": "ac12912bc785f172ce6aba32d0eb59bb3a313370e8b03adc0789bee98fd45cb3",
+    "lessons/storage.js": "12ca575784ba44cc0238b7fe6a5834d5b771314df390a7e268b789a6157e0684",
+    "sw.js": "81f996b8f86cc693a4a50bf6681d29f3e99796a765668de876d209fd59e17b5e",
+    "tools/lessons/browser-runtime.cjs": "19dfc0220aa1f7eb4ccac84c5d9ad73f91598b2f9d9d92429cb76a5249b7110a"
+  },
+  "metaCalls": 0,
+  "creditBalance": "unknown; no calls attempted",
+  "approval": "All 3 actual candidates remain READY_FOR_APPROVAL; no owner approval or approved-pack release QA",
+  "deployment": "No push or deployment",
+  "limits": [
+    "390px emulation, not physical phone",
+    "No independent human editorial review or learning study",
+    "Storage blocked-open lifecycle tested deterministically, not real browser blocked-upgrade reproduction",
+    "Official full rules/form requirements inaccessible through public extraction",
+    "Production deploy API/parity not rechecked"
+  ],
+  "next": [
+    "Owner decision on exact three reviewed candidates before approved exports and release QA",
+    "Verify free-credit balance securely before additional Meta generation or live evaluation",
+    "Complete official participant form/rules verification and final exact-build demo video; no automatic submission"
+  ]
+}

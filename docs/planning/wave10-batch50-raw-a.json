@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 50,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only phrase pages after managing director, selected by comparing builder slugs with all hand-definition files; cross-checked against local OALD 10 and LDOCE 6 where matching entries exist. WHO Marburg virus disease fact sheet consulted for current terminology.",
+  "selectionRationale": "Original Vietnamese meanings, usage patterns, bilingual examples and learner notes; historical and dated terminology is labeled, scientific/business meanings are contextualized, and no source wording or examples are reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1860,
+    "remainingRawOnlyAfter": 1840
+  },
+  "selected": [
+    "mandarin orange",
+    "Manhattan Project",
+    "manic depressive",
+    "Marburg disease",
+    "Mardi Gras",
+    "margin of error",
+    "mark up",
+    "market capitalization",
+    "market economy",
+    "market forces",
+    "market price",
+    "market research",
+    "market value",
+    "marrow bone",
+    "marshalling yard",
+    "masking tape",
+    "mass number",
+    "mass production",
+    "master key",
+    "master plan"
+  ]
+}

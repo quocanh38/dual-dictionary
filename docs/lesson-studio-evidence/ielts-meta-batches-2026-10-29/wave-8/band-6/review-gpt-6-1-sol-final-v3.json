@@ -1,0 +1,84 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "26029e8b86d1afd55df40a197788ca886959feaac6afd2dba0315d40c88c51e5",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-6-reading-02",
+      "severity": "minor",
+      "issue": "Explanation for OptionB should identify the reversed attribution: auditors praised café staff, not café staff praising changes. Key inclusion claim is supported."
+    },
+    {
+      "item": "ielts-meta-wave-8-band-6-writing-01",
+      "severity": "minor",
+      "issue": "TotalVisitors equals summed session attendances; state visitors attended one session or label totals as attendances if repeat attendance possible."
+    }
+  ],
+  "coverage": {
+    "scope": "Full candidate-only AI-assisted rereview of 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking. Entire contexts, all 40 options,10 keys/explanations and all productive prompts/metadata read. No prior reviewer report inspected during this pass; no candidate edits or provider calls.",
+    "listening": "Full rewritten clinic call reviewed: corrected 11:30/Room 3, prior SMS 4 pm, either YES or phone confirmation explicitly allowed, patient chooses call,15-minute early card requirement, optional follow-up. All five keys/options/explanations supported; optionality now preserved.",
+    "reading": "Full CentralPark audit reviewed: mixed access, north ramp/smooth paths versus south steps/lake barriers, café staff example, inclusive features/funding-dependent plans. All keys supported; explanation of one reversed distractor could be clearer.",
+    "writing": "Both Task 1 tables complete: session totals 100/140/150 correct and 12 rota-hour values. Three Task 2 topics coherent with reasons/comparison.150/250 minima and 20/40-minute metadata correct; prose omits timing repetition.",
+    "speaking": "Two familiar Part 1 sets, event card with four newline bullets/preparation/duration, two broader Part 3 learning/volunteering discussions. Natural stage 6 practice.",
+    "structure": {
+      "wordCounts": {
+        "listening": 307,
+        "reading": 405
+      },
+      "listeningBounds": [
+        300,
+        400
+      ],
+      "readingBounds": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          1,
+          0,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          2,
+          1,
+          3,
+          1
+        ]
+      },
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "normalizationFindingsRead": [],
+      "contextCopies": "All repeated contexts string-identical to shared contexts."
+    },
+    "originalityAndProvenance": "Read Baseten Model API/meta-models/muse-spark-open-1026 provenance, originalContent=true and repair metadata. No recognisable official-exam copying or score guarantee found; not an exhaustive plagiarism or empirical-source audit. Fictional data assessed for coherence.",
+    "independence": "Reviewer has previous conversation exposure to earlier versions, but this pass used candidate files only and reread all content; no prior or other-model reports opened.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-6-listening-01",
+      "ielts-meta-wave-8-band-6-listening-02",
+      "ielts-meta-wave-8-band-6-listening-03",
+      "ielts-meta-wave-8-band-6-listening-04",
+      "ielts-meta-wave-8-band-6-listening-05",
+      "ielts-meta-wave-8-band-6-reading-01",
+      "ielts-meta-wave-8-band-6-reading-02",
+      "ielts-meta-wave-8-band-6-reading-03",
+      "ielts-meta-wave-8-band-6-reading-04",
+      "ielts-meta-wave-8-band-6-reading-05",
+      "ielts-meta-wave-8-band-6-writing-01",
+      "ielts-meta-wave-8-band-6-writing-02",
+      "ielts-meta-wave-8-band-6-writing-03",
+      "ielts-meta-wave-8-band-6-writing-04",
+      "ielts-meta-wave-8-band-6-writing-05",
+      "ielts-meta-wave-8-band-6-speaking-01",
+      "ielts-meta-wave-8-band-6-speaking-02",
+      "ielts-meta-wave-8-band-6-speaking-03",
+      "ielts-meta-wave-8-band-6-speaking-04",
+      "ielts-meta-wave-8-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

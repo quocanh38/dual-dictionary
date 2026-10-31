@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-10-29T04:23:35.625Z",
+  "output": "js/ielts-meta-practice.js",
+  "outputSha256": "48d9a6f463d1b07e0bbed793d2a7073ce97cd896694b941b96436fb86f6d8fd4",
+  "includedBatches": [
+    {
+      "batchId": "wave-1",
+      "stage": "band-5",
+      "candidateSha256": "1f23171ca9b4496783fefcb9bcc443612a95f1f8cabf8461bbc6262ea60680c8"
+    },
+    {
+      "batchId": "wave-1",
+      "stage": "band-6",
+      "candidateSha256": "93101ca1904485c5e3eb2964892ff410b313417841da1be9a64cf4fb8babb5f1"
+    },
+    {
+      "batchId": "wave-1",
+      "stage": "band-6-5",
+      "candidateSha256": "cf42464c6bc5a2ed1e82ef12d83b19a3bff55704d1a01e3da6f7bd68952edf77"
+    },
+    {
+      "batchId": "wave-1",
+      "stage": "band-7",
+      "candidateSha256": "7c017719f3809883aeb6118942366b0e205ab31e2037727f3068a63c82247e97"
+    },
+    {
+      "batchId": "wave-2",
+      "stage": "band-5",
+      "candidateSha256": "d173e0b9d11e5804ea7e65bc01a6f394a21bcba19ecb0f67445d3bd5d740fe16"
+    },
+    {
+      "batchId": "wave-2",
+      "stage": "band-6",
+      "candidateSha256": "d24619de24ead9a29b5f6c26fb98205cbd2dcf5982a3fb0ad4fdb65d931d66df"
+    },
+    {
+      "batchId": "wave-2",
+      "stage": "band-6-5",
+      "candidateSha256": "ea98c070d06c17ce7c27355e4ea5fa910f443a91a18931c563c89b51f0021cb6"
+    },
+    {
+      "batchId": "wave-2",
+      "stage": "band-7",
+      "candidateSha256": "b4f2627b73488dea6c48e230a3125f697fc90fdf1b82336b2f04848aa99cf572"
+    },
+    {
+      "batchId": "wave-3",
+      "stage": "band-5",
+      "candidateSha256": "d39a8613b5e404fbf2d14928234165dc8d0bc1b9f07a3db345a12f73f5c00b0d"
+    },
+    {
+      "batchId": "wave-3",
+      "stage": "band-6",
+      "candidateSha256": "f7ac05061455e83e7ac244c93a72527199ef504b3c026b44680757290391f5da"
+    },
+    {
+      "batchId": "wave-3",
+      "stage": "band-6-5",
+      "candidateSha256": "c869a1ba685bb653def9f7238879e369e8c3952544f4792cf675d81576d2600b"
+    },
+    {
+      "batchId": "wave-3",
+      "stage": "band-7",
+      "candidateSha256": "1b21e129dc2ab806d3889d9428f41ab2038a8ba6d01297190dd7be0d6f8f4ffe"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-5",
+      "candidateSha256": "b293fbeaaaaf6b42eed1eabc30a7631e61a7f26a5894802874575bb7930562cc"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-6",
+      "candidateSha256": "3560af2fe77289392b46e95addadf318a3d4c6288d3b88b1412635876c4d5cef"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-6-5",
+      "candidateSha256": "148ea435be99d65a34f93eaf8b0e419b56d0c86235fbe4c89238427e606d577f"
+    },
+    {
+      "batchId": "wave-4",
+      "stage": "band-7",
+      "candidateSha256": "a5663e4bb0cc1e3fb18ea6046ec99735ef0de6054766f2db702f62a6f25dd293"
+    }
+  ],
+  "reviewedItems": 320,
+  "newWaveItems": 80,
+  "totals": {
+    "listening": 80,
+    "reading": 80,
+    "writing": 80,
+    "speaking": 80
+  }
+}

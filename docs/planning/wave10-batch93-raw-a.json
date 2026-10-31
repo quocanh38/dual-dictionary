@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 93,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after submarine sandwich; reviewed against local OALD 10/LDOCE 6. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover placeholders and phrasal verbs, sport, crops and trees, chemical substances, home types, daylight-saving terminology, psychology, economics and courts; distinguish informal or regional meanings and spelling variants.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1000, "remainingRawOnlyAfter": 980},
+  "selected": ["such and such", "suck in", "suck up", "sudden death", "sugar beet", "sugar cane", "sugar daddy", "sugar maple", "sulphur dioxide", "sulphuric acid", "sum total", "summer house", "summer time", "sun lounge", "sun porch", "super power", "superiority complex", "supply line", "supply-side economics", "supreme court"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

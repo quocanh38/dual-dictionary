@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-10",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:21:39.577Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 771,
+    "outputTokens": 12321,
+    "totalTokens": 13092
+  },
+  "latencyMs": 51661,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"Museum School Visit Booking\",\"focus\":\"paraphrase, linked ideas and corrected details in an everyday service conversation\",\"part\":\"Part 1\",\"script\":\"Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\\nTom: Certainly. Which programme are you interested in?\\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\\nMs Patel: Great. Will you send confirmation by email?\\nTom: Yes, I'll email the booking pack today with directions and payment details.\",\"questions\":[{\"title\":\"Workshop Booking\",\"prompt\":\"What workshop and date was booked?\",\"options\":[\"Ancient Egypt workshop on 18 March\",\"Ancient Egypt workshop on 18 May\",\"Science workshop on 18 March\",\"Guided tour only on 18 March\"],\"answer\":0,\"explanation\":\"The script confirms the 'Life in Ancient Egypt' workshop for 18 March. Option B fails because May is never mentioned.\"},{\"title\":\"Group Size\",\"prompt\":\"How many pupils will attend?\",\"options\":[\"32 pupils\",\"30 pupils\",\"28 pupils\",\"33 pupils and adults\"],\"answer\":1,\"explanation\":\"The teacher says 32 in class but two away, leaving 30 pupils. Option A ignores the two absentees.\"},{\"title\":\"Booking Policy\",\"prompt\":\"What must the school do to keep its slot?\",\"options\":[\"Pay 50% charge\",\"Bring no backpacks\",\"Confirm form two weeks before\",\"Arrive at 10:00\"],\"answer\":2,\"explanation\":\"Tom says the form must be confirmed two weeks before or the slot is released. Option A refers to late cancellation, not keeping the slot.\"},{\"title\":\"Lunch Facilities\",\"prompt\":\"What is true about the lunch room?\",\"options\":[\"Costs £4 per child\",\"Open all morning\",\"On first floor education room\",\"Available 12:00-12:45 if pre-booked\"],\"answer\":3,\"explanation\":\"Tom states the lunch room is 12:00-12:45 and must be pre-booked. Option C confuses it with the education room location.\"},{\"title\":\"Correction Detail\",\"prompt\":\"What correction did the caller make?\",\"options\":[\"Changed arrival from 10:00 to 10:30\",\"Changed date to 19 March\",\"Increased pupils to 32\",\"Cancelled lunch booking\"],\"answer\":0,\"explanation\":\"The caller corrects arrival from 10:00 to 10:30 due to the bus change. Option B is wrong as the date stays 18 March.\"}]},\"reading\":{\"title\":\"University Study-Support Drop-In Evaluation\",\"focus\":\"clear comparisons, distinguishing claims from examples and limited inference\",\"passage\":\"The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\\n\\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\\n\\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\\n\\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\\n\\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.\",\"questions\":[{\"title\":\"Purpose of Evaluation\",\"prompt\":\"Why was the evaluation carried out?\",\"options\":[\"To compare library locations\",\"To close booking service\",\"To assess value of drop-in service\",\"To recruit five advisers\"],\"answer\":2,\"explanation\":\"The passage says the Unit evaluated the service to assess its value in spring 2024. Option A misuses the library location detail.\"},{\"title\":\"Attendance Patterns\",\"prompt\":\"What did attendance records show about timing?\",\"options\":[\"Afternoon visits higher than morning\",\"Morning visits double afternoon\",\"Equal morning and afternoon use\",\"Postgraduates only came mornings\"],\"answer\":0,\"explanation\":\"Records show 62% afternoon versus 38% morning visits. Option B reverses the comparison.\"},{\"title\":\"Reasons for Attending\",\"prompt\":\"How did reasons for attending differ?\",\"options\":[\"Both groups wanted referencing only\",\"Undergraduates wanted dissertation help\",\"Postgraduates wanted data commentary only\",\"Undergraduates sought essay structure, postgraduates dissertation planning\"],\"answer\":3,\"explanation\":\"Undergraduates sought essay structure and referencing while postgraduates sought dissertation planning. Option B swaps the groups.\"},{\"title\":\"Claim Versus Example\",\"prompt\":\"Which is the authors' main claim illustrated by the history student?\",\"options\":[\"History student reorganised industrialisation argument\",\"Drop-in builds long-term confidence\",\"85% rated advice helpful\",\"Tutors correct grammar quickly\"],\"answer\":1,\"explanation\":\"The authors argue the main benefit is long-term confidence growth; the history student is just an example. Option A is the example, not the claim.\"},{\"title\":\"Recommendation Inference\",\"prompt\":\"What can be inferred about extending afternoon hours?\",\"options\":[\"It would end morning sessions\",\"It would replace booked appointments\",\"It would address higher afternoon demand\",\"It would reduce questionnaire volunteers\"],\"answer\":2,\"explanation\":\"Afternoon sessions were busier (62% and 18 per hour), so extending hours meets demand. Option B contradicts the conclusion that drop-ins complement appointments.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Museum School Visit Booking",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "part": "Part 1",
+      "script": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "questions": [
+        {
+          "title": "Workshop Booking",
+          "prompt": "What workshop and date was booked?",
+          "options": [
+            "Ancient Egypt workshop on 18 March",
+            "Ancient Egypt workshop on 18 May",
+            "Science workshop on 18 March",
+            "Guided tour only on 18 March"
+          ],
+          "answer": 0,
+          "explanation": "The script confirms the 'Life in Ancient Egypt' workshop for 18 March. Option B fails because May is never mentioned."
+        },
+        {
+          "title": "Group Size",
+          "prompt": "How many pupils will attend?",
+          "options": [
+            "32 pupils",
+            "30 pupils",
+            "28 pupils",
+            "33 pupils and adults"
+          ],
+          "answer": 1,
+          "explanation": "The teacher says 32 in class but two away, leaving 30 pupils. Option A ignores the two absentees."
+        },
+        {
+          "title": "Booking Policy",
+          "prompt": "What must the school do to keep its slot?",
+          "options": [
+            "Pay 50% charge",
+            "Bring no backpacks",
+            "Confirm form two weeks before",
+            "Arrive at 10:00"
+          ],
+          "answer": 2,
+          "explanation": "Tom says the form must be confirmed two weeks before or the slot is released. Option A refers to late cancellation, not keeping the slot."
+        },
+        {
+          "title": "Lunch Facilities",
+          "prompt": "What is true about the lunch room?",
+          "options": [
+            "Costs £4 per child",
+            "Open all morning",
+            "On first floor education room",
+            "Available 12:00-12:45 if pre-booked"
+          ],
+          "answer": 3,
+          "explanation": "Tom states the lunch room is 12:00-12:45 and must be pre-booked. Option C confuses it with the education room location."
+        },
+        {
+          "title": "Correction Detail",
+          "prompt": "What correction did the caller make?",
+          "options": [
+            "Changed arrival from 10:00 to 10:30",
+            "Changed date to 19 March",
+            "Increased pupils to 32",
+            "Cancelled lunch booking"
+          ],
+          "answer": 0,
+          "explanation": "The caller corrects arrival from 10:00 to 10:30 due to the bus change. Option B is wrong as the date stays 18 March."
+        }
+      ]
+    },
+    "reading": {
+      "title": "University Study-Support Drop-In Evaluation",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "questions": [
+        {
+          "title": "Purpose of Evaluation",
+          "prompt": "Why was the evaluation carried out?",
+          "options": [
+            "To compare library locations",
+            "To close booking service",
+            "To assess value of drop-in service",
+            "To recruit five advisers"
+          ],
+          "answer": 2,
+          "explanation": "The passage says the Unit evaluated the service to assess its value in spring 2024. Option A misuses the library location detail."
+        },
+        {
+          "title": "Attendance Patterns",
+          "prompt": "What did attendance records show about timing?",
+          "options": [
+            "Afternoon visits higher than morning",
+            "Morning visits double afternoon",
+            "Equal morning and afternoon use",
+            "Postgraduates only came mornings"
+          ],
+          "answer": 0,
+          "explanation": "Records show 62% afternoon versus 38% morning visits. Option B reverses the comparison."
+        },
+        {
+          "title": "Reasons for Attending",
+          "prompt": "How did reasons for attending differ?",
+          "options": [
+            "Both groups wanted referencing only",
+            "Undergraduates wanted dissertation help",
+            "Postgraduates wanted data commentary only",
+            "Undergraduates sought essay structure, postgraduates dissertation planning"
+          ],
+          "answer": 3,
+          "explanation": "Undergraduates sought essay structure and referencing while postgraduates sought dissertation planning. Option B swaps the groups."
+        },
+        {
+          "title": "Claim Versus Example",
+          "prompt": "Which is the authors' main claim illustrated by the history student?",
+          "options": [
+            "History student reorganised industrialisation argument",
+            "Drop-in builds long-term confidence",
+            "85% rated advice helpful",
+            "Tutors correct grammar quickly"
+          ],
+          "answer": 1,
+          "explanation": "The authors argue the main benefit is long-term confidence growth; the history student is just an example. Option A is the example, not the claim."
+        },
+        {
+          "title": "Recommendation Inference",
+          "prompt": "What can be inferred about extending afternoon hours?",
+          "options": [
+            "It would end morning sessions",
+            "It would replace booked appointments",
+            "It would address higher afternoon demand",
+            "It would reduce questionnaire volunteers"
+          ],
+          "answer": 2,
+          "explanation": "Afternoon sessions were busier (62% and 18 per hour), so extending hours meets demand. Option B contradicts the conclusion that drop-ins complement appointments."
+        }
+      ]
+    }
+  }
+}

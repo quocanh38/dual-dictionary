@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "set aside",
+        "meaningEn": "to reserve time for a specific activity or purpose",
+        "meaningVi": "dành ra (thời gian cho một việc gì đó)",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "look after",
+        "meaningEn": "to take care of something and keep it in good condition",
+        "meaningVi": "trông nom, bảo quản",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 411,
+    "outputTokens": 1036,
+    "totalTokens": 1447
+  },
+  "status": 200,
+  "latencyMs": 6418,
+  "model": "muse-spark-1.3"
+}

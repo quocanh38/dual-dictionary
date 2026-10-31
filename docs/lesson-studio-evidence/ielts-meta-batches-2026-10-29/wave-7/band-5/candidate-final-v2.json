@@ -1,0 +1,360 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-7",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2660,
+        "outputTokens": 7011,
+        "totalTokens": 9671
+      },
+      "round": 1
+    },
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2035,
+        "outputTokens": 4823,
+        "totalTokens": 6858
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-7-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-7-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Printing Credit Help Desk",
+      "focus": "listening for details, prices and corrections",
+      "part": "Part 1",
+      "script": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "wordCount": 335
+    },
+    "reading": {
+      "title": "Campus Orientation Walking Route",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "wordCount": 424
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-7-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Printing Credit Help Desk",
+      "pathwayStage": "band-5",
+      "focus": "listening for details, prices and corrections",
+      "transcript": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "prompt": "Why is Maya calling the help desk?",
+      "options": [
+        "Her printing credit is still zero",
+        "She lost her student ID card",
+        "She cannot find the library",
+        "She wants to buy a printer"
+      ],
+      "answer": 0,
+      "explanation": "She says she paid $20 but balance is still zero. The ID card option is wrong because she gives her ID but does not report it lost."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Printing Credit Help Desk",
+      "pathwayStage": "band-5",
+      "focus": "listening for details, prices and corrections",
+      "transcript": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "prompt": "How much money did Maya pay online?",
+      "options": [
+        "$10",
+        "$20",
+        "$25",
+        "$15"
+      ],
+      "answer": 1,
+      "explanation": "Both Maya and staff confirm the payment was $20 yesterday. The $25 option is wrong because the colour price is 25 cents, not $25."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Printing Credit Help Desk",
+      "pathwayStage": "band-5",
+      "focus": "listening for details, prices and corrections",
+      "transcript": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "prompt": "What is the price for one black-and-white page?",
+      "options": [
+        "5 cents",
+        "15 cents",
+        "10 cents",
+        "25 cents"
+      ],
+      "answer": 2,
+      "explanation": "Staff states black-and-white is 10 cents per page. 25 cents is for colour, the strongest distractor."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Printing Credit Help Desk",
+      "pathwayStage": "band-5",
+      "focus": "listening for details, prices and corrections",
+      "transcript": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "prompt": "Where should Maya collect her receipt?",
+      "options": [
+        "Room 240 on first floor",
+        "Room 240 on ground floor",
+        "Room 204 on second floor",
+        "Room 204 on ground floor"
+      ],
+      "answer": 3,
+      "explanation": "Staff corrects himself from Room 240 to Room 204 on the ground floor. Room 240 is the initial error before correction."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Printing Credit Help Desk",
+      "pathwayStage": "band-5",
+      "focus": "listening for details, prices and corrections",
+      "transcript": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "prompt": "When will Maya's printing credit be active?",
+      "options": [
+        "Within two hours by email",
+        "Tomorrow morning at 9 a.m.",
+        "After one week",
+        "At 4 p.m. on Friday"
+      ],
+      "answer": 0,
+      "explanation": "Staff says it will be active within two hours with a confirmation email. Tomorrow at 9 a.m. confuses opening hours with activation time."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Orientation Walking Route",
+      "pathwayStage": "band-5",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "prompt": "What is the main reason the university created the walking route?",
+      "options": [
+        "To build new cafes and banks",
+        "To sell campus maps",
+        "To help new students not feel lost",
+        "To train volunteer guides"
+      ],
+      "answer": 2,
+      "explanation": "The opening explains the route was made because new students worry about getting lost. Building cafes is just a feature of the Student Centre, not the reason."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Orientation Walking Route",
+      "pathwayStage": "band-5",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "prompt": "Where does the orientation walk begin?",
+      "options": [
+        "At the Main Gate",
+        "At the Sports Hall",
+        "At the Science Building",
+        "At the Student Centre"
+      ],
+      "answer": 0,
+      "explanation": "The second paragraph states the walk begins at the Main Gate. The Sports Hall is where the tour ends, not starts."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Orientation Walking Route",
+      "pathwayStage": "band-5",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "prompt": "What does the author say is the main purpose of the route?",
+      "options": [
+        "To learn where buildings are",
+        "To help students meet people and feel part of community",
+        "To explain how to borrow library books",
+        "To show where laboratories are"
+      ],
+      "answer": 1,
+      "explanation": "The author claims the most important aim is meeting people and feeling part of community. Borrowing books is given only as an example of a library talk."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Orientation Walking Route",
+      "pathwayStage": "band-5",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "prompt": "What can be inferred about students who miss their booked time?",
+      "options": [
+        "They must pay extra fee",
+        "They cannot do tour later",
+        "They must wait until next year",
+        "They can join next group without new booking"
+      ],
+      "answer": 3,
+      "explanation": "The passage says they can join the next group without extra registration. The fee option is unsupported as no payment is mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Campus Orientation Walking Route",
+      "pathwayStage": "band-5",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "prompt": "What did students in September 2023 say after the tour?",
+      "options": [
+        "They made friends and felt less stress",
+        "They found campus maps confusing",
+        "They wanted more cafes",
+        "They preferred evening tours"
+      ],
+      "answer": 0,
+      "explanation": "The final paragraph reports many made friends and felt less stress. Evening tours are a future plan, not 2023 feedback."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-7-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Weekend Campus Tour Attendance",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas and direct comparisons from a table",
+      "prompt": "The table below shows the number of visitors who joined the weekend campus tour at Greenfield College in March, April and May 2024. The table lists three visitor groups: local new students, parents, and international visitors. In March, there were 45 local new students, 30 parents and 15 international visitors. In April, there were 60 local new students, 35 parents and 25 international visitors. In May, there were 50 local new students, 40 parents and 20 international visitors. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Student Board-Game Event Preferences",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas and simple explanations of survey data",
+      "prompt": "The bar chart below shows the results of a survey of 120 students at Greenfield College about their favourite type of game at the monthly board-game event in May 2024. 40 students chose strategy games, 30 chose word games, 25 chose cooperative games, and 25 chose classic board games such as chess and checkers. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Gardening and Student Life",
+      "pathwayStage": "band-5",
+      "focus": "clear position and direct evidence from a familiar context",
+      "prompt": "Some people think that all college students should take part in a community gardening session at least once a month to learn about teamwork and nature. Others think students are too busy with their studies. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Weekend Campus Tours Online or In Person",
+      "pathwayStage": "band-5",
+      "focus": "simple evaluation and accurate explanations of an everyday academic idea",
+      "prompt": "Some colleges now offer weekend campus tours online with videos and live chats, instead of face-to-face tours. Some people think online tours are better because they are easy and cheap. Others think visiting the campus in person is more useful. To what extent do you agree or disagree that online tours are better than in-person tours? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Board Games and Learning",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas and accurate simple explanations of advantages and disadvantages",
+      "prompt": "At Greenfield College, the student club organises a board-game event every weekend. Some students say board games are a good way to relax and learn useful skills like planning and communication. Others say board games are a waste of time. Do the advantages of regular board-game events for students outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-7-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Weekend Activities",
+      "pathwayStage": "band-5",
+      "focus": "familiar topics and short personal answers",
+      "prompt": "Answer the following questions about yourself. Give short, clear answers with a reason or example where you can. 1. What do you usually do at the weekend? 2. Have you ever joined a campus tour? What was it like? 3. Do you prefer spending free time indoors or outdoors? Why? 4. How often do you take part in group activities with other students?"
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Games and Hobbies",
+      "pathwayStage": "band-5",
+      "focus": "everyday familiar context and simple explanations",
+      "prompt": "Answer the following questions about yourself. Give short, clear answers with a reason or example where you can. 1. Do you like playing board games? Why or why not? 2. Who do you usually play games with? 3. What kind of games did you play when you were younger? 4. Do you think games can help students learn new skills?"
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Weekend Campus Tour",
+      "pathwayStage": "band-5",
+      "focus": "describe a familiar experience with clear main ideas",
+      "prompt": "Describe a weekend campus tour you went on. You will have one minute to prepare and should speak for one to two minutes. You should say:\n• when and where the tour was\n• who you went with\n• what you saw and did on the tour\n• and explain why you remember this tour.\nYou can add one or two more details if you want."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Community Gardening Session",
+      "pathwayStage": "band-5",
+      "focus": "describe a practical group activity with direct evidence",
+      "prompt": "Describe a community gardening session you took part in or saw. You will have one minute to prepare and should speak for one to two minutes. You should say:\n• where the gardening session was\n• what you did there\n• who was with you\n• and explain how you felt about the experience.\nYou can add one or two more details if you want."
+    },
+    {
+      "id": "ielts-meta-wave-7-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Learning Outside the Classroom",
+      "pathwayStage": "band-5",
+      "focus": "reasons and evaluation of community and leisure activities",
+      "prompt": "Discuss the following questions more fully. Give reasons and examples to support your ideas. 1. Why do some students enjoy joining community activities like gardening while others do not? 2. Are outdoor group activities more useful for learning teamwork than indoor games like board games? Why? 3. How can colleges encourage more students to take part in weekend events? 4. Do you think practical activities outside class will become more important for students in the future? Why or why not?"
+    }
+  ]
+}

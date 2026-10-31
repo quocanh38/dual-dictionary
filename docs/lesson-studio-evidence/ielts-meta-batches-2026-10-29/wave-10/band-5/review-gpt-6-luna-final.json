@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "07fc1f1483046dacd07084922c4bba99070e70f1958a5d0a9f9ffdbb086f349e",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Declared context wordCount differs slightly from a simple whitespace/token count (Listening 339 declared vs 342 counted; Reading 411 vs 419); both passages remain within the requested 300–400 and 400–500 bounds."
+  ],
+  "coverage": "Full 20-item review: both shared contexts, all five Listening and five Reading objective items (including every option, key and explanation), five Writing prompts and five Speaking prompts. Confirmed the campus-card fees, correction and collection details are coherent; the first-aid course gives appropriate burn-care guidance; reading dates/schedule and objective evidence align; visible Writing Task 1 data and units reconcile; and Speaking Part 2 cards are complete and stage-appropriate. Listening script word count (declared/tokenized): 339/342; Reading passage: 411/419. Verified all 20 items and provenance/original-content metadata; no unresolved critical, major or uncertain content issue found.",
+  "reviewerType": "AI-assisted"
+}

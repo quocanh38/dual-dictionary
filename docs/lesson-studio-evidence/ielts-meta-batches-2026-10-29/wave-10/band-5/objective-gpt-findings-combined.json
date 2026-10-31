@@ -1,0 +1,16 @@
+{
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-10-band-5-reading-03 / Student First-Aid Course Timetable",
+      "issue": "The passage teaches cooling a burn with water for 10 minutes. This conflicts with current NHS first-aid guidance to cool a burn under cool running water for 20 minutes; update the course detail and any dependent answer/explanation. https://www.nhs.uk/conditions/Burns-and-scalds/",
+      "severity": "critical",
+      "reviewer": "gpt-6-luna"
+    },
+    {
+      "item": "sharedContexts.reading.passage, Session2; all Reading passage copies",
+      "severity": "critical",
+      "issue": "First-aid course teaches cooling a burn for ten minutes. In this UK-style health-centre context, current NHS guidance specifies20minutes under cool running water. Replace with that guidance or omit procedural duration. Source: https://www.nhs.uk/conditions/burns-and-scalds/ .",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

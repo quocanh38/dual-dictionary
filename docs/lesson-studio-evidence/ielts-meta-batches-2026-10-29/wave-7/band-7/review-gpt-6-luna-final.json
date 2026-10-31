@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "e38b085749af3fff23f4c48fe6807fa04540160855daaa83e6ce8ff53df5e044",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 351/445 words; all 10 answers are uniquely supported, with plausible distractors and accurate explanations on confounding, comparison groups, proxy limits and qualified inference. Both Task 1 prompts provide the visible values and reporting instructions; the flood-session item gives a total n=900 but no per-method sample sizes, so compare the stated percentages without inferring group counts or precision. Writing minimums/timing and Speaking Part 1/2/3 fit are complete. Original-content provenance is declared; no official-item or score claims."
+  ],
+  "coverage": "Full rereview of exact candidate bytes, provenance/metadata, both contexts, every objective item/options/key/explanation, all five Writing prompts (including Task 1 numbers/units and denominator interpretation), and all five Speaking prompts including cue card and Part 3 fit.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "work in pairs",
+        "meaningEn": "to do a task together with one other person as a team",
+        "meaningVi": "làm việc theo cặp",
+        "sourceSentenceId": "s2"
+      },
+      {
+        "id": "t2",
+        "phrase": "in chronological order",
+        "meaningEn": "arranged from earliest to latest according to date or time",
+        "meaningVi": "theo thứ tự thời gian từ sớm đến muộn",
+        "sourceSentenceId": "s5"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 560,
+    "outputTokens": 1027,
+    "totalTokens": 1587
+  },
+  "status": 200,
+  "latencyMs": 8145,
+  "model": "muse-spark-1.3"
+}

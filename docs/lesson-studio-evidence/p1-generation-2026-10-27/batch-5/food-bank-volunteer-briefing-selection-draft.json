@@ -1,0 +1,53 @@
+{
+  "id": "draft-f453802c-cc42-47cf-9b3c-de60532027d4",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Organising a food-bank volunteer shift",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The coordinator will set aside a short briefing before the food-bank opens on Saturday. New volunteers will learn where to store donated goods and how to look after chilled items. During the first hour, a team leader will hand out labels and assign each person a shelf to check. At the end of the shift, volunteers will record low-stock items so the next team can prepare an order.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The coordinator will set aside a short briefing before the food-bank opens on Saturday. New volunteers will learn where to store donated goods and how to look after chilled items. During the first hour, a team leader will hand out labels and assign each person a shelf to check. At the end of the shift, volunteers will record low-stock items so the next team can prepare an order.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The coordinator will set aside a short briefing before the food-bank opens on Saturday."
+      },
+      {
+        "id": "s2",
+        "text": "New volunteers will learn where to store donated goods and how to look after chilled items."
+      },
+      {
+        "id": "s3",
+        "text": "During the first hour, a team leader will hand out labels and assign each person a shelf to check."
+      },
+      {
+        "id": "s4",
+        "text": "At the end of the shift, volunteers will record low-stock items so the next team can prepare an order."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "set aside",
+      "meaningEn": "to reserve time for a specific activity or purpose",
+      "meaningVi": "dành ra (thời gian cho một việc gì đó)",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "look after",
+      "meaningEn": "to take care of something and keep it in good condition",
+      "meaningVi": "trông nom, bảo quản",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

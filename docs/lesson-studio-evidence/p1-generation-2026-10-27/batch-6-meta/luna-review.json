@@ -1,0 +1,16 @@
+{
+  "reviewerRouteRequested": "gpt-6-luna",
+  "runtimeReportedModelLabel": "GPT-6",
+  "reviewedPackSha256": "e50fc3207f548f3d18d4534708c113f2fc106d7d7f2c134316508717936ff796",
+  "scope": "Independent full review of source, both target meanings and every exercise option, explanation, transfer model and checklist.",
+  "criteriaPassed": 17,
+  "criteriaTotal": 17,
+  "criticalFindings": 0,
+  "uncertainFindings": 0,
+  "minorFindings": 0,
+  "limitations": [
+    "Rights and authorship declarations were not independently verified.",
+    "Short, relatively simple B2 practice; no formal finding."
+  ],
+  "decision": "pass"
+}

@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 139,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after fundamental particle in the current phrase manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples independently written.",
+  "selectionRationale": "Enrich computing and physics concepts, waste services, transport controls, postal and military terms, linguistics and mathematics, and common disease/game expressions. Notes distinguish technical senses, regional wording, historical names and potentially confusing terms.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 88,
+    "remainingRawOnlyAfter": 68
+  },
+  "selected": [
+    "funny bone",
+    "fusion bomb",
+    "fuzzy logic",
+    "gamma radiation",
+    "garbage collector",
+    "garbage truck",
+    "garden of eden",
+    "gas chamber",
+    "gas mask",
+    "gas meter",
+    "gas pedal",
+    "gear shift",
+    "general assembly",
+    "general delivery",
+    "general headquarters",
+    "generative grammar",
+    "geometric progression",
+    "german measles",
+    "gin rummy",
+    "glandular fever"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

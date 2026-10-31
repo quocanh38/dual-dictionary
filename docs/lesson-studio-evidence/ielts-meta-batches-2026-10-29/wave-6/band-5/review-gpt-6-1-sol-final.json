@@ -1,0 +1,89 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "9f9f926aee3e7c5a773a892acbffd788d343496c793590dd30c67ec1a1510546",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-6-band-5-speaking-01",
+      "severity": "minor",
+      "issue": "Eating outside can mean outdoors; eating out is the natural phrase if contrasting cooking at home with restaurants."
+    },
+    {
+      "item": "ielts-meta-wave-6-band-5-listening-04",
+      "severity": "minor",
+      "issue": "Call the manager at home is an implausible distractor; a plausible incorrect official information route would improve the item."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final rereview of all 20 items:5 Listening,5 Reading,5 Writing,5 Speaking. Entire contexts, all 40 options/10 keys/10 explanations and all productive prompts/metadata reread; copied item contexts verified identical. No other model reports inspected, no candidate edits or provider calls.",
+    "listening": "Full revised canteen dialogue read: allergy enquiry, pasta ingredients and explicit kitchen cross-contact check, special-meal notice, green cards/QR information, weekday 3:30 correction versus weekend 2, free cards. All five keys [2,0,1,3,2] and 20 options/five explanations supported; ingredient absence no longer presented as proof of suitability.",
+    "reading": "Full tool-loan passage read: eligibility, registration/booking,7-day conditional extension, late fee, available versus excluded tools, safety/return rule and example, survey/community benefits. All five keys [0,1,3,2,1] supported; revised mower option and explanation synchronised, all four positions represented.",
+    "writing": "All five Writing prompts read. Picnic nine group counts with totals 185/220/250 correctly summed; five sports-kit borrowing counts dated January–May 2024. Three Task 2 prompts on welcome events, borrowing and cooking clearly require reasons/opinion. Minima 150/250 and suggested 20/40 minutes verified; timing is metadata rather than prose.",
+    "speaking": "All five Speaking prompts read. Two familiar Part 1 sets; campus-event Part 2 has four visible bullets, one-minute preparation and 1–2-minute talk; two Part 3 sets give broader reasoned evaluation. Introductory language and stage fit appropriate.",
+    "initialIssueResolution": [
+      "Cross-contact/preparation controls now explicitly checked before confirming suitability; original unsafe ingredient-only assurance removed.",
+      "Reading keys now cover all four positions after mower option/key/explanation reorder."
+    ],
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 381,
+        "reading": 417
+      },
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          2
+        ],
+        "Reading": [
+          0,
+          1,
+          3,
+          2,
+          1
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      }
+    },
+    "originalityAndProvenance": "Baseten Model API, meta-models/muse-spark-open-1026, wave6-v1 prompt versions and repair metadata read. No recognisable official-question copying or guaranteed score claim found; no exhaustive plagiarism or empirical-research validation performed. Stage labels treated as intended practice difficulty.",
+    "independence": "Same reviewer completed initial review and now full final rereview; own prior findings used for closure. Other model reports were not read.",
+    "itemIds": [
+      "ielts-meta-wave-6-band-5-listening-01",
+      "ielts-meta-wave-6-band-5-listening-02",
+      "ielts-meta-wave-6-band-5-listening-03",
+      "ielts-meta-wave-6-band-5-listening-04",
+      "ielts-meta-wave-6-band-5-listening-05",
+      "ielts-meta-wave-6-band-5-reading-01",
+      "ielts-meta-wave-6-band-5-reading-02",
+      "ielts-meta-wave-6-band-5-reading-03",
+      "ielts-meta-wave-6-band-5-reading-04",
+      "ielts-meta-wave-6-band-5-reading-05",
+      "ielts-meta-wave-6-band-5-writing-01",
+      "ielts-meta-wave-6-band-5-writing-02",
+      "ielts-meta-wave-6-band-5-writing-03",
+      "ielts-meta-wave-6-band-5-writing-04",
+      "ielts-meta-wave-6-band-5-writing-05",
+      "ielts-meta-wave-6-band-5-speaking-01",
+      "ielts-meta-wave-6-band-5-speaking-02",
+      "ielts-meta-wave-6-band-5-speaking-03",
+      "ielts-meta-wave-6-band-5-speaking-04",
+      "ielts-meta-wave-6-band-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

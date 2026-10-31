@@ -1,0 +1,429 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-10-27T09:40:26.636Z",
+  "runtimeSha256": {
+    "lessons/app.js": "63ca29fef45544c9ed7d4d9a0e47504fd4c11ae93ae871a2d0cf7d9876b9f283",
+    "lessons/storage.js": "12ca575784ba44cc0238b7fe6a5834d5b771314df390a7e268b789a6157e0684",
+    "lessons/library.js": "114310d2729db2f1dc56fe55a72d3fe3cd0c46eab98f31cbb151c403923b0c82",
+    "sw.js": "94fce349edd1a161533aa3c2192894dcb4eba4dafe5d75c5b9c94c4136a96755"
+  },
+  "physicalDevice": false,
+  "device": "Chrome emulation 390x844",
+  "realProviderRequests": 0,
+  "blockedExternalRequests": [],
+  "uncaughtExceptions": [],
+  "results": [
+    {
+      "packId": "pack-7b561abd-993e-415e-9304-0baa103ddf2c",
+      "sha256": "011e985f434bee1e080a6dc8174570d01db1fc695ce0a5f09679f1f80b73d3df",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-fd14f5d3-1f53-4f59-b9a4-781b7f2e9856",
+      "sha256": "750cc3cdd654b854fe38a09da6639116efa5cac6748e520bebc1c8168da48d35",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-c765f334-1b00-43c2-a398-d63570e04d21",
+      "sha256": "a8d2f90f5dc11f86ae27c4290e77f19ddecff14fa0318d81480ed4a4a52528ee",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-71baf4b5-06fa-42f1-97b8-e24796a4dd22",
+      "sha256": "abf826498ab1908545fb6114bf0b72ebff3462542b61bacf16a1a720cad554ce",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-898c63a0-049e-45cd-bd59-bd890e81691c",
+      "sha256": "4703a2b464ec0dbb71897dba1c3df027c332374c19872ac160a58afea1bd5ccd",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-d15f0d67-d556-4420-bde1-f31155ac1e79",
+      "sha256": "1257e16f113eff56138952ae5b0a6ed4d752b617187e0b74628f63c48ab8c887",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-3203d64e-13cf-400f-a639-33b27efb90bc",
+      "sha256": "d753c55e70d77d8ec6e5b32b7bd07576dd2ee7a619c53b85ebdcd2e939918552",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-8a955f70-327f-4eab-a145-13d4d849c2e8",
+      "sha256": "8a815b049a3798d5a31f393b91b63b85a1c809aecaefd08e67a168693069d746",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-0e754c61-b77f-41b3-a7ed-1b4efc7f62ea",
+      "sha256": "19440dcb6eaaa3af87d5edf0e57a6b99a3a656d5583150b07bdb60be9352050d",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-97eb5b4b-1d2e-419a-8e5d-299406ee638e",
+      "sha256": "09fc34e27abe5eeb05e785348c0ee147860e73845a5a55eab91f0505f0a27036",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-f453802c-cc42-47cf-9b3c-de60532027d4",
+      "sha256": "85f1bef6bccb1119f672733fa8ffee1f04a6802c62cdd03cfaf1974d051e84ae",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-eddc15b5-2b20-4dd5-9859-3abedd7a3968",
+      "sha256": "bc3b500a25f9c0220febbcadf5dd1ed6755b757851c73ff545496eaac88997fd",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-8ad96ec0-b0ce-4cc3-bc80-70a877b48f56",
+      "sha256": "8febf3979e8ad06b71b7ad80bf00d294ebb2381f183ddbe8a438cb0d28000819",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-200d40dc-d233-4ee2-9dad-d3d8164643bd",
+      "sha256": "607757049cac69cb81ca11a2070579000b275f1c404227e4eee0be5674c977ac",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-c9e4b2e8-edd5-4af7-a463-690a755f33ba",
+      "sha256": "eadd5188e872312b9448c5644949b5cc07c369c4faa9a0a11da015ae6762020e",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-4627bb92-0afb-42fb-83c1-88a23a7390c4",
+      "sha256": "610f3a42419979718e155832953e79bf733e7cabeab8c25eec9145df021f9824",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-63392e53-907d-42bd-8c5d-524ba2cb8012",
+      "sha256": "c19731ccc67340501976c8b15d111bac45068dd51fa873f566a21a6793794f9b",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-c6f5556f-e4c1-45e3-9be2-4b8a0c8bde38",
+      "sha256": "397d1934f3f7e950a423875624d2b652c1b25cdf7daad7bf88b50bf433a47077",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-a4411c05-13de-4d44-9e29-f908436c97f3",
+      "sha256": "e0012ffb349c534b4514672769cc25aae1be915f2a98775b27f84e8575d5117a",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-0645fa42-23cd-4d84-9c50-a828962ea712",
+      "sha256": "6ad069dc1d4e5c5ab46f1e330f2cebbb57eda1bf3c7a74e1975f6f176462b1fa",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-d1f70c2f-90d8-4080-a616-7783c6f06d12",
+      "sha256": "69f707c735d93be66e925fa1a59046098b3a33d7f719abdd1a6cb28d44865073",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-89a2a594-120e-4d83-8acc-03b6c9be7405",
+      "sha256": "772964a98a91e0ae4162527d0ce8065f870a21e833939ac7a20cfadf67133d15",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-41cea0c9-7d1c-4980-b4c1-78832b701194",
+      "sha256": "74fa7c8e9c8bbe95bfbbf2b7774ece730155cfdfda50606455c83aab2d6fd7b4",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-0ecba08e-7198-4bb5-ab2e-57eef26115e6",
+      "sha256": "b1e95a0b3551da8eaa9f2933fc0f268afbc769ee1d72f4e3ea4f04b826378294",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-593359c8-d912-43aa-acc3-63f4ce979bb3",
+      "sha256": "252f176bc35ead4ecbf3e5f59e9d84816ac9de999d2f4f903754524c924876f7",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-b984407d-d36b-4251-b7a7-3d53d5a3ba51",
+      "sha256": "c4197d4a6947045e77b24be231a826d7f5329bdf6d1f5f8074137204858002aa",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+      "sha256": "7789783ed910a4554f915aa98abd3be5fe781bc6ef792109be78b175734defa5",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-9d62218e-ce0c-4f8d-8710-2774f188153b",
+      "sha256": "828ea4285f53c426998b2418e156105d6eeb1a6adc05a0fb7abe65554cb3a64a",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-74344d60-30a2-42a5-adcd-cdb3cf478ce7",
+      "sha256": "259fe9caae6e124a926b41cafdcba23ffc585dec3c53a09da314c0fe2376df80",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-80b0637b-59e9-4e66-9717-6752a793bcdf",
+      "sha256": "8ac3d11991ead39a9408923aee29f30d5f0b63e1b60bde2c446b06aa261d0e8b",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-e9701317-1107-440d-818c-b8e47aed37fc",
+      "sha256": "f250bd97e09249d9ce0037e10953af8ca6f142a6b11173013cb9ea090a58c35d",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-e1ecc59e-b313-4da1-a550-d88f641a6d5b",
+      "sha256": "8cf75f0d83cbc344334dc73da95c8cc555c7d28def7b2d2357b3a5d05a911aed",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "packId": "pack-44150ff8-e9c3-4d89-9c1b-f5ce7c5e2f90",
+      "sha256": "3f30c73e3d91b7b8c67102ac5295c1f45d97d1dda08b4d8115b9093b9529b079",
+      "status": "PASS",
+      "checks": [
+        "real catalogue install while offline before prior install",
+        "exact installed sha256",
+        "reload hides repeat install",
+        "reimport idempotent",
+        "existing Vault schedule/FSRS/review history preserved"
+      ]
+    },
+    {
+      "case": "malformed-index",
+      "status": "PASS",
+      "checks": [
+        "visible rejection",
+        "no installed pack"
+      ]
+    },
+    {
+      "case": "tampered-pack",
+      "status": "PASS",
+      "checks": [
+        "visible rejection",
+        "no installed pack"
+      ]
+    }
+  ]
+}

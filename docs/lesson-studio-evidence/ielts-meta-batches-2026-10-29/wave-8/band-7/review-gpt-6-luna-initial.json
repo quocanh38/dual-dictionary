@@ -1,0 +1,31 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "643806e30785e14b33ddc88b5dad8b62ea4927878fc9f32d091396a562c44a09",
+  "verdict": "repair",
+  "findings": [
+    {
+      "issue": "The shared Reading passage is 375 words, below the required 400–500 word range. The declared wordCount is accurate but does not meet the length requirement; expand the passage with relevant material and update all repeated copies/metadata.",
+      "severity": "major",
+      "item": "sharedContexts.reading.passage"
+    }
+  ],
+  "observations": [
+    "Shared listening is 317 words and within its target; all five listening and five reading keys/explanations align with the source material.",
+    "The high-level tasks appropriately test measurement invariance, causal attribution and qualified interpretation. Writing datasets, Task 1/2 timing and word targets are supplied; Speaking Part 2 has the expected one-minute preparation and 1–2 minute response guidance.",
+    "Provenance and originality metadata are present; no obvious copied material was apparent."
+  ],
+  "coverage": {
+    "itemsReviewed": 20,
+    "listeningExercises": 5,
+    "readingExercises": 5,
+    "writingPrompts": 5,
+    "speakingPrompts": 5,
+    "sharedListeningWordCount": 317,
+    "sharedReadingWordCount": 375,
+    "answersOptionsExplanations": "reviewed",
+    "writingDataTimingWordTargets": "reviewed",
+    "speakingCueCardAndStageLevel": "reviewed",
+    "provenanceOriginalityMetadata": "reviewed"
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,344 @@
+{
+  "stage": "band-6",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "Speaking Part 2 cue-card format",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 1792,
+        "outputTokens": 3305,
+        "totalTokens": 5097
+      }
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Library Tool-Lending Service",
+      "focus": "paraphrase, linked ideas and corrected details in everyday service talk",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Riverside Public Library, tool desk. You're speaking with Daniel. How can I help?\nMAYA: Hi, Daniel. My name's Maya Patel. I heard you lend tools as well as books, and I need a power drill to put up some shelves.\nSTAFF: Yes, that's right. Our tool-lending service started last spring. Are you already a library member?\nMAYA: Yes, I joined in January to borrow novels.\nSTAFF: Perfect. Then you just need to add free tool membership at the front desk. Please bring your library card and one photo ID, like a driving licence or passport.\nMAYA: I have my driving licence. Do I pay each time I borrow something?\nSTAFF: There's no daily charge. It's covered by membership. You can take up to three items at once. Power tools go out for one week, while hand tools like hammers and spanners can stay out for two weeks.\nMAYA: Oh, I thought all tools were for two weeks.\nSTAFF: That's a common mix-up. We shortened power tools to one week because demand is high. You can renew once online if nobody else has reserved the item.\nMAYA: Good. Is a drill available this weekend?\nSTAFF: Let me check... Yes, the medium drill is free from Saturday morning. I can reserve it for you. You'll collect it from the side entrance.\nMAYA: Thanks. Does it come with extra parts?\nSTAFF: Yes, it comes in a case with drill bits and a charger, so you don't need to buy anything extra. Just return it clean and on time to the same desk.\nMAYA: What if I'm late returning it?\nSTAFF: There's a charge of two pounds per day to keep it fair for everyone waiting.\nMAYA: Understood. And I saw a poster for a free DIY safety session. Is it on Friday evening?\nSTAFF: Actually, we moved it — it's now Thursday at six-thirty in the meeting room, not Friday. It lasts about an hour and covers drilling and ladder safety.\nMAYA: Thursday at six-thirty — I can make that. Do I need to book?\nSTAFF: Yes, just tell the front desk when you add the tool membership, and they'll put your name down. Also, please report any damage straight away, so we can repair it for the next person.\nMAYA: Great, I'll come in tomorrow to sort that out.",
+      "wordCount": 390
+    },
+    "reading": {
+      "title": "Digitising the Millford Community Archive",
+      "focus": "paraphrase, comparison and linking steps in a community project",
+      "passage": "Millford Community Archive keeps the town's memory in boxes stored in the basement of the community centre. The collection includes photographs, letters, maps and posters dating from about 1890 to 1980. Many paper items are becoming fragile, with faded ink and torn edges, and staff worry they will become difficult to handle if they are used too often.\nIn 2023, the town council gave a grant for a two-year digitisation project with a clear target: to scan 5,000 items and place the copies on a free public website. The aim is not to replace the original papers, which will stay in careful storage, but to reduce handling and allow more people to see the material from home.\nThe work is done mainly by volunteers and follows the same linked steps for each box. First, volunteers sort the items by date and remove metal clips and rubber bands that can damage paper. Next, they gently clean each page and scan it at high resolution. Then, they write a short description that records the date, place and people shown, where this information is known. Finally, a second volunteer checks the scan and description for mistakes before it is uploaded.\nTo find enough helpers, the project offers free training in evening classes. Sessions run on Tuesdays and Thursdays from six to eight in the evening and teach scanning, describing and checking. The evening time was chosen after a short survey showed strong interest among shop workers, bus drivers and parents who could not come to daytime sessions. Daytime training had attracted mainly retired volunteers, while the evening groups include more people in full-time work. Simple childcare is provided in the next room to make attendance easier.\nThe project leader argues that the greatest value of the online archive is wider access, especially for younger residents who rarely visited the basement store. As one example of this wider use, a Year 8 class at Millford School recently used photographs of the market in the 1950s for a local history assignment. Pupils compared the old stalls with the present shopping street and interviewed grandparents about changes. Older residents have also added comments to the website, correcting names and adding stories that were not in the written records.\nThe work is slow and careful. A single box of 200 letters can take a team of four volunteers three evenings to prepare, scan and check. There are also limits: some newspapers from the 1970s cannot be shown online because of copyright rules, so visitors must still ask to see them in person. The grant ends next year, so the archive is now training two new coordinators to continue the evening classes and keep the website updated.",
+      "wordCount": 449
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Library Tool-Lending Service",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in everyday service talk",
+      "transcript": "STAFF: Good morning, Riverside Public Library, tool desk. You're speaking with Daniel. How can I help?\nMAYA: Hi, Daniel. My name's Maya Patel. I heard you lend tools as well as books, and I need a power drill to put up some shelves.\nSTAFF: Yes, that's right. Our tool-lending service started last spring. Are you already a library member?\nMAYA: Yes, I joined in January to borrow novels.\nSTAFF: Perfect. Then you just need to add free tool membership at the front desk. Please bring your library card and one photo ID, like a driving licence or passport.\nMAYA: I have my driving licence. Do I pay each time I borrow something?\nSTAFF: There's no daily charge. It's covered by membership. You can take up to three items at once. Power tools go out for one week, while hand tools like hammers and spanners can stay out for two weeks.\nMAYA: Oh, I thought all tools were for two weeks.\nSTAFF: That's a common mix-up. We shortened power tools to one week because demand is high. You can renew once online if nobody else has reserved the item.\nMAYA: Good. Is a drill available this weekend?\nSTAFF: Let me check... Yes, the medium drill is free from Saturday morning. I can reserve it for you. You'll collect it from the side entrance.\nMAYA: Thanks. Does it come with extra parts?\nSTAFF: Yes, it comes in a case with drill bits and a charger, so you don't need to buy anything extra. Just return it clean and on time to the same desk.\nMAYA: What if I'm late returning it?\nSTAFF: There's a charge of two pounds per day to keep it fair for everyone waiting.\nMAYA: Understood. And I saw a poster for a free DIY safety session. Is it on Friday evening?\nSTAFF: Actually, we moved it — it's now Thursday at six-thirty in the meeting room, not Friday. It lasts about an hour and covers drilling and ladder safety.\nMAYA: Thursday at six-thirty — I can make that. Do I need to book?\nSTAFF: Yes, just tell the front desk when you add the tool membership, and they'll put your name down. Also, please report any damage straight away, so we can repair it for the next person.\nMAYA: Great, I'll come in tomorrow to sort that out.",
+      "prompt": "What does Daniel say Maya must bring to add tool membership?",
+      "options": [
+        "A library card and a utility bill",
+        "A library card and photo ID",
+        "A passport and proof of address",
+        "A driving licence and a cash deposit"
+      ],
+      "answer": 1,
+      "explanation": "The script says to bring 'your library card and one photo ID, like a driving licence or passport'. The strongest distractor about a utility bill fails because proof of address is never mentioned."
+    },
+    {
+      "id": "ielts-meta-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Library Tool-Lending Service",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in everyday service talk",
+      "transcript": "STAFF: Good morning, Riverside Public Library, tool desk. You're speaking with Daniel. How can I help?\nMAYA: Hi, Daniel. My name's Maya Patel. I heard you lend tools as well as books, and I need a power drill to put up some shelves.\nSTAFF: Yes, that's right. Our tool-lending service started last spring. Are you already a library member?\nMAYA: Yes, I joined in January to borrow novels.\nSTAFF: Perfect. Then you just need to add free tool membership at the front desk. Please bring your library card and one photo ID, like a driving licence or passport.\nMAYA: I have my driving licence. Do I pay each time I borrow something?\nSTAFF: There's no daily charge. It's covered by membership. You can take up to three items at once. Power tools go out for one week, while hand tools like hammers and spanners can stay out for two weeks.\nMAYA: Oh, I thought all tools were for two weeks.\nSTAFF: That's a common mix-up. We shortened power tools to one week because demand is high. You can renew once online if nobody else has reserved the item.\nMAYA: Good. Is a drill available this weekend?\nSTAFF: Let me check... Yes, the medium drill is free from Saturday morning. I can reserve it for you. You'll collect it from the side entrance.\nMAYA: Thanks. Does it come with extra parts?\nSTAFF: Yes, it comes in a case with drill bits and a charger, so you don't need to buy anything extra. Just return it clean and on time to the same desk.\nMAYA: What if I'm late returning it?\nSTAFF: There's a charge of two pounds per day to keep it fair for everyone waiting.\nMAYA: Understood. And I saw a poster for a free DIY safety session. Is it on Friday evening?\nSTAFF: Actually, we moved it — it's now Thursday at six-thirty in the meeting room, not Friday. It lasts about an hour and covers drilling and ladder safety.\nMAYA: Thursday at six-thirty — I can make that. Do I need to book?\nSTAFF: Yes, just tell the front desk when you add the tool membership, and they'll put your name down. Also, please report any damage straight away, so we can repair it for the next person.\nMAYA: Great, I'll come in tomorrow to sort that out.",
+      "prompt": "How long can Maya keep the power drill?",
+      "options": [
+        "One week",
+        "Two weeks",
+        "Three weeks",
+        "Until the safety session ends"
+      ],
+      "answer": 0,
+      "explanation": "Daniel states power tools go out for one week, while hand tools can stay out for two weeks. The distractor 'Two weeks' fails because it applies only to hand tools such as hammers and spanners."
+    },
+    {
+      "id": "ielts-meta-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Library Tool-Lending Service",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in everyday service talk",
+      "transcript": "STAFF: Good morning, Riverside Public Library, tool desk. You're speaking with Daniel. How can I help?\nMAYA: Hi, Daniel. My name's Maya Patel. I heard you lend tools as well as books, and I need a power drill to put up some shelves.\nSTAFF: Yes, that's right. Our tool-lending service started last spring. Are you already a library member?\nMAYA: Yes, I joined in January to borrow novels.\nSTAFF: Perfect. Then you just need to add free tool membership at the front desk. Please bring your library card and one photo ID, like a driving licence or passport.\nMAYA: I have my driving licence. Do I pay each time I borrow something?\nSTAFF: There's no daily charge. It's covered by membership. You can take up to three items at once. Power tools go out for one week, while hand tools like hammers and spanners can stay out for two weeks.\nMAYA: Oh, I thought all tools were for two weeks.\nSTAFF: That's a common mix-up. We shortened power tools to one week because demand is high. You can renew once online if nobody else has reserved the item.\nMAYA: Good. Is a drill available this weekend?\nSTAFF: Let me check... Yes, the medium drill is free from Saturday morning. I can reserve it for you. You'll collect it from the side entrance.\nMAYA: Thanks. Does it come with extra parts?\nSTAFF: Yes, it comes in a case with drill bits and a charger, so you don't need to buy anything extra. Just return it clean and on time to the same desk.\nMAYA: What if I'm late returning it?\nSTAFF: There's a charge of two pounds per day to keep it fair for everyone waiting.\nMAYA: Understood. And I saw a poster for a free DIY safety session. Is it on Friday evening?\nSTAFF: Actually, we moved it — it's now Thursday at six-thirty in the meeting room, not Friday. It lasts about an hour and covers drilling and ladder safety.\nMAYA: Thursday at six-thirty — I can make that. Do I need to book?\nSTAFF: Yes, just tell the front desk when you add the tool membership, and they'll put your name down. Also, please report any damage straight away, so we can repair it for the next person.\nMAYA: Great, I'll come in tomorrow to sort that out.",
+      "prompt": "What arrangement is made for the medium drill?",
+      "options": [
+        "It must be collected from the main desk on Friday",
+        "It can be renewed twice without reservation",
+        "It is reserved for Saturday morning collection",
+        "It is lent without bits or charger"
+      ],
+      "answer": 2,
+      "explanation": "Daniel checks and says the medium drill 'is free from Saturday morning' and he can reserve it for collection from the side entrance. The distractor about lent without bits fails because the case includes bits and a charger."
+    },
+    {
+      "id": "ielts-meta-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Library Tool-Lending Service",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in everyday service talk",
+      "transcript": "STAFF: Good morning, Riverside Public Library, tool desk. You're speaking with Daniel. How can I help?\nMAYA: Hi, Daniel. My name's Maya Patel. I heard you lend tools as well as books, and I need a power drill to put up some shelves.\nSTAFF: Yes, that's right. Our tool-lending service started last spring. Are you already a library member?\nMAYA: Yes, I joined in January to borrow novels.\nSTAFF: Perfect. Then you just need to add free tool membership at the front desk. Please bring your library card and one photo ID, like a driving licence or passport.\nMAYA: I have my driving licence. Do I pay each time I borrow something?\nSTAFF: There's no daily charge. It's covered by membership. You can take up to three items at once. Power tools go out for one week, while hand tools like hammers and spanners can stay out for two weeks.\nMAYA: Oh, I thought all tools were for two weeks.\nSTAFF: That's a common mix-up. We shortened power tools to one week because demand is high. You can renew once online if nobody else has reserved the item.\nMAYA: Good. Is a drill available this weekend?\nSTAFF: Let me check... Yes, the medium drill is free from Saturday morning. I can reserve it for you. You'll collect it from the side entrance.\nMAYA: Thanks. Does it come with extra parts?\nSTAFF: Yes, it comes in a case with drill bits and a charger, so you don't need to buy anything extra. Just return it clean and on time to the same desk.\nMAYA: What if I'm late returning it?\nSTAFF: There's a charge of two pounds per day to keep it fair for everyone waiting.\nMAYA: Understood. And I saw a poster for a free DIY safety session. Is it on Friday evening?\nSTAFF: Actually, we moved it — it's now Thursday at six-thirty in the meeting room, not Friday. It lasts about an hour and covers drilling and ladder safety.\nMAYA: Thursday at six-thirty — I can make that. Do I need to book?\nSTAFF: Yes, just tell the front desk when you add the tool membership, and they'll put your name down. Also, please report any damage straight away, so we can repair it for the next person.\nMAYA: Great, I'll come in tomorrow to sort that out.",
+      "prompt": "What happens if a tool is returned late?",
+      "options": [
+        "The borrower loses library book rights",
+        "The borrower must attend the safety session",
+        "The borrower must clean the tool store",
+        "A charge of two pounds per day applies"
+      ],
+      "answer": 3,
+      "explanation": "Daniel says 'There's a charge of two pounds per day to keep it fair for everyone waiting.' The distractor about losing book rights fails because no loss of membership is mentioned, only the daily charge."
+    },
+    {
+      "id": "ielts-meta-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Library Tool-Lending Service",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in everyday service talk",
+      "transcript": "STAFF: Good morning, Riverside Public Library, tool desk. You're speaking with Daniel. How can I help?\nMAYA: Hi, Daniel. My name's Maya Patel. I heard you lend tools as well as books, and I need a power drill to put up some shelves.\nSTAFF: Yes, that's right. Our tool-lending service started last spring. Are you already a library member?\nMAYA: Yes, I joined in January to borrow novels.\nSTAFF: Perfect. Then you just need to add free tool membership at the front desk. Please bring your library card and one photo ID, like a driving licence or passport.\nMAYA: I have my driving licence. Do I pay each time I borrow something?\nSTAFF: There's no daily charge. It's covered by membership. You can take up to three items at once. Power tools go out for one week, while hand tools like hammers and spanners can stay out for two weeks.\nMAYA: Oh, I thought all tools were for two weeks.\nSTAFF: That's a common mix-up. We shortened power tools to one week because demand is high. You can renew once online if nobody else has reserved the item.\nMAYA: Good. Is a drill available this weekend?\nSTAFF: Let me check... Yes, the medium drill is free from Saturday morning. I can reserve it for you. You'll collect it from the side entrance.\nMAYA: Thanks. Does it come with extra parts?\nSTAFF: Yes, it comes in a case with drill bits and a charger, so you don't need to buy anything extra. Just return it clean and on time to the same desk.\nMAYA: What if I'm late returning it?\nSTAFF: There's a charge of two pounds per day to keep it fair for everyone waiting.\nMAYA: Understood. And I saw a poster for a free DIY safety session. Is it on Friday evening?\nSTAFF: Actually, we moved it — it's now Thursday at six-thirty in the meeting room, not Friday. It lasts about an hour and covers drilling and ladder safety.\nMAYA: Thursday at six-thirty — I can make that. Do I need to book?\nSTAFF: Yes, just tell the front desk when you add the tool membership, and they'll put your name down. Also, please report any damage straight away, so we can repair it for the next person.\nMAYA: Great, I'll come in tomorrow to sort that out.",
+      "prompt": "When will the DIY safety session take place?",
+      "options": [
+        "Friday evening",
+        "Thursday at six-thirty",
+        "Saturday morning",
+        "Tuesday at six o'clock"
+      ],
+      "answer": 1,
+      "explanation": "Maya asks about Friday, but Daniel corrects her: 'it's now Thursday at six-thirty... not Friday.' The distractor 'Friday evening' fails because it was the old time on the poster before the change."
+    },
+    {
+      "id": "ielts-meta-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Digitising the Millford Community Archive",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, comparison and linking steps in a community project",
+      "passage": "Millford Community Archive keeps the town's memory in boxes stored in the basement of the community centre. The collection includes photographs, letters, maps and posters dating from about 1890 to 1980. Many paper items are becoming fragile, with faded ink and torn edges, and staff worry they will become difficult to handle if they are used too often.\nIn 2023, the town council gave a grant for a two-year digitisation project with a clear target: to scan 5,000 items and place the copies on a free public website. The aim is not to replace the original papers, which will stay in careful storage, but to reduce handling and allow more people to see the material from home.\nThe work is done mainly by volunteers and follows the same linked steps for each box. First, volunteers sort the items by date and remove metal clips and rubber bands that can damage paper. Next, they gently clean each page and scan it at high resolution. Then, they write a short description that records the date, place and people shown, where this information is known. Finally, a second volunteer checks the scan and description for mistakes before it is uploaded.\nTo find enough helpers, the project offers free training in evening classes. Sessions run on Tuesdays and Thursdays from six to eight in the evening and teach scanning, describing and checking. The evening time was chosen after a short survey showed strong interest among shop workers, bus drivers and parents who could not come to daytime sessions. Daytime training had attracted mainly retired volunteers, while the evening groups include more people in full-time work. Simple childcare is provided in the next room to make attendance easier.\nThe project leader argues that the greatest value of the online archive is wider access, especially for younger residents who rarely visited the basement store. As one example of this wider use, a Year 8 class at Millford School recently used photographs of the market in the 1950s for a local history assignment. Pupils compared the old stalls with the present shopping street and interviewed grandparents about changes. Older residents have also added comments to the website, correcting names and adding stories that were not in the written records.\nThe work is slow and careful. A single box of 200 letters can take a team of four volunteers three evenings to prepare, scan and check. There are also limits: some newspapers from the 1970s cannot be shown online because of copyright rules, so visitors must still ask to see them in person. The grant ends next year, so the archive is now training two new coordinators to continue the evening classes and keep the website updated.",
+      "prompt": "Why does the passage say the archive material needs careful handling?",
+      "options": [
+        "It is stored in a crowded basement",
+        "It is often taken home by borrowers",
+        "It is ageing and easily damaged",
+        "It has already been thrown away"
+      ],
+      "answer": 2,
+      "explanation": "The passage describes faded ink, torn edges and worry items will become difficult to handle if used often. The distractor about a crowded basement fails because the basement is only the location, not the stated cause of damage."
+    },
+    {
+      "id": "ielts-meta-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Digitising the Millford Community Archive",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, comparison and linking steps in a community project",
+      "passage": "Millford Community Archive keeps the town's memory in boxes stored in the basement of the community centre. The collection includes photographs, letters, maps and posters dating from about 1890 to 1980. Many paper items are becoming fragile, with faded ink and torn edges, and staff worry they will become difficult to handle if they are used too often.\nIn 2023, the town council gave a grant for a two-year digitisation project with a clear target: to scan 5,000 items and place the copies on a free public website. The aim is not to replace the original papers, which will stay in careful storage, but to reduce handling and allow more people to see the material from home.\nThe work is done mainly by volunteers and follows the same linked steps for each box. First, volunteers sort the items by date and remove metal clips and rubber bands that can damage paper. Next, they gently clean each page and scan it at high resolution. Then, they write a short description that records the date, place and people shown, where this information is known. Finally, a second volunteer checks the scan and description for mistakes before it is uploaded.\nTo find enough helpers, the project offers free training in evening classes. Sessions run on Tuesdays and Thursdays from six to eight in the evening and teach scanning, describing and checking. The evening time was chosen after a short survey showed strong interest among shop workers, bus drivers and parents who could not come to daytime sessions. Daytime training had attracted mainly retired volunteers, while the evening groups include more people in full-time work. Simple childcare is provided in the next room to make attendance easier.\nThe project leader argues that the greatest value of the online archive is wider access, especially for younger residents who rarely visited the basement store. As one example of this wider use, a Year 8 class at Millford School recently used photographs of the market in the 1950s for a local history assignment. Pupils compared the old stalls with the present shopping street and interviewed grandparents about changes. Older residents have also added comments to the website, correcting names and adding stories that were not in the written records.\nThe work is slow and careful. A single box of 200 letters can take a team of four volunteers three evenings to prepare, scan and check. There are also limits: some newspapers from the 1970s cannot be shown online because of copyright rules, so visitors must still ask to see them in person. The grant ends next year, so the archive is now training two new coordinators to continue the evening classes and keep the website updated.",
+      "prompt": "What is the stated aim of the two-year project?",
+      "options": [
+        "To scan 5,000 items for a free website",
+        "To sell original papers to pay for storage",
+        "To move the collection to a new building",
+        "To close the basement store to visitors"
+      ],
+      "answer": 0,
+      "explanation": "The passage gives a clear target to scan 5,000 items and place copies on a free public website, while originals stay in storage. The distractor about selling originals fails because the aim is to reduce handling, not remove originals."
+    },
+    {
+      "id": "ielts-meta-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Digitising the Millford Community Archive",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, comparison and linking steps in a community project",
+      "passage": "Millford Community Archive keeps the town's memory in boxes stored in the basement of the community centre. The collection includes photographs, letters, maps and posters dating from about 1890 to 1980. Many paper items are becoming fragile, with faded ink and torn edges, and staff worry they will become difficult to handle if they are used too often.\nIn 2023, the town council gave a grant for a two-year digitisation project with a clear target: to scan 5,000 items and place the copies on a free public website. The aim is not to replace the original papers, which will stay in careful storage, but to reduce handling and allow more people to see the material from home.\nThe work is done mainly by volunteers and follows the same linked steps for each box. First, volunteers sort the items by date and remove metal clips and rubber bands that can damage paper. Next, they gently clean each page and scan it at high resolution. Then, they write a short description that records the date, place and people shown, where this information is known. Finally, a second volunteer checks the scan and description for mistakes before it is uploaded.\nTo find enough helpers, the project offers free training in evening classes. Sessions run on Tuesdays and Thursdays from six to eight in the evening and teach scanning, describing and checking. The evening time was chosen after a short survey showed strong interest among shop workers, bus drivers and parents who could not come to daytime sessions. Daytime training had attracted mainly retired volunteers, while the evening groups include more people in full-time work. Simple childcare is provided in the next room to make attendance easier.\nThe project leader argues that the greatest value of the online archive is wider access, especially for younger residents who rarely visited the basement store. As one example of this wider use, a Year 8 class at Millford School recently used photographs of the market in the 1950s for a local history assignment. Pupils compared the old stalls with the present shopping street and interviewed grandparents about changes. Older residents have also added comments to the website, correcting names and adding stories that were not in the written records.\nThe work is slow and careful. A single box of 200 letters can take a team of four volunteers three evenings to prepare, scan and check. There are also limits: some newspapers from the 1970s cannot be shown online because of copyright rules, so visitors must still ask to see them in person. The grant ends next year, so the archive is now training two new coordinators to continue the evening classes and keep the website updated.",
+      "prompt": "What do volunteers include when they describe an item?",
+      "options": [
+        "The cost of scanning the item",
+        "The names of the funders",
+        "The copyright payment details",
+        "The date, place and people shown"
+      ],
+      "answer": 3,
+      "explanation": "The passage says they write a short description that records date, place and people shown where known. The distractor about copyright fails because copyright is mentioned later as a limit for 1970s newspapers, not as description content."
+    },
+    {
+      "id": "ielts-meta-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Digitising the Millford Community Archive",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, comparison and linking steps in a community project",
+      "passage": "Millford Community Archive keeps the town's memory in boxes stored in the basement of the community centre. The collection includes photographs, letters, maps and posters dating from about 1890 to 1980. Many paper items are becoming fragile, with faded ink and torn edges, and staff worry they will become difficult to handle if they are used too often.\nIn 2023, the town council gave a grant for a two-year digitisation project with a clear target: to scan 5,000 items and place the copies on a free public website. The aim is not to replace the original papers, which will stay in careful storage, but to reduce handling and allow more people to see the material from home.\nThe work is done mainly by volunteers and follows the same linked steps for each box. First, volunteers sort the items by date and remove metal clips and rubber bands that can damage paper. Next, they gently clean each page and scan it at high resolution. Then, they write a short description that records the date, place and people shown, where this information is known. Finally, a second volunteer checks the scan and description for mistakes before it is uploaded.\nTo find enough helpers, the project offers free training in evening classes. Sessions run on Tuesdays and Thursdays from six to eight in the evening and teach scanning, describing and checking. The evening time was chosen after a short survey showed strong interest among shop workers, bus drivers and parents who could not come to daytime sessions. Daytime training had attracted mainly retired volunteers, while the evening groups include more people in full-time work. Simple childcare is provided in the next room to make attendance easier.\nThe project leader argues that the greatest value of the online archive is wider access, especially for younger residents who rarely visited the basement store. As one example of this wider use, a Year 8 class at Millford School recently used photographs of the market in the 1950s for a local history assignment. Pupils compared the old stalls with the present shopping street and interviewed grandparents about changes. Older residents have also added comments to the website, correcting names and adding stories that were not in the written records.\nThe work is slow and careful. A single box of 200 letters can take a team of four volunteers three evenings to prepare, scan and check. There are also limits: some newspapers from the 1970s cannot be shown online because of copyright rules, so visitors must still ask to see them in person. The grant ends next year, so the archive is now training two new coordinators to continue the evening classes and keep the website updated.",
+      "prompt": "What can be inferred about why evening classes were introduced?",
+      "options": [
+        "Retired volunteers asked for evening times",
+        "Many interested people were busy during the day",
+        "Childcare could only be offered in the evening",
+        "Evening training is shorter than daytime training"
+      ],
+      "answer": 1,
+      "explanation": "The survey showed strong interest among workers and parents who could not come to daytime sessions, while daytime had mainly retired volunteers. The inference is limited to daytime availability. The distractor about retired volunteers fails because they already attended daytime sessions."
+    },
+    {
+      "id": "ielts-meta-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "Digitising the Millford Community Archive",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, comparison and linking steps in a community project",
+      "passage": "Millford Community Archive keeps the town's memory in boxes stored in the basement of the community centre. The collection includes photographs, letters, maps and posters dating from about 1890 to 1980. Many paper items are becoming fragile, with faded ink and torn edges, and staff worry they will become difficult to handle if they are used too often.\nIn 2023, the town council gave a grant for a two-year digitisation project with a clear target: to scan 5,000 items and place the copies on a free public website. The aim is not to replace the original papers, which will stay in careful storage, but to reduce handling and allow more people to see the material from home.\nThe work is done mainly by volunteers and follows the same linked steps for each box. First, volunteers sort the items by date and remove metal clips and rubber bands that can damage paper. Next, they gently clean each page and scan it at high resolution. Then, they write a short description that records the date, place and people shown, where this information is known. Finally, a second volunteer checks the scan and description for mistakes before it is uploaded.\nTo find enough helpers, the project offers free training in evening classes. Sessions run on Tuesdays and Thursdays from six to eight in the evening and teach scanning, describing and checking. The evening time was chosen after a short survey showed strong interest among shop workers, bus drivers and parents who could not come to daytime sessions. Daytime training had attracted mainly retired volunteers, while the evening groups include more people in full-time work. Simple childcare is provided in the next room to make attendance easier.\nThe project leader argues that the greatest value of the online archive is wider access, especially for younger residents who rarely visited the basement store. As one example of this wider use, a Year 8 class at Millford School recently used photographs of the market in the 1950s for a local history assignment. Pupils compared the old stalls with the present shopping street and interviewed grandparents about changes. Older residents have also added comments to the website, correcting names and adding stories that were not in the written records.\nThe work is slow and careful. A single box of 200 letters can take a team of four volunteers three evenings to prepare, scan and check. There are also limits: some newspapers from the 1970s cannot be shown online because of copyright rules, so visitors must still ask to see them in person. The grant ends next year, so the archive is now training two new coordinators to continue the evening classes and keep the website updated.",
+      "prompt": "Which example is given to illustrate wider access for younger people?",
+      "options": [
+        "Training two new coordinators",
+        "Checking each scan with a second volunteer",
+        "A Year 8 class using 1950s market photos",
+        "Older residents adding comments online"
+      ],
+      "answer": 2,
+      "explanation": "The leader claims the greatest value is wider access especially for younger residents, and the Year 8 market-photos assignment is presented as one example of this use. The distractor about older residents adding comments fails because it illustrates use by older people, not the younger-access claim."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Library Tool-Lending Loans",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase categories and make clear comparisons across years",
+      "prompt": "The table below shows loans from the Maplewood Public Library tool-lending service in 2022 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. This is original practice material. Table data: Category | Loans in 2022 | Loans in 2025 | Average loan length in days in 2025 - Garden tools | 320 | 480 | 5 - Home repair kits | 250 | 410 | 4 - Kitchen equipment | 180 | 210 | 3 - Sewing machines | 120 | 195 | 6 - Camping gear | 90 | 230 | 7",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-6-writing-02",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Lending Practical Items in Public Libraries",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas with reasons and examples on a familiar community topic",
+      "prompt": "Some people think public libraries should lend practical tools and equipment, such as garden tools and sewing machines, in addition to books. Others think libraries should focus only on books and reading materials. Discuss both views and give your own opinion. Write at least 250 words in about 40 minutes. This is original practice material.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-band-6-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Community Archive Digitisation Progress",
+      "pathwayStage": "band-6",
+      "focus": "corrected details and comparison of progress between two months",
+      "prompt": "The table below shows the progress of the Riverbank Community Archive digitisation project in March and September of last year. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. This is original practice material. Table data: Material type | Items digitised in March | Items digitised in September | Volunteer hours in September - Photographs | 450 | 680 | 95 - Handwritten letters | 300 | 340 | 80 - Local newspaper pages | 520 | 610 | 110 - Recorded interviews in hours | 25 | 48 | 70",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Access to Evening Classes",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase the question and link ideas with a clear position",
+      "prompt": "Many adults want to join evening classes to learn new skills, but course fees and transport can make it difficult. Some people believe local councils should make evening classes low-cost and easy to reach for everyone. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes. This is original practice material.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-band-6-writing-05",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Evening Class Enrolments",
+      "pathwayStage": "band-6",
+      "focus": "overview with linked trends and accurate figures",
+      "prompt": "The table below shows enrolments in evening courses at Riverside Learning Centre in 2023 and 2026. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. This is original practice material. Table data: Evening course | Enrolments in 2023 | Enrolments in 2026 | Completion rate in 2026 percent - English for work | 140 | 210 | 72 - Basic computer skills | 180 | 240 | 68 - Healthy cooking | 110 | 130 | 81 - First aid basics | 90 | 165 | 77",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Libraries and Borrowing",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase short answers on familiar daily topics",
+      "prompt": "Give short, natural answers of a few sentences. 1. Do you visit a public library often? Why or why not? 2. Have you ever borrowed something other than a book? 3. Would you use a library service that lends tools? Why? 4. How do people in your area share or reuse useful items?"
+    },
+    {
+      "id": "ielts-meta-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Learning New Skills",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas in short answers about study routines",
+      "prompt": "Give short, natural answers of a few sentences. 1. Have you ever taken an evening class or online course? 2. What new skill would you like to learn in the future? 3. Do you prefer to study alone or with other people? Why? 4. How do you usually find time to practise something new?"
+    },
+    {
+      "id": "ielts-meta-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Borrowed Tool",
+      "pathwayStage": "band-6",
+      "focus": "organised description with linked ideas and corrected details",
+      "prompt": "Describe a useful tool or piece of equipment you borrowed from a person or a service.\nYou should say:\n- what the item was\n- where you borrowed it from\n- why you needed it\n- and explain how useful it was for you.\nYou have one minute to prepare and should speak for one to two minutes. This is original practice material."
+    },
+    {
+      "id": "ielts-meta-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - An Old Item from the Past",
+      "pathwayStage": "band-6",
+      "focus": "clear comparison between past and present with details",
+      "prompt": "Describe an old photograph, letter or other record that you found interesting.\nYou should say:\n- what the item was\n- where you saw or found it\n- what it showed about life in the past\n- and explain why you found it interesting.\nYou have one minute to prepare and should speak for one to two minutes. This is original practice material."
+    },
+    {
+      "id": "ielts-meta-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Learning and Shared Resources",
+      "pathwayStage": "band-6",
+      "focus": "giving reasons and evaluation, not memorised facts",
+      "prompt": "Discuss these ideas with reasons and evaluation. 1. Why do some adults prefer evening classes to daytime classes? 2. How can a community decide which tools or courses are most useful to offer? 3. What are the advantages and possible problems of digitising a community archive and putting it online? 4. Do you think shared services like tool libraries can change how people buy and use things in the future? Why?"
+    }
+  ]
+}

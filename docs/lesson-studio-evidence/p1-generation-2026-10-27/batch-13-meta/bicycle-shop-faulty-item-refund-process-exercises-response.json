@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Handling Returns and Keeping Records",
+    "objective": "By the end of the lesson, learners will understand and correctly use 'original payment method' and 'service log' in workplace service situations.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s3 about store policy, what does 'original payment method' mean?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means a new gift card the shop offers for the next purchase.",
+            "explanation": "It is wrong because a gift card for next time is different from the way the customer first paid."
+          },
+          {
+            "id": "b",
+            "text": "It means the same card or cash the customer used to pay first.",
+            "explanation": "It is correct because it matches the refund to the first way of paying in s3."
+          },
+          {
+            "id": "c",
+            "text": "It means the shop's account for paying the supplier at the end of the month.",
+            "explanation": "It is wrong because it describes the shop paying the supplier, not the customer’s first payment."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "The phrase refers to the same way the customer first paid."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses 'original payment method' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The shop will send the refund to the original payment method.",
+            "explanation": "It is correct because article, preposition, and singular noun are all natural."
+          },
+          {
+            "id": "b",
+            "text": "The shop will send the refund to original payment method.",
+            "explanation": "It is wrong because the article 'the' is missing before 'original payment method.'"
+          },
+          {
+            "id": "c",
+            "text": "The shop will send the refund on the original payment method.",
+            "explanation": "It is wrong because the preposition should be 'to,' not 'on.'"
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one sentence uses the fixed collocation correctly."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s5 about the refund, what does 'service log' mean?",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means the printed receipt that the customer takes home after paying.",
+            "explanation": "It is wrong because a receipt is given to the customer, not the staff record of actions."
+          },
+          {
+            "id": "b",
+            "text": "It means the monthly schedule that shows when supervisors review cases.",
+            "explanation": "It is wrong because a schedule shows timing, not a record of what staff did."
+          },
+          {
+            "id": "c",
+            "text": "It means the written record where staff note what they did and why.",
+            "explanation": "It is correct because it matches entering the reason in the record in s5."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "The phrase refers to the staff record of service actions and reasons."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses 'service log' correctly and naturally.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "She recorded the broken chair and the repair request in service log.",
+            "explanation": "It is wrong because the article 'the' is missing before 'service log.'"
+          },
+          {
+            "id": "b",
+            "text": "She recorded the broken chair and the repair request in the service log.",
+            "explanation": "It is correct because article, preposition, and singular noun are all natural."
+          },
+          {
+            "id": "c",
+            "text": "She recorded the broken chair and the repair request on the service log.",
+            "explanation": "It is wrong because the preposition should be 'in,' not 'on.'"
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only one sentence uses the fixed collocation correctly."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are a hotel receptionist. A guest reports a broken lamp. Write 2-3 sentences to your manager explaining what you noted in the service log and what will happen next. Use the phrase 'service log'.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "sampleAnswer": "A guest in room 204 reported a broken bedside lamp this morning. I noted the room number and the issue in the service log for maintenance to check.",
+        "selfCheck": [
+          "My message has 2-3 sentences.",
+          "I used the phrase 'service log' naturally.",
+          "I describe a hotel situation, not the bicycle shop."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1062,
+    "outputTokens": 4665,
+    "totalTokens": 5727
+  },
+  "status": 200,
+  "latencyMs": 15987,
+  "model": "muse-spark-1.3"
+}

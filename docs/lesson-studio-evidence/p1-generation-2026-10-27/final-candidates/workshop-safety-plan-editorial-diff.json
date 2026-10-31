@@ -1,0 +1,11 @@
+{
+  "sourceCandidate": "batch-1/workshop-safety-plan-candidate.json",
+  "editorialChanges": [
+    {
+      "path": "exercises/1/options/1/explanation",
+      "before": "This is wrong because about should be corrected to of after inspection.",
+      "after": "Wrong: For the object being examined, inspection of the bridge is natural; about does not express that relation naturally here."
+    }
+  ],
+  "newProviderCallsForTheseEdits": 0
+}

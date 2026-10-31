@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-10-27T08:28:11.197Z",
+  "results": [
+    {
+      "id": "coastal-temperature-sampling-candidate-editorial-v1",
+      "status": "PASS",
+      "candidateSha256": "5ef6ea6a9a65a41fa6958ccab5a36589d916d8f815184a0a59d06514fba7fc58",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "community-centre-emergency-drill-candidate-editorial-v1",
+      "status": "PASS",
+      "candidateSha256": "b3cf0328ef18ded56c51fd6d523660871b93f794c474a4644f49516298f6c0bf",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "equipment-loan-desk-candidate-editorial-v1",
+      "status": "PASS",
+      "candidateSha256": "5ef90d1f82c576073a006bf8ae617a6ee531044e9a2bad71aa81ab8ecd7dab9a",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

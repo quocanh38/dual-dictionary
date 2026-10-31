@@ -1,0 +1,156 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-7",
+  "batchId": "wave-4",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-28-wave-4-v2",
+  "completedAt": "2026-10-28T08:31:00.959Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2969,
+    "outputTokens": 3560,
+    "totalTokens": 6529
+  },
+  "latencyMs": 12610,
+  "reasoningEffort": "low",
+  "maxOutputTokens": 32768,
+  "result": {
+    "listening": {
+      "title": "App Data and Bus Demand",
+      "focus": "Limits of evidence and cautious interpretation",
+      "part": "Part 3",
+      "script": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 actual journeys once return searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "questions": [
+        {
+          "title": "Q1 - Sample size",
+          "prompt": "What do the students say about the dataset size?",
+          "options": [
+            "It contains 12,000 separate journeys",
+            "It contains 8,000 journeys after merging",
+            "It covers 8,000 individual taps",
+            "It covers 12,000 regular users"
+          ],
+          "answer": 1,
+          "explanation": "The script corrects trips to taps and gives 8,000 merged journeys. The first option confuses taps with journeys."
+        },
+        {
+          "title": "Q2 - Representativeness",
+          "prompt": "Why might app users misrepresent all bus passengers?",
+          "options": [
+            "They mostly travel outside the centre",
+            "They rarely search before travelling",
+            "They are mainly younger regular commuters",
+            "They tend to be younger and tech-comfortable"
+          ],
+          "answer": 3,
+          "explanation": "Maya says users tend to be younger and tech-comfortable. The commuter option overclaims regularity not stated."
+        },
+        {
+          "title": "Q3 - Search vs boarding",
+          "prompt": "What limitation do Chen and Alvarez identify?",
+          "options": [
+            "Searches do not confirm actual boarding",
+            "Cards record searches inaccurately",
+            "Users never check multiple times",
+            "Walking is rarely an alternative"
+          ],
+          "answer": 0,
+          "explanation": "The authors stress a search may end in walking, not boarding. The multiple-checks option misstates this distinction."
+        },
+        {
+          "title": "Q4 - Weekend accuracy",
+          "prompt": "What was found on Routes 42 and 18?",
+          "options": [
+            "Weekday match was close; weekend evenings overestimated",
+            "Weekend match was exact; weekdays underestimated",
+            "Both periods matched within 10%",
+            "Evening data was missing for March"
+          ],
+          "answer": 0,
+          "explanation": "Weekdays matched within 10% but weekend evenings were overestimated by a third. The second option reverses that pattern."
+        },
+        {
+          "title": "Q5 - Recommendation",
+          "prompt": "What approach do the authors recommend?",
+          "options": [
+            "Replace ticket data with app data",
+            "Use app data only in suburbs",
+            "Avoid app data for central areas",
+            "Combine app patterns with boarding counts"
+          ],
+          "answer": 3,
+          "explanation": "They advise app searches for timing plus tickets and counts for volume. The first option contradicts this combined approach."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Can One Study Speak for Many Schools?",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "questions": [
+        {
+          "title": "Q1 - Overall finding",
+          "prompt": "What did the synthesis find overall?",
+          "options": [
+            "Average gain of three months progress",
+            "Gains above five months everywhere",
+            "No difference in most sites",
+            "Uniform improvement across schools"
+          ],
+          "answer": 0,
+          "explanation": "The passage gives a three-month average with wide variation. The uniform option ignores the reported spread."
+        },
+        {
+          "title": "Q2 - Volunteer bias",
+          "prompt": "Why might volunteer schools overstate effects?",
+          "options": [
+            "They had more stable staffing and training attendance",
+            "They enrolled only high-attaining pupils",
+            "They received larger cash incentives",
+            "They excluded control groups entirely"
+          ],
+          "answer": 0,
+          "explanation": "Lower turnover and higher training attendance aided delivery. The high-attainer claim adds selection not mentioned."
+        },
+        {
+          "title": "Q3 - Year 6 example",
+          "prompt": "How does the author use the Year 6 case?",
+          "options": [
+            "As proof that rooms cause higher scores",
+            "As illustration of implementation differences",
+            "As claim that volunteers always fail",
+            "As average result across trials"
+          ],
+          "answer": 1,
+          "explanation": "The text frames the case as illustration, not causal proof. The rooms option overstates the author's claim."
+        },
+        {
+          "title": "Q4 - Cost inference",
+          "prompt": "What can reasonably be inferred about savings?",
+          "options": [
+            "Existing staff always guarantee lower costs",
+            "Overtime never affected programme budgets",
+            "Cost data were identical in all schools",
+            "Savings occurred only with genuinely spare staff capacity"
+          ],
+          "answer": 3,
+          "explanation": "Savings held only where spare time existed and costs rose otherwise. The always-guarantee option extends beyond that limit."
+        },
+        {
+          "title": "Q5 - Responsible generalisation",
+          "prompt": "What do the authors recommend for policymakers?",
+          "options": [
+            "Report averages without site ranges",
+            "Rely on first-round volunteers alone",
+            "Adopt programmes based on headlines",
+            "Show ranges, conditions, and retest broadly"
+          ],
+          "answer": 3,
+          "explanation": "They call for ranges, detailed conditions and retesting in less-advantaged schools. Omitting ranges contradicts that recommendation."
+        }
+      ]
+    }
+  }
+}

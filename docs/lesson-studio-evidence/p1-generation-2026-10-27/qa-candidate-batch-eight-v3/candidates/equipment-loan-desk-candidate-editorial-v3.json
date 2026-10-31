@@ -1,0 +1,223 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-0645fa42-23cd-4d84-9c50-a828962ea712",
+    "version": 1,
+    "title": "Borrowing Equipment and Managing Time at Work",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B1",
+    "topic": "workplace",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T08:26:09.317Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Borrowing Equipment and Managing Time at Work",
+        "objective": "Learners will understand and correctly use check out and run late in workplace contexts.",
+        "reading": {
+          "text": "Teams using the training rooms can check out a portable projector from the equipment desk. Before leaving, write the serial number and team name on the checkout sheet so staff can track each loan. The projector is due back by 5 p.m. on the same day, even if a meeting ends early. Keep it in the padded case and return the charger with the device. If a session is likely to run late, call the desk before 4 p.m. to request an extension. Staff will confirm the new return time by email. Equipment left in a room after closing is treated as unreturned until the desk records it, so teams should allow a few minutes to complete the handover.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "Teams using the training rooms can check out a portable projector from the equipment desk."
+            },
+            {
+              "id": "s2",
+              "text": "Before leaving, write the serial number and team name on the checkout sheet so staff can track each loan."
+            },
+            {
+              "id": "s3",
+              "text": "The projector is due back by 5 p.m. on the same day, even if a meeting ends early."
+            },
+            {
+              "id": "s4",
+              "text": "Keep it in the padded case and return the charger with the device."
+            },
+            {
+              "id": "s5",
+              "text": "If a session is likely to run late, call the desk before 4 p.m. to request an extension."
+            },
+            {
+              "id": "s6",
+              "text": "Staff will confirm the new return time by email."
+            },
+            {
+              "id": "s7",
+              "text": "Equipment left in a room after closing is treated as unreturned until the desk records it, so teams should allow a few minutes to complete the handover."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "check out",
+            "meaningEn": "to borrow equipment temporarily after recording the loan",
+            "meaningVi": "mượn tạm thiết bị có ghi lại thông tin mượn",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "run late",
+            "meaningEn": "to be delayed or to continue beyond the scheduled time",
+            "meaningVi": "bị chậm hoặc kéo dài quá thời gian dự kiến",
+            "sourceSentenceId": "s5"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence s1, 'Teams using the training rooms can check out a portable projector from the equipment desk,' what does 'check out' mean here?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to borrow the projector for a short time after recording the loan.",
+                "explanation": "Correct: it matches borrowing temporarily after recording the loan."
+              },
+              {
+                "id": "b",
+                "text": "It means to test the projector carefully to check its picture quality.",
+                "explanation": "Wrong: it describes inspecting quality, not borrowing after recording the loan."
+              },
+              {
+                "id": "c",
+                "text": "It means to return the projector to the desk after the training ends.",
+                "explanation": "Wrong: it describes returning, which is the opposite of borrowing."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a matches borrowing temporarily after recording the loan in s1."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'check out' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "We checked out a laptop from the library for our presentation tomorrow.",
+                "explanation": "Correct: verb form and collocation checked out from are natural."
+              },
+              {
+                "id": "b",
+                "text": "She check out a camera from the office yesterday for the event.",
+                "explanation": "Wrong: needs checked out instead of check out for past time."
+              },
+              {
+                "id": "c",
+                "text": "They checked out a projector from to the equipment desk for training.",
+                "explanation": "Wrong: remove to and keep from the equipment desk for the correct preposition."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a uses correct grammar and collocation with check out."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In s5, what does 'run late' mean in the sentence about calling the desk before an extension is needed?",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means to arrive after the scheduled start time because of traffic.",
+                "explanation": "Wrong: it describes arriving late, not continuing beyond the end time."
+              },
+              {
+                "id": "b",
+                "text": "It means to continue beyond the scheduled end time.",
+                "explanation": "Correct: it matches continuing beyond the scheduled end time."
+              },
+              {
+                "id": "c",
+                "text": "It means to finish earlier than planned to save time.",
+                "explanation": "Wrong: it describes finishing early, the opposite of continuing beyond the end time."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only option b matches continuing beyond the scheduled end time described in s5."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'run late' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Our workshop ran late, so we ordered lunch for the team.",
+                "explanation": "Correct: ran late naturally describes continuing beyond the end time."
+              },
+              {
+                "id": "b",
+                "text": "Our workshop run late yesterday, so we ordered lunch for the team.",
+                "explanation": "Wrong because the completed event needs the past-tense verb ran, not the base form run."
+              },
+              {
+                "id": "c",
+                "text": "Our workshop will run lately tomorrow, so we will order lunch.",
+                "explanation": "Wrong: change lately to late because run late is the fixed collocation."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only option a uses correct grammar and the fixed collocation run late."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You missed dinner with a friend because your bus was delayed. Write 2–3 sentences to apologize and explain what happened. Use the phrase run late in a natural form.",
+            "sourceSentenceIds": [
+              "s5"
+            ],
+            "sampleAnswer": "Sorry I missed dinner yesterday. My bus ran late and I could not get to the restaurant on time.",
+            "selfCheck": [
+              "My message has 2–3 sentences.",
+              "I used run late in a natural form such as ran late.",
+              "I apologize and explain the delay to my friend."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

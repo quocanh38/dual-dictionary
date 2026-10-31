@@ -1,0 +1,93 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "ee125c253be0b6580d82c883f9c95d727d56b2d8440dcb06df9987f3da40af12",
+  "verdict": "fail",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-5-band-6-listening-04",
+      "issue": "The stem asks only what the attendance summary shows, while all four options use undefined They. It never identifies weekend groups as the subject of the larger/smaller/completion comparison. The intended index2 is supported only after supplying that missing subject. Ask explicitly how weekend morning groups compare with weekday evening groups, and describe completion rates rather than groups finishing more often.",
+      "severity": "uncertain"
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-5-band-6-writing-01",
+      "issue": "Museum tour times are labelled daily while Monday is closed. Daily can reasonably mean each open day, but on opening days is clearer. The mixed family-ticket/individual-visitor share denominator could also be labelled more explicitly.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-5-band-6-writing-02",
+      "issue": "Reasons percentages are not explicitly labelled as shares of all400 surveyed students or recording users. The multiple-response note is present and comparisons remain possible, but make the denominator explicit.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "listening": "Read full347-word cycle-course dialogue: beginner reason; corrected Sunday09–11/south entrance;40-pound hire/check/guide versus loaned equipment; weekend20 versus weekday12 and completion comparison; online form/photoID/15-minute fitting. All option/key/explanation fields checked; keys0/0/1/2/3 supported once listening04 undefined comparison subject is supplied, which needs repair.",
+    "reading": "Read full448-word oral-history passage: official-record gap,70+ eligibility,45–60minutes, opt-in recording and control, Elena illustration of interpretation/social effects,28then41 interviews,58home versus46library minutes, conditional60s extension. Five keys1/2/1/0/3 uniquely supported; distractor claims checked against full passage.",
+    "writing": "Museum2024 guide includes opening/tour times, closedMonday, dollar prices and family/free-child conditions, amenities and2023 shares42/28/18/12 summing100. Recording survey400/March2024 has four frequency shares35/40/15/10 summing100 and four reason percentages plus multiple-response note; denominator observation recorded. Three Task2 discussions coherent. All Task1/2 word/time instructions and fields correct.",
+    "speaking": "Two personal Part1 sets; memorable museum visit cue card has location/date/company/learning/reflection, preparation and duration; two appropriately broader Part3 museum-access/heritage-memory discussions. Language generally natural except named listening04 omission.",
+    "scope": "Full AI-assisted independent initial review:20items (5Listening,5Reading,5Writing,5Speaking); all shared contexts, all40options,10zero-based keys and10explanations, every productive prompt and metadata read. Per-item transcript/passage copies verified exactly equal shared contexts. No other reviewer outputs inspected, no provider generation/repair calls, no candidate edits.",
+    "structuralChecks": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "normalizationFindingsRead": [],
+      "wordCounts": {
+        "listening": {
+          "actualWhitespaceWords": 347,
+          "metadata": 347,
+          "requiredRange": [
+            300,
+            400
+          ]
+        },
+        "reading": {
+          "actualWhitespaceWords": 448,
+          "metadata": 448,
+          "requiredRange": [
+            400,
+            500
+          ]
+        }
+      },
+      "answerPositionCoverage": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "originalityAndClaims": "Provenance records Baseten/meta-models/muse-spark-open-1026 and originalContent=true. No recognisable copied official exam question or promised IELTS score found in this full read; no exhaustive external plagiarism comparison performed. Stage labels treated as intended practice difficulty, not validated attainment claims. Fictional project statistics assessed for internal consistency, not represented as verified empirical research.",
+    "itemIds": [
+      "ielts-meta-wave-5-band-6-listening-01",
+      "ielts-meta-wave-5-band-6-listening-02",
+      "ielts-meta-wave-5-band-6-listening-03",
+      "ielts-meta-wave-5-band-6-listening-04",
+      "ielts-meta-wave-5-band-6-listening-05",
+      "ielts-meta-wave-5-band-6-reading-01",
+      "ielts-meta-wave-5-band-6-reading-02",
+      "ielts-meta-wave-5-band-6-reading-03",
+      "ielts-meta-wave-5-band-6-reading-04",
+      "ielts-meta-wave-5-band-6-reading-05",
+      "ielts-meta-wave-5-band-6-writing-01",
+      "ielts-meta-wave-5-band-6-writing-02",
+      "ielts-meta-wave-5-band-6-writing-03",
+      "ielts-meta-wave-5-band-6-writing-04",
+      "ielts-meta-wave-5-band-6-writing-05",
+      "ielts-meta-wave-5-band-6-speaking-01",
+      "ielts-meta-wave-5-band-6-speaking-02",
+      "ielts-meta-wave-5-band-6-speaking-03",
+      "ielts-meta-wave-5-band-6-speaking-04",
+      "ielts-meta-wave-5-band-6-speaking-05"
+    ],
+    "independence": "Reviewer did not inspect other agents review outputs. Parent received early independent issue reports and asked continuation, without supplying other reviewer findings. Prior wave4 reviews are unrelated content and were not consulted for judgments here."
+  },
+  "reviewerType": "AI-assisted"
+}

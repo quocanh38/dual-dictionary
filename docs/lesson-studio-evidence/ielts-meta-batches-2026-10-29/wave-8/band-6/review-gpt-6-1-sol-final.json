@@ -1,0 +1,86 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "0837b71b019530ec9caa32f7ee628aa61fa10fcce80e08e1d8149ab3058081a2",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-8-band-6-listening-04",
+      "severity": "uncertain",
+      "issue": "Stem asks what David MUST do to confirm, but keyed Reply YES is optional: script explicitly permits confirmation during the phone call instead. Ask How can David confirm? or provide the complete alternative Reply YES or confirm during the phone call; retain unique supported key/explanation."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-8-band-6-writing-01",
+      "severity": "minor",
+      "issue": "Totals equal summed session attendance. If Total Visitors means unique people, state each visitor attended only one session; otherwise label total attendances."
+    }
+  ],
+  "coverage": {
+    "scope": "Full independent AI-assisted final review of all 20 items:5 Listening,5 Reading,5 Writing and 5 Speaking; complete contexts, all 40 options,10 keys/explanations and every productive prompt/metadata field. Repeated contexts verified identical. No other reviewer reports inspected; no candidate edits or provider calls.",
+    "listening": "Complete 386-word clinic call read. Verified DrPatel/Tuesday 14 May/Room 4,9→9:30 correction,trialMay–July/400 patients/18%missed,GroupAtext versusGroupBtext+call,confirmation alternatives,cancellation 24 hours,privacy/free service and 15 minute early documents. All keys [1,1,2,0,3] content-aligned; listening 04 overstates optional YES as mandatory and needs repair.",
+    "reading": "Complete 431-word parks audit read. Verified 12 parks/March 2024,10-person mixed team/twovisits/checklist,Central versusNorthside,10 unevenpaths/7 unavailableaccessibletoilets/4 readablemaps,age examples versus maintenance claim,Hilltop counterexample and recommendations/follow-up 2026. All keys [1,1,2,0,3],20 options and five explanations supported.",
+    "writing": "All five Writing prompts read. Health-event nine session counts sum 100/140/150; unique-visitor versus attendance interpretation noted. Parkrota 12 hour values Jan–April 2024 complete. ThreeTask 2 showcasejudging,health-information sources and compulsoryvolunteering topics coherent. Minimum 150/250 and suggested 20/40 minute fields correct; prose omits timing repetition.",
+    "speaking": "All five Speaking prompts read: personalhealth/projectPart 1 sets,eventPart 2 hasfournewlinebullets/preparation/durationandchoiceofexperience,twobroaderPart 3 sets evaluate learning/volunteering. Mostly natural intermediate academicpractice.",
+    "structure": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "wordCounts": {
+        "listening": 386,
+        "reading": 431
+      },
+      "answerPositions": {
+        "Listening": [
+          1,
+          1,
+          2,
+          0,
+          3
+        ],
+        "Reading": [
+          1,
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      "requiredRanges": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      },
+      "normalizationFindingsRead": []
+    },
+    "originalityAndProvenance": "Baseten Model API, model meta-models/muse-spark-open-1026, wave8-v1 prompt versions and repair provenance read. No recognisable official-question copying or score guarantee found; no exhaustive plagiarism audit. Fictional study statistics assessed for consistency. Band7 real-city policy dates were checked against municipal sources and conflict with passage. Stage labels are practice targets, not validated attainment.",
+    "independence": "No initial or final reports by other reviewers read. Final content reviewed directly in full.",
+    "itemIds": [
+      "ielts-meta-wave-8-band-6-listening-01",
+      "ielts-meta-wave-8-band-6-listening-02",
+      "ielts-meta-wave-8-band-6-listening-03",
+      "ielts-meta-wave-8-band-6-listening-04",
+      "ielts-meta-wave-8-band-6-listening-05",
+      "ielts-meta-wave-8-band-6-reading-01",
+      "ielts-meta-wave-8-band-6-reading-02",
+      "ielts-meta-wave-8-band-6-reading-03",
+      "ielts-meta-wave-8-band-6-reading-04",
+      "ielts-meta-wave-8-band-6-reading-05",
+      "ielts-meta-wave-8-band-6-writing-01",
+      "ielts-meta-wave-8-band-6-writing-02",
+      "ielts-meta-wave-8-band-6-writing-03",
+      "ielts-meta-wave-8-band-6-writing-04",
+      "ielts-meta-wave-8-band-6-writing-05",
+      "ielts-meta-wave-8-band-6-speaking-01",
+      "ielts-meta-wave-8-band-6-speaking-02",
+      "ielts-meta-wave-8-band-6-speaking-03",
+      "ielts-meta-wave-8-band-6-speaking-04",
+      "ielts-meta-wave-8-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

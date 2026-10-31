@@ -1,0 +1,53 @@
+{
+  "id": "draft-898c63a0-049e-45cd-bd59-bd890e81691c",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Campus water study",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "A student research group will gather evidence about water use in two campus buildings. Before drawing a conclusion, the group must take into consideration the different numbers of people using each building. They will compare measurements from ordinary teaching weeks rather than holidays. Their report will explain the limits of the sample instead of claiming that one small study proves which building is always more efficient.",
+    "rightsStatement": "Original reading composed for this project with coding-assistant assistance; no copied examination passage, third-party source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "academic",
+    "levelEstimate": "B2"
+  },
+  "reading": {
+    "text": "A student research group will gather evidence about water use in two campus buildings. Before drawing a conclusion, the group must take into consideration the different numbers of people using each building. They will compare measurements from ordinary teaching weeks rather than holidays. Their report will explain the limits of the sample instead of claiming that one small study proves which building is always more efficient.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "A student research group will gather evidence about water use in two campus buildings."
+      },
+      {
+        "id": "s2",
+        "text": "Before drawing a conclusion, the group must take into consideration the different numbers of people using each building."
+      },
+      {
+        "id": "s3",
+        "text": "They will compare measurements from ordinary teaching weeks rather than holidays."
+      },
+      {
+        "id": "s4",
+        "text": "Their report will explain the limits of the sample instead of claiming that one small study proves which building is always more efficient."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "gather evidence",
+      "meaningEn": "to collect information or facts to support a finding or idea",
+      "meaningVi": "thu thập bằng chứng, thu thập thông tin để chứng minh",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "take into consideration",
+      "meaningEn": "to think about something carefully when making a decision or judgment",
+      "meaningVi": "xem xét, cân nhắc đến điều gì",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

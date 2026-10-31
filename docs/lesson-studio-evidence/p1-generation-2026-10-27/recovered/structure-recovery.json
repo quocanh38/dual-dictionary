@@ -1,0 +1,10 @@
+{
+  "originalAttemptStatus": "failed",
+  "reason": "Original output used grammatical gathered evidence but controlled inflection list lacked gather. Added explicit gather/hand/comply families with positive/negative contracts.",
+  "originalResponseSha256": "107540d99ef2b5c417eed1f8c76e3c0b289513b20fe558547f444c940d84de6b",
+  "candidateSha256": "99e80e749852452b0eb5e778c3e044071c33cb6d24e678081efaabf07d33cf50",
+  "payloadContentEdited": false,
+  "generationTimestamp": "Original response file completion timestamp used when reconstructing previously rejected pack.",
+  "newMetaCalls": 0,
+  "validNow": true
+}

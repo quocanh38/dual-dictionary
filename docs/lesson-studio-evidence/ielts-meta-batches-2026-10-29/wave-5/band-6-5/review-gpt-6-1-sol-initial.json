@@ -1,0 +1,98 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "e9853b005fdd0ec44474e4ad07cfbd75c8efd09bab32dd696e74bdb9bbedcf16",
+  "verdict": "fail",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-5-band-6-5-listening-04",
+      "issue": "Wrong key: answer3 selects surveys conducted in different years, which is unsupported. Both the complete dialogue and explanation support index1, Eastfield had a low35% response rate. Correct the key, then revalidate it after any answer-position shuffling.",
+      "severity": "critical"
+    },
+    {
+      "item": "normalizationFindings; Listening and Reading option/key distributions",
+      "issue": "Both unresolved structural findings are real: Listening keys cover only indices0,1,3 (and correcting listening04 currently leaves only0,1); Reading keys cover only0,1. Neither five-item set covers all four answer positions. Reorder options and synchronise keys/explanations without changing meaning; verify all indices0–3 in each skill.",
+      "severity": "critical"
+    }
+  ],
+  "observations": [
+    {
+      "item": "sharedContexts.listening.script; ielts-meta-wave-5-band-6-5-listening-02",
+      "issue": "The measured eight-degree temperature difference lacks Celsius/Fahrenheit units. Surface-versus-air distinction and comparative key are otherwise clear; specify degrees Celsius for scientific precision.",
+      "severity": "minor"
+    },
+    {
+      "item": "sharedContexts.reading.passage",
+      "issue": "14to17 is21.43%, so about22% is loose approximation; about21% or just over21% is more accurate. This does not change any key.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "listening": "Read full314-word tutor/student school-shade discussion: sails versus trees/pergola; surface8degrees; usage68/45%, rain and teacher-direction confounds; parent80/62% with35% response; Tuesday-to-Wednesday correction. All20Listening options checked with five explanations. Listening04 is incorrectly keyed3 rather than1; other intended keys1/0/1/1 explicit. Temperature-unit observation separate.",
+    "reading": "Read full408-word stream-restoration passage:800m restored/600m control; monthly/quarterly permissions and both-site logger gap;14to17 families versus13–14; summer1.2C cooling/weather confounds; flood40% temporary decline as example, not failure; cautious central claim and balanced schedules/backups/landowner access/raw gaps. Five keys0/1/1/1/0 supported, with normalization position coverage failures recorded.",
+    "writing": "School shade table2024 has six complete cost/time/annual-maintenance options across three schools, USD and years explicit, no-action baseline stated. Portal downloads has nine thousand-unit observations for2021–23, January2022 launch, same40datasets. Three advanced Task2 prompts ask qualified funding/openness/measure comparisons.150/250 minima and20/40-minute instructions/fields consistent.",
+    "speaking": "Two personal Part1 outdoor/information sets; transport wait/information Part2 offers concrete experience and clear bullets/preparation/duration; two Part3 sets ask interpretation, trade-offs and measure limitations. Stage appropriately advances to qualified evidence discussion without requiring memorised facts.",
+    "scope": "Full AI-assisted independent initial review:20items (5Listening,5Reading,5Writing,5Speaking); all shared contexts, all40options,10zero-based keys and10explanations, every productive prompt and metadata read. Per-item transcript/passage copies verified exactly equal shared contexts. No other reviewer outputs inspected, no provider generation/repair calls, no candidate edits.",
+    "structuralChecks": {
+      "declaredItemCount": 20,
+      "actualItems": 20,
+      "normalizationFindingsRead": [
+        "Listening answer positions do not cover all four options.",
+        "Reading answer positions do not cover all four options."
+      ],
+      "wordCounts": {
+        "listening": {
+          "actualWhitespaceWords": 314,
+          "metadata": 314,
+          "requiredRange": [
+            300,
+            400
+          ]
+        },
+        "reading": {
+          "actualWhitespaceWords": 408,
+          "metadata": 408,
+          "requiredRange": [
+            400,
+            500
+          ]
+        }
+      },
+      "answerPositionCoverage": {
+        "Listening": [
+          0,
+          1,
+          3
+        ],
+        "Reading": [
+          0,
+          1
+        ]
+      }
+    },
+    "originalityAndClaims": "Provenance records Baseten/meta-models/muse-spark-open-1026 and originalContent=true. No recognisable copied official exam question or promised IELTS score found in this full read; no exhaustive external plagiarism comparison performed. Stage labels treated as intended practice difficulty, not validated attainment claims. Fictional project statistics assessed for internal consistency, not represented as verified empirical research.",
+    "itemIds": [
+      "ielts-meta-wave-5-band-6-5-listening-01",
+      "ielts-meta-wave-5-band-6-5-listening-02",
+      "ielts-meta-wave-5-band-6-5-listening-03",
+      "ielts-meta-wave-5-band-6-5-listening-04",
+      "ielts-meta-wave-5-band-6-5-listening-05",
+      "ielts-meta-wave-5-band-6-5-reading-01",
+      "ielts-meta-wave-5-band-6-5-reading-02",
+      "ielts-meta-wave-5-band-6-5-reading-03",
+      "ielts-meta-wave-5-band-6-5-reading-04",
+      "ielts-meta-wave-5-band-6-5-reading-05",
+      "ielts-meta-wave-5-band-6-5-writing-01",
+      "ielts-meta-wave-5-band-6-5-writing-02",
+      "ielts-meta-wave-5-band-6-5-writing-03",
+      "ielts-meta-wave-5-band-6-5-writing-04",
+      "ielts-meta-wave-5-band-6-5-writing-05",
+      "ielts-meta-wave-5-band-6-5-speaking-01",
+      "ielts-meta-wave-5-band-6-5-speaking-02",
+      "ielts-meta-wave-5-band-6-5-speaking-03",
+      "ielts-meta-wave-5-band-6-5-speaking-04",
+      "ielts-meta-wave-5-band-6-5-speaking-05"
+    ],
+    "independence": "Reviewer did not inspect other agents review outputs. Parent received early independent issue reports and asked continuation, without supplying other reviewer findings. Prior wave4 reviews are unrelated content and were not consulted for judgments here."
+  },
+  "reviewerType": "AI-assisted"
+}

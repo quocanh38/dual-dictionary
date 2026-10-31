@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 98,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after third party in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover legacy social terminology, driving, phrasal verbs and common office/timekeeping vocabulary. Separate literal and figurative senses, flag outdated or region-specific wording, and add technical distinctions for tide waves and photography.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 900,
+    "remainingRawOnlyAfter": 880
+  },
+  "selected": [
+    "third world",
+    "three-point turn",
+    "throw away",
+    "throw off",
+    "throw out",
+    "thumb index",
+    "tick off",
+    "ticker tape",
+    "tidal wave",
+    "tie down",
+    "tie in",
+    "tie up",
+    "time and motion study",
+    "time bomb",
+    "time card",
+    "time exposure",
+    "time frame",
+    "time lag",
+    "time out",
+    "time sheet"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NOAA National Ocean Service, What is a tidal wave? (https://oceanservice.noaa.gov/facts/tidalwave.html)",
+    "Oxford Advanced Learner's Dictionary, time exposure (https://www.oxfordlearnersdictionaries.com/us/definition/english/time-exposure)"
+  ]
+}

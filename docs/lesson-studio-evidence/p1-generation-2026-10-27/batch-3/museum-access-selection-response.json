@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "take steps",
+        "meaningEn": "to take action in order to achieve something",
+        "meaningVi": "thực hiện các hành động để đạt được điều gì đó",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "identify barriers",
+        "meaningEn": "to recognize obstacles that prevent people from doing something",
+        "meaningVi": "xác định các trở ngại ngăn cản mọi người làm điều gì đó",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 388,
+    "outputTokens": 807,
+    "totalTokens": 1195
+  },
+  "status": 200,
+  "latencyMs": 5824,
+  "model": "muse-spark-1.3"
+}

@@ -1,0 +1,40 @@
+{
+  "wave": 10,
+  "batch": 105,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after waiting list in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Prioritize common phrasal verbs and adjective uses, then home, finance, military, and household vocabulary. Disambiguate separable patterns, regional usage, metaphorical senses, register, and easily confused forms.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 760,
+    "remainingRawOnlyAfter": 740
+  },
+  "selected": [
+    "wake up",
+    "walk away",
+    "walk out",
+    "walk over",
+    "walk up",
+    "wall plug",
+    "wall street",
+    "war chest",
+    "war cry",
+    "war game",
+    "war paint",
+    "warm up",
+    "warming pan",
+    "wash out",
+    "wash up",
+    "washed out",
+    "washed up",
+    "washing machine",
+    "washing soda",
+    "waste pipe"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)"
+  ]
+}

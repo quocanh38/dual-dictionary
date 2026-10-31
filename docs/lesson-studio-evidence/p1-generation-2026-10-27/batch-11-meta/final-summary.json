@@ -1,0 +1,161 @@
+{
+  "completedAt": "2026-10-27T09:16:04.495Z",
+  "batch": "P1 offline lesson generation batch 11",
+  "sourceFile": "sources-batch-11.json",
+  "sourceSha256": "fef0597ea0d2158ec935d5c4c0b131fa0c2bc79728d39bff831afabe86f2e677",
+  "generationPrompt": "lesson-studio-2026-10-27-v5",
+  "generationStatus": "Three original Meta candidates preserved unchanged; no local editorial edits were required after independent review.",
+  "generation": {
+    "sourcesAttempted": 3,
+    "selectionAndExerciseCalls": 6,
+    "responsesReceived": 6,
+    "automaticRetries": 0,
+    "repairCalls": 0,
+    "providerRequestsDuringReviewAndQa": 0,
+    "metaUsageOrBillingLookup": "not performed per owner instruction"
+  },
+  "packs": [
+    {
+      "id": "university-photo-archive-catalogue",
+      "packId": "pack-9d62218e-ce0c-4f8d-8710-2774f188153b",
+      "version": 1,
+      "title": "Cataloguing Archive Photographs Carefully",
+      "topic": "academic",
+      "sourceId": "university-photo-archive-catalogue",
+      "purpose": "development",
+      "sourceType": "original",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "rawMetaCandidateSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+      "finalEditorialCandidateFile": "university-photo-archive-catalogue-candidate.json",
+      "finalReviewedPayloadSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+      "reviewers": [
+        {
+          "model": "gpt-6-luna",
+          "reviewFile": "university-photo-archive-catalogue-review-luna.json",
+          "reviewSha256": "f76815ba7c03c3ce270467d6f10bb5deca8afd473e462ac63b6ce7fed8d8e300",
+          "criteriaPassed": 17,
+          "findings": 0
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "reviewFile": "university-photo-archive-catalogue-review-terra.json",
+          "reviewSha256": "80c671410b4ad128df4e22de5a8c3f37dc87de34da500c0fb04c3dddc4cf0ebb",
+          "criteriaPassed": 17,
+          "findings": 0
+        }
+      ],
+      "reviewSha256": "80c671410b4ad128df4e22de5a8c3f37dc87de34da500c0fb04c3dddc4cf0ebb",
+      "approvedEnvelopeSha256": "828ea4285f53c426998b2418e156105d6eeb1a6adc05a0fb7abe65554cb3a64a",
+      "releaseDirectory": "release-university-photo-archive-catalogue",
+      "libraryFile": "lessons/library/university-photo-archive-catalogue.json",
+      "librarySha256": "828ea4285f53c426998b2418e156105d6eeb1a6adc05a0fb7abe65554cb3a64a",
+      "editorialStatus": "approved"
+    },
+    {
+      "id": "community-arts-open-day-volunteers",
+      "packId": "pack-74344d60-30a2-42a5-adcd-cdb3cf478ce7",
+      "version": 1,
+      "title": "Helping at the Hillview Open Day",
+      "topic": "workplace",
+      "sourceId": "community-arts-open-day-volunteers",
+      "purpose": "development",
+      "sourceType": "original",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "rawMetaCandidateSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+      "finalEditorialCandidateFile": "community-arts-open-day-volunteers-candidate.json",
+      "finalReviewedPayloadSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+      "reviewers": [
+        {
+          "model": "gpt-6-luna",
+          "reviewFile": "community-arts-open-day-volunteers-review-luna.json",
+          "reviewSha256": "078095ecb5fb2d7bdd5704e4f4e675fb71fe31b7b6e9ef60d311b81567c0a543",
+          "criteriaPassed": 17,
+          "findings": 0
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "reviewFile": "community-arts-open-day-volunteers-review-terra.json",
+          "reviewSha256": "e8da7d82e8c69f3fff1cba199ec81761b0fc9f491fbd0be0c25c6298029f9140",
+          "criteriaPassed": 17,
+          "findings": 0
+        }
+      ],
+      "reviewSha256": "e8da7d82e8c69f3fff1cba199ec81761b0fc9f491fbd0be0c25c6298029f9140",
+      "approvedEnvelopeSha256": "259fe9caae6e124a926b41cafdcba23ffc585dec3c53a09da314c0fe2376df80",
+      "releaseDirectory": "release-community-arts-open-day-volunteers",
+      "libraryFile": "lessons/library/community-arts-open-day-volunteers.json",
+      "librarySha256": "259fe9caae6e124a926b41cafdcba23ffc585dec3c53a09da314c0fe2376df80",
+      "editorialStatus": "approved"
+    },
+    {
+      "id": "volunteer-rota-schedule-change",
+      "packId": "pack-80b0637b-59e9-4e66-9717-6752a793bcdf",
+      "version": 1,
+      "title": "Workplace Scheduling: Bring Forward and Put Off",
+      "topic": "workplace",
+      "sourceId": "volunteer-rota-schedule-change",
+      "purpose": "development",
+      "sourceType": "original",
+      "generationPrompt": "lesson-studio-2026-10-27-v5",
+      "rawMetaCandidateSha256": "672991f1a60ff5f8e66ddec90fb44bbda34db070ce7e06a9fabf461c14e953c3",
+      "finalEditorialCandidateFile": "volunteer-rota-schedule-change-candidate.json",
+      "finalReviewedPayloadSha256": "672991f1a60ff5f8e66ddec90fb44bbda34db070ce7e06a9fabf461c14e953c3",
+      "reviewers": [
+        {
+          "model": "gpt-6-luna",
+          "reviewFile": "volunteer-rota-schedule-change-review-luna.json",
+          "reviewSha256": "e05a17921642482a8c80631be59dd3f3d8a8360454fe031d44ba4fc4d004d486",
+          "criteriaPassed": 17,
+          "findings": 0
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "reviewFile": "volunteer-rota-schedule-change-review-terra.json",
+          "reviewSha256": "133a92adb4cbc7c161d4bdd6e856f5912e405ddab2cb4b3176aa7df2511b0196",
+          "criteriaPassed": 17,
+          "findings": 0
+        }
+      ],
+      "reviewSha256": "133a92adb4cbc7c161d4bdd6e856f5912e405ddab2cb4b3176aa7df2511b0196",
+      "approvedEnvelopeSha256": "8ac3d11991ead39a9408923aee29f30d5f0b63e1b60bde2c446b06aa261d0e8b",
+      "releaseDirectory": "release-volunteer-rota-schedule-change",
+      "libraryFile": "lessons/library/volunteer-rota-schedule-change.json",
+      "librarySha256": "8ac3d11991ead39a9408923aee29f30d5f0b63e1b60bde2c446b06aa261d0e8b",
+      "editorialStatus": "approved"
+    }
+  ],
+  "reviewRoutesRequested": [
+    "gpt-6-luna",
+    "gpt-5.6-terra"
+  ],
+  "reviewLimitations": [
+    "AI-assisted editorial review, not human or learner review",
+    "Rights/authorship supported only by local declarations, not independently verified",
+    "B1/B2 are estimates, not calibrated CEFR ratings"
+  ],
+  "approval": "Three exact-hash approvals recorded under owner-delegated AI-assisted editorial authority after both reviewers passed 17/17; deployment remains unperformed.",
+  "qa": {
+    "finalUnapprovedPreview": "PASS, 3 exact candidates in Chrome mobile offline emulation 390x844 on cache v135; no Vault writes, 0 provider requests, 0 JS errors",
+    "approvedReleaseQa": "PASS, 60 clean/preseeded Chrome mobile emulation contexts across all 30 exact approved packs; 0 provider/external requests and 0 JS errors",
+    "catalogueOfflineInstall": "PASS, all 30 indexed packs installed offline; malformed index and tampered pack rejected; existing Vault/Review history preserved; 0 external/provider requests",
+    "offlineShell": "PASS, 45 offline paths in mdx-dict-v136",
+    "schemaContracts": "PASS, 27 contract groups",
+    "qualityGateContracts": "PASS",
+    "libraryContracts": "PASS",
+    "providerRequestsDuringReviewAndQa": 0,
+    "externalRequests": 0,
+    "physicalDevice": false,
+    "evidence": {
+      "candidatePreview": "qa-candidate-batch-eleven-v135/candidate-preview.json",
+      "approvedLibrary": "qa-approved-batch-eleven-v136/approved-library-tests.json",
+      "catalogueUi": "qa-library-ui-thirty-v136/library-ui-tests.json"
+    }
+  },
+  "library": {
+    "packCount": 30,
+    "newPacks": 3,
+    "cache": "mdx-dict-v136"
+  },
+  "deployed": false,
+  "ownerInstruction": "Owner accepts responsibility for Meta credits and instructed Codex not to check Meta usage/Billing; ask only if deployment is needed."
+}

@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-10-27T09:08:23.212Z",
+  "results": [
+    {
+      "id": "community-arts-open-day-volunteers",
+      "status": "PASS",
+      "candidateSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "university-photo-archive-catalogue",
+      "status": "PASS",
+      "candidateSha256": "1f29f9a12a1486e6b9925e731552f7943d76de7120808a2e93695d2e932cacde",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    },
+    {
+      "id": "volunteer-rota-schedule-change",
+      "status": "PASS",
+      "candidateSha256": "672991f1a60ff5f8e66ddec90fb44bbda34db070ce7e06a9fabf461c14e953c3",
+      "checks": [
+        "offline draft reload",
+        "all four closed answer keys and wrong-option handling",
+        "transfer model/checklist",
+        "no Vault writes in unapproved preview",
+        "mobile no overflow"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "physicalDevice": false,
+      "paidRequests": 0
+    }
+  ],
+  "uncaughtExceptions": [],
+  "paidRequests": 0
+}

@@ -1,0 +1,87 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "70f3e5ed7e64c815ce3c55ff6c496e275f081223c2e5c398c91cf42f695836fd",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "writingPrompts",
+      "severity": "minor",
+      "issue": "ThreeTask1/twoTask2 mix is internally labelled consistently; confirm intended practice mix."
+    },
+    {
+      "item": "ielts-meta-wave-10-band-6-writing-03",
+      "severity": "minor",
+      "issue": "Clarify500respondents per year versus same500 surveyed twice if describing sample design; proportions remain interpretable."
+    }
+  ],
+  "coverage": {
+    "scope": "Full candidate-only AI-assisted final review:all 20 items,entire script/passage,all 40 options/10 keys/10 explanations and 5 Writing/5 Speaking prompts/metadata. No other reviewer reports inspected;no candidate edits/provider calls.",
+    "listening": "Full museum visit call read:March 18 Egypt programme,arrival 10→10:30,30 pupils/3 adults,booking/cancellation rules,lunch/accessibility. All five keys/options/explanations supported.",
+    "reading": "Full revised 438-word support evaluation read. History student now returns two weeks later,self-identifies similar issues and reports independent confidence,so reading 04 example supports main claim. All five keys/options/explanations supported,including timing/demand distinctions.",
+    "writing": "ThreeTask 1 tables provide complete museum/support/consultation data;response shares eachsum 100. TwoTask 2 prompts clear.150/20 and 250/40 fields correct;timing sometimes metadata-only. Practice-mix/sample-design observations separate.",
+    "speaking": "Two personalPart 1 sets,educationalvisit card with 4 newlinebullets/preparation/duration,two evaluativePart 3 sets. Natural stage 6 practice.",
+    "structure": {
+      "candidateFilename": "candidate-final-v2.json",
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 312,
+        "reading": 438
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        "Reading": [
+          2,
+          0,
+          3,
+          1,
+          2
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "contextCopies": "All copied contexts equal shared contexts.",
+      "bounds": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      }
+    },
+    "provenanceAndOriginality": "Read Baseten Model API/meta-models/muse-spark-open-1026 provenance,originalContent=true andrepairmetadata. No recognisable copiedofficialquestion or scoreguarantee found;notexhaustiveplagiarismaudit. Fictionalresearchdata assessed forinternalcoherence.",
+    "independence": "Prior conversation exposure to earlier versions exists,but this pass used candidate files directly and no prior/other-model reports.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-6-listening-01",
+      "ielts-meta-wave-10-band-6-listening-02",
+      "ielts-meta-wave-10-band-6-listening-03",
+      "ielts-meta-wave-10-band-6-listening-04",
+      "ielts-meta-wave-10-band-6-listening-05",
+      "ielts-meta-wave-10-band-6-reading-01",
+      "ielts-meta-wave-10-band-6-reading-02",
+      "ielts-meta-wave-10-band-6-reading-03",
+      "ielts-meta-wave-10-band-6-reading-04",
+      "ielts-meta-wave-10-band-6-reading-05",
+      "ielts-meta-wave-10-band-6-writing-01",
+      "ielts-meta-wave-10-band-6-writing-02",
+      "ielts-meta-wave-10-band-6-writing-03",
+      "ielts-meta-wave-10-band-6-writing-04",
+      "ielts-meta-wave-10-band-6-writing-05",
+      "ielts-meta-wave-10-band-6-speaking-01",
+      "ielts-meta-wave-10-band-6-speaking-02",
+      "ielts-meta-wave-10-band-6-speaking-03",
+      "ielts-meta-wave-10-band-6-speaking-04",
+      "ielts-meta-wave-10-band-6-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,666 @@
+[
+  {
+    "phrase": "hold on",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(thân mật) chờ một lát; thường dùng khi yêu cầu ai đó tạm dừng hoặc đợi trên điện thoại",
+        "pat": "hold on a minute/second · hold on while · please hold on",
+        "ex": [
+          [
+            "Hold on a moment while I check the booking.",
+            "Chờ một lát để tôi kiểm tra đặt chỗ."
+          ],
+          [
+            "Could you hold on? I’ll transfer your call.",
+            "Anh/chị chờ máy nhé? Tôi sẽ chuyển cuộc gọi."
+          ]
+        ]
+      },
+      {
+        "m": "nắm hoặc bám chặt để không bị rơi, trượt hay mất thăng bằng",
+        "pat": "hold on to something · hold on tight · hold on by one hand",
+        "ex": [
+          [
+            "Hold on to the rail as you go down the stairs.",
+            "Hãy bám vào tay vịn khi xuống cầu thang."
+          ],
+          [
+            "She held on tightly when the bus turned.",
+            "Cô bám chặt khi xe buýt rẽ."
+          ]
+        ]
+      },
+      {
+        "m": "tiếp tục tồn tại hoặc kiên trì trong tình huống khó khăn cho đến khi có thay đổi hay trợ giúp",
+        "pat": "hold on until · hold on to hope · manage to hold on",
+        "ex": [
+          [
+            "The small business held on through a difficult winter.",
+            "Doanh nghiệp nhỏ trụ vững qua một mùa đông khó khăn."
+          ],
+          [
+            "They held on until the rescue team arrived.",
+            "Họ cầm cự cho đến khi đội cứu hộ tới."
+          ]
+        ]
+      }
+    ],
+    "note": "Hold on có thể là lời yêu cầu chờ, hành động bám chắc hoặc nghĩa bóng “trụ vững”. Hold on to something nghĩa là tiếp tục giữ lấy vật hoặc niềm tin."
+  },
+  {
+    "phrase": "hold out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "kéo dài hoặc đủ dùng trong một khoảng thời gian, nhất là khi nguồn lực hạn chế",
+        "pat": "supplies/money hold out · hold out for a week · as long as something holds out",
+        "ex": [
+          [
+            "Our fuel should hold out until the next service station.",
+            "Nhiên liệu của chúng ta có lẽ đủ dùng đến trạm dịch vụ tiếp theo."
+          ],
+          [
+            "The team can stay as long as its food supplies hold out.",
+            "Đội có thể ở lại chừng nào nguồn thực phẩm còn đủ."
+          ]
+        ]
+      },
+      {
+        "m": "tiếp tục chống cự, không đầu hàng hoặc không chấp nhận yêu cầu",
+        "pat": "hold out against somebody/something · hold out for better terms · refuse to give in",
+        "ex": [
+          [
+            "The residents held out against the proposal for several months.",
+            "Cư dân kiên quyết phản đối đề xuất trong nhiều tháng."
+          ],
+          [
+            "The union is holding out for safer working conditions.",
+            "Công đoàn tiếp tục đấu tranh đòi điều kiện làm việc an toàn hơn."
+          ]
+        ]
+      },
+      {
+        "m": "đưa ra hoặc cho thấy có triển vọng, hy vọng hay khả năng đạt được điều gì",
+        "pat": "hold out hope/promise · hold out the possibility of something · hold out something to somebody",
+        "ex": [
+          [
+            "The new evidence holds out hope for a fair review.",
+            "Bằng chứng mới mở ra hy vọng về một cuộc xem xét công bằng."
+          ],
+          [
+            "The offer holds out the possibility of a long-term partnership.",
+            "Lời đề nghị cho thấy khả năng hình thành quan hệ đối tác lâu dài."
+          ]
+        ]
+      }
+    ],
+    "note": "Hold out có thể không có tân ngữ (supplies hold out) hoặc có tân ngữ (hold out hope). Hold out for something thường nghĩa là kiên trì đòi điều mình cho là xứng đáng."
+  },
+  {
+    "phrase": "hold over",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "hoãn một vấn đề hoặc quyết định sang thời điểm/cuộc họp sau",
+        "pat": "hold something over until a meeting/date · be held over · hold over a decision",
+        "ex": [
+          [
+            "The committee held the budget decision over until Friday.",
+            "Ủy ban hoãn quyết định ngân sách đến thứ Sáu."
+          ],
+          [
+            "The final item was held over for the next meeting.",
+            "Mục cuối được để lại xem xét trong cuộc họp kế tiếp."
+          ]
+        ]
+      },
+      {
+        "m": "tiếp tục chiếu hoặc biểu diễn một chương trình lâu hơn dự kiến vì vẫn thu hút khán giả",
+        "pat": "hold a film/show over · be held over for another week · a film held over",
+        "ex": [
+          [
+            "The theatre held the play over for an extra week.",
+            "Nhà hát diễn vở kịch thêm một tuần."
+          ],
+          [
+            "The popular film was held over after a strong opening weekend.",
+            "Bộ phim ăn khách được giữ lịch chiếu sau cuối tuần mở màn thuận lợi."
+          ]
+        ]
+      },
+      {
+        "m": "giữ lại hoặc tiếp tục dùng một người/vật từ giai đoạn trước; đôi khi dùng như sức ép hoặc món nợ tình cảm",
+        "pat": "hold something over from the previous year · hold something over somebody · a holdover from",
+        "ex": [
+          [
+            "The company held over two temporary staff members for the next project.",
+            "Công ty giữ lại hai nhân viên tạm thời cho dự án tiếp theo."
+          ],
+          [
+            "He felt that the old favour was being held over him.",
+            "Anh cảm thấy món ân tình cũ đang bị đem ra làm sức ép với mình."
+          ]
+        ]
+      }
+    ],
+    "note": "Hold something over thường tách được: hold the decision over / hold it over. Nghĩa “giữ lại để chiếu tiếp” thường thấy trong ngữ cảnh rạp phim; nghĩa “đem ra gây áp lực” thường có hold something over somebody."
+  },
+  {
+    "phrase": "hold up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "làm chậm, cản trở hoặc khiến một việc không thể tiếp tục đúng tiến độ",
+        "pat": "hold somebody/something up · be held up by traffic · hold up a process",
+        "ex": [
+          [
+            "A delivery problem held up production for two days.",
+            "Sự cố giao hàng làm chậm sản xuất hai ngày."
+          ],
+          [
+            "We were held up by heavy traffic near the bridge.",
+            "Chúng tôi bị chậm lại vì giao thông đông gần cây cầu."
+          ]
+        ]
+      },
+      {
+        "m": "đỡ hoặc nâng một vật/người để ngăn khỏi rơi hay sụp xuống",
+        "pat": "hold something up · hold up a ceiling/roof · be held up by supports",
+        "ex": [
+          [
+            "Two columns hold up the roof of the entrance.",
+            "Hai cột chống đỡ mái lối vào."
+          ],
+          [
+            "He held up the damaged shelf while I fixed the bracket.",
+            "Anh đỡ chiếc kệ hỏng trong khi tôi sửa giá đỡ."
+          ]
+        ]
+      },
+      {
+        "m": "chịu đựng tốt hoặc vẫn hoạt động ổn trong điều kiện khó khăn",
+        "pat": "hold up well · hold up under pressure · how is something holding up?",
+        "ex": [
+          [
+            "The old bridge has held up well after the repairs.",
+            "Cây cầu cũ vẫn bền tốt sau đợt sửa chữa."
+          ],
+          [
+            "How are you holding up after the long shift?",
+            "Bạn chịu đựng thế nào sau ca làm dài?"
+          ]
+        ]
+      },
+      {
+        "m": "cướp một người hoặc địa điểm bằng cách đe dọa, thường bằng vũ khí",
+        "pat": "hold up a bank/store · be held up at gunpoint · a person holding somebody up",
+        "ex": [
+          [
+            "Two masked people held up a jewellery shop before dawn.",
+            "Hai người đeo mặt nạ cướp một cửa hàng trang sức trước bình minh."
+          ],
+          [
+            "The driver was held up at gunpoint near the depot.",
+            "Tài xế bị cướp có vũ trang gần kho hàng."
+          ]
+        ]
+      }
+    ],
+    "note": "Hold up có nhiều nghĩa phụ thuộc tân ngữ và ngữ cảnh; nghĩa cướp thường gặp trong tin tức và cũng có thể dùng bị động. Đừng nhầm với hold on “chờ/bám” hoặc hold back “ngăn/kìm lại”."
+  },
+  {
+    "phrase": "holding company",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "công ty nắm cổ phần ở một hoặc nhiều doanh nghiệp khác để kiểm soát hoặc có ảnh hưởng đến hoạt động của họ",
+        "pat": "a holding company for/of a group · a parent/holding company · form/own a holding company",
+        "ex": [
+          [
+            "The holding company owns a majority stake in the regional bank.",
+            "Công ty mẹ nắm cổ phần chi phối tại ngân hàng khu vực."
+          ],
+          [
+            "The founders transferred the patents to a separate holding company.",
+            "Những người sáng lập chuyển các bằng sáng chế sang một công ty nắm giữ riêng."
+          ]
+        ]
+      }
+    ],
+    "note": "Holding company thường sở hữu cổ phần hoặc tài sản; công ty con vẫn có thể là pháp nhân riêng. Quyền kiểm soát và nghĩa vụ pháp lý phụ thuộc cơ cấu sở hữu và luật áp dụng."
+  },
+  {
+    "phrase": "holding pattern",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(hàng không) đường bay lặp theo một mẫu đã định để máy bay chờ được phép hạ cánh hoặc chờ hướng dẫn",
+        "pat": "enter/remain in a holding pattern · an aircraft holding pattern · circle in a holding pattern",
+        "ex": [
+          [
+            "The aircraft entered a holding pattern because of poor visibility.",
+            "Máy bay bay theo vòng chờ do tầm nhìn kém."
+          ],
+          [
+            "Several flights remained in a holding pattern until the runway reopened.",
+            "Một số chuyến bay tiếp tục ở trạng thái chờ cho đến khi đường băng mở lại."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) trạng thái tạm đình trệ hoặc chờ quyết định trước khi có thể tiến tiếp",
+        "pat": "be in a holding pattern · put a project into a holding pattern · remain in a holding pattern",
+        "ex": [
+          [
+            "The merger plans are in a holding pattern pending regulatory approval.",
+            "Kế hoạch sáp nhập đang tạm đình trệ để chờ cơ quan quản lý phê duyệt."
+          ],
+          [
+            "The team stayed in a holding pattern until the client chose a design.",
+            "Nhóm tiếp tục chờ quyết định cho đến khi khách hàng chọn thiết kế."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa hàng không là thuật ngữ chuyên môn; nghĩa bóng phổ biến trong kinh doanh và quản lý dự án để nói rằng tiến độ đang chờ một điều kiện bên ngoài."
+  },
+  {
+    "phrase": "hollow out",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "lấy bỏ phần bên trong của vật để tạo thành khoang rỗng",
+        "pat": "hollow something out · hollow out a tree/pumpkin/loaf · be hollowed out",
+        "ex": [
+          [
+            "They hollowed out a pumpkin for the festival display.",
+            "Họ khoét rỗng quả bí ngô để trang trí lễ hội."
+          ],
+          [
+            "The workers hollowed out the log to make a canoe.",
+            "Những người thợ khoét rỗng khúc gỗ để làm xuồng."
+          ]
+        ]
+      },
+      {
+        "m": "làm suy yếu dần một tổ chức, cộng đồng hoặc hệ thống bằng cách lấy đi nguồn lực hay chức năng cốt lõi",
+        "pat": "hollow out an organization/community · be hollowed out by cuts · hollow out the middle class",
+        "ex": [
+          [
+            "Repeated budget cuts hollowed out the public service.",
+            "Các đợt cắt ngân sách liên tiếp làm suy yếu bộ máy dịch vụ công."
+          ],
+          [
+            "The factory closure hollowed out the local economy.",
+            "Việc nhà máy đóng cửa làm suy kiệt nền kinh tế địa phương."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa đen thường dùng với vật thể; nghĩa bóng thường gặp trong bình luận chính sách, kinh tế và tổ chức. Cấu trúc ngoại động từ tách được: hollow the log out / hollow it out."
+  },
+  {
+    "phrase": "holy of holies",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Do Thái giáo) gian thánh linh thiêng nhất bên trong Đền thờ, nơi chỉ một số người được phép vào theo quy định tôn giáo",
+        "pat": "the Holy of Holies · enter the Holy of Holies · the inner Holy of Holies",
+        "ex": [
+          [
+            "The guide described the role of the Holy of Holies in the ancient temple.",
+            "Hướng dẫn viên mô tả vai trò của gian Cực Thánh trong ngôi đền cổ."
+          ],
+          [
+            "Only the high priest could enter the Holy of Holies on the appointed day.",
+            "Chỉ thầy tế lễ thượng phẩm mới được vào gian Cực Thánh vào ngày quy định."
+          ]
+        ]
+      },
+      {
+        "m": "(ẩn dụ, đôi khi hài hước) nơi hoặc lĩnh vực thiêng liêng/riêng tư nhất, chỉ một số ít người được tiếp cận",
+        "pat": "the holy of holies of something · enter somebody’s holy of holies · a private holy of holies",
+        "ex": [
+          [
+            "The archive is the curator’s holy of holies, closed to casual visitors.",
+            "Kho lưu trữ là chốn riêng tư nhất của người phụ trách, không mở cho khách tham quan tùy tiện."
+          ],
+          [
+            "The laboratory was treated as the holy of holies of the research centre.",
+            "Phòng thí nghiệm được xem như khu vực bất khả xâm phạm của trung tâm nghiên cứu."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa tôn giáo thường viết hoa The Holy of Holies; nghĩa bóng có thể viết thường và dùng giọng đùa hoặc nhấn mạnh tính độc quyền."
+  },
+  {
+    "phrase": "Holy See",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Tòa Thánh — cơ quan quyền lực trung ương của Giáo hội Công giáo Rôma do Giáo hoàng đứng đầu, đại diện Giáo hội trong quan hệ ngoại giao",
+        "pat": "the Holy See · the Holy See’s representative · diplomatic relations with the Holy See",
+        "ex": [
+          [
+            "The Holy See issued a statement on the negotiations.",
+            "Tòa Thánh ra tuyên bố về các cuộc đàm phán."
+          ],
+          [
+            "Several countries maintain diplomatic relations with the Holy See.",
+            "Một số quốc gia duy trì quan hệ ngoại giao với Tòa Thánh."
+          ]
+        ]
+      }
+    ],
+    "note": "Holy See là chủ thể tôn giáo và ngoại giao; Vatican City là quốc gia-thành phố có lãnh thổ. Hai khái niệm có liên hệ nhưng không đồng nghĩa."
+  },
+  {
+    "phrase": "Holy Spirit",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Chúa Thánh Thần — trong giáo lý Kitô giáo, ngôi thứ ba của Chúa Ba Ngôi",
+        "pat": "the Holy Spirit · filled with the Holy Spirit · a gift of the Holy Spirit",
+        "ex": [
+          [
+            "The prayer asks the Holy Spirit for guidance.",
+            "Lời cầu nguyện xin Chúa Thánh Thần dẫn dắt."
+          ],
+          [
+            "Many Christians celebrate Pentecost as a day associated with the Holy Spirit.",
+            "Nhiều tín hữu Kitô giáo mừng Lễ Ngũ Tuần như ngày gắn với Chúa Thánh Thần."
+          ]
+        ]
+      }
+    ],
+    "note": "Đây là thuật ngữ thần học Kitô giáo và thường viết hoa. Quan niệm, cách diễn đạt và thực hành có thể khác nhau giữa các truyền thống Kitô giáo."
+  },
+  {
+    "phrase": "home base",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "địa điểm chính mà một cá nhân, đội nhóm hoặc tổ chức thường xuất phát và quay về",
+        "pat": "return to home base · operate from a home base · use somewhere as a home base",
+        "ex": [
+          [
+            "The field team returned to its home base after sunset.",
+            "Đội công tác trở về căn cứ chính sau khi mặt trời lặn."
+          ],
+          [
+            "The company operates from a home base near the port.",
+            "Công ty hoạt động từ một cơ sở chính gần cảng."
+          ]
+        ]
+      },
+      {
+        "m": "(bóng chày) đĩa gôn nhà, nơi người đánh bóng đứng và phải chạm tới để ghi điểm",
+        "pat": "reach/cross home base · run to home base · a player at home base",
+        "ex": [
+          [
+            "The runner slid safely across home base.",
+            "Cầu thủ chạy lướt an toàn qua đĩa gôn nhà."
+          ],
+          [
+            "A hit sent the runner back toward home base.",
+            "Một cú đánh đưa cầu thủ chạy về phía đĩa gôn nhà."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong bóng chày Bắc Mỹ, home base cũng được gọi là home plate. Nghĩa thông thường là căn cứ/địa điểm hoạt động chính; đôi khi được dùng ẩn dụ cho nơi thân thuộc."
+  },
+  {
+    "phrase": "home economics",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "môn học về các kỹ năng quản lý gia đình và đời sống như nấu ăn, dinh dưỡng, may vá và lập ngân sách",
+        "pat": "study/teach home economics · a home-economics class · home economics teacher",
+        "ex": [
+          [
+            "Home economics classes included nutrition and meal planning.",
+            "Các lớp kinh tế gia đình bao gồm dinh dưỡng và lập kế hoạch bữa ăn."
+          ],
+          [
+            "She teaches home economics at a secondary school.",
+            "Cô dạy môn kinh tế gia đình ở một trường trung học."
+          ]
+        ]
+      }
+    ],
+    "note": "Tên môn học và nội dung thay đổi theo quốc gia; ở một số nơi môn này được đổi tên thành family and consumer sciences hoặc chương trình tương tự."
+  },
+  {
+    "phrase": "home help",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh, nay hơi cũ) người được thuê hoặc bố trí đến nhà để hỗ trợ người già, người bệnh hay người cần chăm sóc bằng việc nấu ăn, dọn dẹp và sinh hoạt hằng ngày",
+        "pat": "have/get a home help · a home-help service · work as a home help",
+        "ex": [
+          [
+            "Her father receives visits from a home help twice a week.",
+            "Cha cô được nhân viên hỗ trợ tại nhà đến thăm hai lần mỗi tuần."
+          ],
+          [
+            "The council arranged home help after his operation.",
+            "Hội đồng địa phương sắp xếp dịch vụ hỗ trợ tại nhà sau ca phẫu thuật của ông."
+          ]
+        ]
+      }
+    ],
+    "note": "Home help có thể chỉ người làm công việc hỗ trợ hoặc dịch vụ đó; thuật ngữ hiện đại thường dùng home-care worker, carer hoặc domiciliary care worker tùy quốc gia và nhiệm vụ."
+  },
+  {
+    "phrase": "home loan",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "khoản vay dùng để mua, xây hoặc tái cấp vốn cho nhà ở; thường được bảo đảm bằng chính bất động sản đó",
+        "pat": "apply for/take out a home loan · home-loan rate/payment · repay a home loan",
+        "ex": [
+          [
+            "They compared home-loan rates before choosing a lender.",
+            "Họ so sánh lãi suất vay mua nhà trước khi chọn bên cho vay."
+          ],
+          [
+            "She repays her home loan monthly by direct debit.",
+            "Cô trả khoản vay mua nhà hằng tháng bằng lệnh trích nợ tự động."
+          ]
+        ]
+      }
+    ],
+    "note": "Home loan là cách gọi phổ biến ở nhiều nước; mortgage thường dùng ở Anh-Mỹ. Tên sản phẩm, lãi suất và điều kiện thế chấp phụ thuộc thị trường và hợp đồng."
+  },
+  {
+    "phrase": "home run",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(bóng chày) cú đánh giúp người đánh chạy quanh tất cả các gôn và ghi điểm mà không bị loại",
+        "pat": "hit/get/score a home run · a home run hitter · a two-run home run",
+        "ex": [
+          [
+            "She hit a home run over the centre-field wall.",
+            "Cô đánh một cú home run vượt qua hàng rào giữa sân."
+          ],
+          [
+            "The team won after a home run in the final inning.",
+            "Đội giành chiến thắng sau cú home run ở lượt đánh cuối."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) thành công lớn hoặc kết quả đặc biệt ấn tượng",
+        "pat": "be a home run · score a home run · a home run with customers",
+        "ex": [
+          [
+            "The new product was a home run with first-time buyers.",
+            "Sản phẩm mới thành công vang dội với những khách hàng mua lần đầu."
+          ],
+          [
+            "Her presentation was a home run at the annual meeting.",
+            "Bài thuyết trình của cô thành công rực rỡ tại cuộc họp thường niên."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa bóng phổ biến trong Anh-Mỹ và thường gặp trong kinh doanh, thể thao, truyền thông. Ở Bắc Mỹ đôi khi dùng dạng rút gọn homer."
+  },
+  {
+    "phrase": "home stretch",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(đường đua) đoạn cuối thẳng hướng về vạch đích",
+        "pat": "enter the home stretch · on the home stretch · reach the home stretch",
+        "ex": [
+          [
+            "The leading horse pulled ahead on the home stretch.",
+            "Con ngựa dẫn đầu bứt lên ở đoạn thẳng cuối đường đua."
+          ],
+          [
+            "The runners entered the home stretch with one lap remaining.",
+            "Các vận động viên bước vào đoạn cuối đường đua khi còn một vòng."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) giai đoạn cuối của một hành trình, dự án hoặc quá trình dài",
+        "pat": "be in the home stretch · reach the home stretch · the final home stretch",
+        "ex": [
+          [
+            "We are in the home stretch of the renovation.",
+            "Chúng tôi đang ở giai đoạn cuối của đợt cải tạo."
+          ],
+          [
+            "The team reached the home stretch after months of testing.",
+            "Nhóm đã vào chặng cuối sau nhiều tháng thử nghiệm."
+          ]
+        ]
+      }
+    ],
+    "note": "Trong Anh-Anh, home straight cũng thường được dùng cho nghĩa đường đua. Nghĩa bóng thân mật, diễn tả việc đã gần hoàn tất."
+  },
+  {
+    "phrase": "home town",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "thị trấn hoặc thành phố nơi một người sinh ra, lớn lên hoặc xem là quê nhà",
+        "pat": "return to one’s home town · somebody’s home town · a home-town team",
+        "ex": [
+          [
+            "She returned to her home town after university.",
+            "Cô trở về quê nhà sau khi học đại học."
+          ],
+          [
+            "The singer performed for a crowd in his home town.",
+            "Ca sĩ biểu diễn trước khán giả ở quê nhà."
+          ]
+        ]
+      }
+    ],
+    "note": "Hometown viết liền là cách viết phổ biến trong Anh-Mỹ; home town thường gặp trong Anh-Anh. Quê nhà có thể là nơi sinh ra hoặc nơi người đó gắn bó, tùy ngữ cảnh."
+  },
+  {
+    "phrase": "honeydew melon",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "dưa mật — một loại dưa quả tròn, thường có vỏ nhạt và phần thịt xanh nhạt, vị ngọt dịu",
+        "pat": "a ripe honeydew melon · slice/cut a honeydew melon · honeydew melon flesh",
+        "ex": [
+          [
+            "Chill the honeydew melon before serving it.",
+            "Hãy làm lạnh quả dưa mật trước khi dùng."
+          ],
+          [
+            "The salad combines honeydew melon with mint and lime.",
+            "Món salad kết hợp dưa mật với bạc hà và chanh xanh."
+          ]
+        ]
+      }
+    ],
+    "note": "Honeydew melon là tên một nhóm giống dưa; màu vỏ và thịt có thể thay đổi theo giống và độ chín. Không nhầm với honeydew, chất dịch ngọt do một số côn trùng tiết ra."
+  },
+  {
+    "phrase": "hook up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "kết nối thiết bị với nguồn điện, mạng hoặc thiết bị khác để chúng hoạt động cùng nhau",
+        "pat": "hook something up to something · be hooked up to · hook up a printer/router",
+        "ex": [
+          [
+            "The technician hooked the display up to the conference-room computer.",
+            "Kỹ thuật viên kết nối màn hình với máy tính trong phòng họp."
+          ],
+          [
+            "Make sure the router is hooked up to the modem.",
+            "Hãy đảm bảo bộ định tuyến được kết nối với modem."
+          ]
+        ]
+      },
+      {
+        "m": "(thân mật, nhất là Anh-Mỹ) gặp hoặc tụ tập với ai đó; đôi khi chỉ việc bắt đầu quan hệ tình cảm/thể xác tùy ngữ cảnh",
+        "pat": "hook up with somebody · hook up after work · hook up at a party",
+        "ex": [
+          [
+            "We hooked up with the local guide near the station.",
+            "Chúng tôi gặp hướng dẫn viên địa phương gần nhà ga."
+          ],
+          [
+            "They first hooked up at a friend’s birthday party.",
+            "Họ gặp nhau lần đầu tại tiệc sinh nhật của một người bạn."
+          ]
+        ]
+      }
+    ],
+    "note": "Nghĩa gặp gỡ thường có hook up with somebody; trong một số ngữ cảnh Anh-Mỹ, cụm này hàm ý quan hệ tình dục, nên cần đọc ngữ cảnh. Không nhầm với hook somebody up with something nghĩa là giúp ai có được thứ gì."
+  },
+  {
+    "phrase": "hopped up",
+    "pos": "adjective phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Mỹ, thân mật) bị kích động hoặc tràn đầy năng lượng do chất kích thích hay một tác nhân mạnh; đôi khi hàm ý đang chịu ảnh hưởng của ma túy",
+        "pat": "hopped up on something · get somebody hopped up · feel hopped up",
+        "ex": [
+          [
+            "The player seemed hopped up on energy drinks before the match.",
+            "Cầu thủ có vẻ bị kích động vì uống nước tăng lực trước trận."
+          ],
+          [
+            "The article described him as hopped up and unable to sit still.",
+            "Bài báo mô tả anh ấy bị kích động và không thể ngồi yên."
+          ]
+        ]
+      }
+    ],
+    "note": "Hopped up là tiếng lóng Anh-Mỹ và thường có hàm ý tiêu cực; hopped-up thường viết có gạch nối trước danh từ. Không dùng trong văn phong trang trọng hoặc như một chẩn đoán y tế."
+  }
+]

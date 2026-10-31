@@ -1,0 +1,166 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-5",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Keep each option under 12 words and each explanation to 1–2 sentences; do not repeat source paragraphs in explanations. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 6.5 to 7.0: nuanced inference, scope and causality limits, competing evidence, and precise evaluation without overclaiming. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: interpreting synthetic-control estimates after a staggered policy rollout, limits of biodiversity indicators across restoration sites, and missing data in regional education comparisons. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-7",
+    "batchId": "wave-5",
+    "currentBatch": {
+      "listening": {
+        "title": "Evaluating a Staggered Plastic Bag Levy",
+        "focus": "interpreting synthetic-control estimates after a staggered policy rollout",
+        "part": "Part 3",
+        "script": "TUTOR: Let's review your presentation on evaluating environmental policies. You chose the recent study on the plastic bag levy, correct?\nMAYA: Yes. We understood the synthetic control method — building a weighted comparison from untreated regions.\nJONAH: Right, but the rollout was staggered. Three cities introduced the levy in 2018, then four more in 2020.\nMAYA: Actually the paper said the second group was 2020 — sorry, I mean 2021? Let me check... No, 2020 is correct for the second wave, 2021 was just the follow-up survey.\nTUTOR: Good catch. So what did the authors claim?\nJONAH: They found a 12% drop in plastic waste in early-adopting cities compared to their synthetic counterparts.\nMAYA: But we questioned causality. The early cities also launched a recycling campaign at the same time.\nTUTOR: Exactly — competing explanations. How did the authors address that?\nJONAH: They ran a placebo test, applying the same method to cities with no levy, and found no effect.\nTUTOR: Does that strengthen their argument?\nMAYA: Somewhat, but the placebo test doesn't rule out the recycling campaign effect in the treated cities.\nJONAH: Right, because the control cities didn't have that campaign either.\nMAYA: Still, the confidence intervals were wide for the later group, so we can't be sure the effect was consistent.\nTUTOR: And what about the missing retail data?\nJONAH: Two of the 2020 cities didn't report supermarket sales, so the estimate relies on five of the seven later cities.\nMAYA: So overall, the method is useful but the staggered timing makes it hard to isolate the levy's impact.\nTUTOR: Would you recommend this approach for your own project?\nMAYA: Only if we can get complete data for all periods. Otherwise the comparison becomes unreliable.\nJONAH: And we'd need to control for other policies happening simultaneously, otherwise we risk overstating the effect.\nTUTOR: Precisely. The key lesson is to interpret the estimates as suggestive, not definitive proof of impact.",
+        "questions": [
+          {
+            "title": "Second Wave Timing",
+            "prompt": "According to the discussion, when was the second group of cities treated?",
+            "options": [
+              "In 2018 with the first group",
+              "In 2019 before the survey",
+              "In 2020 as the second wave",
+              "In 2021 during follow-up"
+            ],
+            "answer": 2,
+            "explanation": "Maya corrects herself to confirm 2020 for the second wave; 2021 was only the follow-up survey, so that distractor confuses treatment with data collection."
+          },
+          {
+            "title": "Early Adopters' Result",
+            "prompt": "What drop did the authors report for early-adopting cities?",
+            "options": [
+              "12% fall in plastic waste versus synthetic control",
+              "12% rise in recycling campaign participation",
+              "Wide confidence intervals for early cities",
+              "No effect in placebo test cities"
+            ],
+            "answer": 0,
+            "explanation": "Jonah states the 12% drop versus synthetic counterparts; the placebo finding of no effect applies to untreated cities, not the early adopters."
+          },
+          {
+            "title": "Competing Explanation",
+            "prompt": "Why did the students question causality for early cities?",
+            "options": [
+              "Missing supermarket sales data",
+              "Simultaneous recycling campaign in those cities",
+              "Use of weighted comparison method",
+              "Staggered timing across regions"
+            ],
+            "answer": 1,
+            "explanation": "Maya notes early cities also launched a recycling campaign at the same time; missing sales data concerns the later group, not the early causality issue."
+          },
+          {
+            "title": "Placebo Test Outcome",
+            "prompt": "What did the placebo test show?",
+            "options": [
+              "12% drop replicated in treated cities",
+              "Recycling campaign had no impact",
+              "Wide intervals for later group",
+              "No effect when method applied without levy"
+            ],
+            "answer": 3,
+            "explanation": "Jonah reports the method found no effect in cities with no levy; wide intervals describe the later treated group, not the placebo result."
+          },
+          {
+            "title": "Data Limitation for Later Group",
+            "prompt": "What limits the estimate for the later rollout?",
+            "options": [
+              "All seven cities lacked baseline data",
+              "Two cities missing supermarket sales data",
+              "Early cities had no comparison group",
+              "Follow-up survey was not completed"
+            ],
+            "answer": 1,
+            "explanation": "Jonah says two of the 2020 cities didn't report sales, so estimate uses five of seven; the distractor overstates missing data to all seven."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Biodiversity Indicators and Restoration Success",
+        "focus": "limits of biodiversity indicators across restoration sites",
+        "passage": "Measuring the success of ecological restoration is more complex than counting new trees. Governments and NGOs now invest heavily in restoring wetlands, grasslands and forests degraded by agriculture or mining, and they need reliable ways to judge whether these efforts work. Biodiversity indicators – quantifiable measures such as species richness, vegetation cover or the presence of indicator species – are widely used for this purpose because they appear objective and comparable across sites.\n\nA common approach is to track bird diversity. In the Willow Marsh wetland in southern England, for example, the number of breeding wader species rose from 11 to 19 within five years of re-flooding, and this was presented as evidence of recovery. Similarly, many grassland projects report percentage vegetation cover as a quick proxy for ecosystem health. Such examples are persuasive and often cited in funding reports, but the authors of a recent synthesis argue that reliance on a single indicator can be misleading.\n\nThe problem is that indicators do not behave consistently across contexts. Vegetation cover may recover quickly in a wet lowland site but remain sparse for decades in arid uplands, even when both are on a positive trajectory. Bird counts are especially volatile: a spike in migratory visitors in one season can inflate richness figures without reflecting local breeding success. The synthesis found that in 40% of 78 restoration sites reviewed, trends in bird richness and plant richness moved in opposite directions. This suggests that no single taxonomic group can stand in for overall biodiversity.\n\nComparisons are further complicated by missing data. Regional education comparisons face a similar issue, but in ecology the gaps are often historical. Over half of the sites in the review lacked systematic surveys before restoration began, forcing researchers to reconstruct baselines from anecdotal records or nearby reference sites. In the Arden Heath project, for instance, pre-restoration bird data were incomplete, so apparent gains may partly reflect improved monitoring rather than genuine increase. The authors claim that without complete baseline and follow-up data, cross-site rankings of restoration success are unreliable, even when standardised indicators are used.\n\nTherefore, the authors recommend using a suite of complementary indicators – combining vegetation structure, invertebrate sampling and long-term bird monitoring – and interpreting them in relation to site-specific goals and timescales. This approach acknowledges uncertainty and avoids overstating short-term gains as lasting recovery. Indicators remain essential tools, but their limits mean they should inform judgement, not replace it.",
+        "questions": [
+          {
+            "title": "Reason for Indicator Use",
+            "prompt": "Why are biodiversity indicators widely adopted?",
+            "options": [
+              "They seem objective and comparable across sites",
+              "They guarantee long-term recovery",
+              "They replace need for baseline surveys",
+              "They work identically in all ecosystems"
+            ],
+            "answer": 0,
+            "explanation": "The passage says indicators appear objective and comparable; the identical performance option is contradicted by later discussion of context variation."
+          },
+          {
+            "title": "Willow Marsh Example",
+            "prompt": "How does the passage use the Willow Marsh case?",
+            "options": [
+              "Proof that single indicators are sufficient",
+              "Example cited as recovery but authors warn against reliance",
+              "Evidence that vegetation cover is unreliable",
+              "Demonstration of missing baseline data problem"
+            ],
+            "answer": 1,
+            "explanation": "Willow Marsh rise is presented as recovery evidence in reports, but authors argue single-indicator reliance is misleading; proof of sufficiency misrepresents their caution."
+          },
+          {
+            "title": "Divergent Trends Finding",
+            "prompt": "What does the 40% finding imply?",
+            "options": [
+              "Vegetation cover predicts bird diversity",
+              "40% of sites showed full recovery",
+              "Bird and plant richness trends often diverged",
+              "Migratory birds indicate breeding success"
+            ],
+            "answer": 2,
+            "explanation": "The synthesis found opposite movements in bird and plant richness in 40% of sites, implying no single group proxies overall biodiversity; full recovery misreads the statistic."
+          },
+          {
+            "title": "Arden Heath Inference",
+            "prompt": "What can be inferred about Arden Heath's apparent gains?",
+            "options": [
+              "They prove cross-site rankings are reliable",
+              "They were based on complete baseline surveys",
+              "They show vegetation cover recovered quickly",
+              "They may partly reflect better monitoring"
+            ],
+            "answer": 3,
+            "explanation": "The passage notes incomplete pre-restoration data at Arden Heath, so gains may reflect improved monitoring; complete baseline distractor contradicts that gap."
+          },
+          {
+            "title": "Authors' Recommendation",
+            "prompt": "What do the authors recommend for evaluation?",
+            "options": [
+              "Use a suite of indicators linked to site goals",
+              "Rely on bird diversity alone",
+              "Rank sites using standardised single indicator",
+              "Avoid indicators and use anecdotal records"
+            ],
+            "answer": 0,
+            "explanation": "Authors advise combining vegetation, invertebrate and bird measures interpreted by site-specific goals; single-indicator ranking is what they deem unreliable."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "sharedContexts.listening.script; all Listening transcripts; ielts-meta-wave-5-band-7-listening-05 explanation",
+          "issue": "Internal arithmetic/cohort contradiction: the rollout has three cities in2018 and four more in2020, but later the script says two2020 cities lack data and the estimate uses five of seven later cities. Four later cities minus two missing leaves two complete, not five. Seven is the total across both waves. Correct the cohort/counts consistently in script and listening05 explanation, preserving which group has missing data.",
+          "severity": "critical"
+        },
+        {
+          "item": "ielts-meta-wave-5-band-7-writing-01; writing-04; speaking-02",
+          "issue": "Specialist synthetic-control terminology and required interpretation of pre-intervention fit/causal evidence create a subject-knowledge burden beyond language difficulty. Consider accessible definitions or broader public research reporting framing. Speaking Part1 question about missing information affecting school judgements also approaches Part3 abstraction. These are practice-design concerns, not additional answer-key blockers.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        },
+        {
+          "item": "sharedContexts.reading.passage, paragraph4",
+          "issue": "Regional education comparisons sentence interrupts an otherwise ecological argument without development; remove or connect it more naturally.",
+          "severity": "minor",
+          "kind": "reviewer observation to address where safe"
+        }
+      ]
+    }
+  }
+}

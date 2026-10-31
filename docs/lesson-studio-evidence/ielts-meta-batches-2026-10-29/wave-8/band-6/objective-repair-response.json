@@ -1,0 +1,24 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-8",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:29:54.390Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2215,
+    "outputTokens": 694,
+    "totalTokens": 2909
+  },
+  "latencyMs": 3028,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listeningPart\":\"Part 1\",\"reason\":\"Script is a two-way everyday transactional conversation about clinic appointment details, time correction, and reminder arrangements - classic Part 1 social needs/services, not an academic student/staff discussion (Part 3) or single-speaker academic monologue (Part 4).\"}",
+  "result": {
+    "listeningPart": "Part 1",
+    "reason": "Script is a two-way everyday transactional conversation about clinic appointment details, time correction, and reminder arrangements - classic Part 1 social needs/services, not an academic student/staff discussion (Part 3) or single-speaker academic monologue (Part 4)."
+  }
+}

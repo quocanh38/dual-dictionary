@@ -1,0 +1,331 @@
+{
+  "stage": "band-5",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "The University Seed Library",
+      "focus": "Main ideas, details and a corrected detail",
+      "script": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "wordCount": 371
+    },
+    "reading": {
+      "title": "The Campus Repair Workshop",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "wordCount": 404
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 4",
+      "type": "choice",
+      "title": "The University Seed Library",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details and a corrected detail",
+      "transcript": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "prompt": "What is the main purpose of the seed library?",
+      "options": [
+        "To sell seeds to biology students",
+        "To let students borrow seeds and return new seeds later",
+        "To give gardening lessons in Room 3",
+        "To keep old seed packets in storage"
+      ],
+      "answer": 1,
+      "explanation": "The script says students take home packets, grow them, and later return new seeds. The sell option fails because Mr Lee says borrowing is free."
+    },
+    {
+      "id": "ielts-meta-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 4",
+      "type": "choice",
+      "title": "The University Seed Library",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details and a corrected detail",
+      "transcript": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "prompt": "How many seed packets can a student take each month now?",
+      "options": [
+        "Three packets",
+        "Five packets",
+        "Four packets",
+        "One packet"
+      ],
+      "answer": 0,
+      "explanation": "Mr Lee corrects the old guide and says the new limit is three because demand is high. Five fails because it was the old information."
+    },
+    {
+      "id": "ielts-meta-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 4",
+      "type": "choice",
+      "title": "The University Seed Library",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details and a corrected detail",
+      "transcript": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "prompt": "Which seeds are most popular and why?",
+      "options": [
+        "Tomatoes because they are cheap",
+        "Carrots because they need little water",
+        "Beans because they grow quickly in small pots",
+        "Sunflowers because they need no light"
+      ],
+      "answer": 2,
+      "explanation": "Mr Lee says beans are the most popular because they grow quickly, even in small pots. Tomatoes fails because price is never mentioned."
+    },
+    {
+      "id": "ielts-meta-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 4",
+      "type": "choice",
+      "title": "The University Seed Library",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details and a corrected detail",
+      "transcript": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "prompt": "What must Maya write in her growing diary?",
+      "options": [
+        "Her name, number and email",
+        "The shop price and seller",
+        "The workshop time and room",
+        "The planting date, pot place and watering"
+      ],
+      "answer": 3,
+      "explanation": "Mr Lee says write the planting date, where you put the pot, and how often you water. Name and email fails because that is for the joining form, not the diary."
+    },
+    {
+      "id": "ielts-meta-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 4",
+      "type": "choice",
+      "title": "The University Seed Library",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details and a corrected detail",
+      "transcript": "Mr Lee: Good morning, welcome to the university seed library. How can I help you? Maya: Good morning. I am a first-year biology student, and I heard I can borrow seeds here for free. Is that right? Mr Lee: Yes, that is right. The seed library lets students take home small packets of vegetable and flower seeds, grow them, and later return new seeds if the plants grow well. Maya: That sounds interesting. How do I join? Mr Lee: You just need to fill in a short form with your name, student number, and email. Then you can choose up to three packets each month. Maya: Only three? I thought I could take five. Mr Lee: The guide on the website says five, but we changed it this term to three, because demand is high. So three packets is the new limit. Maya: I understand. What kinds of seeds do you have now? Mr Lee: At the moment, we have tomatoes, carrots, beans, and sunflowers. Beans are the most popular because they grow quickly, even in small pots. Maya: I would like to try beans and sunflowers. Do I need anything else? Mr Lee: We also ask you to keep a simple growing diary. Just write the planting date, where you put the pot, and how often you water the plant. It helps you notice problems. Maya: Do I have to return seeds at the end? Mr Lee: If you can, yes. If your sunflowers produce seeds, bring some back in a clean, dry envelope with the plant name and date. But if the plant does not grow well, just tell us. There is no fine. Maya: That is good. Is there any training? I have never grown flowers before. Mr Lee: Yes, we have a short beginners workshop. It was planned for Thursday, but sorry, it moved to Friday at 2 p.m. in Room 3 of the library. It takes about one hour. Maya: Perfect, I can come on Friday. How long can I keep the seeds before planting? Mr Lee: Please plant them within four weeks, and keep the packets in a cool, dry place until then. Maya: Thank you very much. I will fill in the form now.",
+      "prompt": "When and where is the beginners workshop?",
+      "options": [
+        "Thursday at 2 p.m. in Room 3",
+        "Friday at 2 p.m. in Room 3",
+        "Friday at 4 p.m. in Room 5",
+        "Thursday at 1 p.m. in the basement"
+      ],
+      "answer": 1,
+      "explanation": "Mr Lee corrects the plan: it moved from Thursday to Friday at 2 p.m. in Room 3. Thursday fails because it was the old plan."
+    },
+    {
+      "id": "ielts-meta-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "The Campus Repair Workshop",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "prompt": "What is the main idea of the Campus Repair Workshop?",
+      "options": [
+        "To sell cheap tools to students",
+        "To throw away broken items safely",
+        "To help students learn to repair and reuse small items",
+        "To train students to make new phones"
+      ],
+      "answer": 2,
+      "explanation": "The passage says students learn to fix small broken things and reuse them. Throw away fails because the idea is the opposite of throwing things away."
+    },
+    {
+      "id": "ielts-meta-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "The Campus Repair Workshop",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "prompt": "Which item will the workshop NOT repair?",
+      "options": [
+        "A large fridge",
+        "A bicycle with a flat tyre",
+        "A jacket with a broken zip",
+        "A phone with a cracked cover"
+      ],
+      "answer": 0,
+      "explanation": "The passage says large electrical items such as fridges are not repaired because they can be dangerous. Bicycle fails because flat tyres are listed as a common repair."
+    },
+    {
+      "id": "ielts-meta-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "The Campus Repair Workshop",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "prompt": "Why is Lena's lamp story included in the passage?",
+      "options": [
+        "To prove every repair takes forty minutes",
+        "To claim lamps are the most common repair",
+        "To explain why repairs always fail",
+        "To give an example of how a repair works"
+      ],
+      "answer": 3,
+      "explanation": "The passage says the story is one example and does not mean every repair is quick or cheap. Every repair takes forty minutes fails because the passage warns against that general idea."
+    },
+    {
+      "id": "ielts-meta-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "The Campus Repair Workshop",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "prompt": "According to the organiser's report, what is the main value of the workshop?",
+      "options": [
+        "Saving a lot of money on new things",
+        "Learning practical skills and confidence",
+        "Recording numbers of repairs each term",
+        "Reducing waiting time on busy days"
+      ],
+      "answer": 1,
+      "explanation": "The report claims the main value is learning, not saving money. Saving money fails because the passage says it is only a second benefit."
+    },
+    {
+      "id": "ielts-meta-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "The Campus Repair Workshop",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, claim versus example and simple inference",
+      "passage": "The Campus Repair Workshop opened last year in the basement of the Student Centre. It is a free service where students can bring small broken things and learn how to fix them with help from trained volunteers. The idea is simple: instead of throwing things away, students repair and reuse them. The workshop is open on Tuesday and Thursday afternoons from 1 p.m. to 5 p.m. Students do not need an appointment. They just bring the broken item and wait for a volunteer. The volunteers do not fix things alone. They show the student each step, so the student learns the skill. Common repairs include bicycles with flat tyres, jackets with broken zips, and phones with cracked screen covers. The workshop does not repair large electrical items, such as fridges, because they can be dangerous. All tools and basic materials are provided at the workshop, so students do not need to buy anything in advance. Last month, second-year student Lena brought in a desk lamp that stopped working. A volunteer helped her open the base, test the wire, and change the small switch inside. The repair took about forty minutes and cost only two dollars for the new switch. Lena said she was happy because she uses the lamp every evening for study. This story is one example of a normal repair at the workshop. It does not mean every repair is quick or cheap, but it shows how the process works. The organiser's report makes a clear claim: the main value of the workshop is learning, not saving money. In other words, students gain useful practical skills and confidence, and saving money is only a second benefit. The report also says the workshop helps the environment by reducing waste. Last term, volunteers recorded 310 repairs, and 210 items worked again after the visit. That means fewer things went into the bins. The service is open to all students from any subject. To use the workshop well, students should follow three rules. First, clean the item before bringing it. Second, bring any extra parts, such as buttons or batteries, if you have them. Third, stay for the whole repair and listen to the safety advice. The waiting time can be long on busy days, sometimes more than one hour, so many students bring study notes while they wait. The organisers hope more students will join as volunteers next term after a short training course.",
+      "prompt": "What can be inferred about a student who visits the workshop?",
+      "options": [
+        "The student must book a week in advance",
+        "The student can leave the item and return later",
+        "The student will join in the repair and stay until the end",
+        "The student must buy tools before the visit"
+      ],
+      "answer": 2,
+      "explanation": "Volunteers do not fix alone and students must stay for the whole repair, so the student takes part. Leave the item fails because the rules require staying."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · University Seed Library Borrowing",
+      "pathwayStage": "band-5",
+      "focus": "Clear main ideas and direct comparison from table data",
+      "prompt": "This is original practice material. The table below shows the number of seed packets borrowed from the Greenfield University seed library from March to May 2026. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Vegetables - March 120, April 150, May 180; Flowers - March 80, April 95, May 110; Herbs - March 60, April 70, May 65. All figures are numbers of packets borrowed by students.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-5-writing-02",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Sleep-and-Study Diary Habits",
+      "pathwayStage": "band-5",
+      "focus": "Clear opinion with direct evidence from familiar student life",
+      "prompt": "This is original practice material. Some students at Greenfield University keep a sleep-and-study diary for one month. They write down their bedtime, wake-up time, and study hours each day. Some people think this is a good way to improve study habits. Do you agree or disagree? Give reasons for your answer and include examples from your own experience or studies. Write in clear paragraphs with a simple introduction and conclusion. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-band-5-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Campus Repair Workshop Use",
+      "pathwayStage": "band-5",
+      "focus": "Accurate simple description of changes in familiar academic context",
+      "prompt": "This is original practice material. The table below shows the number of items brought by students to the Greenfield University campus repair workshop in Semester 1 2025 and Semester 2 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Table data: Bicycles - Semester 1 45, Semester 2 70; Laptop computers - Semester 1 60, Semester 2 55; Clothes and bags - Semester 1 30, Semester 2 85. All figures are numbers of items brought for repair.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Repair Workshops on Campus",
+      "pathwayStage": "band-5",
+      "focus": "Simple explanation of advantages with clear main ideas",
+      "prompt": "This is original practice material. Many old bicycles, laptops and clothes are thrown away by students. Greenfield University has opened a free campus repair workshop where students can learn to fix these things with help from staff. Some people think all universities should have this kind of workshop. Do you agree or disagree? Give reasons for your answer and include examples from your own life or studies. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Seed Libraries and Student Community",
+      "pathwayStage": "band-5",
+      "focus": "Balanced discussion with accurate simple explanations",
+      "prompt": "This is original practice material. Greenfield University has a seed library where students can borrow vegetable, flower and herb seeds for free, grow plants at home, and return new seeds later. Some people think this helps students learn about nature and community life. Others think the university should spend money on books and computers instead. Discuss both views and give your own opinion. Give reasons and examples from your experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Sleep and Study Routine",
+      "pathwayStage": "band-5",
+      "focus": "Familiar academic context and simple personal explanations",
+      "prompt": "This is original practice material for Part 1, 4-5 minutes. Answer in short, clear sentences. 1. What time do you usually go to bed and get up? 2. Where do you like to study, at home or at the university? 3. Do you ever write down your study hours or sleep hours? Why or why not? 4. What helps you concentrate when you study?"
+    },
+    {
+      "id": "ielts-meta-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Plants and Green Spaces",
+      "pathwayStage": "band-5",
+      "focus": "Familiar topics with direct personal evidence",
+      "prompt": "This is original practice material for Part 1, 4-5 minutes. Answer in short, clear sentences. 1. Do you like growing plants or vegetables? Why or why not? 2. Is there a garden or green space near your home or university? 3. Have you ever borrowed books or seeds from a library? 4. Do you like to fix or reuse old things?"
+    },
+    {
+      "id": "ielts-meta-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Record You Kept",
+      "pathwayStage": "band-5",
+      "focus": "Clear description with simple sequence and reason",
+      "prompt": "This is original practice material for Part 2. You have one minute to prepare and should speak for one to two minutes. Describe a diary or record you kept about your sleep, study, or daily life. You should say: what you recorded and for how long, when and where you did it, what you learned from the record, and explain why it was useful or not useful for you."
+    },
+    {
+      "id": "ielts-meta-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Sleep, Study and Learning",
+      "pathwayStage": "band-5",
+      "focus": "Giving reasons and simple evaluation, not memorised facts",
+      "prompt": "This is original practice material for Part 3, 4-5 minutes. Give reasons and explain your ideas. 1. Why do some university students sleep late and feel tired in class? 2. How can keeping a sleep-and-study diary help students understand their habits? 3. Do you think universities should teach students about sleep and health? Why? 4. Which is more important for good study results, longer study hours or better sleep? Why?"
+    },
+    {
+      "id": "ielts-meta-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Repair, Reuse and Campus Life",
+      "pathwayStage": "band-5",
+      "focus": "Reasons and evaluation of community ideas",
+      "prompt": "This is original practice material for Part 3, 4-5 minutes. Give reasons and evaluate ideas. 1. Why do many students throw away things that could be repaired? 2. What are the advantages of a campus repair workshop for students and the community? 3. Are there any problems with running a free repair service at a university? 4. How can activities like a seed library or a repair workshop change student life in the future?"
+    }
+  ]
+}

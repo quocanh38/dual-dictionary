@@ -1,0 +1,18 @@
+{
+  "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+  "reviewedAt": "2026-10-28T08:30:33.462Z",
+  "reviewScope": "Pre-repair single-model GPT content review; findings are issue-focused; no claim of independent cross-model review.",
+  "candidateSha256": "6ebf1dca28db9213cf6127a7f8e6cdf276aece930f2083264b07ae990c2cce06",
+  "rawResponseSha256": {
+    "objective-generate-response.json": "ccf05b08dec5ea9f5ef246c91b69f52824992a5c14047abf067851434c628c09",
+    "prompts-generate-response.json": "d4986ea27d512fc5e51067e4f9eb24865296cb18c1d652f6fac9dac561155022"
+  },
+  "findings": [
+    {
+      "item": "Speaking · Part 3 · School Events and Community Help",
+      "severity": "medium",
+      "issue": "The IELTS Speaking Part 3 prompt asks the learner to discuss with a partner or teacher, which misrepresents the examiner-led test format.",
+      "recommendedRepair": "Address the candidate as an examiner would and retain open-ended reason/evaluation questions; remove the partner framing."
+    }
+  ]
+}

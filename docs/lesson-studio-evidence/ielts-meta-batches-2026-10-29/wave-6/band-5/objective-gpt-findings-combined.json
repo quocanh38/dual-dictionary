@@ -1,0 +1,29 @@
+{
+  "findings": [
+    {
+      "itemId": "ielts-meta-wave-6-band-5-listening-context / listening-02",
+      "issue": "The staff tells a student with a serious nut allergy that the chicken pasta “should be safe” because nuts are not listed, with no cross-contact caveat or instruction to verify with the kitchen. Remove the safety guarantee and advise confirming ingredients and cross-contact controls before ordering.",
+      "severity": "critical"
+    },
+    {
+      "itemId": "Reading objective answer-position distribution",
+      "issue": "Reading keys use only option positions 0, 1 and 2; position 3 is never correct, matching the candidate normalization finding. Rebalance keys/options so all four positions are used without changing defensible answers.",
+      "severity": "minor"
+    },
+    {
+      "item": "normalizationFindings; Reading exercises",
+      "severity": "major",
+      "issue": "Reading keys [0,1,2,2,1] omit index3, confirming unresolved normalization failure. Reorder an item options/key to cover all four positions, preserving meaning and explanation alignment."
+    },
+    {
+      "item": "sharedContexts.listening.script; all Listening transcripts",
+      "severity": "critical",
+      "issue": "For a serious nut allergy, staff infer pasta should be safe solely because ingredients list has no nuts/peanuts. Ingredient absence does not establish absence of allergen cross-contact. Replace safety assurance with checking kitchen preparation/cross-contact controls before confirming suitability; keep ingredient answer clear. FSA source: https://www.food.gov.uk/print/pdf/node/172 ."
+    },
+    {
+      "item": "normalizationFindings",
+      "issue": "Objective content issue: Reading answer positions do not cover all four options.",
+      "severity": "major"
+    }
+  ]
+}

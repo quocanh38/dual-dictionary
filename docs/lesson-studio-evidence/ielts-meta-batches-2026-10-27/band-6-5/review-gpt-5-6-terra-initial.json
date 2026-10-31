@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "ef966272672b12a00fdc38616fcbc0edb5f5ddfc811294ea45ef5acc8ea26ddd",
+  "verdict": "repair",
+  "findings": [
+    {
+      "severity": "major",
+      "itemId": "ielts-meta-band-6-5-writing-05",
+      "issue": "The Task 2 instruction permits materially different responses: discuss one of two unrelated approaches (university mentoring or city transport priorities), or compare both. This leaves the required scope indeterminate and combines two prompts without a single defined question.",
+      "suggestedMetaFix": "Choose one topic and ask a single clear advantages/disadvantages or opinion question; alternatively require comparison of both examples with explicit criteria and a defined response scope."
+    }
+  ]
+}

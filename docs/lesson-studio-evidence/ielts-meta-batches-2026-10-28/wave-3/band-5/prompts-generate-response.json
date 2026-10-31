@@ -1,0 +1,63 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "batchId": "wave-3",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:10:34.491Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 492,
+    "outputTokens": 3721,
+    "totalTokens": 4213
+  },
+  "latencyMs": 16882,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Student Club Charity Stall",
+        "focus": "Clear overview with direct comparisons",
+        "prompt": "The table below shows money raised by a student club charity stall at Greenfield College on Saturday 11 April and Sunday 12 April 2026. The club ran three small stalls: Second-hand Books, Homemade Food, and Paper Crafts. Table: Second-hand Books - Saturday $85 from 42 visitors, Sunday $95 from 48 visitors; Homemade Food - Saturday $120 from 75 visitors, Sunday $140 from 88 visitors; Paper Crafts - Saturday $60 from 30 visitors, Sunday $110 from 55 visitors. Total raised was $265 on Saturday and $345 on Sunday. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · University Orientation Timetable",
+        "focus": "Selecting main events and simple changes over time",
+        "prompt": "The timetable below shows three morning orientation events for new students at Riverside University from Monday 1 September to Wednesday 3 September 2026. Monday 1 September, 9:00-10:30, Campus Tour, Main Hall, 200 students expected; Tuesday 2 September, 9:00-10:00, Library Session, Library Room A, 150 students expected; Wednesday 3 September, 9:00-12:00, Club Fair, Sports Hall, 300 students expected. All three events are led by second-year student helpers. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Community Art Class Attendance",
+        "focus": "Describing simple trends from complete data",
+        "prompt": "The table below shows weekly attendance at a community art class in Hilltown Community Centre for six weeks from 5 May to 9 June 2026. There were two groups. Morning Group (ages 16-25): Week 1: 12, Week 2: 14, Week 3: 15, Week 4: 15, Week 5: 17, Week 6: 18. Evening Group (ages 26 and older): Week 1: 20, Week 2: 19, Week 3: 18, Week 4: 18, Week 5: 16, Week 6: 15. Each class lasted two hours and taught drawing with pencils and watercolours. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Charity Work by Student Clubs",
+        "focus": "Giving a clear opinion with direct reasons",
+        "prompt": "Some university students join clubs mainly to meet friends and have fun. Others join clubs mainly to help other people, for example by organising a charity stall to raise money for a local hospital. Which purpose do you think is more important for a student club? Give reasons for your answer and include ideas from your own experience and daily life. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Free Time and Community Art Classes",
+        "focus": "Discussing two views and giving an opinion",
+        "prompt": "Some people think community art classes are a good way for teenagers and adults to spend free time. Others think free time should be used for sport or extra study instead of art. Discuss both views and give your own opinion. Give reasons for your answer and include ideas from your own experience and daily life. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Study and Student Clubs",
+        "focus": "Short answers about familiar daily life",
+        "prompt": "Answer these short questions about yourself. Give 2-3 sentences for each answer. 1. What are you studying at the moment? 2. Is there a student club you would like to join? Why? 3. Did you take part in any charity activity at school? 4. How do you usually spend your free time in the evening? 5. Do you prefer to do activities alone or with friends? Why?"
+      }
+    ]
+  }
+}

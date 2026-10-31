@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "cf8215014ddcafc5e202050fcfd3955be186ab293fcae352709385ea5b304fd3",
+  "verdict": "repair",
+  "findings": [
+    {
+      "id": "ielts-meta-band-6-writing-03",
+      "severity": "major",
+      "issue": "The Task 1 table labels March and September values as numbers of items digitised, but the recorded-interviews row reports 25 and 48 hours of audio. This leaves the units inconsistent and makes cross-row comparisons ambiguous.",
+      "suggestedFix": "Use a neutral amount header and state units per row (items for photographs and letters, pages for newspapers, hours of audio for interviews), or convert all categories to a common unit if appropriate."
+    }
+  ]
+}

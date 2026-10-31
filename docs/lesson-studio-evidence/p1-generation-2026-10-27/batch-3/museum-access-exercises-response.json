@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Making Lectures Accessible",
+    "objective": "Learners will understand and use take steps and identify barriers to discuss improving access to academic events.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In s1 'The museum will take steps to make its public lectures easier to attend', what does take steps mean?",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means the museum will take action to make its lectures easier to attend.",
+            "explanation": "This is correct because it matches taking action in order to achieve something."
+          },
+          {
+            "id": "b",
+            "text": "It means visitors will walk on foot to reach the museum lectures.",
+            "explanation": "This is wrong because the sentence is about the museum acting, not about walking."
+          },
+          {
+            "id": "c",
+            "text": "It means the museum will count the stairs leading to the lecture hall.",
+            "explanation": "This is wrong because the sentence is about improving access, not counting stairs."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "In s1 take steps means taking action to achieve easier attendance."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the natural sentence using take steps.",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The school has taken steps to extend library hours for exam students.",
+            "explanation": "This is correct because agreement is right and take steps to plus verb is natural."
+          },
+          {
+            "id": "b",
+            "text": "The schools has taken steps to extend library hours for exam students.",
+            "explanation": "This is wrong because has should be have to agree with the plural subject schools."
+          },
+          {
+            "id": "c",
+            "text": "The school has taken step to extend library hours for exam students.",
+            "explanation": "This is wrong because step should be steps in the fixed phrase take steps."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only a uses correct agreement and the fixed collocation take steps."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In s2 'Organisers need to identify barriers that prevent visitors from joining the discussion', what does identify barriers mean?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means organisers need to build fences around the discussion area.",
+            "explanation": "This is wrong because the sentence is about recognising obstacles, not building fences."
+          },
+          {
+            "id": "b",
+            "text": "It means organisers need to recognise obstacles that stop visitors joining the discussion.",
+            "explanation": "This is correct because it matches recognising obstacles that prevent people from doing something."
+          },
+          {
+            "id": "c",
+            "text": "It means organisers need to welcome visitors to join the discussion quickly.",
+            "explanation": "This is wrong because the sentence is about finding obstacles, not welcoming visitors."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "In s2 identify barriers means recognising obstacles that stop visitors joining."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the natural sentence using identify barriers.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Researchers identified barriers that prevent students from using the tutoring centre.",
+            "explanation": "This is correct because agreement and the collocation identify barriers are natural."
+          },
+          {
+            "id": "b",
+            "text": "Researchers identified barriers that prevents students from using the tutoring centre.",
+            "explanation": "This is wrong because prevents should be prevent to agree with plural barriers."
+          },
+          {
+            "id": "c",
+            "text": "Researchers identified barrier that prevent students from using the tutoring centre.",
+            "explanation": "This is wrong because barrier should be barriers to match plural verb prevent."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only a uses correct agreement and the fixed collocation identify barriers."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are a class representative suggesting improvements to group study sessions. Write 2-3 sentences about what your class should do using identify barriers.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "sampleAnswer": "Our class should identify barriers that stop students from joining group study sessions. We noticed late meeting times and noisy rooms discourage many classmates, so we will suggest earlier times and quieter spaces.",
+        "selfCheck": [
+          "I wrote 2-3 sentences as a class representative about study sessions.",
+          "I used identify barriers in a natural form to talk about obstacles.",
+          "My sentences are clear and grammatically correct."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 881,
+    "outputTokens": 4665,
+    "totalTokens": 5546
+  },
+  "status": 200,
+  "latencyMs": 15472,
+  "model": "muse-spark-1.3"
+}

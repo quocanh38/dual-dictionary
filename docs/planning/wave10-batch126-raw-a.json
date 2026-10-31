@@ -1,0 +1,44 @@
+{
+  "wave": 10,
+  "batch": 126,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after contact lens in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue the C-section with travel/hotel vocabulary, geology and law, aviation, corporate control, food and manufacturing, industrial systems, marine biology, medicine, legal Latin, healthcare, astronomy, accounting, British usage and mechanical terminology. Notes clarify register, regional variants, technical distinctions and limits of legal/medical terminology.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 348,
+    "remainingRawOnlyAfter": 328
+  },
+  "selected": [
+    "continental breakfast",
+    "continental drift",
+    "continental shelf",
+    "contributory negligence",
+    "control tower",
+    "controlling interest",
+    "convenience food",
+    "conveyor belt",
+    "cooling system",
+    "cooling tower",
+    "coral reef",
+    "coral snake",
+    "coronary thrombosis",
+    "corpus delicti",
+    "cosmetic surgery",
+    "cosmic ray",
+    "cost accounting",
+    "cot death",
+    "cotter pin",
+    "cotton wool"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NOAA: Ocean floor features and continental shelf (https://oceanservice.noaa.gov/facts/continental-shelf.html)",
+    "USGS: Historical perspective on continental drift (https://pubs.usgs.gov/gip/dynamic/historical.html)",
+    "Cornell Legal Information Institute: Contributory negligence (https://www.law.cornell.edu/wex/contributory_negligence)",
+    "CDC: About SUID and SIDS (https://www.cdc.gov/sudden-infant-death/about/index.html)"
+  ]
+}

@@ -1,0 +1,28 @@
+PASS authored fixture validates and round-trips with checksum
+PASS checksum independent of object key insertion order
+PASS tampered approved pack rejected
+PASS draft and reviewed packs cannot be distributed as approved
+PASS unresolved critical or uncertain issues prevent approval
+PASS review checks and note are required
+PASS source sentences reconstruct complete reading
+PASS target absent from its cited source rejected
+PASS missing semantic meaning rejected
+PASS repeated target phrase rejected
+PASS unknown source references rejected
+PASS unrelated valid sentence cannot replace target citation
+PASS unknown target rejected
+PASS duplicate option IDs and text rejected
+PASS correct ID is required and survives option reorder
+PASS sample permits controlled verb inflections without losing phrase boundaries
+PASS free writing cannot be given an automatic answer ID
+PASS free writing sample must use target and include checklist
+PASS each target needs meaning and usage coverage
+PASS unsupported schema and invalid IDs rejected
+PASS unexpected fields including credentials rejected
+PASS credential-like text rejected before export
+PASS malformed JSON and foreign file format rejected
+PASS 2 MB text import limit
+PASS cloze reconstructs exactly one source gap
+PASS source rights required before generator draft
+PASS generation uses source IDs and no credential settings
+27 contract groups PASS

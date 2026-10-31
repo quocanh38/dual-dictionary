@@ -1,0 +1,212 @@
+{
+  "format": "dual-dictionary-lesson-pack",
+  "payload": {
+    "schemaVersion": 1,
+    "packId": "pack-eddc15b5-2b20-4dd5-9859-3abedd7a3968",
+    "version": 1,
+    "title": "Lab Audits: Using carry out and account for",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T06:53:37.104Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Lab Audits: Using carry out and account for",
+        "objective": "Learners will interpret carry out and account for in an academic lab context and use them accurately in new situations.",
+        "reading": {
+          "text": "A research assistant will carry out a quarterly audit of shared laboratory equipment. The team will account for each device by matching its label with the inventory record. In response to several missing calibration dates, the supervisor has added a reminder field to the maintenance log. The next review will check whether staff have entered the dates consistently and whether any device needs servicing before the study begins.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A research assistant will carry out a quarterly audit of shared laboratory equipment."
+            },
+            {
+              "id": "s2",
+              "text": "The team will account for each device by matching its label with the inventory record."
+            },
+            {
+              "id": "s3",
+              "text": "In response to several missing calibration dates, the supervisor has added a reminder field to the maintenance log."
+            },
+            {
+              "id": "s4",
+              "text": "The next review will check whether staff have entered the dates consistently and whether any device needs servicing before the study begins."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "carry out",
+            "meaningEn": "to perform or complete a task such as an audit",
+            "meaningVi": "thực hiện",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "account for",
+            "meaningEn": "to make sure each item is included in a count or record",
+            "meaningVi": "kiểm kê đầy đủ từng thiết bị",
+            "sourceSentenceId": "s2"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In 'A research assistant will carry out a quarterly audit of shared laboratory equipment,' what does 'carry out' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The assistant will perform the quarterly audit as an assigned task.",
+                "explanation": "This is correct because it matches the source meaning of performing a task such as an audit."
+              },
+              {
+                "id": "b",
+                "text": "The assistant will transport the equipment out of the laboratory by hand.",
+                "explanation": "This is wrong because it confuses carry out with physically carrying an object."
+              },
+              {
+                "id": "c",
+                "text": "The assistant will postpone the quarterly audit until a later date.",
+                "explanation": "This is wrong because postponing means delaying, not performing the audit."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one option describes performing the audit task."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the natural sentence using 'carry out'.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Our team will carry out to a safety check before the event opens.",
+                "explanation": "This is wrong because carry out takes a direct object, so delete to."
+              },
+              {
+                "id": "b",
+                "text": "Our team will carries out a safety check before the event opens.",
+                "explanation": "This is wrong because after will use the base form, so change carries to carry."
+              },
+              {
+                "id": "c",
+                "text": "Our team will carry out a safety check before the event opens.",
+                "explanation": "This is correct because carry out is followed directly by the task noun phrase."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Only one option uses carry out with correct grammar and collocation."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In 'The team will account for each device by matching its label with the inventory record,' what does 'account for' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The team will purchase a replacement for each device.",
+                "explanation": "This is wrong because purchasing replacements does not check that each device is included in the inventory record."
+              },
+              {
+                "id": "b",
+                "text": "The team will check that every device is included in the inventory record by matching its label.",
+                "explanation": "This is correct because it paraphrases making sure each device is counted or recorded."
+              },
+              {
+                "id": "c",
+                "text": "The team will share each device with another laboratory.",
+                "explanation": "This is wrong because sharing a device does not check that each device is included in the inventory record."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "In this sentence, account for means making sure each device is included in the inventory record."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the natural sentence using 'account for'.",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The manager must account for every laptop at the end of the month.",
+                "explanation": "This is correct because account for can mean making sure every listed laptop is included in the count or record."
+              },
+              {
+                "id": "b",
+                "text": "The manager must account every laptop at the end of the month.",
+                "explanation": "This is wrong because the fixed phrase requires for, so add for after account."
+              },
+              {
+                "id": "c",
+                "text": "The manager must accounts for every laptop at the end of the month.",
+                "explanation": "This is wrong because after must use the base form, so change accounts to account."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only a uses account for naturally to mean checking that all listed laptops are included in the record."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t1",
+            "prompt": "You are a volunteer organizing a neighbourhood recycling drive. Write 2-3 sentences to a friend explaining what task your group will perform next weekend. Use the phrase 'carry out'.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "sampleAnswer": "Our volunteer group will carry out a door-to-door survey about recycling habits on Saturday. We will then share the results at the community meeting on Sunday.",
+            "selfCheck": [
+              "My message has 2-3 sentences.",
+              "I used a natural form of carry out to describe performing a task.",
+              "My role and situation are different from a laboratory audit."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewerType": "ai-assisted-editor",
+      "note": "gpt-6-luna + gpt-6.1-sol; Codex editorial consolidation; 2026-10-27T07:33:12.821Z. Full-pack cross-model review at this exact stableJSON pack hash: Luna first/re-review and Sol final. Every source, meaning EN/VI, exercise option, explanation, answer key, transfer and self-check was reviewed. Rights rely on author-supplied provenance; AI-assisted editorial review only, not independent human or learner review, independent rights verification, or evidence of learning efficacy.",
+      "checks": {
+        "rights": true,
+        "meaning": true,
+        "uniqueAnswers": true,
+        "explanations": true
+      },
+      "findings": []
+    }
+  },
+  "sha256": "bc3b500a25f9c0220febbcadf5dd1ed6755b757851c73ff545496eaac88997fd"
+}

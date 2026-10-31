@@ -1,0 +1,28 @@
+{
+  "createdAt": "2026-10-27T08:14:11.944Z",
+  "kind": "local-editorial-revision",
+  "rawMetaCandidate": "city-bus-temporary-diversion-candidate.json",
+  "rawMetaCandidatePackSha256": "fb5d05efcb59ff974fe32797f5192f703d59eaecb5b8c4d9f7b9d8985e1fd8f6",
+  "editedCandidate": "city-bus-temporary-diversion-candidate-editorial-v1.json",
+  "editedPackSha256": "caa5a1760250187133c78395bb5e0ed4db18ee009b2ec7cc31b798876c23ab78",
+  "editor": "Codex AI-assisted editor",
+  "providerCallsForRevision": 0,
+  "changes": [
+    {
+      "id": "city-bus-temporary-diversion-edit-1",
+      "reason": "Replaced an implausible inspectors-leave-the-city distractor with a credible contrast between a diversion being valid and merely remaining listed on a notice."
+    },
+    {
+      "id": "city-bus-temporary-diversion-edit-2",
+      "reason": "Made distractors natural readings of free/access while preserving a clear stairs-versus-fare distinction and avoiding a duplicate response."
+    },
+    {
+      "id": "city-bus-temporary-diversion-edit-3",
+      "reason": "Replaced the uncertain countability-based article distractor with objective singular agreement and preposition errors while retaining the target phrase in every option."
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

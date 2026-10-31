@@ -1,0 +1,350 @@
+{
+  "stage": "band-7",
+  "batchId": "wave-4",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "normalizationFindings": [],
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 2969,
+        "outputTokens": 3560,
+        "totalTokens": 6529
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-28-wave-4-v2",
+      "writingSpeaking": "ielts-practice-2026-10-28-wave-4-v2"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "App Data and Bus Demand",
+      "focus": "Limits of evidence and cautious interpretation",
+      "part": "Part 3",
+      "script": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 distinct journey searches once repeated searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "wordCount": 367
+    },
+    "reading": {
+      "title": "Can One Study Speak for Many Schools?",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "wordCount": 427
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-4-band-7-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "App Data and Bus Demand",
+      "pathwayStage": "band-7",
+      "focus": "Limits of evidence and cautious interpretation",
+      "transcript": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 distinct journey searches once repeated searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "prompt": "What do the students say about the dataset size?",
+      "options": [
+        "It contains 12,000 separate journeys",
+        "It contains 8,000 distinct journey searches",
+        "It covers 8,000 individual taps",
+        "It covers 12,000 regular users"
+      ],
+      "answer": 1,
+      "explanation": "The script corrects trips to taps and gives 8,000 distinct journey searches. The first option confuses taps with journeys."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "App Data and Bus Demand",
+      "pathwayStage": "band-7",
+      "focus": "Limits of evidence and cautious interpretation",
+      "transcript": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 distinct journey searches once repeated searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "prompt": "Why might app users misrepresent all bus passengers?",
+      "options": [
+        "They mostly travel outside the centre",
+        "They rarely search before travelling",
+        "They are mainly younger regular commuters",
+        "They tend to be younger and tech-comfortable"
+      ],
+      "answer": 3,
+      "explanation": "Jonas says users tend to be younger and tech-comfortable. The commuter option overclaims regularity not stated."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "App Data and Bus Demand",
+      "pathwayStage": "band-7",
+      "focus": "Limits of evidence and cautious interpretation",
+      "transcript": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 distinct journey searches once repeated searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "prompt": "What limitation do Chen and Alvarez identify?",
+      "options": [
+        "Searches do not confirm actual boarding",
+        "Cards record searches inaccurately",
+        "Users never check multiple times",
+        "Walking is rarely an alternative"
+      ],
+      "answer": 0,
+      "explanation": "The authors stress a search may end in walking, not boarding. The multiple-checks option misstates this distinction."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "App Data and Bus Demand",
+      "pathwayStage": "band-7",
+      "focus": "Limits of evidence and cautious interpretation",
+      "transcript": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 distinct journey searches once repeated searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "prompt": "What was found on Routes 42 and 18?",
+      "options": [
+        "Weekday match was close; weekend evenings overestimated",
+        "Weekend match was exact; weekdays underestimated",
+        "Both periods matched within 10%",
+        "Evening data was missing for March"
+      ],
+      "answer": 0,
+      "explanation": "Weekdays matched within 10% but weekend evenings were overestimated by a third. The second option reverses that pattern."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "App Data and Bus Demand",
+      "pathwayStage": "band-7",
+      "focus": "Limits of evidence and cautious interpretation",
+      "transcript": "Maya: So our seminar project is on whether phone app records can help estimate demand for buses. I found a dataset from TransitApp users in our city — about 12,000 trips — sorry, I mean taps, not trips. That works out to roughly 8,000 distinct journey searches once repeated searches are merged. Jonas: Right, so it's a large sample, but is it representative? App users tend to be younger and more comfortable with technology, so older passengers or occasional riders might rarely appear. Maya: Exactly. The reading by Chen and Alvarez makes that point. They say app logs show intended searches very well, but they don't prove someone boarded. A person might check three departure times and then decide to walk instead. Jonas: So we can't treat a search as a completed ride. Did they suggest any correction? Maya: They linked a subset of searches to smart-card boardings on two routes, Route 42 and Route 18, during March last year. On weekdays the match was fairly close, within about 10%, but at weekends the app overestimated evening travel by almost a third. Jonas: That's a big gap. Was that because of leisure trips? Maya: Partly. They argue weekend plans change more often, and tourists use the app without having a local travel card, so they disappear from the boarding data. It doesn't mean the app is useless, just that its error varies by context. Jonas: That matters for our proposal. If the council wants to add late-night buses on Fridays, app data alone could be misleading. Maya: Agreed. The authors recommend combining sources — app searches for timing patterns, plus ticket sales and driver counts for volume. They also warn against generalising from the city centre, where phone coverage and app use are highest, to outer suburbs with lower smartphone use and less frequent services. Jonas: So our conclusion should be qualified: app data can reveal when and where people consider travelling, especially on weekdays in central areas, but it cannot by itself measure total demand or justify service cuts elsewhere. Maya: Perfect. Let's structure it that way — strengths, then limits, then a combined method, with the Route 42 and 18 comparison as our main example.",
+      "prompt": "What approach do the authors recommend?",
+      "options": [
+        "Replace ticket data with app data",
+        "Use app data only in suburbs",
+        "Combine app patterns with boarding counts",
+        "Avoid app data for central areas"
+      ],
+      "answer": 2,
+      "explanation": "They advise app searches for timing plus tickets and counts for volume. The first option contradicts this combined approach."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can One Study Speak for Many Schools?",
+      "pathwayStage": "band-7",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "prompt": "What did the synthesis find overall?",
+      "options": [
+        "An average gain of three additional months of progress",
+        "Gains above five months everywhere",
+        "No difference in most sites",
+        "Uniform improvement across schools"
+      ],
+      "answer": 0,
+      "explanation": "The passage gives a three-month average with wide variation. The uniform option ignores the reported spread."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can One Study Speak for Many Schools?",
+      "pathwayStage": "band-7",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "prompt": "Why might volunteer schools overstate effects?",
+      "options": [
+        "They had more stable staffing and training attendance",
+        "They enrolled only high-attaining pupils",
+        "They received larger cash incentives",
+        "They excluded control groups entirely"
+      ],
+      "answer": 0,
+      "explanation": "Lower turnover and higher training attendance aided delivery. The high-attainer claim adds selection not mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can One Study Speak for Many Schools?",
+      "pathwayStage": "band-7",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "prompt": "How does the author use the Year 6 case?",
+      "options": [
+        "As proof that rooms cause higher scores",
+        "An illustration of implementation differences",
+        "As claim that volunteers always fail",
+        "As average result across trials"
+      ],
+      "answer": 1,
+      "explanation": "The text frames the case as illustration, not causal proof. The rooms option overstates the author's claim."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can One Study Speak for Many Schools?",
+      "pathwayStage": "band-7",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "prompt": "What can reasonably be inferred about savings?",
+      "options": [
+        "Existing staff always guarantee lower costs",
+        "Overtime never affected programme budgets",
+        "Savings occurred only with genuinely spare staff capacity",
+        "Cost data were identical in all schools"
+      ],
+      "answer": 2,
+      "explanation": "Savings held only where spare time existed and costs rose otherwise. The always-guarantee option extends beyond that limit."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Can One Study Speak for Many Schools?",
+      "pathwayStage": "band-7",
+      "focus": "Generalising from multi-site education research",
+      "passage": "Education researchers often test a tutoring programme in several schools and then ask whether the average result can guide policy elsewhere. A recent synthesis of 28 multi-site trials of small-group mathematics support offers a useful caution. Overall, pupils gained an average of three additional months of progress compared with control groups. That headline figure, however, hides wide variation: in nine sites the benefit exceeded five months, in eleven it was between one and three months, and in eight there was little or no measurable difference. The authors argue that such spread is normal when teaching depends on timetables, staffing and pupil attendance, and should not be dismissed as statistical noise. They stress that averages alone can mislead when site conditions differ markedly, and that transparent reporting helps readers see where effects held and where they faded. A key issue is who takes part. Schools that volunteer for trials often have stable leadership and extra administrative support. In the synthesis, volunteer schools had lower staff turnover and higher attendance at training sessions than typical schools in the same districts. If those conditions help tutors deliver sessions as planned, then results from willing volunteers may overstate what would happen under routine pressures. The review therefore distinguishes between what worked in the study sample and what might work across a whole system. A second issue concerns delivery. Programmes described by the same label differed in practice. One widely cited example involved Year 6 pupils receiving 30-minute sessions three times per week for twelve weeks. In some schools, sessions were led by trained teaching assistants in quiet rooms; in others, they were led by rotating volunteers in corridors or shared halls, with frequent cancellations before examinations. Unsurprisingly, the first arrangement showed stronger gains. The authors present this case not as proof that room location alone causes success, but as an illustration of how implementation quality shapes outcomes. Training logs, session records and attendance figures, they suggest, should accompany headline gains so future schools can judge fit. Finally, the synthesis questions broad claims about cost-effectiveness. Two evaluations reported savings because schools used existing staff rather than hiring new tutors. That finding applied only where spare staff time genuinely existed. Where schools paid overtime or reduced other support, costs rose sharply. To generalise responsibly, the authors recommend reporting the range of site results alongside the average, describing staffing and attendance conditions in detail, and testing the programme in a second round that includes less-advantaged schools. Only with that fuller picture, they conclude, can policymakers judge whether an encouraging average is likely to travel.",
+      "prompt": "What do the authors recommend for policymakers?",
+      "options": [
+        "Report averages without site ranges",
+        "Rely on first-round volunteers alone",
+        "Adopt programmes based on headlines",
+        "Show ranges, conditions, and retest broadly"
+      ],
+      "answer": 3,
+      "explanation": "They call for ranges, detailed conditions and retesting in less-advantaged schools. Omitting ranges contradicts that recommendation."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-4-band-7-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Describing forecast accuracy data",
+      "pathwayStage": "band-7",
+      "focus": "nuanced inference and precise evaluation without overclaiming",
+      "prompt": "The table below shows the predicted chance of severe flooding and the actual outcome for three coastal towns in the country of Meridia over two storm seasons. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Data: Predicted risk for 2022 season - Port Alan 60%, Dunmore 35%, Kestrel Bay 20%; Actual flooding in 2022 - Port Alan Yes, Dunmore No, Kestrel Bay No. Predicted risk for 2023 season - Port Alan 45%, Dunmore 40%, Kestrel Bay 30%; Actual flooding in 2023 - Port Alan No, Dunmore Yes, Kestrel Bay No. A survey note adds: 68% of residents in Port Alan said they ignored the 2023 warning because the 2022 warning had worried them unnecessarily.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Comparing visitor access and conservation spending",
+      "pathwayStage": "band-7",
+      "focus": "competing evidence and scope limits in describing trends",
+      "prompt": "The charts below show visitor numbers (in thousands) and annual conservation spending (in thousand dollars) at two historic sites, Old Harrow Fort and Lina Temple, from 2019 to 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. Data: Old Harrow Fort visitors - 2019: 120, 2020: 45, 2021: 80, 2022: 150, 2023: 180; spending - 2019: 200, 2020: 180, 2021: 190, 2022: 210, 2023: 220. Lina Temple visitors - 2019: 90, 2020: 30, 2021: 50, 2022: 70, 2023: 85; spending - 2019: 150, 2020: 160, 2021: 210, 2022: 260, 2023: 300. A site report notes minor wall damage increased at Old Harrow Fort in 2023, while Lina Temple reported no new damage.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Communicating uncertain environmental forecasts",
+      "pathwayStage": "band-7",
+      "focus": "causality limits and careful evaluation of competing approaches",
+      "prompt": "Some people argue that weather agencies should give a single clear warning even when forecasts are uncertain, while others believe agencies should explain the range of possible outcomes and how likely each is. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Whether universities should share research data",
+      "pathwayStage": "band-7",
+      "focus": "weighing competing evidence and scope of claims",
+      "prompt": "Many universities collect large sets of research data on topics such as climate, health, and agriculture. Some people think all publicly funded university research data should be freely shared with other researchers and the public, while others think universities should be allowed to restrict access to protect quality and future work. To what extent do you agree or disagree that publicly funded data should be openly shared? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Balancing access with conservation at historic sites",
+      "pathwayStage": "band-7",
+      "focus": "nuanced inference about causes and precise evaluation of solutions",
+      "prompt": "Historic sites attract many visitors, which supports local jobs but can damage old buildings and landscapes. Some suggest limiting visitor numbers and raising entry fees to protect these places, while others argue that historic sites belong to everyone and should remain fully open and affordable. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-4-band-7-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Daily news and weather information",
+      "pathwayStage": "band-7",
+      "focus": "personal experience with uncertain forecasts",
+      "prompt": "Part 1. I will ask you some questions about yourself and everyday life. How do you usually check the weather forecast? How often do you find forecasts uncertain or unclear? What do you do when a forecast says it might rain or storm? Do you think weather warnings in your area are easy to understand?"
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Visiting historic places",
+      "pathwayStage": "band-7",
+      "focus": "personal habits and access preferences",
+      "prompt": "Part 1. Let us talk about historic places. Have you visited any old buildings, temples, or historic towns? What did you enjoy most about the visit? Do you prefer to visit popular historic sites or quieter, less-known ones? Would you be willing to book in advance if it helped protect a site?"
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: Explaining an uncertain forecast",
+      "pathwayStage": "band-7",
+      "focus": "organised description with careful language about likelihood",
+      "prompt": "Part 2. Take one minute to prepare and speak for one to two minutes. Describe a time when you heard an uncertain forecast about weather or the environment. You should say: • what the forecast was about and where you heard it • how the uncertainty was explained • what you and others decided to do • and explain whether you thought the communication was effective."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card: A historic site you visited",
+      "pathwayStage": "band-7",
+      "focus": "description balancing enjoyment and conservation awareness",
+      "prompt": "Part 2. Take one minute to prepare and speak for one to two minutes. Describe a historic site you have visited or would like to visit. You should say: • where the site is and what is special about it • what visitors can see and do there • what problems too many visitors might cause • and explain how access and protection could be balanced at this site."
+    },
+    {
+      "id": "ielts-meta-wave-4-band-7-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Sharing research and managing public knowledge",
+      "pathwayStage": "band-7",
+      "focus": "reasons and evaluation, not memorised facts",
+      "prompt": "Part 3. Let us discuss research and public information more generally. Why might universities hesitate to share their research data openly? What are the possible benefits and risks of making scientific data freely available? How should uncertain scientific findings be communicated to the public without causing confusion or panic? Who should be responsible for explaining limits in the evidence?"
+    }
+  ]
+}

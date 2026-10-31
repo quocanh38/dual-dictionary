@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "a9ccaa996c1c3aa67ff4ccea2470a2f4d36cbfab6091d1a5d1a3cf6e06a35210",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex coding assistant",
+  "reviewedAt": "2026-10-27T01:33:35.242Z",
+  "note": "AI-assisted editorial review of all targets, options, explanations and transfer. Not independent human review, learner effectiveness evidence or certification. Manual corrections retain original Meta generation metadata and separate before/after evidence. No approval action performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Original short reading drafted within this project with AI assistance; author/rights statement recorded; no copied exam text, external source or personal learner data in the reading."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "allocate resources occurs verbatim in s1: The university library will allocate resources to extend its evening opening hours."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Reviewed contextual gloss: to provide money, staff, or time for a particular purpose. It states the phrase meaning, not a reason to choose it."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Reviewed Vietnamese meaning: phân bổ nguồn lực. Fits the cited context and contains diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "meet the deadline occurs verbatim in s2: A student group must meet the deadline for submitting its survey findings."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Reviewed contextual gloss: to finish or submit something by the required time. It states the phrase meaning, not a reason to choose it."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Reviewed Vietnamese meaning: hoàn thành đúng thời hạn. Fits the cited context and contains diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a defines assigning support for longer hours; b defines reducing services and c shelf organization, neither is the phrase meaning."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a links to library support; b now avoids claiming resource allocation always opposes service cuts; c distinguishes organization from resource assignment."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is correct. a incorrectly uses organizing after infinitival to; c incorrectly uses bare organize after for. Both distractors now have objective errors, independent of activity or intention."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each wrong option names its correction: to organize or for organizing; b explains the purposeful assignment of resources."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c means completing/submitting by the required time. a merely discusses the deadline; b postpones it. Neither defines meeting a deadline."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations distinguish submission on time from discussion and postponement; Vietnamese has diacritics."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is correct. b uses meeted instead of irregular past met. c lacks a determiner before singular deadline. Prior late-submission/cafe alternatives removed."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations identify the wrong past form and missing determiner, without assuming what friends or cafe imply."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Shop assistant messaging a manager about stock replaces student survey submission; purpose and role both change."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence polite stock-list message uses meet the deadline naturally; checklist checks phrase, changed setting and register; no language grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "pack-finding-1",
+      "severity": "critical",
+      "resolved": true,
+      "evidence": "q2 subjective coffee/leisure distractors replaced by to organizing / for organize errors. Full rerun also replaced ambiguous q4 cafe/late alternatives with meeted / missing determiner errors. Original output retained."
+    }
+  ]
+}

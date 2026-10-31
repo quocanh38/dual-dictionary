@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "e841bd0cc9935c3338b2221e08077568498c9ab7b6ba4ab9a5739f83b686a811",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-astra — independent AI-assisted editorial audit",
+  "reviewedAt": "2026-10-27T04:15:46.260Z",
+  "note": "Independent full-content review of this exact candidate payload. Configured reviewer model identity: gpt-6-astra; this is not independently verified Meta provider identity and is not human review. Prior standalone review files and other models’ findings were not read. Required process and board were read; embedded pack review metadata was visible and its legacy findings are explicitly assessed. No Meta calls, candidate edits, approval, import QA or deployment performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Accepted the project’s explicit original AI-assisted source and rights declaration for this editorial gate. Text inspected contains generic fictional contexts and no learner personal data, external attributed excerpt or copied exam branding. This is not an independent authorship investigation or legal certification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "The exact phrase carry out a survey occurs in s1. The reading concerns research into transport choices, supporting the questionnaire/information-collection sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Conducting a survey by asking questions is an accurate contextual gloss for this transport-choice survey. It is not presented as a definition of every technical sense of survey."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Tiến hành một cuộc khảo sát is the natural Vietnamese equivalent and includes correct diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "The exact phrase draw a distinction between occurs in s2 and separates occasional visitors from daily commuters."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Recognizing and showing the difference between things accurately captures the contextual act of differentiating groups."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Phân biệt sự khác nhau giữa conveys the intended distinction with correct diacritics. It is slightly redundant but understandable and acceptable as a short phrase gloss; it does not reverse or narrow the sense."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: incorrect. Looking at final results after a finished survey is not the meaning of carrying it out. b: correct. Conducting a survey to collect information by asking questions matches the transport research context. c: incorrect. Cancelling a survey contrasts with carrying it out."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations correctly distinguish conducting, later examination of final results and cancellation. Doing and completing expresses the normal carry-out sense here; the source future tense does not falsely claim the survey has already finished. Overall explanation matches the context."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: correct. Carried out a survey about lunch choices is natural standard English. b: incorrect. In lunch choices is not the topic complement intended here; about or on lunch choices repairs it. c: incorrect. The singular count survey in this complete sentence requires a determiner; adding a repairs it."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "The b explanation explicitly allows both about and on, avoiding a false exclusive-about rule. The c explanation gives a valid minimal repair; a is correctly explained. Overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: incorrect. Ignoring differences reverses the intended act of distinguishing. b: incorrect. Inviting people to travel together is a different act, regardless of whether distinguished groups could also share a bus. c: correct. Recognizing and showing the difference is the contextual sense."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All explanations concern meaning, not an unjustified claim that the two groups cannot travel together. Visitors and daily workers are serviceable short contextual labels for the stated groups. Overall explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a: incorrect. The intended two groups are connected with between A and B; to does not express that pairing here. b: correct. Draws a distinction between short-term visitors and daily commuters has the correct collocation, agreement and two-group complement. c: incorrect. Draws distinction omits a in the standard expression draw a distinction between these two groups."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All three option explanations correctly address the two-group comparison and the missing article. The overall explanation selects b consistently. No alternate intended answer is defensible in this ordinary complete sentence."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "The source concerns researchers and transport groups. The learner becomes a student explaining borrowing rules to a new classmate, changing recipient, domain and communicative purpose."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The model contains two sentences including the greeting. It correctly uses the exact target and between A and B, then explains the borrowing difference with clear relative clauses. A two-week loan period is a plausible invented detail within the fictional school situation. The phrase is somewhat formal but compatible with a helpful school explanation; this is not grounds to mark it wrong. The checklist covers phrase, two things and their difference, length and audience tone. No automatic grade is claimed."
+    }
+  ],
+  "findings": [],
+  "candidateFile": "docs/lesson-studio-evidence/quality-cycle-2026-10-27/candidates/3-v3.json",
+  "candidateFileSha256": "98a35294db2db61d6f8d2a99eadc08cf5dab8aa6a9597247d224ec33e210de94",
+  "decision": "ready-for-approval",
+  "rightsScope": "Accepted the project’s explicit original AI-assisted source and rights declaration for this editorial gate. Text inspected contains generic fictional contexts and no learner personal data, external attributed excerpt or copied exam branding. This is not an independent authorship investigation or legal certification.",
+  "optionAudit": [
+    {
+      "exerciseId": "q1",
+      "storedCorrectOptionId": "b",
+      "verdict": "pass",
+      "overallExplanationReviewed": "The researchers will ask people questions to collect information, so b is the only correct meaning.",
+      "options": [
+        {
+          "id": "a",
+          "text": "to look at the final results after a survey is finished",
+          "explanation": "This is wrong because looking at results happens after collecting information, while the sentence describes collecting information by asking questions.",
+          "judgment": "incorrect",
+          "evidence": "Looking at final results after a finished survey is not the meaning of carrying it out."
+        },
+        {
+          "id": "b",
+          "text": "to conduct a survey by asking people questions to collect information",
+          "explanation": "This is correct because it matches asking people questions to collect information about transport (tiến hành một cuộc khảo sát).",
+          "judgment": "correct",
+          "evidence": "Conducting a survey to collect information by asking questions matches the transport research context."
+        },
+        {
+          "id": "c",
+          "text": "to cancel a survey because people do not want to answer",
+          "explanation": "This is wrong because cancelling means stopping a survey, while carrying out means doing and completing it.",
+          "judgment": "incorrect",
+          "evidence": "Cancelling a survey contrasts with carrying it out."
+        }
+      ]
+    },
+    {
+      "exerciseId": "q2",
+      "storedCorrectOptionId": "a",
+      "verdict": "pass",
+      "overallExplanationReviewed": "Only a uses correct grammar and collocation, so a is the only correct choice.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Our class carried out a survey about lunch choices last week.",
+          "explanation": "This is correct because the collocation 'carried out a survey about' and grammar are natural and correct.",
+          "judgment": "correct",
+          "evidence": "Carried out a survey about lunch choices is natural standard English."
+        },
+        {
+          "id": "b",
+          "text": "Our class carried out a survey in lunch choices last week.",
+          "explanation": "This is wrong because the preposition 'in' is incorrect and must be changed to 'about' or 'on'.",
+          "judgment": "incorrect",
+          "evidence": "In lunch choices is not the topic complement intended here; about or on lunch choices repairs it."
+        },
+        {
+          "id": "c",
+          "text": "Our class carried out survey about lunch choices last week.",
+          "explanation": "This is wrong because the article 'a' is missing and must be added before 'survey'.",
+          "judgment": "incorrect",
+          "evidence": "The singular count survey in this complete sentence requires a determiner; adding a repairs it."
+        }
+      ]
+    },
+    {
+      "exerciseId": "q3",
+      "storedCorrectOptionId": "c",
+      "verdict": "pass",
+      "overallExplanationReviewed": "They need to recognize and show the difference between two groups, so c is the only correct meaning.",
+      "options": [
+        {
+          "id": "a",
+          "text": "to ignore the differences and treat two groups as the same",
+          "explanation": "This is wrong because ignoring differences is the opposite of recognizing and showing the difference.",
+          "judgment": "incorrect",
+          "evidence": "Ignoring differences reverses the intended act of distinguishing."
+        },
+        {
+          "id": "b",
+          "text": "to invite both groups to travel together on the same bus",
+          "explanation": "This is wrong because inviting groups to travel together does not mean recognizing and showing a difference.",
+          "judgment": "incorrect",
+          "evidence": "Inviting people to travel together is a different act, regardless of whether distinguished groups could also share a bus."
+        },
+        {
+          "id": "c",
+          "text": "to recognize and show the difference between two or more things",
+          "explanation": "This is correct because they must show the difference between visitors and daily workers (phân biệt sự khác nhau giữa).",
+          "judgment": "correct",
+          "evidence": "Recognizing and showing the difference is the contextual sense."
+        }
+      ]
+    },
+    {
+      "exerciseId": "q4",
+      "storedCorrectOptionId": "b",
+      "verdict": "pass",
+      "overallExplanationReviewed": "Only b follows the natural pattern with correct grammar, so b is the only correct choice.",
+      "options": [
+        {
+          "id": "a",
+          "text": "The report draws a distinction between short-term visitors to daily commuters.",
+          "explanation": "This is wrong because 'to' is incorrect and must be changed to 'and' in the pattern 'between A and B'.",
+          "judgment": "incorrect",
+          "evidence": "The intended two groups are connected with between A and B; to does not express that pairing here."
+        },
+        {
+          "id": "b",
+          "text": "The report draws a distinction between short-term visitors and daily commuters.",
+          "explanation": "This is correct because it uses the natural pattern 'draws a distinction between A and B' with two comparable noun phrases.",
+          "judgment": "correct",
+          "evidence": "Draws a distinction between short-term visitors and daily commuters has the correct collocation, agreement and two-group complement."
+        },
+        {
+          "id": "c",
+          "text": "The report draws distinction between short-term visitors and daily commuters.",
+          "explanation": "This is wrong because the article 'a' is missing and must be added before 'distinction'.",
+          "judgment": "incorrect",
+          "evidence": "Draws distinction omits a in the standard expression draw a distinction between these two groups."
+        }
+      ]
+    }
+  ],
+  "transferAudit": {
+    "exerciseId": "q5",
+    "type": "transfer",
+    "targetId": "t2",
+    "prompt": "You are a student helping a new classmate understand the school library. Write 2-3 sentences explaining the difference between regular books you can borrow and reference books you can only read in the library. Use the phrase 'draw a distinction between'.",
+    "sourceSentenceIds": [
+      "s2"
+    ],
+    "sampleAnswer": "Welcome to our school library! I want to draw a distinction between regular books, which you can borrow for two weeks, and reference books, which you can only read in the library.",
+    "selfCheck": [
+      "I used the exact phrase 'draw a distinction between'.",
+      "I named two different things and explained the difference.",
+      "I wrote 2-3 sentences in a friendly, helpful tone for a classmate."
+    ],
+    "explanation": "Compare with the model and self-assess; no automatic grade.",
+    "newSituationEvidence": "The source concerns researchers and transport groups. The learner becomes a student explaining borrowing rules to a new classmate, changing recipient, domain and communicative purpose.",
+    "modelAndChecklistEvidence": "The model contains two sentences including the greeting. It correctly uses the exact target and between A and B, then explains the borrowing difference with clear relative clauses. A two-week loan period is a plausible invented detail within the fictional school situation. The phrase is somewhat formal but compatible with a helpful school explanation; this is not grounds to mark it wrong. The checklist covers phrase, two things and their difference, length and audience tone. No automatic grade is claimed."
+  },
+  "references": []
+}

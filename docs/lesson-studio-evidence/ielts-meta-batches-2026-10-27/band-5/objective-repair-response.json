@@ -1,0 +1,20 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-batch-2026-10-27-v2",
+  "completedAt": "2026-10-27T12:36:32.692Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2250,
+    "outputTokens": 470,
+    "totalTokens": 2720
+  },
+  "latencyMs": 3999,
+  "result": {
+    "listeningPart": "Part 1",
+    "reason": "Two-speaker everyday service conversation about joining the seed library, borrowing limits and workshop details, not a single-speaker academic monologue, so Part 1 fits."
+  }
+}

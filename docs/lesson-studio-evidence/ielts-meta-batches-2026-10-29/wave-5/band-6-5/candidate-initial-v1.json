@@ -1,0 +1,340 @@
+{
+  "stage": "band-6-5",
+  "batchId": "wave-5",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "normalizationFindings": [
+    "Listening answer positions do not cover all four options.",
+    "Reading answer positions do not cover all four options."
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-5-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-5-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Comparing Shade Interventions in Two School Playgrounds",
+      "focus": "Comparing effectiveness and limitations of shade interventions",
+      "part": "Part 3",
+      "script": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+      "wordCount": 314
+    },
+    "reading": {
+      "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+      "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+      "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+      "wordCount": 408
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-5-band-6-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Shade Interventions in Two School Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and limitations of shade interventions",
+      "transcript": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+      "prompt": "What did each school install as a shade intervention?",
+      "options": [
+        "Northwood planted trees; Eastfield built sails",
+        "Northwood installed sails; Eastfield planted trees and a pergola",
+        "Both schools installed identical shade sails",
+        "Both schools relied only on existing buildings"
+      ],
+      "answer": 1,
+      "explanation": "The script states Northwood installed three sails and Eastfield planted trees plus a pergola. The first distractor reverses the schools."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Shade Interventions in Two School Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and limitations of shade interventions",
+      "transcript": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+      "prompt": "What temperature difference was found at Northwood?",
+      "options": [
+        "Surface under sails was about 8 degrees cooler",
+        "Air temperature rose by 8 degrees",
+        "No measurable temperature change occurred",
+        "Trees cooled the area more than sails"
+      ],
+      "answer": 0,
+      "explanation": "Liam reports surfaces under sails were about eight degrees lower than exposed asphalt. The last option misattributes the effect to trees."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Shade Interventions in Two School Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and limitations of shade interventions",
+      "transcript": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+      "prompt": "Why might Eastfield's usage figure be understated?",
+      "options": [
+        "Teachers forced children into the sun",
+        "Monitoring included three rainy days",
+        "Only 35% of children were counted",
+        "The pergola was closed for repair"
+      ],
+      "answer": 1,
+      "explanation": "Liam qualifies the 45% figure by noting three rainy days during Eastfield's monitoring. The teacher-direction point inflated Northwood's figure, not Eastfield's."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Shade Interventions in Two School Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and limitations of shade interventions",
+      "transcript": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+      "prompt": "What limits the parent satisfaction comparison?",
+      "options": [
+        "Northwood parents were not surveyed",
+        "Eastfield had a low response rate of 35%",
+        "Both schools had identical satisfaction levels",
+        "Surveys were conducted in different years"
+      ],
+      "answer": 3,
+      "explanation": "Maya notes Eastfield's 62% satisfaction came from only a 35% response rate, limiting comparability. The identical-levels option contradicts the reported 80% vs 62%."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 3",
+      "type": "choice",
+      "title": "Comparing Shade Interventions in Two School Playgrounds",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing effectiveness and limitations of shade interventions",
+      "transcript": "Tutor: So, how did your comparison of the two playground projects go?\nMaya: We looked at Northwood and Eastfield primary schools to compare how different shade interventions affected playground use and heat exposure.\nLiam: Northwood installed three large shade sails over the main play area last summer. Eastfield planted twelve fast-growing trees and built a wooden pergola near the classrooms.\nMaya: We measured surface temperature, UV index, and counted children using shaded areas during lunch breaks over two weeks in September.\nTutor: And what did you find?\nLiam: Northwood showed an immediate drop in surface temperature – about eight degrees lower under the sails compared to exposed asphalt.\nMaya: Eastfield's trees provided less coverage initially, only about forty percent of the target area, but the pergola was very popular with students eating lunch.\nTutor: Interesting. Did usage differ between the schools?\nMaya: Yes, at Northwood, sixty-eight percent of children stayed under the sails during peak sun, versus forty-five percent at Eastfield.\nLiam: But we need to be careful – Eastfield's monitoring period included three rainy days, so usage figures might be understated.\nMaya: Also, teachers at Northwood actively directed children to shade, which could inflate the numbers.\nTutor: So you can't claim sails are definitively more effective?\nLiam: Exactly. The data suggests sails give faster protection, while trees may offer longer-term benefits like cooling surrounding air, not just surface temperature.\nMaya: We also surveyed parents – eighty percent at Northwood reported satisfaction, compared to sixty-two percent at Eastfield. Though Eastfield's survey had a low response rate, only thirty-five percent.\nTutor: Good point about limitations. What's your conclusion for the report?\nLiam: That short-term, manufactured shade works quickly, but natural shade needs time and ongoing maintenance to be effective.\nMaya: And we'll present next Tuesday – sorry, Wednesday – in the seminar.\nTutor: Wednesday, yes. Make sure to highlight those qualifications in your discussion section.",
+      "prompt": "When will the students present their findings?",
+      "options": [
+        "On Tuesday as originally planned",
+        "On Wednesday after a correction",
+        "On Thursday after rescheduling",
+        "On Friday in the seminar"
+      ],
+      "answer": 1,
+      "explanation": "Maya corrects herself from Tuesday to Wednesday, which the tutor confirms. The Tuesday option ignores the self-correction."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+      "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+      "prompt": "Why was the Lower Reach left unrestored?",
+      "options": [
+        "To provide a comparison for the Upper Reach",
+        "Because restoration funds were insufficient",
+        "To test a different restoration method",
+        "Due to lack of ecological value"
+      ],
+      "answer": 0,
+      "explanation": "The passage states the Lower Reach served as a comparison for the restored Upper Reach. The funds option is not mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+      "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+      "prompt": "What caused the uneven monitoring between reaches?",
+      "options": [
+        "Different researchers monitored each reach",
+        "Quarterly access limits and logger failure",
+        "Upper Reach was sampled only in winter",
+        "Lower Reach had more frequent sampling"
+      ],
+      "answer": 1,
+      "explanation": "The passage cites quarterly sampling due to permission delays and logger failure in August-September. The last option reverses the frequency."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+      "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+      "prompt": "How do authors interpret the 1.2°C cooling?",
+      "options": [
+        "Definitive proof willows cooled the stream",
+        "Possibly from willows but limited by gaps and weather",
+        "Caused entirely by a cooler summer",
+        "No change occurred at either reach"
+      ],
+      "answer": 1,
+      "explanation": "Authors attribute cooling to willows but qualify it with incomplete data and a cooler summer overall. The definitive-proof option ignores those qualifications."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+      "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+      "prompt": "What is the role of the March 2022 flood?",
+      "options": [
+        "Central claim that restoration failed",
+        "Example of natural variability, not failure",
+        "Evidence of long-term ecological decline",
+        "Proof that monitoring was unnecessary"
+      ],
+      "answer": 1,
+      "explanation": "The flood is explicitly framed as an example of variability, distinct from the central claim of modest likely improvement. The failure option confuses example with claim."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Estimating Stream-Restoration Outcomes from Uneven Monitoring",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating restoration effects with patchy data and qualified conclusions",
+      "passage": "Willow Creek, a small urban stream in the northwest, underwent restoration in early 2021. The project aimed to improve ecological health by re-meandering a straightened 800-metre section (the Upper Reach), planting native willows along the banks, and adding gravel beds to encourage invertebrate habitat. A downstream 600-metre section (the Lower Reach) was left unrestored to serve as a comparison. Researchers from the regional university monitored both reaches from June 2021 to December 2022.\n\nMonitoring, however, was uneven. The Upper Reach was accessible and sampled monthly for water temperature, flow, and macroinvertebrate diversity. The Lower Reach, bordered by private farmland, could only be sampled quarterly after permission delays. In addition, automated temperature loggers at both sites failed during August and September 2022, leaving a gap during the hottest period. This patchiness complicates direct comparison.\n\nResults initially appear promising. At the Upper Reach, the average number of macroinvertebrate families rose from 14 to 17 per sample, an increase of about 22%, while the Lower Reach showed little change, remaining at 13 to 14 families. Water temperature in the Upper Reach was on average 1.2°C lower in summer 2022 than in summer 2021, which the authors attribute to increased shading from the young willows. The Lower Reach showed no significant temperature change.\n\nThe authors, however, qualify these findings. They note that the temperature difference is based on incomplete data due to logger failure, and that 2022 was a cooler summer overall, so some cooling may reflect weather rather than restoration. They also point out that macroinvertebrate sampling at the Lower Reach was too infrequent to detect seasonal variation, making the apparent stability uncertain.\n\nTo illustrate the problem of short-term events, the authors describe a flash flood in March 2022 that scoured the Upper Reach, temporarily reducing invertebrate counts by 40% for one month before recovery. This event is presented as an example of natural variability, not as evidence that restoration failed. The authors' central claim is that restoration likely contributed to modest ecological improvement, but that uneven monitoring prevents firm conclusions about the magnitude of change.\n\nThey recommend that future projects ensure balanced sampling schedules and backup sensors, and that conclusions be framed as tentative until longer, more consistent datasets are available. Early engagement with landowners could prevent access restrictions that limited Lower Reach sampling, and publishing raw datasets with explicit gap annotations would help others evaluate uncertainty. Without such steps, apparent differences between restored and unrestored sites may be overstated.",
+      "prompt": "What can be inferred about future evaluations?",
+      "options": [
+        "They should be tentative without balanced, longer data",
+        "They will always show 22% diversity gains",
+        "Access restrictions improve data quality",
+        "Single flood events prove restoration success"
+      ],
+      "answer": 0,
+      "explanation": "The authors recommend tentative conclusions until longer consistent datasets and balanced schedules exist. The 22% option overgeneralizes one result."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-5-band-6-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Schoolyard Shade Proposals Comparison",
+      "pathwayStage": "band-6-5",
+      "focus": "Summarising trade-offs across cost, time to shade and maintenance",
+      "prompt": "The table below shows council estimates in 2024 for shade options at three primary schools. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. You should spend about 20 minutes on this task.\n\nEstimated Shade Options by School (USD):\nNorthview Primary - Plant trees: initial cost 18,000, years until full shade 4, annual maintenance 1,200; Fabric canopies: initial cost 32,000, years until full shade 0.5, annual maintenance 2,800.\nLakeside Primary - Plant trees: initial cost 15,000, years until full shade 5, annual maintenance 1,000; Fabric canopies: initial cost 28,000, years until full shade 0.5, annual maintenance 2,500.\nHillcrest Primary - Plant trees: initial cost 22,000, years until full shade 3, annual maintenance 1,500; Fabric canopies: initial cost 35,000, years until full shade 0.5, annual maintenance 3,000.\nDoing nothing has no initial cost or maintenance and provides no additional shade at any school.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Public Access to Ecological Data After an Open Portal Launch",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing trends and comparing user groups over time",
+      "prompt": "The table below shows the number of ecological dataset downloads (in thousands) by user group before and after a city launched a free open-access portal in January 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. You should spend about 20 minutes on this task.\n\nDataset Downloads by User Group (thousands):\n2021 (before portal) - University researchers 45, Secondary school students 8, General public 12.\n2022 (portal launch year) - University researchers 58, Secondary school students 22, General public 31.\n2023 (one year after launch) - University researchers 62, Secondary school students 35, General public 48.\nAll figures are for the same set of 40 datasets on air quality, river health and bird counts.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Trade-offs in Schoolyard-Shade Funding",
+      "pathwayStage": "band-6-5",
+      "focus": "Evaluating competing priorities with qualified claims and evidence comparison",
+      "prompt": "Some people argue that with limited education budgets, schools should prioritise spending on shade structures such as trees or fabric canopies to protect children from heat and UV exposure, even if this means less money for books, technology or building repairs. Others say shade is less urgent than these other needs. Discuss both views, compare the types of evidence that might support each position, and give your own opinion. Acknowledge any limitations in the evidence you discuss. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Benefits and Risks of Open Ecological Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Weighing benefits against risks with careful qualification",
+      "prompt": "Many cities now publish ecological data such as air quality, river health and bird counts on free public websites. Some people believe this openness helps education and public decision-making, while others worry the data may be misunderstood or misused without expert guidance. To what extent do the benefits of open ecological data outweigh the risks? Support your answer with reasons and examples, and qualify your claims where evidence is incomplete or uncertain. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Choosing Measures for a Commuter-Satisfaction Survey",
+      "pathwayStage": "band-6-5",
+      "focus": "Comparing strengths, limitations and combinations of measures",
+      "prompt": "A transport authority wants to measure commuter satisfaction with a new bus network. It is considering three possible measures: (1) average waiting time, (2) responses to a short satisfaction questionnaire, and (3) number of complaints received. Which measure or combination of measures do you think is most useful, and why? Compare the strengths and limitations of each measure and explain how limitations could be addressed. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-5-band-6-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Outdoor Spaces and Heat at School or Work",
+      "pathwayStage": "band-6-5",
+      "focus": "Talking about personal experience with shade and outdoor comfort",
+      "prompt": "Answer the following questions about outdoor spaces. You should give short personal answers with reasons or examples.\n1. Do you spend much time outdoors during a typical school or work day?\n2. Was there enough shade in the playground or outdoor areas at your primary school?\n3. How do you usually keep cool when it is very hot outside?\n4. Do you think schools in your area provide enough protection from sun and heat?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Finding and Using Public Information",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing habits around transport and environmental information",
+      "prompt": "Answer the following questions about information you use. You should give short personal answers with reasons or examples.\n1. Where do you usually check information about buses or trains before you travel?\n2. Have you ever looked at public data about air quality, water or wildlife in your area?\n3. Do you prefer to get practical information from official websites, apps or other people?\n4. How important is it for you that public information is easy to understand?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card",
+      "pathwayStage": "band-6-5",
+      "focus": "Describing a journey and the information you used or needed",
+      "prompt": "Describe a time when you had to wait a long time for a bus or train, or when you checked transport information before travelling. You will have one minute to prepare and should speak for one to two minutes.\n\nYou should say:\n- when and where this was\n- what information you had or needed about the journey\n- what happened while you were waiting or travelling\n- and explain how you felt about the experience and what could have improved it."
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Evaluating Public Access to Ecological Data",
+      "pathwayStage": "band-6-5",
+      "focus": "Explaining reasons, balancing openness and accuracy",
+      "prompt": "Consider these questions about making ecological data public. Give reasons and evaluate different viewpoints.\n1. Why might some people find open ecological data difficult to interpret correctly?\n2. How should governments balance making data freely available with ensuring it is not misleading?\n3. What are the advantages and limitations of using public data in schools compared to expert reports?"
+    },
+    {
+      "id": "ielts-meta-wave-5-band-6-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Funding Priorities and Measuring Satisfaction",
+      "pathwayStage": "band-6-5",
+      "focus": "Discussing trade-offs and the limits of different measures",
+      "prompt": "Consider these questions about funding decisions and measuring satisfaction. Give reasons and evaluate alternatives.\n1. How should schools decide between competing needs such as shade, books and building repairs when budgets are limited?\n2. Why might waiting times, questionnaires and complaint numbers give different pictures of commuter satisfaction?\n3. What are the limitations of relying on only one measure, and how could those limitations be reduced?"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "e841bd0cc9935c3338b2221e08077568498c9ab7b6ba4ab9a5739f83b686a811",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex coding assistant",
+  "reviewedAt": "2026-10-27T01:33:35.252Z",
+  "note": "AI-assisted editorial review of all targets, options, explanations and transfer. Not independent human review, learner effectiveness evidence or certification. Manual corrections retain original Meta generation metadata and separate before/after evidence. No approval action performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Original short reading drafted within this project with AI assistance; author/rights statement recorded; no copied exam text, external source or personal learner data in the reading."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "carry out a survey occurs verbatim in s1: Researchers will carry out a survey about transport choices in a coastal town."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Reviewed contextual gloss: to conduct a survey by asking people questions to collect information. It states the phrase meaning, not a reason to choose it."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Reviewed Vietnamese meaning: tiến hành một cuộc khảo sát. Fits the cited context and contains diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "draw a distinction between occurs verbatim in s2: They must draw a distinction between occasional visitors and people who travel to work every day."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Reviewed contextual gloss: to recognize and show the difference between two or more things. It states the phrase meaning, not a reason to choose it."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Reviewed Vietnamese meaning: phân biệt sự khác nhau giữa. Fits the cited context and contains diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b is conducting a survey by asking questions. a only examines results and c cancels the survey; neither defines conducting it."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations correctly distinguish doing a survey from just looking at finished results or cancelling; Vietnamese gloss fits."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is correct; b wrongly uses in lunch choices instead of about/on; c omits a before singular survey."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanations name the two specific corrections. They allow both about and on rather than imposing only about."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c means recognizing/showing a difference; a ignores differences and b invites groups to travel together, neither defines the target."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Explanation matches visitor/commuter distinction without changing the meaning to separating people physically."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b follows between A and B; a substitutes to for and; c omits a before singular distinction."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations correctly identify the conjunction or article correction."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Helping a new classmate distinguish book types replaces researchers classifying transport respondents; audience, purpose and compared things change."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Welcome plus explanatory sentence uses draw a distinction between naturally; two book types and their borrowing rule are clear; checklist is ungraded."
+    }
+  ],
+  "findings": []
+}

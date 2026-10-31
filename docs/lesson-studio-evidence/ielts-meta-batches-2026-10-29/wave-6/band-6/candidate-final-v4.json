@@ -1,0 +1,360 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-6",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2964,
+        "outputTokens": 7604,
+        "totalTokens": 10568
+      },
+      "round": 2
+    },
+    {
+      "field": "GPT findings on Writing/Speaking prompts",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2072,
+        "outputTokens": 4256,
+        "totalTokens": 6328
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-6-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-6-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Riverside Museum Audio-Guide Trial",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "part": "Part 1",
+      "script": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "wordCount": 334
+    },
+    "reading": {
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided this plate waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. In addition, kitchen staff set aside all unserved food left after service each day, which volunteers weighed separately and added to the daily total. The team also noted the number of students eating each day, so they could calculate total waste per diner. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "wordCount": 468
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-6-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Museum Audio-Guide Trial",
+      "pathwayStage": "band-6",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "transcript": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "prompt": "What is true about the audio-guide trial?",
+      "options": [
+        "Covers only the art floor",
+        "Available until the end of May",
+        "Requires downloading an app",
+        "Costs £2 for online bookings"
+      ],
+      "answer": 1,
+      "explanation": "Script says trial runs until end of May. Distractor about app fails because Tom says no app needed, device is lent."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Museum Audio-Guide Trial",
+      "pathwayStage": "band-6",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "transcript": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "prompt": "How does the audio guide operate?",
+      "options": [
+        "Plays automatically in each room",
+        "Must be started by staff",
+        "Works only on personal phones",
+        "Offers one fixed story"
+      ],
+      "answer": 0,
+      "explanation": "Tom says it plays automatically when you enter each room. Distractor about staff fails because guide is automatic and user-controlled."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Museum Audio-Guide Trial",
+      "pathwayStage": "band-6",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "transcript": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "prompt": "What correction does Tom make?",
+      "options": [
+        "Café discount has ended",
+        "Group tour is at 10:30 not 10:00",
+        "Museum now opens earlier",
+        "Online booking is no longer free"
+      ],
+      "answer": 1,
+      "explanation": "Tom corrects website time from 10 a.m. to 10:30 a.m. Distractor about opening earlier fails because he says museum now opens later."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Museum Audio-Guide Trial",
+      "pathwayStage": "band-6",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "transcript": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "prompt": "What should Maya bring for her visit?",
+      "options": [
+        "Cash for parking",
+        "Own headphones",
+        "Printed website page",
+        "Booking reference and student ID"
+      ],
+      "answer": 3,
+      "explanation": "Tom asks for booking reference and student ID for café discount. Distractor about headphones fails because headphones are provided."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Riverside Museum Audio-Guide Trial",
+      "pathwayStage": "band-6",
+      "focus": "Everyday services and booking details with paraphrase and correction",
+      "transcript": "Tom: Good morning, Riverside Regional Museum, Tom speaking. How can I help you?\nMaya: Good morning. I'm calling about the new audio-guide trial I saw on your website. Is it still available this month?\nTom: Yes, it is. We're testing it until the end of May. It covers the local history and art floors.\nMaya: Great. How does it work? Do I need to download an app?\nTom: No app needed. We lend you a small device and headphones at the entrance. It plays automatically when you enter each room, and you can also choose extra stories.\nMaya: That sounds useful. Is there an extra charge for it?\nTom: Normally the guide costs £4, but during the trial it's free if you book online in advance. Walk-in visitors pay £2.\nMaya: I see, so online booking makes it free. What about tour times? The website said guided group tours with the audio guide are at 10 a.m. daily.\nTom: Actually, let me correct that — we changed the group tour to 10:30 a.m. from this week because the museum now opens a bit later. The time on the website hasn't been updated yet.\nMaya: Thanks for letting me know. 10:30 is better for me. How long does the tour last?\nTom: About 90 minutes, including time for questions at the end. You can also stay and use the guide on your own afterwards.\nMaya: Perfect. Do I need to bring anything for the booking?\nTom: Just your booking reference and student ID if you have one, as we offer a discount in the café.\nMaya: I do have a student ID. I'll book for this Friday then.\nTom: Lovely. You'll get a confirmation email with the entrance instructions. Also, please return the device at the exit desk before you leave.\nMaya: One last thing — is parking available nearby?\nTom: Yes, there's a free car park behind the museum for visitors, but it fills quickly on Fridays, so arriving early is a good idea.",
+      "prompt": "What does Tom say about parking?",
+      "options": [
+        "No visitor parking available",
+        "Car park is always empty",
+        "Arrive early on Fridays as it fills quickly",
+        "Parking costs £4 on Fridays"
+      ],
+      "answer": 2,
+      "explanation": "Tom says free car park behind museum fills quickly on Fridays. Distractor about cost fails because parking is free."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "pathwayStage": "band-6",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided this plate waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. In addition, kitchen staff set aside all unserved food left after service each day, which volunteers weighed separately and added to the daily total. The team also noted the number of students eating each day, so they could calculate total waste per diner. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "prompt": "Why did students organise the food-waste audit?",
+      "options": [
+        "To test new recycling bins",
+        "To create advertising posters",
+        "To measure actual waste despite existing measures",
+        "To close the dining hall"
+      ],
+      "answer": 2,
+      "explanation": "Passage says audit followed bins and posters because staff suspected waste continued. Distractor about testing bins fails because bins already existed."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "pathwayStage": "band-6",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided this plate waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. In addition, kitchen staff set aside all unserved food left after service each day, which volunteers weighed separately and added to the daily total. The team also noted the number of students eating each day, so they could calculate total waste per diner. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "prompt": "How did the team try to keep behaviour normal?",
+      "options": [
+        "Did not inform most students beforehand",
+        "Weighed waste after closing time",
+        "Only checked staff-served days",
+        "Cancelled weekend meals"
+      ],
+      "answer": 0,
+      "explanation": "Team did not tell most students in advance to avoid changing behaviour. Distractor about staff-served days fails because both service types were compared."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "pathwayStage": "band-6",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided this plate waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. In addition, kitchen staff set aside all unserved food left after service each day, which volunteers weighed separately and added to the daily total. The team also noted the number of students eating each day, so they could calculate total waste per diner. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "prompt": "What can be inferred about higher weekend waste per person?",
+      "options": [
+        "Weekend food was less popular",
+        "Volunteers made weighing errors",
+        "Students ate more meals on weekends",
+        "Kitchen prepared same total food for fewer diners, creating surplus waste"
+      ],
+      "answer": 3,
+      "explanation": "Passage says kitchen kept preparing similar total quantity on weekends, so unserved food was discarded, raising per-diner average. Distractor about popularity fails because authors link waste to portion control, not dislike."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "pathwayStage": "band-6",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided this plate waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. In addition, kitchen staff set aside all unserved food left after service each day, which volunteers weighed separately and added to the daily total. The team also noted the number of students eating each day, so they could calculate total waste per diner. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "prompt": "Which correctly separates author claim from example?",
+      "options": [
+        "Claim that waste fell 18% everywhere",
+        "Claim about portion control; example of hall with smaller plates",
+        "Example that all halls volunteered",
+        "Claim that audit was inaccurate"
+      ],
+      "answer": 1,
+      "explanation": "Authors claim portion control and habit cause waste; hall with smaller plates is one example. Distractor about 18% everywhere fails because fall was only in that hall."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Food-Waste Audit at Greenfield College",
+      "pathwayStage": "band-6",
+      "focus": "Understanding method, results, and author claims versus examples",
+      "passage": "Last term, students at Greenfield College decided to measure how much food was being wasted in the college dining hall. Although the college had already introduced recycling bins and posters about saving food, staff suspected that a lot of edible food was still being thrown away every day. To understand the problem better, a small team of volunteers organised a food-waste audit over two weeks.\n\nThe audit was simple. At the end of lunch and dinner, volunteers stood near the bins and asked diners to scrape any leftover food into separate containers. They divided this plate waste into three groups: untouched food, such as whole bread rolls or unopened fruit; partially eaten meals; and inedible waste like bones and peel. Each container was weighed, and the results were recorded. In addition, kitchen staff set aside all unserved food left after service each day, which volunteers weighed separately and added to the daily total. The team also noted the number of students eating each day, so they could calculate total waste per diner. Importantly, they did not tell most students about the audit in advance, to avoid changing normal behaviour.\n\nThe results were surprising. On average, the dining hall produced 42 kilograms of food waste per day, which equals about 95 grams per student. More than half of this was partially eaten meals, especially rice, pasta and salad. About 20 percent was untouched food, often taken as an extra item but not eaten. The team compared weekdays and weekends and found that waste per person was higher on weekends. At weekends fewer students ate, but the kitchen continued to prepare almost the same total quantity of food, so large amounts of unserved food had to be discarded after service, raising the average per diner. They also compared self-service days, when students served themselves, with staff-served days. Waste was clearly lower when students chose their own portions.\n\nThe authors of the report argue that the main cause of waste is not dislike of food but poor portion control and habit. They claim that simple changes in serving and awareness can reduce waste significantly. As an example, they describe one student hall that introduced smaller plates and signs showing the previous week's waste total. In that hall, waste fell by 18 percent in one month. However, the authors note that this example involved motivated students who volunteered to take part, so it may not represent the whole college.\n\nBased on the audit, the team recommended three actions: offering different portion sizes, allowing students to return for second helpings instead of taking too much at first, and sharing weekly waste figures on noticeboards. They believe these low-cost steps could cut waste without affecting student satisfaction. The college has agreed to trial the ideas next term and repeat the audit to check progress.",
+      "prompt": "What does the team recommend?",
+      "options": [
+        "Stop serving rice and pasta",
+        "Close dining hall on weekends",
+        "Offer varied portions and share waste data",
+        "Charge students for leftovers"
+      ],
+      "answer": 2,
+      "explanation": "Recommendations are different portion sizes, second helpings, and weekly figures on boards. Distractor about closing weekends fails because they suggest adjusting portions, not closing."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Museum Family Learning Day Table",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrasing numbers and comparing activities with linked ideas",
+      "prompt": "The table below shows information about four activities at a Museum Family Learning Day held at Riverside Museum on 16 March 2024. It shows the number of families, the total number of participants, and the average satisfaction rating (out of 5) for each activity.\n\nPottery Workshop: 42 families, 118 participants, rating 4.6\nStorytelling Tour: 55 families, 142 participants, rating 4.8\nScience Discovery Lab: 38 families, 105 participants, rating 4.3\nArt Trail Challenge: 48 families, 130 participants, rating 4.5\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Public Library Digital-Skills Sessions Bar Chart",
+      "pathwayStage": "band-6",
+      "focus": "Correcting details and making clear comparisons across age groups",
+      "prompt": "The bar chart below shows the age-group distribution of attendees for three types of Public Library Digital-Skills Sessions at Greenfield Central Library in 2024. For each session type, it shows two figures, both expressed as a percentage of all attendees for that session type: (1) the share of attendees in each age group, and (2) the share of attendees in each age group who completed the follow-up practice task at home.\n\nBasic Internet Safety – Share of all attendees: 16-25 years 35%, 26-50 years 45%, 51+ years 20%. Share of all attendees who completed task: 16-25 years 28%, 26-50 years 38%, 51+ years 12%.\nOnline Job Applications – Share of all attendees: 16-25 years 40%, 26-50 years 38%, 51+ years 22%. Share of all attendees who completed task: 16-25 years 32%, 26-50 years 30%, 51+ years 15%.\nVideo Calling Family and Friends – Share of all attendees: 16-25 years 15%, 26-50 years 30%, 51+ years 55%. Share of all attendees who completed task: 16-25 years 12%, 26-50 years 25%, 51+ years 40%.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words in about 20 minutes.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Museums and Family Learning Days",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrasing views and linking ideas with reasons and examples",
+      "prompt": "Some people think museums should organise more interactive family learning days to attract visitors of all ages. Others think museums should mainly focus on protecting and displaying historical objects in a traditional way. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Student Volunteering Fair",
+      "pathwayStage": "band-6",
+      "focus": "Presenting a clear position with corrected details and connected arguments",
+      "prompt": "Many universities hold a student volunteering fair where local charities offer projects such as tutoring, environmental clean-ups, and care for older people. Some people believe all students should be encouraged to do some volunteering, while others think students should focus only on their academic studies. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Library Digital-Skills Sessions",
+      "pathwayStage": "band-6",
+      "focus": "Evaluating advantages and disadvantages with clear comparisons",
+      "prompt": "Public libraries in many towns now offer free digital-skills sessions, for example how to use email, online banking, and video calls. Do the advantages of this development outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should write at least 250 words in about 40 minutes.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-6-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Museums and Family Activities",
+      "pathwayStage": "band-6",
+      "focus": "Paraphrasing familiar ideas and giving linked answers",
+      "prompt": "Let's talk about museums and learning with family.\nDo you enjoy visiting museums? Why or why not?\nDid you visit museums with your family when you were younger?\nWhat kind of museum activities do you think children enjoy most?\nDo you prefer learning by doing an activity or by reading information?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Volunteering and Community Help",
+      "pathwayStage": "band-6",
+      "focus": "Giving clear personal information with connected sentences",
+      "prompt": "Let's talk about helping and volunteering.\nHave you ever done any volunteering? What did you do?\nDo many young people in your area volunteer?\nWhat kind of volunteering do you think is most useful for the community?\nWould you like to take part in a volunteering fair at your school or university?"
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Family Learning Day",
+      "pathwayStage": "band-6",
+      "focus": "Describing an experience with linked ideas and corrected details",
+      "prompt": "Describe a family learning day or educational visit you attended or would like to attend.\nYou should say:\n• where and when it was or would be\n• what activities were or would be available\n• who you went with or would go with\n• and explain why you found it enjoyable or why you would like to go.\n\nYou will have one minute to prepare and then speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Digital Skill You Learned",
+      "pathwayStage": "band-6",
+      "focus": "Explaining a learning process with clear comparisons and examples",
+      "prompt": "Describe a digital skill you learned in a library, community centre, or online session.\nYou should say:\n• what the skill was\n• where and how you learned it\n• how difficult it was at first\n• and explain how you have used this skill afterwards.\n\nYou will have one minute to prepare and then speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-6-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Community Learning and Volunteering",
+      "pathwayStage": "band-6",
+      "focus": "Giving reasons, evaluating ideas, and comparing views",
+      "prompt": "Let's discuss community learning more generally.\nWhy do some people prefer interactive learning days while others prefer learning alone?\nWhat are the advantages for students of meeting charities at a volunteering fair compared to choosing a project online?\nDo you think free digital-skills sessions in libraries can reduce differences between age groups? Why or why not?\nHow can museums, libraries, and volunteering projects work together to support local communities?"
+    }
+  ]
+}

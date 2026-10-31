@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-7",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-7-v1",
+  "completedAt": "2026-10-29T05:26:24.181Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2660,
+    "outputTokens": 7011,
+    "totalTokens": 9671
+  },
+  "latencyMs": 18715,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listening\":{\"title\":\"Printing Credit Help Desk\",\"focus\":\"listening for details, prices and corrections\",\"part\":\"Part 1\",\"script\":\"Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\\nStaff: Okay, Maya, tell me what happened.\\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\\nStaff: Let me check your account. Can you confirm your email for the confirmation?\\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\\nStudent: The one in the main library on the second floor.\\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\\nStudent: I checked there, but it showed zero. Will it update after you fix it?\\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\\nStudent: That's good. Where can I get a receipt for the payment?\\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\\nStudent: Room 204, ground floor. What are your opening hours?\\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\\nStudent: Thank you. Will my credit be ready soon?\\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\\nStudent: Great, thanks for your help.\\nStaff: You're welcome. Let us know if you have any more problems.\",\"questions\":[{\"title\":\"Reason for call\",\"prompt\":\"Why is Maya calling the help desk?\",\"options\":[\"Her printing credit is still zero\",\"She lost her student ID card\",\"She cannot find the library\",\"She wants to buy a printer\"],\"answer\":0,\"explanation\":\"She says she paid $20 but balance is still zero. The ID card option is wrong because she gives her ID but does not report it lost.\"},{\"title\":\"Payment amount\",\"prompt\":\"How much money did Maya pay online?\",\"options\":[\"$10\",\"$20\",\"$25\",\"$15\"],\"answer\":1,\"explanation\":\"Both Maya and staff confirm the payment was $20 yesterday. The $25 option is wrong because the colour price is 25 cents, not $25.\"},{\"title\":\"Printing price\",\"prompt\":\"What is the price for one black-and-white page?\",\"options\":[\"5 cents\",\"15 cents\",\"10 cents\",\"25 cents\"],\"answer\":2,\"explanation\":\"Staff states black-and-white is 10 cents per page. 25 cents is for colour, the strongest distractor.\"},{\"title\":\"Receipt location\",\"prompt\":\"Where should Maya collect her receipt?\",\"options\":[\"Room 240 on first floor\",\"Room 240 on ground floor\",\"Room 204 on second floor\",\"Room 204 on ground floor\"],\"answer\":3,\"explanation\":\"Staff corrects himself from Room 240 to Room 204 on the ground floor. Room 240 is the initial error before correction.\"},{\"title\":\"Credit ready time\",\"prompt\":\"When will Maya's printing credit be active?\",\"options\":[\"Within two hours by email\",\"Tomorrow morning at 9 a.m.\",\"After one week\",\"At 4 p.m. on Friday\"],\"answer\":0,\"explanation\":\"Staff says it will be active within two hours with a confirmation email. Tomorrow at 9 a.m. confuses opening hours with activation time.\"}]},\"reading\":{\"title\":\"Campus Orientation Walking Route\",\"focus\":\"finding main ideas, purpose and details\",\"passage\":\"Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\\n\\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\\n\\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\\n\\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\\n\\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.\",\"questions\":[{\"title\":\"Reason for route\",\"prompt\":\"What is the main reason the university created the walking route?\",\"options\":[\"To build new cafes and banks\",\"To sell campus maps\",\"To help new students not feel lost\",\"To train volunteer guides\"],\"answer\":2,\"explanation\":\"The opening explains the route was made because new students worry about getting lost. Building cafes is just a feature of the Student Centre, not the reason.\"},{\"title\":\"Start point\",\"prompt\":\"Where does the orientation walk begin?\",\"options\":[\"At the Main Gate\",\"At the Sports Hall\",\"At the Science Building\",\"At the Student Centre\"],\"answer\":0,\"explanation\":\"The second paragraph states the walk begins at the Main Gate. The Sports Hall is where the tour ends, not starts.\"},{\"title\":\"Author claim vs example\",\"prompt\":\"What does the author say is the main purpose of the route?\",\"options\":[\"To learn where buildings are\",\"To help students meet people and feel part of community\",\"To explain how to borrow library books\",\"To show where laboratories are\"],\"answer\":1,\"explanation\":\"The author claims the most important aim is meeting people and feeling part of community. Borrowing books is given only as an example of a library talk.\"},{\"title\":\"Missed booking inference\",\"prompt\":\"What can be inferred about students who miss their booked time?\",\"options\":[\"They must pay extra fee\",\"They cannot do tour later\",\"They must wait until next year\",\"They can join next group without new booking\"],\"answer\":3,\"explanation\":\"The passage says they can join the next group without extra registration. The fee option is unsupported as no payment is mentioned.\"},{\"title\":\"Student feedback\",\"prompt\":\"What did students in September 2023 say after the tour?\",\"options\":[\"They made friends and felt less stress\",\"They found campus maps confusing\",\"They wanted more cafes\",\"They preferred evening tours\"],\"answer\":0,\"explanation\":\"The final paragraph reports many made friends and felt less stress. Evening tours are a future plan, not 2023 feedback.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Printing Credit Help Desk",
+      "focus": "listening for details, prices and corrections",
+      "part": "Part 1",
+      "script": "Staff: Good morning, IT Help Desk, this is David speaking. How can I help you?\nStudent: Hi, I'm Maya Patel, a first-year student. My ID number is 58392. I have a problem with my printing credit.\nStaff: Okay, Maya, tell me what happened.\nStudent: I added $20 to my account online yesterday afternoon, around 3 o'clock, but my balance is still zero. I need to print an assignment today.\nStaff: Let me check your account. Can you confirm your email for the confirmation?\nStudent: Yes, it's maya.patel@greenfield.ac.uk.\nStaff: Thank you. Yes, I can see a payment of $20 yesterday, but it did not go to your printing balance. Which printer did you try to use?\nStudent: The one in the main library on the second floor.\nStaff: I see. Those old printers do not connect to the new payment system. You should use the new printers on the first floor. You can also check your balance on the student portal under 'My Services'.\nStudent: I checked there, but it showed zero. Will it update after you fix it?\nStaff: Yes, it will show the $20 after we add it. Do you want the full $20 added now?\nStudent: Yes, please. All for black-and-white printing. How much is one page now?\nStaff: It's 10 cents per page for black-and-white, and 25 cents for colour.\nStudent: That's good. Where can I get a receipt for the payment?\nStaff: You can collect it from the help desk in Room 240 — sorry, I mean Room 204, on the ground floor of the library.\nStudent: Room 204, ground floor. What are your opening hours?\nStaff: We are open from 9 a.m. to 5 p.m., Monday to Friday, but on Friday we close early at 4 p.m.\nStudent: Thank you. Will my credit be ready soon?\nStaff: Yes, it will be active within two hours, and you will receive a confirmation email.\nStudent: Great, thanks for your help.\nStaff: You're welcome. Let us know if you have any more problems.",
+      "questions": [
+        {
+          "title": "Reason for call",
+          "prompt": "Why is Maya calling the help desk?",
+          "options": [
+            "Her printing credit is still zero",
+            "She lost her student ID card",
+            "She cannot find the library",
+            "She wants to buy a printer"
+          ],
+          "answer": 0,
+          "explanation": "She says she paid $20 but balance is still zero. The ID card option is wrong because she gives her ID but does not report it lost."
+        },
+        {
+          "title": "Payment amount",
+          "prompt": "How much money did Maya pay online?",
+          "options": [
+            "$10",
+            "$20",
+            "$25",
+            "$15"
+          ],
+          "answer": 1,
+          "explanation": "Both Maya and staff confirm the payment was $20 yesterday. The $25 option is wrong because the colour price is 25 cents, not $25."
+        },
+        {
+          "title": "Printing price",
+          "prompt": "What is the price for one black-and-white page?",
+          "options": [
+            "5 cents",
+            "15 cents",
+            "10 cents",
+            "25 cents"
+          ],
+          "answer": 2,
+          "explanation": "Staff states black-and-white is 10 cents per page. 25 cents is for colour, the strongest distractor."
+        },
+        {
+          "title": "Receipt location",
+          "prompt": "Where should Maya collect her receipt?",
+          "options": [
+            "Room 240 on first floor",
+            "Room 240 on ground floor",
+            "Room 204 on second floor",
+            "Room 204 on ground floor"
+          ],
+          "answer": 3,
+          "explanation": "Staff corrects himself from Room 240 to Room 204 on the ground floor. Room 240 is the initial error before correction."
+        },
+        {
+          "title": "Credit ready time",
+          "prompt": "When will Maya's printing credit be active?",
+          "options": [
+            "Within two hours by email",
+            "Tomorrow morning at 9 a.m.",
+            "After one week",
+            "At 4 p.m. on Friday"
+          ],
+          "answer": 0,
+          "explanation": "Staff says it will be active within two hours with a confirmation email. Tomorrow at 9 a.m. confuses opening hours with activation time."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Campus Orientation Walking Route",
+      "focus": "finding main ideas, purpose and details",
+      "passage": "Starting university can be exciting, but many new students feel worried about getting lost on a large campus. To help with this, Greenfield University created a special Orientation Walking Route for all first-year students. The university started the route in 2022 after many students said the campus was confusing. The route is designed to be simple, useful, and friendly.\n\nThe walk is 1.5 kilometres long and takes about 45 minutes to complete. It begins at the Main Gate, where new students meet their group and a volunteer guide. From there, the group walks to the Student Centre, which has cafes, banks, and support offices. The next stop is the University Library, then the Science Building, and finally the Sports Hall, where the tour ends. The route is flat and suitable for wheelchairs and bicycles. Maps are given to every student, and there are clear signs along the path. Guides also share tips about student life, such as where to find cheap meals and quiet study areas.\n\nAt each stop, volunteers give short talks about the place. For example, at the library, they explain how to borrow books, use computers, and book study rooms. At the Science Building, they show where laboratories and lecture halls are. However, the author makes a clear point: the main purpose of the walking route is not just to learn where buildings are. The most important aim is to help new students meet other people, ask questions, and feel part of the university community. The building information is just an example of what students learn on the way.\n\nTo join the walk, students must register online through the university website. They are advised to wear comfortable shoes, bring water, and arrive ten minutes early. Each group has about 15 students, so everyone can hear the guide and ask questions. During the first week of the semester, tours run twice a day, at 10 a.m. and 2 p.m. If students miss their booked time, they can join the next group without extra registration. No booking is needed after the first week, but groups are smaller. Feedback forms are available at the Sports Hall at the end of the walk.\n\nStudents who completed the route in September 2023 gave very positive feedback. In a survey, 85% of participants said the tour was very helpful. Many said they made friends during the walk and felt less stress in their first month. Because of this success, the university plans to add evening tours next year for part-time students who cannot come during the day.",
+      "questions": [
+        {
+          "title": "Reason for route",
+          "prompt": "What is the main reason the university created the walking route?",
+          "options": [
+            "To build new cafes and banks",
+            "To sell campus maps",
+            "To help new students not feel lost",
+            "To train volunteer guides"
+          ],
+          "answer": 2,
+          "explanation": "The opening explains the route was made because new students worry about getting lost. Building cafes is just a feature of the Student Centre, not the reason."
+        },
+        {
+          "title": "Start point",
+          "prompt": "Where does the orientation walk begin?",
+          "options": [
+            "At the Main Gate",
+            "At the Sports Hall",
+            "At the Science Building",
+            "At the Student Centre"
+          ],
+          "answer": 0,
+          "explanation": "The second paragraph states the walk begins at the Main Gate. The Sports Hall is where the tour ends, not starts."
+        },
+        {
+          "title": "Author claim vs example",
+          "prompt": "What does the author say is the main purpose of the route?",
+          "options": [
+            "To learn where buildings are",
+            "To help students meet people and feel part of community",
+            "To explain how to borrow library books",
+            "To show where laboratories are"
+          ],
+          "answer": 1,
+          "explanation": "The author claims the most important aim is meeting people and feeling part of community. Borrowing books is given only as an example of a library talk."
+        },
+        {
+          "title": "Missed booking inference",
+          "prompt": "What can be inferred about students who miss their booked time?",
+          "options": [
+            "They must pay extra fee",
+            "They cannot do tour later",
+            "They must wait until next year",
+            "They can join next group without new booking"
+          ],
+          "answer": 3,
+          "explanation": "The passage says they can join the next group without extra registration. The fee option is unsupported as no payment is mentioned."
+        },
+        {
+          "title": "Student feedback",
+          "prompt": "What did students in September 2023 say after the tour?",
+          "options": [
+            "They made friends and felt less stress",
+            "They found campus maps confusing",
+            "They wanted more cafes",
+            "They preferred evening tours"
+          ],
+          "answer": 0,
+          "explanation": "The final paragraph reports many made friends and felt less stress. Evening tours are a future plan, not 2023 feedback."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 40,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after jack up, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes. Historical, legal, religious, regional, technical and sports labels are explicit; source wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2040,
+    "remainingRawOnlyAfter": 2020
+  },
+  "selected": [
+    "jet lag",
+    "jet propulsion",
+    "jet stream",
+    "jim crow",
+    "job centre",
+    "job description",
+    "job lot",
+    "joint-stock company",
+    "joint venture",
+    "jolly roger",
+    "judgement day",
+    "judgment day",
+    "judicial review",
+    "julian calendar",
+    "jumble sale",
+    "jumbo jet",
+    "jump ball",
+    "jump start",
+    "jumper cable",
+    "jumping-off point"
+  ]
+}

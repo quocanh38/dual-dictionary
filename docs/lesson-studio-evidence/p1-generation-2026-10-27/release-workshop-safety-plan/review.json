@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "ee22798605f2bc50695a3c2d1e0ddc7ccc25dc1baa2d93a1c922d205e3261567",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex delegated adjudicator; economical cross-review Luna + Sol",
+  "reviewedAt": "2026-10-27T04:44:30.917Z",
+  "note": "Explicit AI-assisted editorial decision under owner delegation, after independent Luna and Sol full reviews. Every source, EN/VI target, option/explanation and transfer checked. Resolved prior follow-up ambiguity and Vietnamese overclaim. Original provider outputs and all edits retained. No human certification, learning outcome claim or deployment approval.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Sol: The provenance identifies a permitted AI-assisted original project source, discloses its origin and authorizes distribution. Generic supervisor/team details reveal no learner PII. Rights review relies on the supplied provenance statement. Luna: Candidate declares an original AI-assisted project source, distribution permission, and no learner PII; review relies on this provenance statement."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Sol: s1 includes carry out an inspection verbatim, naturally meaning perform a check before a machine is used. Luna: s1 contains exact phrase ‘carry out an inspection’; supervisor checks a new machine before it is used."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Sol: Performing a careful check or examination is accurate in this machinery context; no unsupported legal certification requirement is added. Luna: Performing a careful check or examination accurately captures the inspection described."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Sol: Tiến hành kiểm tra is natural Vietnamese with diacritics and accurately renders the action. Luna: ‘tiến hành kiểm tra’ is a natural, accurate Vietnamese gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Sol: s2 includes comply with the safety rules verbatim; the obligation despite queued orders supports obeying the rules. Luna: s2 contains ‘comply with the safety rules’; the team must follow them despite waiting orders."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Sol: To obey or follow the safety rules accurately states the contextual sense without adding an implication that compliance eliminates all risk. Luna: Obeying or following the safety rules accurately captures the contextual meaning."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Sol: Tuân thủ các quy tắc an toàn is a precise, natural and correctly accented Vietnamese gloss. Luna: ‘tuân thủ các quy tắc an toàn’ is natural, accurate and correctly diacritized."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Sol: q1 a performs a careful machine check and is correct. b cancels the check; c moves the machine for storage. Neither action means carrying out an inspection, although an inspection could incidentally involve moving a machine. Luna: a matches performing a careful pre-use machine check. b cancels the check; c moves the machine for storage; neither means inspecting."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Sol: q1 each explanation accurately distinguishes performance from cancellation/storage. The overall before-use gloss follows the source; the option pronoun he is incidental to the meaning and does not alter the answer. Luna: All option explanations correctly distinguish inspection from cancellation and storage. The phrase ‘matches to perform’ is awkward, but the reason remains clear."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Sol: q2 a is the natural sentence. b inspection about the bridge is not the natural object-of-examination relation; a hypothetical report about a bridge would require different wording and does not make this an equal natural answer. c will carries is objectively malformed. Luna: a is natural. b uses ‘about’ where ‘of’ is natural for the bridge as the object examined; c uses ‘carries’ after modal will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Sol: q2 a correctly accepts inspection of; b explicitly limits its claim to the object examined here and provides of as correction rather than banning about universally; c correctly restores carry after will. Overall single natural answer claim holds. Luna: The revised b rationale now limits ‘of’ to the object being examined and correctly states that ‘about’ is unnatural here; c’s modal-form explanation is accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Sol: q3 a obeys rules despite pressure and is correct. b permits ignoring them and contradicts must comply; c requires writing future rules rather than following existing ones. Writing rules may coexist with compliance but is not its meaning. Luna: a means obey despite pressure. b reverses the meaning; c means writing new rules rather than following the existing ones."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Sol: q3 explanations accurately contrast obeying with ignoring and distinguish writing rules from following them. Overall explanation faithfully states the target meaning. Luna: All rationales distinguish following current rules from ignoring or creating rules. ‘Matches to obey’ is awkward, but meaning is clear."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Sol: q4 b has standard comply with plus base comply after must. a comply to is the wrong complement preposition in this rule-following use; c must complies has invalid modal inflection. Alternative lab circumstances do not repair those forms. Luna: b is the natural target sentence. a has the wrong preposition after comply; c uses ‘complies’ after modal must."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Sol: q4 a to-to-with and c complies-to-comply corrections are accurate in the displayed sentences; b and overall explanations correctly identify standard grammar/collocation without relying on stylistic preference. Luna: Option rationales correctly identify ‘comply with’ and the bare verb after must; overall uniqueness rationale is accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Sol: q5 moves a workshop team under work pressure to a hotel guest telling a friend about pool behaviour. The guest role, recipient and descriptive purpose constitute substantive transfer. Luna: Source is workshop team under order pressure; transfer shifts to a hotel guest discussing swimming-pool rules and guest behavior with a friend."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Sol: The two-sentence model naturally uses has to comply with the safety rules and describes a plausible video requirement at this hotel, not a universal pool practice. The checklist supports length, target use and clarity/grammar; explicit self-assessment carries no automatic grade. Luna: The two-sentence answer uses ‘comply with the safety rules’ naturally. Checklist covers length, target phrase and clarity/grammar; self-assessment only."
+    }
+  ],
+  "findings": [
+    {
+      "id": "workshop-explanations-awkward-phrasing",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "Nonblocking wording limitation remains: matches to perform / matches to obey is awkward, but the gloss relation and correct answer are clear. No correction is claimed; original reviewer marked this resolved while describing only a potential polish."
+    }
+  ]
+}

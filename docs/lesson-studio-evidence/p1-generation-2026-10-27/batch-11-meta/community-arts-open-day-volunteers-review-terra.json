@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "8e8c217c399e26a3bbf48b1c9f6251e0b661078e02149cf37f3ed01e5adf829c",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-5.6-terra",
+  "reviewedAt": "2026-10-27T09:06:06Z",
+  "note": "Full independent content review of this exact candidate: source/citations, both target glosses, all 15 options and explanations, and transfer. Rights and authorship are declaration-only: the supplied original-source declaration states permitted distribution and no learner PII, but were not independently verified.",
+  "criteria": [
+    {"id":"rights","prompt":"Original/permitted source, author, distribution rights and no learner PII checked.","status":"pass","evidence":"Source record and provenance declare an original AI-assisted passage, authorized distribution, and no learner PII; this is declaration-only and was not independently verified."},
+    {"id":"lesson-1/t1/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s2 says volunteers may ‘take part in’ a welcome session, which is participation in it."},
+    {"id":"lesson-1/t1/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"‘to participate in an activity or event’ is the contextual meaning in s2."},
+    {"id":"lesson-1/t1/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘tham gia vào một hoạt động hoặc sự kiện’ accurately and naturally conveys the phrase with diacritics."},
+    {"id":"lesson-1/t2/source","prompt":"Phrase occurs in cited source and the contextual sense is supported.","status":"pass","evidence":"s3 says one coordinator is ‘in charge of’ the welcome desk, establishing responsibility for it."},
+    {"id":"lesson-1/t2/meaning-en","prompt":"English gloss is the actual contextual meaning, not a selection rationale.","status":"pass","evidence":"‘responsible for managing or looking after something’ accurately captures the responsibility sense in s3."},
+    {"id":"lesson-1/t2/meaning-vi","prompt":"Vietnamese gloss is accurate, natural and includes diacritics.","status":"pass","evidence":"‘phụ trách, chịu trách nhiệm về việc gì’ is an accurate natural Vietnamese gloss with diacritics."},
+    {"id":"lesson-1/q1/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"a alone means joining the session; b says only watching and c says cancelling, neither of which matches participation."},
+    {"id":"lesson-1/q1/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"The option and overall explanations accurately contrast active participation with watching or cancellation."},
+    {"id":"lesson-1/q2/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"a correctly uses past ‘took part in’; b needs ‘takes’ with She, and c uses the wrong preposition for this fixed phrase."},
+    {"id":"lesson-1/q2/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"The explanations identify the exact agreement and fixed-preposition errors and accurately describe a’s event use."},
+    {"id":"lesson-1/q3/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"b alone states managing responsibility; visiting as a guest and leaving the desk are different actions, not meanings of ‘in charge of’."},
+    {"id":"lesson-1/q3/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"The explanations accurately contrast responsibility/looking after the desk with visiting or leaving."},
+    {"id":"lesson-1/q4/unique-answer","prompt":"Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.","status":"pass","evidence":"b alone has the standard phrase ‘in charge of’; a substitutes ‘for’, and c incorrectly pluralizes ‘charge’ in this phrase."},
+    {"id":"lesson-1/q4/explanations","prompt":"Every option explanation is accurate; grammar/collocation claims are not overgeneralized.","status":"pass","evidence":"The explanations precisely identify the fixed preposition and singular noun in the responsibility expression."},
+    {"id":"lesson-1/q5/new-situation","prompt":"Role or purpose differs meaningfully from the source; not merely rewriting it.","status":"pass","evidence":"The learner writes as an office worker to a friend about a company sports event, rather than volunteering at the arts-centre welcome desk."},
+    {"id":"lesson-1/q5/self-check","prompt":"Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.","status":"pass","evidence":"The three-sentence model naturally uses ‘took part in’; checks cover length, correct form, and changed setting, and the explanation states no automatic grade."}
+  ],
+  "findings": []
+}

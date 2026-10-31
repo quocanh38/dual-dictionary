@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "635598939599ce8c52ff8c21bfb0bfa2e8462df32129e79225ff5707e273cda0",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening/Reading contexts are 312/419 words; all 10 objective keys are supported by the source and answer positions are distributed across all four options. Museum booking details reconcile (30 pupils plus three adults; lunch room 12:00–12:45 by advance booking; corrected arrival 10:30). Reading claims and examples are correctly distinguished; drop-in versus booked service claims are qualified. All three Task 1 datasets include the figures needed for comparison; writing minimums/timing and Speaking parts/cue card are complete. Minor clarity: for the 500-resident consultation across 2023 and 2024, clarify whether n=500 applies to each wave or both combined, and whether the samples are repeated or independent. Original-content provenance is stated; no official-item or score claims."
+  ],
+  "coverage": "Full review of provenance/metadata, listening script (312 words) and reading passage (419 words), all 10 objective prompts/options/keys/explanations, all three Task 1 datasets, all five Writing prompts and timing, and all five Speaking prompts including cue-card completeness and part fit.",
+  "reviewerType": "AI-assisted"
+}

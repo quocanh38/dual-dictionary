@@ -1,0 +1,18 @@
+{
+  "reviewer": "local-structural-validator",
+  "candidateStage": "band-7",
+  "findings": [
+    {
+      "severity": "major",
+      "item": "Speaking prompt 3",
+      "issue": "Part 2 cue-card prompt is missing visible bullet points.",
+      "requiredFix": "Add four concise, separate cue-card bullets that guide the long turn without supplying a sample answer."
+    },
+    {
+      "severity": "major",
+      "item": "Speaking prompt 4",
+      "issue": "Part 2 cue-card prompt is missing visible bullet points.",
+      "requiredFix": "Add four concise, separate cue-card bullets that guide the long turn without supplying a sample answer."
+    }
+  ]
+}

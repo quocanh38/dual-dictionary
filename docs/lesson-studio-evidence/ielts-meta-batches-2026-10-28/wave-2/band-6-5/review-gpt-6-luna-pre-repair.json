@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "4404e61122d66ea0cc6214dd3441a4558a0273e00f245cafe94dc3246b640f99",
+  "verdict": "changes_required",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-2-band-6-5-reading-02",
+      "skill": "Reading",
+      "issue": "The answer key is incorrect. Option C (index 2) correctly states that North Marsh restored tidal flow while South Inlet planted and fenced grasses; the passage and explanation support C. The stored answer is index 3, which selects the unsupported option about the sites focusing separately on birds and sediment.",
+      "suggestion": "Change answer to index 2."
+    }
+  ]
+}

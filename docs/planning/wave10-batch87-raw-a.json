@@ -1,0 +1,16 @@
+{
+  "wave": 10,
+  "batch": 87,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after solar plexus; reviewed against local OALD 10/LDOCE 6. Soft-money legal-history note checked against FEC sources. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover astronomy, legal titles, practical repair, phrasal verbs, sound/media, geography and spaceflight; distinguish technical terms from figurative uses and clarify British/American spelling or institutional variants.",
+  "counts": {"selected": 20, "rawPagesUpgraded": 20, "rawOnlyBefore": 1120, "remainingRawOnlyAfter": 1100},
+  "selected": ["solar power", "solar system", "solar year", "soldering iron", "solicitor general", "sonic boom", "sort out", "sound barrier", "sound effect", "sounding board", "south african", "south america", "south east", "south pole", "soya bean", "space probe", "space shuttle", "space station", "spaced out", "spare part"],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "https://www.fec.gov/about/fec-historical-timeline/",
+    "https://www.fec.gov/legal-resources/court-cases/grover-v-fec/"
+  ]
+}

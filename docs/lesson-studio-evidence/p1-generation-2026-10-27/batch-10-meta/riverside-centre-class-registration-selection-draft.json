@@ -1,0 +1,65 @@
+{
+  "id": "draft-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Registering for a Class at the Riverside Centre",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The Riverside Centre opens registration for its spring pottery classes on Monday. Each class meets once a week for six weeks, and the fee includes clay and access to shared tools. New participants should fill in the online form and choose a preferred class time. A confirmation email will arrive within two working days if a place is available. When a class is full, the centre puts applicants on a waiting list in the order their forms were received. Staff contact people on that list if a place opens before the first session. Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable.",
+    "rightsStatement": "Original educational passage written for this project with AI assistance; no copied exam text, external source or learner personal data. Authorized for lesson generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The Riverside Centre opens registration for its spring pottery classes on Monday. Each class meets once a week for six weeks, and the fee includes clay and access to shared tools. New participants should fill in the online form and choose a preferred class time. A confirmation email will arrive within two working days if a place is available. When a class is full, the centre puts applicants on a waiting list in the order their forms were received. Staff contact people on that list if a place opens before the first session. Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The Riverside Centre opens registration for its spring pottery classes on Monday."
+      },
+      {
+        "id": "s2",
+        "text": "Each class meets once a week for six weeks, and the fee includes clay and access to shared tools."
+      },
+      {
+        "id": "s3",
+        "text": "New participants should fill in the online form and choose a preferred class time."
+      },
+      {
+        "id": "s4",
+        "text": "A confirmation email will arrive within two working days if a place is available."
+      },
+      {
+        "id": "s5",
+        "text": "When a class is full, the centre puts applicants on a waiting list in the order their forms were received."
+      },
+      {
+        "id": "s6",
+        "text": "Staff contact people on that list if a place opens before the first session."
+      },
+      {
+        "id": "s7",
+        "text": "Participants who need step-free access can contact the front desk before registering so staff can confirm which room is suitable."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "fill in the online form",
+      "meaningEn": "to complete a form by writing the required information",
+      "meaningVi": "điền vào biểu mẫu trực tuyến",
+      "sourceSentenceId": "s3"
+    },
+    {
+      "id": "t2",
+      "phrase": "waiting list",
+      "meaningEn": "a list of people waiting to be offered a place if one becomes available",
+      "meaningVi": "danh sách chờ",
+      "sourceSentenceId": "s5"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

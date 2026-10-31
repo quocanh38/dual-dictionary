@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "8e3203a631ea43c77e5e86e443df709c9e7e4122083c8e03ea09f894532d81c1",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna (configured model)",
+  "reviewedAt": "2026-10-27T06:00:00Z",
+  "note": "Fresh full AI-assisted editorial rereview of the frozen final candidate: all 17 criteria, every option and explanation, both target EN/VI glosses, cited source and transfer. Development batch; not unseen-source evaluation. No candidate edits, learner study, independent human review, or provider call. Pack digest 8e3203a631ea43c77e5e86e443df709c9e7e4122083c8e03ea09f894532d81c1.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Candidate declares an original AI-assisted project source, distribution permission, and no learner PII; review relies on this provenance statement."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains exact phrase ‘hand over’; the receptionist transfers booking records to the night team."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Giving documents or responsibility to another person/team accurately describes passing booking records to the next shift."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘bàn giao’ is a natural, accurate Vietnamese gloss with diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains exact phrase ‘follow up on’; requests unresolved during the day require later action."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Checking and taking further action on unfinished matters accurately fits the unresolved requests."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "‘theo dõi và xử lý tiếp’ naturally captures monitoring and continuing action; diacritics are present."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a uniquely matches giving records/responsibility to the night team; b reverses transfer; c cancels records rather than transferring them."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Each option explanation correctly identifies the transfer, opposite action, or unrelated cancellation; overall rationale is accurate."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is natural. b’s ‘before leaves’ is malformed because it lacks a subject after before (or should be ‘before leaving’); c has inflected ‘overs’ after modal will."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Option explanations correctly diagnose the malformed clause and modal bare-form error. They do not overstate the correction."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b matches checking unresolved requests and acting on them. a is the opposite; c means initiating rather than continuing an existing request."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All three rationales accurately distinguish ignoring, continued action, and a new request."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is correct. b adds an invalid ‘on’ before ‘tomorrow morning’; c uses ‘follows’ after modal will. Neither is a plausible standard sentence."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "b’s explanation correctly removes the redundant preposition before ‘tomorrow morning’; c correctly requires bare ‘follow’ after will. ‘Follow up on’ itself is valid in a."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Reading is a hotel receptionist handing records to the night shift; transfer changes to a school charity-fair volunteer handing items/work to a classmate."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The three-sentence model naturally uses ‘hand over … to you’; checklist checks length, phrase use and changed role/situation. Prompt says self-assess, with no automatic grade."
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,85 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "batchId": "wave-4",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-28-wave-4-v2",
+  "completedAt": "2026-10-28T08:27:49.314Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 524,
+    "outputTokens": 1876,
+    "totalTokens": 2400
+  },
+  "latencyMs": 10541,
+  "reasoningEffort": "low",
+  "maxOutputTokens": 10000,
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Public-health information campaign reach",
+        "focus": "Comparing sources and qualified trends with limitations",
+        "prompt": "Summarise the information by selecting and reporting the main features, and make comparisons where relevant. The table below shows the estimated reach of a public-health information campaign about hydration in the city of Merriton in 2023 and 2025. Reach is shown as the percentage of surveyed adults aged 18+ who recalled the message from each source. Survey samples: 1,200 adults in 2023, 1,350 adults in 2025. Source | 2023 | 2025: Local radio spots 42% 35%; Posters in clinics 38% 44%; Social media videos 25% 51%; Community workshops 12% 18%; School newsletters 20% 22%. Note: respondents could select more than one source, so totals exceed 100%. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Funding options for a university field course",
+        "focus": "Comparing proportions and handling approximate data",
+        "prompt": "Summarise the information by selecting and reporting the main features, and make comparisons where relevant. The bar chart data below shows how a university department planned to fund its 10-day coastal field course for 60 students in two proposals, Plan A and Plan B. Total cost for each plan was 48,000 dollars. Plan A: Student fees 55%, Department grant 25%, Local council sponsorship 12%, Fundraising events 8%. Plan B: Student fees 35%, Department grant 30%, Local council sponsorship 20%, Fundraising events 15%. Write at least 150 words in about 20 minutes. Briefly note what the percentages suggest about reliance on student payments.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Effectiveness of public-health campaigns",
+        "focus": "Qualified claims and evidence comparison",
+        "prompt": "Some people argue that public-health information campaigns are effective because they raise awareness quickly, while others argue that they have only a limited effect unless they are combined with practical support such as free services or follow-up advice. Discuss both views and give your own opinion. Support your ideas with reasons and relevant examples. Do not repeat instructions from any source. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Funding a university field course",
+        "focus": "Evaluating options with fairness and limitations",
+        "prompt": "A university is deciding how to fund an optional field course. One option is to ask students to pay most of the cost. Another option is to seek mixed funding from grants, sponsors, and fundraising, even though this takes more time to organise. Discuss the advantages and disadvantages of each approach and give your own view on which is more suitable. Include reasons and examples. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Proposal to improve a city walking route",
+        "focus": "Balancing benefits, costs, and evidence",
+        "prompt": "A local council has proposed to improve a 4-kilometre city walking route by widening paths, adding lighting, planting trees, and creating two rest areas with seating and drinking water. Supporters say this will improve health and safety, while critics say the money should be spent on repairing roads and public transport. To what extent do you agree that improving the walking route should be a priority? Give reasons for your answer, including any limitations of the evidence for health benefits. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily health information",
+        "focus": "Everyday habits and information sources",
+        "prompt": "Part 1. Answer in 2-3 sentences per question. 1. Where do you usually see or hear information about health? 2. Do you often walk for exercise or travel? 3. How do students in your area usually pay for extra study activities? 4. Do you prefer to learn practical skills indoors or outdoors?"
+      },
+      {
+        "task": "Part 1 · Local area and walking",
+        "focus": "Describing familiar places",
+        "prompt": "Part 1. Answer in 2-3 sentences per question. 1. Is your neighbourhood easy to walk around? 2. What public spaces do people in your area use most? 3. Have you ever joined a community event or workshop? 4. Would you like more green spaces where you live?"
+      },
+      {
+        "task": "Part 2 · Cue card: A walking route you know",
+        "focus": "Extended description with detail and limitation",
+        "prompt": "Part 2. Talk for 1-2 minutes. Describe a walking route in a city or town that you know. You should say: • where the route is and what places it connects • what the path, scenery, and facilities are like • who uses this route and when • and explain what improvement you would suggest and why. You have about one minute to prepare."
+      },
+      {
+        "task": "Part 3 · Evaluating a public-health campaign",
+        "focus": "Reasons, evidence comparison, and limitations",
+        "prompt": "Part 3. Discuss in more depth. 1. Why might some public-health messages be remembered but not followed? 2. How can organisers check whether a campaign has actually changed behaviour, not just awareness? 3. What are the limitations of using social media as the main source of health information?"
+      },
+      {
+        "task": "Part 3 · Funding learning and improving public spaces",
+        "focus": "Evaluation and qualified judgements",
+        "prompt": "Part 3. Discuss in more depth. 1. Should students pay extra for field courses that involve travel, or should universities find other funding? Why? 2. When a city has limited money, how should leaders decide between improving a walking route and repairing transport? 3. How can small changes to public paths affect how often people walk?"
+      }
+    ]
+  }
+}

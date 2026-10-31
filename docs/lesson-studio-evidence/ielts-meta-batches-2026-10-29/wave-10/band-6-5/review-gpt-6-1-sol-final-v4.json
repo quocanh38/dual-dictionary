@@ -1,0 +1,79 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "f76a844b7ca74ce5469a3eb75aff9368daab9dede7941951c90f53e149661440",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-10-band-6-5-speaking-03",
+      "severity": "minor",
+      "issue": "Four cue prompts are inline Unicode bullets. Separate lines would improve readability; all content and preparation/duration requirements are already present."
+    }
+  ],
+  "coverage": {
+    "scope": "Full candidate-only AI-assisted final-v4 rereview of all 20 items: 5 Listening, 5 Reading, 5 Writing and 5 Speaking. Complete shared contexts, all 40 options, 10 keys/explanations and every productive prompt/metadata field read. Repeated item contexts verified identical. No other reviewer reports opened; no edits to candidate or provider calls.",
+    "listening": "Read full 382-word tutorial. Building C 18% versus Building D 6%, guest leaflet explanation, dry-period 22% versus semester 14% correction, 120-day period, volume and installation-cost comparisons and long-term limitation all coherent. 1200×120=144000 litres and800×120=96000; $900/144000=$0.00625 per litre versus more than$6000/96000=$0.0625. All keys [2,0,1,3,1] supported. Listening04 A now says irrigation saved MORE overall, objectively false against96000<144000; B same-cost and C better-irrigation-value also false. D uniquely supported, with accurate revised explanation.",
+    "reading": "Read full 407-word environmental monitoring passage:80 sensors/60% green-area bias,2.1 versus1.2°C adjusted cooling within200m, variation and limits of satellite comparison,15% versus8% bird decline after effort/identification adjustment, subgroup patterns/uncertainty and raw-plus-adjusted reporting. All keys [0,3,1,2,0], alternatives and explanations supported.",
+    "writing": "Read all five prompts. Water Task1 supplies five complete rows of baseline/projected/actual annual cubic metres, metering coverage and Sports Centre meter-fault estimate note. Bird Task1 supplies three habitats, two years, observer hours and all three species counts, plus weather/area/double-count limitations. Three Task2 prompts are coherent self-contained qualified arguments about technology/behaviour, communication and heat options. All150/250-word minima and20/40-minute instructions/metadata agree.",
+    "speaking": "Read both personal water/nature Part1 sets, environmental-project Part2 with four cues and one-minute preparation/one-to-two-minute talk, and two evaluative Part3 sets. Intended band6.5 progression to evidence/trade-off discussion is appropriate as practice, not validated score attainment.",
+    "structure": {
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 382,
+        "reading": 407
+      },
+      "listeningBounds": [
+        300,
+        400
+      ],
+      "readingBounds": [
+        400,
+        500
+      ],
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "contextCopies": "All repeated contexts identical to shared contexts."
+    },
+    "provenanceAndOriginality": "Read Baseten Model API/meta-models/muse-spark-open-1026 provenance, originalContent=true, prompt versions and repair metadata. No recognisable copied official question or score guarantee found; no exhaustive plagiarism or empirical-source audit performed.",
+    "independence": "Earlier-version conversation exposure acknowledged; this pass reread full candidate content and opened no prior/other-model reports.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-6-5-listening-01",
+      "ielts-meta-wave-10-band-6-5-listening-02",
+      "ielts-meta-wave-10-band-6-5-listening-03",
+      "ielts-meta-wave-10-band-6-5-listening-04",
+      "ielts-meta-wave-10-band-6-5-listening-05",
+      "ielts-meta-wave-10-band-6-5-reading-01",
+      "ielts-meta-wave-10-band-6-5-reading-02",
+      "ielts-meta-wave-10-band-6-5-reading-03",
+      "ielts-meta-wave-10-band-6-5-reading-04",
+      "ielts-meta-wave-10-band-6-5-reading-05",
+      "ielts-meta-wave-10-band-6-5-writing-01",
+      "ielts-meta-wave-10-band-6-5-writing-02",
+      "ielts-meta-wave-10-band-6-5-writing-03",
+      "ielts-meta-wave-10-band-6-5-writing-04",
+      "ielts-meta-wave-10-band-6-5-writing-05",
+      "ielts-meta-wave-10-band-6-5-speaking-01",
+      "ielts-meta-wave-10-band-6-5-speaking-02",
+      "ielts-meta-wave-10-band-6-5-speaking-03",
+      "ielts-meta-wave-10-band-6-5-speaking-04",
+      "ielts-meta-wave-10-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer": "local-structural-validator",
+  "candidateStage": "band-7",
+  "findings": [
+    {
+      "severity": "major",
+      "item": "Listening script",
+      "issue": "Listening script has 413 whitespace-separated words; expected 300–400 words.",
+      "requiredFix": "Reduce the script to 330–380 words while retaining the supported facts, qualifications, and question evidence."
+    },
+    {
+      "severity": "critical",
+      "item": "Reading question 5 · Low-score inference",
+      "issue": "The answer key points to option 2, but the explanation supports option 3: a low-score area with few sensors may appear low-risk due to missing data and needs checking.",
+      "requiredFix": "Set the answer index to 2 (zero-based) so it points to the existing supported option, and keep the explanation aligned with that option. Do not change the other questions or options."
+    }
+  ]
+}

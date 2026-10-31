@@ -1,0 +1,105 @@
+{
+  "reviewedAt": "2026-10-27T06:46:12Z",
+  "batch": "P1 cross-model review of four remaining local library packs",
+  "reviewModels": [
+    "gpt-6-luna first pass",
+    "gpt-6.1-sol final pass"
+  ],
+  "packs": [
+    {
+      "id": "supplier-delivery",
+      "packId": "pack-3203d64e-13cf-400f-a639-33b27efb90bc",
+      "candidateSha256": "b91d11fc8707fda89b60ebba111cb0ffb14d99f1eb25eed0b0765b8e2a658d04",
+      "reviewSha256": "88512fb5945a97bda66fa0fcf34687176f331e1bddba22da2edf82df6e8b8527",
+      "approvedPayloadSha256": "d753c55e70d77d8ec6e5b32b7bd07576dd2ee7a619c53b85ebdcd2e939918552",
+      "editorialStatus": "approved",
+      "criteria": 17,
+      "minorFindings": [
+        "Luna: The short reading and target phrases appear closer to A2–B1 than a clearly demonstrated B1 level; the workplace context remains clear and useful."
+      ],
+      "cleanChromeQa": true,
+      "preseededChromeQa": true,
+      "modelEvidence": [
+        "../p1-generation-2026-10-27/batch-3/reviews-final-v2/supplier-delivery-luna-review.json",
+        "../p1-generation-2026-10-27/batch-3/reviews-final-v2/supplier-delivery-sol-review.json"
+      ]
+    },
+    {
+      "id": "museum-access",
+      "packId": "pack-8a955f70-327f-4eab-a145-13d4d849c2e8",
+      "candidateSha256": "9418d62ef8d883d222c80e6c7ade38ff79f5902bcecfe53fe1620e3d93665783",
+      "reviewSha256": "7e1ce562005a75312cc7876f77ca4ef114bbb110b83b4ba04def98ef8cff9140",
+      "approvedPayloadSha256": "8a815b049a3798d5a31f393b91b63b85a1c809aecaefd08e67a168693069d746",
+      "editorialStatus": "approved",
+      "criteria": 17,
+      "minorFindings": [
+        "Luna: The reading and target phrases appear closer to B1 than a clearly demonstrated B2 level. No source, meaning, answer-key or explanation defect was found in q4: option a is grammatical; b and c each contain subject–verb agreement errors."
+      ],
+      "cleanChromeQa": true,
+      "preseededChromeQa": true,
+      "modelEvidence": [
+        "../p1-generation-2026-10-27/batch-3/reviews-final-v2/museum-access-luna-review.json",
+        "../p1-generation-2026-10-27/batch-3/reviews-final-v2/museum-access-sol-review.json"
+      ]
+    },
+    {
+      "id": "remote-team-handover",
+      "packId": "pack-0e754c61-b77f-41b3-a7ed-1b4efc7f62ea",
+      "candidateSha256": "78b16f0382d991460c8b319fd60c0f0e3ba508c273f24f3c26c972016477b901",
+      "reviewSha256": "ddfa5dfc5b306e9e783a71be59270785264ded372d55a05da24d95e7dc6ab9eb",
+      "approvedPayloadSha256": "19440dcb6eaaa3af87d5edf0e57a6b99a3a656d5583150b07bdb60be9352050d",
+      "editorialStatus": "approved",
+      "criteria": 17,
+      "minorFindings": [],
+      "cleanChromeQa": true,
+      "preseededChromeQa": true,
+      "modelEvidence": [
+        "../p1-generation-2026-10-27/batch-4/reviews-final-v3/remote-team-handover-luna-review.json",
+        "../p1-generation-2026-10-27/batch-4/reviews-final-v3/remote-team-handover-sol-review.json"
+      ]
+    },
+    {
+      "id": "urban-tree-survey",
+      "packId": "pack-97eb5b4b-1d2e-419a-8e5d-299406ee638e",
+      "candidateSha256": "4297d21344629e0e0122967b9dd1869290ca5c8fe0c36ae8f285af37ec46cf87",
+      "reviewSha256": "fde8de035df63d6dac1bebd18514bc23e6fce84b9161c731cd236775b84bf696",
+      "approvedPayloadSha256": "09fc34e27abe5eeb05e785348c0ee147860e73845a5a55eab91f0505f0a27036",
+      "editorialStatus": "approved",
+      "criteria": 17,
+      "minorFindings": [],
+      "cleanChromeQa": true,
+      "preseededChromeQa": true,
+      "modelEvidence": [
+        "../p1-generation-2026-10-27/batch-4/reviews-final-v2/urban-tree-survey-luna-review.json",
+        "../p1-generation-2026-10-27/batch-4/reviews-final-v2/urban-tree-survey-sol-review.json"
+      ]
+    }
+  ],
+  "scope": {
+    "independentModelReview": true,
+    "reviewType": "AI-assisted editorial review, not human or learner review",
+    "mutatedPackPayloads": 0,
+    "newMetaCalls": 0
+  },
+  "aggregate": {
+    "newlyRecordedBoardEntries": 4,
+    "localLibraryPacks": 10,
+    "qualityGateAudits": "PASS for all four exact candidate hashes",
+    "approvedPackBrowserResults": 20,
+    "allCleanAndPreseededPass": true,
+    "physicalDevice": false,
+    "providerCallsDuringQA": 0
+  },
+  "limits": [
+    "Supplier and museum reviewers disagreed mildly on approximate CEFR level; preserved as non-blocking minor findings, not a language correctness or rights concern.",
+    "Review relies on author-supplied original-source rights declaration; no external rights verification.",
+    "Approved packs remain local and are not deployed."
+  ],
+  "next": "Proceed to hackathon submission reconciliation and exact-build demo preparation; deployment remains owner-authorized only.",
+  "serviceWorker": {
+    "browserQaRecordedHash": "7183458cc1be33a54d11ddc1154f1cb57db156a414ee227b72efef30d2223493",
+    "currentCache": "mdx-dict-v128",
+    "currentOfflineShellContract": "PASS, 25 Studio paths checked",
+    "note": "The exact-pack Chrome QA used the same app.js and all ten release hashes, but a later service-worker cache version bump changed sw.js; the current v128 offline path contract was checked separately."
+  }
+}

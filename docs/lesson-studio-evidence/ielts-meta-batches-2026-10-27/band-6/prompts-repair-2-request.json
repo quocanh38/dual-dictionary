@@ -1,0 +1,88 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-prompts-batch",
+  "instructions": "Return JSON only, no markdown, with exactly {\"writing\":[{\"task\":\"Task 1 · ... or Task 2 · ...\",\"focus\":\"...\",\"prompt\":\"...\",\"minimumWords\":150,\"suggestedMinutes\":20}],\"speaking\":[{\"task\":\"Part 1 · ... or Part 2 · Cue card or Part 3 · ...\",\"focus\":\"...\",\"prompt\":\"...\"}]}. Generate exactly five Writing and five Speaking prompts. Writing: create distinct Academic Task 1 and Task 2 prompts, giving complete original table data directly in each Task 1 prompt (no image dependency), valid minimum word counts (Task 1: 150; Task 2: 250) and realistic times (20/40 minutes). Speaking: cover Parts 1, 2 and 3; Part 2 must include cue-card bullet points; Part 3 needs reasons/evaluation, not memorised facts. Prompts must be distinct and answerable without hidden material. Do not include model responses or band estimates. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 5.0 to 6.0: paraphrase, linked ideas, corrected details, and clear comparisons across familiar academic topics. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a public library tool-lending service, a community archive digitisation project, and access to evening classes. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied writing and speaking prompts against the GPT findings. Preserve every valid unflagged prompt and keep exactly five per skill. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-6",
+    "currentBatch": {
+      "writing": [
+        {
+          "task": "Task 1 · Library Tool-Lending Loans",
+          "focus": "paraphrase categories and make clear comparisons across years",
+          "prompt": "The table below shows loans from the Maplewood Public Library tool-lending service in 2022 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. This is original practice material. Table data: Category | Loans in 2022 | Loans in 2025 | Average loan length in days in 2025 - Garden tools | 320 | 480 | 5 - Home repair kits | 250 | 410 | 4 - Kitchen equipment | 180 | 210 | 3 - Sewing machines | 120 | 195 | 6 - Camping gear | 90 | 230 | 7",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 2 · Lending Practical Items in Public Libraries",
+          "focus": "linked ideas with reasons and examples on a familiar community topic",
+          "prompt": "Some people think public libraries should lend practical tools and equipment, such as garden tools and sewing machines, in addition to books. Others think libraries should focus only on books and reading materials. Discuss both views and give your own opinion. Write at least 250 words in about 40 minutes. This is original practice material.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 1 · Community Archive Digitisation Progress",
+          "focus": "corrected details and comparison of progress between two months",
+          "prompt": "The table below shows the progress of the Riverbank Community Archive digitisation project in March and September of last year. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. This is original practice material. Table data: Material type | Items digitised in March | Items digitised in September | Volunteer hours in September - Photographs | 450 | 680 | 95 - Handwritten letters | 300 | 340 | 80 - Local newspaper pages | 520 | 610 | 110 - Recorded interviews in hours | 25 | 48 | 70",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        },
+        {
+          "task": "Task 2 · Access to Evening Classes",
+          "focus": "paraphrase the question and link ideas with a clear position",
+          "prompt": "Many adults want to join evening classes to learn new skills, but course fees and transport can make it difficult. Some people believe local councils should make evening classes low-cost and easy to reach for everyone. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes. This is original practice material.",
+          "minimumWords": 250,
+          "suggestedMinutes": 40
+        },
+        {
+          "task": "Task 1 · Evening Class Enrolments",
+          "focus": "overview with linked trends and accurate figures",
+          "prompt": "The table below shows enrolments in evening courses at Riverside Learning Centre in 2023 and 2026. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes. This is original practice material. Table data: Evening course | Enrolments in 2023 | Enrolments in 2026 | Completion rate in 2026 percent - English for work | 140 | 210 | 72 - Basic computer skills | 180 | 240 | 68 - Healthy cooking | 110 | 130 | 81 - First aid basics | 90 | 165 | 77",
+          "minimumWords": 150,
+          "suggestedMinutes": 20
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Part 1 · Libraries and Borrowing",
+          "focus": "paraphrase short answers on familiar daily topics",
+          "prompt": "Give short, natural answers of a few sentences. 1. Do you visit a public library often? Why or why not? 2. Have you ever borrowed something other than a book? 3. Would you use a library service that lends tools? Why? 4. How do people in your area share or reuse useful items?"
+        },
+        {
+          "task": "Part 1 · Learning New Skills",
+          "focus": "linked ideas in short answers about study routines",
+          "prompt": "Give short, natural answers of a few sentences. 1. Have you ever taken an evening class or online course? 2. What new skill would you like to learn in the future? 3. Do you prefer to study alone or with other people? Why? 4. How do you usually find time to practise something new?"
+        },
+        {
+          "task": "Part 2 · Cue card - A Borrowed Tool",
+          "focus": "organised description with linked ideas and corrected details",
+          "prompt": "Describe a useful tool or piece of equipment you borrowed from a person or a service.\nYou should say:\n- what the item was\n- where you borrowed it from\n- why you needed it\n- and explain how useful it was for you.\nYou have one minute to prepare and should speak for one to two minutes. This is original practice material."
+        },
+        {
+          "task": "Part 2 · Cue card - An Old Item from the Past",
+          "focus": "clear comparison between past and present with details",
+          "prompt": "Describe an old photograph, letter or other record that you found interesting.\nYou should say:\n- what the item was\n- where you saw or found it\n- what it showed about life in the past\n- and explain why you found it interesting.\nYou have one minute to prepare and should speak for one to two minutes. This is original practice material."
+        },
+        {
+          "task": "Part 3 · Community Learning and Shared Resources",
+          "focus": "giving reasons and evaluation, not memorised facts",
+          "prompt": "Discuss these ideas with reasons and evaluation. 1. Why do some adults prefer evening classes to daytime classes? 2. How can a community decide which tools or courses are most useful to offer? 3. What are the advantages and possible problems of digitising a community archive and putting it online? 4. Do you think shared services like tool libraries can change how people buy and use things in the future? Why?"
+        }
+      ]
+    },
+    "gptFindings": {
+      "candidateSha256": "cf8215014ddcafc5e202050fcfd3955be186ab293fcae352709385ea5b304fd3",
+      "reviewers": [
+        "gpt-6-luna",
+        "gpt-5.6-terra"
+      ],
+      "findings": [
+        {
+          "id": "ielts-meta-band-6-writing-03",
+          "severity": "major",
+          "issue": "The table labels both March and September values as item counts, but the Recorded interviews row gives 25 and 48 in hours, so its unit does not match the column headings.",
+          "suggestedFix": "Use a neutral amount heading or explicitly label the recorded-interview row in hours, and make the dataset units unambiguous. Preserve other valid prompts."
+        }
+      ]
+    }
+  }
+}

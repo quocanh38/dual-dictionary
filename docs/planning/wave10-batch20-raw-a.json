@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 20,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Independent Vietnamese definitions, usage patterns, fresh bilingual examples and learner notes; dictionary wording/examples are not reproduced. Rare or medical senses carry register/context notes.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2460,
+    "remainingRawOnlyAfter": 2440
+  },
+  "selected": [
+    "blind trust",
+    "block off",
+    "block out",
+    "block vote",
+    "blood brother",
+    "blood count",
+    "blood heat",
+    "blood pressure",
+    "blow off",
+    "blow out",
+    "blow up",
+    "blue baby",
+    "blue book",
+    "body language",
+    "bottom line",
+    "box number",
+    "box office",
+    "box seat",
+    "break away",
+    "break off"
+  ]
+}

@@ -1,0 +1,512 @@
+[
+  {
+    "phrase": "base rate",
+    "pos": "noun phrase (countable; finance/statistics)",
+    "hideOvdp": true,
+    "note": "Trong tài chính Anh, base rate là lãi suất cơ sở do ngân hàng trung ương ấn định, ảnh hưởng đến lãi suất mà các ngân hàng áp dụng. Trong thống kê, base rate cũng chỉ tỷ lệ/nền tần suất ban đầu của một hiện tượng trong nhóm. Xem ngữ cảnh để biết đang nói về lãi suất hay xác suất nền.",
+    "senses": [
+      {
+        "m": "lãi suất cơ sở của ngân hàng trung ương (Anh)",
+        "pat": "the base rate · raise/lower the base rate · a change in the base rate",
+        "ex": [
+          [
+            "The bank changed its mortgage offers after the base rate rose.",
+            "Ngân hàng điều chỉnh các khoản vay thế chấp sau khi lãi suất cơ sở tăng."
+          ],
+          [
+            "A cut in the base rate can influence the cost of borrowing.",
+            "Việc giảm lãi suất cơ sở có thể ảnh hưởng đến chi phí vay."
+          ]
+        ]
+      },
+      {
+        "m": "tỷ lệ nền; tần suất ban đầu trong một nhóm (thống kê)",
+        "pat": "the base rate of something · a low/high base rate · compare a test result with the base rate",
+        "ex": [
+          [
+            "The report gives the base rate of the condition in the wider population.",
+            "Báo cáo nêu tỷ lệ nền của tình trạng đó trong toàn bộ dân số."
+          ],
+          [
+            "A test result is easier to interpret when its base rate is known.",
+            "Kết quả xét nghiệm dễ diễn giải hơn khi đã biết tỷ lệ nền."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "batch processing",
+    "pos": "noun phrase (uncountable; computing)",
+    "hideOvdp": true,
+    "note": "Batch processing là cách xử lý dữ liệu hoặc công việc theo từng lô đã gom sẵn, thường tự động và không cần người dùng tương tác ở từng bước. Phân biệt với xử lý tương tác, nơi hệ thống phản hồi cho người dùng ngay trong lúc thao tác.",
+    "senses": [
+      {
+        "m": "xử lý theo lô (trong máy tính)",
+        "pat": "batch processing · use batch processing to do something · a batch-processing system/job",
+        "ex": [
+          [
+            "The payroll system uses batch processing to calculate salaries overnight.",
+            "Hệ thống tính lương dùng xử lý theo lô để tính lương qua đêm."
+          ],
+          [
+            "Batch processing is useful when thousands of records can be handled together.",
+            "Xử lý theo lô hữu ích khi có thể xử lý hàng nghìn bản ghi cùng lúc."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "baud rate",
+    "pos": "noun phrase (countable; technical)",
+    "hideOvdp": true,
+    "note": "Baud rate là số ký hiệu tín hiệu được truyền trong một giây, đo bằng baud. Một ký hiệu có thể mã hóa nhiều bit, nên baud rate không phải lúc nào cũng bằng bit rate; hai con số chỉ trùng khi mỗi ký hiệu mang đúng một bit.",
+    "senses": [
+      {
+        "m": "tốc độ baud; số ký hiệu truyền mỗi giây",
+        "pat": "a baud rate of 9,600 · set/check the baud rate · match the baud rates",
+        "ex": [
+          [
+            "Set the modem and the receiver to the same baud rate.",
+            "Hãy đặt modem và bộ nhận ở cùng tốc độ baud."
+          ],
+          [
+            "A higher baud rate does not always mean the same increase in bits per second.",
+            "Tốc độ baud cao hơn không phải lúc nào cũng đồng nghĩa số bit mỗi giây tăng tương ứng."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "bay tree",
+    "pos": "noun phrase (countable; also bay)",
+    "hideOvdp": true,
+    "note": "Bay tree thường chỉ cây nguyệt quế thơm Laurus nobilis; lá bay được dùng làm gia vị. Cây này khác với các loài thường được gọi là bay laurel hoặc cherry laurel trong làm vườn, nên tên thông dụng đôi khi cần kiểm tra theo ngữ cảnh thực vật học.",
+    "senses": [
+      {
+        "m": "cây nguyệt quế thơm (Laurus nobilis)",
+        "pat": "a bay tree · grow/plant a bay tree · bay leaves from a bay tree",
+        "ex": [
+          [
+            "She grows a bay tree in a pot beside the kitchen door.",
+            "Cô trồng một cây nguyệt quế thơm trong chậu cạnh cửa bếp."
+          ],
+          [
+            "Fresh leaves from the bay tree were added to the stew.",
+            "Lá tươi từ cây nguyệt quế được cho vào món hầm."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "bay window",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Bay window là cửa sổ nhô ra khỏi mặt tường ngoài, thường có kính ở nhiều mặt để lấy thêm ánh sáng và tạo một hốc nhỏ bên trong phòng. Phần nhô ra có thể có dạng đa giác hoặc cong; không nhất thiết chỉ gồm đúng ba tấm kính.",
+    "senses": [
+      {
+        "m": "cửa sổ lồi/cửa sổ nhô ra ngoài tường",
+        "pat": "a bay window · sit in/by the bay window · a room with a bay window",
+        "ex": [
+          [
+            "A small sofa fits neatly beneath the bay window.",
+            "Một chiếc sofa nhỏ vừa khít bên dưới cửa sổ lồi."
+          ],
+          [
+            "The bay window gives the living room more daylight.",
+            "Cửa sổ lồi giúp phòng khách đón được nhiều ánh sáng ban ngày hơn."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "bean feast",
+    "pos": "noun phrase (countable; British English, old-fashioned)",
+    "hideOvdp": true,
+    "note": "Bean feast là bữa tiệc hoặc buổi liên hoan, thường do chủ lao động tổ chức cho công nhân; cách dùng này nay đã cũ và mang sắc thái Anh-Anh. OALD cũng có dạng viết liền beanfeast; trong văn phong hiện đại, party hoặc staff celebration tự nhiên hơn.",
+    "senses": [
+      {
+        "m": "buổi tiệc/liên hoan (cách dùng cũ, Anh-Anh)",
+        "pat": "hold/have a bean feast · an annual bean feast · a company bean feast",
+        "ex": [
+          [
+            "The factory held a bean feast for its workers at the end of the season.",
+            "Nhà máy tổ chức tiệc liên hoan cho công nhân vào cuối mùa."
+          ],
+          [
+            "In the old diary, the village’s annual bean feast is mentioned every summer.",
+            "Trong cuốn nhật ký cũ, hội tiệc thường niên của làng được nhắc đến mỗi mùa hè."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "bear hug",
+    "pos": "noun phrase (countable; informal)",
+    "hideOvdp": true,
+    "note": "Nghĩa thông thường là cái ôm thật chặt; bear hug cũng có nghĩa chuyên ngành kinh doanh: lời đề nghị mua lại hấp dẫn đến mức ban lãnh đạo công ty mục tiêu khó từ chối, dù họ có thể chưa chủ động tìm người mua. Ngữ cảnh quyết định nghĩa.",
+    "senses": [
+      {
+        "m": "cái ôm thật chặt",
+        "pat": "give somebody a bear hug · wrap somebody in a bear hug · a warm bear hug",
+        "ex": [
+          [
+            "Her brother greeted her with a bear hug at the station.",
+            "Anh trai ôm chặt cô khi đón cô ở nhà ga."
+          ],
+          [
+            "The child ran across the room and gave his grandfather a bear hug.",
+            "Đứa trẻ chạy qua phòng rồi ôm chầm lấy ông."
+          ]
+        ]
+      },
+      {
+        "m": "đề nghị mua lại hấp dẫn nhằm gây sức ép để công ty mục tiêu chấp nhận (tài chính)",
+        "pat": "make/launch a bear hug offer · a bear-hug takeover bid · reject a bear hug",
+        "ex": [
+          [
+            "The board rejected the bear hug offer and asked shareholders to wait.",
+            "Hội đồng quản trị từ chối đề nghị mua lại hấp dẫn đó và yêu cầu cổ đông chờ thêm."
+          ],
+          [
+            "The bidder used a bear hug to pressure the company into negotiations.",
+            "Bên mua dùng một lời chào mua rất hấp dẫn để gây sức ép buộc công ty đàm phán."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "bell jar",
+    "pos": "noun phrase (countable)",
+    "hideOvdp": true,
+    "note": "Bell jar là bình/chụp thủy tinh hình chuông dùng để che mẫu vật hoặc thiết bị thí nghiệm; trong thí nghiệm, nó có thể được đặt trên đế để tạo một khoang kín. Cụm này cũng xuất hiện trong văn học như nhan đề riêng, nhưng nghĩa từ vựng cơ bản là vật dụng thủy tinh.",
+    "senses": [
+      {
+        "m": "chụp/bình thủy tinh hình chuông dùng trong thí nghiệm",
+        "pat": "under a bell jar · cover something with a bell jar · a glass bell jar",
+        "ex": [
+          [
+            "The scientist placed the plant under a bell jar for the experiment.",
+            "Nhà khoa học đặt cây dưới chụp thủy tinh để làm thí nghiệm."
+          ],
+          [
+            "Dust gathered on the bell jar covering the delicate instrument.",
+            "Bụi bám trên chiếc chụp thủy tinh che dụng cụ tinh xảo."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "belly button",
+    "pos": "noun phrase (countable; informal)",
+    "hideOvdp": true,
+    "note": "Belly button là cách nói thân mật của navel (rốn); trong tiếng Anh-Anh cũng có thể nghe tummy button. Đây là từ đời thường, còn navel phù hợp hơn trong văn bản y khoa hoặc trang trọng.",
+    "senses": [
+      {
+        "m": "rốn (cách nói thân mật)",
+        "pat": "your belly button · around the belly button · a belly-button piercing",
+        "ex": [
+          [
+            "The baby has a small birthmark just above her belly button.",
+            "Em bé có một vết bớt nhỏ ngay phía trên rốn."
+          ],
+          [
+            "He got a belly-button piercing while travelling.",
+            "Anh ấy xỏ khuyên rốn trong chuyến đi."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "belly dance",
+    "pos": "noun phrase (countable/uncountable)",
+    "hideOvdp": true,
+    "note": "Belly dance là một nhóm hình thức múa có nguồn gốc từ Tây Á và Bắc Phi, thường nhấn mạnh chuyển động thân mình và hông; phong cách và tên gọi thay đổi theo vùng, cộng đồng và bối cảnh biểu diễn. Không nên coi đây là một điệu múa duy nhất có quy tắc đồng nhất.",
+    "senses": [
+      {
+        "m": "múa bụng; một hình thức múa có chuyển động thân mình và hông",
+        "pat": "learn/do belly dance · a belly-dance class · a belly dancer performs",
+        "ex": [
+          [
+            "She joined a beginner belly-dance class at the community centre.",
+            "Cô tham gia lớp múa bụng căn bản tại trung tâm cộng đồng."
+          ],
+          [
+            "The festival featured dancers presenting several regional styles of belly dance.",
+            "Lễ hội có các vũ công trình diễn nhiều phong cách múa bụng theo vùng."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "belly flop",
+    "pos": "noun phrase (countable; informal)",
+    "hideOvdp": true,
+    "note": "Belly flop là cú nhảy xuống nước vụng về khiến mặt trước cơ thể đập phẳng xuống mặt nước; nghĩa bóng thân mật có thể chỉ một thất bại hoặc cú sa sút nặng. Động từ liên quan là belly-flop (into/on something).",
+    "senses": [
+      {
+        "m": "cú nhảy úp bụng xuống nước (thường gây đau)",
+        "pat": "do a belly flop · land in a belly flop · a painful belly flop",
+        "ex": [
+          [
+            "He attempted a dive but landed in a painful belly flop.",
+            "Anh định thực hiện cú lặn nhưng lại úp bụng xuống nước đau điếng."
+          ],
+          [
+            "The children laughed when the lifeguard demonstrated a belly flop.",
+            "Bọn trẻ cười khi nhân viên cứu hộ làm mẫu cú nhảy úp bụng."
+          ]
+        ]
+      },
+      {
+        "m": "thất bại/cú sa sút nghiêm trọng (nghĩa bóng, thân mật)",
+        "pat": "a commercial belly flop · a project makes a belly flop · avoid a belly flop",
+        "ex": [
+          [
+            "The expensive launch was a commercial belly flop.",
+            "Đợt ra mắt tốn kém đó là một thất bại thương mại nặng nề."
+          ],
+          [
+            "The team’s performance took a belly flop in the second half.",
+            "Phong độ của đội sa sút thảm hại trong hiệp hai."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "belt up",
+    "pos": "phrasal verb (British English; informal)",
+    "hideOvdp": true,
+    "note": "Ở Anh, belt up nghĩa là cài dây an toàn; cách nói Bắc Mỹ tương ứng thường là buckle up. Trong khẩu ngữ, belt up còn có nghĩa thô lỗ “im đi”, vì vậy cần dựa vào ngữ cảnh và tránh dùng nghĩa này trong giao tiếp lịch sự.",
+    "senses": [
+      {
+        "m": "cài dây an toàn",
+        "pat": "belt up · belt up before driving · belt somebody up (less common)",
+        "ex": [
+          [
+            "Please belt up before the car pulls away.",
+            "Vui lòng cài dây an toàn trước khi xe chạy."
+          ],
+          [
+            "The driver waited until everyone had belted up.",
+            "Tài xế đợi đến khi mọi người cài dây an toàn xong."
+          ]
+        ]
+      },
+      {
+        "m": "im đi; thôi nói (thô lỗ, thân mật)",
+        "pat": "belt up! · tell somebody to belt up · just belt up",
+        "ex": [
+          [
+            "He told his brother to belt up during the film.",
+            "Anh bảo em trai im đi trong lúc xem phim."
+          ],
+          [
+            "“Belt up,” she snapped, then apologized for being rude.",
+            "“Im đi,” cô gắt lên rồi xin lỗi vì đã thô lỗ."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "beta blocker",
+    "pos": "noun phrase (countable; also beta-blocker)",
+    "hideOvdp": true,
+    "note": "Beta blocker là nhóm thuốc làm chậm nhịp tim và giảm lực co bóp của tim; bác sĩ có thể kê thuốc này cho một số tình trạng tim mạch hoặc bệnh lý khác. Tên nhóm viết beta blocker hoặc beta-blocker. Đây là thông tin từ vựng, không thay thế tư vấn y tế; chỉ dùng thuốc theo chỉ định chuyên môn.",
+    "senses": [
+      {
+        "m": "thuốc chẹn beta (nhóm thuốc ảnh hưởng đến nhịp và hoạt động của tim)",
+        "pat": "a beta blocker · prescribe/take a beta blocker · beta-blocker treatment",
+        "ex": [
+          [
+            "Her doctor prescribed a beta blocker to help manage her heart condition.",
+            "Bác sĩ kê thuốc chẹn beta để hỗ trợ kiểm soát bệnh tim của cô."
+          ],
+          [
+            "Patients should ask a health professional before changing a beta-blocker dose.",
+            "Người bệnh nên hỏi chuyên gia y tế trước khi thay đổi liều thuốc chẹn beta."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "beta test",
+    "pos": "noun phrase (countable; also verb)",
+    "hideOvdp": true,
+    "note": "Beta test là đợt thử nghiệm sản phẩm/phần mềm với người dùng thực tế trước khi phát hành rộng rãi; người thử thường ở ngoài nhóm phát triển. Beta testing thường diễn ra sau alpha testing nội bộ. Trong công nghệ, beta test cũng dùng như động từ: beta-test an app.",
+    "senses": [
+      {
+        "m": "đợt thử nghiệm beta; thử nghiệm với người dùng trước khi phát hành chính thức",
+        "pat": "run/conduct a beta test · invite users to a beta test · beta-test a new app",
+        "ex": [
+          [
+            "The company invited teachers to take part in a beta test of its learning app.",
+            "Công ty mời giáo viên tham gia thử nghiệm beta ứng dụng học tập."
+          ],
+          [
+            "We beta-tested the new feature with a small group before launch.",
+            "Chúng tôi thử nghiệm tính năng mới với một nhóm nhỏ trước khi ra mắt."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "betel nut",
+    "pos": "noun phrase (countable/uncountable)",
+    "hideOvdp": true,
+    "note": "Betel nut thường là hạt của cây cau (areca nut), không phải một loại hạt thực vật học theo nghĩa “nut”. Ở nhiều nơi, hạt này được nhai trong trầu cau cùng lá trầu và các thành phần khác; betel leaf là lá trầu, còn betel quid là miếng trầu đã têm.",
+    "senses": [
+      {
+        "m": "hạt cau (thường được gọi là betel nut trong tiếng Anh)",
+        "pat": "chew betel nut · betel-nut chewing · a piece of betel nut",
+        "ex": [
+          [
+            "The market sells dried betel nut alongside betel leaves.",
+            "Chợ bán hạt cau khô cùng với lá trầu."
+          ],
+          [
+            "In the region, people traditionally chew betel nut during social visits.",
+            "Trong vùng, người ta có truyền thống nhai trầu cau khi thăm hỏi nhau."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "bicarbonate of soda",
+    "pos": "noun phrase (uncountable; also baking soda)",
+    "hideOvdp": true,
+    "note": "Bicarbonate of soda là tên thường dùng ở Anh của natri hiđrocacbonat (NaHCO₃); baking soda phổ biến hơn ở Mỹ và bicarb là cách gọi thân mật. Chất này dùng làm muối nở, nhưng không đồng nghĩa với baking powder (bột nở), vốn là hỗn hợp nhiều thành phần.",
+    "senses": [
+      {
+        "m": "muối nở; natri hiđrocacbonat",
+        "pat": "a teaspoon of bicarbonate of soda · add bicarbonate of soda · bicarbonate-of-soda solution",
+        "ex": [
+          [
+            "The recipe calls for bicarbonate of soda to help the cake rise.",
+            "Công thức yêu cầu muối nở để giúp bánh nở."
+          ],
+          [
+            "Bicarbonate of soda is also known as baking soda in American English.",
+            "Trong tiếng Anh-Mỹ, bicarbonate of soda còn được gọi là baking soda."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "big bang",
+    "pos": "proper noun (usually the Big Bang)",
+    "hideOvdp": true,
+    "note": "The Big Bang là tên mô hình khoa học mô tả vũ trụ sơ khai ở trạng thái cực nóng và đậm đặc rồi giãn nở; thuật ngữ này không nên hiểu như một vụ nổ thông thường xảy ra tại một điểm trong không gian đã tồn tại sẵn. Thường viết hoa và dùng mạo từ the.",
+    "senses": [
+      {
+        "m": "Vụ Nổ Lớn; mô hình vũ trụ học về sự giãn nở của vũ trụ",
+        "pat": "the Big Bang · the Big Bang theory · evidence for the Big Bang",
+        "ex": [
+          [
+            "The Big Bang model describes how the universe has expanded over time.",
+            "Mô hình Vụ Nổ Lớn mô tả vũ trụ đã giãn nở theo thời gian như thế nào."
+          ],
+          [
+            "Astronomers study background radiation as evidence related to the Big Bang.",
+            "Các nhà thiên văn nghiên cứu bức xạ nền như bằng chứng liên quan đến Vụ Nổ Lớn."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "big bang theory",
+    "pos": "noun phrase (usually the Big Bang theory)",
+    "hideOvdp": true,
+    "note": "The Big Bang theory là lý thuyết khoa học hiện đại cho rằng vũ trụ đã tiến hóa từ trạng thái ban đầu cực nóng, đậm đặc và tiếp tục giãn nở. Tên thường có mạo từ và viết hoa Big Bang; khác với nhan đề The Big Bang Theory của một phim truyền hình.",
+    "senses": [
+      {
+        "m": "thuyết Vụ Nổ Lớn; lý thuyết vũ trụ học về nguồn gốc và sự giãn nở của vũ trụ",
+        "pat": "the Big Bang theory · support/challenge the Big Bang theory · evidence for the theory",
+        "ex": [
+          [
+            "The Big Bang theory is supported by several observations of the universe.",
+            "Thuyết Vụ Nổ Lớn được hỗ trợ bởi nhiều quan sát về vũ trụ."
+          ],
+          [
+            "The lecturer compared the Big Bang theory with older models of the universe.",
+            "Giảng viên so sánh thuyết Vụ Nổ Lớn với các mô hình vũ trụ cũ hơn."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "big blue",
+    "pos": "proper noun (informal nickname)",
+    "hideOvdp": true,
+    "note": "Big Blue là biệt danh thân mật của IBM, đặc biệt phổ biến trong ngữ cảnh công nghệ và kinh doanh. Thường viết hoa cả hai từ; đây là tên gọi không chính thức của công ty, không phải nghĩa đen “màu xanh lớn”.",
+    "senses": [
+      {
+        "m": "Big Blue: biệt danh của tập đoàn IBM",
+        "pat": "Big Blue · Big Blue’s products · work for Big Blue",
+        "ex": [
+          [
+            "Big Blue announced a new enterprise-software partnership.",
+            "Big Blue công bố quan hệ hợp tác mới về phần mềm doanh nghiệp."
+          ],
+          [
+            "The journalist interviewed a former engineer from Big Blue.",
+            "Nhà báo phỏng vấn một cựu kỹ sư của IBM."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "big dipper",
+    "pos": "proper noun and noun phrase (regional)",
+    "hideOvdp": true,
+    "note": "Ở Bắc Mỹ, the Big Dipper là nhóm bảy ngôi sao dễ nhận ra thuộc chòm Ursa Major (Đại Hùng), chứ không phải tên một chòm sao chính thức riêng. Trong tiếng Anh-Anh cũ, Big Dipper còn chỉ một trò tàu lượn ở công viên giải trí.",
+    "senses": [
+      {
+        "m": "Bắc Đẩu Thất Tinh (nhóm sao thuộc chòm Đại Hùng)",
+        "pat": "the Big Dipper · find/spot the Big Dipper · the handle/bowl of the Big Dipper",
+        "ex": [
+          [
+            "We used the Big Dipper to help us find the North Star.",
+            "Chúng tôi dựa vào nhóm sao Bắc Đẩu để tìm Sao Bắc Cực."
+          ],
+          [
+            "The Big Dipper was visible above the hills after sunset.",
+            "Nhóm sao Bắc Đẩu hiện rõ phía trên những ngọn đồi sau hoàng hôn."
+          ]
+        ]
+      },
+      {
+        "m": "tàu lượn ở công viên giải trí (cách dùng cũ, Anh-Anh)",
+        "pat": "ride the Big Dipper · a Big Dipper roller coaster · an amusement-park Big Dipper",
+        "ex": [
+          [
+            "The children queued for the Big Dipper at the seaside amusement park.",
+            "Bọn trẻ xếp hàng chơi tàu lượn Big Dipper ở công viên giải trí ven biển."
+          ],
+          [
+            "An old poster advertised a fast ride on the Big Dipper.",
+            "Một tấm áp phích cũ quảng cáo chuyến tàu lượn tốc độ cao mang tên Big Dipper."
+          ]
+        ]
+      }
+    ]
+  }
+]

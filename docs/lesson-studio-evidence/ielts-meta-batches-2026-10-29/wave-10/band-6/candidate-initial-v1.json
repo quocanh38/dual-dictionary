@@ -1,0 +1,336 @@
+{
+  "stage": "band-6",
+  "batchId": "wave-10",
+  "itemCount": 20,
+  "status": "meta-draft-awaiting-gpt-cross-review",
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-10-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-10-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Museum School Visit Booking",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "part": "Part 1",
+      "script": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "wordCount": 312
+    },
+    "reading": {
+      "title": "University Study-Support Drop-In Evaluation",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "wordCount": 419
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-10-band-6-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Museum School Visit Booking",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "transcript": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "prompt": "What workshop and date was booked?",
+      "options": [
+        "Ancient Egypt workshop on 18 March",
+        "Ancient Egypt workshop on 18 May",
+        "Science workshop on 18 March",
+        "Guided tour only on 18 March"
+      ],
+      "answer": 0,
+      "explanation": "The script confirms the 'Life in Ancient Egypt' workshop for 18 March. Option B fails because May is never mentioned."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Museum School Visit Booking",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "transcript": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "prompt": "How many pupils will attend?",
+      "options": [
+        "32 pupils",
+        "30 pupils",
+        "28 pupils",
+        "33 pupils and adults"
+      ],
+      "answer": 1,
+      "explanation": "The teacher says 32 in class but two away, leaving 30 pupils. Option A ignores the two absentees."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Museum School Visit Booking",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "transcript": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "prompt": "What must the school do to keep its slot?",
+      "options": [
+        "Pay 50% charge",
+        "Bring no backpacks",
+        "Confirm form two weeks before",
+        "Arrive at 10:00"
+      ],
+      "answer": 2,
+      "explanation": "Tom says the form must be confirmed two weeks before or the slot is released. Option A refers to late cancellation, not keeping the slot."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Museum School Visit Booking",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "transcript": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "prompt": "What is true about the lunch room?",
+      "options": [
+        "Costs £4 per child",
+        "Open all morning",
+        "On first floor education room",
+        "Available 12:00-12:45 if pre-booked"
+      ],
+      "answer": 3,
+      "explanation": "Tom states the lunch room is 12:00-12:45 and must be pre-booked. Option C confuses it with the education room location."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Museum School Visit Booking",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and corrected details in an everyday service conversation",
+      "transcript": "Tom: Good morning, City Museum Education Bookings, Tom speaking. How can I help?\nMs Patel: Hello, I'm calling from Westfield Primary. I'd like to arrange a school visit for Year 5 next month.\nTom: Certainly. Which programme are you interested in?\nMs Patel: The 'Life in Ancient Egypt' workshop. I saw it includes a guided tour and handling objects.\nTom: Yes, that's our most popular one. It lasts 90 minutes and starts in the education room on the first floor. What date did you have in mind?\nMs Patel: Tuesday, 18th March. We can arrive at 10 o'clock... actually, sorry, the bus company just changed the time, so we'll arrive at 10:30.\nTom: No problem, I've noted 10:30 arrival on the 18th. How many children will be coming?\nMs Patel: There are 32 in the class, but two are away on that day, so 30 pupils and three adults.\nTom: Thanks. So 30 students plus staff. The cost is £4 per child, teachers free. You need to confirm the booking form at least two weeks before, otherwise we release the slot. If you cancel less than five days before, there's a 50% charge.\nMs Patel: Understood. Is there space for lunch? We'd like to eat before we leave.\nTom: Yes, the lunch room is available from 12:00 to 12:45, but you must book it in advance. It's free if you book with the workshop.\nMs Patel: Please book it for us. One more thing, one student uses a wheelchair. Is the workshop room accessible?\nTom: Absolutely, all galleries and the workshop room have lift access. Just note it on the form. There's also a cloakroom on the ground floor next to the entrance for coats, but please avoid large backpacks.\nMs Patel: Great. Will you send confirmation by email?\nTom: Yes, I'll email the booking pack today with directions and payment details.",
+      "prompt": "What correction did the caller make?",
+      "options": [
+        "Changed arrival from 10:00 to 10:30",
+        "Changed date to 19 March",
+        "Increased pupils to 32",
+        "Cancelled lunch booking"
+      ],
+      "answer": 0,
+      "explanation": "The caller corrects arrival from 10:00 to 10:30 due to the bus change. Option B is wrong as the date stays 18 March."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "University Study-Support Drop-In Evaluation",
+      "pathwayStage": "band-6",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "prompt": "Why was the evaluation carried out?",
+      "options": [
+        "To compare library locations",
+        "To close booking service",
+        "To assess value of drop-in service",
+        "To recruit five advisers"
+      ],
+      "answer": 2,
+      "explanation": "The passage says the Unit evaluated the service to assess its value in spring 2024. Option A misuses the library location detail."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "University Study-Support Drop-In Evaluation",
+      "pathwayStage": "band-6",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "prompt": "What did attendance records show about timing?",
+      "options": [
+        "Afternoon visits higher than morning",
+        "Morning visits double afternoon",
+        "Equal morning and afternoon use",
+        "Postgraduates only came mornings"
+      ],
+      "answer": 0,
+      "explanation": "Records show 62% afternoon versus 38% morning visits. Option B reverses the comparison."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "University Study-Support Drop-In Evaluation",
+      "pathwayStage": "band-6",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "prompt": "How did reasons for attending differ?",
+      "options": [
+        "Both groups wanted referencing only",
+        "Undergraduates wanted dissertation help",
+        "Postgraduates wanted data commentary only",
+        "Undergraduates sought essay structure, postgraduates dissertation planning"
+      ],
+      "answer": 3,
+      "explanation": "Undergraduates sought essay structure and referencing while postgraduates sought dissertation planning. Option B swaps the groups."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "University Study-Support Drop-In Evaluation",
+      "pathwayStage": "band-6",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "prompt": "Which is the authors' main claim illustrated by the history student?",
+      "options": [
+        "History student reorganised industrialisation argument",
+        "Drop-in builds long-term confidence",
+        "85% rated advice helpful",
+        "Tutors correct grammar quickly"
+      ],
+      "answer": 1,
+      "explanation": "The authors argue the main benefit is long-term confidence growth; the history student is just an example. Option A is the example, not the claim."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "University Study-Support Drop-In Evaluation",
+      "pathwayStage": "band-6",
+      "focus": "clear comparisons, distinguishing claims from examples and limited inference",
+      "passage": "The University of Northbridge opened a Study-Support Drop-In Centre in September 2023 to help students with academic writing, referencing and revision planning. The centre is located on the second floor of the main library and is staffed by five learning advisers. Unlike the existing one-to-one tutoring service, which requires booking two weeks in advance, the drop-in operates without appointments. Students can arrive during advertised hours and speak to a tutor for up to 20 minutes. To assess its value, the Student Learning Unit evaluated the service during the spring term of 2024.\n\nThe evaluation combined attendance records for 12 weeks with a questionnaire completed by 180 users. The records showed clear patterns in timing and user groups. Overall, 62% of visits occurred in afternoon sessions (2pm-5pm) compared with 38% in morning sessions (10am-1pm). Staff suggested this reflects undergraduate lecture timetables, which often occupy mornings. Postgraduates made up 35% of users despite representing only 20% of the university population, indicating higher relative use.\n\nReasons for attending also differed. Undergraduates most commonly sought help with essay structure and referencing, while postgraduates came for dissertation planning and data commentary. Satisfaction was high: 85% of respondents rated the advice as 'helpful' or 'very helpful', and 70% said they would return. The report illustrates this with an example: a second-year history student described how a tutor helped her reorganise an argument about industrialisation, rather than simply correcting grammar.\n\nThe evaluation compared the drop-in with booked appointments. Booked sessions last 45 minutes and allow detailed feedback, but the average waiting time was 11 days. Drop-in consultations averaged 14 minutes and were seen as more accessible for quick questions. The authors argue that the main benefit of the drop-in is not immediate problem-solving but longer-term growth in confidence, as students learn to identify their own errors. This claim is supported by the finding that repeat visitors reported greater confidence than first-time users.\n\nHowever, the evaluation has limits. It covered only one term and relied on volunteers who chose to complete the questionnaire, so results may not represent all students. Tutors reported that afternoon sessions averaged 18 students per hour, compared with 11 in the morning, which sometimes reduced individual time. The authors recommend extending afternoon opening by one hour and providing additional tutor training on referencing software, which accounted for 40% of queries. The report concludes that the drop-in complements rather than replaces booked appointments, offering quick access while longer issues still need scheduled support. A follow-up evaluation is planned for autumn 2024 to include non-users.",
+      "prompt": "What can be inferred about extending afternoon hours?",
+      "options": [
+        "It would end morning sessions",
+        "It would replace booked appointments",
+        "It would address higher afternoon demand",
+        "It would reduce questionnaire volunteers"
+      ],
+      "answer": 2,
+      "explanation": "Afternoon sessions were busier (62% and 18 per hour), so extending hours meets demand. Option B contradicts the conclusion that drop-ins complement appointments."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-10-band-6-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Museum Schools Programme",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and clear comparisons",
+      "prompt": "The table below shows information about the Hillford City Museum schools programme in 2022 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nData:\n- Primary school visits: 45 in 2022, 62 in 2024\n- Secondary school visits: 30 in 2022, 28 in 2024\n- Total students participating: 3,200 in 2022, 4,100 in 2024\n- Workshops offered: 18 in 2022, 25 in 2024\n- Average teacher rating (out of 10): 7.8 in 2022, 8.4 in 2024\n\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · University Study-Support Sessions",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, corrected details and clear comparisons",
+      "prompt": "The bar chart below compares attendance at four study-support sessions at Westfield University in Term 1 and Term 2 in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nAttendance (number of students):\n- Academic Writing: 80 in Term 1, 110 in Term 2\n- Time Management: 65 in Term 1, 70 in Term 2\n- Research Skills: 95 in Term 1, 85 in Term 2\n- Exam Preparation: 50 in Term 1, 90 in Term 2\n\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Public Bicycle-Dock Consultation",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, linked ideas and clear comparisons",
+      "prompt": "The table below shows the results of a public consultation with 500 residents in Hillford about a proposed bicycle dock near Central Park in 2023 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nShare of responses:\n- Support the proposal: 42% in 2023, 55% in 2024\n- Oppose the proposal: 35% in 2023, 25% in 2024\n- Undecided: 23% in 2023, 20% in 2024\n\nMost common reason given:\n- For support: convenient for commuting (2023 and 2024)\n- For opposition: concern about loss of parking space (2023 and 2024)\n\nWrite at least 150 words.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Museums and Education",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas, balanced discussion and clear opinion",
+      "prompt": "Some people think museums should focus mainly on entertaining visitors, while others believe their main purpose should be to educate. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Bicycle Facilities in Cities",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase, reasons and evaluation",
+      "prompt": "Some people say governments should spend more money on bicycle facilities, such as docks and lanes, than on other forms of public transport. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-10-band-6-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Studies and Free Time",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase and linked ideas on familiar topics",
+      "prompt": "Answer the following questions about yourself. Give short, connected answers.\n1. What do you study or work on at the moment?\n2. How do you usually organise your study time?\n3. Do you enjoy visiting museums? Why or why not?\n4. What do you like to do when you have free time in the evening?"
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Transport and Your Area",
+      "pathwayStage": "band-6",
+      "focus": "paraphrase and linked ideas on familiar topics",
+      "prompt": "Answer the following questions about yourself. Give short, connected answers.\n1. How do you usually travel around your local area?\n2. Is cycling popular where you live?\n3. What is one thing you like about your neighbourhood?\n4. Has transport in your area changed in recent years?"
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · An Educational Visit",
+      "pathwayStage": "band-6",
+      "focus": "linked ideas, corrected details and clear description",
+      "prompt": "Describe a museum, library or educational centre you visited and found interesting. You will have one minute to prepare and should speak for one to two minutes.\n\nYou should say:\n- where it was\n- when you went there\n- what you did or learned there\n- and explain why you found the visit interesting or useful.\n\nYou may make notes while you prepare."
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · University Support and Independent Learning",
+      "pathwayStage": "band-6",
+      "focus": "reasons, evaluation and comparison",
+      "prompt": "Answer the following questions with reasons and examples. Do not give memorised facts.\n1. Why do some university students use extra study-support sessions while others prefer to study alone?\n2. What are the advantages and disadvantages of group study sessions compared to individual study?\n3. How can universities encourage students to become more independent learners?\n4. Do you think online support can be as effective as face-to-face support? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-10-band-6-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Public Facilities and Consultation",
+      "pathwayStage": "band-6",
+      "focus": "reasons, evaluation and balancing views",
+      "prompt": "Answer the following questions with reasons and evaluation. Do not give memorised facts.\n1. Why is it important for local councils to consult the public before building new facilities like bicycle docks?\n2. How should decision-makers balance different opinions when some residents support and others oppose a project?\n3. What are the benefits and possible problems of encouraging more cycling in cities?\n4. Do you think public consultations lead to better decisions in the long term? Why or why not?"
+    }
+  ]
+}

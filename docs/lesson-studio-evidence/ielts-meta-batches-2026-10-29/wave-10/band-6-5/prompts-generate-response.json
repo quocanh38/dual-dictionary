@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-10",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:21:10.106Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 647,
+    "outputTokens": 4734,
+    "totalTokens": 5381
+  },
+  "latencyMs": 21646,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Campus Water Use and Saving Projections\",\"focus\":\"Summarising and comparing projected versus actual use with denser data and limitations\",\"prompt\":\"Summarise the information in the table. Compare the main trends and differences between projected and actual water use, and note any limitations in the data. Table: Northfield University Campus Water Project (cubic metres per year). Dormitories: 2023 baseline 42,000; 2024 projected 36,000; 2024 actual 38,500; metering coverage 98%. Science Laboratories: 28,000; 24,000; 25,200; 95%. Sports Centre: 18,000; 14,500; 16,800*; 70%. Cafeterias and Kitchens: 15,000; 12,000; 12,400; 100%. Administration Offices: 9,000; 8,000; 8,600; 92%. *Sports Centre 2024 actual includes estimate for March-April due to meter fault. Interventions in 2024: low-flow showers in dormitories, water-recycling system in laboratories, awareness campaign in all buildings. Write at least 150 words in about 20 minutes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Bird Monitoring Results Across Campus Habitats\",\"focus\":\"Comparing counts across habitats and years while handling observer effort and uncertainty\",\"prompt\":\"Summarise the information in the table. Compare bird counts across habitats and between years, and comment on observer effort and data limitations. Table: Greenfield Campus Bird Monitoring - individuals counted. Woodland Patch: observer hours 40 in 2022, 60 in 2024; Swifts 45 in 2022, 62 in 2024; Sparrows 120, 135; Herons 8, 9. Lake Edge: 40, 60; Swifts 12, 18; Sparrows 80, 95; Herons 22, 31. Rooftop Gardens: 30, 50; Swifts 28, 55; Sparrows 60, 110; Herons 2, 3. Notes: 2024 had calmer spring weather; rooftop garden area increased by 30% between surveys; some juvenile swifts and sparrows may have been double-counted. Write at least 150 words in about 20 minutes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Technical Upgrades or Behaviour Change for Campus Water Saving\",\"focus\":\"Qualified argument with evidence comparison and handling of limitations\",\"prompt\":\"Some people think universities should prioritise technical upgrades such as efficient fixtures and recycling systems to save water, while others think behaviour campaigns such as education and incentives are more effective. Discuss both views, compare the evidence and costs, and give your own view with qualified claims. Consider long-term effects and the limitations of available evidence. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Communicating Bird-Monitoring Results to Different Audiences\",\"focus\":\"Evaluating accuracy versus accessibility and communicating uncertainty\",\"prompt\":\"Bird-monitoring results are often simplified for the public, which some people say is misleading, while others argue that detailed scientific reports are too difficult for most people to use. Discuss both views and give your opinion. Compare different communication approaches and explain how uncertainty and limitations should be handled. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Selecting Urban Heat Measures for a Campus District\",\"focus\":\"Comparing options with trade-offs, evidence and limitations\",\"prompt\":\"A university district is choosing measures to reduce urban heat: planting more trees, installing reflective roofs, or creating water features such as ponds and fountains. Each option has benefits and drawbacks for cost, maintenance, and effectiveness. Discuss what factors should guide the choice, compare the evidence for the different options, and explain how trade-offs and limitations should be handled. Give reasons for your view. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Daily Water Use and Conservation\",\"focus\":\"Personal habits and qualified descriptions of routine behaviour\",\"prompt\":\"Answer 4-5 short questions in 4-5 minutes. 1. How do you usually try to save water at home? 2. Has your attitude to saving water changed in recent years? 3. What water-saving measures have you seen in schools or workplaces? 4. Do you think people in your area are concerned about water use?\"},{\"task\":\"Part 1 · Nature and Birdlife in Your Area\",\"focus\":\"Describing local environment and personal experience with nature\",\"prompt\":\"Answer 4-5 short questions in 4-5 minutes. 1. Are there many birds or green spaces where you live? 2. Do you often notice birds or other wildlife in your daily life? 3. Have you ever taken part in a nature observation activity? 4. How important is it for cities to protect habitats for birds?\"},{\"task\":\"Part 2 · Cue card · An Environmental Project You Observed or Joined\",\"focus\":\"Narrative with reflection on results and limitations\",\"prompt\":\"Describe an environmental project you observed or took part in, such as a water-saving, bird-monitoring, or urban heat project. You will have 1 minute to prepare and 1-2 minutes to speak. Include: • what the project was and where it took place • what you did or observed • what the results or challenges were • and explain what you learned about its success or limitations.\"},{\"task\":\"Part 3 · Evaluating Campus Environmental Projects\",\"focus\":\"Reasons, trade-offs and evidence comparison for decision making\",\"prompt\":\"Discuss for 4-5 minutes. 1. How should universities decide between technical solutions and behaviour campaigns for saving water? 2. What are the advantages and limitations of using short-term data to judge a project? 3. Should student views be included when selecting urban heat measures? Why or why not?\"},{\"task\":\"Part 3 · Communicating Scientific Information to the Public\",\"focus\":\"Evaluation of accuracy, accessibility and handling uncertainty\",\"prompt\":\"Discuss for 4-5 minutes. 1. Why might simplified summaries of bird-monitoring results be useful, and what risks do they carry? 2. How can communicators show uncertainty without confusing the public? 3. When evidence is limited or mixed, how should decision makers explain their choices about urban heat measures?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Campus Water Use and Saving Projections",
+        "focus": "Summarising and comparing projected versus actual use with denser data and limitations",
+        "prompt": "Summarise the information in the table. Compare the main trends and differences between projected and actual water use, and note any limitations in the data. Table: Northfield University Campus Water Project (cubic metres per year). Dormitories: 2023 baseline 42,000; 2024 projected 36,000; 2024 actual 38,500; metering coverage 98%. Science Laboratories: 28,000; 24,000; 25,200; 95%. Sports Centre: 18,000; 14,500; 16,800*; 70%. Cafeterias and Kitchens: 15,000; 12,000; 12,400; 100%. Administration Offices: 9,000; 8,000; 8,600; 92%. *Sports Centre 2024 actual includes estimate for March-April due to meter fault. Interventions in 2024: low-flow showers in dormitories, water-recycling system in laboratories, awareness campaign in all buildings. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Bird Monitoring Results Across Campus Habitats",
+        "focus": "Comparing counts across habitats and years while handling observer effort and uncertainty",
+        "prompt": "Summarise the information in the table. Compare bird counts across habitats and between years, and comment on observer effort and data limitations. Table: Greenfield Campus Bird Monitoring - individuals counted. Woodland Patch: observer hours 40 in 2022, 60 in 2024; Swifts 45 in 2022, 62 in 2024; Sparrows 120, 135; Herons 8, 9. Lake Edge: 40, 60; Swifts 12, 18; Sparrows 80, 95; Herons 22, 31. Rooftop Gardens: 30, 50; Swifts 28, 55; Sparrows 60, 110; Herons 2, 3. Notes: 2024 had calmer spring weather; rooftop garden area increased by 30% between surveys; some juvenile swifts and sparrows may have been double-counted. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Technical Upgrades or Behaviour Change for Campus Water Saving",
+        "focus": "Qualified argument with evidence comparison and handling of limitations",
+        "prompt": "Some people think universities should prioritise technical upgrades such as efficient fixtures and recycling systems to save water, while others think behaviour campaigns such as education and incentives are more effective. Discuss both views, compare the evidence and costs, and give your own view with qualified claims. Consider long-term effects and the limitations of available evidence. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Communicating Bird-Monitoring Results to Different Audiences",
+        "focus": "Evaluating accuracy versus accessibility and communicating uncertainty",
+        "prompt": "Bird-monitoring results are often simplified for the public, which some people say is misleading, while others argue that detailed scientific reports are too difficult for most people to use. Discuss both views and give your opinion. Compare different communication approaches and explain how uncertainty and limitations should be handled. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Selecting Urban Heat Measures for a Campus District",
+        "focus": "Comparing options with trade-offs, evidence and limitations",
+        "prompt": "A university district is choosing measures to reduce urban heat: planting more trees, installing reflective roofs, or creating water features such as ponds and fountains. Each option has benefits and drawbacks for cost, maintenance, and effectiveness. Discuss what factors should guide the choice, compare the evidence for the different options, and explain how trade-offs and limitations should be handled. Give reasons for your view. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Water Use and Conservation",
+        "focus": "Personal habits and qualified descriptions of routine behaviour",
+        "prompt": "Answer 4-5 short questions in 4-5 minutes. 1. How do you usually try to save water at home? 2. Has your attitude to saving water changed in recent years? 3. What water-saving measures have you seen in schools or workplaces? 4. Do you think people in your area are concerned about water use?"
+      },
+      {
+        "task": "Part 1 · Nature and Birdlife in Your Area",
+        "focus": "Describing local environment and personal experience with nature",
+        "prompt": "Answer 4-5 short questions in 4-5 minutes. 1. Are there many birds or green spaces where you live? 2. Do you often notice birds or other wildlife in your daily life? 3. Have you ever taken part in a nature observation activity? 4. How important is it for cities to protect habitats for birds?"
+      },
+      {
+        "task": "Part 2 · Cue card · An Environmental Project You Observed or Joined",
+        "focus": "Narrative with reflection on results and limitations",
+        "prompt": "Describe an environmental project you observed or took part in, such as a water-saving, bird-monitoring, or urban heat project. You will have 1 minute to prepare and 1-2 minutes to speak. Include: • what the project was and where it took place • what you did or observed • what the results or challenges were • and explain what you learned about its success or limitations."
+      },
+      {
+        "task": "Part 3 · Evaluating Campus Environmental Projects",
+        "focus": "Reasons, trade-offs and evidence comparison for decision making",
+        "prompt": "Discuss for 4-5 minutes. 1. How should universities decide between technical solutions and behaviour campaigns for saving water? 2. What are the advantages and limitations of using short-term data to judge a project? 3. Should student views be included when selecting urban heat measures? Why or why not?"
+      },
+      {
+        "task": "Part 3 · Communicating Scientific Information to the Public",
+        "focus": "Evaluation of accuracy, accessibility and handling uncertainty",
+        "prompt": "Discuss for 4-5 minutes. 1. Why might simplified summaries of bird-monitoring results be useful, and what risks do they carry? 2. How can communicators show uncertainty without confusing the public? 3. When evidence is limited or mixed, how should decision makers explain their choices about urban heat measures?"
+      }
+    ]
+  }
+}

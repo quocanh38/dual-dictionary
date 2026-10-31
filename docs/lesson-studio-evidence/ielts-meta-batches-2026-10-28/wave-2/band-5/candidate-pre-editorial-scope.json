@@ -1,0 +1,346 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-2",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "usage": {
+        "inputTokens": 2662,
+        "outputTokens": 6832,
+        "totalTokens": 9494
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "promptVersion": "ielts-practice-2026-10-28-wave-2-v1",
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Campus Bicycle-Repair Desk",
+      "focus": "Everyday service details: problem, place, price and time",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you today?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it here for repair?\nSTAFF: Of course, Anna. We can fix both problems here at the desk. Could you please write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks very much, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it exactly?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost in total?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take exactly?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday morning.",
+      "wordCount": 336
+    },
+    "reading": {
+      "title": "A Student Project About Local Trees",
+      "focus": "Main ideas, details, and claims in a student project",
+      "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+      "wordCount": 412
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-2-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Bicycle-Repair Desk",
+      "pathwayStage": "band-5",
+      "focus": "Everyday service details: problem, place, price and time",
+      "transcript": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you today?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it here for repair?\nSTAFF: Of course, Anna. We can fix both problems here at the desk. Could you please write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks very much, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it exactly?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost in total?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take exactly?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday morning.",
+      "prompt": "Why does Anna contact the repair desk?",
+      "options": [
+        "To buy a new blue city bike",
+        "To ask about sports office hours",
+        "To get her tyre and brakes fixed",
+        "To change her phone number"
+      ],
+      "answer": 2,
+      "explanation": "The script says her bike has a flat back tyre and loose brakes. The option about buying a bike is wrong because the blue city bike is the bike she already owns."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Bicycle-Repair Desk",
+      "pathwayStage": "band-5",
+      "focus": "Everyday service details: problem, place, price and time",
+      "transcript": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you today?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it here for repair?\nSTAFF: Of course, Anna. We can fix both problems here at the desk. Could you please write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks very much, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it exactly?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost in total?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take exactly?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday morning.",
+      "prompt": "Where should Anna leave her bike?",
+      "options": [
+        "In Room 4 past the sports office",
+        "In Room 3 with the old sign",
+        "In the sports office itself",
+        "In Room 4 before the sports office"
+      ],
+      "answer": 0,
+      "explanation": "Staff says go past the sports office to Room 4 and corrects Room 3 to Room 4. Room 3 is wrong because it is only the old sign, not the current room."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Bicycle-Repair Desk",
+      "pathwayStage": "band-5",
+      "focus": "Everyday service details: problem, place, price and time",
+      "transcript": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you today?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it here for repair?\nSTAFF: Of course, Anna. We can fix both problems here at the desk. Could you please write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks very much, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it exactly?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost in total?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take exactly?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday morning.",
+      "prompt": "How much will Anna pay in total?",
+      "options": [
+        "6 pounds",
+        "14 pounds",
+        "8 pounds",
+        "5 pounds"
+      ],
+      "answer": 1,
+      "explanation": "Staff says 8 pounds for the tyre plus 6 pounds for the brakes, so 14 pounds total. 8 pounds is wrong because it is only for the tyre."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Bicycle-Repair Desk",
+      "pathwayStage": "band-5",
+      "focus": "Everyday service details: problem, place, price and time",
+      "transcript": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you today?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it here for repair?\nSTAFF: Of course, Anna. We can fix both problems here at the desk. Could you please write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks very much, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it exactly?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost in total?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take exactly?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday morning.",
+      "prompt": "When can Anna collect her bike?",
+      "options": [
+        "On Monday morning",
+        "On Wednesday afternoon",
+        "On Tuesday morning",
+        "On Thursday morning after 10"
+      ],
+      "answer": 3,
+      "explanation": "Staff first says Wednesday, then corrects it to Thursday morning after 10 because Wednesday is a holiday. Wednesday is wrong because of this correction."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Bicycle-Repair Desk",
+      "pathwayStage": "band-5",
+      "focus": "Everyday service details: problem, place, price and time",
+      "transcript": "STAFF: Good morning, Campus Bicycle-Repair Desk, this is Daniel speaking. How can I help you today?\nSTUDENT: Hi, I'm Anna, a first-year student. My bike has a flat back tyre, and the brakes feel loose. Can I leave it here for repair?\nSTAFF: Of course, Anna. We can fix both problems here at the desk. Could you please write your full name on this repair form?\nSTUDENT: Yes. It's Anna Lopez, L-O-P-E-Z.\nSTAFF: Thanks very much, Anna. And can I take your phone number?\nSTUDENT: Yes, it's 07715 482390.\nSTAFF: Thanks. And what type of bike is it exactly?\nSTUDENT: It's a blue city bike, quite old. I use it every day to come to college.\nSTAFF: Okay. You can leave it in our storage room. Go down the hall, past the sports office, and it's Room 4.\nSTUDENT: Sorry, did you say Room 3?\nSTAFF: No, Room 4 — sorry, I know the sign on the door still says Room 3, but we moved last week. It's Room 4 now.\nSTUDENT: Got it, Room 4. How much will the repair cost in total?\nSTAFF: A flat tyre repair is 8 pounds, and fixing the brakes is 6 pounds. So 14 pounds in total. Our desk is open from 9 to 5 on weekdays, and you can pay when you collect the bike.\nSTUDENT: That's fine. How long will it take exactly?\nSTAFF: Normally two days. If you leave it today, Monday, it will be ready on Wednesday afternoon. Actually, wait — Wednesday is a holiday, so the desk is closed. It will be ready on Thursday morning after 10 o'clock.\nSTUDENT: Thursday after 10, okay. Do I need to bring anything when I collect it?\nSTAFF: Yes, please bring the yellow receipt I will give you now, and pay by card. We don't take cash anymore because the card machine is faster.\nSTUDENT: Okay, yellow receipt and pay by card. Thank you very much for your help.\nSTAFF: You're welcome. See you on Thursday morning.",
+      "prompt": "What must Anna do when she collects her bike?",
+      "options": [
+        "Bring the yellow receipt and pay by card",
+        "Pay cash and show her phone number",
+        "Bring a new lock and repair form",
+        "Pay by card and clean Room 4"
+      ],
+      "answer": 0,
+      "explanation": "Staff says bring the yellow receipt and pay by card, no cash. Paying cash is wrong because staff says they do not take cash anymore."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "A Student Project About Local Trees",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, and claims in a student project",
+      "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+      "prompt": "What was the main aim of Maya and Tom's project?",
+      "options": [
+        "To build a new playground in the park",
+        "To find what trees grow and how shade is used",
+        "To cut down old trees near the lake",
+        "To draw a new map for the library"
+      ],
+      "answer": 1,
+      "explanation": "The first paragraph says they wanted to know what kinds of trees grow and how people use shade. Building a playground is wrong because the playground is only one study area."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "A Student Project About Local Trees",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, and claims in a student project",
+      "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+      "prompt": "How did the students collect information about trees?",
+      "options": [
+        "By walking three paths weekly and recording trees",
+        "By asking families to plant fruit trees",
+        "By copying an old park map exactly",
+        "By counting people only on Saturdays"
+      ],
+      "answer": 0,
+      "explanation": "The second paragraph says they walked each path for six weeks, took photos and measured trunks. Copying the map is wrong because they did not copy it as trees had changed."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "A Student Project About Local Trees",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, and claims in a student project",
+      "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+      "prompt": "According to the records, which trees were most common?",
+      "options": [
+        "Oak trees with 40 trees",
+        "Pine and birch trees",
+        "Maple trees with 90 trees",
+        "Fruit trees near the lake"
+      ],
+      "answer": 2,
+      "explanation": "The third paragraph says maple trees were most common with 90 of 180 trees. Oak trees are wrong because with 40 they were second."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "A Student Project About Local Trees",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, and claims in a student project",
+      "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+      "prompt": "Which statement shows the difference between the example and the main claim?",
+      "options": [
+        "The park map is the main claim about shade",
+        "The fruit trees are the main claim about planting",
+        "The large oak is one example, while shade changing park use is the main claim",
+        "The six-week walk is the main claim about old trees"
+      ],
+      "answer": 2,
+      "explanation": "The passage presents the large oak near the lake as only one example, and shade helping people stay longer as the main claim. The fruit-tree option is wrong because those trees are part of the findings, not the main claim."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Passage 1",
+      "type": "choice",
+      "title": "A Student Project About Local Trees",
+      "pathwayStage": "band-5",
+      "focus": "Main ideas, details, and claims in a student project",
+      "passage": "Maya and Tom are second-year college students studying the environment. Last spring, they started a small project about the trees in Greenfield Park, a large public park near their college. They wanted to answer a simple question: what kinds of trees grow in the park, and how do people use the shade from those trees?\nTo begin, they chose three walking paths in different parts of the park: one near the lake, one near the playground, and one near the main entrance. Every Saturday morning for six weeks, they walked each path and counted the trees. They took photos of leaves and bark, measured the width of the trunks with a tape, and wrote notes about the height and shape of each tree. They also checked an old park map from the library, but they did not copy it because some trees had been cut down or newly planted.\nAfter six weeks, they had records for 180 trees. Their main finding was clear: maple trees were the most common, with 90 trees, or half of the total. Oak trees were second, with 40 trees. The rest were a mix of pine, birch, and small fruit trees. Most of the fruit trees were near the playground, and a park worker told them that local families had planted those trees five years ago to make the area nicer.\nOne large oak tree near the lake was a good example of the old trees in the park. Maya measured its trunk at 2 metres wide, and Tom estimated it was more than 80 years old. They took several photos of its wide branches and thick leaves. The students liked this tree, but they did not say it was the most important tree in the park. It was only one example in their notes.\nThe students' main claim was about shade and park use. On hot afternoons, they counted people sitting under trees and people sitting in sunny places. They found about three times more people in shady areas. From this, they claimed that shade from trees helps people enjoy the park for longer in summer. They wrote that shade is not just nice to look at; it changes how people use the park.\nIn their final report, Maya and Tom suggested planting ten more maple trees near the playground, where there is little shade. They will present their results to the park office next month and ask if student volunteers can help with the planting.",
+      "prompt": "What can be reasonably inferred from Maya and Tom's suggestion about the playground?",
+      "options": [
+        "They have already planted ten maple trees there",
+        "They think the playground already has enough shade",
+        "They want to remove the fruit trees near the playground",
+        "They think more shade there would help people enjoy the park"
+      ],
+      "answer": 3,
+      "explanation": "The final paragraph suggests ten more maples where there is little shade, and the main claim links shade to longer park use, so more shade should help. Already planted is wrong because they will only present results next month and ask about planting."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Neighbourhood Food Market Stalls",
+      "pathwayStage": "band-5",
+      "focus": "Clear main ideas and direct comparison from a simple table",
+      "prompt": "The table below shows the number of stalls at Green Lane Neighbourhood Food Market in 2020 and 2025.\n\nIn 2020: Fresh fruit - 12 stalls, Fresh vegetables - 15 stalls, Bread and cakes - 8 stalls, Hot drinks and juices - 6 stalls. Total - 41 stalls.\nIn 2025: Fresh fruit - 18 stalls, Fresh vegetables - 20 stalls, Bread and cakes - 10 stalls, Hot drinks and juices - 12 stalls. Total - 60 stalls.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. You should spend about 20 minutes on this task.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Student Study-Group Timetable",
+      "pathwayStage": "band-5",
+      "focus": "Accurate simple description of a weekly timetable",
+      "prompt": "The table below shows the weekly timetable of a student study group at Parkside Library in March 2026.\n\nMonday 16:00-17:30: Maths problem practice, 6 students\nTuesday 16:00-17:00: English reading, 8 students\nWednesday 16:00-17:30: Science homework, 5 students\nThursday 16:00-17:00: English writing, 7 students\nFriday 16:00-17:00: Music club review and weekly test preparation, 10 students\n\nAll sessions are led by two older student helpers. Friday has the highest attendance.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words. You should spend about 20 minutes on this task.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-writing-03",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Local Food Markets and Supermarkets",
+      "pathwayStage": "band-5",
+      "focus": "Clear opinion with direct everyday evidence",
+      "prompt": "Some people prefer to buy food at a small neighbourhood food market, while others prefer to buy food at a large supermarket.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Studying Alone and Studying in a Group",
+      "pathwayStage": "band-5",
+      "focus": "Simple comparison with familiar academic examples",
+      "prompt": "Some students like to study alone at home, while others like to join a study group with a fixed weekly timetable.\n\nDo the advantages of studying in a group outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Music Clubs for Young People",
+      "pathwayStage": "band-5",
+      "focus": "Clear ideas and simple explanation of benefits",
+      "prompt": "In many towns, a community music club meets once a week so young people can learn an instrument, sing, and play together.\n\nSome people think local councils should give more money to support these clubs. Others think young people can learn music by themselves online.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own experience. Write at least 250 words. You should spend about 40 minutes on this task.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-2-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Food and Local Markets",
+      "pathwayStage": "band-5",
+      "focus": "Familiar everyday answers about food shopping",
+      "prompt": "Answer the following questions. Give short, clear answers with one or two reasons or examples.\n1. Where do you usually buy your food?\n2. How often do you visit a local food market?\n3. What kind of fresh food do you like most?\n4. Do you like cooking at home or eating outside? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Study Habits and Free Time",
+      "pathwayStage": "band-5",
+      "focus": "Simple personal answers about study and music",
+      "prompt": "Answer the following questions. Give short, clear answers with one or two reasons or examples.\n1. Do you prefer to study in the morning or in the evening? Why?\n2. Do you usually study alone or with friends?\n3. Do you enjoy listening to music while you study?\n4. What do you usually do after your study time finishes?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card - A Visit to a Neighbourhood Food Market",
+      "pathwayStage": "band-5",
+      "focus": "Clear description of a familiar event with explanation",
+      "prompt": "Describe a visit you made to a neighbourhood food market. You should say:\n• where the market was and when you went there\n• who you went with\n• what you saw, heard, or bought there\n• and explain why you remember this visit.\n\nYou have one minute to prepare. Then speak for one to two minutes."
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Local Markets and Community Life",
+      "pathwayStage": "band-5",
+      "focus": "Giving reasons and simple evaluation about local shops",
+      "prompt": "Discuss the following ideas. Give reasons and compare ideas, not only facts from memory.\n1. Why do some people prefer small food markets to large supermarkets?\n2. How can neighbourhood markets help the local community?\n3. Do you think online food shopping will replace local markets in the future? Why or why not?"
+    },
+    {
+      "id": "ielts-meta-wave-2-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Music Clubs and Learning Together",
+      "pathwayStage": "band-5",
+      "focus": "Explaining benefits and evaluating group learning",
+      "prompt": "Discuss the following ideas. Give reasons and compare ideas, not only facts from memory.\n1. What are the benefits of joining a community music club for young people?\n2. Is it better to learn music in a group or alone? Why?\n3. Should schools give more time for group activities like music and study groups? Why or why not?"
+    }
+  ]
+}

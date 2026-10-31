@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-10-27T08:49:13.747Z",
+  "promptVersion": "lesson-studio-2026-10-27-v5",
+  "requestParameters": {
+    "model": "muse-spark-1.3",
+    "temperature": 0.2,
+    "maxOutputTokens": 10000,
+    "reasoningEffort": "medium"
+  },
+  "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+  "sourcesSha256": "632a57262d70042f82b3e89fadda88e67205cfe0b444106b1717dabeb080a77f",
+  "results": [
+    {
+      "sourceId": "east-market-repair-cafe-volunteer-shift",
+      "purpose": "development",
+      "draftId": "draft-593359c8-d912-43aa-acc3-63f4ce979bb3",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "08c2fe65-6a31-4fe7-86bc-4721377dcbfe",
+        "abf6ab16-60cc-42f3-ac50-da887730af42"
+      ]
+    },
+    {
+      "sourceId": "school-library-survey-privacy",
+      "purpose": "development",
+      "draftId": "draft-b984407d-d36b-4251-b7a7-3d53d5a3ba51",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "8111c8fb-8a51-49df-bce9-17a50b94f13a",
+        "546e04c1-75a6-48d9-95d8-73c292a854dc"
+      ]
+    },
+    {
+      "sourceId": "riverside-centre-class-registration",
+      "purpose": "development",
+      "draftId": "draft-b00491b0-71a9-47b7-94b0-c0f7d3838e03",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "84d5f76d-643a-4595-b6dd-f0d36b2f2245",
+        "0b395648-6f13-4477-b8e3-bdaacdebab7f"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 18,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "First 20 existing raw-only Tier A phrase pages, alphabetically, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Each page receives independently authored Vietnamese sense explanations, usage patterns, fresh bilingual examples and a learner note. No dictionary definition or example is copied. Terms are selected systematically by frequency tier and alphabetic order; dated and domain-specific items are labeled.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "remainingRawOnlyAfter": 2480,
+    "rawOnlyBefore": 2500
+  },
+  "selected": [
+    "above board",
+    "access road",
+    "access time",
+    "action painting",
+    "add in",
+    "add on",
+    "add up",
+    "air letter",
+    "air pocket",
+    "all out",
+    "all right",
+    "any more",
+    "area code",
+    "back door",
+    "back end",
+    "back off",
+    "back out",
+    "back room",
+    "back seat",
+    "ball park"
+  ]
+}

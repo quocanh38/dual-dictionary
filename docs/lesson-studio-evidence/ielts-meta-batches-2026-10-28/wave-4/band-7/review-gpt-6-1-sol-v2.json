@@ -1,0 +1,49 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "6fede567440b44dd00744a7354e78206dd576b7fa18f3b58d027277d950fe74a",
+  "verdict": "changes-required",
+  "findings": [
+    {
+      "item": "sharedContexts.listening; ielts-meta-wave-4-band-7-listening-01",
+      "issue": "The script calls deduplicated searches roughly 8,000 actual journeys, yet later correctly states that app searches do not prove boarding. Merging searches cannot establish actual journeys. The keyed option/explanation repeats the journey claim. Use distinct journey searches or similar consistently in script, key and explanation.",
+      "severity": "uncertain"
+    },
+    {
+      "item": "ielts-meta-wave-4-band-7-listening-02",
+      "issue": "The explanation attributes the younger/technology-comfortable observation to Maya; Jonas makes it. Correct the speaker attribution.",
+      "severity": "minor"
+    }
+  ],
+  "coverage": {
+    "scope": "Full AI-assisted final review of 20 items: 5 Listening, 5 Reading, 5 Writing and 5 Speaking. Entire shared script and passage read; all 40 options, zero-based keys and 10 explanations evaluated. All repeated item contexts verified byte-for-string identical to shared context. No other reviewer outputs inspected; no candidates edited.",
+    "listening": "12,000 taps correction and unsupported actual-journey interpretation blocker; user representativeness; intention versus boarding; weekday/weekend comparison and near-third qualification; combined timing/volume method; full script including smart-card tourist coverage caveat read",
+    "reading": "three-month mean versus site range; volunteer staffing/training bias; Year6 implementation illustration rather than room-only causation; spare-capacity cost condition; reporting ranges and broad second-round testing",
+    "writing": "flood forecast six percentages and six yes/no outcomes across2022/2023 supplied, 68% survey note treated as subjective reported perception rather than proof warnings were false; historic-site visitors/spending complete20 observations with explicit thousand units across2019–2023; all three Task2 prompts coherent and evaluative; Task1 minimum150 words/20 minutes and Task2 minimum250 words/40 minutes verified.",
+    "speaking": "two personal Part1 sets; forecast cue card and historic-site cue card both include preparation/duration and sufficient bullets, with advanced analytical scaffold appropriate for practice; Part3 public-research discussion answerable without memorised facts",
+    "languageAndStage": "Reviewed natural language, unsupported claims, distractor uniqueness/plausibility, stage suitability and task realism. These are staged short-form practice items, not a complete official IELTS paper or a validated band-score measure.",
+    "itemIds": [
+      "ielts-meta-wave-4-band-7-listening-01",
+      "ielts-meta-wave-4-band-7-listening-02",
+      "ielts-meta-wave-4-band-7-listening-03",
+      "ielts-meta-wave-4-band-7-listening-04",
+      "ielts-meta-wave-4-band-7-listening-05",
+      "ielts-meta-wave-4-band-7-reading-01",
+      "ielts-meta-wave-4-band-7-reading-02",
+      "ielts-meta-wave-4-band-7-reading-03",
+      "ielts-meta-wave-4-band-7-reading-04",
+      "ielts-meta-wave-4-band-7-reading-05",
+      "ielts-meta-wave-4-band-7-writing-01",
+      "ielts-meta-wave-4-band-7-writing-02",
+      "ielts-meta-wave-4-band-7-writing-03",
+      "ielts-meta-wave-4-band-7-writing-04",
+      "ielts-meta-wave-4-band-7-writing-05",
+      "ielts-meta-wave-4-band-7-speaking-01",
+      "ielts-meta-wave-4-band-7-speaking-02",
+      "ielts-meta-wave-4-band-7-speaking-03",
+      "ielts-meta-wave-4-band-7-speaking-04",
+      "ielts-meta-wave-4-band-7-speaking-05"
+    ],
+    "priorReviewExposure": "No other reviewer reports inspected. Parent sent confirmation of proposed average-error blocker after this review independently identified and reported it."
+  },
+  "reviewerType": "AI-assisted"
+}

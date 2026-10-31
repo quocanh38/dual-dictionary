@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 39,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after integrated circuit, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes. Historical, medical, legal, technical, regional, and stigmatizing terminology receives careful labels; source wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2060,
+    "remainingRawOnlyAfter": 2040
+  },
+  "selected": [
+    "intelligence test",
+    "interest group",
+    "interior decorating",
+    "interior decoration",
+    "interior design",
+    "internal combustion engine",
+    "internal medicine",
+    "international date line",
+    "international monetary fund",
+    "interstate commerce commission",
+    "intrauterine device",
+    "iron age",
+    "iron curtain",
+    "iron lung",
+    "iron out",
+    "irrational number",
+    "irritable bowel syndrome",
+    "ivory tower",
+    "ivy league",
+    "jack up"
+  ]
+}

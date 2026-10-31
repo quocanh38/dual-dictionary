@@ -1,0 +1,349 @@
+{
+  "stage": "band-5",
+  "batchId": "wave-8",
+  "itemCount": 20,
+  "status": "meta-repaired-awaiting-gpt-cross-review",
+  "metaRepairs": [
+    {
+      "field": "GPT findings on Listening/Reading content",
+      "provider": "Baseten Model API",
+      "model": "meta-models/muse-spark-open-1026",
+      "usage": {
+        "inputTokens": 2803,
+        "outputTokens": 10749,
+        "totalTokens": 13552
+      },
+      "round": 1
+    }
+  ],
+  "provenance": {
+    "provider": "Baseten Model API",
+    "model": "meta-models/muse-spark-open-1026",
+    "promptVersions": {
+      "objective": "ielts-practice-2026-10-29-wave-8-v1",
+      "writingSpeaking": "ielts-practice-2026-10-29-wave-8-v1"
+    },
+    "originalContent": true
+  },
+  "sharedContexts": {
+    "listening": {
+      "title": "Campus Music Room Reservation",
+      "focus": "booking details and conditions",
+      "part": "Part 1",
+      "script": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "wordCount": 331
+    },
+    "reading": {
+      "title": "Student Bicycle Safety Workshop",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to the college, and cycling saves them money and time every day. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, had thought her helmet fitted correctly before the workshop, but she found that it was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "wordCount": 409
+    }
+  },
+  "exercises": [
+    {
+      "id": "ielts-meta-wave-8-band-5-listening-01",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Music Room Reservation",
+      "pathwayStage": "band-5",
+      "focus": "booking details and conditions",
+      "transcript": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "prompt": "What does Maya want to do?",
+      "options": [
+        "Reserve a practice room for piano",
+        "Cancel a music lesson on Friday",
+        "Buy a grand piano for home",
+        "Join the campus music club"
+      ],
+      "answer": 0,
+      "explanation": "She says she wants to book a room for piano practice. The lesson option is wrong because she is booking, not cancelling."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-listening-02",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Music Room Reservation",
+      "pathwayStage": "band-5",
+      "focus": "booking details and conditions",
+      "transcript": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "prompt": "Why does Maya choose Room B?",
+      "options": [
+        "It is cheaper than Room A",
+        "It has a grand piano",
+        "It is free all afternoon",
+        "It is near the reception desk"
+      ],
+      "answer": 1,
+      "explanation": "She prefers the grand piano, which is in Room B. Price is not mentioned as a difference between rooms."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-listening-03",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Music Room Reservation",
+      "pathwayStage": "band-5",
+      "focus": "booking details and conditions",
+      "transcript": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "prompt": "What is Maya's final booking time?",
+      "options": [
+        "2 p.m. to 4 p.m.",
+        "3 p.m. to 5 p.m.",
+        "4 p.m. to 6 p.m.",
+        "5 p.m. to 7 p.m."
+      ],
+      "answer": 2,
+      "explanation": "The receptionist corrects the first request and confirms 4 to 6 p.m. The 3 to 5 slot was requested but unavailable."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-listening-04",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Music Room Reservation",
+      "pathwayStage": "band-5",
+      "focus": "booking details and conditions",
+      "transcript": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "prompt": "How much will Maya pay for her booking?",
+      "options": [
+        "$5 in total",
+        "$15 in total",
+        "$20 in total",
+        "$10 in total"
+      ],
+      "answer": 3,
+      "explanation": "The fee is $5 per hour for two hours, totalling $10. $5 would be for one hour only."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-listening-05",
+      "exam": "IELTS Academic",
+      "skill": "Listening",
+      "part": "Listening · Part 1",
+      "type": "choice",
+      "title": "Campus Music Room Reservation",
+      "pathwayStage": "band-5",
+      "focus": "booking details and conditions",
+      "transcript": "Receptionist (Mr. Davies): Good morning, Riverside Campus Music Centre, you're speaking with Tom Davies. How can I help you?\nMaya: Good morning, Mr. Davies. My name is Maya Patel. I'm a first-year student. I want to book a music room for piano practice.\nMr. Davies: Of course, Maya. Which day would you like?\nMaya: This Thursday, please. In the afternoon.\nMr. Davies: Let me check. We have Room A and Room B free on Thursday. Room A has an upright piano, Room B has a grand piano.\nMaya: I prefer the grand piano, so Room B, please.\nMr. Davies: Room B is free from 2 p.m. to 6 p.m. What time do you want?\nMaya: From 3 p.m. to 5 p.m. would be great.\nMr. Davies: Actually, sorry, I made a mistake. Room B is booked at 3 p.m. for a lesson. It's free from 4 p.m. to 6 p.m. Is 4 to 6 okay?\nMaya: Yes, 4 to 6 is fine.\nMr. Davies: Great. How long will you need it regularly? Just this week?\nMaya: Just this Thursday for now. Maybe every week later.\nMr. Davies: Okay. There is a small fee of $5 per hour, so $10 for two hours. You can pay at the desk.\nMaya: That's fine. Do I need to bring anything?\nMr. Davies: Please bring your student ID card to show at reception. Also, please don't bring food or drinks into the room.\nMaya: I understand. No food or drinks. Can I bring my friend to listen?\nMr. Davies: Yes, one guest is allowed, but they must be quiet.\nMr. Davies: So to confirm, Maya Patel, Room B this Thursday from 4 to 6 p.m., $10, bring ID.\nMr. Davies: Your booking number is M-442. Please keep it for Thursday.\nMaya: M-442, got it. Can I book online next time?\nMr. Davies: Yes, after today you can book on the campus website.\nMaya: Perfect. Thank you very much.\nMr. Davies: You're welcome. See you Thursday.",
+      "prompt": "What must Maya bring and follow?",
+      "options": [
+        "Bring student ID and no food or drinks",
+        "Bring own piano and pay online",
+        "Bring two guests and arrive early",
+        "Bring booking number M-442 only"
+      ],
+      "answer": 0,
+      "explanation": "She must show her ID and not bring food or drinks. The booking number is given but not the only requirement."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-reading-01",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Bicycle Safety Workshop",
+      "pathwayStage": "band-5",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to the college, and cycling saves them money and time every day. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, had thought her helmet fitted correctly before the workshop, but she found that it was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "prompt": "Why did Student Services organise the workshop?",
+      "options": [
+        "To reduce accidents near campus gates",
+        "To sell bicycles to new students",
+        "To build a new sports hall",
+        "To train police officers in town"
+      ],
+      "answer": 0,
+      "explanation": "The text links recent accidents near the gates to the decision to help students stay safe. Selling bicycles was the bike shop's job, not the college's purpose."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-reading-02",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Bicycle Safety Workshop",
+      "pathwayStage": "band-5",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to the college, and cycling saves them money and time every day. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, had thought her helmet fitted correctly before the workshop, but she found that it was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "prompt": "Who led the bicycle safety workshop?",
+      "options": [
+        "Two college teachers",
+        "A police officer and a bike mechanic",
+        "Forty student volunteers",
+        "Sports hall managers"
+      ],
+      "answer": 1,
+      "explanation": "The passage names Officer White and mechanic Sam Lee as leaders. The other options are not described as leading the workshop."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-reading-03",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Bicycle Safety Workshop",
+      "pathwayStage": "band-5",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to the college, and cycling saves them money and time every day. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, had thought her helmet fitted correctly before the workshop, but she found that it was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "prompt": "What did students do during practical training?",
+      "options": [
+        "Watched videos inside the hall",
+        "Repaired the campus gates",
+        "Rode a marked course in the car park",
+        "Wrote a booklet about helmets"
+      ],
+      "answer": 2,
+      "explanation": "They rode a cone-marked course outside while leaders gave advice. The booklet was given to them, not written by them."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-reading-04",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Bicycle Safety Workshop",
+      "pathwayStage": "band-5",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to the college, and cycling saves them money and time every day. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, had thought her helmet fitted correctly before the workshop, but she found that it was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "prompt": "What can be inferred about Lisa before the workshop?",
+      "options": [
+        "She worked at the bike shop",
+        "She taught other students safety",
+        "She never owned a bicycle before",
+        "She thought her helmet fitted correctly"
+      ],
+      "answer": 3,
+      "explanation": "The passage states Lisa had thought her helmet fitted correctly before the workshop. There is no evidence she worked at the bike shop."
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-reading-05",
+      "exam": "IELTS Academic",
+      "skill": "Reading",
+      "part": "Reading · Short-form practice passage",
+      "type": "choice",
+      "title": "Student Bicycle Safety Workshop",
+      "pathwayStage": "band-5",
+      "focus": "main ideas and supporting examples",
+      "passage": "Last month, Greenfield College held a free bicycle safety workshop for students. The college is in a busy town where many students ride bicycles to classes. Many students live close to the college, and cycling saves them money and time every day. In the last year, there were several small accidents near the campus gates. Student Services decided to organise a workshop to help students stay safe on the road.\n\nThe workshop took place on Saturday morning in the sports hall. About forty students attended. It was led by two guests: Officer Karen White from the town police and Sam Lee, a mechanic from the local bike shop. Officer White talked about road rules, such as stopping at red lights and using hand signals to turn. Sam Lee showed how to check a bicycle before riding. He explained the importance of testing brakes, checking tyre pressure, and using front and back lights at night. He also showed how a helmet should fit tightly and sit low on the forehead. The workshop lasted three hours and included time for questions. Each student also received a small booklet with safety tips to take home.\n\nAfter the talks, students moved outside for practical training. The college had set up a short course in the car park with cones to mark turns and stops. Each student rode around the course while the leaders watched and gave advice. One student, Lisa, had thought her helmet fitted correctly before the workshop, but she found that it was too loose and moved when she shook her head. Sam helped her adjust the straps so it stayed firm. Many other students also learned that their lights were not bright enough.\n\nThe writer of this report believes the workshop was valuable mainly because it gave students more confidence, not only more information. For example, Lisa's loose helmet is just one case that shows a common problem, but the main point is that practical help makes students feel ready to cycle safely. Before the workshop, several students said they felt nervous in traffic. After practising, they said they felt calmer and more prepared.\n\nBecause the event was popular, Student Services will offer free monthly bicycle checks and free lights for students who need them. The next workshop will be in November. Teachers have also asked for a similar session for staff who cycle to work. The college hopes fewer accidents will happen and more students will enjoy cycling safely.",
+      "prompt": "Which is the author's claim, not just an example?",
+      "options": [
+        "Lisa's helmet was loose during practice",
+        "The workshop mainly built student confidence",
+        "Cones marked turns in the car park",
+        "The next workshop is in November"
+      ],
+      "answer": 1,
+      "explanation": "The writer states confidence-building as the main value, while Lisa's helmet is presented as one example. The November date is a future plan, not the claim."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-5-writing-01",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Student Film-Club Screening Attendance",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas and direct comparisons from a table",
+      "prompt": "The table below shows the number of students who attended three film-club screenings at Greenfield College from March to May 2024, and the percentage who said they enjoyed the film. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task and write at least 150 words.\n\nFilm type | March | April | May | Enjoyed the film (%)\nDocumentary about Oceans | 45 | 52 | 60 | 78%\nShort Comedy Films | 70 | 65 | 55 | 85%\nClassic Science Fiction | 30 | 40 | 48 | 62%\n\nAll screenings were on Friday evenings in Room B.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-writing-02",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Local Museum Map Changes",
+      "pathwayStage": "band-5",
+      "focus": "describing locations and changes clearly with simple comparisons",
+      "prompt": "The maps below show the ground floor of Riverside City Museum in 2020 and in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. You should spend about 20 minutes on this task and write at least 150 words.\n\nIn 2020: The entrance was on the south side. Inside the entrance was a ticket desk. The Film Room was on the west side. The History Gallery was on the north-west corner. A small cafe was on the north-east corner. The gift shop was on the east side.\n\nIn 2025: The entrance is still on the south side. The ticket desk has moved to the east side, next to the gift shop. The Film Room is now larger and has moved to the north-west corner, where the History Gallery was. The History Gallery is now smaller and on the west side. There is a new Bicycle Display Area in the centre of the museum. The cafe is still in the north-east corner but is now larger.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-writing-03",
+      "exam": "IELTS Academic · Task 1",
+      "skill": "Writing",
+      "task": "Task 1 · Introduction to Bicycle Maintenance Process",
+      "pathwayStage": "band-5",
+      "focus": "accurate simple explanations of a process in clear steps",
+      "prompt": "The diagram below shows six steps to check a bicycle before riding. Summarise the information by selecting and reporting the main features. You should spend about 20 minutes on this task and write at least 150 words.\n\nStep 1: Check tyre pressure. If the tyres are soft, use a pump to add air.\nStep 2: Check the brakes. Squeeze both brake levers and look at the brake pads.\nStep 3: Check the chain. Clean the chain and add a little oil if it is dry.\nStep 4: Check the lights and bell. Turn on the front and back lights and ring the bell to test them.\nStep 5: Check the seat height. Sit on the seat and adjust it if your feet cannot touch the ground easily.\nStep 6: Do a slow test ride in a safe area to make sure everything works.",
+      "minimumWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-writing-04",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Practical Skills at School",
+      "pathwayStage": "band-5",
+      "focus": "clear main ideas with reasons and familiar examples",
+      "prompt": "Some people think schools should teach practical skills such as bicycle maintenance, cooking and basic repairs. Others think schools should only teach academic subjects like mathematics and science. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should spend about 40 minutes on this task and write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-writing-05",
+      "exam": "IELTS Academic · Task 2",
+      "skill": "Writing",
+      "task": "Task 2 · Community Film and Museum Activities",
+      "pathwayStage": "band-5",
+      "focus": "giving a clear position with direct evidence and simple explanations",
+      "prompt": "Many towns offer free activities such as student film-club screenings and local museum visits. Some people say these activities are very useful for students and local communities. Do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. You should spend about 40 minutes on this task and write at least 250 words.",
+      "minimumWords": 250,
+      "suggestedMinutes": 40
+    }
+  ],
+  "speakingPrompts": [
+    {
+      "id": "ielts-meta-wave-8-band-5-speaking-01",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Films and Free Time",
+      "pathwayStage": "band-5",
+      "focus": "giving simple personal information and preferences",
+      "prompt": "Answer the following questions about films and free time. Speak for 30-60 seconds for each answer.\n1. How often do you watch films?\n2. Do you prefer watching films at home or at the cinema? Why?\n3. Did you join any clubs when you were at school?\n4. What do you usually do with friends in the evening?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-speaking-02",
+      "exam": "IELTS Academic · Part 1",
+      "skill": "Speaking",
+      "task": "Part 1 · Museums and Local Places",
+      "pathwayStage": "band-5",
+      "focus": "describing familiar places with simple explanations",
+      "prompt": "Answer the following questions about museums and your town. Speak for 30-60 seconds for each answer.\n1. Is there a museum near where you live?\n2. When was the last time you visited a museum?\n3. Do you like looking at maps when you visit a new place? Why or why not?\n4. How do you usually travel around your town - by bicycle, bus, or on foot?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-speaking-03",
+      "exam": "IELTS Academic · Part 2",
+      "skill": "Speaking",
+      "task": "Part 2 · Cue card · A Film Screening You Attended",
+      "pathwayStage": "band-5",
+      "focus": "organising a short talk with clear sequence and details",
+      "prompt": "Describe a film screening or movie you watched together with other students or friends. You will have one minute to prepare and should speak for one to two minutes.\n\nYou should say:\n• what the film was and where you watched it\n• who you went with\n• what happened during the screening\n• and explain why you enjoyed it or not\n\nYou can finish with one short follow-up idea: Would you like to go to a similar screening again?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-speaking-04",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Learning Practical Skills",
+      "pathwayStage": "band-5",
+      "focus": "giving reasons and evaluation about learning methods",
+      "prompt": "Discuss the following questions about practical skills such as bicycle maintenance. Give reasons and examples for your opinions.\n1. Why is it useful for young people to learn practical skills?\n2. Should schools or parents teach skills like bicycle repair? Why?\n3. Is it better to learn a practical skill from a teacher, from a video, or by trying yourself? Why?"
+    },
+    {
+      "id": "ielts-meta-wave-8-band-5-speaking-05",
+      "exam": "IELTS Academic · Part 3",
+      "skill": "Speaking",
+      "task": "Part 3 · Museums and Community Activities",
+      "pathwayStage": "band-5",
+      "focus": "comparing ideas and evaluating benefits for the future",
+      "prompt": "Discuss the following questions about museums and community activities. Give reasons for your opinions.\n1. Why do some people visit museums often while others never visit them?\n2. What are the advantages of free film-clubs and museum visits for a local community?\n3. Will people still visit museums in the future when they can see everything online? Why or why not?"
+    }
+  ]
+}

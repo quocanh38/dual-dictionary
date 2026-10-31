@@ -1,0 +1,20 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "d39139134fab8237e4cb25966ace61008d8ab1aa4f2eb651f9a1123704add7fb",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-03",
+      "issue": "Formatting issue: cue-card points are run together in one paragraph with hyphen separators. Put each cue-card bullet on its own visible line.",
+      "severity": "minor"
+    },
+    {
+      "item": "ielts-meta-wave-7-band-5-speaking-04",
+      "issue": "Formatting issue: cue-card points are run together in one paragraph with hyphen separators. Put each cue-card bullet on its own visible line.",
+      "severity": "minor"
+    }
+  ],
+  "observations": [],
+  "coverage": "Full exact-byte review of the 335-word listening script and 424-word reading passage, all 10 objective questions/options/keys/explanations, all five Writing and five Speaking prompts, and normalizationFindings/provenance. Word counts match declared values and are within 300–400 / 400–500; answer keys cover all four option positions for both skills. Objective answers are uniquely supported, with distractors tied to clear source conflicts. Task 1 attendance has all months, groups, counts; game survey states n=120 and response counts. Minimums and times are supplied. Speaking is suitable for band 5 and includes Parts 1–3, but two Part 2 cue cards are not visually formatted as bullets, matching the normalization flags; findings give the requested simple repair. Provenance declares originalContent:true. No official IELTS or learner score claims.",
+  "reviewerType": "AI-assisted"
+}

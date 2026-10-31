@@ -1,0 +1,16 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-9-band-6-writing-02",
+      "severity": "critical",
+      "issue": "The opening says the table counts students, but the final sentence says active pairs per semester. These units differ by a factor of two. State pairs consistently throughout, including the heading, or convert every value and total to student counts.",
+      "reviewer": "gpt-6.1-sol"
+    },
+    {
+      "item": "ielts-meta-wave-9-band-6-speaking-03",
+      "severity": "major",
+      "issue": "The opening permits an event the learner would like to attend, but cues require what you did or learned and why you found it memorable. Provide parallel future forms (would do/learn; would find useful) or restrict the card to attended events.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

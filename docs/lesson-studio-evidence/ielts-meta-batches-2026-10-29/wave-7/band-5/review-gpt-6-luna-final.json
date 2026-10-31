@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "3b8c994df478f419af7f7815dccd3a931a186a75a690f9fbda5738e5246a69ad",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Both prior review issues are resolved: the Listening 02 explanation explicitly distinguishes the $25 amount option from the colour-page price of 25 cents, and both Speaking Part 2 cue cards display cue points as separate visible bullets. Listening/Reading contexts are 335/424 words; all 10 objective keys are uniquely supported, with balanced answer positions. Writing Task 1 totals are complete (group data sums to 90, 120 and 110 visitors); both Task 1 tasks include units and 150-word/20-minute instructions. Writing Task 2 prompts and Speaking Part 1/2/3 coverage are appropriate; cue cards include preparation/speaking times and required points. Original-content provenance is declared; no official-item or score claims."
+  ],
+  "coverage": "Full rereview of exact candidate bytes, provenance/metadata, both contexts, all 10 objective prompts/options/keys/explanations, all five Writing prompts including visible data and timing, and all five Speaking prompts including Part 2 formatting and section fit. Checked prior review issues and objective answer-position distribution.",
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "item": "sharedContexts.reading.passage; all Reading passage copies",
+      "severity": "critical",
+      "issue": "Passage presents LEZs as introduced2019–2021 in six real cities including Warsaw and Brussels. Official municipal sources date Warsaw first LEZ to1July2024 and Brussels to1January2018, outside that window. Make study/cities explicitly fictional (prefer invented city names), or use verified implementation dates and coherent study periods/results throughout. Sources: https://warszawa19115.pl/-/low-emission-zone-lez- and https://www.brussels.be/lez .",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

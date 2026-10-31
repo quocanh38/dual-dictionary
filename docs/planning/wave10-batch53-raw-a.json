@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 53,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only phrase pages after monkey wrench, selected by comparing builder slugs with all hand-definition files; cross-checked against local OALD 10 and LDOCE 6 where matching entries exist. NHS, MedlinePlus/NIH and OPCW references consulted for health/chemical terminology.",
+  "selectionRationale": "Original Vietnamese definitions, patterns, bilingual examples and learner notes; regional, dated and technical labels are explicit. Medical, financial and hazardous-agent entries are informational only; no individualized advice or operational weapon instructions.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 1800,
+    "remainingRawOnlyAfter": 1780
+  },
+  "selected": [
+    "monosodium glutamate",
+    "mop up",
+    "moral hazard",
+    "morning-after pill",
+    "morning sickness",
+    "morris dance",
+    "mortar board",
+    "motion picture",
+    "motion sickness",
+    "mountain ash",
+    "mountain standard time",
+    "mouth organ",
+    "moving picture",
+    "mucous membrane",
+    "multiple choice",
+    "mumbo jumbo",
+    "muscular dystrophy",
+    "musk ox",
+    "mustard gas",
+    "mutual fund"
+  ]
+}

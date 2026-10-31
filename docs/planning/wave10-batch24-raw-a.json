@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 24,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after come off, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Independently written Vietnamese meanings, collocations, bilingual examples and learner notes. Regional, legal, historical and register distinctions are explained where relevant; no source wording/examples are copied.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2380,
+    "remainingRawOnlyAfter": 2360
+  },
+  "selected": [
+    "come to",
+    "come up",
+    "commander in chief",
+    "common law",
+    "common market",
+    "common sense",
+    "community chest",
+    "computer science",
+    "contract bridge",
+    "control key",
+    "control room",
+    "cool down",
+    "cool off",
+    "cost of living",
+    "count down",
+    "country dance",
+    "court card",
+    "cover letter",
+    "crash course",
+    "credit account"
+  ]
+}

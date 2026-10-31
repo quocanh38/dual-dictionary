@@ -1,0 +1,18 @@
+{
+  "reviewer": "current Codex GPT runtime (family GPT-6; exact model alias unavailable)",
+  "reviewedAt": "2026-10-28T08:30:33.462Z",
+  "reviewScope": "Pre-repair single-model GPT content review; findings are issue-focused; no claim of independent cross-model review.",
+  "candidateSha256": "cf3120b173f586d45d78cc265917a11971714a2d9a3cf754db53dea381a8a3f4",
+  "rawResponseSha256": {
+    "objective-generate-3-response.json": "f84153d1bc127549d60c931b9f620833a8ef0d8e4e288fc603cb1e211122a006",
+    "prompts-generate-response.json": "4ca9e25d5faade805b7662cc807110033fbb14577b4314b094b30dc2ffd11d4b"
+  },
+  "findings": [
+    {
+      "item": "Speaking · Part 2 · A Useful Talk or Panel You Attended",
+      "severity": "medium",
+      "issue": "The cue-card content is presented as a prose list after “You should say” rather than as visible bullet points.",
+      "recommendedRepair": "Format the four cue-card prompts as clear, visible bullet points and preserve the preparation and speaking times."
+    }
+  ]
+}

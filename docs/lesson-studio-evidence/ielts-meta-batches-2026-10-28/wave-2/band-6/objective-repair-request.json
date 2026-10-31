@@ -1,0 +1,161 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-2",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 5.0 to 6.0: paraphrase, linked ideas, corrected details, and clear comparisons across familiar academic topics. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: a community science exhibition, a college evening-course attendance report, and a city recycling collection change. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-6",
+    "batchId": "wave-2",
+    "currentBatch": {
+      "listening": {
+        "title": "Community Science Exhibition Booking",
+        "focus": "Listening for details, paraphrase and corrected information",
+        "part": "Part 1",
+        "script": "Anna: Good morning, Riverside Community Centre, you are speaking with Anna. How can I help you?\nDaniel: Hello Anna, my name is Daniel Morris. I am calling about the community science exhibition next month. I saw a poster at the library.\nAnna: Yes, you mean the Bright Future Science Fair. It is on Saturday the fifteenth of March, from ten in the morning until four in the afternoon, in our Main Hall.\nDaniel: Saturday the fifteenth. I thought the poster said it finished at five?\nAnna: You are right, it was first planned to finish at five, but we have changed it to four because there is an evening concert in the same hall. So please come between ten and four.\nDaniel: I understand. And where exactly is it? The poster said Room B on the first floor?\nAnna: We did book Room B at first, but we have moved it to the Main Hall on the ground floor because more local schools are joining and we need extra space.\nDaniel: That makes sense. How much are the tickets?\nAnna: Adults are six pounds, and children under twelve are three pounds. A family ticket for two adults and two children is fifteen pounds.\nDaniel: Do I need to book before the day?\nAnna: Booking ahead is recommended, especially for the workshops. We have two hands-on workshops, robotics at eleven in the morning and kitchen chemistry at half past one.\nDaniel: My daughter would love the kitchen chemistry one. Is there an extra charge for that?\nAnna: Yes, there is a small fee of two pounds per child for materials, to be paid on the day. The robotics session is free but it is limited to twenty places, so early booking is important.\nDaniel: Can I book two adults and one child for general entry, plus the chemistry workshop for my daughter?\nAnna: Certainly. Can I take your email address for the confirmation?\nDaniel: Yes, it is daniel.morris8 at example dot com.\nAnna: Thank you. One more practical point. Our own car park behind the centre is closed for repairs, so please use the Market Street car park, about five minutes walk away.\nDaniel: Perfect. So just to check, I do not need to bring anything for the experiments?\nAnna: No, all materials are provided. Just bring your booking reference and the two pounds for the workshop. We look forward to seeing you.",
+        "questions": [
+          {
+            "title": "Exhibition date",
+            "prompt": "On which date is the Bright Future Science Fair?",
+            "options": [
+              "Saturday 15th February",
+              "Saturday 15th March",
+              "Sunday 15th March",
+              "Saturday 5th March"
+            ],
+            "answer": 1,
+            "explanation": "Anna states it is on Saturday the fifteenth of March. The strongest distractor Saturday 15th February fails because February is not mentioned; March is clearly stated."
+          },
+          {
+            "title": "Closing time",
+            "prompt": "What time does the exhibition now finish?",
+            "options": [
+              "4 p.m.",
+              "5 p.m.",
+              "6 p.m.",
+              "1:30 p.m."
+            ],
+            "answer": 0,
+            "explanation": "Anna corrects the earlier plan: it was first planned to finish at five but changed to four because of an evening concert. The distractor 5 p.m. fails because it was the old, cancelled time."
+          },
+          {
+            "title": "Exhibition location",
+            "prompt": "Where will the exhibition now be held?",
+            "options": [
+              "Room B on the first floor",
+              "The library hall",
+              "The Main Hall on the ground floor",
+              "The Market Street hall"
+            ],
+            "answer": 2,
+            "explanation": "Anna explains they moved from Room B to the Main Hall on the ground floor for extra space. The distractor Room B fails because it was the first booking, now changed."
+          },
+          {
+            "title": "Workshop fee",
+            "prompt": "What must Daniel pay for his daughter to join the kitchen chemistry workshop?",
+            "options": [
+              "Nothing, it is free",
+              "Six pounds for entry only",
+              "Fifteen pounds for materials",
+              "Two pounds for materials on the day"
+            ],
+            "answer": 3,
+            "explanation": "Anna says there is a small fee of two pounds per child for materials, to be paid on the day. The distractor Nothing fails because that describes the robotics session, not kitchen chemistry."
+          },
+          {
+            "title": "Parking advice",
+            "prompt": "Where should visitors park?",
+            "options": [
+              "In the car park behind the centre",
+              "In the Market Street car park",
+              "On Library Street",
+              "In the school car park"
+            ],
+            "answer": 1,
+            "explanation": "Anna says the centre car park is closed for repairs and visitors should use the Market Street car park. The distractor behind the centre fails because that car park is closed."
+          }
+        ]
+      },
+      "reading": {
+        "title": "City Recycling Collection Change",
+        "focus": "Following linked ideas, comparisons and examples",
+        "passage": "The council of Millford has announced a major change to household waste collection from the first of June. General rubbish, which is currently collected every week in large grey bins, will be collected every two weeks. Recycling of paper, plastic and metal, which is currently collected every two weeks in blue bins, will become weekly. Food waste will continue to be collected every week in small green boxes, and garden waste will still be collected every two weeks for households that pay for that service.\nThe council says the main reason for the change is to reduce the amount of rubbish sent to landfill and to lower costs. Last year the city sent 28,000 tonnes of general rubbish to landfill, at a cost of almost four million pounds. Officers believe that if recycling is collected more often and general rubbish less often, residents will sort their waste more carefully. The council also hopes to increase the city recycling rate from 38 percent to 50 percent within two years.\nThe new rules ask residents to sort materials into the correct containers. Paper, plastic bottles and metal cans should go in the blue bin. Glass bottles and jars should not go in the blue bin; they must be taken to local bottle banks or the recycling centre on Park Road. Old clothes, shoes and batteries must also be kept out of all bins and taken to special collection points. The council will provide a new guide with pictures to help families sort correctly, and collectors will leave a notice if a bin contains the wrong items.\nBefore making the decision, the council tested the new timetable in two areas for six months. North Millford kept the old system of weekly general rubbish and fortnightly recycling. South Millford tried the new system of fortnightly general rubbish and weekly recycling. At the end of the trial, South Millford recycled 46 percent of its waste, compared with 36 percent in North Millford. General rubbish in South Millford fell by almost a fifth, while there was little change in the north. Complaints about full bins rose slightly in the south during the first month but then returned to normal levels.\nTo support the change, the council will deliver larger blue bins to large families on request and will collect extra recycling for free if it is placed in clear bags beside the bin. Food waste collections will remain weekly because officers say frequent collection avoids bad smells, especially in summer. The council will also visit schools and community centres to explain the new system. Residents who repeatedly put the wrong materials in the wrong bin will first receive advice, and only after three warnings will they face a small fine.",
+        "questions": [
+          {
+            "title": "Main timetable change",
+            "prompt": "What is the main change to general rubbish collection from June?",
+            "options": [
+              "It will be collected in blue bins",
+              "It will stop completely",
+              "It will change from weekly to every two weeks",
+              "It will change from every two weeks to weekly"
+            ],
+            "answer": 2,
+            "explanation": "The passage states general rubbish currently collected every week will be collected every two weeks. The strongest distractor about changing to weekly fails because that describes recycling, not general rubbish."
+          },
+          {
+            "title": "Reason for change",
+            "prompt": "Why does the council say it is changing the system?",
+            "options": [
+              "To reduce landfill waste and lower costs",
+              "To close the recycling centre on Park Road",
+              "To stop food waste collections in summer",
+              "To increase garden waste payments"
+            ],
+            "answer": 0,
+            "explanation": "The passage gives reducing rubbish sent to landfill and lowering costs as the main reason, with figures for tonnes and cost. The distractor about closing the recycling centre fails because the centre is mentioned as a place to take glass, not to close."
+          },
+          {
+            "title": "Glass example",
+            "prompt": "Why does the author mention glass bottles and jars?",
+            "options": [
+              "To show the main claim that recycling will become weekly",
+              "To give an example of items that must not go in the blue bin",
+              "To compare North and South Millford results",
+              "To explain why food waste is collected weekly"
+            ],
+            "answer": 1,
+            "explanation": "Glass bottles and jars are presented as an example of items that must be taken to bottle banks, not put in the blue bin. The distractor about the main claim fails because weekly recycling is the general rule, while glass is an exception used as an illustration."
+          },
+          {
+            "title": "Trial comparison",
+            "prompt": "What did the six-month trial show?",
+            "options": [
+              "Both areas recycled the same amount",
+              "North Millford recycled more than South Millford",
+              "Complaints in the south stayed high",
+              "South Millford recycled more and produced less general rubbish"
+            ],
+            "answer": 3,
+            "explanation": "The passage compares 46 percent recycled in the south with 36 percent in the north, and a fall of almost a fifth in general rubbish in the south. The distractor that the north recycled more reverses this comparison."
+          },
+          {
+            "title": "Support for families",
+            "prompt": "What can be inferred about a large family that often has extra paper and plastic?",
+            "options": [
+              "They will have to pay a fine immediately",
+              "They can request a larger blue bin and leave extra recycling in clear bags",
+              "They can put extra recycling in the grey bin",
+              "They must take all recycling to schools"
+            ],
+            "answer": 1,
+            "explanation": "The passage states larger blue bins are available on request and extra recycling in clear bags will be collected for free, which directly supports this situation. The distractor about putting extra recycling in the grey bin fails because the passage requires sorting into correct containers."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "sharedContexts.listening",
+          "issue": "Listening script has 402 words; expected 300–400. Cross-review counted 402–403 whitespace/word tokens. Trim at least three words to reach no more than 400 and update sharedContexts.listening.wordCount."
+        },
+        {
+          "item": "ielts-meta-wave-2-band-6-listening-04",
+          "issue": "Ambiguous answer: the daughter needs general admission as well as the £2 workshop-materials fee, but the keyed option gives only £2. Rewrite the stem to ask specifically for the additional materials fee or key an answer that includes all required charges. Keep the evidence explicit and the answer unique."
+        },
+        {
+          "item": "sharedContexts.listening",
+          "issue": "Unnatural English: change “about five minutes walk away” to “about a five-minute walk away” or “about five minutes’ walk away” and preserve meaning."
+        }
+      ]
+    }
+  }
+}

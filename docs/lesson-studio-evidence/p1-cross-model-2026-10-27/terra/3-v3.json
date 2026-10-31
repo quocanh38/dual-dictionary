@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "e841bd0cc9935c3338b2221e08077568498c9ab7b6ba4ab9a5739f83b686a811",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-terra (configured local reviewer)",
+  "reviewedAt": "2026-10-27T04:13:40.223430+00:00",
+  "note": "Independent AI-assisted full-content review of the exact candidate payload. Not independent human or teacher certification. Rights and origin are assessed from the pack declaration; no external chain-of-title verification. The gate hash binds the parsed pack; candidate wrapper carries draft metadata.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "The pack declares an AI-assisted original reading, project author, pilot use and no learner data; no PII appears in the reading. This is a provenance assertion, not independent verification of authorship or distribution rights."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains carry out a survey; researchers plan a transport survey for information gathering."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Conducting a survey by asking questions to gather information fits this transport-choices survey; surveys can have other forms in other contexts."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Tiến hành một cuộc khảo sát is natural and accurately conveys the contextual action."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains draw a distinction between; the context calls for distinguishing visitors from daily commuters."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Recognizing and showing a difference accurately describes distinguishing the groups."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Phân biệt sự khác nhau giữa conveys distinguishing differences, though phân biệt giữa is more concise."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b describes conducting the survey; a describes looking at results after completion and c cancelling it, neither is the target sense."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All explanations distinguish conducting from looking at results and cancellation; the reference to asking questions is a reasonable contextual interpretation rather than explicitly specified in the source."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "a is idiomatic; b uses in with lunch choices where about/on is appropriate; c omits the article before singular survey."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a, b and c explanations identify natural about, the inappropriate in and the missing article; the suggested about/on corrections are valid."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "c means recognizing and showing difference; a ignores differences, b invites both groups onto a bus; neither is the target sense."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "All option explanations and overall explanation distinguish the two groups from ignoring differences or inviting them to travel."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "b uses between A and B and a determiner; a substitutes to for and; c omits the determiner before singular distinction."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "a identifies the between-and pairing, b the natural pattern, c the missing article; overall identifies b."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "A student explains library borrowing rules to a new classmate, changing the participants and purpose from town transport research."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Two-sentence friendly model distinguishes book categories and uses the phrase idiomatically; the two-week loan is an illustrative detail, not a claim about an identified actual library. Checklist tests phrase, contrast, length and tone; no automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "id": "t2-vi-wording",
+      "severity": "minor",
+      "resolved": false,
+      "evidence": "Phân biệt sự khác nhau giữa is understandable but wordy; phân biệt giữa may be more concise. No answer is affected."
+    }
+  ],
+  "editorialDecision": "ready-for-approval"
+}

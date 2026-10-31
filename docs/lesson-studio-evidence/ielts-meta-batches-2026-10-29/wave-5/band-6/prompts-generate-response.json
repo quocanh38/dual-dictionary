@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6",
+  "batchId": "wave-5",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-5-v1",
+  "completedAt": "2026-10-29T04:56:05.730Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 646,
+    "outputTokens": 5539,
+    "totalTokens": 6185
+  },
+  "latencyMs": 19036,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Museum Access Guide and Visitors\",\"focus\":\"paraphrase, linked ideas and clear comparisons\",\"prompt\":\"The table below shows information from the City Heritage Museum Access Guide for 2024 and the share of visitors by ticket type in 2023. Opening hours: Tuesday to Friday 10:00-17:00, Saturday and Sunday 10:00-18:00, closed on Monday. Guided tours at 11:00 and 14:00 daily, booking required. Ticket prices: Adult $12, Student $8 (student ID required), Family $28 for 2 adults and up to 3 children under 16, Children under 12 free when with an adult. All tickets include wheelchair access, audio guide in 4 languages, cloakroom and cafe access. Share of visitors in 2023: Adult 42%, Student 28%, Family 18%, Children under 12 (free) 12%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Campus Lecture-Recording Use\",\"focus\":\"corrected details, linked ideas and clear comparisons\",\"prompt\":\"The bar chart below shows the results of a survey of 400 university students in March 2024 about how they use lecture recordings. Frequency of use: Regularly (every week) 35%, Sometimes (2-3 times a month) 40%, Rarely 15%, Never 10%. Main reasons for using recordings (students could choose more than one reason): to review difficult ideas 68%, to catch up after missing a class 55%, to improve notes 48%, to prepare for exams 72%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Free Access to Museums\",\"focus\":\"paraphrase, linked ideas and balanced comparison\",\"prompt\":\"Some people think museums should be free for all visitors. Others think museums need to charge an entry fee to stay open and provide good services. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Campus Lecture-Recording Policy\",\"focus\":\"linked ideas, corrected details and clear comparisons\",\"prompt\":\"At some universities, students must ask for permission before recording a lecture. Some students think they should be free to record any lecture for personal study. Others think the permission rule protects teachers and other students. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Community Heritage Interview Project\",\"focus\":\"paraphrase, linked ideas and evaluation of accuracy\",\"prompt\":\"A community heritage project asks young people to interview older people in their community about their lives and local history. Some people think this is a valuable way to learn about the past. Others think information from interviews is not always accurate or useful. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Museums and Visiting\",\"focus\":\"paraphrase and linked ideas in short answers\",\"prompt\":\"Let's talk about museums. 1. How often do you visit museums? 2. What kind of museum do you enjoy most? 3. Did you visit museums when you were a child? 4. Do you prefer visiting museums alone or with other people? Why?\"},{\"task\":\"Part 1 · Study Habits and Recordings\",\"focus\":\"corrected details and linked ideas\",\"prompt\":\"Let's talk about your studies. 1. How do you usually take notes in lectures or classes? 2. Do you ever watch or listen to recorded lectures? Why or why not? 3. What helps you remember information from a class? 4. Has technology changed how you study compared to a few years ago?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"paraphrase, clear comparison and extended linked ideas\",\"prompt\":\"Describe a visit to a museum or heritage place that you remember well. You should say: • where it was and when you went • who you went with • what you saw and learned there • and explain why this visit was memorable for you. You will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Access to Culture and Education\",\"focus\":\"reasons, evaluation and comparison\",\"prompt\":\"Let's discuss access to museums and education. 1. Why do some people think museums should be free for everyone? 2. What are the advantages and disadvantages of putting museum collections online? 3. Should governments give more money to museums or to other public services? Why? 4. How can museums attract more young visitors?\"},{\"task\":\"Part 3 · Community Heritage and Memory\",\"focus\":\"evaluation, reasons and linked ideas\",\"prompt\":\"Let's discuss community heritage projects. 1. Why is it important to record older people's memories of local history? 2. How can we check if information from interviews is accurate? 3. What are the benefits for young people who take part in heritage interview projects? 4. Is it better to learn history from people or from books and the internet? Why?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Museum Access Guide and Visitors",
+        "focus": "paraphrase, linked ideas and clear comparisons",
+        "prompt": "The table below shows information from the City Heritage Museum Access Guide for 2024 and the share of visitors by ticket type in 2023. Opening hours: Tuesday to Friday 10:00-17:00, Saturday and Sunday 10:00-18:00, closed on Monday. Guided tours at 11:00 and 14:00 daily, booking required. Ticket prices: Adult $12, Student $8 (student ID required), Family $28 for 2 adults and up to 3 children under 16, Children under 12 free when with an adult. All tickets include wheelchair access, audio guide in 4 languages, cloakroom and cafe access. Share of visitors in 2023: Adult 42%, Student 28%, Family 18%, Children under 12 (free) 12%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Campus Lecture-Recording Use",
+        "focus": "corrected details, linked ideas and clear comparisons",
+        "prompt": "The bar chart below shows the results of a survey of 400 university students in March 2024 about how they use lecture recordings. Frequency of use: Regularly (every week) 35%, Sometimes (2-3 times a month) 40%, Rarely 15%, Never 10%. Main reasons for using recordings (students could choose more than one reason): to review difficult ideas 68%, to catch up after missing a class 55%, to improve notes 48%, to prepare for exams 72%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words in about 20 minutes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Free Access to Museums",
+        "focus": "paraphrase, linked ideas and balanced comparison",
+        "prompt": "Some people think museums should be free for all visitors. Others think museums need to charge an entry fee to stay open and provide good services. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Campus Lecture-Recording Policy",
+        "focus": "linked ideas, corrected details and clear comparisons",
+        "prompt": "At some universities, students must ask for permission before recording a lecture. Some students think they should be free to record any lecture for personal study. Others think the permission rule protects teachers and other students. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Community Heritage Interview Project",
+        "focus": "paraphrase, linked ideas and evaluation of accuracy",
+        "prompt": "A community heritage project asks young people to interview older people in their community about their lives and local history. Some people think this is a valuable way to learn about the past. Others think information from interviews is not always accurate or useful. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words in about 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Museums and Visiting",
+        "focus": "paraphrase and linked ideas in short answers",
+        "prompt": "Let's talk about museums. 1. How often do you visit museums? 2. What kind of museum do you enjoy most? 3. Did you visit museums when you were a child? 4. Do you prefer visiting museums alone or with other people? Why?"
+      },
+      {
+        "task": "Part 1 · Study Habits and Recordings",
+        "focus": "corrected details and linked ideas",
+        "prompt": "Let's talk about your studies. 1. How do you usually take notes in lectures or classes? 2. Do you ever watch or listen to recorded lectures? Why or why not? 3. What helps you remember information from a class? 4. Has technology changed how you study compared to a few years ago?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "paraphrase, clear comparison and extended linked ideas",
+        "prompt": "Describe a visit to a museum or heritage place that you remember well. You should say: • where it was and when you went • who you went with • what you saw and learned there • and explain why this visit was memorable for you. You will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Access to Culture and Education",
+        "focus": "reasons, evaluation and comparison",
+        "prompt": "Let's discuss access to museums and education. 1. Why do some people think museums should be free for everyone? 2. What are the advantages and disadvantages of putting museum collections online? 3. Should governments give more money to museums or to other public services? Why? 4. How can museums attract more young visitors?"
+      },
+      {
+        "task": "Part 3 · Community Heritage and Memory",
+        "focus": "evaluation, reasons and linked ideas",
+        "prompt": "Let's discuss community heritage projects. 1. Why is it important to record older people's memories of local history? 2. How can we check if information from interviews is accurate? 3. What are the benefits for young people who take part in heritage interview projects? 4. Is it better to learn history from people or from books and the internet? Why?"
+      }
+    ]
+  }
+}

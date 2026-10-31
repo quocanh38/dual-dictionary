@@ -1,0 +1,512 @@
+[
+  {
+    "phrase": "look up",
+    "pos": "phrasal verb",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "tìm một từ, thông tin hoặc người trong sách, danh sách hay hệ thống để tra cứu",
+        "pat": "look something up in a dictionary/database · look up an address · look up a word",
+        "ex": [
+          [
+            "I looked up the word in an online dictionary.",
+            "Tôi tra từ đó trong từ điển trực tuyến."
+          ],
+          [
+            "She looked up the supplier’s contact details.",
+            "Cô tra thông tin liên hệ của nhà cung cấp."
+          ]
+        ]
+      },
+      {
+        "m": "(tình hình, công việc) trở nên tốt hơn sau giai đoạn khó khăn",
+        "pat": "things look up · business begins to look up · prospects look up",
+        "ex": [
+          [
+            "Business started to look up after the new service launched.",
+            "Công việc kinh doanh bắt đầu khởi sắc sau khi dịch vụ mới ra mắt."
+          ],
+          [
+            "Things are looking up for the team after the recent results.",
+            "Tình hình của đội đang tốt lên sau những kết quả gần đây."
+          ]
+        ]
+      },
+      {
+        "m": "ngước mắt hoặc nhìn lên",
+        "pat": "look up at the sky · look up from a book · look up suddenly",
+        "ex": [
+          [
+            "She looked up from her notes when the door opened.",
+            "Cô ngẩng lên khỏi ghi chú khi cửa mở."
+          ],
+          [
+            "The child looked up at the stars.",
+            "Đứa trẻ ngước nhìn những vì sao."
+          ]
+        ]
+      }
+    ],
+    "note": "Look something up tách được; đại từ đứng giữa: look it up. Nghĩa “tra cứu” khác với look for nghĩa “tìm kiếm” và look into nghĩa “điều tra”."
+  },
+  {
+    "phrase": "lounge lizard",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(lỗi thời, thân mật, thường chê) người đàn ông dành nhiều thời gian lui tới quán bar hoặc sảnh khách sạn sang trọng, tìm cách giao du với người giàu có",
+        "pat": "an old-fashioned lounge lizard · a fashionable lounge lizard · describe somebody as a lounge lizard",
+        "ex": [
+          [
+            "The novel portrays him as a lounge lizard living off wealthy acquaintances.",
+            "Cuốn tiểu thuyết khắc họa anh ta như một kẻ ăn bám lui tới những nơi sang trọng để kết giao người giàu."
+          ],
+          [
+            "The lounge lizard spent the evening moving between hotel bars.",
+            "Kẻ ăn chơi đó dành cả tối đi qua lại giữa các quầy bar khách sạn."
+          ]
+        ]
+      }
+    ],
+    "note": "Lounge lizard là cách gọi cũ, mang sắc thái mỉa mai và thường nhắm đến đàn ông; không phải cách mô tả trung tính cho khách nghỉ tại sảnh."
+  },
+  {
+    "phrase": "loving cup",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "cốc nghi lễ lớn có hai quai, được chuyền cho nhiều người cùng uống trong một buổi lễ hoặc dịp kỷ niệm",
+        "pat": "a ceremonial loving cup · pass/share a loving cup · drink from a loving cup",
+        "ex": [
+          [
+            "The club presented a loving cup to mark its anniversary.",
+            "Câu lạc bộ trao chiếc cốc nghi lễ để kỷ niệm ngày thành lập."
+          ],
+          [
+            "Guests passed the loving cup around after the toast.",
+            "Khách chuyền chiếc cốc hai quai quanh bàn sau lời chúc mừng."
+          ]
+        ]
+      }
+    ],
+    "note": "Loving cup thường gắn với nghi thức cộng đồng hoặc lịch sử; ngày nay có thể xuất hiện như vật lưu niệm hay biểu tượng hơn là đồ uống dùng thường xuyên."
+  },
+  {
+    "phrase": "low countries",
+    "pos": "proper noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "Các Xứ Thấp — vùng đất thấp ở tây bắc châu Âu, thường gồm Hà Lan, Bỉ và Luxembourg",
+        "pat": "the Low Countries · the history/landscape of the Low Countries · cities in the Low Countries",
+        "ex": [
+          [
+            "The Low Countries have a long history of trade and urban development.",
+            "Các Xứ Thấp có lịch sử lâu dài về thương mại và phát triển đô thị."
+          ],
+          [
+            "The exhibition compares painting traditions in the Low Countries.",
+            "Triển lãm so sánh các truyền thống hội họa ở Các Xứ Thấp."
+          ]
+        ]
+      }
+    ],
+    "note": "Low Countries là tên vùng lịch sử/địa lý, không phải tên chính thức của một quốc gia; phạm vi có thể thay đổi tùy giai đoạn và ngữ cảnh."
+  },
+  {
+    "phrase": "low gear",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "số thấp trên phương tiện, tạo lực kéo lớn hơn nhưng tốc độ thấp hơn, thường dùng khi khởi hành, leo dốc hoặc đi chậm",
+        "pat": "shift into low gear · drive in low gear · a vehicle’s lowest gear",
+        "ex": [
+          [
+            "The driver shifted into low gear before the steep climb.",
+            "Tài xế chuyển sang số thấp trước đoạn dốc đứng."
+          ],
+          [
+            "Use low gear when moving slowly over rough ground.",
+            "Dùng số thấp khi đi chậm trên địa hình gồ ghề."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) nhịp độ hoặc mức hoạt động thấp",
+        "pat": "in low gear · operate/run in low gear · shift out of low gear",
+        "ex": [
+          [
+            "The project remained in low gear while funding was reviewed.",
+            "Dự án hoạt động cầm chừng trong lúc nguồn vốn được xem xét."
+          ],
+          [
+            "After the holiday, the office shifted out of low gear.",
+            "Sau kỳ nghỉ, văn phòng tăng nhịp hoạt động trở lại."
+          ]
+        ]
+      }
+    ],
+    "note": "Cách gọi số truyền tùy loại hộp số; trong xe số tự động, low gear có thể là chế độ giới hạn dải số chứ không phải một bánh răng riêng."
+  },
+  {
+    "phrase": "low tide",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mực triều thấp nhất tại một địa điểm trong chu kỳ thủy triều; cũng chỉ thời điểm biển rút xuống mức đó",
+        "pat": "at low tide · the time of low tide · low-tide pools/marks",
+        "ex": [
+          [
+            "The rocks become visible at low tide.",
+            "Các tảng đá lộ ra khi triều xuống thấp."
+          ],
+          [
+            "Check the tide table before walking across the bay at low tide.",
+            "Hãy xem bảng thủy triều trước khi đi bộ qua vịnh lúc triều xuống."
+          ]
+        ]
+      }
+    ],
+    "note": "Thời điểm và độ cao triều thấp thay đổi theo vị trí và ngày; khu vực bãi triều có thể ngập nhanh khi nước lên."
+  },
+  {
+    "phrase": "low water",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mực nước thấp trong sông, hồ, hồ chứa hoặc vùng biển; trong thủy triều thường tương ứng thời điểm nước xuống thấp",
+        "pat": "at low water · a period of low water · low-water level/mark",
+        "ex": [
+          [
+            "Navigation became difficult at low water.",
+            "Việc lưu thông đường thủy trở nên khó khăn khi mực nước thấp."
+          ],
+          [
+            "The reservoir reached a low-water level during the dry season.",
+            "Hồ chứa đạt mực nước thấp trong mùa khô."
+          ]
+        ]
+      }
+    ],
+    "note": "Low water có thể chỉ thủy triều hoặc mực nước thấp nói chung; low tide chỉ cụ thể mức triều thấp. Nghĩa bóng low-water mark chỉ thời kỳ thấp điểm."
+  },
+  {
+    "phrase": "low water mark",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "vạch hoặc dấu cho biết mực nước thấp nhất tại một vị trí ven bờ hay trên một công trình",
+        "pat": "the low-water mark · mark the low-water line · below/above the low-water mark",
+        "ex": [
+          [
+            "The stones below the low-water mark were covered with algae.",
+            "Những phiến đá dưới vạch nước thấp phủ đầy tảo."
+          ],
+          [
+            "The survey team recorded the low-water mark on the harbour wall.",
+            "Đội khảo sát ghi lại dấu mực nước thấp trên tường cảng."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) mức thấp nhất hoặc giai đoạn tệ nhất của một tình hình",
+        "pat": "reach/hit the low-water mark · a low-water mark for something · fall to a low-water mark",
+        "ex": [
+          [
+            "Public confidence hit a low-water mark after the investigation.",
+            "Niềm tin công chúng chạm mức thấp nhất sau cuộc điều tra."
+          ],
+          [
+            "The season marked a low-water mark for the club’s results.",
+            "Mùa giải đó là thời điểm thành tích của câu lạc bộ thấp nhất."
+          ]
+        ]
+      }
+    ],
+    "note": "Dạng có gạch nối low-water mark thường gặp trước danh từ; cách viết thay đổi theo biên tập. Nghĩa bóng trang trọng hơn low point."
+  },
+  {
+    "phrase": "lower case",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "chữ thường — dạng chữ cái không viết hoa, như a, b, c",
+        "pat": "in lower case · use lower-case letters · type something in lower case",
+        "ex": [
+          [
+            "Enter the username in lower case.",
+            "Nhập tên người dùng bằng chữ thường."
+          ],
+          [
+            "The heading is printed in lower case for a softer look.",
+            "Tiêu đề được in bằng chữ thường để tạo cảm giác nhẹ hơn."
+          ]
+        ]
+      }
+    ],
+    "note": "Lower case cũng viết liền lowercase hoặc có gạch nối lower-case tùy vai trò và quy ước; đối lập với upper case (chữ hoa)."
+  },
+  {
+    "phrase": "lowest common multiple",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "bội chung nhỏ nhất (BCNN) — số nguyên dương nhỏ nhất chia hết cho tất cả các số nguyên dương đã cho; thường viết tắt LCM",
+        "pat": "the lowest common multiple (LCM) of two numbers · find/calculate the LCM · use the LCM",
+        "ex": [
+          [
+            "The lowest common multiple of nine and twelve is thirty-six.",
+            "Bội chung nhỏ nhất của chín và mười hai là ba mươi sáu."
+          ],
+          [
+            "Find the LCM before adding fractions with different denominators.",
+            "Hãy tìm BCNN trước khi cộng các phân số có mẫu số khác nhau."
+          ]
+        ]
+      }
+    ],
+    "note": "Lowest common multiple thường dùng ở Anh; least common multiple là cách gọi phổ biến ở Bắc Mỹ. Cả hai cùng viết tắt LCM."
+  },
+  {
+    "phrase": "lucky dip",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh) trò bốc thăm ngẫu nhiên, trong đó người tham gia rút một món quà hoặc vé mà không biết trước mình sẽ nhận gì",
+        "pat": "have a lucky dip · a lucky-dip ticket · choose a prize from the lucky dip",
+        "ex": [
+          [
+            "The children each picked a wrapped toy from the lucky dip.",
+            "Mỗi đứa trẻ chọn một món đồ chơi gói kín từ trò bốc thăm may mắn."
+          ],
+          [
+            "The school fair ran a lucky dip to raise funds.",
+            "Hội chợ trường tổ chức trò bốc thăm để gây quỹ."
+          ]
+        ]
+      },
+      {
+        "m": "(nghĩa bóng) lựa chọn hoặc kết quả ngẫu nhiên, không thể đoán trước",
+        "pat": "a bit of a lucky dip · treat something as a lucky dip · a lucky-dip choice",
+        "ex": [
+          [
+            "Without clear labels, ordering from the menu felt like a lucky dip.",
+            "Không có nhãn rõ ràng, gọi món từ thực đơn giống như bốc thăm may rủi."
+          ],
+          [
+            "The recruitment process was more than a lucky dip; candidates were carefully assessed.",
+            "Quy trình tuyển dụng không phải trò may rủi; ứng viên được đánh giá cẩn thận."
+          ]
+        ]
+      }
+    ],
+    "note": "Ở Bắc Mỹ, grab bag có thể là trò chơi tương tự. Lucky dip mang sắc thái thân mật và thường gắn với hội chợ hoặc gây quỹ."
+  },
+  {
+    "phrase": "luggage van",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh-Anh, nay ít gặp) toa riêng trên tàu hỏa dùng để chở hành lý hoặc hàng hóa của hành khách",
+        "pat": "a railway luggage van · load luggage into a luggage van · a luggage-van compartment",
+        "ex": [
+          [
+            "The trunks were loaded into the luggage van before departure.",
+            "Những chiếc rương được đưa vào toa hành lý trước giờ khởi hành."
+          ],
+          [
+            "The old train included a luggage van behind the passenger carriages.",
+            "Đoàn tàu cũ có một toa hành lý phía sau các toa khách."
+          ]
+        ]
+      }
+    ],
+    "note": "Luggage van là thuật ngữ lịch sử/đường sắt; ở Bắc Mỹ, baggage car thường tương đương. Các chuyến tàu hiện đại thường xử lý hành lý theo cách khác."
+  },
+  {
+    "phrase": "lumbar puncture",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "chọc dò tủy sống — thủ thuật y khoa đưa kim vào vùng thắt lưng để lấy dịch não tủy hoặc đo áp lực dịch",
+        "pat": "perform/have a lumbar puncture · a lumbar-puncture procedure · consent to a lumbar puncture",
+        "ex": [
+          [
+            "The neurologist explained why a lumbar puncture was being considered.",
+            "Bác sĩ thần kinh giải thích lý do đang cân nhắc chọc dò tủy sống."
+          ],
+          [
+            "A lumbar puncture can help investigate certain infections.",
+            "Chọc dò tủy sống có thể hỗ trợ khảo sát một số bệnh nhiễm trùng."
+          ]
+        ]
+      }
+    ],
+    "note": "Lumbar puncture còn gọi là spinal tap ở Bắc Mỹ; đây là thủ thuật do nhân viên y tế thực hiện sau khi đánh giá chỉ định và rủi ro. Thông tin này không thay thế tư vấn lâm sàng."
+  },
+  {
+    "phrase": "lump sum",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "khoản tiền được trả hoặc nhận một lần, thay vì chia thành nhiều khoản định kỳ",
+        "pat": "pay/receive a lump sum · a lump-sum payment · invest a lump sum",
+        "ex": [
+          [
+            "The contractor received a lump sum after completing the work.",
+            "Nhà thầu nhận một khoản tiền trọn gói sau khi hoàn thành công việc."
+          ],
+          [
+            "She chose a lump-sum payment rather than monthly instalments.",
+            "Cô chọn nhận một khoản tiền một lần thay vì trả góp hằng tháng."
+          ]
+        ]
+      }
+    ],
+    "note": "Lump sum mô tả cách thanh toán, không tự nói lên tổng giá trị hay điều kiện thuế; các khoản hưu trí, bảo hiểm và hợp đồng có quy định riêng."
+  },
+  {
+    "phrase": "lunar day",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "ngày Mặt Trăng — khoảng thời gian để Mặt Trăng quay về cùng vị trí biểu kiến trên bầu trời so với một điểm quan sát trên Trái Đất; thường dài khoảng 24 giờ 50 phút",
+        "pat": "a lunar day · the length of a lunar day · measure time by lunar days",
+        "ex": [
+          [
+            "A lunar day is longer than a solar day on Earth.",
+            "Một ngày Mặt Trăng dài hơn một ngày Mặt Trời trên Trái Đất."
+          ],
+          [
+            "The mission schedule was planned around the lunar day and night.",
+            "Lịch trình nhiệm vụ được lập theo ngày và đêm Mặt Trăng."
+          ]
+        ]
+      }
+    ],
+    "note": "Lunar day không giống chu kỳ pha Mặt Trăng kéo dài khoảng một tháng; thời lượng chính xác phụ thuộc cách định nghĩa mốc quan sát."
+  },
+  {
+    "phrase": "luncheon voucher",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "(Anh, nay ít phổ biến) phiếu ăn trưa do chủ lao động cấp, có thể dùng để thanh toán bữa ăn tại một số cơ sở",
+        "pat": "a luncheon voucher · issue/use luncheon vouchers · accept luncheon vouchers",
+        "ex": [
+          [
+            "The employer provided luncheon vouchers for staff working away from the office.",
+            "Chủ lao động cấp phiếu ăn trưa cho nhân viên làm việc ngoài văn phòng."
+          ],
+          [
+            "The café accepted luncheon vouchers at lunchtime.",
+            "Quán cà phê nhận phiếu ăn trưa vào giờ trưa."
+          ]
+        ]
+      }
+    ],
+    "note": "Luncheon voucher là phúc lợi kiểu cũ ở Anh; hiện có thể được thay bằng thẻ ăn, trợ cấp hoặc chương trình phúc lợi khác."
+  },
+  {
+    "phrase": "machine code",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "mã máy — dạng chỉ thị ở mức thấp nhất mà bộ xử lý có thể thực thi trực tiếp, thường được biểu diễn dưới dạng nhị phân",
+        "pat": "machine code · translate/compile into machine code · machine-code instructions",
+        "ex": [
+          [
+            "The compiler translates the program into machine code.",
+            "Trình biên dịch chuyển chương trình thành mã máy."
+          ],
+          [
+            "Machine-code instructions depend on the processor architecture.",
+            "Các chỉ thị mã máy phụ thuộc kiến trúc bộ xử lý."
+          ]
+        ]
+      }
+    ],
+    "note": "Machine code thường viết tắt là mã máy; nó khác ngôn ngữ lập trình bậc cao và khác mã nguồn dù mã nguồn có thể được dịch hoặc biên dịch thành mã máy."
+  },
+  {
+    "phrase": "machine gun",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "súng máy — loại súng có khả năng bắn liên tiếp nhiều viên đạn bằng cơ chế tự nạp, thường dùng trong bối cảnh quân sự",
+        "pat": "a machine gun · machine-gun fire · a machine-gun unit",
+        "ex": [
+          [
+            "The museum displayed a decommissioned machine gun from the conflict.",
+            "Bảo tàng trưng bày một khẩu súng máy đã ngừng hoạt động từ cuộc xung đột."
+          ],
+          [
+            "The report documented machine-gun fire during the battle.",
+            "Báo cáo ghi nhận hỏa lực súng máy trong trận chiến."
+          ]
+        ]
+      }
+    ],
+    "note": "Machine gun là thuật ngữ vũ khí; luật sở hữu và sử dụng khác nhau theo quốc gia. Định nghĩa ở đây chỉ giải thích từ vựng, không phải hướng dẫn sử dụng."
+  },
+  {
+    "phrase": "machine shop",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "xưởng cơ khí có máy móc dùng để gia công, cắt, tiện hoặc sửa chữa các chi tiết kim loại và thiết bị",
+        "pat": "a machine shop · work in a machine shop · machine-shop equipment",
+        "ex": [
+          [
+            "The machine shop produced replacement parts for the pump.",
+            "Xưởng cơ khí sản xuất linh kiện thay thế cho máy bơm."
+          ],
+          [
+            "He trained as a machinist in a small machine shop.",
+            "Anh được đào tạo thành thợ cơ khí tại một xưởng nhỏ."
+          ]
+        ]
+      }
+    ],
+    "note": "Machine shop khác cửa hàng bán máy; đây là nơi gia công hoặc sửa chi tiết bằng máy công cụ. Quy định an toàn yêu cầu người vận hành được đào tạo."
+  },
+  {
+    "phrase": "machine translation",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "senses": [
+      {
+        "m": "dịch máy — quá trình phần mềm tự động chuyển văn bản hoặc lời nói từ ngôn ngữ này sang ngôn ngữ khác",
+        "pat": "machine translation (MT) · use machine translation · machine-translation system/output",
+        "ex": [
+          [
+            "The team used machine translation to prepare a first draft.",
+            "Nhóm dùng dịch máy để chuẩn bị bản nháp đầu tiên."
+          ],
+          [
+            "Machine translation can miss tone and cultural context.",
+            "Dịch máy có thể bỏ sót sắc thái và bối cảnh văn hóa."
+          ]
+        ]
+      }
+    ],
+    "note": "Machine translation thường viết tắt MT; chất lượng phụ thuộc cặp ngôn ngữ, chủ đề và công cụ. Nội dung quan trọng nên được người có chuyên môn rà soát."
+  }
+]

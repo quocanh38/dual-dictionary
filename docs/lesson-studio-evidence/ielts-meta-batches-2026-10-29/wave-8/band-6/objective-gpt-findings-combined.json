@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-8-band-6-listening-04",
+      "severity": "critical",
+      "issue": "The question asks what David MUST do to confirm and keys replying YES, but the script explicitly allows confirmation during the phone call instead. Ask how he can confirm by text, or include both permitted methods in the key."
+    }
+  ]
+}

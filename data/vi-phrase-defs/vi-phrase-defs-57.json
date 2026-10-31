@@ -1,0 +1,498 @@
+[
+  {
+    "phrase": "nouvelle cuisine",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Thuật ngữ vay mượn từ tiếng Pháp, thường chỉ phong cách ẩm thực Pháp hiện đại chú trọng trình bày, nguyên liệu tươi và khẩu phần nhỏ hơn kiểu truyền thống. Không phải tên của một món ăn cụ thể.",
+    "senses": [
+      {
+        "m": "phong cách ẩm thực Pháp hiện đại, thường chú trọng cách trình bày và sự nhẹ nhàng của món ăn",
+        "pat": "nouvelle cuisine · a nouvelle cuisine restaurant · nouvelle cuisine dishes",
+        "ex": [
+          [
+            "The restaurant became known for its nouvelle cuisine.",
+            "Nhà hàng trở nên nổi tiếng với phong cách ẩm thực nouvelle cuisine."
+          ],
+          [
+            "The menu combines nouvelle cuisine with local ingredients.",
+            "Thực đơn kết hợp phong cách nouvelle cuisine với nguyên liệu địa phương."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear energy",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear energy là năng lượng từ biến đổi trong hạt nhân nguyên tử. Các nhà máy điện hạt nhân đang vận hành chủ yếu dùng phân hạch; phản ứng nhiệt hạch được nghiên cứu như một hướng khác nhưng chưa phải nguồn phát điện thương mại phổ biến.",
+    "senses": [
+      {
+        "m": "năng lượng hạt nhân, năng lượng giải phóng từ các biến đổi trong hạt nhân nguyên tử",
+        "pat": "nuclear energy · generate/produce nuclear energy · nuclear-energy programme",
+        "ex": [
+          [
+            "The country is debating whether to expand nuclear energy.",
+            "Quốc gia đang tranh luận có nên mở rộng năng lượng hạt nhân hay không."
+          ],
+          [
+            "Nuclear energy can be produced by fission, while fusion remains an active research area.",
+            "Năng lượng hạt nhân có thể được tạo ra bằng phân hạch, còn nhiệt hạch vẫn là lĩnh vực nghiên cứu tích cực."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear family",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear family là thuật ngữ xã hội học cho đơn vị gia đình hạt nhân; đây là một dạng cấu trúc gia đình, không hàm ý gia đình mở rộng hoặc các dạng gia đình khác kém đầy đủ hơn.",
+    "senses": [
+      {
+        "m": "gia đình hạt nhân, thường gồm cha mẹ và con cái sống như một đơn vị gia đình riêng",
+        "pat": "a nuclear family · live in a nuclear family · nuclear-family household",
+        "ex": [
+          [
+            "The survey compared nuclear families with multigenerational households.",
+            "Khảo sát so sánh các gia đình hạt nhân với hộ gia đình nhiều thế hệ."
+          ],
+          [
+            "In the novel, the nuclear family moves to a new city.",
+            "Trong tiểu thuyết, gia đình hạt nhân chuyển đến một thành phố mới."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear fission",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear fission là quá trình hạt nhân nặng tách thành các hạt nhân nhỏ hơn và giải phóng năng lượng; trong điện hạt nhân hiện nay, đây là phản ứng được sử dụng phổ biến. Không nhầm với fusion, trong đó các hạt nhân nhẹ kết hợp.",
+    "senses": [
+      {
+        "m": "phân hạch hạt nhân; quá trình một hạt nhân nguyên tử tách thành các hạt nhân nhỏ hơn và giải phóng năng lượng",
+        "pat": "nuclear fission · a nuclear-fission reaction · energy from nuclear fission",
+        "ex": [
+          [
+            "Nuclear fission releases energy when a heavy atomic nucleus splits.",
+            "Phân hạch hạt nhân giải phóng năng lượng khi một hạt nhân nguyên tử nặng tách ra."
+          ],
+          [
+            "The course explains the difference between fission and fusion.",
+            "Khóa học giải thích sự khác nhau giữa phân hạch và nhiệt hạch."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear fusion",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear fusion là quá trình các hạt nhân nhẹ kết hợp thành hạt nhân nặng hơn và giải phóng năng lượng, như phản ứng cung cấp năng lượng cho các ngôi sao. Tạo và duy trì điều kiện cần cho nhiệt hạch có kiểm soát trên Trái Đất vẫn là thách thức khoa học-kỹ thuật.",
+    "senses": [
+      {
+        "m": "nhiệt hạch; quá trình các hạt nhân nguyên tử nhẹ kết hợp thành hạt nhân nặng hơn và giải phóng năng lượng",
+        "pat": "nuclear fusion · nuclear-fusion research · a fusion reaction",
+        "ex": [
+          [
+            "Nuclear fusion powers the Sun and other stars.",
+            "Nhiệt hạch cung cấp năng lượng cho Mặt Trời và các ngôi sao khác."
+          ],
+          [
+            "Scientists are researching ways to sustain nuclear fusion on Earth.",
+            "Các nhà khoa học đang nghiên cứu cách duy trì phản ứng nhiệt hạch trên Trái Đất."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear power",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear power thường chỉ điện hoặc năng lượng sản xuất bằng phản ứng hạt nhân; trong ngữ cảnh điện lực hiện nay thường là điện từ phân hạch. Cụm này cũng có nghĩa khác là sức mạnh/tiềm lực hạt nhân của một quốc gia, tùy văn cảnh.",
+    "senses": [
+      {
+        "m": "điện hoặc năng lượng được tạo ra từ phản ứng hạt nhân",
+        "pat": "nuclear power plant · generate nuclear power · rely on nuclear power",
+        "ex": [
+          [
+            "The region gets part of its electricity from nuclear power.",
+            "Khu vực lấy một phần điện năng từ điện hạt nhân."
+          ],
+          [
+            "The debate over nuclear power includes questions about cost and waste.",
+            "Cuộc tranh luận về điện hạt nhân bao gồm các vấn đề chi phí và chất thải."
+          ]
+        ]
+      },
+      {
+        "m": "quốc gia có vũ khí hạt nhân hoặc tiềm lực hạt nhân lớn",
+        "pat": "a nuclear power · become a nuclear power · nuclear powers",
+        "ex": [
+          [
+            "The treaty was negotiated by several nuclear powers.",
+            "Hiệp ước được đàm phán bởi một số cường quốc hạt nhân."
+          ],
+          [
+            "The phrase “nuclear power” can refer to a state as well as to electricity.",
+            "Cụm “nuclear power” có thể chỉ một quốc gia chứ không chỉ điện năng."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear reactor",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear reactor là thiết bị nơi phản ứng hạt nhân được duy trì có kiểm soát; không phải mọi lò phản ứng đều là nhà máy điện—một số dùng cho nghiên cứu hoặc sản xuất đồng vị. Mục này chỉ giải thích thuật ngữ, không mô tả cách vận hành.",
+    "senses": [
+      {
+        "m": "lò phản ứng hạt nhân; thiết bị duy trì phản ứng hạt nhân có kiểm soát để tạo nhiệt hoặc phục vụ nghiên cứu",
+        "pat": "a nuclear reactor · operate/shut down a reactor · a research reactor",
+        "ex": [
+          [
+            "The research team used a small nuclear reactor to produce medical isotopes.",
+            "Nhóm nghiên cứu dùng một lò phản ứng hạt nhân nhỏ để sản xuất đồng vị y tế."
+          ],
+          [
+            "The report assessed the safety systems at the nuclear reactor.",
+            "Báo cáo đánh giá các hệ thống an toàn tại lò phản ứng hạt nhân."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nuclear winter",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nuclear winter là giả thuyết về giai đoạn khí hậu lạnh và tối kéo dài sau một cuộc chiến tranh hạt nhân quy mô lớn, khi khói/bụi làm giảm ánh sáng Mặt Trời tới bề mặt. Đây là kịch bản khoa học được nghiên cứu, không phải tên một mùa đông thông thường.",
+    "senses": [
+      {
+        "m": "mùa đông hạt nhân; giả thuyết về sự lạnh và tối kéo dài do khói bụi từ chiến tranh hạt nhân làm giảm ánh sáng Mặt Trời",
+        "pat": "the threat of nuclear winter · a nuclear-winter scenario · research on nuclear winter",
+        "ex": [
+          [
+            "The documentary examines the scientific idea of nuclear winter.",
+            "Phim tài liệu khảo sát giả thuyết khoa học về mùa đông hạt nhân."
+          ],
+          [
+            "The phrase “nuclear winter” describes a possible global climate effect of a large nuclear conflict.",
+            "Cụm “nuclear winter” mô tả một tác động khí hậu toàn cầu có thể xảy ra sau xung đột hạt nhân quy mô lớn."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "nucleic acid",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Nucleic acids gồm DNA và RNA, được cấu tạo từ các nucleotide. DNA lưu trữ phần lớn thông tin di truyền ở nhiều sinh vật; RNA có nhiều vai trò khác trong tế bào. Không đồng nhất mọi chức năng của DNA và RNA.",
+    "senses": [
+      {
+        "m": "axit nucleic; phân tử sinh học gồm chuỗi nucleotide, bao gồm DNA và RNA",
+        "pat": "a nucleic acid · nucleic-acid molecule · DNA and RNA are nucleic acids",
+        "ex": [
+          [
+            "DNA is one type of nucleic acid.",
+            "DNA là một loại axit nucleic."
+          ],
+          [
+            "The laboratory analysed nucleic acids in the sample.",
+            "Phòng thí nghiệm phân tích axit nucleic trong mẫu."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "number cruncher",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Number cruncher là cách nói thân mật; có thể chỉ người thường xử lý nhiều số liệu hoặc, trong một số ngữ cảnh, máy tính/phần mềm xử lý phép tính. Trong văn phong trang trọng, dùng data analyst/accountant nếu đúng nghề cụ thể.",
+    "senses": [
+      {
+        "m": "(thân mật) người thường xuyên tính toán hoặc phân tích lượng lớn số liệu",
+        "pat": "a financial number cruncher · work as a number cruncher · number-crunching skills",
+        "ex": [
+          [
+            "The company hired a number cruncher to review its costs.",
+            "Công ty thuê một chuyên viên xử lý số liệu để rà soát chi phí."
+          ],
+          [
+            "Our number cruncher checked the sales figures before the meeting.",
+            "Người phụ trách tính toán kiểm tra số liệu bán hàng trước cuộc họp."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "o level",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "O level (Ordinary Level) là kỳ thi/chứng chỉ lịch sử trong hệ thống giáo dục Anh; ở Anh và một số nơi, nó được thay thế hoặc cải tổ, trong khi một số hệ thống giáo dục khác vẫn dùng tên O Level. Không suy ra chứng chỉ hiện hành chỉ từ tên này.",
+    "senses": [
+      {
+        "m": "O level; kỳ thi/chứng chỉ phổ thông theo hệ thống giáo dục Anh, đặc biệt trong cách dùng lịch sử",
+        "pat": "take/pass an O level · O-level examinations · an O-level qualification",
+        "ex": [
+          [
+            "Her parents took O levels before the school system changed.",
+            "Cha mẹ cô thi O level trước khi hệ thống trường học thay đổi."
+          ],
+          [
+            "The college accepts several international O-level qualifications.",
+            "Trường cao đẳng chấp nhận một số chứng chỉ O level quốc tế."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "oast house",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Oast house là công trình đặc trưng ở Anh, nhất là vùng Kent, dùng để sấy hoa bia; các lò sấy thường có mái chóp hoặc chụp thông gió. Nhiều công trình cũ hiện được bảo tồn hoặc chuyển công năng.",
+    "senses": [
+      {
+        "m": "(Anh-Anh) nhà/lò sấy hoa bia, thường có mái chóp đặc trưng",
+        "pat": "an old oast house · dry hops in an oast house · an oast-house roof",
+        "ex": [
+          [
+            "The village has several restored oast houses.",
+            "Ngôi làng có một số nhà sấy hoa bia đã được phục dựng."
+          ],
+          [
+            "The oast house was built when hop farming was common in the area.",
+            "Nhà sấy hoa bia được xây khi nghề trồng hoa bia còn phổ biến trong vùng."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "obiter dictum",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Cụm Latin trong luật, số nhiều obiter dicta. Đây là nhận xét của thẩm phán không thiết yếu để đi đến phán quyết; giá trị tham khảo/pháp lý của nó khác nhau theo hệ thống và bối cảnh. Đây là giải thích thuật ngữ, không phải tư vấn pháp lý.",
+    "senses": [
+      {
+        "m": "(luật) nhận định phụ của thẩm phán không phải căn cứ cần thiết cho phán quyết",
+        "pat": "an obiter dictum · obiter dicta in a judgment · distinguish the ratio from an obiter dictum",
+        "ex": [
+          [
+            "The judge’s comment was treated as an obiter dictum rather than the basis of the ruling.",
+            "Nhận xét của thẩm phán được xem là obiter dictum chứ không phải căn cứ của phán quyết."
+          ],
+          [
+            "The textbook distinguishes an obiter dictum from the binding part of a decision.",
+            "Sách giáo khoa phân biệt obiter dictum với phần có giá trị ràng buộc của quyết định."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "object language",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Trong logic và ngôn ngữ học, object language là ngôn ngữ đang được mô tả; metalanguage là ngôn ngữ dùng để nói về nó. Ví dụ, khi dùng tiếng Việt để phân tích cấu trúc tiếng Anh, tiếng Anh là object language.",
+    "senses": [
+      {
+        "m": "ngôn ngữ đối tượng; ngôn ngữ đang được phân tích hoặc mô tả bằng một siêu ngôn ngữ",
+        "pat": "an object language · describe an object language · object language and metalanguage",
+        "ex": [
+          [
+            "In the exercise, English is the object language and Vietnamese is the metalanguage.",
+            "Trong bài tập này, tiếng Anh là ngôn ngữ đối tượng còn tiếng Việt là siêu ngôn ngữ."
+          ],
+          [
+            "The symbols belong to the object language being studied.",
+            "Các ký hiệu thuộc về ngôn ngữ đối tượng đang được nghiên cứu."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "object lesson",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Object lesson có thể là bài học được minh họa bằng tình huống thực tế hoặc ví dụ cảnh tỉnh về hậu quả của một hành động. Thường dùng an object lesson in + phẩm chất/chủ đề.",
+    "senses": [
+      {
+        "m": "bài học cụ thể được minh họa bằng một tình huống hoặc trải nghiệm thực tế",
+        "pat": "an object lesson in something · provide/offer an object lesson · learn an object lesson",
+        "ex": [
+          [
+            "The failed launch provided an object lesson in the need for testing.",
+            "Lần ra mắt thất bại là bài học thực tế về sự cần thiết của việc thử nghiệm."
+          ],
+          [
+            "The visit was an object lesson in how a small design change can improve access.",
+            "Chuyến thăm là bài học trực quan về cách một thay đổi thiết kế nhỏ có thể cải thiện khả năng tiếp cận."
+          ]
+        ]
+      },
+      {
+        "m": "ví dụ cảnh tỉnh cho thấy hậu quả xấu có thể xảy ra",
+        "pat": "an object lesson in what can go wrong · serve as an object lesson",
+        "ex": [
+          [
+            "The flooded basement served as an object lesson in poor drainage.",
+            "Căn hầm bị ngập là ví dụ cảnh tỉnh về hệ thống thoát nước kém."
+          ],
+          [
+            "The case became an object lesson in the cost of ignoring warnings.",
+            "Vụ việc trở thành bài học cảnh tỉnh về cái giá của việc phớt lờ cảnh báo."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "object program",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Object program là thuật ngữ tin học tương đối cũ cho chương trình được tạo ra từ mã nguồn qua quá trình biên dịch, thường cần liên kết với thành phần khác trước khi chạy. Hiện nay thường gặp object code, object file hoặc executable tùy sản phẩm đầu ra cụ thể.",
+    "senses": [
+      {
+        "m": "(tin học, cách dùng cũ) chương trình ở dạng mã máy/đối tượng được tạo từ mã nguồn sau khi biên dịch",
+        "pat": "compile source code into an object program · an object-program file · generate an object program",
+        "ex": [
+          [
+            "The compiler translated the source into an object program.",
+            "Trình biên dịch chuyển mã nguồn thành chương trình dạng mã đối tượng."
+          ],
+          [
+            "The object program was linked with the required libraries.",
+            "Chương trình mã đối tượng được liên kết với các thư viện cần thiết."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "occupational therapy",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Occupational therapy không chỉ liên quan đến nghề nghiệp; occupation ở đây là các hoạt động hằng ngày có ý nghĩa như tự chăm sóc, học tập, làm việc và giải trí. NHS mô tả mục tiêu là giúp người gặp khó khăn thực hiện các hoạt động thường nhật tốt hơn.",
+    "senses": [
+      {
+        "m": "hoạt động trị liệu; dịch vụ hỗ trợ người gặp khó khăn về sức khỏe hoặc khuyết tật thực hiện các hoạt động hằng ngày và tăng tính độc lập",
+        "pat": "receive occupational therapy · occupational-therapy services · an occupational therapist",
+        "ex": [
+          [
+            "Occupational therapy helped him practise everyday tasks after the injury.",
+            "Hoạt động trị liệu giúp anh luyện tập các việc thường ngày sau chấn thương."
+          ],
+          [
+            "The hospital offers occupational therapy for people recovering from illness.",
+            "Bệnh viện cung cấp hoạt động trị liệu cho người đang hồi phục sau bệnh."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "oedipus complex",
+    "pos": "noun phrase",
+    "hideOvdp": true,
+    "note": "Oedipus complex là khái niệm của phân tâm học cổ điển gắn với Freud, không phải chẩn đoán y khoa hiện đại. APA mô tả đây là lý thuyết lịch sử đã được các trường phái phân tâm đương đại điều chỉnh và tranh luận; không nên áp dụng như lời giải thích chắc chắn cho hành vi một cá nhân.",
+    "senses": [
+      {
+        "m": "(phân tâm học cổ điển) khái niệm Freud về xung đột vô thức thời thơ ấu liên quan đến gắn bó với cha/mẹ và cạnh tranh với phụ huynh còn lại",
+        "pat": "the Oedipus complex · Freud’s theory of the Oedipus complex · an Oedipus-complex interpretation",
+        "ex": [
+          [
+            "The lecturer presented the Oedipus complex as a historical psychoanalytic theory.",
+            "Giảng viên trình bày phức cảm Oedipus như một lý thuyết phân tâm học mang tính lịch sử."
+          ],
+          [
+            "The novel alludes to the Oedipus complex, but the idea is debated.",
+            "Cuốn tiểu thuyết ám chỉ phức cảm Oedipus, nhưng khái niệm này còn gây tranh luận."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "off colour",
+    "pos": "adjective phrase",
+    "hideOvdp": true,
+    "note": "Off colour là cách viết Anh-Anh; Anh-Mỹ viết off-color. Trạng thái “hơi ốm” thường dùng be/feel off colour; nghĩa “không phù hợp/khêu gợi” thường đi với joke hoặc remark.",
+    "senses": [
+      {
+        "m": "(Anh-Anh) hơi mệt hoặc không được khỏe",
+        "pat": "feel/be a little off colour · look off colour · stay home because you are off colour",
+        "ex": [
+          [
+            "I felt a little off colour and went home early.",
+            "Tôi thấy hơi mệt nên về nhà sớm."
+          ],
+          [
+            "She looked off colour after the long flight.",
+            "Cô ấy trông không khỏe sau chuyến bay dài."
+          ]
+        ]
+      },
+      {
+        "m": "(về lời nói/hài hước) hơi tục, khêu gợi hoặc không phù hợp",
+        "pat": "an off-colour joke · an off-colour remark · tell an off-colour story",
+        "ex": [
+          [
+            "He apologized for making an off-colour joke at dinner.",
+            "Anh xin lỗi vì đã kể một câu đùa hơi tục trong bữa tối."
+          ],
+          [
+            "The host removed an off-colour remark from the broadcast.",
+            "Người dẫn chương trình bỏ một lời nhận xét không phù hợp khỏi buổi phát sóng."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "phrase": "off limits",
+    "pos": "adjective phrase",
+    "hideOvdp": true,
+    "note": "Off limits thường đứng sau be hoặc sau danh từ chỉ nơi/chủ đề: the area is off limits; an off-limits area. Không nhất thiết mang nghĩa cấm theo luật; có thể là quy định riêng hoặc giới hạn xã giao.",
+    "senses": [
+      {
+        "m": "(về nơi chốn) không được phép vào hoặc sử dụng",
+        "pat": "be off limits to someone · an off-limits area · make a place off limits",
+        "ex": [
+          [
+            "The construction site is off limits to visitors.",
+            "Khách không được vào công trường."
+          ],
+          [
+            "The upper floor remained off limits during the repairs.",
+            "Tầng trên vẫn bị hạn chế ra vào trong thời gian sửa chữa."
+          ]
+        ]
+      },
+      {
+        "m": "(về chủ đề/vấn đề) không được phép hoặc không nên bàn tới",
+        "pat": "a subject is off limits · be off limits for discussion · declare something off limits",
+        "ex": [
+          [
+            "Personal questions were off limits during the interview.",
+            "Trong buổi phỏng vấn, các câu hỏi riêng tư không được đặt ra."
+          ],
+          [
+            "The manager said that no topic was off limits for the review.",
+            "Quản lý nói rằng buổi đánh giá không loại trừ chủ đề nào."
+          ]
+        ]
+      }
+    ]
+  }
+]

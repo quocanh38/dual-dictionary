@@ -1,0 +1,154 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-6-5",
+  "batchId": "wave-3",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-28-wave-3-v1",
+  "completedAt": "2026-10-28T07:18:17.431Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2993,
+    "outputTokens": 5849,
+    "totalTokens": 8842
+  },
+  "latencyMs": 14168,
+  "result": {
+    "listening": {
+      "title": "Comparing Low-Cost Indoor Air Sensors",
+      "focus": "Following academic discussion, comparing evidence and handling limitations",
+      "part": "Part 3",
+      "script": "DR ELLIS: So, Priya and Sam, how is your comparison of low-cost indoor air-quality sensors going? PRIYA: Quite well. We compared three models, all priced under 120 pounds, in two rented flats. We monitored fine particles and carbon dioxide in a kitchen and a bedroom. SAM: We chose those rooms for a reason. Cooking creates brief, very high particle peaks, while bedrooms show overnight carbon dioxide accumulation when windows stay closed and two people are sleeping. DR ELLIS: Good contrast between short spikes and gradual build-up. How long did you run them? PRIYA: We first planned two weeks, but actually we extended it to three weeks in March because during the first week one family was away, so occupancy was unusually low. SAM: In each room we placed a calibrated reference instrument beside the low-cost sensors, so we could compare readings hour by hour rather than relying on the manufacturers' claims. DR ELLIS: Sensible. What differences did you find? PRIYA: Model K was the cheapest, but it consistently overestimated particle levels when relative humidity was high, especially after boiling water or showering. The manual does not mention that weakness. SAM: Model L was more stable for particles, but its carbon dioxide readings drifted steadily upward after day ten. We had to recalibrate it — we first thought we would need to restart it completely — to bring it back into line with the reference. DR ELLIS: And the third model? PRIYA: Model M measured both pollutants reasonably well, but it stores data for only 48 hours unless it stays connected to Wi-Fi, which is a practical drawback for longer household studies. SAM: When we averaged the data by day, Model L matched the reference most closely for particles, within about twelve percent. However, for short cooking peaks, none of the low-cost devices captured the full height of the spike; they smoothed it out. DR ELLIS: So what is your main conclusion for the report? PRIYA: That these sensors are useful for showing patterns — when pollution rises and falls — but less reliable for exact peak values, unless a humidity correction is applied and regular calibration is done. SAM: Exactly. Next, we will test whether moving Model M further from the cooker reduces false alarms without missing genuine high-exposure events.",
+      "questions": [
+        {
+          "title": "Choice of rooms",
+          "prompt": "Why did the students choose a kitchen and a bedroom for the test?",
+          "options": [
+            "To compare two different sensor brands in the same flat",
+            "To check whether Wi-Fi connection was stable in different rooms",
+            "To contrast brief cooking particle peaks with overnight carbon dioxide build-up",
+            "To measure outdoor pollution entering through windows"
+          ],
+          "answer": 2,
+          "explanation": "The script says cooking creates brief, very high particle peaks while bedrooms show overnight accumulation. Option 3 paraphrases this. The Wi-Fi distractor fails because Wi-Fi storage is mentioned only later for Model M, not as a reason for room choice."
+        },
+        {
+          "title": "Monitoring period",
+          "prompt": "Why did monitoring last three weeks instead of two?",
+          "options": [
+            "Occupancy in the first week was unusually low because a family was away",
+            "The reference instrument broke and had to be replaced",
+            "The students wanted to include April as well as March",
+            "Humidity levels were too stable to test Model K"
+          ],
+          "answer": 0,
+          "explanation": "Priya corrects the plan from two to three weeks because one family was away in week one. The instrument-break distractor fails because no breakdown is mentioned; only recalibration of Model L is discussed."
+        },
+        {
+          "title": "Model K weakness",
+          "prompt": "What limitation did they find with Model K?",
+          "options": [
+            "Its carbon dioxide readings drifted upward after day ten",
+            "It overestimated particle levels when humidity was high",
+            "It could not store data for more than 48 hours",
+            "It failed to detect carbon dioxide overnight"
+          ],
+          "answer": 1,
+          "explanation": "Priya states Model K overestimated particles after boiling water or showering when humidity was high. The CO2 drift distractor fails because that describes Model L, not Model K."
+        },
+        {
+          "title": "Model L performance",
+          "prompt": "What did the daily averages show about Model L?",
+          "options": [
+            "It recorded cooking peaks more accurately than the reference instrument",
+            "It needed Wi-Fi to avoid losing data after 48 hours",
+            "It was the cheapest model but missed all pollution patterns",
+            "It matched the reference most closely for particles but smoothed short peaks"
+          ],
+          "answer": 3,
+          "explanation": "Sam says Model L matched the reference within about twelve percent on daily averages but none of the low-cost devices captured the full height of cooking spikes. The cheapest-model distractor fails because Model K was the cheapest."
+        },
+        {
+          "title": "Overall conclusion",
+          "prompt": "What is their main conclusion about low-cost sensors?",
+          "options": [
+            "They should replace calibrated reference instruments in research",
+            "They are useful for showing pollution patterns but less reliable for exact peaks without correction",
+            "They are unsuitable for household use because of Wi-Fi limits",
+            "They measure short cooking peaks accurately if placed near the cooker"
+          ],
+          "answer": 1,
+          "explanation": "Priya concludes sensors show when pollution rises and falls but are less reliable for exact peaks unless humidity correction and calibration are done. The replace-reference distractor fails because they used the reference to check accuracy and noted peak errors."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Why Some City Trees Survive Longer",
+      "focus": "Comparing evidence on species and maintenance while recognising study limits",
+      "passage": "City trees provide shade, cool streets and support well-being, yet many newly planted street trees die within a few years. To understand longer-term outcomes, researchers at Merrifield University tracked street trees planted by the city council between 2008 and 2012 and re-examined them in 2022. The team identified 1,240 planting locations from council records and visited each site. A tree was counted as surviving only if the original individual was still alive; stumps, empty pits and replacements were recorded separately. Three common species were included: London plane, red maple and honey locust. The researchers also noted pit size, nearby pavement type and whether watering records existed for the first two summers. After ten to fourteen years, 58% of the original trees survived. Survival differed by species. London plane had the highest rate at 71%, followed by honey locust at 62%, while red maple was lowest at 49%. Pit size was also strongly associated with survival. Trees in large pits of over four square metres survived at 68%, compared with 41% in small pits of under two square metres. Trees watered regularly during the first two summers survived at higher rates than those with no watering record, although the authors caution that watering records were incomplete and may reflect better overall maintenance rather than water alone. A comparison between two districts was revealing. Northside has compacted, clay-rich soil and Southside has looser, sandy soil that would normally favour root growth. Despite this, Northside achieved 64% survival compared with 52% in Southside. The difference appears linked to management: Northside had a volunteer watering programme and annual pruning checks from 2010 to 2015, while Southside had no organised aftercare. The authors conclude that sustained maintenance can partly offset less favourable soil, though they stress this is based on observational data and does not prove that soil type is unimportant. Several limitations qualify the results. Planting locations were not randomly assigned; tougher sites may have received hardier species. In addition, some dead trees were replaced without updating the records, so the reported 58% survival rate may slightly overestimate true survival. The study also covers one temperate city, so findings may not apply directly to hotter, drier climates. The report notes an exception that illustrates the need to distinguish patterns from single cases. One honey locust on Carter Lane survived fourteen years in a pit of only 1.5 square metres. The authors present this as an unusual example, not as evidence against the general pattern that larger pits support higher survival.",
+      "questions": [
+        {
+          "title": "Counting survival",
+          "prompt": "How did the researchers define survival in the follow-up visit?",
+          "options": [
+            "Any living tree present at the planting location",
+            "Only the original planted individual still alive",
+            "Any tree taller than two metres regardless of species",
+            "Only trees with complete watering records"
+          ],
+          "answer": 1,
+          "explanation": "The passage states a tree counted only if the original individual was still alive, with replacements recorded separately. The any-living-tree distractor fails because replacements were explicitly excluded from survival."
+        },
+        {
+          "title": "Species differences",
+          "prompt": "What did the species comparison show after ten to fourteen years?",
+          "options": [
+            "London plane survived best, followed by honey locust, with red maple lowest",
+            "Honey locust survived best, followed by red maple, with London plane lowest",
+            "All three species had survival rates close to the 58% average",
+            "Red maple survived best in small pits but worst in large pits"
+          ],
+          "answer": 0,
+          "explanation": "The passage gives 71% for London plane, 62% for honey locust and 49% for red maple. The honey-locust-best distractor reverses the order and is contradicted by those figures."
+        },
+        {
+          "title": "District comparison",
+          "prompt": "What does the Northside and Southside comparison suggest?",
+          "options": [
+            "Sandy soil always produces lower survival than clay-rich soil",
+            "Organised watering and pruning checks can partly offset poorer soil",
+            "Soil type has no effect on tree survival in any city",
+            "Southside had higher survival because it had no aftercare programme"
+          ],
+          "answer": 1,
+          "explanation": "Northside had poorer clay soil but higher survival at 64% versus 52%, linked to volunteer watering and pruning. The authors qualify this as partly offsetting soil, not proving soil unimportant. The no-effect distractor fails because the claim is qualified, not absolute."
+        },
+        {
+          "title": "Effect of missing records",
+          "prompt": "What can reasonably be inferred about the reported 58% survival rate?",
+          "options": [
+            "It is exact because every planting location was visited",
+            "It must be higher in hotter climates",
+            "It may slightly overstate true survival because some replacements were unrecorded",
+            "It understates survival because empty pits were counted as survivors"
+          ],
+          "answer": 2,
+          "explanation": "The passage notes some dead trees were replaced without record updates, so the rate may slightly overestimate true survival. This limited inference follows directly. The exact-rate distractor fails because the authors explicitly warn about incomplete records."
+        },
+        {
+          "title": "Pattern versus example",
+          "prompt": "How do the authors treat the honey locust on Carter Lane?",
+          "options": [
+            "As an unusual single case that does not overturn the general benefit of larger pits",
+            "As proof that small pits are generally better than large pits",
+            "As evidence that pit size has no link to survival",
+            "As the main basis for recommending honey locust everywhere"
+          ],
+          "answer": 0,
+          "explanation": "The passage presents the 1.5 square metre pit survivor as an unusual example, not evidence against the pattern that larger pits support higher survival. The small-pits-better distractor fails because it mistakes an exception for the authors' general claim."
+        }
+      ]
+    }
+  }
+}

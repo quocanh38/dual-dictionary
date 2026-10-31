@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FSRS là gì? Thuật toán ôn tập thông minh hơn thế hệ cũ</title>
+<meta name="description" content="FSRS (Free Spaced Repetition Scheduler) là gì: vì sao mỗi người quên khác nhau, thuật toán xếp lịch ôn riêng từng từ, và điểm khác với thế hệ SM-2 cũ.">
+<link rel="canonical" href="https://dualdictionary.netlify.app/vi/blog/phuong-phap/fsrs-la-gi/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:title" content="FSRS là gì? Thuật toán ôn tập thông minh hơn thế hệ cũ">
+<meta property="og:description" content="Mỗi người quên khác nhau — FSRS xếp lịch ôn riêng từng từ cho từng người học, thay lịch cứng chung của thế hệ cũ.">
+<meta property="og:image" content="https://dualdictionary.netlify.app/vi/blog/images/fsrs-la-gi/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-19T19:50:00+07:00">
+<meta property="article:modified_time" content="2026-08-19T19:50:00+07:00">
+<meta property="article:author" content="https://www.linkedin.com/in/quocanh38/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FSRS là gì? Thuật toán ôn tập thông minh">
+<meta name="twitter:description" content="Xếp lịch ôn riêng từng từ cho từng người học — khác gì thế hệ SM-2 cũ?">
+<link rel="stylesheet" href="/vi/blog/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://dualdictionary.netlify.app/vi/blog/#quoc-anh",
+      "name": "Nguyễn Quốc Anh",
+      "alternateName": "Quốc Anh",
+      "jobTitle": "Senior Business Development",
+      "worksFor": { "@type": "Organization", "name": "TMA" },
+      "description": "Senior Business Development tại TMA, người khởi tạo Dual Dictionary — app từ điển & luyện từ vựng offline-first cho người Việt học IELTS/TOEIC.",
+      "url": "https://www.linkedin.com/in/quocanh38/",
+      "sameAs": ["https://www.linkedin.com/in/quocanh38/"]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "FSRS là gì? Thuật toán ôn tập thông minh hơn thế hệ cũ",
+      "description": "Mỗi người quên khác nhau — FSRS xếp lịch ôn riêng từng từ cho từng người học, thay lịch cứng chung của thế hệ cũ.",
+      "inLanguage": "vi",
+      "datePublished": "2026-08-19T19:50:00+07:00",
+      "dateModified": "2026-08-19T19:50:00+07:00",
+      "author": { "@id": "https://dualdictionary.netlify.app/vi/blog/#quoc-anh" },
+      "publisher": { "@type": "Organization", "name": "Dual Dictionary", "url": "https://dualdictionary.netlify.app/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://dualdictionary.netlify.app/vi/blog/phuong-phap/fsrs-la-gi/" },
+      "image": "https://dualdictionary.netlify.app/vi/blog/images/fsrs-la-gi/og-1200x630.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://dualdictionary.netlify.app/vi/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://dualdictionary.netlify.app/vi/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Phương pháp", "item": "https://dualdictionary.netlify.app/vi/blog/phuong-phap/" },
+        { "@type": "ListItem", "position": 4, "name": "FSRS là gì?" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-post">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/vi/">Trang chủ</a> › <a href="/vi/blog/">Blog</a> ›
+  <a href="/vi/blog/phuong-phap/">Phương pháp</a> › <span aria-current="page">FSRS là gì?</span>
+</nav>
+
+<article>
+<h1>FSRS là gì? Thuật toán ôn tập thông minh hơn thế hệ cũ</h1>
+
+<p class="byline">
+  <strong>Quốc Anh</strong> · 19/08/2026 · ~7 phút đọc
+</p>
+
+<nav class="toc" aria-label="Mục lục">
+  <p>Mục lục</p>
+  <ul>
+    <li><a href="#thuat-toan-thay-lich">Vấn đề: lịch ôn tốt phải là lịch của riêng bạn</a></li>
+    <li><a href="#fsrs">FSRS giải vấn đề đó bằng cách nào</a></li>
+    <li><a href="#khac-sm2">Khác gì thế hệ cũ (SM-2)?</a></li>
+    <li><a href="#trong-app">FSRS trong Dual Dictionary — và phần tôi thích nhất</a></li>
+    <li><a href="#doc-tiep">Đọc tiếp</a></li>
+  </ul>
+</nav>
+
+<aside class="series-box">
+  <p><strong>Ba câu hỏi bài này trả lời</strong></p>
+  <ul>
+    <li>FSRS khác lịch ôn cứng ở điểm nào? — nó ước lượng tốc độ quên riêng của từng thẻ với từng người.</li>
+    <li>Nó dựa vào đâu? — ba con số: khả năng còn nhớ lúc này, độ bền ký ức, độ khó của thẻ.</li>
+    <li>Có cần thiết lập gì không? — không; đủ dữ liệu thì thuật toán tự tinh chỉnh theo chính bạn.</li>
+  </ul>
+</aside>
+<p>Bài trước trong cụm này giải thích vì sao ôn đúng lúc sắp quên mới giữ được từ. Bài này trả lời câu hỏi kế theo: <em>chính xác thì "đúng lúc" là khi nào?</em> Với người nhanh, ba ngày là quá trễ; với người chậm, ba ngày là quá sớm. Cùng một từ, học buổi sáng thì quên chậm hơn học lúc nửa đêm mệt rũ. Một lịch cố định cho mọi người mọi từ là thô sơ — và FSRS (Free Spaced Repetition Scheduler) là câu trả lời hiện đại cho vấn đề đó. Dual Dictionary chạy nó ở hàng đợi ôn, nên bài này cũng giải thích đúng cái đang chạy trong app của bạn.</p>
+
+<h2 id="thuat-toan-thay-lich">Vấn đề: lịch ôn tốt phải là lịch của riêng bạn</h2>
+
+<p>Suy nghĩ tự nhiên đầu tiên: làm cái lịch "một ngày — ba ngày — một tuần — một tháng" là xong. Đó là cách thế hệ cũ làm, và nó hoạt động được — chỉ là hoạt động <em>máy móc</em>: mỗi thẻ được đối xử y hệt nhau dù không có hai từ nào bạn quên cùng tốc độ, và không có hai người nào quên cùng nhịp.</p>
+
+<p>Hệ quả của lịch cứng: từ dễ thì vẫn bị kéo ra ôn dày hơn cần (lãng phí thời gian), từ khó thì bị đẩy đi xa theo lịch mặc định dù bạn chưa nhớ vững (trôi mất). Cộng dồn qua vài trăm từ, phần trăm lãng phí cộng phần trăm trôi mất đó là chênh lệch thật giữa hai band.</p>
+
+<h2 id="fsrs">FSRS giải vấn đề đó bằng cách nào</h2>
+
+<p>FSRS học từ chính hành vi của bạn. Mỗi lần bạn chấm một thẻ (nhớ / quên), thuật toán cập nhật ba ước lượng cho <em>thẻ đó, của riêng bạn</em>:</p>
+
+<ul>
+  <li><strong>Độ khó:</strong> từ này bạn quên nhanh hay chậm so với trung bình của chính bạn.</li>
+  <li><strong>Độ bền hiện tại:</strong> từ lần ôn gần nhất tới giờ, trí nhớ còn "trụ" được bao lâu.</li>
+  <li><strong>Khả năng nhớ lại ở thời điểm hiện tại:</strong> FSRS ước tính xác suất bạn còn nhớ thẻ lúc này.</li>
+</ul>
+
+<p>Từ ba ước lượng đó, FSRS dự báo xác suất bạn còn nhớ thẻ tại một thời điểm bất kỳ trong tương lai, và đặt lần ôn kế tiếp ở đúng chỗ xác suất đó sắp chạm ngưỡng (thường khoảng 90%). Nghĩa là: từ dễ của bạn được giãn lịch sớm hơn, từ khó được gặp dày hơn, và toàn bộ lịch tự tinh chỉnh theo tuần theo tháng — không phải bạn cài gì cả, chỉ việc trả lời trung thực.</p>
+
+<p>Con số phụ đáng chú ý: FSRS dùng một bộ trọng số học từ hàng trăm nghìn lượt ôn thực tế của cộng đồng để khởi điểm — bạn hưởng lợi trí tuệ đám đông ngay từ thẻ đầu tiên, và app như Dual Dictionary còn cho "huấn luyện lại" trọng số theo chính log ôn của bạn khi đủ dữ liệu.</p>
+
+<figure>
+  <img src="/vi/blog/images/on-ielts-30-phut-moi-ngay/stats.webp" alt="Trang Stats trong Dual Dictionary: tỷ lệ nhớ, số thẻ đến hạn, số từ đã học — các con số phản chiếu lịch FSRS" loading="lazy" width="1200" height="800">
+  <figcaption>Stats trong Dual Dictionary: tỷ lệ nhớ và thẻ đến hạn — phần hiển thị "phía người dùng" của cỗ máy FSRS.</figcaption>
+</figure>
+
+<h2 id="khac-sm2">Khác gì thế hệ cũ (SM-2)?</h2>
+
+<p>Thế hệ cũ là SM-2 — thuật toán thập niên 80, từng là mặc định của Anki và nhiều app flashcard: đơn giản, bền bỉ, nhưng xếp lịch theo <em>hệ số nhân</em> cố định bạn tự chỉnh (lần sau = lần này × 2.5 chẳng hạn). SM-2 không biết "xác suất nhớ" là gì; nó chỉ nhân các con số. FSRS sinh sau hơn ba mươi năm, mô hình hóa thẳng vào đường cong quên và tối ưu bằng dữ liệu thật, nên với cùng một khối lượng thời gian, các so sánh độc lập thường cho FSRS giữ từ tốt hơn hoặc tốn ít lần ôn hơn — hai thứ đều là thời gian của bạn.</p>
+
+<p>Nói công bằng: SM-2 cũng là người hầu tốt, và chênh lệch không phải là cách biệt một trời một vực. Chênh lệch lớn nhất nằm ở người mới không biết chỉnh hệ số — FSRS chạy chuẩn ngay từ đầu, không cần am hiểu tinh chỉnh. Đó là lý do tôi chọn nó cho app của mình: đồng nghiệp tôi cần công cụ chạy được ngay, không cần đọc manual về các hệ số.</p>
+
+<h2 id="trong-app">FSRS trong Dual Dictionary — và phần tôi thích nhất</h2>
+
+<p>Trong app, hàng đợi ôn chạy FSRS toàn bộ: mỗi thẻ bạn lưu từ bất kỳ đâu (tra từ, Reader, Listening) tự vào lịch. Bạn chấm ba nút — Know it / Forgot / Skip — và lịch tự giãn nén theo. Không bảng cài đặt nào phải đụng tới.</p>
+
+<p>Phần tôi thích nhất: khi log ôn của bạn đủ dày (khoảng 200 lượt, tốt nhất từ 400), app có nút <em>tối ưu hóa</em> — huấn luyện lại bộ trọng số FSRS theo chính lịch sử quên của bạn, ngay trên thiết bị. Cùng một thuật toán cộng đồng, nhưng lịch trở thành của riêng bạn theo đúng nghĩa đen. Và một điều nữa khớp DNA của app: toàn bộ việc này chạy offline trên máy bạn — lịch ôn là dữ liệu riêng tư nhất của người học, và nó không bao giờ rời khỏi thiết bị.</p>
+
+<h2 id="doc-tiep">Đọc tiếp</h2>
+
+<ul>
+  <li><a href="/vi/blog/phuong-phap/spaced-repetition-la-gi/"><strong>Spaced repetition là gì?</strong></a> — lý thuyết gốc mà FSRS là bản hiện đại.</li>
+  <li><a href="/vi/blog/ielts/cach-hoc-tu-vung-ielts-khong-quen/"><strong>Cách học từ vựng IELTS để nhớ lâu hơn</strong></a> — FSRS nằm ở nguyên tắc số 3 của bài đó.</li>
+  <li><a href="/vi/blog/toeic/hoc-toeic-flashcard-anki/"><strong>Học TOEIC bằng flashcard: đúng cách và sai cách</strong></a> — FSRS trong thực tế của người thi, kèm cách chuyển dữ liệu từ Anki.</li>
+</ul>
+
+<div class="cta-box">
+  <p><strong>FSRS chạy ngay trong trình duyệt — không cài, không cấu hình.</strong></p>
+  <p>Dual Dictionary: Review xếp lịch FSRS cho từng thẻ đã lưu và có thể tối ưu lịch theo dữ liệu ôn khi đủ điều kiện. Đây là chức năng cục bộ; AI tùy chọn ở các luồng khác mới cần mạng và key riêng.</p>
+  <p><a class="cta-button" href="/vi/">Mở Dual Dictionary</a></p>
+</div>
+
+</article>
+
+<section class="author-box" aria-label="Về tác giả">
+  <img class="author-avatar" src="/vi/blog/images/author-quoc-anh.webp" alt="Ảnh tác giả Quốc Anh" width="72" height="72" loading="lazy">
+  <div class="author-info">
+    <p class="author-name">Quốc Anh <span class="author-title">· Senior Business Development, TMA</span></p>
+    <p>Người khởi tạo Dual Dictionary — ban đầu viết app từ điển này để đồng nghiệp ở công ty luyện TOEIC bớt khổ, giờ mở cho mọi người Việt học IELTS/TOEIC. Bài viết là kinh nghiệm thật, app là công cụ mã nguồn mở chạy trên máy bạn — cả hai đều không quảng cáo, không thu phí.</p>
+    <p><a class="author-link" href="https://www.linkedin.com/in/quocanh38/" target="_blank" rel="noopener">Liên hệ / theo dõi trên LinkedIn →</a></p>
+  </div>
+</section>
+
+<section class="sources" aria-label="Nguồn tham khảo">
+  <h2>Nguồn tham khảo</h2>
+  <ol>
+    <li><a href="https://github.com/open-spaced-repetition" target="_blank" rel="noopener">FSRS — mã nguồn mở, tài liệu thuật toán</a> — open-spaced-repetition (GitHub)</li>
+    <li><a href="https://en.wikipedia.org/wiki/SuperMemo" target="_blank" rel="noopener">SM-2 — thuật toán thế hệ cũ của SuperMemo</a> — Wikipedia</li>
+    <li><a href="https://en.wikipedia.org/wiki/Spaced_repetition" target="_blank" rel="noopener">Spaced repetition — bối cảnh khoa học</a> — Wikipedia</li>
+  </ol>
+</section>
+
+<footer class="blog-footer">
+  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. · <a href="/vi/blog/">Blog học IELTS &amp; TOEIC</a></p>
+</footer>
+</body>
+</html>

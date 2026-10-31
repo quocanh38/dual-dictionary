@@ -1,0 +1,53 @@
+{
+  "id": "draft-3203d64e-13cf-400f-a639-33b27efb90bc",
+  "revision": 0,
+  "stage": "selected",
+  "source": {
+    "title": "Checking a supplier delivery",
+    "author": "Dual Dictionary project — AI-assisted original source",
+    "article": "The warehouse team will check the delivery against the order before signing the receipt. If an item is missing, a supervisor will get in touch with the supplier that afternoon. Staff will photograph the unopened boxes and keep the order number beside the checklist. This record helps both teams explain which items arrived without blaming a colleague who was not present.",
+    "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+    "sourceType": "original",
+    "topic": "workplace",
+    "levelEstimate": "B1"
+  },
+  "reading": {
+    "text": "The warehouse team will check the delivery against the order before signing the receipt. If an item is missing, a supervisor will get in touch with the supplier that afternoon. Staff will photograph the unopened boxes and keep the order number beside the checklist. This record helps both teams explain which items arrived without blaming a colleague who was not present.",
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "The warehouse team will check the delivery against the order before signing the receipt."
+      },
+      {
+        "id": "s2",
+        "text": "If an item is missing, a supervisor will get in touch with the supplier that afternoon."
+      },
+      {
+        "id": "s3",
+        "text": "Staff will photograph the unopened boxes and keep the order number beside the checklist."
+      },
+      {
+        "id": "s4",
+        "text": "This record helps both teams explain which items arrived without blaming a colleague who was not present."
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "t1",
+      "phrase": "check the delivery against the order",
+      "meaningEn": "to compare the delivered goods with the order to see if they match",
+      "meaningVi": "đối chiếu hàng được giao với đơn đặt hàng",
+      "sourceSentenceId": "s1"
+    },
+    {
+      "id": "t2",
+      "phrase": "get in touch with",
+      "meaningEn": "to contact someone",
+      "meaningVi": "liên lạc với ai đó",
+      "sourceSentenceId": "s2"
+    }
+  ],
+  "pack": null,
+  "selectionModel": "muse-spark-1.3"
+}

@@ -1,0 +1,153 @@
+{
+  "purpose": "repair-gpt-reviewed-ielts-objective-wave-2",
+  "instructions": "Return JSON only, no markdown, with exactly {\"listening\":{\"title\":\"...\",\"focus\":\"...\",\"part\":\"Part 1|Part 3|Part 4\",\"script\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]},\"reading\":{\"title\":\"...\",\"focus\":\"...\",\"passage\":\"...\",\"questions\":[{\"title\":\"...\",\"prompt\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"answer\":0,\"explanation\":\"...\"}]}. Generate exactly five Listening and five Reading questions. The Listening script is for synthetic browser voice, not official audio; make one original conversation or monologue of about 300–400 words and five questions that follow information order. Include paraphrase and one change/correction or qualification. Set part to Part 1 for an everyday social needs/services conversation, Part 3 for an academic discussion, or Part 4 for a single-speaker academic monologue; make transcript format agree with this choice. The Reading passage is original and self-contained, about 400–500 words; questions follow passage order, with at least one carefully limited inference and one distinguishing author claim from an example. Each question must be answerable solely from its script/passage and have exactly one defensible correct option. Use four concise plausible non-overlapping options, distribute answer indexes across 0–3, and explain the evidence plus why the strongest distractor fails. Avoid trick questions, external knowledge, ambiguous quantifiers, and unsupported inference. Keep all content original; do not reproduce, paraphrase closely, or claim to use official IELTS questions. Do not provide a model essay, sample response, answer band, IELTS score, or score conversion. Write natural international English and keep names, figures and dates internally consistent. Stage IELTS 6.5 to 7.0: nuanced inference, scope and causality limits, competing evidence, and precise evaluation without overclaiming. Ensure the language demand and reasoning complexity fit this learning stage while remaining original practice, not a validated band test. Suggested original topic space: longitudinal survey attrition, uncertainty in campus energy-demand forecasts, and trade-offs in urban noise exposure research. Do not use Linear Thinking as a level/category label: pathwayStage is the stage classification; method guidance is separate.\nRepair the supplied Listening and Reading batch against the findings. Return the complete objective JSON shape, preserving every valid unflagged passage, script, question, answer key and explanation. Keep exactly five Listening and five Reading questions, four distinct options per choice question, and one clearly supported correct answer. The Listening script must contain 300–400 whitespace-separated words, retain its current appropriate IELTS part and remain consistent with its questions. Do not add model answers, band estimates or official claims.",
+  "input": {
+    "stage": "band-7",
+    "batchId": "wave-2",
+    "currentBatch": {
+      "listening": {
+        "title": "Retaining Participants in a Two-Year Student Wellbeing Survey",
+        "focus": "Understanding selective dropout and evaluating retention strategies",
+        "part": "Part 3",
+        "script": "MAYA: Have you finished the analysis for our research methods project on the two-year student wellbeing survey? TOM: Mostly. We started with 850 first-year students in 2023, and the first questionnaire had a very strong return — 78% completed it fully. MAYA: That is high for a long survey. But we lost a lot of people by the second round, did we not? TOM: Yes. By the second survey in spring 2024 — sorry, I mean autumn 2024, it was delayed by ethics approval — only 520 people replied. So we kept about 61% of the original group. MAYA: Did the project report say why? I assumed people just lost interest. TOM: Loss of interest played a role, but the pattern was not random. Students working more than 15 hours a week in part-time jobs, and those who had changed flats, were about twice as likely to stop responding. MAYA: So dropout was selective. That could distort the results if the most pressured students disappear. TOM: Exactly. Our tutor called it systematic loss — if students under greater strain leave, the average wellbeing score looks healthier than it really is. MAYA: What did the team do to encourage people to stay? I remember shopping vouchers were mentioned. TOM: They offered a five-pound voucher in the first wave, then raised it to ten pounds in the second, and added text reminders. In fact, the well-timed reminders helped more than the extra money, especially messages sent on Sunday evenings. MAYA: That is useful. Did they also shorten the questionnaire? TOM: Yes. After the pilot they cut the second survey from 40 questions to 25, keeping only sleep, workload and social support. Average completion time fell from 22 minutes to around 14, and half-finished surveys fell sharply. MAYA: So for our presentation, we should argue that work hours and moving house predicted withdrawal, and that design tweaks mattered more than simply increasing payment? TOM: Yes, but we must add the limitation. Because the larger voucher and the reminders were introduced together, the team could not prove which one caused the improvement. MAYA: Right — two changes at once, so the separate effects cannot be untangled. I will put that caution on the final slide.",
+        "questions": [
+          {
+            "title": "First Wave Result",
+            "prompt": "What is stated about the first questionnaire?",
+            "options": [
+              "It was completed by 520 students.",
+              "It was sent to 850 students and 78% completed it.",
+              "It was delayed by ethics approval.",
+              "It contained 25 questions about sleep and workload."
+            ],
+            "answer": 1,
+            "explanation": "The script states 850 first-year students and 78% completed it fully. The 520 figure refers to the second survey, so that distractor confuses the two waves."
+          },
+          {
+            "title": "Timing of Second Survey",
+            "prompt": "When did the second survey take place?",
+            "options": [
+              "In spring 2023 at the start of the study.",
+              "In spring 2024 as originally planned.",
+              "In autumn 2024 after a delay.",
+              "On Sunday evenings in autumn 2024."
+            ],
+            "answer": 2,
+            "explanation": "Tom corrects himself: spring 2024 — sorry, autumn 2024, delayed by ethics approval. The spring 2024 distractor repeats the corrected error, while Sunday evenings refers to reminders, not the survey date."
+          },
+          {
+            "title": "Pattern of Withdrawal",
+            "prompt": "According to the discussion, who was most likely to stop responding?",
+            "options": [
+              "Students working over 15 hours a week and those who changed accommodation.",
+              "Students who received only a five-pound voucher.",
+              "Students who completed the survey in under 14 minutes.",
+              "Students living in university halls throughout the study."
+            ],
+            "answer": 0,
+            "explanation": "Tom says those working more than 15 hours and those who changed flats were about twice as likely to stop. The voucher distractor confuses a retention method with a predictor of dropout."
+          },
+          {
+            "title": "Most Helpful Retention Action",
+            "prompt": "What helped retention most in the second wave?",
+            "options": [
+              "Increasing the voucher from five to ten pounds.",
+              "Shortening the survey from 40 to 25 questions.",
+              "Sending reminders on Sunday evenings.",
+              "Offering ethics approval information by text."
+            ],
+            "answer": 2,
+            "explanation": "Tom states well-timed reminders helped more than extra money, especially Sunday evenings. The voucher increase is the strongest distractor because it also occurred, but the script explicitly ranks it as less helpful."
+          },
+          {
+            "title": "Limit of the Conclusion",
+            "prompt": "What caution must be included about the improvement in the second wave?",
+            "options": [
+              "The separate effects cannot be untangled because two changes were made together.",
+              "The sample of 520 is too small to calculate any average.",
+              "Shorter surveys always reduce data quality.",
+              "Sunday messages prove reminders cause higher wellbeing."
+            ],
+            "answer": 0,
+            "explanation": "Tom notes the larger voucher and reminders were introduced together, so the team could not prove which caused improvement. The wellbeing distractor overclaims causality, which the speakers explicitly reject."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Measuring City Noise: Accuracy, Cost and Participation",
+        "focus": "Comparing methods for estimating residents’ noise exposure and their limits",
+        "passage": "City authorities increasingly treat noise as a public health issue rather than a mere annoyance. Long-term exposure to traffic, construction and nightlife sound has been linked in several reviews to sleep disturbance and elevated stress, although the strength of the link to lasting cardiovascular harm remains debated. To design speed limits, insulation grants or night-time delivery rules, planners need reliable estimates of what residents actually hear, not just what is emitted at the source. The traditional approach relies on a small network of fixed monitoring stations. In the city of Merriton, for example, twelve rooftop microphones record continuously and report hourly averages. These stations are accurate, easy to calibrate, and a five-year record allows comparison across seasons. Their weakness is spatial coverage. Sound levels can fall by more than ten decibels within a single block because of building shielding and street layout, so a rooftop average may poorly represent a bedroom facing a side road. A second method uses portable sensors worn or carried by volunteers for one or two weeks. Because participants move through homes, workplaces and transport, the data reflect personal exposure more closely. In Merriton's 2024 pilot, 180 volunteers carried pocket sensors that logged levels every minute. The pilot revealed short, loud episodes — such as waiting on an underground platform — that fixed stations never captured. However, wearables introduce their own uncertainties. Battery failures, forgetting to carry the device, and deliberate avoidance of noisy places during the measurement week can all distort the record. A third option is computational modelling, which combines traffic counts, building maps and sound propagation equations to predict average levels for every address. Models cover the whole city cheaply, but they depend on input quality. If traffic data are outdated or courtyard reflections are simplified, predictions may be high or low. Questionnaire surveys add a further dimension by asking residents how annoyed or sleep-disturbed they feel. Surveys capture perception, yet two people exposed to the same 65-decibel average may report different annoyance because of work schedules, window type or sensitivity. Merriton's researchers argue that no single method is sufficient, and they illustrate the point with Elm Row, a narrow street with a popular night market. Fixed stations on the main road recorded 68 decibels, the model predicted 66, but wearable data showed stallholders experienced repeated peaks above 85 decibels while residents on upper floors reported only moderate annoyance thanks to double glazing. The example does not prove that markets are the city's main health risk; it shows how location, duration and building protection change the meaning of a single number. The conclusion is modest. Rather than seeking a perfect measure, teams should combine methods for the question at hand: models for city-wide mapping, fixed stations for trends, wearables for high-exposure groups, and surveys for perceived impact. Even then, researchers caution against claiming that a fall in measured decibels will automatically produce a proportional health gain, since sleep, stress and other environmental factors also intervene.",
+        "questions": [
+          {
+            "title": "Limitation of Fixed Stations",
+            "prompt": "According to the passage, what is the main weakness of Merriton's fixed stations?",
+            "options": [
+              "They cannot record continuously for five years.",
+              "They are difficult to calibrate on rooftops.",
+              "They may not represent nearby shielded locations.",
+              "They only measure night-market sound."
+            ],
+            "answer": 2,
+            "explanation": "The passage states levels can fall sharply within a block, so a rooftop average may poorly represent a side-road bedroom. The calibration distractor reverses the stated strength that stations are easy to calibrate."
+          },
+          {
+            "title": "Contribution of Wearables",
+            "prompt": "What did the 2024 wearable pilot reveal?",
+            "options": [
+              "Brief loud episodes missed by fixed stations, such as on underground platforms.",
+              "That 180 volunteers avoided all noisy places for two weeks.",
+              "That battery failures made all personal data unusable.",
+              "That personal exposure is identical to rooftop averages."
+            ],
+            "answer": 0,
+            "explanation": "The passage says the pilot revealed short, loud episodes fixed stations never captured, giving the platform example. The avoidance distractor overstates a possible distortion as if all volunteers did it."
+          },
+          {
+            "title": "Dependence of Models",
+            "prompt": "Why might computational predictions be inaccurate?",
+            "options": [
+              "They cover only twelve rooftop locations.",
+              "They ignore traffic counts and building maps.",
+              "They reflect personal sensitivity and window type.",
+              "They rely on inputs that may be outdated or simplified."
+            ],
+            "answer": 3,
+            "explanation": "Models depend on input quality; outdated traffic data or simplified reflections make predictions high or low. The sensitivity distractor confuses survey perception factors with modelling inputs."
+          },
+          {
+            "title": "Claim Versus Example",
+            "prompt": "How does the Elm Row case function in the argument?",
+            "options": [
+              "It proves night markets are the main city health risk.",
+              "It illustrates the claim that no single method is sufficient.",
+              "It proves double glazing removes all annoyance.",
+              "It shows models are always more accurate than stations."
+            ],
+            "answer": 1,
+            "explanation": "Researchers argue no single method is sufficient and illustrate with Elm Row where station, model, wearable and survey differ. The main-risk distractor is explicitly denied: the example does not prove markets are the main risk."
+          },
+          {
+            "title": "Cautious Inference",
+            "prompt": "What limited inference do the researchers support about reducing decibels?",
+            "options": [
+              "Any fall in decibels guarantees better health.",
+              "A fall in decibels will not automatically bring a proportional health gain.",
+              "Combining methods eliminates all uncertainty.",
+              "Survey annoyance can replace physical measurement."
+            ],
+            "answer": 1,
+            "explanation": "The conclusion cautions against claiming automatic proportional health gain because sleep, stress and other factors intervene. The guarantee distractor overclaims causality beyond what the evidence supports."
+          }
+        ]
+      }
+    },
+    "gptFindings": {
+      "findings": [
+        {
+          "item": "sharedContexts.listening",
+          "issue": "Unsupported answer-position distribution: the five Listening keys are [1, 2, 0, 2, 0], so option D (index 3) is never keyed. Revise one otherwise well-supported item to make index 3 the correct answer while preserving script evidence, unique defensibility, and a plausible distractor. Recheck all five keys and explanations."
+        }
+      ]
+    }
+  }
+}

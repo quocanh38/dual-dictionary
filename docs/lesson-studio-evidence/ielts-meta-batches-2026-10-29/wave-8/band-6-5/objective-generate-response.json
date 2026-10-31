@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-6-5",
+  "batchId": "wave-8",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:21:27.003Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 773,
+    "outputTokens": 8834,
+    "totalTokens": 9607
+  },
+  "latencyMs": 39207,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"River Sampling Project Discussion\",\"focus\":\"Identifying bias from missing samples\",\"part\":\"Part 3\",\"script\":\"Dr Ellis: So how did the fieldwork go?\\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\\nDr Ellis: That's a good point. What did your initial model show?\\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\\nJon: Should we propose installing an automatic sampler for next year?\\nMaya: Yes, that would capture high-flow events even when we can't access the site.\\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.\",\"questions\":[{\"title\":\"Reason for missing data\",\"prompt\":\"Why were no samples collected for three weeks in April?\",\"options\":[\"Access road flooded, river too high to sample\",\"Equipment failure at gauging station\",\"Samples were contaminated in lab\",\"Students forgot to collect them\"],\"answer\":0,\"explanation\":\"The students state the access road flooded and the river was too high to sample safely. Option B is incorrect because the gauging station actually supplied usable flow data.\"},{\"title\":\"Initial assumption\",\"prompt\":\"What was Jon's initial view about the missing weeks?\",\"options\":[\"The flood made data more accurate\",\"Three missing weeks would have little impact\",\"April always has low nitrate levels\",\"The gauging station data were unreliable\"],\"answer\":1,\"explanation\":\"Jon says three out of sixteen weeks wouldn't matter much, a view later revised. Option C misstates his concern, which was about quantity not nitrate level.\"},{\"title\":\"Flow data finding\",\"prompt\":\"What did the flow data show about the missing weeks?\",\"options\":[\"Flow was low during missing weeks\",\"Data were missing at random\",\"Missing weeks coincided with peak discharge\",\"Snowmelt had no effect on flow\"],\"answer\":2,\"explanation\":\"Maya reports the missing weeks coincided with peak discharge, so the gap wasn't random. Option B is the opposite of this qualified finding.\"},{\"title\":\"Second approach result\",\"prompt\":\"What did the flow-concentration model estimate?\",\"options\":[\"It confirmed the simple average was accurate\",\"It showed nitrate was lower than expected\",\"It was impossible to calculate without samples\",\"It estimated higher nitrate and 30% greater load\"],\"answer\":3,\"explanation\":\"The model predicted about 4.5 mg per litre and raised the seasonal load by almost 30%. Option A describes the first analysis that ignored the gap.\"},{\"title\":\"Qualified conclusion\",\"prompt\":\"How do the students qualify their final conclusion?\",\"options\":[\"Flood peak estimates are now certain\",\"Adjusted load is probably better but remains uncertain\",\"Simple average should be reported alone\",\"No further sampling is needed next year\"],\"answer\":1,\"explanation\":\"They conclude the adjusted load is likely more accurate but still uncertain without direct flood samples. Option A claims certainty they explicitly deny.\"}]},\"reading\":{\"title\":\"Evaluating a Peer-Mentoring Programme Over Time\",\"focus\":\"Distinguishing overall findings from subgroup examples\",\"passage\":\"A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\\n\\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\\n\\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\\n\\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.\",\"questions\":[{\"title\":\"Year 1 limitation\",\"prompt\":\"What limitation did evaluators note about the first-year results?\",\"options\":[\"Participants may have been more motivated initially\",\"Surveys were completed too early in term\",\"Retention data were not collected properly\",\"Mentors lacked adequate training that year\"],\"answer\":0,\"explanation\":\"The passage notes without a matched comparison group they couldn't know if participants were already more motivated. Option B invents a timing problem not mentioned.\"},{\"title\":\"Year 2 outcomes\",\"prompt\":\"What did the second-year comparison show?\",\"options\":[\"Self-efficacy gains were large and significant\",\"Belonging gains were significantly greater for mentored students\",\"Grades were higher for mentored students overall\",\"Comparison group was less motivated at entry\"],\"answer\":1,\"explanation\":\"Mentored students showed significantly greater gains in belonging, while self-efficacy differences were small and not significant. Option A reverses the self-efficacy finding.\"},{\"title\":\"Engineering example\",\"prompt\":\"How do evaluators interpret the Engineering grade result?\",\"options\":[\"It demonstrates overall grade improvement\",\"It was based on unreliable grade data\",\"It was a small subgroup and not general evidence\",\"It was the only department studied\"],\"answer\":2,\"explanation\":\"They caution the Engineering result was a small intensive subgroup and not evidence of a general effect. Option A mistakes this example for the authors' overall claim.\"},{\"title\":\"Attendance and longer-term effects\",\"prompt\":\"What did the third-year attendance analysis show?\",\"options\":[\"High attenders kept advantage to June, lost it by year two\",\"Low attenders outperformed the comparison group in June\",\"Attendance remained stable after week six\",\"Retention differences increased in year two\"],\"answer\":0,\"explanation\":\"High attenders kept higher belonging in June but the advantage had largely disappeared by year two. Option C contradicts the sharp decline after week six.\"},{\"title\":\"Overall conclusion\",\"prompt\":\"What do the authors conclude about the programme?\",\"options\":[\"It should be stopped because effects faded\",\"It proves voluntary schemes have no bias\",\"It guarantees higher grades when embedded\",\"It supports short-term transition but not sustained outcomes\"],\"answer\":3,\"explanation\":\"The authors argue it reliably supports initial transition but does not sustain integration or improve attainment broadly. Option A misreads their recommendation to embed rather than stop it.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "River Sampling Project Discussion",
+      "focus": "Identifying bias from missing samples",
+      "part": "Part 3",
+      "script": "Dr Ellis: So how did the fieldwork go?\nMaya: Mostly well, we collected weekly nitrate samples from March to June, but we lost three weeks in April when the access road flooded.\nJon: Yeah, the river was too high to sample safely. I thought that wouldn't matter much because it's only three out of sixteen weeks.\nMaya: I was worried it would bias our average, because April is usually high flow after snowmelt.\nDr Ellis: That's a good point. What did your initial model show?\nJon: We first ran the analysis ignoring the gap, and the mean nitrate looked quite low, around 2.1 mg per litre.\nMaya: But then we checked flow data from the gauging station, and those missing weeks coincided with peak discharge. So the gap isn't random.\nDr Ellis: Exactly. Missing data during high flow can underestimate the load if you just average the rest.\nJon: Right, so we tried a second approach, estimating the missing values using the relationship between flow and concentration from the weeks we do have.\nMaya: The flow-concentration model predicted much higher nitrate for those weeks, about 4.5 mg per litre, which raised the seasonal load by almost 30 percent.\nDr Ellis: That's a substantial difference. How confident are you in that estimate?\nJon: Not completely. The relationship is fairly strong in March and May, but we have no direct samples to verify it for the flood peak itself.\nMaya: So we qualified our conclusion, saying the adjusted load is likely more accurate than the simple average, but still uncertain without flood samples.\nDr Ellis: That's the right way to handle it. You should report both figures and clearly state the limitation.\nJon: Should we propose installing an automatic sampler for next year?\nMaya: Yes, that would capture high-flow events even when we can't access the site.\nDr Ellis: Good idea. Include that as a recommendation, but note the cost and maintenance need.",
+      "questions": [
+        {
+          "title": "Reason for missing data",
+          "prompt": "Why were no samples collected for three weeks in April?",
+          "options": [
+            "Access road flooded, river too high to sample",
+            "Equipment failure at gauging station",
+            "Samples were contaminated in lab",
+            "Students forgot to collect them"
+          ],
+          "answer": 0,
+          "explanation": "The students state the access road flooded and the river was too high to sample safely. Option B is incorrect because the gauging station actually supplied usable flow data."
+        },
+        {
+          "title": "Initial assumption",
+          "prompt": "What was Jon's initial view about the missing weeks?",
+          "options": [
+            "The flood made data more accurate",
+            "Three missing weeks would have little impact",
+            "April always has low nitrate levels",
+            "The gauging station data were unreliable"
+          ],
+          "answer": 1,
+          "explanation": "Jon says three out of sixteen weeks wouldn't matter much, a view later revised. Option C misstates his concern, which was about quantity not nitrate level."
+        },
+        {
+          "title": "Flow data finding",
+          "prompt": "What did the flow data show about the missing weeks?",
+          "options": [
+            "Flow was low during missing weeks",
+            "Data were missing at random",
+            "Missing weeks coincided with peak discharge",
+            "Snowmelt had no effect on flow"
+          ],
+          "answer": 2,
+          "explanation": "Maya reports the missing weeks coincided with peak discharge, so the gap wasn't random. Option B is the opposite of this qualified finding."
+        },
+        {
+          "title": "Second approach result",
+          "prompt": "What did the flow-concentration model estimate?",
+          "options": [
+            "It confirmed the simple average was accurate",
+            "It showed nitrate was lower than expected",
+            "It was impossible to calculate without samples",
+            "It estimated higher nitrate and 30% greater load"
+          ],
+          "answer": 3,
+          "explanation": "The model predicted about 4.5 mg per litre and raised the seasonal load by almost 30%. Option A describes the first analysis that ignored the gap."
+        },
+        {
+          "title": "Qualified conclusion",
+          "prompt": "How do the students qualify their final conclusion?",
+          "options": [
+            "Flood peak estimates are now certain",
+            "Adjusted load is probably better but remains uncertain",
+            "Simple average should be reported alone",
+            "No further sampling is needed next year"
+          ],
+          "answer": 1,
+          "explanation": "They conclude the adjusted load is likely more accurate but still uncertain without direct flood samples. Option A claims certainty they explicitly deny."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Evaluating a Peer-Mentoring Programme Over Time",
+      "focus": "Distinguishing overall findings from subgroup examples",
+      "passage": "A three-year evaluation of a peer-mentoring scheme in a UK university illustrates how early enthusiasm can obscure longer-term patterns. The programme paired first-year undergraduates with trained second-year mentors who met weekly in small groups to discuss study skills, campus resources, and social integration. Participation was voluntary, and mentors received course credit.\n\nIn its first year, the evaluation relied solely on end-of-term surveys of participants. Over 80% reported feeling more confident and better connected, and retention among participants was 92%, compared with 85% for the cohort as a whole. The report concluded the scheme was highly successful. However, the evaluators noted a key limitation: without a matched comparison group, it was impossible to know whether participants were already more motivated than non-participants.\n\nTo address this, the second-year evaluation introduced a quasi-experimental design. Students who applied but could not be matched due to capacity limits formed a comparison group with similar entry grades and demographics. Both groups completed validated belonging and self-efficacy scales at the start and end of the autumn term. Mentored students showed significantly greater gains in belonging, but differences in self-efficacy were small and not statistically significant. Academic records told a more nuanced story. Overall, first-term grades did not differ between groups. In Engineering, however, mentored students averaged half a grade higher, a result highlighted in departmental publicity. The evaluators cautioned that this departmental example reflected a small subgroup with intensive mentor contact and should not be taken as evidence of a general academic effect.\n\nThe third year extended the follow-up to the end of the academic year and into the second year of study. Attendance data showed that engagement declined sharply after week six, with only 40% attending more than half the sessions. When outcomes were analysed by attendance, high attenders maintained higher belonging scores in June, while low attenders resembled the comparison group. By the start of year two, even the high attenders' advantage in belonging had largely disappeared, and retention differences were no longer significant. The authors argue that the programme reliably supports initial transition but does not by itself sustain long-term integration or improve attainment across the board. They recommend embedding mentoring within curriculum activities rather than running it as an optional add-on, while acknowledging that voluntary schemes will always face self-selection bias. They also note that mentor training quality varied, and future evaluations should track mentor behaviour directly, not just student attendance. Without this, it remains unclear whether outcomes reflect programme design or individual mentor skill.",
+      "questions": [
+        {
+          "title": "Year 1 limitation",
+          "prompt": "What limitation did evaluators note about the first-year results?",
+          "options": [
+            "Participants may have been more motivated initially",
+            "Surveys were completed too early in term",
+            "Retention data were not collected properly",
+            "Mentors lacked adequate training that year"
+          ],
+          "answer": 0,
+          "explanation": "The passage notes without a matched comparison group they couldn't know if participants were already more motivated. Option B invents a timing problem not mentioned."
+        },
+        {
+          "title": "Year 2 outcomes",
+          "prompt": "What did the second-year comparison show?",
+          "options": [
+            "Self-efficacy gains were large and significant",
+            "Belonging gains were significantly greater for mentored students",
+            "Grades were higher for mentored students overall",
+            "Comparison group was less motivated at entry"
+          ],
+          "answer": 1,
+          "explanation": "Mentored students showed significantly greater gains in belonging, while self-efficacy differences were small and not significant. Option A reverses the self-efficacy finding."
+        },
+        {
+          "title": "Engineering example",
+          "prompt": "How do evaluators interpret the Engineering grade result?",
+          "options": [
+            "It demonstrates overall grade improvement",
+            "It was based on unreliable grade data",
+            "It was a small subgroup and not general evidence",
+            "It was the only department studied"
+          ],
+          "answer": 2,
+          "explanation": "They caution the Engineering result was a small intensive subgroup and not evidence of a general effect. Option A mistakes this example for the authors' overall claim."
+        },
+        {
+          "title": "Attendance and longer-term effects",
+          "prompt": "What did the third-year attendance analysis show?",
+          "options": [
+            "High attenders kept advantage to June, lost it by year two",
+            "Low attenders outperformed the comparison group in June",
+            "Attendance remained stable after week six",
+            "Retention differences increased in year two"
+          ],
+          "answer": 0,
+          "explanation": "High attenders kept higher belonging in June but the advantage had largely disappeared by year two. Option C contradicts the sharp decline after week six."
+        },
+        {
+          "title": "Overall conclusion",
+          "prompt": "What do the authors conclude about the programme?",
+          "options": [
+            "It should be stopped because effects faded",
+            "It proves voluntary schemes have no bias",
+            "It guarantees higher grades when embedded",
+            "It supports short-term transition but not sustained outcomes"
+          ],
+          "answer": 3,
+          "explanation": "The authors argue it reliably supports initial transition but does not sustain integration or improve attainment broadly. Option A misreads their recommendation to embed rather than stop it."
+        }
+      ]
+    }
+  }
+}

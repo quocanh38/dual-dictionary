@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Cataloguing Archive Photographs Carefully",
+    "objective": "Learners will understand and use work in pairs and in chronological order to describe academic tasks accurately.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s2, Students work in pairs and enter only details visible in each image. What does work in pairs mean here?",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means they do the task together with one other person as a team.",
+            "explanation": "It is correct because it matches the source meaning of collaborating with one partner."
+          },
+          {
+            "id": "b",
+            "text": "It means they do the task alone without help from anyone else.",
+            "explanation": "It is wrong because working alone is the opposite of working with a partner."
+          },
+          {
+            "id": "c",
+            "text": "It means they take turns leading a large group of classmates.",
+            "explanation": "It is wrong because leading a large group involves more than two people and a different role."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "The phrase describes two students collaborating as a team on the cataloguing task."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses work in pairs correctly and naturally.",
+        "sourceSentenceIds": [
+          "s2"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "They work in pairs to check each other's entries.",
+            "explanation": "It is correct because it uses plural work with They and the infinitive to check naturally."
+          },
+          {
+            "id": "b",
+            "text": "They work in pairs to checking each other's entries.",
+            "explanation": "It is wrong because to checking should be to check after to."
+          },
+          {
+            "id": "c",
+            "text": "They works in pairs to check each other's entries.",
+            "explanation": "It is wrong because works should be work to agree with They."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one sentence uses the phrase with correct agreement and infinitive form."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s5, Records with known dates appear in chronological order. What does in chronological order mean here?",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means they are grouped by topic name without considering dates.",
+            "explanation": "It is wrong because grouping by topic ignores the time-based arrangement described in the source."
+          },
+          {
+            "id": "b",
+            "text": "It means they are arranged from earliest to latest according to date.",
+            "explanation": "It is correct because it matches the source meaning of sorting by time from early to late."
+          },
+          {
+            "id": "c",
+            "text": "It means they are placed randomly with no clear system.",
+            "explanation": "It is wrong because random placement is the opposite of ordered arrangement by date."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "The phrase describes records sorted by date from earliest to latest."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses in chronological order correctly and naturally.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The archive lists the photos in chronological order from 2000 to 2010.",
+            "explanation": "It is correct because it uses the fixed singular phrase and correct verb agreement."
+          },
+          {
+            "id": "b",
+            "text": "The archive lists the photos in chronological orders from 2000 to 2010.",
+            "explanation": "It is wrong because the fixed phrase needs singular order not orders."
+          },
+          {
+            "id": "c",
+            "text": "The archive list the photos in chronological order from 2000 to 2010.",
+            "explanation": "It is wrong because the singular subject archive needs lists not list."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one sentence uses the fixed phrase with correct grammar."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "Imagine you are a sports club leader telling new members how you organized past newsletters. Write 2-3 sentences explaining how you arranged them and why it helps readers. Use the phrase in chronological order.",
+        "sourceSentenceIds": [
+          "s5"
+        ],
+        "sampleAnswer": "I arranged our club newsletters in chronological order from 2019 to 2026. This helps new members see how our activities have developed over time.",
+        "selfCheck": [
+          "My response has 2-3 sentences.",
+          "I used the phrase in chronological order to describe date order.",
+          "I describe a new situation with a different role and purpose from the archive project."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1050,
+    "outputTokens": 4686,
+    "totalTokens": 5736
+  },
+  "status": 200,
+  "latencyMs": 20916,
+  "model": "muse-spark-1.3"
+}

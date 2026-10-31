@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 128,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after damp course in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Continue into D-section computing, mining history, time conventions, Latin legal terms, navigation, plants, religion, vital statistics, banking, legal procedure, economics, mathematics, psychology, and literature. Notes flag regional variants, old legal terminology, denominator distinctions, and the difference between description and advice.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 308,
+    "remainingRawOnlyAfter": 288
+  },
+  "selected": [
+    "data processing",
+    "database management system",
+    "davy lamp",
+    "daylight saving time",
+    "de facto",
+    "de jure",
+    "dead reckoning",
+    "deadly nightshade",
+    "deadly sin",
+    "death rate",
+    "death toll",
+    "debit card",
+    "decree nisi",
+    "deep freeze",
+    "defence mechanism",
+    "deficit spending",
+    "dependent variable",
+    "deposit account",
+    "desktop computer",
+    "deus ex machina"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "GOV.UK: Conditional order or decree nisi (https://www.gov.uk/divorce/apply-for-conditional-order-decree-nisi)",
+    "NIH MedlinePlus: Cystic fibrosis (https://medlineplus.gov/cysticfibrosis.html)"
+  ]
+}

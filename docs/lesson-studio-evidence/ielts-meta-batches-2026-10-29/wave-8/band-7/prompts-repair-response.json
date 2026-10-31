@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-8",
+  "segment": "prompts",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-8-v1",
+  "completedAt": "2026-10-29T05:30:03.139Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 1969,
+    "outputTokens": 4303,
+    "totalTokens": 6272
+  },
+  "latencyMs": 11209,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Open Data Portal and Public Trust\",\"focus\":\"Describing trends and cautious comparison without overstating causality\",\"prompt\":\"The table below shows results from a public trust survey in four cities before and after the launch of a municipal open data portal. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data: Percentage of respondents who said they trust local government to act in the public interest (2019 vs 2023) and average monthly portal users per 1,000 residents in 2023. City A: 42% (2019) to 48% (2023), 120 users; City B: 51% to 49%, 85 users; City C: 38% to 55%, 210 users; City D: 60% to 58%, 95 users. All surveys sampled 1,000 residents per city. Write at least 150 words in 20 minutes. Report what the data shows without assuming the portal alone caused the changes.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Coastal Reserves: Visitors, Budgets and Disturbance\",\"focus\":\"Comparing multi-site data with competing patterns\",\"prompt\":\"The table below compares three coastal nature reserves in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data for 2022: North Bay Reserve - 180,000 visitors, conservation budget $420,000, 45 habitat disturbance incidents, 70% of area open to public; South Cove Reserve - 95,000 visitors, $610,000 budget, 22 incidents, 40% open; East Point Reserve - 250,000 visitors, $380,000 budget, 78 incidents, 85% open. Write at least 150 words in 20 minutes. Highlight key similarities and differences without drawing unsupported causal conclusions.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Does Open Data Always Build Public Trust?\",\"focus\":\"Evaluating scope, causality limits and competing explanations\",\"prompt\":\"Some people argue that publishing government data online automatically increases public trust. Others argue that trust depends on data quality, how understandable the data is, and whether authorities act on what the data reveals. Discuss both views, consider the limits of evidence for a direct causal link, and give your own opinion with carefully qualified claims. Use relevant examples and avoid overgeneralising. Write at least 250 words in 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Balancing Conservation and Public Access\",\"focus\":\"Weighing competing evidence and stakeholder interests with precise evaluation\",\"prompt\":\"Many protected natural areas face pressure to allow more visitors for education, recreation and funding, while conservationists warn that greater access can damage fragile habitats. Should access be restricted to protect ecosystems even if it reduces public support and income, or should access be expanded to build engagement? Discuss the trade-offs, consider short-term and long-term consequences, and support your position with reasoned arguments that acknowledge uncertainty and context. Write at least 250 words in 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Interpreting Conflicting Evidence from Multi-Site Studies\",\"focus\":\"Interpreting variation across contexts and avoiding overclaiming\",\"prompt\":\"When studies of the same environmental policy in different locations produce conflicting results, some argue the policy is ineffective, while others argue local context explains the differences. How should policymakers and the public interpret such mixed evidence? Discuss the importance of methodology, sample scope, and contextual factors in drawing conclusions, and explain how to evaluate competing findings without overstating what the evidence proves. Write at least 250 words in 40 minutes.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Information and Trust in Everyday Life\",\"focus\":\"Personal habits and attitudes to data and news\",\"prompt\":\"Answer in short, natural responses. 1. How often do you look at official statistics or government information? 2. Do you generally trust the information you see online about public issues? Why or why not? 3. Has the way you check whether information is reliable changed in recent years? 4. Do you think most people in your community are interested in open data about local services?\"},{\"task\":\"Part 1 · Visiting Natural Places\",\"focus\":\"Personal experience with conservation and access\",\"prompt\":\"Answer in short, natural responses. 1. Do you enjoy visiting nature reserves, parks or coastal areas? 2. What kind of rules do you usually notice in protected natural places? 3. Do you think visitor numbers have changed in natural areas near you? 4. How important is it for children to have access to natural environments?\"},{\"task\":\"Part 2 · Cue card - A Time You Questioned Information\",\"focus\":\"Narrating evaluation and decision-making\",\"prompt\":\"Describe a time when you questioned information you saw online or in the media.\\nYou should say:\\n• what the information was about\\n• where you saw or heard it\\n• why you began to doubt it\\n• and explain what you did to check it or decide what to believe.\\nYou will have 1 minute to prepare and should speak for 1 to 2 minutes.\"},{\"task\":\"Part 3 · Transparency, Open Data and Trust\",\"focus\":\"Reasoned evaluation of whether transparency always helps\",\"prompt\":\"Discuss in more depth, giving reasons and examples. 1. Does making government data public always lead to greater public trust? Why or why not? 2. Why might greater transparency sometimes reduce trust in the short term? 3. How should authorities present complex data so it is useful without being misleading? 4. What are the limits of using survey data alone to judge whether open data has worked?\"},{\"task\":\"Part 3 · Conservation, Access and Learning from Other Places\",\"focus\":\"Balancing interests and interpreting evidence across contexts\",\"prompt\":\"Discuss in more depth, giving reasons and evaluation. 1. Should popular natural sites limit visitor numbers to protect habitats, even if it disappoints tourists? 2. How can evidence from one nature reserve or country be usefully applied to another? 3. What are the risks of drawing general conclusions from a single study or a single location? 4. How should decision-makers balance scientific evidence with local community needs when evidence is mixed?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Open Data Portal and Public Trust",
+        "focus": "Describing trends and cautious comparison without overstating causality",
+        "prompt": "The table below shows results from a public trust survey in four cities before and after the launch of a municipal open data portal. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data: Percentage of respondents who said they trust local government to act in the public interest (2019 vs 2023) and average monthly portal users per 1,000 residents in 2023. City A: 42% (2019) to 48% (2023), 120 users; City B: 51% to 49%, 85 users; City C: 38% to 55%, 210 users; City D: 60% to 58%, 95 users. All surveys sampled 1,000 residents per city. Write at least 150 words in 20 minutes. Report what the data shows without assuming the portal alone caused the changes.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Coastal Reserves: Visitors, Budgets and Disturbance",
+        "focus": "Comparing multi-site data with competing patterns",
+        "prompt": "The table below compares three coastal nature reserves in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Data for 2022: North Bay Reserve - 180,000 visitors, conservation budget $420,000, 45 habitat disturbance incidents, 70% of area open to public; South Cove Reserve - 95,000 visitors, $610,000 budget, 22 incidents, 40% open; East Point Reserve - 250,000 visitors, $380,000 budget, 78 incidents, 85% open. Write at least 150 words in 20 minutes. Highlight key similarities and differences without drawing unsupported causal conclusions.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Does Open Data Always Build Public Trust?",
+        "focus": "Evaluating scope, causality limits and competing explanations",
+        "prompt": "Some people argue that publishing government data online automatically increases public trust. Others argue that trust depends on data quality, how understandable the data is, and whether authorities act on what the data reveals. Discuss both views, consider the limits of evidence for a direct causal link, and give your own opinion with carefully qualified claims. Use relevant examples and avoid overgeneralising. Write at least 250 words in 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Balancing Conservation and Public Access",
+        "focus": "Weighing competing evidence and stakeholder interests with precise evaluation",
+        "prompt": "Many protected natural areas face pressure to allow more visitors for education, recreation and funding, while conservationists warn that greater access can damage fragile habitats. Should access be restricted to protect ecosystems even if it reduces public support and income, or should access be expanded to build engagement? Discuss the trade-offs, consider short-term and long-term consequences, and support your position with reasoned arguments that acknowledge uncertainty and context. Write at least 250 words in 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Interpreting Conflicting Evidence from Multi-Site Studies",
+        "focus": "Interpreting variation across contexts and avoiding overclaiming",
+        "prompt": "When studies of the same environmental policy in different locations produce conflicting results, some argue the policy is ineffective, while others argue local context explains the differences. How should policymakers and the public interpret such mixed evidence? Discuss the importance of methodology, sample scope, and contextual factors in drawing conclusions, and explain how to evaluate competing findings without overstating what the evidence proves. Write at least 250 words in 40 minutes.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Information and Trust in Everyday Life",
+        "focus": "Personal habits and attitudes to data and news",
+        "prompt": "Answer in short, natural responses. 1. How often do you look at official statistics or government information? 2. Do you generally trust the information you see online about public issues? Why or why not? 3. Has the way you check whether information is reliable changed in recent years? 4. Do you think most people in your community are interested in open data about local services?"
+      },
+      {
+        "task": "Part 1 · Visiting Natural Places",
+        "focus": "Personal experience with conservation and access",
+        "prompt": "Answer in short, natural responses. 1. Do you enjoy visiting nature reserves, parks or coastal areas? 2. What kind of rules do you usually notice in protected natural places? 3. Do you think visitor numbers have changed in natural areas near you? 4. How important is it for children to have access to natural environments?"
+      },
+      {
+        "task": "Part 2 · Cue card - A Time You Questioned Information",
+        "focus": "Narrating evaluation and decision-making",
+        "prompt": "Describe a time when you questioned information you saw online or in the media.\nYou should say:\n• what the information was about\n• where you saw or heard it\n• why you began to doubt it\n• and explain what you did to check it or decide what to believe.\nYou will have 1 minute to prepare and should speak for 1 to 2 minutes."
+      },
+      {
+        "task": "Part 3 · Transparency, Open Data and Trust",
+        "focus": "Reasoned evaluation of whether transparency always helps",
+        "prompt": "Discuss in more depth, giving reasons and examples. 1. Does making government data public always lead to greater public trust? Why or why not? 2. Why might greater transparency sometimes reduce trust in the short term? 3. How should authorities present complex data so it is useful without being misleading? 4. What are the limits of using survey data alone to judge whether open data has worked?"
+      },
+      {
+        "task": "Part 3 · Conservation, Access and Learning from Other Places",
+        "focus": "Balancing interests and interpreting evidence across contexts",
+        "prompt": "Discuss in more depth, giving reasons and evaluation. 1. Should popular natural sites limit visitor numbers to protect habitats, even if it disappoints tourists? 2. How can evidence from one nature reserve or country be usefully applied to another? 3. What are the risks of drawing general conclusions from a single study or a single location? 4. How should decision-makers balance scientific evidence with local community needs when evidence is mixed?"
+      }
+    ]
+  }
+}

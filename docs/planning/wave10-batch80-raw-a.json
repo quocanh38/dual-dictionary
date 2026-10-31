@@ -1,0 +1,14 @@
+{
+  "wave": 10,
+  "batch": 80,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only entries after set back; reviewed against local OALD 10/LDOCE 6. STI/STD distinction cross-checked against CDC; Shadow Cabinet definition checked against UK Parliament. All Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover high-frequency set/shake phrasal verbs, sports, civic institutions, wastewater and health vocabulary; separate transitive patterns, UK terminology and formal health labels.",
+  "counts": {"selected":20,"rawPagesUpgraded":20,"rawOnlyBefore":1260,"remainingRawOnlyAfter":1240},
+  "selected": ["set down","set in","set off","set on","set out","set piece","set point","set to","set up","seville orange","sewage farm","sewage works","sexual intercourse","sexually transmitted disease","shadow boxing","shadow cabinet","shaggy dog story","shake down","shake out","shake up"],
+  "references": [
+    "https://www.cdc.gov/sti/about/index.html",
+    "https://www.parliament.uk/site-information/glossary/shadow-cabinet/"
+  ]
+}

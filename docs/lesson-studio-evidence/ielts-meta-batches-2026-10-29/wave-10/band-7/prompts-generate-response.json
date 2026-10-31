@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-7",
+  "batchId": "wave-10",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:21:10.376Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 664,
+    "outputTokens": 4806,
+    "totalTokens": 5470
+  },
+  "latencyMs": 22776,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Tutoring Trial Results Table\",\"focus\":\"nuanced inference and scope limits from tabular data\",\"prompt\":\"The table below shows results from a one-year tutoring trial in 12 state secondary schools in the Northland region, September 2023 to June 2024. All schools were urban, medium-to-large, and had above-average funding. Participants were Year 9 students only.\\n\\nGroup: Treatment (n=480) - Baseline maths score: 58.2/100, End-of-year score: 67.4, Average gain: +9.2 points, Average attendance: 93%\\nGroup: Control (n=470) - Baseline: 57.9, End-of-year: 62.1, Average gain: +4.2 points, Average attendance: 91%\\nSubgroup with low prior attainment: Treatment (n=180) gain +11.5 points; Control (n=175) gain +3.8 points\\nTutors were volunteers with 2 days of training; sessions were 2 hours per week after school.\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note what the data can and cannot show about wider application.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · University Wellbeing Survey Breakdown\",\"focus\":\"whether an average score hides group differences\",\"prompt\":\"The data below shows results from an undergraduate wellbeing survey at Riverside University, March 2024 (scale 0-10, 10 = highest wellbeing). Overall response rate was 62% (n=2,400).\\n\\nOverall average wellbeing score: 7.2\\nBy year of study: Year 1: 7.6 (n=900), Year 2: 7.1 (n=800), Year 3: 6.8 (n=700)\\nBy accommodation: On-campus halls: 7.5 (n=1,100), Off-campus with family: 7.3 (n=600), Off-campus shared rental: 6.6 (n=700)\\nBy status: Domestic students: 7.4 (n=1,650), International students: 6.9 (n=750)\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Highlight where the overall average masks variation between groups.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Generalising a Tutoring Trial\",\"focus\":\"causality limits, competing evidence and precise evaluation\",\"prompt\":\"A one-year trial in 12 urban secondary schools found that Year 9 students who received weekly after-school tutoring improved more in maths than students who did not. Some people argue this proves tutoring should be expanded nationally to all schools and year groups. Others say one trial in one region cannot justify a national policy.\\n\\nDiscuss both views, evaluate the strength of the evidence, and give your own opinion. Consider what additional evidence would be needed and avoid overclaiming about cause and effect.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Wellbeing Scores and Hidden Differences\",\"focus\":\"precise evaluation without overclaiming from averages\",\"prompt\":\"Universities often report a single average wellbeing score for all students. Critics argue that an average can hide important differences between groups, for example by year of study, accommodation type, or background, and may lead to poor decisions about support services.\\n\\nTo what extent should decisions about student support be based on overall averages? Discuss competing interpretations of such data, consider the limits of what an average can show, and give your own view with reasons.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Interrupted Time Series and Policy Claims\",\"focus\":\"what an interrupted time series can and cannot establish about cause\",\"prompt\":\"A university introduced a new attendance monitoring system in January 2024. Data collected monthly from September 2022 to December 2024 shows average attendance was stable at 81-83% before the change and rose to 86-88% in the six months after. Average grades showed little change over the same period. Some claim this proves the system improved engagement; others argue other factors could explain the rise.\\n\\nDiscuss what an interrupted time series of this kind can establish about cause and effect, evaluate how confident we can be in the claim, and explain what further information would help reach a more precise conclusion.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Learning Support and Study Habits\",\"focus\":\"personal reflection with nuanced inference\",\"prompt\":\"Answer briefly and naturally, giving reasons or examples where helpful.\\n1. Do you prefer studying alone or with help from others?\\n2. Have you ever had extra help with your studies, such as tutoring or mentoring?\\n3. What kind of support helps you learn best?\\n4. Do you think support that works well for one student will always work for others?\"},{\"task\":\"Part 1 · Wellbeing and Student Life\",\"focus\":\"describing variation without overgeneralising\",\"prompt\":\"Answer briefly and naturally, giving reasons or examples where helpful.\\n1. How do students in your area usually manage stress?\\n2. Do you think first-year and final-year students face similar pressures? Why or why not?\\n3. What do you think affects student wellbeing most?\\n4. Is an average wellbeing score a useful way to understand how students are doing?\"},{\"task\":\"Part 2 · Cue card\",\"focus\":\"describing an experience of extra help and evaluating its transferability\",\"prompt\":\"Describe a time when you or someone you know received extra help with studies.\\nYou should say:\\n• what the help was and who provided it\\n• when it happened and how long it lasted\\n• who it was intended to help\\n• and explain how useful it was and whether you think it would help other people in different situations.\\nYou will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Evaluating Educational Evidence\",\"focus\":\"reasons, evaluation and competing evidence\",\"prompt\":\"Discuss in more depth, giving reasons and evaluation.\\n1. Why might a programme that succeeds in one school not work in another?\\n2. What makes evidence from a small trial more or less convincing?\\n3. How should decision-makers balance one strong study against other, conflicting evidence?\\n4. When, if ever, is it reasonable to act on limited evidence?\"},{\"task\":\"Part 3 · Averages, Groups and Policy\",\"focus\":\"precise evaluation, causality limits and avoiding overclaiming\",\"prompt\":\"Discuss in more depth, giving reasons and evaluation.\\n1. Why can an average score be misleading when groups are very different?\\n2. How can we tell if a difference between groups is important in practice?\\n3. What are the risks of making policy based only on before-and-after data?\\n4. How can we avoid overclaiming when interpreting data about people?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Tutoring Trial Results Table",
+        "focus": "nuanced inference and scope limits from tabular data",
+        "prompt": "The table below shows results from a one-year tutoring trial in 12 state secondary schools in the Northland region, September 2023 to June 2024. All schools were urban, medium-to-large, and had above-average funding. Participants were Year 9 students only.\n\nGroup: Treatment (n=480) - Baseline maths score: 58.2/100, End-of-year score: 67.4, Average gain: +9.2 points, Average attendance: 93%\nGroup: Control (n=470) - Baseline: 57.9, End-of-year: 62.1, Average gain: +4.2 points, Average attendance: 91%\nSubgroup with low prior attainment: Treatment (n=180) gain +11.5 points; Control (n=175) gain +3.8 points\nTutors were volunteers with 2 days of training; sessions were 2 hours per week after school.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Note what the data can and cannot show about wider application.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · University Wellbeing Survey Breakdown",
+        "focus": "whether an average score hides group differences",
+        "prompt": "The data below shows results from an undergraduate wellbeing survey at Riverside University, March 2024 (scale 0-10, 10 = highest wellbeing). Overall response rate was 62% (n=2,400).\n\nOverall average wellbeing score: 7.2\nBy year of study: Year 1: 7.6 (n=900), Year 2: 7.1 (n=800), Year 3: 6.8 (n=700)\nBy accommodation: On-campus halls: 7.5 (n=1,100), Off-campus with family: 7.3 (n=600), Off-campus shared rental: 6.6 (n=700)\nBy status: Domestic students: 7.4 (n=1,650), International students: 6.9 (n=750)\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Highlight where the overall average masks variation between groups.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Generalising a Tutoring Trial",
+        "focus": "causality limits, competing evidence and precise evaluation",
+        "prompt": "A one-year trial in 12 urban secondary schools found that Year 9 students who received weekly after-school tutoring improved more in maths than students who did not. Some people argue this proves tutoring should be expanded nationally to all schools and year groups. Others say one trial in one region cannot justify a national policy.\n\nDiscuss both views, evaluate the strength of the evidence, and give your own opinion. Consider what additional evidence would be needed and avoid overclaiming about cause and effect.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Wellbeing Scores and Hidden Differences",
+        "focus": "precise evaluation without overclaiming from averages",
+        "prompt": "Universities often report a single average wellbeing score for all students. Critics argue that an average can hide important differences between groups, for example by year of study, accommodation type, or background, and may lead to poor decisions about support services.\n\nTo what extent should decisions about student support be based on overall averages? Discuss competing interpretations of such data, consider the limits of what an average can show, and give your own view with reasons.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Interrupted Time Series and Policy Claims",
+        "focus": "what an interrupted time series can and cannot establish about cause",
+        "prompt": "A university introduced a new attendance monitoring system in January 2024. Data collected monthly from September 2022 to December 2024 shows average attendance was stable at 81-83% before the change and rose to 86-88% in the six months after. Average grades showed little change over the same period. Some claim this proves the system improved engagement; others argue other factors could explain the rise.\n\nDiscuss what an interrupted time series of this kind can establish about cause and effect, evaluate how confident we can be in the claim, and explain what further information would help reach a more precise conclusion.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Learning Support and Study Habits",
+        "focus": "personal reflection with nuanced inference",
+        "prompt": "Answer briefly and naturally, giving reasons or examples where helpful.\n1. Do you prefer studying alone or with help from others?\n2. Have you ever had extra help with your studies, such as tutoring or mentoring?\n3. What kind of support helps you learn best?\n4. Do you think support that works well for one student will always work for others?"
+      },
+      {
+        "task": "Part 1 · Wellbeing and Student Life",
+        "focus": "describing variation without overgeneralising",
+        "prompt": "Answer briefly and naturally, giving reasons or examples where helpful.\n1. How do students in your area usually manage stress?\n2. Do you think first-year and final-year students face similar pressures? Why or why not?\n3. What do you think affects student wellbeing most?\n4. Is an average wellbeing score a useful way to understand how students are doing?"
+      },
+      {
+        "task": "Part 2 · Cue card",
+        "focus": "describing an experience of extra help and evaluating its transferability",
+        "prompt": "Describe a time when you or someone you know received extra help with studies.\nYou should say:\n• what the help was and who provided it\n• when it happened and how long it lasted\n• who it was intended to help\n• and explain how useful it was and whether you think it would help other people in different situations.\nYou will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Evaluating Educational Evidence",
+        "focus": "reasons, evaluation and competing evidence",
+        "prompt": "Discuss in more depth, giving reasons and evaluation.\n1. Why might a programme that succeeds in one school not work in another?\n2. What makes evidence from a small trial more or less convincing?\n3. How should decision-makers balance one strong study against other, conflicting evidence?\n4. When, if ever, is it reasonable to act on limited evidence?"
+      },
+      {
+        "task": "Part 3 · Averages, Groups and Policy",
+        "focus": "precise evaluation, causality limits and avoiding overclaiming",
+        "prompt": "Discuss in more depth, giving reasons and evaluation.\n1. Why can an average score be misleading when groups are very different?\n2. How can we tell if a difference between groups is important in practice?\n3. What are the risks of making policy based only on before-and-after data?\n4. How can we avoid overclaiming when interpreting data about people?"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "sourceId": "station-maintenance-notice",
+  "sourceFile": "station-maintenance-notice-candidate.json",
+  "priorPayloadSha256": "f667cbe5eae59caa34dd3d794452085ee1f8b45288219593960006dec88aa7c8",
+  "edits": [],
+  "provenance": "Editorial changes after cross-model review; original Meta outputs remain unchanged in adjacent *response.json files.",
+  "reviewRequired": true,
+  "editRounds": [
+    {
+      "priorPayloadSha256": "f667cbe5eae59caa34dd3d794452085ee1f8b45288219593960006dec88aa7c8",
+      "edits": [
+        {
+          "path": "lesson-1/q3/options/a,b,c + lesson-1/q3/explanation",
+          "before": {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s2, 'While the work is underway, the escalator will be out of service,' what does 'out of service' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the escalator will run more slowly during the morning rush.",
+                "explanation": "Wrong because running slowly still means working, not unavailable for use."
+              },
+              {
+                "id": "b",
+                "text": "It means the escalator will not be working and cannot be used.",
+                "explanation": "Correct because it matches not working or not available for use."
+              },
+              {
+                "id": "c",
+                "text": "It means the escalator will be open only for station staff.",
+                "explanation": "Wrong because limited access for staff still means working, not unavailable for use."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The context is that passengers cannot use the escalator during the work."
+          },
+          "after": {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence s2, 'While the work is underway, the escalator will be out of service,' what does 'out of service' mean?",
+            "sourceSentenceIds": [
+              "s2"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the escalator will stay open for passengers but run more slowly during the morning rush.",
+                "explanation": "Wrong: the notice directs passengers to the lifts while work is underway; it does not say they can keep using the escalator at a slower speed."
+              },
+              {
+                "id": "b",
+                "text": "It means passengers will not be able to use the escalator while the work is underway.",
+                "explanation": "Correct: the notice directs passengers to the lifts, so the escalator is unavailable to them during the work."
+              },
+              {
+                "id": "c",
+                "text": "It means the escalator will be free for passengers to use during the maintenance work.",
+                "explanation": "Wrong: the notice directs passengers to the lifts during the work, so it does not say the escalator remains available to passengers."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Here, out of service means passengers cannot use the escalator during the maintenance; the notice tells them to use the lifts."
+          },
+          "finding": "gpt-6.1-sol final: unresolved uncertain issue — out-of-service can mean unavailable to passengers even if the unit may still operate; the original explanation overclaimed that restricted staff access means available for use, and option b conjoined the two alternatives in the gloss. Reframed all options and evidence around passenger availability during maintenance."
+        }
+      ]
+    }
+  ],
+  "editedPayloadSha256": "cc0d043663d251952fa5dc44f8739ac06fa832ec9ecbb57417bccf7a8b2e3f2b"
+}

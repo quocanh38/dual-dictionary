@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "416f49e30f5abfe2c6d3fcc31192ddb789caf151d66ddfa9a26ad2bd9b63c6a2",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte review of the 319-word listening script and 413-word reading passage, all 10 objective questions/options/keys/explanations, all five Writing and five Speaking prompts, and metadata/provenance. Word counts match declared values and meet expected ranges; answer keys use all four positions for both skills. Objective answers are uniquely grounded in the two contexts; explanations distinguish corrected details and examples from claims. Task 1 workshop table has full counts and return percentages; campaign survey states n=500 and awareness percentages at both dates. All writing prompts include minimum word counts and suggested timing. Speaking has two Part 1 prompts, one complete Part 2 cue card with preparation/speaking time, and two Part 3 prompts, at an appropriate band-6 level. Provenance declares originalContent:true; there are no official-question or score claims. No unresolved issue.",
+  "reviewerType": "AI-assisted"
+}

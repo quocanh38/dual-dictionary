@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": [
+    "explicit medium effort and output cap",
+    "malformed exercise output not accepted",
+    "selected source preserved",
+    "single repair available before pack exists",
+    "repair stays unapproved",
+    "one-call repair limit and usage ledger"
+  ],
+  "apiCalls": "3 mocked; 0 real"
+}

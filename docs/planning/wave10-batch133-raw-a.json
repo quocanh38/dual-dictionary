@@ -1,0 +1,42 @@
+{
+  "wave": 10,
+  "batch": 133,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after epoxy resin in the manifest; consulted local OALD 10/LDOCE 6. Vietnamese meanings, learner notes and bilingual examples are independently written.",
+  "selectionRationale": "Complete the E-section batch with chemistry, astronomy, aromatherapy, property and vehicle terms, academic abbreviations, European institutions, Latin expressions, currency, punctuation, computing and geometry. Notes clarify historical institutional names, formal usage, spelling variants and claims of paranormal phenomena.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 208,
+    "remainingRawOnlyAfter": 188
+  },
+  "selected": [
+    "epsom salts",
+    "escape velocity",
+    "essential oil",
+    "estate agent",
+    "estate car",
+    "et al",
+    "ethyl alcohol",
+    "euclidean geometry",
+    "european community",
+    "european union",
+    "ex officio",
+    "exchange rate",
+    "exclamation mark",
+    "exhaust pipe",
+    "expansion slot",
+    "expense account",
+    "exposure meter",
+    "exterior angle",
+    "extra-sensory perception",
+    "extrasensory perception"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "European Parliament: Maastricht Treaty (https://www.europarl.europa.eu/about-parliament/en/in-the-past/the-parliament-and-the-treaties/maastricht-treaty)",
+    "EUR-Lex: Treaty of Lisbon (https://eur-lex.europa.eu/eli/treaty/lis/sign/eng)"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-5",
+  "segment": "prompts",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-5-v1",
+  "completedAt": "2026-10-29T04:54:51.028Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 641,
+    "outputTokens": 6645,
+    "totalTokens": 7286
+  },
+  "latencyMs": 17974,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"writing\":[{\"task\":\"Task 1 · Student-Club Bake Sale Table\",\"focus\":\"Describing clear main ideas and direct comparisons from a table\",\"prompt\":\"The table below shows the results of a student-club bake sale on 15 March at Greenfield College. It shows the price of each item, how many were made, how many were sold, and the total money raised.\\n\\nCookies | Price $1.50 | Made 80 | Sold 72 | Raised $108\\nBrownies | Price $2.00 | Made 60 | Sold 45 | Raised $90\\nCupcakes | Price $2.50 | Made 50 | Sold 48 | Raised $120\\nLemon Bars | Price $1.00 | Made 40 | Sold 30 | Raised $30\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 1 · Campus Printing Queue Bar Chart\",\"focus\":\"Reporting main trends and simple comparisons across time\",\"prompt\":\"The bar chart below shows the average number of students waiting in the campus printing queue at four times of day on Monday and Friday in the second week of October.\\n\\nMonday: 9 a.m. 4 students, 12 p.m. 12 students, 3 p.m. 8 students, 6 p.m. 3 students.\\nFriday: 9 a.m. 2 students, 12 p.m. 6 students, 3 p.m. 5 students, 6 p.m. 1 student.\\n\\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.\",\"minimumWords\":150,\"suggestedMinutes\":20},{\"task\":\"Task 2 · Beginner Classes at Local Sports Centres\",\"focus\":\"Presenting clear main ideas with simple reasons and examples\",\"prompt\":\"Some people think that beginner classes at local sports centres, such as swimming or badminton, are a good way for students to stay healthy and meet new people. Others think students are too busy with study to join these classes.\\n\\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Waiting Times for Campus Services\",\"focus\":\"Explaining causes and suggesting simple solutions\",\"prompt\":\"At many colleges, students have to wait a long time to use the campus printing service, especially around midday. This wastes time and causes stress.\\n\\nWhat do you think are the causes of this problem? What can colleges and students do to reduce waiting times? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40},{\"task\":\"Task 2 · Fundraising for Student Clubs\",\"focus\":\"Expressing an opinion with direct evidence and clear organisation\",\"prompt\":\"Some people believe student clubs should raise their own money through activities like bake sales and small events. Others believe colleges should provide all the money clubs need.\\n\\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.\",\"minimumWords\":250,\"suggestedMinutes\":40}],\"speaking\":[{\"task\":\"Part 1 · Daily Life and Campus Services\",\"focus\":\"Talking about familiar routines and simple preferences\",\"prompt\":\"Answer the following questions about your daily life. Give short, clear answers with a reason or example where you can.\\n1. Do you often need to print documents for your studies?\\n2. Where do you usually study on campus?\\n3. How do you usually spend your lunch break?\\n4. Do you prefer to study alone or with other students? Why?\"},{\"task\":\"Part 1 · Food and Small Events\",\"focus\":\"Describing familiar experiences with simple details\",\"prompt\":\"Answer the following questions about food and events. Give short, clear answers with a reason or example where you can.\\n1. Do you enjoy baking or cooking at home?\\n2. Have you ever been to a bake sale or food fair at school?\\n3. What kind of small events do students enjoy at your college?\\n4. Do you prefer buying snacks or making them yourself? Why?\"},{\"task\":\"Part 2 · Cue card · A Beginner Class You Attended\",\"focus\":\"Describing an experience in clear order with simple explanation\",\"prompt\":\"Describe a beginner class you attended at a local sports centre or college. You should say:\\n• what the class was\\n• where and when it was\\n• who was in the class with you\\n• why you decided to join it\\nand explain what you learned from the class and how you felt about it. You will have one minute to prepare and should speak for one to two minutes.\"},{\"task\":\"Part 3 · Organising Student Events and Clubs\",\"focus\":\"Evaluating advantages and giving reasons for opinions\",\"prompt\":\"Consider the following questions about student clubs and events. Give reasons and examples to support your ideas.\\n1. Why do colleges support student clubs to organise events like bake sales?\\n2. What are the advantages of learning new skills outside the classroom?\\n3. Should colleges give money to clubs or should clubs raise money themselves? Why?\\n4. Do small campus events help students make friends? In what ways?\"},{\"task\":\"Part 3 · Waiting Times and Time Management\",\"focus\":\"Comparing solutions and explaining causes\",\"prompt\":\"Consider the following questions about waiting and managing time on campus. Give reasons and examples to support your ideas.\\n1. Why do students have to wait a long time for services like printing at certain times of day?\\n2. What can colleges do to reduce queues for campus services?\\n3. Is it better to book a service online or wait in a queue? Why?\\n4. How does waiting a long time affect students’ study and stress?\"}]}",
+  "result": {
+    "writing": [
+      {
+        "task": "Task 1 · Student-Club Bake Sale Table",
+        "focus": "Describing clear main ideas and direct comparisons from a table",
+        "prompt": "The table below shows the results of a student-club bake sale on 15 March at Greenfield College. It shows the price of each item, how many were made, how many were sold, and the total money raised.\n\nCookies | Price $1.50 | Made 80 | Sold 72 | Raised $108\nBrownies | Price $2.00 | Made 60 | Sold 45 | Raised $90\nCupcakes | Price $2.50 | Made 50 | Sold 48 | Raised $120\nLemon Bars | Price $1.00 | Made 40 | Sold 30 | Raised $30\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 1 · Campus Printing Queue Bar Chart",
+        "focus": "Reporting main trends and simple comparisons across time",
+        "prompt": "The bar chart below shows the average number of students waiting in the campus printing queue at four times of day on Monday and Friday in the second week of October.\n\nMonday: 9 a.m. 4 students, 12 p.m. 12 students, 3 p.m. 8 students, 6 p.m. 3 students.\nFriday: 9 a.m. 2 students, 12 p.m. 6 students, 3 p.m. 5 students, 6 p.m. 1 student.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+        "minimumWords": 150,
+        "suggestedMinutes": 20
+      },
+      {
+        "task": "Task 2 · Beginner Classes at Local Sports Centres",
+        "focus": "Presenting clear main ideas with simple reasons and examples",
+        "prompt": "Some people think that beginner classes at local sports centres, such as swimming or badminton, are a good way for students to stay healthy and meet new people. Others think students are too busy with study to join these classes.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Waiting Times for Campus Services",
+        "focus": "Explaining causes and suggesting simple solutions",
+        "prompt": "At many colleges, students have to wait a long time to use the campus printing service, especially around midday. This wastes time and causes stress.\n\nWhat do you think are the causes of this problem? What can colleges and students do to reduce waiting times? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      },
+      {
+        "task": "Task 2 · Fundraising for Student Clubs",
+        "focus": "Expressing an opinion with direct evidence and clear organisation",
+        "prompt": "Some people believe student clubs should raise their own money through activities like bake sales and small events. Others believe colleges should provide all the money clubs need.\n\nDiscuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+        "minimumWords": 250,
+        "suggestedMinutes": 40
+      }
+    ],
+    "speaking": [
+      {
+        "task": "Part 1 · Daily Life and Campus Services",
+        "focus": "Talking about familiar routines and simple preferences",
+        "prompt": "Answer the following questions about your daily life. Give short, clear answers with a reason or example where you can.\n1. Do you often need to print documents for your studies?\n2. Where do you usually study on campus?\n3. How do you usually spend your lunch break?\n4. Do you prefer to study alone or with other students? Why?"
+      },
+      {
+        "task": "Part 1 · Food and Small Events",
+        "focus": "Describing familiar experiences with simple details",
+        "prompt": "Answer the following questions about food and events. Give short, clear answers with a reason or example where you can.\n1. Do you enjoy baking or cooking at home?\n2. Have you ever been to a bake sale or food fair at school?\n3. What kind of small events do students enjoy at your college?\n4. Do you prefer buying snacks or making them yourself? Why?"
+      },
+      {
+        "task": "Part 2 · Cue card · A Beginner Class You Attended",
+        "focus": "Describing an experience in clear order with simple explanation",
+        "prompt": "Describe a beginner class you attended at a local sports centre or college. You should say:\n• what the class was\n• where and when it was\n• who was in the class with you\n• why you decided to join it\nand explain what you learned from the class and how you felt about it. You will have one minute to prepare and should speak for one to two minutes."
+      },
+      {
+        "task": "Part 3 · Organising Student Events and Clubs",
+        "focus": "Evaluating advantages and giving reasons for opinions",
+        "prompt": "Consider the following questions about student clubs and events. Give reasons and examples to support your ideas.\n1. Why do colleges support student clubs to organise events like bake sales?\n2. What are the advantages of learning new skills outside the classroom?\n3. Should colleges give money to clubs or should clubs raise money themselves? Why?\n4. Do small campus events help students make friends? In what ways?"
+      },
+      {
+        "task": "Part 3 · Waiting Times and Time Management",
+        "focus": "Comparing solutions and explaining causes",
+        "prompt": "Consider the following questions about waiting and managing time on campus. Give reasons and examples to support your ideas.\n1. Why do students have to wait a long time for services like printing at certain times of day?\n2. What can colleges do to reduce queues for campus services?\n3. Is it better to book a service online or wait in a queue? Why?\n4. How does waiting a long time affect students’ study and stress?"
+      }
+    ]
+  }
+}

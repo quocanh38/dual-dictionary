@@ -1,0 +1,28 @@
+{
+  "result": {
+    "targets": [
+      {
+        "id": "t1",
+        "phrase": "hand over",
+        "meaningEn": "to give documents or responsibility to another person or team",
+        "meaningVi": "bàn giao",
+        "sourceSentenceId": "s1"
+      },
+      {
+        "id": "t2",
+        "phrase": "follow up on",
+        "meaningEn": "to check and take further action on something not yet finished",
+        "meaningVi": "theo dõi và xử lý tiếp",
+        "sourceSentenceId": "s2"
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 405,
+    "outputTokens": 957,
+    "totalTokens": 1362
+  },
+  "status": 200,
+  "latencyMs": 9894,
+  "model": "muse-spark-1.3"
+}

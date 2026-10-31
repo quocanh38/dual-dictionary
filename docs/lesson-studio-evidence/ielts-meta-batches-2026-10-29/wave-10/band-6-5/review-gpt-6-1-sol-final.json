@@ -1,0 +1,88 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "3a61ff53f74ce3ba0899c6b38ff6a7c53830a89fe8ef96dadccf8fdfd33cccf5",
+  "verdict": "repair",
+  "findings": [
+    {
+      "item": "ielts-meta-wave-10-band-6-5-listening-04",
+      "severity": "uncertain",
+      "issue": "New totals make distractor A Irrigation saved less water overall true:96000 litres versus144000 for showerheads. D is the precise cost-per-litre conclusion, but A is now a supported comparative result rather than a clearly incorrect distractor. Change A to an objectively false whole-semester volume comparison, preserving unique D and explanation."
+    }
+  ],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-10-band-6-5-speaking-03",
+      "severity": "minor",
+      "issue": "Put cue bullets on separate lines for readability; content/preparation/duration already complete."
+    }
+  ],
+  "coverage": {
+    "scope": "Full candidate-only AI-assisted final review:all 20 items,entire script/passage,all 40 options/10 keys/10 explanations and 5 Writing/5 Speaking prompts/metadata. No other reviewer reports inspected;no candidate edits/provider calls.",
+    "listening": "Full revised 382-word water trial dialogue read:120 days,BuildingC 18%/D 6%,leaflet confound,22%dryperiod versus 14%semester,irrigation 800 L/day=96000 L and showerheads 1200 L/day=144000 L;costs>$6000 versus$900 yield >6.25 cents versus 0.625 cents/litre. Calculations coherent;newly true listening 04 volume distractor needs repair.",
+    "reading": "Full 407-word monitoring passage read:uneven 80 sensors/60%greenplacement,2.1→1.2°Cweightedcooling within 200 m,satellite scope limit,bird 15→8%adjustment/effort/uncertainty. All five keys/options/explanations supported.",
+    "writing": "BothTask 1 tables complete:5 building annual water rows withcoverage/estimatedfaultnote;3 habitats×2 years birdcounts/observerhours witharea/weather/doublecountlimits. ThreeTask 2 prompts coherent qualified arguments. All word/time prose/metadata agree.",
+    "speaking": "Two personal-basedPart 1 sets,environmentproject card withall 4 cues/preparation/duration(inlineformat observation),two evaluativePart 3 sets. Advanced practice self-contained.",
+    "structure": {
+      "candidateFilename": "candidate-final-v3.json",
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 382,
+        "reading": 407
+      },
+      "answerPositions": {
+        "Listening": [
+          2,
+          0,
+          1,
+          3,
+          1
+        ],
+        "Reading": [
+          0,
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "contextCopies": "All copied contexts equal shared contexts.",
+      "bounds": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      }
+    },
+    "provenanceAndOriginality": "Read Baseten Model API/meta-models/muse-spark-open-1026 provenance,originalContent=true andrepairmetadata. No recognisable copiedofficialquestion or scoreguarantee found;notexhaustiveplagiarismaudit. Fictionalresearchdata assessed forinternalcoherence.",
+    "independence": "Prior conversation exposure to earlier versions exists,but this pass used candidate files directly and no prior/other-model reports.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-6-5-listening-01",
+      "ielts-meta-wave-10-band-6-5-listening-02",
+      "ielts-meta-wave-10-band-6-5-listening-03",
+      "ielts-meta-wave-10-band-6-5-listening-04",
+      "ielts-meta-wave-10-band-6-5-listening-05",
+      "ielts-meta-wave-10-band-6-5-reading-01",
+      "ielts-meta-wave-10-band-6-5-reading-02",
+      "ielts-meta-wave-10-band-6-5-reading-03",
+      "ielts-meta-wave-10-band-6-5-reading-04",
+      "ielts-meta-wave-10-band-6-5-reading-05",
+      "ielts-meta-wave-10-band-6-5-writing-01",
+      "ielts-meta-wave-10-band-6-5-writing-02",
+      "ielts-meta-wave-10-band-6-5-writing-03",
+      "ielts-meta-wave-10-band-6-5-writing-04",
+      "ielts-meta-wave-10-band-6-5-writing-05",
+      "ielts-meta-wave-10-band-6-5-speaking-01",
+      "ielts-meta-wave-10-band-6-5-speaking-02",
+      "ielts-meta-wave-10-band-6-5-speaking-03",
+      "ielts-meta-wave-10-band-6-5-speaking-04",
+      "ielts-meta-wave-10-band-6-5-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

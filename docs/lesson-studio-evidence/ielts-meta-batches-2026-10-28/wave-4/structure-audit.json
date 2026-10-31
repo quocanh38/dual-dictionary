@@ -1,0 +1,127 @@
+{
+  "auditedAt": "2026-10-28T08:32:48.793Z",
+  "scope": "Structural validation only; not language review or cross-model approval.",
+  "stages": [
+    {
+      "stage": "band-5",
+      "sha256": "da1f0cd65cbac0157a01020d19a31f994c53e3fd8694c23e7c22cf1ee7b76073",
+      "status": "meta-repaired-awaiting-gpt-cross-review",
+      "counts": {
+        "Listening": 5,
+        "Reading": 5,
+        "Writing": 5,
+        "Speaking": 5
+      },
+      "wordCounts": {
+        "listening": 332,
+        "reading": 402
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "issues": []
+    },
+    {
+      "stage": "band-6",
+      "sha256": "37e1c7ac3a98fd561d9efdd6d66e16b2e99b855d030a24abf6ba6f83a458b0c1",
+      "status": "meta-repaired-awaiting-gpt-cross-review",
+      "counts": {
+        "Listening": 5,
+        "Reading": 5,
+        "Writing": 5,
+        "Speaking": 5
+      },
+      "wordCounts": {
+        "listening": 344,
+        "reading": 415
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "issues": []
+    },
+    {
+      "stage": "band-6-5",
+      "sha256": "9cd0b667745401308cc1e2e1a739320fb3fd8b51e661955d36143787d1c1942e",
+      "status": "meta-repaired-awaiting-gpt-cross-review",
+      "counts": {
+        "Listening": 5,
+        "Reading": 5,
+        "Writing": 5,
+        "Speaking": 5
+      },
+      "wordCounts": {
+        "listening": 325,
+        "reading": 421
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "issues": []
+    },
+    {
+      "stage": "band-7",
+      "sha256": "532befa7e8970c89ee460c9c2392aad04b62fec1ffb7a642c84091fa5af02f42",
+      "status": "meta-repaired-awaiting-gpt-cross-review",
+      "counts": {
+        "Listening": 5,
+        "Reading": 5,
+        "Writing": 5,
+        "Speaking": 5
+      },
+      "wordCounts": {
+        "listening": 366,
+        "reading": 427
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Reading": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "issues": []
+    }
+  ],
+  "passed": true
+}

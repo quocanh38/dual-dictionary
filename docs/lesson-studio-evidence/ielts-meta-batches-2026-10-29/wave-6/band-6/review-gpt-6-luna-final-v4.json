@@ -1,0 +1,12 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "9b15e208692c30b9ff541f855df1c998cb0bdde58bf05bbcbfd17b091f9a685b",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening context declares 334 words and is about 336 by a simple token count; Reading declares and contains 468 words. Both are within their respective 300–400 and 400–500 limits.",
+    "Listening item 04 correctly keys the booking reference and Maya’s available student ID, though the script says the ID is requested only if the visitor has one; the explanation could preserve that conditional wording. This does not alter the answer."
+  ],
+  "coverage": "Full rereview of the exact v4 candidate: both complete Listening/Reading contexts, all 10 objective questions with every option, key and explanation, all 5 Writing prompts and all 5 Speaking prompts. Verified the Task 1 digital-skills chart explicitly defines both series as percentages of all attendees for that session type, and the values reflect that denominator; family-day participant/family counts and ratings are visible. Rechecked museum booking fee, operating method, corrected tour time, duration, documents and parking; rechecked audit method, separately weighed unserved food, weekend denominator rationale, claim/example distinction, recommendations, and all answer evidence. Writing minimums/timings are present; Speaking Parts 1–3 and both complete Part 2 cue cards are appropriate. Provenance identifies original content and the provider/model/prompt versions. No unresolved critical, major or uncertain issue found.",
+  "reviewerType": "AI-assisted"
+}

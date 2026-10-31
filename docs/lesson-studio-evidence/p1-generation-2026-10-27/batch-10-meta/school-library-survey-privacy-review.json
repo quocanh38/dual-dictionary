@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "683b36a9cb6aa5ed6791537f8d8e2bc29ffc5c7cc296b1870e4a0d04face2643",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews",
+  "reviewedAt": "2026-10-27T08:54:25.901Z",
+  "note": "Two independent AI-assisted reviewers evaluated this exact payload hash against the matching source row and schema. Evidence synthesizes both reviews and a local consistency check. This is not human or learner validation. Rights/authorship are supported only by local declarations and are not independently verified. Terra route: gpt-5.6-terra (runtime label Codex GPT-6); Luna route was requested as gpt-6-luna but runtime exposed only broad GPT-6 label.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both independent reviewers checked the local AI-assisted original-source and distribution-rights declaration; no learner PII is visible. This is a declaration check only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “opt out” appears in the cited s3 and describes choosing not to take part in the optional survey."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss accurately defines choosing not to participate or withdrawing."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “chọn không tham gia; rút khỏi” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “contact details” appears in the cited s2, which lists information not requested by the survey."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the definition accurately describes phone, email or address information used to reach someone."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “thông tin liên lạc” is natural and accurate Vietnamese."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the unique answer; a is the opposite choice, c means delaying rather than declining, and d is unrelated."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm every option explanation accurately distinguishes nonparticipation from joining, postponing or unrelated actions."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only natural use of “opt out of”; b’s “from” is the wrong construction and c omits “of.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the phrasal-verb/preposition explanations are standard and accurate."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify c as contact information used to reach someone; grades/attendance and library rules/hours do not fit."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm every option explanation accurately distinguishes contact information from academic records and regulations."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as correct; b has plural-subject agreement error and c should use “to send.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the agreement and infinitive explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from optional school-library survey participation to politely withdrawing from weekend cooking classes."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the prompt explicitly asks for “opt out,” the model uses it naturally in a polite message, and the checklist aligns to length, meaning and tone; no automatic grading."
+    }
+  ],
+  "findings": []
+}

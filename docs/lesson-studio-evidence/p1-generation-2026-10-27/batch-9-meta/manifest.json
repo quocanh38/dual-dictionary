@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-10-27T08:37:10.144Z",
+  "promptVersion": "lesson-studio-2026-10-27-v5",
+  "requestParameters": {
+    "model": "muse-spark-1.3",
+    "temperature": 0.2,
+    "maxOutputTokens": 10000,
+    "reasoningEffort": "medium"
+  },
+  "generatorSha256": "3e0b8245c3e2a00e30be1cc96d52d089aea6b4eaa86f5092e0a73668b20fd7d4",
+  "sourcesSha256": "4bc12107c56be74374ca0cbd3110c2e47f6af3128ee94b3d3274db92b579c15c",
+  "results": [
+    {
+      "sourceId": "community-kitchen-volunteer-shift",
+      "purpose": "development",
+      "draftId": "draft-89a2a594-120e-4d83-8acc-03b6c9be7405",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "5a43e4a1-ea80-4cc1-b08f-f1654779c0e9",
+        "51ff32ba-e16e-4428-bb09-d955a031fc3d"
+      ]
+    },
+    {
+      "sourceId": "urban-heat-survey-method",
+      "purpose": "development",
+      "draftId": "draft-41cea0c9-7d1c-4980-b4c1-78832b701194",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "bf7641ab-eb34-450f-b5ff-e1639fcd1c7a",
+        "4bdd462b-b041-4166-88c1-ac8891192318"
+      ]
+    },
+    {
+      "sourceId": "rail-station-lost-property",
+      "purpose": "development",
+      "draftId": "draft-0ecba08e-7198-4bb5-ab2e-57eef26115e6",
+      "status": "validated-unapproved-draft",
+      "calls": [
+        "8962269b-39f5-4e31-935d-56ce88587d28",
+        "b84726c0-e4e9-4eaa-8f94-a85fee6417af"
+      ]
+    }
+  ]
+}

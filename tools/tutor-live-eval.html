@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <title>Đánh giá AI Tutor · Dual Dictionary</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    main { max-width: 900px; margin: 24px auto; padding: 0 16px 48px; }
+    .eval-case { margin: 16px 0; padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+    .eval-case h2 { margin-top: 0; }
+    .eval-case pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px; border-radius: 8px; background: var(--bg); }
+    .eval-fields { display: grid; gap: 10px; }
+    .eval-fields label { display: grid; gap: 5px; }
+    .eval-fields input,.eval-fields select,.eval-fields textarea { width: 100%; min-height: 42px; padding: 8px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+    .eval-controls,.eval-result-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+    .eval-result { margin-top: 12px; padding: 12px; border-left: 3px solid var(--accent); background: var(--bg); overflow-wrap: anywhere; }
+    .eval-consent { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; }
+    .eval-consent input { margin-top: 4px; }
+    #eval-summary { padding: 12px; border: 1px solid var(--border); border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../index.html#/reader">← Quay lại app</a></p>
+    <h1>Đánh giá chất lượng AI Tutor</h1>
+    <p class="hint">Sáu ca live kiểm tra câu đúng, lỗi ngữ pháp có quote, lạc đề, thiếu cụm và thiếu chi tiết đề bài yêu cầu. Fixture offline riêng kiểm tra ngữ cảnh mơ hồ, thiếu/fabricated quote và lỗi API. Mỗi ca live gọi model riêng sau khi xem payload và đồng ý. Có thể chấm độ liên quan và giải thích theo thang 1–5. Key không hiển thị hoặc xuất trong báo cáo; nhà cung cấp có thể tính phí token.</p>
+    <p id="eval-settings" class="hint" role="status"></p>
+    <div class="eval-controls">
+      <button id="eval-export" type="button" class="btn-secondary" disabled>Tải báo cáo JSON</button>
+      <button id="eval-clear" type="button" class="btn-secondary">Xóa kết quả trên trang này</button>
+    </div>
+    <p id="eval-summary" class="hint">Chưa gửi ca kiểm tra nào. Đây là công cụ đánh giá thủ công, không phải điểm chuẩn hóa.</p>
+    <section id="eval-cases" aria-label="Các ca đánh giá"></section>
+  </main>
+  <script type="module" src="./tutor-live-eval.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "reviewer": "gpt-5.6-terra",
+  "candidateSha256": "e397158a48d2816200aea60b536df9624eca097a695169abcb942a52d2787d7f",
+  "verdict": "repair",
+  "findings": [
+    {
+      "id": "ielts-meta-band-5-listening-01 through ielts-meta-band-5-listening-05",
+      "severity": "major",
+      "issue": "Part 4 must be a single-speaker academic talk; all five questions reuse a two-speaker conversation. The keyed answers are supported by the dialogue.",
+      "suggestedFix": "Relabel to an appropriate conversational section, or replace the dialogue with a Part 4 talk."
+    }
+  ]
+}

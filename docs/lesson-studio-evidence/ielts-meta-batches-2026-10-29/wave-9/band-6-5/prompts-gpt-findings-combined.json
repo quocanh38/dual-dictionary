@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-9-band-6-5-speaking-03",
+      "severity": "major",
+      "issue": "Part 2 cue points are inline in one paragraph. Put every bullet on its own newline so the cue card is visually usable; retain preparation and speaking timing.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}

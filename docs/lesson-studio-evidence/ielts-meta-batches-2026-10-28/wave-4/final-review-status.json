@@ -1,0 +1,40 @@
+{
+  "reviewedAt": "2026-10-28T08:34:00.382Z",
+  "status": "single-model-review-complete; cross-model gate pending",
+  "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+  "stages": [
+    {
+      "stage": "band-5",
+      "sha256": "da1f0cd65cbac0157a01020d19a31f994c53e3fd8694c23e7c22cf1ee7b76073",
+      "reviewFile": "review-current-gpt-final.json",
+      "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+      "verdict": "single-model-pass",
+      "crossModelStatus": "pending; this file does not substitute for the separately required gpt-6-luna and gpt-6.1-sol exact-hash reviews."
+    },
+    {
+      "stage": "band-6",
+      "sha256": "37e1c7ac3a98fd561d9efdd6d66e16b2e99b855d030a24abf6ba6f83a458b0c1",
+      "reviewFile": "review-current-gpt-final.json",
+      "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+      "verdict": "single-model-pass",
+      "crossModelStatus": "pending; this file does not substitute for the separately required gpt-6-luna and gpt-6.1-sol exact-hash reviews."
+    },
+    {
+      "stage": "band-6-5",
+      "sha256": "9cd0b667745401308cc1e2e1a739320fb3fd8b51e661955d36143787d1c1942e",
+      "reviewFile": "review-current-gpt-final.json",
+      "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+      "verdict": "single-model-pass",
+      "crossModelStatus": "pending; this file does not substitute for the separately required gpt-6-luna and gpt-6.1-sol exact-hash reviews."
+    },
+    {
+      "stage": "band-7",
+      "sha256": "532befa7e8970c89ee460c9c2392aad04b62fec1ffb7a642c84091fa5af02f42",
+      "reviewFile": "review-current-gpt-final.json",
+      "reviewer": "Current Codex GPT runtime (family GPT-6; exact model alias not exposed)",
+      "verdict": "single-model-pass",
+      "crossModelStatus": "pending; this file does not substitute for the separately required gpt-6-luna and gpt-6.1-sol exact-hash reviews."
+    }
+  ],
+  "limitation": "No claim of GPT-6-Luna, GPT-6.1-Sol, independent reviewer, or human review."
+}

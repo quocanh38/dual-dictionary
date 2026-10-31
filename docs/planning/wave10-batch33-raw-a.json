@@ -1,0 +1,36 @@
+{
+  "wave": 10,
+  "batch": 33,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 existing raw-only Tier A phrase pages after ground crew, selected by current slug and frequency metadata, cross-checked against local OALD 10 and LDOCE 6 where matching entries exist.",
+  "selectionRationale": "Original Vietnamese definitions, collocations, bilingual examples and learner notes. Regional, technical, safety and religious terminology is labeled; source dictionary wording/examples are not reproduced.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 2180,
+    "remainingRawOnlyAfter": 2160
+  },
+  "selected": [
+    "ground floor",
+    "ground level",
+    "ground plan",
+    "ground rule",
+    "ground speed",
+    "group practice",
+    "half back",
+    "half moon",
+    "half price",
+    "hand out",
+    "hand over",
+    "hang over",
+    "hang up",
+    "hard copy",
+    "hard hat",
+    "head start",
+    "head up",
+    "heat up",
+    "heavy water",
+    "high church"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "9418d62ef8d883d222c80e6c7ade38ff79f5902bcecfe53fe1620e3d93665783",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6-luna + gpt-6.1-sol; Codex consolidation",
+  "reviewedAt": "2026-10-27T06:46:12.824Z",
+  "note": "Both models independently reviewed this exact payload criterion by criterion. Codex consolidated their evidence. AI-assisted editorial review only; no human reviewer or learner testing.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Luna: Pack attributes an original AI-assisted reading to the project, states no copied exam text/external source/learner data, and the inspected payload contains no learner PII; rights are based on this declaration, not external provenance verification.\nSol: Checked provenance: named Dual Dictionary project as AI-assisted author, original source declaration and explicit generation/distribution authorization. Reading contains no learner personal data. Rights assessment relies on supplied provenance; no external authorship verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Luna: Exact phrase appears in s1 and means the museum will act to improve attendance at public lectures.\nSol: s1 contains take steps to make its public lectures easier to attend; purpose clause supports taking action."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Luna: “to take action in order to achieve something” fits the stated access goal.\nSol: to take action in order to achieve something is the contextual meaning in s1, rather than literal walking."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Luna: “thực hiện các hành động để đạt được điều gì đó” conveys the intended meaning in grammatical Vietnamese with diacritics.\nSol: thực hiện các hành động để đạt được điều gì đó is accurate Vietnamese with complete diacritics."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Luna: Exact phrase appears in cited s2; organisers look for obstacles preventing visitors from joining discussion.\nSol: s2 contains identify barriers that prevent visitors from joining the discussion; relative clause explicitly supports obstacles."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Luna: Gloss accurately defines recognising obstacles that prevent people doing something.\nSol: Recognizing obstacles preventing participation accurately glosses identify barriers in s2."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Luna: “xác định các trở ngại ngăn cản mọi người làm điều gì đó” is accurate and natural with diacritics.\nSol: xác định các trở ngại ngăn cản mọi người làm điều gì đó is accurate, natural Vietnamese with diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: a alone paraphrases acting to improve access; b/c take steps literally as walking/counting stairs.\nSol: a uniquely expresses taking action to improve attendance. b changes the actor to walking visitors; c substitutes counting stairs. Citation s1 matches."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: All explanations distinguish figurative action from literal walking or stair counting.\nSol: All a/b/c explanations and overall explanation correctly distinguish purposeful action from walking or counting stairs."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: a is correct; b has plural schools with has, and c omits plural steps in the fixed expression.\nSol: a is grammatical and natural. b incorrectly pairs plural schools with has; c uses bare singular count noun step. Citation s1 supplies take steps."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Agreement and plural fixed phrase explanations are accurate.\nSol: All explanations accurately identify agreement in a/b and restore the target idiom take steps in c. Overall explanation correctly selects a."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: b alone paraphrases recognising obstacles that keep visitors from joining; a/c change the meaning.\nSol: b uniquely identifies obstacles preventing participation. a proposes building fences; c proposes welcoming people. Citation s2 matches the intended sense."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Each option explanation accurately distinguishes identifying obstacles from building fences or welcoming visitors.\nSol: Every option explanation and the overall explanation accurately distinguish recognizing obstacles from building fences or welcoming visitors. stop visitors joining is natural British English."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Luna: a alone is grammatical; b mismatches plural barriers with prevents, while c mismatches singular barrier with prevent.\nSol: a is grammatical and natural. b uses prevents with plural barriers; c has undetermined singular barrier and plural prevent. Changing barrier to barriers fixes c. Citation s2 supplies the target."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Luna: Explanations correctly identify each agreement error and the target collocation.\nSol: All option explanations accurately address natural a, prevents to prevent in b, and barrier to barriers in c. The revised overall explanation correctly states plural barriers matches prevent; prior fixed-collocation overstatement is absent in this exact payload."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Luna: Class representative improving study sessions is distinct from museum lecture access planning.\nSol: Class representative improving group study sessions differs from museum organisers improving public lectures; target applies naturally to this new academic purpose. Citation s2 is valid."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Luna: Two-sentence answer naturally uses identify barriers and gives relevant examples; checklist is usable and no automatic grade is implied.\nSol: Two-sentence sample naturally uses identify barriers and gives meeting-time/noise obstacles with proposed changes. Checklist covers role, length, target meaning and grammar; explanation explicitly says no automatic grade."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "resolved": false,
+      "id": "luna-luna-minor-museum-access-1",
+      "evidence": "Luna: The reading and target phrases appear closer to B1 than a clearly demonstrated B2 level. No source, meaning, answer-key or explanation defect was found in q4: option a is grammatical; b and c each contain subject–verb agreement errors."
+    }
+  ]
+}

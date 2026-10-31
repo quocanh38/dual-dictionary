@@ -1,0 +1,231 @@
+{
+  "kind": "unapproved-editor-draft",
+  "pack": {
+    "schemaVersion": 1,
+    "packId": "pack-97eb5b4b-1d2e-419a-8e5d-299406ee638e",
+    "version": 1,
+    "title": "Tree Survey Findings",
+    "language": "en",
+    "explanationLanguage": "en-vi",
+    "levelEstimate": "B2",
+    "topic": "academic",
+    "provenance": {
+      "author": "Dual Dictionary project — AI-assisted original source",
+      "sourceType": "original",
+      "rightsStatement": "Original reading composed with coding-assistant assistance for this project; no copied exam text, external source or learner personal data. Authorized for generation and distribution.",
+      "aiAssisted": true
+    },
+    "generation": {
+      "provider": "Meta Model API",
+      "model": "muse-spark-1.3",
+      "promptVersion": "lesson-studio-2026-10-27-v5",
+      "generatedAt": "2026-10-27T05:47:04.195Z"
+    },
+    "lessons": [
+      {
+        "lessonId": "lesson-1",
+        "title": "Tree Survey Findings",
+        "objective": "Learners will understand and use carry out a survey and point out to describe systematic study and highlight observations.",
+        "reading": {
+          "text": "A university team will carry out a survey of trees along three busy streets. Researchers will record the species, trunk width and distance from the road at each site. In the preliminary report, they point out that young trees are concentrated near newer apartment blocks. The team will compare these observations with summer temperature readings before recommending where the city should plant more trees.",
+          "sentences": [
+            {
+              "id": "s1",
+              "text": "A university team will carry out a survey of trees along three busy streets."
+            },
+            {
+              "id": "s2",
+              "text": "Researchers will record the species, trunk width and distance from the road at each site."
+            },
+            {
+              "id": "s3",
+              "text": "In the preliminary report, they point out that young trees are concentrated near newer apartment blocks."
+            },
+            {
+              "id": "s4",
+              "text": "The team will compare these observations with summer temperature readings before recommending where the city should plant more trees."
+            }
+          ]
+        },
+        "targets": [
+          {
+            "id": "t1",
+            "phrase": "carry out a survey",
+            "meaningEn": "to conduct a systematic study to collect information",
+            "meaningVi": "tiến hành một cuộc khảo sát",
+            "sourceSentenceId": "s1"
+          },
+          {
+            "id": "t2",
+            "phrase": "point out",
+            "meaningEn": "to state or draw attention to a fact or observation",
+            "meaningVi": "chỉ ra, nêu rõ",
+            "sourceSentenceId": "s3"
+          }
+        ],
+        "exercises": [
+          {
+            "exerciseId": "q1",
+            "type": "meaning",
+            "targetId": "t1",
+            "prompt": "In sentence 1, 'A university team will carry out a survey of trees along three busy streets,' what does 'carry out a survey' mean?",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means the team will conduct a systematic study to collect information about trees.",
+                "explanation": "Correct because it matches conducting a systematic study to collect information."
+              },
+              {
+                "id": "b",
+                "text": "It means the team will move young trees to a safer place near apartments.",
+                "explanation": "Wrong because the sentence is about collecting information, not moving trees."
+              },
+              {
+                "id": "c",
+                "text": "It means the team will walk along the streets to get exercise in summer.",
+                "explanation": "Wrong because the purpose is research, not physical exercise."
+              },
+              {
+                "id": "d",
+                "text": "It means the team will stop traffic from damaging trees near the road.",
+                "explanation": "Wrong because the team records data rather than stopping traffic."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The phrase describes conducting a systematic study to collect information."
+          },
+          {
+            "exerciseId": "q2",
+            "type": "usage",
+            "targetId": "t1",
+            "prompt": "Choose the sentence that uses 'carry out a survey' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s1"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "Our club will carry out survey of student lunch habits next week.",
+                "explanation": "Wrong because the singular noun needs the article a before survey."
+              },
+              {
+                "id": "b",
+                "text": "Our club will carry out a survey of student lunch habits next week.",
+                "explanation": "Correct because it uses the natural collocation carry out a survey of."
+              },
+              {
+                "id": "c",
+                "text": "Our club will carry off a survey of student lunch habits next week.",
+                "explanation": "Wrong because the particle off should be corrected to out."
+              },
+              {
+                "id": "d",
+                "text": "Our club will carries out a survey of student lunch habits next week.",
+                "explanation": "Wrong because carries after will should be corrected to carry."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Only one option uses the correct collocation and grammar."
+          },
+          {
+            "exerciseId": "q3",
+            "type": "meaning",
+            "targetId": "t2",
+            "prompt": "In sentence 3, 'In the preliminary report, they point out that young trees are concentrated near newer apartment blocks,' what does 'point out' mean?",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "It means they use a finger to show the physical direction of the trees.",
+                "explanation": "Wrong because the context is stating an observation in a report, not physical pointing."
+              },
+              {
+                "id": "b",
+                "text": "It means they question whether young trees grow near apartment blocks.",
+                "explanation": "Wrong because they are stating a finding, not asking a question about it."
+              },
+              {
+                "id": "c",
+                "text": "It means they state an observation to draw attention to an important fact.",
+                "explanation": "Correct because it matches stating a fact to draw attention to it."
+              },
+              {
+                "id": "d",
+                "text": "It means they disagree with the finding about young trees and reject it.",
+                "explanation": "Wrong because they are presenting the finding, not disagreeing with it."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "The phrase means stating an observation to draw attention to it."
+          },
+          {
+            "exerciseId": "q4",
+            "type": "usage",
+            "targetId": "t2",
+            "prompt": "Choose the sentence that uses 'point out' correctly and naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "options": [
+              {
+                "id": "a",
+                "text": "The guide pointed out that the museum closes at six on Sundays.",
+                "explanation": "Correct because it naturally draws attention to a fact with pointed out that."
+              },
+              {
+                "id": "b",
+                "text": "The guide pointed that the museum closes at six on Sundays.",
+                "explanation": "Wrong because pointed needs the particle out added after it."
+              },
+              {
+                "id": "c",
+                "text": "The guide pointed out about that the museum closes at six on Sundays.",
+                "explanation": "Wrong because the extra word about should be removed before that."
+              },
+              {
+                "id": "d",
+                "text": "The guide point out that the museum closes at six on Sundays.",
+                "explanation": "Wrong because point should be corrected to pointed for past tense agreement."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Only one option uses the correct grammar and collocation."
+          },
+          {
+            "exerciseId": "q5",
+            "type": "transfer",
+            "targetId": "t2",
+            "prompt": "You are a sports club member writing a friendly message to a new member about weekend practice. Write 2-3 sentences to draw attention to an important fact about the schedule. Use 'point out' naturally.",
+            "sourceSentenceIds": [
+              "s3"
+            ],
+            "sampleAnswer": "Welcome to the club! I want to point out that Saturday practice starts at 8 a.m. in the north park.",
+            "selfCheck": [
+              "My response has 2-3 sentences.",
+              "I used point out to draw attention to a fact about the schedule.",
+              "My role and message are different from the university tree report."
+            ],
+            "explanation": "Compare with the model and self-assess; no automatic grade."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "status": "draft",
+      "reviewerType": "not-reviewed",
+      "note": "",
+      "checks": {
+        "rights": false,
+        "meaning": false,
+        "uniqueAnswers": false,
+        "explanations": false
+      },
+      "findings": []
+    }
+  }
+}

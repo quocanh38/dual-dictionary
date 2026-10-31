@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-9",
+  "segment": "objective",
+  "action": "generate",
+  "promptVersion": "ielts-practice-2026-10-29-wave-9-v1",
+  "completedAt": "2026-10-29T05:21:25.732Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 758,
+    "outputTokens": 8388,
+    "totalTokens": 9146
+  },
+  "latencyMs": 38642,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 32768,
+  "rawOutput": "{\"listening\":{\"title\":\"Student Meal-Card Top-Up Service\",\"focus\":\"Understanding amounts, fees and service hours\",\"part\":\"Part 1\",\"script\":\"STAFF: Good morning, Student Services, how can I help you?\\nSTUDENT: Hello, I want to add money to my student meal card.\\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\\nSTUDENT: Yes, here it is. My ID number is 8847392.\\nSTAFF: Thank you. I can see your account. How much would you like to top up?\\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\\nSTUDENT: By bank card, please. Is there an extra fee?\\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\\nSTUDENT: That's good. How soon can I use the money?\\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\\nSTUDENT: Perfect. Where can I use the card?\\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\\nSTUDENT: Can I also check my balance online?\\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\\nSTUDENT: What should I do if I lose my card?\\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\\nSTUDENT: I understand. And can my friend use my card?\\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\\nSTUDENT: Will I get a receipt for the payment?\\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\\nSTUDENT: Great. What time do you close?\\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.\",\"questions\":[{\"title\":\"Top-up Amount\",\"prompt\":\"How much will the student add to the card?\",\"options\":[\"Twenty dollars\",\"Fifty dollars\",\"Sixty dollars\",\"Eleven dollars\"],\"answer\":2,\"explanation\":\"The student corrects the first amount of fifty to sixty dollars. Fifty was the initial idea, not the final amount.\"},{\"title\":\"Service Fee\",\"prompt\":\"What is the fee for this top-up?\",\"options\":[\"No fee for this amount\",\"Five dollars extra charge\",\"Twenty dollars minimum fee\",\"Two hours waiting fee\"],\"answer\":0,\"explanation\":\"Staff says no fee for amounts above twenty dollars, so sixty has no fee. The five-dollar charge is for a replacement card, not a top-up.\"},{\"title\":\"Available Time\",\"prompt\":\"When can the student use the money?\",\"options\":[\"Immediately at payment desk\",\"In about two hours\",\"After Friday at four thirty\",\"Next month only\"],\"answer\":1,\"explanation\":\"Staff says the balance will be ready in about two hours, after eleven o'clock. It is not immediate and not delayed until Friday.\"},{\"title\":\"Where to Use\",\"prompt\":\"Where can the student use the meal card?\",\"options\":[\"Only in library snack bar\",\"Only in main dining hall\",\"Only at student services office\",\"Dining hall, cafe, snack bar\"],\"answer\":3,\"explanation\":\"Staff lists three places: main dining hall, campus cafe, and library snack bar. Single-location options miss the full list.\"},{\"title\":\"Friday Closing Time\",\"prompt\":\"When does the office close on Friday?\",\"options\":[\"At nine o'clock\",\"At five o'clock\",\"At four thirty\",\"At eleven o'clock\"],\"answer\":2,\"explanation\":\"Staff says Friday closing is earlier at four thirty, not five like other weekdays. Five o'clock is the Monday to Thursday time.\"}]},\"reading\":{\"title\":\"Community Art Workshop Sign-Up\",\"focus\":\"Understanding sign-up rules and workshop details\",\"passage\":\"The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\\n\\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\\n\\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\\n\\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\\n\\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\\n\\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.\",\"questions\":[{\"title\":\"Main Aim\",\"prompt\":\"What is the main aim of the workshops?\",\"options\":[\"To prepare students for final art exams\",\"To try creative activities and meet people\",\"To collect money for centre repairs\",\"To provide free bus service nearby\"],\"answer\":1,\"explanation\":\"The passage states the aim is to try creative activities and meet people. Exam preparation is not mentioned as a purpose.\"},{\"title\":\"Sign-Up Method\",\"prompt\":\"How must people sign up for workshops?\",\"options\":[\"Fill in online form on centre website\",\"Call centre office one day after\",\"Write name on library notice board\",\"Pay fee at Room B entrance\"],\"answer\":0,\"explanation\":\"The passage says sign-up is by online form on the website. The notice board only gives information, not sign-up.\"},{\"title\":\"Pottery Fee\",\"prompt\":\"What is true about Pottery Basics?\",\"options\":[\"It is only for experienced artists\",\"It provides all materials for free\",\"It requires ten dollars for materials\",\"It takes place on Sunday afternoon\"],\"answer\":2,\"explanation\":\"The passage says pottery has a ten-dollar fee for clay and firing. Painting is the free-materials workshop, not pottery.\"},{\"title\":\"Late Cancellation\",\"prompt\":\"What can be inferred about late cancellation?\",\"options\":[\"They will receive confirmation email quickly\",\"They must pay ten dollars extra\",\"They can bring child without adult\",\"Another person may not get place\"],\"answer\":3,\"explanation\":\"The passage asks for 24-hour cancellation so another person can take the place, implying late cancellation blocks others. No extra fee is mentioned.\"},{\"title\":\"Claim vs Example\",\"prompt\":\"What is the organiser's main claim?\",\"options\":[\"Last year's group held small exhibition\",\"Workshops help build stronger community connections\",\"Room B is near campus bus stop\",\"Pottery needs ten-dollar material fee\"],\"answer\":1,\"explanation\":\"The claim is that workshops build community connections; the exhibition is given as an example to support it. The location detail is not a claim.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Student Meal-Card Top-Up Service",
+      "focus": "Understanding amounts, fees and service hours",
+      "part": "Part 1",
+      "script": "STAFF: Good morning, Student Services, how can I help you?\nSTUDENT: Hello, I want to add money to my student meal card.\nSTAFF: Sure, I can help you with that. Do you have your student ID card with you?\nSTUDENT: Yes, here it is. My ID number is 8847392.\nSTAFF: Thank you. I can see your account. How much would you like to top up?\nSTUDENT: I was thinking fifty dollars... sorry, actually sixty dollars would be better. I have more classes next month.\nSTAFF: No problem, I've changed it to sixty dollars. Will you pay by cash or bank card?\nSTUDENT: By bank card, please. Is there an extra fee?\nSTAFF: No, there is no fee for amounts above twenty dollars. So for sixty dollars, you pay only sixty.\nSTUDENT: That's good. How soon can I use the money?\nSTAFF: It will be ready in about two hours. You can buy lunch today after eleven o'clock.\nSTUDENT: Perfect. Where can I use the card?\nSTAFF: You can use it in the main dining hall, the campus cafe, and the library snack bar.\nSTUDENT: Can I also check my balance online?\nSTAFF: Yes, just log in to the student portal. You can also see it on the screen in the dining hall when you pay.\nSTUDENT: What should I do if I lose my card?\nSTAFF: You should tell us quickly. We can freeze the balance and give you a new card for five dollars.\nSTUDENT: I understand. And can my friend use my card?\nSTAFF: No, only you can use it. You need to show your ID if staff ask.\nSTUDENT: Will I get a receipt for the payment?\nSTAFF: Yes, I will send it to your student email. You can also print it from the portal.\nSTUDENT: Great. What time do you close?\nSTAFF: We are open Monday to Friday from nine to five, but on Fridays we close a bit earlier, at four thirty.\nSTUDENT: Okay, thanks. So I need to come before four thirty on Friday.\nSTAFF: Exactly. Please tap your card on the reader now to finish the top-up.",
+      "questions": [
+        {
+          "title": "Top-up Amount",
+          "prompt": "How much will the student add to the card?",
+          "options": [
+            "Twenty dollars",
+            "Fifty dollars",
+            "Sixty dollars",
+            "Eleven dollars"
+          ],
+          "answer": 2,
+          "explanation": "The student corrects the first amount of fifty to sixty dollars. Fifty was the initial idea, not the final amount."
+        },
+        {
+          "title": "Service Fee",
+          "prompt": "What is the fee for this top-up?",
+          "options": [
+            "No fee for this amount",
+            "Five dollars extra charge",
+            "Twenty dollars minimum fee",
+            "Two hours waiting fee"
+          ],
+          "answer": 0,
+          "explanation": "Staff says no fee for amounts above twenty dollars, so sixty has no fee. The five-dollar charge is for a replacement card, not a top-up."
+        },
+        {
+          "title": "Available Time",
+          "prompt": "When can the student use the money?",
+          "options": [
+            "Immediately at payment desk",
+            "In about two hours",
+            "After Friday at four thirty",
+            "Next month only"
+          ],
+          "answer": 1,
+          "explanation": "Staff says the balance will be ready in about two hours, after eleven o'clock. It is not immediate and not delayed until Friday."
+        },
+        {
+          "title": "Where to Use",
+          "prompt": "Where can the student use the meal card?",
+          "options": [
+            "Only in library snack bar",
+            "Only in main dining hall",
+            "Only at student services office",
+            "Dining hall, cafe, snack bar"
+          ],
+          "answer": 3,
+          "explanation": "Staff lists three places: main dining hall, campus cafe, and library snack bar. Single-location options miss the full list."
+        },
+        {
+          "title": "Friday Closing Time",
+          "prompt": "When does the office close on Friday?",
+          "options": [
+            "At nine o'clock",
+            "At five o'clock",
+            "At four thirty",
+            "At eleven o'clock"
+          ],
+          "answer": 2,
+          "explanation": "Staff says Friday closing is earlier at four thirty, not five like other weekdays. Five o'clock is the Monday to Thursday time."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Community Art Workshop Sign-Up",
+      "focus": "Understanding sign-up rules and workshop details",
+      "passage": "The Riverside Community Centre is offering a series of free art workshops this spring. The programme is open to university students and local residents. The main aim is to give people a chance to try creative activities and meet new people in a friendly space. All workshops will take place in Room B of the centre, which is near the campus bus stop. The series runs for six weeks, from 10 March to 15 April, with one workshop each Saturday morning. Each session runs from ten o'clock until twelve o'clock.\n\nTo join a workshop, people must complete an online sign-up form on the centre's website. The form asks for name, email, and workshop choice. Sign-up closes three days before each workshop, and places are limited to fifteen people per session. If a workshop is full, names go on a waiting list. The centre sends a confirmation email within one day after sign-up. Without this email, the place is not guaranteed.\n\nThere are three different workshops to choose from. The first is 'Painting for Beginners', which needs no experience and all paints and paper are provided. The second is 'Pottery Basics', where participants learn to make small bowls and cups. For pottery, there is a small material fee of ten dollars to cover clay and firing. The third is 'Digital Photography', which teaches how to take better photos with light and composition. For this workshop, participants must bring their own camera or smartphone.\n\nThe centre asks participants to arrive on time and to cancel at least twenty-four hours in advance if they cannot attend, so another person can take the place. Volunteers will be present to help and to answer questions. Most materials are included, except for the pottery fee and cameras for photography. Children under twelve must come with an adult.\n\nThe organiser believes these workshops do more than teach art skills. Her main claim is that they help build stronger community connections. As an example, she notes that last year a group of participants from different backgrounds organised a small public exhibition together after the workshops finished. This showed how shared creative work can bring people together.\n\nFeedback from past participants has been positive. Many said they enjoyed learning something new without pressure of exams. The centre plans to continue the programme next year if enough people join. Interested people can find more information on the notice board near the library or by calling the centre office.",
+      "questions": [
+        {
+          "title": "Main Aim",
+          "prompt": "What is the main aim of the workshops?",
+          "options": [
+            "To prepare students for final art exams",
+            "To try creative activities and meet people",
+            "To collect money for centre repairs",
+            "To provide free bus service nearby"
+          ],
+          "answer": 1,
+          "explanation": "The passage states the aim is to try creative activities and meet people. Exam preparation is not mentioned as a purpose."
+        },
+        {
+          "title": "Sign-Up Method",
+          "prompt": "How must people sign up for workshops?",
+          "options": [
+            "Fill in online form on centre website",
+            "Call centre office one day after",
+            "Write name on library notice board",
+            "Pay fee at Room B entrance"
+          ],
+          "answer": 0,
+          "explanation": "The passage says sign-up is by online form on the website. The notice board only gives information, not sign-up."
+        },
+        {
+          "title": "Pottery Fee",
+          "prompt": "What is true about Pottery Basics?",
+          "options": [
+            "It is only for experienced artists",
+            "It provides all materials for free",
+            "It requires ten dollars for materials",
+            "It takes place on Sunday afternoon"
+          ],
+          "answer": 2,
+          "explanation": "The passage says pottery has a ten-dollar fee for clay and firing. Painting is the free-materials workshop, not pottery."
+        },
+        {
+          "title": "Late Cancellation",
+          "prompt": "What can be inferred about late cancellation?",
+          "options": [
+            "They will receive confirmation email quickly",
+            "They must pay ten dollars extra",
+            "They can bring child without adult",
+            "Another person may not get place"
+          ],
+          "answer": 3,
+          "explanation": "The passage asks for 24-hour cancellation so another person can take the place, implying late cancellation blocks others. No extra fee is mentioned."
+        },
+        {
+          "title": "Claim vs Example",
+          "prompt": "What is the organiser's main claim?",
+          "options": [
+            "Last year's group held small exhibition",
+            "Workshops help build stronger community connections",
+            "Room B is near campus bus stop",
+            "Pottery needs ten-dollar material fee"
+          ],
+          "answer": 1,
+          "explanation": "The claim is that workshops build community connections; the exhibition is given as an example to support it. The location detail is not a claim."
+        }
+      ]
+    }
+  }
+}

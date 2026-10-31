@@ -1,0 +1,41 @@
+{
+  "wave": 10,
+  "batch": 97,
+  "generated": "2026-10-20",
+  "tier": "A raw-only editorial enrichment",
+  "source": "Next 20 raw-only pages after telephone booth in the builder manifest; checked against local OALD 10/LDOCE 6. Vietnamese meanings, usage notes and bilingual examples are independently written.",
+  "selectionRationale": "Cover telephone vocabulary, photography and geography, technical terms, historic military/cultural expressions, legal terminology and test/software vocabulary. Clarify old or figurative wording and distinguish closely related uses.",
+  "counts": {
+    "selected": 20,
+    "rawPagesUpgraded": 20,
+    "rawOnlyBefore": 920,
+    "remainingRawOnlyAfter": 900
+  },
+  "selected": [
+    "telephone call",
+    "telephone directory",
+    "telephone exchange",
+    "telephone number",
+    "telephoto lens",
+    "temperate zone",
+    "tennis elbow",
+    "tensile strength",
+    "terra firma",
+    "territorial army",
+    "territorial waters",
+    "test bed",
+    "test case",
+    "test drive",
+    "test-tube baby",
+    "text editor",
+    "the ft",
+    "theme park",
+    "third class",
+    "third party"
+  ],
+  "references": [
+    "local OALD 10 MDX (../oald10.mdx)",
+    "local LDOCE 6 MDX (../ldoce6.mdx)",
+    "NHS, IVF treatment overview (https://www.nhs.uk/tests-and-treatments/ivf/) for current plain-language process terminology"
+  ]
+}

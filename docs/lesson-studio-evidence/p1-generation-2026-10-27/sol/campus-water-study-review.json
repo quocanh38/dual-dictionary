@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "67095ea484efd7c0f358629bc81f08de4ee0134190b95cedc02cad5d7fa3a256",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "gpt-6.1-sol — AI-assisted final content reviewer",
+  "reviewedAt": "2026-10-27T04:42:30.482Z",
+  "note": "Independent full final-candidate audit of supplied source, both EN/VI meanings, every choice and explanation, transfer model and checklist, including realistic alternate readings. Configured model: gpt-6.1-sol. No Luna reviews or prior pack editorial judgments read before this audit. Required process/board read for workflow context only. AI-assisted review, not human review or proof of learning effectiveness; no approval, provider call or deployment performed.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Supplied provenance labels this an AI-assisted original project passage and authorizes distribution; the generic campus study has no learner PII or copied-exam attribution. Rights judgment relies on the stated provenance."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s1 contains gather evidence verbatim, with measurements of campus water use providing the contextual collection-of-information sense."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Collecting information/facts to support a finding or idea fits the research context and does not claim that gathered evidence necessarily proves a conclusion."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Thu thập bằng chứng hoặc dữ liệu để hỗ trợ một nhận định is natural, accented Vietnamese and correctly expresses collection in support of a finding."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "s2 contains take into consideration verbatim; different building populations are a factor to consider before drawing conclusions."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Thinking carefully about something when deciding/judging accurately conveys considering the population difference, without requiring agreement or a particular outcome."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Xem xét, cân nhắc đến điều gì accurately conveys consideration and includes natural Vietnamese diacritics."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q1 a collects measurements/facts to support a finding. b ignores/hides data; c announces a conclusion without checking. Neither alternative is a meaning of gather evidence in s1, regardless of whether a careless researcher could perform those actions."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q1 each option explanation accurately contrasts collection with ignoring and an unchecked conclusion. The overall explanation preserves support rather than claiming proof."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q2 a uses gathered evidence from surveys naturally. b evidences is not the ordinary uncountable survey-information use required here; a specialized historical count use does not make this an equally natural ordinary library-survey sentence. c for support their recommendation requires to support or for supporting; no missing implied context repairs its verb form."
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q2 a explanation is sound; b correctly repairs the ordinary information sense to uncountable evidence; c to support is a valid correction, without claiming it is the only possible rewrite. The sole natural answer claim holds in the supplied context."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q3 b considers different user numbers when judging. a immediately announces results; c refuses comparison. Those could be actions people take but do not paraphrase considering a factor; consideration does not entail refusing judgment."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q3 option explanations correctly distinguish a and c from careful thought and identify b. The overall explanation matches judgment before a conclusion; it does not require a predetermined decision."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "q4 b naturally puts the object between take and into consideration. a plural considerations breaks this idiom; c in consideration is not its standard natural form. Other constructions with in consideration of do not license this exact sentence."
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "q4 explanations correctly restore singular consideration in a and into in c and endorse b. They concern this fixed collocation, not a blanket ban on plural considerations or the preposition in elsewhere."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "q5 moves from a student research report on buildings to a football fan persuading friends about a player award; the role, audience and purpose differ materially."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "The two-sentence model naturally uses gathered evidence from videos/statistics to support a choice. The checklist checks length, collection meaning and persuasive fan context. Explicit self-assessment makes no automated grade or proficiency claim."
+    }
+  ],
+  "findings": []
+}

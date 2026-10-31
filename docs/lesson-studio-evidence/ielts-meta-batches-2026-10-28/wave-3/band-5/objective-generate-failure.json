@@ -1,0 +1,18 @@
+{
+  "provider": "Meta Model API",
+  "model": "muse-spark-1.3",
+  "stage": "band-5",
+  "batchId": "wave-3",
+  "segment": "objective",
+  "action": "generate",
+  "completedAt": "2026-10-28T07:00:36.414Z",
+  "outcome": "failed-or-unknown",
+  "error": "Request timed out. No automatic retry.",
+  "call": {
+    "purpose": "generate-original-ielts-objective-wave-3",
+    "model": "muse-spark-1.3",
+    "status": null,
+    "usage": null,
+    "latencyMs": 409034
+  }
+}

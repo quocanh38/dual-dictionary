@@ -1,0 +1,157 @@
+{
+  "provider": "Baseten Model API",
+  "model": "meta-models/muse-spark-open-1026",
+  "stage": "band-5",
+  "batchId": "wave-10",
+  "segment": "objective",
+  "action": "repair",
+  "promptVersion": "ielts-practice-2026-10-29-wave-10-v1",
+  "completedAt": "2026-10-29T05:34:40.872Z",
+  "status": 200,
+  "usage": {
+    "inputTokens": 2845,
+    "outputTokens": 7106,
+    "totalTokens": 9951
+  },
+  "latencyMs": 16950,
+  "reasoningMode": "always-on",
+  "maxOutputTokens": 65536,
+  "rawOutput": "{\"listening\":{\"title\":\"Campus Card Replacement Desk\",\"focus\":\"Understanding details, fees and collection times\",\"part\":\"Part 1\",\"script\":\"Receptionist: Good morning, Campus Card Services. How can I help you?\\nMaya: Good morning. I'm Maya Patel, a first-year nursing student. I think I lost my campus card yesterday.\\nReceptionist: I'm sorry to hear that. I can help you get a replacement. When did you last have it?\\nMaya: I used it to enter the library at about 3 p.m. yesterday. I put it in my jacket pocket, but it's not there now.\\nReceptionist: Have you checked the library lost property desk?\\nMaya: Yes, I went there this morning, but they don't have it.\\nReceptionist: Okay, we will block your old card so no one else can use it. Can I have your student number?\\nMaya: Yes, it's N84729.\\nReceptionist: Thank you, I've blocked card N84729. Do you use the card for building access?\\nMaya: Yes, I need it for my dormitory and the cafeteria every day.\\nReceptionist: I understand. There is a fee for a new card. It's $25 for a replacement — sorry, $15 for the first time you lose it.\\nMaya: That's good. $15 is okay. How do I pay?\\nReceptionist: You can pay at the cashier next door by cash or card. Then bring the receipt back here.\\nMaya: And when will the new card be ready?\\nReceptionist: If you pay today before 2 p.m., you can collect it tomorrow morning after 10 a.m. from this desk.\\nMaya: Tomorrow after 10, great. What time do you close?\\nReceptionist: We are open until 5 p.m. Monday to Thursday — actually 4 p.m. on Friday, so please come early tomorrow.\\nMaya: Okay, I'll come at 10:30. What should I bring?\\nReceptionist: Please bring your passport or driving licence and the payment receipt. We will take a new photo here if needed.\\nMaya: Perfect. So I pay today, come tomorrow after 10 with my passport and receipt.\\nReceptionist: Exactly. And please check your email — we will send a confirmation when it's ready.\\nMaya: Thank you very much for your help.\\nReceptionist: You're welcome, Maya. See you tomorrow.\",\"questions\":[{\"title\":\"Reason for Visit\",\"prompt\":\"Why is Maya at the Card Services desk?\",\"options\":[\"To replace a lost campus card\",\"To find library lost property\",\"To pay cafeteria fees\",\"To get a new jacket\"],\"answer\":0,\"explanation\":\"Maya says she lost her campus card and needs a replacement. The library desk was already checked and had nothing, so that is not the reason.\"},{\"title\":\"Last Use of Card\",\"prompt\":\"Where did Maya last use her card?\",\"options\":[\"At the cashier next door\",\"In the dormitory\",\"At the library entrance\",\"In the cafeteria\"],\"answer\":2,\"explanation\":\"She states she used the card to enter the library at 3 p.m. The dormitory is a place she needs the card for, not where she last used it.\"},{\"title\":\"Replacement Fee\",\"prompt\":\"How much will Maya pay for this replacement?\",\"options\":[\"$25 for any replacement\",\"$15 for first loss\",\"$10 with receipt\",\"$20 before 2 p.m.\"],\"answer\":1,\"explanation\":\"Staff corrects the general $25 fee to $15 for a first loss. The $25 option is the initial price before the correction.\"},{\"title\":\"Collection Time\",\"prompt\":\"When can Maya collect her new card?\",\"options\":[\"Today before 2 p.m.\",\"Friday at 4 p.m.\",\"Next Monday morning\",\"Tomorrow after 10 a.m.\"],\"answer\":3,\"explanation\":\"Staff says payment before 2 p.m. allows collection tomorrow after 10 a.m. Friday at 4 p.m. is the closing time, not collection time.\"},{\"title\":\"Items to Bring\",\"prompt\":\"What must Maya bring to collect the new card?\",\"options\":[\"Passport or driving licence and receipt\",\"Jacket and library book\",\"Student number only\",\"Cash for $25 fee\"],\"answer\":0,\"explanation\":\"Staff asks for passport or driving licence plus payment receipt. The jacket is where the card was lost, not a required document.\"}]},\"reading\":{\"title\":\"Student First-Aid Course Timetable\",\"focus\":\"Understanding main ideas, schedule and requirements\",\"passage\":\"The University Health Centre offers a free First-Aid Course for all students this term. The aim is to give students basic skills to help in emergencies on campus and at home. The Health Centre has run this course for five years and many students have completed it. The course leaders say that learning first aid increases confidence in emergencies. For example, they describe how a student used chest compressions to help a visitor who fell in the library last year.\\n\\nThe course runs for three Saturdays in November: 8, 15 and 22 November. Each session is from 9:30 a.m. to 12:30 p.m. in Room B12 of the Health Building. There is a 15-minute break at 11 a.m. with tea and biscuits provided. Students must attend all three sessions to receive a certificate. If you miss a session, you will need to join the next term's course.\\n\\nSession 1 on 8 November covers calling for help and checking breathing. Students will practise how to put someone in the recovery position and how to stay calm until help arrives. There will be time for questions at the end.\\n\\nSession 2 on 15 November focuses on cuts, burns and choking. The teacher will show how to clean a small cut and how to cool a burn under cool running water for 20 minutes. Students will also practise what to do if someone is choking, including back blows.\\n\\nSession 3 on 22 November is about CPR and using a defibrillator. A defibrillator is a machine that can help restart the heart. Students will work in pairs to practise CPR on models. No real medical experience is needed, and all steps are explained slowly.\\n\\nThe course is taught by two nurses from the Health Centre, Anna Grey and Tom Hall. All materials are provided, but students should wear comfortable clothes and bring water. At the end of Session 3, students who attended every session will take a short quiz and get a First-Aid Certificate valid for three years.\\n\\nTo join, students must register online by 1 November. Places are limited to 20 students per term, and the course is very popular, so early booking is advised. Last term all places were filled two weeks before the deadline. Students can find the registration link on the university website. The Health Centre staff are happy to answer questions by phone during office hours. For more information, email healthcentre@university.ac.uk or visit the Health Centre desk on the ground floor.\",\"questions\":[{\"title\":\"Example of Help\",\"prompt\":\"Which is given as an example of first-aid help?\",\"options\":[\"Course increases confidence\",\"Certificate lasts three years\",\"Student helped visitor in library\",\"Nurses teach in Room B12\"],\"answer\":2,\"explanation\":\"The library incident with chest compressions is presented as an example. Increased confidence is the leaders' claim, not the example.\"},{\"title\":\"Course Schedule\",\"prompt\":\"When are the first-aid sessions held?\",\"options\":[\"Three Saturdays in November mornings\",\"Every weekday evening\",\"One Sunday in December\",\"Three Fridays at night\"],\"answer\":0,\"explanation\":\"Passage states three Saturday mornings in November in Room B12. Other options give wrong days or times.\"},{\"title\":\"Second Session Focus\",\"prompt\":\"What will students learn on 15 November?\",\"options\":[\"How to call for help only\",\"How to treat cuts, burns and choking\",\"How to use defibrillator\",\"How to register online\"],\"answer\":1,\"explanation\":\"Session 2 on 15 November covers cuts, burns and choking. Defibrillator practice is in Session 3, so that distractor is incorrect.\"},{\"title\":\"Certificate Requirement\",\"prompt\":\"What can be inferred about receiving the certificate?\",\"options\":[\"Can miss one session\",\"Given after Session 1\",\"Bought online for $20\",\"Must attend all three sessions\"],\"answer\":3,\"explanation\":\"Students must attend all three sessions for a certificate; missing one means joining next term. Therefore the certificate cannot be earned after one session.\"},{\"title\":\"How to Register\",\"prompt\":\"What does the passage say about joining?\",\"options\":[\"Register online by 1 November\",\"Visit Room B12 anytime\",\"Email after 22 November\",\"Pay $15 fee first\"],\"answer\":0,\"explanation\":\"Registration must be online by 1 November and places are limited. Visiting Room B12 is the class location, not the registration method.\"}]}}",
+  "result": {
+    "listening": {
+      "title": "Campus Card Replacement Desk",
+      "focus": "Understanding details, fees and collection times",
+      "part": "Part 1",
+      "script": "Receptionist: Good morning, Campus Card Services. How can I help you?\nMaya: Good morning. I'm Maya Patel, a first-year nursing student. I think I lost my campus card yesterday.\nReceptionist: I'm sorry to hear that. I can help you get a replacement. When did you last have it?\nMaya: I used it to enter the library at about 3 p.m. yesterday. I put it in my jacket pocket, but it's not there now.\nReceptionist: Have you checked the library lost property desk?\nMaya: Yes, I went there this morning, but they don't have it.\nReceptionist: Okay, we will block your old card so no one else can use it. Can I have your student number?\nMaya: Yes, it's N84729.\nReceptionist: Thank you, I've blocked card N84729. Do you use the card for building access?\nMaya: Yes, I need it for my dormitory and the cafeteria every day.\nReceptionist: I understand. There is a fee for a new card. It's $25 for a replacement — sorry, $15 for the first time you lose it.\nMaya: That's good. $15 is okay. How do I pay?\nReceptionist: You can pay at the cashier next door by cash or card. Then bring the receipt back here.\nMaya: And when will the new card be ready?\nReceptionist: If you pay today before 2 p.m., you can collect it tomorrow morning after 10 a.m. from this desk.\nMaya: Tomorrow after 10, great. What time do you close?\nReceptionist: We are open until 5 p.m. Monday to Thursday — actually 4 p.m. on Friday, so please come early tomorrow.\nMaya: Okay, I'll come at 10:30. What should I bring?\nReceptionist: Please bring your passport or driving licence and the payment receipt. We will take a new photo here if needed.\nMaya: Perfect. So I pay today, come tomorrow after 10 with my passport and receipt.\nReceptionist: Exactly. And please check your email — we will send a confirmation when it's ready.\nMaya: Thank you very much for your help.\nReceptionist: You're welcome, Maya. See you tomorrow.",
+      "questions": [
+        {
+          "title": "Reason for Visit",
+          "prompt": "Why is Maya at the Card Services desk?",
+          "options": [
+            "To replace a lost campus card",
+            "To find library lost property",
+            "To pay cafeteria fees",
+            "To get a new jacket"
+          ],
+          "answer": 0,
+          "explanation": "Maya says she lost her campus card and needs a replacement. The library desk was already checked and had nothing, so that is not the reason."
+        },
+        {
+          "title": "Last Use of Card",
+          "prompt": "Where did Maya last use her card?",
+          "options": [
+            "At the cashier next door",
+            "In the dormitory",
+            "At the library entrance",
+            "In the cafeteria"
+          ],
+          "answer": 2,
+          "explanation": "She states she used the card to enter the library at 3 p.m. The dormitory is a place she needs the card for, not where she last used it."
+        },
+        {
+          "title": "Replacement Fee",
+          "prompt": "How much will Maya pay for this replacement?",
+          "options": [
+            "$25 for any replacement",
+            "$15 for first loss",
+            "$10 with receipt",
+            "$20 before 2 p.m."
+          ],
+          "answer": 1,
+          "explanation": "Staff corrects the general $25 fee to $15 for a first loss. The $25 option is the initial price before the correction."
+        },
+        {
+          "title": "Collection Time",
+          "prompt": "When can Maya collect her new card?",
+          "options": [
+            "Today before 2 p.m.",
+            "Friday at 4 p.m.",
+            "Next Monday morning",
+            "Tomorrow after 10 a.m."
+          ],
+          "answer": 3,
+          "explanation": "Staff says payment before 2 p.m. allows collection tomorrow after 10 a.m. Friday at 4 p.m. is the closing time, not collection time."
+        },
+        {
+          "title": "Items to Bring",
+          "prompt": "What must Maya bring to collect the new card?",
+          "options": [
+            "Passport or driving licence and receipt",
+            "Jacket and library book",
+            "Student number only",
+            "Cash for $25 fee"
+          ],
+          "answer": 0,
+          "explanation": "Staff asks for passport or driving licence plus payment receipt. The jacket is where the card was lost, not a required document."
+        }
+      ]
+    },
+    "reading": {
+      "title": "Student First-Aid Course Timetable",
+      "focus": "Understanding main ideas, schedule and requirements",
+      "passage": "The University Health Centre offers a free First-Aid Course for all students this term. The aim is to give students basic skills to help in emergencies on campus and at home. The Health Centre has run this course for five years and many students have completed it. The course leaders say that learning first aid increases confidence in emergencies. For example, they describe how a student used chest compressions to help a visitor who fell in the library last year.\n\nThe course runs for three Saturdays in November: 8, 15 and 22 November. Each session is from 9:30 a.m. to 12:30 p.m. in Room B12 of the Health Building. There is a 15-minute break at 11 a.m. with tea and biscuits provided. Students must attend all three sessions to receive a certificate. If you miss a session, you will need to join the next term's course.\n\nSession 1 on 8 November covers calling for help and checking breathing. Students will practise how to put someone in the recovery position and how to stay calm until help arrives. There will be time for questions at the end.\n\nSession 2 on 15 November focuses on cuts, burns and choking. The teacher will show how to clean a small cut and how to cool a burn under cool running water for 20 minutes. Students will also practise what to do if someone is choking, including back blows.\n\nSession 3 on 22 November is about CPR and using a defibrillator. A defibrillator is a machine that can help restart the heart. Students will work in pairs to practise CPR on models. No real medical experience is needed, and all steps are explained slowly.\n\nThe course is taught by two nurses from the Health Centre, Anna Grey and Tom Hall. All materials are provided, but students should wear comfortable clothes and bring water. At the end of Session 3, students who attended every session will take a short quiz and get a First-Aid Certificate valid for three years.\n\nTo join, students must register online by 1 November. Places are limited to 20 students per term, and the course is very popular, so early booking is advised. Last term all places were filled two weeks before the deadline. Students can find the registration link on the university website. The Health Centre staff are happy to answer questions by phone during office hours. For more information, email healthcentre@university.ac.uk or visit the Health Centre desk on the ground floor.",
+      "questions": [
+        {
+          "title": "Example of Help",
+          "prompt": "Which is given as an example of first-aid help?",
+          "options": [
+            "Course increases confidence",
+            "Certificate lasts three years",
+            "Student helped visitor in library",
+            "Nurses teach in Room B12"
+          ],
+          "answer": 2,
+          "explanation": "The library incident with chest compressions is presented as an example. Increased confidence is the leaders' claim, not the example."
+        },
+        {
+          "title": "Course Schedule",
+          "prompt": "When are the first-aid sessions held?",
+          "options": [
+            "Three Saturdays in November mornings",
+            "Every weekday evening",
+            "One Sunday in December",
+            "Three Fridays at night"
+          ],
+          "answer": 0,
+          "explanation": "Passage states three Saturday mornings in November in Room B12. Other options give wrong days or times."
+        },
+        {
+          "title": "Second Session Focus",
+          "prompt": "What will students learn on 15 November?",
+          "options": [
+            "How to call for help only",
+            "How to treat cuts, burns and choking",
+            "How to use defibrillator",
+            "How to register online"
+          ],
+          "answer": 1,
+          "explanation": "Session 2 on 15 November covers cuts, burns and choking. Defibrillator practice is in Session 3, so that distractor is incorrect."
+        },
+        {
+          "title": "Certificate Requirement",
+          "prompt": "What can be inferred about receiving the certificate?",
+          "options": [
+            "Can miss one session",
+            "Given after Session 1",
+            "Bought online for $20",
+            "Must attend all three sessions"
+          ],
+          "answer": 3,
+          "explanation": "Students must attend all three sessions for a certificate; missing one means joining next term. Therefore the certificate cannot be earned after one session."
+        },
+        {
+          "title": "How to Register",
+          "prompt": "What does the passage say about joining?",
+          "options": [
+            "Register online by 1 November",
+            "Visit Room B12 anytime",
+            "Email after 22 November",
+            "Pay $15 fee first"
+          ],
+          "answer": 0,
+          "explanation": "Registration must be online by 1 November and places are limited. Visiting Room B12 is the class location, not the registration method."
+        }
+      ]
+    }
+  }
+}

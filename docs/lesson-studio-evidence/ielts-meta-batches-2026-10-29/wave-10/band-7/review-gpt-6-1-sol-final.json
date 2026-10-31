@@ -1,0 +1,82 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "candidateSha256": "1d291ef42ecaca212f078d0603fbb5798307977f4a891ab070086d1e51ab751a",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    {
+      "item": "ielts-meta-wave-10-band-7-speaking-02",
+      "severity": "minor",
+      "issue": "Average-score evaluation is closer toPart3 than personalPart1; personal experience/preferences would improve fit."
+    }
+  ],
+  "coverage": {
+    "scope": "Full candidate-only AI-assisted final review:all 20 items,entire script/passage,all 40 options/10 keys/10 explanations and 5 Writing/5 Speaking prompts/metadata. No other reviewer reports inspected;no candidate edits/provider calls.",
+    "listening": "Full 335-word tutoring/composite/time-series dialogue read:0.3 SD 8 weeks,context/tutor modifiers,opposing wellbeing components,full-year dropout correction,pretrend/funding confound. All five keys/options/explanations supported.",
+    "reading": "Full 463-word trial/transportability passage read:0.35 SD/strongimplementation,Highlandmodifiers,neutralcompositeversussubgroupanxiety,48 monthlyobservations/pretrend/concurrenttransport. All five keys/options/explanations supported.",
+    "writing": "BothTask 1 datasets complete:maths score differences 9.2/4.2 correct;subgroups/scope supplied. Wellbeing group counts eachsum 2400;weighted means byyear/accommodation/status 7.2/7.1875/7.24375 allround 7.2. ThreeTask 2 prompts answerable withprecise qualification.150/250 minima 20/40 timingfields correct.",
+    "speaking": "Two personal-basedPart 1 sets(oneabstractaveragequestionnoted),studyhelp cardwith 4 visiblebullets/preparation/duration,two evaluativePart 3 sets. Advanced evidence focus coherent aspractice,notvalidatedbandscore.",
+    "structure": {
+      "candidateFilename": "candidate-final-v2.json",
+      "actualItems": 20,
+      "declaredItemCount": 20,
+      "wordCounts": {
+        "listening": 335,
+        "reading": 463
+      },
+      "answerPositions": {
+        "Listening": [
+          0,
+          0,
+          2,
+          3,
+          1
+        ],
+        "Reading": [
+          2,
+          1,
+          0,
+          3,
+          0
+        ]
+      },
+      "normalizationFindingsRead": [],
+      "contextCopies": "All copied contexts equal shared contexts.",
+      "bounds": {
+        "Listening": [
+          300,
+          400
+        ],
+        "Reading": [
+          400,
+          500
+        ]
+      }
+    },
+    "provenanceAndOriginality": "Read Baseten Model API/meta-models/muse-spark-open-1026 provenance,originalContent=true andrepairmetadata. No recognisable copiedofficialquestion or scoreguarantee found;notexhaustiveplagiarismaudit. Fictionalresearchdata assessed forinternalcoherence.",
+    "independence": "Prior conversation exposure to earlier versions exists,but this pass used candidate files directly and no prior/other-model reports.",
+    "itemIds": [
+      "ielts-meta-wave-10-band-7-listening-01",
+      "ielts-meta-wave-10-band-7-listening-02",
+      "ielts-meta-wave-10-band-7-listening-03",
+      "ielts-meta-wave-10-band-7-listening-04",
+      "ielts-meta-wave-10-band-7-listening-05",
+      "ielts-meta-wave-10-band-7-reading-01",
+      "ielts-meta-wave-10-band-7-reading-02",
+      "ielts-meta-wave-10-band-7-reading-03",
+      "ielts-meta-wave-10-band-7-reading-04",
+      "ielts-meta-wave-10-band-7-reading-05",
+      "ielts-meta-wave-10-band-7-writing-01",
+      "ielts-meta-wave-10-band-7-writing-02",
+      "ielts-meta-wave-10-band-7-writing-03",
+      "ielts-meta-wave-10-band-7-writing-04",
+      "ielts-meta-wave-10-band-7-writing-05",
+      "ielts-meta-wave-10-band-7-speaking-01",
+      "ielts-meta-wave-10-band-7-speaking-02",
+      "ielts-meta-wave-10-band-7-speaking-03",
+      "ielts-meta-wave-10-band-7-speaking-04",
+      "ielts-meta-wave-10-band-7-speaking-05"
+    ]
+  },
+  "reviewerType": "AI-assisted"
+}

@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "balanceAtStartUsd": 149.26,
+  "balanceSource": "Authenticated official Meta Billing UI: free credits in use; refreshed27October2026. Activity may lag one hour.",
+  "balanceRecordedAt": "2026-10-27T04:33:54.302Z",
+  "safetyReserveUsd": 5,
+  "pricing": {
+    "model": "muse-spark-1.3",
+    "inputPerMillion": 1.25,
+    "outputPerMillion": 4.25,
+    "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "checkedOn": "2026-10-27"
+  },
+  "scope": "Active-session original lesson content generation only; no source-code review; free credits only; first batch at most6initial calls, at most1deliberate repair per draft.",
+  "requests": [
+    {
+      "id": "24d98d66-c489-4662-a5b0-00d779dc55b0",
+      "purpose": "select-targets",
+      "sourceId": "hotel-shift-handover",
+      "at": "2026-10-27T04:33:54.419Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0045735,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 405,
+        "outputTokens": 957,
+        "totalTokens": 1362
+      },
+      "latencyMs": 9894
+    },
+    {
+      "id": "da9bdf8d-a5f3-451f-82e5-e9250f4e13a8",
+      "purpose": "generate-exercises",
+      "sourceId": "hotel-shift-handover",
+      "at": "2026-10-27T04:34:04.327Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.02733875,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 825,
+        "outputTokens": 6190,
+        "totalTokens": 7015
+      },
+      "latencyMs": 42677
+    },
+    {
+      "id": "5a81f9c1-1ed1-461a-9608-9cd128135ee4",
+      "purpose": "select-targets",
+      "sourceId": "campus-water-study",
+      "at": "2026-10-27T04:34:47.013Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0044015,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 400,
+        "outputTokens": 918,
+        "totalTokens": 1318
+      },
+      "latencyMs": 11056
+    },
+    {
+      "id": "dc3a6187-49c1-4df5-b8e2-460d8fdb0a27",
+      "purpose": "generate-exercises",
+      "sourceId": "campus-water-study",
+      "at": "2026-10-27T04:34:58.073Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01923125,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 833,
+        "outputTokens": 4280,
+        "totalTokens": 5113
+      },
+      "latencyMs": 42836
+    },
+    {
+      "id": "2bcc1179-7cc1-40f9-9f2e-458e90131388",
+      "purpose": "select-targets",
+      "sourceId": "workshop-safety-plan",
+      "at": "2026-10-27T04:35:40.920Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.00454725,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 401,
+        "outputTokens": 952,
+        "totalTokens": 1353
+      },
+      "latencyMs": 8569
+    },
+    {
+      "id": "cc29fdbb-30d3-4121-a41b-436bc6febffd",
+      "purpose": "generate-exercises",
+      "sourceId": "workshop-safety-plan",
+      "at": "2026-10-27T04:35:49.493Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.022728,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 822,
+        "outputTokens": 5106,
+        "totalTokens": 5928
+      },
+      "latencyMs": 45074
+    },
+    {
+      "id": "533dc47d-d143-4e54-9a13-c15287d9fa1c",
+      "purpose": "repair-exercises",
+      "sourceId": "hotel-shift-handover",
+      "at": "2026-10-27T04:37:28.756Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.01957175,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 2207,
+        "outputTokens": 3956,
+        "totalTokens": 6163
+      },
+      "latencyMs": 29797
+    },
+    {
+      "id": "c05d584c-fc7e-4859-86f6-995fce9d2e64",
+      "purpose": "select-targets",
+      "sourceId": "conference-travel",
+      "at": "2026-10-27T04:39:19.869Z",
+      "reservedUsd": 1,
+      "estimatedUsd": 0.0045335,
+      "outcome": "response-received",
+      "status": 200,
+      "usage": {
+        "inputTokens": 390,
+        "outputTokens": 952,
+        "totalTokens": 1342
+      },
+      "latencyMs": 10397
+    },
+    {
+      "id": "7983ddde-2240-42e0-aa29-e637b2e00e7f",
+      "purpose": "generate-exercises",
+      "sourceId": "conference-travel",
+      "at": "2026-10-27T04:39:30.273Z",
+      "reservedUsd": 1,
+      "estimatedUsd": null,
+      "outcome": "failed-or-unknown",
+      "status": null,
+      "usage": null,
+      "latencyMs": 60013
+    }
+  ],
+  "stopReason": "Provider/network stop: unknown; inspect before deliberate continuation."
+}

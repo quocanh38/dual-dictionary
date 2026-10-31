@@ -1,0 +1,11 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "f7eb2c64affb719e4ba286ab83c64603198af21f43b0371c3f183dd5a0a43fdb",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Listening and Reading contexts are 338 and 444 words, within target ranges. All 10 objective answer keys are unique and supported; explanations correctly handle the corrected sensor count, causal limits, claim/example distinction and cautious inference. Task 1 funding data has clear USD amounts/statuses and a $3,300 gap to estimated cost (with pending/variable contributions disclosed); health-survey counts, 25% response rate, voluntary sampling and sample/population composition are stated. All five Writing prompts include 150/250-word minimums and 20/40-minute timing; Speaking has appropriate two Part 1, one complete Part 2 cue card, and two Part 3 tasks. Original-content provenance is explicit; no official-item or score claims."
+  ],
+  "coverage": "Full review of metadata/provenance, both shared contexts (listening 338 words; reading 444 words), every objective prompt/options/key/explanation, Task 1 data and denominators/units/limitations, all five Writing prompts/timing, and all five Speaking prompts with part fit and cue-card completeness.",
+  "reviewerType": "AI-assisted"
+}

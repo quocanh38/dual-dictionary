@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "packSha256": "269cd70f8c0f433dd64cd14f7c73522b044873beb36556adc8d5d689374ad95c",
+  "reviewerType": "ai-assisted-editor",
+  "reviewerName": "Codex AI-assisted editor synthesizing independent Luna and Terra reviews",
+  "reviewedAt": "2026-10-27T08:54:25.883Z",
+  "note": "Two independent AI-assisted reviewers evaluated this exact payload hash against the matching source row and schema. Evidence synthesizes both reviews and a local consistency check. This is not human or learner validation. Rights/authorship are supported only by local declarations and are not independently verified. Terra route: gpt-5.6-terra (runtime label Codex GPT-6); Luna route was requested as gpt-6-luna but runtime exposed only broad GPT-6 label.",
+  "criteria": [
+    {
+      "id": "rights",
+      "prompt": "Original/permitted source, author, distribution rights and no learner PII checked.",
+      "status": "pass",
+      "evidence": "Both independent reviewers checked the local AI-assisted original-source and distribution-rights declaration; no learner PII is visible. This is a declaration check only, not independent rights verification."
+    },
+    {
+      "id": "lesson-1/t1/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “sign up for a shift” occurs verbatim in the final cited s2 and means registering for a work period."
+    },
+    {
+      "id": "lesson-1/t1/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm “to register to work during a particular period of time” matches the use in s2."
+    },
+    {
+      "id": "lesson-1/t1/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “đăng ký làm một ca làm việc” is natural and contextually accurate."
+    },
+    {
+      "id": "lesson-1/t2/source",
+      "prompt": "Phrase occurs in cited source and the contextual sense is supported.",
+      "status": "pass",
+      "evidence": "Both confirm “runs out of” occurs in the final cited s4 and describes the café having no common part left."
+    },
+    {
+      "id": "lesson-1/t2/meaning-en",
+      "prompt": "English gloss is the actual contextual meaning, not a selection rationale.",
+      "status": "pass",
+      "evidence": "Both confirm the gloss accurately means having no more of something left because it has all been used."
+    },
+    {
+      "id": "lesson-1/t2/meaning-vi",
+      "prompt": "Vietnamese gloss is accurate, natural and includes diacritics.",
+      "status": "pass",
+      "evidence": "Both confirm “hết sạch, không còn thứ gì đó” is natural and accurate for the stock context."
+    },
+    {
+      "id": "lesson-1/q1/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the unique meaning: register to work during a period; b/c are opposite scheduling actions and d is the lead’s separate tool-checking duty."
+    },
+    {
+      "id": "lesson-1/q1/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm every option explanation fits and the top explanation now correctly cites s2."
+    },
+    {
+      "id": "lesson-1/q2/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify a as the only grammatical natural example; b needs “signs,” c needs “to help,” and d needs the article “a.”"
+    },
+    {
+      "id": "lesson-1/q2/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the subject agreement, infinitive and article explanations accurately address the distractors."
+    },
+    {
+      "id": "lesson-1/q3/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as the only definition of having no stock left; ordering before stock runs low, finding a replacement and repairing are distinct actions."
+    },
+    {
+      "id": "lesson-1/q3/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the option explanations are accurate and the top explanation now correctly cites s4."
+    },
+    {
+      "id": "lesson-1/q4/unique-answer",
+      "prompt": "Identify correct option and explain each distractor. No other plausible answer; no subjective style/intent assumptions.",
+      "status": "pass",
+      "evidence": "Both identify b as correct for a recurring routine; a/d require past “ran out” and c requires “run” with “we.”"
+    },
+    {
+      "id": "lesson-1/q4/explanations",
+      "prompt": "Every option explanation is accurate; grammar/collocation claims are not overgeneralized.",
+      "status": "pass",
+      "evidence": "Both confirm the tense and subject-agreement explanations are accurate."
+    },
+    {
+      "id": "lesson-1/q5/new-situation",
+      "prompt": "Role or purpose differs meaningfully from the source; not merely rewriting it.",
+      "status": "pass",
+      "evidence": "Both confirm the transfer changes from repair-café stock management to roommates explaining a missing kitchen supply."
+    },
+    {
+      "id": "lesson-1/q5/self-check",
+      "prompt": "Model answer is idiomatic and uses target; checklist is usable; writing is not automatically graded.",
+      "status": "pass",
+      "evidence": "Both confirm the prompt explicitly requires “run out of” or a correct inflected form, the model naturally uses “ran out of,” and the checklist matches the writing task; it is self-assessment without automatic grading."
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,33 @@
+> **Current status — 31 October 2026:** the old state below is historical. v150/v151 have since been released; live Tutor resweep results and a local Tutor video exist. The submission is still draft, with public GitHub/video URLs pending. The full Official Rules and authenticated submission form were read on 30 October: the form requires a public GitHub URL and a three-minute video URL, plus description/Meta-use/Meta-importance fields and owner surveys/consent. See [current dossier](README.md). No form was submitted.
+
+# Submission verification — updated 29 October 2026
+
+**Latest release update — 29 October 2026:** product v149 is deployed to production (Netlify deploy `6ae3188c4be8b59f21e381ff`, source `949ac4c2f13806a4b0a5b66aefbfbe013092a914`, cache `mdx-dict-v149`). Production HTTP smoke passed 7/7 on attempt 1; post-deploy inventory comparison found zero live-only/hash/document drift. This records a product deployment only: no hackathon submission or public-repository publication was performed. No account-level usage or Billing lookup was performed, per the owner’s instruction.
+
+The audit and P1 continuation described below were performed on 27 October, before v149. Their references to a local candidate and no deployment are historical. The P1 continuation used owner-authorized generation, cross-model review and local approval; no account-level usage or Billing lookup was performed.
+
+## Official public source checked
+
+[Meta Global AI Developer Hackathon — Cerebral Valley](https://cerebralvalley.ai/e/meta-ai-developer-hackathon) was retrieved on 27 October 2026 using public web extraction. This is an observation of accessible public text, not an authenticated participant portal check or legal eligibility determination.
+
+The page lists two tracks: Indie for individual builders/students and Startup for teams/founders. It lists the application cutoff as 25 October at 11:59 PM ET and project submission as 4 November at 9:00 PM ET. In 2026 that submission time converts to **5 November, 09:00 Asia/Ho_Chi_Minh**; recheck before acting because the page says dates may change. Applications and project submissions are distinct deadlines.
+
+Participation is selected and subject to exclusions. This audit does not establish the owner's accepted status, residence, eligibility, or track assignment. The page still says official rules will be published before 26 October; that sentence is not evidence that the complete rules were accessible on 27 October.
+
+The linked [Application Overview and Event Waiver](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/waiver) returned only “Loading...” through public extraction. Full official rules, acceptance requirements, project-submission fields, repository visibility requirement, video length/format, and existing-code policy remain **unverified**. Application-review text is not a project-submission specification. No form was filled or sent.
+
+## Local evidence reconciled
+
+| Evidence | What it establishes | What it does not establish |
+|---|---|---|
+| `../../NEW-WORK.md` | v143 baseline SHA `97767b54a66f7f0732e3923c70f92a9b165319d8`; new Studio work started 27 October; tag created later | Event eligibility or acceptance of reused code |
+| `../deploy-state.md` | Current v149 production release deploy `6ae3188c4be8b59f21e381ff`, source `949ac4c2f13806a4b0a5b66aefbfbe013092a914`, cache `mdx-dict-v149`; post-deploy inventory and production smoke records | Hackathon submission, public publication or organizer approval |
+| `../LESSON-STUDIO.md`, `../../sw.js` | Current architecture, versioned shell cache, separated generation/offline learning | All historical cache/version statements in that document being current; older v144/v121 paragraphs are historical; the v149 header and deployment record are current |
+| `../lesson-studio-evidence/quality-cycle-2026-10-27/board.json` | Updated after the latest P1 batch: 33 exact-hash local editorial approvals, cross-model review evidence, and 33-pack clean/preseeded Chrome release QA | Production release, independent human review, physical-device use, learning efficacy |
+| `../lesson-studio-evidence/continuation-2026-10-27/` | Historical local regression evidence and execution constraints | A newly run test suite or approved real-provider pack release QA |
+
+The README leads with Studio rather than presenting the pre-event Tutor as the new contribution. Its Tutor section remains historical. Earlier 33-pack release evidence covers exact approved envelopes, clean/preseeded offline practice (66 contexts), and catalogue installation; v149 now serves the approved pack library and the production shell uses cache v149. This verification document records no hackathon submission or public repository publication.
+
+## Remaining handoff
+
+**Historical handoff, updated 27 October 2026 after batch 12:** all 33 lessons had delegated AI-assisted cross-model reviews and separate local approvals. Batch 12 used six bounded Meta generation calls and added refill-shop stock practice (B1 estimate), student-podcast editing (B1) and flexible start times at work (B2). Terra caught a critical v1 collocation explanation in Refill Shop; the local v2 correction was fully rereviewed at its new exact hash. Both configured reviewers passed 17/17 on all three final hashes; Luna recorded one non-blocking minor wording note and no critical or uncertain findings remain. All 33 approved packs passed 66 clean/preseeded Chrome mobile-emulation contexts; all 33 catalogue installs passed offline, including malformed-index/tamper rejection and Vault/Review preservation. Candidate cache mdx-dict-v137 has 48 offline paths. At that time, the content remained local and not deployed; v149 has since deployed the approved library. Levels are B1/B2 estimates, not calibrated CEFR ratings, and the current exercise sequence is meaning, usage and transfer rather than a validated difficulty curve. Rights remain declaration-only, browser tests are emulated, and no independent human/learner review or learning-efficacy evidence is claimed. The P1 set exceeds the original 10–20 range by 13 packs under the owner’s continuation instruction. Earlier batch 10 and 11 findings, including their recorded local fixes, remain documented above and in the per-batch evidence. The final recording and actual public repository/video links remain missing or unverified. Before submission, freeze the release set and exact source identity, obtain the complete organizer rules and form through authorized participant access, and check required fields and eligibility without guessing. The owner instructed the v149 production deployment on 29 October; a future deployment still requires the owner's instruction.

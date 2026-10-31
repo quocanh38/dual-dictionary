@@ -1,0 +1,25 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "f75933f5c7355a9f639f6f8925bccc797dc64def8a8bc32d73a1d4c97d8808c2",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [
+    "Shared listening (386 words) and reading (431 words) meet their target ranges and declared counts.",
+    "All answer keys and explanations match the scripts/passages; reading questions test main purpose, detail, claim and inference. Writing prompts include coherent data, Task 1/2 word targets and time guidance; speaking includes five prompts and a timed Part 2 cue card.",
+    "Stage language is suitably intermediate. Provenance and originality metadata are present, with no obvious reuse detected."
+  ],
+  "coverage": {
+    "itemsReviewed": 20,
+    "listeningExercises": 5,
+    "readingExercises": 5,
+    "writingPrompts": 5,
+    "speakingPrompts": 5,
+    "sharedListeningWordCount": 386,
+    "sharedReadingWordCount": 431,
+    "answersOptionsExplanations": "reviewed",
+    "writingDataTimingWordTargets": "reviewed",
+    "speakingCueCardAndStageLevel": "reviewed",
+    "provenanceOriginalityMetadata": "reviewed"
+  },
+  "reviewerType": "AI-assisted"
+}

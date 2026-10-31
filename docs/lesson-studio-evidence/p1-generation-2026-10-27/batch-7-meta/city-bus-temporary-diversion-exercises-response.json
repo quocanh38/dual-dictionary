@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Temporary Routes and Building Access",
+    "objective": "Learners will understand and correctly use remain in effect and step-free access in workplace notices.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s3, what does remain in effect mean when the diversion will remain in effect until inspectors confirm the road is safe?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The diversion will continue to be active until inspectors change it.",
+            "explanation": "Correct because it matches continuing to be valid until changed."
+          },
+          {
+            "id": "b",
+            "text": "The diversion will stop immediately and will not wait for inspectors.",
+            "explanation": "Wrong because it describes immediate cancellation instead of continuation."
+          },
+          {
+            "id": "c",
+            "text": "The diversion will be planned again only after inspectors leave the city.",
+            "explanation": "Wrong because it describes future replanning instead of staying active."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "The diversion stays active until inspectors confirm safety."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the correct sentence using remain in effect.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The temporary safety rules will remain in effect until the manager updates them.",
+            "explanation": "Correct because the verb form and time clause are natural."
+          },
+          {
+            "id": "b",
+            "text": "The temporary safety rules will remains in effect until the manager updates them.",
+            "explanation": "Wrong because remains should be remain after will."
+          },
+          {
+            "id": "c",
+            "text": "The temporary safety rules will remain in effect to the manager updates them.",
+            "explanation": "Wrong because to should be until before a clause."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only the correct sentence uses the phrase with natural grammar."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s6, what does step-free access mean when passengers who need step-free access should check the updated stop map?",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It means passengers can get free tickets without waiting in a line.",
+            "explanation": "Wrong because it confuses free with no cost instead of no steps."
+          },
+          {
+            "id": "b",
+            "text": "It means passengers can enter and move through the stops without using steps.",
+            "explanation": "Correct because it matches moving without steps or stairs."
+          },
+          {
+            "id": "c",
+            "text": "It means passengers must use stairs to reach the platform more quickly.",
+            "explanation": "Wrong because it describes the opposite action of using stairs."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "The phrase refers to moving without steps or stairs."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the correct sentence using step-free access.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The office offers a step-free access to visitors in wheelchairs.",
+            "explanation": "Wrong because a should be removed before the uncountable phrase."
+          },
+          {
+            "id": "b",
+            "text": "The office offers step-free access to visitors in wheelchairs.",
+            "explanation": "Correct because grammar and collocation are natural."
+          },
+          {
+            "id": "c",
+            "text": "The office offers step-free access to visitors on wheelchairs.",
+            "explanation": "Wrong because on should be in in the fixed phrase in wheelchairs."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Only one sentence uses the noun phrase with correct grammar."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "You are an office assistant welcoming a job candidate for an interview. Write 2-3 sentences to tell the candidate how to enter the building comfortably. Use the phrase step-free access.",
+        "sourceSentenceIds": [
+          "s6"
+        ],
+        "sampleAnswer": "We look forward to meeting you tomorrow. Our main entrance offers step-free access, so you can reach reception without using stairs. Please let us know if you need any extra help.",
+        "selfCheck": [
+          "My message has 2-3 sentences.",
+          "I used the phrase step-free access correctly.",
+          "I describe entering without steps and offer help."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 997,
+    "outputTokens": 5399,
+    "totalTokens": 6396
+  },
+  "status": 200,
+  "latencyMs": 27876,
+  "model": "muse-spark-1.3"
+}

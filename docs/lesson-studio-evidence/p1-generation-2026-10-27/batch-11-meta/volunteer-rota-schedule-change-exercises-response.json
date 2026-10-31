@@ -1,0 +1,144 @@
+{
+  "result": {
+    "title": "Workplace Scheduling: Bring Forward and Put Off",
+    "objective": "Learners will understand and use bring forward and put off to describe moving work events earlier or later.",
+    "exercises": [
+      {
+        "exerciseId": "q1",
+        "type": "meaning",
+        "targetId": "t1",
+        "prompt": "In sentence s1, what does bring forward mean?",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "To move the equipment check to an earlier day.",
+            "explanation": "It is correct because the coordinator moved the check earlier since Friday is booked."
+          },
+          {
+            "id": "b",
+            "text": "To delay the equipment check to a later day.",
+            "explanation": "It is wrong because delaying means moving later, the opposite of the context."
+          },
+          {
+            "id": "c",
+            "text": "To cancel the equipment check completely.",
+            "explanation": "It is wrong because the check still happens, only the date changes."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "The context shows the check happens one day earlier, not later or cancelled."
+      },
+      {
+        "exerciseId": "q2",
+        "type": "usage",
+        "targetId": "t1",
+        "prompt": "Choose the sentence that uses bring forward correctly and naturally.",
+        "sourceSentenceIds": [
+          "s1"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "The team decided to bring forward the workshop to Thursday to avoid the Friday booking.",
+            "explanation": "It is correct because it uses bring forward with correct grammar to mean moving to an earlier date."
+          },
+          {
+            "id": "b",
+            "text": "She bring forward the presentation to Monday because the client is available.",
+            "explanation": "It is wrong because She bring should be She brings to agree with the subject."
+          },
+          {
+            "id": "c",
+            "text": "We will bring forward the review on next Tuesday to finish earlier.",
+            "explanation": "It is wrong because on next Tuesday should be next Tuesday without on."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option uses bring forward with correct grammar to mean an earlier time."
+      },
+      {
+        "exerciseId": "q3",
+        "type": "meaning",
+        "targetId": "t2",
+        "prompt": "In sentence s3, what does put off mean?",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "To start the walkthrough earlier than planned.",
+            "explanation": "It is wrong because starting earlier is the opposite of delaying until more volunteers are available."
+          },
+          {
+            "id": "b",
+            "text": "To postpone the walkthrough to a later time.",
+            "explanation": "It is correct because the team delays the walkthrough until more volunteers are available."
+          },
+          {
+            "id": "c",
+            "text": "To cancel the walkthrough permanently.",
+            "explanation": "It is wrong because the walkthrough may still happen later, not be cancelled forever."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "The context shows a delay until more volunteers are available, not an earlier start or cancellation."
+      },
+      {
+        "exerciseId": "q4",
+        "type": "usage",
+        "targetId": "t2",
+        "prompt": "Choose the sentence that uses put off correctly and naturally.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "We had to put off the site visit until next week when more staff are available.",
+            "explanation": "It is correct because it uses put off with correct grammar to mean postponing to a later time."
+          },
+          {
+            "id": "b",
+            "text": "They has put off the training until June due to scheduling issues.",
+            "explanation": "It is wrong because They has should be They have to agree with the plural subject."
+          },
+          {
+            "id": "c",
+            "text": "He decided to put off the meeting in Monday morning because of the delay.",
+            "explanation": "It is wrong because in Monday morning should be on Monday morning for days."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Only one option uses put off with correct grammar to mean postponing."
+      },
+      {
+        "exerciseId": "q5",
+        "type": "transfer",
+        "targetId": "t2",
+        "prompt": "Imagine you are an office assistant emailing a client about a product meeting. Write 2-3 sentences explaining you need to postpone the meeting and suggesting a new arrangement. Use the phrase put off.",
+        "sourceSentenceIds": [
+          "s3"
+        ],
+        "sampleAnswer": "I am writing to let you know we need to put off our product meeting until next Tuesday. More team members will be available then to discuss the details with you.",
+        "selfCheck": [
+          "I wrote 2-3 sentences as a message with a new role and purpose.",
+          "I used put off correctly to mean postponing to a later time.",
+          "My message suggests a new arrangement for the meeting."
+        ],
+        "explanation": "Compare with the model and self-assess; no automatic grade."
+      }
+    ]
+  },
+  "usage": {
+    "inputTokens": 1009,
+    "outputTokens": 4207,
+    "totalTokens": 5216
+  },
+  "status": 200,
+  "latencyMs": 23405,
+  "model": "muse-spark-1.3"
+}

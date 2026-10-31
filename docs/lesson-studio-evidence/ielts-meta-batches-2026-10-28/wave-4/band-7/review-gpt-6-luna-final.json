@@ -1,0 +1,9 @@
+{
+  "reviewer": "gpt-6-luna",
+  "candidateSha256": "a5663e4bb0cc1e3fb18ea6046ec99735ef0de6054766f2db702f62a6f25dd293",
+  "verdict": "pass",
+  "findings": [],
+  "observations": [],
+  "coverage": "Full exact-byte rereview of the shared 367-word app-data seminar script and 427-word multi-site tutoring passage; all five Listening and five Reading questions, all options, answer keys and explanations; and all five Task 1/Task 2 Writing and five Speaking prompts. Checked answer uniqueness and source grounding, distractor validity, explanation accuracy, natural language and band fit, Task 1 data/units, and originality disclosure. Listening 01 now distinguishes 12,000 taps from roughly 8,000 distinct journey searches and no longer equates searches with completed journeys. Flood risk probabilities/outcomes and visitor/spending values, years and units are explicit. No unresolved issue found.",
+  "reviewerType": "AI-assisted"
+}

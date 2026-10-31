@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "item": "ielts-meta-wave-6-band-6-writing-02",
+      "severity": "uncertain",
+      "issue": "Attendance shares sum100 across ages per session, suggesting percentages of all session attendees, but wording says percentages within age groups. Completion percentages also lack a clear denominator. Explicitly define the base for each series (e.g. age shares of attendees and percentages of that same full-session group completing, or separate conditional age-group rates) and align wording/data.",
+      "reviewer": "gpt-6.1-sol"
+    }
+  ]
+}
