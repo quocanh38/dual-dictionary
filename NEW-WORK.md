@@ -1,6 +1,10 @@
-> **Dossier synchronization — 31 October 2026:** current submission narrative is Offline Lesson Studio on the pre-existing v143 dictionary/Tutor foundation. Main Studio demo and submission assets are tracked in docs/hackathon-submission/README.md. No new release, generation or learner study is implied by this documentation update.
+> **Dossier synchronization — 31 October 2026 (evening):** narrative is Offline Lesson Pipeline for working adults on flaky networks (OFFLINE-PIPELINE-2026-10-31.md). Live v154, cache mdx-dict-v152. FORM-ANSWERS project description cites shifts/sites/commutes. Main Studio demo and submission assets are tracked in docs/hackathon-submission/README.md. No new release, generation or learner study is implied by this documentation update.
 
 # Hackathon new-work disclosure
+
+## Production release update — v154/v153/v152 (31 October 2026 evening)
+
+LIVE v154 — narrative switch to offline pipeline for working adults; cache `mdx-dict-v152` (shell text only). App banner + Studio hero reworded to workplace-English-where-network-drops (EN/VI); village.js overlay reworded to pipeline; dossier rewritten as OFFLINE-PIPELINE with adult-audience fit; form description cites shifts/sites/commutes. v153 — village path on main app (banner, offline/online badges, EN/VI i18n). v152 — Village Kit provenance overlay + weight audit (learner kit ~612KB). Smoke checks on production; new narrative verified live, old classroom story gone.
 
 ## Production release update — v151 (30 October 2026)
 

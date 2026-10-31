@@ -1,20 +1,23 @@
-# Dual Dictionary — Offline Lesson Studio
+# Dual Dictionary — Offline Lesson Pipeline
 
-Turn a permitted reading into a reviewed bilingual lesson pack, then learn offline without an API key.
+Turn a permitted reading into a reviewed bilingual lesson pack, then learn workplace English where the network drops — no API key.
 
 - [Live Studio](https://dualdictionary.netlify.app/lessons/)
 - [Live dictionary and Vault](https://dualdictionary.netlify.app/)
 - [Hackathon dossier](docs/hackathon-submission/README.md)
+- [Offline pipeline narrative](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md)
 - [Pre-event foundation and new hackathon work](NEW-WORK.md)
 - [Studio architecture and author workflow](docs/LESSON-STUDIO.md)
 - [Third-party data and code attribution](NOTICE.md)
 
-## Latest status — 31 October 2026
+## Latest status — 31 October 2026 (evening)
 
 | Item | Status |
 |---|---|
-| Studio source | Published in [58ef314a](https://github.com/quocanh38/dual-dictionary/commit/58ef314a4ccae9b05f449376e25678bd5b7ef2b6); prior public history preserved |
-| Offline library | 33 approved, versioned AI-assisted packs |
+| Narrative | Offline lesson pipeline for working adults on flaky networks: prepare where connected, learn airplane-mode ([pipeline note](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md)) |
+| Studio source | Published in [5f9d25ac](https://github.com/quocanh38/dual-dictionary/commit/5f9d25ac) (narrative) on top of [8b39df2a](https://github.com/quocanh38/dual-dictionary/commit/8b39df2a) (Village Kit) + [e3fc2dd8](https://github.com/quocanh38/dual-dictionary/commit/e3fc2dd8) (main-app path); prior public history preserved |
+| Live production | v154, service-worker cache `mdx-dict-v152`; banner + offline/online badges verified live on `/` and `/lessons/` |
+| Offline library | 33 approved, versioned AI-assisted packs (workplace 20 + academic 13, B1 20 + B2 13) |
 | Validation | 27 schema/generator contract groups, library and quality-gate checks passed; all 33 pack checksums/metadata verified |
 | Main demo | Completed locally: 3:00, 1080p, English narration/subtitles; [recording evidence](docs/hackathon-submission/STUDIO-DEMO-2026-10-31.md) |
 | Video viewing link | Not published yet; recommended destination is YouTube Unlisted ([publishing notes](docs/hackathon-submission/VIDEO-PUBLISHING.md)) |
@@ -48,7 +51,7 @@ The library contains 33 approved, versioned AI-assisted packs. Automated validat
 
 ## Source snapshot and scope
 
-This export contains the current application source, static learning assets, test/build tools and structured generation/review/QA evidence. It is based on private deployment-source commit `dddf30818`, including the v151 Studio UI and the separately updated submission documents of 31 October 2026. The pre-event dictionary, Reader, Vault and Tutor are disclosed in NEW-WORK.md; Studio is the hackathon contribution.
+This export contains the current application source, static learning assets, test/build tools and structured generation/review/QA evidence. It includes the 31 October Offline Pipeline narrative (working adults on flaky networks), the Village Kit provenance/weight tooling, the main-app offline/online badges with EN/VI strings, and the separately updated submission documents. The pre-event dictionary, Reader, Vault and Tutor are disclosed in NEW-WORK.md; Studio is the hackathon contribution.
 
 Existing public repository history is preserved. Deployment-repository history, workstation handoffs and browser QA PNG screenshots are not exported; historical evidence references to those screenshots may therefore be unavailable. Structured JSON/text evidence remains included. Local demo video files and private study/browser backups are not in this source repository. A hosted three-minute video URL is still pending.
 
