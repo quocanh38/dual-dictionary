@@ -13,13 +13,13 @@ const size = async (p) => (await fs.stat(path.join(repo, p))).size;
 
 // Learner-critical: everything needed for airplane-mode lesson learning.
 const SHELL = [
-  'lessons/index.html', 'lessons/app.js', 'lessons/village.js', 'lessons/schema.js',
+  'lessons/index.html', 'lessons/app.js', 'lessons/village.js', 'lessons/photo-pane.js', 'lessons/photo-request.js', 'lessons/photo-downscale.js', 'lessons/schema.js',
   'lessons/storage.js', 'lessons/generator.js', 'lessons/backup.js', 'lessons/draft-file.js',
   'lessons/library.js', 'lessons/studio.css', 'lessons/example.json',
-  'lessons/library/index.json', 'lessons/library/provenance.json',
+  'lessons/library/index.json', 'lessons/library/provenance.json', 'lessons/why-meta.html',
   'sw.js', 'manifest.webmanifest', 'index.html', 'js/store.js', 'js/db.js',
 ];
-const BUDGETS = { shellKB: 290, packKB: 12, provenanceKB: 24, totalLearnerKB: 700 };
+const BUDGETS = { shellKB: 300, packKB: 12, provenanceKB: 24, totalLearnerKB: 700 };
 const failures = [];
 const check = (name, actualKB, budgetKB) => {
   const ok = actualKB <= budgetKB;
