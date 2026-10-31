@@ -9,6 +9,19 @@ Turn a permitted reading into a reviewed bilingual lesson pack, then learn offli
 - [Studio architecture and author workflow](docs/LESSON-STUDIO.md)
 - [Third-party data and code attribution](NOTICE.md)
 
+## Latest status — 31 October 2026
+
+| Item | Status |
+|---|---|
+| Studio source | Published in [58ef314a](https://github.com/quocanh38/dual-dictionary/commit/58ef314a4ccae9b05f449376e25678bd5b7ef2b6); prior public history preserved |
+| Offline library | 33 approved, versioned AI-assisted packs |
+| Validation | 27 schema/generator contract groups, library and quality-gate checks passed; all 33 pack checksums/metadata verified |
+| Main demo | Completed locally: 3:00, 1080p, English narration/subtitles; [recording evidence](docs/hackathon-submission/STUDIO-DEMO-2026-10-31.md) |
+| Video viewing link | Not published yet; recommended destination is YouTube Unlisted ([publishing notes](docs/hackathon-submission/VIDEO-PUBLISHING.md)) |
+| Submission | Draft only; hosted video URL, owner surveys/consent and final submission remain outstanding |
+
+The Studio demo shows permitted-source authoring, the explicit review boundary, an approved lesson, Chrome Offline reload with restored progress, fixed-key practice, self-assessed transfer and exact-meaning Vault save. It uses labelled retained Meta material and makes no new provider call. This is a desktop browser demonstration, not a learner-outcome study.
+
 ## Run locally
 
 This is a static browser app. With Python 3 installed, run from the repository root:

@@ -22,3 +22,7 @@ Owner explicitly requested synchronization to https://github.com/quocanh38/dual-
 - No new browser/device or language-quality certification is implied. Earlier observed browser flow is recorded separately in STUDIO-DEMO-2026-10-31.md.
 
 The hosted three-minute video URL, owner survey answers and final submission remain separate outstanding steps.
+
+## Publication receipt
+
+GitHub main was successfully updated to [58ef314a4ccae9b05f449376e25678bd5b7ef2b6](https://github.com/quocanh38/dual-dictionary/commit/58ef314a4ccae9b05f449376e25678bd5b7ef2b6). Remote commit and complete tree were verified after push. Runtime byte parity passed for 18,431 files. The Netlify deployment remote was not pushed.

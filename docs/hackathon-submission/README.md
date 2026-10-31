@@ -51,7 +51,7 @@ Why Meta matters: it performs the language-generation step that turns a permitte
 | Item | Current state |
 |---|---|
 | Public GitHub URL | [quocanh38/dual-dictionary](https://github.com/quocanh38/dual-dictionary) — this source snapshot contains the Studio application, 33-pack library, tools and current dossier. The earlier public main snapshot `2c43d65feb5f48c67568396898fc9d1ba4c2a77c` is retained in Git history. See [source synchronization record](GITHUB-SYNC-2026-10-31.md) for scope and checks. |
-| Main three-minute video | Completed local `DualDictionary-Studio-demo-3min.mp4`, 180 seconds, with labelled retained Meta material and observed Chrome Offline reload. Hash/provenance: [recording evidence](STUDIO-DEMO-2026-10-31.md). Hosted viewing URL still missing. |
+| Main three-minute video | Completed local `DualDictionary-Studio-demo-3min.mp4`, 180 seconds, with labelled retained Meta material and observed Chrome Offline reload. Hash/provenance: [recording evidence](STUDIO-DEMO-2026-10-31.md). Hosted viewing URL still missing; [YouTube Unlisted publishing notes](VIDEO-PUBLISHING.md) are prepared. |
 | Tutor video | Local `DualDictionary-demo-3min.mp4` from the previous chat step is a supporting demonstration of existing infrastructure, not the new-work narrative. |
 | Description / use of Meta / why Meta | Draft text above; copy into the corresponding form fields after final review. |
 | Partner feedback | Optional form field; answer from actual retained Baseten experience. |
