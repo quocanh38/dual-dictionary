@@ -1317,3 +1317,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .reader-tools summary { cursor:pointer; padding:10px 12px; border:1px solid var(--border); border-radius:10px; }
 .reader-tools[open] { flex-basis:100%; }
 .reader-tools button { margin:8px 4px 0 0; }
+
+.village-banner{border-left:4px solid #0f766e;background:#eefaf7;padding:12px 16px;border-radius:10px;margin:12px 0}.village-banner p{margin:6px 0}.village-actions{display:flex;gap:10px;flex-wrap:wrap}.village-banner .btn-secondary{text-decoration:none}
+@media(prefers-reduced-motion:reduce){.village-banner{border-left-width:6px}}
+.offline-badge{display:inline-block;background:#0f766e;color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}.online-badge{display:inline-block;background:#fff;border:1px solid #b34524;color:#b34524;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}

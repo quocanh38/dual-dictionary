@@ -57,7 +57,19 @@ Learner device chỉ cần 612KB trên + cache PWA là học được.
 - `tools/lessons/quality-gate-check.mjs` — PASS (gồm fix fileURLToPath).
 - `tools/lessons/village-weight.mjs` — 4/4 PASS + learner kit 611.7 KB.
 
-## 6. Chưa làm (chờ owner / checkout chính chủ)
+## 6. App chính — đường learner + ranh giới offline/online (31/10 tối)
+
+- `index.html` — banner Village Kit ngay sau `<main>`: câu chuyện vùng sâu +
+  2 nút learner không key (Offline lessons 33 packs · IELTS/TOEIC offline lab).
+  IELTS lab gắn badge `OFFLINE · no key` + dòng village path; 2 khối
+  "Optional AI feedback" (Writing/Speaking) gắn badge `ONLINE · own key`.
+- `js/app.js` — i18n EN/VI đủ bộ: `village.title/body/lessons/ielts/offlineBadge/labNote`.
+- `css/style.css` — `.village-banner`, `.offline-badge` (teal), `.online-badge`
+  (viền đỏ), tôn trọng `prefers-reduced-motion`.
+- Ranh giới trung thực: Tutor nút giữ nguyên "AI practice (online · own key)";
+  learner path (lessons + IELTS L/R + Vault/Review) chạy airplane-mode, không key.
+
+## 7. Chưa làm (chờ owner / checkout chính chủ)
 
 - Port sang `work/github-studio` + push GitHub (chưa có lệnh).
 - Quay clip 30s proof Install/search/provenance trên Chrome sạch.
