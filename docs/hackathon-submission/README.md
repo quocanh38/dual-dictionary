@@ -1,12 +1,14 @@
-# Dual Dictionary — Offline Lesson Studio
+# Dual Dictionary — Offline Lesson Pipeline
 
-**Submission draft synchronized 31 October 2026. Not submitted.** Track shown in the participant form: Indie Developer; theme: Build for Your World. The owner must still confirm eligibility, team details, the two opinion/intent survey answers and the final rights consent.
+**Submission draft synchronized 31 October 2026 (evening). Not submitted.** Track shown in the participant form: Indie Developer; theme: Build for Your World. The owner must still confirm eligibility, team details, the two opinion/intent survey answers and the final rights consent.
 
 ## Submission description
 
-Dual Dictionary helps Vietnamese learners turn a reading into phrases they can use. The new Offline Lesson Studio builds on our existing dictionary, Reader, Vault and spaced-review app. An author supplies an original or permitted text; Meta models draft phrases grounded in exact source sentences, contextual English/Vietnamese meanings, fixed-answer exercises and a changed-situation writing task. Drafts must be reviewed and explicitly approved before distribution as versioned lesson packs.
+Dual Dictionary helps Vietnamese working adults turn a reading into phrases they can use on the job. The new Offline Lesson Studio builds on our existing dictionary, Reader, Vault and spaced-review app. An author supplies an original or permitted text; Meta models draft phrases grounded in exact source sentences, contextual English/Vietnamese meanings, fixed-answer exercises and a changed-situation writing task. Drafts must be reviewed and explicitly approved before distribution as versioned lesson packs.
 
-A learner installs an approved pack once, then reads, practises, checks explanations, writes a transfer response and saves the selected meaning and source to the existing Vault. Installed packs and progress work offline. Live generation needs connectivity and the author's own provider key; learner practice does not require an API key. Free writing uses a model/checklist and self-assessment, not automated grading.
+A learner installs an approved pack once — workplace handovers, deliveries, safety plans, academic readings (33 packs: workplace 20 + academic 13) — then reads, practises, checks explanations, writes a transfer response and saves the selected meaning and source to the existing Vault. Installed packs and progress work offline: prepare where connected, learn where the network drops (shifts, sites, commutes). Live generation needs connectivity and the author's own provider key; learner practice does not require an API key. Free writing uses a model/checklist and self-assessment, not automated grading.
+
+Full narrative: [OFFLINE-PIPELINE-2026-10-31.md](OFFLINE-PIPELINE-2026-10-31.md).
 
 The contribution is a durable author-to-learner workflow: generation, editorial decisions and offline distribution remain distinct and inspectable. The retained Meta outputs, editorial changes and exact-payload reviews document both failures and corrections. These safeguards do not establish general language accuracy or learning gains.
 
@@ -14,11 +16,11 @@ The contribution is a durable author-to-learner workflow: generation, editorial 
 
 - **Pre-event baseline:** v143, commit `97767b54a66f7f0732e3923c70f92a9b165319d8`, 25 October. Dictionary, Reader, Vault, spaced review, BYOK Tutor, authored demo and earlier exam/blog features already existed. The reference tag was created on 27 October, not before kickoff.
 - **New from 27 October:** `/lessons/` authoring/review/offline player, source references, versioned packs, isolated Studio storage and request ledger, backup/restore, draft import and exact-meaning Vault integration. The new IELTS pathway and generated practice library are supporting scope; not every prior exam feature is new.
-- **Later refinements:** v150 provider routing and trust/translation/lookup fixes; v151 exposes the flagship loop. Details and baseline disclosure: [NEW-WORK](../../NEW-WORK.md).
+- **Later refinements:** v150 provider routing and trust/translation/lookup fixes; v151 flagship loop; v152–v154 offline pipeline (provenance overlay, weight audit, main-app offline/online badges, adult-audience narrative). Details and baseline disclosure: [NEW-WORK](../../NEW-WORK.md).
 
 ## Current release and evidence
 
-Release records identify v151 source `b152bc9f186cee08f114f04d4755c9ae2bba8c62`, with service-worker cache `mdx-dict-v150`. The Netlify deploy ID remains unfilled; no fresh full-site parity run was made for this document update. Repository HEAD before this update is `dddf30818` (evaluation documentation after the product release). Release identity is distinct from the later docs commit.
+Live production is v154 (31 October evening), service-worker cache `mdx-dict-v152`: app banner + Studio hero tell the offline-pipeline story for working adults, verified live on `/` and `/lessons/` with the old classroom story gone. Prior records identify v151 source `b152bc9f186cee08f114f04d4755c9ae2bba8c62`, cache `mdx-dict-v150`.
 
 The production Studio was opened on 31 October and showed the two-provider author workflow, a reviewed 33-pack library and Ready offline. The [31 October Studio recording](STUDIO-DEMO-2026-10-31.md) verified one approved pack through Chrome Offline reload, progress restoration, fixed-key practice, self-assessed transfer and an exact-meaning/source Vault save. This is a one-pack desktop flow with browser offline emulation, not new all-pack QA or physical-device coverage.
 
