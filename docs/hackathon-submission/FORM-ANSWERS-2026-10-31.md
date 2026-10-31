@@ -4,7 +4,7 @@ Draft only. The public GitHub source snapshot includes Studio and the current do
 
 ## Project description
 
-Dual Dictionary helps Vietnamese learners turn a reading into phrases they can use. Our new Offline Lesson Studio takes an original or permitted text, uses Meta models to draft source-grounded phrases and bilingual exercises, and separates editorial review from publication. A learner installs an approved, versioned pack once, then reads, practises with explanations, writes in a new situation, and saves the selected meaning and source to the existing Vault—even offline, without an API key.
+Dual Dictionary helps Vietnamese working adults turn a reading into phrases they can use on the job. Our new Offline Lesson Studio takes an original or permitted text, uses Meta models to draft source-grounded phrases and bilingual exercises, and separates editorial review from publication. A learner installs an approved, versioned pack once — workplace handovers, deliveries, safety plans, academic readings — then reads, practises with explanations, writes in a new situation, and saves the selected meaning and source to the existing Vault: even offline, without an API key. Built for shifts, sites and commutes where the network drops.
 
 The pre-event foundation already included the dictionary, Reader, Vault and live Tutor. Hackathon work beginning 27 October adds the Studio authoring/review/player workflow, versioned offline packs, isolated draft/progress storage and exact-meaning integration. The library contains 33 AI-assisted, editor-reviewed packs. Review and deterministic checks do not certify teaching quality; learner outcomes have not been measured.
 

@@ -1,6 +1,6 @@
-// Village Kit overlay for the Offline Lesson Studio.
+// Offline pipeline overlay for the Offline Lesson Studio.
 // Loads AFTER app.js (deferred): adds search + per-pack Meta provenance to
-// the reviewed library, a village banner, and a low-memory mode — without
+// the reviewed library, a pipeline banner, and a low-memory mode — without
 // touching the Studio core files (app.js stays byte-identical).
 (function () {
   'use strict';
@@ -19,20 +19,20 @@
   }
   function decorateCatalogue() {
     var host = document.querySelector('#app');
-    if (!host || host.dataset.villageDecorated) return;
+    if (!host || host.dataset.pipelineDecorated) return;
     var h2s = host.querySelectorAll('h2');
     var found = false;
     h2s.forEach(function (h) { if (h.textContent.indexOf('Reviewed lesson library') !== -1) found = true; });
     if (!found) return;
-    host.dataset.villageDecorated = '1';
+    host.dataset.pipelineDecorated = '1';
     // 1) offline search box (client-side filter, no network)
     var label = document.createElement('label');
     label.textContent = 'Search lessons (offline filter)';
-    label.htmlFor = 'village-search';
+    label.htmlFor = 'pipeline-search';
     var input = document.createElement('input');
-    input.id = 'village-search';
+    input.id = 'pipeline-search';
     input.type = 'search';
-    input.placeholder = 'e.g. library, handover, B2…';
+    input.placeholder = 'e.g. handover, B2, academic…';
     input.autocomplete = 'off';
     host.insertBefore(input, host.children[2] || null);
     host.insertBefore(label, input);
@@ -49,10 +49,10 @@
         var btn = s.querySelector('button');
         var title = (s.querySelector('h3') || {}).textContent || '';
         var key = Object.keys(m).find(function (k) { return m[k].title === title; });
-        if (!key || s.querySelector('.village-prov')) return;
+        if (!key || s.querySelector('.pipeline-prov')) return;
         var p = m[key];
         var line = document.createElement('p');
-        line.className = 'meta village-prov';
+        line.className = 'meta pipeline-prov';
         line.textContent = 'Made with ' + p.provider + ' · ' + p.model +
           ' · reviewed by ' + p.reviewerType + ' · sha ' + String(p.sha256).slice(0, 12) + '…';
         s.insertBefore(line, btn || null);
@@ -64,18 +64,18 @@
     try {
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var saveData = navigator.connection && navigator.connection.saveData;
-      if (reduce || saveData) document.documentElement.classList.add('village-lite');
+      if (reduce || saveData) document.documentElement.classList.add('pipeline-lite');
     } catch (e) { /* best effort */ }
   }
-  // 4) village banner under the hero (only on the studio page)
+  // 4) pipeline banner under the hero (only on the studio page)
   function banner() {
-    if (document.querySelector('.village')) return;
+    if (document.querySelector('.pipeline-note')) return;
     var main = document.querySelector('main');
     var status = document.querySelector('#offline-status');
     if (!main || !status) return;
     var p = document.createElement('p');
-    p.className = 'notice village';
-    p.textContent = 'Village Kit: install packs once (school USB or one online visit), then airplane-mode learning works — read, practise, save meanings, review. No account, no key, no tracking on the learner device.';
+    p.className = 'notice pipeline-note';
+    p.textContent = 'Offline pipeline: install packs once (office wifi or one online visit), then airplane-mode learning works — read, practise, save meanings, review. No account, no key, no tracking on the learner device.';
     main.insertBefore(p, status);
   }
   lowMemory();

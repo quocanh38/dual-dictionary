@@ -161,10 +161,11 @@
 // v145: add wave 4, bringing reviewed IELTS Meta practice to 320 items.
 // v147: add waves 6–10, bringing reviewed IELTS Meta practice to 800 items.
 // v149: release the merged wave-10 library and 800-item IELTS practice pack.
+// v152: Village path on main app — banner + offline/online badges + EN/VI i18n.
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v151';
+const CACHE = 'mdx-dict-v152';
 const ASSETS = [
   './',
   './index.html',
