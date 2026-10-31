@@ -190,4 +190,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/blog/phuong-phap/offline-lesson-packs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/blog/phuong-phap/lo-trinh-30-ngay-packs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/blog/toeic/toeic-ca-dem-mang-yeu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/blog/en/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
