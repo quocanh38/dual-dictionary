@@ -699,6 +699,64 @@ function compareLinksHtml(word) {
   }).join('');
   return `<section class="related"><h2>Phân biệt dễ nhầm</h2><div class="related-list">${rows}</div></section>`;
 }
+/* P2 topic links (owner-approved 01/11): same AWL sublist = same academic
+ * topic (evidence Sub1 -> analysis, data...). Max 6, excludes self + words
+ * already in related/phrase chips. Topical mesh for SEO, not token match. */
+let TOPIC_INDEX = null;
+function topicLinksHtml(word, labels) {
+  if (TOPIC_INDEX === null) {
+    TOPIC_INDEX = {};
+    try {
+      const awl = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'awl.json'), 'utf8')).words || {};
+      const bySub = {};
+      for (const [w, s] of Object.entries(awl)) {
+        const k = String(s);
+        if (!bySub[k]) bySub[k] = [];
+        bySub[k].push(w);
+      }
+      TOPIC_INDEX = bySub;
+    } catch (e) { TOPIC_INDEX = {}; }
+  }
+  const sub = labels && labels.awl ? String(typeof labels.awl === 'object' ? (labels.awl.sublist ?? labels.awl.sub ?? '') : labels.awl) : '';
+  if (!sub || !TOPIC_INDEX[sub]) return '';
+  const mates = TOPIC_INDEX[sub].filter((w) => w !== word && BUILT.has(w)).slice(0, 12);
+  // prefer exam-tagged mates (IELTS core first)
+  const scored = mates.map((w) => ({ w, exam: ((examTagsFor(w, null) || {}).tags || []).includes('ielts') ? 0 : 1 }));
+  scored.sort((a, b) => a.exam - b.exam);
+  const picks = scored.slice(0, 6).map((s) => s.w);
+  if (!picks.length) return '';
+  return `<section class="related"><h2>Cùng chủ đề học thuật (AWL Sublist ${escapeHtml(sub)})</h2><div class="related-list">${picks.map((w) => `<a class="related-chip" href="${wordPageUrl(w)}">${escapeHtml(w)}</a>`).join('')}</div></section>`;
+}
+/* P2 word FAQ (owner-approved 01/11): 200 top words get 2-3 Q/A distilled
+ * from their own hand/auto notes (data/word-faq.json). Rendered compact +
+ * FAQPage schema (People Also Ask eligible). */
+let WORD_FAQ = null;
+function wordFaq() {
+  if (WORD_FAQ === null) {
+    try { WORD_FAQ = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'word-faq.json'), 'utf8')); }
+    catch (e) { WORD_FAQ = {}; }
+  }
+  return WORD_FAQ;
+}
+function faqHtml(word) {
+  const list = wordFaq()[String(word).toLowerCase()];
+  if (!list || !list.length) return '';
+  const rows = list.map(([head, body]) =>
+    `<details class="faq-item"><summary>${escapeHtml(head)} — ${escapeHtml(body.slice(0, 80))}${body.length > 80 ? '…' : ''}</summary><p>${escapeHtml(body)}</p></details>`).join('\n');
+  return `<section class="related faq-sec"><h2>Câu hỏi thường gặp</h2>${rows}</section>`;
+}
+function faqJsonLd(word) {
+  const list = wordFaq()[String(word).toLowerCase()];
+  if (!list || !list.length) return null;
+  return {
+    '@type': 'FAQPage',
+    mainEntity: list.map(([head, body]) => ({
+      '@type': 'Question',
+      name: `${word} — ${head}?`,
+      acceptedAnswer: { '@type': 'Answer', text: body },
+    })),
+  };
+}
 function ipaLineHtml(word, ipa) {
   if (!ipa) return '';
   const bre = breOf(ipa, word);
@@ -778,6 +836,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
           { '@type': 'ListItem', position: 3, name: word, item: canonical },
         ],
       },
+      ...(faqJsonLd(word) ? [faqJsonLd(word)] : []),
     ],
   };
 
@@ -832,6 +891,10 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   ${examExamplesHtml(word, null)}
 
   ${compareLinksHtml(word)}
+
+  ${topicLinksHtml(word, labels)}
+
+  ${faqHtml(word)}
 
   ${relatedHtml}
 
@@ -1345,6 +1408,9 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .exam-src{color:var(--muted);font-size:.82rem}
 .exam-copy{display:inline-block;margin-left:6px;padding:1px 7px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:pointer;font-size:.8rem}
 .exam-copy:hover{border-color:var(--teal)}
+.faq-sec details{margin:8px 0;border:1px solid var(--line);border-radius:8px;padding:8px 12px;background:var(--paper)}
+.faq-sec summary{cursor:pointer;font-weight:600;color:var(--teal-dark)}
+.faq-sec p{margin:6px 0 2px}
 .mylist-btn{display:inline-block;margin:6px 0 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;background:var(--paper);color:var(--teal-dark);cursor:pointer}
 .hub-list li.sel{outline:2px solid var(--teal);border-radius:6px}
 #mylist-bar{display:none;gap:8px;align-items:center;margin:10px 0;padding:10px 14px;border:1px solid var(--teal);border-radius:10px;background:#e6f4f2;font-size:.9rem}
