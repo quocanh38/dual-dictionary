@@ -1,0 +1,20 @@
+{
+  "format": "dual-dictionary-lesson-covers",
+  "schemaVersion": 1,
+  "model": "muse-image-1.0",
+  "generatedAt": "2026-11-01",
+  "covers": {
+    "hotel-shift-handover.json": {
+      "cover": "covers/hotel-shift-handover.webp",
+      "bytes": 210426
+    },
+    "workshop-safety-plan.json": {
+      "cover": "covers/workshop-safety-plan.webp",
+      "bytes": 173354
+    },
+    "library-hours.json": {
+      "cover": "covers/library-hours.webp",
+      "bytes": 94574
+    }
+  }
+}

@@ -43,6 +43,29 @@
         s.style.display = (!q || t.indexOf(q) !== -1) ? '' : 'none';
       });
     });
+    // 1b) pack covers (Muse Image, display-only; packs untouched). Match by
+    // library order: fetch index + covers, map entry file -> section order.
+    Promise.all([fetch('./library/index.json').then(function (r) { return r.json(); }), fetch('./library/covers.json').then(function (r) { return r.ok ? r.json() : null; })]).then(function (pair) {
+      var index = pair[0], doc = pair[1];
+      if (!index || !index.packs || !doc || !doc.covers) return;
+      var sections = host.querySelectorAll(':scope > section');
+      index.packs.forEach(function (entry, i) {
+        var c = doc.covers[entry.file];
+        var s = sections[i];
+        if (!c || !s || s.querySelector('.pack-cover')) return;
+        var img = document.createElement('img');
+        img.className = 'pack-cover';
+        img.src = './library/' + c.cover;
+        img.alt = 'Cover illustration for ' + entry.title;
+        img.loading = 'lazy';
+        img.width = 640;
+        s.insertBefore(img, s.firstChild);
+        var cap = document.createElement('p');
+        cap.className = 'meta';
+        cap.textContent = 'Cover: Muse Image (muse-image-1.0) · display only, not part of the reviewed pack.';
+        s.insertBefore(cap, s.children[1] || null);
+      });
+    }).catch(function () {});
     // 2) per-pack Meta provenance line (one small JSON fetch, cached)
     provMap().then(function (m) {
       host.querySelectorAll(':scope > section').forEach(function (s) {
