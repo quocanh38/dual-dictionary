@@ -267,7 +267,8 @@ function phraseExamHtml(phrase) {
   let db = null;
   try { db = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'exam-examples.json'), 'utf8')); }
   catch (e) { return ''; }
-  const list = db.phrases && db.phrases[String(phrase).toLowerCase()];
+  const pl = String(phrase).toLowerCase();
+  const list = db.phrases && (db.phrases[pl] || db.phrases[pl.replace(/ /g, '-')]);
   if (!list || !list.length) return '';
   const esc = core.escapeHtml;
   const rows = list.map(([en, vi, src]) =>
