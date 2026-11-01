@@ -114,25 +114,54 @@ function main() {
     fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(p));
   }
   const rows = slugs.map(({ slug, p }) => `    <li><a href="/vi/cambridge/${slug}/">Từ vựng Cam ${p.book} Test ${p.test} (${esc(p.skill)}) — ${(p.words || []).length} từ + ${(p.phrases || []).length} cụm</a></li>`).join('\n');
+  const books = papers.map((p) => p.book);
+  const range = `Cam ${Math.min(...books)}-${Math.max(...books)}`;
+  const hubTitle = `Từ vựng đề Cambridge IELTS — ${range} | Dual Dictionary`;
+  const hubDesc = `Bộ từ vựng hay gặp trong đề thi IELTS Cambridge ${range.replace('Cam ', '')} theo từng test — nghĩa, phát âm, ví dụ thi và bài luyện.`;
+  const itemList = {
+    '@type': 'ItemList',
+    name: hubTitle,
+    itemListElement: slugs.map(({ slug, p }, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: `Từ vựng ${p.title}`,
+      url: `${SITE}/vi/cambridge/${slug}/`,
+    })),
+  };
+  const hubJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'CollectionPage', name: hubTitle, description: hubDesc, url: `${SITE}/vi/cambridge/`, inLanguage: 'vi' },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Cambridge', item: `${SITE}/vi/cambridge/` },
+        ],
+      },
+      itemList,
+    ],
+  };
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), `<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>Từ vựng đề Cambridge IELTS — Cam 15-18 | Dual Dictionary</title>
-<meta name="description" content="Bộ từ vựng hay gặp trong đề thi IELTS Cambridge 15-18 theo từng test — nghĩa, phát âm, ví dụ thi và bài luyện.">
+<title>${esc(hubTitle)}</title>
+<meta name="description" content="${esc(hubDesc)}">
 <link rel="canonical" href="${SITE}/vi/cambridge/">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
+<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Cambridge</span></nav>
 <main class="page">
   <p class="word-kicker">Đề thi thật</p>
   <h1 style="font-size:2.2rem">Từ vựng đề Cambridge IELTS</h1>
-  <p style="color:var(--muted)">Từ vựng hay gặp theo từng đề thi thật Cambridge 15–18. Chỉ liệt kê từ vựng — không sao chép đề thi.</p>
+  <p style="color:var(--muted)">Từ vựng hay gặp theo từng đề thi thật Cambridge ${esc(range)}. Chỉ liệt kê từ vựng — không sao chép đề thi.</p>
   <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>

@@ -139,18 +139,36 @@ function hubHtml(pairs) {
     const slug = `${slugOf(p.a)}-vs-${slugOf(p.b)}`;
     return `    <li data-word="${esc(slug)}"><a href="/vi/phan-biet/${slug}/">Phân biệt ${esc(p.a)} và ${esc(p.b)}</a></li>`;
   }).join('\n');
+  const itemList = {
+    '@type': 'ItemList',
+    name: `Phân biệt ${pairs.length} cặp từ dễ nhầm`,
+    itemListElement: pairs.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: `Phân biệt ${p.a} và ${p.b}`,
+      url: `${SITE}/vi/phan-biet/${slugOf(p.a)}-vs-${slugOf(p.b)}/`,
+    })),
+  };
+  const hubJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'CollectionPage', name: `Phân biệt ${pairs.length} cặp từ dễ nhầm`, url: `${SITE}/vi/phan-biet/`, inLanguage: 'vi' },
+      itemList,
+    ],
+  };
   return `<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>Phân biệt từ dễ nhầm — 30 cặp IELTS/TOEIC | Dual Dictionary</title>
-<meta name="description" content="30 cặp từ dễ nhầm (evidence/proof, affect/effect, balance sheet/income statement…) kèm câu đúng/sai và cách dùng IELTS/TOEIC.">
+<title>Phân biệt từ dễ nhầm — ${pairs.length} cặp IELTS/TOEIC | Dual Dictionary</title>
+<meta name="description" content="${pairs.length} cặp từ dễ nhầm (evidence/proof, affect/effect, say/tell…) kèm câu đúng/sai và cách dùng IELTS/TOEIC.">
 <link rel="canonical" href="${SITE}/vi/phan-biet/">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
+<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Phân biệt</span></nav>

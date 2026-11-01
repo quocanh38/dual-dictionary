@@ -100,8 +100,8 @@ ${rightRows || `<li>Tra chi tiết tại trang từ “${esc(m.word)}”.</li>`}
 }
 
 function main() {
-  const data = JSON.parse(fs.readFileSync('/tmp/mistakes.json', 'utf8'));
-  const pairs = (data.pairs || []).slice(0, 40);
+  const data = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'mistakes.json'), 'utf8'));
+  const pairs = (data.pairs || []);
   // word link guard: phrase mistakes (contain space) -> phrase slug page
   let phraseSlugs = new Set();
   try {
@@ -127,18 +127,36 @@ function main() {
     fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(m, wordHref));
   }
   const rows = pairs.map((m, i) => `    <li><a href="/vi/loi-sai/${slugs[i]}/">Đừng nói “${esc(m.mistake)}” (${esc(m.word)})</a></li>`).join('\n');
+  const hubTitle = `${pairs.length} lỗi sai tiếng Anh thường gặp`;
+  const hubJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'CollectionPage', name: hubTitle, url: `${SITE}/vi/loi-sai/`, inLanguage: 'vi' },
+      {
+        '@type': 'ItemList',
+        name: hubTitle,
+        itemListElement: pairs.map((m, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: `Đừng nói “${m.mistake}” (${m.word})`,
+          url: `${SITE}/vi/loi-sai/${slugs[i]}/`,
+        })),
+      },
+    ],
+  };
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), `<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>40 lỗi sai tiếng Anh thường gặp | Dual Dictionary</title>
-<meta name="description" content="40 lỗi sai tiếng Anh người Việt hay mắc (an evidence, analyze on…) kèm cách dùng đúng và câu mẫu IELTS/TOEIC.">
+<title>${pairs.length} lỗi sai tiếng Anh thường gặp | Dual Dictionary</title>
+<meta name="description" content="${pairs.length} lỗi sai tiếng Anh người Việt hay mắc kèm cách dùng đúng và câu mẫu IELTS/TOEIC.">
 <link rel="canonical" href="${SITE}/vi/loi-sai/">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
+<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Lỗi sai</span></nav>
