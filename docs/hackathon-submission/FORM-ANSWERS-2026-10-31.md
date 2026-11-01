@@ -1,6 +1,6 @@
 # Submission form — review-ready text, 31 October 2026
 
-Draft only. The public GitHub source snapshot includes Studio and the current dossier. The hosted video URL remains missing. The two opinion/intent surveys and legal consent require the owner's own answers/decision. No form has been filled or submitted by this update.
+Draft only. The public GitHub source snapshot includes Studio and the current dossier. Video published: https://youtu.be/6r8nJDiZr5E. Required project fields and owner-selected surveys were filled on 1 November 2026; legal consent and final Submit are not yet verified.
 
 ## Project description
 
@@ -26,8 +26,8 @@ Draft for owner review: The Studio creation route uses Baseten-hosted Muse Spark
 
 - Public GitHub repository URL: https://github.com/quocanh38/dual-dictionary
 - Source readiness: Studio code, 33 reviewed packs, test/build tools and the current dossier are included; prior public repository history is preserved.
-- Main three-minute video viewing URL: pending; local final file is DualDictionary-Studio-demo-3min.mp4.
+- Main three-minute video viewing URL: https://youtu.be/6r8nJDiZr5E — Unlisted, English captions, 1080p available; player displays 3:00.
 - Track/theme currently observed: Indie Developer / Build for Your World; owner to confirm.
-- Likelihood of building with Meta Model API: owner answer required.
-- Overall opinion of Meta Model API: owner answer required.
+- Likelihood of building with Meta Model API: Very likely — explicitly selected by owner on 1 November; entered into form.
+- Overall opinion of Meta Model API: Very favorable — explicitly selected by owner on 1 November; entered into form.
 - Final permission checkbox and Submit: owner review at submission time.
