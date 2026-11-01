@@ -4,6 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {reviewTemplate,audit,approve} from './quality-gate.mjs';
 import {readPack,digest} from '../../lessons/schema.js';
 const fixture=JSON.parse(await fs.readFile(new URL('../../lessons/example.json',import.meta.url),'utf8')),results=[];

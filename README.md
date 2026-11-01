@@ -23,6 +23,7 @@ Turn a permitted reading into a reviewed bilingual lesson pack, then learn workp
 | Validation | 27 schema/generator contract groups, library and quality-gate checks passed; all 33 pack checksums/metadata verified |
 | Main demo | Completed locally: 3:00, 1080p, English narration/subtitles; [recording evidence](docs/hackathon-submission/STUDIO-DEMO-2026-10-31.md) |
 | Video viewing link | [Watch the 3-minute Studio demo](https://youtu.be/6r8nJDiZr5E) — Unlisted, English captions, 1080p verified |
+| mobile-emulation supplement | [Watch the separate 30-second clip](https://youtu.be/IIomKgrVzmw) — Unlisted; browser/device emulation, not physical-phone proof ([record](docs/hackathon-submission/MOBILE-EMULATION-SUPPLEMENT-2026-11-01.md)) |
 | Submission | Submitted by owner; verified 1 November at 09:39 Vietnam. Physical-phone proof is a pending supplement. |
 
 The Studio demo shows permitted-source authoring, the explicit review boundary, an approved lesson, Chrome Offline reload with restored progress, fixed-key practice, self-assessed transfer and exact-meaning Vault save. It uses labelled retained Meta material and makes no new provider call. This is a desktop browser demonstration, not a learner-outcome study.

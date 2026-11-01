@@ -37,3 +37,7 @@ Submitted by the owner on 1 November 2026; verified at 09:39 Vietnam (02:39 UTC)
 - Live app.js SHA-256 matched local: `8aa0af0e8df1a0da054d46e1f7b375b3f1a9f2660901c458f5b2f9f1dade1d99`. Full post-deploy parity passed; HTTP smoke 10/10 passed. Final browser smoke 7/7 returned populated pages with no console errors, and production Reader opened successfully.
 - One previously cached production session initially retained the old syntax error. Visiting Studio refreshed its service worker; a subsequent production session worked without clearing learning data. The cold deploy URL also initialized successfully.
 - Local receipt screenshots and submitted-field snapshot are kept in the owner's outputs directory rather than published with personal form details.
+
+## Subsequent emulated supplement
+
+Owner requested a separately published `mobile-emulation supplement`: https://youtu.be/IIomKgrVzmw (Unlisted, 30 seconds). The dossier explicitly describes browser/device emulation; this does not close the pending physical-phone proof item. The existing contest submission and its main demo URL were not modified.
