@@ -47,7 +47,9 @@
     </select>
     <label style="display:inline-flex;align-items:center;gap:6px;font-size:.9rem;color:var(--muted)"><input id="hub-clean" type="checkbox" style="min-width:0;flex:none;width:18px;height:18px"> Ẩn cảm thán / tên riêng / viết tắt</label>
     <span id="hub-count" aria-live="polite"></span>
+    <button type="button" id="mylist-toggle" class="related-chip" style="cursor:pointer" title="Bật chế độ chọn từ để tạo list">📝 Tạo list</button>
   </div>
+  <div id="mylist-bar"><span id="mylist-count">Đã chọn 0 từ</span><button type="button" id="mylist-copy" class="related-chip" style="cursor:pointer">📋 Chép list</button><button type="button" id="mylist-quiz" class="related-chip" style="cursor:pointer">📝 Xuất quiz</button><button type="button" id="mylist-clear" class="related-chip" style="cursor:pointer">✖ Xóa</button></div>
   <ul class="hub-list" id="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
     <li data-word="a" data-group="core" data-band="1k" data-awl="" data-learning="active" data-exam="ielts giao-tiep" data-noise="1"><a href="/vi/tu/a/">a</a> <span class="hub-ipa">/ə/</span></li>
     <li data-word="able" data-group="core" data-band="1k" data-awl="" data-learning="active" data-exam="ielts giao-tiep" data-noise="0"><a href="/vi/tu/able/">able</a> <span class="hub-ipa">/ˈeɪbəl/</span></li>
@@ -491,6 +493,49 @@ window.__HUB_NOISE__ = {"a":1,"able":0,"about":0,"absolutely":0,"accept":0,"acci
   ['input', 'change'].forEach(function (ev) {
     q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply); x.addEventListener(ev, apply); c.addEventListener(ev, apply);
   });
+  /* P2 teacher list (owner-approved 01/11): pick words -> copy list / quiz.
+   * LocalStorage only, no account, no tracking. */
+  var pickMode=false, picked=[];
+  try{ picked=JSON.parse(localStorage.getItem('dd-mylist')||'[]'); }catch(e){ picked=[]; }
+  var tgl=document.getElementById('mylist-toggle'), bar=document.getElementById('mylist-bar'), cnt=document.getElementById('mylist-count');
+  function refreshPick(){
+    cnt.textContent='Đã chọn '+picked.length+' từ';
+    bar.classList.toggle('show', pickMode||picked.length>0);
+    var lis=list.querySelectorAll('li');
+    for(var i=0;i<lis.length;i++){ var w2=lis[i].dataset.word; lis[i].classList.toggle('sel', picked.indexOf(w2)!==-1); }
+  }
+  tgl.addEventListener('click', function(){ pickMode=!pickMode; tgl.textContent=pickMode?'✅ Đang chọn… (bấm từ để thêm)':'📝 Tạo list'; refreshPick(); });
+  list.addEventListener('click', function(ev){
+    if(!pickMode) return;
+    var li=ev.target.closest?ev.target.closest('li'):null;
+    if(!li||!list.contains(li)) return;
+    ev.preventDefault();
+    var w3=li.dataset.word, at=picked.indexOf(w3);
+    if(at===-1){ if(picked.length>=50){return;} picked.push(w3); } else picked.splice(at,1);
+    try{ localStorage.setItem('dd-mylist',JSON.stringify(picked)); }catch(e){}
+    refreshPick();
+  });
+  function copyText(t, ok){
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(ok, function(){
+      var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); ok(); }catch(e){}
+      document.body.removeChild(ta);
+    });
+  }
+  document.getElementById('mylist-copy').addEventListener('click', function(){
+    if(!picked.length) return;
+    copyText(picked.join('
+'), function(){ cnt.textContent='Đã chép '+picked.length+' từ ✅'; });
+  });
+  document.getElementById('mylist-quiz').addEventListener('click', function(){
+    if(!picked.length) return;
+    var q2=picked.map(function(w4,i){ return (i+1)+'. '+w4+' — nghĩa tiếng Việt là gì? (xem /vi/tu/'+w4+'/ )'; }).join('
+');
+    copyText('QUIZ — '+picked.length+' từ (Dual Dictionary)
+'+q2, function(){ cnt.textContent='Đã chép quiz '+picked.length+' câu ✅'; });
+  });
+  document.getElementById('mylist-clear').addEventListener('click', function(){ picked=[]; try{localStorage.removeItem('dd-mylist');}catch(e){} refreshPick(); });
+  refreshPick();
   apply();
 })();
 </script>

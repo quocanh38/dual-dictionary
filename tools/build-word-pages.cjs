@@ -88,6 +88,52 @@ function splitSensePairs(piece) {
  * JSON-LD pos list. Do NOT change what it counts: the v99 owner-approved page
  * set depends on it (04/10 lesson: counting the new mtd-ex lines shifted the
  * admitted set by ~30 words). */
+/* P2 phrase-link (owner-approved 01/11): link multi-word phrases inside entry
+ * example sentences (to bear evidence -> balance-sheet style pages). Loaded
+ * from the phrase manifest; longest-match first; max 3 links per page so
+ * entries never turn blue. Runs on the RENDER html (escaped), matching plain
+ * English phrases in ex-en spans only. */
+let PHRASE_LINK_INDEX = null;
+function phraseLinkIndex() {
+  if (PHRASE_LINK_INDEX === null) {
+    PHRASE_LINK_INDEX = [];
+    try {
+      const m = JSON.parse(fs.readFileSync(PHRASE_MANIFEST_PATH, 'utf8'));
+      const entries = m.entries || [];
+      PHRASE_LINK_INDEX = entries
+        .filter((e) => e.phrase && e.phrase.trim().includes(' '))
+        .map((e) => ({ phrase: e.phrase.toLowerCase(), slug: e.slug }))
+        .sort((a, b) => b.phrase.length - a.phrase.length);
+    } catch (e) { PHRASE_LINK_INDEX = []; }
+  }
+  return PHRASE_LINK_INDEX;
+}
+function linkPhrasesInHtml(html, word) {
+  const idx = phraseLinkIndex();
+  if (!idx.length) return html;
+  let links = 0;
+  // only inside ex-en spans (example sentences), never in heads/glosses
+  return html.replace(/<span class="mtd-ex-en">(.*?)<\/span>/g, (m, inner) => {
+    if (links >= 3) return m;
+    let out = inner;
+    const low = inner.toLowerCase();
+    for (const { phrase, slug } of idx) {
+      if (links >= 3) break;
+      if (phrase === String(word).toLowerCase()) continue;
+      const at = low.indexOf(phrase);
+      if (at === -1) continue;
+      // word-boundary guard on the raw slice
+      const before = at === 0 ? ' ' : low[at - 1];
+      const after = low[at + phrase.length] || ' ';
+      if (/[a-z]/.test(before) || /[a-z]/.test(after)) continue;
+      const orig = inner.slice(at, at + phrase.length);
+      out = inner.slice(0, at) + `<a class="ph-link" href="/vi/tu/${encodeURIComponent(slug)}/">${orig}</a>` + inner.slice(at + phrase.length);
+      links++;
+      break;
+    }
+    return `<span class="mtd-ex-en">${out}</span>`;
+  });
+}
 function mtdToBlocks(text) {
   const blocks = [];
     const crossref = (s) => {
@@ -365,6 +411,10 @@ function renderEntry(raw, word) {
     })
     .join('\n');
 }
+/* renderEntry with P2 phrase links applied (word pages only). */
+function renderEntryLinked(raw, word) {
+  return linkPhrasesInHtml(renderEntry(raw, word), word);
+}
 
 /* ---------- P0 sense priority (owner-approved 01/11/2026) ----------
  * data/sense-priority.json maps a headword to Vietnamese keywords whose
@@ -614,8 +664,8 @@ function examExamplesHtml(word, slug) {
     || null;
   if (!list || !list.length) return '';
   const rows = list.map(([en, vi, src]) =>
-    `<div class="mtd-ex"><span class="mtd-ex-en exam-en">${escapeHtml(en)}</span> — <span class="mtd-ex-vi">${escapeHtml(vi)}</span>${src ? ` <span class="exam-src">(${escapeHtml(src)})</span>` : ''}</div>`).join('\n');
-  return `<section class="word-note exam-note"><h2>Ví dụ thi</h2><p class="exam-sub">Câu mẫu viết tay theo văn IELTS / TOEIC — dùng lại được trong bài thi.</p>\n${rows}</section>`;
+    `<div class="mtd-ex exam-row"><span class="mtd-ex-en exam-en">${escapeHtml(en)}</span> — <span class="mtd-ex-vi">${escapeHtml(vi)}</span>${src ? ` <span class="exam-src">(${escapeHtml(src)})</span>` : ''} <button type="button" class="exam-copy" data-en="${escapeHtml(en)}" data-vi="${escapeHtml(vi)}" aria-label="Chép câu này">📋</button></div>`).join('\n');
+  return `<section class="word-note exam-note"><h2>Ví dụ thi</h2><p class="exam-sub">Câu mẫu viết tay theo văn IELTS / TOEIC — dùng lại được trong bài thi.</p>\n${rows}</section><script>(function(){document.querySelectorAll('.exam-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-en')+' — '+b.getAttribute('data-vi');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='✅';setTimeout(function(){b.textContent='📋';},1200);},function(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');b.textContent='✅';setTimeout(function(){b.textContent='📋';},1200);}catch(e){}document.body.removeChild(ta);});});});})();</script>`;
 }
 /* P1 audio manifest: which words have pre-rendered Piper m4a (audio/us|gb).
  * Scanned once per build; pages without files keep the app deep-link. */
@@ -717,6 +767,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f766e">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -1043,7 +1094,7 @@ async function main() {
 
     const raw = p.raw;
     const rawLemma = p.rawLemma;
-    const entryHtml = renderEntry(raw, word);
+    const entryHtml = renderEntryLinked(raw, word);
     // P0 QA: record which listed words actually reordered (silent no-match =
     // keyword absent from entry — owner reviews the JSON, no build failure)
     if (sensePriorityFor(word)) {
@@ -1226,6 +1277,7 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .mtd-ex-vi{color:var(--muted)}
 .mtd-idiom{margin:6px 0;padding-left:14px}
 .mtd-idiom b{color:#134e4a}
+.ph-link{color:var(--teal-dark);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .mtd-line{margin:4px 0}
 .word-cta{margin-top:26px;padding:20px 22px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
 .word-cta-actions{display:flex;flex-wrap:wrap;gap:10px}
@@ -1270,6 +1322,12 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .exam-note{border-left-color:var(--coral)}
 .exam-sub{margin:0 0 8px;color:var(--muted);font-size:.9rem}
 .exam-src{color:var(--muted);font-size:.82rem}
+.exam-copy{display:inline-block;margin-left:6px;padding:1px 7px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:pointer;font-size:.8rem}
+.exam-copy:hover{border-color:var(--teal)}
+.mylist-btn{display:inline-block;margin:6px 0 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;background:var(--paper);color:var(--teal-dark);cursor:pointer}
+.hub-list li.sel{outline:2px solid var(--teal);border-radius:6px}
+#mylist-bar{display:none;gap:8px;align-items:center;margin:10px 0;padding:10px 14px;border:1px solid var(--teal);border-radius:10px;background:#e6f4f2;font-size:.9rem}
+#mylist-bar.show{display:flex;flex-wrap:wrap}
 .note-badge-auto{background:#6b7280}
 .hub-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 14px}
 .hub-filters input,.hub-filters select{min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:8px;font:inherit;color:var(--ink);background:var(--paper)}
@@ -1354,7 +1412,9 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
     </select>
     <label style="display:inline-flex;align-items:center;gap:6px;font-size:.9rem;color:var(--muted)"><input id="hub-clean" type="checkbox" style="min-width:0;flex:none;width:18px;height:18px"> Ẩn cảm thán / tên riêng / viết tắt</label>
     <span id="hub-count" aria-live="polite"></span>
-  </div>`;
+    <button type="button" id="mylist-toggle" class="related-chip" style="cursor:pointer" title="Bật chế độ chọn từ để tạo list">📝 Tạo list</button>
+  </div>
+  <div id="mylist-bar"><span id="mylist-count">Đã chọn 0 từ</span><button type="button" id="mylist-copy" class="related-chip" style="cursor:pointer">📋 Chép list</button><button type="button" id="mylist-quiz" class="related-chip" style="cursor:pointer">📝 Xuất quiz</button><button type="button" id="mylist-clear" class="related-chip" style="cursor:pointer">✖ Xóa</button></div>`;
   fs.writeFileSync(
     path.join(OUT_DIR, 'index.html'),
     `<!DOCTYPE html>
@@ -1522,6 +1582,46 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
   ['input', 'change'].forEach(function (ev) {
     q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply); x.addEventListener(ev, apply); c.addEventListener(ev, apply);
   });
+  /* P2 teacher list (owner-approved 01/11): pick words -> copy list / quiz.
+   * LocalStorage only, no account, no tracking. */
+  var pickMode=false, picked=[];
+  try{ picked=JSON.parse(localStorage.getItem('dd-mylist')||'[]'); }catch(e){ picked=[]; }
+  var tgl=document.getElementById('mylist-toggle'), bar=document.getElementById('mylist-bar'), cnt=document.getElementById('mylist-count');
+  function refreshPick(){
+    cnt.textContent='Đã chọn '+picked.length+' từ';
+    bar.classList.toggle('show', pickMode||picked.length>0);
+    var lis=list.querySelectorAll('li');
+    for(var i=0;i<lis.length;i++){ var w2=lis[i].dataset.word; lis[i].classList.toggle('sel', picked.indexOf(w2)!==-1); }
+  }
+  tgl.addEventListener('click', function(){ pickMode=!pickMode; tgl.textContent=pickMode?'✅ Đang chọn… (bấm từ để thêm)':'📝 Tạo list'; refreshPick(); });
+  list.addEventListener('click', function(ev){
+    if(!pickMode) return;
+    var li=ev.target.closest?ev.target.closest('li'):null;
+    if(!li||!list.contains(li)) return;
+    ev.preventDefault();
+    var w3=li.dataset.word, at=picked.indexOf(w3);
+    if(at===-1){ if(picked.length>=50){return;} picked.push(w3); } else picked.splice(at,1);
+    try{ localStorage.setItem('dd-mylist',JSON.stringify(picked)); }catch(e){}
+    refreshPick();
+  });
+  function copyText(t, ok){
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(ok, function(){
+      var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); ok(); }catch(e){}
+      document.body.removeChild(ta);
+    });
+  }
+  document.getElementById('mylist-copy').addEventListener('click', function(){
+    if(!picked.length) return;
+    copyText(picked.join('\n'), function(){ cnt.textContent='Đã chép '+picked.length+' từ ✅'; });
+  });
+  document.getElementById('mylist-quiz').addEventListener('click', function(){
+    if(!picked.length) return;
+    var q2=picked.map(function(w4,i){ return (i+1)+'. '+w4+' — nghĩa tiếng Việt là gì? (xem /vi/tu/'+w4+'/ )'; }).join('\n');
+    copyText('QUIZ — '+picked.length+' từ (Dual Dictionary)\n'+q2, function(){ cnt.textContent='Đã chép quiz '+picked.length+' câu ✅'; });
+  });
+  document.getElementById('mylist-clear').addEventListener('click', function(){ picked=[]; try{localStorage.removeItem('dd-mylist');}catch(e){} refreshPick(); });
+  refreshPick();
   apply();
 })();
 </script>

@@ -219,6 +219,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f766e">
 <title>${core.escapeHtml(title)}</title>
 <meta name="description" content="${core.escapeHtml(desc)}">
 <link rel="canonical" href="${canonical}">

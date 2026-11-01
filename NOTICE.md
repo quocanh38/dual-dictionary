@@ -77,6 +77,19 @@ published list. Used by `tools/build-word-pages.cjs` (batch 2) and the
 "Thuộc AWL" hub filter. AWL membership is labeled distinctly and never
 conflated with OpenSubtitles frequency bands or NGSL learning membership.
 
+## Spoken audio — `audio/us/*.m4a`, `audio/gb/*.m4a` (P1, 01/11/2026)
+
+Per-word pronunciation audio is pre-rendered with **Piper TTS** (open-source
+neural voices, https://github.com/rhasspy/piper) and hosted on-site:
+
+- US voice: `en_US-amy-medium` (Amy, American English) — `audio/us/`
+- GB voice: `en_GB-alba-medium` (Alba, British English) — `audio/gb/`
+- Piper voices are free for commercial and non-commercial use (see
+  https://github.com/rhasspy/piper-voices for per-voice training-data licenses).
+- Script: `tools/render-audio.py` (voices live OUTSIDE the repo at
+  `~/piper-voices/`, never committed). Files served with `preload="none"` —
+  no bandwidth until the user taps play.
+
 ## Anki .apkg export (v119 A3)
 
 - `js/vendor/sql-wasm.js` + `js/vendor/sql-wasm.wasm` — [sql.js](https://sql.js.org) 1.13.0 (SQLite compiled to WebAssembly), **MIT License** (full text: `js/vendor/sql-js-LICENSE.txt`). Loaded lazily on first .apkg export, cached by the service worker after that.
