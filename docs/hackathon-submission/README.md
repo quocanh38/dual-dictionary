@@ -1,4 +1,4 @@
-> **P0 update — 1 November 2026:** main video published Unlisted; form prepared with the actual URL and owner-selected surveys. Final consent/Submit not yet verified. Real-phone airplane-mode proof remains pending. [Execution record](P0-PUBLISH-SUBMIT-2026-11-01.md).
+> **P0 completed — 1 November 2026:** main video published Unlisted and submission verified at 09:39 Vietnam. Physical-phone airplane-mode proof remains an optional pending supplement. [Execution record](P0-PUBLISH-SUBMIT-2026-11-01.md).
 
 # Dual Dictionary — Offline Lesson Pipeline
 
@@ -59,8 +59,8 @@ Why Meta matters: it performs the language-generation step that turns a permitte
 | Tutor video | Local `DualDictionary-demo-3min.mp4` from the previous chat step is a supporting demonstration of existing infrastructure, not the new-work narrative. |
 | Description / use of Meta / why Meta | Draft text above; copy into the corresponding form fields after final review. |
 | Partner feedback | Optional form field; answer from actual retained Baseten experience. |
-| Two mandatory Meta surveys | Owner explicitly chose Very likely / Very favorable on 1 November; entered into the form. Additional optional survey questions remain unanswered. |
-| Rights consent / final Submit | Not performed. Owner review remains necessary. |
+| Two mandatory Meta surveys | Owner explicitly chose Very likely / Very favorable on 1 November; entered into the form. Owner also completed additional survey fields during final submission. |
+| Rights consent / final Submit | Completed by owner; submission-specific edit page and checked consent verified 1 November at 09:39 Vietnam. |
 
 [Official event schedule](https://dev.meta.ai/events/global-hackathon): 4 November 2026, 21:00 ET = **5 November, 09:00 Vietnam**. Dates may change; recheck before submitting. The authenticated [submission form](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit) was inspected on 30 October and explicitly asks for a public GitHub repository and a three-minute demo video URL. [Official Rules](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/waiver) were read in full. No explicit ban on pre-event code was found there; disclose the foundation and new work accurately, and check any additional participant communications.
 

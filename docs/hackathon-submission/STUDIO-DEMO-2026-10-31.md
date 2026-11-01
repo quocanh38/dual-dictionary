@@ -31,4 +31,4 @@ This is a recording/evidence note, not a new product release or a hackathon subm
 
 ## Hosted publication — 1 November 2026
 
-[https://youtu.be/6r8nJDiZr5E](https://youtu.be/6r8nJDiZr5E), YouTube Unlisted, channel Nguyen Quoc Anh. Uploaded by the agent with owner confirmation of YouTube terms and publication. Separate English SRT uploaded. Signed-out browser playback at 1920×1080 verified; watch player displays 3:00 (media duration 180.021s). Studio thumbnail rounds to 3:01. Local original SHA remains unchanged. No real-phone proof or final hackathon submission is implied.
+[https://youtu.be/6r8nJDiZr5E](https://youtu.be/6r8nJDiZr5E), YouTube Unlisted, channel Nguyen Quoc Anh. Uploaded by the agent with owner confirmation of YouTube terms and publication. Separate English SRT uploaded. Signed-out browser playback at 1920×1080 verified; watch player displays 3:00 (media duration 180.021s). Studio thumbnail rounds to 3:01. Local original SHA remains unchanged. Physical-phone proof remains pending. The owner completed contest submission; verified separately on 1 November at 09:39 Vietnam.

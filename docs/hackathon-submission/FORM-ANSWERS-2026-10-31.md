@@ -1,6 +1,6 @@
 # Submission form — review-ready text, 31 October 2026
 
-Draft only. The public GitHub source snapshot includes Studio and the current dossier. Video published: https://youtu.be/6r8nJDiZr5E. Required project fields and owner-selected surveys were filled on 1 November 2026; legal consent and final Submit are not yet verified.
+Submitted field reference; final submission verified 1 November 2026 at 09:39 Vietnam. The public GitHub source snapshot includes Studio and the current dossier. Video published: https://youtu.be/6r8nJDiZr5E. Required project fields and owner-selected surveys were filled on 1 November 2026; owner completed legal consent and final Submit; verified via the submission-specific edit page.
 
 ## Project description
 
@@ -30,4 +30,4 @@ Draft for owner review: The Studio creation route uses Baseten-hosted Muse Spark
 - Track/theme currently observed: Indie Developer / Build for Your World; owner to confirm.
 - Likelihood of building with Meta Model API: Very likely — explicitly selected by owner on 1 November; entered into form.
 - Overall opinion of Meta Model API: Very favorable — explicitly selected by owner on 1 November; entered into form.
-- Final permission checkbox and Submit: owner review at submission time.
+- Final permission checkbox and Submit: owner completed; verified 1 November 2026 at 09:39 Vietnam.
