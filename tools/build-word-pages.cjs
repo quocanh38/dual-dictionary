@@ -680,6 +680,25 @@ function loadAudioSet() {
   return set;
 }
 const audioSet = loadAudioSet();
+/* P2 compare links (owner-approved 01/11): word pages link to their
+ * phan-biet pages. Loaded from data/comparisons.json (same slug rule). */
+let COMPARE_PAIRS = null;
+function compareLinksHtml(word) {
+  if (COMPARE_PAIRS === null) {
+    try { COMPARE_PAIRS = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'comparisons.json'), 'utf8')).pairs || []; }
+    catch (e) { COMPARE_PAIRS = []; }
+  }
+  const slugOf = (s) => String(s).normalize('NFC').toLowerCase().replace(/[^a-z0-9'\s-]/g, '').replace(/\s+/g, '-');
+  const w = String(word).toLowerCase();
+  const hits = COMPARE_PAIRS.filter((p) => p.a.toLowerCase() === w || p.b.toLowerCase() === w);
+  if (!hits.length) return '';
+  const rows = hits.map((p) => {
+    const slug = `${slugOf(p.a)}-vs-${slugOf(p.b)}`;
+    const other = p.a.toLowerCase() === w ? p.b : p.a;
+    return `<a class="related-chip" href="/vi/phan-biet/${slug}/">So sánh với “${escapeHtml(other)}” →</a>`;
+  }).join('');
+  return `<section class="related"><h2>Phân biệt dễ nhầm</h2><div class="related-list">${rows}</div></section>`;
+}
 function ipaLineHtml(word, ipa) {
   if (!ipa) return '';
   const bre = breOf(ipa, word);
@@ -811,6 +830,8 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   ${noteHtml ? `<section class="word-note"><h2>Ghi chú sử dụng</h2>${noteIsHand ? '' : '<span class="note-badge note-badge-auto">Tự sinh — chưa biên tập</span>'}${noteHtml}</section>` : ''}
 
   ${examExamplesHtml(word, null)}
+
+  ${compareLinksHtml(word)}
 
   ${relatedHtml}
 
