@@ -345,6 +345,7 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
   <h1 style="font-size:2.4rem">${built.length} cụm từ tiếng Anh — phrasal verbs, collocations, idioms</h1>
   <p style="color:var(--muted)">Mỗi cụm có trang riêng: nghĩa tiếng Việt, ví dụ minh hoạ và (nếu có) định nghĩa tiếng Anh WordNet 3.1. Danh sách gồm phrasal verbs, collocations và idioms — từ thông dụng đến thuật ngữ chuyên ngành; ${handCount === built.length ? `toàn bộ ${built.length.toLocaleString('vi-VN')} cụm có nghĩa tiếng Việt biên soạn riêng` : `${handCount.toLocaleString('vi-VN')} cụm có nghĩa tiếng Việt biên soạn riêng`}. Đang tìm từ đơn? Xem <a href="/vi/tu/">danh sách ${wordCount ? `${wordCount.toLocaleString('vi-VN')} từ` : 'các từ'} tiếng Anh</a>.</p>
   <div class="hub-filters">
+    <div style="margin:0 0 10px"><a class="related-chip" style="text-decoration:none" href="/?deck=toeic">💼 Luyện TOEIC Business trong app ↗</a></div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px" role="group" aria-label="Lọc danh sách cụm từ">
       <button type="button" class="chip chip-band hub-tab" data-filter="all" aria-pressed="true">Tất cả</button>${handCount > 0 && handCount < built.length ? '\n      <button type="button" class="chip chip-learn hub-tab" data-filter="hand" aria-pressed="false">Biên soạn riêng</button>' : ''}
       <button type="button" class="chip chip-band hub-tab" data-filter="common" aria-pressed="false" title="Mọi từ trong cụm thuộc 2.000 từ phổ biến nhất">Phổ biến</button>

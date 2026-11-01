@@ -4214,6 +4214,8 @@ let practiceGloss = new Map();
  * ngsl1 911 · ngsl2 783 · ngsl3 580 · offngsl 3,488 · awl 569 (6,331/6,839 words;
  * the rest are low-band forms with no NGSL rank, still reachable via search). */
 const PRACTICE_DECKS = [
+  { id: 'ielts', key: 'practice.deck.ielts' },
+  { id: 'toeic', key: 'practice.deck.toeic' },
   { id: 'ngsl1', key: 'practice.deck.ngsl1' },
   { id: 'ngsl2', key: 'practice.deck.ngsl2' },
   { id: 'ngsl3', key: 'practice.deck.ngsl3' },
@@ -4224,9 +4226,32 @@ const PRACTICE_DECKS = [
 ];
 let curriculumDeck = null;   // the deck the current session came from (summary "again")
 
+/* P1 exam decks (owner-approved 01/11): IELTS Core = exam-tagged words;
+ * TOEIC Business = the business-headword subset (shared BIZ list with the
+ * build-time CTA). Membership comes from data/exam-tags.json (built-words
+ * rows carry no exam tags). Loaded once, cached like loadBuiltWords. */
+const TOEIC_BIZ_WORDS = 'account bank balance invoice payment budget finance marketing sales contract meeting office shipping delivery order customer client employee manager payroll revenue profit audit tax loan credit stock share board quarter expense claim warranty supplier retail import export freight cargo warehouse inventory deadline overtime salary conference proposal dividend interest mortgage insurance premium booking memo agenda'.split(' ');
+let examTagsPromise = null;
+function loadExamTags() {
+  if (!examTagsPromise) {
+    examTagsPromise = fetch('./data/exam-tags.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null);
+  }
+  return examTagsPromise;
+}
+let examTagSet = null;
+function examTagHas(word, deckId) {
+  const t = examTagSet && examTagSet.words && examTagSet.words[String(word).toLowerCase()];
+  if (!t) return false;
+  if (deckId === 'ielts') return (t.tags || []).includes('ielts');
+  if (deckId === 'toeic') return TOEIC_BIZ_WORDS.indexOf(String(word).toLowerCase()) !== -1;
+  return false;
+}
 function deckWords(deckId, rows) {
   return rows.filter(([w, b, r, a]) => {
     if (w.length < 3) return false;   // "a"/"i" are real NGSL words but pointless drills
+    if (deckId === 'ielts' || deckId === 'toeic') return examTagHas(w, deckId);
     if (deckId === 'awl') return a > 0;
     if (deckId === 'ngsl1') return a === 0 && r >= 1 && r <= 1000;
     if (deckId === 'ngsl2') return a === 0 && r >= 1001 && r <= 2000;
@@ -4266,6 +4291,7 @@ async function startReadingClozePractice() {
 async function startCurriculumPractice(deckId) {
   const bw = await loadBuiltWords();
   if (!bw || !bw.words) { showToast(i18n('practice.deckUnavailable')); return; }
+  if (deckId === 'ielts' || deckId === 'toeic') { try { examTagSet = await loadExamTags(); } catch (e) { examTagSet = null; } }
   const pool = deckWords(deckId, bw.words).filter((w) => !isSaved(w));
   if (!pool.length) { showToast(i18n('practice.deckEmpty')); return; }
   shuffleArr(pool);
@@ -4293,6 +4319,63 @@ async function startCurriculumPractice(deckId) {
     try { it.ipa = (await ipaForWord(it.text))[0] || ''; } catch (e) { it.ipa = ''; }
   }));
   assignCurriculumKinds(pool);
+  renderPractice();
+}
+
+/* P1 TOEIC mix (owner-approved 01/11): 44 business words are a thin deck —
+ * mix in the 161 TOEIC-tagged phrases as EN->VI flashcards + cloze over the
+ * hand-written exam sentences. Phrases skip IPA/listen drills (no word IPA). */
+let examPhrasePool = null;
+async function loadToeicPhrases() {
+  if (examPhrasePool) return examPhrasePool;
+  try {
+    const [tags, ex] = await Promise.all([
+      fetch('./data/exam-tags.json').then((r) => (r.ok ? r.json() : null)),
+      fetch('./data/exam-examples.json').then((r) => (r.ok ? r.json() : null)),
+    ]);
+    const out = [];
+    const pt = (tags && tags.phrases) || {};
+    const exP = (ex && ex.phrases) || {};
+    for (const slug of Object.keys(pt)) {
+      if (!((pt[slug].tags || []).includes('toeic'))) continue;
+      const key = slug.replace(/-/g, ' ');
+      const entry = exP[slug] || exP[key];
+      if (!entry) continue;
+      const [en, vi] = Array.isArray(entry[0]) ? entry[0] : entry;
+      out.push({ phrase: key, slug, gloss: entry.m || vi || '', en, vi });
+    }
+    examPhrasePool = out;
+  } catch (e) { examPhrasePool = []; }
+  return examPhrasePool;
+}
+
+async function startToeicMixPractice() {
+  const bw = await loadBuiltWords();
+  if (!bw || !bw.words) { showToast(i18n('practice.deckUnavailable')); return; }
+  try { examTagSet = await loadExamTags(); } catch (e) { examTagSet = null; }
+  const words = deckWords('toeic', bw.words).filter((w) => !isSaved(w));
+  const phrases = (await loadToeicPhrases()).slice();
+  shuffleArr(words); shuffleArr(phrases);
+  const queue = [];
+  for (const w of words.slice(0, 5)) queue.push({ id: 'cur:toeic:' + w, synthetic: true, type: 'word', text: w, context: { headword: w } });
+  for (const ph of phrases.slice(0, 5)) queue.push({ id: 'cur:toeicp:' + ph.slug, synthetic: true, type: 'phrase', text: ph.phrase, context: { headword: ph.phrase, sentence: ph.en }, gloss: ph.gloss, vi: ph.vi });
+  if (!queue.length) { showToast(i18n('practice.deckEmpty')); return; }
+  shuffleArr(queue);
+  curriculumDeck = 'toeic';
+  practiceQueue = queue;
+  practiceIndex = 0;
+  practiceStats = { done: 0, ok: 0, streak: 0 };
+  practiceChecked = false;
+  practiceGloss = new Map();
+  for (const it of practiceQueue) if (it.gloss) practiceGloss.set(it.id, it.gloss);
+  await Promise.all(practiceQueue.filter((it) => it.type === 'word').map(async (it) => {
+    try { const g = await quickGloss(it.text); if (g && !practiceGloss.has(it.id)) practiceGloss.set(it.id, g); } catch (e) {}
+    try { const sent = await firstExampleSentence(it.text); if (sent) it.context.sentence = sent; } catch (e) {}
+    try { it.ipa = (await ipaForWord(it.text))[0] || ''; } catch (e) { it.ipa = ''; }
+  }));
+  // phrases: EN->VI choice/recall + cloze over the exam sentence only
+  for (const it of practiceQueue) if (it.type === 'phrase') it.drillKinds = ['choice', 'recall', 'cloze'];
+  assignCurriculumKinds(practiceQueue.map((it) => it.text));
   renderPractice();
 }
 
@@ -4367,6 +4450,7 @@ function renderPracticePicker() {
     b.addEventListener('click', () => {
       if (d.id === 'vault') startPractice();
       else if (d.id === 'reading') startReadingClozePractice();
+      else if (d.id === 'toeic') startToeicMixPractice();
       else startCurriculumPractice(d.id);
     });
     box.appendChild(b);
@@ -4392,6 +4476,7 @@ function replayPendingDeck() {
   navigate('practice');
   if (deck === 'vault') startPractice();
   else if (deck === 'reading') startReadingClozePractice();
+  else if (deck === 'toeic') startToeicMixPractice();
   else startCurriculumPractice(deck);
 }
 
@@ -6345,6 +6430,7 @@ const I18N = {
     'search.didYouMean': 'Did you mean…?',
     'practice.pickDeck': 'Practice — pick a deck:',
     'practice.deck.ngsl1': 'NGSL 1k', 'practice.deck.ngsl2': 'NGSL 2k', 'practice.deck.ngsl3': 'NGSL 3k',
+    'practice.deck.ielts': '🎯 IELTS Core', 'practice.deck.toeic': '💼 TOEIC Business',
     'practice.deck.offngsl': 'Off-NGSL (by frequency)', 'practice.deck.awl': 'AWL', 'practice.deck.reading': '📖 From your reading', 'practice.deck.vault': 'My Vault',
     'practice.ipa': 'IPA match',
     'practice.saveCta': '⭐ Save to Vault for later review',
@@ -6475,6 +6561,7 @@ const I18N = {
     'search.didYouMean': 'Có phải bạn muốn tìm…?',
     'practice.pickDeck': 'Luyện tập — chọn một bộ từ:',
     'practice.deck.ngsl1': 'NGSL 1k', 'practice.deck.ngsl2': 'NGSL 2k', 'practice.deck.ngsl3': 'NGSL 3k',
+    'practice.deck.ielts': '🎯 IELTS Core', 'practice.deck.toeic': '💼 TOEIC Business',
     'practice.deck.offngsl': 'Ngoài NGSL (theo tần suất)', 'practice.deck.awl': 'AWL', 'practice.deck.reading': '📖 Từ bài đã đọc', 'practice.deck.vault': 'Vault của tôi',
     'practice.ipa': 'Phiên âm IPA',
     'practice.saveCta': '⭐ Lưu vào Vault để ôn sau',

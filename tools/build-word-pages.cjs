@@ -626,8 +626,13 @@ function ipaLineHtml(word, ipa) {
   return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${brePart} <a class="ipa-hear" href="/?q=${encodeURIComponent(word)}" title="Nghe phát âm trong app offline">🔊 Nghe</a></p>`;
 }
 function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, raw }) {
-  const practiceCta = practiceDeck
-    ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${practiceDeck}">🎯 Luyện bộ từ này trong app ↗</a>`
+  /* P1 deck CTA (owner-approved 01/11): word pages point at the matching exam
+   * deck (?deck=ielts / ?deck=toeic) instead of the NGSL band deck. */
+  const exam = examTagsFor(word, null);
+  const bizHead = /^(account|bank|balance|invoice|payment|budget|finance|marketing|sales|contract|meeting|office|shipping|delivery|order|customer|client|employee|manager|payroll|revenue|profit|audit|tax|loan|credit|stock|share|board|quarter|expense|claim|warranty|supplier|retail|import|export|freight|cargo|warehouse|inventory|deadline|overtime|salary|conference|proposal|dividend|interest|mortgage|insurance|premium|booking|memo|agenda)$/.test(String(word).toLowerCase());
+  const examDeck = bizHead ? 'toeic' : exam && exam.tags.includes('ielts') ? 'ielts' : null;
+  const practiceCta = (examDeck || practiceDeck)
+    ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${examDeck || practiceDeck}">${examDeck === 'toeic' ? '💼' : '🎯'} Luyện ${examDeck === 'toeic' ? 'TOEIC Business' : examDeck === 'ielts' ? 'IELTS Core' : 'bộ từ này'} trong app ↗</a>`
     : '';
   const title = `${word} nghĩa là gì? — Phiên âm & nghĩa tiếng Việt | Dual Dictionary`;
   /* P0 SEO: unique meta per page — first rendered sense (post-priority) + IPA.
@@ -1313,6 +1318,7 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
   <h1 style="font-size:2.4rem">${built.length} từ tiếng Anh phổ biến nhất</h1>
   <p style="color:var(--muted)">Mỗi từ có trang riêng: phiên âm, loại từ, nghĩa tiếng Việt và ví dụ. Nhãn <b>Học chính</b> dựa trên danh sách NGSL (New General Service List, Browne &amp; Culligan), nhóm <b>Học thuật (AWL)</b> dựa trên Academic Word List của Coxhead (570 họ từ chia 10 sublist — chip ghi đúng số sublist, ví dụ "AWL Sublist 1"). <b>Tần suất</b> (top 1K/2K/5K/10K) tính riêng theo corpus phụ đề phim OpenSubtitles — nhãn tần suất và nhãn học không trộn vào nhau: một từ có thể "top 10K" mà vẫn thuộc NGSL. Nhóm "Dạng chia" là biến thể của từ gốc (trang hiển thị mục của từ gốc, có dán nhãn). Từ ngoài các danh sách học vẫn có trang riêng, được dán nhãn rõ ràng.</p>
   <p style="margin:12px 0 0"><a href="${PHRASE_HUB_URL}">Duyệt thêm ${phraseIndex.phrases.length.toLocaleString('vi-VN')} cụm từ tiếng Anh (phrasal verbs, collocations) →</a></p>
+  <p style="margin:8px 0 0"><a class="word-cta-btn word-cta-btn-practice" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:var(--teal);color:#fff;font-weight:800;text-decoration:none" href="/?deck=ielts">🎯 Luyện IELTS Core trong app ↗</a></p>
   ${hubFilterBar}
   <ul class="hub-list" id="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${hubRows}
