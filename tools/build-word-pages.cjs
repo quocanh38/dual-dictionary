@@ -617,13 +617,32 @@ function examExamplesHtml(word, slug) {
     `<div class="mtd-ex"><span class="mtd-ex-en exam-en">${escapeHtml(en)}</span> — <span class="mtd-ex-vi">${escapeHtml(vi)}</span>${src ? ` <span class="exam-src">(${escapeHtml(src)})</span>` : ''}</div>`).join('\n');
   return `<section class="word-note exam-note"><h2>Ví dụ thi</h2><p class="exam-sub">Câu mẫu viết tay theo văn IELTS / TOEIC — dùng lại được trong bài thi.</p>\n${rows}</section>`;
 }
+/* P1 audio manifest: which words have pre-rendered Piper m4a (audio/us|gb).
+ * Scanned once per build; pages without files keep the app deep-link. */
+function loadAudioSet() {
+  const set = new Set();
+  for (const accent of ['us', 'gb']) {
+    const dir = path.join(REPO, 'audio', accent);
+    let files = [];
+    try { files = fs.readdirSync(dir); } catch (e) { files = []; }
+    for (const f of files) if (f.endsWith('.m4a')) set.add(`${f.slice(0, -4).toLowerCase()}:${accent}`);
+  }
+  return set;
+}
+const audioSet = loadAudioSet();
 function ipaLineHtml(word, ipa) {
   if (!ipa) return '';
   const bre = breOf(ipa, word);
   const brePart = bre && bre !== ipa
     ? ` <span class="ipa-bre" title="Phiên âm Anh-Anh (suy từ quy tắc chắc ăn; từ không chắc chỉ hiện Mỹ)">BrE /${escapeHtml(bre)}/</span>`
     : '';
-  return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${brePart} <a class="ipa-hear" href="/?q=${encodeURIComponent(word)}" title="Nghe phát âm trong app offline">🔊 Nghe</a></p>`;
+  /* P1 audio (owner-approved 01/11): Piper open voices (amy=US, alba=GB),
+   * pre-rendered m4a hosted on-site, preload=none (no bandwidth until tap). */
+  const safe = String(word).toLowerCase().replace(/'/g, '');
+  const usAud = audioSet.has(`${safe}:us`) ? ` <button type="button" class="ipa-play" data-aud="/audio/us/${encodeURIComponent(safe)}.m4a" aria-label="Nghe giọng Mỹ">🔊 Mỹ</button>` : '';
+  const gbAud = audioSet.has(`${safe}:gb`) ? ` <button type="button" class="ipa-play" data-aud="/audio/gb/${encodeURIComponent(safe)}.m4a" aria-label="Nghe giọng Anh">🔊 Anh</button>` : '';
+  const hearFallback = (!usAud && !gbAud) ? ` <a class="ipa-hear" href="/?q=${encodeURIComponent(word)}" title="Nghe phát âm trong app offline">🔊 Nghe</a>` : '';
+  return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${usAud}${brePart}${gbAud}${hearFallback}</p><audio id="ipa-player" preload="none"></audio><script>(function(){var p=document.getElementById('ipa-player');if(!p)return;document.querySelectorAll('.ipa-play').forEach(function(b){b.addEventListener('click',function(){p.src=b.getAttribute('data-aud');p.play();});});})();</script>`;
 }
 function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, raw }) {
   /* P1 deck CTA (owner-approved 01/11): word pages point at the matching exam
@@ -1192,6 +1211,7 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .ipa-label{display:inline-block;padding:2px 8px;margin-right:6px;border-radius:999px;background:var(--soft);color:var(--teal-dark);font-size:.75rem;font-weight:800;text-transform:uppercase}
 .ipa-bre{color:var(--muted)}
 .ipa-hear{display:inline-block;margin-left:8px;padding:2px 10px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;font-weight:700;color:var(--teal-dark);text-decoration:none}
+.ipa-play{display:inline-block;margin-left:8px;padding:2px 10px;border:1px solid var(--teal);border-radius:999px;font-size:.82rem;font-weight:700;color:var(--teal-dark);background:var(--paper);cursor:pointer}
 .entry-body{border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:22px 24px;box-shadow:0 10px 30px rgba(23,32,38,.06)}
 .entry-lemma-note{margin:0 0 10px;color:var(--muted);font-size:.92rem}
 .entry-lemma-note a{color:var(--teal);font-weight:700}
