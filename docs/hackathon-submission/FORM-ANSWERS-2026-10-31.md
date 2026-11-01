@@ -31,3 +31,7 @@ Draft for owner review: The Studio creation route uses Baseten-hosted Muse Spark
 - Likelihood of building with Meta Model API: Very likely — explicitly selected by owner on 1 November; entered into form.
 - Overall opinion of Meta Model API: Very favorable — explicitly selected by owner on 1 November; entered into form.
 - Final permission checkbox and Submit: owner completed; verified 1 November 2026 at 09:39 Vietnam.
+
+## Later supplemental asset — not added to the submitted form
+
+`mobile-emulation supplement`: https://youtu.be/IIomKgrVzmw — separate Unlisted clip, explicitly browser/device emulation, not physical-phone airplane-mode proof. This dossier update does not change the submitted form.

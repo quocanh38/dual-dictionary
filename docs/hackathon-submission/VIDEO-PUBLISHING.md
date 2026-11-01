@@ -14,3 +14,7 @@ Recommended destination: **YouTube, Unlisted visibility**. This is a recommendat
 [Official YouTube privacy guidance](https://support.google.com/youtube/answer/157177?hl=en) states that anyone with an unlisted video link can watch/share it and does not need a Google Account. Unlisted is link-accessible and can be reshared.
 
 Video upload/publication is complete. Owner completed hackathon consent and Submit; submission-specific edit page verified 1 November at 09:39 Vietnam.
+
+## Separate mobile-emulation supplement
+
+Published 1 November 2026, exact title `mobile-emulation supplement`, Unlisted: https://youtu.be/IIomKgrVzmw. Chrome DevTools iPhone SE emulation with its Offline preset; 30-second portrait edit with persistent emulation labels. Not a physical-phone airplane-mode recording. No contest-form update was made. [Evidence](MOBILE-EMULATION-SUPPLEMENT-2026-11-01.md).
