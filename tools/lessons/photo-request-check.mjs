@@ -5,8 +5,9 @@ import {
   PHOTO_PURPOSE, PHOTO_PROVIDER_ID, PHOTO_ACCEPTED_MIME,
   PHOTO_MAX_INPUT_BYTES, PHOTO_MAX_SEND_BYTES,
   validatePhotoInput, validatePhotoDataUrl,
-  buildVisionRequest, previewVisionRequest, parseVisionResult,
+  buildVisionRequest, previewVisionRequest, parseVisionResult, sendVisionRequest,
 } from '../../lessons/photo-request.js';
+import { providerForPurpose, META_MODEL_API_PROVIDER } from '../../lessons/provider.js';
 
 const results = [];
 async function test(name, fn) { await fn(); results.push({ name, status: 'PASS' }); console.log('PASS ' + name); }
@@ -44,6 +45,15 @@ await test('vision result needs 100+ legible characters, never invented text', a
   for (const bad of [null, [], {}, { reading_text: '' }, { reading_text: 'too short' }]) {
     assert.throws(() => parseVisionResult(bad), /legible|JSON|100/i);
   }
+});
+
+await test('photo-extract routes to Meta Model API like repair', async () => {
+  assert.equal(providerForPurpose(PHOTO_PURPOSE).id, META_MODEL_API_PROVIDER.id);
+  assert.equal(providerForPurpose('repair-exercises').id, META_MODEL_API_PROVIDER.id);
+});
+
+await test('vision sender needs a key before any network', async () => {
+  await assert.rejects(() => sendVisionRequest({ baseUrl: 'https://api.meta.ai/v1', model: 'muse-spark-1.3', key: '', request: { purpose: PHOTO_PURPOSE } }), /key/i);
 });
 
 console.log(`${results.length} photo-request contract groups PASS`);
