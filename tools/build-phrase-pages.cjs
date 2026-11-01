@@ -130,6 +130,10 @@ const HAND_STYLES = `
 .wn-body{border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:16px 20px;font-size:.97rem}
 .wn-body ol{margin:8px 0 8px 18px;padding:0}
 .wn-body li{margin:6px 0}
+.exam-note{margin-top:24px;border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:10px;background:var(--soft);padding:20px 22px}
+.exam-note h2{margin:0 0 6px;font-size:1.25rem}
+.exam-sub{margin:0 0 8px;color:var(--muted);font-size:.9rem}
+.exam-src{color:var(--muted);font-size:.82rem}
 `;
 
 /* ---------- page ---------- */
@@ -144,6 +148,17 @@ function phraseMetaDesc(phrase, hand) {
   return `${phrase} nghĩa tiếng Việt là gì? Ý nghĩa, các nghĩa thường gặp và ví dụ minh hoạ của cụm "${phrase}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
 }
 
+/* P1 exam chips for phrase pages (TOEIC business / IELTS academic). */
+function examChips(phrase) {
+  const slug = phraseSlug(phrase);
+  const t = core.examTagsFor ? core.examTagsFor(null, slug) : null;
+  if (!t || !t.tags || !t.tags.length) return '';
+  let out = '';
+  if (t.tags.includes('toeic')) out += '<span class="chip chip-exam" title="Cụm từ công sở thường gặp trong đề TOEIC">TOEIC Business</span>';
+  if (t.tags.includes('ielts')) out += '<span class="chip chip-exam2" title="Cụm từ học thuật, hữu ích cho IELTS Reading/Writing">IELTS</span>';
+  return out;
+}
+
 function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHtml, tier }) {
   const title = `${phrase} nghĩa là gì? — Ý nghĩa & ví dụ tiếng Việt | Dual Dictionary`;
   const desc = phraseMetaDesc(phrase, hand);
@@ -153,7 +168,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
     : '';
   const badges = `<div class="word-badges"><span class="chip chip-band">Cụm từ</span>${
     posList.map((p) => `<span class="chip chip-core">${core.escapeHtml(p)}</span>`).join('')
-  }${hand ? '<span class="chip chip-learn">Biên soạn riêng</span>' : ''}${tier === 'A' ? '<span class="chip chip-band" title="Mọi từ trong cụm thuộc 2.000 từ phổ biến nhất (theo tần suất corpus)">Phổ biến</span>' : ''}</div>`;
+  }${hand ? '<span class="chip chip-learn">Biên soạn riêng</span>' : ''}${tier === 'A' ? '<span class="chip chip-band" title="Mọi từ trong cụm thuộc 2.000 từ phổ biến nhất (theo tần suất corpus)">Phổ biến</span>' : ''}${examChips(phrase)}</div>`;
   const showOvdp = entryHtml && !(hand && hand.hideOvdp);
   const showWordNet = wnHtml && !(hand && hand.hideWordNet);
   const body = (hand
@@ -233,6 +248,8 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
   </header>
 
   ${relatedHtml}
+
+  ${phraseExamHtml(phrase)}
 </main>
 
 <footer class="blog-footer">
@@ -243,6 +260,20 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
 `;
 }
 
+/* P1 exam examples on phrase pages (same hand-written seed as words). */
+function phraseExamHtml(phrase) {
+  const fs = require('fs');
+  const path = require('path');
+  let db = null;
+  try { db = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'exam-examples.json'), 'utf8')); }
+  catch (e) { return ''; }
+  const list = db.phrases && db.phrases[String(phrase).toLowerCase()];
+  if (!list || !list.length) return '';
+  const esc = core.escapeHtml;
+  const rows = list.map(([en, vi, src]) =>
+    `<div class="mtd-ex"><span class="mtd-ex-en">${esc(en)}</span> — <span class="mtd-ex-vi">${esc(vi)}</span>${src ? ` <span class="exam-src">(${esc(src)})</span>` : ''}</div>`).join('\n');
+  return `<section class="exam-note"><h2>Ví dụ thi</h2><p class="exam-sub">Câu mẫu viết tay theo văn TOEIC / IELTS — dùng lại được trong bài thi.</p>\n${rows}</section>`;
+}
 function relatedHtml(phrase, prepKeys, wordSlugSet) {
   const chips = [];
   for (const tok of phrase.toLowerCase().split(/\s+/)) {
@@ -279,7 +310,8 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
     const p5 = prep.get(phrase);
     const hand = !!(p5 && p5.hand);
     const common = !!(p5 && p5.tier === 'A');
-    return `    <li data-word="${esc(slug)}" data-phrase="${esc(phrase.toLowerCase())}"${hand ? ' data-hand="1"' : ''}${common ? ' data-common="1"' : ''}><a href="${phrasePageUrl(phrase)}">${esc(phrase)}</a></li>`;
+    const exam = (core.examTagsFor ? (core.examTagsFor(null, slug) || {}).tags : []) || [];
+    return `    <li data-word="${esc(slug)}" data-phrase="${esc(phrase.toLowerCase())}"${hand ? ' data-hand="1"' : ''}${common ? ' data-common="1"' : ''}${exam.length ? ` data-exam="${esc(exam.join(' '))}"` : ''}><a href="${phrasePageUrl(phrase)}">${esc(phrase)}</a></li>`;
   }).join('\n');
   const title = `${built.length} cụm từ tiếng Anh — danh sách A–Z | Dual Dictionary`;
   const desc = `Danh sách ${built.length} cụm từ tiếng Anh (phrasal verbs, collocations, idiom) kèm nghĩa tiếng Việt, ví dụ minh hoạ và định nghĩa tiếng Anh WordNet 3.1. ${handCount} cụm có phần nghĩa tiếng Việt biên soạn riêng cho người Việt học tiếng Anh.`;
@@ -315,6 +347,8 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px" role="group" aria-label="Lọc danh sách cụm từ">
       <button type="button" class="chip chip-band hub-tab" data-filter="all" aria-pressed="true">Tất cả</button>${handCount > 0 && handCount < built.length ? '\n      <button type="button" class="chip chip-learn hub-tab" data-filter="hand" aria-pressed="false">Biên soạn riêng</button>' : ''}
       <button type="button" class="chip chip-band hub-tab" data-filter="common" aria-pressed="false" title="Mọi từ trong cụm thuộc 2.000 từ phổ biến nhất">Phổ biến</button>
+      <button type="button" class="chip chip-exam hub-tab" data-filter="toeic" aria-pressed="false" title="Cụm từ công sở thường gặp trong đề TOEIC">TOEIC</button>
+      <button type="button" class="chip chip-exam2 hub-tab" data-filter="ielts" aria-pressed="false" title="Cụm từ học thuật cho IELTS">IELTS</button>
     </div>
     <input id="hub-q" type="search" placeholder="Tìm cụm từ… (vd: run out, take care)" aria-label="Tìm cụm từ trong danh sách">
     <span id="hub-count" aria-live="polite"></span>
@@ -334,6 +368,7 @@ ${rows}
   function matchFilter(it) {
     if (filter === 'hand') return it.dataset.hand === '1';
     if (filter === 'common') return it.dataset.common === '1';
+    if (filter === 'toeic' || filter === 'ielts') return (it.dataset.exam || '').split(' ').indexOf(filter) !== -1;
     return true;
   }
   function apply() {

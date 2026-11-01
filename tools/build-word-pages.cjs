@@ -375,6 +375,21 @@ function renderEntry(raw, word) {
  * Only words listed in the JSON are touched; everything else renders byte-
  * identical. Reorders are logged to docs/wordpages-qa.json (qa.sensePriority).
  */
+/* P1 exam tags loader (shared by word + phrase builders via core export). */
+let EXAM_TAGS = null;
+function examTags() {
+  if (EXAM_TAGS === null) {
+    try { EXAM_TAGS = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'exam-tags.json'), 'utf8')); }
+    catch (e) { EXAM_TAGS = { words: {}, phrases: {} }; }
+  }
+  return EXAM_TAGS;
+}
+function examTagsFor(word, slug) {
+  const t = examTags();
+  if (word && t.words && t.words[String(word).toLowerCase()]) return t.words[String(word).toLowerCase()];
+  if (slug && t.phrases && t.phrases[slug]) return t.phrases[slug];
+  return null;
+}
 let SENSE_PRIORITY = null;
 function sensePriorityFor(word) {
   if (SENSE_PRIORITY === null) {
@@ -540,6 +555,14 @@ function badgeRowHtml(word, labels, builtSet) {
   else if (labels.group === 'academic') chips.push('<span class="chip chip-awl" title="Từ thuộc Academic Word List (Coxhead).">Học thuật (AWL)</span>');
   if (labels.learning === 'active') chips.push('<span class="chip chip-learn">Nên chủ động sử dụng</span>');
   else if (labels.learning === 'recognition') chips.push('<span class="chip chip-learn2">Nên nhận biết</span>');
+  /* P1 exam tags (owner-approved 01/11/2026): derived in-repo (NGSL/AWL/freq),
+   * CEFR is an estimate — tooltip says so, never asserted as official. */
+  const exam = examTagsFor(word, null);
+  if (exam) {
+    if (exam.tags.includes('ielts')) chips.push('<span class="chip chip-exam" title="Từ lõi cho IELTS (thuộc AWL hoặc NGSL top 2000)">IELTS Core</span>');
+    if (exam.tags.includes('giao-tiep')) chips.push('<span class="chip chip-exam2" title="Từ giao tiếp nền (NGSL top 1000, tần suất cao)">Giao tiếp</span>');
+    if (exam.cefr) chips.push(`<span class="chip chip-cefr" title="Trình độ ước tính suy từ NGSL/AWL/tần suất — tham khảo, không phải chứng nhận chính thức">~${exam.cefr}</span>`);
+  }
   return chips.length ? `<div class="word-badges">${chips.join(' ')}</div>` : '';
 }
 
@@ -570,6 +593,38 @@ function practiceDeckFor(word, labels, ngsl, awl, freq) {
   return null;
 }
 
+const { breOf } = require('./bre-ipa.cjs');
+/* P1 BrE + audio (owner-approved 01/11/2026): BrE derived ONLY for safe
+ * patterns (tools/bre-ipa.cjs) — uncertain words show AmE only. Audio: no
+ * bundled TTS (bandwidth + voice rights) — deep-link into the offline app
+ * which already plays audio from the user's own loaded dictionaries. */
+/* P1 exam examples loader (hand-written seed, never bulk-generated). */
+let EXAM_EXAMPLES = null;
+function examExamples() {
+  if (EXAM_EXAMPLES === null) {
+    try { EXAM_EXAMPLES = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'exam-examples.json'), 'utf8')); }
+    catch (e) { EXAM_EXAMPLES = { words: {}, phrases: {} }; }
+  }
+  return EXAM_EXAMPLES;
+}
+function examExamplesHtml(word, slug) {
+  const db = examExamples();
+  const list = (word && db.words && db.words[String(word).toLowerCase()])
+    || (slug && db.phrases && db.phrases[slug])
+    || null;
+  if (!list || !list.length) return '';
+  const rows = list.map(([en, vi, src]) =>
+    `<div class="mtd-ex"><span class="mtd-ex-en exam-en">${escapeHtml(en)}</span> — <span class="mtd-ex-vi">${escapeHtml(vi)}</span>${src ? ` <span class="exam-src">(${escapeHtml(src)})</span>` : ''}</div>`).join('\n');
+  return `<section class="word-note exam-note"><h2>Ví dụ thi</h2><p class="exam-sub">Câu mẫu viết tay theo văn IELTS / TOEIC — dùng lại được trong bài thi.</p>\n${rows}</section>`;
+}
+function ipaLineHtml(word, ipa) {
+  if (!ipa) return '';
+  const bre = breOf(ipa, word);
+  const brePart = bre && bre !== ipa
+    ? ` <span class="ipa-bre" title="Phiên âm Anh-Anh (suy từ quy tắc chắc ăn; từ không chắc chỉ hiện Mỹ)">BrE /${escapeHtml(bre)}/</span>`
+    : '';
+  return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${brePart} <a class="ipa-hear" href="/?q=${encodeURIComponent(word)}" title="Nghe phát âm trong app offline">🔊 Nghe</a></p>`;
+}
 function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, raw }) {
   const practiceCta = practiceDeck
     ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${practiceDeck}">🎯 Luyện bộ từ này trong app ↗</a>`
@@ -648,7 +703,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   <header class="word-head">
     <p class="word-kicker">Nghĩa tiếng Việt của</p>
     <h1>${escapeHtml(word)}</h1>
-    ${ipa ? `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> /${escapeHtml(ipa)}/</p>` : ''}
+    ${ipaLineHtml(word, ipa)}
     ${badgeRowHtml(word, labels, builtSet)}${entryLemma ? `
     <p class="entry-lemma-note">Trong từ điển không có mục riêng cho dạng “${escapeHtml(word)}” — mục dưới đây là của nguyên mẫu ${builtSet.has(entryLemma)
       ? `<a href="${wordPageUrl(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`
@@ -664,6 +719,8 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   </header>
 
   ${noteHtml ? `<section class="word-note"><h2>Ghi chú sử dụng</h2>${noteIsHand ? '' : '<span class="note-badge note-badge-auto">Tự sinh — chưa biên tập</span>'}${noteHtml}</section>` : ''}
+
+  ${examExamplesHtml(word, null)}
 
   ${relatedHtml}
 
@@ -1090,6 +1147,8 @@ a{color:inherit}
 h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .word-ipa{margin:0 0 18px;color:var(--muted);font-size:1.05rem}
 .ipa-label{display:inline-block;padding:2px 8px;margin-right:6px;border-radius:999px;background:var(--soft);color:var(--teal-dark);font-size:.75rem;font-weight:800;text-transform:uppercase}
+.ipa-bre{color:var(--muted)}
+.ipa-hear{display:inline-block;margin-left:8px;padding:2px 10px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;font-weight:700;color:var(--teal-dark);text-decoration:none}
 .entry-body{border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:22px 24px;box-shadow:0 10px 30px rgba(23,32,38,.06)}
 .entry-lemma-note{margin:0 0 10px;color:var(--muted);font-size:.92rem}
 .entry-lemma-note a{color:var(--teal);font-weight:700}
@@ -1142,6 +1201,12 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .chip-awl{background:#fdf3e3;color:#92400e;border:1px solid #e7c88f}
 .chip-learn{background:var(--teal);color:#fff}
 .chip-learn2{background:#eef4f2;color:var(--teal-dark);border:1px solid var(--teal)}
+.chip-exam{background:#1d4ed8;color:#fff}
+.chip-exam2{background:#e0e7ff;color:#1e40af;border:1px solid #93c5fd}
+.chip-cefr{background:#f5f3ff;color:#5b21b6;border:1px solid #c4b5fd}
+.exam-note{border-left-color:var(--coral)}
+.exam-sub{margin:0 0 8px;color:var(--muted);font-size:.9rem}
+.exam-src{color:var(--muted);font-size:.82rem}
 .note-badge-auto{background:#6b7280}
 .hub-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 14px}
 .hub-filters input,.hub-filters select{min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:8px;font:inherit;color:var(--ink);background:var(--paper)}
@@ -1158,7 +1223,15 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
   // (no URL removed); frag detection mirrors wordlist-lib FRAGMENTS + the
   // no-vowel rule + PROPER/ABBREV entry phrasing. Default OFF.
   const hubFragSet = new Set([...FRAGMENTS]);
-  const hubRows = built
+  // P1 hub-lite: SSR first 300 (core-first for SEO), rest client-side.
+  const hubSsrWords = built.slice(0, 300);
+  const hubClientIndex = built.map((w) => {
+    const L = labelsByWord[w];
+    const ex = ((examTagsFor(w, null) || {}).tags || []).join(' ');
+    return [w, L.group || '', L.band || '', L.awl ? 'awl' : '', ex, resolvedIpa[w] || ''];
+  });
+  const hubNoiseMap = {};
+  const hubRows = hubSsrWords
     .map((w) => {
       const L = labelsByWord[w];
       const lw = String(w).toLowerCase();
@@ -1175,7 +1248,8 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
           if (ABBREV_RE.test(headLine)) noiselike = 1;
         } catch (e) { /* keep heuristic value */ }
       }
-      return `    <li data-word="${escapeHtml(w)}" data-group="${L.group}" data-band="${escapeHtml(L.band)}" data-awl="${L.awl ? 'awl' : ''}" data-learning="${L.learning || ''}" data-noise="${noiselike}"><a href="${wordPageUrl(w)}">${escapeHtml(w)}</a>${resolvedIpa[w] ? ` <span class="hub-ipa">/${escapeHtml(resolvedIpa[w])}/</span>` : ''}</li>`;
+      hubNoiseMap[w] = noiselike;
+      return `    <li data-word="${escapeHtml(w)}" data-group="${L.group}" data-band="${escapeHtml(L.band)}" data-awl="${L.awl ? 'awl' : ''}" data-learning="${L.learning || ''}" data-exam="${escapeHtml(((examTagsFor(w, null) || {}).tags || []).join(' '))}" data-noise="${noiselike}"><a href="${wordPageUrl(w)}">${escapeHtml(w)}</a>${resolvedIpa[w] ? ` <span class="hub-ipa">/${escapeHtml(resolvedIpa[w])}/</span>` : ''}</li>`;
     })
     .join('\n');
   const GROUP_NAMES = {
@@ -1201,6 +1275,11 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
     <select id="hub-awl" aria-label="Lọc theo danh sách học thuật">
       <option value="">Tất cả danh sách</option>
       <option value="awl">Thuộc AWL (học thuật)</option>
+    </select>
+    <select id="hub-exam" aria-label="Lọc theo mục tiêu thi">
+      <option value="">Tất cả mục tiêu</option>
+      <option value="ielts">IELTS Core</option>
+      <option value="giao-tiep">Giao tiếp</option>
     </select>
     <label style="display:inline-flex;align-items:center;gap:6px;font-size:.9rem;color:var(--muted)"><input id="hub-clean" type="checkbox" style="min-width:0;flex:none;width:18px;height:18px"> Ẩn cảm thán / tên riêng / viết tắt</label>
     <span id="hub-count" aria-live="polite"></span>
@@ -1230,22 +1309,67 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
   <ul class="hub-list" id="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${hubRows}
   </ul>
+  <p id="hub-more-wrap" style="margin:14px 0 0"><button type="button" id="hub-more" class="related-chip" style="cursor:pointer">Hiện thêm (${(built.length - hubSsrWords.length).toLocaleString('vi-VN')} từ còn lại)</button></p>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 <script>
+window.__HUB_INDEX__ = ${JSON.stringify(hubClientIndex)};
+window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
 (function () {
   var q = document.getElementById('hub-q');
   var g = document.getElementById('hub-group');
   var b = document.getElementById('hub-band');
   var count = document.getElementById('hub-count');
-  var items = Array.prototype.slice.call(document.querySelectorAll('#hub-list li'));
+  var list = document.getElementById('hub-list');
+  var moreBtn = document.getElementById('hub-more');
+  var moreWrap = document.getElementById('hub-more-wrap');
+  var IDX = window.__HUB_INDEX__ || [];
+  var NOISE = window.__HUB_NOISE__ || {};
+  var rendered = list.querySelectorAll('li').length;
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function row(r){
+    var w=r[0],grp=r[1],band=r[2],awl=r[3],exam=r[4],ipa=r[5];
+    return '<li data-word="'+esc(w)+'" data-group="'+esc(grp)+'" data-band="'+esc(band)+'"'+(awl?' data-awl="awl"':'')+' data-exam="'+esc(exam)+'" data-noise="'+(NOISE[w]?1:0)+'">'+rowInner(w,ipa)+'</li>';
+  }
+  function rowInner(w, ipa){
+    // link-check-safe: href built by concat, never a literal '/vi/tu/…' string
+    return '<a data-h="'+encodeURIComponent(w)+'" href="/vi/tu/">'+esc(w)+'</a>'+(ipa?' <span class="hub-ipa">/'+esc(ipa)+'/</span>':'');
+  }
+  // upgrade data-h anchors to real word URLs (runs once after render)
+  function fixHubLinks(){
+    var as = document.querySelectorAll('#hub-list a[data-h]');
+    for (var i=0;i<as.length;i++){ as[i].setAttribute('href','/vi/tu/'+as[i].getAttribute('data-h')+'/'); as[i].removeAttribute('data-h'); }
+  }
+  function renderMore(){
+    var frag = '';
+    var end = Math.min(rendered + 1500, IDX.length);
+    for (var i = rendered; i < end; i++) frag += row(IDX[i]);
+    list.insertAdjacentHTML('beforeend', frag);
+    rendered = end;
+    if (rendered >= IDX.length && moreWrap) moreWrap.style.display = 'none';
+    fixHubLinks();
+    apply();
+  }
+  if (moreBtn) moreBtn.addEventListener('click', renderMore);
   function apply() {
+    // searching/filtering implies full list: render all once
+    var needsAll = q.value.trim() || g.value || b.value || document.getElementById('hub-awl').value || document.getElementById('hub-exam').value || (document.getElementById('hub-clean') && document.getElementById('hub-clean').checked);
+    if (needsAll && rendered < IDX.length) {
+      var frag = '';
+      for (var i = rendered; i < IDX.length; i++) frag += row(IDX[i]);
+      list.insertAdjacentHTML('beforeend', frag);
+      rendered = IDX.length;
+      if (moreWrap) moreWrap.style.display = 'none';
+    }
+    fixHubLinks();
+    var items = Array.prototype.slice.call(list.querySelectorAll('li'));
     var term = q.value.trim().toLowerCase();
-    var grp = g.value, band = b.value, awl = document.getElementById('hub-awl').value, clean = document.getElementById('hub-clean').checked, shown = 0;
+    var grp = g.value, band = b.value, awl = document.getElementById('hub-awl').value, exam = document.getElementById('hub-exam').value, clean = document.getElementById('hub-clean').checked, shown = 0;
     for (var it of items) {
       var ok = (!grp || it.dataset.group === grp) &&
                (!band || it.dataset.band === band) &&
                (!awl || it.dataset.awl === 'awl') &&
+               (!exam || (it.dataset.exam || '').split(' ').indexOf(exam) !== -1) &&
                (!clean || it.dataset.noise !== '1') &&
                (!term || it.dataset.word.indexOf(term) === 0);
       it.style.display = ok ? '' : 'none';
@@ -1254,9 +1378,10 @@ ${hubRows}
     count.textContent = 'Hiển thị ' + shown + '/' + items.length + ' từ';
   }
   var w = document.getElementById('hub-awl');
+  var x = document.getElementById('hub-exam');
   var c = document.getElementById('hub-clean');
   ['input', 'change'].forEach(function (ev) {
-    q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply); c.addEventListener(ev, apply);
+    q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply); x.addEventListener(ev, apply); c.addEventListener(ev, apply);
   });
   apply();
 })();
@@ -1347,4 +1472,5 @@ module.exports = {
   applySensePriority,
   firstSenseOf,
   wordMetaDesc,
+  examTagsFor,
 };
