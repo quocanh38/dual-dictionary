@@ -3,3 +3,5 @@ body{font:17px/1.6 system-ui,sans-serif;background:var(--bg,#f7fafb);color:var(-
 *,*::before,*::after{box-sizing:border-box}button,.button{max-width:100%;overflow-wrap:anywhere}header,main{width:100%;min-width:0}section,fieldset,details{min-width:0} .studio-badge{position:static;height:auto;color:inherit;background:transparent;white-space:normal}
 
 .pack-cover{display:block;width:100%;max-width:640px;height:auto;border-radius:10px;margin:0 0 8px}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
