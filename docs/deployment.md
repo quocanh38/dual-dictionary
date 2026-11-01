@@ -1,3 +1,31 @@
+## v160 verified + contest submission receipt — 1 November 2026
+
+Hotfix deploy `6ae6a585fd8e4f55e34cda5d`, source `5d9570762a9693a23ff995b3f066c2d55579c16c`, published 09:36:19 Vietnam. Cache mdx-dict-v154. Full post-deploy parity PASS; HTTP smoke 10/10; browser smoke 7/7 without console errors; production Reader interaction PASS. Owner completed contest Submit, verified 09:39 Vietnam by Your Submission / Update Project and checked consent (verification time, not exact server timestamp). Main video https://youtu.be/6r8nJDiZr5E. Physical-phone proof remains pending. This follow-up commit records the already verified hotfix/submission and changes documentation only.
+
+## v160 — P0 blocking app syntax fix and video publication — 1 November 2026
+
+The P0 documentation deployment `6ae6a4c1528dcf255fa8bfa3`, source `90aba15e7`, published 09:33:03 Vietnam; full post-deploy parity passed and HTTP smoke 10/10 returned 200. Browser smoke then exposed a pre-existing v157 Vietnamese translation syntax error in js/app.js: duplicate comma and missing separator around reader.loopHint. v160 fixes those two punctuation errors and bumps cache mdx-dict-v153→mdx-dict-v154. Main Unlisted video https://youtu.be/6r8nJDiZr5E has English captions and signed-out 1080p playback through the end. Final contest Submit and physical-phone proof remain unverified. Final hotfix deploy ID/postchecks are recorded in the publication receipt after deployment.
+
+## P0 video publication docs — 1 November 2026 (deployment prepared)
+
+Main Studio demo published Unlisted: https://youtu.be/6r8nJDiZr5E. English SRT uploaded; signed-out playback completed at 1080p. Dossier, form answer copy and publication record updated. Owner-selected required surveys: Very likely / Very favorable. Final consent/Submit and physical-phone airplane-mode proof remain unverified. Documentation-only change; no app/pack changes, cache unchanged. Full snapshot preflight against origin/main and route-aware internal link check passed; post-deploy result to be recorded in publication receipt.
+
+## LIVE v152 — Village Kit: offline IELTS/TOEIC for low-connectivity learners; source `50527e2ff`, published 31 October 2026; service-worker cache `mdx-dict-v151`. Studio hero tells the village story (teacher prepares online, children learn fully offline); village.js overlay adds offline search, per-pack Meta provenance (1 fetch provenance.json) and low-memory mode. Learner kit 612KB (shell 275KB + 33 packs 337KB). IELTS/TOEIC L/R offline via fixed keys; AI review stays optional with consent. Smoke 7/7 on production attempt 1 (/, index, lessons, provenance, village.js, sw, manifest); live sw.js serves mdx-dict-v151; hero + provenance verified by curl.
+
+## LIVE v153 — Village path on main app; source `58ad70b5d`, published 31 October 2026; cache `mdx-dict-v152`. Village banner after main with 2 no-key CTAs; IELTS lab OFFLINE badge + village-path note; AI review ONLINE badges; EN/VI i18n + banner/badge CSS. Smoke 7/7 attempt 1; live sw v152; banner + both badges verified by curl.
+
+## LIVE v154 — narrative to offline pipeline for working adults; source `a940ce4f2`, published 31 October 2026; cache `mdx-dict-v152` (shell text only). App banner + Studio hero reworded to workplace-English-where-network-drops; village.js overlay reworded; dossier rewritten as OFFLINE-PIPELINE; form description cites shifts/sites/commutes. Smoke 4/4; new narrative verified live, old classroom story gone.
+
+## LIVE v155 — blogs x pipeline; source `bd6223534`, published 31 October 2026; cache unchanged. 3 new VI bridge posts + EN summary page, 3 SVGs + OG PNGs, figures in 3 top posts, blog indexes + app Help 2-way discovery, sitemap 37→41. Smoke 7/7 blogs live.
+
+## LIVE v156 — message sweep; source `f74d8c69c`, published 31 October 2026; cache unchanged. Hero primary CTA to offline lessons; About + vi/ landing tell pipeline. Live verified: new CTA + pipeline on /, /vi/; old 2-minute loop gone.
+
+## LIVE v157 — fold hero-loop into Reader; source `4f361b065`, published 31 October 2026. Search shows banner + search only; Reader toolbar has compact loop hint. Stale i18n removed. Verified live.
+
+## LIVE v158 — Why-Meta + photo path; source `7490042ce`, published 1 Nov 2026; cache mdx-dict-v153. New why-meta.html (200), photo overlay files (200), nav link live. Smoke 5/5.
+
+## LIVE v159 — photo path end-to-end; source `82d4a5244`, published 1 Nov 2026. Overlay consent+ledger in photo-pane.js, routing to Meta, E2E doc live. Smoke 5/5.
+
 # Deployment record — Dual Dictionary (dualdictionary.netlify.app)
 
 ## LIVE v151 — hero loop to top of main + 3-day reuse protocol; deploy id pending dashboard lookup, source `b152bc9f186cee08f114f04d4755c9ae2bba8c62`, published 30 October 2026; service-worker cache `mdx-dict-v150` (unchanged — sw.js untouched). Hero loop moved from inside Reader to the top of `<main>` (visible on search + reader views); hero CTA hint reworded for the new position; `docs/learner-reuse-3day.md` added (6-phrase, 0/1/2 rubric, 3-day interim signal ahead of the 4 Nov deadline). Local gates PASS (node --check, sw-shell-check, ai-client/tutor-eval/provider-routing checks). Owner-verified production serves `hero-loop` (curl count 1); full post-verify + deploy-id lookup deferred to infra recovery.

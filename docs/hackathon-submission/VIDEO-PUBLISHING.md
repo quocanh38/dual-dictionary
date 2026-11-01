@@ -1,6 +1,6 @@
 # Main demo publishing notes — 31 October 2026
 
-Status: the local final Studio video is complete. No hosted video URL has been supplied or published by this update.
+Status: published 1 November 2026 by the agent on owner Nguyen Quoc Anh's channel, with explicit owner confirmation. Viewing URL: [https://youtu.be/6r8nJDiZr5E](https://youtu.be/6r8nJDiZr5E). Visibility: Unlisted. English SRT uploaded. Signed-out playback and 1080p verified; watch player displays 3:00. The uploaded original matches the dossier SHA-256.
 
 Recommended destination: **YouTube, Unlisted visibility**. This is a recommendation, not a confirmed mandatory host in the event rules. The inspected submission form used a YouTube URL example.
 
@@ -13,4 +13,4 @@ Recommended destination: **YouTube, Unlisted visibility**. This is a recommendat
 
 [Official YouTube privacy guidance](https://support.google.com/youtube/answer/157177?hl=en) states that anyone with an unlisted video link can watch/share it and does not need a Google Account. Unlisted is link-accessible and can be reshared.
 
-No upload, visibility change or hackathon submission was performed by this documentation update.
+Video upload/publication is complete. Owner completed hackathon consent and Submit; submission-specific edit page verified 1 November at 09:39 Vietnam.

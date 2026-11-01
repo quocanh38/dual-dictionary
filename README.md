@@ -1,3 +1,5 @@
+> **1 November 2026:** [main demo](https://youtu.be/6r8nJDiZr5E) published Unlisted; contest submission verified at 09:39 Vietnam. v160 critical syntax fix is live; physical-phone proof remains a pending supplement. [P0 record](docs/hackathon-submission/P0-PUBLISH-SUBMIT-2026-11-01.md).
+
 # Dual Dictionary — Offline Lesson Pipeline
 
 Turn a permitted reading into a reviewed bilingual lesson pack, then learn workplace English where the network drops — no API key.
@@ -10,18 +12,18 @@ Turn a permitted reading into a reviewed bilingual lesson pack, then learn workp
 - [Studio architecture and author workflow](docs/LESSON-STUDIO.md)
 - [Third-party data and code attribution](NOTICE.md)
 
-## Latest status — 31 October 2026 (evening)
+## Latest status — 1 November 2026
 
 | Item | Status |
 |---|---|
 | Narrative | Offline lesson pipeline for working adults on flaky networks: prepare where connected, learn airplane-mode ([pipeline note](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md)) |
 | Studio source | Published in [5f9d25ac](https://github.com/quocanh38/dual-dictionary/commit/5f9d25ac) (narrative) on top of [8b39df2a](https://github.com/quocanh38/dual-dictionary/commit/8b39df2a) (Village Kit) + [e3fc2dd8](https://github.com/quocanh38/dual-dictionary/commit/e3fc2dd8) (main-app path); prior public history preserved |
-| Live production | v154, service-worker cache `mdx-dict-v152`; banner + offline/online badges verified live on `/` and `/lessons/` |
+| Live production | v160 hotfix live, cache `mdx-dict-v154`; main app/Reader and 7-page browser smoke pass. Photo path from v159 retained. |
 | Offline library | 33 approved, versioned AI-assisted packs (workplace 20 + academic 13, B1 20 + B2 13) |
 | Validation | 27 schema/generator contract groups, library and quality-gate checks passed; all 33 pack checksums/metadata verified |
 | Main demo | Completed locally: 3:00, 1080p, English narration/subtitles; [recording evidence](docs/hackathon-submission/STUDIO-DEMO-2026-10-31.md) |
-| Video viewing link | Not published yet; recommended destination is YouTube Unlisted ([publishing notes](docs/hackathon-submission/VIDEO-PUBLISHING.md)) |
-| Submission | Draft only; hosted video URL, owner surveys/consent and final submission remain outstanding |
+| Video viewing link | [Watch the 3-minute Studio demo](https://youtu.be/6r8nJDiZr5E) — Unlisted, English captions, 1080p verified |
+| Submission | Submitted by owner; verified 1 November at 09:39 Vietnam. Physical-phone proof is a pending supplement. |
 
 The Studio demo shows permitted-source authoring, the explicit review boundary, an approved lesson, Chrome Offline reload with restored progress, fixed-key practice, self-assessed transfer and exact-meaning Vault save. It uses labelled retained Meta material and makes no new provider call. This is a desktop browser demonstration, not a learner-outcome study.
 
@@ -53,7 +55,7 @@ The library contains 33 approved, versioned AI-assisted packs. Automated validat
 
 This export contains the current application source, static learning assets, test/build tools and structured generation/review/QA evidence. It includes the 31 October Offline Pipeline narrative (working adults on flaky networks), the Village Kit provenance/weight tooling, the main-app offline/online badges with EN/VI strings, and the separately updated submission documents. The pre-event dictionary, Reader, Vault and Tutor are disclosed in NEW-WORK.md; Studio is the hackathon contribution.
 
-Existing public repository history is preserved. Deployment-repository history, workstation handoffs and browser QA PNG screenshots are not exported; historical evidence references to those screenshots may therefore be unavailable. Structured JSON/text evidence remains included. Local demo video files and private study/browser backups are not in this source repository. A hosted three-minute video URL is still pending.
+Existing public repository history is preserved. Deployment-repository history, workstation handoffs and browser QA PNG screenshots are not exported; historical evidence references to those screenshots may therefore be unavailable. Structured JSON/text evidence remains included. Local demo video files and private study/browser backups are not in this source repository. The main demo is now [available on YouTube Unlisted](https://youtu.be/6r8nJDiZr5E).
 
 This GitHub synchronization does not push to the separate Netlify deployment repository. The deployed application is not rebuilt by this change.
 

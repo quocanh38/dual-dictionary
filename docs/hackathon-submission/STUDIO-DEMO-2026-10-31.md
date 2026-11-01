@@ -28,3 +28,7 @@ This is a recording/evidence note, not a new product release or a hackathon subm
 - Browser side effects: one source draft plus one unapproved imported editing copy, one installed pack and completed progress, one Vault meaning card. Existing learning records were not cleared. These are demo records, not participant-study data.
 - The successful single-pack flow does not replace the historical 33-pack release QA. No learning-gain, human certification or official IELTS claim follows.
 - Hosted viewing URL remains pending. Public GitHub URL: https://github.com/quocanh38/dual-dictionary; the current source snapshot includes Studio and the submission dossier (31 October 2026). No form was sent and no rights checkbox was accepted.
+
+## Hosted publication — 1 November 2026
+
+[https://youtu.be/6r8nJDiZr5E](https://youtu.be/6r8nJDiZr5E), YouTube Unlisted, channel Nguyen Quoc Anh. Uploaded by the agent with owner confirmation of YouTube terms and publication. Separate English SRT uploaded. Signed-out browser playback at 1920×1080 verified; watch player displays 3:00 (media duration 180.021s). Studio thumbnail rounds to 3:01. Local original SHA remains unchanged. Physical-phone proof remains pending. The owner completed contest submission; verified separately on 1 November at 09:39 Vietnam.
