@@ -336,7 +336,7 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
 <meta name="twitter:title" content="${esc(title)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<style>.hub-tab{cursor:pointer;border:1px solid rgba(0,0,0,.18);background:transparent}.hub-tab[aria-pressed="true"]{font-weight:700;box-shadow:inset 0 0 0 1.5px currentColor}@media (max-width:900px){#hub-list{columns:2 !important}}@media (max-width:600px){#hub-list{columns:1 !important}}</style>
+<style>.hub-tab{cursor:pointer;border:1px solid rgba(0,0,0,.18);background:transparent}.hub-tab[aria-pressed="true"]{font-weight:700;box-shadow:inset 0 0 0 1.5px currentColor}@media (max-width:900px){#hub-list{columns:2 !important}}@media (max-width:600px){#hub-list{columns:1 !important}}.hub-filters{position:relative}.hub-suggest{position:absolute;z-index:20;max-width:480px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}</style>
 </head>
 <body class="word-page">
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Cụm từ</span></nav>
@@ -351,7 +351,8 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
       <button type="button" class="chip chip-exam hub-tab" data-filter="toeic" aria-pressed="false" title="Cụm từ công sở thường gặp trong đề TOEIC">TOEIC</button>
       <button type="button" class="chip chip-exam2 hub-tab" data-filter="ielts" aria-pressed="false" title="Cụm từ học thuật cho IELTS">IELTS</button>
     </div>
-    <input id="hub-q" type="search" placeholder="Tìm cụm từ… (vd: run out, take care)" aria-label="Tìm cụm từ trong danh sách">
+    <input id="hub-q" type="search" placeholder="Tìm cụm từ… (vd: run out, take care)" aria-label="Tìm cụm từ trong danh sách" autocomplete="off">
+    <div id="hub-suggest" class="hub-suggest" hidden></div>
     <span id="hub-count" aria-live="polite"></span>
   </div>
   <ul class="hub-list" id="hub-list" style="columns:3;gap:20px;padding-left:18px;line-height:2">
@@ -391,6 +392,41 @@ ${rows}
   });
   ['input', 'change'].forEach(function (ev) { q.addEventListener(ev, apply); });
   apply();
+  /* P1 autocomplete for phrases (owner-approved 01/11): substring/prefix over
+   * the rendered list (no fetch). Up/Down + Enter + Esc. */
+  var sgBox = document.getElementById('hub-suggest');
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function tagOf(it){ var e=it.dataset.exam||''; if(e.indexOf('toeic')!==-1)return 'TOEIC'; if(e.indexOf('ielts')!==-1)return 'IELTS'; return ''; }
+  var sgIdx=-1;
+  function suggest(term){
+    term=String(term||'').toLowerCase().trim();
+    if(term.length<2) return [];
+    var pre=[],sub=[],i,it,ph;
+    for(i=0;i<items.length&&(pre.length<5||sub.length<3);i++){ it=items[i]; ph=it.dataset.phrase||'';
+      if(ph.indexOf(term)===0) pre.push(it); else if(ph.indexOf(term)!==-1) sub.push(it); }
+    return pre.concat(sub).slice(0,8);
+  }
+  function renderSg(list2){
+    if(!sgBox) return;
+    if(!list2.length){ sgBox.hidden=true; sgBox.innerHTML=''; sgIdx=-1; return; }
+    sgBox.innerHTML=list2.map(function(it,i){
+      var a=it.querySelector('a'); var t=tagOf(it);
+      return '<a href="'+a.getAttribute('href')+'">'+esc(a.textContent)+(t?' <span class="sg-tag">'+t+'</span>':'')+'</a>';
+    }).join('');
+    sgBox.hidden=false; sgIdx=-1;
+  }
+  var sgT=null;
+  q.addEventListener('input', function(){ if(sgT)clearTimeout(sgT); sgT=setTimeout(function(){renderSg(suggest(q.value));},120); });
+  q.addEventListener('keydown', function(ev){
+    if(!sgBox||sgBox.hidden) return;
+    var links=sgBox.querySelectorAll('a');
+    if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){ ev.preventDefault();
+      sgIdx=ev.key==='ArrowDown'?Math.min(sgIdx+1,links.length-1):Math.max(sgIdx-1,0);
+      for(var i=0;i<links.length;i++) links[i].classList.toggle('active',i===sgIdx);
+    } else if(ev.key==='Enter'&&sgIdx>=0&&links[sgIdx]){ ev.preventDefault(); window.location.href=links[sgIdx].href; }
+    else if(ev.key==='Escape'){ sgBox.hidden=true; }
+  });
+  document.addEventListener('click', function(ev){ if(sgBox&&!sgBox.hidden&&!sgBox.contains(ev.target)&&ev.target!==q) sgBox.hidden=true; });
 })();
 </script>
 </body>

@@ -76,3 +76,8 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .hub-filters input{min-width:200px;flex:1}
 #hub-count{color:var(--muted);font-size:.88rem}
 .hub-ipa{color:var(--muted);font-size:.9em}
+.hub-suggest{position:absolute;z-index:20;max-width:480px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}
+.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}
+.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}
+.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}
+.hub-filters{position:relative}

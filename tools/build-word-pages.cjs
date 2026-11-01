@@ -1213,6 +1213,11 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .hub-filters input{min-width:200px;flex:1}
 #hub-count{color:var(--muted);font-size:.88rem}
 .hub-ipa{color:var(--muted);font-size:.9em}
+.hub-suggest{position:absolute;z-index:20;max-width:480px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}
+.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}
+.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}
+.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}
+.hub-filters{position:relative}
 `,
   );
 
@@ -1261,7 +1266,8 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
   };
   const hubFilterBar = `
   <div class="hub-filters">
-    <input id="hub-q" type="search" placeholder="Tìm trong danh sách…" aria-label="Tìm từ trong danh sách">
+    <input id="hub-q" type="search" placeholder="Tìm trong danh sách…" aria-label="Tìm từ trong danh sách" autocomplete="off">
+    <div id="hub-suggest" class="hub-suggest" hidden></div>
     <select id="hub-group" aria-label="Lọc theo nhóm">
 ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${escapeHtml(n)}</option>`).join('\n')}
     </select>
@@ -1351,6 +1357,69 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
     apply();
   }
   if (moreBtn) moreBtn.addEventListener('click', renderMore);
+  /* P1 autocomplete (owner-approved 01/11): prefix matches first (max 5),
+   * then DSFuzzy.suggestFor for typos (max 3). Runs on the client-side IDX
+   * (no fetch). Keyboard: Up/Down + Enter + Esc. Never hijacks typing. */
+  var sgBox = document.getElementById('hub-suggest');
+  var sgIdx = -1;
+  function lev(a, b, max){
+    if (a === b) return 0;
+    var m=a.length,n=b.length;
+    if (Math.abs(m-n) > max) return max+1;
+    var p=[],c=[],j,i;
+    for (j=0;j<=n;j++) p[j]=j;
+    for (i=1;i<=m;i++){ c[0]=i; var rm=c[0];
+      for (j=1;j<=n;j++){ var v=p[j]+1; var u=c[j-1]+1; if(u<v)v=u; var d=p[j-1]+(a.charCodeAt(i-1)===b.charCodeAt(j-1)?0:1); if(d<v)v=d; if(v>max)v=max+1; c[j]=v; if(v<rm)rm=v; }
+      if(rm>max) return max+1; var t=p;p=c;c=t; }
+    return p[n]<=max?p[n]:max+1;
+  }
+  function tagOf(w){
+    for (var i=0;i<IDX.length;i++) if(IDX[i][0]===w){ var e=IDX[i][4]||''; if(e.indexOf('ielts')!==-1)return 'IELTS'; if(e.indexOf('giao-tiep')!==-1)return 'Giao tiếp'; }
+    return '';
+  }
+  function suggest(term){
+    term = String(term||'').toLowerCase().trim();
+    if (term.length < 2) return [];
+    var pre = [], i, w;
+    for (i=0;i<IDX.length && pre.length<5;i++){ w=IDX[i][0]; if(w.indexOf(term)===0) pre.push(w); }
+    if (term.length < 3) return pre;
+    var max = term.length>=5?2:1, seen={}, out=pre.slice(), fy=[];
+    for (i=0;i<pre.length;i++) seen[pre[i]]=1;
+    for (i=0;i<IDX.length;i++){ w=IDX[i][0];
+      if(seen[w]||Math.abs(w.length-term.length)>max) continue;
+      if(w.charCodeAt(0)!==term.charCodeAt(0)&&w.indexOf(term)===-1) continue;
+      if(lev(term,w,max)>max) continue;
+      seen[w]=1; fy.push(w); if(fy.length>=3) break; }
+    return out.concat(fy).slice(0,8);
+  }
+  function renderSg(list2){
+    if(!sgBox) return;
+    if(!list2.length){ sgBox.hidden=true; sgBox.innerHTML=''; sgIdx=-1; return; }
+    sgBox.innerHTML = list2.map(function(w,i){
+      var t=tagOf(w);
+      return '<a href="/vi/tu/'+encodeURIComponent(w)+'/" data-i="'+i+'">'+esc(w)+(t?' <span class="sg-tag">'+t+'</span>':'')+'</a>';
+    }).join('');
+    sgBox.hidden=false; sgIdx=-1;
+  }
+  var sgTimer=null;
+  q.addEventListener('input', function(){
+    if(sgTimer) clearTimeout(sgTimer);
+    sgTimer=setTimeout(function(){ renderSg(suggest(q.value)); }, 120);
+  });
+  q.addEventListener('keydown', function(ev){
+    if(!sgBox||sgBox.hidden) return;
+    var links=sgBox.querySelectorAll('a');
+    if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){
+      ev.preventDefault();
+      sgIdx = ev.key==='ArrowDown' ? Math.min(sgIdx+1,links.length-1) : Math.max(sgIdx-1,0);
+      for(var i=0;i<links.length;i++) links[i].classList.toggle('active', i===sgIdx);
+    } else if(ev.key==='Enter'&&sgIdx>=0&&links[sgIdx]){
+      ev.preventDefault(); window.location.href=links[sgIdx].href;
+    } else if(ev.key==='Escape'){ sgBox.hidden=true; }
+  });
+  document.addEventListener('click', function(ev){
+    if(sgBox&&!sgBox.hidden&&!sgBox.contains(ev.target)&&ev.target!==q) sgBox.hidden=true;
+  });
   function apply() {
     // searching/filtering implies full list: render all once
     var needsAll = q.value.trim() || g.value || b.value || document.getElementById('hub-awl').value || document.getElementById('hub-exam').value || (document.getElementById('hub-clean') && document.getElementById('hub-clean').checked);
