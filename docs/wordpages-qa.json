@@ -48940,6 +48940,13 @@
     "po"
   ],
   "formOfLemma": [],
+  "sensePriority": {
+    "evidence": {
+      "reordered": true,
+      "before": "tính hiển nhiên; tính rõ ràng, tính rõ rệt",
+      "after": "(pháp lý) chứng, chứng cớ, bằng chứng"
+    }
+  },
   "summary": {
     "built": 6936,
     "ipaSources": {
@@ -48957,6 +48964,13 @@
     "removedAbbrev": 40,
     "removedFat": 5,
     "removedThin": 298,
-    "generatedAt": "2026-10-16T03:59:09.047Z"
+    "sensePriority": {
+      "evidence": {
+        "reordered": true,
+        "before": "tính hiển nhiên; tính rõ ràng, tính rõ rệt",
+        "after": "(pháp lý) chứng, chứng cớ, bằng chứng"
+      }
+    },
+    "generatedAt": "2026-11-01T07:36:14.264Z"
   }
 }

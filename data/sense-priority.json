@@ -1,0 +1,4 @@
+{
+  "_note": "P0 sense priority (owner-approved 01/11/2026): per-word Vietnamese keywords whose matching sense/line (+ its examples) is moved to the front of the first POS group at BUILD time. Source .mdx is never edited; admission gates keep legacy semantics. Seed: evidence. Add more words only after hand-reviewing the OVDP entry.",
+  "evidence": ["bằng chứng", "chứng cớ", "chứng cứ"]
+}

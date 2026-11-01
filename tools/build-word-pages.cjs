@@ -26,7 +26,7 @@ const path = require('path');
 const { MDict } = require('../js/mdict.js');
 const { buildAutoNote, loadHandNote, renderNoteHTML, lemmaStems, compactRegisterLabels } = require('./word-notes-lib.cjs');
 const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs');
-const { wordGroup, ABBREV_RE } = require('./wordlist-lib.cjs');
+const { wordGroup, ABBREV_RE, FRAGMENTS, PROPER_RE } = require('./wordlist-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
@@ -347,9 +347,9 @@ function dropLeadingIpaFragment(text) {
   return text;
 }
 
-function renderEntry(raw) {
+function renderEntry(raw, word) {
   const text = sanitizeRaw(raw);
-  const blocks = demoteLeadingDomain(mtdToBlocksRender(text));
+  const blocks = applySensePriority(word, demoteLeadingDomain(mtdToBlocksRender(text)));
   if (!blocks.length) return '';
   // sense/line/ex texts are already escaped + crossref-linked by mtdToBlocks
   return blocks
@@ -364,6 +364,84 @@ function renderEntry(raw) {
       return `<div class="mtd-line">${b.text}</div>`;
     })
     .join('\n');
+}
+
+/* ---------- P0 sense priority (owner-approved 01/11/2026) ----------
+ * data/sense-priority.json maps a headword to Vietnamese keywords whose
+ * matching sense is the EXAM meaning (e.g. evidence -> bang chung). The
+ * matching line/sense block (+ its trailing ex blocks) moves to the front of
+ * the FIRST pos group at RENDER time. Source .mdx is never edited and the
+ * admission gates keep legacy semantics, so the page set cannot shift.
+ * Only words listed in the JSON are touched; everything else renders byte-
+ * identical. Reorders are logged to docs/wordpages-qa.json (qa.sensePriority).
+ */
+let SENSE_PRIORITY = null;
+function sensePriorityFor(word) {
+  if (SENSE_PRIORITY === null) {
+    try { SENSE_PRIORITY = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'sense-priority.json'), 'utf8')); }
+    catch (e) { SENSE_PRIORITY = {}; }
+  }
+  const kws = SENSE_PRIORITY[String(word || '').toLowerCase()];
+  return Array.isArray(kws) && kws.length ? kws : null;
+}
+function decodeEnt(s) {
+  return String(s || '').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+}
+function plainText(s) {
+  return decodeEnt(String(s || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+}
+function applySensePriority(word, blocks) {
+  const kws = sensePriorityFor(word);
+  if (!kws || !blocks.length) return blocks;
+  const firstPos = blocks.findIndex((b) => b.type === 'pos');
+  if (firstPos === -1) return blocks;
+  let end = blocks.length;
+  for (let i = firstPos + 1; i < blocks.length; i++) {
+    if (blocks[i].type === 'pos') { end = i; break; }
+  }
+  const norm = (s) => plainText(s).toLowerCase();
+  const keys = kws.map((k) => String(k).toLowerCase());
+  // units: a line/sense head + its trailing ex blocks; domain blocks stay put
+  const units = [];
+  let cur = null;
+  for (let i = firstPos + 1; i < end; i++) {
+    const b = blocks[i];
+    if (b.type === 'ex' && cur) { cur.blocks.push(b); continue; }
+    if (b.type === 'line' || b.type === 'sense') {
+      cur = { head: b, blocks: [b], match: keys.some((k) => norm(b.text).includes(k)) };
+      units.push(cur);
+      continue;
+    }
+    cur = null; // domain / idiom / pos-adjacent: fixed position
+    units.push({ head: b, blocks: [b], match: false, fixed: true });
+  }
+  if (!units.some((u) => u.match)) return blocks;
+  const moved = units.filter((u) => u.match).flatMap((u) => u.blocks);
+  const rest = units.filter((u) => !u.match).flatMap((u) => u.blocks);
+  if (!moved.length || !rest.length) return blocks;
+  // no-op guard: first content unit already matches
+  const firstUnit = units.find((u) => !u.fixed);
+  if (firstUnit && firstUnit.match) return blocks;
+  return [...blocks.slice(0, firstPos + 1), ...moved, ...rest, ...blocks.slice(end)];
+}
+/* First rendered sense head AFTER priority reorder - feeds the unique meta
+ * description (P0 SEO). Falls back to '' so callers use the generic template. */
+function firstSenseOf(word, raw) {
+  try {
+    const blocks = applySensePriority(word, demoteLeadingDomain(mtdToBlocksRender(sanitizeRaw(raw))));
+    const b = blocks.find((x) => x.type === 'line' || x.type === 'sense');
+    if (!b) return '';
+    return plainText(b.text).split('=')[0].trim();
+  } catch (e) { return ''; }
+}
+function wordMetaDesc(word, ipa, raw) {
+  const head = `${word}${ipa ? ` /${ipa}/` : ''}`;
+  const s = firstSenseOf(word, raw);
+  if (s) {
+    const short = s.length > 140 ? s.slice(0, 140).replace(/\s+\S*$/, '') + '...' : s;
+    return `${head} nghĩa là: ${short} — Loại từ, ví dụ và ghi chú sử dụng chi tiết — tra offline miễn phí trong app Dual Dictionary.`;
+  }
+  return `${head} nghĩa tiếng Việt là gì? Loại từ, nghĩa và ví dụ chi tiết của "${word}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
 }
 
 function wordPageUrl(word) {
@@ -383,7 +461,7 @@ const PHRASE_MANIFEST_PATH = path.join(REPO, 'docs', 'phrasepages-manifest.json'
 const PHRASE_HUB_URL = '/vi/tu/cum-tu/';
 function loadPhraseIndex() {
   const byFirst = new Map();
-  const byToken = new Map();
+  const byTerm = new Map();
   const phrases = [];
   let handCount = 0;
   let m = null;
@@ -404,11 +482,11 @@ function loadPhraseIndex() {
     // across the phrase graph (GSC crawl-priority lever).
     for (const tok of new Set(String(e.phrase).toLowerCase().split(/\s+/)
         .map((t) => t.replace(/[^a-z'’-]/g, '')).filter((t) => t.length > 1))) {
-      if (!byToken.has(tok)) byToken.set(tok, []);
-      byToken.get(tok).push(e);
+      if (!byTerm.has(tok)) byTerm.set(tok, []);
+      byTerm.get(tok).push(e);
     }
   }
-  return { byFirst, byToken, phrases, handCount };
+  return { byFirst, byTerm, phrases, handCount };
 }
 
 
@@ -492,12 +570,15 @@ function practiceDeckFor(word, labels, ngsl, awl, freq) {
   return null;
 }
 
-function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride }) {
+function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, raw }) {
   const practiceCta = practiceDeck
     ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${practiceDeck}">🎯 Luyện bộ từ này trong app ↗</a>`
     : '';
   const title = `${word} nghĩa là gì? — Phiên âm & nghĩa tiếng Việt | Dual Dictionary`;
-  const desc = `${word}${ipa ? ` /${ipa}/` : ''} nghĩa tiếng Việt là gì? Loại từ, nghĩa và ví dụ chi tiết của "${word}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
+  /* P0 SEO: unique meta per page — first rendered sense (post-priority) + IPA.
+   * raw is passed from the build loop; direct renderEntry() callers without
+   * raw keep the old generic template via the '' fallback in wordMetaDesc. */
+  const desc = wordMetaDesc(word, ipa, raw || '');
   const canonical = canonicalOverride || `${SITE}${wordPageUrl(word)}`;
   const relatedHtml = related.length
     ? `<section class="related"><h2>Từ liên quan</h2><div class="related-list">${related
@@ -842,7 +923,7 @@ async function main() {
   const labelsByWord = {};
   /* P0 QA ledger: IPA resolution per word (lemma-copy bug fix + gate) and any
    * data-field violations. Written to docs/wordpages-qa.json at the end. */
-  const qa = { ipa: [], violations: [], thinPages: [], removedVulgar, removedEmpty, removedAbbrev, removedFat, removedThin, removedCorrupt, formOfLemma: [] };
+  const qa = { ipa: [], violations: [], thinPages: [], removedVulgar, removedEmpty, removedAbbrev, removedFat, removedThin, removedCorrupt, formOfLemma: [], sensePriority: {} };
   const resolvedIpa = {};
   const builtCandidates = [...prep.keys()];
   for (const [word, p] of prep) {
@@ -866,7 +947,18 @@ async function main() {
 
     const raw = p.raw;
     const rawLemma = p.rawLemma;
-    const entryHtml = renderEntry(raw);
+    const entryHtml = renderEntry(raw, word);
+    // P0 QA: record which listed words actually reordered (silent no-match =
+    // keyword absent from entry — owner reviews the JSON, no build failure)
+    if (sensePriorityFor(word)) {
+      const before = (() => { try {
+        const bs = demoteLeadingDomain(mtdToBlocksRender(sanitizeRaw(raw)));
+        const b = bs.find((x) => x.type === 'line' || x.type === 'sense');
+        return b ? plainText(b.text).slice(0, 80) : '';
+      } catch (e) { return ''; } })();
+      const after = firstSenseOf(word, raw).slice(0, 80);
+      qa.sensePriority[word] = { reordered: before !== after, before, after };
+    }
     // collect parts of speech from pos blocks for the JSON-LD
     const posList = [];
     for (const b of mtdToBlocks(sanitizeRaw(raw))) {
@@ -874,7 +966,7 @@ async function main() {
     }
 
     const rel = relatedWords(word, builtCandidates, freq);
-    const phraseFam = (phraseIndex.byToken.get(word.toLowerCase()) || [])
+    const phraseFam = (phraseIndex.byTerm.get(word.toLowerCase()) || [])
       .slice()
       .sort((a, b) => (b.hand ? 1 : 0) - (a.hand ? 1 : 0) || a.phrase.localeCompare(b.phrase))
       .slice(0, 8);
@@ -943,6 +1035,7 @@ async function main() {
       builtSet: BUILT,
       practiceDeck,
       canonicalOverride,
+      raw,
     });
 
     const dir = path.join(OUT_DIR, slugOf(word));
@@ -1060,10 +1153,29 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 
   // hub page /vi/tu/ listing all built words (by frequency band) + P1 filters:
   // client-side only (no tracking, no backend) over data-attrs emitted at build
+  // P0 hub declutter (owner-approved 01/11/2026): client-side toggle hides
+  // fragments/interjections + proper nouns + abbreviations. Pages stay live
+  // (no URL removed); frag detection mirrors wordlist-lib FRAGMENTS + the
+  // no-vowel rule + PROPER/ABBREV entry phrasing. Default OFF.
+  const hubFragSet = new Set([...FRAGMENTS]);
   const hubRows = built
     .map((w) => {
       const L = labelsByWord[w];
-      return `    <li data-word="${escapeHtml(w)}" data-group="${L.group}" data-band="${escapeHtml(L.band)}" data-awl="${L.awl ? 'awl' : ''}" data-learning="${L.learning || ''}"><a href="${wordPageUrl(w)}">${escapeHtml(w)}</a>${resolvedIpa[w] ? ` <span class="hub-ipa">/${escapeHtml(resolvedIpa[w])}/</span>` : ''}</li>`;
+      const lw = String(w).toLowerCase();
+      let noiselike = hubFragSet.has(lw) || lw.length <= 2 || !/[aeiouy]/.test(lw) ? 1 : 0;
+      // P0 fix 01/11: entry-ABBREV/PROPER check MUST NOT scan the raw entry —
+      // real words (care: "c/o" example, change: "change of air") contain the
+      // phrasing mid-entry. Only flag when the head pos-line itself says so.
+      // Proper nouns are additionally 3rd-person-name shaped (capitalized key
+      // with a (ten rieng) head). Conservative: never flag group=core.
+      if (!noiselike && L.group !== 'core' && L.group !== 'inflection') {
+        try {
+          const rawT = prep.get(w) ? sanitizeRaw(prep.get(w).raw) : '';
+          const headLine = rawT.split(/[@*!]/)[0].slice(0, 400);
+          if (ABBREV_RE.test(headLine)) noiselike = 1;
+        } catch (e) { /* keep heuristic value */ }
+      }
+      return `    <li data-word="${escapeHtml(w)}" data-group="${L.group}" data-band="${escapeHtml(L.band)}" data-awl="${L.awl ? 'awl' : ''}" data-learning="${L.learning || ''}" data-noise="${noiselike}"><a href="${wordPageUrl(w)}">${escapeHtml(w)}</a>${resolvedIpa[w] ? ` <span class="hub-ipa">/${escapeHtml(resolvedIpa[w])}/</span>` : ''}</li>`;
     })
     .join('\n');
   const GROUP_NAMES = {
@@ -1090,6 +1202,7 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
       <option value="">Tất cả danh sách</option>
       <option value="awl">Thuộc AWL (học thuật)</option>
     </select>
+    <label style="display:inline-flex;align-items:center;gap:6px;font-size:.9rem;color:var(--muted)"><input id="hub-clean" type="checkbox" style="min-width:0;flex:none;width:18px;height:18px"> Ẩn cảm thán / tên riêng / viết tắt</label>
     <span id="hub-count" aria-live="polite"></span>
   </div>`;
   fs.writeFileSync(
@@ -1128,11 +1241,12 @@ ${hubRows}
   var items = Array.prototype.slice.call(document.querySelectorAll('#hub-list li'));
   function apply() {
     var term = q.value.trim().toLowerCase();
-    var grp = g.value, band = b.value, awl = document.getElementById('hub-awl').value, shown = 0;
+    var grp = g.value, band = b.value, awl = document.getElementById('hub-awl').value, clean = document.getElementById('hub-clean').checked, shown = 0;
     for (var it of items) {
       var ok = (!grp || it.dataset.group === grp) &&
                (!band || it.dataset.band === band) &&
                (!awl || it.dataset.awl === 'awl') &&
+               (!clean || it.dataset.noise !== '1') &&
                (!term || it.dataset.word.indexOf(term) === 0);
       it.style.display = ok ? '' : 'none';
       if (ok) shown++;
@@ -1140,8 +1254,9 @@ ${hubRows}
     count.textContent = 'Hiển thị ' + shown + '/' + items.length + ' từ';
   }
   var w = document.getElementById('hub-awl');
+  var c = document.getElementById('hub-clean');
   ['input', 'change'].forEach(function (ev) {
-    q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply);
+    q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply); c.addEventListener(ev, apply);
   });
   apply();
 })();
@@ -1184,6 +1299,7 @@ ${hubRows}
     removedAbbrev: qa.removedAbbrev.length,
     removedFat: qa.removedFat.length,
     removedThin: qa.removedThin.length,
+    sensePriority: qa.sensePriority,
     generatedAt: new Date().toISOString(),
   };
   fs.writeFileSync(QA_PATH, JSON.stringify(qa, null, 2));
@@ -1228,4 +1344,7 @@ module.exports = {
   applyOvdpFixes,
   dropLeadingIpaFragment,
   renderEntry,
+  applySensePriority,
+  firstSenseOf,
+  wordMetaDesc,
 };

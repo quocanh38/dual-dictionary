@@ -134,9 +134,19 @@ const HAND_STYLES = `
 
 /* ---------- page ---------- */
 
+function phraseMetaDesc(phrase, hand) {
+  /* P0 SEO: unique meta per phrase page — first hand sense, else generic. */
+  if (hand && Array.isArray(hand.senses) && hand.senses.length && hand.senses[0].m) {
+    const m = String(hand.senses[0].m);
+    const short = m.length > 140 ? m.slice(0, 140).replace(/\s+\S*$/, '') + '…' : m;
+    return `${phrase} nghĩa là: ${short} — Ví dụ minh hoạ và định nghĩa tiếng Anh — tra offline miễn phí trong app Dual Dictionary.`;
+  }
+  return `${phrase} nghĩa tiếng Việt là gì? Ý nghĩa, các nghĩa thường gặp và ví dụ minh hoạ của cụm "${phrase}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
+}
+
 function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHtml, tier }) {
   const title = `${phrase} nghĩa là gì? — Ý nghĩa & ví dụ tiếng Việt | Dual Dictionary`;
-  const desc = `${phrase} nghĩa tiếng Việt là gì? Ý nghĩa, các nghĩa thường gặp và ví dụ minh hoạ của cụm "${phrase}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
+  const desc = phraseMetaDesc(phrase, hand);
   const canonical = `${SITE}${phrasePageUrl(phrase)}`;
   const keyNote = ovdpKey && ovdpKey.toLowerCase() !== phrase.toLowerCase()
     ? `\n    <p class="entry-lemma-note">Mục trong từ điển mở: “${core.escapeHtml(ovdpKey)}”.</p>`
@@ -173,7 +183,8 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
           { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` },
-          { '@type': 'ListItem', position: 3, name: phrase, item: canonical },
+          { '@type': 'ListItem', position: 3, name: 'Cụm từ', item: `${SITE}/vi/tu/cum-tu/` },
+          { '@type': 'ListItem', position: 4, name: phrase, item: canonical },
         ],
       },
     ],
@@ -203,7 +214,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
 </head>
 <body class="word-page">
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">${core.escapeHtml(phrase)}</span>
+  <a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <a href="/vi/tu/cum-tu/">Cụm từ</a> › <span aria-current="page">${core.escapeHtml(phrase)}</span>
 </nav>
 
 <main class="page">
