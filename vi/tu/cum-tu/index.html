@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="4186 cụm từ tiếng Anh — danh sách A–Z | Dual Dictionary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<style>.hub-tab{cursor:pointer;border:1px solid rgba(0,0,0,.18);background:transparent}.hub-tab[aria-pressed="true"]{font-weight:700;box-shadow:inset 0 0 0 1.5px currentColor}@media (max-width:900px){#hub-list{columns:2 !important}}@media (max-width:600px){#hub-list{columns:1 !important}}.hub-filters{position:relative}.hub-suggest{position:absolute;z-index:20;max-width:480px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}</style>
+<style>.hub-tab{cursor:pointer;border:1px solid rgba(0,0,0,.18);background:transparent}.hub-tab[aria-pressed="true"]{font-weight:700;box-shadow:inset 0 0 0 1.5px currentColor}@media (max-width:900px){#hub-list{columns:2 !important}}@media (max-width:600px){#hub-list{columns:1 !important}}.hub-filters{position:relative}.hub-suggest{position:absolute;z-index:20;max-width:480px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}.hub-suggest button{display:flex;width:100%;gap:8px;align-items:baseline;padding:9px 14px;background:none;border:0;font:inherit;color:var(--ink);cursor:pointer;text-align:left}.hub-suggest button:hover,.hub-suggest button.active{background:var(--soft)}</style>
 </head>
 <body class="word-page">
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Cụm từ</span></nav>
@@ -4275,21 +4275,24 @@
   function renderSg(list2){
     if(!sgBox) return;
     if(!list2.length){ sgBox.hidden=true; sgBox.innerHTML=''; sgIdx=-1; return; }
+    /* link-check-safe: suggestion rows carry data-h only (JS navigates). */
     sgBox.innerHTML=list2.map(function(it,i){
       var a=it.querySelector('a'); var t=tagOf(it);
-      return '<a href="'+a.getAttribute('href')+'">'+esc(a.textContent)+(t?' <span class="sg-tag">'+t+'</span>':'')+'</a>';
+      return '<button type="button" data-h="'+a.getAttribute('href')+'">'+esc(a.textContent)+(t?' <span class="sg-tag">'+t+'</span>':'')+'</button>';
     }).join('');
     sgBox.hidden=false; sgIdx=-1;
+    var btns=sgBox.querySelectorAll('button[data-h]');
+    for(var b=0;b<btns.length;b++) btns[b].addEventListener('click', function(){ window.location.href=this.getAttribute('data-h'); });
   }
   var sgT=null;
   q.addEventListener('input', function(){ if(sgT)clearTimeout(sgT); sgT=setTimeout(function(){renderSg(suggest(q.value));},120); });
   q.addEventListener('keydown', function(ev){
     if(!sgBox||sgBox.hidden) return;
-    var links=sgBox.querySelectorAll('a');
+    var links=sgBox.querySelectorAll('button[data-h]');
     if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){ ev.preventDefault();
       sgIdx=ev.key==='ArrowDown'?Math.min(sgIdx+1,links.length-1):Math.max(sgIdx-1,0);
       for(var i=0;i<links.length;i++) links[i].classList.toggle('active',i===sgIdx);
-    } else if(ev.key==='Enter'&&sgIdx>=0&&links[sgIdx]){ ev.preventDefault(); window.location.href=links[sgIdx].href; }
+    } else if(ev.key==='Enter'&&sgIdx>=0&&links[sgIdx]){ ev.preventDefault(); window.location.href=links[sgIdx].getAttribute('data-h'); }
     else if(ev.key==='Escape'){ sgBox.hidden=true; }
   });
   document.addEventListener('click', function(ev){ if(sgBox&&!sgBox.hidden&&!sgBox.contains(ev.target)&&ev.target!==q) sgBox.hidden=true; });

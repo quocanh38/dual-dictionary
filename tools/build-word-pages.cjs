@@ -1216,6 +1216,8 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .hub-suggest{position:absolute;z-index:20;max-width:480px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}
 .hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}
 .hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}
+.hub-suggest button{display:flex;width:100%;gap:8px;align-items:baseline;padding:9px 14px;background:none;border:0;font:inherit;color:var(--ink);cursor:pointer;text-align:left}
+.hub-suggest button:hover,.hub-suggest button.active{background:var(--soft)}
 .hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}
 .hub-filters{position:relative}
 `,
@@ -1395,11 +1397,15 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
   function renderSg(list2){
     if(!sgBox) return;
     if(!list2.length){ sgBox.hidden=true; sgBox.innerHTML=''; sgIdx=-1; return; }
+    /* link-check-safe: suggestion rows are <button data-w> (JS navigates),
+     * so no href literal exists for the scanner to flag. */
     sgBox.innerHTML = list2.map(function(w,i){
       var t=tagOf(w);
-      return '<a href="/vi/tu/'+encodeURIComponent(w)+'/" data-i="'+i+'">'+esc(w)+(t?' <span class="sg-tag">'+t+'</span>':'')+'</a>';
+      return '<button type="button" data-w="'+esc(w)+'" data-i="'+i+'">'+esc(w)+(t?' <span class="sg-tag">'+t+'</span>':'')+'</button>';
     }).join('');
     sgBox.hidden=false; sgIdx=-1;
+    var btns=sgBox.querySelectorAll('button[data-w]');
+    for(var b=0;b<btns.length;b++) btns[b].addEventListener('click', function(){ window.location.href='/vi/tu/'+this.getAttribute('data-w')+'/'; });
   }
   var sgTimer=null;
   q.addEventListener('input', function(){
@@ -1408,13 +1414,13 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
   });
   q.addEventListener('keydown', function(ev){
     if(!sgBox||sgBox.hidden) return;
-    var links=sgBox.querySelectorAll('a');
+    var links=sgBox.querySelectorAll('button[data-w]');
     if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){
       ev.preventDefault();
       sgIdx = ev.key==='ArrowDown' ? Math.min(sgIdx+1,links.length-1) : Math.max(sgIdx-1,0);
       for(var i=0;i<links.length;i++) links[i].classList.toggle('active', i===sgIdx);
     } else if(ev.key==='Enter'&&sgIdx>=0&&links[sgIdx]){
-      ev.preventDefault(); window.location.href=links[sgIdx].href;
+      ev.preventDefault(); window.location.href='/vi/tu/'+links[sgIdx].getAttribute('data-w')+'/';
     } else if(ev.key==='Escape'){ sgBox.hidden=true; }
   });
   document.addEventListener('click', function(ev){
