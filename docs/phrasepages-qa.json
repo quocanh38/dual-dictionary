@@ -1,25 +1,25 @@
 {
   "summary": {
     "inQueue": 25021,
-    "built": 4186,
+    "built": 4187,
     "builtHand": 4186,
     "builtByTier": {
       "A": 1653,
       "B": 1459,
-      "C": 462,
+      "C": 463,
       "D": 612
     },
-    "builtWordNet": 3841,
+    "builtWordNet": 3842,
     "removedNoSource": 17208,
     "removedEmpty": 74,
     "removedFat": 1,
     "removedAbbrev": 9,
     "removedThin": 1791,
-    "removedThinShort": 1594,
+    "removedThinShort": 1593,
     "removedVulgar": 32,
     "removedCollision": 126,
     "removedStale": 0,
-    "generatedAt": "2026-11-01T13:01:09.969Z"
+    "generatedAt": "2026-11-01T13:34:52.083Z"
   },
   "samples": {
     "removedNoSource": [

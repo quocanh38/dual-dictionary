@@ -4375,10 +4375,48 @@ async function startToeicMixPractice() {
   }));
   // phrases: EN->VI choice/recall + cloze over the exam sentence only
   for (const it of practiceQueue) if (it.type === 'phrase') it.drillKinds = ['choice', 'recall', 'cloze'];
+  assignToeicDeepKinds(practiceQueue);
   assignCurriculumKinds(practiceQueue.map((it) => it.text));
   renderPractice();
 }
 
+/* P2 TOEIC-deep (owner-approved 01/11): two extra drill shapes for phrases.
+ * 1. prep-gap: hide the PREPOSITION inside a phrasal phrase (look forward TO,
+ *    take care OF, in charge OF) — the learner types the missing particle.
+ * 2. near-pick: confuse with a NEAR phrase sharing a token (take care of vs
+ *    take charge of, look forward to vs look up to) — EN->VI choice with the
+ *    near gloss as distractor.
+ * Both are best-effort: phrases without a known prep or near pair keep the
+ * standard choice/recall/cloze rotation. */
+const PREP_WORDS = ['to','of','for','with','on','in','at','up','out','off','into','over','from','about','after','before','between','through','during','without','within','along','across','behind','beyond','plus','except','but','toward','towards','upon','among','per'];
+const NEAR_PAIRS = { 'take care of':['take charge of','take part in'], 'take charge of':['take care of','take part in'], 'look forward to':['look up to','look out for'], 'deal with':['cope with','come up with'], 'come up with':['deal with','keep up with'], 'in charge of':['take charge of','out of stock'], 'out of stock':['in charge of','out of order'], 'as a result':['result in','lead to'], 'result in':['as a result','lead to'], 'lead to':['result in','as a result'] };
+function prepGapOf(phrase, sent) {
+  const toks = String(phrase).split(/\s+/);
+  const preps = toks.map((w,i)=>({w:w.toLowerCase(),i})).filter((o)=>PREP_WORDS.indexOf(o.w)!==-1);
+  if (!preps.length || !sent) return null;
+  const target = preps[preps.length-1];
+  const re = new RegExp('(^|[^\\p{L}])(' + target.w + ')(?=[^\\p{L}]|$)', 'i');
+  const m = String(sent).match(re);
+  if (!m) return null;
+  const idx = m.index + m[1].length;
+  return { text: sent.slice(0,idx) + '_____' + sent.slice(idx + m[2].length), answer: m[2].toLowerCase(), hint: 'điền giới từ còn thiếu' };
+}
+function assignToeicDeepKinds(queue) {
+  const phrases = queue.filter((it)=>it.type==='phrase');
+  if (phrases.length < 2) return;
+  // rotate: every 3rd phrase gets prep-gap, every 4th gets near-pick
+  let n = 0;
+  for (const it of phrases) {
+    n++;
+    if (n % 3 === 0) {
+      const g = prepGapOf(it.text, it.context && it.context.sentence);
+      if (g) { it.deepKind = 'prep-gap'; it.deepGap = g; }
+    } else if (n % 4 === 0) {
+      const nears = NEAR_PAIRS[it.text.toLowerCase()];
+      if (nears && nears.length) { it.deepKind = 'near-pick'; it.deepNears = nears; }
+    }
+  }
+}
 function assignCurriculumKinds(deckPool) {
   const cycle = ['choice', 'recall', 'listen', 'cloze', 'ipa', 'say'];
   let i = 0;
@@ -4530,6 +4568,8 @@ function practiceExercise(item) {
     return item.type === 'sentence' ? { kind: 'dictation', sent: sent || '' } : { kind: 'listen', text: item.text };
   }
   if (item.synthetic) {
+    if (item.deepKind === 'prep-gap' && item.deepGap) return { kind: 'prep-gap', gap: item.deepGap, gloss: practiceGloss.get(item.id) };
+    if (item.deepKind === 'near-pick') return { kind: 'near-pick', nears: item.deepNears || [], gloss: practiceGloss.get(item.id) };
     const g = practiceGloss.get(item.id);
     switch (item.practiceKind) {
       case 'choice': if (g) return { kind: 'choice', gloss: g }; break;
@@ -4629,6 +4669,33 @@ function renderPractice() {
   gotBtn.addEventListener('click', () => finishPracticeCard(item, true));
   againBtn.addEventListener('click', () => finishPracticeCard(item, false));
 
+  if (ex.kind === 'near-pick' && ex.nears && ex.nears.length) {
+    prompt.textContent = '“' + (ex.gloss || item.text) + '” — cụm nào có nghĩa này?';
+    card.dataset.answer = item.text;
+    const opts = shuffleArr([item.text].concat(ex.nears.slice(0, 3)));
+    const box = document.createElement('div');
+    box.className = 'practice-options';
+    for (const o of opts) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'btn-secondary practice-option'; b.textContent = o;
+      b.addEventListener('click', () => {
+        const ok = o === item.text;
+        practiceChecked = true;
+        practiceStats.done++;
+        if (ok) practiceStats.ok++;
+        else practiceStats.streak = 0;
+        feedback.textContent = ok ? '✓ Correct — ' + item.text : '✗ Đáp án: ' + item.text;
+        feedback.classList.toggle('ok', ok); feedback.classList.toggle('bad', !ok);
+        gotBtn.disabled = false; againBtn.disabled = false;
+      });
+      box.appendChild(b);
+    }
+    card.appendChild(box);
+    card.appendChild(feedback);
+    actions.append(gotBtn, againBtn); card.appendChild(actions);
+    stage.appendChild(card);
+    return;
+  }
   if (ex.kind === 'choice') {
     prompt.textContent = item.text;
     card.dataset.answer = ex.gloss;
@@ -4731,7 +4798,8 @@ function renderPractice() {
   }
 
   let answer; let hear;
-  if (ex.kind === 'cloze') { const c = clozeSentence(ex.sent, ex.hw); prompt.textContent = c.text; answer = c.answer; hear = ex.sent; }
+  if (ex.kind === 'prep-gap' && ex.gap) { prompt.textContent = ex.gap.text + ' (' + ex.gap.hint + ')'; answer = ex.gap.answer; hear = ''; }
+  else if (ex.kind === 'cloze') { const c = clozeSentence(ex.sent, ex.hw); prompt.textContent = c.text; answer = c.answer; hear = ex.sent; }
   else if (ex.kind === 'dictation') { prompt.textContent = i18n('practice.dictation') + ':'; answer = ex.sent; hear = ex.sent; }
   else if (ex.kind === 'recall') { prompt.textContent = '“' + ex.gloss + '” — ' + i18n('practice.recall') + ':'; answer = item.text; hear = ''; }
   else { prompt.textContent = i18n('practice.listen') + ':'; answer = item.text; hear = item.text; }
