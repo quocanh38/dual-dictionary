@@ -166,6 +166,13 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
   const keyNote = ovdpKey && ovdpKey.toLowerCase() !== phrase.toLowerCase()
     ? `\n    <p class="entry-lemma-note">Mục trong từ điển mở: “${core.escapeHtml(ovdpKey)}”.</p>`
     : '';
+  /* P1 schema-rich for phrases: about TOEIC/IELTS + first exam example. */
+  const pExam = core.examTagsFor ? core.examTagsFor(null, phraseSlug(phrase)) : null;
+  const pAbout = [];
+  if (pExam && pExam.tags.includes('toeic')) pAbout.push({ '@type': 'Thing', name: 'TOEIC Business', url: `${SITE}/vi/tu/toeic/` });
+  if (pExam && pExam.tags.includes('ielts')) pAbout.push({ '@type': 'Thing', name: 'IELTS', url: `${SITE}/vi/tu/ielts/` });
+  let pExample = null;
+  if (hand && Array.isArray(hand.senses) && hand.senses.length && hand.senses[0].ex && hand.senses[0].ex.length) pExample = hand.senses[0].ex[0][0];
   const badges = `<div class="word-badges"><span class="chip chip-band">Cụm từ</span>${
     posList.map((p) => `<span class="chip chip-core">${core.escapeHtml(p)}</span>`).join('')
   }${hand ? '<span class="chip chip-learn">Biên soạn riêng</span>' : ''}${tier === 'A' ? '<span class="chip chip-band" title="Mọi từ trong cụm thuộc 2.000 từ phổ biến nhất (theo tần suất corpus)">Phổ biến</span>' : ''}${examChips(phrase)}</div>`;
@@ -192,6 +199,8 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
         },
         url: canonical,
         termCode: phrase,
+        ...(pAbout.length ? { about: pAbout } : {}),
+        ...(pExample ? { example: pExample } : {}),
       },
       {
         '@type': 'BreadcrumbList',
@@ -702,6 +711,27 @@ async function main() {
     path.join(sitemapDir, 'phrases-index.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries.join('\n')}\n</sitemapindex>\n`,
   );
+  /* P1 sitemap-tag: TOEIC + IELTS phrase clusters. */
+  const tagP = { toeic: [], ielts: [] };
+  for (const phrase of built) {
+    const t = (core.examTagsFor ? (core.examTagsFor(null, phraseSlug(phrase)) || {}).tags : []) || [];
+    if (t.includes('toeic')) tagP.toeic.push(phraseSlug(phrase));
+    if (t.includes('ielts')) tagP.ielts.push(phraseSlug(phrase));
+  }
+  for (const [tag, slugs] of Object.entries(tagP)) {
+    if (!slugs.length) continue;
+    const name = `phrases-${tag}.xml`;
+    fs.writeFileSync(
+      path.join(sitemapDir, name),
+      `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${slugs.map((s) => `  <url><loc>${SITE}/vi/tu/${encodeURIComponent(s)}/</loc><lastmod>${LASTMOD}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n')}\n</urlset>\n`,
+    );
+    sitemapIndexEntries.push(`  <sitemap><loc>${SITE}/vi/tu/sitemap/${name}</loc><lastmod>${LASTMOD}</lastmod></sitemap>`);
+  }
+  fs.writeFileSync(
+    path.join(sitemapDir, 'phrases-index.xml'),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries.join('\n')}\n</sitemapindex>\n`,
+  );
+  console.log(`TAG-SITEMAP phrases: toeic ${tagP.toeic.length} · ielts ${tagP.ielts.length}`);
 
   const builtByTier = { A: 0, B: 0, C: 0, D: 0 };
   for (const phrase of built) { const p5 = prep.get(phrase); builtByTier[p5 && p5.tier ? p5.tier : 'D']++; }

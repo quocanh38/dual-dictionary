@@ -651,6 +651,19 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
         .map((e) => `<a class="related-chip" href="/vi/tu/${encodeURIComponent(e.slug)}/">${escapeHtml(e.phrase)}</a>`)
         .join('')}</div></section>`
     : '';
+  /* P1 schema-rich (owner-approved 01/11): subject tags + first exam example
+   * as schema example. about[] points at the tag collection pages (built in
+   * the same run below); example[] carries 1 hand-written exam sentence. */
+  const examTag = examTagsFor(word, null);
+  const examAbout = [];
+  if (examTag && examTag.tags.includes('ielts')) examAbout.push({ '@type': 'Thing', name: 'IELTS Core', url: `${SITE}/vi/tu/ielts/` });
+  if (examTag && examTag.tags.includes('giao-tiep')) examAbout.push({ '@type': 'Thing', name: 'Giao tiếp', url: `${SITE}/vi/tu/giao-tiep/` });
+  let examExample = null;
+  try {
+    const db = examExamples();
+    const list = db.words && db.words[String(word).toLowerCase()];
+    if (list && list.length && list[0][0]) examExample = list[0][0];
+  } catch (e) { /* no example */ }
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -666,6 +679,8 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
         },
         url: canonical,
         termCode: word,
+        ...(examAbout.length ? { about: examAbout } : {}),
+        ...(examExample ? { example: examExample } : {}),
       },
       {
         '@type': 'BreadcrumbList',
@@ -1136,6 +1151,29 @@ async function main() {
     path.join(sitemapDir, 'index.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries.join('\n')}\n</sitemapindex>\n`,
   );
+  /* P1 sitemap-tag (owner-approved 01/11): topical sitemaps per exam tag so
+   * Google sees the IELTS/TOEIC clusters. Additive — chunk sitemaps above
+   * are untouched. */
+  const tagGroups = { ielts: [], 'giao-tiep': [] };
+  for (const w of sitemapWords) {
+    const t = (examTagsFor(w, null) || {}).tags || [];
+    if (t.includes('ielts')) tagGroups.ielts.push(w);
+    if (t.includes('giao-tiep')) tagGroups['giao-tiep'].push(w);
+  }
+  for (const [tag, words] of Object.entries(tagGroups)) {
+    if (!words.length) continue;
+    const name = `words-${tag}.xml`;
+    fs.writeFileSync(
+      path.join(sitemapDir, name),
+      `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${words.map((w) => `  <url><loc>${SITE}${wordPageUrl(w)}</loc><lastmod>${LASTMOD}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n')}\n</urlset>\n`,
+    );
+    sitemapIndexEntries.push(`  <sitemap><loc>${SITE}/vi/tu/sitemap/${name}</loc><lastmod>${LASTMOD}</lastmod></sitemap>`);
+  }
+  fs.writeFileSync(
+    path.join(sitemapDir, 'index.xml'),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries.join('\n')}\n</sitemapindex>\n`,
+  );
+  console.log(`TAG-SITEMAP: ielts ${tagGroups.ielts.length} · giao-tiep ${tagGroups['giao-tiep'].length}`);
 
   // a lightweight word.css reusing the app's own entry visual language
   fs.writeFileSync(
