@@ -33,5 +33,6 @@ export const LESSON_PROVIDERS = Object.freeze({
 });
 
 export function providerForPurpose(purpose) {
-  return purpose === 'repair-exercises' ? META_MODEL_API_PROVIDER : HACKATHON_PROVIDER;
+  if (purpose === 'repair-exercises' || purpose === 'photo-extract') return META_MODEL_API_PROVIDER;
+  return HACKATHON_PROVIDER;
 }
