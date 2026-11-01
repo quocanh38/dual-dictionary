@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
+const { navHtml } = require('./nav-partial.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'loi-sai');
@@ -79,6 +80,7 @@ function pageHtml(m, wordHref) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('loi-sai')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <a href="/vi/loi-sai/">Lỗi sai</a> › <span aria-current="page">${esc(m.mistake)}</span></nav>
 <main class="page">
   <p class="word-kicker">Lỗi sai thường gặp</p>
@@ -159,6 +161,7 @@ function main() {
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('loi-sai')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Lỗi sai</span></nav>
 <main class="page">
   <p class="word-kicker">Lỗi sai thường gặp</p>

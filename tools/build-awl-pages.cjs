@@ -12,6 +12,7 @@ const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'chu-de');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
+const { navHtml } = require('./nav-partial.cjs');
 
 /* Hand-written intros — one per sublist, each naming its own head words. */
 const INTROS = {
@@ -124,6 +125,7 @@ function sublistPageHtml(n, words, ipa) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('chu-de')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/chu-de/">Chủ đề</a> › <span aria-current="page">AWL Sublist ${n}</span></nav>
 <main class="page">
   <p class="word-kicker">Academic Word List · Sublist ${n}/10</p>
@@ -221,6 +223,7 @@ function hubHtml(subs) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('chu-de')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Chủ đề</span></nav>
 <main class="page">
   <p class="word-kicker">Học theo chủ đề</p>

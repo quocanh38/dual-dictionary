@@ -10,6 +10,7 @@ const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'cambridge');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
+const { navHtml } = require('./nav-partial.cjs');
 
 function pageHtml(p) {
   const slug = `cam-${p.book}-test-${p.test}`;
@@ -59,6 +60,7 @@ function pageHtml(p) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('cambridge')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <a href="/vi/cambridge/">Cambridge</a> › <span aria-current="page">Cam ${p.book} Test ${p.test}</span></nav>
 <main class="page">
   <p class="word-kicker">Từ vựng đề thi thật · ${esc(p.skill)}</p>
@@ -157,11 +159,13 @@ function main() {
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('cambridge')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Cambridge</span></nav>
 <main class="page">
   <p class="word-kicker">Đề thi thật</p>
   <h1 style="font-size:2.2rem">Từ vựng đề Cambridge IELTS</h1>
   <p style="color:var(--muted)">Từ vựng hay gặp theo từng đề thi thật Cambridge ${esc(range)}. Chỉ liệt kê từ vựng — không sao chép đề thi.</p>
+  <p style="margin:12px 0 0"><a href="/vi/chu-de/">Chủ đề học thuật (AWL) →</a> · <a href="/vi/tu/ielts/">Bộ IELTS Core →</a> · <a href="/vi/phan-biet/">Phân biệt dễ nhầm →</a> · <a href="/vi/loi-sai/">Lỗi sai thường gặp →</a></p>
   <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>

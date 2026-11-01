@@ -27,6 +27,7 @@ const { MDict } = require('../js/mdict.js');
 const { buildAutoNote, loadHandNote, renderNoteHTML, lemmaStems, compactRegisterLabels } = require('./word-notes-lib.cjs');
 const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs');
 const { wordGroup, ABBREV_RE, FRAGMENTS, PROPER_RE } = require('./wordlist-lib.cjs');
+const { navHtml } = require('./nav-partial.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
@@ -601,7 +602,7 @@ function badgeRowHtml(word, labels, builtSet) {
   } else if (labels.group === 'vulgar') {
     chips.push('<span class="chip chip-vulgar">Từ tục / tiếng lóng — cẩn trọng ngữ cảnh</span>');
   }
-  if (labels.awl) chips.push(`<span class="chip chip-awl" title="Từ thuộc Academic Word List (Coxhead, 570 họ từ chia 10 sublist theo tần suất trong văn học thuật) — sublist càng nhỏ càng gặp trong bài đọc học thuật.">Học thuật (AWL Sublist ${escapeHtml(String(labels.awl))})</span>`);
+  if (labels.awl) { const sub = String(typeof labels.awl === 'object' ? (labels.awl.sublist ?? labels.awl.sub ?? '') : labels.awl); const hub = /^\d+$/.test(sub) ? `/vi/chu-de/awl-${sub}/` : '/vi/chu-de/'; chips.push(`<span class="chip chip-awl" title="Từ thuộc Academic Word List (Coxhead, 570 họ từ chia 10 sublist theo tần suất trong văn học thuật) — sublist càng nhỏ càng gặp trong bài đọc học thuật.">Học thuật (<a href="${hub}">AWL Sublist ${escapeHtml(sub)}</a>)</span>`); }
   else if (labels.group === 'academic') chips.push('<span class="chip chip-awl" title="Từ thuộc Academic Word List (Coxhead).">Học thuật (AWL)</span>');
   if (labels.learning === 'active') chips.push('<span class="chip chip-learn">Nên chủ động sử dụng</span>');
   else if (labels.learning === 'recognition') chips.push('<span class="chip chip-learn2">Nên nhận biết</span>');
@@ -680,6 +681,22 @@ function loadAudioSet() {
   return set;
 }
 const audioSet = loadAudioSet();
+/* Internal-link mesh (01/11): word pages link to loi-sai pages sharing the same
+ * keyword. Loaded from data/mistakes.json (same slug rule as builder). */
+let MISTAKE_INDEX = null;
+function mistakeLinksHtml(word) {
+  if (MISTAKE_INDEX === null) {
+    MISTAKE_INDEX = [];
+    try { MISTAKE_INDEX = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'mistakes.json'), 'utf8')).pairs || []; }
+    catch (e) { MISTAKE_INDEX = []; }
+  }
+  const slugOf = (s) => String(s).normalize('NFC').toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'loi-sai';
+  const w = String(word).toLowerCase();
+  const hits = MISTAKE_INDEX.filter((m) => String(m.word || '').toLowerCase() === w).slice(0, 3);
+  if (!hits.length) return '';
+  const rows = hits.map((m) => `<a class="related-chip" href="/vi/loi-sai/${slugOf(m.mistake)}/">Đừng nói “${escapeHtml(m.mistake)}” →</a>`).join('');
+  return `<section class="related"><h2>Lỗi sai thường gặp</h2><div class="related-list">${rows}</div></section>`;
+}
 /* P2 compare links (owner-approved 01/11): word pages link to their
  * phan-biet pages. Loaded from data/comparisons.json (same slug rule). */
 let COMPARE_PAIRS = null;
@@ -863,6 +880,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">${escapeHtml(word)}</span>
 </nav>
@@ -891,6 +909,8 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   ${examExamplesHtml(word, null)}
 
   ${compareLinksHtml(word)}
+
+  ${mistakeLinksHtml(word)}
 
   ${topicLinksHtml(word, labels)}
 
@@ -1517,6 +1537,7 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
 <link rel="stylesheet" href="/vi/tu/word.css">
 </head>
 <body class="word-page">
+${navHtml('tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <span aria-current="page">Từ điển</span></nav>
 <main class="page">
   <p class="word-kicker">Từ điển Anh-Việt</p>

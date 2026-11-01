@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { phraseSlug } = require('./build-phrase-pages.cjs');
+const { navHtml } = require('./nav-partial.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
@@ -63,12 +64,13 @@ function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml(slug === 'giao-tiep' ? 'tu' : slug)}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">${core.escapeHtml(h1)}</span></nav>
 <main class="page">
   <p class="word-kicker">Bộ từ theo mục tiêu</p>
   <h1 style="font-size:2.2rem">${core.escapeHtml(h1)}</h1>
   <p style="color:var(--muted)">${intro}</p>
-  <p style="margin:12px 0 0"><a class="related-chip" style="text-decoration:none" href="${deckCta.href}">${deckCta.label} ↗</a> <a href="/vi/tu/">Tất cả từ →</a> · <a href="/vi/tu/cum-tu/">Tất cả cụm →</a></p>
+  <p style="margin:12px 0 0"><a class="related-chip" style="text-decoration:none" href="${deckCta.href}">${deckCta.label} ↗</a> <a href="/vi/tu/">Tất cả từ →</a> · <a href="/vi/tu/cum-tu/">Tất cả cụm →</a> · <a href="/vi/chu-de/">Chủ đề học thuật (AWL) →</a> · <a href="/vi/phan-biet/">Phân biệt dễ nhầm →</a> · <a href="/vi/loi-sai/">Lỗi sai thường gặp →</a></p>
   <div class="hub-filters">
     <input id="hub-q" type="search" placeholder="Tìm trong bộ này…" aria-label="Tìm trong bộ này">
     <span id="hub-count" aria-live="polite"></span>

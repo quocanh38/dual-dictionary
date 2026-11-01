@@ -12,6 +12,7 @@ const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'phan-biet');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
+const { navHtml } = require('./nav-partial.cjs');
 
 function slugOf(s) {
   return String(s).normalize('NFC').toLowerCase().replace(/[^a-z0-9'\s-]/g, '').replace(/\s+/g, '-');
@@ -108,6 +109,7 @@ function pageHtml(p) {
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('phan-biet')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <a href="/vi/phan-biet/">Phân biệt</a> › <span aria-current="page">${esc(p.a)} / ${esc(p.b)}</span></nav>
 <main class="page">
   <p class="word-kicker">Phân biệt từ dễ nhầm</p>
@@ -171,6 +173,7 @@ function hubHtml(pairs) {
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('phan-biet')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Phân biệt</span></nav>
 <main class="page">
   <p class="word-kicker">Từ dễ nhầm</p>

@@ -25,6 +25,7 @@ const path = require('path');
 const { MDict } = require('../js/mdict.js');
 const { ABBREV_RE, VULGAR } = require('./wordlist-lib.cjs');
 const core = require('./build-word-pages.cjs');
+const { navHtml } = require('./nav-partial.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
@@ -238,6 +239,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
+${navHtml('cum-tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <a href="/vi/tu/cum-tu/">Cụm từ</a> › <span aria-current="page">${core.escapeHtml(phrase)}</span>
 </nav>
@@ -349,6 +351,7 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
 <style>.hub-tab{cursor:pointer;border:1px solid rgba(0,0,0,.18);background:transparent}.hub-tab[aria-pressed="true"]{font-weight:700;box-shadow:inset 0 0 0 1.5px currentColor}@media (max-width:900px){#hub-list{columns:2 !important}}@media (max-width:600px){#hub-list{columns:1 !important}}.hub-filters{position:relative}.hub-suggest{position:absolute;z-index:20;max-width:480px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}.hub-suggest button{display:flex;width:100%;gap:8px;align-items:baseline;padding:9px 14px;background:none;border:0;font:inherit;color:var(--ink);cursor:pointer;text-align:left}.hub-suggest button:hover,.hub-suggest button.active{background:var(--soft)}</style>
 </head>
 <body class="word-page">
+${navHtml('cum-tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Cụm từ</span></nav>
 <main class="page">
   <p class="word-kicker">Cụm từ tiếng Anh</p>
