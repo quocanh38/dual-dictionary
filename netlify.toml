@@ -2,7 +2,9 @@ headersOrigin = "config"
 redirectsOrigin = "config"
 plugins = []
 headers = []
-redirects = []
+redirects = [
+  { from = "/vi/tu/*", to = "/vi/tu/", status = 404 },
+]
 
 [functions]
 
