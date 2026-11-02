@@ -1,0 +1,4 @@
+# 404 safety net (owner-approved 02/11): guessed-but-never-built /vi/tu/* URLs
+# serve the dictionary hub content with a 404 status (no soft-404 for SEO).
+# Existing files always win (no force flag) — real pages are unaffected.
+/vi/tu/*  /vi/tu/  404
