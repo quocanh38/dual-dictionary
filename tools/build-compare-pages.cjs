@@ -36,6 +36,9 @@ function builtTerms() {
 function termHref(t) {
   const slug = slugOf(t);
   if (builtTerms().has(slug)) return `/vi/tu/${encodeURIComponent(slug)}/`;
+  /* Hand-written pages (02/11: evaluate, sustain, economical) live outside the
+   * manifests — fall back to a disk check before giving up to ?q=. */
+  try { if (fs.statSync(path.join(REPO, 'vi', 'tu', slug, 'index.html')).isFile()) return `/vi/tu/${encodeURIComponent(slug)}/`; } catch (e) {}
   return `/?q=${encodeURIComponent(t)}`;
 }
 
