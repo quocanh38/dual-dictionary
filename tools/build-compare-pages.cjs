@@ -222,8 +222,9 @@ function main() {
   for (const p of pairs) {
     const slug = `${slugOf(p.a)}-vs-${slugOf(p.b)}`;
     slugs.push(slug);
-    fs.writeFileSync(path.join(OUT_DIR, `${slug}.html`), pageHtml(p));
-    // pretty URL: /vi/phan-biet/{slug}/ via dir + index
+    // pretty URL: /vi/phan-biet/{slug}/ via dir + index ONLY (no {slug}.html
+    // twin — a twin makes Netlify serve non-slash as canonical and 301 the
+    // sitemap slash URL, splitting link equity).
     const dir = path.join(OUT_DIR, slug);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(p));
