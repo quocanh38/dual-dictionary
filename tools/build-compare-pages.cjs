@@ -47,8 +47,27 @@ function pageHtml(p) {
   const canonical = `${SITE}/vi/phan-biet/${slug}/`;
   const h1 = `Phân biệt ${p.a} và ${p.b}`;
   const desc = `${p.a} khác ${p.b} thế nào? ${p.diff} Câu đúng/sai, cách dùng IELTS/TOEIC — Dual Dictionary.`.slice(0, 160);
-  const wrongRows = (p.wrong || []).map((w) =>
-    `<li class="cmp-wrong">✗ <s>${esc(w)}</s> — đừng nói thế này</li>`).join('\n');
+  /* Anti-cannibalization (02/11): a wrong line that HAS its own loi-sai page
+   * links to it ("Giải thích chi tiết") — signals Google the mistake page is
+   * the deep answer, the compare page is the comparison context. */
+  let MISTAKE_SLUGS = null;
+  const mistakeHref = (w) => {
+    if (MISTAKE_SLUGS === null) {
+      MISTAKE_SLUGS = {};
+      try {
+        const pairs = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'mistakes.json'), 'utf8')).pairs || [];
+        const s = (x) => String(x).normalize('NFC').toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'loi-sai';
+        for (const m of pairs) MISTAKE_SLUGS[String(m.mistake || '').toLowerCase()] = s(m.mistake);
+      } catch (e) {}
+    }
+    const sl = MISTAKE_SLUGS[String(w).toLowerCase()];
+    return sl ? `/vi/loi-sai/${sl}/` : '';
+  };
+  const wrongRows = (p.wrong || []).map((w) => {
+    const mh = mistakeHref(w);
+    const deep = mh ? ` <a href="${mh}" title="Giải thích chi tiết lỗi này">Giải thích chi tiết →</a>` : '';
+    return `<li class="cmp-wrong">✗ <s>${esc(w)}</s> — đừng nói thế này${deep}</li>`;
+  }).join('\n');
   const rightRows = (p.right || []).map((r) =>
     `<li class="cmp-right">✓ ${esc(r)}</li>`).join('\n');
   /* Snippet box (02/11): 40-60 word TL;DR right under H1 — clean <p>, no nested
