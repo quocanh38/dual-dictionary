@@ -15,6 +15,7 @@ function navHtml(active) {
 <a href="/vi/chu-de/"${on('chu-de')}>Chủ đề AWL</a>
 <a href="/vi/phan-biet/"${on('phan-biet')}>Phân biệt</a>
 <a href="/vi/loi-sai/"${on('loi-sai')}>Lỗi sai</a>
+<a href="/vi/gioi-tu/"${on('gioi-tu')}>Giới từ</a>
 <a href="/vi/cambridge/"${on('cambridge')}>Cambridge</a>
 <a href="/vi/blog/"${on('blog')}>Blog</a>
 </div>

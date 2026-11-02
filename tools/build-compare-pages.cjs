@@ -48,6 +48,11 @@ function pageHtml(p) {
     `<li class="cmp-wrong">✗ <s>${esc(w)}</s> — đừng nói thế này</li>`).join('\n');
   const rightRows = (p.right || []).map((r) =>
     `<li class="cmp-right">✓ ${esc(r)}</li>`).join('\n');
+  /* Snippet box (02/11): 40-60 word TL;DR right under H1 — clean <p>, no nested
+   * spans, directly quotable for featured snippet / PAA / voice. Derived from
+   * hand-written diff + right sentences, plus SpeakableSpecification. */
+  const tldr = `Tóm tắt: ${p.diff}${(p.right || []).length ? ` Ví dụ: ${(p.right || []).map((r) => String(r).replace(/\.+$/, '')).join(' / ')}.` : ''}`;
+  const tldrHtml = `<p class="tldr">${esc(tldr)}</p>`;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -61,6 +66,13 @@ function pageHtml(p) {
           { '@type': 'DefinedTerm', name: p.a, url: `${SITE}${termHref(p.a)}` },
           { '@type': 'DefinedTerm', name: p.b, url: `${SITE}${termHref(p.b)}` },
         ],
+      },
+      {
+        '@type': 'WebPage',
+        name: h1,
+        url: canonical,
+        inLanguage: 'vi',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.tldr'] },
       },
       {
         '@type': 'FAQPage',
@@ -105,7 +117,7 @@ function pageHtml(p) {
 <meta property="og:description" content="${esc(desc)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<style>.cmp-table{width:100%;border-collapse:collapse;margin:14px 0}.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}.cmp-table th{background:var(--soft)}.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.cmp-links{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}</style>
+<style>.cmp-table{width:100%;border-collapse:collapse;margin:14px 0}.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}.cmp-table th{background:var(--soft)}.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.cmp-links{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
@@ -114,6 +126,7 @@ ${navHtml('phan-biet')}
 <main class="page">
   <p class="word-kicker">Phân biệt từ dễ nhầm</p>
   <h1 style="font-size:2.2rem">${esc(h1)}</h1>
+  ${tldrHtml}
   <table class="cmp-table">
     <tr><th style="width:28%">Từ</th><th>Điểm khác biệt</th></tr>
     <tr><td><b>${esc(p.a)}</b></td><td rowspan="2">${esc(p.diff)}</td></tr>

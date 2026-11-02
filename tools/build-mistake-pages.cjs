@@ -22,6 +22,12 @@ function pageHtml(m, wordHref) {
   const h1 = `Đừng nói “${m.mistake}” — cách dùng đúng`;
   const desc = `Vì sao “${m.mistake}” là sai? Cách dùng đúng của “${m.word}” kèm câu mẫu IELTS/TOEIC — Dual Dictionary.`.slice(0, 160);
   const rightRows = (m.right || []).map((r) => `<li class="cmp-right">✓ ${esc(r)}</li>`).join('\n');
+  /* Snippet box (02/11): TL;DR under H1 — states the CORRECT form in one line
+   * (snippet-quotable) + why + example. Clean <p>, SpeakableSpecification. */
+  const firstRight = (m.right || [])[0] || '';
+  const firstClean = firstRight.replace(/\.+$/, '');
+  const tldr = `Đáp án: thay “${m.mistake}” bằng cách dùng đúng của “${m.word}”${firstClean ? ` — ví dụ: ${firstClean}.` : ''} ${m.diff || ''}`.trim();
+  const tldrHtml = `<p class="tldr">${esc(tldr)}</p>`;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -32,6 +38,13 @@ function pageHtml(m, wordHref) {
         url: canonical,
         inLanguage: 'vi',
         about: { '@type': 'DefinedTerm', name: m.word, url: `${SITE}${wordHref(m.word)}` },
+      },
+      {
+        '@type': 'WebPage',
+        name: h1,
+        url: canonical,
+        inLanguage: 'vi',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.tldr'] },
       },
       {
         '@type': 'FAQPage',
@@ -76,7 +89,7 @@ function pageHtml(m, wordHref) {
 <meta property="og:description" content="${esc(desc)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<style>.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}</style>
+<style>.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="word-page">
@@ -85,6 +98,7 @@ ${navHtml('loi-sai')}
 <main class="page">
   <p class="word-kicker">Lỗi sai thường gặp</p>
   <h1 style="font-size:2.2rem">Đừng nói <s>“${esc(m.mistake)}”</s></h1>
+  ${tldrHtml}
   <p>${esc(m.diff || `Cách dùng đúng của “${m.word}” — xem câu đúng bên dưới.`)}</p>
   <h2>Câu đúng</h2>
   <ul>
