@@ -85,6 +85,8 @@ function pageHtml(p, wordHref, slugToHead) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.ex-en{font-weight:600}.ex-vi{color:var(--muted)}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
@@ -165,6 +167,12 @@ function main() {
 <meta name="description" content="${pairs.length} cặp từ + giới từ tiếng Anh người Việt hay nhầm: đáp án 1 dòng, giải thích và câu mẫu song ngữ.">
 <link rel="canonical" href="${SITE}/vi/gioi-tu/">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:url" content="${SITE}/vi/gioi-tu/">
+<meta property="og:title" content="${pairs.length} cặp từ + giới từ tiếng Anh hay nhầm | Dual Dictionary">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>

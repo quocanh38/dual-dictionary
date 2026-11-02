@@ -87,6 +87,8 @@ function pageHtml(m, wordHref) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
@@ -170,6 +172,12 @@ function main() {
 <meta name="description" content="${pairs.length} lỗi sai tiếng Anh người Việt hay mắc kèm cách dùng đúng và câu mẫu IELTS/TOEIC.">
 <link rel="canonical" href="${SITE}/vi/loi-sai/">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:url" content="${SITE}/vi/loi-sai/">
+<meta property="og:title" content="${pairs.length} lỗi sai tiếng Anh thường gặp | Dual Dictionary">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>

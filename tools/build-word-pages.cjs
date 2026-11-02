@@ -505,9 +505,9 @@ function wordMetaDesc(word, ipa, raw) {
   const s = firstSenseOf(word, raw);
   if (s) {
     const short = s.length > 140 ? s.slice(0, 140).replace(/\s+\S*$/, '') + '...' : s;
-    return `${head} nghĩa là: ${short} — Loại từ, ví dụ và ghi chú sử dụng chi tiết — tra offline miễn phí trong app Dual Dictionary.`;
+    return `${head} nghĩa là: ${short} — Loại từ, ví dụ, ghi chú sử dụng.`;
   }
-  return `${head} nghĩa tiếng Việt là gì? Loại từ, nghĩa và ví dụ chi tiết của "${word}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
+  return `${head} nghĩa tiếng Việt là gì? Loại từ, nghĩa và ví dụ chi tiết.`;
 }
 
 function wordPageUrl(word) {
@@ -797,7 +797,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   const practiceCta = (examDeck || practiceDeck)
     ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${examDeck || practiceDeck}">${examDeck === 'toeic' ? '💼' : '🎯'} Luyện ${examDeck === 'toeic' ? 'TOEIC Business' : examDeck === 'ielts' ? 'IELTS Core' : 'bộ từ này'} trong app ↗</a>`
     : '';
-  const title = `${word} nghĩa là gì? — Phiên âm & nghĩa tiếng Việt | Dual Dictionary`;
+  const title = `${word} nghĩa là gì? — Nghĩa tiếng Việt | Dual Dictionary`;
   /* P0 SEO: unique meta per page — first rendered sense (post-priority) + IPA.
    * raw is passed from the build loop; direct renderEntry() callers without
    * raw keep the old generic template via the '' fallback in wordMetaDesc. */
@@ -1541,6 +1541,13 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
 <meta name="description" content="Danh sách ${built.length} từ tiếng Anh (phổ biến nhất + học thuật AWL) kèm phiên âm và nghĩa tiếng Việt chi tiết."
 <link rel="canonical" href="${SITE}/vi/tu/">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:url" content="${SITE}/vi/tu/">
+<meta property="og:title" content="Từ điển Anh-Việt: ${built.length} từ phổ biến nhất | Dual Dictionary">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} từ phổ biến nhất`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 </head>

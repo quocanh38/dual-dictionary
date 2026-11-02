@@ -59,6 +59,8 @@ function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${core.escapeHtml(h1)}">
 <meta property="og:description" content="${core.escapeHtml(desc)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${core.escapeHtml(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>

@@ -118,6 +118,9 @@ function pageHtml(p) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${esc(h1)}">
+<meta name="twitter:description" content="${esc(desc)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.cmp-table{width:100%;border-collapse:collapse;margin:14px 0}.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}.cmp-table th{background:var(--soft)}.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.cmp-links{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
@@ -184,6 +187,12 @@ function hubHtml(pairs) {
 <meta name="description" content="${pairs.length} cặp từ dễ nhầm (evidence/proof, affect/effect, say/tell…) kèm câu đúng/sai và cách dùng IELTS/TOEIC.">
 <link rel="canonical" href="${SITE}/vi/phan-biet/">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:url" content="${SITE}/vi/phan-biet/">
+<meta property="og:title" content="Phân biệt từ dễ nhầm — ${pairs.length} cặp IELTS/TOEIC | Dual Dictionary">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>

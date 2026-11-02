@@ -55,6 +55,8 @@ function pageHtml(p) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
@@ -154,6 +156,12 @@ function main() {
 <meta name="description" content="${esc(hubDesc)}">
 <link rel="canonical" href="${SITE}/vi/cambridge/">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:url" content="${SITE}/vi/cambridge/">
+<meta property="og:title" content="${esc(hubTitle)}">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
