@@ -904,9 +904,9 @@ ${navHtml('tu')}
     </div>
   </header>
 
-  ${noteHtml ? `<section class="word-note"><h2>Ghi chú sử dụng</h2>${noteIsHand ? '' : '<span class="note-badge note-badge-auto">Tự sinh — chưa biên tập</span>'}${noteHtml}</section>` : ''}
-
   ${examExamplesHtml(word, null)}
+
+  ${noteHtml ? `<section class="word-note"><h2>Ghi chú sử dụng</h2>${noteIsHand ? '' : '<span class="note-badge note-badge-auto">Tự sinh — chưa biên tập</span>'}${noteHtml}</section>` : ''}
 
   ${compareLinksHtml(word)}
 

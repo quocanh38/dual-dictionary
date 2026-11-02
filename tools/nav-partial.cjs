@@ -12,7 +12,7 @@ function navHtml(active) {
 <a href="/vi/tu/cum-tu/"${on('cum-tu')}>Cụm từ</a>
 <a href="/vi/tu/ielts/"${on('ielts')}>IELTS</a>
 <a href="/vi/tu/toeic/"${on('toeic')}>TOEIC</a>
-<a href="/vi/chu-de/"${on('chu-de')}>Chủ đề AWL</a>
+<a href="/vi/chu-de/"${on('chu-de')}>Chủ đề</a>
 <a href="/vi/phan-biet/"${on('phan-biet')}>Phân biệt</a>
 <a href="/vi/loi-sai/"${on('loi-sai')}>Lỗi sai</a>
 <a href="/vi/gioi-tu/"${on('gioi-tu')}>Giới từ</a>

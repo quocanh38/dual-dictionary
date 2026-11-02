@@ -135,25 +135,22 @@ ${FILTER_JS}
 `;
 }
 
-/* Patch hub index: insert "IELTS theo chủ đề (15)" section after the AWL sublist
- * list, before "Bộ từ theo mục tiêu". Idempotent via marker comment. */
+/* Patch hub index: insert "IELTS theo chủ đề (15)" section BEFORE the AWL
+ * sublist list (user intent first: thi theo chủ đề, AWL là tham khảo sâu).
+ * Idempotent via marker comment. */
 function patchHubIndex(topics) {
   const p = path.join(OUT_DIR, 'index.html');
   let html = fs.readFileSync(p, 'utf8');
   if (html.includes('<!-- ielts-topics -->')) {
-    // refresh counts in existing section (re-generate rows)
-    const rows = topics.map((t) =>
-      `    <li><a href="/vi/chu-de/${t.slug}/">Từ vựng IELTS chủ đề ${esc(t.name)} — ${t.words.length + t.phrases.length} từ (${esc(t.words.slice(0, 4).join(', '))}…)</a></li>`).join('\n');
-    html = html.replace(/<!-- ielts-topics -->[\s\S]*?<!-- \/ielts-topics -->/,
-      `<!-- ielts-topics -->\n  <h2>IELTS theo chủ đề (15)</h2>\n  <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">\n${rows}\n  </ul>\n  <!-- /ielts-topics -->`);
-    fs.writeFileSync(p, html);
-    return 'patched(existing)';
+    // refresh + REORDER (02/11 UX): IELTS topics go BEFORE AWL sublists.
+    // strip old section first, then insert fresh at the new anchor.
+    html = html.replace(/<!-- ielts-topics -->[\s\S]*?<!-- \/ielts-topics -->\n?/, '');
   }
-  const anchor = '  <h2>Bộ từ theo mục tiêu</h2>';
+  const anchor = '  <h2>AWL theo sublist (10)</h2>';
   if (!html.includes(anchor)) throw new Error('hub index anchor not found — awl builder changed?');
   const rows = topics.map((t) =>
     `    <li><a href="/vi/chu-de/${t.slug}/">Từ vựng IELTS chủ đề ${esc(t.name)} — ${t.words.length + t.phrases.length} từ (${esc(t.words.slice(0, 4).join(', '))}…)</a></li>`).join('\n');
-  const section = `<!-- ielts-topics -->\n  <h2>IELTS theo chủ đề (15)</h2>\n  <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">\n${rows}\n  </ul>\n  <!-- /ielts-topics -->\n  ${anchor}`;
+  const section = `<!-- ielts-topics -->\n  <h2>IELTS theo chủ đề (15)</h2>\n  <p style="color:var(--muted)">Học từ vựng theo đúng chủ đề ra thi — mỗi chủ đề 60–120 từ/cụm hay gặp trong đề IELTS thật, kèm ví dụ viết tay. Muốn đào sâu từ học thuật theo tần suất, xem 10 sublist AWL bên dưới.</p>\n  <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">\n${rows}\n  </ul>\n  <!-- /ielts-topics -->\n  ${anchor}`;
   html = html.replace(anchor, section);
   // also extend hub H1/desc? keep AWL H1 (stable); widen intro paragraph slightly
   fs.writeFileSync(p, html);
