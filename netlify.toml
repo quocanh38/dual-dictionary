@@ -2,7 +2,6 @@
   from = "/vi/tu/*"
   to = "/vi/tu/"
   status = 404
-  force = true
 
 [build]
   publish = "."
