@@ -49,7 +49,7 @@
     <span id="hub-count" aria-live="polite"></span>
   </div>
   <h2>Cụm TOEIC (161)</h2>
-  <ul class="hub-list" style="columns:3;gap:20px;padding-left:18px;line-height:2">
+  <ul class="hub-list" data-hub="0" style="columns:3;gap:20px;padding-left:18px;line-height:2">
     <li data-word="above-board"><a href="/vi/tu/above-board/">above board</a></li>
     <li data-word="account-executive"><a href="/vi/tu/account-executive/">account executive</a></li>
     <li data-word="accounts-payable"><a href="/vi/tu/accounts-payable/">accounts payable</a></li>
@@ -213,7 +213,7 @@
     <li data-word="world-bank"><a href="/vi/tu/world-bank/">world bank</a></li>
   </ul>
   <h2>Từ kinh doanh (44)</h2>
-  <ul class="hub-list" style="columns:3;gap:20px;padding-left:18px;line-height:2">
+  <ul class="hub-list" data-hub="1" style="columns:3;gap:20px;padding-left:18px;line-height:2">
     <li data-word="account"><a href="/vi/tu/account/">account</a> <span class="hub-ipa">/əˈkaʊnt/</span></li>
     <li data-word="agenda"><a href="/vi/tu/agenda/">agenda</a> <span class="hub-ipa">/əˈdʒɛndə/</span></li>
     <li data-word="balance"><a href="/vi/tu/balance/">balance</a> <span class="hub-ipa">/ˈbæləns/</span></li>
@@ -265,9 +265,43 @@
 (function () {
   var q = document.getElementById('hub-q');
   var count = document.getElementById('hub-count');
-  var items = Array.prototype.slice.call(document.querySelectorAll('.hub-list li'));
+  function allItems() { return Array.prototype.slice.call(document.querySelectorAll('.hub-list li')); }
+  function loadRest(gi, cb) {
+    var ul = document.querySelector('ul[data-hub="' + gi + '"]');
+    if (!ul || ul.dataset.full === '1') return cb && cb();
+    /* link-check-safe: explicit per-group URL (no string concat), mirrors
+     * the hub-rest-{gi}.js files the builder wrote. */
+    var urls = {'0': 'hub-rest-0.js', '1': 'hub-rest-1.js', '2': 'hub-rest-2.js'};
+    var s = document.createElement('script');
+    s.src = urls[String(gi)] || ('hub-rest-' + '' + gi + '.js');
+    s.onload = function () {
+      var html = (window.__COLL_REST__ && window.__COLL_REST__[gi]) || '';
+      if (html) ul.insertAdjacentHTML('beforeend', html);
+      ul.dataset.full = '1';
+      var w = document.querySelector('[data-more-wrap="' + gi + '"]');
+      if (w) w.style.display = 'none';
+      cb && cb();
+    };
+    s.onerror = function () { cb && cb(); };
+    document.head.appendChild(s);
+  }
   function apply() {
-    var term = q.value.trim().toLowerCase(), shown = 0;
+    var term = q.value.trim().toLowerCase();
+    if (term) {
+      // searching implies full lists: load all rests once, then filter
+      var uls = Array.prototype.slice.call(document.querySelectorAll('ul[data-hub]'));
+      var pending = uls.filter(function (u) { return u.dataset.full !== '1'; });
+      if (pending.length && !window.__COLL_LOADING__) {
+        window.__COLL_LOADING__ = true;
+        var left = pending.length;
+        pending.forEach(function (u) {
+          loadRest(u.getAttribute('data-hub'), function () { if (--left === 0) { window.__COLL_LOADING__ = false; apply(); } });
+        });
+        return;
+      }
+      if (window.__COLL_LOADING__) return;
+    }
+    var shown = 0, items = allItems();
     for (var it of items) {
       var ok = !term || (it.dataset.word || '').indexOf(term) !== -1;
       it.style.display = ok ? '' : 'none';
@@ -275,6 +309,9 @@
     }
     count.textContent = 'Hiển thị ' + shown + '/' + items.length;
   }
+  document.querySelectorAll('[data-more]').forEach(function (b) {
+    b.addEventListener('click', function () { loadRest(b.getAttribute('data-more'), apply); });
+  });
   q.addEventListener('input', apply); q.addEventListener('change', apply);
   apply();
 })();

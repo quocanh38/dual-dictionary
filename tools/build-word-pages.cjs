@@ -744,6 +744,30 @@ function topicLinksHtml(word, labels) {
   if (!picks.length) return '';
   return `<section class="related"><h2>Cùng chủ đề học thuật (AWL Sublist ${escapeHtml(sub)})</h2><div class="related-list">${picks.map((w) => `<a class="related-chip" href="${wordPageUrl(w)}">${escapeHtml(w)}</a>`).join('')}</div></section>`;
 }
+/* IELTS topic backlinks (02/11): word pages belonging to an IELTS topic hub
+ * link UP to that hub — the hub has 1390 downlinks but no uplinks, so Google
+ * undervalues it. Max 2 hubs (words in 2+ topics). */
+let IELTS_TOPIC_INDEX = null;
+function ieltsTopicLinksHtml(word) {
+  if (IELTS_TOPIC_INDEX === null) {
+    IELTS_TOPIC_INDEX = { slugs: {}, names: {} };
+    try {
+      const topics = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'topics.json'), 'utf8')).topics || [];
+      for (const t of topics) {
+        IELTS_TOPIC_INDEX.names[t.slug] = t.name;
+        for (const w of (t.words || [])) {
+          const k = String(w).toLowerCase();
+          if (!IELTS_TOPIC_INDEX.slugs[k]) IELTS_TOPIC_INDEX.slugs[k] = [];
+          if (!IELTS_TOPIC_INDEX.slugs[k].includes(t.slug)) IELTS_TOPIC_INDEX.slugs[k].push(t.slug);
+        }
+      }
+    } catch (e) {}
+  }
+  const hits = (IELTS_TOPIC_INDEX.slugs[String(word).toLowerCase()] || []).slice(0, 2);
+  if (!hits.length) return '';
+  const rows = hits.map((s) => `<a class="related-chip" href="/vi/chu-de/${s}/">Chủ đề ${escapeHtml(IELTS_TOPIC_INDEX.names[s] || s)} →</a>`).join('');
+  return `<section class="related"><h2>Học theo chủ đề IELTS</h2><div class="related-list">${rows}</div></section>`;
+}
 /* P2 word FAQ (owner-approved 01/11): 200 top words get 2-3 Q/A distilled
  * from their own hand/auto notes (data/word-faq.json). Rendered compact +
  * FAQPage schema (People Also Ask eligible). */
@@ -913,6 +937,8 @@ ${navHtml('tu')}
   ${mistakeLinksHtml(word)}
 
   ${topicLinksHtml(word, labels)}
+
+  ${ieltsTopicLinksHtml(word)}
 
   ${faqHtml(word)}
 

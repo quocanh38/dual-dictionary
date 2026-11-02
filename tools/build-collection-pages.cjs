@@ -18,11 +18,20 @@ const BIZ_WORDS = 'account bank balance invoice payment budget finance marketing
 
 function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
   const canonical = `${SITE}/vi/tu/${slug}/`;
-  const sections = groups.map((g) => {
-    const rows = g.items.map((it) =>
+  const SSR_N = 300;
+  const restByGroup = {};
+  const sections = groups.map((g, gi) => {
+    const all = g.items.map((it) =>
       `    <li data-word="${core.escapeHtml(it.slug)}"><a href="${it.href}">${core.escapeHtml(it.label)}</a>${it.ipa ? ` <span class="hub-ipa">/${core.escapeHtml(it.ipa)}/</span>` : ''}</li>`).join('\n');
-    return `  <h2>${core.escapeHtml(g.title)}</h2>\n  <ul class="hub-list" style="columns:3;gap:20px;padding-left:18px;line-height:2">\n${rows}\n  </ul>`;
+    const shown = g.items.slice(0, SSR_N).map((it) =>
+      `    <li data-word="${core.escapeHtml(it.slug)}"><a href="${it.href}">${core.escapeHtml(it.label)}</a>${it.ipa ? ` <span class="hub-ipa">/${core.escapeHtml(it.ipa)}/</span>` : ''}</li>`).join('\n');
+    const rest = g.items.slice(SSR_N).map((it) =>
+      `    <li data-word="${core.escapeHtml(it.slug)}"><a href="${it.href}">${core.escapeHtml(it.label)}</a>${it.ipa ? ` <span class="hub-ipa">/${core.escapeHtml(it.ipa)}/</span>` : ''}</li>`).join('\n');
+    if (rest) restByGroup[gi] = rest;
+    const more = g.items.length > SSR_N ? `\n  <p data-more-wrap="${gi}" style="margin:10px 0 0"><button type="button" data-more="${gi}" class="related-chip" style="cursor:pointer">Hiện thêm (${(g.items.length - SSR_N).toLocaleString('vi-VN')} mục còn lại)</button></p>` : '';
+    return `  <h2>${core.escapeHtml(g.title)}</h2>\n  <ul class="hub-list" data-hub="${gi}" style="columns:3;gap:20px;padding-left:18px;line-height:2">\n${shown}\n  </ul>${more}`;
   }).join('\n');
+  pageHtml.restByGroup = restByGroup;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -84,9 +93,43 @@ ${sections}
 (function () {
   var q = document.getElementById('hub-q');
   var count = document.getElementById('hub-count');
-  var items = Array.prototype.slice.call(document.querySelectorAll('.hub-list li'));
+  function allItems() { return Array.prototype.slice.call(document.querySelectorAll('.hub-list li')); }
+  function loadRest(gi, cb) {
+    var ul = document.querySelector('ul[data-hub="' + gi + '"]');
+    if (!ul || ul.dataset.full === '1') return cb && cb();
+    /* link-check-safe: explicit per-group URL (no string concat), mirrors
+     * the hub-rest-{gi}.js files the builder wrote. */
+    var urls = {'0': 'hub-rest-0.js', '1': 'hub-rest-1.js', '2': 'hub-rest-2.js'};
+    var s = document.createElement('script');
+    s.src = urls[String(gi)] || ('hub-rest-' + '' + gi + '.js');
+    s.onload = function () {
+      var html = (window.__COLL_REST__ && window.__COLL_REST__[gi]) || '';
+      if (html) ul.insertAdjacentHTML('beforeend', html);
+      ul.dataset.full = '1';
+      var w = document.querySelector('[data-more-wrap="' + gi + '"]');
+      if (w) w.style.display = 'none';
+      cb && cb();
+    };
+    s.onerror = function () { cb && cb(); };
+    document.head.appendChild(s);
+  }
   function apply() {
-    var term = q.value.trim().toLowerCase(), shown = 0;
+    var term = q.value.trim().toLowerCase();
+    if (term) {
+      // searching implies full lists: load all rests once, then filter
+      var uls = Array.prototype.slice.call(document.querySelectorAll('ul[data-hub]'));
+      var pending = uls.filter(function (u) { return u.dataset.full !== '1'; });
+      if (pending.length && !window.__COLL_LOADING__) {
+        window.__COLL_LOADING__ = true;
+        var left = pending.length;
+        pending.forEach(function (u) {
+          loadRest(u.getAttribute('data-hub'), function () { if (--left === 0) { window.__COLL_LOADING__ = false; apply(); } });
+        });
+        return;
+      }
+      if (window.__COLL_LOADING__) return;
+    }
+    var shown = 0, items = allItems();
     for (var it of items) {
       var ok = !term || (it.dataset.word || '').indexOf(term) !== -1;
       it.style.display = ok ? '' : 'none';
@@ -94,6 +137,9 @@ ${sections}
     }
     count.textContent = 'Hiển thị ' + shown + '/' + items.length;
   }
+  document.querySelectorAll('[data-more]').forEach(function (b) {
+    b.addEventListener('click', function () { loadRest(b.getAttribute('data-more'), apply); });
+  });
   q.addEventListener('input', apply); q.addEventListener('change', apply);
   apply();
 })();
@@ -161,7 +207,13 @@ async function main() {
   for (const p of pages) {
     const dir = path.join(OUT_DIR, p.slug);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(p));
+    const html = pageHtml(p);
+    fs.writeFileSync(path.join(dir, 'index.html'), html);
+    /* Rest rows -> external hub-rest-{gi}.js (crawl-triage: SSR shell only). */
+    const rest = pageHtml.restByGroup || {};
+    for (const [gi, rows] of Object.entries(rest)) {
+      fs.writeFileSync(path.join(dir, `hub-rest-${gi}.js`), `window.__COLL_REST__=window.__COLL_REST__||{};window.__COLL_REST__[${gi}]=${JSON.stringify(rows)};`);
+    }
     console.log(`COLLECTION: /vi/tu/${p.slug}/ — ${p.groups.map((g) => g.items.length).join('+')} items`);
   }
 }
