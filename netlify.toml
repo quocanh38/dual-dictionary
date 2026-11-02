@@ -1,29 +1,7 @@
-headersOrigin = "config"
-redirectsOrigin = "config"
-plugins = []
-headers = []
-redirects = [
-  { from = "/vi/tu/*", to = "/vi/tu/", status = 404 },
-]
-
-[functions]
-
-  [functions."*"]
+[[redirects]]
+  from = "/vi/tu/*"
+  to = "/vi/tu/"
+  status = 404
 
 [build]
-publish = "."
-publishOrigin = "config"
-
-  [build.environment]
-
-  [build.processing]
-
-    [build.processing.css]
-
-    [build.processing.html]
-
-    [build.processing.images]
-
-    [build.processing.js]
-
-  [build.services]
+  publish = "."
