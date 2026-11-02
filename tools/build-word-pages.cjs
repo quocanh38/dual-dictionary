@@ -1522,6 +1522,14 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
     <button type="button" id="mylist-toggle" class="related-chip" style="cursor:pointer" title="Bật chế độ chọn từ để tạo list">📝 Tạo list</button>
   </div>
   <div id="mylist-bar"><span id="mylist-count">Đã chọn 0 từ</span><button type="button" id="mylist-copy" class="related-chip" style="cursor:pointer">📋 Chép list</button><button type="button" id="mylist-quiz" class="related-chip" style="cursor:pointer">📝 Xuất quiz</button><button type="button" id="mylist-clear" class="related-chip" style="cursor:pointer">✖ Xóa</button></div>`;
+  /* Crawl-triage (02/11): hub search index lives in an external cacheable JS
+   * file instead of 317KB inline — HTML drops 385KB to ~70KB for Googlebot,
+   * full index loads only when the user searches/filters. */
+  fs.writeFileSync(
+    path.join(OUT_DIR, 'hub-index.js'),
+    `window.__HUB_INDEX__=${JSON.stringify(hubClientIndex)};window.__HUB_NOISE__=${JSON.stringify(hubNoiseMap)};`,
+  );
+  console.log(`HUB-INDEX: vi/tu/hub-index.js (${(fs.statSync(path.join(OUT_DIR, 'hub-index.js')).size / 1024).toFixed(0)}KB external)`);
   fs.writeFileSync(
     path.join(OUT_DIR, 'index.html'),
     `<!DOCTYPE html>
@@ -1552,9 +1560,8 @@ ${hubRows}
   <p id="hub-more-wrap" style="margin:14px 0 0"><button type="button" id="hub-more" class="related-chip" style="cursor:pointer">Hiện thêm (${(built.length - hubSsrWords.length).toLocaleString('vi-VN')} từ còn lại)</button></p>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
+<script src="/vi/tu/hub-index.js" defer></script>
 <script>
-window.__HUB_INDEX__ = ${JSON.stringify(hubClientIndex)};
-window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
 (function () {
   var q = document.getElementById('hub-q');
   var g = document.getElementById('hub-group');
@@ -1565,6 +1572,14 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
   var moreWrap = document.getElementById('hub-more-wrap');
   var IDX = window.__HUB_INDEX__ || [];
   var NOISE = window.__HUB_NOISE__ || {};
+  function ensureFullIndex(cb) {
+    if (window.__HUB_FULL__) return cb();
+    var s = document.createElement('script');
+    s.src = '/vi/tu/hub-index.js';
+    s.onload = function () { window.__HUB_FULL__ = true; IDX = window.__HUB_INDEX__ || IDX; NOISE = window.__HUB_NOISE__ || NOISE; cb(); };
+    s.onerror = function () { cb(); };
+    document.head.appendChild(s);
+  }
   var rendered = list.querySelectorAll('li').length;
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function row(r){
@@ -1590,7 +1605,7 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
     fixHubLinks();
     apply();
   }
-  if (moreBtn) moreBtn.addEventListener('click', renderMore);
+  if (moreBtn) moreBtn.addEventListener('click', function () { ensureFullIndex(renderMore); });
   /* P1 autocomplete (owner-approved 01/11): prefix matches first (max 5),
    * then DSFuzzy.suggestFor for typos (max 3). Runs on the client-side IDX
    * (no fetch). Keyboard: Up/Down + Enter + Esc. Never hijacks typing. */
@@ -1642,7 +1657,7 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
   var sgTimer=null;
   q.addEventListener('input', function(){
     if(sgTimer) clearTimeout(sgTimer);
-    sgTimer=setTimeout(function(){ renderSg(suggest(q.value)); }, 120);
+    sgTimer=setTimeout(function(){ ensureFullIndex(function(){ renderSg(suggest(q.value)); }); }, 120);
   });
   q.addEventListener('keydown', function(ev){
     if(!sgBox||sgBox.hidden) return;
@@ -1661,6 +1676,7 @@ window.__HUB_NOISE__ = ${JSON.stringify(hubNoiseMap)};
   function apply() {
     // searching/filtering implies full list: render all once
     var needsAll = q.value.trim() || g.value || b.value || document.getElementById('hub-awl').value || document.getElementById('hub-exam').value || (document.getElementById('hub-clean') && document.getElementById('hub-clean').checked);
+    if (needsAll && !window.__HUB_FULL__) { ensureFullIndex(apply); return; }
     if (needsAll && rendered < IDX.length) {
       var frag = '';
       for (var i = rendered; i < IDX.length; i++) frag += row(IDX[i]);

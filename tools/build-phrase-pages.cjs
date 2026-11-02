@@ -318,14 +318,23 @@ function relatedHtml(phrase, prepKeys, wordSlugSet) {
  * every build; "cum-tu" belongs to NO manifest, so no builder can ever wipe it. */
 function phraseHubHtml({ built, prep, handCount, wordCount }) {
   const esc = core.escapeHtml;
-  const rows = built.map((phrase) => {
+  /* Crawl-triage (02/11): SSR first 500, rest via Hiện-thêm button (same data
+   * shape, no extra fetch) — HTML drops 560KB to ~75KB for Googlebot. */
+  const SSR_N = 500;
+  const rowOf = (phrase) => {
     const slug = phraseSlug(phrase);
     const p5 = prep.get(phrase);
     const hand = !!(p5 && p5.hand);
     const common = !!(p5 && p5.tier === 'A');
     const exam = (core.examTagsFor ? (core.examTagsFor(null, slug) || {}).tags : []) || [];
     return `    <li data-word="${esc(slug)}" data-phrase="${esc(phrase.toLowerCase())}"${hand ? ' data-hand="1"' : ''}${common ? ' data-common="1"' : ''}${exam.length ? ` data-exam="${esc(exam.join(' '))}"` : ''}><a href="${phrasePageUrl(phrase)}">${esc(phrase)}</a></li>`;
-  }).join('\n');
+  };
+  const rows = built.slice(0, SSR_N).map(rowOf).join('\n');
+  const restRows = built.slice(SSR_N).map(rowOf).join('\n');
+  phraseHubHtml.restRows = restRows;
+  /* Rest list lives in an external file (same pattern as word hub-index.js)
+   * so crawlers only fetch the 65KB SSR shell. */
+  const hubRestName = 'hub-rest.js';
   const title = `${built.length} cụm từ tiếng Anh — danh sách A–Z | Dual Dictionary`;
   const desc = `Danh sách ${built.length} cụm từ tiếng Anh (phrasal verbs, collocations, idiom) kèm nghĩa tiếng Việt, ví dụ minh hoạ và định nghĩa tiếng Anh WordNet 3.1. ${handCount} cụm có phần nghĩa tiếng Việt biên soạn riêng cho người Việt học tiếng Anh.`;
   const canonical = `${SITE}/vi/tu/cum-tu/`;
@@ -372,6 +381,7 @@ ${navHtml('cum-tu')}
   <ul class="hub-list" id="hub-list" style="columns:3;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>
+  <p id="hub-more-wrap" style="margin:14px 0 0"><button type="button" id="hub-more" class="related-chip" style="cursor:pointer">Hiện thêm (${(built.length - SSR_N).toLocaleString('vi-VN')} cụm còn lại)</button></p>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 <script>
@@ -381,6 +391,25 @@ ${rows}
   var items = Array.prototype.slice.call(document.querySelectorAll('#hub-list li'));
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.hub-tab'));
   var filter = 'all';
+  var moreBtn = document.getElementById('hub-more');
+  var moreWrap = document.getElementById('hub-more-wrap');
+  function renderRest() {
+    var done = function (html) {
+      var list = document.getElementById('hub-list');
+      list.insertAdjacentHTML('beforeend', html);
+      items = Array.prototype.slice.call(document.querySelectorAll('#hub-list li'));
+      if (moreWrap) moreWrap.style.display = 'none';
+    };
+    var rest = document.getElementById('hub-rest');
+    if (rest) { var html = rest.textContent; rest.remove(); done(html); return; }
+    if (window.__PHRASE_REST__) { done(window.__PHRASE_REST__); return; }
+    var s = document.createElement('script');
+    s.src = '/vi/tu/cum-tu/hub-rest.js';
+    s.onload = function () { done(window.__PHRASE_REST__ || ''); };
+    s.onerror = function () { if (moreWrap) moreWrap.style.display = 'none'; };
+    document.head.appendChild(s);
+  }
+  if (moreBtn) moreBtn.addEventListener('click', function () { renderRest(); apply(); });
   function matchFilter(it) {
     if (filter === 'hand') return it.dataset.hand === '1';
     if (filter === 'common') return it.dataset.common === '1';
@@ -388,7 +417,11 @@ ${rows}
     return true;
   }
   function apply() {
-    var term = q.value.trim().toLowerCase();
+    // searching/filtering implies the full list: render rest once
+    var term0 = q.value.trim();
+    if ((term0 || filter !== 'all') && document.getElementById('hub-rest')) renderRest();
+  if ((term0 || filter !== 'all') && !window.__PHRASE_REST__ && !document.getElementById('hub-rest')) { renderRest(); return; }
+    var term = term0.toLowerCase();
     var shown = 0;
     for (var it of items) {
       var ok = matchFilter(it) && (!term || it.dataset.word.indexOf(term) !== -1 || it.dataset.phrase.indexOf(term) !== -1);
@@ -682,9 +715,13 @@ async function main() {
    * no manifest, so neither builder can ever wipe it) */
   const hubDir = path.join(OUT_DIR, 'cum-tu');
   fs.mkdirSync(hubDir, { recursive: true });
-  fs.writeFileSync(path.join(hubDir, 'index.html'), phraseHubHtml({
+  /* Rest rows live in hub-rest.js (external, cacheable) — crawlers fetch the
+   * 75KB SSR shell only. Inline fallback kept when rest is small. */
+  const hubHtml = phraseHubHtml({
     built, prep, handCount: builtHand, wordCount: wordSlugSet.size,
-  }));
+  });
+  fs.writeFileSync(path.join(hubDir, 'hub-rest.js'), `window.__PHRASE_REST__=${JSON.stringify(phraseHubHtml.restRows || '')};`);
+  fs.writeFileSync(path.join(hubDir, 'index.html'), hubHtml);
   console.log(`HUB: /vi/tu/cum-tu/index.html — ${built.length} entries (${builtHand} hand-written)`);
 
   const LASTMOD = new Date().toISOString().slice(0, 10);
