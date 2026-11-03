@@ -16,10 +16,13 @@ function navHtml(active) {
 <a href="/vi/phan-biet/"${on('phan-biet')}>Phân biệt</a>
 <a href="/vi/dong-nghia/"${on('dong-nghia')}>Đồng nghĩa</a>
 <a href="/vi/loi-sai/"${on('loi-sai')}>Lỗi sai</a>
+<a href="/vi/ngu-phap/"${on('ngu-phap')}>Ngữ pháp</a>
 <a href="/vi/phat-am/"${on('phat-am')}>Phát âm</a>
 <a href="/vi/gioi-tu/"${on('gioi-tu')}>Giới từ</a>
 <a href="/vi/cambridge/"${on('cambridge')}>Cambridge</a>
 <a href="/vi/cum-di-voi/"${on('cum-di-voi')}>Cụm đi với</a>
+<a href="/vi/luyen-thi/"${on('luyen-thi')}>Luyện thi</a>
+<a href="/vi/ngu-phap/"${on('ngu-phap')}>Ngữ pháp</a>
 <a href="/vi/blog/"${on('blog')}>Blog</a>
 </div>
 <form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>

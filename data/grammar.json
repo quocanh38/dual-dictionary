@@ -1,0 +1,615 @@
+{
+  "_note": "Grammar hubs (owner task 03/11): 10 hubs under /vi/ngu-phap/{slug}/. mistakes[] with slug=null have no /vi/loi-sai/ page yet — builder renders them as plain text (verified at build time), never as dead links. sentences[] are hand-written bilingual correct examples.",
+  "guides": [
+    {
+      "intro": "Mạo từ đứng trước danh từ: chọn a/an/the hay bỏ hẳn. Nắm 5 quy tắc dưới là hết sai an evidence, evidences.",
+      "mistakes": [
+        {
+          "fix": "strong evidence / a piece of evidence",
+          "slug": "an-evidence",
+          "t": "an evidence"
+        },
+        {
+          "fix": "evidence (không bao giờ thêm -s)",
+          "slug": "evidences",
+          "t": "evidences"
+        },
+        {
+          "fix": "a business trip / business travel (không mạo từ)",
+          "slug": "a-business-travel",
+          "t": "a business travel"
+        },
+        {
+          "fix": "legislation / a piece of legislation",
+          "slug": null,
+          "t": "a legislation"
+        },
+        {
+          "fix": "consent / a consensus (sự đồng thuận)",
+          "slug": null,
+          "t": "a consent"
+        }
+      ],
+      "name": "Mạo từ a / an / the",
+      "rules": [
+        "Danh từ đếm được số ít luôn cần mạo từ: a/an (chưa xác định) hoặc the (đã xác định).",
+        "Danh từ không đếm được và danh từ số nhiều nói chung: không dùng a/an.",
+        "An + nguyên âm (âm đầu), a + phụ âm: an hour nhưng a university.",
+        "The + thứ đã nhắc tới, thứ duy nhất, hoặc cụm xác định: the sun, the first time.",
+        "evidence, information, advice không đếm được: dùng some / a piece of, cấm a/an và -s."
+      ],
+      "sentences": [
+        {
+          "en": "She presented strong evidence to support her claim.",
+          "vi": "Cô ấy đã đưa ra bằng chứng thuyết phục để bảo vệ luận điểm của mình."
+        },
+        {
+          "en": "A university degree is required for this position.",
+          "vi": "Vị trí này yêu cầu một tấm bằng đại học."
+        },
+        {
+          "en": "The first draft needs major revisions.",
+          "vi": "Bản nháp đầu tiên cần được chỉnh sửa nhiều."
+        },
+        {
+          "en": "Business travel can be exhausting in peak season.",
+          "vi": "Đi công tác có thể rất mệt vào mùa cao điểm."
+        },
+        {
+          "en": "An hour of reading every day builds vocabulary fast.",
+          "vi": "Đọc một giờ mỗi ngày giúp tăng vốn từ rất nhanh."
+        }
+      ],
+      "slug": "articles"
+    },
+    {
+      "intro": "Danh từ nào đếm được, danh từ nào không — và cách diễn đạt số lượng cho đúng. Gốc rễ của informations, advices, evidences.",
+      "mistakes": [
+        {
+          "fix": "a lot of information / some information",
+          "slug": "i-have-many-informations-to-share",
+          "t": "I have many informations to share"
+        },
+        {
+          "fix": "some very useful advice / a piece of advice",
+          "slug": "he-gave-me-some-useful-advices",
+          "t": "He gave me some useful advices"
+        },
+        {
+          "fix": "evidence (không -s, động từ số ít)",
+          "slug": "evidences",
+          "t": "evidences"
+        },
+        {
+          "fix": "a business trip / business travel",
+          "slug": "a-business-travel",
+          "t": "a business travel"
+        },
+        {
+          "fix": "much furniture / many pieces of furniture",
+          "slug": null,
+          "t": "many furnitures"
+        }
+      ],
+      "name": "Danh từ đếm được và không đếm được",
+      "rules": [
+        "Không đếm được (information, advice, evidence, furniture…): không -s, không a/an, động từ số ít.",
+        "Muốn đếm ý nhỏ: a piece of / pieces of / some / a lot of.",
+        "many + đếm được số nhiều; much + không đếm được.",
+        "few / a few + đếm được; little / a little + không đếm được.",
+        "travel (nói chung), work (công việc), news (tin tức) là không đếm được."
+      ],
+      "sentences": [
+        {
+          "en": "I need some useful advice before the interview.",
+          "vi": "Tôi cần vài lời khuyên hữu ích trước buổi phỏng vấn."
+        },
+        {
+          "en": "The news on this channel is updated hourly.",
+          "vi": "Tin tức trên kênh này được cập nhật hằng giờ."
+        },
+        {
+          "en": "We bought some modern furniture for the new office.",
+          "vi": "Chúng tôi đã mua một số đồ nội thất hiện đại cho văn phòng mới."
+        },
+        {
+          "en": "Many pieces of evidence were presented in court.",
+          "vi": "Nhiều chứng cứ đã được trình ra trước tòa."
+        },
+        {
+          "en": "How much time do you spend on homework daily?",
+          "vi": "Mỗi ngày bạn dành bao nhiêu thời gian cho bài tập về nhà?"
+        }
+      ],
+      "slug": "countability"
+    },
+    {
+      "intro": "Động từ và tính từ nào đi với giới từ nào: depend on, interested in, married to. Và những động từ cấm giới từ thừa: discuss, mention.",
+      "mistakes": [
+        {
+          "fix": "depends on hard work",
+          "slug": "our-success-depends-of-hard-work",
+          "t": "Our success depends of hard work"
+        },
+        {
+          "fix": "interested in learning English",
+          "slug": "i-am-interested-on-learning-english",
+          "t": "I am interested on learning English"
+        },
+        {
+          "fix": "married to a doctor / married her classmate",
+          "slug": "she-got-married-with-a-doctor",
+          "t": "She got married with a doctor"
+        },
+        {
+          "fix": "discussed the new plan (discuss + tân ngữ trực tiếp)",
+          "slug": "we-discussed-about-the-new-plan",
+          "t": "We discussed about the new plan"
+        },
+        {
+          "fix": "mentioned the delay (mention + tân ngữ trực tiếp)",
+          "slug": "she-mentioned-about-the-delay",
+          "t": "She mentioned about the delay"
+        }
+      ],
+      "name": "Giới từ đi với động từ và tính từ",
+      "rules": [
+        "depend luôn + on / upon, không bao giờ + of.",
+        "interested + in; good + at (kỹ năng); married + to (người).",
+        "discuss / mention + tân ngữ trực tiếp — thêm about là thừa.",
+        "consider + tân ngữ + bổ ngữ, không cần as.",
+        "according to + nguồn tin người khác; ý kiến bản thân dùng in my opinion."
+      ],
+      "sentences": [
+        {
+          "en": "Our success depends on consistent hard work.",
+          "vi": "Thành công của chúng ta phụ thuộc vào sự chăm chỉ bền bỉ."
+        },
+        {
+          "en": "She is interested in applying for the scholarship.",
+          "vi": "Cô ấy quan tâm đến việc nộp đơn xin học bổng."
+        },
+        {
+          "en": "They discussed the budget cuts for over an hour.",
+          "vi": "Họ đã thảo luận về các khoản cắt giảm ngân sách hơn một giờ."
+        },
+        {
+          "en": "He got married to his university classmate.",
+          "vi": "Anh ấy đã kết hôn với bạn học đại học của mình."
+        },
+        {
+          "en": "We look forward to hearing from you soon.",
+          "vi": "Chúng tôi mong sớm nhận được phản hồi của bạn."
+        }
+      ],
+      "slug": "prepositions"
+    },
+    {
+      "intro": "Thì quá khứ, hiện tại hoàn thành và phân biệt used to / be used to. Đi kèm collocation do homework hay nhầm thành make.",
+      "mistakes": [
+        {
+          "fix": "used to live (thói quen cũ) / am used to living (đã quen)",
+          "slug": "i-used-to-living-in-hanoi-for-five-years",
+          "t": "I used to living in Hanoi for five years"
+        },
+        {
+          "fix": "did my homework (do + homework, quá khứ đơn)",
+          "slug": "i-made-my-homework-yesterday",
+          "t": "I made my homework yesterday"
+        },
+        {
+          "fix": "I saw him yesterday (mốc đã kết thúc → quá khứ đơn)",
+          "slug": null,
+          "t": "I have seen him yesterday"
+        },
+        {
+          "fix": "I have lived here since 2020 (since/for → hoàn thành)",
+          "slug": null,
+          "t": "I am living here since 2020"
+        },
+        {
+          "fix": "I used to swim (used to + nguyên mẫu)",
+          "slug": null,
+          "t": "When I was young, I use to swim"
+        }
+      ],
+      "name": "Các thì cơ bản và used to",
+      "rules": [
+        "used to + V nguyên mẫu: thói quen quá khứ đã chấm dứt.",
+        "be / get used to + V-ing: đã quen với việc gì.",
+        "Quá khứ đơn + mốc đã kết thúc: yesterday, in 2019, last week.",
+        "Hiện tại hoàn thành + since / for: việc bắt đầu quá khứ còn tiếp diễn.",
+        "Bài tập về nhà luôn + do: do homework, do housework — cấm make."
+      ],
+      "sentences": [
+        {
+          "en": "I used to live in Hanoi before moving south.",
+          "vi": "Trước khi chuyển vào Nam, tôi từng sống ở Hà Nội."
+        },
+        {
+          "en": "She is now used to getting up at five every morning.",
+          "vi": "Hiện cô ấy đã quen với việc dậy từ 5 giờ mỗi sáng."
+        },
+        {
+          "en": "We finished the sales report yesterday afternoon.",
+          "vi": "Chúng tôi đã hoàn thành báo cáo bán hàng chiều hôm qua."
+        },
+        {
+          "en": "They have worked in this factory since 2019.",
+          "vi": "Họ đã làm việc trong nhà máy này từ năm 2019."
+        },
+        {
+          "en": "He did all his homework before dinner.",
+          "vi": "Cậu ấy đã làm xong hết bài tập về nhà trước bữa tối."
+        }
+      ],
+      "slug": "tenses"
+    },
+    {
+      "intro": "Chủ ngữ số ít thì động từ số ít: every/each, each of, neither of. Kèm much/many hay nhầm theo.",
+      "mistakes": [
+        {
+          "fix": "Every student needs (every + số ít)",
+          "slug": "every-students-need-a-laptop",
+          "t": "Every students need a laptop"
+        },
+        {
+          "fix": "Each of the students is ready (each luôn số ít)",
+          "slug": "each-of-the-students-are-ready",
+          "t": "Each of the students are ready"
+        },
+        {
+          "fix": "too many people (people đếm được số nhiều)",
+          "slug": "there-are-too-much-people-in-the-room",
+          "t": "There are too much people in the room"
+        },
+        {
+          "fix": "Neither of them is ready",
+          "slug": null,
+          "t": "Neither of them are ready"
+        },
+        {
+          "fix": "The news is shocking (news luôn số ít)",
+          "slug": null,
+          "t": "The news are shocking"
+        }
+      ],
+      "name": "Hòa hợp chủ ngữ – động từ",
+      "rules": [
+        "every / each + danh từ số ít + động từ số ít.",
+        "each of + cụm số nhiều vẫn + động từ số ít: each of them is.",
+        "many + đếm được số nhiều; much + không đếm được.",
+        "neither / either of + số nhiều + động từ số ít (văn phong chuẩn).",
+        "news, mathematics… (đuôi -s) vẫn chia số ít."
+      ],
+      "sentences": [
+        {
+          "en": "Every student needs a laptop for the course.",
+          "vi": "Mỗi học viên đều cần một chiếc laptop cho khóa học."
+        },
+        {
+          "en": "Each of the participants receives a certificate.",
+          "vi": "Mỗi học viên tham dự đều nhận được một chứng chỉ."
+        },
+        {
+          "en": "Neither of the answers is correct.",
+          "vi": "Cả hai câu trả lời đều không đúng."
+        },
+        {
+          "en": "The news is better than expected.",
+          "vi": "Tin tức khả quan hơn mong đợi."
+        },
+        {
+          "en": "Many students joined the English club this term.",
+          "vi": "Nhiều sinh viên đã tham gia câu lạc bộ tiếng Anh học kỳ này."
+        }
+      ],
+      "slug": "agreement"
+    },
+    {
+      "intro": "Bị động be + V3/ed và tính từ sở hữu trước danh từ. Gốc rễ của the report wrote by Lan và he documents.",
+      "mistakes": [
+        {
+          "fix": "His documents were signed (tính từ sở hữu + bị động)",
+          "slug": null,
+          "t": "He documents were signed yesterday"
+        },
+        {
+          "fix": "was written by Lan (bị động cần be)",
+          "slug": null,
+          "t": "The report wrote by Lan"
+        },
+        {
+          "fix": "is spoken here (V3 của speak là spoken)",
+          "slug": null,
+          "t": "English is spoke here"
+        },
+        {
+          "fix": "was built in 1999",
+          "slug": null,
+          "t": "The bridge built in 1999"
+        },
+        {
+          "fix": "was solved yesterday",
+          "slug": null,
+          "t": "The problem solved yesterday"
+        }
+      ],
+      "name": "Câu chủ động và câu bị động",
+      "rules": [
+        "Bị động = be + V3/ed: is written, was built, were signed.",
+        "Chủ ngữ số ít + is/was; số nhiều + are/were.",
+        "Trước danh từ dùng tính từ sở hữu: his documents — cấm he documents.",
+        "by + tác nhân khi cần nêu ai làm: was written by Lan.",
+        "have, lack, resemble… không dùng ở bị động."
+      ],
+      "sentences": [
+        {
+          "en": "His documents were signed yesterday morning.",
+          "vi": "Tài liệu của anh ấy đã được ký sáng hôm qua."
+        },
+        {
+          "en": "The new bridge was built in less than two years.",
+          "vi": "Cây cầu mới đã được xây trong chưa đầy hai năm."
+        },
+        {
+          "en": "English is spoken in many international meetings.",
+          "vi": "Tiếng Anh được dùng trong nhiều cuộc họp quốc tế."
+        },
+        {
+          "en": "The problem was solved by our technical team.",
+          "vi": "Vấn đề đã được đội kỹ thuật của chúng tôi giải quyết."
+        },
+        {
+          "en": "Her application has been accepted by three universities.",
+          "vi": "Đơn của cô ấy đã được ba trường đại học chấp nhận."
+        }
+      ],
+      "slug": "voice"
+    },
+    {
+      "intro": "Từ loại đặt sai chỗ và cặp từ hình thức giống nhau: economic/economical, affect/effect, improve/increase, experience/experiment.",
+      "mistakes": [
+        {
+          "fix": "Economic reforms (thuộc kinh tế)",
+          "slug": "economical-growth",
+          "t": "economical growth"
+        },
+        {
+          "fix": "the effect of pollution (effect là danh từ)",
+          "slug": "the-affect-of-pollution",
+          "t": "the affect of pollution"
+        },
+        {
+          "fix": "Sales increased (số lượng tăng → increase)",
+          "slug": "improve-sales-by-20",
+          "t": "improve sales by 20%"
+        },
+        {
+          "fix": "job experience (kinh nghiệm → experience)",
+          "slug": "job-experiment",
+          "t": "job experiment"
+        },
+        {
+          "fix": "my current job (công việc hiện tại → current)",
+          "slug": "my-actual-job-l-cng-vic-hin-ti",
+          "t": "my actual job (ý là công việc hiện tại)"
+        }
+      ],
+      "name": "Từ loại và cặp từ dễ nhầm",
+      "rules": [
+        "economic (thuộc kinh tế) ≠ economical (tiết kiệm).",
+        "affect là động từ; effect thường là danh từ.",
+        "improve (chất lượng tốt hơn) ≠ increase (số lượng tăng).",
+        "experience (kinh nghiệm) ≠ experiment (thí nghiệm).",
+        "Trước danh từ dùng tính từ: potential risks — cấm trạng từ potentially."
+      ],
+      "sentences": [
+        {
+          "en": "Economic reforms helped small businesses grow.",
+          "vi": "Các cải cách kinh tế đã giúp doanh nghiệp nhỏ phát triển."
+        },
+        {
+          "en": "Pollution seriously affects children's health.",
+          "vi": "Ô nhiễm ảnh hưởng nghiêm trọng đến sức khỏe trẻ em."
+        },
+        {
+          "en": "Sales increased by twenty percent last quarter.",
+          "vi": "Doanh số đã tăng 20% trong quý trước."
+        },
+        {
+          "en": "Two years of relevant experience is required.",
+          "vi": "Vị trí này yêu cầu hai năm kinh nghiệm liên quan."
+        },
+        {
+          "en": "Identify the potential risks before signing the contract.",
+          "vi": "Hãy xác định các rủi ro tiềm ẩn trước khi ký hợp đồng."
+        }
+      ],
+      "slug": "word-form"
+    },
+    {
+      "intro": "So sánh hơn và nhất: cấm more better, most cheapest. Tính từ ngắn + -er/-est, tính từ dài + more/most.",
+      "mistakes": [
+        {
+          "fix": "far better than mine (better đã là so sánh hơn)",
+          "slug": "this-laptop-is-more-better-than-mine",
+          "t": "This laptop is more better than mine"
+        },
+        {
+          "fix": "the cheapest hotel (cheapest đã là nhất, cấm most)",
+          "slug": "this-is-the-most-cheapest-hotel-here",
+          "t": "This is the most cheapest hotel here"
+        },
+        {
+          "fix": "cheaper (tính từ ngắn + -er, cấm more)",
+          "slug": null,
+          "t": "more cheaper"
+        },
+        {
+          "fix": "the best (best đã là nhất, cấm -est kép)",
+          "slug": null,
+          "t": "the bestest"
+        },
+        {
+          "fix": "as tall as me (so sánh bằng dùng as…as)",
+          "slug": null,
+          "t": "as tall than me"
+        }
+      ],
+      "name": "So sánh hơn và so sánh nhất",
+      "rules": [
+        "better / best đã là dạng đặc biệt của good: cấm more/most.",
+        "Tính từ ngắn: -er / -est; tính từ dài: more / most + tính từ.",
+        "So sánh hơn + than; so sánh bằng + as…as.",
+        "So sánh nhất + the + phạm vi: the cheapest in the district.",
+        "much / far + so sánh hơn để nhấn mạnh: much better."
+      ],
+      "sentences": [
+        {
+          "en": "This laptop is far better than mine.",
+          "vi": "Chiếc laptop này tốt hơn của tôi nhiều."
+        },
+        {
+          "en": "The early train is usually the cheapest option.",
+          "vi": "Chuyến tàu sớm thường là lựa chọn rẻ nhất."
+        },
+        {
+          "en": "Regular practice makes your writing much better.",
+          "vi": "Luyện tập đều đặn giúp bài viết của bạn tốt hơn nhiều."
+        },
+        {
+          "en": "She is now as tall as her older sister.",
+          "vi": "Cô ấy giờ đã cao bằng chị gái mình."
+        },
+        {
+          "en": "Hanoi is cheaper than Singapore for most travellers.",
+          "vi": "Hà Nội rẻ hơn Singapore với đa số du khách."
+        }
+      ],
+      "slug": "comparison"
+    },
+    {
+      "intro": "Sau giới từ và liên từ dùng tân ngữ (me/him), không dùng chủ ngữ (I/he). Quy tắc vàng: between you and me.",
+      "mistakes": [
+        {
+          "fix": "between you and me (sau giới từ luôn + me)",
+          "slug": "this-secret-is-just-between-you-and-i",
+          "t": "This secret is just between you and I"
+        },
+        {
+          "fix": "Give it to me (sau giới từ + tân ngữ)",
+          "slug": "can-you-borrow-me-your-pen",
+          "t": "Can you borrow me your pen?"
+        },
+        {
+          "fix": "Lan and I went (trang trọng đặt người khác trước)",
+          "slug": null,
+          "t": "Me and Lan went"
+        },
+        {
+          "fix": "I did it myself (mình tự làm, không dùng Myself đầu câu)",
+          "slug": null,
+          "t": "Myself did it"
+        },
+        {
+          "fix": "She told me that… (tell + người nghe)",
+          "slug": "she-said-me-that-she-was-busy",
+          "t": "She said me that she was busy"
+        }
+      ],
+      "name": "Đại từ sau giới từ và liên từ",
+      "rules": [
+        "Sau giới từ (between, for, with…): dùng tân ngữ me / him / us.",
+        "between you and me — không có ngoại lệ.",
+        "Đầu câu trang trọng: Lan and I — cấm Me and Lan.",
+        "Sau tell / lend / give + tân ngữ: tell me, lend me.",
+        "myself không làm chủ ngữ: I did it myself."
+      ],
+      "sentences": [
+        {
+          "en": "This agreement is strictly between you and me.",
+          "vi": "Thỏa thuận này hoàn toàn chỉ giữa tôi và bạn."
+        },
+        {
+          "en": "Please give the report to her before Friday.",
+          "vi": "Vui lòng đưa báo cáo cho cô ấy trước thứ Sáu."
+        },
+        {
+          "en": "Lan and I shared the prize with the whole team.",
+          "vi": "Lan và tôi đã chia giải thưởng với cả đội."
+        },
+        {
+          "en": "They invited him and me to the workshop.",
+          "vi": "Họ đã mời anh ấy và tôi tham dự hội thảo."
+        },
+        {
+          "en": "She finished the project all by herself.",
+          "vi": "Cô ấy đã tự mình hoàn thành dự án."
+        }
+      ],
+      "slug": "pronouns"
+    },
+    {
+      "intro": "Động từ nào + V-ing, động từ nào + to-V. Bẫy lớn nhất: look forward to + V-ing vì to ở đây là giới từ.",
+      "mistakes": [
+        {
+          "fix": "look forward to meeting you (to là giới từ + V-ing)",
+          "slug": "look-forward-to-meet-you",
+          "t": "look forward to meet you"
+        },
+        {
+          "fix": "used to live (thói quen cũ) / am used to living (đã quen)",
+          "slug": "i-used-to-living-in-hanoi-for-five-years",
+          "t": "I used to living in Hanoi for five years"
+        },
+        {
+          "fix": "enjoy reading (enjoy + V-ing)",
+          "slug": null,
+          "t": "enjoy to read"
+        },
+        {
+          "fix": "suggest going (suggest + V-ing)",
+          "slug": null,
+          "t": "suggest to go"
+        },
+        {
+          "fix": "avoid making (avoid + V-ing)",
+          "slug": null,
+          "t": "avoid to make mistakes"
+        }
+      ],
+      "name": "To-V và V-ing sau động từ",
+      "rules": [
+        "look forward to + V-ing (to ở đây là giới từ): to meeting you.",
+        "enjoy, suggest, finish, avoid, practise + V-ing.",
+        "want, decide, manage, agree, hope + to-V.",
+        "interested in + V-ing: interested in learning English.",
+        "used to + V (thói quen cũ) ≠ be used to + V-ing (đã quen)."
+      ],
+      "sentences": [
+        {
+          "en": "We look forward to receiving your reply.",
+          "vi": "Chúng tôi mong sớm nhận được phản hồi của bạn."
+        },
+        {
+          "en": "She enjoys reading business case studies.",
+          "vi": "Cô ấy thích đọc các tình huống kinh doanh thực tế."
+        },
+        {
+          "en": "They decided to expand into three new markets.",
+          "vi": "Họ đã quyết định mở rộng sang ba thị trường mới."
+        },
+        {
+          "en": "He managed to finish the report on time.",
+          "vi": "Anh ấy đã xoay xở hoàn thành báo cáo đúng hạn."
+        },
+        {
+          "en": "I am used to working under tight deadlines.",
+          "vi": "Tôi đã quen với việc làm việc dưới áp lực deadline gấp."
+        }
+      ],
+      "slug": "infinitives"
+    }
+  ]
+}
