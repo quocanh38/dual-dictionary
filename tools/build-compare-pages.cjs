@@ -13,6 +13,7 @@ const OUT_DIR = path.join(REPO, 'vi', 'phan-biet');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 function slugOf(s) {
   return String(s).normalize('NFC').toLowerCase().replace(/[^a-z0-9'\s-]/g, '').replace(/\s+/g, '-');
@@ -167,6 +168,7 @@ ${rightRows}
     <a class="related-chip" href="${termHref(p.b)}">Tra “${esc(p.b)}” →</a>
     <a class="related-chip" href="/vi/phan-biet/">Tất cả phân biệt →</a>
   </div>
+  ${blogLinksHtml(`/vi/phan-biet/${slug}/`)}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
@@ -194,6 +196,13 @@ function hubHtml(pairs) {
     '@graph': [
       { '@type': 'CollectionPage', name: `Phân biệt ${pairs.length} cặp từ dễ nhầm`, url: `${SITE}/vi/phan-biet/`, inLanguage: 'vi' },
       itemList,
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Phân biệt' },
+        ],
+      },
     ],
   };
   return `<!DOCTYPE html>

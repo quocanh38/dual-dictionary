@@ -28,6 +28,7 @@ const { buildAutoNote, loadHandNote, renderNoteHTML, lemmaStems, compactRegister
 const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs');
 const { wordGroup, ABBREV_RE, FRAGMENTS, PROPER_RE } = require('./wordlist-lib.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
@@ -821,7 +822,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   const practiceCta = (examDeck || practiceDeck)
     ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${examDeck || practiceDeck}">${examDeck === 'toeic' ? '💼' : '🎯'} Luyện ${examDeck === 'toeic' ? 'TOEIC Business' : examDeck === 'ielts' ? 'IELTS Core' : 'bộ từ này'} trong app ↗</a>`
     : '';
-  const title = `${word} nghĩa là gì? — Nghĩa tiếng Việt | Dual Dictionary`;
+  const title = `${word} nghĩa là gì? | Dual Dictionary`;
   /* P0 SEO: unique meta per page — first rendered sense (post-priority) + IPA.
    * raw is passed from the build loop; direct renderEntry() callers without
    * raw keep the old generic template via the '' fallback in wordMetaDesc. */
@@ -943,6 +944,8 @@ ${navHtml('tu')}
   ${faqHtml(word)}
 
   ${relatedHtml}
+
+  ${blogLinksHtml(`/vi/tu/${word}/`)}
 
   ${phraseHtml}
 </main>

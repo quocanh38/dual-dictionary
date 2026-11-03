@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'gioi-tu');
@@ -105,6 +106,8 @@ ${exRows}
   </ul>
   ${mistakeHtml}
   ${relatedHtml}
+
+  ${blogLinksHtml(`/vi/gioi-tu/${p.slug}/`)}
   <div class="cmp-links">
     <a class="related-chip" href="${wordHref(p.linkWord)}">Tra “${esc(p.linkWord)}” →</a>
     <a class="related-chip" href="/vi/gioi-tu/">Tất cả giới từ →</a>
@@ -153,6 +156,13 @@ function main() {
           name: `${p.head} đi với giới từ gì?`,
           url: `${SITE}/vi/gioi-tu/${p.slug}/`,
         })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Giới từ' },
+        ],
       },
     ],
   };

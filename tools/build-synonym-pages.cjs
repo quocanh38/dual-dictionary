@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'dong-nghia');
@@ -125,6 +126,7 @@ ${exRows}
     <a class="related-chip" href="${wordHref(p.word)}">Tra “${esc(p.word)}” →</a>
     <a class="related-chip" href="/vi/dong-nghia/">Tất cả từ đồng nghĩa →</a>
   </div>
+  ${blogLinksHtml(`/vi/dong-nghia/${p.slug}/`)}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
@@ -172,6 +174,13 @@ function main() {
           name: `Từ đồng nghĩa với ${p.word}`,
           url: `${SITE}/vi/dong-nghia/${p.word}/`,
         })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Đồng nghĩa' },
+        ],
       },
     ],
   };

@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'cum-di-voi');
@@ -106,6 +107,8 @@ ${exRows}
   </ul>
   ${mistakeHtml}
   ${relatedHtml}
+
+  ${blogLinksHtml(`/vi/cum-di-voi/${p.slug}/`)}
   <div class="cmp-links">
     <a class="related-chip" href="${wordHref(p.linkWord)}">Tra “${esc(p.linkWord)}” →</a>
     <a class="related-chip" href="/vi/cum-di-voi/">Tất cả cụm đi với →</a>
@@ -154,6 +157,13 @@ function main() {
           name: `${cap(p.noun)} đi với ${p.verb}? Dùng đúng hay sai`,
           url: `${SITE}/vi/cum-di-voi/${p.slug}/`,
         })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Cụm đi với' },
+        ],
       },
     ],
   };

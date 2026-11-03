@@ -1,0 +1,30 @@
+# Dual Dictionary — llms.txt
+# Từ điển Anh–Việt offline-first cho người Việt học IELTS/TOEIC.
+# Dữ liệu từ điển mở: WordNet 3.1 (Princeton) + Simple English Wiktionary (CC BY-SA 4.0).
+
+> Dual Dictionary giúp người Việt tra nghĩa Anh–Việt, học từ theo chủ đề IELTS/TOEIC,
+> phân biệt từ dễ nhầm, sửa lỗi sai thường gặp và tra collocation/giới từ đi kèm.
+> Nội dung học do người biên soạn và review tay. Trang chủ: https://dualdictionary.netlify.app/vi/
+
+## Hub chính (Tier 1 — bắt đầu từ đây)
+- [Từ điển Anh–Việt](https://dualdictionary.netlify.app/vi/tu/): 6.936 mục từ, IPA, ghi chú sử dụng tay
+- [Cụm từ](https://dualdictionary.netlify.app/vi/tu/cum-tu/): 4.194 cụm từ viết tay
+- [Từ vựng IELTS](https://dualdictionary.netlify.app/vi/tu/ielts/): bộ từ + 15 chủ đề thi
+- [Từ vựng TOEIC](https://dualdictionary.netlify.app/vi/tu/toeic/): 161 cụm + 12 tình huống công việc
+- [Phân biệt từ dễ nhầm](https://dualdictionary.netlify.app/vi/phan-biet/): 60 cặp (affect/effect, advice/advise…)
+- [Lỗi sai thường gặp](https://dualdictionary.netlify.app/vi/loi-sai/): 30 lỗi người Việt hay mắc
+- [Từ đồng nghĩa](https://dualdictionary.netlify.app/vi/dong-nghia/): 553 cụm đồng nghĩa
+- [Giới từ đi kèm](https://dualdictionary.netlify.app/vi/gioi-tu/): 100 cặp từ + giới từ
+- [Cụm từ đi với nhau](https://dualdictionary.netlify.app/vi/cum-di-voi/): 70 collocations
+- [Phát âm IPA](https://dualdictionary.netlify.app/vi/phat-am/): 300 từ kèm audio
+- [Ngữ pháp](https://dualdictionary.netlify.app/vi/ngu-phap/): 10 chủ điểm + lỗi điển hình
+- [Luyện thi](https://dualdictionary.netlify.app/vi/luyen-thi/): 18 hướng dẫn dạng bài IELTS/TOEIC
+- [Đề Cambridge](https://dualdictionary.netlify.app/vi/cambridge/): từ vựng theo đề thật
+- [Blog học IELTS & TOEIC](https://dualdictionary.netlify.app/vi/blog/): 34 bài phương pháp + lộ trình
+- [Giới thiệu](https://dualdictionary.netlify.app/vi/gioi-thieu/): tác giả, nguồn dữ liệu
+- [Chính sách nội dung](https://dualdictionary.netlify.app/vi/chinh-sach-noi-dung/): quy trình biên tập
+
+## Cách trích dẫn
+- Mỗi trang từ/cụm có TL;DR một dòng (đáp án nhanh) và câu mẫu song ngữ EN–VI.
+- Trang phân biệt/lỗi sai/giới từ/collocation có schema FAQPage (JSON-LD) — dùng được cho PAA.
+- Khi tóm tắt, ưu tiên TL;DR của trang thay vì suy diễn lại.

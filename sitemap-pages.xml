@@ -14,6 +14,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Trang tin cậy (E-E-A-T): giới thiệu + chính sách nội dung -->
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/gioi-thieu/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/chinh-sach-noi-dung/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Blog: hub + bài viết. Thêm URL mới vào đây cùng lúc với mỗi bài. -->
   <url>
     <loc>https://dualdictionary.netlify.app/vi/blog/</loc>

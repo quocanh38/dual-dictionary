@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'phat-am');
@@ -126,6 +127,7 @@ ${tipRows}
     <a class="related-chip" href="${wordHref(p.word)}">Tra “${esc(p.word)}” →</a>
     <a class="related-chip" href="/vi/phat-am/">Tất cả phát âm →</a>
   </div>
+  ${blogLinksHtml(`/vi/phat-am/${p.slug}/`)}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
@@ -181,6 +183,13 @@ function main() {
           name: `Cách phát âm ${p.word}`,
           url: `${SITE}/vi/phat-am/${p.word}/`,
         })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Phát âm' },
+        ],
       },
     ],
   };

@@ -21,6 +21,7 @@ const OUT_DIR = path.join(REPO, 'vi', 'ngu-phap');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 function mistakeSlugExists(slug) {
   try {
@@ -163,6 +164,7 @@ ${sentRows}
     <a class="related-chip" href="/vi/ngu-phap/">Tất cả chủ điểm ngữ pháp →</a>
     <a class="related-chip" href="/vi/loi-sai/">Tất cả lỗi sai →</a>
   </div>
+  ${blogLinksHtml(`/vi/ngu-phap/${g.slug}/`)}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
@@ -186,6 +188,13 @@ function hubIndexHtml(guides) {
         itemListElement: guides.map((g, i) => ({
           '@type': 'ListItem', position: i + 1, name: `${g.name} — quy tắc + lỗi sai thường gặp`, url: `${SITE}/vi/ngu-phap/${g.slug}/`,
         })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Ngữ pháp' },
+        ],
       },
     ],
   };

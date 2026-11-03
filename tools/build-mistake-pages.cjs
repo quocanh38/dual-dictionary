@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'loi-sai');
@@ -110,6 +111,7 @@ ${rightRows || `<li>Tra chi tiết tại trang từ “${esc(m.word)}”.</li>`}
     <a class="related-chip" href="${wordHref(m.word)}">Tra “${esc(m.word)}” →</a>
     <a class="related-chip" href="/vi/loi-sai/">Tất cả lỗi sai →</a>
   </div>
+  ${blogLinksHtml(`/vi/loi-sai/${slug}/`)}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
@@ -159,6 +161,13 @@ function main() {
           name: `Đừng nói “${m.mistake}” (${m.word})`,
           url: `${SITE}/vi/loi-sai/${slugs[i]}/`,
         })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
+          { '@type': 'ListItem', position: 2, name: 'Lỗi sai' },
+        ],
       },
     ],
   };

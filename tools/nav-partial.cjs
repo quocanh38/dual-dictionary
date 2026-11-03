@@ -24,6 +24,7 @@ function navHtml(active) {
 <a href="/vi/luyen-thi/"${on('luyen-thi')}>Luyện thi</a>
 <a href="/vi/ngu-phap/"${on('ngu-phap')}>Ngữ pháp</a>
 <a href="/vi/blog/"${on('blog')}>Blog</a>
+<a href="/vi/gioi-thieu/"${on('gioi-thieu')}>Giới thiệu</a>
 </div>
 <form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>
 </div></nav>
