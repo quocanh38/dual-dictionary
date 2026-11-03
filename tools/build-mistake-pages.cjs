@@ -28,7 +28,9 @@ function pageHtml(m, wordHref) {
   const firstRight = (m.right || [])[0] || '';
   const firstClean = firstRight.replace(/\.+$/, '');
   const tldr = `Đáp án: thay “${m.mistake}” bằng cách dùng đúng của “${m.word}”${firstClean ? ` — ví dụ: ${firstClean}.` : ''} ${m.diff || ''}`.trim();
-  const tldrHtml = `<p class="tldr">${esc(tldr)}</p>`;
+  const tldrWords = tldr.split(/\s+/);
+  const tldrShort = tldrWords.length > 60 ? tldrWords.slice(0, 60).join(' ') + '…' : tldr;
+  const tldrHtml = `<p class="tldr">${esc(tldrShort)}</p>`;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -197,7 +199,7 @@ ${navHtml('loi-sai')}
 <main class="page">
   <p class="word-kicker">Lỗi sai thường gặp</p>
   <h1 style="font-size:2.2rem">${pairs.length} lỗi sai tiếng Anh thường gặp</h1>
-  <p style="color:var(--muted)">Mỗi lỗi 1 trang riêng: vì sao sai, cách dùng đúng, câu mẫu IELTS/TOEIC.</p>
+  <p style="color:var(--muted)">Mỗi lỗi 1 trang riêng: vì sao sai, cách dùng đúng, câu mẫu IELTS/TOEIC. Gõ không dấu như &quot;an evidence dung hay sai&quot; vẫn ra đúng lỗi.</p>
   <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>

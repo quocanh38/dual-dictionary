@@ -9,6 +9,14 @@ const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
 const { blogLinksHtml } = require('./blog-links-lib.cjs');
+let FAQ_EXTRA = null;
+function faqExtra(slug) {
+  if (FAQ_EXTRA === null) {
+    try { FAQ_EXTRA = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'colloc-faq-extra.json'), 'utf8')); }
+    catch (e) { FAQ_EXTRA = {}; }
+  }
+  return FAQ_EXTRA[slug] || [];
+}
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'cum-di-voi');
@@ -59,6 +67,11 @@ function pageHtml(p, wordHref, slugToHead) {
             name: `Đặt câu đúng với ${p.head}?`,
             acceptedAnswer: { '@type': 'Answer', text: (p.examples || []).map(([en]) => en).join(' ') },
           },
+          ...faqExtra(p.slug).map((q) => ({
+            '@type': 'Question',
+            name: q.charAt(0).toUpperCase() + q.slice(1) + '?',
+            acceptedAnswer: { '@type': 'Answer', text: p.answer },
+          })),
         ],
       },
       {
@@ -193,7 +206,7 @@ ${navHtml('cum-di-voi')}
 <main class="page">
   <p class="word-kicker">Cụm từ đi với nhau</p>
   <h1 style="font-size:2.2rem">${pairs.length} cặp từ tiếng Anh hay đi với nhau</h1>
-  <p style="color:var(--muted)">Mỗi cặp 1 trang riêng: đáp án 1 dòng, giải thích, câu mẫu song ngữ EN–VI.</p>
+  <p style="color:var(--muted)">Mỗi cặp 1 trang riêng: đáp án 1 dòng, giải thích, câu mẫu song ngữ EN–VI. Gõ không dấu như &quot;make decision&quot; hay &quot;do business dung hay sai&quot; vẫn ra đúng cụm.</p>
   <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>

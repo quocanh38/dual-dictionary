@@ -74,6 +74,24 @@ function pageHtml(p) {
   /* Snippet box (02/11): 40-60 word TL;DR right under H1 — clean <p>, no nested
    * spans, directly quotable for featured snippet / PAA / voice. Derived from
    * hand-written diff + right sentences, plus SpeakableSpecification. */
+  /* 4-col table (03/11, format PREP): IPA from data/ipa-en.json (149k entries). */
+  let IPA_MAP = null;
+  const ipaOf = (w) => {
+    if (IPA_MAP === null) {
+      try { IPA_MAP = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'ipa-en.json'), 'utf8')); }
+      catch (e) { IPA_MAP = {}; }
+    }
+    const v = IPA_MAP[String(w).toLowerCase()];
+    return typeof v === 'string' ? v : (v && v.ipa ? v.ipa : '');
+  };
+  const posOf = (w, diff) => {
+    /* suy loại từ từ diff text: pattern "là động từ/danh từ/tính từ..." */
+    const m = String(diff).match(new RegExp('"' + String(w).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '"[^.]{0,20}?là\\s*([^,;.(]+)', 'i'));
+    if (m) return m[1].trim().slice(0, 40);
+    const fb = String(diff).match(new RegExp('"' + String(w).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '"([^.]{1,44})', 'i'));
+    if (fb) return fb[1].replace(/^\s*(là\s+)?/, '').trim().slice(0, 40);
+    return '';
+  };
   const tldr = `Tóm tắt: ${p.diff}${(p.right || []).length ? ` Ví dụ: ${(p.right || []).map((r) => String(r).replace(/\.+$/, '')).join(' / ')}.` : ''}`;
   const tldrHtml = `<p class="tldr">${esc(tldr)}</p>`;
   const jsonLd = {
@@ -154,10 +172,11 @@ ${navHtml('phan-biet')}
   <h1 style="font-size:2.2rem">${esc(h1)}</h1>
   ${tldrHtml}
   <table class="cmp-table">
-    <tr><th style="width:28%">Từ</th><th>Điểm khác biệt</th></tr>
-    <tr><td><b>${esc(p.a)}</b></td><td rowspan="2">${esc(p.diff)}</td></tr>
-    <tr><td><b>${esc(p.b)}</b></td></tr>
+    <tr><th>Từ</th><th>Phiên âm</th><th>Loại từ / ý nghĩa</th><th>Ví dụ đúng</th></tr>
+    <tr><td><b>${esc(p.a)}</b></td><td>${esc(ipaOf(p.a))}</td><td>${esc(posOf(p.a, p.diff))}</td><td>${esc((p.right || [])[0] || '')}</td></tr>
+    <tr><td><b>${esc(p.b)}</b></td><td>${esc(ipaOf(p.b))}</td><td>${esc(posOf(p.b, p.diff))}</td><td>${esc((p.right || [])[1] || (p.right || [])[0] || '')}</td></tr>
   </table>
+  <p>${esc(p.diff)}</p>
   ${wrongRows ? `<h2>Lỗi sai thường gặp</h2>\n  <ul>\n${wrongRows}\n  </ul>` : ''}
   <h2>Câu đúng</h2>
   <ul>
@@ -231,7 +250,7 @@ ${navHtml('phan-biet')}
 <main class="page">
   <p class="word-kicker">Từ dễ nhầm</p>
   <h1 style="font-size:2.2rem">Phân biệt ${pairs.length} cặp từ dễ nhầm</h1>
-  <p style="color:var(--muted)">Mỗi cặp 1 trang riêng: điểm khác biệt, lỗi sai thường gặp, câu đúng dùng được trong IELTS/TOEIC.</p>
+  <p style="color:var(--muted)">Mỗi cặp 1 trang riêng: điểm khác biệt, lỗi sai thường gặp, câu đúng dùng được trong IELTS/TOEIC. Gõ không dấu như &quot;affect effect khac nhau&quot; hay &quot;advice advise phan biet&quot; vẫn tìm ra đúng trang.</p>
   <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>

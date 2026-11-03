@@ -210,7 +210,7 @@ ${navHtml('dong-nghia')}
 <main class="page">
   <p class="word-kicker">Từ đồng nghĩa &amp; trái nghĩa</p>
   <h1 style="font-size:2.2rem">${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra</h1>
-  <p style="color:var(--muted)">Mỗi từ 1 trang riêng: list đồng nghĩa link về trang từ, trái nghĩa, phân biệt sắc thái, câu mẫu song ngữ EN–VI.</p>
+  <p style="color:var(--muted)">Mỗi từ 1 trang riêng: list đồng nghĩa link về trang từ, trái nghĩa, phân biệt sắc thái, câu mẫu song ngữ EN–VI. Tra không dấu vẫn ra đúng từ.</p>
   <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>

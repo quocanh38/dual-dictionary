@@ -9,6 +9,14 @@ const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
 const { blogLinksHtml } = require('./blog-links-lib.cjs');
+let PREP_FAQ_EXTRA = null;
+function prepFaqExtra(slug) {
+  if (PREP_FAQ_EXTRA === null) {
+    try { PREP_FAQ_EXTRA = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'prep-faq-extra.json'), 'utf8')); }
+    catch (e) { PREP_FAQ_EXTRA = {}; }
+  }
+  return PREP_FAQ_EXTRA[slug] || [];
+}
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'gioi-tu');
@@ -58,6 +66,11 @@ function pageHtml(p, wordHref, slugToHead) {
             name: `Đặt câu với ${p.head} đúng giới từ?`,
             acceptedAnswer: { '@type': 'Answer', text: (p.examples || []).map(([en]) => en).join(' ') },
           },
+          ...prepFaqExtra(p.slug).map((q) => ({
+            '@type': 'Question',
+            name: q.charAt(0).toUpperCase() + q.slice(1) + '?',
+            acceptedAnswer: { '@type': 'Answer', text: p.answer },
+          })),
         ],
       },
       {
@@ -99,7 +112,7 @@ ${navHtml('gioi-tu')}
 <main class="page">
   <p class="word-kicker">Giới từ đi kèm</p>
   <h1 style="font-size:2.2rem">${esc(p.head)} đi với giới từ gì?</h1>
-  <p class="tldr"><strong>${esc(p.answer)}</strong> ${esc(p.explain)}${(p.examples || []).length ? ` Ví dụ: ${esc(String(p.examples[0][0]).replace(/\.+$/, ''))}.` : ''}</p>
+  <p class="tldr"><strong>${esc(p.answer)}</strong> ${esc(p.explain.split(/\s+/).slice(0, 50).join(' '))}${(p.examples || []).length ? ` Ví dụ: ${esc(String(p.examples[0][0]).replace(/\.+$/, ''))}.` : ''}</p>
   <h2>Câu mẫu</h2>
   <ul>
 ${exRows}
@@ -192,7 +205,7 @@ ${navHtml('gioi-tu')}
 <main class="page">
   <p class="word-kicker">Giới từ đi kèm</p>
   <h1 style="font-size:2.2rem">${pairs.length} cặp từ + giới từ tiếng Anh hay nhầm</h1>
-  <p style="color:var(--muted)">Mỗi cặp 1 trang riêng: đáp án 1 dòng, giải thích, câu mẫu song ngữ EN–VI.</p>
+  <p style="color:var(--muted)">Mỗi cặp 1 trang riêng: đáp án 1 dòng, giải thích, câu mẫu song ngữ EN–VI. Bạn gõ không dấu như &quot;depend on&quot; hay &quot;sau depend la gi&quot; vẫn tìm ra đúng trang.</p>
   <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>
