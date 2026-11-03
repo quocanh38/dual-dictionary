@@ -53,7 +53,7 @@ for (const f of fs.readdirSync(SM_DIR).filter((x) => x.endsWith('.xml') && x !==
 
 /* Pass 2: tiered sitemap.xml. Tier 1 = crawl-priority (hubs, collections, SEO
  * clusters, topics). Tier 2 = topical tag sitemaps. Tier 3 = bulk chunks. */
-const TIER1 = ['collections.xml', 'topics.xml', 'compare.xml', 'mistakes.xml', 'prepositions.xml', 'cambridge.xml'];
+const TIER1 = ['collections.xml', 'topics.xml', 'compare.xml', 'mistakes.xml', 'prepositions.xml', 'collocations.xml', 'cambridge.xml', 'pronunciation.xml', 'synonyms.xml'];
 const TIER2 = ['words-ielts.xml', 'words-giao-tiep.xml', 'phrases-ielts.xml', 'phrases-toeic.xml'];
 function entry(name) {
   const t = tierInfo[name];
