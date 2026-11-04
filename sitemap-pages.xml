@@ -25,6 +25,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/tu/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/tu/cum-tu/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- Blog: hub + bài viết. Thêm URL mới vào đây cùng lúc với mỗi bài. -->
   <url>
     <loc>https://dualdictionary.netlify.app/vi/blog/</loc>
