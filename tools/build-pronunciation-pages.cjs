@@ -15,6 +15,51 @@ const OUT_DIR = path.join(REPO, 'vi', 'phat-am');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
 
+// Tier1 helpers
+const IPA_DESC = {
+  'θ': 'th không rung — lưỡi giữa hai răng, thổi hơi, không rung dây thanh',
+  'ð': 'th rung — lưỡi giữa hai răng, rung dây thanh',
+  'ʃ': 'sh — chu môi, lưỡi gần vòm cứng, hơi xát',
+  'ʒ': 's rung — chu môi, rung dây thanh',
+  'tʃ': 'ch bật — đầu lưỡi chạm lợi, bật hơi mạnh',
+  'dʒ': 'j rung — như tʃ nhưng rung',
+  'ŋ': 'ng mũi — cuống lưỡi chạm ngạc mềm, hơi ra mũi',
+  'æ': 'a bẹt — hạ hàm, miệng mở ngang rộng',
+  'ɑ': 'a mở sau — miệng mở tròn, lưỡi hạ',
+  'ɔ': 'o mở — tròn môi, lưỡi lùi',
+  'ʌ': 'a ngắn — miệng hé, lưỡi giữa',
+  'ə': 'ơ lơi — miệng thả lỏng, âm không nhấn',
+  'ɚ': 'ơ cong Mỹ — lưỡi cong nhẹ, rung',
+  'ɝ': 'ơ cong nhấn — như ɚ nhưng nhấn',
+  'ɛ': 'e mở — miệng hé, lưỡi trước',
+  'ɪ': 'i ngắn — miệng hé, lưỡi cao trước',
+  'i': 'i dài — miệng hé hẹp, lưỡi cao',
+  'ʊ': 'u ngắn — môi tròn nhẹ, lưỡi lùi',
+  'u': 'u dài — môi tròn chặt',
+  'eɪ': 'ê-i — trượt từ e sang i',
+  'aɪ': 'ai — mở miệng rộng rồi trượt lên i',
+  'aʊ': 'ao — mở miệng rồi tròn môi',
+  'oʊ': 'ô-u — trượt từ ô sang u',
+  'ɹ': 'r Mỹ — cong lưỡi, không chạm',
+  'ɾ': 'r vỗ — lưỡi chạm nhanh',
+  'l': 'l — đầu lưỡi chạm lợi',
+  'w': 'w — tròn môi như huýt sáo',
+  'j': 'y — lưỡi nâng gần vòm',
+  'h': 'h — thở hắt nhẹ',
+  'ˈ': 'trọng âm chính — nhấn mạnh âm tiết sau nó',
+  'ˌ': 'trọng âm phụ — nhấn nhẹ hơn',
+  'ː': 'kéo dài — giữ âm lâu hơn'
+};
+function ipaTokens(ipa){ const out=[]; let i=0; while(i<ipa.length){ let two=ipa.slice(i,i+2); if(IPA_DESC[two]){out.push(two); i+=2; continue;} let one=ipa[i]; if(one.trim()) out.push(one); i+=1; } return out; }
+function ipaBreakdownHtml(ipa){ const toks=ipaTokens(ipa); const rows=toks.map(t=>`    <tr><td><code>/${esc(t)}/</code></td><td>${esc(IPA_DESC[t]||'âm vị — giữ đúng vị trí miệng, không Việt hóa')}</td></tr>`).join('\n'); return `<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:.92rem"><thead><tr style="background:var(--soft)"><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Âm</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Cách đặt miệng/lưỡi</th></tr></thead><tbody>\n${rows}\n</tbody></table>`; }
+function vnContrast(p){ const cm=p.common_mistake||''; if(cm.includes('th không rung')||cm.includes('θ')) return 'Tiếng Việt không có /θ/. Người Việt hay thay bằng /t/ (“think” → “tink”). Đặt lưỡi giữa hai răng, thổi hơi nhẹ, không chạm lợi.'; if(cm.includes('th rung')||cm.includes('ð')) return 'Tiếng Việt không có /ð/. Đừng đọc thành /d/ hay /z/. Lưỡi giữa răng và rung cổ họng.'; if(cm.includes('æ')) return 'Âm /æ/ bẹt không có trong tiếng Việt. Đừng đọc thành “a” hay “e”. Hạ hàm, miệng mở ngang.'; if(cm.includes('r')||cm.includes('/ɚ/')||cm.includes('ɝ')) return 'Âm /r/ Mỹ cong lưỡi, không chạm vòm. Người Việt hay bỏ hẳn hoặc đọc thành “r” Việt quá mạnh.'; if(cm.includes('l')) return 'Âm /l/ đầu lưỡi chạm lợi, khác “n”. Đừng nuốt phụ âm cuối.'; if(cm.includes('trọng âm')) return 'Tiếng Việt không có trọng âm từ. Nhấn mạnh đúng âm tiết thì người nghe mới bắt được từ.'; return 'Giữ đúng độ dài nguyên âm và bật rõ phụ âm cuối — hai lỗi phổ biến nhất của người Việt khi nói từ này.'; }
+function loadWordExamples(word){ try{ const html=require('fs').readFileSync(require('path').join(REPO,'vi','tu',word,'index.html'),'utf8'); const re=/<div class="mtd-ex"><span class="mtd-ex-en">(.*?)<\/span> — <span class="mtd-ex-vi">(.*?)<\/span><\/div>/g; let m, out=[]; while((m=re.exec(html))&&out.length<3){ let en=m[1].replace(/<[^>]+>/g,''); let vi=m[2].replace(/<[^>]+>/g,''); if(en&&vi) out.push([en,vi]); } return out.length?out:null; }catch(e){ return null; } }
+function exampleSentences(p){ const fromWord=loadWordExamples(p.word); if(fromWord) return fromWord; const w=p.word; const caps=w[0].toUpperCase()+w.slice(1); return [
+  [ `I ${w} it will help you in the long run.`, `Tôi nghĩ điều này sẽ giúp bạn về lâu dài.` ],
+  [ `${caps} about it before you decide.`, `Hãy cân nhắc về điều này trước khi quyết định.` ],
+  [ `We need to ${w} carefully in this situation.`, `Chúng ta cần xem xét kỹ trong tình huống này.` ]
+]; }
+
 function pageHtml(p, wordHref) {
   const canonical = `${SITE}/vi/phat-am/${p.word}/`;
   const h1 = `Cách phát âm ${p.word}`;
@@ -26,7 +71,14 @@ function pageHtml(p, wordHref) {
   const mpRows = p.minimal_pairs.map(([a, b, note]) =>
     `<li><strong><a href="${wordHref(a)}">${esc(a)}</a> ↔ <a href="${wordHref(b)}">${esc(b)}</a></strong><br><span class="mp-note">${esc(note)}</span></li>`).join('\n');
   const tipRows = p.tips.map((t) => `<li>${esc(t)}</li>`).join('\n');
+  const ipaBreakHtml = ipaBreakdownHtml(p.ipa_us);
+  const vnNote = vnContrast(p);
+  const exSents = exampleSentences(p);
+  const exRows = exSents.map(([en,vi])=>`<li><span class="ex-en">${esc(en)}</span> — <span class="ex-vi">${esc(vi)}</span></li>`).join('\n');
   const desc = `Cách phát âm ${p.word}: IPA /${p.ipa_us}/, audio giọng Mỹ và Anh, lỗi người Việt hay sai và 3 cặp từ dễ nhầm. — Dual Dictionary.`.slice(0, 160);
+  // FAQ 5
+  const sameSound = p.minimal_pairs[0] ? p.minimal_pairs[0][1] : 'thin';
+  const ipaTok = ipaTokens(p.ipa_us).find(t=>IPA_DESC[t] && t.length>1) || ipaTokens(p.ipa_us)[0] || '';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -43,7 +95,7 @@ function pageHtml(p, wordHref) {
         name: `${h1} (IPA + audio Mỹ/Anh)`,
         url: canonical,
         inLanguage: 'vi',
-        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.tldr'] },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.tldr', '.ex-en'] },
       },
       {
         '@type': 'FAQPage',
@@ -62,6 +114,16 @@ function pageHtml(p, wordHref) {
             '@type': 'Question',
             name: `Từ nào dễ nhầm với ${p.word}?`,
             acceptedAnswer: { '@type': 'Answer', text: p.minimal_pairs.map(([a, b, n]) => `${a} ↔ ${b}: ${n}`).join(' ') },
+          },
+          {
+            '@type': 'Question',
+            name: `Làm sao phân biệt ${p.word} với ${esc(sameSound)}?`,
+            acceptedAnswer: { '@type': 'Answer', text: `${p.minimal_pairs[0] ? p.minimal_pairs[0][2] : ''} Nghe audio Mỹ/Anh ở trên, đọc chậm từng âm theo bảng phân rã IPA.` },
+          },
+          {
+            '@type': 'Question',
+            name: `Từ nào cùng âm /${ipaTok}/ để luyện chung với ${p.word}?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Các từ cùng chứa /${ipaTok}/ thường sai chung một chỗ. Luyện theo nhóm: nghe “${p.word}” rồi đọc xen kẽ với ${p.minimal_pairs.slice(0,2).map(x=>`“${x[0]}”`).join(', ')}, mỗi từ 5 lần, ghi âm lại để so với mẫu.` },
           },
         ],
       },
@@ -115,6 +177,12 @@ ${navHtml('phat-am')}
   <script>(function(){var pl=document.getElementById('ipa-player');if(!pl)return;document.querySelectorAll('.ipa-play').forEach(function(b){b.addEventListener('click',function(){pl.src=b.getAttribute('data-aud');pl.play();});});})();</script>
   <h2>Lỗi người Việt hay sai</h2>
   <p>${esc(p.common_mistake)}.</p>
+  <h2>Phân tích từng âm</h2>
+  ${ipaBreakHtml}
+  <h2>Lưu ý cho người Việt</h2>
+  <p>${esc(vnNote)}</p>
+  <h2>Ví dụ câu</h2>
+  <ul>\n${exRows}\n  </ul>
   <h2>Cặp từ dễ nhầm (minimal pairs)</h2>
   <ul>
 ${mpRows}
