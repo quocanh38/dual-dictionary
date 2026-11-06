@@ -1,0 +1,30 @@
+<svg width="480" height="260" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t">
+<title id="t">How to pronounce /θ/ think - tongue between teeth</title>
+<rect width="480" height="260" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+<!-- WRONG panel -->
+<rect x="16" y="16" width="216" height="228" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+<text x="124" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#991b1b">WRONG: /t/</text>
+<!-- lips wrong - tongue behind -->
+<ellipse cx="124" cy="110" rx="56" ry="38" fill="none" stroke="#e5e7eb" stroke-width="1.4"/>
+<path d="M 92 120 Q124 100 156 120" fill="none" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="108" y="92" width="32" height="10" rx="2" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="124" y="148" text-anchor="middle" font-size="10" fill="#6b7280">Tongue behind teeth</text>
+<text x="124" y="168" text-anchor="middle" font-size="9" fill="#991b1b">✗ Blocked airflow</text>
+<!-- arrow wrong: crossed -->
+<line x1="124" y1="182" x2="124" y2="208" stroke="#991b1b" stroke-width="1.6" stroke-dasharray="4 4"/>
+<text x="124" y="224" text-anchor="middle" font-size="8" fill="#991b1b">No air</text>
+
+<!-- CORRECT panel -->
+<rect x="248" y="16" width="216" height="228" rx="10" fill="#ecfdf5" stroke="#a7f3d0"/>
+<text x="356" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#065f46">CORRECT: /θ/</text>
+<ellipse cx="356" cy="110" rx="56" ry="38" fill="none" stroke="#e5e7eb" stroke-width="1.4"/>
+<!-- tongue between teeth -->
+<rect x="334" y="98" width="44" height="14" rx="7" fill="#0f766e"/>
+<path d="M 302 120 Q356 106 410 120" fill="none" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<text x="356" y="148" text-anchor="middle" font-size="10" fill="#065f46">Tongue between teeth</text>
+<text x="356" y="168" text-anchor="middle" font-size="9" fill="#065f46">Air flows forward</text>
+<!-- arrow correct: forward out -->
+<line x1="356" y1="182" x2="396" y2="182" stroke="#0f766e" stroke-width="2" marker-end="url(#arrow)"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/></marker></defs>
+<text x="376" y="202" text-anchor="middle" font-size="8" fill="#0f766e">blow gently</text>
+</svg>
