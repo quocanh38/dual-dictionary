@@ -29,6 +29,24 @@ const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs'
 const { wordGroup, ABBREV_RE, FRAGMENTS, PROPER_RE } = require('./wordlist-lib.cjs');
 const { navHtml } = require('./nav-partial.cjs');
 const { blogLinksHtml } = require('./blog-links-lib.cjs');
+/* Behavioral internal linking (06/11): top-traffic vi/tu -> phat-am/dong-nghia
+ * Dwell-time booster: if a word has a pronunciation/synonym page, link it.
+ * Top traffic heuristic = freq 1k/2k (most searched). */
+let PHAT_SET=null, DONG_SET=null;
+function behaviorLinksHtml(word){
+  if(PHAT_SET===null){
+    try{ const fs=require('fs'); const path=require('path');
+      PHAT_SET=new Set(require('fs').readdirSync(path.join(__dirname,'..','vi','phat-am')).filter(n=>!n.includes('.')));
+      DONG_SET=new Set(require('fs').readdirSync(path.join(__dirname,'..','vi','dong-nghia')).filter(n=>!n.includes('.')));
+    }catch(e){ PHAT_SET=new Set(); DONG_SET=new Set(); }
+  }
+  const w=String(word).toLowerCase();
+  const links=[];
+  if(PHAT_SET.has(w)) links.push(`<a class="related-chip" href="/vi/phat-am/${w}/">🔊 Phát âm "${w}" →</a>`);
+  if(DONG_SET.has(w)) links.push(`<a class="related-chip" href="/vi/dong-nghia/${w}/">📚 Đồng nghĩa "${w}" →</a>`);
+  if(!links.length) return '';
+  return `<section class="related"><h2>Mở rộng</h2><div class="related-list">${links.join('')}</div></section>`;
+}
 
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
@@ -811,7 +829,8 @@ function ipaLineHtml(word, ipa) {
   const usAud = audioSet.has(`${safe}:us`) ? ` <button type="button" class="ipa-play" data-aud="/audio/us/${encodeURIComponent(safe)}.m4a" aria-label="Nghe giọng Mỹ">🔊 Mỹ</button>` : '';
   const gbAud = audioSet.has(`${safe}:gb`) ? ` <button type="button" class="ipa-play" data-aud="/audio/gb/${encodeURIComponent(safe)}.m4a" aria-label="Nghe giọng Anh">🔊 Anh</button>` : '';
   const hearFallback = (!usAud && !gbAud) ? ` <a class="ipa-hear" href="/?q=${encodeURIComponent(word)}" title="Nghe phát âm trong app offline">🔊 Nghe</a>` : '';
-  return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${usAud}${brePart}${gbAud}${hearFallback}</p><audio id="ipa-player" preload="none"></audio><script>(function(){var p=document.getElementById('ipa-player');if(!p)return;document.querySelectorAll('.ipa-play').forEach(function(b){b.addEventListener('click',function(){p.src=b.getAttribute('data-aud');p.play();});});})();</script>`;
+  const transcript = `<p class="ipa-transcript" style="font-size:0.9em;color:var(--muted);margin-top:6px">Transcript: từ "${escapeHtml(word)}" phát âm Mỹ /${escapeHtml(ipa)}/ ${bre && bre!==ipa ? `Anh /${escapeHtml(bre)}/`: ""} — audio file: ${safe}.m4a (nghe online hoặc trong app offline)</p>`;
+  return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${usAud}${brePart}${gbAud}${hearFallback}</p>${transcript}<audio id="ipa-player" preload="none"></audio><script>(function(){var p=document.getElementById('ipa-player');if(!p)return;document.querySelectorAll('.ipa-play').forEach(function(b){b.addEventListener('click',function(){p.src=b.getAttribute('data-aud');p.play();});});})();</script>`;
 }
 function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, raw }) {
   /* P1 deck CTA (owner-approved 01/11): word pages point at the matching exam
@@ -944,6 +963,8 @@ ${navHtml('tu')}
   ${faqHtml(word)}
 
   ${relatedHtml}
+
+  ${behaviorLinksHtml(word)}
 
   ${blogLinksHtml(`/vi/tu/${word}/`)}
 
@@ -1342,7 +1363,7 @@ async function main() {
   chunks.forEach((chunk, i) => {
     const name = `words-${String(i + 1).padStart(3, '0')}.xml`;
     const urls = chunk
-      .map((w) => `  <url><loc>${SITE}${wordPageUrl(w)}</loc><lastmod>${LASTMOD}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`)
+      .map((w) => { const f=freq[w.toLowerCase()]; const pr=(f==="1k"||f==="2k")?"0.8":(f==="5k"?"0.6":"0.4"); return `  <url><loc>${SITE}${wordPageUrl(w)}</loc><lastmod>${LASTMOD}</lastmod><changefreq>monthly</changefreq><priority>${pr}</priority></url>`; })
       .join('\n');
     fs.writeFileSync(
       path.join(sitemapDir, name),
