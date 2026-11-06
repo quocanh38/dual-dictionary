@@ -15,59 +15,6 @@ const OUT_DIR = path.join(REPO, 'vi', 'phat-am');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
 
-// Mouth diagram helpers — style chốt ở /think/: cắt ngang miệng, chữ tiếng Anh trong hình, không mũi tên
-const MOUTH_LABELS = {
-  th: 'Upper Teeth / Tongue Between Teeth / Gentle Airflow / Lower Teeth',
-  sh: 'Palate / Tongue Raised / Air Through Narrow Gap / Teeth Together',
-  ch: 'Palate / Tongue Tip Touches Ridge / Release Air / Teeth Lightly Apart',
-  ng: 'Soft Palate Closed / Back Tongue Raised / Air Through Nose / Lower Teeth',
-  ae: 'Upper Teeth / Tongue Low & Forward / Mouth Open Wide / Lower Teeth',
-  ei: 'Palate / Tongue From Mid to High / Smooth Glide / Jaw Slightly Closed',
-  ai: 'Open Jaw / Tongue Low to High / Strong Glide / Teeth Apart',
-  au: 'Open Mouth / Tongue Back / Lips Round / Jaw Closes',
-  ou: 'Mid Tongue / Glide to High / Lips Rounded / Air Steady',
-  aw: 'Back Raised / Lips Slightly Rounded / Open Mouth / Steady Air',
-  uh: 'Palate / Tongue Mid / Mouth Slightly Open / Relaxed',
-  schwa: 'Neutral Lips / Tongue Centered / Relaxed Jaw / Light Air',
-  rcolor: 'Palate / Tongue Curled Back / Lips Neutral / Voiced',
-  other: 'Upper Teeth / Tongue Position / Release Consonant / Lower Teeth'
-};
-const MOUTH_TITLES = {
-  th: 'Tongue Between Teeth', sh: 'Tongue Near Palate', ch: 'Tongue Raised to Palate', ng: 'Back of Tongue Raised',
-  ae: 'Jaw Low, Mouth Wide', ei: 'Tongue Glides Up', ai: 'Wide Open to High', au: 'Open to Rounded',
-  ou: 'Mid to High Rounded', aw: 'Back Tongue Raised', uh: 'Tongue Relaxed Mid', schwa: 'Neutral & Relaxed', rcolor: 'Tongue Tensed, R-Colored', other: 'Clear Final Consonant'
-};
-function classifyMouth(p){
-  const cm=p.common_mistake||''; const ipa=p.ipa_us||'';
-  if(cm.includes('θ')||cm.includes('th không rung')||ipa.includes('θ')) return 'th';
-  if(cm.includes('ð')||ipa.includes('ð')) return 'th';
-  if(cm.includes('ʃ')||ipa.includes('ʃ')) return 'sh';
-  if(cm.includes('tʃ')||ipa.includes('tʃ')) return 'ch';
-  if(cm.includes('dʒ')||ipa.includes('dʒ')) return 'ch';
-  if(cm.includes('ŋ')||ipa.includes('ŋ')) return 'ng';
-  if(cm.includes('æ')||ipa.includes('æ')) return 'ae';
-  if(ipa.includes('eɪ')) return 'ei'; if(ipa.includes('aɪ')) return 'ai'; if(ipa.includes('aʊ')) return 'au';
-  if(ipa.includes('oʊ')) return 'ou'; if(ipa.includes('ɔ')) return 'aw'; if(ipa.includes('ʌ')) return 'uh';
-  if(ipa.includes('ɚ')||ipa.includes('ɝ')) return 'rcolor'; if(ipa.includes('ə')) return 'schwa';
-  if(cm.includes('eɪ')) return 'ei'; if(cm.includes('aɪ')) return 'ai'; if(cm.includes('aʊ')) return 'au';
-  if(cm.includes('oʊ')) return 'ou'; if(cm.includes('ɔ')) return 'aw'; if(cm.includes('ʌ')) return 'uh';
-  if(cm.includes('ə')) return 'schwa'; return 'other';
-}
-function mouthFigureHtml(p, group){
-  // think keeps its original photographic mouth-th.jpg (already correct style)
-  if(p.word==='think'){
-    return `  <figure style="margin:16px 0;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
-      <img src="/vi/phat-am/think/mouth-th.jpg" srcset="/vi/phat-am/think/mouth-th-480.webp 480w" sizes="(max-width: 640px) 100vw, 480px" alt="Mouth cross-section for /θ/ think — tongue between teeth, gentle airflow — English labels inside image" width="480" height="480" loading="lazy" decoding="async" style="width:100%;height:auto;display:block">
-      <figcaption style="padding:8px 12px;background:#f9fafb;border-top:1px solid #e5e7eb;font-size:11px;color:#6b7280">English labels inside image: ${MOUTH_LABELS.th}</figcaption>
-    </figure>`;
-  }
-  const jpg=`mouth-${group}.jpg`; const webp=`mouth-${group}-480.webp`;
-  return `  <figure style="margin:16px 0;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
-      <img src="/vi/phat-am/${p.word}/${jpg}" srcset="/vi/phat-am/${p.word}/${webp} 480w" sizes="(max-width: 640px) 100vw, 480px" alt="Mouth cross-section for /${esc(p.ipa_us)}/ ${esc(p.word)} — ${esc(MOUTH_TITLES[group])} — English labels inside image" width="480" height="480" loading="lazy" decoding="async" style="width:100%;height:auto;display:block">
-      <figcaption style="padding:8px 12px;background:#f9fafb;border-top:1px solid #e5e7eb;font-size:11px;color:#6b7280">English labels inside image: ${esc(MOUTH_LABELS[group])}</figcaption>
-    </figure>`;
-}
-
 function pageHtml(p, wordHref) {
   const canonical = `${SITE}/vi/phat-am/${p.word}/`;
   const h1 = `Cách phát âm ${p.word}`;
@@ -164,7 +111,6 @@ ${navHtml('phat-am')}
     <button type="button" class="ipa-play" data-aud="${usAud}" aria-label="Nghe giọng Mỹ">🔊 Mỹ</button>
     <button type="button" class="ipa-play" data-aud="${gbAud}" aria-label="Nghe giọng Anh">🔊 Anh</button>
   </div>
-${mouthFigureHtml(p, classifyMouth(p))}
   <audio id="ipa-player" preload="none"></audio>
   <script>(function(){var pl=document.getElementById('ipa-player');if(!pl)return;document.querySelectorAll('.ipa-play').forEach(function(b){b.addEventListener('click',function(){pl.src=b.getAttribute('data-aud');pl.play();});});})();</script>
   <h2>Lỗi người Việt hay sai</h2>
