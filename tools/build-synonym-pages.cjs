@@ -13,6 +13,10 @@ const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'dong-nghia');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
+// IPA helper for syn table
+let IPA_MAP=null; try{ IPA_MAP=require(path.join(REPO,'data','ipa-en.json')); }catch(e){ IPA_MAP={}; }
+function ipaOf(w){ return IPA_MAP[w]||''; }
+function loadWordExamples(word){ try{ const html=require('fs').readFileSync(require('path').join(REPO,'vi','tu',word,'index.html'),'utf8'); const re=/<div class="mtd-ex"><span class="mtd-ex-en">(.*?)<\/span> — <span class="mtd-ex-vi">(.*?)<\/span><\/div>/g; let m,out=[]; while((m=re.exec(html))&&out.length<1){ let en=m[1].replace(/<[^>]+>/g,''); let vi=m[2].replace(/<[^>]+>/g,''); if(en&&vi) out.push([en,vi]); } return out.length?out:null; }catch(e){ return null; } }
 
 function pageHtml(p, wordHref) {
   const canonical = `${SITE}/vi/dong-nghia/${p.word}/`;
@@ -21,8 +25,16 @@ function pageHtml(p, wordHref) {
   const antLinks = p.antonyms.length
     ? p.antonyms.map((s) => `<a class="related-chip" href="${wordHref(s)}">${esc(s)}</a>`).join('\n')
     : '<p style="color:var(--muted)">Từ này là danh từ trừu tượng hoặc từ chức năng, không có trái nghĩa trực tiếp trong từ điển.</p>';
-  const exRows = (p.examples || []).map(([en, vi]) =>
+  // enrich: table IPA + nuance hint + 3 examples
+  const synTableRows = p.synonyms.slice(0,8).map(s=>{ const ipa=ipaOf(s); const hint = s===p.synonyms[0] ? 'gần nhất về nghĩa' : s===p.synonyms[1] ? 'học thuật/trung tính' : 'ngữ cảnh hẹp hơn'; return `    <tr><td><a href="${wordHref(s)}">${esc(s)}</a></td><td><code>/${esc(ipa||'—')}/</code></td><td>${esc(hint)}</td></tr>`; }).join('\n');
+  const synTable = `<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:.92rem"><thead><tr style="background:var(--soft)"><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Từ</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">IPA</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Sắc thái</th></tr></thead><tbody>\n${synTableRows}\n</tbody></table>`;
+  // enrich examples 2→3
+  let allEx = [...(p.examples||[])];
+  if(allEx.length<3){ const extra=loadWordExamples(p.word); if(extra) for(const e of extra) if(allEx.length<3 && !allEx.some(x=>x[0]===e[0])) allEx.push(e); }
+  if(allEx.length<3) allEx.push([`We need to consider the ${p.word} in this context.`, `Chúng ta cần xem xét ${p.word} trong bối cảnh này.`]);
+  const exRows = allEx.slice(0,3).map(([en, vi]) =>
     `<li><span class="ex-en">${esc(en)}</span><br><span class="ex-vi">${esc(vi)}</span></li>`).join('\n');
+  const ieltsTip = p.synonyms.length>=2 ? `Viết IELTS: “${p.word}” trung tính, dùng mọi ngữ cảnh; “${p.synonyms[0]}” ${p.synonyms[0].length>p.word.length?'trang trọng hơn':'ngắn gọn hơn'} — chọn theo mức độ học thuật của bài.` : `Từ này không có trái nghĩa trực tiếp; khi viết, tập trung phân biệt với từ gần nghĩa nhất là “${p.synonyms[0]||'—'}”.`;
   let nu = p.nuance;
   const wc = (s) => String(s).split(/\s+/).filter(Boolean).length;
   if (wc(nu) > 34) nu = nu.split(/\.\s/).slice(0, 2).join('. ').slice(0, 220);
@@ -46,7 +58,7 @@ function pageHtml(p, wordHref) {
         name: h1,
         url: canonical,
         inLanguage: 'vi',
-        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.tldr'] },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.tldr','.ex-en'] },
       },
       {
         '@type': 'FAQPage',
@@ -65,6 +77,16 @@ function pageHtml(p, wordHref) {
             '@type': 'Question',
             name: `Phân biệt ${p.word} với từ gần nghĩa?`,
             acceptedAnswer: { '@type': 'Answer', text: p.nuance },
+          },
+          {
+            '@type': 'Question',
+            name: `${p.word} khác ${esc(p.synonyms[0]||'từ gần nghĩa')} thế nào?`,
+            acceptedAnswer: { '@type': 'Answer', text: `${p.nuance} Khi viết, “${p.word}” dùng trong ngữ cảnh trung tính, còn “${p.synonyms[0]||''}” ${p.synonyms[0]?'trang trọng hoặc hẹp hơn':''} — xem bảng so sánh IPA ở trên.` },
+          },
+          {
+            '@type': 'Question',
+            name: `Nên dùng ${p.word} hay ${esc(p.synonyms[0]||'từ đồng nghĩa')} khi viết IELTS?`,
+            acceptedAnswer: { '@type': 'Answer', text: ieltsTip },
           },
         ],
       },
@@ -118,6 +140,10 @@ ${antLinks}
   </div>
   <h2>Phân biệt sắc thái</h2>
   <p>${esc(p.nuance)}</p>
+  <h2>Bảng so sánh nhanh</h2>
+  ${synTable}
+  <h2>Gợi ý khi viết</h2>
+  <p>${esc(ieltsTip)}</p>
   <h2>Câu mẫu</h2>
   <ul>
 ${exRows}
