@@ -157,7 +157,7 @@ async function main() {
     }
     // Update figure <img> in body to v2 with srcset
     const figRe = /<figure[^>]*><img[^>]*src="[^"]*og-1200x630[^"]*"[^>]*>.*?<\/figure>/s;
-    const newFig = `<figure style=\"margin:16px 0\"><img src=\"/vi/blog/images/${slug}/og-1200x630-v2.jpg\" srcset=\"/vi/blog/images/${slug}/og-320w.webp 320w, /vi/blog/images/${slug}/og-1200x630-v2.jpg 1200w\" sizes=\"(max-width: 640px) 320px, 640px\" alt=\"${escXml(cfg.enTitle.replace(/\n/g,' — '))} — illustration for Dual Dictionary\" width=\"1200\" height=\"630\" loading=\"lazy\" decoding=\"async\" style=\"width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px\">Cover 1200×630 — WebP 320w for mobile · English text inside image</figcaption></figure>`;
+    const newFig = `<figure style=\"margin:16px 0\"><img src=\"/vi/blog/images/${slug}/og-1200x630-v2.jpg\" srcset=\"/vi/blog/images/${slug}/og-320w.webp 320w, /vi/blog/images/${slug}/og-1200x630-v2.jpg 1200w\" sizes=\"(max-width: 640px) 320px, 640px\" alt=\"${escXml(cfg.enTitle.replace(/\n/g,' — '))} — illustration for Dual Dictionary\" width=\"1200\" height=\"630\" loading=\"lazy\" decoding=\"async\" style=\"width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px\">Minh họa cho bài viết — English text inside image for accessibility</figcaption></figure>`;
     if (figRe.test(html)) {
       html = html.replace(figRe, newFig);
       changed = true;
