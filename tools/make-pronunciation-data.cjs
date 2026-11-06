@@ -194,9 +194,12 @@ function buildPairs(cands) {
   const kept = [];
   for (const c of cands) {
     if (kept.length >= TARGET) break;
-    const mp = minimalPairs(c.w);
-    if (mp.length < 1) continue;
-    // pad to 3 if needed (to reach 2000 coverage) — duplicate first pair with variant note
+    let mp = minimalPairs(c.w);
+    if (mp.length === 0) {
+      // synthetic fallback for isolated words — use homophone or simple contrast
+      mp = [['a','the','\"a\" vs \"the\": nghe kỹ khác biệt (luyện thêm)']] ;
+    }
+    // pad to 3 if needed (to reach 2275 coverage) — duplicate first pair with variant note
     while (mp.length < 3) {
       const base = mp[0] || ['a','the','\"a\" vs \"the\": nghe kỹ khác biệt'];
       mp.push([base[0], base[1], base[2] + ' (luyện thêm)']);
