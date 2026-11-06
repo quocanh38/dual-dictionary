@@ -162,7 +162,12 @@ ${exRows}
 
 function main() {
   const data = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'synonyms.json'), 'utf8'));
-  const pairs = data.pairs || [];
+  let pairs = data.pairs || [];
+  // merge expanded if exists
+  try{
+    const exp=JSON.parse(fs.readFileSync(path.join(REPO,'data','synonyms-expanded.json'),'utf8'));
+    if(exp.pairs) pairs = pairs.concat(exp.pairs);
+  }catch(e){}
   let wordSlugs = new Set();
   try {
     const wm = JSON.parse(fs.readFileSync(path.join(REPO, 'docs', 'wordpages-manifest.json'), 'utf8'));
