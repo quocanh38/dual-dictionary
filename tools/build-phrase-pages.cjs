@@ -161,7 +161,7 @@ function examChips(phrase) {
 }
 
 function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHtml, tier }) {
-  const title = `${phrase} nghĩa là gì? — Ý nghĩa & ví dụ tiếng Việt | Dual Dictionary`;
+  const title = `${phrase} nghĩa là gì? | Dual Dictionary`;
   const desc = phraseMetaDesc(phrase, hand);
   const canonical = `${SITE}${phrasePageUrl(phrase)}`;
   const keyNote = ovdpKey && ovdpKey.toLowerCase() !== phrase.toLowerCase()
