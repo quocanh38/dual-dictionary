@@ -781,8 +781,16 @@ function familyHtml(word, builtSet) {
       }
     } catch (e) {}
   }
-  const items = (FAMILY_IDX[String(word).toLowerCase()] || []).slice(0, 6);
-  if (!items.length) return '';
+  let items = (FAMILY_IDX[String(word).toLowerCase()] || []).slice(0, 6);
+  if (!items.length) {
+    try {
+      const tg = require('../data/exam-tags.json').words || {};
+      const t = tg[String(word).toLowerCase()];
+      if (t && t.cefr) items.push({ t: 'Từ vựng ' + t.cefr + ' (cùng trình độ)', u: '/vi/trinh-do/' + String(t.cefr).toLowerCase() + '/' });
+    } catch (e) {}
+    items.push({ t: 'Kiểm tra trình độ của bạn', u: '/vi/test-trinh-do/' });
+    if (!items.length) return '';
+  }
   return '<section class="related"><h2>Họ từ &amp; kết hợp</h2><div class="related-list">' + items.map((x) => '<a class="related-chip" href="' + x.u + '">' + escapeHtml(x.t) + ' →</a>').join('') + '</div></section>';
 }
 /* Internal-link mesh (01/11): word pages link to loi-sai pages sharing the same
