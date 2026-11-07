@@ -106,6 +106,7 @@ ${navHtml('tu')}
   <p style="color:var(--muted)">Trình độ ước tính suy từ NGSL/AWL/tần suất — tham khảo lộ trình học, không phải chứng nhận chính thức. Mỗi từ có trang riêng: phiên âm IPA, nghĩa tiếng Việt, ví dụ thi thật.</p>
   <p><input id="hub-q" type="search" placeholder="Lọc từ trong trang này…" aria-label="Lọc từ" style="width:100%;max-width:420px;padding:8px 12px;border:1px solid var(--line);border-radius:8px"> <span id="hub-count" style="color:var(--muted)"></span></p>
   ${hubListHtml(wRows.split('\n'), {cols:2})}
+<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
 ${FILTER_JS}
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
