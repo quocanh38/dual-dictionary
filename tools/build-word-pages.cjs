@@ -1013,6 +1013,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
       autoQa.push([`Quá khứ của "${word}" là gì`, irr ? `Xem bảng chia trong mục từ điển ở trên (cột quá khứ — từ bất quy tắc cần học thuộc).` : `Động từ có quy tắc: thêm -ed (${word} → ${word}ed).`]);
     }
     if (isAdj) autoQa.push([`Trái nghĩa với "${word}" là gì`, `Xem khối Phân biệt dễ nhầm ở dưới — cặp trái nghĩa và từ gần nghĩa của "${word}".`]);
+    else if (!isNoun && !isVerb) autoQa.push([`"${word}" dùng thế nào trong câu`, `Xem khối Ví dụ thi và Câu mẫu ở trên — "${word}" ${pos}, dùng trong văn IELTS/TOEIC.`]);
   } catch (e) {}
   if (ipa) autoQa.push([`Phát âm "${word}" thế nào`, `Phiên âm Mỹ /${ipa}/${breOf(ipa, word) && breOf(ipa, word) !== ipa ? `, Anh /${breOf(ipa, word)}/` : ''} — nghe audio Mỹ/Anh ở đầu trang, đọc chậm từng âm.`]);
   if (examExample) autoQa.push([`Đặt câu với "${word}"`, examExample]);
