@@ -303,6 +303,12 @@ const REMOVE_WORDS = new Set([
   'fart',  // carries farther's entry wholesale
   'po',    // carries poach's entry wholesale
   'papa',  // whole entry is garbage ("uây (Mỹ) b") — review 04/10
+  // proper-noun/mythology/no-SEO-intent batch (audit 07/11): names, deities,
+  // countries-as-names, slang fragments with no learning value
+  'ada','adam','albert','amazon','anna','anthony','apollo','arab','arrow','arrows',
+  'bailey','barney','becky','ben','benny','bible','blessed','bo','bob','brad',
+  'charlie','christ','divine','fabulous','goddess','holy','intel','jesus','mars',
+  'mysterious','myth','name','nickname','title',
 ]);
 
 /* Pages that only ever occur as the listed lemma's inflection but whose own

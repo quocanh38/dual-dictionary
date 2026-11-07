@@ -68,7 +68,8 @@ function pageHtml(p, wordHref) {
   const ipaLine = p.ipa_uk
     ? `<span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${esc(p.ipa_us)}/</span> · <span class="ipa-bre" title="Phiên âm Anh-Anh">Anh /${esc(p.ipa_uk)}/</span>`
     : `<span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${esc(p.ipa_us)}/</span>`;
-  const mpRows = p.minimal_pairs.map(([a, b, note]) =>
+  const pairs = (p.minimal_pairs||[]).filter((m) => !/luyện thêm/.test(m[2]||''));
+  const mpRows = pairs.map(([a, b, note]) =>
     `<li><strong><a href="${wordHref(a)}">${esc(a)}</a> ↔ <a href="${wordHref(b)}">${esc(b)}</a></strong><br><span class="mp-note">${esc(note)}</span></li>`).join('\n');
   const tipRows = p.tips.map((t) => `<li>${esc(t)}</li>`).join('\n');
   const ipaBreakHtml = ipaBreakdownHtml(p.ipa_us);
@@ -77,7 +78,7 @@ function pageHtml(p, wordHref) {
   const exRows = exSents.map(([en,vi])=>`<li><span class="ex-en">${esc(en)}</span> — <span class="ex-vi">${esc(vi)}</span></li>`).join('\n');
   const desc = `Cách phát âm ${p.word}: IPA /${p.ipa_us}/, audio giọng Mỹ và Anh, lỗi người Việt hay sai và 3 cặp từ dễ nhầm. — Dual Dictionary.`.slice(0, 160);
   // FAQ 5
-  const sameSound = p.minimal_pairs[0] ? p.minimal_pairs[0][1] : 'thin';
+  const sameSound = pairs[0] ? pairs[0][1] : 'thin';
   const ipaTok = ipaTokens(p.ipa_us).find(t=>IPA_DESC[t] && t.length>1) || ipaTokens(p.ipa_us)[0] || '';
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -113,17 +114,17 @@ function pageHtml(p, wordHref) {
           {
             '@type': 'Question',
             name: `Từ nào dễ nhầm với ${p.word}?`,
-            acceptedAnswer: { '@type': 'Answer', text: p.minimal_pairs.map(([a, b, n]) => `${a} ↔ ${b}: ${n}`).join(' ') },
+            acceptedAnswer: { '@type': 'Answer', text: pairs.map(([a, b, n]) => `${a} ↔ ${b}: ${n}`).join(' ') },
           },
           {
             '@type': 'Question',
             name: `Làm sao phân biệt ${p.word} với ${esc(sameSound)}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `${p.minimal_pairs[0] ? p.minimal_pairs[0][2] : ''} Nghe audio Mỹ/Anh ở trên, đọc chậm từng âm theo bảng phân rã IPA.` },
+            acceptedAnswer: { '@type': 'Answer', text: `${pairs[0] ? pairs[0][2] : ''} Nghe audio Mỹ/Anh ở trên, đọc chậm từng âm theo bảng phân rã IPA.` },
           },
           {
             '@type': 'Question',
             name: `Từ nào cùng âm /${ipaTok}/ để luyện chung với ${p.word}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Các từ cùng chứa /${ipaTok}/ thường sai chung một chỗ. Luyện theo nhóm: nghe “${p.word}” rồi đọc xen kẽ với ${p.minimal_pairs.slice(0,2).map(x=>`“${x[0]}”`).join(', ')}, mỗi từ 5 lần, ghi âm lại để so với mẫu.` },
+            acceptedAnswer: { '@type': 'Answer', text: `Các từ cùng chứa /${ipaTok}/ thường sai chung một chỗ. Luyện theo nhóm: nghe “${p.word}” rồi đọc xen kẽ với ${pairs.slice(0,2).map(x=>`“${x[0]}”`).join(', ')}, mỗi từ 5 lần, ghi âm lại để so với mẫu.` },
           },
         ],
       },
@@ -184,9 +185,9 @@ ${navHtml('phat-am')}
   <h2>Ví dụ câu</h2>
   <ul>\n${exRows}\n  </ul>
   <h2>Cặp từ dễ nhầm (minimal pairs)</h2>
-  <ul>
+  ${pairs.length ? `<ul>
 ${mpRows}
-  </ul>
+  </ul>` : `<p style="color:var(--muted)">Từ này phát âm đặc biệt, chưa có cặp từ dễ nhầm trong bộ dữ liệu — luyện kỹ bảng phân rã IPA và ví dụ câu ở trên.</p>`}
   <h2>Mẹo luyện tập</h2>
   <ul>
 ${tipRows}
