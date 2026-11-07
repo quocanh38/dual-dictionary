@@ -42,6 +42,11 @@ function behaviorLinksHtml(word){
   }
   const w=String(word).toLowerCase();
   const links=[];
+  try {
+    const tg = require('../data/exam-tags.json').words || {};
+    const t = tg[w];
+    if (t && t.cefr) links.push(`<a class="related-chip" href="/vi/trinh-do/${String(t.cefr).toLowerCase()}/">\u0001F4CA Từ vựng ${t.cefr} →</a>`);
+  } catch (e) {}
   if(PHAT_SET.has(w)) links.push(`<a class="related-chip" href="/vi/phat-am/${w}/">🔊 Phát âm "${w}" →</a>`);
   if(DONG_SET.has(w)) links.push(`<a class="related-chip" href="/vi/dong-nghia/${w}/">📚 Đồng nghĩa "${w}" →</a>`);
   if(!links.length) return '';
