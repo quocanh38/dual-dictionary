@@ -14,6 +14,7 @@ const OUT_DIR = path.join(REPO, 'vi', 'trinh-do');
 const SITE = core.SITE;
 const esc = core.escapeHtml;
 const { navHtml } = require('./nav-partial.cjs');
+const { hubListHtml } = require('./hub-lazy-lib.cjs');
 
 const LEVELS = [
   { slug: 'a2', name: 'A2 Sơ cấp', en: 'Elementary', desc: 'từ vựng nền tảng giao tiếp hàng ngày' },
@@ -87,6 +88,10 @@ function levelPageHtml(lv, words, ipa, maniSet) {
 <meta property="og:site_name" content="Dual Dictionary">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
+<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -100,9 +105,7 @@ ${navHtml('tu')}
   <h1 style="font-size:2.2rem">${esc(h1)}</h1>
   <p style="color:var(--muted)">Trình độ ước tính suy từ NGSL/AWL/tần suất — tham khảo lộ trình học, không phải chứng nhận chính thức. Mỗi từ có trang riêng: phiên âm IPA, nghĩa tiếng Việt, ví dụ thi thật.</p>
   <p><input id="hub-q" type="search" placeholder="Lọc từ trong trang này…" aria-label="Lọc từ" style="width:100%;max-width:420px;padding:8px 12px;border:1px solid var(--line);border-radius:8px"> <span id="hub-count" style="color:var(--muted)"></span></p>
-  <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
-${wRows}
-  </ul>
+  ${hubListHtml(wRows.split('\n'), {cols:2})}
 </main>
 ${FILTER_JS}
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>

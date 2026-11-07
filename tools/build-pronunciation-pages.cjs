@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { hubListHtml } = require('./hub-lazy-lib.cjs');
 const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
@@ -154,6 +155,10 @@ function pageHtml(p, wordHref) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)} (IPA + audio Mỹ/Anh)">
 <meta property="og:description" content="${esc(desc)}">
+<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)} (IPA + audio Mỹ/Anh)">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -289,9 +294,7 @@ ${navHtml('phat-am')}
   <p class="word-kicker">Phát âm Anh–Mỹ, Anh–Anh</p>
   <h1 style="font-size:2.2rem">${kept.length} từ tiếng Anh + audio phát âm Mỹ/Anh hay tra nhất</h1>
   <p style="color:var(--muted)">Mỗi từ 1 trang riêng: player giọng Mỹ + Anh, IPA, lỗi người Việt hay sai, cặp từ dễ nhầm link về trang từ.</p>
-  <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
-${rows}
-  </ul>
+  ${hubListHtml(rows.split('\n'), {cols:2})}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>

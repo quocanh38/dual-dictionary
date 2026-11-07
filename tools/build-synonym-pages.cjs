@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const core = require('./build-word-pages.cjs');
 const { navHtml } = require('./nav-partial.cjs');
+const { hubListHtml } = require('./hub-lazy-lib.cjs');
 const { blogLinksHtml } = require('./blog-links-lib.cjs');
 
 const REPO = path.join(__dirname, '..');
@@ -117,6 +118,10 @@ function pageHtml(p, wordHref) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
+<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -243,9 +248,7 @@ ${navHtml('dong-nghia')}
   <p class="word-kicker">Từ đồng nghĩa &amp; trái nghĩa</p>
   <h1 style="font-size:2.2rem">${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra</h1>
   <p style="color:var(--muted)">Mỗi từ 1 trang riêng: list đồng nghĩa link về trang từ, trái nghĩa, phân biệt sắc thái, câu mẫu song ngữ EN–VI. Tra không dấu vẫn ra đúng từ.</p>
-  <ul class="hub-list" style="columns:2;gap:20px;padding-left:18px;line-height:2">
-${rows}
-  </ul>
+  ${hubListHtml(rows.split('\n'), {cols:2})}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
