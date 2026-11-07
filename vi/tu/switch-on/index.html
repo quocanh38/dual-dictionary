@@ -46,27 +46,37 @@
 <button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 <div class="dd-links">
 <a href="/vi/tu/">Từ điển</a>
-<a href="/vi/tu/cum-tu/" aria-current="page" class="dd-nav-on">Cụm từ</a>
-<a href="/vi/tu/ielts/">IELTS</a>
-<a href="/vi/tu/toeic/">TOEIC</a>
 <a href="/vi/chu-de/">Chủ đề</a>
 <a href="/vi/phan-biet/">Phân biệt</a>
 <a href="/vi/dong-nghia/">Đồng nghĩa</a>
-<a href="/vi/loi-sai/">Lỗi sai</a>
 <a href="/vi/phat-am/">Phát âm</a>
+<a href="/vi/loi-sai/">Lỗi sai</a>
 <a href="/vi/gioi-tu/">Giới từ</a>
-<a href="/vi/cambridge/">Cambridge</a>
 <a href="/vi/cum-di-voi/">Cụm đi với</a>
-<a href="/vi/luyen-thi/">Luyện thi</a>
-<a href="/vi/trinh-do/">Trình độ</a>
-<a href="/vi/ngu-phap/">Ngữ pháp</a>
 <a href="/vi/blog/">Blog</a>
+<div class="dd-drop"><button type="button" class="dd-drop-btn">Công cụ ▾</button>
+<div class="dd-drop-menu">
+<a href="/vi/test-trinh-do/">📊 Test trình độ</a>
+<a href="/vi/luyen-shadowing/">🎤 Luyện phát âm</a>
+<a href="/vi/lo-trinh/">🗺️ Lộ trình 30 ngày</a>
+<a href="/vi/trinh-do/">📶 Từ theo trình độ</a>
+<a href="/vi/luyen-thi/">📝 Luyện thi</a>
+<a href="/vi/tu/ielts/">IELTS Core</a>
+<a href="/vi/tu/toeic/">TOEIC Business</a>
+<a href="/vi/cambridge/">Cambridge Papers</a>
+<a href="/vi/ngu-phap/">Ngữ pháp</a>
+</div></div>
+<div class="dd-drop"><button type="button" class="dd-drop-btn">Về chúng tôi ▾</button>
+<div class="dd-drop-menu">
 <a href="/vi/gioi-thieu/">Giới thiệu</a>
+<a href="/vi/tac-gia/">✍️ Tác giả</a>
+<a href="/vi/chinh-sach-noi-dung/">📜 Chính sách nội dung</a>
+<a href="/vi/cap-nhat/">🗞️ Nhật ký cập nhật</a>
+</div></div>
 </div>
 <form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>
 </div></nav>
-<p class="upd" style="color:var(--muted);font-size:.85rem">Cập nhật: <time datetime="2026-11-07">2026-11-07</time> · <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a></p>
-<style>.dd-nav{position:sticky;top:0;z-index:50;background:#0f766e;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1}.dd-links a{color:#e6fffa;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#115e59;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column}.dd-nav.open .dd-links{display:flex}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
+<style>.dd-nav{position:sticky;top:0;z-index:50;background:#0f766e;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#e6fffa;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#e6fffa;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#0d5c55;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#115e59;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <a href="/vi/tu/cum-tu/">Cụm từ</a> › <span aria-current="page">switch on</span>
 </nav>
@@ -93,7 +103,7 @@
 </main>
 
 <footer class="blog-footer">
-  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p>
+  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p>
 </footer>
 </body>
 </html>
