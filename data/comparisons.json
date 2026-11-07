@@ -245,16 +245,6 @@
       ]
     },
     {
-      "a": "in charge of",
-      "b": "out of stock",
-      "diff": "Không liên quan nghĩa — dễ nhầm vì cùng mẫu \"X of\": \"in charge of\" = phụ trách; \"out of stock\" = hết hàng.",
-      "wrong": [],
-      "right": [
-        "Mr. Nam is in charge of logistics.",
-        "This model is temporarily out of stock."
-      ]
-    },
-    {
       "a": "on time",
       "b": "in time",
       "diff": "\"on time\" là đúng giờ hẹn; \"in time\" là kịp lúc (trước khi quá muộn).",
@@ -561,16 +551,6 @@
       ]
     },
     {
-      "a": "get over yourself",
-      "b": "get through with",
-      "diff": "\"get over yourself\" là câu trách ai bớt kiêu căng hay dỗi hờn quá mức; \"get through with\" là làm xong hẳn một việc.",
-      "right": [
-        "You missed one question — get over yourself and move on.",
-        "Call me when you get through with your homework."
-      ],
-      "wrong": []
-    },
-    {
       "a": "run into",
       "b": "run across",
       "diff": "Gần nghĩa (tình cờ gặp); \"run into\" thường đi với người quen cũ; \"run across\" thường đi với đồ vật, thông tin tìm thấy tình cờ.",
@@ -660,6 +640,198 @@
       ],
       "wrong": [
         "put away the meeting until Friday"
+      ]
+    },
+    {
+      "a": "ensure",
+      "b": "insure",
+      "diff": "\"ensure\" là bảo đảm việc gì chắc chắn xảy ra (ensure safety); \"insure\" là mua bảo hiểm (insure a car) — IELTS Writing Task 2 hay nhầm.",
+      "right": [
+        "The government must ensure equal access to education.",
+        "You should insure your house against fire."
+      ],
+      "wrong": [
+        "ensure your car (khi muốn nói mua bảo hiểm xe)"
+      ]
+    },
+    {
+      "a": "beside",
+      "b": "besides",
+      "diff": "\"beside\" là bên cạnh ai/cái gì (giới từ chỉ vị trí); \"besides\" là ngoài ra, thêm vào đó (trạng từ liên kết ý).",
+      "right": [
+        "She sat beside her best friend.",
+        "Besides English, he can speak French fluently."
+      ],
+      "wrong": [
+        "beside English he speaks French (thiếu -s là sai nghĩa vị trí)"
+      ]
+    },
+    {
+      "a": "during",
+      "b": "while",
+      "diff": "\"during\" + danh từ (during the meeting); \"while\" + mệnh đề (while we were eating) — cùng nghĩa trong lúc, khác cấu trúc.",
+      "right": [
+        "Prices rose sharply during the crisis.",
+        "She cooked dinner while he was working."
+      ],
+      "wrong": [
+        "during we were eating (during không đi với mệnh đề)"
+      ]
+    },
+    {
+      "a": "although",
+      "b": "despite",
+      "diff": "\"although\" + mệnh đề; \"despite\" + danh từ/cụm danh từ/V-ing — cùng nghĩa mặc dù, IELTS chấm nặng lỗi này.",
+      "right": [
+        "Although it rained, they kept playing.",
+        "Despite the rain, they kept playing."
+      ],
+      "wrong": [
+        "despite it rained (despite không đi với mệnh đề)"
+      ]
+    },
+    {
+      "a": "among",
+      "b": "between",
+      "diff": "\"between\" dùng cho 2 đối tượng (hoặc từng cặp riêng lẻ); \"among\" dùng cho 3+ hoặc tập thể không phân biệt.",
+      "right": [
+        "The deal was signed between two companies.",
+        "The teacher walked among the students."
+      ],
+      "wrong": [
+        "among two companies (2 đối tượng phải dùng between)"
+      ]
+    },
+    {
+      "a": "funny",
+      "b": "fun",
+      "diff": "\"funny\" là buồn cười (gây cười); \"fun\" là vui vẻ, thú vị (trải nghiệm hay) — khen phim hay là fun, không phải funny.",
+      "right": [
+        "The trip to Da Lat was really fun.",
+        "His joke was so funny that everyone laughed."
+      ],
+      "wrong": [
+        "the movie was funny (khi muốn khen phim hay, thú vị)"
+      ]
+    },
+    {
+      "a": "late",
+      "b": "lately",
+      "diff": "\"late\" là muộn (giờ giấc, chuyến xe); \"lately\" là gần đây (thời gian, = recently) — khác hẳn nghĩa.",
+      "right": [
+        "The bus arrived 20 minutes late.",
+        "Have you seen any good films lately?"
+      ],
+      "wrong": [
+        "lately bus (nhầm trạng từ thời gian với tính từ muộn)"
+      ]
+    },
+    {
+      "a": "hard",
+      "b": "hardly",
+      "diff": "\"hard\" là chăm chỉ/khó khăn; \"hardly\" là hầu như không — bẫy TOEIC Part 5 kinh điển.",
+      "right": [
+        "She works hard to support her family.",
+        "There is hardly any milk left in the fridge."
+      ],
+      "wrong": [
+        "hardly working students pass (sai nghĩa hoàn toàn)"
+      ]
+    },
+    {
+      "a": "everyday",
+      "b": "every day",
+      "diff": "\"everyday\" (1 từ) là tính từ = thường ngày; \"every day\" (2 từ) là trạng từ = mỗi ngày.",
+      "right": [
+        "He wears everyday clothes at home.",
+        "She goes jogging every day."
+      ],
+      "wrong": [
+        "she jogs everyday (trạng từ tần suất phải viết 2 từ)"
+      ]
+    },
+    {
+      "a": "quite",
+      "b": "quiet",
+      "diff": "\"quite\" là khá, tương đối (trạng từ mức độ); \"quiet\" là yên tĩnh — phát âm và chính tả dễ nhầm.",
+      "right": [
+        "The exam was quite difficult.",
+        "Please keep quiet during the test."
+      ],
+      "wrong": [
+        "quite room (nhầm mức độ với yên tĩnh)"
+      ]
+    },
+    {
+      "a": "lose",
+      "b": "loose",
+      "diff": "\"lose\" (động từ) là làm mất/thua; \"loose\" (tính từ) là lỏng lẻo — cặp lỗi chính tả top đầu.",
+      "right": [
+        "Don't lose your passport when travelling.",
+        "These shoes are too loose for me."
+      ],
+      "wrong": [
+        "loose your keys (động từ làm mất phải là lose)"
+      ]
+    },
+    {
+      "a": "accept",
+      "b": "except",
+      "diff": "\"accept\" là chấp nhận; \"except\" là ngoại trừ — nghe gần giống, nghĩa khác hẳn.",
+      "right": [
+        "She accepted the job offer yesterday.",
+        "Everyone came except John."
+      ],
+      "wrong": [
+        "except my apology (khi muốn nói chấp nhận lời xin lỗi)"
+      ]
+    },
+    {
+      "a": "weather",
+      "b": "whether",
+      "diff": "\"weather\" là thời tiết; \"whether\" là liệu rằng (mệnh đề điều kiện) — đồng âm khác nghĩa.",
+      "right": [
+        "The weather in Saigon is hot all year.",
+        "I don't know whether he will come."
+      ],
+      "wrong": [
+        "whether forecast (dự báo thời tiết phải là weather)"
+      ]
+    },
+    {
+      "a": "effective",
+      "b": "efficient",
+      "diff": "\"effective\" là hiệu quả (đạt mục tiêu); \"efficient\" là hiệu suất cao (ít tốn kém, nhanh gọn) — IELTS Task 2.",
+      "right": [
+        "The new policy was effective in reducing traffic.",
+        "A good manager runs efficient meetings."
+      ],
+      "wrong": [
+        "efficient policy (khi muốn nói chính sách đạt mục tiêu)"
+      ]
+    },
+    {
+      "a": "personal",
+      "b": "personnel",
+      "diff": "\"personal\" là cá nhân, riêng tư; \"personnel\" là nhân sự (phòng/ban nhân sự) — TOEIC văn phòng.",
+      "right": [
+        "Please do not share personal information.",
+        "Ask the personnel department for help."
+      ],
+      "wrong": [
+        "personal department (phòng nhân sự phải là personnel)"
+      ]
+    },
+    {
+      "a": "classic",
+      "b": "classical",
+      "diff": "\"classic\" là kinh điển, mẫu mực (sách, phim hay); \"classical\" là thuộc cổ điển (nhạc, văn học Hy-La).",
+      "right": [
+        "This is a classic novel every student should read.",
+        "She enjoys listening to classical music."
+      ],
+      "wrong": [
+        "classical novel (tiểu thuyết kinh điển phải là classic)"
       ]
     }
   ]
