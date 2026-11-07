@@ -796,6 +796,35 @@ function familyHtml(word, builtSet) {
 /* Internal-link mesh (01/11): word pages link to loi-sai pages sharing the same
  * keyword. Loaded from data/mistakes.json (same slug rule as builder). */
 let MISTAKE_INDEX = null;
+/* Ra đề thi thật 07/11 (đòn vượt top3): exam-examples src + cambridge papers.
+ * Intent "X trong IELTS" không đối thủ nào phủ. */
+let EXAMPROOF = null;
+function examProofHtml(word) {
+  if (EXAMPROOF === null) {
+    EXAMPROOF = {};
+    try {
+      const ex = require('../data/exam-examples.json');
+      const we = ex.words || ex;
+      for (const [w, list] of Object.entries(we)) {
+        const srcs = [...new Set((list || []).map((e) => e[2]).filter(Boolean))];
+        if (srcs.length) EXAMPROOF[w.toLowerCase()] = { srcs, type: 'exam' };
+      }
+      const cam = require('../data/cambridge.json');
+      for (const p of cam.papers || []) {
+        const tag = 'Cam ' + p.book + ' Test ' + p.test + (p.skill ? ' ' + p.skill : '');
+        for (const w of p.words || []) {
+          const k = String(w).toLowerCase();
+          EXAMPROOF[k] = EXAMPROOF[k] || { srcs: [], type: 'cam' };
+          if (!EXAMPROOF[k].srcs.includes(tag)) EXAMPROOF[k].srcs.push(tag);
+        }
+      }
+    } catch (e) {}
+  }
+  const d = EXAMPROOF[String(word).toLowerCase()];
+  if (!d || !d.srcs.length) return '';
+  const rows = d.srcs.slice(0, 4).join(' · ');
+  return '<section class="related"><h2>Ra đề thi thật</h2><p>Từ "' + escapeHtml(word) + '" đã xuất hiện trong: <strong>' + escapeHtml(rows) + '</strong> — học kỹ từ này, đi thi gặp lại.</p></section>';
+}
 function mistakeLinksHtml(word) {
   if (MISTAKE_INDEX === null) {
     MISTAKE_INDEX = [];
@@ -968,6 +997,23 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
    * Trang nào có word-faq tay thì dùng tay (ưu tiên trong faqJsonLd/faqHtml). */
   const autoQa = [];
   autoQa.push([`"${word}" nghĩa là gì`, desc]);
+  // PAA morphology 07/11: 5 câu người Việt gõ thật (đếm được/quá khứ/loại từ/trái nghĩa)
+  try {
+    const rawL = String(raw || '').replace(/<[^>]+>/g, ' ');
+    const isNoun = /danh từ/.test(rawL), isVerb = /động từ|ngoại động|nội động/.test(rawL);
+    const isAdj = /tính từ/.test(rawL), isAdv = /phó từ|trạng từ/.test(rawL);
+    const pos = [isNoun?'danh từ':null, isVerb?'động từ':null, isAdj?'tính từ':null, isAdv?'trạng từ':null].filter(Boolean).join(', ') || (posList.length ? posList.join(', ') : 'xem mục từ điển ở trên');
+    autoQa[0] = [`"${word}" nghĩa là gì, loại từ gì`, desc + ` Loại từ: ${pos}.`];
+    if (isNoun) {
+      const uncount = /không đếm được|uncountable|\(U\)/.test(rawL);
+      autoQa.push([`"${word}" đếm được không`, `"${word}" là danh từ ${uncount ? 'KHÔNG đếm được — không dùng a/an, không thêm -s (ví dụ: much ' + word + ', không nói *a ' + word + ')' : 'đếm được — dùng được a/an và số nhiều'}.`]);
+    }
+    if (isVerb) {
+      const irr = /quá khứ|past|Ved|V2/.test(rawL);
+      autoQa.push([`Quá khứ của "${word}" là gì`, irr ? `Xem bảng chia trong mục từ điển ở trên (cột quá khứ — từ bất quy tắc cần học thuộc).` : `Động từ có quy tắc: thêm -ed (${word} → ${word}ed).`]);
+    }
+    if (isAdj) autoQa.push([`Trái nghĩa với "${word}" là gì`, `Xem khối Phân biệt dễ nhầm ở dưới — cặp trái nghĩa và từ gần nghĩa của "${word}".`]);
+  } catch (e) {}
   if (ipa) autoQa.push([`Phát âm "${word}" thế nào`, `Phiên âm Mỹ /${ipa}/${breOf(ipa, word) && breOf(ipa, word) !== ipa ? `, Anh /${breOf(ipa, word)}/` : ''} — nghe audio Mỹ/Anh ở đầu trang, đọc chậm từng âm.`]);
   if (examExample) autoQa.push([`Đặt câu với "${word}"`, examExample]);
   else if (related.length) autoQa.push([`Từ liên quan tới "${word}"`, `Các từ hay đi cùng hoặc dễ nhầm: ${related.slice(0, 4).join(', ')} — xem khối Từ liên quan ở dưới.`]);
@@ -1061,6 +1107,8 @@ ${navHtml('tu')}
   </header>
 
   ${examExamplesHtml(word, null)}
+
+  ${examProofHtml(word)}
 
   ${noteHtml ? `<section class="word-note"><h2>Ghi chú sử dụng</h2>${noteIsHand ? '' : '<span class="note-badge note-badge-auto">Tự sinh — chưa biên tập</span>'}${noteHtml}</section>` : ''}
 
