@@ -3669,6 +3669,13 @@
       "lemma": null
     },
     {
+      "word": "name",
+      "source": "dataset",
+      "ipa": "neɪm",
+      "prev": "neɪm",
+      "lemma": null
+    },
+    {
       "word": "near",
       "source": "dataset",
       "ipa": "nɪɹ",
@@ -41210,6 +41217,13 @@
       "lemma": null
     },
     {
+      "word": "refer",
+      "source": "dataset",
+      "ipa": "ɹəˈfɝ",
+      "prev": "ɹəˈfɝ",
+      "lemma": null
+    },
+    {
       "word": "reference",
       "source": "dataset",
       "ipa": "ˈɹɛfɚəns",
@@ -46691,6 +46705,27 @@
       "lemma": null
     },
     {
+      "word": "accord",
+      "source": "dataset",
+      "ipa": "əˈkɔɹd",
+      "prev": "əˈkɔɹd",
+      "lemma": null
+    },
+    {
+      "word": "unclear",
+      "source": "dataset",
+      "ipa": "ənˈklɪɹ",
+      "prev": "ənˈklɪɹ",
+      "lemma": null
+    },
+    {
+      "word": "resource",
+      "source": "dataset",
+      "ipa": "ˈɹisɔɹs",
+      "prev": "ˈɹisɔɹs",
+      "lemma": null
+    },
+    {
       "word": "abstract",
       "source": "dataset",
       "ipa": "æbˈstɹækt",
@@ -48377,7 +48412,6 @@
     "parliament",
     "pow",
     "prop",
-    "refer",
     "rm",
     "sa",
     "se",
@@ -48700,7 +48734,6 @@
     "ben",
     "charlie",
     "jesus",
-    "name",
     "adam",
     "anna",
     "bob",
@@ -48744,9 +48777,9 @@
     }
   },
   "summary": {
-    "built": 6902,
+    "built": 6907,
     "ipaSources": {
-      "dataset": 6636,
+      "dataset": 6641,
       "absent": 19,
       "derived": 246,
       "table": 1
@@ -48757,7 +48790,7 @@
     "thinPages": 0,
     "removedVulgar": 21,
     "removedEmpty": 5,
-    "removedAbbrev": 40,
+    "removedAbbrev": 39,
     "removedFat": 5,
     "removedThin": 298,
     "sensePriority": {
@@ -48767,6 +48800,6 @@
         "after": "(pháp lý) chứng, chứng cớ, bằng chứng"
       }
     },
-    "generatedAt": "2026-11-07T01:14:02.357Z"
+    "generatedAt": "2026-11-07T01:47:18.800Z"
   }
 }

@@ -308,7 +308,9 @@ const REMOVE_WORDS = new Set([
   'ada','adam','albert','amazon','anna','anthony','apollo','arab','arrow','arrows',
   'bailey','barney','becky','ben','benny','bible','blessed','bo','bob','brad',
   'charlie','christ','divine','fabulous','goddess','holy','intel','jesus','mars',
-  'mysterious','myth','name','nickname','title',
+  'mysterious','myth','nickname','title',
+  // NOTE 07/11: 'name' (danh từ chung, NGSL #?) đã ra khỏi list — entry đầy đủ,
+  // chỉ loại tên riêng người (adam/anna/david...), không loại danh từ chung.
 ]);
 
 /* Pages that only ever occur as the listed lemma's inflection but whose own
@@ -602,7 +604,54 @@ function relatedWords(word, allKeys, freqMap) {
     if (cands.length > 40) break;
   }
   cands.sort((a, b) => band(a) - band(b) || a.localeCompare(b));
-  return cands.slice(0, 6);
+  // 07/11 mesh: bổ sung từ dữ liệu ngữ nghĩa (ưu tiên trước prefix-match)
+  try {
+    const extra = [];
+    const wl = w;
+    // a) synonym siblings (2 chiều đồng nghĩa)
+    const syn = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'synonyms.json'), 'utf8'));
+    for (const p of syn.pairs || []) {
+      if (p.word === wl) for (const x of (p.synonyms || []).slice(0, 4)) extra.push(x);
+      else if ((p.synonyms || []).includes(wl)) extra.push(p.word);
+      if (extra.length >= 12) break;
+    }
+    try {
+      const se = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'synonyms-expanded.json'), 'utf8'));
+      for (const p of se.pairs || []) {
+        if (p.noindex) continue;
+        if (p.word === wl) for (const x of (p.synonyms || []).slice(0, 3)) extra.push(x);
+        else if ((p.synonyms || []).includes(wl)) extra.push(p.word);
+        if (extra.length >= 20) break;
+      }
+    } catch (e) {}
+    // b) collocation/prep heads chứa từ này
+    try {
+      const co = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'collocations.json'), 'utf8'));
+      for (const p of co.pairs || []) {
+        if (p.noun === wl || p.verb === wl) { if (p.noun !== wl) extra.push(p.noun); if (p.verb !== wl) extra.push(p.verb); }
+        if (extra.length >= 26) break;
+      }
+      const pr = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'prepositions.json'), 'utf8'));
+      for (const p of pr.pairs || []) {
+        const h = String(p.head || '').split(' ')[0].toLowerCase();
+        if (h === wl) for (const r of (p.related || [])) { const t = r.split('-')[0]; if (t !== wl) extra.push(t); }
+        if (extra.length >= 30) break;
+      }
+    } catch (e) {}
+    // c) compare pairs chứa từ này
+    try {
+      const cp = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'comparisons.json'), 'utf8'));
+      for (const p of cp.pairs || []) {
+        if (p.a === wl && p.b) extra.push(p.b);
+        else if (p.b === wl && p.a) extra.push(p.a);
+        if (extra.length >= 34) break;
+      }
+    } catch (e) {}
+    const builtSet2 = new Set(allKeys);
+    const sem = [...new Set(extra)].filter((k) => builtSet2.has(k) && isReal(k)).slice(0, 6);
+    const rest = cands.filter((k) => !sem.includes(k)).slice(0, Math.max(0, 8 - sem.length));
+    return [...sem, ...rest].slice(0, 8);
+  } catch (e) { return cands.slice(0, 6); }
 }
 
 /* ---------- page template ---------- */
@@ -804,15 +853,15 @@ function wordFaq() {
   }
   return WORD_FAQ;
 }
-function faqHtml(word) {
+function faqHtml(word, autoQa) {
   const list = wordFaq()[String(word).toLowerCase()];
-  if (!list || !list.length) return '';
-  const rows = list.map(([head, body]) =>
-    `<details class="faq-item"><summary>${escapeHtml(head)} — ${escapeHtml(body.slice(0, 80))}${body.length > 80 ? '…' : ''}</summary><p>${escapeHtml(body)}</p></details>`).join('\n');
+  const rows = (list && list.length ? list : (autoQa || [])).map(([head, body]) =>
+    `<details class="faq-item"><summary>${escapeHtml(head)} — ${escapeHtml(String(body).slice(0, 80))}${String(body).length > 80 ? '…' : ''}</summary><p>${escapeHtml(body)}</p></details>`).join('\n');
+  if (!rows) return '';
   return `<section class="related faq-sec"><h2>Câu hỏi thường gặp</h2>${rows}</section>`;
 }
-function faqJsonLd(word) {
-  const list = wordFaq()[String(word).toLowerCase()];
+function faqJsonLd(word, autoQa) {
+  const list = (wordFaq()[String(word).toLowerCase()] || []).length ? wordFaq()[String(word).toLowerCase()] : (autoQa || []);
   if (!list || !list.length) return null;
   return {
     '@type': 'FAQPage',
@@ -877,6 +926,13 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
     const list = db.words && db.words[String(word).toLowerCase()];
     if (list && list.length && list[0][0]) examExample = list[0][0];
   } catch (e) { /* no example */ }
+  /* Auto-FAQ 07/11: mọi trang từ đều có 3 Q/A từ dữ liệu sẵn có (nghĩa, phát âm, ví dụ).
+   * Trang nào có word-faq tay thì dùng tay (ưu tiên trong faqJsonLd/faqHtml). */
+  const autoQa = [];
+  autoQa.push([`"${word}" nghĩa là gì`, desc]);
+  if (ipa) autoQa.push([`Phát âm "${word}" thế nào`, `Phiên âm Mỹ /${ipa}/${breOf(ipa, word) && breOf(ipa, word) !== ipa ? `, Anh /${breOf(ipa, word)}/` : ''} — nghe audio Mỹ/Anh ở đầu trang, đọc chậm từng âm.`]);
+  if (examExample) autoQa.push([`Đặt câu với "${word}"`, examExample]);
+  else if (related.length) autoQa.push([`Từ liên quan tới "${word}"`, `Các từ hay đi cùng hoặc dễ nhầm: ${related.slice(0, 4).join(', ')} — xem khối Từ liên quan ở dưới.`]);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -903,7 +959,14 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
           { '@type': 'ListItem', position: 3, name: word, item: canonical },
         ],
       },
-      ...(faqJsonLd(word) ? [faqJsonLd(word)] : []),
+      ...(faqJsonLd(word, autoQa) ? [faqJsonLd(word, autoQa)] : []),
+      {
+        '@type': 'WebPage',
+        name: title,
+        url: canonical,
+        inLanguage: 'vi',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.word-head h1', '.word-ipa'] },
+      },
     ],
   };
 
@@ -966,7 +1029,7 @@ ${navHtml('tu')}
 
   ${ieltsTopicLinksHtml(word)}
 
-  ${faqHtml(word)}
+  ${faqHtml(word, autoQa)}
 
   ${relatedHtml}
 
@@ -1032,6 +1095,16 @@ async function main() {
     })
     .slice(0, LIMIT);
 
+  // 07/11: NGSL core top-1000 vắng trong freq-en (name/accord/unclear/resource) —
+  // từ học chính phải có trang tĩnh, bổ sung trực tiếp (đã verify entry đầy đủ).
+  try {
+    const ngslCore = require('../data/ngsl.json').core || {};
+    const have = new Set(candidates);
+    const extra = Object.keys(ngslCore)
+      .filter((w) => ngslCore[w] <= 1000 && /^[a-z][a-z'’-]{0,24}$/.test(w) && dictHasKey(w) && !have.has(w))
+      .sort((a, b) => ngslCore[a] - ngslCore[b]);
+    if (extra.length) { candidates.push(...extra); console.log(`NGSL top-1000 supplement: +${extra.length} (${extra.join(', ')})`); }
+  } catch (e) { console.log('NGSL supplement skipped:', e.message.slice(0, 80)); }
   // v95 batch 2: AWL headwords the frequency list does not already cover.
   // Same admission rules as batch 1 (regex + must exist in the dictionary);
   // batch-1 words that are also AWL keep their existing page and just gain
@@ -1141,8 +1214,10 @@ async function main() {
       // the headword's real content is a fraction of the entry; drop, the app
       // still serves the raw entry for whoever needs it.
       if (raw.length > 15000) { removedFat.push(word); continue; }
-      // "(viết tắt)" junk lookups (ai, asap, dc…) — no learning or SEO value
-      if (ABBREV_RE.test(sanitizeRaw(raw))) { removedAbbrev.push(word); continue; }
+      // "(viết tắt)" junk lookups (ai, asap, dc…) — no learning or SEO value.
+      // 07/11: chỉ loại khi entry NGẮN (<800 ký tự); entry dài có 1 dòng viết tắt
+      // phụ (refer/R.D.) vẫn giữ — nghĩa chính đầy đủ.
+      if (ABBREV_RE.test(sanitizeRaw(raw)) && raw.length < 800) { removedAbbrev.push(word); continue; }
       // anti thin-content: off-list words outside the learning frame need a
       // real entry (≥2 content blocks); NGSL/academic words are exempt —
       // learning value outranks entry length (email/finance/asset…)
