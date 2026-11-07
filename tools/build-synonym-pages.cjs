@@ -42,6 +42,7 @@ function pageHtml(p, wordHref) {
   if (wc(tldr) < 40) tldr += ` Xem chi tiết từng từ đồng nghĩa, ví dụ song ngữ và cách phân biệt sắc thái trong bài.`;
   if (wc(tldr) > 60) tldr = tldr.split(/\s+/).slice(0, 60).join(' ') + '…';
   const desc = `${h1}${p.antonyms.length ? ' và trái nghĩa' : ''}: ${p.synonyms.slice(0, 4).join(', ')}. Phân biệt sắc thái + câu mẫu song ngữ EN–VI — Dual Dictionary.`.slice(0, 160);
+  const robotsTag = p.noindex ? 'noindex, follow' : 'index, follow';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -109,7 +110,7 @@ function pageHtml(p, wordHref) {
 <title>${esc(h1)}${p.antonyms.length ? ' (kèm trái nghĩa)' : ''} | Dual Dictionary</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="${robotsTag}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="Dual Dictionary">
@@ -251,7 +252,8 @@ ${rows}
 </html>
 `);
   const LM = new Date().toISOString().slice(0, 10);
-  const urls = [`https://dualdictionary.netlify.app/vi/dong-nghia/`, ...pairs.map((p) => `https://dualdictionary.netlify.app/vi/dong-nghia/${p.word}/`)];
+  const indexable = pairs.filter((p) => !p.noindex);
+  const urls = [`https://dualdictionary.netlify.app/vi/dong-nghia/`, ...indexable.map((p) => `https://dualdictionary.netlify.app/vi/dong-nghia/${p.word}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'synonyms.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n')}\n</urlset>\n`);
   console.log(`SYNONYMS: ${pairs.length} pages + hub + sitemap (manifest-guard dead: ${deadLinks})`);
