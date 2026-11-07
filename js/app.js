@@ -637,6 +637,23 @@ function wireUi() {
   $('#btn-pron-replay')?.addEventListener('click', (e) => speakAt(e.currentTarget.dataset.sentence || ''));
   // v69 R4: say-the-word mic — one-shot browser recognition checked against the
   // strip's current word. Unsupported browsers never see the button at all.
+  // Voice search 07/11: mic trong search-box — nói từ tiếng Anh, tra luôn
+  const voiceBtn = $('#btn-voice');
+  if (voiceBtn && !SR_CLASS) voiceBtn.classList.add('hidden');
+  voiceBtn?.addEventListener('click', () => {
+    voiceBtn.disabled = true;
+    const inp = $('#search-input');
+    if (inp) inp.placeholder = 'Nói từ tiếng Anh…';
+    recognizeOnce((out) => {
+      voiceBtn.disabled = false;
+      if (inp) inp.placeholder = '';
+      if (out.ok && out.heard) {
+        const first = out.heard.split(' / ')[0].trim().toLowerCase().replace(/[^a-z' -]/g, '');
+        if (first && inp) { inp.value = first; try { search(first); } catch (e) { document.querySelector('#search-form')?.requestSubmit(); } }
+        else showToast(out.heard);
+      } else showToast(i18n('pron.micError'));
+    });
+  });
   const micBtn = $('#btn-pron-mic');
   if (micBtn && !SR_CLASS) micBtn.classList.add('hidden');
   else micBtn?.classList.remove('hidden');
@@ -655,6 +672,35 @@ function wireUi() {
   });
   // Phase 3+: export dialog + practice/stats entry points
   $('#export-run')?.addEventListener('click', runExport);
+  // Share/import 07/11: nén word list vào URL (?share=), không server — mở link là nhập Vault
+  $('#share-run')?.addEventListener('click', async () => {
+    const words = exportScope.map((it) => it.text).filter(Boolean).slice(0, 50);
+    if (!words.length) { showToast('Nothing to share yet'); return; }
+    const code = btoa(unescape(encodeURIComponent(words.join('\n')))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    const url = location.origin + location.pathname + '?share=' + code;
+    try { await navigator.clipboard.writeText(url); showToast('Share link copied (' + words.length + ' words)'); }
+    catch (e) { prompt('Copy share link:', url); }
+    $('#export-dialog').close();
+  });
+  parseShareParam();
+  // Share-target 07/11 (thay bubble): bôi đen từ app khác → Share → Dual Dict mở kết quả
+  try {
+    const q = new URLSearchParams(location.search);
+    const shared = (q.get('text') || q.get('title') || '').trim();
+    if (shared) {
+      const w = shared.split(/\s+/).slice(0,3).join(' ').toLowerCase().replace(/[^a-z' -]/g,'').trim();
+      if (w) {
+        const inp = document.querySelector('#search-input');
+        if (inp) inp.value = w;
+        try { search(w); } catch (e) {}
+        history.replaceState(null, '', location.pathname);
+      }
+    }
+    if (location.hash === '#quick') {
+      const inp = document.querySelector('#search-input');
+      if (inp) inp.focus();
+    }
+  } catch (e) {}
   // v119 A3: a real Anki deck has a fixed note type — the field pickers only
   // apply to the text formats, so they hide while .apkg is selected.
   $('#export-format')?.addEventListener('change', () => {
@@ -4507,6 +4553,26 @@ function renderPracticePicker() {
  * the word pages' "Luyện band này" CTA points here (page-side CTA ships with
  * the next content rebuild per the plan). */
 let pendingDeck = null;
+/* Share import 07/11: ?share=base64url(word list) → nhập Vault, tối đa 50 từ. */
+async function parseShareParam() {
+  let code = null;
+  try { code = new URLSearchParams(location.search).get('share'); } catch (e) {}
+  if (!code) return;
+  try {
+    const words = decodeURIComponent(escape(atob(code.replace(/-/g, '+').replace(/_/g, '/')))).split('\n').map((w) => w.trim().toLowerCase()).filter((w) => /^[a-z][a-z' -]{1,30}$/.test(w));
+    if (!words.length) return;
+    let added = 0;
+    for (const w of words.slice(0, 50)) {
+      try {
+        const r = await addItem({ type: 'word', text: w, tags: ['shared'], context: { headword: w, sourceTitle: 'shared-list' } });
+        if (r) added++;
+      } catch (e) {}
+    }
+    showToast('Imported ' + added + ' shared words');
+    history.replaceState(null, '', location.pathname);
+    updateVocabBadge(); updateReviewBadge();
+  } catch (e) { showToast('Invalid share link'); }
+}
 function parseDeckParam() {
   try {
     const d = new URLSearchParams(location.search).get('deck');
