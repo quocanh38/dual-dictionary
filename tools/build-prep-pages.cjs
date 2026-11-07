@@ -112,7 +112,9 @@ ${navHtml('gioi-tu')}
 <main class="page">
   <p class="word-kicker">Giới từ đi kèm</p>
   <h1 style="font-size:2.2rem">${esc(p.head)} đi với giới từ gì?</h1>
-  <p class="tldr"><strong>${esc(p.answer)}</strong> ${esc(p.explain.split(/\s+/).slice(0, 50).join(' '))}${(p.examples || []).length ? ` Ví dụ: ${esc(String(p.examples[0][0]).replace(/\.+$/, ''))}.` : ''}</p>
+  <p class="tldr"><strong>${esc(p.answer)}</strong>${(p.examples || []).length ? ` Ví dụ: ${esc(String(p.examples[0][0]).replace(/\.+$/, ''))}.` : ''}</p>
+  <h2>Giải thích chi tiết</h2>
+  <p>${esc(p.explain)}</p>
   <h2>Câu mẫu</h2>
   <ul>
 ${exRows}
