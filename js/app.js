@@ -471,6 +471,7 @@ async function boot() {
     try { state.known = await knownState(); } catch (e) { console.warn('could not load known baseline:', e); }
     updateVocabBadge();
     updateReviewBadge();
+    try { renderWotd(); } catch (e) {}
     applyView(currentView()); // refresh the active view now that items exist
 
     // dictionary init: replace stale bundled dicts, then restore persisted ones
@@ -4421,6 +4422,11 @@ function assignCurriculumKinds(deckPool) {
   const cycle = ['choice', 'recall', 'listen', 'cloze', 'ipa', 'say'];
   let i = 0;
   for (const it of practiceQueue) {
+    if (quizModeLock && quizModeLock.length && it.drillKinds === undefined) {
+      it.practiceKind = quizModeLock[0] === 'recall' ? 'recall' : quizModeLock[0];
+      if (quizModeLock[0] === 'cards') it.practiceKind = 'recall';
+      continue;
+    }
     const has = {
       choice: practiceGloss.has(it.id),
       recall: practiceGloss.has(it.id),
@@ -4531,6 +4537,89 @@ function practicePool() {
   return due.concat(rest);
 }
 
+/* Quiz Vault 07/11 (Cambridge +Plus 3 dạng): flashcards / nghe-gõ / trắc nghiệm
+ * trên chính Vault user — tái dùng practiceQueue + drills sẵn có. */
+function startVaultQuiz(mode) {
+  const pool = practicePool().slice(0, 10);
+  if (!pool.length) { showToast(i18n('practice.deckEmpty')); return; }
+  const kinds = { cards: ['recall'], listen: ['listen', 'dictation'], choice: ['choice'] }[mode] || ['recall'];
+  curriculumDeck = 'vault';
+  practiceQueue = pool.map((it) => ({ ...it }));
+  practiceIndex = 0;
+  practiceStats = { done: 0, ok: 0, streak: 0 };
+  practiceChecked = false;
+  practiceGloss = new Map();
+  quizModeLock = kinds;
+  renderPractice();
+  Promise.all(practiceQueue.map(async (it) => {
+    if (it.type === 'word' || it.type === 'phrase') {
+      try { const g = await meaningForItem(it); if (g) practiceGloss.set(it.id, g); } catch (e) {}
+    }
+  })).then(() => { if (practiceIndex === 0 && practiceQueue.length) renderPractice(); });
+}
+let quizModeLock = null;
+/* Level test 07/11 trong app: 20 câu trắc nghiệm A2–C1 (giống web quiz),
+ * lưu level → gợi packs + WOTD theo level. */
+const LEVEL_QS = [
+  ["abandon","bỏ rơi / từ bỏ","giữ lại","sửa chữa","đón nhận",0,"B2"],
+  ["ability","khả năng","sự yếu đuối","sự chậm trễ","từ chối",0,"A2"],
+  ["benefit","lợi ích","tác hại","chi phí","rủi ro",0,"B1"],
+  ["deadline","hạn chót","khởi đầu","giờ nghỉ","ngày lễ",0,"B1"],
+  ["sustainable","bền vững","tạm thời","tốn kém","nguy hiểm",0,"C1"],
+  ["opportunity","cơ hội","khó khăn","thất bại","nguy cơ",0,"B1"],
+  ["acquire","đạt được","đánh mất","bỏ qua","trì hoãn",0,"C1"],
+  ["efficient","hiệu quả","lãng phí","chậm chạp","cẩu thả",0,"B2"],
+  ["diverse","đa dạng","đồng nhất","đơn điệu","hạn chế",0,"B2"],
+  ["phenomenon","hiện tượng","nguyên nhân","kết quả","giả thuyết",0,"C1"],
+  ["reluctant","miễn cưỡng","hăng hái","vui vẻ","tự nguyện",0,"C1"],
+  ["compulsory","bắt buộc","tự chọn","không cần thiết","tạm hoãn",0,"B2"],
+  ["fragile","dễ vỡ","cứng cáp","bền bỉ","dẻo dai",0,"B2"],
+  ["controversy","tranh cãi","đồng thuận","im lặng","bí mật",0,"C1"],
+  ["diligent","chăm chỉ","lười biếng","cẩu thả","kiêu ngạo",0,"B2"],
+  ["obsolete","lỗi thời","hiện đại","mới mẻ","thịnh hành",0,"C1"],
+  ["generous","hào phóng","keo kiệt","ích kỷ","lạnh lùng",0,"B1"],
+  ["ambiguous","mơ hồ","hăng hái","rõ ràng","chắc chắn",0,"C1"],
+  ["thrive","phát triển mạnh","suy tàn","dậm chân","biến mất",0,"C1"],
+  ["punctual","đúng giờ","trễ nãi","vội vàng","thong thả",0,"B1"]
+];
+let levelAnswers = null;
+function startLevelTest() {
+  levelAnswers = new Array(LEVEL_QS.length).fill(-1);
+  practiceQueue = [];
+  practiceIndex = 0;
+  navigate('practice');
+  renderLevelTest();
+}
+function renderLevelTest() {
+  const stage = document.getElementById('practice-stage');
+  if (!stage) return;
+  const empty = document.getElementById('practice-empty');
+  empty && empty.classList.add('hidden');
+  let h = '<div class="practice-card"><p class="practice-prompt">Test trình độ (20 câu, ~3 phút)</p>';
+  LEVEL_QS.forEach((q, i) => {
+    h += '<p style="margin:10px 0 4px"><strong>Câu ' + (i + 1) + ' [' + q[6] + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
+    for (let k = 1; k <= 4; k++) {
+      const sel = levelAnswers[i] === k - 1;
+      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:#0f766e;background:#ecfdf5' : '') + '">' + escapeHtml(q[k]) + '</button> ';
+    }
+    h += '</div>';
+  });
+  h += '<p style="margin-top:12px"><button type="button" class="btn-primary" id="level-finish">Xem kết quả</button></p><div id="level-res"></div></div>';
+  stage.innerHTML = h;
+  stage.querySelectorAll('[data-q]').forEach((b) => b.addEventListener('click', () => {
+    levelAnswers[+b.dataset.q] = +b.dataset.k;
+    renderLevelTest();
+  }));
+  document.getElementById('level-finish').addEventListener('click', () => {
+    let score = 0;
+    LEVEL_QS.forEach((q, i) => { if (levelAnswers[i] === q[5]) score++; });
+    const lv = score >= 17 ? 'C1' : score >= 12 ? 'B2' : score >= 7 ? 'B1' : 'A2';
+    try { localStorage.setItem('dd-level', lv); } catch (e) {}
+    const deck = { A2: 'ngsl1', B1: 'ngsl2', B2: 'ielts', C1: 'awl' }[lv];
+    document.getElementById('level-res').innerHTML = '<p class="practice-prompt">Kết quả: ' + score + '/20 — trình độ ' + lv + '</p><p><button type="button" class="btn-primary" id="level-go">Học ngay gói ' + deck.toUpperCase() + ' →</button></p>';
+    document.getElementById('level-go').addEventListener('click', () => startCurriculumPractice(deck));
+  });
+}
 async function startPractice(ids) {
   let items;
   if (ids && ids.length) items = ids.map(getItemById).filter(Boolean);
@@ -8075,6 +8164,53 @@ function markPracticeDay() {
       localStorage.setItem('practice-days', JSON.stringify(days.slice(-400)));
     }
   } catch (e) { /* ignore */ }
+}
+/* WOTD 07/11 (giữ chân): 1 từ/ngày theo level user, streak có sẵn.
+ * Level từ quiz trong app (localStorage dd-level) hoặc exam-tags CEFR B1 mặc định. */
+async function wordOfDay() {
+  const day = new Date().toISOString().slice(0, 10);
+  try {
+    const cached = JSON.parse(localStorage.getItem('wotd') || '{}');
+    if (cached.day === day && cached.word) return cached;
+  } catch (e) {}
+  const lvl = (localStorage.getItem('dd-level') || 'B1').toUpperCase();
+  const pick = { A2: 'ngsl1', B1: 'ngsl2', B2: 'ielts', C1: 'awl' }[lvl] || 'ngsl2';
+  let word = 'abandon', ipa = '', gloss = '';
+  try {
+    const bw = await loadBuiltWords();
+    if (bw && bw.words) {
+      if (typeof examTagSet === 'undefined' || !examTagSet) { try { examTagSet = await loadExamTags(); } catch (e) {} }
+      const pool = deckWords(pick, bw.words).filter((w) => !isSaved(w));
+      if (pool.length) {
+        let h = 0; for (const c of day) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+        word = pool[h % pool.length];
+      }
+    }
+    try { gloss = await quickGloss(word) || ''; } catch (e) {}
+    try { ipa = ((await ipaForWord(word))[0]) || ''; } catch (e) {}
+  } catch (e) {}
+  const out = { day, word, ipa, gloss };
+  try { localStorage.setItem('wotd', JSON.stringify(out)); } catch (e) {}
+  return out;
+}
+async function renderWotd() {
+  const el = document.getElementById('wotd-card');
+  if (!el) return;
+  const w = await wordOfDay();
+  const streak = practiceDayStreak();
+  el.innerHTML = '<strong>📅 Từ hôm nay: ' + escapeHtml(w.word) + '</strong>' +
+    (w.ipa ? ' <span class="hint">/' + escapeHtml(w.ipa) + '/</span>' : '') +
+    (w.gloss ? '<br><span>' + escapeHtml(w.gloss.slice(0, 80)) + '</span>' : '') +
+    '<br><span class="hint">🔥 Streak ' + streak + ' ngày · ' +
+    '<a href="#" id="wotd-practice">Luyện ngay</a> · ' +
+    '<a href="#" id="wotd-quiz">Quiz Vault</a> · ' +
+    '<a href="#" id="wotd-level">Test trình độ</a></span>';
+  const p1 = document.getElementById('wotd-practice');
+  if (p1) p1.addEventListener('click', (e) => { e.preventDefault(); startCurriculumPractice('ngsl2'); navigate('practice'); });
+  const p2 = document.getElementById('wotd-quiz');
+  if (p2) p2.addEventListener('click', (e) => { e.preventDefault(); startVaultQuiz('choice'); });
+  const p3 = document.getElementById('wotd-level');
+  if (p3) p3.addEventListener('click', (e) => { e.preventDefault(); startLevelTest(); });
 }
 function practiceDayStreak() {
   try {
