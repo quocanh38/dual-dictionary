@@ -26,6 +26,21 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://dualdictionary.netlify.app/vi/tac-gia/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/test-trinh-do/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/trinh-do/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dualdictionary.netlify.app/vi/tu/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>

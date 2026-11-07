@@ -760,6 +760,31 @@ function loadAudioSet() {
   return set;
 }
 const audioSet = loadAudioSet();
+/* Họ từ + kết hợp 07/11: gom collocations/prepositions chứa từ này. */
+let FAMILY_IDX = null;
+function familyHtml(word, builtSet) {
+  if (FAMILY_IDX === null) {
+    FAMILY_IDX = {};
+    try {
+      const co = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'collocations.json'), 'utf8'));
+      for (const p of co.pairs || []) {
+        for (const k of [p.verb, p.noun]) {
+          if (!k) continue;
+          const kk = String(k).toLowerCase();
+          (FAMILY_IDX[kk] = FAMILY_IDX[kk] || []).push({ t: p.head, u: '/vi/cum-di-voi/' + p.slug + '/' });
+        }
+      }
+      const pr = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'prepositions.json'), 'utf8'));
+      for (const p of pr.pairs || []) {
+        const h = String(p.head || '').split(' ')[0].toLowerCase();
+        if (h) (FAMILY_IDX[h] = FAMILY_IDX[h] || []).push({ t: p.head + ' + ' + p.prep, u: '/vi/gioi-tu/' + p.slug + '/' });
+      }
+    } catch (e) {}
+  }
+  const items = (FAMILY_IDX[String(word).toLowerCase()] || []).slice(0, 6);
+  if (!items.length) return '';
+  return '<section class="related"><h2>Họ từ &amp; kết hợp</h2><div class="related-list">' + items.map((x) => '<a class="related-chip" href="' + x.u + '">' + escapeHtml(x.t) + ' →</a>').join('') + '</div></section>';
+}
 /* Internal-link mesh (01/11): word pages link to loi-sai pages sharing the same
  * keyword. Loaded from data/mistakes.json (same slug rule as builder). */
 let MISTAKE_INDEX = null;
@@ -1012,6 +1037,7 @@ ${navHtml('tu')}
     <p class="word-kicker">Nghĩa tiếng Việt của</p>
     <h1>${escapeHtml(word)}</h1>
     ${ipaLineHtml(word, ipa)}
+    <figure style="margin:16px 0"><img src="/vi/images/ipa-vowels.jpg" alt="Bảng khẩu hình nguyên âm tiếng Anh" loading="lazy" width="800" height="450" style="max-width:100%;height:auto;border-radius:8px"><figcaption style="color:var(--muted);font-size:.85rem">Khẩu hình 10 nguyên âm chính — đối chiếu IPA ở trên khi luyện phát âm.</figcaption></figure>
     ${badgeRowHtml(word, labels, builtSet)}${entryLemma ? `
     <p class="entry-lemma-note">Trong từ điển không có mục riêng cho dạng “${escapeHtml(word)}” — mục dưới đây là của nguyên mẫu ${builtSet.has(entryLemma)
       ? `<a href="${wordPageUrl(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`
@@ -1047,10 +1073,12 @@ ${navHtml('tu')}
   ${blogLinksHtml(`/vi/tu/${word}/`)}
 
   ${phraseHtml}
+
+  ${familyHtml(word, builtSet)}
 </main>
 
 <footer class="blog-footer">
-  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p>
+  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p>
 </footer>
 </body>
 </html>
@@ -1706,7 +1734,7 @@ ${hubRows}
   </ul>
   <p id="hub-more-wrap" style="margin:14px 0 0"><button type="button" id="hub-more" class="related-chip" style="cursor:pointer">Hiện thêm (${(built.length - hubSsrWords.length).toLocaleString('vi-VN')} từ còn lại)</button></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
+<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 <script src="/vi/tu/hub-index.js" defer></script>
 <script>
 (function () {
