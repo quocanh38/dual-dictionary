@@ -932,6 +932,7 @@ let lastAppliedView = 'search';
 
 function applyView(view) {
   if (!VIEWS.includes(view)) view = 'search';
+  if (view === 'search') { try { renderWotd(); } catch (e) {} }
   const showSearchReader = view === 'search' || view === 'reader';
   $('#search-form')?.classList.toggle('hidden', !showSearchReader);
 
@@ -4518,6 +4519,10 @@ async function firstExampleSentence(word) {
   return '';
 }
 
+  document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'practice-empty-quiz') { e.preventDefault(); startVaultQuiz('choice'); }
+    if (e.target && e.target.id === 'practice-empty-level') { e.preventDefault(); startLevelTest(); }
+  });
 function renderPracticePicker() {
   const stage = $('#practice-stage');
   if (!stage) return;
