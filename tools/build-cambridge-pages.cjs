@@ -15,7 +15,7 @@ const { navHtml } = require('./nav-partial.cjs');
 function pageHtml(p) {
   const slug = `cam-${p.book}-test-${p.test}`;
   const canonical = `${SITE}/vi/cambridge/${slug}/`;
-  const h1 = `Từ vựng ${p.title}`;
+  const h1 = `Từ vựng ${p.heading}`;
   const desc = `Bộ ${(p.words || []).length} từ + ${(p.phrases || []).length} cụm hay gặp trong đề Cam ${p.book} Test ${p.test} (${p.skill}) — nghĩa, phát âm, ví dụ thi và bài luyện.`.slice(0, 160);
   const wRows = (p.words || []).map((w) => `    <li data-word="${esc(w)}"><a href="/vi/tu/${encodeURIComponent(w)}/">${esc(w)}</a></li>`).join('\n');
   const pRows = (p.phrases || []).map((s) => `    <li data-word="${esc(s)}"><a href="/vi/tu/${encodeURIComponent(s)}/">${esc(s.replace(/-/g, ' '))}</a></li>`).join('\n');
@@ -133,7 +133,7 @@ function main() {
     itemListElement: slugs.map(({ slug, p }, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: `Từ vựng ${p.title}`,
+      name: `Từ vựng ${p.heading}`,
       url: `${SITE}/vi/cambridge/${slug}/`,
     })),
   };

@@ -57,9 +57,9 @@ function guidePageHtml(t, ipa) {
   const tag = isIELTS ? 'IELTS' : 'TOEIC';
   const n = t.words.length + t.phrases.length;
   const canonical = `${SITE}/vi/luyen-thi/${t.slug}/`;
-  const h1 = `Từ vựng ${t.name} (${n} mục)`;
+  const h1 = `Từ vựng ${t.word} (${n} mục)`;
   const sample = t.words.slice(0, 5).join(', ');
-  const desc = `${n} mục từ vựng ${t.name} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ thi viết tay — Dual Dictionary.`.slice(0, 160);
+  const desc = `${n} mục từ vựng ${t.word} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ thi viết tay — Dual Dictionary.`.slice(0, 160);
   const wRows = t.words.map((w) =>
     `    <li data-word="${esc(w)}"><a href="/vi/tu/${encodeURIComponent(w)}/">${esc(w)}</a>${ipa[w] ? ` <span class="hub-ipa">/${esc(ipa[w])}/</span>` : ''}</li>`).join('\n');
   const pRows = t.phrases.map((s) =>
@@ -80,13 +80,13 @@ function guidePageHtml(t, ipa) {
         inLanguage: 'vi',
         isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` },
       },
-      { '@type': 'ItemList', name: `${t.name} — danh sách mục`, numberOfItems: n, itemListElement: allItems },
+      { '@type': 'ItemList', name: `${t.word} — danh sách mục`, numberOfItems: n, itemListElement: allItems },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
           { '@type': 'ListItem', position: 2, name: 'Luyện thi', item: `${SITE}/vi/luyen-thi/` },
-          { '@type': 'ListItem', position: 3, name: t.name, item: canonical },
+          { '@type': 'ListItem', position: 3, name: t.word, item: canonical },
         ],
       },
     ],
@@ -119,7 +119,7 @@ function guidePageHtml(t, ipa) {
 </head>
 <body class="word-page">
 ${navHtml('luyen-thi')}
-<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/luyen-thi/">Luyện thi</a> › <span aria-current="page">${esc(t.name)}</span></nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/luyen-thi/">Luyện thi</a> › <span aria-current="page">${esc(t.word)}</span></nav>
 <main class="page">
   <p class="word-kicker">Từ vựng luyện thi</p>
   <h1 style="font-size:2.2rem">${esc(h1)}</h1>
@@ -147,8 +147,8 @@ ${FILTER_JS}
 function writeHubIndex(guides, ipa) {
   const canonical = `${SITE}/vi/luyen-thi/`;
   const rows = guides.map((t) =>
-    `    <li><a href="/vi/luyen-thi/${t.slug}/">${t.deck !== 'toeic' ? 'IELTS' : 'TOEIC'} ${esc(t.name)} — ${t.words.length + t.phrases.length} mục (${esc(t.words.slice(0, 4).join(', '))}…)</a></li>`).join('\n');
-  const items = guides.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: `${t.deck !== 'toeic' ? 'IELTS' : 'TOEIC'} ${t.name}`, item: `${SITE}/vi/luyen-thi/${t.slug}/` }));
+    `    <li><a href="/vi/luyen-thi/${t.slug}/">${t.deck !== 'toeic' ? 'IELTS' : 'TOEIC'} ${esc(t.word)} — ${t.words.length + t.phrases.length} mục (${esc(t.words.slice(0, 4).join(', '))}…)</a></li>`).join('\n');
+  const items = guides.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: `${t.deck !== 'toeic' ? 'IELTS' : 'TOEIC'} ${t.word}`, item: `${SITE}/vi/luyen-thi/${t.slug}/` }));
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
