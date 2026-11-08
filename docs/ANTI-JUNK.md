@@ -32,3 +32,11 @@ Mọi builder/data mới PHẢI pass 5 cổng này trước khi deploy. Vi phạ
 - Mọi script `expand-*.cjs` / `make-*-data.cjs` phải in 3 số: tổng entries, số fallback, số synthetic. Fallback/synthetic > 0 → không ghi file, không build.
 - Trang mỏng nhưng đúng intent 1 câu hỏi (gioi-tu, loi-sai, cum-di-voi ~100 từ) được giữ. Trang dài nhưng nội dung copy-paste/template (217 minimal-pairs synthetic) là rác — phải sửa.
 - Quy trình rebuild chuẩn + QA xem HANDOFF mới nhất (đầu file HANDOFF-*.md ở root project).
+
+## 6. Chống ăn thịt từ khóa (08/11/2026)
+
+- Builder đọc đúng field data: đối chiếu key JSON trước khi viết template (`word`≠`name`, `heading`≠`title`). Sai 1 field = hàng chục trang trùng title "undefined" (đã dính 26 trang 08/11).
+- Trước deploy: quét trùng `<title>` + `<h1>` + `<meta description>` toàn site — dup groups phải = 0.
+- Cùng slug khác khu vực (vi/tu/X vs vi/phat-am/X vs vi/dong-nghia/X) KHÔNG canonical chéo — intent khác nhau (nghĩa vs phát âm vs đồng nghĩa), mỗi trang 1 intent riêng.
+- Chỉ canonical khi cùng nội dung: dạng chia → từ gốc (accepting→accept, went→go), mỗi lemma ≤3 variants, variant KHÔNG vào sitemap.
+- Cặp nào trùng title/desc thật thì gộp trang hoặc đổi intent, không để 2 URLs cùng target 1 query.
