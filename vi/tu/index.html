@@ -546,7 +546,7 @@
     q.addEventListener(ev, apply); g.addEventListener(ev, apply); b.addEventListener(ev, apply); w.addEventListener(ev, apply); x.addEventListener(ev, apply); c.addEventListener(ev, apply);
   });
   /* P2 teacher list (owner-approved 01/11): pick words -> copy list / quiz.
-   * LocalStorage only, no account, no tracking. */
+   * LocalStorage only, no account. */
   var pickMode=false, picked=[];
   try{ picked=JSON.parse(localStorage.getItem('dd-mylist')||'[]'); }catch(e){ picked=[]; }
   var tgl=document.getElementById('mylist-toggle'), bar=document.getElementById('mylist-bar'), cnt=document.getElementById('mylist-count');

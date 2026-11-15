@@ -219,6 +219,7 @@ export async function openLearningChatHistory() {
   restore.type = 'file';
   restore.accept = '.json';
   const status = add(dialog, 'p', '');
+  status.setAttribute('role', 'status');
   restore.onchange = async () => {
     try {
       const file = restore.files[0];

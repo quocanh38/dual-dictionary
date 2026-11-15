@@ -6,4 +6,4 @@
 - neither...nor (cả hai đều không) vs either...or (một trong hai): "Neither answer is right" ≠ "Either answer works".
 ### Mẫu câu giá trị
 - "She speaks neither French **nor** German." (cô chẳng nói Pháp cũng chẳng nói Đức).
-- "The app needs no account, **nor** does it track you." (app không cần tài khoản, cũng không theo dõi bạn — đúng DNA!).
+- "The app needs no account, **nor** does it require a password." (app không cần tài khoản, cũng không yêu cầu mật khẩu).

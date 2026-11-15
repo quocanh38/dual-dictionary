@@ -2,6 +2,7 @@ const endpoint = '/.netlify/functions/experience';
 const status = document.querySelector('#status');
 const report = document.querySelector('#report');
 const download = document.querySelector('#export');
+let operationalRows = [], operationsEnabled = false;
 let rows = [], key = '', catalogue = {sets:[],hidden:[]}, visible = [];
 const feedbackStatuses = {new:'Mới',working:'Đang xử lý',done:'Đã xử lý'};
 const categories = {other:'Khác',toeic:'TOEIC',reader:'Reader',gemini:'Gemini',offline:'Offline'};
@@ -67,26 +68,91 @@ function renderManagement(parent) {
     }
   }
 }
+function renderToeicJourney(parent, openedRows) {
+  const attempts = new Map();
+  const week = 7 * 86400000;
+  const now = Date.now();
+  for (const row of rows) {
+    if (!row.attemptId) continue;
+    if (!attempts.has(row.attemptId)) attempts.set(row.attemptId, []);
+    attempts.get(row.attemptId).push(row);
+  }
+  const opened = new Set(openedRows.filter(row=>row.event==='toeic_opened' && row.attemptId).map(row=>row.attemptId));
+  let completed = 0, saved = 0, eligible = 0, reviewed = 0;
+  for (const id of opened) {
+    const events = attempts.get(id).sort((a,b)=>a.at-b.at);
+    const start = events.find(row=>row.event==='toeic_opened');
+    const finish = events.find(row=>row.event==='toeic_completed' && row.at>=start.at);
+    if (!finish) continue;
+    completed++;
+    const save = events.find(row=>row.event==='toeic_saved' && row.at>=start.at);
+    if (!save) continue;
+    saved++;
+    const after = Math.max(save.at,finish.at);
+    if (after+week>now) continue;
+    eligible++;
+    if (events.some(row=>row.event==='toeic_reviewed' && row.at>=after && row.at<=after+week && row.session!==save.session)) reviewed++;
+  }
+  const panel=add(parent,'section','');
+  add(panel,'h2','Hành trình TOEIC · đã đồng ý chia sẻ');
+  add(panel,'p',`Mở bộ: ${opened.size} · Hoàn thành: ${completed} · Hoàn thành và lưu câu sai: ${saved}`);
+  add(panel,'p',eligible ? `Quay lại ôn trong 7 ngày: ${reviewed}/${eligible} (${Math.round(reviewed*100/eligible)}%)` : 'Chưa có lượt đủ 7 ngày để tính tỷ lệ quay lại.');
+  add(panel,'p','Bộ lọc áp dụng theo ngày và phiên bản lúc mở đề. Mỗi mã lượt được đếm một lần. Chỉ tính lượt ôn ở phiên khác sau khi hoàn thành và lưu.');
+}
+
 function render() {
   report.replaceChildren();
-  const tabs=add(report,'nav','');
+  const tabs=add(report,'div','');
+  tabs.className='report-tabs';
+  tabs.setAttribute('role','tablist');
   tabs.setAttribute('aria-label','Mục quản trị');
+  const filters=add(report,'details','');
+  filters.className='filters-panel';
+  add(filters,'summary','Lọc theo ngày (giờ Việt Nam) và phiên bản');
+  const fields=add(filters,'div','');
+  fields.className='filters';
   const overview=add(report,'div','');
   const inbox=add(report,'div','');
   const sets=add(report,'div','');
   const sections=[['Tổng quan',overview],['Góp ý',inbox],['Bộ TOEIC',sets]];
-  const controls=sections.map(([name],index)=>button(tabs,name,()=>show(index)));
+  const controls=sections.map(([name,panel],index)=>{
+    const control=add(tabs,'button',name);
+    control.type='button';
+    control.onclick=()=>show(index);
+    control.id='report-tab-'+index;
+    panel.id='report-panel-'+index;
+    control.setAttribute('role','tab');
+    control.setAttribute('aria-controls',panel.id);
+    panel.setAttribute('role','tabpanel');
+    panel.setAttribute('aria-labelledby',control.id);
+    panel.tabIndex=0;
+    control.addEventListener('keydown',event=>{
+      const target={
+        ArrowRight:(index+1)%sections.length,
+        ArrowLeft:(index+sections.length-1)%sections.length,
+        Home:0,
+        End:sections.length-1,
+      }[event.key];
+      if(typeof target!=='number') return;
+      event.preventDefault();
+      show(target);
+      controls[target].focus();
+    });
+    return control;
+  });
   function show(index) {
-    sections.forEach(([,panel],i)=>{panel.hidden=i!==index;controls[i].setAttribute('aria-pressed',String(i===index));});
+    sections.forEach(([,panel],i)=>{
+      const selected=i===index;
+      panel.hidden=!selected;
+      controls[i].setAttribute('aria-selected',String(selected));
+      controls[i].tabIndex=selected?0:-1;
+    });
   }
   show(0);
-  const filters=add(report,'section','');
-  report.insertBefore(filters,overview);
-  filters.className='filters';
-  const versions=Object.fromEntries([...new Set(rows.map(row=>row.version))].sort().map(v=>[v,v]));
-  const version=select(filters,'Phiên bản',{'':'Tất cả',...versions});
-  const from=add(add(filters,'label','Từ ngày '),'input','');
-  const to=add(add(filters,'label','Đến ngày '),'input','');
+  const versions=Object.fromEntries([...new Set([...rows,...operationalRows].map(row=>row.version))].sort().map(v=>[v,v]));
+  const version=select(fields,'Phiên bản',{'':'Tất cả',...versions});
+  const from=add(add(fields,'label','Từ ngày '),'input','');
+  const to=add(add(fields,'label','Đến ngày '),'input','');
   from.type=to.type='date';
   const content=add(overview,'div','');
   content.className='metrics';
@@ -96,9 +162,19 @@ function render() {
   const entries=add(feedback,'div','');
   const paint=()=>{
     visible=rows.filter(row=>(!version.value || row.version===version.value) &&
-      (!from.value || row.at>=new Date(from.value+'T00:00:00').getTime()) &&
-      (!to.value || row.at<=new Date(to.value+'T23:59:59.999').getTime()));
+      (!from.value || row.at>=new Date(from.value+'T00:00:00+07:00').getTime()) &&
+      (!to.value || row.at<=new Date(to.value+'T23:59:59.999+07:00').getTime()));
     content.replaceChildren();
+    renderToeicJourney(content,visible);
+    const ops=add(content,'section','');
+    add(ops,'h2','Số liệu vận hành · tải audio');
+    if (!operationsEnabled) add(ops,'p','Thu mặc định đang tắt.');
+    const metrics=operationalRows.filter(row=>(!version.value || row.version===version.value) &&
+      (!from.value || row.day>=from.value) && (!to.value || row.day<=to.value));
+    const total=event=>metrics.filter(row=>row.event===event).reduce((sum,row)=>sum+row.count,0);
+    if (metrics.length) add(ops,'p',`Bắt đầu: ${total('audio_start')} · Thành công: ${total('audio_ready')} · Lỗi: ${total('audio_error')}`);
+    else add(ops,'p','Chưa có số liệu vận hành trong kỳ lọc.');
+    if (!visible.length) add(content,'p','Chưa có sự kiện tự nguyện trong kỳ lọc.');
     const count=(event,subset=visible)=>subset.filter(row=>row.event===event).length;
     for (const tag of [...new Set(visible.map(row=>row.version))]) {
       const subset=visible.filter(row=>row.version===tag);
@@ -110,7 +186,7 @@ function render() {
         ['Mở nhóm ôn / lưu câu sai','mistake_saved','mistake_reviewed'],
       ]){
         const total=count(start,subset), done=count(end,subset);
-        add(section,'p',label+' · '+done+'/'+total+(total?' ('+Math.round(done*100/total)+'%)':''));
+        add(section,'p',label+' · '+(total?done+'/'+total+' ('+Math.round(done*100/total)+'%)':'Chưa có lượt'));
       }
       add(section,'p','Các tỷ lệ dùng tổng lượt trong kỳ lọc, không ghép từng lần thao tác.');
       add(section,'p','Gemini chủ động dừng · '+count('gemini_stopped',subset));
@@ -170,6 +246,14 @@ document.querySelector('#access').onsubmit=async event=>{
       cursor=data.cursor;
     } while(cursor);
     catalogue=await api('?sets');
+    operationalRows=[];
+    cursor=null;
+    do {
+      const data=await api('?operational-report'+(cursor?'&cursor='+encodeURIComponent(cursor):''));
+      operationalRows.push(...data.rows);
+      operationsEnabled=data.enabled;
+      cursor=data.cursor;
+    } while(cursor);
     render();
     status.textContent=rows.length+' sự kiện';
   } catch(error){key='';status.textContent=error.message;}

@@ -1,7 +1,7 @@
 {
   "name": "Dual Dictionary — EN–VI & EN–EN",
   "short_name": "Dual Dict",
-  "description": "Offline EN–VI & EN–EN dictionary (PWA): look up, save words/phrases/sentences with their context, then review and practise. Export to CSV/TSV/Anki. Your own .mdx/.mdd files, no account, no tracking.",
+  "description": "Offline EN–VI & EN–EN dictionary (PWA): look up, save words/phrases/sentences with their context, then review and practise. Export to CSV/TSV/Anki. Your own .mdx/.mdd files, no account.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,15 +1,40 @@
+import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS } from '../../js/experience-config.js';
 import { getStore } from '@netlify/blobs';
 import { TOEIC_FOCUS_SETS, getStudyExercises } from '../../js/study-content.js';
 import { timingSafeEqual } from 'node:crypto';
 
-const events = new Set(['audio_start','audio_ready','audio_error','mistake_saved','mistake_reviewed','gemini_start','gemini_done','gemini_error','gemini_saved','gemini_stopped','feedback']);
+const events = new Set(['audio_start','audio_ready','audio_error','mistake_saved','mistake_reviewed','gemini_start','gemini_done','gemini_error','gemini_saved','gemini_stopped','feedback','toeic_opened','toeic_completed','toeic_saved','toeic_reviewed']);
 const uuid = /^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i;
 const json = (body, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
 export default async function handler(request) {
   const secret = process.env.DD_EXPERIENCE_ADMIN_KEY;
   const url = new URL(request.url);
+  const openOperations = () => getStore({name:process.env.CONTEXT === 'production' ? 'dd-experience-operations' : 'dd-experience-operations-preview',consistency:'strong'});
   const openCatalog = () => getStore({name:process.env.CONTEXT === 'production' ? 'dd-experience-catalog' : 'dd-experience-catalog-preview',consistency:'strong'});
+  const operationsEnabled = !!secret && process.env.DD_EXPERIENCE_OPERATIONS === 'enabled';
+  if (url.searchParams.has('operations')) {
+    if (request.method === 'GET') return json({enabled:operationsEnabled});
+    if (request.method !== 'POST') return json({error:'Method'},405);
+    if (!operationsEnabled) return json({error:'Disabled'},403);
+    if (request.headers.get('origin') !== url.origin) return json({error:'Origin'},403);
+    const raw = await request.text();
+    if (raw.length > 300) return json({error:'Too large'},413);
+    let payload;
+    try { payload = JSON.parse(raw); } catch { return json({error:'Invalid metric'},400); }
+    if (payload?.version !== EXPERIENCE_VERSION || !OPERATIONAL_EVENTS.includes(payload.event) ||
+        Object.keys(payload).length !== 2) return json({error:'Invalid metric'},400);
+    const day = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Ho_Chi_Minh',dateStyle:'short'}).format(new Date());
+    const store = openOperations();
+    const bucket = `${day}/${payload.version}/${payload.event}`;
+    for (let attempt=0; attempt<5; attempt++) {
+      const before = await store.getWithMetadata(bucket,{type:'json'});
+      const write = await store.setJSON(bucket,{count:(before?.data?.count || 0)+1},
+        before ? {onlyIfMatch:before.etag} : {onlyIfNew:true});
+      if (write.modified) return new Response(null,{status:204});
+    }
+    return json({error:'Metric busy'},503);
+  }
   if (request.method === 'GET' && url.searchParams.has('catalog')) {
     if (!secret) return json({hidden:[]});
     const page = await openCatalog().list();
@@ -22,6 +47,15 @@ export default async function handler(request) {
     const expected = Buffer.from('Bearer ' + secret);
     if (supplied.length !== expected.length || !timingSafeEqual(supplied, expected)) return json({error:'Unauthorized'}, 401);
     const store = openStore();
+    if (request.method === 'GET' && url.searchParams.has('operational-report')) {
+      const operations = openOperations();
+      const page = await operations.list({cursor:url.searchParams.get('cursor') || undefined});
+      const rows = await Promise.all(page.blobs.map(async ({key}) => {
+        const [day,version,event] = key.split('/');
+        return {day,version,event,count:(await operations.get(key,{type:'json'}))?.count || 0};
+      }));
+      return json({rows,cursor:page.cursor || null,enabled:operationsEnabled});
+    }
     if (request.method === 'GET' && url.searchParams.has('sets')) {
       const bank = new Map(getStudyExercises('TOEIC Listening & Reading').map(q=>[q.id,q]));
       const catalog = await openCatalog().list();
@@ -66,15 +100,19 @@ export default async function handler(request) {
   try {
     const raw = await request.text();
     if (raw.length > 16000) return json({error:'Too large'}, 413);
-    const {id, session, version, entries} = JSON.parse(raw);
+    const {id, session, version, entries, consentNotice, consentedAt} = JSON.parse(raw);
     if (!uuid.test(id) || !uuid.test(session) || !/^v[\w-]{1,60}$/.test(version) || !Array.isArray(entries) || !entries.length || entries.length > 30) return json({error:'Invalid batch'},400);
-    const clean = entries.map(({event, at, note, duration, reason}) => {
+    const consentValid = consentNotice === CONSENT_NOTICE && Number.isSafeInteger(consentedAt) && consentedAt > 0;
+    const clean = entries.map(({event, at, note, duration, reason, attemptId}) => {
       if (!events.has(event) || !Number.isSafeInteger(at)) throw Error('Invalid event');
       if (event === 'feedback' && (typeof note !== 'string' || !note.trim() || note.length > 500)) throw Error('Invalid feedback');
-      return {event,at,...(event === "gemini_error" && ["quota","timeout","network","other"].includes(reason)?{reason}:{}),...(event === 'feedback' ? {note} : {}),...(Number.isSafeInteger(duration)&&duration>=0&&duration<=600000?{duration}:{})};
+      if (event !== 'feedback' && version === EXPERIENCE_VERSION && (!consentValid || at < consentedAt)) throw Error('Invalid consent');
+      const linked = event.startsWith('toeic_');
+      if (linked && (!consentValid || typeof attemptId !== 'string' || !uuid.test(attemptId))) throw Error('Invalid attempt');
+      return {event,at,...(linked ? {attemptId} : {}),...(event === "gemini_error" && ["quota","timeout","network","other"].includes(reason)?{reason}:{}),...(event === 'feedback' ? {note} : {}),...(Number.isSafeInteger(duration)&&duration>=0&&duration<=600000?{duration}:{})};
     });
     const store = openStore();
-    await store.setJSON(id,{session,version,receivedAt:Date.now(),entries:clean},{onlyIfNew:true});
+    await store.setJSON(id,{session,version,receivedAt:Date.now(),entries:clean,...(consentValid ? {consentNotice,consentedAt} : {})},{onlyIfNew:true});
     return json({ok:true});
   } catch (error) {
     return json({error:'Could not accept batch'},error.message.startsWith('Invalid') || error instanceof SyntaxError || error instanceof TypeError && !request.signal.aborted ? 400 : 503);

@@ -1,4 +1,4 @@
-import { trackExperience } from "./experience.js";
+import { sharesExperience, trackExperience } from "./experience.js";
 import { openToeicExplanation, openSavedToeicExplanation } from "./toeic-ai-explanations.js";
 import { listRecords, progressKey } from "../lessons/storage.js";
 import { fetchLibraryIndex } from "../lessons/library.js";
@@ -396,13 +396,15 @@ function bindMistakeActions(host, questions) {
           `Bạn chọn: ${button.dataset.selected}`,
           explanation,
         ].filter(Boolean).join(" · ");
-        const { item } = await addItem({
+        const attemptId = sharesExperience() && current?.exam === q.exam ? current.experienceAttemptId : undefined;
+        const { item, merged } = await addItem({
           type: "phrase", text: q.prompt, status: "new",
-          dictionary: { definition, senseKey: `exam:${q.id}`, source: q.exam },
+          dictionary: { definition, senseKey: `exam:${q.id}`, source: q.exam, ...(attemptId ? {experienceAttemptId: attemptId} : {}) },
           context: { sentence: mistakeEvidence(q), sourceTitle: q.title || q.part },
           tags: ["exam-mistake", q.skill.toLowerCase()],
         });
         trackExperience("mistake_saved");
+        if (attemptId && !merged) trackExperience("toeic_saved", {attemptId});
         document.dispatchEvent(new Event("exam-card-saved"));
         status.textContent = "Đã lưu trong Ôn tập.";
         button.textContent = "Ôn ngay";
@@ -474,6 +476,7 @@ async function startSet(exam = "IELTS Academic", mode = "practice", skill = "all
       assignmentQuestionIds: chosen.map((q) => q.id),
     } : {}),
   };
+  if (!prev && exam === TOEIC_EXAM && sharesExperience()) current.experienceAttemptId = crypto.randomUUID();
   current.sessionId = sid;
   current.skill ||= skill;
   current.pathwayStage = pathwayStage;
@@ -491,7 +494,9 @@ async function startSet(exam = "IELTS Academic", mode = "practice", skill = "all
   current.results = (current.results || []).filter((result) => chosen.some((q) => q.id === result.questionId));
   $("#exam-start")?.classList.add("hidden");
   $("#exam-question")?.classList.remove("hidden");
-  await persistAttempt(); paintQuestion(); await renderIELTSAssignment();
+  await persistAttempt();
+  if (!prev && current.experienceAttemptId) trackExperience("toeic_opened", {attemptId: current.experienceAttemptId});
+  paintQuestion(); await renderIELTSAssignment();
 }
 function startExamClock() {
   clearInterval(startExamClock.timer);
@@ -511,7 +516,7 @@ async function checkAnswer() {
   current.correct = responseIsCorrect(q, current.response ?? current.answerIndex);
   current.checked = true;
   const response = current.response ?? current.answerIndex;
-  current.results = [...(current.results || []).filter((r) => r.questionId !== q.id), { questionId: q.id, skill: q.skill, part: q.part, correct: current.correct }];
+  current.results = [...(current.results || []).filter((r) => r.questionId !== q.id), { questionId: q.id, skill: q.skill, part: q.part, correct: current.correct, response }];
   await putStudyRecord({
     id: `study:exam-attempt:${Date.now()}:${q.id}`, type: "exam-attempt", exam: q.exam,
     skill: q.skill, part: q.part, questionId: q.id, prompt: q.prompt, pathwayStage: q.pathwayStage || null, focus: q.focus || "",
@@ -542,10 +547,20 @@ async function finishSession(timedOut = false) {
   current.result = { correct: results.filter((r) => r.correct).length, answered: results.length, unanswered: Math.max(0, set.length - results.length), total: set.length, accuracy: results.length ? Math.round(100 * results.filter((r) => r.correct).length / results.length) : 0, bySkill };
   current.elapsedMs = current.completedAt - current.startedAt;
   await persistAttempt();
+  if (current.experienceAttemptId) trackExperience("toeic_completed", {attemptId: current.experienceAttemptId});
   const summary = current.result;
   await putStudyRecord({ id: `study:exam-result:${current.completedAt}:${Math.random().toString(36).slice(2, 7)}`, type: "exam-result", exam: current.exam, mode: current.mode, diagnosticSet: current.mode === "diagnostic" ? IELTS_DIAGNOSTIC_FORM : null, pathwayStage: current.pathwayStage || null, assignmentId: current.assignmentId || null, timedOut, ...summary, elapsedMs: current.elapsedMs, createdAt: current.completedAt });
   const host = $("#exam-question");
-  const review = isTimedMode() ? `<details class="exam-review"><summary>Review answers and explanations</summary>${set.filter((q) => responseIsComplete(q, current.responses?.[q.id])).map((q) => { const response = current.responses[q.id], ok = responseIsCorrect(q, response); return `<article class="study-history"><strong>${esc(q.skill)} · ${esc(q.part || q.title)} · ${ok ? "Correct" : "Review"}</strong><p>${esc(q.prompt)}</p><p>Your response: ${esc(formatResponse(q, response))}</p><p>Answer: ${esc(formatResponse(q, null, true))}</p><p>${esc(q.explanation)}</p>${ok ? "" : mistakeActions(q, response)}</article>`; }).join("")}</details>` : "";
+  const timed = isTimedMode();
+  const toeic = current.exam.startsWith("TOEIC");
+  const responses = timed ? current.responses || {} : Object.fromEntries(results.map(({ questionId, response }) => [questionId, response]));
+  const reviewed = (timed || toeic) ? set.filter((q) => responseIsComplete(q, responses[q.id])) : [];
+  const review = (timed || reviewed.length) ? `<details class="exam-review"><summary>${toeic ? "Xem đáp án và lời giải" : "Review answers and explanations"}</summary>${reviewed.map((q) => {
+    const response = responses[q.id];
+    const ok = responseIsCorrect(q, response);
+    return `<article class="study-history"><strong>${esc(q.skill)} · ${esc(q.part || q.title)} · ${ok ? "Correct" : "Review"}</strong><p>${esc(q.prompt)}</p><p>Your response: ${esc(formatResponse(q, response))}</p><p>Answer: ${esc(formatResponse(q, null, true))}</p><p>${esc(q.explanation)}</p>${ok ? "" : mistakeActions(q, response)}</article>`;
+  }).join("")}</details>` : "";
+  const canReviewMistakes = toeic && reviewed.some((q) => !responseIsCorrect(q, responses[q.id]));
   const skillLabel = TOEIC_RESUMABLE_SETS.find((entry) => entry.id === current.assignmentId)?.title || (current.assignmentId ? `IELTS ${current.assignmentSkill || current.skill} recommended practice` : current.mode === "diagnostic" ? (current.skill === "all" ? "IELTS Listening + Reading diagnostic" : `IELTS ${current.skill} diagnostic`) : current.skill && current.skill !== "all" ? `${current.skill} timed practice` : "Timed starter simulation");
   const pathwayLabel = current.exam === "IELTS Academic" && current.pathwayStage ? ` · ${getIELTSPathwayStage(current.pathwayStage).label}` : "";
   const diagnosticReports = current.mode === "diagnostic" ? Object.entries(summary.bySkill).map(([skill, row]) => renderDiagnosticReport(skill, row)).join("") : "";
@@ -565,7 +580,15 @@ async function finishSession(timedOut = false) {
     });
     readingReport = `<p>Thời gian làm: ${Math.floor(seconds / 60)} phút ${seconds % 60} giây</p><ul>${parts.join("")}</ul>`;
   }
-  if (host) host.innerHTML = `<section class="exam-result"><h3>${skillLabel} complete${esc(pathwayLabel)}</h3><p>${scoreLine}</p><p>${resultText}</p><ul>${Object.entries(summary.bySkill).map(([skill, row]) => `<li>${esc(skill)}: ${row.correct}/${row.total} correct · ${row.answered} answered</li>`).join("")}</ul>${diagnosticReports}${readingReport}${review}<button type="button" class="btn-primary" data-exam-restart>Try again</button></section>`;
+  if (host) host.innerHTML = `<section class="exam-result"><h3>${skillLabel} complete${esc(pathwayLabel)}</h3><p>${scoreLine}</p><p>${resultText}</p><ul>${Object.entries(summary.bySkill).map(([skill, row]) => `<li>${esc(skill)}: ${row.correct}/${row.total} correct · ${row.answered} answered</li>`).join("")}</ul>${diagnosticReports}${readingReport}${canReviewMistakes ? '<button type="button" class="btn-primary" data-exam-review>Ôn lại câu sai</button>' : ''}${review}<button type="button" class="btn-primary" data-exam-restart>Try again</button></section>`;
+  host?.querySelector("[data-exam-review]")?.addEventListener("click", () => {
+    const first = host.querySelector(".exam-mistake");
+    if (!first) return;
+    first.closest("details")?.setAttribute("open", "");
+    const heading = first.querySelector("h4");
+    heading.tabIndex = -1;
+    heading.focus();
+  });
   if (host) bindMistakeActions(host, set);
   host?.querySelectorAll("[data-use-diagnostic-stage]").forEach((button) => button.addEventListener("click", () => {
     $("#ielts-pathway-stage").value = button.dataset.useDiagnosticStage;

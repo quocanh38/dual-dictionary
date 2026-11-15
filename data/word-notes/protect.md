@@ -6,4 +6,4 @@
 - protect (bảo vệ chủ động trước nguy) vs defend (đỡ đánh khi bị tấn) vs guard (canh giữ thường trực).
 ### Mẫu câu giá trị
 - "Sunglasses **protect** your eyes from UV." (kính râm che mắt khỏi tia UV).
-- "The app **protects** your data — no tracking at all." (app bảo vệ dữ liệu — chẳng theo dõi gì cả).
+- "The app **protects** your data." (app bảo vệ dữ liệu).

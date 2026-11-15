@@ -98,7 +98,7 @@
     if (!main || !status) return;
     var p = document.createElement('p');
     p.className = 'notice pipeline-note';
-    p.textContent = 'Offline pipeline: install packs once (office wifi or one online visit), then airplane-mode learning works — read, practise, save meanings, review. No account, no key, no tracking on the learner device.';
+    p.textContent = 'Offline pipeline: install packs once (office wifi or one online visit), then airplane-mode learning works — read, practise, save meanings, review. No account, no key.';
     status.before(p);
   }
   lowMemory();

@@ -1446,3 +1446,7 @@ body:not([data-app-view="search"]) #envi-hint { display: none; }
 .toeic-ai-dialog .toeic-ai-consent input{flex:none;width:1.15rem;height:1.15rem}
 .toeic-ai-dialog button{min-height:44px}
 .toeic-ai-actions button,.toeic-ai-dialog>button{width:100%}
+
+.work-lesson-list { list-style: none; padding: 0; display: grid; gap: 8px; }
+.work-lesson-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.work-lesson-list .btn-secondary { min-height: 44px; }

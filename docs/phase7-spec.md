@@ -1,7 +1,7 @@
 # Phase 7 — P1: YouTube subtitle → Reader (spec)
 
 > Duyệt: 2026-09-25 (owner chọn hướng 7/8/9). Release: **v72**, sw `mdx-dict-v79`.
-> Nguyên tắc khóa giữ nguyên: **không server, không tracking, không đụng DRM,
+> Nguyên tắc khóa giữ nguyên: **không server, không đụng DRM,
 > KHÔNG phát video trong app** — Reader chỉ nhận **chữ**.
 
 ## 1. Sự thật kỹ thuật quyết định thiết kế (đọc trước)

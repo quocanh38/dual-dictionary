@@ -57,7 +57,7 @@ từ điển vẫn là điểm trừ đã biết; đường learner (lessons + I
 1. Nơi có mạng: mở Studio → cài 33 packs + IELTS pack → verify "Ready offline"
    → export backup ra USB/file.
 2. Nơi mạng yếu/mất mạng: mở PWA đã cài → học lesson, làm IELTS L/R, lưu Vault,
-   review spaced — không tài khoản, không key, không tracking.
+   review spaced — không tài khoản, không key.
 3. Mỗi pack ~10KB nên chép cho cả nhóm trong vài phút.
 
 ## 5. Validation đã chạy

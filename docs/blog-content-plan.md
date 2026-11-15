@@ -158,7 +158,7 @@ group tự học IELTS/TOEIC — đã thấy cộng đồng Anki VN hoạt độ
 2. **Bài phải đứng vững không cần app** (Google đánh giá nội dung, không phải
    quảng cáo). Quy tắc 70/30 ở mục 1.
 3. **Trung thực tuyệt đối**: chỉ claim tính năng có thật; Offline-first,
-   không thu phí, không tài khoản, không tracking là điểm cộng — nói đúng,
+   không thu phí và không cần tài khoản là điểm cộng — nói đúng,
    không thổi. KHÔNG nhắc đến từ điển thương mại (Lạc Việt...) như tính năng —
    tối đa: "app hỗ trợ mở file .mdx bạn có quyền dùng" (quy tắc đã khóa).
 4. **Ảnh minh họa** (quy tắc owner 2026-09-26): **ưu tiên ảnh chụp màn hình
