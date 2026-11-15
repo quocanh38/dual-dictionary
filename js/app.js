@@ -36,6 +36,7 @@ import {
 } from './store.js';
 import { parseEpub } from './epub.js';
 import { parsePdf } from './pdf.js';
+import { openAiLessonBuilder, openSavedAiLessons } from './offline-ai-lessons.js';
 import { initOfflineStudy, exportOfflineStudy, importOfflineStudy } from './offline-study.js';
 
 const SLOTS = {
@@ -67,6 +68,7 @@ const state = {
 
 let loadAbort = null; // AbortController for the current default-dictionary download run
 let firstLoadTotal = 0; // probed total size of the default dictionaries (0 = unknown)
+let incompleteDictionaryLoad = false;
 let dataUnreachable = false; // probe found NO reachable dictionary source — empty state must say so
 const progressTrackers = new Map(); // slot -> {t, received, total, speed}
 
@@ -412,7 +414,7 @@ async function boot() {
   $('#btn-download-all')?.addEventListener('click', () => {
     for (const s of CHOOSER_ORDER) { const c = document.getElementById('chk-firstload-' + s); if (c) c.checked = true; }
     updateFirstloadCta();
-    quickLoadOpenDicts(selectedFirstloadSlots());
+    quickLoadOpenDicts(CHOOSER_ORDER);
   });
   $('#btn-cancel-load')?.addEventListener('click', () => loadAbort?.abort());
   document.querySelectorAll('dialog .dialog-close').forEach((b) => {
@@ -466,6 +468,14 @@ async function boot() {
     } catch (e) { console.warn('migrated-sentence schedule repair failed:', e); }
     try { state.items = await allItems(); } catch (e) { console.warn('could not load learning items:', e); }
     state.itemsReady = true;
+    const entryUrl = new URL(location.href);
+    const reviewId = entryUrl.searchParams.get('reviewItem');
+    if (reviewId && currentView() === 'review') {
+      const item = getItemById(reviewId);
+      if (item) reviewSavedItem(item);
+      entryUrl.searchParams.delete('reviewItem');
+      history.replaceState(history.state, '', entryUrl);
+    }
     // v117 A2: known-words baseline (IndexedDB store `known`) — loaded once at
     // boot, kept OUT of state.items so Vault UI / stats / decks never see it.
     try { state.known = await knownState(); } catch (e) { console.warn('could not load known baseline:', e); }
@@ -510,8 +520,10 @@ async function boot() {
       }
       dictsReady = true;
       // first-ever visit: nothing loaded — probe sizes, let the user start it.
-      if (Object.keys(SLOTS).every((s) => !state.dicts[s])) await showFirstLoadGate();
     } catch (e) { console.warn('dictionary init failed:', e); }
+    if (Object.keys(SLOTS).every((slot) => !state.dicts[slot])) {
+      await showFirstLoadGate();
+    }
     // U3: boot is over — from here on "no dictionary" means really none (a failed
     // init included), so the surface may say so instead of "checking…".
     dictInit.done = true;
@@ -538,6 +550,29 @@ async function boot() {
 }
 
 function wireUi() {
+  const builders = {
+    reader: ['Bài ôn từ Reader', () => {
+      const selected = window.getSelection();
+      const reading = $('#reader-text');
+      if (selected?.rangeCount && reading?.contains(selected.getRangeAt(0).commonAncestorContainer)) {
+        return selected.toString().trim() || reading.textContent;
+      }
+      return reading?.classList.contains('hidden') ? $('#reader-input').value : reading?.textContent;
+    }],
+    vault: ['Bài luyện từ Sổ tay', () => (vaultSelected.size ? state.items.filter(i => vaultSelected.has(i.id)) : state.items).slice(0, 5).map(i => i.text).join(', ')],
+    review: ['Bài luyện từ cần ôn', () => dueItems().slice(0, 5).map(i => i.text).join(', ')],
+    writing: ['Bài sửa lỗi viết', () => $('#writing-input').value],
+  };
+  document.querySelectorAll('[data-ai-lesson]').forEach(button => {
+    button.addEventListener('click', () => {
+      const mode = button.dataset.aiLesson;
+      const [title, source] = builders[mode];
+      openAiLessonBuilder({ title, mode, source: source() || '' });
+    });
+  });
+  document.querySelectorAll('[data-saved-ai-lessons]').forEach(button => {
+    button.addEventListener('click', openSavedAiLessons);
+  });
   document.querySelectorAll('input[type=file][data-slot]').forEach((inp) => {
     inp.addEventListener('change', () => onFilePicked(inp));
   });
@@ -612,6 +647,26 @@ function wireUi() {
   $('#btn-save-word').addEventListener('click', () => openSenseSaveDialog(input.value.trim()));
   $('#sense-save-entry')?.addEventListener('change', renderSenseSaveCandidate);
   $('#btn-sense-save')?.addEventListener('click', saveSelectedSense);
+  $('#practice-saved')?.addEventListener('click', () => startPractice());
+  const readerLookup = $('#reader-lookup');
+  const lookupNodes = ['view-switch', 'mobile-word-actions', 'pron-strip', 'context-bar', 'empty-state', 'dict-grid']
+    .map((id) => {
+      const node = document.getElementById(id);
+      const marker = document.createComment(id);
+      node.before(marker);
+      return { node, marker };
+    });
+  const readerClose = $('#reader-lookup-close');
+  readerClose.addEventListener('click', () => readerLookup.close());
+  $('#btn-reader-lookup-save').addEventListener('click', saveSentence);
+  readerLookup.addEventListener('close', () => {
+    for (const { node, marker } of lookupNodes) marker.after(node);
+  });
+  document.addEventListener('reader-lookup-ready', () => {
+    if (readerLookup.open) return;
+    $('#reader-lookup-results').append(...lookupNodes.map(({ node }) => node));
+    readerLookup.showModal();
+  });
   $('#btn-sense-cancel')?.addEventListener('click', () => $('#sense-save-dialog')?.close());
   $('#import-file')?.addEventListener('change', (e) => {
     const f = e.target.files && e.target.files[0];
@@ -627,6 +682,9 @@ function wireUi() {
   });
   $('#btn-context-vault')?.addEventListener('click', () => {
     const w = ($('#search-input')?.value || '').trim();
+    if (!hasVaultWord(w)) { openSenseSaveDialog(w); return; }
+    vaultTab = 'all';
+    vaultDeck = '';
     if (w) { vaultQuery = w; const vs = $('#vault-search'); if (vs) vs.value = w; }
     navigate('vault');
   });
@@ -933,6 +991,8 @@ let lastAppliedView = 'search';
 function applyView(view) {
   if (!VIEWS.includes(view)) view = 'search';
   if (view === 'search') { try { renderWotd(); } catch (e) {} }
+  if (view !== 'reader' && $('#reader-lookup')?.open) $('#reader-lookup').close();
+  document.body.dataset.appView = view;
   const showSearchReader = view === 'search' || view === 'reader';
   $('#search-form')?.classList.toggle('hidden', !showSearchReader);
 
@@ -957,11 +1017,12 @@ function applyView(view) {
     $('#empty-state')?.classList.add('hidden');
   } else if (view === 'search' || view === 'reader') {
     const anyLoaded = Object.keys(SLOTS).some((s) => state.dicts[s]);
-    $('#empty-state')?.classList.toggle('hidden', anyLoaded);
+    $('#empty-state')?.classList.toggle('hidden', anyLoaded && !incompleteDictionaryLoad && !loadAbort);
     setView(rememberedView()); // restores which single panel is visible
   }
   document.querySelectorAll('[data-nav]').forEach((a) => {
-    const on = a.dataset.nav === view;
+    const isMobileReview = a.matches('.bottom-nav [data-nav="review"]');
+    const on = a.dataset.nav === view || (isMobileReview && (view === 'vault' || view === 'stats'));
     a.classList.toggle('active', on);
     a.setAttribute('aria-current', on ? 'page' : 'false');
   });
@@ -974,8 +1035,28 @@ function applyView(view) {
   if (view === 'review') renderReview();
   if (view === 'stats') { renderStats(); renderBackupInfo(); }
   if (view === 'history') renderHistoryView();
-  if (view === 'practice') { if (practiceQueue.length) renderPractice(); else renderPracticePicker(); }
+  if (view === 'practice') {
+    if (levelAnswers) {
+      renderLevelTest();
+      $('#practice-stage')?.scrollIntoView({ block: 'start' });
+    }
+    else if (practiceQueue.length) renderPractice();
+    else renderPracticePicker();
+  } else if (levelAnswers) levelAnswers = null;
 }
+
+const compactSearch = matchMedia('(max-width: 899.5px)');
+function placeSearchActions() {
+  const searchButton = document.querySelector('#search-form .btn-search');
+  const mobileActions = $('#mobile-word-actions');
+  for (const id of ['btn-speak', 'btn-voice', 'btn-save-word']) {
+    const button = document.getElementById(id);
+    if (compactSearch.matches) mobileActions.append(button);
+    else searchButton.before(button);
+  }
+}
+compactSearch.addEventListener('change', placeSearchActions);
+placeSearchActions();
 
 /* ---- full-screen reading view (per panel) ---- */
 function toggleReading(slot) {
@@ -1073,19 +1154,27 @@ async function quickLoadOne(slot, def, signal) {
   state.loading[slot] = true;
   setBodyDownloading(true);
   updateIdleDictState();
+  let stage = 'download';
   try {
     const mdxFile = await fetchBundledFile(slot, def.url, def.name, 'loading', signal);
-    await putFile(slot + '-mdx', mdxFile);
-    // C2: the slot now holds a NEW .mdx — every companion of the previous
-    // dictionary (.mdd audio/images, .css, .mdx-meta validators) must go, or the
-    // old .mdd would be re-attached to the new dictionary on the next boot.
-    await clearSlotCompanions(slot);
-    await attachDict(slot, mdxFile, null, { persist: false });
+    stage = 'MDX';
+    const mdx = await new MDict(mdxFile, mdxFile.name).init();
+    signal?.throwIfAborted();
+    let persisted = false;
+    try {
+      await putFile(slot + '-mdx', mdxFile);
+      persisted = true;
+      await clearSlotCompanions(slot);
+    } catch (error) {
+      console.warn('Dictionary storage failed:', slot, error);
+    }
+    await attachDict(slot, mdxFile, null, { parsedMdx: mdx });
+    if (!persisted) setStatus(slot, i18n('firstload.sessionOnly'));
     if (def.mddUrl) {
       try {
         const mddFile = await fetchBundledFile(slot, def.mddUrl, def.mddName, 'loading resources', signal);
         try {
-          await putFile(slot + '-mdd', mddFile);
+          if (persisted) await putFile(slot + '-mdd', mddFile);
         } catch (storageErr) {
           // Huge .mdd may fail to persist on some devices — keep it for this session only.
           console.warn('could not persist .mdd:', storageErr);
@@ -1118,19 +1207,11 @@ async function quickLoadOne(slot, def, signal) {
     // bundled defaults missing (public deploy without dicts/) → try the free
     // fallback as last resort
     const fb = FALLBACK_DICTS[slot];
-    if (fb && def !== fb) {
-      try {
-        await quickLoadOne(slot, fb);
-        setStatus(slot, i18n('slot.openLoaded'));
-        return;
-      } catch (fbErr) {
-        if (fbErr.name === 'AbortError') { setStatus(slot, 'Download cancelled'); return; }
-        console.error(fbErr);
-        e = fbErr;
-      }
-    }
+    if (fb && def !== fb && stage === 'download') return quickLoadOne(slot, fb, signal);
     const offline = !navigator.onLine ? ' (you appear to be offline — try again once connected)' : '';
-    setStatus(slot, 'quick-load error: ' + e.message + offline);
+    const detail = stage + ' / ' + (e?.name || 'Error') + ': ' + (e?.message || String(e));
+    setStatus(slot, 'quick-load error: ' + detail + offline);
+    return detail;
   } finally {
     state.loading[slot] = false;
     setBodyDownloading(false);
@@ -1143,6 +1224,7 @@ async function quickLoadOne(slot, def, signal) {
  *  the chooser's selection; empty/omitted = the classic EN–EN pair. Slot 3 loads
  *  the open EN–VI dictionary through the same pipeline (progress + persistence). */
 async function quickLoadOpenDicts(requested) {
+  if (loadAbort) return;
   const btn = $('#btn-quickload');
   const cancelBtn = $('#btn-cancel-load');
   const msg = $('#empty-state-msg');
@@ -1152,13 +1234,13 @@ async function quickLoadOpenDicts(requested) {
   loadAbort = new AbortController();
   const signal = loadAbort.signal;
   if (cancelBtn) cancelBtn.classList.remove('hidden');
-  if (btn) btn.disabled = true;
+  updateFirstloadCta();
   const failed = [];
   let cancelled = false;
   let msgText;
   // The EN–VI dictionary first when selected — it is the one vi-locale users are
   // waiting for, so it lands (and becomes searchable) as early as possible.
-  const queue = ((requested && requested.length) ? requested : ['oxford', 'longman']).filter((s) => SLOTS[s]);
+  const queue = ((requested && requested.length) ? requested : ['oxford', 'longman']).filter((s) => SLOTS[s] && !state.dicts[s]);
   // Name what will REALLY load: probe the sources first so a public deployment
   // (no dicts/ data) shows the open-licensed fallback name instead of promising
   // a commercial dictionary it does not ship.
@@ -1185,11 +1267,20 @@ async function quickLoadOpenDicts(requested) {
       : i18nFmt('firstload.loadingOne', { name: labelOf(slot) });
     if (msg) msg.textContent = msgText;
     markChooserCard(slot, 'loading');
-    await quickLoadOne(slot, def, signal);
+    let detail;
+    try {
+      detail = await quickLoadOne(slot, def, signal);
+    } catch (error) {
+      console.warn('Dictionary download failed:', error);
+      detail = error?.message || String(error);
+    }
     markChooserCard(slot, state.dicts[slot] ? 'done' : 'failed');
-    if (!state.dicts[slot]) failed.push(labelOf(slot));
+    if (signal.aborted) { cancelled = true; break; }
+    if (!state.dicts[slot]) failed.push(detail ? labelOf(slot) + ` (${detail})` : labelOf(slot));
   }
   loadAbort = null;
+  incompleteDictionaryLoad = failed.length > 0 || cancelled;
+  $('#empty-state')?.classList.toggle('hidden', !['search', 'reader'].includes(currentView()) || !incompleteDictionaryLoad);
   progressTrackers.clear();
   if (cancelBtn) cancelBtn.classList.add('hidden');
   if (btn) btn.disabled = false;
@@ -1207,7 +1298,6 @@ async function quickLoadOpenDicts(requested) {
       err.hidden = false;
     }
   } else if (failed.length) {
-    dataUnreachable = failed.length === queue.length;
     updateEmptyStateCopy();
     if (err) {
       err.textContent = i18nFmt('firstload.failed', { names: failed.join(', ') });
@@ -1345,14 +1435,15 @@ function markChooserCard(slot, mark) {
 function updateFirstloadCta() {
   const btn = $('#btn-quickload');
   const all = $('#btn-download-all');
-  if (all) all.disabled = !!dataUnreachable;
+  if (all) all.disabled = !!loadAbort;
   if (!btn) return;
+  if (loadAbort) { btn.disabled = true; return; }
   if (dataUnreachable) {
     btn.textContent = i18n('firstload.retry');
     btn.disabled = false;
     return;
   }
-  const sel = selectedFirstloadSlots();
+  const sel = selectedFirstloadSlots().filter((slot) => !state.dicts[slot]);
   if (!sel.length) {
     btn.textContent = i18n('firstload.pickOne');
     btn.disabled = true;
@@ -1377,7 +1468,12 @@ async function showFirstLoadGate() {
   if ($('#empty-state')) $('#empty-state').classList.remove('hidden');
   // Probe the two EN–EN slots AND the same-origin EN–VI file in one pass.
   const [enEN, envi] = await Promise.all([
-    probeDictionarySizes(),
+    probeDictionarySizes().catch(() => ({
+      total: 0,
+      per: Object.fromEntries(Object.keys(DEFAULT_DICTS).map((slot) => [
+        slot, knownProbe(defaultDictOf(slot).url, 'open') || { bytes: 0, source: 'unknown' },
+      ])),
+    })),
     probeSlotSize('third', ENVI_DICT).catch(() => ({ bytes: KNOWN_DICT_SIZES[ENVI_DICT.url] || 0, source: 'open' })),
   ]);
   firstLoadPer = { ...enEN.per, third: envi };
@@ -1777,10 +1873,10 @@ function baseNameOf(n) {
   return String(n || '').replace(/\\+/g, '/').split('/').pop().replace(/\.(mdx|mdd|css)$/i, '').toLowerCase();
 }
 
-async function attachDict(slot, mdxBlob, mddBlob, { persist = false } = {}) {
+async function attachDict(slot, mdxBlob, mddBlob, { parsedMdx = null } = {}) {
   if (!mdxBlob) return;
   const name = mdxBlob.name || (slot + '.mdx');
-  const mdx = await new MDict(mdxBlob, name).init();
+  const mdx = parsedMdx || await new MDict(mdxBlob, name).init();
   const mdd = mddBlob ? await new MDict(mddBlob, mddBlob.name || 'res.mdd').init() : null;
   // A manually saved .css (persisted as slot-css) re-applies to the dictionary it
   // belongs to: match by base file name (ldoce6.css ↔ ldoce6.mdx) so a stale
@@ -1816,7 +1912,7 @@ async function attachDict(slot, mdxBlob, mddBlob, { persist = false } = {}) {
   frame.querySelector('iframe').title = `${display} entry`;
   frame.querySelector('iframe').srcdoc = welcomeDoc(slot); // no dead white panel before the first search
   setStatus(slot, `${mdx.numEntries.toLocaleString('en-US')} entries`);
-  $('#empty-state').classList.add('hidden');
+  if (!loadAbort) $('#empty-state').classList.add('hidden');
   updateIdleDictState(); // U3: a dictionary is live — the lookup surface is real now
 
   // build key list in background for autocomplete
@@ -1928,6 +2024,10 @@ let anchoredLookupGen = -1; // last lookup that opened a panel at a section (R-D
 let latestLookupEntries = { generation: 0, word: '', bySlot: {} };
 
 /** The tap that produced this lookup, or null. */
+function fromMobileReaderTap(word) {
+  return compactSearch.matches && currentView() === 'reader' && !!tapOriginFor(word);
+}
+
 function tapOriginFor(word) {
   if (!tapOrigin) return null;
   return normalizeText(tapOrigin.word) === normalizeText(word) ? tapOrigin : null;
@@ -2173,7 +2273,7 @@ async function replayPendingQuery() {
   if (!Object.keys(SLOTS).some((s) => state.dicts[s])) return false;
   if (($('#search-input')?.value || '').trim() !== q) { state.pendingQuery = null; return false; }
   state.pendingQuery = null;
-  $('#empty-state')?.classList.add('hidden');
+  if (!incompleteDictionaryLoad) $('#empty-state')?.classList.add('hidden');
   updateContextBar(q);
   updatePronStrip(q);
   // v116: recorded only when the replayed lookup produced an entry — same rule
@@ -2293,7 +2393,7 @@ function rankExactPhraseHits(word, hits) {
     } : null);
     if (!isCurrent()) return false;
     ifr.srcdoc = built.doc;
-    if (built.anchored) {
+    if (built.anchored && !fromMobileReaderTap(word)) {
       ifr.dataset.anchorToken = token;
       anchoredLookupGen = lookupGen;
       anchorJumps.set(ifr, { until: performance.now() + ANCHOR_WINDOW_MS, gen: lookupGen, top: 0, moved: false });
@@ -2754,9 +2854,9 @@ async function buildEntryDoc(d, html, opts) {
   const rawBody = parsed.body.innerHTML;
   const body = rawBody.replace(/\bvirr\+/gi, ''); // display cleanup: strip raw MDX grammar codes leaked as text (e.g. take-off entry); dictionary data itself is unchanged
   const css = [...styles, d.bundledCss || ''].join('\n');
-  const htmlDoc = `<!doctype html><html><head><meta charset="utf-8">
+  const htmlDoc = `<!doctype html><html data-theme="${document.documentElement.dataset.theme || 'auto'}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data: blob:">
 <style>
   html{background:#fff;color:#1a1a1a;-webkit-text-size-adjust:100%;color-scheme:light}
@@ -2808,7 +2908,44 @@ async function buildEntryDoc(d, html, opts) {
   .mtd-line{margin:4px 0}
 </style>
 <style>${css}</style>
+<style>
+  html[data-theme="dark"], html[data-theme="dark"] body {
+    color: #e7eaee;
+    background: #161d24;
+    color-scheme: dark;
+  }
+  html[data-theme="dark"] :is(a, .mtd-pos, .mtd-idiom b, .mtd-domain, .mdx-variant summary) {
+    color: #5eead4;
+  }
+  html[data-theme="dark"] :is(.phrase-banner, .src-sentence, .mdx-variant, .audio-btn) {
+    background: #172b2a;
+    border-color: #315953;
+    color: #e7eaee;
+  }
+  html[data-theme="dark"] :is(.src-label, .src-source) { color: #a7d9d1; }
+  @media (prefers-color-scheme: dark) {
+    html[data-theme="auto"], html[data-theme="auto"] body {
+      color: #e7eaee;
+      background: #161d24;
+      color-scheme: dark;
+    }
+    html[data-theme="auto"] :is(a, .mtd-pos, .mtd-idiom b, .mtd-domain, .mdx-variant summary) {
+      color: #5eead4;
+    }
+    html[data-theme="auto"] :is(.phrase-banner, .src-sentence, .mdx-variant, .audio-btn) {
+      background: #172b2a;
+      border-color: #315953;
+      color: #e7eaee;
+    }
+    html[data-theme="auto"] :is(.src-label, .src-source) { color: #a7d9d1; }
+  }
+</style>
 </head><body>${body}<script>var AT=${JSON.stringify(anchor ? String(anchor) : '')};
+addEventListener('message', function(event) {
+  if (event.source === parent && ['auto', 'light', 'dark'].includes(event.data?.entryTheme)) {
+    document.documentElement.dataset.theme = event.data.entryTheme;
+  }
+});
 function rp(){
   try{
     parent.postMessage({type:'resize',h:Math.ceil(document.documentElement.scrollHeight)},'*');
@@ -3201,7 +3338,7 @@ function openReader() {
   $('#reader-input')?.focus();
   const btn = $('#btn-save-sentence');
   if (btn) btn.title = 'Tap a word in the text first';
-  setReaderMsg('Tap any word to look it up below — then “⭐ Save sentence” keeps its original sentence.');
+  setReaderMsg('Tap any word to see its meaning — then “⭐ Save sentence” keeps its original sentence.');
 }
 
 function closeReader() {
@@ -3313,7 +3450,7 @@ function readerRender(text, source, sourceUrl) {
     }
     pane.appendChild(frag);                 // one insertion per batch, not one per word
     const done = pi >= paragraphs.length && !tokens;
-    setReaderMsg(`${paragraphs.length} paragraph(s) · ${words} word${words === 1 ? '' : 's'}${done ? '' : '…'} — tap any word to look it up below.`);
+    setReaderMsg(`${paragraphs.length} paragraph(s) · ${words} word${words === 1 ? '' : 's'}${done ? '' : '…'} — tap any word to see its meaning.`);
     readerChunkTimer = done ? null : setTimeout(step, 0);
     if (done) { readerTimer.words = words; readerTimerTick(); covOnRenderDone(seq); } // v118 A1 // v74: the final count feeds the wpm figure
   };
@@ -3594,6 +3731,7 @@ function onReaderTap(e) {
   const sourceTitle = para?.dataset.source || 'pasted';
   const sourceUrl = para?.dataset.sourceUrl || '';
   readerSelection = { word, sentence, source: sourceTitle, sourceUrl };
+  for (const id of ['#btn-review-reader-sentence', '#btn-review-lookup-sentence']) $(id)?.classList.add('hidden');
   readerCtx = { headword: word, sentence, sourceTitle, sourceUrl };
   const btn = $('#btn-save-sentence');
   if (btn) {
@@ -3602,7 +3740,8 @@ function onReaderTap(e) {
   }
   // R-D: this lookup came from text the user is reading — the result may open at
   // the part of speech of the form they tapped, carrying this sentence with it.
-  tapOrigin = { word, sentence, sourceTitle, sourceUrl };
+  const origin = { word, sentence, sourceTitle, sourceUrl };
+  tapOrigin = origin;
   search(word, true).then(() => {
     // U7's reveal and the R-D jump both want the window. When the result is going
     // to open at a section, that jump knows exactly where to put it (and brings
@@ -3610,7 +3749,9 @@ function onReaderTap(e) {
     // underneath it would race the two and leave the page wherever the loser
     // stopped. So the reveal stays the answer for everything else — exact hits,
     // words with no guessed part of speech, and the not-loaded surface.
-    if (anchoredLookupGen !== lookupGen) revealLookupAfterTap();
+    if (currentView() !== 'reader' || tapOriginFor(word) !== origin) return;
+    if (compactSearch.matches) document.dispatchEvent(new Event('reader-lookup-ready'));
+    else if (anchoredLookupGen !== lookupGen) revealLookupAfterTap();
   });
 }
 
@@ -3656,14 +3797,15 @@ async function saveSentence() {
     showToast('Could not save the sentence — storage error');
     return;
   }
-  if (!r.merged) {
-    state.items = state.items.filter((i) => i.id !== r.item.id);
-    state.items.unshift(r.item);
-  }
-  const btn = $('#btn-save-sentence');
-  if (btn) {
-    btn.textContent = '✓ Saved';
-    setTimeout(() => { btn.textContent = '⭐ Save sentence'; }, 1500);
+  state.items = [r.item, ...state.items.filter((item) => item.id !== r.item.id)];
+  updateVocabBadge();
+  updateReviewBadge();
+  if (readerSelection?.sentence === sentence) {
+    for (const id of ['#btn-review-reader-sentence', '#btn-review-lookup-sentence']) {
+      const review = $(id);
+      review.onclick = () => reviewSavedItem(r.item);
+      review.classList.remove('hidden');
+    }
   }
   updateContextBar($('#search-input').value.trim());
 }
@@ -3678,8 +3820,8 @@ let tutorRequestId = 0;
 let tutorSetupContinuation = null;
 const TUTOR_PROMPT_VERSION = 'tutor-v3-meaning';
 function syncTutorQuickSetupFields() {
-  const provider = $('#tutor-setup-provider')?.value || 'meta';
-  const defaults = PROVIDERS[provider] || PROVIDERS.meta;
+  const provider = $('#tutor-setup-provider')?.value || 'gemini';
+  const defaults = PROVIDERS[provider] || PROVIDERS.gemini;
   $('#tutor-setup-model').value = defaults.model;
   $('#tutor-setup-url').value = defaults.baseUrl;
   $('#tutor-setup-advanced').open = provider === 'compatible';
@@ -4040,7 +4182,7 @@ function populateTutorSettings() {
   syncAiProviderFields();
 }
 function syncAiProviderFields() {
-  const provider=document.getElementById('ai-provider')?.value||'meta';
+  const provider=document.getElementById('ai-provider')?.value||'gemini';
   const field=document.getElementById('ai-api-key');
   if(field) field.setAttribute('aria-label',`${PROVIDERS[provider]?.label||'AI provider'} API key`);
 }
@@ -4659,7 +4801,6 @@ function startLevelTest() {
   practiceQueue = [];
   practiceIndex = 0;
   navigate('practice');
-  renderLevelTest();
 }
 function renderLevelTest() {
   const stage = document.getElementById('practice-stage');
@@ -4688,7 +4829,10 @@ function renderLevelTest() {
     try { localStorage.setItem('dd-level', lv); } catch (e) {}
     const deck = { A2: 'ngsl1', B1: 'ngsl2', B2: 'ielts', C1: 'awl' }[lv];
     document.getElementById('level-res').innerHTML = '<p class="practice-prompt">Kết quả: ' + score + '/20 — trình độ ' + lv + '</p><p><button type="button" class="btn-primary" id="level-go">Học ngay gói ' + deck.toUpperCase() + ' →</button></p>';
-    document.getElementById('level-go').addEventListener('click', () => startCurriculumPractice(deck));
+    document.getElementById('level-go').addEventListener('click', () => {
+      levelAnswers = null;
+      startCurriculumPractice(deck);
+    });
   });
 }
 async function startPractice(ids) {
@@ -4750,8 +4894,6 @@ function practiceExercise(item) {
   // dictionary lookup or hide the selected sense behind a generic sentence.
   if (g) return { kind: 'recall', gloss: g };
   if (sent && hw) return { kind: 'cloze', hw: hw, sent: sent };
-  const tr = item.dictionary && item.dictionary.translation;
-  if (tr) return { kind: 'recall', gloss: tr };
   // v69 R4: with browser speech recognition the fall-through drill becomes
   // "say it aloud" (see the word, speak it, get checked); without it, listen.
   if (SR_CLASS && (item.type === 'word' || item.type === 'phrase')) return { kind: 'say' };
@@ -4819,7 +4961,7 @@ function renderPractice() {
   const feedback = document.createElement('p');
   feedback.className = 'practice-feedback';
   const actions = document.createElement('div');
-  actions.className = 'review-actions';
+  actions.className = 'review-actions hidden';
   const gotBtn = document.createElement('button');
   gotBtn.type = 'button'; gotBtn.className = 'btn-secondary'; gotBtn.textContent = i18n('practice.got'); gotBtn.disabled = true;
   gotBtn.dataset.act = 'got';
@@ -5070,7 +5212,7 @@ function renderPracticeSummary() {
   p.textContent = practiceStats.done + ' reviewed · ' + practiceStats.ok + ' got it · ' + (practiceStats.done - practiceStats.ok) + ' to review again';
   card.append(t, p);
   const actions = document.createElement('div');
-  actions.className = 'review-actions';
+  actions.className = 'review-actions hidden';
   const again = document.createElement('button');
   again.type = 'button'; again.className = 'btn-primary'; again.textContent = i18n('practice.again2');
   again.addEventListener('click', () => {
@@ -5396,6 +5538,13 @@ function contextForWord(word) {
   return null;
 }
 
+function hasVaultWord(word) {
+  const key = normalizeText(word);
+  return !!key && state.items.some((item) =>
+    ((item.type === 'word' || item.type === 'phrase') && item.normalizedText === key) ||
+    normalizeText(item.context?.headword || '') === key);
+}
+
 /** Render/refresh the context bar above the entry panels. */
 function updateContextBar(word) {
   const bar = $('#context-bar');
@@ -5426,6 +5575,12 @@ function updateContextBar(word) {
         moreEl.appendChild(p);
       }
     } else moreEl.classList.add('hidden');
+  }
+  const vaultButton = $('#btn-context-vault');
+  if (vaultButton) {
+    const label = hasVaultWord(word) ? 'ui.openInVault' : 'ui.saveWord';
+    vaultButton.dataset.i18n = label;
+    vaultButton.textContent = i18n(label);
   }
   bar.dataset.word = word || hw || '';
   bar.classList.remove('hidden');
@@ -5488,6 +5643,7 @@ function isSaved(word) {
 }
 
 let pendingSenseCandidates = [];
+let pendingSenseWord = '';
 
 function dictionaryEntryPlainText(raw) {
   const source = String(raw || '').replace(/\u0000/g, '')
@@ -5517,6 +5673,8 @@ async function openSenseSaveDialog(word) {
   const definition = $('#sense-save-definition');
   const status = $('#sense-save-status');
   if (!dialog || !select || !definition) return;
+  pendingSenseWord = key;
+  pendingSenseCandidates = [];
   status.textContent = 'Loading the entries currently available on this device…';
   select.replaceChildren();
   definition.value = '';
@@ -5538,36 +5696,43 @@ async function openSenseSaveDialog(word) {
       } catch (error) { console.debug('Could not read dictionary candidate', slot, error); }
     }
   }
-  pendingSenseCandidates = candidates.filter((item) => dictionaryEntryPlainText(item.raw));
+  pendingSenseCandidates = candidates.flatMap((candidate) => {
+    const doc = new DOMParser().parseFromString(formatEntry(candidate.raw), 'text/html');
+    doc.querySelectorAll('script, style, blockquote, .example').forEach((node) => node.remove());
+    const meanings = [...doc.querySelectorAll('li, dd, .mtd-sense')]
+      .map((node) => dictionaryEntryPlainText(node.innerHTML))
+      .filter((text) => text && !/^["“]/.test(text));
+    return [...new Set(meanings)].map((meaning) => ({ ...candidate, meaning }));
+  });
   select.replaceChildren();
   if (pendingSenseCandidates.length) {
     pendingSenseCandidates.forEach((candidate, index) => {
       const option = document.createElement('option');
       option.value = String(index);
-      option.textContent = `${candidate.source}${candidate.keyText && candidate.keyText !== key ? ` · ${candidate.keyText}` : ''}`;
+      option.textContent = `${candidate.source} · ${candidate.meaning.slice(0, 100)}`;
       select.appendChild(option);
     });
     const currentView = localStorage.getItem('view') || rememberedView();
     const preferred = pendingSenseCandidates.findIndex((candidate) => candidate.slot === currentView);
     select.value = String(preferred >= 0 ? preferred : 0);
     renderSenseSaveCandidate();
-    status.textContent = 'The full entry is prefilled. Keep or edit the text so this card represents the meaning you want to learn.';
+    status.textContent = i18n('sense.oneMeaning');
   } else {
     const option = document.createElement('option');
     option.value = '';
-    option.textContent = 'No dictionary entry is loaded for this word';
+    option.textContent = i18n('sense.manualOption');
     select.appendChild(option);
-    status.textContent = 'You can still save the word and source sentence. Load a dictionary to save a specific meaning.';
+    status.textContent = i18n('sense.manualMeaning');
   }
 }
 
 function renderSenseSaveCandidate() {
   const candidate = pendingSenseCandidates[Number($('#sense-save-entry')?.value)];
-  $('#sense-save-definition').value = candidate ? dictionaryEntryPlainText(candidate.raw) : '';
+  $('#sense-save-definition').value = candidate?.meaning || '';
 }
 
 async function saveSelectedSense() {
-  const key = ($('#search-input')?.value || '').trim();
+  const key = pendingSenseWord;
   const definition = ($('#sense-save-definition')?.value || '').trim();
   const candidate = pendingSenseCandidates[Number($('#sense-save-entry')?.value)];
   if (!key) return;
@@ -5575,13 +5740,13 @@ async function saveSelectedSense() {
     $('#sense-save-status').textContent = 'Add the meaning you want to remember, or cancel and load a dictionary.';
     return;
   }
-  const senseKey = candidate && definition ? senseStableKey(candidate, definition) : '';
+  const senseKey = definition ? senseStableKey(candidate || { slot: 'manual', sourceFile: '', keyText: key }, definition) : '';
   const ctx = contextForWord(key);
-  const dictionary = candidate && definition ? {
-    slot: candidate.slot,
-    source: candidate.source,
-    sourceFile: candidate.sourceFile,
-    entryKey: candidate.keyText,
+  const dictionary = definition ? {
+    slot: candidate?.slot,
+    source: candidate?.source,
+    sourceFile: candidate?.sourceFile,
+    entryKey: candidate?.keyText,
     definition,
     senseKey,
   } : {};
@@ -5607,6 +5772,7 @@ async function saveSelectedSense() {
     updateContextBar(key);
     updateSaveButtonState();
     updateVocabBadge();
+    updateReviewBadge();
     if (!$('#vault-view')?.classList.contains('hidden')) renderVault();
   } catch (error) {
     console.warn('could not save selected meaning:', error);
@@ -5729,6 +5895,20 @@ let vaultTab = 'all';
 let vaultDeck = '';
 let vaultQuery = '';
 const vaultSelected = new Set();
+function reviewSavedItems(items) {
+  if (!items.length) return;
+  const ids = new Set(items.map((item) => item.id));
+  state.items = [...items, ...state.items.filter((item) => !ids.has(item.id))];
+  reviewQueueIds = [...ids];
+  reviewTotal = ids.size;
+  navigate('review');
+  renderReview();
+}
+
+function reviewSavedItem(item) {
+  reviewSavedItems([item]);
+}
+
 let reviewQueueIds = null; // null = derive from due items when entering Review
 let reviewTotal = 0;
 let editorItemId = null;
@@ -5761,7 +5941,18 @@ function wireVault() {
   $('#btn-cue-start')?.addEventListener('click', cueCardToggle);
   $('#btn-cue-mic')?.addEventListener('click', cueCardRecord);
   cueCardNext();
-  initOfflineStudy();
+  document.addEventListener('exam-card-saved', async () => {
+    state.items = await allItems();
+    updateVocabBadge();
+    updateReviewBadge();
+  });
+  document.addEventListener('review-saved-item', (event) => reviewSavedItem(event.detail));
+  document.addEventListener('review-saved-items', (event) => reviewSavedItems(event.detail));
+  initOfflineStudy(async (value) => {
+    const word = value.trim();
+    if (!word) return;
+    await openSenseSaveDialog(word);
+  });
   $('#btn-vault-select-all')?.addEventListener('click', () => {
     const list = vaultFiltered();
   $('#vault-view')?.classList.toggle('vault-is-empty', state.items.length === 0);
@@ -5803,6 +5994,7 @@ function vaultFiltered() {
     const raw = vaultQuery.toLowerCase();
     list = list.filter((i) =>
       i.normalizedText.includes(q) ||
+      normalizeText(i.context?.headword || '').includes(q) ||
       (i.context?.sentence || '').toLowerCase().includes(raw) ||
       (i.userData.note || '').toLowerCase().includes(raw) ||
       (i.userData.tags || []).some((t) => t.toLowerCase().includes(raw))
@@ -6294,7 +6486,7 @@ function renderReview() {
     return;
   }
   empty?.classList.add('hidden');
-  for (const item of queue) list.appendChild(buildReviewCard(item));
+  list.appendChild(buildReviewCard(queue[0]));
 }
 
 function buildReviewCard(item) {
@@ -6330,7 +6522,7 @@ function buildReviewCard(item) {
   }
   const glossP = document.createElement('p');
   glossP.className = 'item-gloss';
-  const savedGloss = meaningForItem(item);
+  const savedGloss = savedMeaning(item);
   glossP.textContent = savedGloss || 'No meaning was saved with this card. Look up the word and save a specific meaning to review it here.';
   if (!savedGloss) glossP.classList.add('hint');
   answer.appendChild(glossP);
@@ -6354,12 +6546,14 @@ function buildReviewCard(item) {
   show.textContent = i18n('review.show');
   show.addEventListener('click', () => {
     answer.classList.remove('hidden');
+    actions.classList.remove('hidden');
+    actions.querySelector('button')?.focus();
     show.remove();
   });
   card.appendChild(show);
 
   const actions = document.createElement('div');
-  actions.className = 'review-actions';
+  actions.className = 'review-actions hidden';
   const mk = (label, act, cls) => {
     const b = document.createElement('button');
     b.type = 'button';
@@ -6442,7 +6636,17 @@ function savedMeaning(item) {
   return String(item?.dictionary?.definition || item?.dictionary?.translation || '').trim();
 }
 
-function meaningForItem(item) { return savedMeaning(item); }
+function meaningForItem(item) {
+  const escaped = escapeRegExp(item.text);
+  const clue = savedMeaning(item)
+    .split(/\n|(?<=[.!?])\s+/u)
+    .map((part) => part.trim())
+    .find((part) => part && !part.toLowerCase().startsWith(item.text.toLowerCase() + ' '));
+  if (!clue || clue.length > 260) return '';
+  const answer = new RegExp(escaped, 'giu');
+  const masked = clue.replace(answer, '____');
+  return /\p{L}/u.test(masked) ? masked : '';
+}
 
 /** Export LearningItems as a JSON file — data ownership: nothing lives only
  *  in the app. v3 payload {items} plus derived v2-compat words/sentences arrays
@@ -6621,6 +6825,9 @@ function setTheme(mode) {
   if (mode === 'auto') root.removeAttribute('data-theme');
   else root.setAttribute('data-theme', mode);
   localStorage.setItem('theme', mode);
+  for (const frame of document.querySelectorAll('.entry-frame iframe')) {
+    frame.contentWindow?.postMessage({ entryTheme: mode }, '*');
+  }
   const btn = $('#btn-theme');
   if (btn) btn.textContent = mode === 'dark' ? '🌙' : mode === 'light' ? '☀️' : '🌓';
 }
@@ -6652,6 +6859,7 @@ const I18N = {
     'top.tipAdvanced': 'Advanced', 'top.tipHelp': 'Help', 'top.tipMore': 'More',
     'top.advancedShort': '⚙ Advanced', 'top.helpShort': '? Help',
     'search.placeholder': 'Type an English word…',
+    'review.savedWords': 'Saved words', 'review.progress': 'Progress', 'practice.offlineLessons': 'Offline lessons', 'practice.startOffline': 'Study an offline lesson', 'practice.speakingTools': 'Speaking practice', 'sense.pick': 'Choose one meaning', 'sense.oneMeaning': 'Choose the meaning you want to study.', 'sense.manualMeaning': 'Write one meaning to study, or save the word with its sentence.', 'sense.manualOption': 'Write a meaning',
     'search.gateIdle': 'No dictionary loaded yet — download one below to start looking up words.',
     'search.gateLoading': 'Downloading dictionaries… lookup turns on as soon as the first one is ready.',
     'search.gateStarting': 'Checking for a dictionary stored on this device…',
@@ -6714,6 +6922,7 @@ const I18N = {
     'firstload.sizeUnknown': 'size unknown (usually a few GB)',
     'firstload.cancelled': 'Download cancelled — no dictionary is loaded yet.',
     'firstload.cancelHint': 'Press “↻ Retry dictionary download” to try again, or use your own .mdx files via ⚙ Advanced.',
+    'firstload.sessionOnly': 'Ready for this session. This browser could not save the dictionary for offline use.',
     'firstload.failed': 'Failed to load: {names}. Check your connection and try again, or open ⚙ Advanced to load your own .mdx files.',
     'firstload.unreachableHint': 'The bundled download sources did not respond. Press “↻ Retry dictionary download” to try again, or use “Use my own .mdx files” below to load a dictionary manually.',
     'firstload.checking': 'Checking dictionary sizes…',
@@ -6758,7 +6967,7 @@ const I18N = {
     'cov.hardWarn': 'Hard text — under 60% within estimated coverage. A shorter or easier article may fit better.',
     'cov.newHead': 'New words:',
     'cov.estimateNote': 'Estimate against the top-10k most common English words (offline, on this device). Proper nouns and numbers are left out of the count.',
-    'cov.statusDone': '{pct}% within estimated coverage · {words} words — tap any word to look it up below.',
+    'cov.statusDone': '{pct}% within estimated coverage · {words} words — tap any word to see its meaning.',
     'cov.noMilestone': 'No starting milestone set yet — pick one in the Vault so "known" is counted correctly.',
     'known.current': 'current',
     'apkg.building': 'Building Anki deck…',
@@ -6783,6 +6992,7 @@ const I18N = {
     'top.tipAdvanced': 'Nâng cao', 'top.tipHelp': 'Trợ giúp', 'top.tipMore': 'Thêm',
     'top.advancedShort': '⚙ Nâng cao', 'top.helpShort': '? Trợ giúp',
     'search.placeholder': 'Gõ một từ tiếng Anh…',
+    'review.savedWords': 'Từ đã lưu', 'review.progress': 'Tiến độ', 'practice.offlineLessons': 'Bài học offline', 'practice.startOffline': 'Học một bài offline', 'practice.speakingTools': 'Luyện nói', 'sense.pick': 'Chọn một nghĩa', 'sense.oneMeaning': 'Chọn nghĩa bạn muốn học.', 'sense.manualMeaning': 'Nhập một nghĩa để học hoặc lưu từ cùng câu ví dụ.', 'sense.manualOption': 'Tự nhập nghĩa',
     'search.gateIdle': 'Chưa có từ điển — tải ở dưới để bắt đầu tra từ.',
     'search.gateLoading': 'Đang tải từ điển… tra từ sẽ bật ngay khi từ điển đầu tiên sẵn sàng.',
     'search.gateStarting': 'Đang kiểm tra từ điển đã lưu trên máy…',
@@ -6838,6 +7048,7 @@ const I18N = {
     'firstload.sizeUnknown': 'chưa rõ dung lượng (thường vài GB)',
     'firstload.cancelled': 'Đã huỷ tải — chưa có từ điển nào được nạp.',
     'firstload.cancelHint': 'Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng file .mdx của bạn trong ⚙ Nâng cao.',
+    'firstload.sessionOnly': 'Dùng được trong phiên này. Trình duyệt không lưu được từ điển để dùng ngoại tuyến.',
     'firstload.failed': 'Tải thất bại: {names}. Kiểm tra kết nối rồi thử lại, hoặc mở ⚙ Nâng cao để nạp file .mdx của bạn.',
     'firstload.unreachableHint': 'Các nguồn tải từ điển không phản hồi. Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng “Dùng file .mdx của tôi” bên dưới để nạp thủ công.',
     'firstload.checking': 'Đang kiểm tra dung lượng từ điển…',

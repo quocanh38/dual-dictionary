@@ -46,7 +46,7 @@ export const IELTS_PATHWAY_STAGES = [
 ];
 
 // Teaching guidance is based on the app author's four method articles. The
-// pathway stage classifies the practice target; Linear Thinking is the method
+// pathway stage classifies the practice target; step-by-step guidance is the method
 // used to scaffold how learners approach the task.
 export const IELTS_LINEAR_GUIDANCE = {
   Listening: {
@@ -70,6 +70,43 @@ export const IELTS_LINEAR_GUIDANCE = {
     blog: "/vi/blog/phuong-phap/speaking-phan-xa-cum/",
   },
 };
+
+export const TOEIC_FOCUS_SETS = [
+  {
+    "id": "toeic-part3-delivery",
+    "title": "Giao thiết bị",
+    "questionIds": [
+      "toeic-l7",
+      "toeic-delivery-team",
+      "toeic-delivery-reception"
+    ]
+  },
+  {
+    "id": "toeic-part3-training-room",
+    "title": "Đổi phòng đào tạo",
+    "questionIds": [
+      "toeic-training-room-1",
+      "toeic-training-room-2",
+      "toeic-training-room-3"
+    ]
+  },
+  {
+    "id": "toeic-part3-invoice-correction",
+    "title": "Sửa hóa đơn",
+    "questionIds": [
+      "toeic-invoice-correction-1",
+      "toeic-invoice-correction-2",
+      "toeic-invoice-correction-3"
+    ]
+  },
+  { id: "toeic-focus-part4", title: "Đổi lối vào cho khách", part: 4, skill: "Listening", questionIds: ["toeic-l4", "toeic-l4-extra-1", "toeic-l4-extra-2"] },
+  { id: "toeic-part4-staff", title: "Thông báo cho nhân viên làm muộn", part: 4, skill: "Listening", questionIds: ["toeic-l8", "toeic-l8-extra-1", "toeic-l8-extra-2"] },
+  { id: "toeic-focus-part6", title: "Part 6 · Điền vào văn bản", part: 6, skill: "Reading", questionIds: ["toeic-r4-extra-1", "toeic-r4", "toeic-r4-extra-2", "toeic-r4-extra-3"] },
+  {"id": "toeic-part6-returns", "title": "Thông báo quy trình đổi trả", "part": 6, "skill": "Reading", "questionIds": ["toeic-part6-returns-1", "toeic-part6-returns-2", "toeic-part6-returns-3", "toeic-part6-returns-4"]},
+  { id: "toeic-focus-part7", title: "Part 7 · Đọc hiểu", part: 7, skill: "Reading", questionIds: ["toeic-r1", "toeic-r1-extra-1", "toeic-r1-extra-2", "toeic-r1-extra-3", "toeic-r1-extra-4"] },
+  {"id": "toeic-part7-delayed-order", "title": "Đơn hàng và lịch giao mới", "part": 7, "skill": "Reading", "questionIds": ["toeic-part7-delayed-order-1", "toeic-part7-delayed-order-2", "toeic-part7-delayed-order-3", "toeic-part7-delayed-order-4", "toeic-part7-delayed-order-5"], "timed": true},
+  {"id": "toeic-part7-training-update", "title": "Lịch đào tạo và bàn giao", "part": 7, "skill": "Reading", "questionIds": ["toeic-part7-training-update-1", "toeic-part7-training-update-2", "toeic-part7-training-update-3", "toeic-part7-training-update-4", "toeic-part7-training-update-5"]},
+];
 
 export const STUDY_CONTENT_PACKS = [
   {
@@ -132,6 +169,9 @@ export const STUDY_CONTENT_PACKS = [
         id: "toeic-l1", exam: "TOEIC Listening & Reading", skill: "Listening", part: "Part 3 · Conversations", type: "choice", title: "Office voicemail",
         transcript: "Hi Daniel, this is Priya from facilities. The meeting room on the third floor will be unavailable this afternoon while the projector is replaced. I have reserved room 204 for your team from two until four. Please collect the new access card from reception before the meeting.",
         prompt: "What should Daniel do before the meeting?", options: ["Repair the projector", "Move the meeting to tomorrow", "Pick up an access card", "Call the facilities manager"], answer: 2,
+        evidence: "Please collect the new access card from reception before the meeting.",
+        explanationVi: "Daniel cần lấy thẻ ra vào ở quầy lễ tân. Việc thay máy chiếu giải thích vì sao phòng họp đổi, còn cuộc họp vẫn diễn ra trong ngày.",
+        distractorsVi: ["Máy chiếu đang được thay. Priya không yêu cầu Daniel sửa máy.", "Phòng họp đổi sang phòng 204 trong chiều nay. Cuộc họp không dời sang ngày mai.", "", "Lời nhắn không yêu cầu Daniel gọi cho quản lý cơ sở vật chất."],
         explanation: "Priya asks Daniel to collect the new access card from reception before the meeting.",
       },
       {
@@ -152,18 +192,534 @@ export const STUDY_CONTENT_PACKS = [
         transcript: "Attention visitors: the west entrance is temporarily closed while new signs are installed. Please use the main entrance on King Street. The information desk can provide updated maps, and the west entrance is expected to reopen at 4 p.m.",
         prompt: "What are visitors asked to do?", options: ["Use the main entrance", "Wait until tomorrow", "Collect signs from the desk", "Enter from the west street"], answer: 0,
         explanation: "The announcement directs visitors to the main entrance on King Street.",
+        audio: "./assets/study/audio/toeic-focus-l4.wav",
+        explanationVi: "Khách được yêu cầu dùng lối vào chính trên đường King vì lối phía tây đang đóng.",
+      },
+      {
+        "id": "toeic-l4-extra-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Listening",
+        "part": "Part 4 · Talks",
+        "title": "Visitor announcement",
+        "audio": "./assets/study/audio/toeic-focus-l4.wav",
+        "transcript": "Attention visitors: the west entrance is temporarily closed while new signs are installed. Please use the main entrance on King Street. The information desk can provide updated maps, and the west entrance is expected to reopen at 4 p.m.",
+        "type": "choice",
+        "prompt": "What is being installed?",
+        "options": [
+          "New signs",
+          "Security cameras",
+          "Ticket machines",
+          "New doors"
+        ],
+        "answer": 0,
+        "explanationVi": "Lối vào đóng trong lúc lắp biển chỉ dẫn mới.",
+        "explanation": "Lối vào đóng trong lúc lắp biển chỉ dẫn mới.",
+        "evidence": "new signs are installed"
+      },
+      {
+        "id": "toeic-l4-extra-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Listening",
+        "part": "Part 4 · Talks",
+        "title": "Visitor announcement",
+        "audio": "./assets/study/audio/toeic-focus-l4.wav",
+        "transcript": "Attention visitors: the west entrance is temporarily closed while new signs are installed. Please use the main entrance on King Street. The information desk can provide updated maps, and the west entrance is expected to reopen at 4 p.m.",
+        "type": "choice",
+        "prompt": "When should the west entrance open again?",
+        "options": [
+          "At noon",
+          "At 2 p.m.",
+          "At 4 p.m.",
+          "Tomorrow morning"
+        ],
+        "answer": 2,
+        "explanationVi": "Expected to reopen at 4 p.m. nghĩa là dự kiến mở lại lúc 4 giờ chiều.",
+        "explanation": "Expected to reopen at 4 p.m. nghĩa là dự kiến mở lại lúc 4 giờ chiều.",
+        "evidence": "the west entrance is expected to reopen at 4 p.m."
+      },
+      {
+        "id": "toeic-part7-delayed-order-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Đơn hàng và lịch giao mới",
+        "type": "choice",
+        "prompt": "What will Linh most likely arrange?",
+        "options": [
+          "A temporary setup for the training",
+          "A new purchase order",
+          "A Thursday delivery",
+          "A vehicle repair"
+        ],
+        "answer": 0,
+        "explanation": "Email nêu phương án tạm nếu hàng đến thứ Sáu. Thông báo xác nhận điều kiện đó đã xảy ra.",
+        "explanationVi": "Email nêu phương án tạm nếu hàng đến thứ Sáu. Thông báo xác nhận điều kiện đó đã xảy ra.",
+        "evidence": "Email đặt hàng: If delivery moves to Friday. Thông báo: will arrive Friday at 9 a.m.",
+        "documents": [
+          {
+            "title": "Email đặt hàng",
+            "text": "Order #482: Please deliver 20 monitor stands to the East Office by Thursday at noon. Use the loading bay. If delivery moves to Friday, email Linh so she can arrange a temporary setup for Thursday’s training."
+          },
+          {
+            "title": "Thông báo của nhà cung cấp",
+            "text": "Order #482 will arrive Friday at 9 a.m. because of a vehicle breakdown. The quantity is unchanged. The East Office loading bay will be closed Friday morning. The driver will use the main reception desk."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-delayed-order-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Đơn hàng và lịch giao mới",
+        "type": "choice",
+        "prompt": "Where should staff now expect the driver?",
+        "options": [
+          "The loading bay",
+          "The main reception desk",
+          "The training room",
+          "The West Office"
+        ],
+        "answer": 1,
+        "explanation": "Email yêu cầu dùng cửa kho, nhưng thông báo mới đổi sang quầy lễ tân vì cửa kho đóng.",
+        "explanationVi": "Email yêu cầu dùng cửa kho, nhưng thông báo mới đổi sang quầy lễ tân vì cửa kho đóng.",
+        "evidence": "Email: Use the loading bay. Thông báo: use the main reception desk.",
+        "documents": [
+          {
+            "title": "Email đặt hàng",
+            "text": "Order #482: Please deliver 20 monitor stands to the East Office by Thursday at noon. Use the loading bay. If delivery moves to Friday, email Linh so she can arrange a temporary setup for Thursday’s training."
+          },
+          {
+            "title": "Thông báo của nhà cung cấp",
+            "text": "Order #482 will arrive Friday at 9 a.m. because of a vehicle breakdown. The quantity is unchanged. The East Office loading bay will be closed Friday morning. The driver will use the main reception desk."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-delayed-order-3",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Đơn hàng và lịch giao mới",
+        "type": "choice",
+        "prompt": "How many stands are expected?",
+        "options": [
+          "9",
+          "12",
+          "20",
+          "48"
+        ],
+        "answer": 2,
+        "explanation": "Email đặt 20 chiếc, thông báo xác nhận số lượng không đổi.",
+        "explanationVi": "Email đặt 20 chiếc, thông báo xác nhận số lượng không đổi.",
+        "evidence": "Email: 20 monitor stands. Thông báo: The quantity is unchanged.",
+        "documents": [
+          {
+            "title": "Email đặt hàng",
+            "text": "Order #482: Please deliver 20 monitor stands to the East Office by Thursday at noon. Use the loading bay. If delivery moves to Friday, email Linh so she can arrange a temporary setup for Thursday’s training."
+          },
+          {
+            "title": "Thông báo của nhà cung cấp",
+            "text": "Order #482 will arrive Friday at 9 a.m. because of a vehicle breakdown. The quantity is unchanged. The East Office loading bay will be closed Friday morning. The driver will use the main reception desk."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-delayed-order-4",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Đơn hàng và lịch giao mới",
+        "type": "choice",
+        "prompt": "What caused the delay?",
+        "options": [
+          "A stock shortage",
+          "A closed office",
+          "A missing address",
+          "A vehicle breakdown"
+        ],
+        "answer": 3,
+        "explanation": "Thông báo ghi xe gặp sự cố.",
+        "explanationVi": "Thông báo ghi xe gặp sự cố.",
+        "evidence": "Thông báo: because of a vehicle breakdown.",
+        "documents": [
+          {
+            "title": "Email đặt hàng",
+            "text": "Order #482: Please deliver 20 monitor stands to the East Office by Thursday at noon. Use the loading bay. If delivery moves to Friday, email Linh so she can arrange a temporary setup for Thursday’s training."
+          },
+          {
+            "title": "Thông báo của nhà cung cấp",
+            "text": "Order #482 will arrive Friday at 9 a.m. because of a vehicle breakdown. The quantity is unchanged. The East Office loading bay will be closed Friday morning. The driver will use the main reception desk."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-delayed-order-5",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Đơn hàng và lịch giao mới",
+        "type": "choice",
+        "prompt": "Which order is discussed?",
+        "options": [
+          "#428",
+          "#482",
+          "#248",
+          "#824"
+        ],
+        "answer": 1,
+        "explanation": "Cả hai văn bản ghi mã đơn #482.",
+        "explanationVi": "Cả hai văn bản ghi mã đơn #482.",
+        "evidence": "Cả hai văn bản: Order #482.",
+        "documents": [
+          {
+            "title": "Email đặt hàng",
+            "text": "Order #482: Please deliver 20 monitor stands to the East Office by Thursday at noon. Use the loading bay. If delivery moves to Friday, email Linh so she can arrange a temporary setup for Thursday’s training."
+          },
+          {
+            "title": "Thông báo của nhà cung cấp",
+            "text": "Order #482 will arrive Friday at 9 a.m. because of a vehicle breakdown. The quantity is unchanged. The East Office loading bay will be closed Friday morning. The driver will use the main reception desk."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-training-update-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Lịch đào tạo và bàn giao",
+        "type": "choice",
+        "prompt": "Where and when should Mai go?",
+        "options": [
+          "Room 2 at 10:00",
+          "Room 5 at 11:00",
+          "Room 4 at 14:00",
+          "Room 5 at 14:00"
+        ],
+        "answer": 1,
+        "explanation": "Mai thuộc kho nên học Inventory Basics theo lịch gốc. Email chuyển buổi đó sang phòng 5 lúc 11 giờ.",
+        "explanationVi": "Mai thuộc kho nên học Inventory Basics theo lịch gốc. Email chuyển buổi đó sang phòng 5 lúc 11 giờ.",
+        "evidence": "Tin nhắn: warehouse. Lịch: Inventory Basics for warehouse staff. Email: Room 5 at 11:00.",
+        "documents": [
+          {
+            "title": "Lịch đào tạo",
+            "text": "Tuesday 10:00: Inventory Basics, Room 2, for warehouse staff. Tuesday 14:00: Returns Processing, Room 4, for customer service staff. Bring a laptop to either session."
+          },
+          {
+            "title": "Email cập nhật",
+            "text": "Room 2 is unavailable on Tuesday morning. Inventory Basics will move to Room 5 at 11:00. Returns Processing will follow the original schedule."
+          },
+          {
+            "title": "Tin nhắn của Mai",
+            "text": "I work in the warehouse and will attend the session intended for my team. I will cover the dispatch desk until 10:30. Please tell me where and when to go after that."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-training-update-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Lịch đào tạo và bàn giao",
+        "type": "choice",
+        "prompt": "What should Mai bring?",
+        "options": [
+          "A visitor badge",
+          "An inventory form",
+          "A laptop",
+          "A set of keys"
+        ],
+        "answer": 2,
+        "explanation": "Lịch gốc yêu cầu mang laptop đến cả hai buổi. Email chỉ đổi giờ và phòng.",
+        "explanationVi": "Lịch gốc yêu cầu mang laptop đến cả hai buổi. Email chỉ đổi giờ và phòng.",
+        "evidence": "Lịch: Bring a laptop to either session.",
+        "documents": [
+          {
+            "title": "Lịch đào tạo",
+            "text": "Tuesday 10:00: Inventory Basics, Room 2, for warehouse staff. Tuesday 14:00: Returns Processing, Room 4, for customer service staff. Bring a laptop to either session."
+          },
+          {
+            "title": "Email cập nhật",
+            "text": "Room 2 is unavailable on Tuesday morning. Inventory Basics will move to Room 5 at 11:00. Returns Processing will follow the original schedule."
+          },
+          {
+            "title": "Tin nhắn của Mai",
+            "text": "I work in the warehouse and will attend the session intended for my team. I will cover the dispatch desk until 10:30. Please tell me where and when to go after that."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-training-update-3",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Lịch đào tạo và bàn giao",
+        "type": "choice",
+        "prompt": "Which session stays in Room 4?",
+        "options": [
+          "Inventory Basics",
+          "Dispatch Training",
+          "Both sessions",
+          "Returns Processing"
+        ],
+        "answer": 3,
+        "explanation": "Lịch ghi Returns Processing ở phòng 4, email xác nhận giữ lịch.",
+        "explanationVi": "Lịch ghi Returns Processing ở phòng 4, email xác nhận giữ lịch.",
+        "evidence": "Lịch: Returns Processing, Room 4. Email: original schedule.",
+        "documents": [
+          {
+            "title": "Lịch đào tạo",
+            "text": "Tuesday 10:00: Inventory Basics, Room 2, for warehouse staff. Tuesday 14:00: Returns Processing, Room 4, for customer service staff. Bring a laptop to either session."
+          },
+          {
+            "title": "Email cập nhật",
+            "text": "Room 2 is unavailable on Tuesday morning. Inventory Basics will move to Room 5 at 11:00. Returns Processing will follow the original schedule."
+          },
+          {
+            "title": "Tin nhắn của Mai",
+            "text": "I work in the warehouse and will attend the session intended for my team. I will cover the dispatch desk until 10:30. Please tell me where and when to go after that."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-training-update-4",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Lịch đào tạo và bàn giao",
+        "type": "choice",
+        "prompt": "What is Mai doing until 10:30?",
+        "options": [
+          "Covering the dispatch desk",
+          "Attending a training session",
+          "Setting up Room 5",
+          "Processing refunds"
+        ],
+        "answer": 0,
+        "explanation": "Mai nói cô sẽ trực bàn điều phối đến 10:30.",
+        "explanationVi": "Mai nói cô sẽ trực bàn điều phối đến 10:30.",
+        "evidence": "Tin nhắn: cover the dispatch desk until 10:30.",
+        "documents": [
+          {
+            "title": "Lịch đào tạo",
+            "text": "Tuesday 10:00: Inventory Basics, Room 2, for warehouse staff. Tuesday 14:00: Returns Processing, Room 4, for customer service staff. Bring a laptop to either session."
+          },
+          {
+            "title": "Email cập nhật",
+            "text": "Room 2 is unavailable on Tuesday morning. Inventory Basics will move to Room 5 at 11:00. Returns Processing will follow the original schedule."
+          },
+          {
+            "title": "Tin nhắn của Mai",
+            "text": "I work in the warehouse and will attend the session intended for my team. I will cover the dispatch desk until 10:30. Please tell me where and when to go after that."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part7-training-update-5",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Multiple passages",
+        "title": "Lịch đào tạo và bàn giao",
+        "type": "choice",
+        "prompt": "Why was the morning session moved?",
+        "options": [
+          "The trainer was late",
+          "Room 2 was unavailable",
+          "Mai requested a later time",
+          "The session required more laptops"
+        ],
+        "answer": 1,
+        "explanation": "Email nêu phòng 2 không dùng được vào sáng thứ Ba.",
+        "explanationVi": "Email nêu phòng 2 không dùng được vào sáng thứ Ba.",
+        "evidence": "Email: Room 2 is unavailable on Tuesday morning.",
+        "documents": [
+          {
+            "title": "Lịch đào tạo",
+            "text": "Tuesday 10:00: Inventory Basics, Room 2, for warehouse staff. Tuesday 14:00: Returns Processing, Room 4, for customer service staff. Bring a laptop to either session."
+          },
+          {
+            "title": "Email cập nhật",
+            "text": "Room 2 is unavailable on Tuesday morning. Inventory Basics will move to Room 5 at 11:00. Returns Processing will follow the original schedule."
+          },
+          {
+            "title": "Tin nhắn của Mai",
+            "text": "I work in the warehouse and will attend the session intended for my team. I will cover the dispatch desk until 10:30. Please tell me where and when to go after that."
+          }
+        ]
+      },
+      {
+        "id": "toeic-part6-returns-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Thông báo quy trình đổi trả",
+        "type": "choice",
+        "prompt": "Which word fits blank 1?",
+        "options": [
+          "submit",
+          "submits",
+          "submitted",
+          "submitting"
+        ],
+        "answer": 0,
+        "explanation": "Sau must dùng động từ nguyên mẫu.",
+        "explanationVi": "Sau must dùng động từ nguyên mẫu.",
+        "evidence": "Customers must [1] a return request.",
+        "passage": "Customers must [1] a return request within 30 days. [2], include your order number. We will email you a prepaid shipping label. [3] Your refund will be processed [4] the warehouse receives the item."
+      },
+      {
+        "id": "toeic-part6-returns-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Thông báo quy trình đổi trả",
+        "type": "choice",
+        "prompt": "Which phrase fits blank 2?",
+        "options": [
+          "Nevertheless",
+          "In addition",
+          "By contrast",
+          "Meanwhile"
+        ],
+        "answer": 1,
+        "explanation": "Câu sau bổ sung yêu cầu về mã đơn hàng.",
+        "explanationVi": "Câu sau bổ sung yêu cầu về mã đơn hàng.",
+        "evidence": "[2], include your order number.",
+        "passage": "Customers must [1] a return request within 30 days. [2], include your order number. We will email you a prepaid shipping label. [3] Your refund will be processed [4] the warehouse receives the item."
+      },
+      {
+        "id": "toeic-part6-returns-3",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Thông báo quy trình đổi trả",
+        "type": "choice",
+        "prompt": "Which sentence fits blank 3?",
+        "options": [
+          "Our office moved last year.",
+          "The catalog lists six colors.",
+          "Keep this label for your shipment.",
+          "All orders require advance payment."
+        ],
+        "answer": 2,
+        "explanation": "This label chỉ nhãn gửi trả vừa được nhắc ở câu trước.",
+        "explanationVi": "This label chỉ nhãn gửi trả vừa được nhắc ở câu trước.",
+        "evidence": "We will email you a prepaid shipping label. [3]",
+        "passage": "Customers must [1] a return request within 30 days. [2], include your order number. We will email you a prepaid shipping label. [3] Your refund will be processed [4] the warehouse receives the item."
+      },
+      {
+        "id": "toeic-part6-returns-4",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Thông báo quy trình đổi trả",
+        "type": "choice",
+        "prompt": "Which word fits blank 4?",
+        "options": [
+          "before",
+          "unless",
+          "until",
+          "after"
+        ],
+        "answer": 3,
+        "explanation": "Khoản hoàn tiền được xử lý sau khi kho nhận hàng.",
+        "explanationVi": "Khoản hoàn tiền được xử lý sau khi kho nhận hàng.",
+        "evidence": "Your refund will be processed [4] the warehouse receives the item.",
+        "passage": "Customers must [1] a return request within 30 days. [2], include your order number. We will email you a prepaid shipping label. [3] Your refund will be processed [4] the warehouse receives the item."
       },
       {
         id: "toeic-r1", exam: "TOEIC Listening & Reading", skill: "Reading", part: "Part 7 · Single passage", type: "choice", title: "Delivery update",
         passage: "To: All staff\nSubject: Supply delivery\nThe delivery of printer paper scheduled for Tuesday will arrive on Wednesday morning. The supplier has confirmed that the quantity and price are unchanged. Teams that need paper before then should collect one sealed box from the storage cupboard beside reception. Please record each box taken on the clipboard.",
         prompt: "What should staff do if they need paper before Wednesday?", options: ["Contact a different supplier", "Collect a box and record it", "Pay the supplier on Tuesday", "Wait at reception for the delivery"], answer: 1,
         explanation: "The notice directs staff to collect one sealed box from the cupboard and record it on the clipboard.",
+        explanationVi: "Nhân viên cần lấy một hộp giấy và ghi lại trên bảng kê.",
+      },
+      {
+        "id": "toeic-r1-extra-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Single passage",
+        "title": "Delivery update",
+        "passage": "To: All staff\nSubject: Supply delivery\nThe delivery of printer paper scheduled for Tuesday will arrive on Wednesday morning. The supplier has confirmed that the quantity and price are unchanged. Teams that need paper before then should collect one sealed box from the storage cupboard beside reception. Please record each box taken on the clipboard.",
+        "type": "choice",
+        "prompt": "When will the delivery now arrive?",
+        "options": [
+          "Tuesday morning",
+          "Tuesday afternoon",
+          "Wednesday morning",
+          "Wednesday evening"
+        ],
+        "answer": 2,
+        "explanationVi": "Lịch giao chuyển từ thứ Ba sang sáng thứ Tư.",
+        "explanation": "Lịch giao chuyển từ thứ Ba sang sáng thứ Tư.",
+        "evidence": "will arrive on Wednesday morning"
+      },
+      {
+        "id": "toeic-r1-extra-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Single passage",
+        "title": "Delivery update",
+        "passage": "To: All staff\nSubject: Supply delivery\nThe delivery of printer paper scheduled for Tuesday will arrive on Wednesday morning. The supplier has confirmed that the quantity and price are unchanged. Teams that need paper before then should collect one sealed box from the storage cupboard beside reception. Please record each box taken on the clipboard.",
+        "type": "choice",
+        "prompt": "What did the supplier confirm?",
+        "options": [
+          "The quantity and price are unchanged",
+          "The order was canceled",
+          "The paper costs less",
+          "Extra boxes will arrive"
+        ],
+        "answer": 0,
+        "explanationVi": "Nhà cung cấp xác nhận số lượng và giá vẫn giữ nguyên.",
+        "explanation": "Nhà cung cấp xác nhận số lượng và giá vẫn giữ nguyên.",
+        "evidence": "the quantity and price are unchanged"
+      },
+      {
+        "id": "toeic-r1-extra-3",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Single passage",
+        "title": "Delivery update",
+        "passage": "To: All staff\nSubject: Supply delivery\nThe delivery of printer paper scheduled for Tuesday will arrive on Wednesday morning. The supplier has confirmed that the quantity and price are unchanged. Teams that need paper before then should collect one sealed box from the storage cupboard beside reception. Please record each box taken on the clipboard.",
+        "type": "choice",
+        "prompt": "Where is the storage cupboard?",
+        "options": [
+          "Next to reception",
+          "In the car park",
+          "Inside the mailroom",
+          "Beside the loading dock"
+        ],
+        "answer": 0,
+        "explanationVi": "Beside reception tương đương next to reception.",
+        "explanation": "Beside reception tương đương next to reception.",
+        "evidence": "the storage cupboard beside reception"
+      },
+      {
+        "id": "toeic-r1-extra-4",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 7 · Single passage",
+        "title": "Delivery update",
+        "passage": "To: All staff\nSubject: Supply delivery\nThe delivery of printer paper scheduled for Tuesday will arrive on Wednesday morning. The supplier has confirmed that the quantity and price are unchanged. Teams that need paper before then should collect one sealed box from the storage cupboard beside reception. Please record each box taken on the clipboard.",
+        "type": "choice",
+        "prompt": "What is the main purpose of the notice?",
+        "options": [
+          "To request new suppliers",
+          "To explain a delivery delay and a temporary option",
+          "To announce a price increase",
+          "To remind staff to place an order"
+        ],
+        "answer": 1,
+        "explanationVi": "Thông báo nêu lịch giao mới và cách lấy giấy trong lúc chờ.",
+        "explanation": "Thông báo nêu lịch giao mới và cách lấy giấy trong lúc chờ.",
+        "evidence": "Teams that need paper before then should collect one sealed box"
       },
       {
         id: "toeic-r2", exam: "TOEIC Listening & Reading", skill: "Reading", part: "Part 7 · Single passage", type: "choice", title: "Training registration",
         passage: "Employees may register for the customer-service workshop through the internal learning page until 5 p.m. on 12 June. The session is free, but places are limited to 18 participants. Staff who need to cancel should notify the training team at least one working day in advance so a colleague can take the place.",
         prompt: "Why should an employee notify the training team about a cancellation?", options: ["To receive a refund", "So another colleague can use the place", "To change the workshop date", "Because registration closes early"], answer: 1,
         explanation: "The passage explains that advance notice allows a colleague to take the participant’s place.",
+        explanationVi: "Báo hủy sớm để đồng nghiệp khác có thể tham dự.",
       },
       {
         id: "toeic-r3", exam: "TOEIC Listening & Reading", skill: "Reading", part: "Part 5 · Incomplete sentences", type: "choice", title: "Grammar in context",
@@ -172,9 +728,70 @@ export const STUDY_CONTENT_PACKS = [
       },
       {
         id: "toeic-r4", exam: "TOEIC Listening & Reading", skill: "Reading", part: "Part 6 · Text completion", type: "choice", title: "Customer notice",
-        passage: "Our service counter will close at 3 p.m. on Friday for scheduled maintenance. -------. Online orders can still be placed as usual, and the counter will reopen at 9 a.m. on Monday.",
-        prompt: "Choose the sentence that best completes the notice.", options: ["We apologize for any inconvenience this may cause.", "The new counter opened several years ago.", "Please submit your order to the warehouse last month.", "All employees have completed the survey."], answer: 0,
+        passage: "Our service counter will [1] at 3 p.m. on Friday for scheduled maintenance. [2] The closure is temporary. [3], online orders can still be placed as usual. The counter will reopen [4] 9 a.m. on Monday.",
+        prompt: "Which sentence fits blank 2?", options: ["We apologize for any inconvenience this may cause.", "The new counter opened several years ago.", "Please submit your order to the warehouse last month.", "All employees have completed the survey."], answer: 0,
         explanation: "An apology for temporary closure fits the notice; the other sentences do not connect to its purpose or timeline.",
+        explanationVi: "Câu xin lỗi phù hợp với thông báo quầy tạm đóng để bảo trì.",
+      },
+      {
+        "id": "toeic-r4-extra-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Customer notice",
+        "passage": "Our service counter will [1] at 3 p.m. on Friday for scheduled maintenance. [2] The closure is temporary. [3], online orders can still be placed as usual. The counter will reopen [4] 9 a.m. on Monday.",
+        "type": "choice",
+        "prompt": "Which word fits blank 1?",
+        "options": [
+          "close",
+          "closed",
+          "closing",
+          "closure"
+        ],
+        "answer": 0,
+        "explanationVi": "Sau will dùng động từ nguyên mẫu close.",
+        "explanation": "Sau will dùng động từ nguyên mẫu close.",
+        "evidence": "The closure is temporary."
+      },
+      {
+        "id": "toeic-r4-extra-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Customer notice",
+        "passage": "Our service counter will [1] at 3 p.m. on Friday for scheduled maintenance. [2] The closure is temporary. [3], online orders can still be placed as usual. The counter will reopen [4] 9 a.m. on Monday.",
+        "type": "choice",
+        "prompt": "Which phrase fits blank 3?",
+        "options": [
+          "As a result",
+          "In the meantime",
+          "For instance",
+          "In the past"
+        ],
+        "answer": 1,
+        "explanationVi": "In the meantime nói về khoảng thời gian quầy đang đóng.",
+        "explanation": "In the meantime nói về khoảng thời gian quầy đang đóng.",
+        "evidence": "Online orders can still be placed as usual"
+      },
+      {
+        "id": "toeic-r4-extra-3",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Reading",
+        "part": "Part 6 · Text completion",
+        "title": "Customer notice",
+        "passage": "Our service counter will [1] at 3 p.m. on Friday for scheduled maintenance. [2] The closure is temporary. [3], online orders can still be placed as usual. The counter will reopen [4] 9 a.m. on Monday.",
+        "type": "choice",
+        "prompt": "Which word fits blank 4?",
+        "options": [
+          "since",
+          "during",
+          "at",
+          "from"
+        ],
+        "answer": 2,
+        "explanationVi": "Dùng at trước giờ cụ thể: at 9 a.m.",
+        "explanation": "Dùng at trước giờ cụ thể: at 9 a.m.",
+        "evidence": "9 a.m. on Monday"
       },
       {
         id: "ia-r5", exam: "IELTS Academic", skill: "Reading", part: "Reading · Matching information", type: "choice", title: "Restoring salt marshes", pathwayStage: "band-6", focus: "Trace the condition that explains why a habitat becomes squeezed.",
@@ -296,13 +913,316 @@ export const STUDY_CONTENT_PACKS = [
         id: "toeic-l7", exam: "TOEIC Listening & Reading", skill: "Listening", part: "Part 3 · Conversations", type: "choice", title: "Equipment delivery",
         transcript: "Man: The new scanners were due this morning, but the supplier called to say the shipment is delayed. Woman: Do they know when it will arrive? Man: Friday before noon. I will move the installation team to the west branch tomorrow and ask reception to keep the loading area clear on Friday.",
         prompt: "When is the shipment expected?", options: ["Tomorrow morning", "Friday before noon", "Friday afternoon", "Next week"], answer: 1,
+        audio: "./assets/study/audio/toeic-delivery.wav",
+        evidence: "Friday before noon.",
+        explanationVi: "Hàng sẽ đến trước 12 giờ trưa thứ Sáu.",
+        distractorsVi: ["Ngày mai là lúc đội lắp đặt chuyển chi nhánh.", "", "Before noon là trước buổi trưa.", "Người nói xác nhận thứ Sáu, không nói tuần sau."],
+        followUp: { prompt: "The courier will arrive Tuesday before noon. When should you expect the courier?", options: ["Tuesday morning", "Tuesday afternoon"], answer: 0, explanation: "Before noon nghĩa là trước 12 giờ trưa." },
         explanation: "The speaker says the shipment is expected Friday before noon.",
       },
+      {
+        "id": "toeic-delivery-team",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Listening",
+        "part": "Part 3 · Conversations",
+        "type": "choice",
+        "title": "Equipment delivery",
+        transcript: "Man: The new scanners were due this morning, but the supplier called to say the shipment is delayed. Woman: Do they know when it will arrive? Man: Friday before noon. I will move the installation team to the west branch tomorrow and ask reception to keep the loading area clear on Friday.",
+        "prompt": "What will the installation team do tomorrow?",
+        "options": [
+          "Clear the loading area",
+          "Install the scanners",
+          "Work at the west branch",
+          "Call the supplier"
+        ],
+        "answer": 2,
+        "evidence": "I will move the installation team to the west branch tomorrow and ask reception to keep the loading area clear on Friday.",
+        "explanation": "Đội lắp đặt sẽ chuyển sang chi nhánh phía tây vào ngày mai.",
+        "explanationVi": "Đội lắp đặt sẽ chuyển sang chi nhánh phía tây vào ngày mai.",
+        "distractorsVi": [
+          "Việc giữ khu dỡ hàng thông thoáng được giao cho lễ tân.",
+          "Máy chưa được giao nên không có lịch lắp đặt vào ngày mai.",
+          "",
+          "Nhà cung cấp đã gọi báo trễ. Đội lắp đặt không được giao gọi lại."
+        ],
+        "audio": "./assets/study/audio/toeic-delivery.wav",
+        "followUp": {
+          "prompt": "The technician will work at the north branch on Monday. Where will she work on Monday?",
+          "options": [
+            "At reception",
+            "At the north branch"
+          ],
+          "answer": 1,
+          "explanation": "North branch là chi nhánh phía bắc."
+        }
+      },
+      {
+        "id": "toeic-delivery-reception",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Listening",
+        "part": "Part 3 · Conversations",
+        "type": "choice",
+        "title": "Equipment delivery",
+        transcript: "Man: The new scanners were due this morning, but the supplier called to say the shipment is delayed. Woman: Do they know when it will arrive? Man: Friday before noon. I will move the installation team to the west branch tomorrow and ask reception to keep the loading area clear on Friday.",
+        "prompt": "What will reception be asked to do?",
+        "options": [
+          "Keep the loading area clear",
+          "Move the installation team",
+          "Deliver the scanners",
+          "Repair the scanners"
+        ],
+        "answer": 0,
+        "evidence": "I will move the installation team to the west branch tomorrow and ask reception to keep the loading area clear on Friday.",
+        "explanation": "Lễ tân được nhờ giữ khu dỡ hàng thông thoáng vào thứ Sáu.",
+        "explanationVi": "Lễ tân được nhờ giữ khu dỡ hàng thông thoáng vào thứ Sáu.",
+        "distractorsVi": [
+          "",
+          "Người nói sẽ chuyển đội lắp đặt. Đây không phải việc của lễ tân.",
+          "Nhà cung cấp giao máy. Lễ tân chỉ chuẩn bị khu dỡ hàng.",
+          "Đoạn nghe nói giao hàng trễ, không nói máy bị hỏng."
+        ],
+        "audio": "./assets/study/audio/toeic-delivery.wav",
+        "followUp": {
+          "prompt": "Please ask security to keep the entrance clear. What should security do?",
+          "options": [
+            "Keep the entrance clear",
+            "Deliver the equipment"
+          ],
+          "answer": 0,
+          "explanation": "Security được giao giữ lối vào thông thoáng."
+        }
+      },
+      ...[
+  {
+    "id": "toeic-training-room-1",
+    "exam": "TOEIC Listening & Reading",
+    "skill": "Listening",
+    "part": "Part 3 · Conversations",
+    "type": "choice",
+    "title": "Đổi phòng đào tạo",
+    "transcript": "Man: The projector in room two isn't working. Can we move this afternoon's safety training? Woman: Yes. Room six is available at two thirty. I'll email the participants before lunch. Man: Thanks. I'll put a sign on the door of room two so no one waits there.",
+    "prompt": "Why is the training being moved?",
+    "options": [
+      "A projector is broken",
+      "The trainer is late",
+      "The room is too small",
+      "The training was canceled"
+    ],
+    "answer": 0,
+    "audio": "./assets/study/audio/toeic-training-room.wav",
+    "evidence": "The projector in room two isn't working.",
+    "explanationVi": "Máy chiếu phòng 2 bị hỏng nên cần đổi phòng.",
+    "explanation": "The projector in room two isn't working.",
+    "followUp": {
+      "prompt": "The printer isn't working. Why will the team use another printer?",
+      "options": [
+        "The first printer is broken",
+        "They ran out of paper"
+      ],
+      "answer": 0,
+      "explanation": "Isn’t working nghĩa là thiết bị không hoạt động."
+    }
+  },
+  {
+    "id": "toeic-training-room-2",
+    "exam": "TOEIC Listening & Reading",
+    "skill": "Listening",
+    "part": "Part 3 · Conversations",
+    "type": "choice",
+    "title": "Đổi phòng đào tạo",
+    "transcript": "Man: The projector in room two isn't working. Can we move this afternoon's safety training? Woman: Yes. Room six is available at two thirty. I'll email the participants before lunch. Man: Thanks. I'll put a sign on the door of room two so no one waits there.",
+    "prompt": "Where will the training take place?",
+    "options": [
+      "Room two",
+      "Room three",
+      "Room six",
+      "The lobby"
+    ],
+    "answer": 2,
+    "audio": "./assets/study/audio/toeic-training-room.wav",
+    "evidence": "Room six is available at two thirty.",
+    "explanationVi": "Phòng 6 trống lúc 2 giờ 30 và được chọn thay phòng 2.",
+    "explanation": "Room six is available at two thirty.",
+    "followUp": {
+      "prompt": "Room nine is available, so we will move the meeting there. Where is the meeting?",
+      "options": [
+        "Room nine",
+        "Room six"
+      ],
+      "answer": 0,
+      "explanation": "There chỉ địa điểm vừa nhắc đến: phòng 9."
+    }
+  },
+  {
+    "id": "toeic-training-room-3",
+    "exam": "TOEIC Listening & Reading",
+    "skill": "Listening",
+    "part": "Part 3 · Conversations",
+    "type": "choice",
+    "title": "Đổi phòng đào tạo",
+    "transcript": "Man: The projector in room two isn't working. Can we move this afternoon's safety training? Woman: Yes. Room six is available at two thirty. I'll email the participants before lunch. Man: Thanks. I'll put a sign on the door of room two so no one waits there.",
+    "prompt": "What will the second speaker do before lunch?",
+    "options": [
+      "Fix the projector",
+      "Print a sign",
+      "Set up the chairs",
+      "Email the participants"
+    ],
+    "answer": 3,
+    "audio": "./assets/study/audio/toeic-training-room.wav",
+    "evidence": "I'll email the participants before lunch.",
+    "explanationVi": "Người nói thứ hai sẽ gửi email cho người tham dự trước giờ ăn trưa.",
+    "explanation": "I'll email the participants before lunch.",
+    "followUp": {
+      "prompt": "I’ll call the visitors before lunch. What will I do?",
+      "options": [
+        "Call the visitors",
+        "Send a letter"
+      ],
+      "answer": 0,
+      "explanation": "Call là gọi điện."
+    }
+  },
+  {
+    "id": "toeic-invoice-correction-1",
+    "exam": "TOEIC Listening & Reading",
+    "skill": "Listening",
+    "part": "Part 3 · Conversations",
+    "type": "choice",
+    "title": "Sửa hóa đơn",
+    "transcript": "Man: Hi, I'm checking invoice forty-eight. It lists twelve boxes, but we received ten. Woman: You're right. Two boxes were removed from the order. I'll send a corrected invoice this afternoon. Man: Thank you. Our accounting team will wait for the revised invoice before paying.",
+    "prompt": "Why is the caller asking about the invoice?",
+    "options": [
+      "The price was missing",
+      "The delivery was late",
+      "The quantity was incorrect",
+      "The payment was rejected"
+    ],
+    "answer": 2,
+    "audio": "./assets/study/audio/toeic-invoice-correction.wav",
+    "evidence": "It lists twelve boxes, but we received ten.",
+    "explanationVi": "Hóa đơn ghi 12 hộp nhưng thực nhận 10 hộp.",
+    "explanation": "It lists twelve boxes, but we received ten.",
+    "followUp": {
+      "prompt": "The form says six chairs, but we ordered four. What is wrong?",
+      "options": [
+        "The delivery address",
+        "The quantity"
+      ],
+      "answer": 1,
+      "explanation": "Số lượng trên biểu mẫu khác số đã đặt."
+    }
+  },
+  {
+    "id": "toeic-invoice-correction-2",
+    "exam": "TOEIC Listening & Reading",
+    "skill": "Listening",
+    "part": "Part 3 · Conversations",
+    "type": "choice",
+    "title": "Sửa hóa đơn",
+    "transcript": "Man: Hi, I'm checking invoice forty-eight. It lists twelve boxes, but we received ten. Woman: You're right. Two boxes were removed from the order. I'll send a corrected invoice this afternoon. Man: Thank you. Our accounting team will wait for the revised invoice before paying.",
+    "prompt": "What will the second speaker send this afternoon?",
+    "options": [
+      "A corrected invoice",
+      "Two boxes",
+      "A payment receipt",
+      "A new contract"
+    ],
+    "answer": 0,
+    "audio": "./assets/study/audio/toeic-invoice-correction.wav",
+    "evidence": "I'll send a corrected invoice this afternoon.",
+    "explanationVi": "Người nói thứ hai sẽ gửi hóa đơn đã chỉnh sửa chiều nay.",
+    "explanation": "I'll send a corrected invoice this afternoon.",
+    "followUp": {
+      "prompt": "I’ll send a revised schedule after lunch. What will I send?",
+      "options": [
+        "An updated schedule",
+        "A payment receipt"
+      ],
+      "answer": 0,
+      "explanation": "Revised nghĩa là đã chỉnh sửa."
+    }
+  },
+  {
+    "id": "toeic-invoice-correction-3",
+    "exam": "TOEIC Listening & Reading",
+    "skill": "Listening",
+    "part": "Part 3 · Conversations",
+    "type": "choice",
+    "title": "Sửa hóa đơn",
+    "transcript": "Man: Hi, I'm checking invoice forty-eight. It lists twelve boxes, but we received ten. Woman: You're right. Two boxes were removed from the order. I'll send a corrected invoice this afternoon. Man: Thank you. Our accounting team will wait for the revised invoice before paying.",
+    "prompt": "When will the accounting team pay?",
+    "options": [
+      "Before lunch",
+      "After receiving the revised invoice",
+      "When the next order arrives",
+      "At the end of the month"
+    ],
+    "answer": 1,
+    "audio": "./assets/study/audio/toeic-invoice-correction.wav",
+    "evidence": "Our accounting team will wait for the revised invoice before paying.",
+    "explanationVi": "Kế toán sẽ chờ nhận hóa đơn đã sửa rồi mới thanh toán.",
+    "explanation": "Our accounting team will wait for the revised invoice before paying.",
+    "followUp": {
+      "prompt": "We’ll wait for the approval before ordering. What must happen first?",
+      "options": [
+        "Place the order",
+        "Get approval"
+      ],
+      "answer": 1,
+      "explanation": "Before cho biết cần được phê duyệt trước."
+    }
+  }
+],
       {
         id: "toeic-l8", exam: "TOEIC Listening & Reading", skill: "Listening", part: "Part 4 · Talks", type: "choice", title: "Staff announcement",
         transcript: "This is a reminder that the staff entrance will be closed from 6 p.m. today while the access system is upgraded. Employees working late should leave through the lobby entrance and return their temporary visitor cards to security. The usual staff entrance will reopen tomorrow at 6 a.m.",
         prompt: "What should employees working late do?", options: ["Use the lobby exit and return their temporary cards.", "Wait in the staff entrance until 6 a.m.", "Keep their visitor card overnight.", "Use the loading dock."], answer: 0,
         explanation: "The announcement directs late staff to use the lobby entrance and return temporary cards to security.",
+        audio: "./assets/study/audio/toeic-focus-l8.wav",
+        explanationVi: "Nhân viên làm muộn cần ra bằng lối sảnh và trả thẻ tạm cho bảo vệ.",
+      },
+      {
+        "id": "toeic-l8-extra-1",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Listening",
+        "part": "Part 4 · Talks",
+        "title": "Staff announcement",
+        "audio": "./assets/study/audio/toeic-focus-l8.wav",
+        "transcript": "This is a reminder that the staff entrance will be closed from 6 p.m. today while the access system is upgraded. Employees working late should leave through the lobby entrance and return their temporary visitor cards to security. The usual staff entrance will reopen tomorrow at 6 a.m.",
+        "type": "choice",
+        "prompt": "Why is the staff entrance closing?",
+        "options": [
+          "To replace its lighting",
+          "To upgrade the access system",
+          "To clean the lobby",
+          "To check visitor records"
+        ],
+        "answer": 1,
+        "explanationVi": "Lối vào đóng để nâng cấp hệ thống kiểm soát ra vào.",
+        "explanation": "Lối vào đóng để nâng cấp hệ thống kiểm soát ra vào.",
+        "evidence": "while the access system is upgraded"
+      },
+      {
+        "id": "toeic-l8-extra-2",
+        "exam": "TOEIC Listening & Reading",
+        "skill": "Listening",
+        "part": "Part 4 · Talks",
+        "title": "Staff announcement",
+        "audio": "./assets/study/audio/toeic-focus-l8.wav",
+        "transcript": "This is a reminder that the staff entrance will be closed from 6 p.m. today while the access system is upgraded. Employees working late should leave through the lobby entrance and return their temporary visitor cards to security. The usual staff entrance will reopen tomorrow at 6 a.m.",
+        "type": "choice",
+        "prompt": "When will normal access resume?",
+        "options": [
+          "At 6 this evening",
+          "At midnight",
+          "Tomorrow at noon",
+          "Tomorrow at 6 a.m."
+        ],
+        "answer": 3,
+        "explanationVi": "Lối dành cho nhân viên mở lại vào 6 giờ sáng hôm sau.",
+        "explanation": "Lối dành cho nhân viên mở lại vào 6 giờ sáng hôm sau.",
+        "evidence": "The usual staff entrance will reopen tomorrow at 6 a.m."
       },
       {
         id: "toeic-r5", exam: "TOEIC Listening & Reading", skill: "Reading", part: "Part 5 · Incomplete sentences", type: "choice", title: "Grammar in context",

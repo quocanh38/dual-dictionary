@@ -201,19 +201,26 @@ export async function addItem(fields) {
   const norm = normalizeText(fields.text);
   const senseKey = String(fields.dictionary?.senseKey || '').trim();
   const db = await openDb();
-  const existing = norm
-    ? await new Promise((resolve, reject) => {
-        const tx = db.transaction('items', 'readonly');
-        const req = tx.objectStore('items').index('normalizedText').getAll(norm);
-        req.onsuccess = () => resolve((req.result || []).find((i) =>
-          i.type === (fields.type || 'word') && String(i.dictionary?.senseKey || '').trim() === senseKey) || null);
-        req.onerror = () => reject(req.error);
-      })
-    : null;
-  if (existing) return { item: existing, merged: true };
-  const item = makeItem(fields);
-  await putItem(item);
-  return { item, merged: false };
+  const candidate = makeItem(fields);
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('items', 'readwrite');
+    const store = tx.objectStore('items');
+    let result;
+    const request = store.index('normalizedText').getAll(norm);
+    request.onsuccess = () => {
+      const existing = request.result.find((item) =>
+        item.type === (fields.type || 'word') &&
+        String(item.dictionary?.senseKey || '').trim() === senseKey);
+      if (existing) {
+        result = { item: existing, merged: true };
+        return;
+      }
+      result = { item: candidate, merged: false };
+      store.put(candidate);
+    };
+    tx.oncomplete = () => resolve(result);
+    tx.onabort = () => reject(tx.error);
+  });
 }
 
 /* ---------------- migration (one-way, idempotent) — spec §3 ---------------- */

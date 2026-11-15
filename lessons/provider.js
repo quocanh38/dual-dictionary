@@ -27,12 +27,20 @@ export const META_MODEL_API_PROVIDER = Object.freeze({
   keychainAccount: 'DD-lesson-studio',
 });
 
+export const GEMINI_PROVIDER = Object.freeze({
+  id: 'gemini',
+  label: 'Gemini',
+  baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
+  model: 'gemini-3.6-flash',
+  maxOutputTokens: 65536,
+});
+
 export const LESSON_PROVIDERS = Object.freeze({
+  [GEMINI_PROVIDER.id]: GEMINI_PROVIDER,
   [HACKATHON_PROVIDER.id]: HACKATHON_PROVIDER,
   [META_MODEL_API_PROVIDER.id]: META_MODEL_API_PROVIDER,
 });
 
-export function providerForPurpose(purpose) {
-  if (purpose === 'repair-exercises' || purpose === 'photo-extract') return META_MODEL_API_PROVIDER;
-  return HACKATHON_PROVIDER;
+export function providerForPurpose() {
+  return GEMINI_PROVIDER;
 }

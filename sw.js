@@ -150,7 +150,7 @@
 // v135: add three newly reviewed batch-10 offline lessons.
 // v136: add three cross-reviewed batch-11 offline lessons.
 // v137: add three cross-reviewed batch-12 offline lessons.
-// v138: add IELTS pathway stages, Linear Thinking guidance from the app author's
+// v138: add IELTS pathway stages, step-by-step guidance from the app author's
 // blog, upper-stage original practice and offline Academic Writing task visuals.
 // v139: add complete 40-item-per-skill IELTS objective diagnostics and the
 // 6.5→7.0 pathway stage; cache the new diagnostic content module for offline use.
@@ -166,13 +166,14 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v155';
+const CACHE = 'mdx-dict-v188-practice-doc-links';
 const ASSETS = [
   './',
   './index.html',
   './robots.txt',
   './NOTICE.md',
   './css/style.css',
+  './css/style.min.css',
   './js/mdict.js',
   './js/db.js',
   './js/fuzzy.js',
@@ -180,6 +181,7 @@ const ASSETS = [
   './js/fsrs-opt.js',
   './js/app.js',
   './js/ai-client.js',
+  './js/offline-ai-lessons.js',
   './js/tutor-validation.js',
   './js/tutor-prompts.js',
   './js/tutor-selection.js',
@@ -213,7 +215,6 @@ const ASSETS = [
   './lessons/photo-pane.js',
   './lessons/photo-request.js',
   './lessons/photo-downscale.js',
-  './lessons/why-meta.html',
   './lessons/library/index.json',
   './lessons/library/provenance.json',
   './lessons/library/covers.json',
@@ -261,6 +262,8 @@ const ASSETS = [
   './icons/icon-192.png',
   './icons/icon-512.png',
   './data-loading-guide.md',
+  './docs/',
+  './docs/index.html',
   './docs/huong-dan-su-dung.html',
   // frequency band shown next to a looked-up word — small, and looked up on the
   // first search after install, so it is precached (offline from the start).
@@ -283,16 +286,55 @@ const ASSETS = [
   // make if offline PDF support must work on the very first open.
 ];
 
+const TOEIC_AUDIO_CACHE = 'mdx-dict-toeic-audio';
+const TOEIC_AUDIO = /^\/assets\/study\/audio\/toeic-(delivery|training-room|invoice-correction|focus-l4|focus-l8)\.wav$/;
+
+async function preserveToeicAudio() {
+  const target = await caches.open(TOEIC_AUDIO_CACHE);
+  for (const key of await caches.keys()) {
+    if (!key.startsWith('mdx-dict-v') || key === CACHE) continue;
+    const old = await caches.open(key);
+    for (const request of await old.keys()) {
+      if (!TOEIC_AUDIO.test(new URL(request.url).pathname)) continue;
+      const response = await old.match(request);
+      if (response?.status === 200 && !(await target.match(request))) await target.put(request, response);
+    }
+  }
+}
+
+async function serveToeicAudio(request) {
+  const cached = await (await caches.open(TOEIC_AUDIO_CACHE)).match(request.url);
+  if (!cached) return fetch(request);
+  const range = request.headers.get('Range');
+  if (!range) return cached;
+  const bytes = await cached.arrayBuffer();
+  const size = bytes.byteLength;
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  if (match && (match[1] || match[2])) {
+    const start = match[1] ? Number(match[1]) : Math.max(0, size - Number(match[2]));
+    const end = match[1] && match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
+    if (start <= end) {
+      return new Response(bytes.slice(start, end + 1), {status: 206, headers: {
+        'Content-Type': 'audio/wav', 'Content-Range': `bytes ${start}-${end}/${size}`,
+        'Content-Length': String(end - start + 1), 'Accept-Ranges': 'bytes',
+      }});
+    }
+  }
+  return new Response(null, {status: 416, headers: {'Content-Range': `bytes */${size}`}});
+}
+
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  // Build the new offline shell from fresh responses before activating it.
+  const requests = ASSETS.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
+  e.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(requests)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
   e.waitUntil(
-    caches.keys()
+    preserveToeicAudio().then(() => caches.keys())
       // 'mdx-dict-meta' is version-independent reminder state (12h guard + the
       // user's language for notification copy) — old shell caches go, it stays.
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== 'mdx-dict-meta').map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith('mdx-dict-v') && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -303,6 +345,10 @@ self.addEventListener('fetch', (e) => {
   // IndexedDB on load and would blow up the Cache Storage quota otherwise.
   // remote-config.json is optional (private deployments only) — never cache it.
   const path = new URL(e.request.url).pathname;
+  if (new URL(e.request.url).origin === self.location.origin && TOEIC_AUDIO.test(path)) {
+    e.respondWith(serveToeicAudio(e.request));
+    return;
+  }
   if (path.includes('/dicts/') || path.endsWith('/remote-config.json')) return;
   // Vietnamese landing + blog (/vi/...) are marketing content that changes
   // independently of app releases — never enter the app cache (stale pages +
@@ -316,7 +362,7 @@ self.addEventListener('fetch', (e) => {
         // permanently shadow the real asset on the next deploy (this is what
         // broke the previous deployment: style.css/app.js were served from an
         // old broken deploy and never refreshed).
-        if (!resp || !resp.ok || resp.type === 'opaque') return resp;
+        if (!resp || resp.status === 206 || !resp.ok || resp.type === 'opaque') return resp;
         const copy = resp.clone();
         caches.open(CACHE).then((c) => c.put(e.request, copy)).catch(() => {});
         return resp;

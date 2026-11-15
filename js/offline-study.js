@@ -1,4 +1,7 @@
-import { addItem } from "./store.js";
+import { listRecords, progressKey } from "../lessons/storage.js";
+import { fetchLibraryIndex } from "../lessons/library.js";
+import { openAiLessonBuilder, openSavedAiLessons } from './offline-ai-lessons.js';
+import { addItem, allItems } from "./store.js";
 import { askTutor, getAiSettings, PROVIDERS } from "./ai-client.js";
 import {
   allStudyRecords,
@@ -8,6 +11,7 @@ import {
 } from "./db.js";
 import {
   STUDY_CONTENT_PACKS,
+  TOEIC_FOCUS_SETS,
   STUDY_EXAM_CONFIG,
   IELTS_DIAGNOSTIC_FORM,
   IELTS_LINEAR_GUIDANCE,
@@ -229,7 +233,7 @@ function responseMarkup(q) {
   return "";
 }
 function responseFromForm(q, root) {
-  if (q.type === "choice") return Number(root.querySelector('[name="exam-answer"]:checked')?.value);
+  if (q.type === "choice" || q.type === "audio-choice") return Number(root.querySelector('[name="exam-answer"]:checked')?.value);
   if (q.type === "short-answer") return root.querySelector("[data-answer-text]")?.value || "";
   if (q.type === "gap-fill") return Object.fromEntries(q.gaps.map((g) => [g.id, root.querySelector(`[data-answer-gap="${CSS.escape(g.id)}"]`)?.value || ""]));
   if (q.type === "matching") return Object.fromEntries(q.pairs.map((p) => [p.id, root.querySelector(`[data-answer-match="${CSS.escape(p.id)}"]`)?.value || ""]));
@@ -246,25 +250,34 @@ function paintQuestion() {
   const timed = isTimedMode();
   const diagnostic = current.mode === "diagnostic";
   const remaining = timed ? Math.max(0, Math.ceil((current.deadlineAt - Date.now()) / 1000)) : null;
-  const listeningMaterial = !q.transcript ? "" : diagnostic
+  const listeningMaterial = q.audio && !timed
+    ? `<audio controls preload="none" src="${esc(q.audio)}" aria-label="Nghe đoạn hội thoại"></audio>${current.checked ? `<details class="exam-passage"><summary>Lời thoại</summary><p>${esc(q.transcript)}</p></details>` : ""}`
+    : !q.transcript ? "" : diagnostic
     ? `<p class="hint">Part script is hidden. Browser voice is synthetic and may differ from an IELTS recording. In this diagnostic, each Part can be played once.</p><button type="button" class="btn-secondary" data-play-section="${esc(q.diagnosticSection)}" ${current.playedSections?.[q.diagnosticSection] ? "disabled" : ""}>🔊 Play Part ${esc(q.diagnosticSection)} with browser voice</button>`
     : timed
       ? `<p class="hint">Listening script is hidden in timed mode. <button type="button" class="btn-secondary" data-speak-script>🔊 Play with browser voice</button></p>`
-      : `<details class="exam-passage"><summary>Listening script · show after listening</summary><p>${esc(q.transcript)}</p><button type="button" class="btn-secondary" data-speak-script>🔊 Read script (browser voice, may need installed voice)</button></details>`;
-  host.innerHTML = `<p class="hint">${esc(q.exam)} · ${esc(q.skill)} · ${esc(q.part || q.title)} · ${index}/${set.length}${timed ? ` · <strong id="exam-timer" role="timer">${Math.floor(remaining / 60)}:${String(remaining % 60).padStart(2, "0")}</strong>` : ""}</p>
-    ${pathway && !diagnostic ? `<aside class="ielts-learning-scaffold"><strong>${esc(pathway.label)} · Mục tiêu câu này</strong><p>${esc(q.focus)}</p><p><strong>Linear Thinking · ${esc(method.title)}:</strong> ${esc(method.steps)}</p><a href="${esc(method.blog)}" target="_blank" rel="noopener">Đọc bài phương pháp trên blog</a></aside>` : ""}
+      : `<button type="button" class="btn-primary" data-speak-script>🔊 Nghe bài / Play audio</button>${current.checked ? `<details class="exam-passage"><summary>Lời thoại / Transcript</summary><p>${esc(q.transcript)}</p></details>` : ""}`;
+  host.innerHTML = `<p class="exam-progress">${esc(q.skill)} · ${esc(q.part || q.title)} · ${index}/${set.length}${timed ? ` · <strong id="exam-timer" role="timer">${Math.floor(remaining / 60)}:${String(remaining % 60).padStart(2, "0")}</strong>` : ""}</p>
+    ${pathway && !diagnostic ? `<aside class="ielts-learning-scaffold"><strong>${esc(pathway.label)} · Mục tiêu câu này</strong><p>${esc(q.focus)}</p><p><strong>Hướng dẫn theo từng bước · ${esc(method.title)}:</strong> ${esc(method.steps)}</p><a href="${esc(method.blog)}" target="_blank" rel="noopener">Đọc bài phương pháp trên blog</a></aside>` : ""}
     ${q.image ? `<img class="exam-prompt-image" src="${esc(q.image)}" alt="${esc(q.imageAlt || "Practice illustration")}">` : ""}
     ${q.note ? `<p class="hint">${esc(q.note)}</p>` : ""}
     ${q.passage ? `<div class="exam-passage">${esc(q.passage)}</div>` : ""}
+    ${q.documents?.length ? `<div aria-label="Văn bản tham chiếu">${q.documents.map((doc, i) =>
+      `<details class="exam-passage" data-exam-document="${i}"><summary>${esc(doc.title)}</summary><p>${esc(doc.text)}</p></details>`
+    ).join("")}</div>` : ""}
     ${listeningMaterial}
     <h3>${esc(q.prompt)}</h3>${responseMarkup(q)}
     <div class="exam-actions">${timed ? `<button type="button" class="btn-secondary" data-exam-prev ${index === 1 ? "disabled" : ""}>Previous</button><button type="button" class="btn-primary" data-exam-next>${index === set.length ? (diagnostic ? "Finish diagnostic" : "Finish simulation") : (responseIsComplete(q, current.responses?.[q.id]) ? "Save & next" : "Skip")}</button><button type="button" class="btn-secondary" data-exam-finish>Submit now</button>` : current.checked ? `<button type="button" class="btn-primary" data-exam-next>Next question</button>` : `<button type="button" class="btn-primary" data-exam-check ${responseIsComplete(q, current.response ?? current.answerIndex) ? "" : "disabled"}>Check answer</button>`}<button type="button" class="btn-secondary" data-exam-reset>Restart set</button></div>
-    ${current.checked ? `<p class="exam-feedback ${current.correct ? "is-correct" : "is-wrong"}" role="status"><strong>${current.correct ? "Correct" : "Review this answer"}</strong> · ${esc(q.explanation)}${!current.correct ? ` Your response: ${esc(formatResponse(q, current.response ?? current.answerIndex))}. Answer: ${esc(formatResponse(q, null, true))}. Saved in Vault for review.` : ""}</p>` : ""}`;
+    ${current.checked ? `<p class="exam-feedback ${current.correct ? "is-correct" : "is-wrong"}" role="status"><strong>${current.correct ? "Correct" : "Review this answer"}</strong> · ${esc(q.explanation)}${!current.correct ? ` Your response: ${esc(formatResponse(q, current.response ?? current.answerIndex))}. Answer: ${esc(formatResponse(q, null, true))}.` : ""}</p>` : ""}`;
+  if (current.checked && !current.correct) {
+    host.insertAdjacentHTML("beforeend", mistakeActions(q, current.response ?? current.answerIndex));
+    bindMistakeActions(host, [q]);
+  }
   const updateResponse = () => {
     const response = responseFromForm(q, host);
     if (timed) current.responses = { ...(current.responses || {}), [q.id]: response };
     else current.response = response;
-    if (q.type === "choice" && !timed) current.answerIndex = response;
+    if ((q.type === "choice" || q.type === "audio-choice") && !timed) current.answerIndex = response;
     const check = host.querySelector("[data-exam-check]");
     if (check) check.disabled = !responseIsComplete(q, current.response);
     persistAttempt();
@@ -272,6 +285,19 @@ function paintQuestion() {
   host.querySelectorAll('[name="exam-answer"]').forEach((e) => e.addEventListener("change", updateResponse));
   host.querySelectorAll("[data-answer-text], [data-answer-gap], [data-answer-match]").forEach((e) => e.addEventListener("input", updateResponse));
   host.querySelector("[data-exam-check]")?.addEventListener("click", checkAnswer);
+  if (q.documents?.length) {
+    const key = `dd-exam-document:${current.sessionId}`;
+    const panels = [...host.querySelectorAll("[data-exam-document]")];
+    const selected = Number(sessionStorage.getItem(key)) || 0;
+    panels[selected]?.setAttribute("open", "");
+    for (const panel of panels) {
+      panel.addEventListener("toggle", () => {
+        if (!panel.open) return;
+        sessionStorage.setItem(key, panel.dataset.examDocument);
+        panels.filter((other) => other !== panel).forEach((other) => { other.open = false; });
+      });
+    }
+  }
   host.querySelector("[data-exam-next]")?.addEventListener("click", nextQuestion);
   host.querySelector("[data-exam-prev]")?.addEventListener("click", previousQuestion);
   host.querySelector("[data-exam-finish]")?.addEventListener("click", () => {
@@ -292,16 +318,109 @@ function paintQuestion() {
   });
   if (timed) startExamClock();
 }
+function mistakeEvidence(q) {
+  if (q.evidence) return q.evidence;
+  const answer = formatResponse(q, null, true).toLowerCase();
+  return (q.transcript || q.passage || "").match(/[^.!?]+[.!?]?/g)
+    ?.map((sentence) => sentence.trim())
+    .find((sentence) => answer && sentence.toLowerCase().includes(answer)) || "";
+}
+
+function mistakeActions(q, response) {
+  const evidence = mistakeEvidence(q);
+  const selected = formatResponse(q, response);
+  const correct = formatResponse(q, null, true);
+  return `<section class="exam-mistake" aria-label="Ôn lại câu sai">
+    <h4>Ôn lại câu sai</h4>
+    <p><strong>Bạn chọn</strong> ${esc(selected)}</p>
+    <p><strong>Đáp án đúng</strong> ${esc(correct)}</p>
+    ${q.explanationVi ? `<p>${esc(q.distractorsVi?.[response] || q.explanationVi)}</p>` : ""}
+    ${evidence ? `<blockquote>${esc(evidence)}</blockquote>` : ""}
+    <div class="exam-actions">
+      <button type="button" class="btn-primary" data-save-mistake="${esc(q.id)}" data-selected="${esc(selected)}">Lưu để ôn</button>
+      ${q.exam.startsWith("TOEIC") ? '<button type="button" class="btn-secondary" data-ai-exam-practice>Tạo bài luyện tương tự · Gemini</button>' : ""}
+      ${q.transcript && evidence ? `<button type="button" class="btn-secondary" data-play-evidence="${esc(q.id)}">Nghe lại câu chứa đáp án</button>` : ""}
+    </div>
+    <p class="hint" role="status"></p>
+    ${q.followUp ? `<details data-follow-up="${esc(q.id)}"><summary>Luyện câu tương tự</summary>
+      <p>${esc(q.followUp.prompt)}</p>
+      ${q.followUp.options.map((option, index) => `<button type="button" class="btn-secondary" data-follow-answer="${index}">${esc(option)}</button>`).join("")}
+      <p role="status"></p>
+    </details>` : ""}
+  </section>`;
+}
+
+function bindMistakeActions(host, questions) {
+  const byId = new Map(questions.map((question) => [question.id, question]));
+  host.querySelectorAll("[data-follow-up]").forEach((section) => {
+    const question = byId.get(section.dataset.followUp).followUp;
+    section.querySelectorAll("[data-follow-answer]").forEach((button) => {
+      button.onclick = () => {
+        section.querySelector('[role="status"]').textContent = Number(button.dataset.followAnswer) === question.answer
+          ? `Đúng. ${question.explanation}` : "Chưa đúng. Hãy thử lại.";
+      };
+    });
+  });
+  host.querySelectorAll('[data-ai-exam-practice]').forEach(button => {
+    const id = button.closest('.exam-mistake').querySelector('[data-save-mistake]').dataset.saveMistake;
+    const q = byId.get(id);
+    button.onclick = () => openAiLessonBuilder({
+      title: 'Bài luyện bổ sung TOEIC',
+      mode: 'exam',
+      source: [q.part, q.prompt, formatResponse(q, null, true), mistakeEvidence(q), q.explanationVi].filter(Boolean).join('\n'),
+    });
+  });
+  host.querySelectorAll("[data-save-mistake]").forEach((button) => {
+    button.onclick = async () => {
+      const q = byId.get(button.dataset.saveMistake);
+      const status = button.closest(".exam-mistake").querySelector('[role="status"]');
+      button.disabled = true;
+      try {
+        const explanation = q.explanationVi || q.explanation;
+        const definition = [
+          `Đáp án đúng: ${formatResponse(q, null, true)}`,
+          `Bạn chọn: ${button.dataset.selected}`,
+          explanation,
+        ].filter(Boolean).join(" · ");
+        const { item } = await addItem({
+          type: "phrase", text: q.prompt, status: "new",
+          dictionary: { definition, senseKey: `exam:${q.id}`, source: q.exam },
+          context: { sentence: mistakeEvidence(q), sourceTitle: q.title || q.part },
+          tags: ["exam-mistake", q.skill.toLowerCase()],
+        });
+        document.dispatchEvent(new Event("exam-card-saved"));
+        status.textContent = "Đã lưu trong Ôn tập.";
+        button.textContent = "Ôn ngay";
+        button.onclick = () => document.dispatchEvent(new CustomEvent("review-saved-item", { detail: item }));
+        button.disabled = false;
+      } catch {
+        status.textContent = "Chưa lưu được thẻ. Hãy thử lại.";
+        button.disabled = false;
+      }
+    };
+  });
+  host.querySelectorAll("[data-play-evidence]").forEach((button) => {
+    button.onclick = () => {
+      if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
+      const speech = new SpeechSynthesisUtterance(mistakeEvidence(byId.get(button.dataset.playEvidence)));
+      speech.lang = "en-US";
+      speechSynthesis.cancel();
+      speechSynthesis.speak(speech);
+    };
+  });
+}
+
 async function restartSet() {
   if (!current) return;
   const { exam, mode, skill, pathwayStage, assignmentId, assignmentKind, assignmentSkill, assignmentPromptId, assignmentQuestionIds } = current;
   await deleteStudyRecord(current.sessionId || sessionRecordId(exam, mode, skill, pathwayStage));
   await deleteStudyRecord("study:exam-session");
   const assignment = assignmentId ? { id: assignmentId, kind: assignmentKind, skill: assignmentSkill, promptId: assignmentPromptId, questionIds: assignmentQuestionIds } : null;
-  await startSet(exam, mode, skill, pathwayStage, assignment);
+  await startSet(exam, mode, skill, pathwayStage, assignmentId === TOEIC_TIMED_READING.id ? { ...assignment, minutes: TOEIC_TIMED_READING.minutes } : assignment);
 }
 async function persistAttempt() {
   if (current) await putStudyRecord({ ...current, id: current.sessionId || sessionRecordId(current.exam, current.mode, current.skill, current.pathwayStage), type: "exam-session", updatedAt: Date.now() });
+  window.dispatchEvent(new Event("toeic-session-updated"));
 }
 function sessionRecordId(exam, mode, skill = "all", pathwayStage = null) {
   const stageSuffix = exam === "IELTS Academic" ? `:${pathwayStage || IELTS_PATHWAY_STAGES[0].id}` : "";
@@ -331,7 +450,7 @@ async function startSet(exam = "IELTS Academic", mode = "practice", skill = "all
     questionIds: chosen.map((q) => q.id), questionId: chosen[0].id,
     questionIndex: 0, answerIndex: null, response: null, responses: {}, checked: false, correct: null,
     results: [], complete: false, startedAt: Date.now(),
-    deadlineAt: isTimedMode({ mode }) ? Date.now() + sessionDurationMs(exam, skill, chosen.length, mode) : null,
+    deadlineAt: isTimedMode({ mode }) ? Date.now() + (assignment?.minutes ? assignment.minutes * 60_000 : sessionDurationMs(exam, skill, chosen.length, mode)) : null,
     playedSections: {},
     ...(assignment?.kind === "objective" ? {
       assignmentId: assignment.id,
@@ -384,10 +503,6 @@ async function checkAnswer() {
     response: formatResponse(q, response), correct: current.correct,
     explanation: q.explanation, mode: current.mode, createdAt: Date.now(),
   });
-  if (!current.correct) {
-    const mistake = `${q.exam} ${q.skill} ${q.part || ""}: ${q.prompt}\nMy answer: ${formatResponse(q, response)}\nAnswer: ${formatResponse(q, null, true)}\n${q.explanation}`;
-    await addItem({ type: "sentence", text: mistake, context: { sourceTitle: q.title || q.part }, tags: ["exam-mistake", q.exam.startsWith("IELTS") ? "ielts" : "toeic", q.skill.toLowerCase()], status: "new" });
-  }
   await persistAttempt(); paintQuestion(); renderHistory(); renderStudyStats(); renderIELTSAssignment();
 }
 async function finishSession(timedOut = false) {
@@ -402,7 +517,6 @@ async function finishSession(timedOut = false) {
       const result = { questionId: q.id, skill: q.skill, part: q.part, correct };
       current.results = [...(current.results || []).filter((r) => r.questionId !== q.id), result];
       await putStudyRecord({ id: `study:exam-attempt:${Date.now()}:${q.id}`, type: "exam-attempt", exam: q.exam, skill: q.skill, part: q.part, questionId: q.id, prompt: q.prompt, pathwayStage: q.pathwayStage || null, focus: q.focus || "", response: formatResponse(q, answers[q.id]), correct, explanation: q.explanation, mode: current.mode, createdAt: Date.now() });
-      if (!correct) await addItem({ type: "sentence", text: `${q.exam} ${q.skill} ${q.part || ""}: ${q.prompt}\nMy answer: ${formatResponse(q, answers[q.id])}\nAnswer: ${formatResponse(q, null, true)}\n${q.explanation}`, context: { sourceTitle: q.title || q.part }, tags: ["exam-mistake", q.exam.startsWith("IELTS") ? "ielts" : "toeic", q.skill.toLowerCase()], status: "new" });
     }
   }
   const results = current.results || [];
@@ -416,17 +530,28 @@ async function finishSession(timedOut = false) {
   const summary = current.result;
   await putStudyRecord({ id: `study:exam-result:${current.completedAt}:${Math.random().toString(36).slice(2, 7)}`, type: "exam-result", exam: current.exam, mode: current.mode, diagnosticSet: current.mode === "diagnostic" ? IELTS_DIAGNOSTIC_FORM : null, pathwayStage: current.pathwayStage || null, assignmentId: current.assignmentId || null, timedOut, ...summary, elapsedMs: current.elapsedMs, createdAt: current.completedAt });
   const host = $("#exam-question");
-  const review = isTimedMode() ? `<details class="exam-review"><summary>Review answers and explanations</summary>${set.filter((q) => responseIsComplete(q, current.responses?.[q.id])).map((q) => { const response = current.responses[q.id], ok = responseIsCorrect(q, response); return `<article class="study-history"><strong>${esc(q.skill)} · ${esc(q.part || q.title)} · ${ok ? "Correct" : "Review"}</strong><p>${esc(q.prompt)}</p><p>Your response: ${esc(formatResponse(q, response))}</p><p>Answer: ${esc(formatResponse(q, null, true))}</p><p>${esc(q.explanation)}</p></article>`; }).join("")}</details>` : "";
-  const skillLabel = current.assignmentId ? `IELTS ${current.assignmentSkill || current.skill} recommended practice` : current.mode === "diagnostic" ? (current.skill === "all" ? "IELTS Listening + Reading diagnostic" : `IELTS ${current.skill} diagnostic`) : current.skill && current.skill !== "all" ? `${current.skill} timed practice` : "Timed starter simulation";
+  const review = isTimedMode() ? `<details class="exam-review"><summary>Review answers and explanations</summary>${set.filter((q) => responseIsComplete(q, current.responses?.[q.id])).map((q) => { const response = current.responses[q.id], ok = responseIsCorrect(q, response); return `<article class="study-history"><strong>${esc(q.skill)} · ${esc(q.part || q.title)} · ${ok ? "Correct" : "Review"}</strong><p>${esc(q.prompt)}</p><p>Your response: ${esc(formatResponse(q, response))}</p><p>Answer: ${esc(formatResponse(q, null, true))}</p><p>${esc(q.explanation)}</p>${ok ? "" : mistakeActions(q, response)}</article>`; }).join("")}</details>` : "";
+  const skillLabel = TOEIC_RESUMABLE_SETS.find((entry) => entry.id === current.assignmentId)?.title || (current.assignmentId ? `IELTS ${current.assignmentSkill || current.skill} recommended practice` : current.mode === "diagnostic" ? (current.skill === "all" ? "IELTS Listening + Reading diagnostic" : `IELTS ${current.skill} diagnostic`) : current.skill && current.skill !== "all" ? `${current.skill} timed practice` : "Timed starter simulation");
   const pathwayLabel = current.exam === "IELTS Academic" && current.pathwayStage ? ` · ${getIELTSPathwayStage(current.pathwayStage).label}` : "";
   const diagnosticReports = current.mode === "diagnostic" ? Object.entries(summary.bySkill).map(([skill, row]) => renderDiagnosticReport(skill, row)).join("") : "";
-  const resultText = current.assignmentId
+  const resultText = current.assignmentId && current.exam === "IELTS Academic"
     ? "Bài được gợi ý đã hoàn tất. Lượt tiếp theo sẽ được chọn theo bài đến hạn, kỹ năng cần luyện và nội dung chưa làm trong chặng này."
     : current.mode === "diagnostic"
     ? `${timedOut ? "Time ended." : "Diagnostic complete."} The authored set and browser-generated Listening voice are practice material, not calibrated IELTS questions. Results estimate a next practice stage by skill; they do not produce an official or overall four-skill band.`
     : `${timedOut ? "Time ended; unanswered questions are excluded from accuracy." : "All questions completed."} This original practice set is not a full official exam and does not produce an official score.`;
   const scoreLine = current.mode === "diagnostic" ? `<strong>${summary.correct}/${summary.total}</strong> correct across ${summary.total} questions · ${summary.accuracy}% of answered questions` : `<strong>${summary.correct}/${summary.answered}</strong> answered correctly · ${summary.accuracy}% of answered questions`;
-  if (host) host.innerHTML = `<section class="exam-result"><h3>${skillLabel} complete${esc(pathwayLabel)}</h3><p>${scoreLine}</p><p>${resultText}</p><ul>${Object.entries(summary.bySkill).map(([skill, row]) => `<li>${esc(skill)}: ${row.correct}/${row.total} correct · ${row.answered} answered</li>`).join("")}</ul>${diagnosticReports}${review}<button type="button" class="btn-primary" data-exam-restart>Try again</button></section>`;
+  let readingReport = "";
+  if (current.assignmentId === TOEIC_TIMED_READING.id) {
+    const seconds = Math.floor(Math.min(current.elapsedMs, TOEIC_TIMED_READING.minutes * 60_000) / 1000);
+    const parts = [6, 7].map((part) => {
+      const questions = set.filter((question) => question.part.startsWith(`Part ${part} ·`));
+      const correct = questions.filter((question) => responseIsComplete(question, current.responses?.[question.id]) && responseIsCorrect(question, current.responses?.[question.id])).length;
+      return `<li>Part ${part}: ${correct}/${questions.length} đúng (${Math.round(100 * correct / questions.length)}%)</li>`;
+    });
+    readingReport = `<p>Thời gian làm: ${Math.floor(seconds / 60)} phút ${seconds % 60} giây</p><ul>${parts.join("")}</ul>`;
+  }
+  if (host) host.innerHTML = `<section class="exam-result"><h3>${skillLabel} complete${esc(pathwayLabel)}</h3><p>${scoreLine}</p><p>${resultText}</p><ul>${Object.entries(summary.bySkill).map(([skill, row]) => `<li>${esc(skill)}: ${row.correct}/${row.total} correct · ${row.answered} answered</li>`).join("")}</ul>${diagnosticReports}${readingReport}${review}<button type="button" class="btn-primary" data-exam-restart>Try again</button></section>`;
+  if (host) bindMistakeActions(host, set);
   host?.querySelectorAll("[data-use-diagnostic-stage]").forEach((button) => button.addEventListener("click", () => {
     $("#ielts-pathway-stage").value = button.dataset.useDiagnosticStage;
     $("#exam-skill").value = button.dataset.diagnosticSkill;
@@ -435,7 +560,7 @@ async function finishSession(timedOut = false) {
   }));
   host?.querySelector("[data-exam-restart]")?.addEventListener("click", () => {
     const assignment = current.assignmentId ? { id: current.assignmentId, kind: current.assignmentKind, skill: current.assignmentSkill, questionIds: current.assignmentQuestionIds } : null;
-    startSet(current.exam, current.mode, current.skill, current.pathwayStage, assignment);
+    startSet(current.exam, current.mode, current.skill, current.pathwayStage, current.assignmentId === TOEIC_TIMED_READING.id ? { ...assignment, minutes: TOEIC_TIMED_READING.minutes } : assignment);
   });
   renderStudyStats();
   renderIELTSAssignment();
@@ -575,7 +700,7 @@ function renderWritingPrompt() {
   if (!selected) { target.textContent = "Choose a prompt to begin."; return; }
   const stage = getIELTSPathwayStage(selected.pathwayStage);
   const method = IELTS_LINEAR_GUIDANCE.Writing;
-  target.innerHTML = `<strong>${esc(stage.label)} · ${esc(selected.task)}</strong><p>${esc(selected.focus)}</p><p>${esc(selected.prompt)}</p>${selected.image ? `<img class="exam-prompt-image" src="${esc(selected.image)}" alt="${esc(selected.imageAlt || "IELTS Academic writing task visual")}">` : ""}<p><strong>Linear Thinking · ${esc(method.title)}:</strong> ${esc(selected.methodCue || method.steps)}</p><p class="hint">Practice target: ${selected.minimumWords ? `${selected.minimumWords}+ words` : "complete the task"}${selected.suggestedMinutes ? ` · suggested ${selected.suggestedMinutes} minutes` : ""}. This is practice guidance, not a score prediction. <a href="${esc(method.blog)}" target="_blank" rel="noopener">Đọc bài phương pháp trên blog</a></p>`;
+  target.innerHTML = `<strong>${esc(stage.label)} · ${esc(selected.task)}</strong><p>${esc(selected.focus)}</p><p>${esc(selected.prompt)}</p>${selected.image ? `<img class="exam-prompt-image" src="${esc(selected.image)}" alt="${esc(selected.imageAlt || "IELTS Academic writing task visual")}">` : ""}<p><strong>Hướng dẫn theo từng bước · ${esc(method.title)}:</strong> ${esc(selected.methodCue || method.steps)}</p><p class="hint">Practice target: ${selected.minimumWords ? `${selected.minimumWords}+ words` : "complete the task"}${selected.suggestedMinutes ? ` · suggested ${selected.suggestedMinutes} minutes` : ""}. This is practice guidance, not a score prediction. <a href="${esc(method.blog)}" target="_blank" rel="noopener">Đọc bài phương pháp trên blog</a></p>`;
 }
 async function requestAiReview(kind) {
   const isWriting = kind === "writing";
@@ -610,8 +735,8 @@ async function requestAiReview(kind) {
   status.textContent = `Sending the selected prompt and ${isWriting ? "written response" : "typed notes only"} (${submittedText.length} characters) to ${PROVIDERS[settings.provider]?.label || settings.provider} / ${settings.model}… token charges may apply. Cancelling may not stop processing if the provider already received it.`;
   output?.replaceChildren();
   const rubric = isWriting
-    ? "Review the response for task coverage, organization/cohesion, vocabulary, and grammar. Use the supplied pathway focus and Linear Thinking cue as formative context when present. Give 2 specific strengths and up to 3 high-value improvements. For every correction, quote an exact short excerpt from the learner response; never invent a quote. If unsure, say so. Do not calculate or predict an IELTS band or official score."
-    : "Review the learner's typed transcript or reflection notes for response relevance, organization, vocabulary, and grammar/clarity. Use the supplied pathway focus and Linear Thinking cue as formative context when present. Give 2 specific strengths and up to 3 high-value improvements. Quote exact short excerpts only when present; do not infer pronunciation from notes or claim to have heard audio. Do not calculate or predict an IELTS band or official score.";
+    ? "Review the response for task coverage, organization/cohesion, vocabulary, and grammar. Use the supplied pathway focus and step-by-step practice guidance as formative context when present. Give 2 specific strengths and up to 3 high-value improvements. For every correction, quote an exact short excerpt from the learner response; never invent a quote. If unsure, say so. Do not calculate or predict an IELTS band or official score."
+    : "Review the learner's typed transcript or reflection notes for response relevance, organization, vocabulary, and grammar/clarity. Use the supplied pathway focus and step-by-step practice guidance as formative context when present. Give 2 specific strengths and up to 3 high-value improvements. Quote exact short excerpts only when present; do not infer pronunciation from notes or claim to have heard audio. Do not calculate or predict an IELTS band or official score.";
   try {
     const result = await askTutor({
       signal: controller.signal,
@@ -679,7 +804,7 @@ async function setSpeakingPrompt(p, assignmentId = "") {
   if (label) label.textContent = `${getIELTSPathwayStage(p.pathwayStage).label} · ${p.task} · ${p.focus}`;
   const guidance = $("#speaking-method-guidance");
   const method = IELTS_LINEAR_GUIDANCE.Speaking;
-  if (guidance) guidance.innerHTML = `<strong>Linear Thinking · ${esc(method.title)}:</strong> ${esc(p.methodCue || method.steps)} <a href="${esc(method.blog)}" target="_blank" rel="noopener">Đọc bài phương pháp trên blog</a>`;
+  if (guidance) guidance.innerHTML = `<strong>Hướng dẫn theo từng bước · ${esc(method.title)}:</strong> ${esc(p.methodCue || method.steps)} <a href="${esc(method.blog)}" target="_blank" rel="noopener">Đọc bài phương pháp trên blog</a>`;
   const rows = await allStudyRecords();
   const draft = rows.find((row) => row.id === speakingDraftId(p.id))
     || rows.find((row) => row.id === "study:speaking-draft" && row.promptId === p.id);
@@ -834,8 +959,12 @@ async function renderStudyStats() {
     group.total++;
     if (row.correct) group.correct++;
   }
+  const weakest = Object.entries(bySkill)
+    .filter(([, row]) => row.total > row.correct)
+    .sort((a, b) => (b[1].total - b[1].correct) - (a[1].total - a[1].correct))[0];
+  const recommendation = weakest ? `<p><strong>Nên luyện tiếp</strong> ${esc(weakest[0])} · sai ${weakest[1].total - weakest[1].correct}/${weakest[1].total} câu.</p>` : "";
   const recent = results.slice(0, 5).map((r) => `<li><strong>${esc(r.exam)}</strong>${r.exam === "IELTS Academic" && r.pathwayStage ? ` · ${esc(getIELTSPathwayStage(r.pathwayStage).shortLabel)}` : ""} · ${r.correct}/${r.answered} correct${r.mode === "timed" ? " · timed" : ""} · ${new Date(r.createdAt).toLocaleDateString()}</li>`).join("");
-  host.innerHTML = `<p><strong>${attempts.length}</strong> objective questions answered · <strong>${results.length}</strong> sets completed · <strong>${writingCount}</strong> Writing attempts · <strong>${speakingCount}</strong> Speaking attempts/recordings</p><h4>Accuracy by objective skill</h4><ul>${Object.entries(bySkill).map(([name, row]) => `<li>${esc(name)}: ${row.correct}/${row.total} (${Math.round(100 * row.correct / row.total)}%)</li>`).join("") || "<li>No objective attempts yet</li>"}</ul><h4>Recent completed sets</h4><ul>${recent || "<li>No completed sets yet</li>"}</ul><p class="hint">Practice statistics are local counts, not predicted IELTS bands or TOEIC scaled scores.</p>`;
+  host.innerHTML = `${recommendation}<p><strong>${attempts.length}</strong> objective questions answered · <strong>${results.length}</strong> sets completed · <strong>${writingCount}</strong> Writing attempts · <strong>${speakingCount}</strong> Speaking attempts/recordings</p><h4>Accuracy by objective skill</h4><ul>${Object.entries(bySkill).map(([name, row]) => `<li>${esc(name)}: ${row.correct}/${row.total} (${Math.round(100 * row.correct / row.total)}%)</li>`).join("") || "<li>No objective attempts yet</li>"}</ul><h4>Recent completed sets</h4><ul>${recent || "<li>No completed sets yet</li>"}</ul><p class="hint">Practice statistics are local counts, not predicted IELTS bands or TOEIC scaled scores.</p>`;
 }
 
 async function renderListenLibrary() {
@@ -893,7 +1022,7 @@ function renderIELTSStageGuidance() {
   const stage = getIELTSPathwayStage(selectedIELTSStage());
   const skill = $("#exam-skill")?.value || "all";
   const skills = skill === "all" ? ["Reading", "Listening"] : [skill];
-  host.innerHTML = `${diagnostic ? `<p><strong>40-question objective diagnostic:</strong> 40 Listening + 40 Academic Reading questions. The selected pathway is ignored; results compare raw scores with published reference marks and suggest a next practice stage for each skill separately. This is not a calibrated IELTS mock.</p>` : `<p><strong>${esc(stage.label)}</strong> · ${esc(stage.description)} Nhãn này phân loại mục tiêu luyện tập, không phải band được chấm hay dự đoán.</p>`}${skills.map((name) => { const method = IELTS_LINEAR_GUIDANCE[name]; return `<p><strong>Linear Thinking · ${esc(name)}:</strong> ${esc(method.steps)} <a href="${esc(method.blog)}" target="_blank" rel="noopener">Bài phương pháp trên blog</a></p>`; }).join("")}`;
+  host.innerHTML = `${diagnostic ? `<p><strong>40-question objective diagnostic:</strong> 40 Listening + 40 Academic Reading questions. The selected pathway is ignored; results compare raw scores with published reference marks and suggest a next practice stage for each skill separately. This is not a calibrated IELTS mock.</p>` : `<p><strong>${esc(stage.label)}</strong> · ${esc(stage.description)} Nhãn này phân loại mục tiêu luyện tập, không phải band được chấm hay dự đoán.</p>`}${skills.map((name) => { const method = IELTS_LINEAR_GUIDANCE[name]; return `<p><strong>Hướng dẫn theo từng bước · ${esc(name)}:</strong> ${esc(method.steps)} <a href="${esc(method.blog)}" target="_blank" rel="noopener">Bài phương pháp trên blog</a></p>`; }).join("")}`;
 }
 
 function activeIELTSAssignment(rows, stage) {
@@ -988,7 +1117,292 @@ async function startIELTSAssignment(assignment) {
   await renderIELTSAssignment();
 }
 
-export function initOfflineStudy() {
+const TOEIC_EXAM = "TOEIC Listening & Reading";
+const TOEIC_AUDIO_CACHE = "mdx-dict-toeic-audio";
+
+const TOEIC_TIMED_READING = {
+  id: "toeic-timed-reading",
+  title: "TOEIC Part 6–7",
+  skill: "Reading",
+  minutes: 10,
+  questionIds: TOEIC_FOCUS_SETS.filter((set) =>
+    ["toeic-part6-returns", "toeic-part7-delayed-order", "toeic-part7-training-update"].includes(set.id)
+  ).flatMap((set) => set.questionIds),
+};
+const TOEIC_RESUMABLE_SETS = [...TOEIC_FOCUS_SETS, TOEIC_TIMED_READING];
+
+async function openToeicSet(set, mode = "practice") {
+  $("#offline-exam-lab").open = true;
+  const skill = set.skill || "Listening";
+  await startSet(TOEIC_EXAM, mode, skill, null, {
+    ...set, kind: "objective", skill,
+  });
+  $("#exam-question")?.scrollIntoView({ block: "start" });
+}
+
+function initToeicPractice() {
+  const exercises = new Map(getStudyExercises(TOEIC_EXAM).map((question) => [question.id, question]));
+  const setList = $("#toeic-part3-sets");
+  const resume = $("#toeic-continue");
+  const updateResume = async () => {
+    const rows = (await allStudyRecords()).filter((row) => row.type === "exam-session" && !row.complete);
+    rows.sort((a, b) => b.updatedAt - a.updatedAt);
+    const row = rows.find((entry) => TOEIC_RESUMABLE_SETS.some((set) => set.id === entry.assignmentId));
+    const set = TOEIC_RESUMABLE_SETS.find((entry) => entry.id === row?.assignmentId);
+    resume.classList.toggle("hidden", !set);
+    if (!set) return;
+    const position = Math.max(0, set.questionIds.indexOf(row.questionId)) + 1;
+    resume.textContent = `Tiếp tục · ${set.title} · Câu ${position}/${set.questionIds.length}`;
+    resume.onclick = () => openToeicSet(set, row.mode);
+  };
+  window.addEventListener("toeic-session-updated", updateResume);
+  updateResume();
+
+  $("#toeic-timed-reading").onclick = () => openToeicSet(TOEIC_TIMED_READING, "timed");
+  const partFilter = $("#toeic-filter-part");
+  const offlineFilter = $("#toeic-filter-offline");
+  const updateFilters = () => {
+    const rows = [...setList.querySelectorAll("[data-toeic-set]")];
+    for (const row of rows) {
+      row.hidden = !!((partFilter.value && row.dataset.part !== partFilter.value) ||
+        (offlineFilter.value && row.dataset.offline !== offlineFilter.value));
+      row.style.display = row.hidden ? "none" : "";
+    }
+    for (const heading of setList.querySelectorAll("[data-toeic-heading]")) {
+      heading.hidden = !rows.some((row) => !row.hidden && row.dataset.part === heading.dataset.toeicHeading);
+    }
+    $("#toeic-filter-empty").hidden = rows.some((row) => !row.hidden);
+  };
+  partFilter.addEventListener("change", updateFilters);
+  offlineFilter.addEventListener("change", updateFilters);
+  let lastPart;
+  for (const set of TOEIC_FOCUS_SETS) {
+    const part = set.part || 3;
+    if (part !== lastPart) {
+      const heading = document.createElement("h3");
+      heading.dataset.toeicHeading = part;
+      heading.textContent = `Part ${part} · ${set.skill || "Listening"}`;
+      setList.append(heading);
+      lastPart = part;
+    }
+    const files = [...new Set(set.questionIds.map((id) => exercises.get(id).audio).filter(Boolean))];
+    const row = document.createElement("p");
+    const open = document.createElement("button");
+    const download = document.createElement("button");
+    const status = document.createElement("span");
+    row.className = "exam-actions";
+    row.dataset.toeicSet = set.id;
+    row.dataset.part = part;
+    open.type = download.type = "button";
+    open.className = download.className = "btn-secondary";
+    open.textContent = set.title;
+    open.onclick = () => openToeicSet(set);
+    status.setAttribute("role", "status");
+    row.append(open);
+    if (set.timed) {
+      const timed = document.createElement("button");
+      timed.type = "button";
+      timed.className = "btn-secondary";
+      timed.textContent = "Làm có bấm giờ";
+      timed.onclick = () => openToeicSet(set, "timed");
+      row.append(timed);
+    }
+    row.append(download, status);
+    setList.append(row);
+
+    let downloading = false;
+    const update = async () => {
+      if (downloading) return;
+      let ready = false;
+      try {
+        const cache = await caches.open(TOEIC_AUDIO_CACHE);
+        ready = !!navigator.serviceWorker?.controller &&
+          (await Promise.all(files.map((url) => cache.match(url)))).every(Boolean);
+      } catch { /* Storage may be unavailable. */ }
+      if (downloading) return;
+      status.textContent = ready ? "Sẵn sàng offline" : "Chưa sẵn sàng offline";
+      row.dataset.offline = ready ? "ready" : "missing";
+      updateFilters();
+      download.hidden = ready || !files.length;
+      download.textContent = "Tải offline";
+      download.setAttribute("aria-label", `Tải offline · ${set.title}`);
+    };
+    download.onclick = async () => {
+      downloading = true;
+      download.disabled = true;
+      status.textContent = "Đang tải…";
+      try {
+        const cache = await caches.open(TOEIC_AUDIO_CACHE);
+        for (const url of files) {
+          if (await cache.match(url)) continue;
+          const response = await fetch(url, { cache: "reload", signal: AbortSignal.timeout(45000) });
+          if (response.status !== 200 || !/^(audio\/|application\/octet-stream)/i.test(response.headers.get("Content-Type") || "")) {
+            throw new Error("Missing audio");
+          }
+          await cache.put(url, response);
+        }
+        downloading = false;
+        await update();
+      } catch {
+        status.textContent = "Tải chưa xong. Hãy thử lại khi có mạng.";
+        download.textContent = "Tải lại";
+        download.setAttribute("aria-label", `Tải lại · ${set.title}`);
+      } finally {
+        downloading = false;
+        download.disabled = false;
+      }
+    };
+    navigator.serviceWorker?.addEventListener("controllerchange", update);
+    update();
+  }
+
+  const filter = $("#toeic-review-part");
+  const list = $("#toeic-review-list");
+  const start = $("#toeic-review-start");
+  const partNumber = (question) => question?.part.match(/^Part (\d+)/)?.[1] || "";
+  for (const part of [...new Set([...exercises.values()].map(partNumber).filter(Boolean))].sort()) {
+    filter.add(new Option(`Part ${part}`, part));
+  }
+  const review = (items) => document.dispatchEvent(new CustomEvent("review-saved-items", { detail: items }));
+  const updateReview = async () => {
+    const cards = (await allItems()).flatMap((item) => {
+      if (!item.dictionary?.senseKey?.startsWith("exam:")) return [];
+      const question = exercises.get(item.dictionary.senseKey.slice(5));
+      if (!question && item.dictionary.source !== TOEIC_EXAM) return [];
+      return [{ item, question, due: item.due <= Date.now() && item.userData?.status !== "known" }];
+    });
+    const selected = cards.filter(({ question }) => !filter.value || partNumber(question) === filter.value);
+    const due = selected.filter((entry) => entry.due);
+    $("#toeic-due-count").textContent = `· ${cards.filter((entry) => entry.due).length} thẻ đến hạn`;
+    start.disabled = !due.length;
+    start.onclick = () => review(due.map((entry) => entry.item));
+    list.replaceChildren();
+    if (!selected.length) {
+      const empty = document.createElement("li");
+      empty.textContent = "Chưa có thẻ lỗi đã lưu ở phần này.";
+      list.append(empty);
+    }
+    for (const {item, question, due: isDue} of selected) {
+      const entry = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "btn-secondary";
+      button.textContent = item.text;
+      button.onclick = () => review([item]);
+      const part = partNumber(question);
+      entry.append(button, ` · ${part ? `Part ${part} · ` : ""}${isDue ? "Đến hạn" : "Đã lưu"} `);
+      const set = TOEIC_FOCUS_SETS.find((candidate) => candidate.questionIds.includes(question?.id));
+      if (question) {
+        const source = document.createElement("button");
+        source.type = "button";
+        source.className = "btn-secondary";
+        source.textContent = `Mở bộ gốc · ${set?.title || question.part}`;
+        source.onclick = () => openToeicSet(set || {
+          id: `toeic-review-${question.id}`, title: question.title || question.part, skill: question.skill, questionIds: [question.id],
+        });
+        entry.append(source);
+      }
+      list.append(entry);
+    }
+  };
+  filter.addEventListener("change", updateReview);
+  $("#toeic-review-panel").addEventListener("toggle", updateReview);
+  document.addEventListener("exam-card-saved", updateReview);
+  window.addEventListener("hashchange", () => {
+    if (location.hash === "#/practice") updateReview();
+  });
+  updateReview();
+  const entryUrl = new URL(location.href);
+  const linkedSet = TOEIC_FOCUS_SETS.find((set) => set.id === entryUrl.searchParams.get("toeic"));
+  if (linkedSet && location.hash === "#/practice") {
+    entryUrl.searchParams.delete("toeic");
+    history.replaceState(history.state, "", entryUrl);
+    openToeicSet(linkedSet);
+  }
+}
+
+async function updateWorkLessonProgress() {
+  try {
+    const [library, packs, progress, items] = await Promise.all([
+      fetchLibraryIndex(),
+      listRecords("packs"), listRecords("progress"), allItems(),
+    ]);
+    for (const link of document.querySelectorAll("[data-work-lesson]")) {
+      const entry = library.packs.find((item) => item.file === link.dataset.workLesson + ".json");
+      const pack = packs.find((item) => item.id === `${entry?.packId}@${entry?.version}`)?.payload;
+      const lesson = pack?.lessons[0];
+      const step = lesson && progress.find((item) => item.id === progressKey(pack, lesson))?.step;
+      const finished = lesson && step > lesson.exercises.length;
+      let status = link.nextElementSibling;
+      if (!status?.matches("[data-work-progress]")) {
+        status = document.createElement("span");
+        status.dataset.workProgress = "";
+        status.className = "hint";
+        link.after(status);
+      }
+      status.replaceChildren(finished ? "Đã hoàn thành" : step ? `Đã làm ${step - 1}/${lesson.exercises.length} bài tập` : "Chưa bắt đầu");
+      if (!finished) continue;
+      const packKey = `${pack.packId}@${pack.version}`;
+      const saved = items.filter((item) => item.sourceTag === "lesson-studio" && item.dictionary?.sourceFile === packKey);
+      if (saved.length) {
+        const button = document.createElement("button");
+        button.className = "btn-secondary";
+        button.type = "button";
+        button.textContent = "Ôn cụm đã lưu";
+        button.onclick = () => document.dispatchEvent(new CustomEvent("review-saved-items", {detail: saved}));
+        status.append(" ", button);
+      }
+      const related = {
+        "supplier-delivery": "toeic-part7-delayed-order",
+        "hotel-shift-handover": "toeic-part7-training-update",
+        "workshop-safety-plan": "toeic-part3-training-room",
+      };
+      const set = TOEIC_FOCUS_SETS.find((item) => item.id === related[link.dataset.workLesson]);
+      if (set) {
+        const button = document.createElement("button");
+        button.className = "btn-secondary";
+        button.type = "button";
+        button.textContent = "Làm TOEIC cùng chủ đề";
+        button.onclick = () => openToeicSet(set);
+        status.append(" ", button);
+      }
+    }
+  } catch (error) {
+    console.warn("Could not load workplace lesson progress", error);
+  }
+}
+
+export function initOfflineStudy(lookup) {
+  $("#toeic-ai-offline-lessons")?.addEventListener("click", openSavedAiLessons);
+  initToeicPractice();
+  const refreshWorkProgress = () => {
+    if (location.hash === "#/practice") updateWorkLessonProgress();
+  };
+  refreshWorkProgress();
+  window.addEventListener("hashchange", refreshWorkProgress);
+  window.addEventListener("pageshow", refreshWorkProgress);
+  $("#exam-lookup-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    lookup($("#exam-lookup-word").value);
+  });
+  $("#exam-offline-check")?.addEventListener("click", async () => {
+    const status = $("#exam-offline-status");
+    try {
+      if (!navigator.serviceWorker?.controller) throw new Error("Offline shell not active");
+      const packFiles = Array.from(new Set(Object.keys(SECTION_TARGETS).flatMap((exam) =>
+        getStudyExercises(exam).flatMap((q) => [q.image, q.audio, ...(q.audioChoices || [])].filter(Boolean))
+      )));
+      const files = ["./index.html", "./js/offline-study.js", "./js/study-content.js", "./js/ielts-diagnostic-content.js", ...packFiles];
+      const stylesheet = document.querySelector('link[rel="stylesheet"]')?.href;
+      if (!stylesheet) throw new Error("App stylesheet not found");
+      const cached = await Promise.all([...files, stylesheet].map((file) => caches.match(file)));
+      status.textContent = cached.every(Boolean)
+        ? "Bộ đề và audio đính kèm đã có trên máy. Câu dùng giọng đọc cần giọng ngoại tuyến của thiết bị."
+        : "Chưa đủ tệp ngoại tuyến. Hãy mở lại app khi có mạng rồi kiểm tra lại.";
+    } catch {
+      status.textContent = "Trình duyệt này chưa xác nhận được bộ đề ngoại tuyến.";
+    }
+  });
   const quiz = $("#exam-question");
   if (!quiz) return;
   const validation = validateStudyContentPacks();
@@ -1192,7 +1606,7 @@ export function initOfflineStudy() {
       $("#writing-word-count").textContent =
         (d.text || "").trim().split(/\s+/).filter(Boolean).length + " words";
     }
-    const assigned = rows.filter((r) => r.assignmentId && !r.complete && ["exam-session", "writing-draft", "speaking-draft"].includes(r.type))
+    const assigned = rows.filter((r) => r.assignmentId && r.pathwayStage && !r.complete && ["exam-session", "writing-draft", "speaking-draft"].includes(r.type))
       .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0))[0];
     if (assigned?.pathwayStage && getIELTSPathwayStage(assigned.pathwayStage)) {
       $("#exam-select").value = "IELTS Academic";

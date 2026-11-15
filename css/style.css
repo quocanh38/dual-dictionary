@@ -1318,7 +1318,116 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .reader-tools[open] { flex-basis:100%; }
 .reader-tools button { margin:8px 4px 0 0; }
 
-.village-banner{border-left:4px solid #0f766e;background:#eefaf7;padding:12px 16px;border-radius:10px;margin:12px 0}.village-banner p{margin:6px 0}.village-actions{display:flex;gap:10px;flex-wrap:wrap}.village-banner .btn-secondary{text-decoration:none}
+.village-banner{border-left:4px solid var(--accent);background:var(--surface);color:var(--text);padding:12px 16px;border-radius:10px;margin:12px 0}.village-banner p{margin:6px 0}.village-actions{display:flex;gap:10px;flex-wrap:wrap}.village-banner .btn-secondary{text-decoration:none}
 @media(prefers-reduced-motion:reduce){.village-banner{border-left-width:6px}}
 .offline-badge{display:inline-block;background:#0f766e;color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}.online-badge{display:inline-block;background:#fff;border:1px solid #b34524;color:#b34524;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
 .reader-loop-hint{margin-left:8px}
+
+/* Reserve space even if Netlify inserts its badge after startup. */
+@media (max-width: 768px) {
+  :root:has(#nl-badge-frame) .bottom-nav { padding-bottom: calc(var(--safe-b) + 64px); }
+  :root:has(#nl-badge-frame) main { padding-bottom: 134px; }
+}
+
+#practice-stage { scroll-margin-top: calc(var(--topbar-h) + 12px); }
+
+.review-nav, .practice-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.review-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: var(--text-2);
+  text-decoration: none;
+}
+.review-nav a.active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 700;
+}
+.mobile-word-actions { display: none; }
+
+@media (max-width: 899.5px) {
+  #due-banner, #wotd-card { display: none; }
+  #search-form .search-box { margin-top: 8px; }
+  body[data-app-view="search"]:has(#pron-strip:not(.hidden)) #history { display: none; }
+  body[data-app-view="search"]:has(#pron-strip:not(.hidden)) #context-bar { margin-block: 4px; }
+  body:is([data-app-view="search"], [data-app-view="reader"]):not([data-dict-state="idle"]) .mobile-word-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+  .mobile-word-actions:has(+ #pron-strip:not(.hidden)) #btn-speak,
+  .mobile-word-actions button:disabled { display: none; }
+  .mobile-word-actions button { min-width: 44px; min-height: 44px; }
+  .envi-hint { padding: 0; border: 0; background: transparent; }
+  .envi-hint > span { display: none; }
+  .bottom-nav .bn-label { font-size: 12px; }
+}
+
+#reader-lookup {
+  width: min(100%, 560px);
+  max-height: 80dvh;
+  margin: auto auto 0;
+  border-radius: 16px 16px 0 0;
+  padding: 0 12px max(12px, env(safe-area-inset-bottom));
+}
+.reader-lookup-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  padding: 8px 0;
+}
+.reader-lookup-head h2 { margin: 0; }
+body:not([data-app-view="search"]) #envi-hint { display: none; }
+
+.topbar { background: #115e59; }
+:root[data-theme="dark"] .context-bar {
+  background: #172b2a;
+  border-color: #315953;
+}
+:root[data-theme="dark"] .context-label { color: #5eead4; }
+:root[data-theme="dark"] .context-sentence { color: #e7eaee; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .context-bar {
+    background: #172b2a;
+    border-color: #315953;
+  }
+  :root:not([data-theme="light"]) .context-label { color: #5eead4; }
+  :root:not([data-theme="light"]) .context-sentence { color: #e7eaee; }
+}
+
+.exam-progress {
+  position: sticky;
+  top: var(--topbar-h);
+  z-index: 2;
+  padding: 10px 12px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+}
+.exam-mistake {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.exam-mistake h4 { margin: 0 0 8px; }
+.exam-mistake blockquote {
+  margin: 10px 0;
+  padding-inline-start: 10px;
+  border-inline-start: 3px solid var(--accent);
+}
