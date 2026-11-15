@@ -1,6 +1,6 @@
 # Dual Dict — Bàn giao Codex trên Windows, 15/11/2026
 
-Tiếp tục trên nhánh `windows-handoff-2026-11-15`. Bản production được xác minh là `v195-experience`, Netlify deploy [6af9b9ad36c947a30dc86a08](https://app.netlify.com/projects/dualdictionary/deploys/6af9b9ad36c947a30dc86a08). Đây là bản deploy thủ công. Nhánh bàn giao chưa merge vào `main`. Lần deploy vừa rồi giữ bộ tệp của bản production trước và chép đè các thay đổi đã kiểm tra.
+Tiếp tục trên nhánh `windows-handoff-2026-11-15`. Bản production được xác minh là `v196-first-lookup`, Netlify deploy [6af9c3ca5e7e4b1dfb6d764c](https://app.netlify.com/projects/dualdictionary/deploys/6af9c3ca5e7e4b1dfb6d764c). Đây là bản deploy thủ công. Nhánh bàn giao chưa merge vào `main`. Lần deploy vừa rồi giữ bộ tệp của bản production trước và chép đè các thay đổi đã kiểm tra.
 
 ## Mở repo trên Windows
 
@@ -14,25 +14,32 @@ npm ci
 
 Nếu đã clone và đang ở nhánh bàn giao, chạy `git pull --ff-only`. Mở thư mục repo bằng Codex.
 
-## Cài Netlify MCP và Modern Web Guidance cho Codex
+## Cài Netlify MCP, Modern Web Guidance và Impeccable
 
 ```powershell
 codex mcp add netlify --url https://mcp.netlify.com/mcp
 codex plugin marketplace add GoogleChrome/modern-web-guidance
 codex plugin add modern-web-guidance@googlechrome
+npx.cmd skills add https://github.com/pbakaus/impeccable/tree/main/.agents/skills/impeccable --agent codex --global
 ```
 
 Đăng nhập Netlify khi được hỏi. Mở lại Codex nếu cần nạp cấu hình mới. Yêu cầu Codex gọi Netlify MCP `get-user` và kiểm tra quyền đọc dự án `dualdictionary`. Khi rà hay sửa UI, yêu cầu Codex dùng Modern Web Guidance. Nếu chọn lối cài skill qua trình hướng dẫn của dự án, chạy `npx.cmd modern-web-guidance@latest install` và chọn Codex.
 
 [Thiết lập Codex cho Netlify](https://docs.netlify.com/build/build-with-ai/agent-setup-guides/set-up-codex-for-netlify/) · [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance#alternative-installation-methods)
 
+Impeccable dùng cho rà bố cục, thứ bậc thị giác và luồng sử dụng. Sau khi cài, mở lại Codex và gọi `$impeccable`. Dual Dict đã có `playwright-core` trong repo, dùng cho kiểm tra trình duyệt sau khi chạy `npm ci`. Context7 và Vercel Agent Skills chưa dùng cho bản bàn giao này. [Impeccable](https://github.com/pbakaus/impeccable)
+
 ## Trạng thái production và admin
 
 - [App](https://dualdictionary.netlify.app/) · [Admin](https://dualdictionary.netlify.app/admin/experience/) · [Thông báo dữ liệu](https://dualdictionary.netlify.app/vi/du-lieu-trai-nghiem/).
 - `DD_EXPERIENCE_OPERATIONS=enabled` đang bật cho Netlify Functions, context production. Endpoint đọc trạng thái `/.netlify/functions/experience?operations` đã trả `{"enabled":true}`. Số liệu mặc định đếm tải audio bắt đầu, thành công và lỗi theo ngày giờ Việt Nam và phiên bản. Bản ghi bộ đếm không chứa mã phiên hoặc mã lượt học.
 - Hành trình TOEIC chỉ ghi khi người học chủ động bật chia sẻ. Báo cáo nối mở bộ, hoàn thành, lưu lỗi sai và quay lại ôn trong 7 ngày. Tỷ lệ quay lại chỉ tính các lượt đã có đủ 7 ngày quan sát. Góp ý chỉ gửi khi người dùng bấm Gửi.
-- Đã kiểm tra Chromium và backend cục bộ với dữ liệu giả lập. Trên production đã xác minh service worker `v195`, thông báo, trạng thái bật và endpoint báo cáo trả 401 khi thiếu khóa. Chưa kiểm tra số đếm hoặc báo cáo bằng dữ liệu người dùng thật.
+- Đã kiểm tra Chromium và backend cục bộ với dữ liệu giả lập. Trên production đã xác minh service worker `v196`, thông báo, trạng thái bật và endpoint báo cáo trả 401 khi thiếu khóa. Chưa kiểm tra số đếm hoặc báo cáo bằng dữ liệu người dùng thật.
 - Khóa admin và khóa Gemini nhập qua giao diện hoặc quản lý qua hệ thống cấu hình phù hợp. Giữ bí mật và dữ liệu người dùng ngoài Git, chat và ảnh chụp.
+
+## Luồng người học mới
+
+Commit `bd95ec03ab` rút gọn Chào mừng, đưa nút tải gói đề xuất lên màn hình đầu và thêm lối vào bài mẫu. Đã kiểm tra Chromium ở 320, 390 và 1280 px, gồm tải và tra từ, làm bài mẫu và đưa thẻ vào Ôn tập. Bài mẫu hiện dùng giao diện tiếng Anh.
 
 ## Gemini thật đã nghiệm thu trên Chromium cục bộ
 
