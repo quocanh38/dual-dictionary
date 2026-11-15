@@ -170,14 +170,14 @@ function wav() {
     console.log("PASS choice, short answer, gap-fill and matching; offline skill statistics");
     await page.locator("#ielts-pathway-stage").selectOption("band-6");
     await page.waitForFunction((count) => document.querySelector("#study-pack-status")?.textContent.includes(`${count} practice questions in this stage`), getStudyExercises("IELTS Academic", "band-6").filter((q) => !q.diagnosticSet).length);
-    assert.match(await page.locator("#ielts-stage-guidance").innerText(), /Linear Thinking/);
+    assert.match(await page.locator("#ielts-stage-guidance").innerText(), /Step-by-step guidance/);
     await page.locator("#exam-skill").selectOption("Reading");
     await page.waitForFunction(() => document.querySelector("#study-pack-status")?.textContent.includes("40/40 reading diagnostic questions"));
     await page.locator("#ielts-pathway-stage").selectOption("band-6-5");
     await page.waitForFunction((count) => document.querySelector("#study-pack-status")?.textContent.includes(`${count} practice questions in this stage`) && document.querySelector("#study-pack-status")?.textContent.includes("40/40 reading diagnostic questions"), advancedReading.length);
     await page.locator("#btn-exam-begin").click();
     await page.waitForFunction((count) => document.querySelector("#exam-question .hint")?.textContent.includes(`1/${count}`), advancedReading.length);
-    assert.match(await page.locator("#exam-question .ielts-learning-scaffold").innerText(), /6\.0 → 6\.5.*Linear Thinking/s);
+    assert.match(await page.locator("#exam-question .ielts-learning-scaffold").innerText(), /6\.0 → 6\.5.*Step-by-step guidance/s);
     assert.ok((await page.locator("#exam-question").innerText()).includes(advancedReading[0].prompt));
     for (const [i, q] of advancedReading.entries()) {
       if (i) await page.locator("[data-exam-next]").click();
@@ -193,7 +193,7 @@ function wav() {
     await page.locator("[data-exam-next]").click();
     await page.locator(".exam-result").waitFor();
     assert.match(await page.locator(".exam-result").innerText(), new RegExp(`${advancedReading.length}\\/${advancedReading.length} answered correctly`));
-    console.log("PASS staged IELTS filtering, per-item Linear Thinking scaffold, and advanced Reading keys");
+    console.log("PASS staged IELTS filtering, per-item step-by-step guidance scaffold, and advanced Reading keys");
     assert.equal(ieltsDiagnostic.filter((q) => q.skill === "Listening").length, 40);
     assert.equal(ieltsDiagnostic.filter((q) => q.skill === "Reading").length, 40);
     await page.locator("#exam-mode").selectOption("diagnostic");

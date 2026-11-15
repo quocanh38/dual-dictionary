@@ -615,6 +615,19 @@
 
   <!-- ===== Practice (Phase 3+ micro-exercises) ===== -->
   <section id="practice-view" class="practice-view hidden" aria-label="Practice">
+    <details class="offline-study-panel">
+      <summary>Góp ý và dữ liệu sử dụng</summary>
+      <label><input type="checkbox" id="experience-opt-in"> Chia sẻ số liệu sử dụng để giúp cải thiện Dual Dict</label>
+      <p class="hint">App ghi thao tác tải audio, ôn câu sai và trạng thái Gemini. Không ghi nội dung bài học, hội thoại hay API key. Bạn có thể tắt bất cứ lúc nào.</p>
+      <form id="experience-feedback">
+        <label for="experience-note">Góp ý của bạn</label>
+        <textarea id="experience-note" name="note" maxlength="500" required></textarea>
+        <p class="hint">Chỉ nội dung bạn nhập ở đây được gửi cùng mã phiên ngẫu nhiên và phiên bản app. Đừng nhập thông tin riêng tư.</p>
+        <button type="submit" class="btn-secondary">Gửi góp ý</button>
+        <p role="status"></p>
+      </form>
+    </details>
+    <button type="button" id="saved-learning-chats" class="btn-secondary">Hội thoại đã lưu</button>
     <section class="offline-study-panel" aria-labelledby="work-english-heading">
       <h2 id="work-english-heading">Tiếng Anh công việc</h2>
       <div class="exam-actions">

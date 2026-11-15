@@ -16,7 +16,7 @@ export function saveAiSettings(s) {
   return value;
 }
 export function clearAiSettings() { localStorage.removeItem(KEY); }
-async function request(url, headers, body, signal, timeoutMs) {
+async function request(url, headers, body, signal, timeoutMs, readStream) {
   const controller = new AbortController(), timer = setTimeout(() => controller.abort('timeout'), timeoutMs);
   const abort = () => controller.abort('cancelled');
   if (signal?.aborted) abort(); else signal?.addEventListener('abort', abort, { once: true });
@@ -29,6 +29,7 @@ async function request(url, headers, body, signal, timeoutMs) {
       if (response.status === 400) throw new Error('Provider rejected the request. Check the selected model and request compatibility in AI settings.');
       throw new Error(`Provider request failed (${response.status}). Check the endpoint, model, and provider CORS support.`);
     }
+    if (readStream) return await readStream(response);
     try { return await response.json(); } catch { throw new Error('Provider returned a non-JSON response. Check the endpoint and model.'); }
   } catch (error) {
     if (error.name === 'AbortError' || controller.signal.aborted) {
@@ -54,4 +55,50 @@ export async function askTutor({ instructions, input, signal, model, timeoutMs =
   const content = data?.choices?.[0]?.message?.content;
   if (typeof content !== 'string') throw new Error('Provider returned an unexpected response.');
   try { return JSON.parse(content); } catch { throw new Error('Tutor response was not valid JSON. Please retry.'); }
+}
+
+export async function streamTutor({ instructions, input, signal, onText }) {
+  const settings = getAiSettings();
+  if (!settings.apiKey) throw new Error('Hãy nhập Gemini API key trong Cài đặt nâng cao → Học tập.');
+  return request(`${settings.baseUrl}/chat/completions`, {
+    Authorization: `Bearer ${settings.apiKey}`, 'Content-Type': 'application/json',
+  }, {
+    model: settings.model,
+    stream: true,
+    messages: [{ role: 'system', content: instructions }, { role: 'user', content: input }],
+  }, signal, 45000, async (response) => {
+    if (!response.body) throw new Error('Gemini không trả về luồng dữ liệu.');
+    const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+    let buffer = '', result = '', finished = false;
+    try {
+      while (true) {
+        const { value, done } = await reader.read();
+        buffer += value || '';
+        const lines = buffer.split(/\r?\n/);
+        buffer = lines.pop();
+        if (done && buffer) lines.push(buffer);
+        for (const line of lines) {
+          if (!line.startsWith('data:')) continue;
+          const data = line.slice(5).trim();
+          if (data === '[DONE]') {
+            if (!result.trim() || !finished) throw new Error('Gemini chưa trả lời đầy đủ.');
+            return result;
+          }
+          const event = JSON.parse(data);
+          if (event.error) throw new Error('Gemini báo lỗi khi đang trả lời.');
+          const choice = event.choices?.[0];
+          const delta = choice?.delta?.content;
+          if (typeof delta === 'string') {
+            result += delta;
+            onText(result);
+          }
+          if (choice?.finish_reason === 'stop') finished = true;
+        }
+        if (done) throw new Error('Phản hồi bị ngắt. Bạn có thể thử lại.');
+      }
+    } finally {
+      await reader.cancel().catch(() => {});
+      reader.releaseLock();
+    }
+  });
 }

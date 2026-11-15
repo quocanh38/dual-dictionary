@@ -179,7 +179,10 @@ export function openAiLessonBuilder({ title, mode, source }) {
         }
       });
     } catch (error) {
-      if (!controller.signal.aborted) status.textContent = error.message;
+      if (!controller.signal.aborted) {
+        status.textContent = error.message;
+        generate.textContent = 'Thử lại';
+      }
     } finally {
       generate.disabled = false;
       model.disabled = false;

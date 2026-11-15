@@ -1,3 +1,5 @@
+import { trackExperience } from "./experience.js";
+import { openToeicExplanation, openSavedToeicExplanation } from "./toeic-ai-explanations.js";
 import { listRecords, progressKey } from "../lessons/storage.js";
 import { fetchLibraryIndex } from "../lessons/library.js";
 import { openAiLessonBuilder, openSavedAiLessons } from './offline-ai-lessons.js';
@@ -338,7 +340,7 @@ function mistakeActions(q, response) {
     ${evidence ? `<blockquote>${esc(evidence)}</blockquote>` : ""}
     <div class="exam-actions">
       <button type="button" class="btn-primary" data-save-mistake="${esc(q.id)}" data-selected="${esc(selected)}">Lưu để ôn</button>
-      ${q.exam.startsWith("TOEIC") ? '<button type="button" class="btn-secondary" data-ai-exam-practice>Tạo bài luyện tương tự · Gemini</button>' : ""}
+      ${q.exam.startsWith("TOEIC") ? '<button type="button" class="btn-secondary" data-ai-exam-practice>Tạo bài luyện tương tự · Gemini</button><button type="button" class="btn-secondary" data-ai-explain>Hỏi vì sao mình sai</button>' : ""}
       ${q.transcript && evidence ? `<button type="button" class="btn-secondary" data-play-evidence="${esc(q.id)}">Nghe lại câu chứa đáp án</button>` : ""}
     </div>
     <p class="hint" role="status"></p>
@@ -361,6 +363,18 @@ function bindMistakeActions(host, questions) {
       };
     });
   });
+  for (const button of host.querySelectorAll("[data-ai-explain]")) {
+    const saved = button.closest(".exam-mistake").querySelector("[data-save-mistake]");
+    const question = byId.get(saved.dataset.saveMistake);
+    button.onclick = () => openToeicExplanation(question.id, {
+      question: question.prompt,
+      selected: saved.dataset.selected,
+      correct: formatResponse(question, null, true),
+      evidence: mistakeEvidence(question),
+      explanation: question.explanationVi || question.explanation,
+      source: question.documents?.map((doc) => doc.title + ": " + doc.text).join("\n") || question.passage || question.transcript || "",
+    });
+  }
   host.querySelectorAll('[data-ai-exam-practice]').forEach(button => {
     const id = button.closest('.exam-mistake').querySelector('[data-save-mistake]').dataset.saveMistake;
     const q = byId.get(id);
@@ -388,6 +402,7 @@ function bindMistakeActions(host, questions) {
           context: { sentence: mistakeEvidence(q), sourceTitle: q.title || q.part },
           tags: ["exam-mistake", q.skill.toLowerCase()],
         });
+        trackExperience("mistake_saved");
         document.dispatchEvent(new Event("exam-card-saved"));
         status.textContent = "Đã lưu trong Ôn tập.";
         button.textContent = "Ôn ngay";
@@ -1131,7 +1146,13 @@ const TOEIC_TIMED_READING = {
 };
 const TOEIC_RESUMABLE_SETS = [...TOEIC_FOCUS_SETS, TOEIC_TIMED_READING];
 
+let hiddenToeicSets = new Set();
+try {
+  hiddenToeicSets = new Set(JSON.parse(localStorage.getItem("dd-hidden-toeic") || "[]"));
+} catch { /* Keep the bundled catalogue. */ }
+
 async function openToeicSet(set, mode = "practice") {
+  if (hiddenToeicSets.has(set.id) && !set.resume) return;
   $("#offline-exam-lab").open = true;
   const skill = set.skill || "Listening";
   await startSet(TOEIC_EXAM, mode, skill, null, {
@@ -1153,7 +1174,7 @@ function initToeicPractice() {
     if (!set) return;
     const position = Math.max(0, set.questionIds.indexOf(row.questionId)) + 1;
     resume.textContent = `Tiếp tục · ${set.title} · Câu ${position}/${set.questionIds.length}`;
-    resume.onclick = () => openToeicSet(set, row.mode);
+    resume.onclick = () => openToeicSet({...set,resume:true}, row.mode);
   };
   window.addEventListener("toeic-session-updated", updateResume);
   updateResume();
@@ -1164,7 +1185,7 @@ function initToeicPractice() {
   const updateFilters = () => {
     const rows = [...setList.querySelectorAll("[data-toeic-set]")];
     for (const row of rows) {
-      row.hidden = !!((partFilter.value && row.dataset.part !== partFilter.value) ||
+      row.hidden = hiddenToeicSets.has(row.dataset.toeicSet) || !!((partFilter.value && row.dataset.part !== partFilter.value) ||
         (offlineFilter.value && row.dataset.offline !== offlineFilter.value));
       row.style.display = row.hidden ? "none" : "";
     }
@@ -1230,6 +1251,7 @@ function initToeicPractice() {
     download.onclick = async () => {
       downloading = true;
       download.disabled = true;
+      trackExperience("audio_start");
       status.textContent = "Đang tải…";
       try {
         const cache = await caches.open(TOEIC_AUDIO_CACHE);
@@ -1242,8 +1264,10 @@ function initToeicPractice() {
           await cache.put(url, response);
         }
         downloading = false;
+        trackExperience("audio_ready");
         await update();
       } catch {
+        trackExperience("audio_error");
         status.textContent = "Tải chưa xong. Hãy thử lại khi có mạng.";
         download.textContent = "Tải lại";
         download.setAttribute("aria-label", `Tải lại · ${set.title}`);
@@ -1256,6 +1280,22 @@ function initToeicPractice() {
     update();
   }
 
+  const refreshCatalogue = async () => {
+    if (!navigator.onLine) return;
+    try {
+      const response = await fetch("/.netlify/functions/experience?catalog", {cache:"no-store"});
+      if (!response.ok) return;
+      const {hidden} = await response.json();
+      if (!Array.isArray(hidden)) return;
+      hiddenToeicSets = new Set(hidden);
+      updateFilters();
+      localStorage.setItem("dd-hidden-toeic",JSON.stringify(hidden));
+    } catch { /* Use the last catalogue when disconnected. */ }
+  };
+  window.addEventListener("online",refreshCatalogue);
+  window.addEventListener("focus",refreshCatalogue);
+  void refreshCatalogue();
+
   const filter = $("#toeic-review-part");
   const list = $("#toeic-review-list");
   const start = $("#toeic-review-start");
@@ -1263,7 +1303,10 @@ function initToeicPractice() {
   for (const part of [...new Set([...exercises.values()].map(partNumber).filter(Boolean))].sort()) {
     filter.add(new Option(`Part ${part}`, part));
   }
-  const review = (items) => document.dispatchEvent(new CustomEvent("review-saved-items", { detail: items }));
+  const review = (items) => {
+    trackExperience("mistake_reviewed");
+    document.dispatchEvent(new CustomEvent("review-saved-items", { detail: items }));
+  };
   const updateReview = async () => {
     const cards = (await allItems()).flatMap((item) => {
       if (!item.dictionary?.senseKey?.startsWith("exam:")) return [];
@@ -1301,6 +1344,12 @@ function initToeicPractice() {
           id: `toeic-review-${question.id}`, title: question.title || question.part, skill: question.skill, questionIds: [question.id],
         });
         entry.append(source);
+        const explanation = document.createElement("button");
+        explanation.type = "button";
+        explanation.className = "btn-secondary";
+        explanation.textContent = "Lời giải AI đã lưu";
+        explanation.onclick = () => openSavedToeicExplanation(question.id);
+        entry.append(explanation);
       }
       list.append(entry);
     }

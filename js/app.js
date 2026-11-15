@@ -1,3 +1,5 @@
+import { initExperience } from "./experience.js";
+import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanations.js";
 import { MDict } from './mdict.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
 import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS } from './ai-client.js';
@@ -550,6 +552,30 @@ async function boot() {
 }
 
 function wireUi() {
+  initExperience();
+  const chatEntries = [
+    ['#btn-reader-lookup-save', 'reader', 'Hỏi về câu đang đọc', () => readerSelection?.sentence],
+    ['#btn-save-sentence', 'reader', 'Hỏi về câu đang đọc', () => readerSelection?.sentence],
+    ['#writing-input', 'writing', 'Hỏi về bài viết', () => $('#writing-input').value],
+    ['#speaking-notes', 'speaking', 'Hỏi về ghi chú nói', () => $('#speaking-notes').value],
+    ['#tutor-stage', 'tutor', 'Hỏi tiếp trợ giảng', () => tutorSession?.target ? JSON.stringify({target:tutorSession.target, answer:tutorSession.answer, feedback:tutorSession.feedback}) : ''],
+  ];
+  for (const [selector, scope, title, source] of chatEntries) {
+    const target = $(selector);
+    if (!target) continue;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn-secondary';
+    button.textContent = title;
+    button.onclick = () => {
+      const text = source();
+      if (text?.trim()) openContextChat(scope, title, text);
+      else showToast('Chọn câu hoặc nhập nội dung trước khi hỏi.');
+    };
+    target.after(button);
+  }
+  $('#saved-learning-chats')?.addEventListener('click', openLearningChatHistory);
+
   const builders = {
     reader: ['Bài ôn từ Reader', () => {
       const selected = window.getSelection();

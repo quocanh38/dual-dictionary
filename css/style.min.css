@@ -107,3 +107,18 @@ body:not([data-app-view="search"]) #envi-hint { display: none; }
   padding-inline-start: 10px;
   border-inline-start: 3px solid var(--accent);
 }
+
+.toeic-ai-dialog{width:min(34rem,calc(100% - 1.5rem));max-height:calc(100dvh - 1.5rem);padding:clamp(1rem,4vw,1.5rem);border:1px solid var(--border,#8994a0);border-radius:16px;background:var(--surface,var(--bg));color:var(--text);overflow:auto;overflow-wrap:anywhere}
+.toeic-ai-dialog::backdrop{background:#0009}
+.toeic-ai-dialog header{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem}
+.toeic-ai-dialog h2{margin:0;font-size:1.25rem}
+.toeic-ai-dialog textarea{display:block;width:100%;margin:.35rem 0 .75rem;padding:.65rem;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--border,#8994a0);border-radius:8px;resize:vertical}
+.toeic-ai-dialog summary{cursor:pointer;padding:.5rem 0}
+.toeic-ai-dialog .toeic-ai-context,.toeic-ai-dialog .toeic-ai-answer{padding:.75rem;border:1px solid var(--border,#8994a0);border-radius:10px;margin:0 0 1rem}
+.toeic-ai-dialog .toeic-ai-context p{margin:.3rem 0 0}
+.toeic-ai-dialog .toeic-ai-answer{white-space:pre-wrap;line-height:1.6}
+.toeic-ai-dialog :is(.toeic-ai-answer,[role=status]):empty,.toeic-ai-dialog [hidden]{display:none}
+.toeic-ai-dialog .toeic-ai-consent{display:flex;align-items:flex-start;gap:.55rem;margin:.75rem 0}
+.toeic-ai-dialog .toeic-ai-consent input{flex:none;width:1.15rem;height:1.15rem}
+.toeic-ai-dialog button{min-height:44px}
+.toeic-ai-actions button,.toeic-ai-dialog>button{width:100%}

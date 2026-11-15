@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v188-practice-doc-links';
+const CACHE = 'mdx-dict-v193-admin-experience';
 const ASSETS = [
   './',
   './index.html',
@@ -182,6 +182,8 @@ const ASSETS = [
   './js/app.js',
   './js/ai-client.js',
   './js/offline-ai-lessons.js',
+  './js/toeic-ai-explanations.js',
+  './js/experience.js',
   './js/tutor-validation.js',
   './js/tutor-prompts.js',
   './js/tutor-selection.js',
@@ -345,6 +347,7 @@ self.addEventListener('fetch', (e) => {
   // IndexedDB on load and would blow up the Cache Storage quota otherwise.
   // remote-config.json is optional (private deployments only) — never cache it.
   const path = new URL(e.request.url).pathname;
+  if (path.startsWith('/.netlify/functions/')) return;
   if (new URL(e.request.url).origin === self.location.origin && TOEIC_AUDIO.test(path)) {
     e.respondWith(serveToeicAudio(e.request));
     return;

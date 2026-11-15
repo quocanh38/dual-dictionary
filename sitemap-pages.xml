@@ -281,4 +281,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/lessons/</loc>
+  </url>
+  <url>
+    <loc>https://dualdictionary.netlify.app/vi/doc-tieng-anh/</loc>
+  </url>
+  <url><loc>https://dualdictionary.netlify.app/vi/huong-dan-gemini/</loc></url>
 </urlset>
