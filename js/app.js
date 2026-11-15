@@ -544,7 +544,9 @@ async function boot() {
     // unless there is something due; the timer only ever fires when hidden)
     maybeShowDueBanner();
     scheduleBackgroundNotify();
-    setTimeout(() => maybeOnboard(), 400);
+    if (currentView() === 'search' && !Object.keys(SLOTS).some(slot => state.dicts[slot])) {
+      setTimeout(maybeOnboard, 400);
+    }
     // after the onboarding window: first-visit users are marked offered there;
     // everyone else gets the one-time quiet toast (never both)
     setTimeout(() => maybeReofferReminders(), 3000);
@@ -1476,8 +1478,13 @@ function updateFirstloadCta() {
     return;
   }
   const bytes = sel.reduce((sum, s) => sum + ((firstLoadPer[s] && firstLoadPer[s].bytes) || 0), 0);
-  btn.textContent = i18nFmt(sel.length === 1 ? 'firstload.ctaOne' : 'firstload.ctaN',
-    { n: sel.length, size: bytes ? fmtSize(bytes) : '…' });
+  const name = sel.length === 1
+    ? (sel[0] === 'third' ? i18n('envi.short') : $('#chk-firstload-' + sel[0])?.nextElementSibling?.textContent)
+    : '';
+  const vars = { name, n: sel.length, size: fmtSize(bytes) };
+  const hasSizes = sel.every(slot => firstLoadPer[slot]?.bytes > 0);
+  btn.textContent = i18nFmt(name ? (hasSizes ? 'firstload.namedSize' : 'firstload.named') :
+    (hasSizes ? 'firstload.ctaN' : 'firstload.ctaNUnknown'), vars);
   btn.disabled = false;
 }
 
@@ -1506,11 +1513,7 @@ async function showFirstLoadGate() {
   firstLoadTotal = enEN.total + (envi.bytes || 0);
   if (list) {
     list.innerHTML = '';
-    // vi-locale visitors get the EN–VI dictionary pre-selected — the one they are
-    // most likely here for; other locales default to the classic EN–EN pair.
-    const defaults = (lang === 'vi')
-      ? { third: true, oxford: true, longman: false }
-      : { third: false, oxford: true, longman: true };
+    const recommendedSlot = lang === 'vi' ? 'third' : 'longman';
     for (const slot of CHOOSER_ORDER) {
       const info = firstLoadPer[slot] || { bytes: 0, source: 'unknown' };
       let name;
@@ -1527,7 +1530,7 @@ async function showFirstLoadGate() {
       const chk = document.createElement('input');
       chk.type = 'checkbox';
       chk.id = 'chk-firstload-' + slot;
-      chk.checked = !!defaults[slot];
+      chk.checked = slot === recommendedSlot;
       chk.addEventListener('change', updateFirstloadCta);
       const nameEl = document.createElement('span');
       nameEl.className = 'dc-name';
@@ -7146,7 +7149,7 @@ Object.assign(I18N.vi, {
   'dialog.itemEdit': 'Sửa mục', 'dialog.addExample': 'Thêm ví dụ', 'dialog.export': 'Xuất',
   'dialog.tags': 'Nhãn', 'dialog.welcome': 'Chào mừng 👋', 'dialog.advanced': 'Nâng cao',
   'about.title': 'Từ điển học tập & tra cứu, ngay trong trình duyệt',
-  'about.summary': 'Về ứng dụng — tính năng &amp; điều khoản sử dụng',
+  'about.summary': 'Về ứng dụng và điều khoản sử dụng',
   'about.licH': 'Từ điển &amp; giấy phép',
   'about.intro': '<strong>Dual Dictionary là ứng dụng web offline-first cho việc học và tra cứu cá nhân: tra từ tiếng Anh với nhiều từ điển — một chạm chuyển khung — hỗ trợ file từ điển .mdx/.mdd của riêng bạn. Mọi thứ chạy ngay trong trình duyệt — dữ liệu ở lại trên máy bạn, không tài khoản, không quảng cáo.</strong>',
   'about.terms': 'Ứng dụng chỉ dành cho mục đích học tập và tra cứu cá nhân. Đây không phải sản phẩm thương mại, không nhằm thương mại hoá hay phát hành lại bất kỳ nội dung từ điển nào. Dữ liệu mở đi kèm vẫn theo giấy phép riêng (xem NOTICE.md) — điều khoản này chỉ áp dụng cho bản triển khai này.',
@@ -7378,7 +7381,16 @@ Object.assign(I18N.vi, {
 // v91 — first-run chooser, real-name tabs, i18n'd panel docs (everything the
 // audit found still hard-coded English inside the VI interface)
 Object.assign(I18N.en, {
-  'firstload.title': 'Choose dictionaries to download',
+  'firstload.title': 'Start looking up words',
+  'firstload.options': 'Other dictionary options',
+  'firstload.choices': 'Dictionaries to download',
+  'firstload.namedSize': 'Download {name} (≈ {size})',
+  'firstload.named': 'Download {name}',
+  'firstload.ctaNUnknown': 'Download {n} dictionaries',
+  'onboard.start': 'Look up words offline or try a short lesson and save your first phrase.',
+  'onboard.lookup': 'Set up a dictionary',
+  'onboard.more': 'More about studying',
+  'onboard.offline': 'Dictionary lookup, saving and review work offline. Optional AI practice uses your key and only sends material after you agree.',
   'firstload.desc': 'Download the dictionaries you want once, then look up words offline.',
   'firstload.unreachable': 'No dictionary data is reachable from this deployment.',
   'firstload.enviDesc': 'Vietnamese meanings for 386,600 words — open data (MIT)',
@@ -7402,7 +7414,16 @@ Object.assign(I18N.en, {
   'panel.loadingResHint': 'Watch the progress in the panel header, or search the other dictionary meanwhile.',
 });
 Object.assign(I18N.vi, {
-  'firstload.title': 'Chọn từ điển để tải',
+  'firstload.title': 'Bắt đầu tra từ',
+  'firstload.options': 'Tùy chọn từ điển khác',
+  'firstload.choices': 'Từ điển để tải xuống',
+  'firstload.namedSize': 'Tải {name} (≈ {size})',
+  'firstload.named': 'Tải {name}',
+  'firstload.ctaNUnknown': 'Tải {n} từ điển',
+  'onboard.start': 'Tra từ ngoại tuyến hoặc thử một bài ngắn và lưu cụm từ đầu tiên.',
+  'onboard.lookup': 'Cài từ điển',
+  'onboard.more': 'Tìm hiểu thêm',
+  'onboard.offline': 'Bạn có thể tra từ, lưu và ôn khi mất mạng. Luyện với AI là tùy chọn, dùng khóa của bạn và chỉ gửi nội dung khi bạn đồng ý.',
   'firstload.desc': 'Chọn từ điển cần tải một lần, sau đó tra từ ngoại tuyến.',
   'firstload.unreachable': 'Không đọc được dữ liệu từ điển từ bản cài này.',
   'firstload.enviDesc': 'Nghĩa tiếng Việt cho 386.600 từ — dữ liệu mở (MIT)',
@@ -7425,7 +7446,7 @@ Object.assign(I18N.vi, {
   'panel.loadingRes': 'vẫn đang tải tài nguyên{eta}.',
   'panel.loadingResHint': 'Theo dõi tiến độ ở phần đầu panel, hoặc tra từ điển khác trong lúc chờ.',
 });
-let lang = localStorage.getItem('lang') || ((String(navigator.language || '').toLowerCase().indexOf('vi') === 0) ? 'vi' : 'en');
+let lang = localStorage.getItem('lang') || (new URLSearchParams(location.search).get('lang') === 'vi' || /^vi/i.test(navigator.language) ? 'vi' : 'en');
 function i18n(k) { return (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k; }
 /** i18n with {placeholders}: i18nFmt('firstload.ctaSize', {size: fmtSize(n)}) */
 function i18nFmt(k, vars) {
@@ -7455,7 +7476,7 @@ function applyLang() {
   // JS-built copy (the not-ready gate line, the empty card's message) has no
   // data-i18n attribute to re-render, so it is repainted here — otherwise
   // switching language left those two lines in the previous language.
-  try { updateIdleDictState(); updateEmptyStateCopy(); } catch (e) { /* not ready yet */ }
+  try { updateIdleDictState(); updateEmptyStateCopy(); if (Object.keys(firstLoadPer).length) updateFirstloadCta(); } catch (e) { /* not ready yet */ }
   try { if (covLast) covRender(); } catch (e) { /* reader not active */ } // v118 A1
   // refresh the active dynamic view so JS-built strings pick up the language
   try { applyView(currentView()); } catch (e) { /* not ready yet */ }
@@ -7715,7 +7736,7 @@ function renderBackupInfo() {
 }
 /* onboarding (first visit) */
 function maybeOnboard() {
-  if (localStorage.getItem('onboarded')) return;
+  if (currentView() !== 'search' || loadAbort || Object.keys(SLOTS).some(slot => state.dicts[slot]) || document.querySelector('dialog[open]') || localStorage.getItem('onboarded')) return;
   const d = $('#onboarding-dialog');
   if (!d) return;
   // The nudge link is a dead button where notifications don't exist at all

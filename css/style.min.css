@@ -126,3 +126,18 @@ body:not([data-app-view="search"]) #envi-hint { display: none; }
 .work-lesson-list { list-style: none; padding: 0; display: grid; gap: 8px; }
 .work-lesson-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .work-lesson-list .btn-secondary { min-height: 44px; }
+
+/* Keep the first action above the optional package controls. */
+#empty-state { align-items: stretch; text-align: start; gap: .65rem; }
+#empty-state > p { margin: 0; }
+#empty-state-msg { min-height: auto; }
+#empty-state .firstload-title { margin: 0; }
+#empty-state .empty-cta, .first-load-actions, .onboarding-actions {
+  display: flex; align-items: center; flex-wrap: wrap; gap: .5rem;
+}
+.firstload-options { margin-block-start: .3rem; }
+.firstload-options > summary { cursor: pointer; padding-block: .45rem; }
+.firstload-options .dict-chooser { margin-block: .5rem; }
+.firstload-options .dc-name { overflow-wrap: anywhere; }
+#onboarding-dialog { max-inline-size: min(30rem, calc(100% - 1.5rem)); }
+#onboarding-dialog .onboarding-actions form { margin: 0; }

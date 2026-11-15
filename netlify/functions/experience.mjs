@@ -4,6 +4,7 @@ import { TOEIC_FOCUS_SETS, getStudyExercises } from '../../js/study-content.js';
 import { timingSafeEqual } from 'node:crypto';
 
 const events = new Set(['audio_start','audio_ready','audio_error','mistake_saved','mistake_reviewed','gemini_start','gemini_done','gemini_error','gemini_saved','gemini_stopped','feedback','toeic_opened','toeic_completed','toeic_saved','toeic_reviewed']);
+const experienceVersions = new Set(['v195-experience', EXPERIENCE_VERSION]);
 const uuid = /^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i;
 const json = (body, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
@@ -22,7 +23,7 @@ export default async function handler(request) {
     if (raw.length > 300) return json({error:'Too large'},413);
     let payload;
     try { payload = JSON.parse(raw); } catch { return json({error:'Invalid metric'},400); }
-    if (payload?.version !== EXPERIENCE_VERSION || !OPERATIONAL_EVENTS.includes(payload.event) ||
+    if (!experienceVersions.has(payload?.version) || !OPERATIONAL_EVENTS.includes(payload.event) ||
         Object.keys(payload).length !== 2) return json({error:'Invalid metric'},400);
     const day = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Ho_Chi_Minh',dateStyle:'short'}).format(new Date());
     const store = openOperations();
@@ -106,7 +107,7 @@ export default async function handler(request) {
     const clean = entries.map(({event, at, note, duration, reason, attemptId}) => {
       if (!events.has(event) || !Number.isSafeInteger(at)) throw Error('Invalid event');
       if (event === 'feedback' && (typeof note !== 'string' || !note.trim() || note.length > 500)) throw Error('Invalid feedback');
-      if (event !== 'feedback' && version === EXPERIENCE_VERSION && (!consentValid || at < consentedAt)) throw Error('Invalid consent');
+      if (event !== 'feedback' && experienceVersions.has(version) && (!consentValid || at < consentedAt)) throw Error('Invalid consent');
       const linked = event.startsWith('toeic_');
       if (linked && (!consentValid || typeof attemptId !== 'string' || !uuid.test(attemptId))) throw Error('Invalid attempt');
       return {event,at,...(linked ? {attemptId} : {}),...(event === "gemini_error" && ["quota","timeout","network","other"].includes(reason)?{reason}:{}),...(event === 'feedback' ? {note} : {}),...(Number.isSafeInteger(duration)&&duration>=0&&duration<=600000?{duration}:{})};

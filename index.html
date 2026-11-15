@@ -349,23 +349,25 @@
        the CTA sums exactly what is selected. #dict-grid is hidden outright while
        this card is in charge (see body[data-dict-state="idle"] in style.css), so
        the lookup surface never shows a ready-looking search box over empty panels. -->
-  <div id="empty-state" class="empty-state" aria-live="polite">
-    <h2 class="firstload-title" data-i18n="firstload.title">Choose dictionaries to download</h2>
-    <p><strong id="empty-state-msg" data-i18n="firstload.idle">No dictionary is loaded yet — pick the dictionaries you need and download them once.</strong></p>
-    <p><a href="./demo/tutor.html" data-i18n="reader.freeLesson">Read a sample lesson</a></p>
-    <ul id="first-load-sizes" class="dict-chooser" role="group" aria-label="Dictionaries to download"></ul>
+  <div id="empty-state" class="empty-state">
+    <h2 class="firstload-title" data-i18n="firstload.title">Start looking up words</h2>
+    <p role="status"><strong id="empty-state-msg" data-i18n="firstload.idle">Download a dictionary once to look up words offline.</strong></p>
     <div class="empty-cta">
-      <button id="btn-quickload" class="btn-primary" data-i18n="firstload.download">⬇ Download dictionaries</button>
-      <button type="button" id="btn-download-all" class="btn-secondary" data-i18n="firstload.downloadAll">Download all</button>
-      <button id="btn-cancel-load" class="btn-secondary hidden" data-i18n="ui.cancelDownload">Cancel download</button>
+      <button type="button" id="btn-quickload" class="btn-primary" data-i18n="firstload.download" disabled>Download dictionary</button>
+      <button type="button" id="btn-cancel-load" class="btn-secondary hidden" data-i18n="ui.cancelDownload">Cancel download</button>
+      <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson">Read a sample lesson</a>
     </div>
     <p id="empty-state-error" class="load-error" role="alert" hidden></p>
-    <p class="first-load-note" data-i18n="firstload.note">One-time download, stored in the app, fully offline afterwards.</p>
-    <p class="first-load-actions">
-      <button id="btn-open-advanced" class="btn-secondary" data-i18n="firstload.own">Use my own .mdx files</button>
-      <button type="button" id="btn-envi-empty" class="btn-secondary hidden" data-i18n="firstload.envi">🇻🇳 Add English–Vietnamese dictionary</button>
-      <button type="button" id="btn-open-help" class="btn-secondary" data-i18n="firstload.help">Help</button>
-    </p>
+    <details class="firstload-options">
+      <summary data-i18n="firstload.options">Other dictionary options</summary>
+      <ul id="first-load-sizes" class="dict-chooser" role="group" aria-label="Dictionaries to download" data-i18n-aria="firstload.choices"></ul>
+      <div class="first-load-actions">
+        <button type="button" id="btn-download-all" class="btn-secondary" data-i18n="firstload.downloadAll">Download all</button>
+        <button type="button" id="btn-open-advanced" class="btn-secondary" data-i18n="firstload.own">Use my own .mdx files</button>
+        <button type="button" id="btn-envi-empty" class="btn-secondary hidden" data-i18n="firstload.envi">Add English–Vietnamese dictionary</button>
+        <button type="button" id="btn-open-help" class="btn-secondary" data-i18n="firstload.help">Help</button>
+      </div>
+    </details>
     <!-- U17: the support link lives in the footer only — nothing here competes
          with the download CTA for attention. btn-envi-empty stays in the DOM
          (wired + tested) but the chooser card covers its job, so it is hidden. -->
@@ -896,18 +898,16 @@
 <dialog id="onboarding-dialog" aria-labelledby="onboarding-title">
   <button type="button" class="dialog-close" aria-label="Close">✕</button>
   <h2 id="onboarding-title" data-i18n="dialog.welcome">Welcome 👋</h2>
-  <ol class="quickstart" data-i18n-html="onboarding.steps">
-    <li><strong>Look up</strong> — type a word, then tap a dictionary tab to read its result;
-        switch anytime. Prefer meanings in your language? Add the Vietnamese dictionary in one click.</li>
-    <li><strong>Read &amp; save</strong> — open 📖 <em>Reader</em>, paste an article (or a Wikipedia URL), tap any word to look it up. Save the word with ☆, or ⭐ save the whole sentence.</li>
-    <li><strong>Review &amp; practice</strong> — your saved items live in ★ <em>Vault</em>: filter, tag, sort. 🔁 <em>Review</em> runs a spaced-repetition queue; 🎯 <em>Practice</em> turns it into quick drills.</li>
-    <li><strong>Make it yours</strong> — switch theme (🌓) or the navigation language (EN/VI); turn on optional review reminders in ⚙ <em>Advanced</em>; dictionary lookup, saving and review work offline for free. Optional AI practice needs internet and your own provider key. You pay the provider for tokens; article text and answers are sent only after your agreement.</li>
-    <li><strong>New: daily word, quizzes &amp; level test</strong> — 📅 <em>Word of the day</em> under the search box (1 word/day at your level + streak); 🎯 <em>Practice</em> has Vault quizzes (flashcards, listen-type, multiple choice); 📊 <em>Level test</em> (20 questions) sets your level and picks the right deck. 🎤 <em>Voice search</em> in the search box; 🔗 <em>Share link</em> in Export sends a word list to friends (no account).</li>
-  </ol>
-  <!-- v67 R2: the only pre-Advanced reminder opt-in — a quiet link, ignorable,
-       never shown again after it is used once (the app hides it on click). -->
-  <p class="hint onboarding-extra"><button type="button" id="onboard-reminders" class="linklike" data-i18n="onboard.reminders">🔔 Get a nudge when words are due</button></p>
-  <form method="dialog"><button class="btn-primary" data-i18n="onboard.cta">Got it — let's go</button></form>
+  <p data-i18n="onboard.start">Look up words offline or try a short lesson and save your first phrase.</p>
+  <div class="onboarding-actions">
+    <form method="dialog"><button class="btn-primary" data-i18n="onboard.lookup">Set up a dictionary</button></form>
+    <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson">Read a sample lesson</a>
+  </div>
+  <details class="help-more">
+    <summary data-i18n="onboard.more">More about studying</summary>
+    <p data-i18n="onboard.offline">Dictionary lookup, saving and review work offline. Optional AI practice uses your key and only sends material after you agree.</p>
+    <p class="hint onboarding-extra"><button type="button" id="onboard-reminders" class="linklike" data-i18n="onboard.reminders">Get a nudge when words are due</button></p>
+  </details>
 </dialog>
 
 <!-- ===== Saved articles (offline snapshots) ===== -->
