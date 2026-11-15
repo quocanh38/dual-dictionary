@@ -29,17 +29,21 @@ npx.cmd skills add https://github.com/pbakaus/impeccable/tree/main/.agents/skill
 
 Impeccable dùng cho rà bố cục, thứ bậc thị giác và luồng sử dụng. Sau khi cài, mở lại Codex và gọi `$impeccable`. Dual Dict đã có `playwright-core` trong repo, dùng cho kiểm tra trình duyệt sau khi chạy `npm ci`. Context7 và Vercel Agent Skills chưa dùng cho bản bàn giao này. [Impeccable](https://github.com/pbakaus/impeccable)
 
-## Viết và biên tập nội dung tiếng Việt
+## Marketing Skills cho Dual Dict
 
-Cài hai skill chọn lọc từ [Marketing Skills](https://github.com/coreyhaines31/marketingskills) cho Codex trên Windows:
+Cài năm skill chọn lọc từ [Marketing Skills](https://github.com/coreyhaines31/marketingskills) cho Codex trên Windows:
 
 ```powershell
-npx.cmd skills add coreyhaines31/marketingskills --skill copy-editing copywriting --agent codex --global
+npx.cmd skills add coreyhaines31/marketingskills --skill copy-editing copywriting customer-research onboarding content-strategy --agent codex --global
 ```
 
 Mở lại Codex nếu cần. Dùng `$copy-editing` để rà câu chữ tiếng Việt, thuật ngữ và nhãn thao tác. Dùng `$copywriting` để viết nội dung mới cho trang giới thiệu, bài học hoặc màn chào mừng. Lượt rà đầu tiên có thể đi từ trang chủ tiếng Việt đến Chào mừng và Luyện TOEIC.
 
 Với nội dung dạy tiếng Anh, kiểm tra thêm nghĩa theo ngữ cảnh, độ tự nhiên của ví dụ, độ chính xác của bản dịch và căn cứ cho đáp án. Giữ nguyên các thông tin đã xác minh về offline, Gemini và dữ liệu trải nghiệm khi biên tập.
+
+- `$customer-research` để quan sát người học thật và tìm bước họ gặp khó.
+- `$onboarding` để tối ưu đường đến lần tra từ đầu tiên hoặc hoàn thành bài mẫu và lưu cụm từ.
+- `$content-strategy` để ưu tiên cập nhật nội dung theo mục tiêu tra từ, ôn TOEIC và đọc tiếng Anh công việc.
 
 ## Trạng thái production và admin
 
