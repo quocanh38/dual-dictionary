@@ -621,6 +621,7 @@
   <section id="practice-view" class="practice-view hidden" aria-label="Practice">
     <section class="offline-study-panel" aria-labelledby="toeic-practice-heading">
       <h2 id="toeic-practice-heading">TOEIC Listening &amp; Reading</h2>
+      <p id="toeic-entry-status" role="status" hidden></p>
       <p class="hint">Mục tiêu 700–900+? Luyện nhận ra cách diễn đạt tương đương ở Part 3–4, điền từ theo ngữ cảnh ở Part 6 và đọc tìm bằng chứng nhanh ở Part 7.</p>
       <button type="button" id="toeic-continue" class="btn-primary hidden"></button>
       <details id="toeic-review-panel">
@@ -633,7 +634,7 @@
       <div class="exam-actions">
         <button type="button" id="toeic-timed-reading" class="btn-primary">Part 6–7 · 14 câu · 10 phút</button>
         <label for="toeic-filter-part">Part</label>
-        <select id="toeic-filter-part"><option value="">Tất cả</option><option>3</option><option>4</option><option>6</option><option>7</option></select>
+        <select id="toeic-filter-part"><option value="">Tất cả</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
         <label for="toeic-filter-offline">Ngoại tuyến</label>
         <select id="toeic-filter-offline"><option value="">Tất cả</option><option value="ready">Sẵn sàng</option><option value="missing">Chưa sẵn sàng</option></select>
       </div>
@@ -725,14 +726,22 @@
     <section class="offline-study-panel" lang="vi" aria-labelledby="experience-title">
       <h2 id="experience-title">Dữ liệu trải nghiệm</h2>
       <p id="experience-operations-state">Số liệu vận hành mặc định hiện đang tắt hoặc chưa xác định được.</p>
-      <p id="experience-purpose">Nếu bạn bật chia sẻ, Dual Dict ghi bước luyện và ôn TOEIC, trạng thái tải audio và Gemini để cải thiện app. Bạn có thể tắt bất cứ lúc nào. <a href="/vi/du-lieu-trai-nghiem/">Dữ liệu nào được gửi?</a></p>
+      <p id="experience-purpose">Nếu bạn bật chia sẻ, Dual Dict ghi các bước tra từ, đọc, luyện TOEIC, ôn tập và sử dụng Gemini, cùng thời gian chờ và nhãn nguồn cố định nếu có. Bạn có thể tắt bất cứ lúc nào. <a href="/vi/du-lieu-trai-nghiem/">Dữ liệu nào được gửi?</a></p>
       <label><input type="checkbox" id="experience-opt-in" aria-describedby="experience-purpose"> Tôi đồng ý chia sẻ số liệu trải nghiệm</label>
       <details>
       <summary>Gửi góp ý</summary>
       <form id="experience-feedback">
         <label for="experience-note">Góp ý của bạn</label>
         <textarea id="experience-note" name="note" maxlength="500" required></textarea>
-        <p class="hint">Chỉ nội dung bạn nhập ở đây được gửi cùng mã phiên ngẫu nhiên và phiên bản app. Đừng nhập thông tin riêng tư.</p>
+        <label for="experience-topic">Chủ đề (tùy chọn)</label>
+        <select id="experience-topic" name="topic">
+          <option value="">Chọn chủ đề</option>
+          <option value="lookup">Tra từ</option><option value="reader">Reader</option>
+          <option value="toeic">TOEIC</option><option value="review">Ôn tập</option>
+          <option value="chat">Chat</option><option value="gemini">Gemini / AI Tutor</option>
+          <option value="offline">Offline</option><option value="other">Khác</option>
+        </select>
+        <p class="hint">Góp ý và chủ đề bạn chọn được gửi cùng mã phiên ngẫu nhiên và phiên bản app. Đừng nhập thông tin riêng tư.</p>
         <button type="submit" class="btn-secondary">Gửi góp ý</button>
         <p role="status"></p>
       </form>

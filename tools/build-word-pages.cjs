@@ -23,6 +23,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const QUICK_SENSES = require('../data/word-quick-senses.json');
 const { MDict } = require('../js/mdict.js');
 const { buildAutoNote, loadHandNote, renderNoteHTML, lemmaStems, compactRegisterLabels } = require('./word-notes-lib.cjs');
 const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs');
@@ -967,7 +968,10 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   /* P0 SEO: unique meta per page — first rendered sense (post-priority) + IPA.
    * raw is passed from the build loop; direct renderEntry() callers without
    * raw keep the old generic template via the '' fallback in wordMetaDesc. */
-  const desc = wordMetaDesc(word, ipa, raw || '');
+  const quickSenses = Object.hasOwn(QUICK_SENSES, word) ? QUICK_SENSES[word] : null;
+  const desc = quickSenses
+    ? `${word} nghĩa là ${quickSenses.map(([sense]) => sense).join('; ')}. Xem ví dụ Anh–Việt và nghĩa chi tiết.`
+    : wordMetaDesc(word, ipa, raw || '');
   const canonical = canonicalOverride || `${SITE}${wordPageUrl(word)}`;
   const relatedHtml = related.length
     ? `<section class="related"><h2>Từ liên quan</h2><div class="related-list">${related
@@ -1091,7 +1095,13 @@ ${navHtml('tu')}
   <header class="word-head">
     <p class="word-kicker">Nghĩa tiếng Việt của</p>
     <h1>${escapeHtml(word)}</h1>
-    ${ipaLineHtml(word, ipa)}
+    ${ipaLineHtml(word, ipa)} ${quickSenses ? `
+    <section aria-labelledby="quick-senses">
+      <h2 id="quick-senses">Nghĩa thường dùng</h2>
+      <ul>
+        ${quickSenses.map(([sense, example, translation]) => `<li><strong>${escapeHtml(sense)}</strong> · <span lang="en">${escapeHtml(example)}</span> ${escapeHtml(translation)}</li>`).join('\n        ')}
+      </ul>
+    </section>` : ''}
     <figure style="margin:16px 0"><img src="/vi/images/ipa-vowels.jpg" alt="Bảng khẩu hình nguyên âm tiếng Anh" loading="lazy" width="800" height="450" style="max-width:100%;height:auto;border-radius:8px"><figcaption style="color:var(--muted);font-size:.85rem">Khẩu hình 10 nguyên âm chính — đối chiếu IPA ở trên khi luyện phát âm.</figcaption></figure>
     ${badgeRowHtml(word, labels, builtSet)}${entryLemma ? `
     <p class="entry-lemma-note">Trong từ điển không có mục riêng cho dạng “${escapeHtml(word)}” — mục dưới đây là của nguyên mẫu ${builtSet.has(entryLemma)

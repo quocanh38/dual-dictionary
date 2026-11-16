@@ -1,3 +1,7 @@
+import { summarizeSiteJourneys } from './site-journeys.js';
+import { summarizeToeicJourney } from './toeic-journey.js';
+import { systemHealth } from './system-health.js';
+
 const endpoint = '/.netlify/functions/experience';
 const status = document.querySelector('#status');
 const report = document.querySelector('#report');
@@ -5,7 +9,7 @@ const download = document.querySelector('#export');
 let operationalRows = [], operationsEnabled = false;
 let rows = [], key = '', catalogue = {sets:[],hidden:[]}, visible = [];
 const feedbackStatuses = {new:'Mới',working:'Đang xử lý',done:'Đã xử lý'};
-const categories = {other:'Khác',toeic:'TOEIC',reader:'Reader',gemini:'Gemini',offline:'Offline'};
+const categories = {other:'Khác',toeic:'TOEIC',reader:'Reader',gemini:'Gemini',offline:'Offline',lookup:'Tra từ',chat:'Chat',review:'Ôn tập'};
 const reasons = {quota:'Hạn mức / 429',timeout:'Hết thời gian chờ',network:'Kết nối',other:'Lỗi khác',unknown:'Bản cũ chưa phân loại'};
 function add(parent, tag, text) {
   const node = document.createElement(tag);
@@ -13,9 +17,16 @@ function add(parent, tag, text) {
   parent.append(node);
   return node;
 }
+let nextFieldId = 0;
 function select(parent, label, choices) {
-  const field = add(add(parent,'label',label+' '),'select','');
-  for (const [value,text] of Object.entries(choices)) field.add(new Option(text,value));
+  const group = add(parent,'div','');
+  group.className='report-field';
+  const fieldLabel=add(group,'label',label);
+  const field = add(group,'select','');
+  field.id='report-field-'+(++nextFieldId);
+  fieldLabel.htmlFor=field.id;
+  if (Object.hasOwn(choices,'')) field.add(new Option(choices[''],''));
+  for (const [value,text] of Object.entries(choices)) if (value) field.add(new Option(text,value));
   return field;
 }
 function button(parent,text,action) {
@@ -38,11 +49,14 @@ async function api(query = '', method = 'GET', data) {
   if (!response.ok) throw Error('Yêu cầu thất bại ('+response.status+').');
   return response.json();
 }
-function renderManagement(parent) {
+function renderManagement(parent, matchesSet, onChange) {
+  parent.replaceChildren();
   const panel = add(parent,'details','');
   panel.open=true;
   add(panel,'summary','Quản lý bộ TOEIC');
-  for (const set of catalogue.sets) {
+  const matching=catalogue.sets.filter(matchesSet);
+  if (!matching.length) add(panel,'p','Không có bộ TOEIC phù hợp.');
+  for (const set of matching) {
     const group=add(panel,'details','');
     add(group,'summary',set.title+' · '+set.questions.length+' câu');
     button(group,catalogue.hidden.includes(set.id)?'Hiện lại':'Ẩn khỏi danh sách', async () => {
@@ -51,6 +65,7 @@ function renderManagement(parent) {
       catalogue.hidden=hidden?[...catalogue.hidden,set.id]:catalogue.hidden.filter(id=>id!==set.id);
       group.querySelector('button').textContent=hidden?'Hiện lại':'Ẩn khỏi danh sách';
       status.textContent='Đã cập nhật danh sách TOEIC.';
+      onChange();
     });
     const preview=add(group,'a','Mở bộ trong app (khi đang hiện)');
     preview.href='/?toeic='+encodeURIComponent(set.id)+'#/practice';
@@ -68,36 +83,134 @@ function renderManagement(parent) {
     }
   }
 }
-function renderToeicJourney(parent, openedRows) {
-  const attempts = new Map();
-  const week = 7 * 86400000;
-  const now = Date.now();
-  for (const row of rows) {
-    if (!row.attemptId) continue;
-    if (!attempts.has(row.attemptId)) attempts.set(row.attemptId, []);
-    attempts.get(row.attemptId).push(row);
-  }
-  const opened = new Set(openedRows.filter(row=>row.event==='toeic_opened' && row.attemptId).map(row=>row.attemptId));
-  let completed = 0, saved = 0, eligible = 0, reviewed = 0;
-  for (const id of opened) {
-    const events = attempts.get(id).sort((a,b)=>a.at-b.at);
-    const start = events.find(row=>row.event==='toeic_opened');
-    const finish = events.find(row=>row.event==='toeic_completed' && row.at>=start.at);
-    if (!finish) continue;
-    completed++;
-    const save = events.find(row=>row.event==='toeic_saved' && row.at>=start.at);
-    if (!save) continue;
-    saved++;
-    const after = Math.max(save.at,finish.at);
-    if (after+week>now) continue;
-    eligible++;
-    if (events.some(row=>row.event==='toeic_reviewed' && row.at>=after && row.at<=after+week && row.session!==save.session)) reviewed++;
-  }
+const fraction=(numerator,denominator)=>denominator
+  ? `${numerator}/${denominator} (${Math.round(numerator*100/denominator)}%)`
+  : `${numerator}/0`;
+
+function renderToeicJourney(parent, openMatches, openFeedback) {
+  const {total,bySet}=summarizeToeicJourney(rows,openMatches);
   const panel=add(parent,'section','');
+  panel.className='journey-panel';
   add(panel,'h2','Hành trình TOEIC · đã đồng ý chia sẻ');
-  add(panel,'p',`Mở bộ: ${opened.size} · Hoàn thành: ${completed} · Hoàn thành và lưu câu sai: ${saved}`);
-  add(panel,'p',eligible ? `Quay lại ôn trong 7 ngày: ${reviewed}/${eligible} (${Math.round(reviewed*100/eligible)}%)` : 'Chưa có lượt đủ 7 ngày để tính tỷ lệ quay lại.');
-  add(panel,'p','Bộ lọc áp dụng theo ngày và phiên bản lúc mở đề. Mỗi mã lượt được đếm một lần. Chỉ tính lượt ôn ở phiên khác sau khi hoàn thành và lưu.');
+  if (total.answered) {
+    add(panel,'p',`Ghi nhận ${total.answered} lượt trả lời câu đầu, ${total.explained} lượt thấy lời giải.`);
+    const samples=total.durations.sort((a,b)=>a-b);
+    if (samples.length) {
+      const median=(samples[Math.floor((samples.length-1)/2)]+samples[Math.floor(samples.length/2)])/2;
+      add(panel,'p',`Trung vị đến câu trả lời đầu tiên: ${(median/1000).toLocaleString('vi-VN',{maximumFractionDigits:2})} giây · ${samples.length} mẫu`);
+    }
+  }
+  if (total.sources.has('seo_toeic_part5')) add(panel,'p',`Từ bài hướng dẫn Part 5–6: ${total.sources.get('seo_toeic_part5')} lượt.`);
+  add(panel,'p',`Mở bộ: ${total.opened} · Hoàn thành: ${fraction(total.completed,total.opened)} · Lưu câu sai: ${fraction(total.saved,total.completed)}`);
+  if (!total.opened) add(panel,'p','Không có lượt mở phù hợp với bộ lọc.');
+  else if (!total.eligible) add(panel,'p','Chưa có lượt hoàn thành và lưu đủ 7 ngày quan sát.');
+  else add(panel,'p',`Quay lại ôn trong 7 ngày: ${fraction(total.reviewed,total.eligible)} · Đủ thời gian quan sát: ${total.eligible}/${total.saved}`);
+  add(panel,'p','Ngày và phiên bản được tính lúc mở bộ, theo giờ Việt Nam. Báo cáo đọc tối đa 90 ngày hành trình. Các lượt cũ thiếu mã bộ được gộp vào nhóm chưa xác định.');
+  button(panel,'Xem góp ý về TOEIC',openFeedback);
+  if (!bySet.size) return;
+  const scroll=add(panel,'div','');
+  scroll.className='journey-table-scroll';
+  scroll.tabIndex=0;
+  scroll.setAttribute('role','region');
+  scroll.setAttribute('aria-label','Bảng hành trình theo bộ TOEIC');
+  const table=add(scroll,'table','');
+  add(table,'caption','Kết quả theo bộ TOEIC');
+  const heading=add(add(table,'thead',''),'tr','');
+  for (const label of ['Bộ','Mở','Hoàn thành / mở','Lưu / hoàn thành','Đủ 7 ngày','Ôn / đủ 7 ngày']) {
+    add(heading,'th',label).scope='col';
+  }
+  const body=add(table,'tbody','');
+  const groups=[...bySet].sort(([,a],[,b])=>b.opened-a.opened);
+  for (const [id,counts] of groups) {
+    const item=add(body,'tr','');
+    add(item,'th',catalogue.sets.find(set=>set.id===id)?.title || 'Chưa xác định bộ').scope='row';
+    for (const value of [counts.opened,fraction(counts.completed,counts.opened),fraction(counts.saved,counts.completed),
+      counts.eligible,counts.eligible ? fraction(counts.reviewed,counts.eligible) : 'Chưa đủ dữ liệu']) add(item,'td',value);
+  }
+}
+
+const journeyLabels = {
+  lookup:['Tra từ','lookup',['download_needed','download_failed','result','miss','error']],
+  reader:['Reader','reader',['reading','lookup_started','download_needed','download_failed','result','continued','miss','error']],
+  chat:['Chat với Gemini','chat',['setup','sent','response','completed','error','stopped','retry','retry_success','followup','saved']],
+  review:['Ôn tập','review',['empty','card','result','returned']],
+  tutor:['AI Tutor','gemini',['setup','sent','response','error','stopped','followup','saved']],
+  toeic_ai:['Giải thích TOEIC với Gemini','toeic',['setup','sent','response','completed','error','stopped','retry','retry_success','followup','saved']],
+  lesson_studio:['Lesson Studio','gemini',['setup','sent','response','error','stopped','retry','retry_success','saved']],
+};
+const stageLabels = {
+  download_needed:'Gặp bước tải từ điển', download_failed:'Tải gói từ điển thất bại', result:'Đạt kết quả đầu tiên', miss:'Không tìm thấy nghĩa',
+  error:'Gặp lỗi', reading:'Hiện đoạn đọc', lookup_started:'Bấm tra từ', empty:'Chưa có thẻ đến hạn',
+  continued:'Tra thêm từ sau kết quả đầu', returned:'Ôn tiếp vào ngày khác trong 7 ngày',
+  card:'Thấy thẻ', setup:'Gặp bước nhập API key', sent:'Gửi yêu cầu', response:'Thấy phản hồi đầu tiên',
+  completed:'Nhận phản hồi đầy đủ', stopped:'Dừng yêu cầu', retry:'Thử lại', retry_success:'Thử lại thành công',
+  followup:'Hỏi hoặc luyện tiếp', saved:'Lưu kết quả',
+};
+const sourceLabels = {app:'Trong app',welcome:'Chào mừng',lookup_link:'Liên kết tra từ',reader_landing:'Trang giới thiệu Reader',
+  reader:'Reader',dictionary:'Từ điển',toeic:'TOEIC',review:'Ôn tập',vault:'Sổ tay',history:'Hội thoại đã lưu',practice:'Luyện tập',lesson:'Bài học',writing:'Viết',speaking:'Nói',tutor:'AI Tutor'};
+const journeyReasons={...reasons,setup:'API key hoặc cấu hình'};
+const stepBase={download_failed:'download_needed',reading:'opened',lookup_started:'reading',sent:'opened',response:'sent',completed:'response',
+  retry:'opened',retry_success:'retry',followup:'response',saved:'response',card:'opened',continued:'result',returned:'result'};
+
+function renderSiteJourneys(parent, matchesPeriod, openFeedback) {
+  const data=summarizeSiteJourneys(rows,matchesPeriod);
+  for (const [id,[title,category,stages]] of Object.entries(journeyLabels)) {
+    const panel=add(parent,'section','');
+    add(panel,'h2',title);
+    const counts=data.get(id);
+    if (!counts) {
+      add(panel,'p','Chưa có lượt đã đồng ý chia sẻ trong kỳ lọc.');
+    } else {
+      add(panel,'p',`Mở hoặc bắt đầu: ${counts.opened}`);
+      const list=add(panel,'dl','');
+      list.className='journey-steps';
+      for (const step of stages) {
+        const base=step==='result' ? ({review:'card',reader:'lookup_started'}[id] || 'opened') : stepBase[step];
+        const denominator=base && base!=='opened' ? (counts.steps.get(base)||0) : counts.opened;
+        const n=counts.steps.get(step)||0;
+        // A restored chat can start with follow-up before a new response.
+        const eligible=step!=='returned' && n<=denominator && denominator>0;
+        add(list,'dt',stageLabels[step]);
+        add(list,'dd',eligible ? fraction(n,denominator) : String(n));
+      }
+      const samples=counts.durations;
+      if (samples.length) {
+        const median=(samples[Math.floor((samples.length-1)/2)]+samples[Math.floor(samples.length/2)])/2;
+        add(panel,'p',`Thời gian trung vị đến ${['lookup','reader','review'].includes(id) ? 'kết quả' : 'phản hồi đầu'}: ${(median/1000).toLocaleString('vi-VN',{maximumFractionDigits:2})} giây · ${samples.length} mẫu`);
+      }
+      add(panel,'p','Điểm vào · '+[...counts.sources].map(([source,n])=>`${sourceLabels[source] || 'Khác'} ${n}`).join(' · '));
+      if (counts.reasons.size) add(panel,'p','Lỗi · '+[...counts.reasons].map(([reason,n])=>`${journeyReasons[reason]} ${n}`).join(' · '));
+    }
+    button(panel,`Xem góp ý về ${title}`,()=>openFeedback(category));
+  }
+}
+
+function renderSystemHealth(parent) {
+  const panel=add(parent,'section','');
+  panel.className='system-health';
+  add(panel,'h2','Sức khỏe hệ thống');
+  add(panel,'p','Function experience · số liệu Netlify Observability');
+  const date=new Intl.DateTimeFormat('vi-VN',{
+    dateStyle:'short',timeStyle:'short',timeZone:'Asia/Ho_Chi_Minh',
+  });
+  const numbers=new Intl.NumberFormat('vi-VN');
+  const counts=add(panel,'dl','');
+  for (const [label,value] of [
+    ['Yêu cầu',numbers.format(systemHealth.requests)],
+    ['Lỗi 5xx',numbers.format(systemHealth.serverErrors)],
+    ['Phản hồi 429',numbers.format(systemHealth.rateLimited)],
+    ['Độ trễ p95',systemHealth.p95Ms === null ? 'Chưa có dữ liệu' : numbers.format(systemHealth.p95Ms)+' ms'],
+  ]) {
+    const pair=add(counts,'div','');
+    add(pair,'dt',label);
+    add(pair,'dd',value);
+  }
+  add(panel,'p',`Kỳ đo ${date.format(systemHealth.from)} – ${date.format(systemHealth.to)} (giờ Việt Nam).`);
+  const stale=Date.now()-systemHealth.to>=86400000;
+  add(panel,'p',stale ? 'Ảnh chụp đã quá 24 giờ. Xem Netlify để lấy số liệu mới.' : 'Ảnh chụp tại cuối kỳ đo. Netlify có số liệu mới hơn.');
+  const link=add(panel,'a','Mở dự án trong Netlify');
+  link.href='https://app.netlify.com/projects/dualdictionary';
+  add(panel,'p','Trong Netlify, mở Analytics & metrics để xem Observability và Real User Monitoring.');
 }
 
 function render() {
@@ -108,13 +221,16 @@ function render() {
   tabs.setAttribute('aria-label','Mục quản trị');
   const filters=add(report,'details','');
   filters.className='filters-panel';
-  add(filters,'summary','Lọc theo ngày (giờ Việt Nam) và phiên bản');
+  filters.open=true;
+  add(filters,'summary','Lọc báo cáo theo ngày, phiên bản và bộ TOEIC');
   const fields=add(filters,'div','');
   fields.className='filters';
   const overview=add(report,'div','');
   const inbox=add(report,'div','');
   const sets=add(report,'div','');
-  const sections=[['Tổng quan',overview],['Góp ý',inbox],['Bộ TOEIC',sets]];
+  const operations=add(report,'div','');
+  operations.className='metrics';
+  const sections=[['Tổng quan',overview],['Góp ý',inbox],['Bộ TOEIC',sets],['Vận hành',operations]];
   const controls=sections.map(([name,panel],index)=>{
     const control=add(tabs,'button',name);
     control.type='button';
@@ -154,19 +270,46 @@ function render() {
   const from=add(add(fields,'label','Từ ngày '),'input','');
   const to=add(add(fields,'label','Đến ngày '),'input','');
   from.type=to.type='date';
+  const setFilter=select(fields,'Bộ TOEIC',{'':'Tất cả','unknown':'Chưa xác định',...Object.fromEntries(catalogue.sets.map(set=>[set.id,set.title]))});
+  const partFilter=select(fields,'Part',{'':'Tất cả',...Object.fromEntries([3,4,5,6,7].map(part=>[part,`Part ${part}`]))});
+  const stateFilter=select(fields,'Trạng thái bộ',{'':'Tất cả',shown:'Đang hiện',hidden:'Đã ẩn'});
+  const matchesSet=set=> (!setFilter.value || set.id===setFilter.value) &&
+    (!partFilter.value || String(set.part)===partFilter.value) &&
+    (!stateFilter.value || catalogue.hidden.includes(set.id)===(stateFilter.value==='hidden'));
   const content=add(overview,'div','');
   content.className='metrics';
   const feedback=add(inbox,'section','');
   add(feedback,'h2','Hộp thư góp ý');
-  const filter=select(feedback,'Trạng thái',{'':'Tất cả',...feedbackStatuses});
+  const filter=select(feedback,'Trạng thái góp ý',{'':'Tất cả',...feedbackStatuses});
+  const categoryFilter=select(feedback,'Chủ đề góp ý',{'':'Tất cả',...categories});
+  const matchesFeedback=row=>row.event==='feedback' &&
+    (!filter.value || (row.moderation?.status||'new')===filter.value) &&
+    (!categoryFilter.value || (row.moderation?.category||row.category||'other')===categoryFilter.value);
   const entries=add(feedback,'div','');
   const paint=()=>{
-    visible=rows.filter(row=>(!version.value || row.version===version.value) &&
+    const matchesPeriod=row=>(!version.value || row.version===version.value) &&
       (!from.value || row.at>=new Date(from.value+'T00:00:00+07:00').getTime()) &&
-      (!to.value || row.at<=new Date(to.value+'T23:59:59.999+07:00').getTime()));
+      (!to.value || row.at<=new Date(to.value+'T23:59:59.999+07:00').getTime());
+    visible=rows.filter(matchesPeriod);
+    const openMatches=row=>{
+      if (!matchesPeriod(row)) return false;
+      const set=catalogue.sets.find(entry=>entry.id===row.setId);
+      return set ? matchesSet(set)
+        : !partFilter.value && !stateFilter.value && ['', 'unknown'].includes(setFilter.value);
+    };
     content.replaceChildren();
-    renderToeicJourney(content,visible);
-    const ops=add(content,'section','');
+    const openFeedback=category=>{
+      categoryFilter.value=category;
+      filter.value='';
+      paint();
+      show(1);
+      controls[1].focus();
+    };
+    renderToeicJourney(content,openMatches,()=>openFeedback('toeic'));
+    renderSiteJourneys(content,matchesPeriod,openFeedback);
+    operations.replaceChildren();
+    renderSystemHealth(operations);
+    const ops=add(operations,'section','');
     add(ops,'h2','Số liệu vận hành · tải audio');
     if (!operationsEnabled) add(ops,'p','Thu mặc định đang tắt.');
     const metrics=operationalRows.filter(row=>(!version.value || row.version===version.value) &&
@@ -178,7 +321,7 @@ function render() {
     const count=(event,subset=visible)=>subset.filter(row=>row.event===event).length;
     for (const tag of [...new Set(visible.map(row=>row.version))]) {
       const subset=visible.filter(row=>row.version===tag);
-      const section=add(content,'section','');
+      const section=add(operations,'section','');
       add(section,'h2',tag);
       for(const [label,start,end] of [
         ['Audio hoàn tất / bắt đầu','audio_start','audio_ready'],
@@ -195,8 +338,8 @@ function render() {
       }
     }
     entries.replaceChildren();
-    if (!visible.some(r=>r.event==='feedback'&&(!filter.value||(r.moderation?.status||'new')===filter.value))) add(entries,'p','Không có góp ý phù hợp.');
-    for(const row of visible.filter(r=>r.event==='feedback'&&(!filter.value||(r.moderation?.status||'new')===filter.value)).sort((a,b)=>b.at-a.at)){
+    if (!visible.some(matchesFeedback)) add(entries,'p','Không có góp ý phù hợp.');
+    for(const row of visible.filter(matchesFeedback).sort((a,b)=>b.at-a.at)){
       const box=add(entries,'section','');
       add(box,'p',row.note);
       const state=select(box,'Trạng thái',feedbackStatuses);
@@ -204,7 +347,7 @@ function render() {
       const note=add(add(box,'label','Ghi chú nội bộ '),'textarea','');
       note.maxLength=500;
       state.value=row.moderation?.status||'new';
-      category.value=row.moderation?.category||'other';
+      category.value=row.moderation?.category||row.category||'other';
       note.value=row.moderation?.note||'';
       button(box,'Lưu xử lý',async()=>{
         const moderation={status:state.value,category:category.value,note:note.value};
@@ -221,10 +364,10 @@ function render() {
       });
     }
     download.hidden=!visible.length;
+    renderManagement(sets,matchesSet,paint);
   };
-  for(const control of [version,from,to,filter]) control.onchange=paint;
+  for(const control of [version,from,to,filter,categoryFilter,setFilter,partFilter,stateFilter]) control.onchange=paint;
   paint();
-  renderManagement(sets);
 }
 document.querySelector('#access').onsubmit=async event=>{
   event.preventDefault();
@@ -256,11 +399,11 @@ document.querySelector('#access').onsubmit=async event=>{
     } while(cursor);
     render();
     status.textContent=rows.length+' sự kiện';
-  } catch(error){key='';status.textContent=error.message;}
+  } catch(error){key='';status.textContent='Không tải được báo cáo. '+error.message;}
   finally{submit.disabled=false;}
 };
 download.onclick=()=>{
-  const fields=['at','event','session','version','reason','duration','note'];
+  const fields=['at','event','session','version','attemptId','setId','journey','step','source','reason','duration','category','note'];
   const escape=value=>{
     const cell=String(value??'');
     return '"'+(/^[\s=+@-]/.test(cell)?"'"+cell:cell).replaceAll('"','""')+'"';

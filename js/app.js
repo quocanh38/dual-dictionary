@@ -1,4 +1,4 @@
-import { initExperience, trackExperience } from "./experience.js";
+import { initExperience, trackExperience, startExperienceJourney, experienceAiReason } from "./experience.js";
 import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanations.js";
 import { MDict } from './mdict.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
@@ -555,6 +555,10 @@ async function boot() {
 
 function wireUi() {
   initExperience();
+  $('#onboarding-dialog form')?.addEventListener('submit', () => {
+    firstLookupJourney ||= startExperienceJourney('lookup','welcome');
+    if (!Object.values(state.dicts).some(Boolean)) firstLookupJourney?.step('download_needed');
+  });
   const chatEntries = [
     ['#btn-reader-lookup-save', 'reader', 'Hỏi về câu đang đọc', () => readerSelection?.sentence],
     ['#btn-save-sentence', 'reader', 'Hỏi về câu đang đọc', () => readerSelection?.sentence],
@@ -1017,6 +1021,9 @@ function navigate(view) {
 let lastAppliedView = 'search';
 
 function applyView(view) {
+  if (view === 'reader') readerJourney ||= startExperienceJourney('reader',
+    new URLSearchParams(location.search).get('entry') === 'reader_landing' ? 'reader_landing' : 'app');
+  if (view === 'review') reviewJourney ||= startExperienceJourney('review');
   if (!VIEWS.includes(view)) view = 'search';
   if (view === 'search') { try { renderWotd(); } catch (e) {} }
   if (view !== 'reader' && $('#reader-lookup')?.open) $('#reader-lookup').close();
@@ -1326,6 +1333,8 @@ async function quickLoadOpenDicts(requested) {
       err.hidden = false;
     }
   } else if (failed.length) {
+    const journey = pendingLookupJourney || (currentView() === 'reader' ? readerJourney : firstLookupJourney);
+    if (journey?.reached('download_needed') && !journey.reached('result')) journey.step('download_failed');
     updateEmptyStateCopy();
     if (err) {
       err.textContent = i18nFmt('firstload.failed', { names: failed.join(', ') });
@@ -2062,7 +2071,17 @@ function tapOriginFor(word) {
   return normalizeText(tapOrigin.word) === normalizeText(word) ? tapOrigin : null;
 }
 
+let firstLookupJourney, readerJourney, reviewJourney, tutorJourney, pendingLookupJourney;
+const lookupEntry = new URLSearchParams(location.search);
 async function search(word, fromReaderTap = false) {
+  if (!fromReaderTap && word.trim() && !firstLookupJourney) {
+    firstLookupJourney = startExperienceJourney('lookup', lookupEntry.has('q') ? 'lookup_link' : 'app');
+  }
+  const journey = fromReaderTap ? readerJourney : firstLookupJourney;
+  if (fromReaderTap) {
+    if (journey?.reached('result')) journey.step('continued');
+    journey?.step('lookup_started');
+  }
   if (!fromReaderTap) tapOrigin = null;
   lookupGen++;
   latestLookupEntries = { generation: lookupGen, word: String(word || ''), bySlot: {} };
@@ -2095,6 +2114,8 @@ async function search(word, fromReaderTap = false) {
   const anyLoaded = Object.keys(SLOTS).some((s) => state.dicts[s]);
   const anyLoading = Object.keys(SLOTS).some((s) => state.loading[s]);
   if (!anyLoaded) {
+    journey?.step('download_needed');
+    pendingLookupJourney = journey;
     state.pendingQuery = word;   // C15: replayed after the boot dictionary restore
     updateIdleDictState();
     if (!anyLoading) {
@@ -2110,8 +2131,17 @@ async function search(word, fromReaderTap = false) {
   state.pendingQuery = null;
   updateIdleDictState();
   const gen = lookupGen;
-  const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, word)));
-  if (gen === lookupGen && found.some(Boolean)) pushHistory(word);
+  try {
+    const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, word)));
+    if (gen === lookupGen && word.trim()) {
+      const hasResult = found.some(Boolean);
+      journey?.step(hasResult ? 'result' : 'miss', {duration:journey.elapsed()});
+      if (hasResult) pushHistory(word);
+    }
+  } catch (error) {
+    journey?.step('error');
+    throw error;
+  }
 }
 
 /** U3: the not-loaded state has ONE source of truth (body[data-dict-state]) and
@@ -2307,8 +2337,20 @@ async function replayPendingQuery() {
   updatePronStrip(q);
   // v116: recorded only when the replayed lookup produced an entry — same rule
   // as a direct search.
-  const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, q)));
-  if (found.some(Boolean)) pushHistory(q);
+  const journey = pendingLookupJourney;
+  pendingLookupJourney = null;
+  const gen = lookupGen;
+  try {
+    const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, q)));
+    if (gen === lookupGen) {
+      const hasResult = found.some(Boolean);
+      journey?.step(hasResult ? 'result' : 'miss', {duration:journey.elapsed()});
+      if (hasResult) pushHistory(q);
+    }
+  } catch (error) {
+    journey?.step('error');
+    throw error;
+  }
   return true;
 }
 
@@ -3444,6 +3486,7 @@ function readerRender(text, source, sourceUrl) {
   const seq = readerRenderSeq;        // this render's sequence number
   pane.innerHTML = '';
   pane.classList.remove('hidden');
+  readerJourney?.step('reading');
   if (wrap) wrap.classList.add('hidden');
   $('#btn-reader-start').textContent = '📖 Re-edit text';
   // v74: the pace clock starts AFTER the pane is visible — its first tick stops
@@ -3942,10 +3985,11 @@ function tutorShowRequestConsent(kind, payload, title, metadata={}) {
 }
 async function startTutor({fresh=false}={}) {
   if(tutorBusy) return;
+  if (fresh || !tutorJourney) tutorJourney = startExperienceJourney('tutor','reader');
   const reading=$('#reader-text');
   if(!reading || reading.classList.contains('hidden') || reading.innerText.trim().length<80) { setReaderMsg('Start a reading of at least 80 characters before using optional AI practice.'); $('#reader-input')?.focus(); return; }
   const currentArticle=reading.innerText.trim().slice(0,12000), settings=getAiSettings();
-  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & test connection in Advanced \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
+  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & test connection in Advanced \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
   if(fresh) {
     const article=currentArticle;
     if(!article || article.length<80) { showToast('Open a reading of at least 80 characters first.'); return; }
@@ -4015,6 +4059,8 @@ async function findTutorPhrases({consented=false}={}) {
   tutorStatus(cached?`Using a cached phrase result from ${tutorProviderLabel()} (${settings.model}).`:`Finding useful phrases with ${tutorProviderLabel()}…`);
   if(!cached) $('#tutor-stage').replaceChildren(tutorText('p','Requesting live phrase suggestions…','hint'),tutorButton('Cancel request','cancel'));
   try {
+    const started=Date.now();
+    if (!cached) tutorJourney?.step('sent');
     const out=cached?.value || await askTutor({signal:tutorController.signal,instructions:TUTOR_PHRASE_INSTRUCTIONS,input});
     if(requestId!==tutorRequestId || !tutorSession) return;
     const validated=validateTutorPhrases(out?.phrases,input);
@@ -4026,12 +4072,16 @@ async function findTutorPhrases({consented=false}={}) {
     tutorSession.resultSource=cached?'cache':'live';
     tutorSession.stage='select'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
-    tutorRenderSuggestions(); tutorStatus(cached?'Loaded and rechecked the cached phrase result; no AI request was made.':'Live suggestions are checked against the reading. Your Vault and review history stayed on this device.');
+    tutorRenderSuggestions();
+    if (!cached) tutorJourney?.step('response',{duration:Date.now()-started});
+    tutorStatus(cached?'Loaded and rechecked the cached phrase result; no AI request was made.':'Live suggestions are checked against the reading. Your Vault and review history stayed on this device.');
   } catch(error) {
+    if (!cached && requestId===tutorRequestId) tutorJourney?.step('error',{reason:experienceAiReason(error)});
     if(requestId===tutorRequestId) { tutorShowError('Retry phrase selection','retry-select',error); }
   } finally { if(requestId===tutorRequestId){tutorBusy=false;tutorController=null;} }
 }
 function cancelTutorRequest() {
+  if (tutorBusy) tutorJourney?.step('stopped');
   tutorPendingRequest=null;
   if(!tutorController) return;
   tutorRequestId++; tutorController.abort(); tutorController=null; tutorBusy=false; tutorStatus('Request cancelled. Your draft is saved. The provider may still process it if it already received the request.'); renderTutorStage();
@@ -4095,7 +4145,7 @@ async function handleTutorClick(e) {
       if(!tutorMeaning) throw new Error('This older suggestion has no saved Vietnamese meaning. Start a new practice to refresh it.');
       const tutorSense=senseStableKey({slot:'ai-tutor',sourceFile:`${tutorSession.provider}/${tutorSession.model}/${tutorSession.resultSource||'unknown'}`,keyText:p.phrase},`${tutorMeaning}\n${p.sourceSentence}`);
       const r=await addItem({type:'phrase',text:p.phrase,note:`Tutor: ${noteParts.join(' ')}`,tags:['ai-tutor'],dictionary:{source:`AI Tutor suggestion · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} (${tutorSession.resultSource==='cache'?'cached':'live'})`,sourceFile:tutorSession.model||'',entryKey:p.phrase,definition:tutorMeaning,senseKey:tutorSense},context:{sentence:p.sourceSentence,headword:p.phrase,sourceTitle:tutorSession.articleTitle||'AI tutor reading practice'}});
-      if(!r.merged){state.items.unshift(r.item);renderVault();}
+      if(!r.merged){state.items.unshift(r.item);renderVault();tutorJourney?.step('saved');}
       tutorSession.savedItemId=r.item?.id||null; tutorSession.stage='saved'; await persistTutor(); renderTutorStage();
       tutorStatus(r.merged?'This phrase is already in your Vault.':'Saved to your Vault for future FSRS review. Saving is not counted as a review.');
     } catch(error) { tutorStatus('Could not save the review card: '+error.message); }
@@ -4136,6 +4186,7 @@ async function createTutorPrompt(index,{freshContext=false}={}) {
     await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorStatus('Creating a fresh speaking prompt…'); $('#tutor-stage').replaceChildren(tutorText('p','Requesting a live situation prompt…','hint'),tutorButton('Cancel request','cancel'));
+    tutorJourney?.step('followup');
     const out=await askTutor({signal:controller.signal,instructions:TUTOR_SITUATION_INSTRUCTIONS,input:JSON.stringify(payload)});
     if(requestId!==tutorRequestId || !tutorSession) return;
     const situation=validateTutorSituation(out,payload);
@@ -5903,6 +5954,10 @@ async function gradeById(id, action) {
   if (rating === 3) v.userData.status = 'learning'; // preserved Leitner-era behaviour
   try {
     await putItem(v);
+    if (currentView() === 'review' && reviewJourney && !reviewJourney.reached('result')) {
+      reviewJourney.step('result', {duration:reviewJourney.elapsed()});
+      if (reviewJourney.reached('result')) recordReviewReturn(reviewJourney);
+    }
     const attemptId = v.dictionary?.experienceAttemptId;
     if (attemptId) trackExperience('toeic_reviewed', {attemptId});
   } catch (e) {
@@ -5940,6 +5995,21 @@ function reviewSavedItems(items) {
 
 function reviewSavedItem(item) {
   reviewSavedItems([item]);
+}
+
+function recordReviewReturn(journey) {
+  const key='dd-experience-review-anchor';
+  try {
+    const now=Date.now();
+    const previous=JSON.parse(localStorage.getItem(key));
+    if (previous?.consentAt===journey.consentAt && previous.attemptId!==journey.attemptId &&
+        now>=previous.at && now-previous.at<=7*86400000) {
+      const day=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Ho_Chi_Minh',dateStyle:'short'});
+      if (day.format(previous.at)===day.format(now)) return;
+      trackExperience('journey_step',{attemptId:previous.attemptId,journey:'review',step:'returned'});
+    }
+    localStorage.setItem(key,JSON.stringify({attemptId:journey.attemptId,consentAt:journey.consentAt,at:now}));
+  } catch { /* A study session still works if browser storage is unavailable. */ }
 }
 
 let reviewQueueIds = null; // null = derive from due items when entering Review
@@ -6513,6 +6583,7 @@ function renderReview() {
   }
   list.innerHTML = '';
   if (!queue.length) {
+    if (!reviewTotal) reviewJourney?.step('empty');
     const msg = $('#review-empty-msg');
     if (msg) msg.textContent = i18n('review.emptyTitle');
     empty?.classList.remove('hidden');
@@ -6520,6 +6591,7 @@ function renderReview() {
   }
   empty?.classList.add('hidden');
   list.appendChild(buildReviewCard(queue[0]));
+  reviewJourney?.step('card');
 }
 
 function buildReviewCard(item) {
@@ -6593,7 +6665,13 @@ function buildReviewCard(item) {
     b.className = cls;
     b.textContent = label;
     b.dataset.reviewAct = act;
-    b.addEventListener('click', () => advanceReview(item.id, act));
+    b.addEventListener('click', async () => {
+      const controls = [...actions.querySelectorAll('button')];
+      if (controls.some(control => control.disabled)) return;
+      controls.forEach(control => { control.disabled = true; });
+      try { await advanceReview(item.id, act); }
+      finally { controls.forEach(control => { control.disabled = false; }); }
+    });
     return b;
   };
   actions.appendChild(mk(i18n('review.know'), 'know', 'btn-secondary'));

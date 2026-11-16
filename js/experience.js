@@ -1,4 +1,4 @@
-import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS } from './experience-config.js';
+import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, FEEDBACK_TOPICS } from './experience-config.js';
 
 const preference = 'dd-experience-consent';
 const queueKey = 'dd-experience-queue';
@@ -15,7 +15,26 @@ function experienceConsent() {
 export function sharesExperience() {
   return experienceConsent() !== null;
 }
+const sessionKey = 'dd-experience-session';
+const sessionIdleMs = 30 * 60 * 1000;
 let session;
+let sessionAt = 0;
+let retryDelay = 5000;
+const MAX_RETRY_DELAY = 60000;
+
+function sessionId(at) {
+  if (!session) {
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(sessionKey));
+      session = saved?.id;
+      sessionAt = saved?.at || 0;
+    } catch { /* Session remains in memory if storage is unavailable. */ }
+  }
+  if (!session || at - sessionAt >= sessionIdleMs || at < sessionAt) session = crypto.randomUUID();
+  sessionAt = at;
+  try { sessionStorage.setItem(sessionKey, JSON.stringify({id:session,at})); } catch {}
+  return session;
+}
 let sending = false;
 let scheduled;
 
@@ -35,12 +54,28 @@ export async function flushExperience() {
         localStorage.setItem(queueKey,JSON.stringify(queue().filter(item=>item.id!==batch.id)));
         continue;
       }
-      const response = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(batch)});
+      const pending = queue();
+      const queued = pending.find(item=>item.id===batch.id);
+      if (!queued) continue;
+      // Freeze the batch before sending so a lost response cannot make retry
+      // reuse its id with new entries that the server would discard.
+      queued.sealed = true;
+      localStorage.setItem(queueKey, JSON.stringify(pending));
+      const {sealed, ...body} = queued;
+      const response = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
       if (!response.ok && ![400, 413].includes(response.status)) break;
+      retryDelay = 5000;
       localStorage.setItem(queueKey,JSON.stringify(queue().filter(item=>item.id!==batch.id)));
     }
   } catch { /* Keep queued events for the next online attempt. */ }
-  finally { sending = false; }
+  finally {
+    sending = false;
+    clearTimeout(scheduled);
+    if (navigator.onLine && queue().length) {
+      scheduled = setTimeout(flushExperience, retryDelay);
+      retryDelay = Math.min(retryDelay * 2, MAX_RETRY_DELAY);
+    }
+  }
 }
 
 export function trackExperience(event, fields = {}) {
@@ -53,16 +88,17 @@ export function trackExperience(event, fields = {}) {
     }
     const consent = experienceConsent();
     if (event !== 'feedback' && !consent) return false;
-    session ||= crypto.randomUUID();
+    const at = Date.now();
+    const currentSession = sessionId(at);
     const pending = queue();
-    const entry = {event,at:Date.now(),...fields};
+    const entry = {event,at,...fields};
     const last = pending.at(-1);
-    if (!sending && event !== 'feedback' && last?.session === session && last?.consentedAt === consent.at &&
+    if (!sending && event !== 'feedback' && last?.session === currentSession && !last.sealed && last.consentedAt === consent.at &&
         last.entries[0].event !== 'feedback' && last.entries.length < 30) {
       last.entries.push(entry);
     } else {
       if (pending.length >= 100) return false;
-      pending.push({id:crypto.randomUUID(),session,version,entries:[entry],...(event === 'feedback' ? {} : {consentNotice: consent.notice, consentedAt: consent.at})});
+      pending.push({id:crypto.randomUUID(),session:currentSession,version,entries:[entry],...(event === 'feedback' ? {} : {consentNotice: consent.notice, consentedAt: consent.at})});
     }
     localStorage.setItem(queueKey,JSON.stringify(pending));
     clearTimeout(scheduled);
@@ -90,7 +126,10 @@ export function initExperience() {
   opt.onchange = () => {
     try {
       if (opt.checked) localStorage.setItem(preference,JSON.stringify({notice:CONSENT_NOTICE,at:Date.now()}));
-      else localStorage.removeItem(preference);
+      else {
+        localStorage.removeItem(preference);
+        localStorage.removeItem('dd-experience-review-anchor');
+      }
       if (!opt.checked) localStorage.setItem(queueKey,JSON.stringify(queue().filter(batch=>batch.entries[0].event==='feedback')));
     } catch { opt.checked = false; }
   };
@@ -99,7 +138,9 @@ export function initExperience() {
     event.preventDefault();
     const note = form.elements.note.value.trim();
     if (!note) return;
-    form.querySelector('[role=status]').textContent = trackExperience('feedback',{note})
+    const topic = form.elements.topic?.value;
+    const category = FEEDBACK_TOPICS.includes(topic) ? topic : undefined;
+    form.querySelector('[role=status]').textContent = trackExperience('feedback',{note,category})
       ? 'Đã xếp góp ý vào hàng đợi. App sẽ gửi khi kết nối được.'
       : 'Chưa lưu được góp ý. Hãy thử lại.';
     if (form.querySelector('[role=status]').textContent.startsWith('Đã')) form.reset();
@@ -107,4 +148,30 @@ export function initExperience() {
   window.addEventListener('online',flushExperience);
   window.addEventListener('focus',flushExperience);
   void flushExperience();
+}
+
+// An instance represents one user-visible path. Only the fixed journey metadata
+// is recorded. Starting without consent does not create a linkable ID.
+export function startExperienceJourney(journey, source = 'app') {
+  if (!sharesExperience()) return null;
+  const started = Date.now();
+  const consentAt = experienceConsent()?.at;
+  const attemptId = crypto.randomUUID();
+  const seen = new Set();
+  const step = (name, {duration, reason} = {}) => {
+    if (seen.has(name) || experienceConsent()?.at !== consentAt) return;
+    if (trackExperience('journey_step', {attemptId, journey, step:name,
+      ...(name === 'opened' ? {source} : {}), duration, reason})) seen.add(name);
+  };
+  step('opened');
+  return {step, elapsed:()=>Date.now()-started, reached:name=>seen.has(name), attemptId, consentAt};
+}
+
+export function experienceAiReason(error) {
+  const message = String(error?.message || '');
+  if (/rate limit|quota/i.test(message)) return 'quota';
+  if (/timed out/i.test(message)) return 'timeout';
+  if (/could not reach|bị ngắt/i.test(message)) return 'network';
+  if (/api key|rejected the key/i.test(message)) return 'setup';
+  return 'other';
 }

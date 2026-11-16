@@ -1,3 +1,4 @@
+import { startExperienceJourney, experienceAiReason } from './experience.js';
 import { askTutor, getAiSettings } from './ai-client.js';
 
 const storageKey = 'dd-offline-ai-lessons-v1';
@@ -108,6 +109,8 @@ export function openSavedAiLessons(initialLesson) {
 }
 
 export function openAiLessonBuilder({ title, mode, source }) {
+  const journey=startExperienceJourney('lesson_studio', ['reader','vault','review','writing'].includes(mode) ? mode : mode === 'exam' ? 'toeic' : 'lesson');
+  let retryPending=false;
   const { dialog, body } = lessonDialog(title);
   const controller = new AbortController();
   dialog.addEventListener('close', () => controller.abort(), { once: true });
@@ -121,6 +124,7 @@ export function openAiLessonBuilder({ title, mode, source }) {
   const model = append(modelLabel, 'select', '');
   for (const id of models) append(model, 'option', id).value = id;
   if (!getAiSettings().apiKey) {
+    journey?.step('setup');
     append(body, 'p', 'Thêm key trong Cài đặt nâng cao → Học tập.');
     const guide = append(body, 'a', 'Xem hướng dẫn lấy và nhập API key');
     guide.href = '/vi/huong-dan-gemini/';
@@ -147,10 +151,18 @@ export function openAiLessonBuilder({ title, mode, source }) {
       status.textContent = 'Cần có mạng và nội dung để tạo bài.';
       return;
     }
+    if (!getAiSettings().apiKey) {
+      journey?.step('setup');
+      status.textContent = 'Thêm Gemini API key trước khi tạo bài.';
+      return;
+    }
     generate.disabled = true;
     model.disabled = true;
     preview.replaceChildren();
     status.textContent = 'Đang tạo bài…';
+    const started=Date.now();
+    journey?.step('sent');
+    if (retryPending) journey?.step('retry');
     try {
       const result = await askTutor({
         instructions,
@@ -162,12 +174,16 @@ export function openAiLessonBuilder({ title, mode, source }) {
       const lesson = { title, source: material, questions: validateQuestions(result), createdAt: Date.now() };
       status.textContent = 'Kiểm tra câu hỏi và đáp án trước khi lưu.';
       renderLesson(preview, lesson);
+      journey?.step('response',{duration:Date.now()-started});
+      if (retryPending) journey?.step('retry_success');
+      retryPending=false;
       const save = button(preview, 'Lưu để học offline', () => {
         try {
           const lessons = savedLessons();
           if (lessons.length >= 100) throw Error('Thư viện đã có 100 bài.');
           localStorage.setItem(storageKey, JSON.stringify([lesson, ...lessons]));
           save.disabled = true;
+          journey?.step('saved');
           status.textContent = 'Đã lưu trên trình duyệt này.';
           const start = button(preview, 'Làm bài ngay', () => {
             dialog.close();
@@ -179,7 +195,10 @@ export function openAiLessonBuilder({ title, mode, source }) {
         }
       });
     } catch (error) {
-      if (!controller.signal.aborted) {
+      retryPending=true;
+      if (controller.signal.aborted) journey?.step('stopped');
+      else {
+        journey?.step('error',{reason:experienceAiReason(error)});
         status.textContent = error.message;
         generate.textContent = 'Thử lại';
       }

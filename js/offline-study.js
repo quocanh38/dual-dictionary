@@ -1,4 +1,5 @@
 import { sharesExperience, trackExperience } from "./experience.js";
+import { TOEIC_PART5_SAMPLE, TOEIC_PART5_SOURCE } from "./experience-config.js";
 import { openToeicExplanation, openSavedToeicExplanation } from "./toeic-ai-explanations.js";
 import { listRecords, progressKey } from "../lessons/storage.js";
 import { fetchLibraryIndex } from "../lessons/library.js";
@@ -270,7 +271,7 @@ function paintQuestion() {
     ${listeningMaterial}
     <h3>${esc(q.prompt)}</h3>${responseMarkup(q)}
     <div class="exam-actions">${timed ? `<button type="button" class="btn-secondary" data-exam-prev ${index === 1 ? "disabled" : ""}>Previous</button><button type="button" class="btn-primary" data-exam-next>${index === set.length ? (diagnostic ? "Finish diagnostic" : "Finish simulation") : (responseIsComplete(q, current.responses?.[q.id]) ? "Save & next" : "Skip")}</button><button type="button" class="btn-secondary" data-exam-finish>Submit now</button>` : current.checked ? `<button type="button" class="btn-primary" data-exam-next>Next question</button>` : `<button type="button" class="btn-primary" data-exam-check ${responseIsComplete(q, current.response ?? current.answerIndex) ? "" : "disabled"}>Check answer</button>`}<button type="button" class="btn-secondary" data-exam-reset>Restart set</button></div>
-    ${current.checked ? `<p class="exam-feedback ${current.correct ? "is-correct" : "is-wrong"}" role="status"><strong>${current.correct ? "Correct" : "Review this answer"}</strong> · ${esc(q.explanation)}${!current.correct ? ` Your response: ${esc(formatResponse(q, current.response ?? current.answerIndex))}. Answer: ${esc(formatResponse(q, null, true))}.` : ""}</p>` : ""}`;
+    ${current.checked ? `<p class="exam-feedback ${current.correct ? "is-correct" : "is-wrong"}" role="status"><strong>${current.correct ? "Correct" : "Review this answer"}</strong> · ${esc(q.explanationVi || q.explanation)}${!current.correct ? ` Your response: ${esc(formatResponse(q, current.response ?? current.answerIndex))}. Answer: ${esc(formatResponse(q, null, true))}.` : ""}</p>` : ""}`;
   if (current.checked && !current.correct) {
     host.insertAdjacentHTML("beforeend", mistakeActions(q, current.response ?? current.answerIndex));
     bindMistakeActions(host, [q]);
@@ -403,10 +404,12 @@ function bindMistakeActions(host, questions) {
           context: { sentence: mistakeEvidence(q), sourceTitle: q.title || q.part },
           tags: ["exam-mistake", q.skill.toLowerCase()],
         });
-        trackExperience("mistake_saved");
-        if (attemptId && !merged) trackExperience("toeic_saved", {attemptId});
+        if (!merged) {
+          trackExperience("mistake_saved");
+          if (attemptId) trackExperience("toeic_saved", {attemptId});
+        }
         document.dispatchEvent(new Event("exam-card-saved"));
-        status.textContent = "Đã lưu trong Ôn tập.";
+        status.textContent = merged ? "Câu này đã có trong Ôn tập." : "Đã lưu câu sai. Bạn có thể mở Ôn tập ở lần sau.";
         button.textContent = "Ôn ngay";
         button.onclick = () => document.dispatchEvent(new CustomEvent("review-saved-item", { detail: item }));
         button.disabled = false;
@@ -495,7 +498,12 @@ async function startSet(exam = "IELTS Academic", mode = "practice", skill = "all
   $("#exam-start")?.classList.add("hidden");
   $("#exam-question")?.classList.remove("hidden");
   await persistAttempt();
-  if (!prev && current.experienceAttemptId) trackExperience("toeic_opened", {attemptId: current.experienceAttemptId});
+  if (!prev && current.experienceAttemptId) {
+    const setId = TOEIC_FOCUS_SETS.find((set) => set.id === assignment?.id)?.id;
+    const source = setId === TOEIC_PART5_SAMPLE && assignment.source === TOEIC_PART5_SOURCE
+      ? TOEIC_PART5_SOURCE : undefined;
+    trackExperience("toeic_opened", {attemptId: current.experienceAttemptId, setId, source});
+  }
   paintQuestion(); await renderIELTSAssignment();
 }
 function startExamClock() {
@@ -524,6 +532,10 @@ async function checkAnswer() {
     explanation: q.explanation, mode: current.mode, createdAt: Date.now(),
   });
   await persistAttempt(); paintQuestion(); renderHistory(); renderStudyStats(); renderIELTSAssignment();
+  if (current.experienceAttemptId && current.results.length === 1) {
+    trackExperience('toeic_answered', {attemptId:current.experienceAttemptId,duration:Date.now()-current.startedAt});
+    trackExperience('toeic_explanation_seen', {attemptId:current.experienceAttemptId});
+  }
 }
 async function finishSession(timedOut = false) {
   if (!current || current.complete) return;
@@ -558,7 +570,7 @@ async function finishSession(timedOut = false) {
   const review = (timed || reviewed.length) ? `<details class="exam-review"><summary>${toeic ? "Xem đáp án và lời giải" : "Review answers and explanations"}</summary>${reviewed.map((q) => {
     const response = responses[q.id];
     const ok = responseIsCorrect(q, response);
-    return `<article class="study-history"><strong>${esc(q.skill)} · ${esc(q.part || q.title)} · ${ok ? "Correct" : "Review"}</strong><p>${esc(q.prompt)}</p><p>Your response: ${esc(formatResponse(q, response))}</p><p>Answer: ${esc(formatResponse(q, null, true))}</p><p>${esc(q.explanation)}</p>${ok ? "" : mistakeActions(q, response)}</article>`;
+    return `<article class="study-history"><strong>${esc(q.skill)} · ${esc(q.part || q.title)} · ${ok ? "Correct" : "Review"}</strong><p>${esc(q.prompt)}</p><p>Your response: ${esc(formatResponse(q, response))}</p><p>Answer: ${esc(formatResponse(q, null, true))}</p><p>${esc(q.explanationVi || q.explanation)}</p>${ok ? "" : mistakeActions(q, response)}</article>`;
   }).join("")}</details>` : "";
   const canReviewMistakes = toeic && reviewed.some((q) => !responseIsCorrect(q, responses[q.id]));
   const skillLabel = TOEIC_RESUMABLE_SETS.find((entry) => entry.id === current.assignmentId)?.title || (current.assignmentId ? `IELTS ${current.assignmentSkill || current.skill} recommended practice` : current.mode === "diagnostic" ? (current.skill === "all" ? "IELTS Listening + Reading diagnostic" : `IELTS ${current.skill} diagnostic`) : current.skill && current.skill !== "all" ? `${current.skill} timed practice` : "Timed starter simulation");
@@ -1174,14 +1186,23 @@ try {
   hiddenToeicSets = new Set(JSON.parse(localStorage.getItem("dd-hidden-toeic") || "[]"));
 } catch { /* Keep the bundled catalogue. */ }
 
+let openingToeicSet = false;
 async function openToeicSet(set, mode = "practice") {
-  if (hiddenToeicSets.has(set.id) && !set.resume) return;
-  $("#offline-exam-lab").open = true;
-  const skill = set.skill || "Listening";
-  await startSet(TOEIC_EXAM, mode, skill, null, {
-    ...set, kind: "objective", skill,
-  });
-  $("#exam-question")?.scrollIntoView({ block: "start" });
+  if (openingToeicSet) return false;
+  if (hiddenToeicSets.has(set.id) && !set.resume) return false;
+  openingToeicSet = true;
+  try {
+    $("#offline-exam-lab").open = true;
+    const skill = set.skill || "Listening";
+    await startSet(TOEIC_EXAM, mode, skill, null, { ...set, kind: "objective", skill });
+    const question = $("#exam-question");
+    question.tabIndex = -1;
+    question.focus({ preventScroll: true });
+    question.scrollIntoView({ block: "start" });
+    return true;
+  } finally {
+    openingToeicSet = false;
+  }
 }
 
 function initToeicPractice() {
@@ -1272,6 +1293,7 @@ function initToeicPractice() {
       download.setAttribute("aria-label", `Tải offline · ${set.title}`);
     };
     download.onclick = async () => {
+      if (downloading) return;
       downloading = true;
       download.disabled = true;
       trackExperience("audio_start");
@@ -1317,7 +1339,7 @@ function initToeicPractice() {
   };
   window.addEventListener("online",refreshCatalogue);
   window.addEventListener("focus",refreshCatalogue);
-  void refreshCatalogue();
+  const catalogueReady = refreshCatalogue();
 
   const filter = $("#toeic-review-part");
   const list = $("#toeic-review-list");
@@ -1387,9 +1409,22 @@ function initToeicPractice() {
   const entryUrl = new URL(location.href);
   const linkedSet = TOEIC_FOCUS_SETS.find((set) => set.id === entryUrl.searchParams.get("toeic"));
   if (linkedSet && location.hash === "#/practice") {
-    entryUrl.searchParams.delete("toeic");
-    history.replaceState(history.state, "", entryUrl);
-    openToeicSet(linkedSet);
+    const source = entryUrl.searchParams.get("source");
+    void catalogueReady.then(async () => {
+      if (location.href !== entryUrl.href) return;
+      if (!(await openToeicSet({...linkedSet, source}))) {
+        const status = $("#toeic-entry-status");
+        status.textContent = "Bộ này hiện đã ẩn. Bạn có thể chọn bài TOEIC khác bên dưới.";
+        status.hidden = false;
+      }
+      entryUrl.searchParams.delete("toeic");
+      entryUrl.searchParams.delete("source");
+      history.replaceState(history.state, "", entryUrl);
+    }).catch(() => {
+      const status = $("#toeic-entry-status");
+      status.textContent = "Chưa mở được bộ TOEIC. Hãy tải lại trang hoặc chọn bộ trong danh sách.";
+      status.hidden = false;
+    });
   }
 }
 

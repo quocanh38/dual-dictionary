@@ -1,18 +1,28 @@
-# Dual Dict — Bàn giao Codex trên Windows, 15/11/2026
+# Dual Dict — Bàn giao Codex trên Windows, cập nhật 16/11/2026
 
-Tiếp tục trên nhánh `windows-handoff-2026-11-15`. Bản production được xác minh là `v196-first-lookup`, Netlify deploy [6af9c3ca5e7e4b1dfb6d764c](https://app.netlify.com/projects/dualdictionary/deploys/6af9c3ca5e7e4b1dfb6d764c). Đây là bản deploy thủ công. Nhánh bàn giao chưa merge vào `main`. Lần deploy vừa rồi giữ bộ tệp của bản production trước và chép đè các thay đổi đã kiểm tra.
+Tiếp tục trên nhánh `windows-handoff-2026-11-15`. Production hiện chạy **v200**, cache `mdx-dict-v200-dictionary-download-events`, trên [Netlify deploy 6afaa7193b90df2e0803cefe](https://app.netlify.com/projects/dualdictionary/deploys/6afaa7193b90df2e0803cefe). Netlify phát hành thủ công bằng cách giữ inventory production và thay đúng các tệp phát hành. Đã đối chiếu SHA của 28.711 đường dẫn tĩnh.
+
+## Trạng thái đã nghiệm thu
+
+- SEO đã cập nhật sitemap, widget, `llms.txt`, năm mục từ đa nghĩa và bài TOEIC Part 5–6. Bài TOEIC mở thẳng câu mẫu; lỗi sai lưu trên máy và có thể ôn ở tab sau.
+- Tổng quan admin có Tra từ, Reader, TOEIC, Ôn tập, Chat, AI Tutor, Gemini giải thích TOEIC và Lesson Studio. **Vận hành** chứa số đếm audio và ảnh chụp Netlify Observability có thời điểm. Thẻ Netlify không tự làm mới.
+- v200 ghi riêng lỗi tải gói từ điển. Đã đối chiếu **14/14 batch kiểm thử** qua API admin production cho Tra từ, Reader, TOEIC, Ôn tập và Chat. Kiểm tra gửi lại sau khi mất phản hồi, lọc ngày giờ Việt Nam, chạy TOEIC khi tắt chia sẻ, và mẫu số 7 ngày bằng đồng hồ thử. Chat dùng Gemini giả lập. Một số lượt QA có thể nằm trong tổng số ngày nghiệm thu.
+- v199 đã kiểm thử production ở 390 và 1280 px cho giữ nháp khi nhập key, lỗi 429/mất mạng, dừng giữa phản hồi, lưu, đổi tên và mở lại hội thoại. Đã kiểm chứng lượt hỏi tiếp được lưu và phục hồi.
+- Netlify MCP và Playwright MCP đã được cấu hình trên máy Windows này. Modern Web Guidance, Impeccable và năm Marketing Skills bên dưới đã được cài cấp người dùng.
 
 ## Mở repo trên Windows
 
 Dùng PowerShell với Git, Codex CLI và Node.js 24 trở lên.
 
 ```powershell
-git clone --branch windows-handoff-2026-11-15 https://github.com/quocanh38/dual-dictionary.git
+git clone --no-checkout --branch windows-handoff-2026-11-15 https://github.com/quocanh38/dual-dictionary.git
 cd dual-dictionary
-npm ci
+@("/*", "!/data/word-notes/con.md", "!/vi/tu/con/") | git sparse-checkout set --no-cone --stdin
+git -c core.protectNTFS=false read-tree -mu HEAD
+npm.cmd ci
 ```
 
-Nếu đã clone và đang ở nhánh bàn giao, chạy `git pull --ff-only`. Mở thư mục repo bằng Codex.
+Nếu đã clone và đang ở nhánh bàn giao, chạy `git pull --ff-only`. Mở thư mục repo bằng Codex. Checkout Windows đang dùng sparse checkout để loại `data/word-notes/con.md` và `vi/tu/con/index.html`, vì `CON` là tên dành riêng. Hai đường dẫn vẫn có trong Git và production. Nếu checkout mới bị lỗi, dùng checkout trên hệ thống tệp Linux của WSL hoặc cấu hình cùng phạm vi sparse checkout.
 
 ## Cài Netlify MCP, Modern Web Guidance và Impeccable
 
@@ -50,7 +60,7 @@ Với nội dung dạy tiếng Anh, kiểm tra thêm nghĩa theo ngữ cảnh, �
 - [App](https://dualdictionary.netlify.app/) · [Admin](https://dualdictionary.netlify.app/admin/experience/) · [Thông báo dữ liệu](https://dualdictionary.netlify.app/vi/du-lieu-trai-nghiem/).
 - `DD_EXPERIENCE_OPERATIONS=enabled` đang bật cho Netlify Functions, context production. Endpoint đọc trạng thái `/.netlify/functions/experience?operations` đã trả `{"enabled":true}`. Số liệu mặc định đếm tải audio bắt đầu, thành công và lỗi theo ngày giờ Việt Nam và phiên bản. Bản ghi bộ đếm không chứa mã phiên hoặc mã lượt học.
 - Hành trình TOEIC chỉ ghi khi người học chủ động bật chia sẻ. Báo cáo nối mở bộ, hoàn thành, lưu lỗi sai và quay lại ôn trong 7 ngày. Tỷ lệ quay lại chỉ tính các lượt đã có đủ 7 ngày quan sát. Góp ý chỉ gửi khi người dùng bấm Gửi.
-- Đã kiểm tra Chromium và backend cục bộ với dữ liệu giả lập. Trên production đã xác minh service worker `v196`, thông báo, trạng thái bật và endpoint báo cáo trả 401 khi thiếu khóa. Chưa kiểm tra số đếm hoặc báo cáo bằng dữ liệu người dùng thật.
+- Đã kiểm tra Chromium và backend cục bộ với dữ liệu giả lập. Trên production đã xác minh service worker `v196`, thông báo, trạng thái bật và endpoint báo cáo trả 401 khi thiếu khóa. Báo cáo hành trình đã được đối chiếu với các lượt QA có kiểm soát ở v200. Chưa đối chiếu riêng số đếm audio qua một lượt tải production có kiểm soát.
 - Khóa admin và khóa Gemini nhập qua giao diện hoặc quản lý qua hệ thống cấu hình phù hợp. Giữ bí mật và dữ liệu người dùng ngoài Git, chat và ảnh chụp.
 
 ## Luồng người học mới
@@ -65,6 +75,7 @@ Commit `bd95ec03ab` rút gọn Chào mừng, đưa nút tải gói đề xuất 
 
 ## Việc tiếp theo
 
-1. Dùng Netlify MCP kiểm tra production đã publish, rồi mở admin với khóa hợp lệ để xác minh có dữ liệu thật. Đối chiếu một lượt tải audio có kiểm soát và luồng TOEIC mẫu từ mở bộ đến ôn ở phiên sau. Hiển thị mẫu số và số lượt đủ thời gian quan sát khi đọc tỷ lệ.
-2. Rà log kết nối, thời hạn lưu và quy trình đáp ứng yêu cầu dữ liệu, cùng căn cứ xử lý áp dụng. Kiểm tra giới hạn tần suất của endpoint trước khi dựa vào số đếm để ra quyết định.
-3. Tiếp tục UX admin. Ưu tiên đưa số liệu cần xử lý lên đầu, nối Tổng quan với góp ý theo chủ đề, và lọc Bộ TOEIC theo Part/trạng thái. Cân nhắc Reader và tiếng Anh công việc sau khi báo cáo TOEIC cho kết quả đáng tin cậy.
+1. Quan sát 5 người học mới thử Tra từ hoặc Reader → Chat → lưu → Ôn tập. Đối chiếu góp ý theo chủ đề và các mốc admin để xác định ưu tiên UX.
+2. Trong admin, dùng tử số và mẫu số, tách lượt QA khỏi diễn giải hành vi người học. Xác nhận riêng bộ đếm audio và Theo dõi Netlify RUM/Observability khi cần điều tra hiệu năng.
+3. Đối chiếu quy trình lưu trữ, rút lại đồng ý và xóa dữ liệu. Báo cáo hành trình đọc tối đa 90 ngày. Blobs chưa có tác vụ xóa tự động.
+4. Lấy Search Console theo URL × truy vấn để chọn nhóm mục từ biên tập tiếp. Dữ liệu này phục vụ ưu tiên SEO.

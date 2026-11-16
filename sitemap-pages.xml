@@ -51,7 +51,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dualdictionary.netlify.app/vi/widget/</loc>
+    <loc>https://dualdictionary.netlify.app/vi/widget-tra-tu/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -59,21 +59,6 @@
     <loc>https://dualdictionary.netlify.app/vi/cap-nhat/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://dualdictionary.netlify.app/vi/tac-gia/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dualdictionary.netlify.app/vi/test-trinh-do/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dualdictionary.netlify.app/vi/trinh-do/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dualdictionary.netlify.app/vi/tu/</loc>

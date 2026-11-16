@@ -1,3 +1,4 @@
+import { TOEIC_PART5_SAMPLE } from "./experience-config.js";
 // Offline practice content packs. Keep every passage, prompt and asset original
 // or properly licensed; this starter pack contains no official exam material.
 import {
@@ -101,6 +102,7 @@ export const TOEIC_FOCUS_SETS = [
   },
   { id: "toeic-focus-part4", title: "Đổi lối vào cho khách", part: 4, skill: "Listening", questionIds: ["toeic-l4", "toeic-l4-extra-1", "toeic-l4-extra-2"] },
   { id: "toeic-part4-staff", title: "Thông báo cho nhân viên làm muộn", part: 4, skill: "Listening", questionIds: ["toeic-l8", "toeic-l8-extra-1", "toeic-l8-extra-2"] },
+  { id: TOEIC_PART5_SAMPLE, title: "Part 5 · Câu mẫu từ loại", part: 5, skill: "Reading", questionIds: ["toeic-r3"] },
   { id: "toeic-focus-part6", title: "Part 6 · Điền vào văn bản", part: 6, skill: "Reading", questionIds: ["toeic-r4-extra-1", "toeic-r4", "toeic-r4-extra-2", "toeic-r4-extra-3"] },
   {"id": "toeic-part6-returns", "title": "Thông báo quy trình đổi trả", "part": 6, "skill": "Reading", "questionIds": ["toeic-part6-returns-1", "toeic-part6-returns-2", "toeic-part6-returns-3", "toeic-part6-returns-4"]},
   { id: "toeic-focus-part7", title: "Part 7 · Đọc hiểu", part: 7, skill: "Reading", questionIds: ["toeic-r1", "toeic-r1-extra-1", "toeic-r1-extra-2", "toeic-r1-extra-3", "toeic-r1-extra-4"] },
@@ -724,6 +726,7 @@ export const STUDY_CONTENT_PACKS = [
       {
         id: "toeic-r3", exam: "TOEIC Listening & Reading", skill: "Reading", part: "Part 5 · Incomplete sentences", type: "choice", title: "Grammar in context",
         passage: "The design team has ------- the revised brochure to the printer.", prompt: "Choose the word that completes the sentence.", options: ["submit", "submitted", "submitting", "submission"], answer: 1,
+        explanationVi: "Hiện tại hoàn thành dùng has + quá khứ phân từ. Quá khứ phân từ của submit là submitted.",
         explanation: "The present perfect uses has followed by the past participle submitted.",
       },
       {
