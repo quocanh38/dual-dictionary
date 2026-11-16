@@ -170,6 +170,11 @@ function writeHubIndex(topics, ipa) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="TOEIC theo tình huống (12 hub)">
 <meta property="og:description" content="12 hub từ vựng TOEIC theo tình huống công sở: họp, email, văn phòng, tuyển dụng, hóa đơn, giao hàng, công tác, khách hàng, hợp đồng, tiếp thị, tài chính, báo cáo.">
+<meta property="og:image" content="${SITE}/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/vi/images/og-default.jpg">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</` + `script>

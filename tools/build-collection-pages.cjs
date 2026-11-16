@@ -16,7 +16,7 @@ const SITE = core.SITE;
 
 const BIZ_WORDS = 'account bank balance invoice payment budget finance marketing sales contract meeting office shipping delivery order customer client employee manager payroll revenue profit audit tax loan credit stock share board quarter expense claim warranty supplier retail import export freight cargo warehouse inventory deadline overtime salary conference proposal dividend interest mortgage insurance premium booking memo agenda'.split(' ');
 
-function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
+function pageHtml({ slug, h1, title = h1, desc, intro, groups, deckCta }) {
   const canonical = `${SITE}/vi/tu/${slug}/`;
   const SSR_N = 300;
   const restByGroup = {};
@@ -58,7 +58,7 @@ function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${core.escapeHtml(h1)} | Dual Dictionary</title>
+<title>${core.escapeHtml(title)} | Dual Dictionary</title>
 <meta name="description" content="${core.escapeHtml(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
@@ -68,7 +68,11 @@ function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${core.escapeHtml(h1)}">
 <meta property="og:description" content="${core.escapeHtml(desc)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${SITE}/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/vi/images/og-default.jpg">
 <meta name="twitter:title" content="${core.escapeHtml(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -176,6 +180,7 @@ async function main() {
     {
       slug: 'ielts',
       h1: `2263 từ vựng IELTS Core — học thuật + tần suất cao`,
+      title: `2.263 từ vựng IELTS Core`,
       desc: `Bộ 2263 từ vựng IELTS Core (AWL + NGSL top 2000) kèm phiên âm Anh-Mỹ/Anh-Anh, nghĩa tiếng Việt, ví dụ thi viết tay và bài luyện trong app Dual Dictionary.`,
       intro: `Bộ từ IELTS Core gồm <b>${ieltsWords.length.toLocaleString('vi-VN')} từ đơn</b> (thuộc Academic Word List của Coxhead hoặc NGSL top 2000) và <b>${ieltsPhrases.length} cụm học thuật</b>. Mỗi từ có trang riêng: phiên âm Mỹ + Anh, nghĩa thi lên đầu, ví dụ IELTS viết tay. Học xong bấm nút luyện để chạy deck IELTS Core trong app — miễn phí, offline.`,
       groups: [
@@ -187,6 +192,7 @@ async function main() {
     {
       slug: 'toeic',
       h1: `Cụm từ TOEIC Business — 161 cụm công sở + từ kinh doanh`,
+      title: `161 cụm từ TOEIC Business`,
       desc: `Bộ 161 cụm từ TOEIC Business (bank account, balance sheet, cash flow…) + 44 từ kinh doanh kèm nghĩa tiếng Việt, ví dụ công sở viết tay và bài luyện trong app Dual Dictionary.`,
       intro: `Bộ TOEIC Business gồm <b>${toeicPhrases.length} cụm từ công sở</b> (tài chính, ngân hàng, văn phòng, thuế) và <b>${bizWords.length} từ kinh doanh lõi</b>. Mỗi cụm có trang riêng: nghĩa Việt biên soạn tay, cấu trúc đi kèm, ví dụ Part 7 viết tay. Học xong bấm nút luyện để chạy deck TOEIC mix (5 từ + 5 cụm mỗi lượt) trong app.`,
       groups: [

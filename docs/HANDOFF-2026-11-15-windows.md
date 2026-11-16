@@ -1,6 +1,8 @@
+> **LIVE v201 — 16/11/2026.** Netlify deploy [6afacf4e96f233912bb07808](https://app.netlify.com/projects/dualdictionary/deploys/6afacf4e96f233912bb07808), based on `6afaa7193b90df2e0803cefe`. Repaired dictionary-hub canonical, updated social cards on 12 pages, synchronized blog schema and authors, added Gemini guidance on the Vietnamese homepage, and set intrinsic dimensions on the audit images. Cache `mdx-dict-v201-content-metadata`. All 51 changed production paths passed HTTP smoke, SHA inventory matched all 28,711 paths, and Chromium mobile verified canonical, Gemini link and image dimensions. Sitemap URL sets remained unchanged.
+
 # Dual Dict — Bàn giao Codex trên Windows, cập nhật 16/11/2026
 
-Tiếp tục trên nhánh `windows-handoff-2026-11-15`. Production hiện chạy **v200**, cache `mdx-dict-v200-dictionary-download-events`, trên [Netlify deploy 6afaa7193b90df2e0803cefe](https://app.netlify.com/projects/dualdictionary/deploys/6afaa7193b90df2e0803cefe). Netlify phát hành thủ công bằng cách giữ inventory production và thay đúng các tệp phát hành. Đã đối chiếu SHA của 28.711 đường dẫn tĩnh.
+Tiếp tục trên nhánh `windows-handoff-2026-11-15`. Production hiện chạy **v201**, cache `mdx-dict-v201-content-metadata`, trên [Netlify deploy 6afacf4e96f233912bb07808](https://app.netlify.com/projects/dualdictionary/deploys/6afacf4e96f233912bb07808). Netlify phát hành thủ công bằng cách giữ inventory production và thay đúng các tệp phát hành. Đã đối chiếu SHA của 28.711 đường dẫn tĩnh.
 
 ## Trạng thái đã nghiệm thu
 

@@ -1773,17 +1773,21 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Từ điển Anh-Việt: ${built.length} từ phổ biến nhất | Dual Dictionary</title>
-<meta name="description" content="Danh sách ${built.length} từ tiếng Anh (phổ biến nhất + học thuật AWL) kèm phiên âm và nghĩa tiếng Việt chi tiết."
+<title>Từ điển Anh-Việt: ${built.length} mục từ | Dual Dictionary</title>
+<meta name="description" content="Danh sách ${built.length} từ tiếng Anh (phổ biến nhất + học thuật AWL) kèm phiên âm và nghĩa tiếng Việt chi tiết.">
 <link rel="canonical" href="${SITE}/vi/tu/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="Dual Dictionary">
 <meta property="og:url" content="${SITE}/vi/tu/">
-<meta property="og:title" content="Từ điển Anh-Việt: ${built.length} từ phổ biến nhất | Dual Dictionary">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} từ phổ biến nhất`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
+<meta property="og:title" content="Từ điển Anh-Việt: ${built.length} mục từ | Dual Dictionary">
+<meta property="og:image" content="${SITE}/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/vi/images/og-default.jpg">
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} mục từ`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 </head>
@@ -1792,7 +1796,8 @@ ${navHtml('tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <span aria-current="page">Từ điển</span></nav>
 <main class="page">
   <p class="word-kicker">Từ điển Anh-Việt</p>
-  <h1 style="font-size:2.4rem">${built.length} từ tiếng Anh phổ biến nhất</h1>
+  <h1 style="font-size:2.4rem">${built.length} mục từ tiếng Anh</h1>
+  <p>Danh mục gồm từ phổ biến, từ học thuật và cả các dạng biến thể. Ví dụ, <em>accepting</em> dẫn về mục gốc <a href="/vi/tu/accept/">accept</a>.</p>
   <p style="color:var(--muted)">Mỗi từ có trang riêng: phiên âm, loại từ, nghĩa tiếng Việt và ví dụ. Nhãn <b>Học chính</b> dựa trên danh sách NGSL (New General Service List, Browne &amp; Culligan), nhóm <b>Học thuật (AWL)</b> dựa trên Academic Word List của Coxhead (570 họ từ chia 10 sublist — chip ghi đúng số sublist, ví dụ "AWL Sublist 1"). <b>Tần suất</b> (top 1K/2K/5K/10K) tính riêng theo corpus phụ đề phim OpenSubtitles — nhãn tần suất và nhãn học không trộn vào nhau: một từ có thể "top 10K" mà vẫn thuộc NGSL. Nhóm "Dạng chia" là biến thể của từ gốc (trang hiển thị mục của từ gốc, có dán nhãn). Từ ngoài các danh sách học vẫn có trang riêng, được dán nhãn rõ ràng.</p>
   <p style="margin:12px 0 0"><a href="${PHRASE_HUB_URL}">Duyệt thêm ${phraseIndex.phrases.length.toLocaleString('vi-VN')} cụm từ tiếng Anh (phrasal verbs, collocations) →</a></p>
   <p style="margin:8px 0 0"><a class="word-cta-btn word-cta-btn-practice" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:var(--teal);color:#fff;font-weight:800;text-decoration:none" href="/?deck=ielts">🎯 Luyện IELTS Core trong app ↗</a></p>

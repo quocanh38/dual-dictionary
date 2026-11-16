@@ -358,7 +358,11 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${SITE}/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/vi/images/og-default.jpg">
 <meta name="twitter:title" content="${esc(title)}">
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: title, description: desc, url: canonical, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }, { '@type': 'ListItem', position: 3, name: 'Cụm từ', item: canonical }] }] })}</script>
 <link rel="stylesheet" href="/vi/blog/blog.css">

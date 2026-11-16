@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-/* Inject Article+BreadcrumbList+HowTo JSON-LD into hand-written blog posts (07/11).
+/* Inject BlogPosting+BreadcrumbList+HowTo JSON-LD into hand-written blog posts (07/11).
  * - Article: headline/description/author/datePublished from existing meta
  * - HowTo: steps from H2 headings (how-to intent posts)
  * - BreadcrumbList: Trang chủ > Blog > {cat} > {post}
- * Idempotent: skips files already containing '"@type":"Article"'.
+ * Idempotent: skips files already containing article or collection metadata.
  */
 const fs = require('fs'), path = require('path');
 const REPO = path.join(__dirname, '..');
@@ -22,7 +22,7 @@ const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
 let done = 0, skipped = 0;
 for (const f of walk(BLOG)) {
   let h = fs.readFileSync(f, 'utf8');
-  if (h.includes('"@type":"Article"') || h.includes('"@type": "Article"')) { skipped++; continue; }
+  if (/"@type"\s*:\s*"(?:Article|BlogPosting|CollectionPage)"/.test(h)) { skipped++; continue; }
   const rel = path.relative(REPO, f).replace(/\\/g, '/').replace(/\/index\.html$/, '/');
   const url = `${SITE}/${rel}`;
   const parts = rel.split('/');
@@ -30,25 +30,26 @@ for (const f of walk(BLOG)) {
   const mTitle = h.match(/<title>(.*?)<\/title>/s);
   const mDesc = h.match(/<meta name="description" content="([^"]*)"/);
   const mPub = h.match(/article:published_time"[^>]*content="([^"]+)"/) || h.match(/published_time[^>]*content="([^"]+)"/);
-  const mH1 = h.match(/<h1[^>]*>(.*?)<\/h1>/s);
+  const mMod = h.match(/article:modified_time"[^>]*content="([^"]+)"/);
+  const lang = h.match(/<html[^>]*lang="([^"]+)"/i)?.[1] || 'vi';
   const title = (mTitle ? mTitle[1] : '').replace(/<[^>]+>/g, '').trim();
   const desc = (mDesc ? mDesc[1] : '').trim();
-  const pub = (mPub ? mPub[1] : '2026-09-16T17:10:00+07:00');
+  const pub = mPub?.[1];
   const h2s = [...h.matchAll(/<h2[^>]*>(.*?)<\/h2>/gs)].map((m) => m[1].replace(/<[^>]+>/g, '').trim()).filter(Boolean).slice(0, 8);
   const catName = { ielts: 'IELTS', toeic: 'TOEIC', 'phuong-phap': 'Phương pháp', en: 'English' }[cat] || cat;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Article',
-        headline: title, description: desc, url, inLanguage: 'vi',
-        author: { '@type': 'Person', name: 'Quốc Anh', url: 'https://www.linkedin.com/in/quocanh38/' },
-        publisher: { '@type': 'Organization', name: 'Dual Dictionary', url: `${SITE}/vi/` },
-        datePublished: pub, dateModified: pub,
+        '@type': 'BlogPosting',
+        headline: title, description: desc, url, inLanguage: lang,
+        author: { '@type': 'Person', '@id': `${SITE}/vi/tac-gia/#person`, name: 'Nguyễn Quốc Anh', url: `${SITE}/vi/tac-gia/` },
+        publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'Dual Dictionary', url: `${SITE}/`, sameAs: ['https://github.com/quocanh38/dual-dictionary'] },
+        datePublished: pub, dateModified: mMod?.[1] || pub,
         mainEntityOfPage: url,
       },
       ...(h2s.length >= 3 ? [{
-        '@type': 'HowTo', name: title, description: desc, inLanguage: 'vi',
+        '@type': 'HowTo', name: title, description: desc, inLanguage: lang,
         step: h2s.map((s) => ({ '@type': 'HowToStep', name: s })),
       }] : []),
       {
@@ -56,8 +57,10 @@ for (const f of walk(BLOG)) {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
           { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/vi/blog/` },
-          { '@type': 'ListItem', position: 3, name: catName, item: `${SITE}/vi/blog/${cat}/` },
-          { '@type': 'ListItem', position: 4, name: title },
+          ...(parts[3] ? [
+            { '@type': 'ListItem', position: 3, name: catName, item: `${SITE}/vi/blog/${cat}/` },
+            { '@type': 'ListItem', position: 4, name: title },
+          ] : [{ '@type': 'ListItem', position: 3, name: title }]),
         ],
       },
     ],
