@@ -1,4 +1,4 @@
-import { initExperience, trackExperience, startExperienceJourney, experienceAiReason } from "./experience.js";
+import { initExperience, trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from "./experience.js";
 import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanations.js";
 import { MDict } from './mdict.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
@@ -404,7 +404,10 @@ async function boot() {
   captureI18nOriginals();
   applyLang();
   updateNetBanner();
-  $('#btn-open-help')?.addEventListener('click', () => $('#help-dialog').showModal());
+  $('#btn-open-help')?.addEventListener('click', () => {
+    $('#help-dialog').showModal();
+    trackUxSignal('dictionary_help_open');
+  });
   for (const [name, sel] of [['dicts', '#adv-tab-dicts'], ['data', '#adv-tab-data'], ['learning', '#adv-tab-learning']]) {
     $(sel)?.addEventListener('click', () => setAdvTab(name));
   }
@@ -922,7 +925,10 @@ function wireUi() {
     bmcFadeTimer = setTimeout(() => c.classList.remove('bmc-fade'), 1500);
   }, { passive: true });
   $('#btn-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog').showModal(); });
-  $('#btn-help')?.addEventListener('click', () => $('#help-dialog').showModal());
+  $('#btn-help')?.addEventListener('click', () => {
+    $('#help-dialog').showModal();
+    trackUxSignal('app_help_open');
+  });
   if (!TTS_SUPPORTED) {
     const b = $('#btn-speak');
     if (b) { b.title = 'Text-to-speech is not supported by this browser'; }
@@ -1339,6 +1345,7 @@ async function quickLoadOpenDicts(requested) {
     if (err) {
       err.textContent = i18nFmt('firstload.failed', { names: failed.join(', ') });
       err.hidden = false;
+      if (lookupSurfaceVisible()) trackUxSignal('dictionary_download_error');
     }
   } else {
     // U16: scoped to the lookup surface AND to the moment it is on screen — the

@@ -1,4 +1,4 @@
-import { trackExperience, startExperienceJourney, experienceAiReason } from './experience.js';
+import { trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from './experience.js';
 import { getAiSettings, saveAiSettings, streamTutor } from './ai-client.js';
 import { getStudyRecord, putStudyRecord, allStudyRecords, deleteStudyRecord } from './db.js';
 
@@ -264,6 +264,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
       else {
         const reason = experienceAiReason(error);
         if (reason === 'setup') settings.hidden = false;
+        if (dialog.open) trackUxSignal(isChat ? 'chat_response_error' : 'toeic_response_error');
         journey?.step('error',{reason});
         trackExperience('gemini_error',{duration:Date.now()-started,reason});
       }

@@ -1,13 +1,16 @@
-import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, TOEIC_PART5_SAMPLE, TOEIC_PART5_SOURCE, JOURNEY_STEPS, JOURNEY_SOURCES, JOURNEY_REASONS, FEEDBACK_TOPICS } from '../../js/experience-config.js';
+import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, TOEIC_PART5_SAMPLE, TOEIC_PART5_SOURCE, JOURNEY_STEPS, JOURNEY_SOURCES, JOURNEY_REASONS, FEEDBACK_TOPICS, UX_SIGNALS } from '../../js/experience-config.js';
 import { getStore } from '@netlify/blobs';
 import { TOEIC_FOCUS_SETS, getStudyExercises } from '../../js/study-content.js';
 import { timingSafeEqual } from 'node:crypto';
 
-const events = new Set(['audio_start','audio_ready','audio_error','mistake_saved','mistake_reviewed','gemini_start','gemini_done','gemini_error','gemini_saved','gemini_stopped','feedback','toeic_opened','toeic_completed','toeic_answered','toeic_explanation_seen','toeic_saved','toeic_reviewed','journey_step']);
-const experienceVersions = new Set(['v195-experience', 'v196-first-lookup', 'v197-toeic-journey', EXPERIENCE_VERSION]);
+const events = new Set(['audio_start','audio_ready','audio_error','mistake_saved','mistake_reviewed','gemini_start','gemini_done','gemini_error','gemini_saved','gemini_stopped','feedback','toeic_opened','toeic_completed','toeic_answered','toeic_explanation_seen','toeic_saved','toeic_reviewed','journey_step','ux_signal']);
+const previousJourneyVersion = 'v198-site-journeys';
+const experienceVersions = new Set(['v195-experience', 'v196-first-lookup', 'v197-toeic-journey', previousJourneyVersion, EXPERIENCE_VERSION]);
+const journeyVersions = new Set([previousJourneyVersion, EXPERIENCE_VERSION]);
 const toeicSetIds = new Set(TOEIC_FOCUS_SETS.map(({id})=>id));
 const journeyRetentionMs = 90 * 86400000;
 const isJourney = event=>event==='journey_step' || event.startsWith('toeic_');
+const hasReportWindow = event=>isJourney(event) || event==='ux_signal';
 
 export const config = {
   path: '/.netlify/functions/experience',
@@ -105,7 +108,7 @@ export default async function handler(request) {
     const records = await Promise.all(batch.blobs.map(entry => store.get(entry.key,{type:'json'})));
     const earliest = Date.now() - journeyRetentionMs;
     return json({records:records.flatMap((record,index)=>{
-      const entries=record?.entries?.filter(entry=>!isJourney(entry.event) || entry.at>=earliest);
+      const entries=record?.entries?.filter(entry=>!hasReportWindow(entry.event) || entry.at>=earliest);
       return entries?.length ? [{...record,entries,id:batch.blobs[index].key}] : [];
     }),cursor:batch.cursor || null});
   }
@@ -117,30 +120,36 @@ export default async function handler(request) {
     const {id, session, version, entries, consentNotice, consentedAt} = JSON.parse(raw);
     if (!uuid.test(id) || !uuid.test(session) || !/^v[\w-]{1,60}$/.test(version) || !Array.isArray(entries) || !entries.length || entries.length > 30) return json({error:'Invalid batch'},400);
     const now = Date.now();
-    const expectedNotice = version === EXPERIENCE_VERSION ? CONSENT_NOTICE : version === 'v197-toeic-journey' ? 'experience-v3' : 'experience-v2';
+    const expectedNotice = version === EXPERIENCE_VERSION ? CONSENT_NOTICE : version === previousJourneyVersion ? 'experience-v4' : version === 'v197-toeic-journey' ? 'experience-v3' : 'experience-v2';
     const consentValid = consentNotice === expectedNotice && Number.isSafeInteger(consentedAt) && consentedAt > 0;
-    const clean = entries.map(({event, at, note, duration, reason, attemptId, setId, source, journey, step, category}) => {
+    const clean = entries.map(entry => {
+      const {event, at, note, duration, reason, attemptId, setId, source, journey, step, category, signal} = entry;
       if (!events.has(event) || !Number.isSafeInteger(at)) throw Error('Invalid event');
       if (category !== undefined && (event !== 'feedback' || !FEEDBACK_TOPICS.includes(category))) throw Error('Invalid topic');
       if (event === 'feedback' && (typeof note !== 'string' || !note.trim() || note.length > 500)) throw Error('Invalid feedback');
       if (event !== 'feedback' && (!experienceVersions.has(version) || !consentValid || at < consentedAt)) throw Error('Invalid consent');
+      if (event === 'ux_signal') {
+        if (version !== EXPERIENCE_VERSION || at > now + 300000 ||
+            !Object.hasOwn(UX_SIGNALS,signal) || Object.keys(entry).length !== 3) throw Error('Invalid UX signal');
+        return {event,at,signal};
+      }
       const linked = isJourney(event);
       if (linked && (!consentValid || typeof attemptId !== 'string' || !uuid.test(attemptId))) throw Error('Invalid attempt');
       if (linked && at > now + 300000) throw Error('Invalid timestamp');
       if (event === 'journey_step') {
-        if (version !== EXPERIENCE_VERSION || !Object.hasOwn(JOURNEY_STEPS,journey) ||
+        if (!journeyVersions.has(version) || !Object.hasOwn(JOURNEY_STEPS,journey) ||
             !JOURNEY_STEPS[journey].includes(step) ||
             (step === 'opened' ? !JOURNEY_SOURCES.includes(source) : source !== undefined) ||
             (reason !== undefined && (step !== 'error' || !JOURNEY_REASONS.includes(reason)))) throw Error('Invalid journey');
         return {event,at,attemptId,journey,step,...(source ? {source} : {}),...(reason ? {reason} : {}),
           ...(Number.isSafeInteger(duration)&&duration>=0&&duration<=86400000 ? {duration} : {})};
       }
-      const reportsSet = event === 'toeic_opened' && [EXPERIENCE_VERSION,'v197-toeic-journey'].includes(version);
+      const reportsSet = event === 'toeic_opened' && (journeyVersions.has(version) || version === 'v197-toeic-journey');
       if (setId !== undefined && (!reportsSet || !toeicSetIds.has(setId))) throw Error('Invalid set');
       if (source !== undefined && (!reportsSet || setId !== TOEIC_PART5_SAMPLE || source !== TOEIC_PART5_SOURCE)) throw Error('Invalid source');
       return {event,at,...(linked ? {attemptId} : {}),...(setId ? {setId} : {}),...(source ? {source} : {}),...(event === "gemini_error" && ["quota","timeout","network","other"].includes(reason)?{reason}:{}),...(event === 'feedback' ? {note,...(category ? {category} : {})} : {}),...(Number.isSafeInteger(duration)&&duration>=0&&duration<=600000?{duration}:{})};
     });
-    const retained = clean.filter(entry=>!isJourney(entry.event) || entry.at>=now-journeyRetentionMs);
+    const retained = clean.filter(entry=>!hasReportWindow(entry.event) || entry.at>=now-journeyRetentionMs);
     if (retained.length) {
       await openStore().setJSON(id,{session,version,receivedAt:now,entries:retained,
         ...(consentValid ? {consentNotice,consentedAt} : {})},{onlyIfNew:true});

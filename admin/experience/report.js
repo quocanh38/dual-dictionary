@@ -1,3 +1,4 @@
+import { UX_SIGNALS } from '../../js/experience-config.js';
 import { summarizeSiteJourneys } from './site-journeys.js';
 import { summarizeToeicJourney } from './toeic-journey.js';
 import { systemHealth } from './system-health.js';
@@ -185,6 +186,27 @@ function renderSiteJourneys(parent, matchesPeriod, openFeedback) {
   }
 }
 
+function renderUxSignals(parent, visibleRows) {
+  const panel=add(parent,'section','');
+  add(panel,'h2','Lỗi hiển thị và trợ giúp');
+  const counts = new Map();
+  for (const row of visibleRows) {
+    if (row.event==='ux_signal' && Object.hasOwn(UX_SIGNALS,row.signal)) {
+      counts.set(row.signal,(counts.get(row.signal)||0)+1);
+    }
+  }
+  if (!counts.size) add(panel,'p','Chưa ghi nhận tín hiệu trong kỳ lọc.');
+  else {
+    const list=add(panel,'dl','');
+    list.className='journey-steps';
+    for (const [signal,label] of Object.entries(UX_SIGNALS)) {
+      add(list,'dt',label);
+      add(list,'dd',String(counts.get(signal)||0));
+    }
+  }
+  add(panel,'p','Chỉ tính khi người học đồng ý chia sẻ. Mỗi mã được ghi tối đa một lần trong một lần mở trang.');
+}
+
 function renderSystemHealth(parent) {
   const panel=add(parent,'section','');
   panel.className='system-health';
@@ -307,6 +329,7 @@ function render() {
     };
     renderToeicJourney(content,openMatches,()=>openFeedback('toeic'));
     renderSiteJourneys(content,matchesPeriod,openFeedback);
+    renderUxSignals(content,visible);
     operations.replaceChildren();
     renderSystemHealth(operations);
     const ops=add(operations,'section','');
@@ -403,7 +426,7 @@ document.querySelector('#access').onsubmit=async event=>{
   finally{submit.disabled=false;}
 };
 download.onclick=()=>{
-  const fields=['at','event','session','version','attemptId','setId','journey','step','source','reason','duration','category','note'];
+  const fields=['at','event','session','version','attemptId','setId','journey','step','source','signal','reason','duration','category','note'];
   const escape=value=>{
     const cell=String(value??'');
     return '"'+(/^[\s=+@-]/.test(cell)?"'"+cell:cell).replaceAll('"','""')+'"';

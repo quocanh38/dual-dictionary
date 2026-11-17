@@ -1,4 +1,4 @@
-import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, FEEDBACK_TOPICS } from './experience-config.js';
+import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, FEEDBACK_TOPICS, UX_SIGNALS } from './experience-config.js';
 
 const preference = 'dd-experience-consent';
 const queueKey = 'dd-experience-queue';
@@ -6,11 +6,16 @@ const endpoint = '/.netlify/functions/experience';
 const version = EXPERIENCE_VERSION;
 let operationalEnabled = false;
 
-function experienceConsent() {
+function experienceChoice() {
   try {
-    const consent = JSON.parse(localStorage.getItem(preference));
-    return consent?.notice === CONSENT_NOTICE && Number.isSafeInteger(consent.at) ? consent : null;
+    const choice = JSON.parse(localStorage.getItem(preference));
+    return choice?.notice === CONSENT_NOTICE && typeof choice.allowed === 'boolean' &&
+      Number.isSafeInteger(choice.at) ? choice : null;
   } catch { return null; }
+}
+function experienceConsent() {
+  const choice = experienceChoice();
+  return choice?.allowed ? choice : null;
 }
 export function sharesExperience() {
   return experienceConsent() !== null;
@@ -107,10 +112,50 @@ export function trackExperience(event, fields = {}) {
   } catch { return false; }
 }
 
+const seenUxSignals = new Set();
+let signalConsentAt;
+export function trackUxSignal(signal) {
+  if (!Object.hasOwn(UX_SIGNALS,signal)) return;
+  const consent = experienceConsent();
+  if (!consent) return;
+  if (signalConsentAt !== consent.at) {
+    seenUxSignals.clear();
+    signalConsentAt = consent.at;
+  }
+  if (!seenUxSignals.has(signal) && trackExperience('ux_signal',{signal})) seenUxSignals.add(signal);
+}
+
 export function initExperience() {
   const opt = document.querySelector('#experience-opt-in');
   if (!opt) return;
-  opt.checked = sharesExperience();
+  const notice = document.querySelector('#experience-choice');
+  const message = document.querySelector('#experience-choice-status');
+  const syncChoice = () => {
+    const choice = experienceChoice();
+    opt.checked = choice?.allowed === true;
+    if (notice) notice.hidden = Boolean(choice);
+  };
+  const setChoice = (allowed) => {
+    try {
+      localStorage.setItem(preference,JSON.stringify({notice:CONSENT_NOTICE,allowed,at:Date.now()}));
+    } catch {
+      syncChoice();
+      if (message) message.textContent = 'Trình duyệt chưa lưu được lựa chọn chia sẻ.';
+      return;
+    }
+    syncChoice();
+    if (message) message.textContent = allowed ? 'Đã bật chia sẻ dữ liệu trải nghiệm.' : 'Đã tắt chia sẻ dữ liệu trải nghiệm.';
+    if (!allowed) {
+      try {
+        localStorage.removeItem('dd-experience-review-anchor');
+        localStorage.setItem(queueKey,JSON.stringify(queue().filter(batch=>batch.entries[0].event==='feedback')));
+      } catch { /* The sender still checks consent before sending. */ }
+    }
+  };
+  notice?.querySelector('[data-experience-allow]')?.addEventListener('click',()=>setChoice(true));
+  notice?.querySelector('[data-experience-decline]')?.addEventListener('click',()=>setChoice(false));
+  window.addEventListener('storage',event=>{ if (event.key===preference || event.key===null) syncChoice(); });
+  syncChoice();
   try {
     if (!opt.checked) localStorage.setItem(queueKey,JSON.stringify(queue().filter(batch=>batch.entries[0].event==='feedback')));
   } catch {}
@@ -123,16 +168,7 @@ export function initExperience() {
         ? 'Dual Dict đang gửi số đếm tải audio theo ngày và phiên bản.'
         : 'Số liệu vận hành mặc định hiện đang tắt.';
     }).catch(() => {});
-  opt.onchange = () => {
-    try {
-      if (opt.checked) localStorage.setItem(preference,JSON.stringify({notice:CONSENT_NOTICE,at:Date.now()}));
-      else {
-        localStorage.removeItem(preference);
-        localStorage.removeItem('dd-experience-review-anchor');
-      }
-      if (!opt.checked) localStorage.setItem(queueKey,JSON.stringify(queue().filter(batch=>batch.entries[0].event==='feedback')));
-    } catch { opt.checked = false; }
-  };
+  opt.onchange = () => setChoice(opt.checked);
   const form = document.querySelector('#experience-feedback');
   form.onsubmit = (event) => {
     event.preventDefault();
