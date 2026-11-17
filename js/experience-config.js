@@ -1,4 +1,4 @@
-export const EXPERIENCE_VERSION = 'v202-ux-signals';
+export const EXPERIENCE_VERSION = 'v203-dictionary-repeat';
 export const CONSENT_NOTICE = 'experience-v5';
 export const TOEIC_PART5_SAMPLE = 'toeic-sample-part5';
 export const TOEIC_PART5_SOURCE = 'seo_toeic_part5';
@@ -17,6 +17,7 @@ export const JOURNEY_SOURCES = Object.freeze(['app','welcome','lookup_link','rea
 export const JOURNEY_REASONS = Object.freeze(['quota','timeout','network','setup','other']);
 export const UX_SIGNALS = Object.freeze({
   dictionary_download_error: 'Tải từ điển · hiển thị lỗi',
+  dictionary_download_repeat_pending: 'Tải từ điển · bấm lặp khi đang chờ',
   dictionary_help_open: 'Tải từ điển · mở trợ giúp',
   app_help_open: 'Ứng dụng · mở trợ giúp',
   chat_response_error: 'Chat Gemini · hiển thị lỗi phản hồi',

@@ -98,7 +98,7 @@ export function trackExperience(event, fields = {}) {
     const pending = queue();
     const entry = {event,at,...fields};
     const last = pending.at(-1);
-    if (!sending && event !== 'feedback' && last?.session === currentSession && !last.sealed && last.consentedAt === consent.at &&
+    if (!sending && event !== 'feedback' && last?.session === currentSession && last.version === version && !last.sealed && last.consentedAt === consent.at &&
         last.entries[0].event !== 'feedback' && last.entries.length < 30) {
       last.entries.push(entry);
     } else {
@@ -113,15 +113,8 @@ export function trackExperience(event, fields = {}) {
 }
 
 const seenUxSignals = new Set();
-let signalConsentAt;
 export function trackUxSignal(signal) {
-  if (!Object.hasOwn(UX_SIGNALS,signal)) return;
-  const consent = experienceConsent();
-  if (!consent) return;
-  if (signalConsentAt !== consent.at) {
-    seenUxSignals.clear();
-    signalConsentAt = consent.at;
-  }
+  if (!Object.hasOwn(UX_SIGNALS,signal) || !experienceConsent()) return;
   if (!seenUxSignals.has(signal) && trackExperience('ux_signal',{signal})) seenUxSignals.add(signal);
 }
 

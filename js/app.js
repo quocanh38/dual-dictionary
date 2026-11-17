@@ -414,7 +414,17 @@ async function boot() {
   $('#btn-fsrs-optimize')?.addEventListener('click', optimizeFsrs);
   $('#btn-fsrs-reset')?.addEventListener('click', resetFsrsWeightsUi);
   $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog').showModal(); });
-  $('#btn-quickload')?.addEventListener('click', () => quickLoadOpenDicts(selectedFirstloadSlots()));
+  let quickloadButtonRun;
+  $('#btn-quickload')?.addEventListener('click', event => {
+    if (loadAbort) {
+      if (event.isTrusted && quickloadButtonRun === loadAbort && !loadAbort.signal.aborted) {
+        trackUxSignal('dictionary_download_repeat_pending');
+      }
+      return;
+    }
+    void quickLoadOpenDicts(selectedFirstloadSlots());
+    quickloadButtonRun = loadAbort;
+  });
   // v91 chooser: "Download all" ticks every card, then runs the same pipeline
   $('#btn-download-all')?.addEventListener('click', () => {
     for (const s of CHOOSER_ORDER) { const c = document.getElementById('chk-firstload-' + s); if (c) c.checked = true; }
@@ -1481,7 +1491,13 @@ function updateFirstloadCta() {
   const all = $('#btn-download-all');
   if (all) all.disabled = !!loadAbort;
   if (!btn) return;
-  if (loadAbort) { btn.disabled = true; return; }
+  if (loadAbort) {
+    btn.setAttribute('aria-disabled', 'true');
+    btn.textContent = `${i18n('firstload.downloading')}…`;
+    btn.disabled = false;
+    return;
+  }
+  btn.removeAttribute('aria-disabled');
   if (dataUnreachable) {
     btn.textContent = i18n('firstload.retry');
     btn.disabled = false;

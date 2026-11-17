@@ -1,3 +1,12 @@
+const errorRateSteps = {
+  lookup: ['download_needed', 'download_failed'],
+  reader: ['download_needed', 'download_failed'],
+  chat: ['sent', 'error'],
+};
+
+// Older records share a version tag across builds with different tracking coverage.
+const errorRateVersions = new Set(['v202-ux-signals', 'v203-dictionary-repeat']);
+
 export function summarizeSiteJourneys(rows, matchesOpen) {
   const attempts=new Map();
   for (const row of rows) {
@@ -13,11 +22,23 @@ export function summarizeSiteJourneys(rows, matchesOpen) {
     if (!start || !matchesOpen(start)) continue;
     if (!result.has(start.journey)) result.set(start.journey,{
       opened:0, steps:new Map(), sources:new Map(), reasons:new Map(), durations:[],
+      errorRate:{eligible:0, failed:0},
     });
     const counts=result.get(start.journey);
     counts.opened++;
     const source=start.source || 'app';
     counts.sources.set(source,(counts.sources.get(source)||0)+1);
+    const rateSteps=errorRateSteps[start.journey];
+    if (rateSteps && errorRateVersions.has(start.version)) {
+      const [baseStep, failureStep]=rateSteps;
+      const eligible=events.find(row=>row.version===start.version && row.step===baseStep && row.at>=start.at);
+      if (eligible) {
+        counts.errorRate.eligible++;
+        if (events.some(row=>row.version===start.version && row.step===failureStep && row.at>=eligible.at)) {
+          counts.errorRate.failed++;
+        }
+      }
+    }
     const seen=new Set();
     for (const row of events) {
       if (row.at<start.at || row.step==='opened' || seen.has(row.step)) continue;

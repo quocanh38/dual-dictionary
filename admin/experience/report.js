@@ -150,8 +150,13 @@ const stageLabels = {
 const sourceLabels = {app:'Trong app',welcome:'Chào mừng',lookup_link:'Liên kết tra từ',reader_landing:'Trang giới thiệu Reader',
   reader:'Reader',dictionary:'Từ điển',toeic:'TOEIC',review:'Ôn tập',vault:'Sổ tay',history:'Hội thoại đã lưu',practice:'Luyện tập',lesson:'Bài học',writing:'Viết',speaking:'Nói',tutor:'AI Tutor'};
 const journeyReasons={...reasons,setup:'API key hoặc cấu hình'};
-const stepBase={download_failed:'download_needed',reading:'opened',lookup_started:'reading',sent:'opened',response:'sent',completed:'response',
+const stepBase={reading:'opened',lookup_started:'reading',sent:'opened',response:'sent',completed:'response',
   retry:'opened',retry_success:'retry',followup:'response',saved:'response',card:'opened',continued:'result',returned:'result'};
+const errorRateLabels={
+  lookup:['download_failed','Lượt lỗi / lượt gặp bước tải từ điển'],
+  reader:['download_failed','Lượt lỗi / lượt gặp bước tải từ điển'],
+  chat:['error','Hội thoại gặp lỗi sau khi gửi / hội thoại đã gửi'],
+};
 
 function renderSiteJourneys(parent, matchesPeriod, openFeedback) {
   const data=summarizeSiteJourneys(rows,matchesPeriod);
@@ -159,6 +164,7 @@ function renderSiteJourneys(parent, matchesPeriod, openFeedback) {
     const panel=add(parent,'section','');
     add(panel,'h2',title);
     const counts=data.get(id);
+    const [rateStep, rateLabel]=errorRateLabels[id] || [];
     if (!counts) {
       add(panel,'p','Chưa có lượt đã đồng ý chia sẻ trong kỳ lọc.');
     } else {
@@ -166,11 +172,12 @@ function renderSiteJourneys(parent, matchesPeriod, openFeedback) {
       const list=add(panel,'dl','');
       list.className='journey-steps';
       for (const step of stages) {
+        if (step===rateStep) continue;
         const base=step==='result' ? ({review:'card',reader:'lookup_started'}[id] || 'opened') : stepBase[step];
         const denominator=base && base!=='opened' ? (counts.steps.get(base)||0) : counts.opened;
         const n=counts.steps.get(step)||0;
         // A restored chat can start with follow-up before a new response.
-        const eligible=step!=='returned' && n<=denominator && denominator>0;
+        const eligible=step!=='returned' && step!=='error' && n<=denominator && denominator>0;
         add(list,'dt',stageLabels[step]);
         add(list,'dd',eligible ? fraction(n,denominator) : String(n));
       }
@@ -182,13 +189,21 @@ function renderSiteJourneys(parent, matchesPeriod, openFeedback) {
       add(panel,'p','Điểm vào · '+[...counts.sources].map(([source,n])=>`${sourceLabels[source] || 'Khác'} ${n}`).join(' · '));
       if (counts.reasons.size) add(panel,'p','Lỗi · '+[...counts.reasons].map(([reason,n])=>`${journeyReasons[reason]} ${n}`).join(' · '));
     }
+    if (rateStep) {
+      const list=add(panel,'dl','');
+      list.className='journey-steps';
+      const rate=counts?.errorRate;
+      add(list,'dt',rateLabel);
+      add(list,'dd',rate?.eligible ? fraction(rate.failed,rate.eligible) : 'Chưa có lượt đủ điều kiện');
+      add(panel,'p','Tỷ lệ dùng dữ liệu v202 và v203, theo kỳ và phiên bản đang lọc.');
+    }
     button(panel,`Xem góp ý về ${title}`,()=>openFeedback(category));
   }
 }
 
 function renderUxSignals(parent, visibleRows) {
   const panel=add(parent,'section','');
-  add(panel,'h2','Lỗi hiển thị và trợ giúp');
+  add(panel,'h2','Lỗi hiển thị, trợ giúp và bấm lặp');
   const counts = new Map();
   for (const row of visibleRows) {
     if (row.event==='ux_signal' && Object.hasOwn(UX_SIGNALS,row.signal)) {

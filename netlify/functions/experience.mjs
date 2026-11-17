@@ -2,15 +2,14 @@ import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, TOEIC_PART5_SAM
 import { getStore } from '@netlify/blobs';
 import { TOEIC_FOCUS_SETS, getStudyExercises } from '../../js/study-content.js';
 import { timingSafeEqual } from 'node:crypto';
+import { isExpired, isJourney, openExperienceStore, sweepExperience } from '../lib/experience-retention.mjs';
 
 const events = new Set(['audio_start','audio_ready','audio_error','mistake_saved','mistake_reviewed','gemini_start','gemini_done','gemini_error','gemini_saved','gemini_stopped','feedback','toeic_opened','toeic_completed','toeic_answered','toeic_explanation_seen','toeic_saved','toeic_reviewed','journey_step','ux_signal']);
 const previousJourneyVersion = 'v198-site-journeys';
-const experienceVersions = new Set(['v195-experience', 'v196-first-lookup', 'v197-toeic-journey', previousJourneyVersion, EXPERIENCE_VERSION]);
-const journeyVersions = new Set([previousJourneyVersion, EXPERIENCE_VERSION]);
+const uxSignalVersions = new Set(['v202-ux-signals', EXPERIENCE_VERSION]);
+const experienceVersions = new Set(['v195-experience', 'v196-first-lookup', 'v197-toeic-journey', previousJourneyVersion, ...uxSignalVersions]);
+const journeyVersions = new Set([previousJourneyVersion, ...uxSignalVersions]);
 const toeicSetIds = new Set(TOEIC_FOCUS_SETS.map(({id})=>id));
-const journeyRetentionMs = 90 * 86400000;
-const isJourney = event=>event==='journey_step' || event.startsWith('toeic_');
-const hasReportWindow = event=>isJourney(event) || event==='ux_signal';
 
 export const config = {
   path: '/.netlify/functions/experience',
@@ -53,12 +52,17 @@ export default async function handler(request) {
     return json({hidden:page.blobs.map(blob=>blob.key)});
   }
   if (!secret) return json({ error: 'Disabled' }, 503);
-  const openStore = () => getStore({name:process.env.CONTEXT === 'production' ? 'dd-experience' : 'dd-experience-preview',consistency:'strong'});
+  const openStore = openExperienceStore;
   if (['GET','PATCH','DELETE'].includes(request.method)) {
     const supplied = Buffer.from(request.headers.get('authorization') || '');
     const expected = Buffer.from('Bearer ' + secret);
     if (supplied.length !== expected.length || !timingSafeEqual(supplied, expected)) return json({error:'Unauthorized'}, 401);
     const store = openStore();
+    if (request.method === 'GET' && url.searchParams.has('retention-dry-run')) {
+      const prefix = url.searchParams.get('prefix') || undefined;
+      if (prefix && !/^[0-9a-f]{1,8}$/.test(prefix)) return json({ error:'Invalid prefix' },400);
+      return json(await sweepExperience(store, { dryRun:true, prefix }));
+    }
     if (request.method === 'GET' && url.searchParams.has('operational-report')) {
       const operations = openOperations();
       const page = await operations.list({cursor:url.searchParams.get('cursor') || undefined});
@@ -92,23 +96,26 @@ export default async function handler(request) {
       }
       const {id,status,category,note} = input || {};
       if (!uuid.test(id)) return json({error:'Invalid ID'},400);
-      const record = await store.get(id,{type:'json'});
+      const before = await store.getWithMetadata(id,{type:'json'});
+      const record = before?.data;
       if (!record?.entries?.some(entry=>entry.event==='feedback')) return json({error:'Feedback not found'},404);
+      let after;
       if (request.method === 'DELETE') {
-        await store.setJSON(id,{deleted:true});
+        after = {deleted:true};
       } else {
         if (!['new','working','done'].includes(status) ||
             !FEEDBACK_TOPICS.includes(category) ||
             typeof note !== 'string' || note.length > 500) return json({error:'Invalid feedback status'},400);
-        await store.setJSON(id,{...record,moderation:{status,category,note}});
+        after = {...record,moderation:{status,category,note}};
       }
+      if (!before.etag || !(await store.setJSON(id,after,{onlyIfMatch:before.etag})).modified) return json({error:'Feedback changed, retry'},409);
       return json({ok:true});
     }
     const batch = await store.list({cursor:new URL(request.url).searchParams.get('cursor') || undefined});
     const records = await Promise.all(batch.blobs.map(entry => store.get(entry.key,{type:'json'})));
-    const earliest = Date.now() - journeyRetentionMs;
+    const now = Date.now();
     return json({records:records.flatMap((record,index)=>{
-      const entries=record?.entries?.filter(entry=>!hasReportWindow(entry.event) || entry.at>=earliest);
+      const entries=record?.entries?.filter(entry=>!isExpired(entry,now));
       return entries?.length ? [{...record,entries,id:batch.blobs[index].key}] : [];
     }),cursor:batch.cursor || null});
   }
@@ -120,7 +127,7 @@ export default async function handler(request) {
     const {id, session, version, entries, consentNotice, consentedAt} = JSON.parse(raw);
     if (!uuid.test(id) || !uuid.test(session) || !/^v[\w-]{1,60}$/.test(version) || !Array.isArray(entries) || !entries.length || entries.length > 30) return json({error:'Invalid batch'},400);
     const now = Date.now();
-    const expectedNotice = version === EXPERIENCE_VERSION ? CONSENT_NOTICE : version === previousJourneyVersion ? 'experience-v4' : version === 'v197-toeic-journey' ? 'experience-v3' : 'experience-v2';
+    const expectedNotice = uxSignalVersions.has(version) ? CONSENT_NOTICE : version === previousJourneyVersion ? 'experience-v4' : version === 'v197-toeic-journey' ? 'experience-v3' : 'experience-v2';
     const consentValid = consentNotice === expectedNotice && Number.isSafeInteger(consentedAt) && consentedAt > 0;
     const clean = entries.map(entry => {
       const {event, at, note, duration, reason, attemptId, setId, source, journey, step, category, signal} = entry;
@@ -129,7 +136,7 @@ export default async function handler(request) {
       if (event === 'feedback' && (typeof note !== 'string' || !note.trim() || note.length > 500)) throw Error('Invalid feedback');
       if (event !== 'feedback' && (!experienceVersions.has(version) || !consentValid || at < consentedAt)) throw Error('Invalid consent');
       if (event === 'ux_signal') {
-        if (version !== EXPERIENCE_VERSION || at > now + 300000 ||
+        if (!uxSignalVersions.has(version) || (signal === 'dictionary_download_repeat_pending' && version !== EXPERIENCE_VERSION) || at > now + 300000 ||
             !Object.hasOwn(UX_SIGNALS,signal) || Object.keys(entry).length !== 3) throw Error('Invalid UX signal');
         return {event,at,signal};
       }
@@ -149,7 +156,7 @@ export default async function handler(request) {
       if (source !== undefined && (!reportsSet || setId !== TOEIC_PART5_SAMPLE || source !== TOEIC_PART5_SOURCE)) throw Error('Invalid source');
       return {event,at,...(linked ? {attemptId} : {}),...(setId ? {setId} : {}),...(source ? {source} : {}),...(event === "gemini_error" && ["quota","timeout","network","other"].includes(reason)?{reason}:{}),...(event === 'feedback' ? {note,...(category ? {category} : {})} : {}),...(Number.isSafeInteger(duration)&&duration>=0&&duration<=600000?{duration}:{})};
     });
-    const retained = clean.filter(entry=>!hasReportWindow(entry.event) || entry.at>=now-journeyRetentionMs);
+    const retained = clean.filter(entry=>!isExpired(entry,now));
     if (retained.length) {
       await openStore().setJSON(id,{session,version,receivedAt:now,entries:retained,
         ...(consentValid ? {consentNotice,consentedAt} : {})},{onlyIfNew:true});
