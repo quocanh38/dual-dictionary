@@ -1509,6 +1509,11 @@ function updateFirstloadCta() {
     btn.disabled = true;
     return;
   }
+  if (incompleteDictionaryLoad) {
+    btn.textContent = i18n('firstload.retry');
+    btn.disabled = false;
+    return;
+  }
   const bytes = sel.reduce((sum, s) => sum + ((firstLoadPer[s] && firstLoadPer[s].bytes) || 0), 0);
   const name = sel.length === 1
     ? (sel[0] === 'third' ? i18n('envi.short') : $('#chk-firstload-' + sel[0])?.nextElementSibling?.textContent)

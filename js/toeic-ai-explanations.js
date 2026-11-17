@@ -1,6 +1,6 @@
 import { trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from './experience.js';
 import { getAiSettings, saveAiSettings, streamTutor } from './ai-client.js';
-import { getStudyRecord, putStudyRecord, allStudyRecords, deleteStudyRecord } from './db.js';
+import { getStudyRecord, putStudyRecord, updateStudyRecord, allStudyRecords, deleteStudyRecord } from './db.js';
 
 const recordId = (id) => `study:toeic-ai-explanation:${id}`;
 
@@ -85,6 +85,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
     dialog.setAttribute('aria-label',labelText);
   }
   let turns = previous?.turns || (previous?.answer ? [{prompt: previous.prompt, answer: previous.answer}] : []);
+  let savedTurnCount = turns.length;
   const transcript = add(dialog, 'section', '');
   const paint = () => {
     transcript.replaceChildren();
@@ -128,7 +129,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
   consentLabel.append(' Tôi đồng ý gửi câu hỏi, nội dung đang học và tối đa 6 lượt trao đổi gần nhất tới Gemini.');
   const actions = add(dialog, 'div', '');
   actions.className = 'toeic-ai-actions';
-  const send = add(actions, 'button', 'Gửi câu hỏi');
+  const send = add(actions, 'button', turns.length ? 'Hỏi tiếp' : 'Gửi câu hỏi');
   send.className = 'btn-primary';
   const edit = add(actions, 'button', 'Sửa và hỏi lại');
   edit.hidden = !turns.length;
@@ -164,6 +165,30 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
   const save = add(dialog, 'button', 'Lưu lời giải AI');
   save.className = 'btn-primary';
   save.hidden = true;
+  save.onclick = async () => {
+    const pending = turns.slice(savedTurnCount);
+    if (!pending.length || save.disabled) return;
+    send.disabled = save.disabled = true;
+    try {
+      const saved = await updateStudyRecord(recordId(id), latest => {
+        const persisted = latest?.turns || (latest?.answer ? [{prompt:latest.prompt,answer:latest.answer}] : []);
+        const last = pending.at(-1);
+        return { ...latest, id: recordId(id), type: 'toeic-ai-explanation',
+          context, title, turns: [...persisted, ...pending], prompt: last.prompt, answer: last.answer,
+          createdAt: latest?.createdAt || Date.now(), updatedAt: Date.now() };
+      });
+      turns = saved.turns;
+      savedTurnCount = turns.length;
+      paint();
+      save.hidden = true;
+      prompt.focus();
+      journey?.step('saved');
+      trackExperience('gemini_saved');
+      status.textContent = 'Đã lưu lời giải trên thiết bị.';
+    } catch {
+      status.textContent = 'Không lưu được lời giải. Hãy thử lại.';
+    } finally { send.disabled = save.disabled = false; }
+  };
   let active = null;
   let retryPending = false;
   stop.onclick = () => {
@@ -173,7 +198,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
   dialog.addEventListener('close', () => active?.abort(), { once: true });
   send.onclick = async () => {
     const question = prompt.value.trim();
-    if (active) return;
+    if (active || save.disabled) return;
     writeDraft(id,prompt.value);
     if (!getAiSettings().apiKey) {
       journey?.step('setup');
@@ -194,7 +219,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
     const controller = new AbortController();
     active = controller;
     consent.checked = false;
-    send.disabled = prompt.disabled = consent.disabled = true;
+    send.disabled = edit.disabled = prompt.disabled = consent.disabled = true;
     send.hidden = true;
     stop.hidden = stop.disabled = false;
     save.hidden = true;
@@ -222,39 +247,17 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
         },
       });
       if (controller.signal.aborted || !dialog.open) return;
-      output.textContent = answer;
+      turns = [...turns, {prompt:question, answer}];
+      paint();
+      output.textContent = '';
+      prompt.value = '';
+      writeDraft(id,null);
+      edit.hidden = false;
       retryPending=false;
       journey?.step('completed');
       if (retrying) journey?.step('retry_success');
       trackExperience('gemini_done',{duration:Date.now()-started});
       status.textContent = 'Gemini đã trả lời.';
-      save.hidden = false;
-      save.onclick = async () => {
-        save.disabled = true;
-        try {
-          const latest = await getStudyRecord(recordId(id));
-          const persisted = latest?.turns || (latest?.answer ? [{prompt:latest.prompt,answer:latest.answer}] : []);
-          const nextTurns = [...persisted, {prompt:question,answer}];
-          await putStudyRecord({ ...latest, id: recordId(id), type: 'toeic-ai-explanation',
-            context, title, turns: nextTurns, prompt: question, answer,
-            createdAt: latest?.createdAt || Date.now(), updatedAt: Date.now() });
-          turns = nextTurns;
-          paint();
-          output.textContent = '';
-          prompt.value = '';
-          writeDraft(id,null);
-          save.hidden = true;
-          send.hidden = false;
-          send.textContent = 'Hỏi tiếp';
-          edit.hidden = false;
-          prompt.focus();
-          journey?.step('saved');
-          trackExperience('gemini_saved');
-          status.textContent = 'Đã lưu lời giải trên thiết bị.';
-        } catch {
-          status.textContent = 'Không lưu được lời giải. Hãy thử lại.';
-        } finally { save.disabled = false; }
-      };
     } catch (error) {
       retryPending=true;
       if (controller.signal.aborted) {
@@ -274,10 +277,11 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
       if (dialog.open) prompt.focus();
     } finally {
       active = null;
-      send.textContent = 'Thử lại';
-      send.disabled = prompt.disabled = consent.disabled = false;
+      send.textContent = retryPending ? 'Thử lại' : turns.length ? 'Hỏi tiếp' : 'Gửi câu hỏi';
+      send.disabled = edit.disabled = prompt.disabled = consent.disabled = false;
       stop.hidden = true;
-      send.hidden = !save.hidden;
+      send.hidden = false;
+      save.hidden = turns.length === savedTurnCount;
     }
   };
 }
@@ -318,10 +322,11 @@ export async function openLearningChatHistory() {
       if (!label) { renameStatus.textContent = 'Nhập tên hội thoại.'; titleInput.focus(); return; }
       confirmName.disabled = true;
       try {
-        const current = await getStudyRecord(row.id);
-        if (!current) throw new Error('Hội thoại đã bị xóa.');
-        await putStudyRecord({...current,label});
-        heading.textContent = conversationTitle({...current,label});
+        const updated = await updateStudyRecord(row.id, current => {
+          if (!current) throw new Error('Hội thoại đã bị xóa.');
+          return {...current,label};
+        });
+        heading.textContent = conversationTitle(updated);
         renameStatus.textContent = 'Đã đổi tên.';
         closeRename();
       } catch {

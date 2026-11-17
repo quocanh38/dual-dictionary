@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v203-dictionary-repeat';
+const CACHE = 'mdx-dict-v204-learning-flows';
 const ASSETS = [
   './',
   './index.html',
