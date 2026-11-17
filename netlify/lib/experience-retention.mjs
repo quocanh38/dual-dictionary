@@ -5,8 +5,10 @@ export const isJourney = event => event === 'journey_step' || event.startsWith('
 export const isExpired = (entry, now) =>
   (isJourney(entry.event) || entry.event === 'ux_signal') && entry.at < now - retentionMs;
 
-export const openExperienceStore = () => getStore({
-  name: process.env.CONTEXT === 'production' ? 'dd-experience' : 'dd-experience-preview',
+export const openExperienceStore = (deployContext, suffix = '') => getStore({
+  // The old runtime check routed live data to the store ending in -preview.
+  // Keep that history in place and give non-production deploys a separate store.
+  name: `dd-experience${suffix}-${deployContext === 'production' ? 'preview' : 'sandbox'}`,
   consistency: 'strong',
 });
 

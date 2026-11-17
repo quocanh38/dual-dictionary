@@ -1,5 +1,4 @@
 import { CONSENT_NOTICE, EXPERIENCE_VERSION, OPERATIONAL_EVENTS, TOEIC_PART5_SAMPLE, TOEIC_PART5_SOURCE, JOURNEY_STEPS, JOURNEY_SOURCES, JOURNEY_REASONS, FEEDBACK_TOPICS, UX_SIGNALS } from '../../js/experience-config.js';
-import { getStore } from '@netlify/blobs';
 import { TOEIC_FOCUS_SETS, getStudyExercises } from '../../js/study-content.js';
 import { timingSafeEqual } from 'node:crypto';
 import { isExpired, isJourney, openExperienceStore, sweepExperience } from '../lib/experience-retention.mjs';
@@ -18,11 +17,12 @@ export const config = {
 const uuid = /^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i;
 const json = (body, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
-export default async function handler(request) {
+export default async function handler(request, context) {
   const secret = process.env.DD_EXPERIENCE_ADMIN_KEY;
   const url = new URL(request.url);
-  const openOperations = () => getStore({name:process.env.CONTEXT === 'production' ? 'dd-experience-operations' : 'dd-experience-operations-preview',consistency:'strong'});
-  const openCatalog = () => getStore({name:process.env.CONTEXT === 'production' ? 'dd-experience-catalog' : 'dd-experience-catalog-preview',consistency:'strong'});
+  const deployContext = context?.deploy?.context;
+  const openOperations = () => openExperienceStore(deployContext, '-operations');
+  const openCatalog = () => openExperienceStore(deployContext, '-catalog');
   const operationsEnabled = !!secret && process.env.DD_EXPERIENCE_OPERATIONS === 'enabled';
   if (url.searchParams.has('operations')) {
     if (request.method === 'GET') return json({enabled:operationsEnabled});
@@ -52,7 +52,7 @@ export default async function handler(request) {
     return json({hidden:page.blobs.map(blob=>blob.key)});
   }
   if (!secret) return json({ error: 'Disabled' }, 503);
-  const openStore = openExperienceStore;
+  const openStore = () => openExperienceStore(deployContext);
   if (['GET','PATCH','DELETE'].includes(request.method)) {
     const supplied = Buffer.from(request.headers.get('authorization') || '');
     const expected = Buffer.from('Bearer ' + secret);
