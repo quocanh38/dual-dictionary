@@ -144,7 +144,7 @@ function pageHtml(p, wordHref) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(h1)} (IPA + audio Mỹ/Anh) | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -273,7 +273,7 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${kept.length} từ tiếng Anh + audio phát âm Mỹ/Anh hay tra nhất | HọcTA</title>
 <meta name="description" content="${kept.length} từ tiếng Anh kèm audio phát âm giọng Mỹ và Anh, IPA, lỗi người Việt hay sai và cặp từ dễ nhầm.">
 <link rel="canonical" href="${SITE}/vi/phat-am/">

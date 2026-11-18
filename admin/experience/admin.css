@@ -1,4 +1,6 @@
-:root{color-scheme:light;--ink:#162628;--muted:#526769;--line:#dce5e3;--surface:#fff;--bg:#f3f7f6;--accent:#096c61}
+@import url("../../css/brand.css");
+
+:root{color-scheme:light;--ink:var(--brand-ink);--muted:var(--brand-muted);--line:var(--brand-line);--surface:#fff;--bg:var(--brand-paper);--accent:var(--brand-blue)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}
 main{width:min(100% - 2rem,68rem);margin:clamp(1rem,5vw,3.5rem) auto 4rem}

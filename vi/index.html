@@ -27,7 +27,7 @@
 
 <meta name="twitter:title" content="HọcTA | Học tiếng Anh song ngữ và offline">
 <meta name="twitter:description" content="Tra từ Anh–Việt trong bài đọc, lưu từ để ôn, luyện TOEIC và IELTS, rồi học tiếp với các bài đã tải ngay cả khi mất mạng.">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icons/icon-192.png">
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
@@ -36,9 +36,15 @@
 <link rel="stylesheet" href="/css/style.min.css">
 <style>
   .vi-landing { max-width: 52rem; margin: 0 auto; padding: 0 var(--sp-3); }
-  .vi-hero { text-align: center; padding: var(--sp-6) 0 var(--sp-4); }
-  .vi-hero h1 { font-size: var(--fs-xl); line-height: 1.3; margin-bottom: var(--sp-2); }
-  .vi-hero .lede { color: var(--text-2); font-size: var(--fs-md); line-height: 1.7; }
+  .vi-hero { text-align: start; padding: clamp(2rem, 6vw, 4.5rem) 0 var(--sp-4); }
+  .vi-hero h1 { font-size: clamp(2rem, 1.2rem + 3vw, 4rem); line-height: 1.08; margin: 0 0 var(--sp-3); }
+  .vi-hero .vi-cta { justify-content: flex-start; margin-block: 1.25rem 1.75rem; }
+  .hero-example { display: grid; gap: .85rem; margin: 0; padding: clamp(1rem, 4vw, 2rem); background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; }
+  .hero-example blockquote { margin: 0; font: 400 clamp(1.25rem, 1.05rem + 1vw, 1.8rem)/1.45 var(--brand-font-reading); }
+  .hero-example mark { background: var(--brand-yellow); color: var(--brand-ink); border-radius: .3rem; padding-inline: .2em; }
+  .hero-example .hero-definition { margin: 0; padding-block-start: .8rem; border-block-start: 1px solid var(--border); color: var(--text-2); }
+  .hero-definition a { color: var(--accent); font-weight: 750; }
+  .vi-hero .lede { max-width: 65ch; color: var(--text-2); font-size: 1.05rem; line-height: 1.65; }
   .vi-cta { display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap; margin: var(--sp-4) 0; }
   .vi-section { margin: var(--sp-5) 0; }
   .vi-section h2 { font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
@@ -114,7 +120,7 @@
 </head>
 <body>
 <nav class="dd-nav" aria-label="Điều hướng chính"><div class="dd-nav-in">
-<a class="dd-brand" href="/vi/">📖 HọcTA</a>
+<a class="dd-brand" href="/vi/">HọcTA</a>
 <button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 <div class="dd-links">
 <a href="/vi/tu/" aria-current="page" class="dd-nav-on">Từ điển</a>
@@ -149,7 +155,7 @@
 </div>
 <form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>
 </div></nav>
-<style>.dd-nav{position:sticky;top:0;z-index:50;background:#0f766e;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#e6fffa;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#e6fffa;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#0d5c55;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#115e59;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
+<style>.dd-nav{position:sticky;top:0;z-index:50;background:#293cc8;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#eef0ff;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#eef0ff;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#2032a6;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#2032a6;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
 <div class="vi-landing">
   <header class="vi-hero">
     <h1>Tra từ trong ngữ cảnh. Học tiếp khi offline.</h1>
@@ -158,18 +164,21 @@
       <a class="btn-primary" href="/?lang=vi" style="text-decoration:none">Mở HọcTA</a>
       <a class="btn-secondary" href="/lessons/" style="text-decoration:none">Xem bài học offline</a>
     </div>
-    <figure style="margin:var(--sp-4) auto 0;max-width:640px"><img src="/vi/images/hero-vi.jpg" alt="Minh họa từ điển tiếng Anh offline trên điện thoại" width="640" height="640" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.08)"><figcaption style="font-size:12px;color:var(--text-2);margin-top:8px">Có thể cài HọcTA lên màn hình chính.</figcaption></figure>
+    <figure class="hero-example">
+      <blockquote lang="en">I try to <mark>make time</mark> to read every day.</blockquote>
+      <figcaption class="hero-definition"><a href="/?q=make%20time&amp;lang=vi" lang="en">make time</a> — sắp xếp thời gian</figcaption>
+    </figure>
   </header>
 
   <section class="vi-section">
     <h2>Vì sao chọn HọcTA</h2>
     <!-- v119: the free-vs-paid banner leads the section — the new features are
          exactly the ones paid tools put behind a subscription. -->
-    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: #0f766e; background: #f0fdfa;">
+    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: var(--accent);">
       <strong>💡 Những gì app trả phí tính subscription — ở đây miễn phí</strong>
       <p>Chỉ báo "độ phủ từ vựng" khi đọc (LingQ tính <strong>$14.99/tháng</strong> cho tính năng này — app của tôi đo miễn phí, hoàn toàn offline trên máy bạn). Xuất bộ thẻ <strong>.apkg</strong> chuẩn Anki một lần bấm (Readlang tính <strong>$6/tháng</strong>). Luyện <strong>điền từ vào chính câu bạn đã đọc</strong>, ôn theo lịch FSRS, Reader đa nguồn, từ điển .mdx của riêng bạn — không gói Premium, không tài khoản, không giới hạn.</p>
     </div>
-    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: #0f766e; background: #f0fdfa;">
+    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: var(--accent);">
       <strong>📚 Offline lesson pipeline — học tiếng Anh công sở nơi mạng chập chờn</strong>
       <p>33 packs workplace + academic (~10KB/pack): chuẩn bị nơi có mạng, cài một lần rồi đọc, luyện, ôn hoàn toàn offline — không key. <a href="/lessons/">Mở thư viện 33 packs →</a> · <a href="/#/practice">Lab IELTS/TOEIC offline →</a> · <a href="/vi/blog/en/">English summary →</a></p>
     </div>

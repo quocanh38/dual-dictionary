@@ -1,3 +1,5 @@
+@import url("./brand.css");
+
 /* ============================================================
    Design tokens — single source of truth (spacing/type/radius/color)
    ============================================================ */
@@ -9,23 +11,25 @@
   /* radius */
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-full: 999px;
   /* color */
-  --accent: #0f766e;
-  --accent-soft: #14b8a6;
-  --ox: #0f766e; /* v91: was Oxford-crimson #b91c1c — slot 1 is WordNet now and a red panel head read as an error state (field report 2026-09-30) */
+  --accent-fill-text: #fff;
+  --brand-success: var(--brand-green);
+  --accent: var(--brand-blue);
+  --accent-soft: #6d7df0;
+  --ox: var(--brand-blue); /* v91: was Oxford-crimson #b91c1c — slot 1 is WordNet now and a red panel head read as an error state (field report 2026-09-30) */
   --lm: #1d4ed8;
-  --bg: #f4f5f7;
+  --bg: var(--brand-paper);
   --surface: #ffffff;
-  --text: #1f2937;
-  --text-2: #646b78;
-  --border: #e5e7eb;
+  --text: var(--brand-ink);
+  --text-2: var(--brand-muted);
+  --border: var(--brand-line);
   --shadow-1: 0 1px 3px rgba(0,0,0,.08);
   --shadow-2: 0 8px 24px rgba(0,0,0,.14);
   /* U8: ONE highlight convention. The exact word (reader tap / saved-context
      <mark>) is --hl-bg; the surrounding sentence is the softer --hl-soft. Before
      this, the same word was teal in the reader and amber in the context card. */
-  --hl-bg: #fde68a;
-  --hl-fg: #513c06;
-  --hl-soft: #fef3c7;
+  --hl-bg: var(--brand-yellow);
+  --hl-fg: var(--brand-ink);
+  --hl-soft: var(--brand-yellow-soft);
   /* U3: a slot with no dictionary is a NEUTRAL state, never an error colour */
   --panel-muted: #475569;
   /* layout */
@@ -34,18 +38,20 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #101317;
-    --surface: #1a1e26;
-    --text: #e7eaee;
-    --text-2: #9aa3af;
-    --border: #2b313c;
-    --accent: #2dd4bf;
-    --accent-soft: #0f766e;
+    --bg: var(--brand-night);
+    --surface: var(--brand-night-surface);
+    --text: var(--brand-night-text);
+    --text-2: var(--brand-night-muted);
+    --border: var(--brand-night-line);
+    --accent-fill-text: var(--brand-night);
+    --brand-success: var(--brand-green-on-dark);
+    --accent: var(--brand-blue-on-dark);
+    --accent-soft: #6170d7;
     --shadow-1: 0 1px 3px rgba(0,0,0,.4);
     --shadow-2: 0 8px 24px rgba(0,0,0,.5);
-    --hl-bg: #a16207;
-    --hl-fg: #fffbeb;
-    --hl-soft: #3f2d06;
+    --hl-bg: var(--brand-yellow);
+    --hl-fg: var(--brand-ink);
+    --hl-soft: #413918;
     --panel-muted: #3f4a5a;
   }
 }
@@ -60,7 +66,7 @@ html, body { margin: 0; padding: 0; }
    pass overrides --safe-b to 34px and re-measures the clearance. */
 :root { --safe-b: env(safe-area-inset-bottom, 0px); }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: var(--brand-font-body);
   font-size: var(--fs-md);
   line-height: 1.5;
   background: var(--bg);
@@ -178,10 +184,10 @@ main { max-width: 1400px; margin: 0 auto; padding: 0 var(--sp-3) var(--sp-6); }
 .btn-search {
   height: 40px; padding: 0 var(--sp-4);
   border: none; border-radius: var(--r-sm);
-  background: var(--accent); color: #fff; cursor: pointer;
+  background: var(--accent); color: var(--accent-fill-text); cursor: pointer;
   font-weight: 600;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-search { color: #06251f; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-search { color: var(--brand-night); } }
 
 .icon-inline {
   width: 32px; height: 32px; flex: 0 0 auto;
@@ -320,11 +326,11 @@ main { max-width: 1400px; margin: 0 auto; padding: 0 var(--sp-3) var(--sp-6); }
   background: transparent; color: var(--text-2);
   font: inherit; font-size: var(--fs-sm); font-weight: 600; cursor: pointer;
 }
-.adv-tab[aria-selected="true"] { background: var(--accent); color: #fff; }
+.adv-tab[aria-selected="true"] { background: var(--accent); color: var(--accent-fill-text); }
 .adv-panel { margin-top: var(--sp-3); }
 .adv-panel[hidden] { display: none; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .adv-tab[aria-selected="true"] { color: #06251f; } }
-:root[data-theme="dark"] .adv-tab[aria-selected="true"] { color: #06251f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .adv-tab[aria-selected="true"] { color: var(--brand-night); } }
+:root[data-theme="dark"] .adv-tab[aria-selected="true"] { color: var(--brand-night); }
 /* Phase 7 P1: the YouTube transcript dialog reuses the Reader's field styling */
 #yt-dialog input[type="url"], #yt-dialog textarea {
   width: 100%; box-sizing: border-box; font: inherit;
@@ -428,8 +434,8 @@ main { max-width: 1400px; margin: 0 auto; padding: 0 var(--sp-3) var(--sp-6); }
   cursor: pointer; font-size: var(--fs-sm); font-weight: 600;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.view-switch button.active { background: var(--accent); color: #fff; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .view-switch button.active { color: #06251f; } }
+.view-switch button.active { background: var(--accent); color: var(--accent-fill-text); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .view-switch button.active { color: var(--brand-night); } }
 
 /* ============================================================ dict panels */
 .dict-grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-3); margin-top: var(--sp-3); }
@@ -635,10 +641,10 @@ body:not([data-dict-state="ready"]) .view-switch { display: none; }
 }
 .btn-primary {
   padding: var(--sp-3) var(--sp-5); border-radius: var(--r-md); border: none;
-  background: var(--accent); color: #fff; font-size: var(--fs-md);
+  background: var(--accent); color: var(--accent-fill-text); font-size: var(--fs-md);
   cursor: pointer; font-weight: 600; min-height: var(--touch);
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary { color: #06251f; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary { color: var(--brand-night); } }
 /* A button-styled LINK needs the button box explicitly: `<a>` is display:inline,
    where `min-height` is ignored outright AND vertical padding does not grow the
    line box — so every `<a class="btn-secondary">` (the bookmarklet drag target,
@@ -785,14 +791,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
   min-height: var(--touch);
 }
 .app-nav a:hover { background: rgba(255,255,255,.16); }
-/* R-C: the active pill was a translucent white wash (rgba(255,255,255,.22)) with
-   white text — 2.1:1 over the light-theme topbar, the worst contrast in the app.
-   It is now a solid --accent pill: white on #0f766e is 5.47:1 in light, and the
-   dark theme flips the label to the same near-black the other accent fills use
-   (#06251f on #2dd4bf = 8.73:1), so the pill passes AA in both themes. Same
-   palette, just opaque. */
-.app-nav a.active { background: var(--accent); color: #fff; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .app-nav a.active { color: #06251f; } }
+.app-nav a.active { background: var(--brand-paper); color: var(--brand-ink); }
 
 /* bottom nav (mobile <900px only) */
 .bottom-nav {
@@ -808,7 +807,8 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
   color: var(--text-2); text-decoration: none; font-size: var(--fs-xs); font-weight: 600;
   position: relative;
 }
-.bottom-nav a.active { color: var(--accent); }
+.bottom-nav a.active { color: var(--accent); font-weight: 750; }
+.bottom-nav a.active::before { content: ""; position: absolute; inset-block-start: 0; inline-size: 1.6rem; block-size: 3px; border-radius: 0 0 3px 3px; background: currentColor; }
 .bottom-nav .bn-icon { font-size: 18px; line-height: 1; }
 .bottom-nav .badge { position: absolute; top: 4px; right: 18%; }
 
@@ -843,7 +843,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
   border-radius: var(--r-full); padding: 6px var(--sp-3); font-size: var(--fs-sm);
   font-weight: 600; cursor: pointer; min-height: 36px;
 }
-.tab-row button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tab-row button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-fill-text); }
 .select-bar {
   display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap;
   padding: var(--sp-2) 0; margin-bottom: var(--sp-2);
@@ -928,7 +928,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
   display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
   color: #0f766e; font-weight: 700; margin-bottom: 2px;
 }
-.context-sentence { margin: 0; line-height: 1.5; color: #134e4a; overflow-wrap: break-word; }
+.context-sentence { margin: 0; line-height: 1.5; color: var(--text); overflow-wrap: break-word; }
 .context-sentence mark { background: var(--hl-bg); color: var(--hl-fg); padding: 0 1px; border-radius: 3px; }
 .context-source { display: block; margin-top: 3px; }
 .context-actions { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
@@ -948,7 +948,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .pron-ipa { color: var(--text-2); display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: baseline; } /* v91: gap instead of inline margins — variants never glue together */
 .pron-ipa .ipa { white-space: nowrap; }
 .ipa-stress { color: var(--accent); font-weight: 700; }
-#btn-pron-slow.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+#btn-pron-slow.active { background: var(--accent); color: var(--accent-fill-text); border-color: var(--accent); }
 /* head action buttons */
 .head-actions { margin-left: auto; display: flex; gap: var(--sp-2); flex-wrap: wrap; }
 /* practice */
@@ -957,7 +957,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .practice-prompt { font-size: var(--fs-md); line-height: 1.6; margin: 0 0 var(--sp-2); overflow-wrap: break-word; }
 .practice-input { width: 100%; box-sizing: border-box; font: inherit; padding: 10px; border: 1px solid var(--border); border-radius: 8px; margin: var(--sp-2) 0; }
 .practice-feedback { min-height: 1.4em; margin: 0; font-weight: 600; }
-.practice-feedback.ok { color: #0f766e; }
+.practice-feedback.ok { color: var(--brand-success); }
 .practice-feedback.bad { color: #b91c1c; }
 /* stats — U10/R-C: labelled groups (vocabulary / review / activity) instead of one
    grid whose 9th card sat alone on its own row. */
@@ -994,25 +994,26 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 #export-fields label { font-weight: 400; display: inline-flex; align-items: center; gap: 4px; }
 .practice-options { display: grid; gap: 8px; margin: var(--sp-2) 0; }
 .practice-option { text-align: left; }
-.practice-option.opt-ok { border-color: #0f766e; color: #0f766e; font-weight: 700; }
+.practice-option.opt-ok { border-color: var(--brand-success); color: var(--brand-success); font-weight: 700; }
 .practice-option.opt-bad { border-color: #b91c1c; color: #b91c1c; }
 
 /* ============================================================ UX pack (v47) */
 /* manual theme — 'auto' (no attribute) still follows prefers-color-scheme */
 :root[data-theme="light"] {
-  --bg: #f4f5f7; --surface: #ffffff; --text: #1f2937; --text-2: #646b78; --border: #e5e7eb;
-  --accent: #0f766e; --accent-soft: #14b8a6;
+  --bg: var(--brand-paper); --surface: #ffffff; --text: var(--brand-ink); --text-2: var(--brand-muted); --border: var(--brand-line);
+  --accent: var(--brand-blue); --accent-soft: #6d7df0;
   --shadow-1: 0 1px 3px rgba(0,0,0,.08); --shadow-2: 0 8px 24px rgba(0,0,0,.14);
 }
 :root[data-theme="dark"] {
-  --bg: #101317; --surface: #1a1e26; --text: #e7eaee; --text-2: #9aa3af; --border: #2b313c;
-  --accent: #2dd4bf; --accent-soft: #0f766e;
+  --accent-fill-text: var(--brand-night);
+  --brand-success: var(--brand-green-on-dark);
+  --bg: var(--brand-night); --surface: var(--brand-night-surface); --text: var(--brand-night-text); --text-2: var(--brand-night-muted); --border: var(--brand-night-line);
+  --accent: var(--brand-blue-on-dark); --accent-soft: #6170d7;
   --shadow-1: 0 1px 3px rgba(0,0,0,.4); --shadow-2: 0 8px 24px rgba(0,0,0,.5);
 }
 :root[data-theme="dark"] .btn-search,
 :root[data-theme="dark"] .btn-primary,
-:root[data-theme="dark"] .app-nav a.active,
-:root[data-theme="dark"] .view-switch button.active { color: #06251f; }
+:root[data-theme="dark"] .view-switch button.active { color: var(--brand-night); }
 :root[data-theme="dark"] .load-error { color: #f87171; }
 :root[data-theme="dark"] .storage-banner { background: #451a03; color: #fde68a; border-color: #92400e; }
 
@@ -1052,7 +1053,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .adv-slot { margin: var(--sp-2) 0; padding-top: var(--sp-2); border-top: 1px dashed var(--border); }
 .adv-slot h3 { margin: 0 0 var(--sp-2); font-size: var(--fs-md); }
 
-.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 0 0 8px 0; font-weight: 600; text-decoration: none; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--accent); color: var(--accent-fill-text); padding: 10px 16px; border-radius: 0 0 8px 0; font-weight: 600; text-decoration: none; }
 .skip-link:focus { left: 0; }
 /* U17: support is a footer text link — same weight as the licence links next to
    it, no block-level button treatment. */
@@ -1320,7 +1321,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 
 .village-banner{border-left:4px solid var(--accent);background:var(--surface);color:var(--text);padding:12px 16px;border-radius:10px;margin:12px 0}.village-banner p{margin:6px 0}.village-actions{display:flex;gap:10px;flex-wrap:wrap}.village-banner .btn-secondary{text-decoration:none}
 @media(prefers-reduced-motion:reduce){.village-banner{border-left-width:6px}}
-.offline-badge{display:inline-block;background:#0f766e;color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}.online-badge{display:inline-block;background:#fff;border:1px solid #b34524;color:#b34524;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
+.offline-badge{display:inline-block;background:var(--brand-green);color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}.online-badge{display:inline-block;background:#fff;border:1px solid #b34524;color:#b34524;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
 .reader-loop-hint{margin-left:8px}
 
 /* Reserve space even if Netlify inserts its badge after startup. */
@@ -1392,7 +1393,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .reader-lookup-head h2 { margin: 0; }
 body:not([data-app-view="search"]) #envi-hint { display: none; }
 
-.topbar { background: #115e59; }
+.topbar { background: var(--brand-blue); }
 :root[data-theme="dark"] .context-bar {
   background: #172b2a;
   border-color: #315953;
@@ -1465,3 +1466,21 @@ body:not([data-app-view="search"]) #envi-hint { display: none; }
 .firstload-options .dc-name { overflow-wrap: anywhere; }
 #onboarding-dialog { max-inline-size: min(30rem, calc(100% - 1.5rem)); }
 #onboarding-dialog .onboarding-actions form { margin: 0; }
+
+/* Keep the word selection and its saved sentence visually related. */
+.brand h1 { font-family: var(--brand-font-display); }
+.brand-mark img { display: block; width: 27px; height: 22px; object-fit: contain; }
+.reader-text { font-family: var(--brand-font-reading); font-size: 1.23rem; line-height: 1.65; }
+.context-bar { background: var(--brand-paper); border-color: var(--brand-line); }
+.context-label { color: var(--accent); }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; }
+  :root:not([data-theme="light"]) .context-bar { background: var(--brand-night-surface); border-color: var(--brand-night-line); }
+  :root:not([data-theme="light"]) .context-label { color: var(--accent); }
+}
+:root[data-theme="dark"] .context-bar { background: var(--brand-night-surface); border-color: var(--brand-night-line); }
+:root[data-theme="dark"] .context-label { color: var(--accent); }
+:root[data-theme="dark"] { --hl-bg: var(--brand-yellow); --hl-fg: var(--brand-ink); --hl-soft: #413918; }
+.vi-hero h1 { font-family: var(--brand-font-display); font-size: clamp(2rem, 1.2rem + 3vw, 4.25rem); }

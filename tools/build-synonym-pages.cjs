@@ -107,7 +107,7 @@ function pageHtml(p, wordHref) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(h1)}${p.antonyms.length ? ' (kèm trái nghĩa)' : ''} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -227,7 +227,7 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | HọcTA</title>
 <meta name="description" content="${pairs.length} từ tiếng Anh kèm từ đồng nghĩa, trái nghĩa, phân biệt sắc thái và câu mẫu song ngữ.">
 <link rel="canonical" href="${SITE}/vi/dong-nghia/">

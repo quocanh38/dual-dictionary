@@ -78,7 +78,7 @@ function levelPageHtml(lv, words, ipa, maniSet) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -149,7 +149,7 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>Từ vựng tiếng Anh theo trình độ A2–C1 | HọcTA</title>
 <meta name="description" content="Học từ vựng theo trình độ A2 sơ cấp, B1 trung cấp, B2 trung cao cấp, C1 nâng cao — kèm IPA, nghĩa Việt, ví dụ thi thật.">
 <link rel="canonical" href="${SITE}/vi/trinh-do/">

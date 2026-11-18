@@ -2771,7 +2771,7 @@ function emptyDoc(slot, word, pageUrl) {
     : 'Check the spelling, try a shorter form (for example, “run” instead of “running”), or try another dictionary pack.';
   return `<!doctype html><html lang="${lang === 'vi' ? 'vi' : 'en'}"><head><meta charset="utf-8"><style>
     body{font-family:-apple-system,sans-serif;color:#374151;padding:24px;text-align:center;line-height:1.7}
-    b{color:#0f766e}
+    b{color:#293cc8}
     .tips{color:#6b7280;font-size:14px}
   </style></head><body>
     <p>${message}</p>${source}
@@ -2791,7 +2791,7 @@ function docSkin() {
   }
   return dark
     ? { bg: '#161d24', fg: '#d7dde3', link: '#2dd4bf' }
-    : { bg: '#fbfcfe', fg: '#374151', link: '#0f766e' };
+    : { bg: '#fbfcfe', fg: '#374151', link: '#293cc8' };
 }
 
 function welcomeDoc(slot) {
@@ -2952,33 +2952,33 @@ async function buildEntryDoc(d, html, opts) {
   p,li,dd,dt,blockquote,.mtd-line,.mtd-sense,.mtd-idiom,.mtd-pos,.mtd-domain{max-width:58ch}
   .tbl-wrap{max-width:100%;overflow-x:auto}
   h1,h2,h3{line-height:1.25}
-  a{color:#0f766e}
-  .audio-btn{border:1px solid #0f766e;color:#0f766e;background:#fff;border-radius:999px;
+  a{color:#293cc8}
+  .audio-btn{border:1px solid #293cc8;color:#293cc8;background:#fff;border-radius:999px;
     padding:2px 10px;font:inherit;font-size:.9em;cursor:pointer;margin:0 2px;vertical-align:middle}
   .audio-btn:disabled{opacity:.5;cursor:default}
   .mdx-sep{border:none;border-top:1px solid #ddd;margin:18px 0}
   img{max-width:100%}
-  .phrase-banner{background:#f0fdfa;border:1px solid #99f6e4;border-radius:8px;
+  .phrase-banner{background:#eef0ff;border:1px solid #cbd2ff;border-radius:8px;
     padding:8px 12px;margin:0 0 12px;font-family:-apple-system,sans-serif;font-size:.85em;
     line-height:1.5;color:#134e4a}
-  .phrase-banner a{color:#0f766e;cursor:pointer;text-decoration:underline}
+  .phrase-banner a{color:#293cc8;cursor:pointer;text-decoration:underline}
   .mdx-variant{border:1px solid #e5e7eb;border-radius:8px;margin:8px 0;padding:4px 10px;background:#f9fafb}
-  .mdx-variant summary{cursor:pointer;color:#0f766e;font-size:14px}
+  .mdx-variant summary{cursor:pointer;color:#293cc8;font-size:14px}
   /* R-D: the sentence a word was tapped in, riding in the result itself. Same
      teal family as .phrase-banner (this document is always light "paper"), so it
      reads as app-authored furniture and never as part of the dictionary text. */
-  .src-sentence{background:#f0fdfa;border:1px solid #99f6e4;border-left:3px solid #0f766e;border-radius:8px;
+  .src-sentence{background:#eef0ff;border:1px solid #cbd2ff;border-left:3px solid #293cc8;border-radius:8px;
     padding:8px 12px;margin:0 0 14px;font-family:-apple-system,sans-serif;font-size:.85em;line-height:1.5;color:#134e4a}
   .src-sentence .src-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;
-    letter-spacing:.05em;color:#0f766e;margin-bottom:2px}
+    letter-spacing:.05em;color:#293cc8;margin-bottom:2px}
   .src-sentence .src-text{margin:0;max-width:58ch}
   .src-sentence .src-source{display:block;margin-top:3px;font-size:11px;color:#6b7280}
   .src-sentence mark{background:#fde68a;color:#513c06;padding:0 1px;border-radius:3px}
-  .mtd-pos{font-weight:700;color:#0f766e;margin:10px 0 4px;font-family:-apple-system,sans-serif;font-size:.9em}
+  .mtd-pos{font-weight:700;color:#293cc8;margin:10px 0 4px;font-family:-apple-system,sans-serif;font-size:.9em}
   .mtd-domain{font-weight:600;color:#6b7280;margin:12px 0 4px;font-family:-apple-system,sans-serif;font-size:.82em;
     text-transform:uppercase;letter-spacing:.04em}
   .mtd-sense{padding-left:14px;position:relative;margin:4px 0}
-  .mtd-sense::before{content:'–';position:absolute;left:0;color:#0f766e}
+  .mtd-sense::before{content:'–';position:absolute;left:0;color:#293cc8}
   .mtd-idiom{margin:6px 0;padding-left:14px}
   .mtd-idiom b{color:#134e4a}
   .mtd-line{margin:4px 0}
@@ -4897,7 +4897,7 @@ function renderLevelTest() {
     h += '<p style="margin:10px 0 4px"><strong>Câu ' + (i + 1) + ' [' + q[6] + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
     for (let k = 1; k <= 4; k++) {
       const sel = levelAnswers[i] === k - 1;
-      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:#0f766e;background:#ecfdf5' : '') + '">' + escapeHtml(q[k]) + '</button> ';
+      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:#293cc8;background:#ecfdf5' : '') + '">' + escapeHtml(q[k]) + '</button> ';
     }
     h += '</div>';
   });

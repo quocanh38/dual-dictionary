@@ -88,7 +88,7 @@ function pageHtml(p, wordHref, slugToHead) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -191,7 +191,7 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${pairs.length} cặp từ + giới từ tiếng Anh hay nhầm | HọcTA</title>
 <meta name="description" content="${pairs.length} cặp từ + giới từ tiếng Anh người Việt hay nhầm: đáp án 1 dòng, giải thích và câu mẫu song ngữ.">
 <link rel="canonical" href="${SITE}/vi/gioi-tu/">

@@ -63,7 +63,7 @@ function pageHtml(p) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(p.name)} | HọcTA</title>
 <meta name="description" content="${esc(p.desc)}">
 <link rel="canonical" href="${canonical}">
@@ -112,7 +112,7 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>Lộ trình học từ vựng A2–C1, IELTS, TOEIC | HọcTA</title>
 <meta name="description" content="3 lộ trình học từ vựng: A2 lên B1 trong 30 ngày, IELTS Core theo chủ đề, TOEIC 500+ văn phòng.">
 <link rel="canonical" href="${SITE}/vi/lo-trinh/">

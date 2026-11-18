@@ -79,7 +79,7 @@ function pageHtml(m, wordHref) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -183,7 +183,7 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${pairs.length} lỗi sai tiếng Anh thường gặp | HọcTA</title>
 <meta name="description" content="${pairs.length} lỗi sai tiếng Anh người Việt hay mắc kèm cách dùng đúng và câu mẫu IELTS/TOEIC.">
 <link rel="canonical" href="${SITE}/vi/loi-sai/">

@@ -59,18 +59,18 @@ function coverSvg(enTitle, badge, accent) {
   const titleSize = Math.min(66, Math.floor(1390 / Math.max(title.length, 1)));
   const subtitleSize = Math.min(35, Math.floor(1390 / Math.max(subtitle.length, 1)));
   return `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-<rect width="1200" height="630" fill="#0b3533"/>
-<rect width="16" height="630" fill="#52dfc5"/>
+<rect width="1200" height="630" fill="#293cc8"/>
+<rect width="16" height="630" fill="#ffe383"/>
 <circle cx="1100" cy="80" r="280" fill="${accent}" opacity=".28"/>
-<circle cx="1160" cy="70" r="210" fill="none" stroke="#71e8d3" opacity=".24" stroke-width="2"/>
-<text x="86" y="103" fill="#91f2df" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="2">${escXml(badge.toUpperCase())}</text>
+<circle cx="1160" cy="70" r="210" fill="none" stroke="#aab6ff" opacity=".24" stroke-width="2"/>
+<text x="86" y="103" fill="#ffe383" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="2">${escXml(badge.toUpperCase())}</text>
 <text x="84" y="260" fill="white" font-family="Arial, sans-serif" font-size="${titleSize}" font-weight="700">${escXml(title)}</text>
-<text x="86" y="332" fill="#cbefe8" font-family="Arial, sans-serif" font-size="${subtitleSize}">${escXml(subtitle)}</text>
-<path d="M86 441h1028" stroke="#60c1b2" opacity=".4"/>
+<text x="86" y="332" fill="#fbf8ef" font-family="Arial, sans-serif" font-size="${subtitleSize}">${escXml(subtitle)}</text>
+<path d="M86 441h1028" stroke="#aab6ff" opacity=".4"/>
 <text x="86" y="528" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="700">HọcTA</text>
-<text x="86" y="566" fill="#91f2df" font-family="Arial, sans-serif" font-size="23">hocta.app</text>
-<g transform="translate(1034 476)" fill="none" stroke="#91f2df" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M10 10h42v53H14a8 8 0 0 1-8-8V18a8 8 0 0 1 8-8m-8 45a8 8 0 0 1 8-8h38M18 22h22M18 30h22"/>
+<text x="86" y="566" fill="#ffe383" font-family="Arial, sans-serif" font-size="23">hocta.app</text>
+<g transform="translate(1030 477) scale(.8)" fill="#fbf8ef">
+  <rect x="6" y="17" width="72" height="26" rx="12"/><path d="M42 34h24L41 66H17z"/><rect x="6" y="57" width="50" height="26" rx="12"/><rect x="65" y="57" width="29" height="26" rx="12" fill="#ffe383"/>
 </g>
 </svg>`;
 }

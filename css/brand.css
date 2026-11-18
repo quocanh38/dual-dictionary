@@ -1,0 +1,59 @@
+/* HọcTA visual identity. The app and public pages share these values. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../assets/brand/BricolageGrotesque-Bold.ttf") format("truetype");
+  font-weight: 700 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("../assets/brand/CrimsonPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+:root {
+  --brand-blue: #293cc8;
+  --brand-deep: #2032a6;
+  --brand-blue-tint: #e8ecff;
+  --brand-blue-on-dark: #aab6ff;
+  --brand-paper: #fbf8ef;
+  --brand-surface: #fff;
+  --brand-ink: #17253b;
+  --brand-muted: #566277;
+  --brand-line: #d9dce5;
+  --brand-yellow: #ffe383;
+  --brand-yellow-soft: #fff2c4;
+  --brand-green: #176458;
+  --brand-green-on-dark: #94e0cc;
+  --brand-night: #111a2c;
+  --brand-night-surface: #19263b;
+  --brand-night-text: #f1f3fb;
+  --brand-night-muted: #b5c0d7;
+  --brand-night-line: #374561;
+  --brand-focus-on-blue: #ffe383;
+  --brand-font-body: "Segoe UI", system-ui, sans-serif;
+  --brand-font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --brand-font-reading: "Crimson Pro", Georgia, serif;
+}
+:where(h1, h2, h3) {
+  font-family: var(--brand-font-display);
+  text-wrap: balance;
+}
+.dd-nav .dd-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--brand-font-display);
+}
+.dd-nav .dd-brand::before {
+  content: "";
+  inline-size: 1.35rem;
+  block-size: 1.1rem;
+  background: url("../assets/brand/mark-on-blue.png") center / contain no-repeat;
+  flex: none;
+}
+:where(.dd-nav, .topbar) :focus-visible { outline-color: var(--brand-focus-on-blue); }
+@media (forced-colors: active) {
+  :where(.dd-nav, .topbar) :focus-visible { outline-color: Highlight; }
+  .dd-nav .dd-brand::before { display: none; }
+}
