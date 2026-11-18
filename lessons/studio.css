@@ -41,9 +41,9 @@ body{font:17px/1.6 system-ui,sans-serif;background:var(--bg,#f7fafb);color:var(-
 }
 .lesson-page > header {
   max-width: none;
-  background: #115e59;
+  background: var(--brand-blue);
   border: 0;
-  color: #fff;
+  color: var(--brand-paper);
   padding-inline: max(16px, calc((100% - 948px) / 2));
 }
 .lesson-page > header a { color: inherit; }
@@ -101,7 +101,7 @@ body{font:17px/1.6 system-ui,sans-serif;background:var(--bg,#f7fafb);color:var(-
   align-items: center;
   gap: .55rem;
   font-family: var(--brand-font-display);
-  color: var(--accent);
+  color: inherit;
 }
 .lesson-page > header > a::before {
   content: "";
