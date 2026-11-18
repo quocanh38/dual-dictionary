@@ -926,7 +926,7 @@ dialog .quickstart li { font-size: var(--fs-md); margin-bottom: var(--sp-3); }
 .context-main { flex: 1 1 320px; min-width: 0; }
 .context-label {
   display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
-  color: #0f766e; font-weight: 700; margin-bottom: 2px;
+  color: var(--accent); font-weight: 700; margin-bottom: 2px;
 }
 .context-sentence { margin: 0; line-height: 1.5; color: var(--text); overflow-wrap: break-word; }
 .context-sentence mark { background: var(--hl-bg); color: var(--hl-fg); padding: 0 1px; border-radius: 3px; }

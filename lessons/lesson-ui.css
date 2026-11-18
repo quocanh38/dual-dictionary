@@ -61,7 +61,7 @@ body{font:17px/1.6 system-ui,sans-serif;background:var(--bg,#f7fafb);color:var(-
   padding: clamp(16px, 4vw, 30px);
 }
 .lesson-featured h3 { font-size: clamp(1.25rem, 4vw, 1.75rem); }
-.lesson-featured button.primary { background: #115e59; border-color: #115e59; }
+.lesson-featured button.primary { border-color: var(--brand-blue); }
 .lesson-catalogue .lesson-list { border: 0; padding: 0; }
 .lesson-grid {
   display: grid;

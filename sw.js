@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v210-brand-polish';
+const CACHE = 'mdx-dict-v211-palette';
 const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
 const LEGACY_APP = './recover.html';
 const LEGACY_STUDIO = './lessons/recover.html';
@@ -268,7 +268,7 @@ const ASSETS = [
   './lessons/library/east-dock-refill-shop-stock-check.json',
   './lessons/library/student-podcast-interview-editing.json',
   './lessons/library/staggered-start-time-policy-rollout.json',
-  './lessons/studio.css',
+  './lessons/lesson-ui.css',
   './lessons/example.json',
   './js/epub.js',
   './js/pdf.js',

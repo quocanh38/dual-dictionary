@@ -36,6 +36,9 @@ https://dualdictionary.netlify.app/README.md  https://hocta.app/readme.md  301!
 https://dualdictionary.netlify.app/vi/*  https://hocta.app/vi/:splat  301!
 https://dualdictionary.netlify.app/docs/*  https://hocta.app/docs/:splat  301!
 
+# Stylesheet URL retained for readers with an older Lesson Studio page.
+/lessons/studio.css  /lessons/lesson-ui.css  301
+
 # 404 safety net (owner-approved 02/11): guessed-but-never-built /vi/tu/* URLs
 # serve the dictionary hub content with a 404 status (no soft-404 for SEO).
 # Existing files always win (no force flag) — real pages are unaffected.

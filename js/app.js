@@ -2960,7 +2960,7 @@ async function buildEntryDoc(d, html, opts) {
   img{max-width:100%}
   .phrase-banner{background:#eef0ff;border:1px solid #cbd2ff;border-radius:8px;
     padding:8px 12px;margin:0 0 12px;font-family:-apple-system,sans-serif;font-size:.85em;
-    line-height:1.5;color:#134e4a}
+    line-height:1.5;color:#2032a6}
   .phrase-banner a{color:#293cc8;cursor:pointer;text-decoration:underline}
   .mdx-variant{border:1px solid #e5e7eb;border-radius:8px;margin:8px 0;padding:4px 10px;background:#f9fafb}
   .mdx-variant summary{cursor:pointer;color:#293cc8;font-size:14px}
@@ -2968,7 +2968,7 @@ async function buildEntryDoc(d, html, opts) {
      teal family as .phrase-banner (this document is always light "paper"), so it
      reads as app-authored furniture and never as part of the dictionary text. */
   .src-sentence{background:#eef0ff;border:1px solid #cbd2ff;border-left:3px solid #293cc8;border-radius:8px;
-    padding:8px 12px;margin:0 0 14px;font-family:-apple-system,sans-serif;font-size:.85em;line-height:1.5;color:#134e4a}
+    padding:8px 12px;margin:0 0 14px;font-family:-apple-system,sans-serif;font-size:.85em;line-height:1.5;color:#2032a6}
   .src-sentence .src-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;
     letter-spacing:.05em;color:#293cc8;margin-bottom:2px}
   .src-sentence .src-text{margin:0;max-width:58ch}
@@ -2980,7 +2980,7 @@ async function buildEntryDoc(d, html, opts) {
   .mtd-sense{padding-left:14px;position:relative;margin:4px 0}
   .mtd-sense::before{content:'–';position:absolute;left:0;color:#293cc8}
   .mtd-idiom{margin:6px 0;padding-left:14px}
-  .mtd-idiom b{color:#134e4a}
+  .mtd-idiom b{color:#2032a6}
   .mtd-line{margin:4px 0}
 </style>
 <style>${css}</style>
