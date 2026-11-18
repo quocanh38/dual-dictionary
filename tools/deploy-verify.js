@@ -24,6 +24,9 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
+execFileSync(process.execPath, [path.join(__dirname, 'build-lookup-data.cjs'), '--check'], { stdio:'inherit' });
+execFileSync(process.execPath, [path.join(__dirname, 'check-lookup-links.cjs')], { stdio:'inherit' });
+
 const SITE_ID = process.env.NETLIFY_SITE_ID || '1af0641f-673e-48e9-9c86-1755d64b6558';
 /* PC (dual-dictionary-git): site root IS the repo root — no Dictionaries/netlify-deploy nesting.
  * Override with DSH_DEPLOY_ROOT if running from the Mac layout. */

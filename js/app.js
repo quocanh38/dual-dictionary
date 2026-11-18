@@ -1,6 +1,8 @@
+import { lemmaCandidates } from './lookup-lemmas.js';
 import { initExperience, trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from "./experience.js";
 import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanations.js";
 import { MDict } from './mdict.js';
+import { loadLookupSupplement, supplementEntry, lookupPage, renderSupplement } from './lookup-supplement.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
 import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS } from './ai-client.js';
 import { validateTutorPhrases, validateTutorFeedback, validateTutorSituation } from './tutor-validation.js';
@@ -2416,9 +2418,13 @@ async function renderSlot(slot, word) {
   try {
     let hits = await d.mdx.lookup(word);
     if (!isCurrent()) return false;
+    const lookupData = !hits.length ? await loadLookupSupplement() : null;
+    if (!isCurrent()) return false;
+    const authored = !hits.length ? supplementEntry(lookupData, word) : null;
+    if (authored) hits = [{ keyText: word, text: renderSupplement(authored, escapeHtml) }];
     let note = '';
     let resolvedKey = word;   // R-D: the key the entry on screen really belongs to
-    if (/\S\s+\S/.test(String(word || ''))) { const slug = String(word).trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''); note += `<div class="phrase-banner">Curated teaching senses (biên soạn gọn): <a href="https://dualdictionary.netlify.app/vi/tu/${slug}/" target="_blank" rel="noopener">/vi/tu/${slug}/</a> — raw dictionary entries follow below.</div>`; }
+    if (!authored && /\S\s+\S/.test(String(word || ''))) { const slug = String(word).trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''); note += `<div class="phrase-banner">Curated teaching senses (biên soạn gọn): <a href="https://dualdictionary.netlify.app/vi/tu/${slug}/" target="_blank" rel="noopener">/vi/tu/${slug}/</a> — raw dictionary entries follow below.</div>`; }
     if (!hits.length) {
       // U2: an inflected form ("called") must resolve to its base entry
       // ("call") — never to whatever longer key happens to contain the text
@@ -2442,7 +2448,7 @@ async function renderSlot(slot, word) {
     }
     if (!isCurrent()) return false;
     if (!hits.length) {
-      ifr.srcdoc = emptyDoc(slot, word);
+      ifr.srcdoc = emptyDoc(slot, word, lookupPage(lookupData, word));
       setStatus(slot, `no results found for "${word}"`);
       showDidYouMean(slot, word);
       return false;
@@ -2470,8 +2476,8 @@ function rankExactPhraseHits(word, hits) {
     const ranked = rankExactPhraseHits(resolvedKey, hits);
     latestLookupEntries.bySlot[slot] = ranked.map(({ h }) => ({
       slot,
-      source: dictDisplayName(d.mdx),
-      sourceFile: d.mdx.name || '',
+      source: authored ? 'Dual Dictionary · Biên soạn riêng' : dictDisplayName(d.mdx),
+      sourceFile: authored ? 'lookup-supplement.json' : d.mdx.name || '',
       keyText: h.keyText || resolvedKey,
       raw: h.text,
     }));
@@ -2531,51 +2537,6 @@ function slotPanelName(slot) {
  *  set (no data, no dependency): "called" → ["called","call"], "studies" →
  *  ["studies","study","studie"], "running" → ["running","run","runn"], …
  *  The original word always comes first so an exact key still wins. */
-function lemmaCandidates(word) {
-  const w = String(word || '').toLowerCase().replace(/\s+/g, ' ').trim();
-  const out = [];
-  const push = (s) => { if (s && s.length >= 2 && out.indexOf(s) === -1) out.push(s); };
-  push(w);
-  const cut = (base, suffixes, restored) => {
-    for (const suf of suffixes) {
-      if (w.length > suf.length + 1 && w.endsWith(suf)) push(w.slice(0, -suf.length) + restored);
-    }
-  };
-  // irregular forms worth naming (the ones a rule set cannot guess)
-  const IRREGULAR = {
-    ran: 'run', went: 'go', gone: 'go', did: 'do', done: 'do', was: 'be', were: 'be', been: 'be',
-    had: 'have', has: 'have', said: 'say', made: 'make', took: 'take', taken: 'take', gave: 'give',
-    given: 'give', got: 'get', gotten: 'get', came: 'come', saw: 'see', seen: 'see', knew: 'know',
-    known: 'know', thought: 'think', found: 'find', told: 'tell', felt: 'feel', left: 'leave',
-    men: 'man', women: 'woman', children: 'child', feet: 'foot', teeth: 'tooth', mice: 'mouse',
-    better: 'good', best: 'good', worse: 'bad', worst: 'bad', those: 'that', these: 'this',
-  };
-  if (IRREGULAR[w]) push(IRREGULAR[w]);
-  // ...-ies → ...-y
-  cut('', ['ies'], 'y');
-  // ...-ed → base / base+e / de-doubled consonant
-  if (w.length > 3 && w.endsWith('ied')) push(w.slice(0, -3) + 'y');
-  if (w.length > 3 && w.endsWith('ed')) {
-    const stem = w.slice(0, -2);
-    push(stem);
-    push(stem + 'e');
-    if (/([bdfglmnprt])\1$/.test(stem)) push(stem.slice(0, -1));
-    push(w.slice(0, -1)); // "moved" → "move", already covered by stem+'e'; keeps "liked"→"like"
-  }
-  // ...-ing → base / base+e / de-doubled consonant
-  if (w.length > 4 && w.endsWith('ing')) {
-    const stem = w.slice(0, -3);
-    push(stem);
-    push(stem + 'e');
-    if (/([bdfglmnprt])\1$/.test(stem)) push(stem.slice(0, -1));
-  }
-  // ...-es / ...-s (plural + 3rd person)
-  if (w.length > 3 && w.endsWith('es')) push(w.slice(0, -2));
-  if (w.length > 2 && w.endsWith('s')) push(w.slice(0, -1));
-  if (w.length > 4 && w.endsWith('ses')) push(w.slice(0, -2)); // "classes" → "class"
-  return out.filter((c) => c.length >= 2);
-}
-
 /** Look up `query`, walking its lemma candidates: exact first, then prefix
  *  matches on the lemma ("call" finds the "call" entry, not "so-called").
  *  Substring containment is deliberately NOT used here — that is the very
@@ -2790,15 +2751,21 @@ function mtdToBlocks(text) {
   return blocks;
 }
 
-function emptyDoc(slot, word) {
-  return `<!doctype html><html><head><meta charset="utf-8"><style>
+function emptyDoc(slot, word, pageUrl) {
+  const message = lang === 'vi'
+    ? `Gói từ điển hiện tại chưa có mục từ này: <b>${escapeHtml(word)}</b>.`
+    : `This dictionary pack has no entry for <b>${escapeHtml(word)}</b>.`;
+  const source = pageUrl ? `<p><a href="${escapeHtml(pageUrl)}" target="_blank" rel="noopener">${lang === 'vi' ? 'Đọc mục từ trên site' : 'Read the entry on the site'}</a></p>` : '';
+  const tips = lang === 'vi'
+    ? 'Kiểm tra chính tả hoặc thử dạng gốc, ví dụ “run” thay cho “running”. Bạn cũng có thể thử gói từ điển khác.'
+    : 'Check the spelling, try a shorter form (for example, “run” instead of “running”), or try another dictionary pack.';
+  return `<!doctype html><html lang="${lang === 'vi' ? 'vi' : 'en'}"><head><meta charset="utf-8"><style>
     body{font-family:-apple-system,sans-serif;color:#374151;padding:24px;text-align:center;line-height:1.7}
     b{color:#0f766e}
     .tips{color:#6b7280;font-size:14px}
   </style></head><body>
-    <p>No entry found for <b>${escapeHtml(word)}</b> in ${escapeHtml(slotPanelName(slot))}.</p>
-    <p class="tips">Check the spelling, or try a shorter form (e.g. “run” instead of “running”).<br>
-       The other panel may still have a match for this word.</p>
+    <p>${message}</p>${source}
+    <p class="tips">${tips}</p>
   </body></html>`;
 }
 

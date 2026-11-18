@@ -22,6 +22,9 @@
  */
 
 const fs = require('fs');
+const LOOKUP_CORRECTIONS = require('../data/lookup-corrections.json');
+const LOOKUP_TYPO = new RegExp('\\b(' + Object.keys(LOOKUP_CORRECTIONS).join('|') + ')\\b', 'gi');
+const LOOKUP_EXTRAS = require('../data/lookup-extra.json');
 const path = require('path');
 const QUICK_SENSES = require('../data/word-quick-senses.json');
 const { MDict } = require('../js/mdict.js');
@@ -170,6 +173,8 @@ function mtdToBlocks(text) {
         // v109: a closing paren after the crossref (OVDP "(xem) pro_and_con)")
         // belongs to the outer paren pair — keep it OUT of the link text/href
         const w = word.endsWith(')') ? word.slice(0, -1).trimEnd() : word;
+        if (/[à-ỹ]/i.test(w)) return m;
+        if (w.startsWith('prick (twinge,')) return '(xem) ' + ['prick','twinge','qualm','worm'].map(target => `<a href="/?q=${target}">${target}</a>`).join(', ');
         const target = w.trim().toLowerCase();
         const href = BUILT.has(target) ? wordPageUrl(target) : '/?q=' + encodeURIComponent(target);
         return `(xem) <a href="${href}">${w}</a>${word.endsWith(')') ? ')' : ''}`;
@@ -231,6 +236,8 @@ function mtdToBlocksRender(text) {
         // v109: a closing paren after the crossref (OVDP "(xem) pro_and_con)")
         // belongs to the outer paren pair — keep it OUT of the link text/href
         const w = word.endsWith(')') ? word.slice(0, -1).trimEnd() : word;
+        if (/[à-ỹ]/i.test(w)) return m;
+        if (w.startsWith('prick (twinge,')) return '(xem) ' + ['prick','twinge','qualm','worm'].map(target => `<a href="/?q=${target}">${target}</a>`).join(', ');
         const target = w.trim().toLowerCase();
         const href = BUILT.has(target) ? wordPageUrl(target) : '/?q=' + encodeURIComponent(target);
         return `(xem) <a href="${href}">${w}</a>${word.endsWith(')') ? ')' : ''}`;
@@ -289,6 +296,7 @@ function demoteLeadingDomain(blocks) {
  * orphan space collapsed. */
 function sanitizeRaw(raw) {
   return compactRegisterLabels(String(raw || '')
+    .replace(LOOKUP_TYPO, text => LOOKUP_CORRECTIONS[text.toLowerCase()])
     .replace(/\u0000/g, '')
     .replace(/<[^>]*>/g, '')
     .replace(/_/g, ' ')
@@ -545,6 +553,14 @@ function wordMetaDesc(word, ipa, raw) {
 
 function wordPageUrl(word) {
   return `/vi/tu/${encodeURIComponent(String(word).toLowerCase())}/`;
+}
+
+function renderLookupExtras(word) {
+  return LOOKUP_EXTRAS.filter(entry => entry.source === wordPageUrl(word)).map(entry =>
+    `<section class="hand-block"><h2>${escapeHtml(entry.phrase)}</h2>` +
+    entry.senses.map(sense => `<p><strong>${escapeHtml(sense.m)}</strong></p><p>${escapeHtml(sense.pat || '')}</p>` +
+      sense.ex.map(([en, vi]) => `<div class="mtd-ex"><p class="mtd-ex-en">${escapeHtml(en)}</p><p class="mtd-ex-vi">${escapeHtml(vi)}</p></div>`).join('')).join('') +
+    '<p class="hand-src">Nghĩa và ví dụ do Dual Dictionary biên soạn.</p></section>').join('');
 }
 
 function slugOf(word) {
@@ -1107,7 +1123,7 @@ ${navHtml('tu')}
     <p class="entry-lemma-note">Trong từ điển không có mục riêng cho dạng “${escapeHtml(word)}” — mục dưới đây là của nguyên mẫu ${builtSet.has(entryLemma)
       ? `<a href="${wordPageUrl(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`
       : `<a href="/?q=${encodeURIComponent(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`} (như trong app: tra dạng chia, hiện mục gốc).</p>` : ''}
-    <div class="entry-body">${entryHtml || '<p class="word-empty">Chưa có dữ liệu nghĩa chi tiết cho từ này trong bản từ điển hiện tại.</p>'}</div>
+    <div class="entry-body">${entryHtml || '<p class="word-empty">Chưa có dữ liệu nghĩa chi tiết cho từ này trong bản từ điển hiện tại.</p>'}</div>${renderLookupExtras(word)}
     <div class="word-cta">
       <div class="word-cta-actions">
         <a class="word-cta-btn" href="/?q=${encodeURIComponent(word)}">Tra "${escapeHtml(word)}" trong app offline ↗</a>${practiceCta}
@@ -2076,6 +2092,7 @@ module.exports = {
   REMOVE_WORDS,
   escapeHtml,
   sanitizeRaw,
+  renderLookupExtras,
   mtdToBlocks,
   applyOvdpFixes,
   dropLeadingIpaFragment,
