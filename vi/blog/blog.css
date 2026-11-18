@@ -23,7 +23,7 @@
     --text: #e7eaee;
     --text-2: #9aa3af;
     --border: #2b313c;
-    --accent: #2dd4bf;
+    --accent: var(--brand-blue-on-dark);
     --accent-soft: #6170d7;
     --shadow-1: 0 1px 3px rgba(0,0,0,.4);
   }
@@ -113,7 +113,6 @@ figcaption {
   text-decoration: none; font-weight: 600;
 }
 .cta-button:hover { filter: brightness(1.08); }
-@media (prefers-color-scheme: dark) { .cta-button { color: #06251f !important; } }
 
 /* ---------- author box ---------- */
 .author-box {

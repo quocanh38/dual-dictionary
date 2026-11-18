@@ -2790,7 +2790,7 @@ function docSkin() {
     try { dark = window.matchMedia('(prefers-color-scheme: dark)').matches; } catch (e) { /* very old engines */ }
   }
   return dark
-    ? { bg: '#161d24', fg: '#d7dde3', link: '#2dd4bf' }
+    ? { bg: '#161d24', fg: '#d7dde3', link: '#aab6ff' }
     : { bg: '#fbfcfe', fg: '#374151', link: '#293cc8' };
 }
 
@@ -2965,7 +2965,7 @@ async function buildEntryDoc(d, html, opts) {
   .mdx-variant{border:1px solid #e5e7eb;border-radius:8px;margin:8px 0;padding:4px 10px;background:#f9fafb}
   .mdx-variant summary{cursor:pointer;color:#293cc8;font-size:14px}
   /* R-D: the sentence a word was tapped in, riding in the result itself. Same
-     teal family as .phrase-banner (this document is always light "paper"), so it
+     cobalt family as .phrase-banner (this document is always light "paper"), so it
      reads as app-authored furniture and never as part of the dictionary text. */
   .src-sentence{background:#eef0ff;border:1px solid #cbd2ff;border-left:3px solid #293cc8;border-radius:8px;
     padding:8px 12px;margin:0 0 14px;font-family:-apple-system,sans-serif;font-size:.85em;line-height:1.5;color:#2032a6}
@@ -2991,14 +2991,14 @@ async function buildEntryDoc(d, html, opts) {
     color-scheme: dark;
   }
   html[data-theme="dark"] :is(a, .mtd-pos, .mtd-idiom b, .mtd-domain, .mdx-variant summary) {
-    color: #5eead4;
+    color: #aab6ff;
   }
   html[data-theme="dark"] :is(.phrase-banner, .src-sentence, .mdx-variant, .audio-btn) {
-    background: #172b2a;
-    border-color: #315953;
+    background: #19263b;
+    border-color: #374561;
     color: #e7eaee;
   }
-  html[data-theme="dark"] :is(.src-label, .src-source) { color: #a7d9d1; }
+  html[data-theme="dark"] :is(.src-label, .src-source) { color: #b5c0d7; }
   @media (prefers-color-scheme: dark) {
     html[data-theme="auto"], html[data-theme="auto"] body {
       color: #e7eaee;
@@ -3006,14 +3006,14 @@ async function buildEntryDoc(d, html, opts) {
       color-scheme: dark;
     }
     html[data-theme="auto"] :is(a, .mtd-pos, .mtd-idiom b, .mtd-domain, .mdx-variant summary) {
-      color: #5eead4;
+      color: #aab6ff;
     }
     html[data-theme="auto"] :is(.phrase-banner, .src-sentence, .mdx-variant, .audio-btn) {
-      background: #172b2a;
-      border-color: #315953;
+      background: #19263b;
+      border-color: #374561;
       color: #e7eaee;
     }
-    html[data-theme="auto"] :is(.src-label, .src-source) { color: #a7d9d1; }
+    html[data-theme="auto"] :is(.src-label, .src-source) { color: #b5c0d7; }
   }
 </style>
 </head><body>${body}<script>var AT=${JSON.stringify(anchor ? String(anchor) : '')};
