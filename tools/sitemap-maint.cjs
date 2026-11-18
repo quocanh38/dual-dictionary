@@ -31,9 +31,10 @@ let urlCount = 0, keptCount = 0;
 const tierInfo = {}; // xmlName -> { newest, count }
 
 /* Pass 1: per-URL lastmod from real file mtime (chunk + topical sitemaps). */
-for (const f of fs.readdirSync(SM_DIR).filter((x) => x.endsWith('.xml') && x !== 'index.xml' && x !== 'phrases-index.xml')) {
+for (const f of fs.readdirSync(SM_DIR).filter((x) => x.endsWith('.xml'))) {
   const fp = path.join(SM_DIR, f);
   let xml = fs.readFileSync(fp, 'utf8');
+  if (!/<urlset\b/.test(xml)) continue;
   let newest = 0, count = 0;
   xml = xml.replace(/<url>[\s\S]*?<\/url>/g, (block) => {
     const m = block.match(/<loc>([^<]+)<\/loc>/);
@@ -63,8 +64,6 @@ function entry(name) {
 const tier3 = Object.keys(tierInfo).filter((n) => !TIER1.includes(n) && !TIER2.includes(n)).sort();
 const blocks = [
   '  <sitemap>\n    <loc>https://hocta.app/sitemap-pages.xml</loc>\n  </sitemap>',
-  '  <sitemap>\n    <loc>https://hocta.app/vi/tu/sitemap/index.xml</loc>\n  </sitemap>',
-  '  <sitemap>\n    <loc>https://hocta.app/vi/tu/sitemap/phrases-index.xml</loc>\n  </sitemap>',
   ...TIER1.filter((n) => tierInfo[n]).map(entry),
   ...TIER2.filter((n) => tierInfo[n]).map(entry),
   ...tier3.map(entry),
