@@ -120,7 +120,7 @@ export function guidFor(id) {
 export function buildModel(nowSec) {
   return {
     id: 1700000000001,
-    name: 'Dual Dictionary',
+    name: 'HọcTA',
     type: 0,
     mod: nowSec,
     usn: -1,
@@ -154,7 +154,7 @@ export function buildDeck(nowSec, deckName) {
   return {
     1: {
       id: 1,
-      name: deckName || 'Dual Dictionary',
+      name: deckName || 'HọcTA',
       mod: nowSec,
       usn: -1,
       lrnToday: [0, 0],
@@ -203,7 +203,7 @@ export function buildConf(nowSec) {
  *  sortField}]. Returns { bytes, noteCount }. */
 export function buildCollectionBytes(SQL, notes, opts) {
   const nowSec = (opts && opts.now) || Math.floor(Date.now() / 1000);
-  const deckName = (opts && opts.deckName) || 'Dual Dictionary';
+  const deckName = (opts && opts.deckName) || 'HọcTA';
   const db = new SQL.Database();
 
   db.run(`

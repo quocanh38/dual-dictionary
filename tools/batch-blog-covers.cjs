@@ -13,7 +13,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 const REPO = path.join(__dirname, '..');
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 
 const COVERS = {
   'ielts/cach-hoc-tu-vung-ielts-khong-quen': { enTitle: 'Learn IELTS Vocabulary\nand Remember Longer', badge: 'IELTS Vocabulary', accent: '#0f766e' },
@@ -100,7 +100,7 @@ function coverSvg(enTitle, badge, accent) {
 <!-- bottom brand -->
 <text x="520" y="512" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#0f766e" letter-spacing="0.08em">DUAL DICTIONARY</text>
 <text x="520" y="532" font-family="Inter,sans-serif" font-size="12" fill="#64748b">Offline-first English-Vietnamese Dictionary</text>
-<text x="1090" y="532" text-anchor="end" font-family="Inter,sans-serif" font-size="11" fill="#94a3b8">dualdictionary.netlify.app</text>
+<text x="1090" y="532" text-anchor="end" font-family="Inter,sans-serif" font-size="11" fill="#94a3b8">hocta.app</text>
 <!-- small footer line -->
 <rect x="48" y="590" width="1104" height="1" fill="#e2e8f0"/>
 </svg>`;
@@ -157,7 +157,7 @@ async function main() {
     }
     // Update figure <img> in body to v2 with srcset
     const figRe = /<figure[^>]*><img[^>]*src="[^"]*og-1200x630[^"]*"[^>]*>.*?<\/figure>/s;
-    const newFig = `<figure style=\"margin:16px 0\"><img src=\"/vi/blog/images/${slug}/og-1200x630-v2.jpg\" srcset=\"/vi/blog/images/${slug}/og-320w.webp 320w, /vi/blog/images/${slug}/og-1200x630-v2.jpg 1200w\" sizes=\"(max-width: 640px) 320px, 640px\" alt=\"${escXml(cfg.enTitle.replace(/\n/g,' — '))} — illustration for Dual Dictionary\" width=\"1200\" height=\"630\" loading=\"lazy\" decoding=\"async\" style=\"width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px\">Minh họa cho bài viết — English text inside image for accessibility</figcaption></figure>`;
+    const newFig = `<figure style=\"margin:16px 0\"><img src=\"/vi/blog/images/${slug}/og-1200x630-v2.jpg\" srcset=\"/vi/blog/images/${slug}/og-320w.webp 320w, /vi/blog/images/${slug}/og-1200x630-v2.jpg 1200w\" sizes=\"(max-width: 640px) 320px, 640px\" alt=\"${escXml(cfg.enTitle.replace(/\n/g,' — '))} — illustration for HọcTA\" width=\"1200\" height=\"630\" loading=\"lazy\" decoding=\"async\" style=\"width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px\">Minh họa cho bài viết — English text inside image for accessibility</figcaption></figure>`;
     if (figRe.test(html)) {
       html = html.replace(figRe, newFig);
       changed = true;

@@ -116,7 +116,7 @@ export const STUDY_CONTENT_PACKS = [
     schemaVersion: STUDY_CONTENT_SCHEMA_VERSION,
     version: "2.9.0",
     title: "Original IELTS Academic & TOEIC L&R starter pack",
-    author: "Dual Dictionary",
+    author: "HọcTA",
     license: "Original app content; not affiliated with IELTS or ETS",
     offline: true,
     exams: [

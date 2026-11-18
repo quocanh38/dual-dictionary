@@ -6,7 +6,7 @@
 const fs = require('fs'), path = require('path');
 const REPO = path.join(__dirname, '..');
 const OUT = path.join(REPO, 'vi', 'lo-trinh');
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const { navHtml } = require('./nav-partial.cjs');
 
@@ -49,7 +49,7 @@ function pageHtml(p) {
   const steps = p.days.map((d) => ({ '@type': 'HowToStep', name: d[0], text: d[1] }));
   const jsonLd = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'Course', name: p.name, description: p.desc, url: canonical, inLanguage: 'vi',
-      provider: { '@type': 'Organization', name: 'Dual Dictionary', sameAs: `${SITE}/vi/` } },
+      provider: { '@type': 'Organization', name: 'HọcTA', sameAs: `${SITE}/vi/` } },
     { '@type': 'HowTo', name: p.name, description: p.desc, inLanguage: 'vi', step: steps },
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
@@ -64,13 +64,13 @@ function pageHtml(p) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>${esc(p.name)} | Dual Dictionary</title>
+<title>${esc(p.name)} | HọcTA</title>
 <meta name="description" content="${esc(p.desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(p.name)}">
 <meta property="og:image" content="${SITE}/vi/images/og-default.jpg">
@@ -97,7 +97,7 @@ ${rows}
   <p style="color:var(--muted)">Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a></p>
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
 </html>`;
 }
@@ -113,13 +113,13 @@ function main() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>Lộ trình học từ vựng A2–C1, IELTS, TOEIC | Dual Dictionary</title>
+<title>Lộ trình học từ vựng A2–C1, IELTS, TOEIC | HọcTA</title>
 <meta name="description" content="3 lộ trình học từ vựng: A2 lên B1 trong 30 ngày, IELTS Core theo chủ đề, TOEIC 500+ văn phòng.">
 <link rel="canonical" href="${SITE}/vi/lo-trinh/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -135,7 +135,7 @@ ${navHtml('tu')}
 ${PATHS.map((p) => `    <li><a href="/vi/lo-trinh/${p.slug}/">${esc(p.name)}</a> — ${esc(p.desc)}</li>`).join('\n')}
   </ul>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>
 </html>`;
   fs.writeFileSync(path.join(OUT, 'index.html'), hub);

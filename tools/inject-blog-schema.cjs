@@ -7,7 +7,7 @@
  */
 const fs = require('fs'), path = require('path');
 const REPO = path.join(__dirname, '..');
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 const BLOG = path.join(REPO, 'vi', 'blog');
 
 function* walk(d) {
@@ -44,7 +44,7 @@ for (const f of walk(BLOG)) {
         '@type': 'BlogPosting',
         headline: title, description: desc, url, inLanguage: lang,
         author: { '@type': 'Person', '@id': `${SITE}/vi/tac-gia/#person`, name: 'Nguyễn Quốc Anh', url: `${SITE}/vi/tac-gia/` },
-        publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'Dual Dictionary', url: `${SITE}/`, sameAs: ['https://github.com/quocanh38/dual-dictionary'] },
+        publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'HọcTA', url: `${SITE}/`, sameAs: ['https://github.com/quocanh38/dual-dictionary'] },
         datePublished: pub, dateModified: mMod?.[1] || pub,
         mainEntityOfPage: url,
       },

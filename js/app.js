@@ -788,7 +788,7 @@ function wireUi() {
     $('#export-dialog').close();
   });
   parseShareParam();
-  // Share-target 07/11 (thay bubble): bôi đen từ app khác → Share → Dual Dict mở kết quả
+  // Share-target 07/11 (thay bubble): bôi đen từ app khác → Share → HọcTA mở kết quả
   try {
     const q = new URLSearchParams(location.search);
     const shared = (q.get('text') || q.get('title') || '').trim();
@@ -827,6 +827,16 @@ function wireUi() {
   $('#btn-restore-backup')?.addEventListener('click', () => restoreFromKey(($('#backup-select') && $('#backup-select').value) || 'auto-backup-latest'));
   $('#btn-create-restore-point')?.addEventListener('click', createRestorePoint);
   $('#btn-export-full-backup')?.addEventListener('click', exportCompleteStudyBackup);
+  const movePanel = $('#domain-move');
+  if (movePanel && location.hostname === 'dualdictionary.netlify.app') {
+    const moveUrl = new URL('https://hocta.app/');
+    moveUrl.pathname = location.pathname;
+    moveUrl.search = location.search;
+    moveUrl.hash = location.hash;
+    $('#domain-move-link').href = moveUrl.href;
+    $('#domain-move-export').addEventListener('click', exportCompleteStudyBackup);
+    movePanel.classList.remove('hidden');
+  }
   $('#btn-export-encrypted')?.addEventListener('click', exportEncrypted);
   $('#import-encrypted')?.addEventListener('change', (e) => { const f = e.target.files && e.target.files[0]; if (f) importEncryptedFile(f); e.target.value = ''; });
   $('#crypto-confirm')?.addEventListener('click', () => { if (passResolve) { const r = passResolve; passResolve = null; $('#crypto-dialog').close(); r($('#crypto-pass').value); } });
@@ -2424,7 +2434,7 @@ async function renderSlot(slot, word) {
     if (authored) hits = [{ keyText: word, text: renderSupplement(authored, escapeHtml) }];
     let note = '';
     let resolvedKey = word;   // R-D: the key the entry on screen really belongs to
-    if (!authored && /\S\s+\S/.test(String(word || ''))) { const slug = String(word).trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''); note += `<div class="phrase-banner">Curated teaching senses (biên soạn gọn): <a href="https://dualdictionary.netlify.app/vi/tu/${slug}/" target="_blank" rel="noopener">/vi/tu/${slug}/</a> — raw dictionary entries follow below.</div>`; }
+    if (!authored && /\S\s+\S/.test(String(word || ''))) { const slug = String(word).trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''); note += `<div class="phrase-banner">Curated teaching senses (biên soạn gọn): <a href="https://hocta.app/vi/tu/${slug}/" target="_blank" rel="noopener">/vi/tu/${slug}/</a> — raw dictionary entries follow below.</div>`; }
     if (!hits.length) {
       // U2: an inflected form ("called") must resolve to its base entry
       // ("call") — never to whatever longer key happens to contain the text
@@ -2476,7 +2486,7 @@ function rankExactPhraseHits(word, hits) {
     const ranked = rankExactPhraseHits(resolvedKey, hits);
     latestLookupEntries.bySlot[slot] = ranked.map(({ h }) => ({
       slot,
-      source: authored ? 'Dual Dictionary · Biên soạn riêng' : dictDisplayName(d.mdx),
+      source: authored ? 'HọcTA · Biên soạn riêng' : dictDisplayName(d.mdx),
       sourceFile: authored ? 'lookup-supplement.json' : d.mdx.name || '',
       keyText: h.keyText || resolvedKey,
       raw: h.text,
@@ -4442,7 +4452,7 @@ async function exportApkg(items) {
   try {
     const { SQL, writer } = await loadApkgWriter();
     const notes = buildApkgNotes(items, writer);
-    const deckName = 'Dual Dictionary' + (notes.length ? '' : '');
+    const deckName = 'HọcTA' + (notes.length ? '' : '');
     const { bytes, noteCount } = writer.buildApkg(SQL, notes, { deckName });
     downloadBlob(new Blob([bytes], { type: 'application/octet-stream' }),
       'dual-dictionary-anki-' + new Date().toISOString().slice(0, 10) + '.apkg');
@@ -6951,7 +6961,7 @@ const I18N = {
     'nav.search': 'Search', 'nav.reader': 'Reader', 'nav.vault': 'Vault', 'nav.review': 'Review', 'nav.practice': 'Practice', 'nav.stats': 'Stats',
     'section.vault': 'Vault', 'section.review': 'Review', 'section.practice': 'Practice', 'section.stats': 'Stats',
     'top.lang': 'Language (EN / VI)', 'top.theme': 'Theme: auto / light / dark',
-    'top.home': 'Dual Dictionary — go to search', 'top.homeAria': 'Dual Dictionary — go to search',
+    'top.home': 'HọcTA — go to search', 'top.homeAria': 'HọcTA — go to search',
     'top.install': 'Install app', 'top.installAria': 'Install app',
     'top.langAria': 'Navigation language: English or Vietnamese',
     'top.themeAria': 'Theme: system, light or dark',
@@ -7086,7 +7096,7 @@ const I18N = {
     'nav.search': 'Tra từ', 'nav.reader': 'Đọc', 'nav.vault': 'Sổ tay', 'nav.review': 'Ôn tập', 'nav.practice': 'Luyện tập', 'nav.stats': 'Thống kê',
     'section.vault': 'Sổ tay', 'section.review': 'Ôn tập', 'section.practice': 'Luyện tập', 'section.stats': 'Thống kê',
     'top.lang': 'Ngôn ngữ (EN / VI)', 'top.theme': 'Giao diện: auto / sáng / tối',
-    'top.home': 'Dual Dictionary — về trang tra từ', 'top.homeAria': 'Dual Dictionary — về trang tra từ',
+    'top.home': 'HọcTA — về trang tra từ', 'top.homeAria': 'HọcTA — về trang tra từ',
     'top.install': 'Cài ứng dụng', 'top.installAria': 'Cài ứng dụng',
     'top.langAria': 'Ngôn ngữ điều hướng: tiếng Anh hoặc tiếng Việt',
     'top.themeAria': 'Giao diện: theo hệ thống, sáng hoặc tối',
@@ -7212,7 +7222,7 @@ const I18N = {
 Object.assign(I18N.en, {
   'dialog.itemEdit': 'Edit item', 'dialog.addExample': 'Add an example', 'dialog.export': 'Export',
   'dialog.tags': 'Tags', 'dialog.welcome': 'Welcome 👋', 'dialog.advanced': 'Advanced',
-  'about.title': 'A study & research dictionary, right in your browser',
+  'about.title': 'Learn English from what you read',
   'about.summary': 'About this app — features & terms of use',
   'about.licH': 'Dictionaries & licenses',
   'about.feedback': 'If this app helps your study, I\'d genuinely like to hear it — <a class="support-link" href="mailto:quocanh38@gmail.com?subject=Dual%20Dictionary%20%E2%80%94%20feedback">one email is enough</a>.',
@@ -7221,10 +7231,10 @@ Object.assign(I18N.en, {
 Object.assign(I18N.vi, {
   'dialog.itemEdit': 'Sửa mục', 'dialog.addExample': 'Thêm ví dụ', 'dialog.export': 'Xuất',
   'dialog.tags': 'Nhãn', 'dialog.welcome': 'Chào mừng 👋', 'dialog.advanced': 'Nâng cao',
-  'about.title': 'Từ điển học tập & tra cứu, ngay trong trình duyệt',
+  'about.title': 'Học tiếng Anh từ bài bạn đọc',
   'about.summary': 'Về ứng dụng và điều khoản sử dụng',
   'about.licH': 'Từ điển &amp; giấy phép',
-  'about.intro': '<strong>Dual Dictionary là ứng dụng web offline-first cho việc học và tra cứu cá nhân: tra từ tiếng Anh với nhiều từ điển — một chạm chuyển khung — hỗ trợ file từ điển .mdx/.mdd của riêng bạn. Mọi thứ chạy ngay trong trình duyệt — dữ liệu ở lại trên máy bạn, không tài khoản, không quảng cáo.</strong>',
+  'about.intro': '<strong>Chạm vào từ trong bài đọc để tra nghĩa, lưu từ cùng câu gốc và ôn lại khi cần.</strong> Bạn có thể luyện TOEIC hoặc IELTS, mở bài học B1–B2 đã tải khi mất mạng và dùng AI Tutor tùy chọn khi có mạng.',
   'about.terms': 'Ứng dụng chỉ dành cho mục đích học tập và tra cứu cá nhân. Đây không phải sản phẩm thương mại, không nhằm thương mại hoá hay phát hành lại bất kỳ nội dung từ điển nào. Dữ liệu mở đi kèm vẫn theo giấy phép riêng (xem NOTICE.md) — điều khoản này chỉ áp dụng cho bản triển khai này.',
   'about.features': '<li><strong>Nhiều từ điển một chỗ:</strong> một lần tìm, một chạm chuyển giữa các từ điển đang tải.</li>'
     + '<li><strong>Chế độ Đọc:</strong> dán bài viết hoặc mở trang Wikipedia, bấm vào từ bất kỳ để tra ở khung bên dưới — không rời khỏi bài đọc.</li>'
@@ -7397,7 +7407,7 @@ Object.assign(I18N.en, {
   'reminders.reoffer': '🔔 Want a nudge when words are due for review? Reminders are local-only.',
   'reminders.reofferAction': 'Turn on',
   'remind.title': '{n} item(s) due for review',
-  'remind.body': 'Open Dual Dictionary — nothing leaves your device.',
+  'remind.body': 'Open HọcTA — nothing leaves your device.',
 });
 // v69 R4 — say-it-aloud practice + pron-strip mic (browser speech recognition)
 Object.assign(I18N.en, {
@@ -7449,7 +7459,7 @@ Object.assign(I18N.vi, {
   'reminders.reoffer': '🔔 Nhắc tôi khi có từ đến hạn ôn tập? Nhắc nhở chỉ nằm trên máy bạn.',
   'reminders.reofferAction': 'Bật',
   'remind.title': '{n} mục đến hạn ôn',
-  'remind.body': 'Mở Dual Dictionary — không gì rời khỏi thiết bị của bạn.',
+  'remind.body': 'Mở HọcTA — không gì rời khỏi thiết bị của bạn.',
 });
 // v91 — first-run chooser, real-name tabs, i18n'd panel docs (everything the
 // audit found still hard-coded English inside the VI interface)

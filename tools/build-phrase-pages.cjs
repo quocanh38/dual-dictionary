@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Phrase page generator for Dual Dictionary (VI-P1 + VI-P2 + SEO rich gate).
+/* Phrase page generator for HọcTA (VI-P1 + VI-P2 + SEO rich gate).
  *
  * Builds /vi/tu/{phrase}/ pages from TWO content sources, plus one enricher:
  *   1. Hand-written Vietnamese meanings (VI-P2): data/vi-phrase-defs/*.json —
@@ -144,9 +144,9 @@ function phraseMetaDesc(phrase, hand) {
   if (hand && Array.isArray(hand.senses) && hand.senses.length && hand.senses[0].m) {
     const m = String(hand.senses[0].m);
     const short = m.length > 140 ? m.slice(0, 140).replace(/\s+\S*$/, '') + '…' : m;
-    return `${phrase} nghĩa là: ${short} — Ví dụ minh hoạ và định nghĩa tiếng Anh — tra offline miễn phí trong app Dual Dictionary.`;
+    return `${phrase} nghĩa là: ${short} — Ví dụ minh hoạ và định nghĩa tiếng Anh — tra offline miễn phí trong app HọcTA.`;
   }
-  return `${phrase} nghĩa tiếng Việt là gì? Ý nghĩa, các nghĩa thường gặp và ví dụ minh hoạ của cụm "${phrase}" — tra cứu offline miễn phí trong app Dual Dictionary.`;
+  return `${phrase} nghĩa tiếng Việt là gì? Ý nghĩa, các nghĩa thường gặp và ví dụ minh hoạ của cụm "${phrase}" — tra cứu offline miễn phí trong app HọcTA.`;
 }
 
 /* P1 exam chips for phrase pages (TOEIC business / IELTS academic). */
@@ -161,7 +161,7 @@ function examChips(phrase) {
 }
 
 function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHtml, tier }) {
-  const title = `${phrase} nghĩa là gì? | Dual Dictionary`;
+  const title = `${phrase} nghĩa là gì? | HọcTA`;
   const desc = phraseMetaDesc(phrase, hand);
   const canonical = `${SITE}${phrasePageUrl(phrase)}`;
   const keyNote = ovdpKey && ovdpKey.toLowerCase() !== phrase.toLowerCase()
@@ -182,7 +182,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
   const body = (hand
     ? renderHand(hand)
       + (showOvdp ? `<h2 class="hand-ovdp-h">Mục từ điển mở (OVDP)</h2>${entryHtml}` : '')
-      + `<p class="hand-src">Nghĩa tiếng Việt do Dual Dictionary biên soạn — mang tính tham khảo, dùng song song với từ điển trong app.</p>`
+      + `<p class="hand-src">Nghĩa tiếng Việt do HọcTA biên soạn — mang tính tham khảo, dùng song song với từ điển trong app.</p>`
     : (entryHtml || '<p class="word-empty">Chưa có dữ liệu nghĩa chi tiết cho cụm từ này trong bản từ điển hiện tại.</p>'))
     + (showWordNet ? `<h2 class="hand-ovdp-h">Định nghĩa tiếng Anh (WordNet 3.1)</h2><div class="wn-body">${wnHtml}</div>` : '');
   const jsonLd = {
@@ -195,7 +195,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
         description: desc,
         inDefinedTermSet: {
           '@type': 'DefinedTermSet',
-          name: 'Từ điển Anh-Việt Dual Dictionary',
+          name: 'Từ điển Anh-Việt HọcTA',
           url: `${SITE}/vi/`,
         },
         url: canonical,
@@ -227,14 +227,14 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${core.escapeHtml(title)}">
 <meta property="og:description" content="${core.escapeHtml(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${core.escapeHtml(title)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -258,8 +258,8 @@ ${navHtml('cum-tu')}
       <div class="word-cta-actions">
         <a class="word-cta-btn" href="/?q=${encodeURIComponent(phrase)}">Tra "${core.escapeHtml(phrase)}" trong app offline ↗</a>
       </div>
-      <p class="word-cta-note">App Dual Dictionary: từ điển Anh-Việt offline, không cần mạng, không tài khoản.</p>
-      <p class="word-report"><a href="mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(`Lỗi mục từ "${phrase}" — Dual Dictionary`)}">Phát hiện lỗi (nghĩa, ví dụ)? Báo qua email — mình sửa trong bản tới.</a></p>
+      <p class="word-cta-note">App HọcTA: từ điển Anh-Việt offline, không cần mạng, không tài khoản.</p>
+      <p class="word-report"><a href="mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(`Lỗi mục từ "${phrase}" — HọcTA`)}">Phát hiện lỗi (nghĩa, ví dụ)? Báo qua email — mình sửa trong bản tới.</a></p>
     </div>
   </header>
 
@@ -270,7 +270,7 @@ ${navHtml('cum-tu')}
 </main>
 
 <footer class="blog-footer">
-  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p>
+  <p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p>
 </footer>
 </body>
 </html>
@@ -340,7 +340,7 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
   /* Rest list lives in an external file (same pattern as word hub-index.js)
    * so crawlers only fetch the 65KB SSR shell. */
   const hubRestName = 'hub-rest.js';
-  const title = `${built.length} cụm từ tiếng Anh — danh sách A–Z | Dual Dictionary`;
+  const title = `${built.length} cụm từ tiếng Anh — danh sách A–Z | HọcTA`;
   const desc = `Danh sách ${built.length} cụm từ tiếng Anh (phrasal verbs, collocations, idiom) kèm nghĩa tiếng Việt, ví dụ minh hoạ và định nghĩa tiếng Anh WordNet 3.1. ${handCount} cụm có phần nghĩa tiếng Việt biên soạn riêng cho người Việt học tiếng Anh.`;
   const canonical = `${SITE}/vi/tu/cum-tu/`;
   return `<!DOCTYPE html>
@@ -354,7 +354,7 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
@@ -393,7 +393,7 @@ ${rows}
   </ul>
   <p id="hub-more-wrap" style="margin:14px 0 0"><button type="button" id="hub-more" class="related-chip" style="cursor:pointer">Hiện thêm (${(built.length - SSR_N).toLocaleString('vi-VN')} cụm còn lại)</button></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 <script>
 (function () {
   var q = document.getElementById('hub-q');

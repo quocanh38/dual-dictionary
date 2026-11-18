@@ -158,7 +158,7 @@ export function initExperience() {
       operationalEnabled = config?.enabled === true;
       document.querySelector('#experience-operations-banner').hidden = !operationalEnabled;
       document.querySelector('#experience-operations-state').textContent = operationalEnabled
-        ? 'Dual Dict đang gửi số đếm tải audio theo ngày và phiên bản.'
+        ? 'HọcTA đang gửi số đếm tải audio theo ngày và phiên bản.'
         : 'Số liệu vận hành mặc định hiện đang tắt.';
     }).catch(() => {});
   opt.onchange = () => setChoice(opt.checked);

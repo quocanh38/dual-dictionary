@@ -23,7 +23,7 @@ export function renderSupplement(entry, escape) {
     (sense.pat ? `<p>${escape(sense.pat)}</p>` : '') +
     (sense.ex || []).map(([en, vi]) => `<p>${escape(en)}<br>${escape(vi)}</p>`).join('') + '</section>').join('');
   const source = lookupPage({ pages: { [normalize(entry.phrase)]: entry.source } }, entry.phrase);
-  return `<article><h1>${escape(entry.phrase)}</h1><p>Nghĩa và ví dụ do Dual Dictionary biên soạn</p>${senses}` +
+  return `<article><h1>${escape(entry.phrase)}</h1><p>Nghĩa và ví dụ do HọcTA biên soạn</p>${senses}` +
     (entry.note ? `<p>${escape(entry.note)}</p>` : '') +
     (source ? `<p><a href="${escape(source)}" target="_blank" rel="noopener">Xem nguồn trên site</a></p>` : '') + '</article>';
 }

@@ -162,10 +162,10 @@ function expectedLiveCache() {
   return argVal('--expected-cache', '') || cacheName(baselineReader()('sw.js').toString());
 }
 
-const LIVE_BASE = argVal('--base-url', 'https://dualdictionary.netlify.app').replace(/\/$/, '');
+const LIVE_BASE = argVal('--base-url', 'https://hocta.app').replace(/\/$/, '');
 const SMOKE_URLS = [
-  ['/', /Dual Dictionary|Từ điển/i],
-  ['/vi/', /Dual Dictionary|Từ điển/i],
+  ['/', /HọcTA|Từ điển/i],
+  ['/vi/', /HọcTA|Từ điển/i],
   ['/vi/tu/cum-tu/', /air-force|Phổ biến|Biên soạn/i],
   ['/vi/tu/air-force/', /không quân|Phổ biến/i],
   ['/vi/tu/bear-market/', /thị trường gấu|thị trường giá giảm/i],

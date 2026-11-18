@@ -1,28 +1,27 @@
-# Dual Dictionary — llms.txt
-# Từ điển Anh–Việt offline-first cho người Việt học IELTS/TOEIC.
+# HọcTA — llms.txt
+# Ứng dụng học tiếng Anh song ngữ và offline cho người Việt.
 # Dữ liệu từ điển mở: WordNet 3.1 (Princeton) + Simple English Wiktionary (CC BY-SA 4.0).
 
-> Dual Dictionary giúp người Việt tra nghĩa Anh–Việt, học từ theo chủ đề IELTS/TOEIC,
-> phân biệt từ dễ nhầm, sửa lỗi sai thường gặp và tra collocation/giới từ đi kèm.
-> Nội dung học do người biên soạn và review tay. Trang chủ: https://dualdictionary.netlify.app/vi/
+> HọcTA giúp người Việt tra từ Anh–Việt trong bài đọc, lưu và ôn từ, luyện TOEIC hoặc IELTS và học với các bài đã tải khi mất mạng.
+> Nội dung học do người biên soạn và review tay. Trang chủ: https://hocta.app/vi/
 
 ## Hub chính (Tier 1 — bắt đầu từ đây)
-- [Từ điển Anh–Việt](https://dualdictionary.netlify.app/vi/tu/): danh mục tra cứu trên web với IPA và nghĩa tiếng Việt
-- [Cụm từ](https://dualdictionary.netlify.app/vi/tu/cum-tu/): 4.194 cụm từ viết tay
-- [Từ vựng IELTS](https://dualdictionary.netlify.app/vi/tu/ielts/): bộ từ + 15 chủ đề thi
-- [Từ vựng TOEIC](https://dualdictionary.netlify.app/vi/tu/toeic/): 161 cụm + 12 tình huống công việc
-- [Phân biệt từ dễ nhầm](https://dualdictionary.netlify.app/vi/phan-biet/): các cặp như affect/effect và advice/advise
-- [Lỗi sai thường gặp](https://dualdictionary.netlify.app/vi/loi-sai/): 30 lỗi người Việt hay mắc
-- [Từ đồng nghĩa](https://dualdictionary.netlify.app/vi/dong-nghia/): từ đồng nghĩa và trái nghĩa theo mục từ
-- [Giới từ đi kèm](https://dualdictionary.netlify.app/vi/gioi-tu/): 100 cặp từ + giới từ
-- [Cụm từ đi với nhau](https://dualdictionary.netlify.app/vi/cum-di-voi/): các tổ hợp từ thường gặp
-- [Phát âm IPA](https://dualdictionary.netlify.app/vi/phat-am/): phiên âm và audio Anh/Mỹ
-- [Ngữ pháp](https://dualdictionary.netlify.app/vi/ngu-phap/): 10 chủ điểm + lỗi điển hình
-- [Luyện thi](https://dualdictionary.netlify.app/vi/luyen-thi/): 18 hướng dẫn dạng bài IELTS/TOEIC
-- [Đề Cambridge](https://dualdictionary.netlify.app/vi/cambridge/): từ vựng theo đề thật
-- [Blog học IELTS & TOEIC](https://dualdictionary.netlify.app/vi/blog/): bài phương pháp và lộ trình học
-- [Giới thiệu](https://dualdictionary.netlify.app/vi/gioi-thieu/): tác giả, nguồn dữ liệu
-- [Chính sách nội dung](https://dualdictionary.netlify.app/vi/chinh-sach-noi-dung/): quy trình biên tập
+- [Từ điển Anh–Việt](https://hocta.app/vi/tu/): danh mục tra cứu trên web với IPA và nghĩa tiếng Việt
+- [Cụm từ](https://hocta.app/vi/tu/cum-tu/): 4.194 cụm từ viết tay
+- [Từ vựng IELTS](https://hocta.app/vi/tu/ielts/): bộ từ + 15 chủ đề thi
+- [Từ vựng TOEIC](https://hocta.app/vi/tu/toeic/): 161 cụm + 12 tình huống công việc
+- [Phân biệt từ dễ nhầm](https://hocta.app/vi/phan-biet/): các cặp như affect/effect và advice/advise
+- [Lỗi sai thường gặp](https://hocta.app/vi/loi-sai/): 30 lỗi người Việt hay mắc
+- [Từ đồng nghĩa](https://hocta.app/vi/dong-nghia/): từ đồng nghĩa và trái nghĩa theo mục từ
+- [Giới từ đi kèm](https://hocta.app/vi/gioi-tu/): 100 cặp từ + giới từ
+- [Cụm từ đi với nhau](https://hocta.app/vi/cum-di-voi/): các tổ hợp từ thường gặp
+- [Phát âm IPA](https://hocta.app/vi/phat-am/): phiên âm và audio Anh/Mỹ
+- [Ngữ pháp](https://hocta.app/vi/ngu-phap/): 10 chủ điểm + lỗi điển hình
+- [Luyện thi](https://hocta.app/vi/luyen-thi/): 18 hướng dẫn dạng bài IELTS/TOEIC
+- [Đề Cambridge](https://hocta.app/vi/cambridge/): từ vựng theo đề thật
+- [Blog học IELTS & TOEIC](https://hocta.app/vi/blog/): bài phương pháp và lộ trình học
+- [Giới thiệu](https://hocta.app/vi/gioi-thieu/): tác giả, nguồn dữ liệu
+- [Chính sách nội dung](https://hocta.app/vi/chinh-sach-noi-dung/): quy trình biên tập
 
 ## Cách trích dẫn
 - Ưu tiên nghĩa, ghi chú và câu mẫu song ngữ EN–VI có trên từng trang.

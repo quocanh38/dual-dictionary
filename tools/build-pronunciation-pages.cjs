@@ -77,7 +77,7 @@ function pageHtml(p, wordHref) {
   const vnNote = vnContrast(p);
   const exSents = exampleSentences(p);
   const exRows = exSents.map(([en,vi])=>`<li><span class="ex-en">${esc(en)}</span> — <span class="ex-vi">${esc(vi)}</span></li>`).join('\n');
-  const desc = `Cách phát âm ${p.word}: IPA /${p.ipa_us}/, audio giọng Mỹ và Anh, lỗi người Việt hay sai và 3 cặp từ dễ nhầm. — Dual Dictionary.`.slice(0, 160);
+  const desc = `Cách phát âm ${p.word}: IPA /${p.ipa_us}/, audio giọng Mỹ và Anh, lỗi người Việt hay sai và 3 cặp từ dễ nhầm. — HọcTA.`.slice(0, 160);
   // FAQ 5
   const sameSound = pairs[0] ? pairs[0][1] : 'thin';
   const ipaTok = ipaTokens(p.ipa_us).find(t=>IPA_DESC[t] && t.length>1) || ipaTokens(p.ipa_us)[0] || '';
@@ -145,20 +145,20 @@ function pageHtml(p, wordHref) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} (IPA + audio Mỹ/Anh) | Dual Dictionary</title>
+<title>${esc(h1)} (IPA + audio Mỹ/Anh) | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)} (IPA + audio Mỹ/Anh)">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)} (IPA + audio Mỹ/Anh)">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -204,7 +204,7 @@ ${tipRows}
   ${blogLinksHtml(`/vi/phat-am/${p.slug}/`)}
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `;
@@ -274,15 +274,15 @@ function main() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>${kept.length} từ tiếng Anh + audio phát âm Mỹ/Anh hay tra nhất | Dual Dictionary</title>
+<title>${kept.length} từ tiếng Anh + audio phát âm Mỹ/Anh hay tra nhất | HọcTA</title>
 <meta name="description" content="${kept.length} từ tiếng Anh kèm audio phát âm giọng Mỹ và Anh, IPA, lỗi người Việt hay sai và cặp từ dễ nhầm.">
 <link rel="canonical" href="${SITE}/vi/phat-am/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${SITE}/vi/phat-am/">
-<meta property="og:title" content="${kept.length} từ tiếng Anh + audio phát âm Mỹ/Anh hay tra nhất | Dual Dictionary">
+<meta property="og:title" content="${kept.length} từ tiếng Anh + audio phát âm Mỹ/Anh hay tra nhất | HọcTA">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -297,12 +297,12 @@ ${navHtml('phat-am')}
   <p style="color:var(--muted)">Mỗi từ 1 trang riêng: player giọng Mỹ + Anh, IPA, lỗi người Việt hay sai, cặp từ dễ nhầm link về trang từ.</p>
   ${hubListHtml(rows.split('\n'), {cols:2})}
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `);
   const LM = new Date().toISOString().slice(0, 10);
-  const urls = [`https://dualdictionary.netlify.app/vi/phat-am/`, ...kept.map((p) => `https://dualdictionary.netlify.app/vi/phat-am/${p.word}/`)];
+  const urls = [`https://hocta.app/vi/phat-am/`, ...kept.map((p) => `https://hocta.app/vi/phat-am/${p.word}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'pronunciation.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n')}\n</urlset>\n`);
   console.log(`PRONUNCIATION: ${kept.length} pages + hub + sitemap (skipped no-audio: ${skipped}, manifest-guard dead: ${deadLinks})`);

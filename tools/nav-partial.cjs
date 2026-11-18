@@ -6,7 +6,7 @@ function navHtml(active) {
   const on = (k) => (k === active ? ' aria-current="page" class="dd-nav-on"' : '');
   const dropOn = (keys) => (keys.includes(active) ? ' aria-current="page" class="dd-nav-on"' : '');
   return `<nav class="dd-nav" aria-label="Điều hướng chính"><div class="dd-nav-in">
-<a class="dd-brand" href="/vi/">📖 Dual Dictionary</a>
+<a class="dd-brand" href="/vi/">📖 HọcTA</a>
 <button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 <div class="dd-links">
 <a href="/vi/tu/"${on('tu')}>Từ điển</a>

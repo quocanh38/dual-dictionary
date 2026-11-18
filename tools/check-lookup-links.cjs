@@ -4,7 +4,7 @@ const { MDict } = require('../js/mdict.js');
 const { lemmaCandidates } = require('../js/lookup-lemmas.js');
 
 const root = path.resolve(__dirname, '..');
-const site = 'https://dualdictionary.netlify.app';
+const site = 'https://hocta.app';
 const normalize = value => value.normalize('NFC').trim().toLowerCase().replace(/\s+/g, ' ');
 const decode = value => value.replace(/&(#x[0-9a-f]+|#\d+|amp|quot|apos|lt|gt);/gi, (_, entity) => {
   const named = {amp:'&',quot:'"',apos:"'",lt:'<',gt:'>'};

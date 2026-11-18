@@ -41,7 +41,7 @@ function pageHtml({ slug, h1, title = h1, desc, intro, groups, deckCta }) {
         description: desc,
         url: canonical,
         inLanguage: 'vi',
-        isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` },
+        isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` },
       },
       {
         '@type': 'BreadcrumbList',
@@ -58,13 +58,13 @@ function pageHtml({ slug, h1, title = h1, desc, intro, groups, deckCta }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${core.escapeHtml(title)} | Dual Dictionary</title>
+<title>${core.escapeHtml(title)} | HọcTA</title>
 <meta name="description" content="${core.escapeHtml(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${core.escapeHtml(h1)}">
 <meta property="og:description" content="${core.escapeHtml(desc)}">
@@ -93,7 +93,7 @@ ${navHtml(slug === 'giao-tiep' ? 'tu' : slug)}
 ${sections}
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 <script>
 (function () {
   var q = document.getElementById('hub-q');
@@ -181,7 +181,7 @@ async function main() {
       slug: 'ielts',
       h1: `2263 từ vựng IELTS Core — học thuật + tần suất cao`,
       title: `2.263 từ vựng IELTS Core`,
-      desc: `Bộ 2263 từ vựng IELTS Core (AWL + NGSL top 2000) kèm phiên âm Anh-Mỹ/Anh-Anh, nghĩa tiếng Việt, ví dụ thi viết tay và bài luyện trong app Dual Dictionary.`,
+      desc: `Bộ 2263 từ vựng IELTS Core (AWL + NGSL top 2000) kèm phiên âm Anh-Mỹ/Anh-Anh, nghĩa tiếng Việt, ví dụ thi viết tay và bài luyện trong app HọcTA.`,
       intro: `Bộ từ IELTS Core gồm <b>${ieltsWords.length.toLocaleString('vi-VN')} từ đơn</b> (thuộc Academic Word List của Coxhead hoặc NGSL top 2000) và <b>${ieltsPhrases.length} cụm học thuật</b>. Mỗi từ có trang riêng: phiên âm Mỹ + Anh, nghĩa thi lên đầu, ví dụ IELTS viết tay. Học xong bấm nút luyện để chạy deck IELTS Core trong app — miễn phí, offline.`,
       groups: [
         { title: `Từ đơn IELTS (${ieltsWords.length})`, items: ieltsWords.map(wItem) },
@@ -193,7 +193,7 @@ async function main() {
       slug: 'toeic',
       h1: `Cụm từ TOEIC Business — 161 cụm công sở + từ kinh doanh`,
       title: `161 cụm từ TOEIC Business`,
-      desc: `Bộ 161 cụm từ TOEIC Business (bank account, balance sheet, cash flow…) + 44 từ kinh doanh kèm nghĩa tiếng Việt, ví dụ công sở viết tay và bài luyện trong app Dual Dictionary.`,
+      desc: `Bộ 161 cụm từ TOEIC Business (bank account, balance sheet, cash flow…) + 44 từ kinh doanh kèm nghĩa tiếng Việt, ví dụ công sở viết tay và bài luyện trong app HọcTA.`,
       intro: `Bộ TOEIC Business gồm <b>${toeicPhrases.length} cụm từ công sở</b> (tài chính, ngân hàng, văn phòng, thuế) và <b>${bizWords.length} từ kinh doanh lõi</b>. Mỗi cụm có trang riêng: nghĩa Việt biên soạn tay, cấu trúc đi kèm, ví dụ Part 7 viết tay. Học xong bấm nút luyện để chạy deck TOEIC mix (5 từ + 5 cụm mỗi lượt) trong app.`,
       groups: [
         { title: `Cụm TOEIC (${toeicPhrases.length})`, items: toeicPhrases.map(pItem) },

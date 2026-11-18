@@ -51,7 +51,7 @@ const FILTER_JS = `<script>
 function guidePageHtml(g) {
   const canonical = `${SITE}/vi/ngu-phap/${g.slug}/`;
   const h1 = `${g.name} — quy tắc + lỗi sai thường gặp`;
-  const desc = `${g.name}: 5 quy tắc ngắn gọn, 5 lỗi sai người Việt hay mắc và 5 câu đúng song ngữ — Dual Dictionary.`.slice(0, 160);
+  const desc = `${g.name}: 5 quy tắc ngắn gọn, 5 lỗi sai người Việt hay mắc và 5 câu đúng song ngữ — HọcTA.`.slice(0, 160);
   const tldr = `Tóm tắt: ${g.rules[0]} Xem 5 quy tắc, 5 lỗi điển hình và 5 câu đúng song ngữ bên dưới.`;
   const ruleRows = g.rules.map((r) => `    <li>${esc(r)}</li>`).join('\n');
   const mistRows = g.mistakes.map((m, i) => {
@@ -77,7 +77,7 @@ function guidePageHtml(g) {
         description: desc,
         url: canonical,
         inLanguage: 'vi',
-        isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` },
+        isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` },
       },
       { '@type': 'ItemList', name: `${g.name} — lỗi sai điển hình`, numberOfItems: g.mistakes.length, itemListElement: itemList },
       {
@@ -123,20 +123,20 @@ function guidePageHtml(g) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} | Dual Dictionary</title>
+<title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -171,7 +171,7 @@ ${sentRows}
   ${blogLinksHtml(`/vi/ngu-phap/${g.slug}/`)}
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `;
@@ -209,15 +209,15 @@ function hubIndexHtml(guides) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>${esc(title)} | Dual Dictionary</title>
+<title>${esc(title)} | HọcTA</title>
 <meta name="description" content="${esc(desc.slice(0, 160))}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
-<meta property="og:title" content="${esc(title)} | Dual Dictionary">
+<meta property="og:title" content="${esc(title)} | HọcTA">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -238,7 +238,7 @@ ${navHtml('ngu-phap')}
 ${rows}
   </ul>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 ${FILTER_JS}
 </body>
 </html>
@@ -268,8 +268,8 @@ function main() {
 
   // grammar.xml: hub + 10 guides
   const LM = new Date().toISOString().slice(0, 10);
-  const urls = [`https://dualdictionary.netlify.app/vi/ngu-phap/`,
-    ...guides.map((g) => `https://dualdictionary.netlify.app/vi/ngu-phap/${g.slug}/`)];
+  const urls = [`https://hocta.app/vi/ngu-phap/`,
+    ...guides.map((g) => `https://hocta.app/vi/ngu-phap/${g.slug}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'grammar.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`).join('\n')}\n</urlset>\n`);
 
@@ -278,7 +278,7 @@ function main() {
   let sm = fs.readFileSync(smPath, 'utf8');
   if (!sm.includes('sitemap/grammar.xml')) {
     sm = sm.replace('</sitemapindex>',
-      `  <sitemap>\n    <loc>https://dualdictionary.netlify.app/vi/tu/sitemap/grammar.xml</loc>\n    <lastmod>${LM}</lastmod>\n  </sitemap>\n</sitemapindex>`);
+      `  <sitemap>\n    <loc>https://hocta.app/vi/tu/sitemap/grammar.xml</loc>\n    <lastmod>${LM}</lastmod>\n  </sitemap>\n</sitemapindex>`);
     fs.writeFileSync(smPath, sm);
   }
 
