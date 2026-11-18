@@ -830,7 +830,7 @@ function wireUi() {
   const movePanel = $('#domain-move');
   if (movePanel && location.hostname === 'dualdictionary.netlify.app') {
     const moveUrl = new URL('https://hocta.app/');
-    moveUrl.pathname = location.pathname;
+    moveUrl.pathname = location.pathname === '/recover.html' ? '/' : location.pathname;
     moveUrl.search = location.search;
     moveUrl.hash = location.hash;
     $('#domain-move-link').href = moveUrl.href;

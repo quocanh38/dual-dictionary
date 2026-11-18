@@ -166,7 +166,10 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v206-hocta';
+const CACHE = 'mdx-dict-v207-domain-move';
+const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
+const LEGACY_APP = './recover.html';
+const LEGACY_STUDIO = './lessons/recover.html';
 const ASSETS = [
   './',
   './index.html',
@@ -331,7 +334,10 @@ async function serveToeicAudio(request) {
 
 self.addEventListener('install', (e) => {
   // Build the new offline shell from fresh responses before activating it.
-  const requests = ASSETS.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
+  const assets = LEGACY_HOST
+    ? [...ASSETS.filter(path => !['./', './index.html', './lessons/', './lessons/index.html', './docs/', './docs/index.html', './docs/huong-dan-su-dung.html', './demo/tutor.html'].includes(path)), LEGACY_APP, LEGACY_STUDIO]
+    : ASSETS;
+  const requests = assets.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
   e.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(requests)).then(() => self.skipWaiting()));
 });
 
@@ -352,6 +358,8 @@ self.addEventListener('fetch', (e) => {
   // remote-config.json is optional (private deployments only) — never cache it.
   const path = new URL(e.request.url).pathname;
   if (path.startsWith('/.netlify/functions/')) return;
+  if (LEGACY_HOST && e.request.mode === 'navigate' &&
+      path !== '/recover.html' && path !== '/lessons/recover.html') return;
   if (new URL(e.request.url).origin === self.location.origin && TOEIC_AUDIO.test(path)) {
     e.respondWith(serveToeicAudio(e.request));
     return;
@@ -376,7 +384,7 @@ self.addEventListener('fetch', (e) => {
       }).catch(() => {
         // Offline fallback only for page navigations — never for assets like
         // css/js, where index.html would be parsed as garbage.
-        if (e.request.mode === 'navigate') return caches.match('./index.html');
+        if (e.request.mode === 'navigate') return caches.match(LEGACY_HOST ? LEGACY_APP : './index.html');
         return Response.error();
       })
     )
