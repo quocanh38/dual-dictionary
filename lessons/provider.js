@@ -1,3 +1,5 @@
+import { GEMINI_DEFAULT_MODEL } from '../js/gemini-policy.js';
+
 export const HACKATHON_PROVIDER = Object.freeze({
   id: 'baseten-muse-spark-hackathon',
   label: 'Baseten Muse Spark Open · Hackathon',
@@ -31,7 +33,7 @@ export const GEMINI_PROVIDER = Object.freeze({
   id: 'gemini',
   label: 'Gemini',
   baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
-  model: 'gemini-3.6-flash',
+  model: GEMINI_DEFAULT_MODEL,
   maxOutputTokens: 65536,
 });
 

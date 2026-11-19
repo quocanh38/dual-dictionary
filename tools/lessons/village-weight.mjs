@@ -17,7 +17,7 @@ const SHELL = [
   'lessons/storage.js', 'lessons/generator.js', 'lessons/backup.js', 'lessons/draft-file.js',
   'lessons/library.js', 'lessons/lesson-ui.css', 'lessons/example.json',
   'lessons/library/index.json', 'lessons/library/provenance.json', 'lessons/why-meta.html',
-  'sw.js', 'manifest.webmanifest', 'index.html', 'js/store.js', 'js/db.js',
+  'sw.js', 'manifest.webmanifest', 'index.html', 'js/store.js', 'js/db.js', 'js/gemini-policy.js',
 ];
 const BUDGETS = { shellKB: 300, packKB: 12, provenanceKB: 24, totalLearnerKB: 700 };
 const failures = [];

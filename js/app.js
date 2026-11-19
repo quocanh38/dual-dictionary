@@ -4,7 +4,7 @@ import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanation
 import { MDict } from './mdict.js';
 import { loadLookupSupplement, supplementEntry, lookupPage, renderSupplement } from './lookup-supplement.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
-import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS } from './ai-client.js';
+import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS, validateGeminiKey } from './ai-client.js';
 import { validateTutorPhrases, validateTutorFeedback, validateTutorSituation } from './tutor-validation.js';
 import { TUTOR_PHRASE_INSTRUCTIONS, TUTOR_FEEDBACK_INSTRUCTIONS, TUTOR_SITUATION_INSTRUCTIONS, makeTutorSituationPayload } from './tutor-prompts.js';
 import { rankTutorPhrases } from './tutor-selection.js';
@@ -883,9 +883,9 @@ function wireUi() {
   $('#tutor-dialog')?.addEventListener('close', cancelTutorRequest);
   $('#btn-ai-save')?.addEventListener('click', saveTutorSettings);
   $('#btn-ai-test')?.addEventListener('click', testTutorConnection);
-  $('#btn-ai-clear')?.addEventListener('click', () => { clearAiSettings(); $('#ai-api-key').value = ''; $('#ai-settings-status').textContent = 'Key removed from this browser.'; });
+  $('#btn-ai-clear')?.addEventListener('click', () => { clearAiSettings(); populateTutorSettings(); $('#ai-settings-status').textContent = 'Key removed from this browser.'; });
   $('#btn-ai-clear-cache')?.addEventListener('click', () => { clearTutorCache(); $('#ai-settings-status').textContent = 'Cached phrase suggestions cleared from this browser.'; });
-  $('#btn-open-advanced')?.addEventListener('click', () => { const s=getAiSettings(); $('#ai-api-key').value=s.apiKey; $('#ai-provider').value=s.provider; $('#ai-model').value=s.model; $('#ai-base-url').value=s.baseUrl; $('#ai-advanced-fields').open=s.provider==='compatible'; syncAiProviderFields(); });
+  $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); });
   $('#ai-provider')?.addEventListener('change', (e) => { const p=PROVIDERS[e.target.value]; if(p){$('#ai-base-url').value=p.baseUrl;$('#ai-model').value=p.model; $('#ai-advanced-fields').open=e.target.value==='compatible'; syncAiProviderFields();} });
   // A stage replacement removes the focused button. Keep keyboard navigation
   // inside the open dialog, without moving focus away from an existing control.
@@ -3908,6 +3908,7 @@ function openTutorQuickSetup(continuation) {
   tutorSetupContinuation = continuation || null;
   $('#tutor-setup-provider').value = settings.provider;
   $('#tutor-setup-key').value = settings.apiKey;
+  $('#tutor-setup-remember').checked = settings.rememberKey;
   $('#tutor-setup-model').value = settings.model;
   $('#tutor-setup-url').value = settings.baseUrl;
   $('#tutor-setup-advanced').open = settings.provider === 'compatible';
@@ -3922,6 +3923,7 @@ function saveTutorQuickSetup() {
     saveAiSettings({
       provider: $('#tutor-setup-provider').value,
       apiKey: key,
+      rememberKey: $('#tutor-setup-remember').checked,
       model: $('#tutor-setup-model').value,
       baseUrl: $('#tutor-setup-url').value,
     });
@@ -3943,7 +3945,7 @@ function tutorProviderLabel() { return PROVIDERS[getAiSettings().provider]?.labe
 function tutorProviderMatchesSession() {
   if(!tutorSession) return false;
   const settings=getAiSettings();
-  if(settings.provider===tutorSession.provider && settings.model===tutorSession.model) return true;
+  if(settings.provider===tutorSession.provider) return true;
   tutorStatus(`This saved session belongs to ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.model}. Restore those settings or start a new session to use another provider.`);
   return false;
 }
@@ -3977,7 +3979,7 @@ function tutorRenderSuggestions() {
 function tutorConsentCopy(kind, payload) {
   const settings=getAiSettings(), provider=PROVIDERS[settings.provider]?.label||'the selected provider';
   const kindLabel={phrases:'find phrase suggestions',prompt:'create a practice situation',feedback:'review your answer'}[kind]||'provide tutoring';
-  return `This request will ${kindLabel} using ${provider} / ${settings.model}. The provider receives the data shown below and the app's tutor instructions. Token charges may apply. The provider may process this data under its own terms. Your current session is saved in this browser. Agree only if you want to send this request.`;
+  return `This request will ${kindLabel} using ${provider} / ${settings.model}. If the model is busy, Gemini Flash-Lite may handle the same request once. The provider receives the data shown below and the app's tutor instructions. Token charges may apply. The provider may process this data under its own terms. Your current session is saved in this browser. Agree only if you want to send this request.`;
 }
 function tutorShowRequestConsent(kind, payload, title, metadata={}) {
   tutorPendingRequest={kind,payload,...metadata};
@@ -3994,7 +3996,7 @@ async function startTutor({fresh=false}={}) {
   const reading=$('#reader-text');
   if(!reading || reading.classList.contains('hidden') || reading.innerText.trim().length<80) { setReaderMsg('Start a reading of at least 80 characters before using optional AI practice.'); $('#reader-input')?.focus(); return; }
   const currentArticle=reading.innerText.trim().slice(0,12000), settings=getAiSettings();
-  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & test connection in Advanced \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
+  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & check model access in Advanced \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
   if(fresh) {
     const article=currentArticle;
     if(!article || article.length<80) { showToast('Open a reading of at least 80 characters first.'); return; }
@@ -4066,20 +4068,22 @@ async function findTutorPhrases({consented=false}={}) {
   try {
     const started=Date.now();
     if (!cached) tutorJourney?.step('sent');
-    const out=cached?.value || await askTutor({signal:tutorController.signal,instructions:TUTOR_PHRASE_INSTRUCTIONS,input});
+    let modelUsed=settings.model;
+    const out=cached?.value || await askTutor({signal:tutorController.signal,instructions:TUTOR_PHRASE_INSTRUCTIONS,input,onModel:model=>{modelUsed=model;}});
     if(requestId!==tutorRequestId || !tutorSession) return;
     const validated=validateTutorPhrases(out?.phrases,input);
     if(!validated.length) throw new Error('No suggestions passed the source checks. Try a shorter or cleaner article.');
-    if(!cached) setTutorCache(cacheArgs,out);
+    if(!cached && modelUsed===settings.model) setTutorCache(cacheArgs,out);
     const {confirmedErrors}=await tutorLocalHistory();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorSession.phrases=rankTutorPhrases(validated,{savedItems:state.items,confirmedErrors}).slice(0,3);
     tutorSession.resultSource=cached?'cache':'live';
+    tutorSession.phraseModel=modelUsed;
     tutorSession.stage='select'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorRenderSuggestions();
     if (!cached) tutorJourney?.step('response',{duration:Date.now()-started});
-    tutorStatus(cached?'Loaded and rechecked the cached phrase result; no AI request was made.':'Live suggestions are checked against the reading. Your Vault and review history stayed on this device.');
+    tutorStatus(cached?'Loaded and rechecked the cached phrase result; no AI request was made.':'Live suggestions from '+modelUsed+' are checked against the reading. Your Vault and review history stayed on this device.');
   } catch(error) {
     if (!cached && requestId===tutorRequestId) tutorJourney?.step('error',{reason:experienceAiReason(error)});
     if(requestId===tutorRequestId) { tutorShowError('Retry phrase selection','retry-select',error); }
@@ -4114,7 +4118,7 @@ async function handleTutorClick(e) {
     if(tutorSession.stage==='select'&&!tutorSession.phrases.length) await findTutorPhrases(); else tutorStatus('Resumed the saved practice session.');
     return;
   }
-  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Advanced \u2192 Learning \u2192 Save & test connection (small paid request).'); return; }
+  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Advanced \u2192 Learning \u2192 Save & check model access (small paid request).'); return; }
   if(action==='cancel') { cancelTutorRequest(); return; }
   if(action==='retry-select') { if(!tutorBusy) await findTutorPhrases(); return; }
   if(action==='retry-feedback') { if(!tutorSession || tutorBusy) return; tutorSession.stage='answer'; renderTutorAnswer(); const area=$('#tutor-stage textarea'); if(area) area.value=tutorSession.answer||''; return; }
@@ -4192,12 +4196,13 @@ async function createTutorPrompt(index,{freshContext=false}={}) {
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorStatus('Creating a fresh speaking prompt…'); $('#tutor-stage').replaceChildren(tutorText('p','Requesting a live situation prompt…','hint'),tutorButton('Cancel request','cancel'));
     tutorJourney?.step('followup');
-    const out=await askTutor({signal:controller.signal,instructions:TUTOR_SITUATION_INSTRUCTIONS,input:JSON.stringify(payload)});
+    let modelUsed=getAiSettings().model;
+    const out=await askTutor({signal:controller.signal,instructions:TUTOR_SITUATION_INSTRUCTIONS,input:JSON.stringify(payload),onModel:model=>{modelUsed=model;}});
     if(requestId!==tutorRequestId || !tutorSession) return;
     const situation=validateTutorSituation(out,payload);
     if(tutorSession.prompt) tutorSession.promptHistory=[...(tutorSession.promptHistory||[]),{prompt:tutorSession.prompt,contextId:tutorSession.promptContextId||'study'}].slice(-10);
     tutorSession.promptContextId=situation.contextId; tutorSession.feedback=null; tutorSession.feedbackDecision=null;
-    tutorSession.target=p; tutorSession.prompt=situation.prompt; tutorSession.promptSource='live'; tutorSession.answer=''; tutorSession.stage='answer'; await persistTutor();
+    tutorSession.target=p; tutorSession.prompt=situation.prompt; tutorSession.promptSource='live'; tutorSession.promptModel=modelUsed; tutorSession.answer=''; tutorSession.stage='answer'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     renderTutorAnswer(); tutorStatus('Write one or two sentences.');
   } catch(error) { if(requestId===tutorRequestId){tutorShowError('Retry prompt',freshContext?'retry-answer':'choose:'+index,error);} }
@@ -4205,7 +4210,7 @@ async function createTutorPrompt(index,{freshContext=false}={}) {
 }
 function renderTutorAnswer() {
   const s=$('#tutor-stage'); s.replaceChildren(tutorText('p',tutorSession.target.phrase,'chip'),tutorText('p',tutorSession.prompt));
-  s.append(tutorText('p',tutorSession.promptSource==='live'?`Live AI prompt · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.model}`:'Saved practice prompt · source not recorded','hint'));
+  s.append(tutorText('p',tutorSession.promptSource==='live'?`Live AI prompt · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.promptModel||tutorSession.model}`:'Saved practice prompt · source not recorded','hint'));
   const form=document.createElement('form'); form.id='tutor-answer-form';
   const area=document.createElement('textarea'); area.name='answer'; area.required=true; area.maxLength=1200; area.rows=4; area.value=tutorSession.answer||''; area.setAttribute('aria-label','Your English answer');
   const btn=tutorText('button','Get feedback','btn-primary'); btn.type='submit';
@@ -4231,9 +4236,10 @@ async function requestTutorFeedback(answer) {
     tutorSession.answer=answer; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorStatus('Checking your answer…'); $('#tutor-stage').replaceChildren(tutorText('p','Requesting live answer feedback…','hint'),tutorButton('Cancel request','cancel'));
-    const out=await askTutor({signal:controller.signal,instructions:TUTOR_FEEDBACK_INSTRUCTIONS,input:JSON.stringify({phrase:tutorSession.target.phrase,sourceSentence:tutorSession.target.sourceSentence,prompt:tutorSession.prompt,answer})});
+    let modelUsed=getAiSettings().model;
+    const out=await askTutor({signal:controller.signal,onModel:model=>{modelUsed=model;},instructions:TUTOR_FEEDBACK_INSTRUCTIONS,input:JSON.stringify({phrase:tutorSession.target.phrase,sourceSentence:tutorSession.target.sourceSentence,prompt:tutorSession.prompt,answer})});
     if(requestId!==tutorRequestId || !tutorSession) return;
-    tutorSession.feedback=validateTutorFeedback(out,answer); tutorSession.feedbackSource='live'; tutorSession.feedbackDecision=null; tutorSession.stage='feedback'; await persistTutor();
+    tutorSession.feedback=validateTutorFeedback(out,answer); tutorSession.feedbackSource='live'; tutorSession.feedbackModel=modelUsed; tutorSession.feedbackDecision=null; tutorSession.stage='feedback'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     renderTutorFeedback();
     tutorStatus(tutorSession.feedback.verdict==='uncertain'?'The tutor is unsure. Review the feedback before accepting it.':'Review the feedback and choose whether it is useful.');
@@ -4242,7 +4248,7 @@ async function requestTutorFeedback(answer) {
 }
 function renderTutorFeedback() {
   const s=$('#tutor-stage'), f=validateTutorFeedback(tutorSession.feedback,tutorSession.answer); tutorSession.feedback=f; if(f.evidenceStatus==='missing-quote' && tutorSession.feedbackDecision==='accepted') tutorSession.feedbackDecision=null; s.replaceChildren(tutorText('p',tutorSession.answer));
-  s.append(tutorText('p',tutorSession.feedbackSource==='live'?`Live AI feedback · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.model} · verify the quote before deciding.`:'Saved feedback · source not recorded','hint'));
+  s.append(tutorText('p',tutorSession.feedbackSource==='live'?`Live AI feedback · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.feedbackModel||tutorSession.model} · verify the quote before deciding.`:'Saved feedback · source not recorded','hint'));
   if(f.quote) s.append(tutorText('blockquote',f.quote));
   const title=f.verdict==='correct'?'Good use':f.verdict==='uncertain'?'The tutor is unsure':'One thing to improve';
   s.append(tutorText('h3',title),tutorText('p',f.verdict==='correct'?(f.explanation_vi||'Your phrase fits the context.'):f.suggestion||f.issue||'The tutor could not identify a clear correction.',f.verdict==='uncertain'?'hint':''));
@@ -4263,6 +4269,7 @@ function populateTutorSettings() {
   for (const [id, value] of Object.entries({'ai-provider':settings.provider,'ai-base-url':settings.baseUrl,'ai-model':settings.model,'ai-api-key':settings.apiKey})) {
     const field = document.getElementById(id); if (field) field.value = value;
   }
+  const remember=document.getElementById('ai-remember-key'); if(remember) remember.checked=settings.rememberKey;
   const advanced=document.getElementById('ai-advanced-fields'); if(advanced) advanced.open=settings.provider==='compatible';
   syncAiProviderFields();
 }
@@ -4272,12 +4279,16 @@ function syncAiProviderFields() {
   if(field) field.setAttribute('aria-label',`${PROVIDERS[provider]?.label||'AI provider'} API key`);
 }
 async function saveTutorSettings() {
-  try { const settings=saveAiSettings({provider:$('#ai-provider').value,apiKey:$('#ai-api-key').value,model:$('#ai-model').value,baseUrl:$('#ai-base-url').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings in this browser profile.`; return true; }
+  try { const settings=saveAiSettings({provider:$('#ai-provider').value,apiKey:$('#ai-api-key').value,rememberKey:$('#ai-remember-key').checked,model:$('#ai-model').value,baseUrl:$('#ai-base-url').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings for ${settings.rememberKey ? 'this device' : 'this tab'}.`; return true; }
   catch(error) { $('#ai-settings-status').textContent=error.message; return false; }
 }
 async function testTutorConnection() {
-  try { if(!await saveTutorSettings()) return; $('#ai-settings-status').textContent='Testing connection… this small request may use provider tokens.'; const result=await askTutor({instructions:'Return only JSON: {"status":"ok"}.',input:'Connection check.'}); if(result?.status!=='ok') throw new Error('The provider responded, but the connection check returned an unexpected format.'); $('#ai-settings-status').textContent=`Connected to ${PROVIDERS[getAiSettings().provider].label} / ${getAiSettings().model}.`; }
+  const button=$('#btn-ai-test');
+  if (button.disabled) return;
+  button.disabled=true;
+  try { if(!await saveTutorSettings()) return; $('#ai-settings-status').textContent='Checking Gemini model access…'; const model=await validateGeminiKey(); $('#ai-settings-status').textContent='Access confirmed for '+model+'. No text was generated.'; }
   catch(error) { $('#ai-settings-status').textContent=error.message; }
+  finally { button.disabled=false; }
 }
 
 let toastTimer;

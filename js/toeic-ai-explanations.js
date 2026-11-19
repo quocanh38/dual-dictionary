@@ -1,5 +1,6 @@
 import { trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from './experience.js';
 import { getAiSettings, saveAiSettings, streamTutor } from './ai-client.js';
+import { GEMINI_LIGHT_MODEL } from './gemini-policy.js';
 import { getStudyRecord, putStudyRecord, updateStudyRecord, allStudyRecords, deleteStudyRecord } from './db.js';
 
 const recordId = (id) => `study:toeic-ai-explanation:${id}`;
@@ -126,7 +127,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
   const consent = add(consentLabel, 'input', '');
   consent.type = 'checkbox';
   consentLabel.className = 'toeic-ai-consent';
-  consentLabel.append(' Tôi đồng ý gửi câu hỏi, nội dung đang học và tối đa 6 lượt trao đổi gần nhất tới Gemini.');
+  consentLabel.append(' Tôi đồng ý gửi câu hỏi, nội dung đang học và tối đa 6 lượt trao đổi gần nhất tới Gemini Flash-Lite.');
   const actions = add(dialog, 'div', '');
   actions.className = 'toeic-ai-actions';
   const send = add(actions, 'button', turns.length ? 'Hỏi tiếp' : 'Gửi câu hỏi');
@@ -154,7 +155,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
       saveAiSettings({apiKey:value});
       apiKey.value = '';
       settings.hidden = true;
-      status.textContent = 'Đã lưu API key trên trình duyệt. Kiểm tra câu hỏi trước khi gửi.';
+      status.textContent = 'Đã lưu API key cho tab này. Kiểm tra câu hỏi trước khi gửi.';
       prompt.focus();
     } catch {
       setupStatus.textContent = 'Chưa lưu được API key trên trình duyệt.';
@@ -247,7 +248,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
         },
       });
       if (controller.signal.aborted || !dialog.open) return;
-      turns = [...turns, {prompt:question, answer}];
+      turns = [...turns, {prompt:question, answer, model:GEMINI_LIGHT_MODEL}];
       paint();
       output.textContent = '';
       prompt.value = '';
@@ -257,7 +258,7 @@ export async function openToeicExplanation(id, context, title = 'Hỏi vì sao m
       journey?.step('completed');
       if (retrying) journey?.step('retry_success');
       trackExperience('gemini_done',{duration:Date.now()-started});
-      status.textContent = 'Gemini đã trả lời.';
+      status.textContent = 'Model trả lời: ' + GEMINI_LIGHT_MODEL + '.';
     } catch (error) {
       retryPending=true;
       if (controller.signal.aborted) {

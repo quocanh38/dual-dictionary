@@ -780,15 +780,17 @@ async function requestAiReview(kind) {
   aiReviewRequests.set(kind, controller);
   if (button) button.disabled = true;
   if (cancelButton) cancelButton.hidden = false;
-  // Consent applies to this outgoing request only. A retry requires a fresh review.
+  // Consent covers the selected model and the disclosed fallback for this submission.
   consent.checked = false;
   status.textContent = `Sending the selected prompt and ${isWriting ? "written response" : "typed notes only"} (${submittedText.length} characters) to ${PROVIDERS[settings.provider]?.label || settings.provider} / ${settings.model}… token charges may apply. Cancelling may not stop processing if the provider already received it.`;
   output?.replaceChildren();
   const rubric = isWriting
     ? "Review the response for task coverage, organization/cohesion, vocabulary, and grammar. Use the supplied pathway focus and step-by-step practice guidance as formative context when present. Give 2 specific strengths and up to 3 high-value improvements. For every correction, quote an exact short excerpt from the learner response; never invent a quote. If unsure, say so. Do not calculate or predict an IELTS band or official score."
     : "Review the learner's typed transcript or reflection notes for response relevance, organization, vocabulary, and grammar/clarity. Use the supplied pathway focus and step-by-step practice guidance as formative context when present. Give 2 specific strengths and up to 3 high-value improvements. Quote exact short excerpts only when present; do not infer pronunciation from notes or claim to have heard audio. Do not calculate or predict an IELTS band or official score.";
+  let modelUsed=settings.model;
   try {
     const result = await askTutor({
+      onModel: model => { modelUsed=model; },
       signal: controller.signal,
       instructions: `You are an English practice coach. ${rubric} Return concise Vietnamese feedback as JSON: {"strengths":[""],"improvements":[{"quote":"","advice":""}],"next_step":""}. This is formative practice feedback, not an official assessment.`,
       input: JSON.stringify({ task: prompt?.task || "Writing", pathwayStage: prompt?.pathwayStage || null, focus: prompt?.focus || "", methodCue: prompt?.methodCue || "", prompt: prompt?.prompt || "", response: submittedText }),
@@ -804,7 +806,7 @@ async function requestAiReview(kind) {
       return `<li>${quote ? `<q>${esc(quote)}</q> — ` : ""}${esc(x.advice.trim().slice(0, 700))}</li>`;
     }).filter(Boolean).join("");
     if (!strengths.length && !improvements) throw new Error("The provider returned no usable feedback. Retry the request.");
-    output.innerHTML = `<div class="ai-review-card"><strong>Live AI feedback · ${esc(settings.provider)} / ${esc(settings.model)} · not an official score</strong><h4>What works</h4><ul>${strengths.map((x) => `<li>${esc(x)}</li>`).join("") || "<li>No strengths were returned.</li>"}</ul><h4>Try improving</h4><ul>${improvements || "<li>No specific change suggested.</li>"}</ul><p><strong>Next step:</strong> ${esc(result.next_step.trim().slice(0, 700) || "Revise one point and compare it with your prompt.")}</p></div>`;
+    output.innerHTML = `<div class="ai-review-card"><strong>Live AI feedback · ${esc(settings.provider)} / ${esc(modelUsed)} · not an official score</strong><h4>What works</h4><ul>${strengths.map((x) => `<li>${esc(x)}</li>`).join("") || "<li>No strengths were returned.</li>"}</ul><h4>Try improving</h4><ul>${improvements || "<li>No specific change suggested.</li>"}</ul><p><strong>Next step:</strong> ${esc(result.next_step.trim().slice(0, 700) || "Revise one point and compare it with your prompt.")}</p></div>`;
     status.textContent = "Live feedback received. Review it critically; it is a practice suggestion, not a band or official score.";
   } catch (error) {
     const cancelled = controller.signal.aborted;

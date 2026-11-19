@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v213-crawl-fixes';
+const CACHE = 'mdx-dict-v214-gemini-byok';
 const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
 const LEGACY_APP = './recover.html';
 const LEGACY_STUDIO = './lessons/recover.html';
@@ -192,6 +192,7 @@ const ASSETS = [
   './js/lookup-lemmas.js',
   './data/lookup-supplement.json',
   './js/ai-client.js',
+  './js/gemini-policy.js',
   './js/offline-ai-lessons.js',
   './js/toeic-ai-explanations.js',
   './js/experience.js',
