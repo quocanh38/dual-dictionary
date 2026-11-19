@@ -66,7 +66,7 @@ async function request(url, headers, body, signal, timeoutMs, readStream, onMode
     const send = model => fetch(url, { method: 'POST', headers, body: JSON.stringify({ ...body, model }), signal: controller.signal });
     const { response, model } = await fetchGeminiWithFallback(send, body.model, controller.signal);
     if (!response.ok) {
-      if ([401, 403].includes(response.status)) throw new Error('Provider rejected the key or model access. Open AI settings to check the key/model, then use Save & check model access in Advanced → Learning.');
+      if ([401, 403].includes(response.status)) throw new Error('Provider rejected the key or model access. Open AI settings to check the key/model, then use Save & check model access in Settings → Learning.');
       if (response.status === 402) throw new Error('Provider billing or available quota is insufficient for this key. Check your provider account.');
       if (response.status === 429) throw new Error('Provider rate limit or quota reached. Check your provider account, then wait and retry.');
       if (response.status === 400) throw new Error('Provider rejected the request. Check the selected model and request compatibility in AI settings.');
@@ -86,7 +86,7 @@ async function request(url, headers, body, signal, timeoutMs, readStream, onMode
 }
 export async function askTutor({ instructions, input, signal, model, onModel, timeoutMs = 45000 }) {
   const settings = getAiSettings();
-  if (!settings.apiKey) throw new Error('Add an API key in Advanced → Learning.');
+  if (!settings.apiKey) throw new Error('Add an API key in Settings → Learning.');
   if (!settings.baseUrl || !settings.model) throw new Error('Choose an API endpoint and model.');
   const body = {
     model: GEMINI_MODELS.includes(model) ? model : settings.model,
@@ -103,7 +103,7 @@ export async function askTutor({ instructions, input, signal, model, onModel, ti
 
 export async function streamTutor({ instructions, input, signal, onText, onModel }) {
   const settings = getAiSettings();
-  if (!settings.apiKey) throw new Error('Hãy nhập Gemini API key trong Cài đặt nâng cao → Học tập.');
+  if (!settings.apiKey) throw new Error('Hãy nhập Gemini API key trong Cài đặt → Học tập.');
   return request(`${settings.baseUrl}/chat/completions`, {
     Authorization: `Bearer ${settings.apiKey}`, 'Content-Type': 'application/json',
   }, {

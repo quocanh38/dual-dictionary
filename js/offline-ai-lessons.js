@@ -126,7 +126,7 @@ export function openAiLessonBuilder({ title, mode, source }) {
   for (const id of models) append(model, 'option', id).value = id;
   if (!getAiSettings().apiKey) {
     journey?.step('setup');
-    append(body, 'p', 'Thêm key trong Cài đặt nâng cao → Học tập.');
+    append(body, 'p', 'Thêm key trong Cài đặt → Học tập.');
     const guide = append(body, 'a', 'Xem hướng dẫn lấy và nhập API key');
     guide.href = '/vi/huong-dan-gemini/';
     guide.target = '_blank';

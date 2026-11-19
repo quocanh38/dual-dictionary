@@ -171,7 +171,7 @@ const defaultDictOf = (slot) =>
 
 // The optional remote-config.json data-source mechanism was removed:
 // the public deployment ships only the open-licensed samples and users load
-// their own .mdx via ⚙ Advanced.
+// their own .mdx via ⚙ Settings.
 
 async function getBundleVer() {
   const b = await getFile('bundle-version');
@@ -457,7 +457,7 @@ async function boot() {
   setTimeout(markNetlifyBadge, 1200);
 
   defer(async () => {
-    // v71: personalized FSRS weights — trained ON THIS DEVICE by the ⚙ Advanced
+    // v71: personalized FSRS weights — trained ON THIS DEVICE by the ⚙ Settings
     // optimizer (js/fsrs-opt.js) and stored in the `files` store — replace the
     // defaults before anything can schedule a review. Observable marker on
     // <html data-fsrs-weights>: default | custom | default:invalid | default:error.
@@ -675,12 +675,9 @@ function wireUi() {
   });
   $('#more-advanced')?.addEventListener('click', () => {
     $('#more-menu')?.classList.add('hidden');
-    populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog')?.showModal();
-  });
-  $('#more-help')?.addEventListener('click', () => {
-    $('#more-menu')?.classList.add('hidden');
     $('#btn-more')?.setAttribute('aria-expanded', 'false');
-    $('#help-dialog')?.showModal();
+    $('#btn-more')?.focus();
+    populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog')?.showModal();
   });
   // keep the responsive header consistent with the viewport (same breakpoint as CSS)
   const syncTopbar = () => {
@@ -947,10 +944,6 @@ function wireUi() {
     bmcFadeTimer = setTimeout(() => c.classList.remove('bmc-fade'), 1500);
   }, { passive: true });
   $('#btn-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog').showModal(); });
-  $('#btn-help')?.addEventListener('click', () => {
-    $('#help-dialog').showModal();
-    trackUxSignal('app_help_open');
-  });
   if (!TTS_SUPPORTED) {
     const b = $('#btn-speak');
     if (b) { b.title = 'Text-to-speech is not supported by this browser'; }
@@ -1839,7 +1832,7 @@ async function applyRemoteUrl(slot, urlStr) {
   return { mdx: true, mdd: !!mddFile, css: cssOk };
 }
 
-/** UI wrapper for the manual "Load from URL" inputs in ⚙ Advanced.
+/** UI wrapper for the manual "Load from URL" inputs in ⚙ Settings.
  *  One URL pulls the ENTIRE set from dicts/ on the server: .mdx + matching .mdd
  *  + matching .css are fetched automatically, so the user loads a single link
  *  instead of one file at a time. */
@@ -2347,7 +2340,7 @@ function paintFirstLoadProgress() {
  *  and the first-load card gets them too whenever a download is what it shows. Both
  *  download helpers write their progress through here, so the line and the card can
  *  never drift apart. (The card itself only updates for the gate's quick-load, which
- *  is the flow that sets state.loading — the ⚙ Advanced URL loader does not, and by
+ *  is the flow that sets state.loading — the ⚙ Settings URL loader does not, and by
  *  then loaded panels hide the card anyway.) */
 function setDownloadStatus(slot, label, name, received, total) {
   setStatus(slot, `${label} ${name} — ${fmtProgress(slot, received, total)}`, true);
@@ -3996,7 +3989,7 @@ async function startTutor({fresh=false}={}) {
   const reading=$('#reader-text');
   if(!reading || reading.classList.contains('hidden') || reading.innerText.trim().length<80) { setReaderMsg('Start a reading of at least 80 characters before using optional AI practice.'); $('#reader-input')?.focus(); return; }
   const currentArticle=reading.innerText.trim().slice(0,12000), settings=getAiSettings();
-  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & check model access in Advanced \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
+  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & check model access in Settings \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
   if(fresh) {
     const article=currentArticle;
     if(!article || article.length<80) { showToast('Open a reading of at least 80 characters first.'); return; }
@@ -4059,7 +4052,7 @@ async function findTutorPhrases({consented=false}={}) {
     catch { cached=null; }
   }
   if(!cached) {
-    if(!settings.apiKey) { tutorStatus('Add an API key in Advanced → Learning to request new phrase suggestions.'); $('#btn-open-advanced')?.click(); return; }
+    if(!settings.apiKey) { tutorStatus('Add an API key in Settings → Learning to request new phrase suggestions.'); $('#btn-open-advanced')?.click(); return; }
     if(!consented) { tutorShowRequestConsent('phrases',input,'Review before finding phrase suggestions'); return; }
   }
   const requestId=++tutorRequestId; tutorController=new AbortController(); tutorBusy=true;
@@ -4118,7 +4111,7 @@ async function handleTutorClick(e) {
     if(tutorSession.stage==='select'&&!tutorSession.phrases.length) await findTutorPhrases(); else tutorStatus('Resumed the saved practice session.');
     return;
   }
-  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Advanced \u2192 Learning \u2192 Save & check model access (small paid request).'); return; }
+  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Settings \u2192 Learning \u2192 Save & check model access.'); return; }
   if(action==='cancel') { cancelTutorRequest(); return; }
   if(action==='retry-select') { if(!tutorBusy) await findTutorPhrases(); return; }
   if(action==='retry-feedback') { if(!tutorSession || tutorBusy) return; tutorSession.stage='answer'; renderTutorAnswer(); const area=$('#tutor-stage textarea'); if(area) area.value=tutorSession.answer||''; return; }
@@ -6983,15 +6976,12 @@ const I18N = {
     'top.install': 'Install app', 'top.installAria': 'Install app',
     'top.langAria': 'Navigation language: English or Vietnamese',
     'top.themeAria': 'Theme: system, light or dark',
-    // top.advanced / top.help were referenced by data-i18n-title in the header but
-    // never defined, so both tooltips literally read "top.advanced" / "top.help".
-    'top.advanced': 'Advanced', 'top.help': 'Help',
-    'top.advancedAria': 'Advanced settings — load your own .mdx files',
-    'top.helpAria': 'Help — how to use this app',
-    'top.moreAria': 'More options: advanced settings, help', 'top.more': 'More options',
+    'top.advanced': 'Settings',
+    'top.advancedAria': 'Open settings',
+    'top.moreAria': 'Open settings menu', 'top.more': 'Settings',
     'top.tipInstall': 'Install', 'top.tipLang': 'EN / VI', 'top.tipTheme': 'Theme',
-    'top.tipAdvanced': 'Advanced', 'top.tipHelp': 'Help', 'top.tipMore': 'More',
-    'top.advancedShort': '⚙ Advanced', 'top.helpShort': '? Help',
+    'top.tipAdvanced': 'Settings', 'top.tipMore': 'Settings',
+    'top.advancedShort': '⚙ Settings',
     'search.placeholder': 'Type an English word…',
     'review.savedWords': 'Saved words', 'review.progress': 'Progress', 'practice.offlineLessons': 'Offline lessons', 'practice.startOffline': 'Study an offline lesson', 'practice.speakingTools': 'Speaking practice', 'sense.pick': 'Choose one meaning', 'sense.oneMeaning': 'Choose the meaning you want to study.', 'sense.manualMeaning': 'Write one meaning to study, or save the word with its sentence.', 'sense.manualOption': 'Write a meaning',
     'search.gateIdle': 'No dictionary loaded yet — download one below to start looking up words.',
@@ -7055,9 +7045,9 @@ const I18N = {
     'firstload.ctaSize': '⬇ Download dictionaries (≈ {size})',
     'firstload.sizeUnknown': 'size unknown (usually a few GB)',
     'firstload.cancelled': 'Download cancelled — no dictionary is loaded yet.',
-    'firstload.cancelHint': 'Press “↻ Retry dictionary download” to try again, or use your own .mdx files via ⚙ Advanced.',
+    'firstload.cancelHint': 'Press “↻ Retry dictionary download” to try again, or use your own .mdx files via ⚙ Settings.',
     'firstload.sessionOnly': 'Ready for this session. This browser could not save the dictionary for offline use.',
-    'firstload.failed': 'Failed to load: {names}. Check your connection and try again, or open ⚙ Advanced to load your own .mdx files.',
+    'firstload.failed': 'Failed to load: {names}. Check your connection and try again, or open ⚙ Settings to load your own .mdx files.',
     'firstload.unreachableHint': 'The bundled download sources did not respond. Press “↻ Retry dictionary download” to try again, or use “Use my own .mdx files” below to load a dictionary manually.',
     'firstload.checking': 'Checking dictionary sizes…',
     'firstload.note': 'One-time download, stored in the app, fully offline afterwards.',
@@ -7079,7 +7069,7 @@ const I18N = {
     'known.title': 'I already know the most common words',
     'known.hint': 'Pick a starting milestone so "words you know" is counted correctly from day one. Nothing is added to your Vault — this is only a reading-coverage baseline, offline on this device.',
     'known.cta': 'I know the top {n} words',
-    'known.status': 'Milestone set: top {n} — {count} words marked known. Change it in ⚙ Advanced (reset there first to pick a lower one).',
+    'known.status': 'Milestone set: top {n} — {count} words marked known. Change it in ⚙ Settings (reset there first to pick a lower one).',
     'known.advTitle': 'Known words — reading-coverage baseline',
     'known.advNone': 'No milestone set yet — the Vault empty state offers one when your Vault is still empty.',
     'known.advSet': 'Milestone: {level} — {count} words marked known.',
@@ -7118,13 +7108,12 @@ const I18N = {
     'top.install': 'Cài ứng dụng', 'top.installAria': 'Cài ứng dụng',
     'top.langAria': 'Ngôn ngữ điều hướng: tiếng Anh hoặc tiếng Việt',
     'top.themeAria': 'Giao diện: theo hệ thống, sáng hoặc tối',
-    'top.advanced': 'Nâng cao', 'top.help': 'Trợ giúp',
-    'top.advancedAria': 'Cài đặt nâng cao — nạp file .mdx của bạn',
-    'top.helpAria': 'Trợ giúp — cách dùng ứng dụng',
-    'top.moreAria': 'Thêm tuỳ chọn: nâng cao, trợ giúp', 'top.more': 'Thêm tuỳ chọn',
+    'top.advanced': 'Cài đặt',
+    'top.advancedAria': 'Mở cài đặt',
+    'top.moreAria': 'Mở menu cài đặt', 'top.more': 'Cài đặt',
     'top.tipInstall': 'Cài đặt', 'top.tipLang': 'EN / VI', 'top.tipTheme': 'Giao diện',
-    'top.tipAdvanced': 'Nâng cao', 'top.tipHelp': 'Trợ giúp', 'top.tipMore': 'Thêm',
-    'top.advancedShort': '⚙ Nâng cao', 'top.helpShort': '? Trợ giúp',
+    'top.tipAdvanced': 'Cài đặt', 'top.tipMore': 'Cài đặt',
+    'top.advancedShort': '⚙ Cài đặt',
     'search.placeholder': 'Gõ một từ tiếng Anh…',
     'review.savedWords': 'Từ đã lưu', 'review.progress': 'Tiến độ', 'practice.offlineLessons': 'Bài học offline', 'practice.startOffline': 'Học một bài offline', 'practice.speakingTools': 'Luyện nói', 'sense.pick': 'Chọn một nghĩa', 'sense.oneMeaning': 'Chọn nghĩa bạn muốn học.', 'sense.manualMeaning': 'Nhập một nghĩa để học hoặc lưu từ cùng câu ví dụ.', 'sense.manualOption': 'Tự nhập nghĩa',
     'search.gateIdle': 'Chưa có từ điển — tải ở dưới để bắt đầu tra từ.',
@@ -7181,9 +7170,9 @@ const I18N = {
     'firstload.ctaSize': '⬇ Tải từ điển (≈ {size})',
     'firstload.sizeUnknown': 'chưa rõ dung lượng (thường vài GB)',
     'firstload.cancelled': 'Đã huỷ tải — chưa có từ điển nào được nạp.',
-    'firstload.cancelHint': 'Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng file .mdx của bạn trong ⚙ Nâng cao.',
+    'firstload.cancelHint': 'Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng file .mdx của bạn trong ⚙ Cài đặt.',
     'firstload.sessionOnly': 'Dùng được trong phiên này. Trình duyệt không lưu được từ điển để dùng ngoại tuyến.',
-    'firstload.failed': 'Tải thất bại: {names}. Kiểm tra kết nối rồi thử lại, hoặc mở ⚙ Nâng cao để nạp file .mdx của bạn.',
+    'firstload.failed': 'Tải thất bại: {names}. Kiểm tra kết nối rồi thử lại, hoặc mở ⚙ Cài đặt để nạp file .mdx của bạn.',
     'firstload.unreachableHint': 'Các nguồn tải từ điển không phản hồi. Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng “Dùng file .mdx của tôi” bên dưới để nạp thủ công.',
     'firstload.checking': 'Đang kiểm tra dung lượng từ điển…',
     'firstload.note': 'Tải một lần, lưu trong ứng dụng, sau đó dùng hoàn toàn offline.',
@@ -7205,7 +7194,7 @@ const I18N = {
     'known.title': 'Tôi đã biết những từ phổ thông nhất',
     'known.hint': 'Chọn mốc xuất phát để app đếm đúng "từ bạn đã biết" ngay từ đầu. Không có gì được thêm vào Sổ tay — đây chỉ là mốc đo độ phủ khi đọc, nằm offline trên máy bạn.',
     'known.cta': 'Tôi biết {n} từ phổ thông nhất',
-    'known.status': 'Đã chọn mốc: Top {n} — {count} từ được đánh dấu đã biết. Muốn đổi, hãy xoá mốc trong ⚙ Nâng cao rồi chọn lại.',
+    'known.status': 'Đã chọn mốc: Top {n} — {count} từ được đánh dấu đã biết. Muốn đổi, hãy xoá mốc trong ⚙ Cài đặt rồi chọn lại.',
     'known.advTitle': 'Từ đã biết — mốc đo độ phủ khi đọc',
     'known.advNone': 'Chưa chọn mốc nào — màn hình Sổ tay trống sẽ gợi ý chọn một mốc.',
     'known.advSet': 'Mốc: {level} — {count} từ được đánh dấu đã biết.',
@@ -7239,7 +7228,7 @@ const I18N = {
 };
 Object.assign(I18N.en, {
   'dialog.itemEdit': 'Edit item', 'dialog.addExample': 'Add an example', 'dialog.export': 'Export',
-  'dialog.tags': 'Tags', 'dialog.welcome': 'Welcome 👋', 'dialog.advanced': 'Advanced',
+  'dialog.tags': 'Tags', 'dialog.welcome': 'Welcome 👋', 'dialog.advanced': 'Settings', 'settings.close': 'Close settings', 'settings.tabs': 'Settings sections', 'settings.dicts': 'Dictionaries', 'settings.data': 'Data', 'settings.learning': 'Learning', 'settings.ai': 'Optional AI tutor', 'settings.geminiGuide': 'How to get a Gemini API key (Vietnamese)',
   'about.title': 'Learn English from what you read',
   'about.summary': 'About this app — features & terms of use',
   'about.licH': 'Dictionaries & licenses',
@@ -7248,7 +7237,7 @@ Object.assign(I18N.en, {
 });
 Object.assign(I18N.vi, {
   'dialog.itemEdit': 'Sửa mục', 'dialog.addExample': 'Thêm ví dụ', 'dialog.export': 'Xuất',
-  'dialog.tags': 'Nhãn', 'dialog.welcome': 'Chào mừng 👋', 'dialog.advanced': 'Nâng cao',
+  'dialog.tags': 'Nhãn', 'dialog.welcome': 'Chào mừng 👋', 'dialog.advanced': 'Cài đặt', 'settings.close': 'Đóng cài đặt', 'settings.tabs': 'Các mục cài đặt', 'settings.dicts': 'Từ điển', 'settings.data': 'Dữ liệu', 'settings.learning': 'Học tập', 'settings.ai': 'Trợ giảng AI (tùy chọn)', 'settings.geminiGuide': 'Cách lấy Gemini API key',
   'about.title': 'Học tiếng Anh từ bài bạn đọc',
   'about.summary': 'Về ứng dụng và điều khoản sử dụng',
   'about.licH': 'Từ điển &amp; giấy phép',
@@ -7258,11 +7247,11 @@ Object.assign(I18N.vi, {
     + '<li><strong>Chế độ Đọc:</strong> dán bài viết hoặc mở trang Wikipedia, bấm vào từ bất kỳ để tra ở khung bên dưới — không rời khỏi bài đọc.</li>'
     + '<li><strong>Mặc định mở sẵn:</strong> bản công khai đi kèm từ điển giấy phép mở (WordNet 3.1, Simple English Wiktionary) — miễn phí, không cần đăng nhập. Có thể thêm từ điển Anh–Việt mở (OVDP, 386.600 mục) chỉ với một cú bấm.</li>'
     + '<li><strong>Dùng từ điển của riêng bạn:</strong> nạp file .mdx / .mdd bạn sở hữu (định dạng MDX) vào khung bất kỳ — chỉ dùng file bạn được phép dùng.</li>'
-    + '<li><strong>Công cụ học tập:</strong> gợi ý từ, lịch sử tra từ, Sổ tay lưu mọi từ/cụm từ/câu kèm ghi chú và nhãn, cùng hàng đợi Ôn tập lặp lại ngắt quãng — sau vài trăm lượt ôn có thể tinh chỉnh trọng số FSRS theo đúng lịch sử của bạn (trên máy, trong ⚙ Nâng cao).</li>'
+    + '<li><strong>Công cụ học tập:</strong> gợi ý từ, lịch sử tra từ, Sổ tay lưu mọi từ/cụm từ/câu kèm ghi chú và nhãn, cùng hàng đợi Ôn tập lặp lại ngắt quãng — sau vài trăm lượt ôn có thể tinh chỉnh trọng số FSRS theo đúng lịch sử của bạn (trên máy, trong ⚙ Cài đặt).</li>'
     + '<li><strong>Ngữ cảnh đọng lại:</strong> tra một từ đã lưu sẽ thấy câu gốc của bạn được tô nổi phía trên mục từ — thêm ví dụ bất cứ lúc nào.</li>'
-    + '<li><strong>Luyện tập &amp; theo dõi:</strong> biến mục đã lưu thành bài tập nhanh (điền từ, nghe &amp; gõ, đọc to bằng nhận dạng giọng của trình duyệt) và xem từ đã học, tỷ lệ nhớ, nguồn đã đọc trong Thống kê. Ôn tập chạy theo thuật toán FSRS (tinh chỉnh được theo lịch sử của bạn trong ⚙ Nâng cao, hoàn toàn trên máy), phiên âm IPA hiện cho hầu hết từ tiếng Anh. Luyện tập có thêm 🎤 cue card (đề bài, 1 phút chuẩn bị, 2 phút nói), Reader có đồng hồ tốc độ đọc, Sổ tay có tab ✍ Viết kèm đếm từ và hẹn giờ Task 2.</li>'
+    + '<li><strong>Luyện tập &amp; theo dõi:</strong> biến mục đã lưu thành bài tập nhanh (điền từ, nghe &amp; gõ, đọc to bằng nhận dạng giọng của trình duyệt) và xem từ đã học, tỷ lệ nhớ, nguồn đã đọc trong Thống kê. Ôn tập chạy theo thuật toán FSRS (tinh chỉnh được theo lịch sử của bạn trong ⚙ Cài đặt, hoàn toàn trên máy), phiên âm IPA hiện cho hầu hết từ tiếng Anh. Luyện tập có thêm 🎤 cue card (đề bài, 1 phút chuẩn bị, 2 phút nói), Reader có đồng hồ tốc độ đọc, Sổ tay có tab ✍ Viết kèm đếm từ và hẹn giờ Task 2.</li>'
     + '<li><strong>Dữ liệu là của bạn:</strong> xuất / nhập mọi thứ dạng JSON, CSV, TSV hoặc văn bản cho Anki — không cloud, không tài khoản. AI tùy chọn gửi bài và câu trả lời tới nhà cung cấp bạn chọn sau khi bạn đồng ý; tự trả phí token bằng API key của bạn.</li>'
-    + '<li><strong>Cài như ứng dụng:</strong> Thêm vào Màn hình chính trên iOS/Android — sau đó chạy hoàn toàn offline. Có thể bật nhắc ôn (tùy chọn, chỉ chạy local) trong ⚙ Nâng cao.</li>',
+    + '<li><strong>Cài như ứng dụng:</strong> Thêm vào Màn hình chính trên iOS/Android — sau đó chạy hoàn toàn offline. Có thể bật nhắc ôn (tùy chọn, chỉ chạy local) trong ⚙ Cài đặt.</li>',
   'about.licP': 'Bản công khai chỉ đi kèm dữ liệu giấy phép mở (xem <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):',
   // U5: một dòng ngắn cho mỗi nguồn (tên + tên ngắn của giấy phép); toàn văn nằm
   // trong tooltip của liên kết và trong NOTICE.md — nội dung giấy phép không đổi.
@@ -7271,7 +7260,7 @@ Object.assign(I18N.vi, {
     + '<li><strong>Phát âm</strong> — <a href="NOTICE.md" target="_blank" rel="noopener" title="CMUdict (phạm vi công cộng / BSD, cmusphinx). Toàn văn: NOTICE.md">CMUdict</a></li>'
     + '<li><strong>Tần suất từ</strong> — <a href="NOTICE.md" target="_blank" rel="noopener" title="Dải tần suất top 10k từ hermitdave/FrequencyWords, giấy phép MIT. Toàn văn: NOTICE.md">MIT</a></li>'
     + '<li><strong>Phiên âm (IPA)</strong> — <a href="NOTICE.md" target="_blank" rel="noopener" title="Bảng IPA từ thichhoc-org/thichhoc-dict (CC BY-SA 4.0; thượng nguồn WordNet, CMUdict, Wiktionary), lấp chỗ thiếu từ CMUdict (phạm vi công cộng / BSD). Toàn văn: NOTICE.md">CC BY-SA 4.0 &amp; CMUdict</a></li>',
-  'about.licNote': 'Từ điển thương mại (ví dụ OALD, LDOCE) không bao giờ đi kèm ở đây; chỉ nạp file của bạn qua ⚙ Nâng cao nếu bạn được phép dùng.',
+  'about.licNote': 'Từ điển thương mại (ví dụ OALD, LDOCE) không bao giờ đi kèm ở đây; chỉ nạp file của bạn qua ⚙ Cài đặt nếu bạn được phép dùng.',
   'about.feedback': 'Nếu app giúp bạn học tốt hơn, mình rất muốn nghe — <a class="support-link" href="mailto:quocanh38@gmail.com?subject=Dual%20Dictionary%20%E2%80%94%20feedback">một email là đủ</a>.',
   'help.title': 'Cách sử dụng',
   'help.quick': '<li><strong>Chờ tải lần đầu</strong> — từ điển được tải một lần rồi lưu trong app, sau đó dùng offline. Tiến độ, tốc độ và thời gian còn lại hiển thị ở đầu mỗi khung; có thể huỷ hoặc thử lại từ màn hình đầu.</li>'
@@ -7281,15 +7270,15 @@ Object.assign(I18N.vi, {
     + '<li><strong>Ôn tập</strong> — mở ★ <em>Sổ tay</em> để xem mọi thứ kèm ghi chú, nhãn và bộ lọc, rồi 🔁 <em>Ôn tập</em> chạy hàng đợi lặp lại ngắt quãng.</li>',
   'help.more': '<li><strong>Mục đích:</strong> app là công cụ học &amp; tra cứu cá nhân — phi thương mại, không tài khoản. Mọi dữ liệu từ điển ở lại trên máy bạn.</li>'
     + '<li><strong>Nghe, đọc to, xem IPA:</strong> bấm 🔊 để nghe đọc từ (text-to-speech của trình duyệt); dải phát âm hiện IPA thật cho hầu hết từ tiếng Anh; bấm 🎤 để đọc từ và được kiểm tra bằng nhận dạng giọng của trình duyệt (Luyện tập cũng có bài đọc to). Trên Chrome audio do Google xử lý, trên Safari do Apple — app này không có server.</li>'
-    + '<li><strong>Nhắc ôn (tùy chọn):</strong> bật trong <em>⚙ Nâng cao</em> — chỉ chạy local và tự nguyện: badge trên icon app, banner nhẹ và thông báo trên PWA đã cài (Android/Chrome desktop) vào thời điểm browser chọn. Không gửi đi đâu.</li>'
-    + '<li><strong>Nạp file từ điển của bạn:</strong> mở <em>⚙ Nâng cao</em> để nạp file .mdx/.mdd bạn có quyền dùng vào một khung. Bản công khai mặc định đi kèm từ điển giấy phép mở (WordNet 3.1, Simple English) — chỉ nạp từ điển thương mại như OALD/LDOCE nếu bạn sở hữu. Xem <a href="data-loading-guide.md" target="_blank" rel="noopener">hướng dẫn nạp chi tiết + xử lý lỗi</a>.</li>'
+    + '<li><strong>Nhắc ôn (tùy chọn):</strong> bật trong <em>⚙ Cài đặt</em> — chỉ chạy local và tự nguyện: badge trên icon app, banner nhẹ và thông báo trên PWA đã cài (Android/Chrome desktop) vào thời điểm browser chọn. Không gửi đi đâu.</li>'
+    + '<li><strong>Nạp file từ điển của bạn:</strong> mở <em>⚙ Cài đặt</em> để nạp file .mdx/.mdd bạn có quyền dùng vào một khung. Bản công khai mặc định đi kèm từ điển giấy phép mở (WordNet 3.1, Simple English) — chỉ nạp từ điển thương mại như OALD/LDOCE nếu bạn sở hữu. Xem <a href="data-loading-guide.md" target="_blank" rel="noopener">hướng dẫn nạp chi tiết + xử lý lỗi</a>.</li>'
     + '<li><strong>Cài lên điện thoại:</strong> iPhone/iPad (Safari): Chia sẻ → <em>Thêm vào Màn hình chính</em>. Android (Chrome): menu ⋮ → <em>Thêm vào Màn hình chính / Cài đặt ứng dụng</em>. Cần iOS 16.4+.</li>'
     + '<li><strong>Tự triển khai app:</strong> kéo thư mục vào <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a> (miễn phí) hoặc GitHub Pages. Chỉ phát hành công khai với dữ liệu <strong>giấy phép mở</strong> đi kèm; nếu nạp từ điển <strong>thương mại</strong> thì giữ bản triển khai riêng tư.</li>'
     + '<li><strong>Bàn phím (máy tính):</strong> ↑/↓ chọn gợi ý, Enter để tra, Esc để ẩn.</li>'
     + '<li><strong>Chế độ Đọc:</strong> dán văn bản hoặc mở trang rồi bấm từ để tra; câu đã lưu ở lại với từ — hiện tô nổi phía trên mục từ, kèm <em>Thêm ví dụ</em>.</li>'
     + '<li><strong>Sổ tay &amp; Ôn tập:</strong> mọi từ, cụm từ và câu nằm một chỗ — ghi chú, nhãn, trạng thái, tìm trong sổ tay, chọn nhiều. <em>Ôn tập</em> là hàng đợi FSRS (biết / quên / bỏ qua).</li>'
     + '<li><strong>Dữ liệu là của bạn:</strong> xuất / nhập mọi thứ dạng JSON — không cloud, không tài khoản. AI tùy chọn gửi bài và câu trả lời tới nhà cung cấp bạn chọn sau khi bạn đồng ý; tự trả phí token bằng API key của bạn.</li>'
-    + '<li><strong>Anh–Việt một cú bấm:</strong> thêm từ điển Anh–Việt mở (OVDP, 386.600 mục) từ màn hình đầu hoặc ⚙ Nâng cao.</li>'
+    + '<li><strong>Anh–Việt một cú bấm:</strong> thêm từ điển Anh–Việt mở (OVDP, 386.600 mục) từ màn hình đầu hoặc ⚙ Cài đặt.</li>'
     + '<li><strong>Luyện tập &amp; thống kê:</strong> 🎯 <em>Luyện tập</em> (từ Sổ tay hoặc Ôn tập) tạo bài nhanh — điền từ còn thiếu, nghe &amp; gõ — với <em>Đã hiểu</em> / <em>Ôn lại</em>. 📊 <em>Thống kê</em> hiện từ đã học, tỷ lệ nhớ, số cần ôn và nguồn đã đọc.</li>'
     + '<li><strong>Xuất đi bất cứ đâu:</strong> Sổ tay xuất mục dạng JSON, CSV, TSV hoặc văn bản cho Anki, có chọn trường.</li>'
     + '<li><strong>Phát âm:</strong> 🔊 đọc từ, 🐢 <em>0.75×</em> đọc chậm, và ↺ đọc lại câu đã lưu. IPA hiện khi dữ liệu từ điển có.</li>',
@@ -7505,12 +7494,12 @@ Object.assign(I18N.en, {
   'firstload.loadingOne': 'Loading {name}… (one-time download, then stored offline)',
   'envi.short': 'EN–VI',
   'slot.third': 'Slot 3',
-  'slot.openLoaded': 'Open-licensed dictionary loaded — use ⚙ Advanced to load your own .mdx files',
+  'slot.openLoaded': 'Open-licensed dictionary loaded — use ⚙ Settings to load your own .mdx files',
   'slot.cancelled': 'Download cancelled',
   'panel.ready': 'is ready.',
   'panel.readyHint': 'Type a word above to start — results appear here.',
   'panel.notLoaded': 'is not loaded yet.',
-  'panel.notLoadedHint': 'Tap Download dictionaries below, or open ⚙ Advanced to use your own .mdx files.',
+  'panel.notLoadedHint': 'Tap Download dictionaries below, or open ⚙ Settings to use your own .mdx files.',
   'panel.loadingRes': 'resources are still loading{eta}.',
   'panel.loadingResHint': 'Watch the progress in the panel header, or search the other dictionary meanwhile.',
 });
@@ -7538,12 +7527,12 @@ Object.assign(I18N.vi, {
   'firstload.loadingOne': 'Đang tải {name}… (tải một lần, sau đó lưu offline)',
   'envi.short': 'Anh–Việt',
   'slot.third': 'Slot 3',
-  'slot.openLoaded': 'Đã tải từ điển mở — dùng ⚙ Nâng cao để dùng file .mdx của bạn',
+  'slot.openLoaded': 'Đã tải từ điển mở — dùng ⚙ Cài đặt để dùng file .mdx của bạn',
   'slot.cancelled': 'Đã hủy tải xuống',
   'panel.ready': 'đã sẵn sàng.',
   'panel.readyHint': 'Gõ một từ ở trên để bắt đầu — kết quả hiện ở đây.',
   'panel.notLoaded': 'chưa được tải.',
-  'panel.notLoadedHint': 'Bấm Tải từ điển ở dưới, hoặc mở ⚙ Nâng cao để dùng file .mdx của bạn.',
+  'panel.notLoadedHint': 'Bấm Tải từ điển ở dưới, hoặc mở ⚙ Cài đặt để dùng file .mdx của bạn.',
   'panel.loadingRes': 'vẫn đang tải tài nguyên{eta}.',
   'panel.loadingResHint': 'Theo dõi tiến độ ở phần đầu panel, hoặc tra từ điển khác trong lúc chờ.',
 });
@@ -7910,7 +7899,7 @@ function setAdvTab(name) {
   }
 }
 
-/* v71 — on-device FSRS weight optimizer (⚙ Advanced). One button: reads the
+/* v71 — on-device FSRS weight optimizer (⚙ Settings). One button: reads the
  * review log, fits the 17 weights (js/fsrs-opt.js, lazy-loaded — this code
  * path never runs unless the user clicks), applies them via store.js and
  * persists the blob for future boots. Opt-in, local-only, one-click revert. */
@@ -8200,7 +8189,7 @@ async function openSnapshots() {
  * touches the Vault UI, the stats denominators or the practice deck pools.
  * Each level stores its CUMULATIVE lemma list (every band up to its ceiling)
  * computed offline from the precached data/freq-en.json; levelling up is an
- * idempotent delta-add, ⚙ Advanced reset is the only way down. */
+ * idempotent delta-add, ⚙ Settings reset is the only way down. */
 
 const KNOWN_LEVELS_META = {
   top1k: { n: 1000, band: '1k' },
@@ -8243,7 +8232,7 @@ async function applyKnownLevel(levelId) {
   showToast(i18nFmt('known.setLevel', { n: KNOWN_LEVELS_META[levelId].n.toLocaleString('en-US') }));
 }
 
-/** ⚙ Advanced → Data: the known-words management block (plan D6). */
+/** ⚙ Settings → Data: the known-words management block (plan D6). */
 function renderKnownAdvanced() {
   const status = $('#known-adv-status');
   if (!status) return;
@@ -8296,7 +8285,7 @@ async function resetKnownUi() {
 
 /** Vault empty state (plan D6): the milestone CTA lives exactly where an empty
  *  vault asks "what now?". A non-empty vault hides this block entirely — the
- *  management entry point stays in ⚙ Advanced. */
+ *  management entry point stays in ⚙ Settings. */
 let knownEmptyBusy = false;
 async function renderKnownEmpty() {
   if (knownEmptyBusy) return;

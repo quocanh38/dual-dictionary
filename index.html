@@ -121,14 +121,11 @@
     <button id="btn-install" class="icon-btn hidden" title="Install app" aria-label="Install app" data-i18n-title="top.install" data-i18n-aria="top.installAria" data-i18n-tip="top.tipInstall" data-tip="Install">⬇</button>
     <button id="btn-lang" class="icon-btn" title="Language (EN / VI)" aria-label="Language" data-i18n-title="top.lang" data-i18n-aria="top.langAria" data-i18n-tip="top.tipLang" data-tip="EN / VI">EN</button>
     <button id="btn-theme" class="icon-btn" title="Theme: auto / light / dark" aria-label="Theme" data-i18n-title="top.theme" data-i18n-aria="top.themeAria" data-i18n-tip="top.tipTheme" data-tip="Theme">🌓</button>
-    <button id="btn-advanced" class="icon-btn topbar-optional" title="Advanced" aria-label="Advanced settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Advanced">⚙</button>
-    <button id="btn-help" class="icon-btn topbar-optional" title="Help" aria-label="Help" data-i18n-title="top.help" data-i18n-aria="top.helpAria" data-i18n-tip="top.tipHelp" data-tip="Help">?</button>
-    <button id="btn-more" class="icon-btn hidden" aria-label="More options" aria-expanded="false"
-            aria-haspopup="true" aria-controls="more-menu" title="More options" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="More">⋯</button>
-    <div id="more-menu" class="more-menu hidden" role="menu" aria-label="More options">
-      <button id="more-advanced" type="button" role="menuitem" data-i18n="top.advancedShort">⚙ Advanced</button>
-      <a href="/vi/huong-dan-gemini/" role="menuitem">Hướng dẫn Gemini API key</a>
-      <button id="more-help" type="button" role="menuitem" data-i18n="top.helpShort">? Help</button>
+    <button id="btn-advanced" class="icon-btn topbar-optional" title="Settings" aria-label="Open settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Settings">⚙</button>
+    <button id="btn-more" class="icon-btn hidden" aria-label="Open settings menu" aria-expanded="false"
+            aria-haspopup="true" aria-controls="more-menu" title="Settings" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="Settings">⋯</button>
+    <div id="more-menu" class="more-menu hidden" role="menu" aria-label="Settings" data-i18n-aria="top.advanced">
+      <button id="more-advanced" type="button" role="menuitem" data-i18n="top.advancedShort">⚙ Settings</button>
     </div>
   </div>
 </header>
@@ -136,8 +133,8 @@
 <aside id="domain-move" class="about hidden" aria-labelledby="domain-move-title">
   <details open>
     <summary id="domain-move-title">Dual Dictionary đã chuyển sang HọcTA</summary>
-    <p>Tải bản sao lưu ở đây, rồi mở HọcTA. Trên trang mới, vào Advanced → Your data để nhập tệp JSON. Nếu từng thêm app vào màn hình chính, hãy cài lại từ trang mới.</p>
-    <p>Download your study backup here, then open HọcTA and import it from Advanced → Your data. Reinstall the app if you use a home-screen shortcut.</p>
+    <p>Tải bản sao lưu ở đây, rồi mở HọcTA. Trên trang mới, vào Settings → Your data để nhập tệp JSON. Nếu từng thêm app vào màn hình chính, hãy cài lại từ trang mới.</p>
+    <p>Download your study backup here, then open HọcTA and import it from Settings → Your data. Reinstall the app if you use a home-screen shortcut.</p>
     <button type="button" id="domain-move-export" class="btn-secondary">Tải bản sao lưu / Download backup</button>
     <a id="domain-move-link" href="https://hocta.app/">Mở HọcTA / Open HọcTA</a>
     <p class="hint">Cài lại gói từ điển và thiết lập lại khóa AI trên miền mới. Với Lesson Studio, <a href="https://dualdictionary.netlify.app/lessons/recover.html#library">xuất bản sao lưu Studio</a> riêng rồi nhập tại <a href="https://hocta.app/lessons/#library">thư viện mới</a>.</p>
@@ -460,7 +457,7 @@
         <li><strong>Learn-oriented tools:</strong> word suggestions, search history, a Vault that keeps
            every word, phrase and sentence with your notes and tags, and a spaced-repetition
            Review queue that can re-fit its FSRS weights to your own history (on-device,
-           from ⚙ Advanced, once enough reviews accumulate).</li>
+           from ⚙ Settings, once enough reviews accumulate).</li>
         <li><strong>Context that sticks:</strong> look up a saved word and see your own original
            sentence highlighted above the entry — add extra examples any time.</li>
         <li><strong>Practice &amp; track:</strong> turn saved items into quick practice sessions
@@ -474,7 +471,7 @@
         <li><strong>Learning guides:</strong> 34 developer-written posts (VI) with <a href="./vi/blog/en/">English summary</a> — study method, TOEIC night-shift setup, 30-day pack plan.</li>
         <li><strong>Your data is yours:</strong> export / import Vault items as JSON, CSV, TSV or
            Anki-ready text — no cloud or account for your study data. Optional AI sends your article and answers to your chosen provider after you agree; you pay that provider for tokens.</li>
-        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that. Optional review reminders (opt-in, local-only) can be enabled in ⚙ Advanced.</li>
+        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that. Optional review reminders (opt-in, local-only) can be enabled in ⚙ Settings.</li>
       </ul>
       <h3 data-i18n="about.licH">Dictionaries &amp; licenses</h3>
       <p data-i18n-html="about.licP">The public edition ships only open-licensed data (see <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):</p>
@@ -493,7 +490,7 @@
             title="IPA table from thichhoc-org/thichhoc-dict (CC BY-SA 4.0; upstream WordNet, CMUdict, Wiktionary) filled from CMUdict (public domain / BSD). Full text: NOTICE.md">CC BY-SA 4.0 &amp; CMUdict</a></li>
       </ul>
       <p data-i18n-html="about.licNote">Commercial dictionaries (e.g. OALD, LDOCE) are never bundled here; load your own
-         files via ⚙ Advanced only if you are authorized to use them.</p>
+         files via ⚙ Settings only if you are authorized to use them.</p>
       <!-- v65: feedback moved out of the footer/Stats — one opt-in line at the end
            of About (mail to is user-initiated; no form, no network call) -->
       <p class="hint" data-i18n-html="about.feedback">If this app helps your study, I'd genuinely like to hear it —
@@ -943,16 +940,16 @@
     <li><strong>Save a meaning</strong> — ☆ opens loaded dictionary entries. Choose the source and edit the full definition if you want one sense per card. Reader also keeps the tapped sentence; ⭐ <em>Save sentence</em> saves that sentence by itself.</li>
     <li><strong>Review</strong> — open ★ <em>Vault</em> to browse meanings with their saved source and sentence, notes, tags
         and filters, then 🔁 <em>Review</em> runs the FSRS spaced-repetition queue — after a
-        few hundred graded reviews, ⚙ Advanced can re-fit its weights to your own history
+        few hundred graded reviews, ⚙ Settings can re-fit its weights to your own history
         (entirely on this device).</li>
   </ol>
   <details class="help-more"><summary>Offline IELTS, TOEIC, Writing and Speaking practice</summary>
-    <ol><li>Open <em>Practice</em> and choose IELTS Academic or TOEIC Listening &amp; Reading, then choose Listening, Reading or all objective questions. The versioned original content pack works offline and demonstrates multiple choice, audio choice, short answer, gap-fill and matching; it is not official exam material.</li><li>For TOEIC Part 1, play each bundled statement from its audio control and choose the one that matches the picture. These original audio clips are precached with the app and work offline. Other listening examples reveal their transcript after practice; optional browser voice playback depends on installed voices.</li><li>Choose <em>Practice</em> for feedback after every answer or <em>Timed practice · current question set</em> to move between available questions, go back, skip, and submit against a countdown. Timed pathway practice scales to the selected set. IELTS Academic diagnostic mode has 40 Listening questions in four Parts and 40 Reading questions in three passages, with 30- and 60-minute section timers; both can be completed in one 90-minute objective-only session. Browser-generated Listening voice is synthetic, and the authored items are not calibrated, so results suggest a next stage per skill rather than a predicted or overall band. TOEIC remains a short starter bank (8 Listening and 8 Reading questions). Answers stay hidden until submission; reloading preserves the selected skill, question, answers and remaining time. Progress shows local raw answers by skill, never an official score.</li><li>IELTS Academic Writing prompts cover Task 1 and Task 2, and Speaking prompts cover Parts 1–3. Drafts save on this device. Use the checklist for self-review, then save an attempt to offline history. The TOEIC set intentionally covers L&amp;R; TOEIC Speaking and Writing are separate tests and are not included.</li><li>Optional AI feedback for Writing/Speaking uses the provider and API key you configured in Advanced → Learning. It requires internet, your per-request consent, and may incur token charges with the provider. Writing sends the prompt and your response; Speaking sends only your prompt and typed transcript/notes. Recordings never leave the device through this feature. Feedback is for practice and does not predict an official score. Prompts, drafts, self-review and saved recordings remain available offline without a key.</li><li>Speaking prompts can be recorded with your microphone; recordings are stored on this device (maximum 25 MB each) and included in JSON/encrypted study backups. Microphone access needs a secure browser context and your permission. Speech recognition is optional and may contact the browser vendor online; this app does not guarantee offline transcription.</li><li>In Reader → Listening, save your own audio file and transcript to keep them for later offline sessions. The audio stays local. Include your saved study data in a JSON or encrypted backup before moving devices; media makes the file larger. You can delete saved materials and recordings from their lists.</li><li>Vault’s <em>Journal</em> tab remains available even when you have no saved vocabulary. Journal text and its timer resume after reload on this browser.</li></ol>
+    <ol><li>Open <em>Practice</em> and choose IELTS Academic or TOEIC Listening &amp; Reading, then choose Listening, Reading or all objective questions. The versioned original content pack works offline and demonstrates multiple choice, audio choice, short answer, gap-fill and matching; it is not official exam material.</li><li>For TOEIC Part 1, play each bundled statement from its audio control and choose the one that matches the picture. These original audio clips are precached with the app and work offline. Other listening examples reveal their transcript after practice; optional browser voice playback depends on installed voices.</li><li>Choose <em>Practice</em> for feedback after every answer or <em>Timed practice · current question set</em> to move between available questions, go back, skip, and submit against a countdown. Timed pathway practice scales to the selected set. IELTS Academic diagnostic mode has 40 Listening questions in four Parts and 40 Reading questions in three passages, with 30- and 60-minute section timers; both can be completed in one 90-minute objective-only session. Browser-generated Listening voice is synthetic, and the authored items are not calibrated, so results suggest a next stage per skill rather than a predicted or overall band. TOEIC remains a short starter bank (8 Listening and 8 Reading questions). Answers stay hidden until submission; reloading preserves the selected skill, question, answers and remaining time. Progress shows local raw answers by skill, never an official score.</li><li>IELTS Academic Writing prompts cover Task 1 and Task 2, and Speaking prompts cover Parts 1–3. Drafts save on this device. Use the checklist for self-review, then save an attempt to offline history. The TOEIC set intentionally covers L&amp;R; TOEIC Speaking and Writing are separate tests and are not included.</li><li>Optional AI feedback for Writing/Speaking uses the provider and API key you configured in Settings → Learning. It requires internet, your per-request consent, and may incur token charges with the provider. Writing sends the prompt and your response; Speaking sends only your prompt and typed transcript/notes. Recordings never leave the device through this feature. Feedback is for practice and does not predict an official score. Prompts, drafts, self-review and saved recordings remain available offline without a key.</li><li>Speaking prompts can be recorded with your microphone; recordings are stored on this device (maximum 25 MB each) and included in JSON/encrypted study backups. Microphone access needs a secure browser context and your permission. Speech recognition is optional and may contact the browser vendor online; this app does not guarantee offline transcription.</li><li>In Reader → Listening, save your own audio file and transcript to keep them for later offline sessions. The audio stays local. Include your saved study data in a JSON or encrypted backup before moving devices; media makes the file larger. You can delete saved materials and recordings from their lists.</li><li>Vault’s <em>Journal</em> tab remains available even when you have no saved vocabulary. Journal text and its timer resume after reload on this browser.</li></ol>
   </details>
   <details class="help-more"><summary>📚 Learning guides — 34 posts by the developer (EN summary)</summary><p>Study method, TOEIC and IELTS guides in Vietnamese (~48,000 words), with an <a href="./vi/blog/en/" target="_blank" rel="noopener">English summary page</a>. New: <a href="./vi/blog/phuong-phap/offline-lesson-packs/" target="_blank" rel="noopener">how work readings become offline packs</a>, <a href="./vi/blog/phuong-phap/lo-trinh-30-ngay-packs/" target="_blank" rel="noopener">30-day pack plan</a>, <a href="./vi/blog/toeic/toeic-ca-dem-mang-yeu/" target="_blank" rel="noopener">night-shift TOEIC setup</a>. Full list: <a href="./vi/blog/" target="_blank" rel="noopener">Blog học IELTS &amp; TOEIC</a>.</p></details>
   <details class="help-more"><summary>Optional AI practice — setup, privacy and costs</summary>
     <p>Dictionary lookup, Reader, Vault and review remain free and offline after setup. AI practice is optional, requires internet for new responses and uses an API key for your chosen provider. Token charges are paid directly to that provider.</p>
-    <ol><li>When you first choose AI practice without a saved key, a short setup appears with provider defaults already filled in. Paste your own key and continue; custom model and endpoint values are under <em>Advanced</em>. This saves settings only and does not call AI by itself. You can also configure or forget the key in Advanced → Learning.</li><li>In Reader, start a reading of at least 80 characters, then choose AI practice. Before each live model request, inspect the exact learner data, provider/model and possible token cost, then agree to that request. Cached suggestions are labelled and do not make a provider call.</li><li>Select a phrase with its source sentence, answer the situation, and review the quoted feedback. Accept useful feedback or mark it not useful before saving the phrase to Vault or trying another situation.</li><li>Saving a phrase does not grade a review. Your regular FSRS reviews run locally. Previously cached phrase suggestions may be reused offline; new situations and feedback need your provider connection.</li><li><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Run the authored live AI evaluation cases</a> to review correct use, a grammar error, an off-topic answer, and a missing required phrase. Each case requires separate consent; the exported report contains no API key and describes only those cases.</li><li>Drafts and sessions are saved in this browser and included in study backups. Advanced → Learning lets you forget the key, clear phrase cache, or delete Tutor data. Browser data may be lost when cleared: export a backup first.</li></ol>
+    <ol><li>When you first choose AI practice without a saved key, a short setup appears with provider defaults already filled in. Paste your own key and continue; custom model and endpoint values are under <em>Advanced</em>. This saves settings only and does not call AI by itself. You can also configure or forget the key in Settings → Learning.</li><li>In Reader, start a reading of at least 80 characters, then choose AI practice. Before each live model request, inspect the exact learner data, provider/model and possible token cost, then agree to that request. Cached suggestions are labelled and do not make a provider call.</li><li>Select a phrase with its source sentence, answer the situation, and review the quoted feedback. Accept useful feedback or mark it not useful before saving the phrase to Vault or trying another situation.</li><li>Saving a phrase does not grade a review. Your regular FSRS reviews run locally. Previously cached phrase suggestions may be reused offline; new situations and feedback need your provider connection.</li><li><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Run the authored live AI evaluation cases</a> to review correct use, a grammar error, an off-topic answer, and a missing required phrase. Each case requires separate consent; the exported report contains no API key and describes only those cases.</li><li>Drafts and sessions are saved in this browser and included in study backups. Settings → Learning lets you forget the key, clear phrase cache, or delete Tutor data. Browser data may be lost when cleared: export a backup first.</li></ol>
     <p>The offline tutorial is an authored walkthrough. It does not evaluate your answer or pretend to be a live model result. Browser speech recognition may also use your browser vendor's online service as described in pronunciation help.</p>
   </details>
   <details class="help-more">
@@ -965,10 +962,10 @@
          pronunciation using your browser's speech recognition (Practice also has a
          say-it-aloud drill). On Chrome the audio is processed by Google, on Safari by
          Apple — this app has no server.</li>
-      <li><strong>Review reminders (optional):</strong> enable in ⚙ <em>Advanced</em> — local-only
+      <li><strong>Review reminders (optional):</strong> enable in ⚙ <em>Settings</em> — local-only
          and opt-in: an app badge, a quiet banner, and notifications on installed
          Android/desktop PWAs at browser-chosen times. Nothing is sent anywhere.</li>
-      <li><strong>Bring your own dictionary file:</strong> open <em>⚙ Advanced</em> in the top bar to load
+      <li><strong>Bring your own dictionary file:</strong> open <em>⚙ Settings</em> in the top bar to load
         a .mdx/.mdd dictionary file you have the rights to use into either slot.
         The public edition ships with open-licensed dictionaries (WordNet 3.1, Simple English)
         by default — load commercial dictionaries such as OALD/LDOCE only if you own them.
@@ -995,7 +992,7 @@
       <li><strong>Your data is yours:</strong> export Vault items as JSON, or use the complete study backup to include local sessions and audio — no cloud,
         no account, nothing leaves your device.</li>
       <li><strong>One-click EN–VI:</strong> add the open English–Vietnamese dictionary
-        (OVDP, 386,600 entries) from the start screen or ⚙ Advanced.</li>
+        (OVDP, 386,600 entries) from the start screen or ⚙ Settings.</li>
       <li><strong>Practice &amp; stats:</strong> 🎯 <em>Practice</em> (from Vault or Review) runs
         quick exercises — fill in the missing word, or listen &amp; type — with
         <em>Got it</em> / <em>Review again</em>. 📊 <em>Stats</em> shows words learned,
@@ -1011,7 +1008,7 @@
         Vault renames or deletes a tag across every item.</li>
       <li><strong>Install &amp; offline safety:</strong> the ⬇ button installs the app; an “Offline”
         note appears if the network drops (your data keeps working). A JSON backup of your items is
-        written on-device once a day — restore it from ⚙ Advanced.</li>
+        written on-device once a day — restore it from ⚙ Settings.</li>
     </ol>
   </details>
   <details class="help-more">
@@ -1035,8 +1032,8 @@
 
 <!-- Advanced settings modal -->
 <dialog id="advanced-dialog" aria-labelledby="advanced-title">
-  <button type="button" class="dialog-close" aria-label="Close advanced settings">✕</button>
-  <h2 id="advanced-title" data-i18n="dialog.advanced">Advanced</h2>
+  <button type="button" class="dialog-close" aria-label="Close settings" data-i18n-aria="settings.close">✕</button>
+  <h2 id="advanced-title" data-i18n="dialog.advanced">Settings</h2>
   <p class="hint"><strong>Optional</strong> — most users never need this screen. Three tabs:
     your dictionaries, your data, and how the app behaves while you study.</p>
 
@@ -1044,10 +1041,10 @@
        different concerns (dictionary setup, data care, study behaviour) now get
        one tab each. All element IDs are unchanged, so the test suites and the
        wiring keep working; the tab choice is context-based (see renderAdvStatus). -->
-  <div class="adv-tabs" role="tablist" aria-label="Advanced settings sections">
-    <button type="button" class="adv-tab" id="adv-tab-dicts" role="tab" aria-selected="true">Dictionaries</button>
-    <button type="button" class="adv-tab" id="adv-tab-data" role="tab" aria-selected="false">Data</button>
-    <button type="button" class="adv-tab" id="adv-tab-learning" role="tab" aria-selected="false">Learning</button>
+  <div class="adv-tabs" role="tablist" aria-label="Settings sections" data-i18n-aria="settings.tabs">
+    <button type="button" class="adv-tab" id="adv-tab-dicts" role="tab" aria-selected="true" data-i18n="settings.dicts">Dictionaries</button>
+    <button type="button" class="adv-tab" id="adv-tab-data" role="tab" aria-selected="false" data-i18n="settings.data">Data</button>
+    <button type="button" class="adv-tab" id="adv-tab-learning" role="tab" aria-selected="false" data-i18n="settings.learning">Learning</button>
   </div>
 
   <div id="adv-panel-dicts" class="adv-panel" role="tabpanel" aria-label="Dictionaries">
@@ -1144,13 +1141,14 @@
 
   <div id="adv-panel-learning" class="adv-panel" role="tabpanel" aria-label="Learning behaviour" hidden>
   <details class="adv-section">
-    <summary>Optional AI tutor — connect your AI account</summary><div class="ai-settings-form">
+    <summary data-i18n="settings.ai">Optional AI tutor</summary><div class="ai-settings-form">
     <p class="hint">Choose your AI provider and paste its API key. The app fills in the usual model and endpoint for you. Your key is kept in this tab unless you choose to remember it on this device. The app sends it directly to Google when you check model access or request feedback. Tutor sessions and answers are included in JSON and encrypted backups; the key is not. Use a key you are comfortable storing in this browser profile.</p>
     <label for="ai-provider">AI provider</label>
     <select id="ai-provider" aria-describedby="ai-provider-hint"><option value="gemini">Gemini</option></select>
     <p id="ai-provider-hint" class="hint">The free offline features work without connecting an AI account.</p>
     <label for="ai-api-key">API key</label>
     <input id="ai-api-key" type="password" autocomplete="off" spellcheck="false" style="width:100%" aria-label="AI provider API key">
+    <p class="hint"><a href="/vi/huong-dan-gemini/" target="_blank" rel="noopener noreferrer" data-i18n="settings.geminiGuide">How to get a Gemini API key (Vietnamese)</a></p>
     <label><input type="checkbox" id="ai-remember-key" name="rememberKey"> Remember my key on this device</label>
     <details id="ai-advanced-fields" class="ai-advanced-fields">
       <summary>Advanced: model and endpoint</summary>

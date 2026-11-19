@@ -767,7 +767,7 @@ async function requestAiReview(kind) {
   if (!text) { status.textContent = isWriting ? "Write a response first." : "Add a transcript or reflection notes first. The recording itself is not sent."; return; }
   if (!consent?.checked) { status.textContent = "Review the data-sharing note and check the consent box before requesting AI feedback."; return; }
   const settings = getAiSettings();
-  if (!settings.apiKey) { status.textContent = "Add your provider key in Advanced → Learning first. Offline practice remains available without it."; return; }
+  if (!settings.apiKey) { status.textContent = "Add your provider key in Settings → Learning first. Offline practice remains available without it."; return; }
   try {
     if (isWriting) await saveWritingDraft();
     else await speakingDraft();
