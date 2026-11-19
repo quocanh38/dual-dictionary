@@ -1,3 +1,4 @@
+import { refreshApp } from './app-update.js';
 import { lemmaCandidates } from './lookup-lemmas.js';
 import { initExperience, trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from "./experience.js";
 import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanations.js";
@@ -398,7 +399,7 @@ async function boot() {
   // alone does not protect the property access.
   try {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
+      navigator.serviceWorker.register('sw.js', {updateViaCache:'none'}).catch(() => {});
     }
   } catch (e) { /* service worker unavailable (sandboxed/unsupported) */ }
   wireUi();
@@ -406,6 +407,7 @@ async function boot() {
   captureI18nOriginals();
   applyLang();
   updateNetBanner();
+  $('#btn-update-app')?.addEventListener('click', updateAppFiles);
   $('#btn-open-help')?.addEventListener('click', () => {
     $('#help-dialog').showModal();
     trackUxSignal('dictionary_help_open');
@@ -6126,7 +6128,7 @@ function renderDeckOptions() {
   const sel = $('#vault-deck');
   if (sel) {
     const cur = vaultDeck;
-    sel.innerHTML = '<option value="">All decks</option>' + decks.map((d) => '<option value="' + escapeHtml(d) + '">' + escapeHtml(d) + '</option>').join('');
+    sel.innerHTML = '<option value="" data-i18n="vault.allDecks">' + escapeHtml(i18n('vault.allDecks')) + '</option>' + decks.map((d) => '<option value="' + escapeHtml(d) + '">' + escapeHtml(d) + '</option>').join('');
     sel.value = decks.indexOf(cur) !== -1 ? cur : '';
     if (decks.indexOf(cur) === -1) vaultDeck = '';
   }
@@ -6977,6 +6979,31 @@ const I18N = {
     'top.langAria': 'Navigation language: English or Vietnamese',
     'top.themeAria': 'Theme: system, light or dark',
     'top.advanced': 'Settings',
+    'vault.deck': "Deck",
+    'vault.deckFilter': "Filter by deck",
+    'vault.allDecks': "All decks",
+    'vault.sort': "Sort",
+    'vault.newest': "Newest",
+    'vault.dueFirst': "Due first",
+    'vault.hardest': "Hardest first",
+    'vault.stats': "📊 Stats",
+    'vault.tags': "🏷️ Tags",
+    'net.offline': "Offline — saved words and loaded dictionaries still work.",
+    'help.close': "Close help",
+    'help.section.practice': "Offline IELTS, TOEIC, Writing and Speaking practice",
+    'help.section.guides': "Learning guides",
+    'help.section.ai': "Optional AI practice — setup, privacy and costs",
+    'help.section.more': "More features",
+    'help.section.bookmark': "Save words from any web page",
+    'help.section.licenses': "Licenses & terms of use",
+    'update.title': "App version",
+    'update.hint': "Refresh the files used by the app. Your dictionaries, saved words, drafts and downloaded TOEIC audio stay on this device. Save any unsaved work before updating.",
+    'update.action': "Update app",
+    'update.busy': "Checking for updates and refreshing app files…",
+    'update.offline': "Connect to the internet to update the app.",
+    'update.unsupported': "This browser cannot manage the offline app. Reload while online to check for an update.",
+    'update.done': "App files updated. Reloading…",
+    'update.failed': "Could not refresh the app. Your saved data is still on this device. Check your connection and try again.",
     'top.advancedAria': 'Open settings',
     'top.moreAria': 'Open settings menu', 'top.more': 'Settings',
     'top.tipInstall': 'Install', 'top.tipLang': 'EN / VI', 'top.tipTheme': 'Theme',
@@ -7109,6 +7136,31 @@ const I18N = {
     'top.langAria': 'Ngôn ngữ điều hướng: tiếng Anh hoặc tiếng Việt',
     'top.themeAria': 'Giao diện: theo hệ thống, sáng hoặc tối',
     'top.advanced': 'Cài đặt',
+    'vault.deck': "Bộ từ",
+    'vault.deckFilter': "Lọc theo bộ từ",
+    'vault.allDecks': "Tất cả bộ từ",
+    'vault.sort': "Sắp xếp",
+    'vault.newest': "Mới nhất",
+    'vault.dueFirst': "Đến hạn trước",
+    'vault.hardest': "Khó nhất trước",
+    'vault.stats': "📊 Thống kê",
+    'vault.tags': "🏷️ Nhãn",
+    'net.offline': "Đang ngoại tuyến. Bạn vẫn có thể tra từ điển đã tải và ôn từ đã lưu.",
+    'help.close': "Đóng trợ giúp",
+    'help.section.practice': "Luyện IELTS, TOEIC, Viết và Nói offline",
+    'help.section.guides': "Bài hướng dẫn học tiếng Anh",
+    'help.section.ai': "Trợ giảng AI: cài đặt, riêng tư và chi phí",
+    'help.section.more': "Các tính năng khác",
+    'help.section.bookmark': "Lưu từ từ trang web bất kỳ",
+    'help.section.licenses': "Giấy phép và điều khoản sử dụng",
+    'update.title': "Phiên bản ứng dụng",
+    'update.hint': "Làm mới các tệp của app. Từ điển, từ đã lưu, bản nháp và audio TOEIC đã tải vẫn ở trên thiết bị. Hãy lưu nội dung đang nhập trước khi cập nhật.",
+    'update.action': "Cập nhật ứng dụng",
+    'update.busy': "Đang kiểm tra phiên bản và làm mới các tệp của app…",
+    'update.offline': "Hãy kết nối mạng để cập nhật ứng dụng.",
+    'update.unsupported': "Trình duyệt này không quản lý được bản offline. Hãy tải lại trang khi có mạng.",
+    'update.done': "Đã cập nhật các tệp của app. Đang tải lại…",
+    'update.failed': "Chưa làm mới được ứng dụng. Dữ liệu học vẫn ở trên thiết bị. Hãy kiểm tra mạng rồi thử lại.",
     'top.advancedAria': 'Mở cài đặt',
     'top.moreAria': 'Mở menu cài đặt', 'top.more': 'Cài đặt',
     'top.tipInstall': 'Cài đặt', 'top.tipLang': 'EN / VI', 'top.tipTheme': 'Giao diện',
@@ -7562,6 +7614,7 @@ function applyLang() {
     const vi = I18N.vi[el.dataset.i18nHtml];
     el.innerHTML = (lang === 'vi' && vi) ? vi : (el.dataset.i18nEn != null ? el.dataset.i18nEn : el.innerHTML);
   });
+  document.querySelectorAll('[data-help-lang]').forEach(el => { el.hidden = el.dataset.helpLang !== lang; });
   const b = $('#btn-lang'); if (b) b.textContent = lang === 'vi' ? 'VI' : 'EN';
   // JS-built copy (the not-ready gate line, the empty card's message) has no
   // data-i18n attribute to re-render, so it is repainted here — otherwise
@@ -7572,6 +7625,23 @@ function applyLang() {
   try { applyView(currentView()); } catch (e) { /* not ready yet */ }
 }
 function toggleLang() { lang = lang === 'en' ? 'vi' : 'en'; localStorage.setItem('lang', lang); applyLang(); showToast(lang === 'vi' ? 'Tiếng Việt' : 'English'); }
+
+async function updateAppFiles(event) {
+  const button = event.currentTarget;
+  const status = $('#app-update-status');
+  if (!navigator.onLine) { status.textContent = i18n('update.offline'); return; }
+  if (!('serviceWorker' in navigator)) { status.textContent = i18n('update.unsupported'); return; }
+  button.disabled = true;
+  status.textContent = i18n('update.busy');
+  try {
+    await refreshApp();
+    status.textContent = i18n('update.done');
+    location.reload();
+  } catch {
+    status.textContent = i18n('update.failed');
+    button.disabled = false;
+  }
+}
 
 /* install prompt + offline indicator */
 let installEvt = null;
@@ -7587,7 +7657,7 @@ function updateNetBanner() {
   const off = navigator.onLine === false;
   b.classList.toggle('hidden', !off);
   const el = $('#net-banner-text');
-  if (el) el.textContent = 'Offline — saved words and loaded dictionaries still work.';
+  if (el) el.textContent = i18n('net.offline');
 }
 
 /* search history page */

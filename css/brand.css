@@ -188,3 +188,24 @@ body > header.section-topbar,
 @media (forced-colors: active) {
   .section-trigger:focus-visible { outline-color: Highlight; }
 }
+
+.help-dialog-heading {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  padding-block-end: .25rem;
+  background: var(--surface);
+}
+
+.help-dialog-heading h2 { margin: 0; }
+.help-dialog-heading .dialog-close {
+  position: static;
+  flex: 0 0 44px;
+  float: none;
+  margin: 0;
+}

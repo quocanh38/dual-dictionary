@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v219-settings-help';
+const CACHE = 'mdx-dict-v220-help-offline-update';
 const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
 const LEGACY_APP = './recover.html';
 const LEGACY_STUDIO = './lessons/recover.html';
@@ -189,6 +189,7 @@ const ASSETS = [
   './js/store.js',
   './js/fsrs-opt.js',
   './js/app.js',
+  './js/app-update.js',
   './js/lookup-supplement.js',
   './js/lookup-lemmas.js',
   './data/lookup-supplement.json',
@@ -339,13 +340,30 @@ async function serveToeicAudio(request) {
   return new Response(null, {status: 416, headers: {'Content-Range': `bytes */${size}`}});
 }
 
-self.addEventListener('install', (e) => {
-  // Build the new offline shell from fresh responses before activating it.
+function precacheAppShell() {
+  // addAll writes the replacement entries together after all requests succeed.
   const assets = LEGACY_HOST
     ? [...ASSETS.filter(path => !['./', './index.html', './lessons/', './lessons/index.html', './docs/', './docs/index.html', './docs/huong-dan-su-dung.html', './demo/tutor.html'].includes(path)), LEGACY_APP, LEGACY_STUDIO]
     : ASSETS;
   const requests = assets.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
-  e.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(requests)).then(() => self.skipWaiting()));
+  return caches.open(CACHE).then(cache => cache.addAll(requests));
+}
+
+self.addEventListener('install', event => {
+  event.waitUntil(precacheAppShell().then(() => self.skipWaiting()));
+});
+
+let shellRefresh;
+self.addEventListener('message', event => {
+  if (event.data?.type === 'SKIP_WAITING') {
+    event.waitUntil(self.skipWaiting());
+  } else if (event.data?.type === 'REFRESH_APP_SHELL' && event.ports[0]) {
+    shellRefresh ||= precacheAppShell().finally(() => { shellRefresh = null; });
+    event.waitUntil(shellRefresh.then(
+      () => event.ports[0].postMessage({ok:true}),
+      () => event.ports[0].postMessage({ok:false}),
+    ));
+  }
 });
 
 self.addEventListener('activate', (e) => {
