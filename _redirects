@@ -2,6 +2,15 @@
 https://dualdictionary.netlify.app/recover.html  /index.html  200!
 https://dualdictionary.netlify.app/lessons/recover.html  /lessons/index.html  200!
 
+# Preserve links to the word index on both domains.
+https://dualdictionary.netlify.app/vi/tu/index/  https://hocta.app/vi/tu/index-word/  301!
+https://dualdictionary.netlify.app/vi/dong-nghia/index/  https://hocta.app/vi/dong-nghia/index-word/  301!
+https://dualdictionary.netlify.app/vi/phat-am/index/  https://hocta.app/vi/phat-am/index-word/  301!
+/vi/tu/index/  /vi/tu/index-word/  301!
+/vi/dong-nghia/index/  /vi/dong-nghia/index-word/  301!
+/vi/phat-am/index/  /vi/phat-am/index-word/  301!
+/lessons/recover.html  https://dualdictionary.netlify.app/lessons/recover.html  301!
+
 # Move public pages, leaving same-origin recovery assets available.
 https://dualdictionary.netlify.app/  https://hocta.app/  301!
 https://dualdictionary.netlify.app/index.html  https://hocta.app/  301!
