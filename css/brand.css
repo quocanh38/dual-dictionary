@@ -57,3 +57,50 @@
   :where(.dd-nav, .topbar) :focus-visible { outline-color: Highlight; }
   .dd-nav .dd-brand::before { display: none; }
 }
+
+/* Shared entry points between the app, reference content, lessons and help. */
+.site-sections {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 .4rem;
+  padding: .15rem .65rem;
+  background: var(--brand-blue);
+  color: var(--brand-paper);
+  font-family: var(--brand-font-body);
+}
+
+.site-sections a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .48rem;
+  color: var(--brand-paper);
+  font-size: .875rem;
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: .25em;
+}
+
+.site-sections a:hover,
+.site-sections a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: .13em;
+}
+
+.site-sections a:focus-visible { outline-color: var(--brand-focus-on-blue); }
+
+@media (forced-colors: active) {
+  .site-sections a:focus-visible { outline-color: Highlight; }
+}
+
+.lesson-page > header .site-sections {
+  justify-content: flex-start;
+  gap: 0 .4rem;
+  padding: 0;
+}
+
+.lesson-page > header .site-sections a[aria-current="page"] {
+  text-decoration: underline;
+}

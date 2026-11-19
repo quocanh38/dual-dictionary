@@ -7,6 +7,7 @@ import { listRecords, getRecord, putRecord, saveDraft, installPack, progressKey 
 import { startDraft, selectionRequest, acceptSelection, exerciseRequest, acceptExercises, repairRequest, sendMeta } from './generator.js';
 import { GEMINI_PROVIDER, providerForPurpose } from './provider.js';
 import { addItem } from '../js/store.js';
+const publicLessons=document.querySelector('#public-lessons');
 const app=document.querySelector('#app'),status=document.querySelector('#status'),offline=document.querySelector('#offline-status');
 let providerSettings={
  [GEMINI_PROVIDER.id]:{apiKey:'',model:GEMINI_PROVIDER.model},
@@ -23,10 +24,11 @@ function check(parent,text,id){const l=el('label'),c=el('input');c.type='checkbo
 function settingsForRequest(task){const provider=providerForPurpose(task.purpose),choice=providerSettings[provider.id];return {...choice,providerId:provider.id,providerLabel:provider.label,baseUrl:provider.baseUrl,maxOutputTokens:provider.maxOutputTokens};}
 function refreshDestination(){const label=document.querySelector('#request-destination');if(label&&request){const chosen=settingsForRequest(request),provider=providerForPurpose(request.purpose);label.textContent=`Provider: ${provider.label} · Purpose: ${request.purpose} · Model: ${chosen.model} · Endpoint: ${provider.baseUrl} · Output limit: ${provider.maxOutputTokens.toLocaleString()} tokens${provider.id===GEMINI_PROVIDER.id?'; reasoning is always on':''}`;const heading=label.parentElement?.querySelector('h3');if(heading)heading.textContent=`Inspect before sending to ${provider.label}`;const agree=document.querySelector('#request-consent');if(agree)agree.checked=false;}}
 function cancel(){epoch++;controller?.abort();controller=null;request=null;}
-function heading(text){app.replaceChildren();const h=el('h2',text);h.tabIndex=-1;app.append(h);h.focus();return h;}
+function heading(text){if(publicLessons)publicLessons.hidden=true;app.replaceChildren();const h=el('h2',text);h.tabIndex=-1;app.append(h);h.focus();return h;}
 function download(name,value){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=el('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function persistDraft(next){const ticket=epoch;const saved=await saveDraft(next);if(ticket===epoch)draft=saved;return saved;}
 async function library(){const ticket=++epoch;const [packs,drafts]=await Promise.all([listRecords('packs'),listRecords('drafts')]);if(ticket!==epoch)return;heading('Choose a lesson').classList.add('sr-only');
+ if(publicLessons)publicLessons.hidden=false;
  const catalogue=el('div');catalogue.className='lesson-catalogue';app.append(catalogue);renderCatalogue(catalogue,ticket).catch(e=>{if(ticket===epoch&&catalogue.isConnected){para(catalogue,e.message,'notice');button(catalogue,'Retry lesson library',()=>library());}});
  const tools=el('details');tools.append(el('summary','Import or try a sample pack'));app.append(tools);
  button(tools,'Load authored example',async b=>{b.disabled=true;try{const p=await(await fetch('./example.json')).json();await installPack(await exportPack(p));await library();tell('Authored example installed. It is not a live provider response.');}finally{b.disabled=false;}});
@@ -46,7 +48,9 @@ async function renderCatalogue(host,ticket){
  const renderEntry=(parent,entry,featured=false)=>{
   const section=el('section');
   if(featured){section.classList.add('lesson-featured');para(section,'Suggested lesson','meta');}
-  section.append(el('h3',entry.title));
+  const title=el('h3');
+  link(title,entry.title,'/lessons/'+entry.file.slice(0,-5)+'/');
+  section.append(title);
   para(section,`${entry.topic} · ${entry.levelEstimate} (estimate)`,'meta');
   if(featured && entry.file==='supplier-delivery.json') {
    para(section,'Practise checking a delivery against an order and contacting a supplier.');
@@ -54,11 +58,7 @@ async function renderCatalogue(host,ticket){
   }
   const existing=installed.get(entry.packId+'@'+entry.version);
   button(section,featured?'Start lesson':existing?'Study':'Open lesson',async()=>{
-   const envelope=existing?.sha256===entry.sha256?existing:await fetchLibraryPack(entry);
-   if(envelope!==existing)await installPack(envelope);
-   if(ticket!==epoch)return;
-   const pack=envelope.payload || envelope;
-   await openPlayer(pack,pack.lessons[0]);
+   await openCatalogueEntry(entry,existing,ticket);
   },featured);
   parent.append(section);
  };
@@ -69,6 +69,35 @@ async function renderCatalogue(host,ticket){
  for(const entry of index.packs)renderEntry(grid,entry);
  more.append(grid);
  host.append(more);
+ if(publicLessons)publicLessons.hidden=true;
+}
+
+async function openCatalogueEntry(entry,existing,ticket) {
+ const envelope=existing?.sha256===entry.sha256?existing:await fetchLibraryPack(entry);
+ if(ticket!==epoch)return;
+ if(envelope!==existing)await installPack(envelope);
+ if(ticket!==epoch)return;
+ const pack=envelope.payload;
+ await openPlayer(pack,pack.lessons[0]);
+}
+
+async function openLinkedLesson(slug) {
+ const ticket=epoch;
+ heading('Opening lesson…');
+ try {
+  const index=await fetchLibraryIndex();
+  if(ticket!==epoch)return;
+  const entry=index.packs.find(item=>item.file===slug+'.json');
+  if(!entry)throw Error('This lesson could not be found in the library.');
+  const existing=await getRecord('packs',entry.packId+'@'+entry.version);
+  if(ticket!==epoch)return;
+  await openCatalogueEntry(entry,existing,ticket);
+ } catch(error) {
+  if(ticket!==epoch)return;
+  heading('Unable to open this lesson');
+  para(app,error.message,'notice');
+  link(app,'Back to lesson library','#library');
+ }
 }
 const studioModels = [
  ['gemini-3.8-flash', 'Gemini 3.8 Flash (default)'],
@@ -160,7 +189,7 @@ function addTargetSave(box, pack, lesson, t) {
 }
 function renderPlayer(){
  if(!currentPlayer)return;const s=currentPlayer,{pack,lesson,progress,preview}=s;heading(preview?'Draft lesson preview':lesson.title);para(app,`${pack.levelEstimate} (estimate) · ${pack.review.reviewerType==='authored-fixture'?'Authored example — not a live Meta result':preview?'AI-assisted draft — review pending':'AI-assisted, editor-reviewed'} · ${pack.review.reviewerType}`,'studio-badge');if(preview)para(app,'Unpublished preview. Progress and Vault saving are disabled.','notice');
- button(app,preview?'Back to editor':'Back to library',()=>{currentPlayer=null;if(preview)renderStudio();else library();});para(app,`Step ${progress.step+1} of ${lesson.exercises.length+2}`);
+ button(app,preview?'Back to editor':'Back to library',()=>{currentPlayer=null;if(preview)renderStudio();else if(location.hash.startsWith('#study='))location.hash='library';else library();});para(app,`Step ${progress.step+1} of ${lesson.exercises.length+2}`);
  if (!preview) button(app, 'Hỏi về bài này', () => openContextChat('work', lesson.title, lesson.reading.text));
  const advance=async()=>{const before=progress.step;progress.step++;try{await writeProgress();if(currentPlayer===s)renderPlayer();}catch(e){progress.step=before;throw e;}};
  if(progress.step===0){para(app,lesson.objective);app.append(el('blockquote',lesson.reading.text));for(const t of lesson.targets){const box=el('section');box.append(el('h3',t.phrase));para(box,t.meaningEn+' · '+t.meaningVi);para(box,lesson.reading.sentences.find(x=>x.id===t.sourceSentenceId).text,'source');if(!preview) addTargetSave(box, pack, lesson, t);app.append(box);}button(app,'Start exercises',advance,true);}
@@ -179,6 +208,16 @@ async function offlineReady(){
   return;
  }
  try{if(!('serviceWorker'in navigator))throw Error('No service worker support.');await navigator.serviceWorker.register('../sw.js');offline.textContent='Preparing offline app cache. Keep the network on until ready.';await navigator.serviceWorker.ready;const shellCaches=(await caches.keys()).filter(name=>/^mdx-dict-v\d+(?:-|$)/.test(name)).sort((a,b)=>parseInt(b.slice('mdx-dict-v'.length),10)-parseInt(a.slice('mdx-dict-v'.length),10));const cacheName=shellCaches[0];if(!cacheName)throw Error('App shell cache is missing.');const cache=await caches.open(cacheName);const paths=['./','./index.html','./app.js','./schema.js','./storage.js','./generator.js','./backup.js','./draft-file.js','./library.js','./village.js','./photo-pane.js','./photo-request.js','./photo-downscale.js','./library/index.json','./library/provenance.json','./library/covers.json','./library/covers/hotel-shift-handover.webp','./library/covers/workshop-safety-plan.webp','./library/covers/library-hours.webp','./library/library-hours.json','./library/tracking-work.json','./library/coastal-survey.json','./library/hotel-shift-handover.json','./library/campus-water-study.json','./library/workshop-safety-plan.json','./library/supplier-delivery.json','./library/museum-access.json','./library/remote-team-handover.json','./library/urban-tree-survey.json','./library/food-bank-volunteer-briefing.json','./library/lab-equipment-audit.json','./library/station-maintenance-notice.json','./library/conference-travel.json','./library/community-garden-water-rotation.json','./library/clinic-appointment-process.json','./library/city-bus-temporary-diversion.json','./library/coastal-bird-count-method.json','./library/community-centre-emergency-drill.json','./library/equipment-loan-desk.json','./library/coastal-temperature-sampling.json','./library/community-kitchen-volunteer-shift.json','./library/urban-heat-survey-method.json','./library/rail-station-lost-property.json','./library/east-market-repair-cafe-volunteer-shift.json','./library/school-library-survey-privacy.json','./library/riverside-centre-class-registration.json','./library/university-photo-archive-catalogue.json','./library/community-arts-open-day-volunteers.json','./library/volunteer-rota-schedule-change.json','./library/east-dock-refill-shop-stock-check.json','./library/student-podcast-interview-editing.json','./library/staggered-start-time-policy-rollout.json','./lesson-ui.css','./example.json','../index.html','../js/store.js','../js/db.js','../js/gemini-policy.js'];const ok=(await Promise.all(paths.map(p=>cache.match(new URL(p,location.href))))).every(Boolean);offline.textContent=ok?'Ready offline: app shell cached. Installed packs are available on this browser.':'Offline cache is not ready for this version. Stay online, reload after update, or retry.';if(!ok)button(document.querySelector('main'),'Retry offline readiness',offlineReady);}catch{offline.textContent='Offline cache unavailable. Stay online; saved records still require browser storage.';}}
-window.addEventListener('hashchange',()=>{cancel();currentPlayer=null;tell('');if(location.hash==='#studio')renderStudio();else library().catch(e=>tell(e.message));});
+function routeLessonView() {
+ cancel();
+ currentPlayer=null;
+ tell('');
+ const hash=location.hash;
+ if(hash==='#studio')renderStudio();
+ else if(hash.startsWith('#study='))openLinkedLesson(hash.slice(7));
+ else library().catch(error=>tell(error.message));
+}
+window.addEventListener('hashchange',routeLessonView);
 window.addEventListener('beforeunload',()=>controller?.abort());
-if(location.hash==='#studio')renderStudio();else library().catch(e=>tell('Could not read local storage: '+e.message));offlineReady();
+routeLessonView();
+offlineReady();

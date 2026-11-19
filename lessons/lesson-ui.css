@@ -110,3 +110,32 @@ body{font:17px/1.6 system-ui,sans-serif;background:var(--bg,#f7fafb);color:var(-
   background: url("../icons/icon-192.png") center / contain no-repeat;
   border-radius: .4rem;
 }
+
+.public-lesson article {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.public-lesson .lesson-breadcrumb {
+  max-width: 44rem;
+  margin: 0 auto .75rem;
+}
+
+.public-lesson article section {
+  margin-block: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.public-lesson article dl { margin-block-end: 0; }
+.public-lesson article dt { font-weight: 750; }
+.public-lesson article dd { margin: .4rem 0 1.25rem; }
+.public-lesson article dd:last-child { margin-block-end: 0; }
+.public-lesson article dd p { margin-block: .35rem; }
+.public-lesson article dd blockquote { margin-block: .6rem 0; }
+
+.lesson-grid h3 a,
+.lesson-featured h3 a,
+.public-lesson .lesson-breadcrumb a {
+  color: var(--accent);
+  text-underline-offset: .15em;
+}
