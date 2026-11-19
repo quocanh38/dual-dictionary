@@ -73,7 +73,6 @@ async function renderCatalogue(host,ticket){
 const studioModels = [
  ['gemini-3.8-flash', 'Gemini 3.8 Flash (default)'],
  ['gemini-3.5-flash-lite', 'Gemini 3.5 Flash-Lite'],
- ['gemini-3.6-flash', 'Gemini 3.6 Flash'],
 ];
 function renderStudio(){heading('Gemini online');para(app,'Create a lesson from your reading with Gemini. After review, save the pack to study offline. Use original or permitted text.','notice');
  const config=el('section');

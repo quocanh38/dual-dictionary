@@ -1,6 +1,6 @@
 export const GEMINI_DEFAULT_MODEL = 'gemini-3.8-flash';
 export const GEMINI_LIGHT_MODEL = 'gemini-3.5-flash-lite';
-export const GEMINI_MODELS = [GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL, 'gemini-3.6-flash'];
+export const GEMINI_MODELS = [GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL];
 
 function waitForRetry(ms, signal) {
   return new Promise((resolve, reject) => {
