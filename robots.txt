@@ -1,7 +1,14 @@
 User-agent: *
 Allow: /
 
-# AI crawlers (GEO 03/11): cho phep trich dan AI.
+# AI search crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Existing crawler permissions
 User-agent: GPTBot
 Allow: /
 
