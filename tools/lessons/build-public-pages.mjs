@@ -61,9 +61,10 @@ function render({entry, slug, pack, lesson}) {
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/lessons/lesson-ui.css">
 <script type="application/ld+json">${json(data)}</script>
+<script defer src="/js/section-switcher.js"></script>
 </head>
 <body class="lesson-page public-lesson">
-<header><a href="/">HọcTA</a><nav class="site-sections" aria-label="HọcTA"><a href="/" lang="vi">Ứng dụng</a><a href="/lessons/" lang="vi">Bài học</a><a href="/vi/tu/" lang="vi">Từ điển</a><a href="/docs/" lang="vi">Hướng dẫn</a></nav></header>
+<header class="section-topbar"><a href="/">HọcTA</a><div class="section-switcher" lang="vi"><button class="section-trigger" type="button" aria-label="Chuyển khu vực, hiện tại: Bài học" aria-controls="hocta-sections" popovertarget="hocta-sections">Bài học</button><nav id="hocta-sections" class="section-links" aria-label="Các khu vực HọcTA" popover><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></nav></div></header>
 <main id="lesson-content">
   <nav class="lesson-breadcrumb" aria-label="Breadcrumb"><a href="/lessons/">Lesson library</a></nav>
   <article>

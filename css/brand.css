@@ -58,49 +58,133 @@
   .dd-nav .dd-brand::before { display: none; }
 }
 
-/* Shared entry points between the app, reference content, lessons and help. */
-.site-sections {
+/* A compact section switcher shared by the main HọcTA surfaces. */
+.section-topbar {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 0 .4rem;
-  padding: .15rem .65rem;
-  background: var(--brand-blue);
+  gap: .65rem;
+  padding: .25rem max(12px, calc((100% - 948px) / 2));
   color: var(--brand-paper);
-  font-family: var(--brand-font-body);
+  background: var(--brand-blue);
 }
 
-.site-sections a {
+body > header.section-topbar,
+.lesson-page > header.section-topbar {
+  justify-content: flex-start;
+  gap: .65rem;
+  margin: 0;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  padding-block: .25rem;
+  background: var(--brand-blue);
+}
+
+.section-topbar .section-wordmark {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
-  padding-inline: .48rem;
+  gap: .4rem;
   color: var(--brand-paper);
-  font-size: .875rem;
-  font-weight: 650;
+  font-family: var(--brand-font-display);
+  font-weight: 750;
   text-decoration: none;
-  text-underline-offset: .25em;
 }
 
-.site-sections a:hover,
-.site-sections a[aria-current="page"] {
+.section-switcher {
+  flex: none;
+  font-family: var(--brand-font-body);
+  font-size: .875rem;
+}
+
+.section-switcher .section-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: .55em;
+  min-height: 44px;
+  margin: 0;
+  padding: .25rem .55rem;
+  border: 0;
+  border-radius: .45rem;
+  background: transparent;
+  color: var(--brand-paper);
+  font: inherit;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.section-trigger::after {
+  content: "";
+  inline-size: .42em;
+  block-size: .42em;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-.12em) rotate(45deg);
+}
+
+.section-trigger:hover { background: rgba(255, 255, 255, .13); }
+.section-trigger:focus-visible { outline: 2px solid var(--brand-focus-on-blue); }
+
+.section-switcher .section-links {
+  display: grid;
+  gap: .12rem;
+  box-sizing: border-box;
+  width: min(208px, calc(100vw - 24px));
+  padding: .32rem;
+  border: 1px solid var(--border, var(--brand-line));
+  border-radius: .65rem;
+  background: var(--surface, light-dark(var(--brand-surface), var(--brand-night-surface)));
+  color: var(--text, light-dark(var(--brand-ink), var(--brand-night-text)));
+  box-shadow: 0 8px 25px rgba(10, 20, 55, .2);
+}
+
+.section-switcher .section-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .65rem;
+  border-radius: .35rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-links a:hover,
+.section-links a:focus-visible,
+.section-links a[aria-current="page"] {
   text-decoration: underline;
-  text-decoration-thickness: .13em;
+  text-underline-offset: .22em;
 }
 
-.site-sections a:focus-visible { outline-color: var(--brand-focus-on-blue); }
+@supports selector(:popover-open) {
+  .section-switcher .section-links:not(:popover-open) { display: none; }
+  .section-switcher .section-links:popover-open {
+    position: fixed;
+    inset: var(--section-top, 54px) auto auto var(--section-left, 12px);
+    margin: 0;
+  }
+}
+
+@supports not selector(:popover-open) {
+  .section-switcher:not([data-fallback]) .section-trigger { display: none; }
+  .section-switcher[data-fallback] { position: relative; }
+  .section-switcher[data-fallback] .section-links {
+    position: absolute;
+    z-index: 70;
+    inset: calc(100% + 6px) auto auto 0;
+  }
+  .section-switcher[data-fallback] .section-links[hidden] { display: none; }
+}
+
+@media (max-width: 420px) {
+  .topbar .brand { gap: .15rem; }
+  .topbar .brand h1 {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    clip-path: inset(50%);
+  }
+}
 
 @media (forced-colors: active) {
-  .site-sections a:focus-visible { outline-color: Highlight; }
-}
-
-.lesson-page > header .site-sections {
-  justify-content: flex-start;
-  gap: 0 .4rem;
-  padding: 0;
-}
-
-.lesson-page > header .site-sections a[aria-current="page"] {
-  text-decoration: underline;
+  .section-trigger:focus-visible { outline-color: Highlight; }
 }

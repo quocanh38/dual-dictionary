@@ -14,10 +14,13 @@
   <link rel="stylesheet" href="/lessons/lesson-ui.css">
 <link rel="icon" href="/favicon.ico">
 <meta name="theme-color" content="#293CC8">
+<script defer src="/js/section-switcher.js"></script>
 </head>
 <body class="lesson-page">
-  <header><a href="/">HọcTA</a><nav aria-label="Học tiếng Anh"><a href="/lessons/">Bài học</a><a href="/vi/blog/toeic/luyen-toeic-tren-dien-thoai-offline/">TOEIC offline</a></nav></header>
+  <header class="section-topbar"><a href="/">HọcTA</a><div class="section-switcher" lang="vi"><button class="section-trigger" type="button" aria-label="Chuyển khu vực, hiện tại: Bài học" aria-controls="hocta-sections" popovertarget="hocta-sections">Bài học</button><nav id="hocta-sections" class="section-links" aria-label="Các khu vực HọcTA" popover><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></nav></div></header>
   <main>
+<p class="meta"><a href="/lessons/">Thư viện bài học</a> · <a href="/vi/blog/toeic/luyen-toeic-tren-dien-thoai-offline/">TOEIC offline</a></p>
+
     <h1>Đọc tiếng Anh và tra từ trong ngữ cảnh</h1>
     <p class="lead">Đọc văn bản tiếng Anh, chạm vào từ chưa biết để xem nghĩa tiếng Việt, rồi quay lại bài đọc.</p>
     <a class="btn-primary" href="/?entry=reader_landing#/reader">Mở Reader</a>
