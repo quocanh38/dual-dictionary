@@ -3963,7 +3963,7 @@ async function tutorLocalHistory() {
 function tutorRenderSuggestions() {
   const stage=$('#tutor-stage');
   const provider=PROVIDERS[tutorSession.provider]?.label||tutorSession.provider||'selected provider';
-  stage.replaceChildren(tutorText('p','Choose one phrase to practise. Suggestions and source sentences were checked against the article.','hint'),tutorText('p',tutorSession.resultSource==='cache'?`Cached result · ${provider} / ${tutorSession.model||'saved model'} · no provider request was made.`:`Live result · ${provider} / ${tutorSession.model||''}`,'hint'));
+  stage.replaceChildren(tutorText('p','Choose one phrase to practise. Suggestions and source sentences were checked against the article.','hint'),tutorText('p',tutorSession.resultSource==='cache'?`Cached result · ${provider} / ${tutorSession.phraseModel||tutorSession.model||'saved model'} · no provider request was made.`:`Live result · ${provider} / ${tutorSession.phraseModel||tutorSession.model||''}`,'hint'));
   tutorSession.phrases.forEach((p,i)=>{
     const card=document.createElement('section'); card.className='adv-section';
     card.append(tutorText('h3',p.phrase),tutorText('p',p.sourceSentence));
@@ -4152,8 +4152,9 @@ async function handleTutorClick(e) {
       // only a personalization/ranking explanation (for example, already due).
       const tutorMeaning=String(p.meaningVi||'').trim();
       if(!tutorMeaning) throw new Error('This older suggestion has no saved Vietnamese meaning. Start a new practice to refresh it.');
-      const tutorSense=senseStableKey({slot:'ai-tutor',sourceFile:`${tutorSession.provider}/${tutorSession.model}/${tutorSession.resultSource||'unknown'}`,keyText:p.phrase},`${tutorMeaning}\n${p.sourceSentence}`);
-      const r=await addItem({type:'phrase',text:p.phrase,note:`Tutor: ${noteParts.join(' ')}`,tags:['ai-tutor'],dictionary:{source:`AI Tutor suggestion · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} (${tutorSession.resultSource==='cache'?'cached':'live'})`,sourceFile:tutorSession.model||'',entryKey:p.phrase,definition:tutorMeaning,senseKey:tutorSense},context:{sentence:p.sourceSentence,headword:p.phrase,sourceTitle:tutorSession.articleTitle||'AI tutor reading practice'}});
+      const phraseModel=tutorSession.phraseModel||tutorSession.model||'';
+      const tutorSense=senseStableKey({slot:'ai-tutor',sourceFile:`${tutorSession.provider}/${phraseModel}/${tutorSession.resultSource||'unknown'}`,keyText:p.phrase},`${tutorMeaning}\n${p.sourceSentence}`);
+      const r=await addItem({type:'phrase',text:p.phrase,note:`Tutor: ${noteParts.join(' ')}`,tags:['ai-tutor'],dictionary:{source:`AI Tutor suggestion · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} (${tutorSession.resultSource==='cache'?'cached':'live'})`,sourceFile:phraseModel,entryKey:p.phrase,definition:tutorMeaning,senseKey:tutorSense},context:{sentence:p.sourceSentence,headword:p.phrase,sourceTitle:tutorSession.articleTitle||'AI tutor reading practice'}});
       if(!r.merged){state.items.unshift(r.item);renderVault();tutorJourney?.step('saved');}
       tutorSession.savedItemId=r.item?.id||null; tutorSession.stage='saved'; await persistTutor(); renderTutorStage();
       tutorStatus(r.merged?'This phrase is already in your Vault.':'Saved to your Vault for future FSRS review. Saving is not counted as a review.');
@@ -6865,6 +6866,12 @@ async function importTutorRecords(payload) {
     if(['answer','feedback','saved'].includes(stage)&&!target) stage='select';
     if(stage==='feedback'&&!feedback) stage='answer';
     const safe={id:row.id,stage,article:row.article,articleTitle:String(row.articleTitle||'').slice(0,300),createdAt:Number(row.createdAt)||Date.now(),updatedAt:Number(row.updatedAt)||Date.now(),consentedAt:Number(row.consentedAt)||0,provider:String(row.provider||'').slice(0,40),model:String(row.model||'').slice(0,120),phrases,target,prompt:String(row.prompt||'').slice(0,1200),answer:String(row.answer||'').slice(0,1200),feedback,feedbackDecision:['accepted','rejected'].includes(row.feedbackDecision)?row.feedbackDecision:null,resultSource:['live','cache'].includes(row.resultSource)?row.resultSource:null,confirmedErrors:Array.isArray(row.confirmedErrors)?row.confirmedErrors.slice(0,40):[],savedItemId:String(row.savedItemId||'')};
+    for(const key of ['phraseModel','promptModel','feedbackModel']) {
+      if(typeof row[key]==='string') safe[key]=row[key].slice(0,120);
+    }
+    for(const key of ['promptSource','feedbackSource']) {
+      if(row[key]==='live') safe[key]='live';
+    }
     await putTutorRecord(safe); added++;
   }
   if(added && !localStorage.getItem('dd-tutor-current')) {
