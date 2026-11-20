@@ -228,3 +228,75 @@ html.is-offline .net-banner {
   font-weight: 600;
 }
 
+/* Mobile navbar fix for /vi/ pages: override inline flex:1 bug so menu wraps
+   full-width below the topbar in a compact 2-column grid instead of squeezing
+   into a tall right-hand column. */
+@media (max-width: 720px) {
+  nav.dd-nav .dd-nav-in {
+    align-items: center;
+    row-gap: 8px;
+  }
+  nav.dd-nav .dd-burger {
+    margin-left: auto;
+    min-width: 44px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav.dd-nav .dd-links {
+    flex: 1 0 100%;
+    width: 100%;
+    margin-top: 2px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, .18);
+    max-height: 68dvh;
+    overflow-y: auto;
+  }
+  nav.dd-nav.open .dd-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 6px;
+    align-items: stretch;
+  }
+  nav.dd-nav .dd-links > a,
+  nav.dd-nav .dd-drop-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 10px;
+    text-align: left;
+    background: rgba(255, 255, 255, .07);
+    border-radius: 8px;
+  }
+  nav.dd-nav .dd-drop {
+    grid-column: 1 / -1;
+  }
+  nav.dd-nav .dd-drop-menu {
+    position: static;
+    min-width: 0;
+    margin-top: 4px;
+    padding: 6px;
+    box-shadow: none;
+    background: rgba(16, 26, 92, .45);
+  }
+  nav.dd-nav .dd-drop:hover .dd-drop-menu,
+  nav.dd-nav .dd-drop:focus-within .dd-drop-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+  nav.dd-nav .dd-drop-menu a {
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: transparent;
+  }
+  nav.dd-nav .dd-search {
+    flex: 1 0 100%;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
