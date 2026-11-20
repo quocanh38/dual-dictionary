@@ -2791,10 +2791,20 @@ function emptyDoc(slot, word, pageUrl) {
   const tips = lang === 'vi'
     ? 'Kiểm tra chính tả hoặc thử dạng gốc, ví dụ “run” thay cho “running”. Bạn cũng có thể thử gói từ điển khác.'
     : 'Check the spelling, try a shorter form (for example, “run” instead of “running”), or try another dictionary pack.';
-  return `<!doctype html><html lang="${lang === 'vi' ? 'vi' : 'en'}"><head><meta charset="utf-8"><style>
-    body{font-family:-apple-system,sans-serif;color:#374151;padding:24px;text-align:center;line-height:1.7}
-    b{color:#293cc8}
+  const theme = document.documentElement.dataset.theme || 'auto';
+  return `<!doctype html><html lang="${lang === 'vi' ? 'vi' : 'en'}" data-theme="${theme}"><head><meta charset="utf-8"><style>
+    html{background:#fff;color:#374151;color-scheme:light}
+    body{font-family:-apple-system,sans-serif;padding:24px;text-align:center;line-height:1.7}
+    b,a{color:#293cc8}
     .tips{color:#6b7280;font-size:14px}
+    html[data-theme="dark"]{background:#161d24;color:#e7eaee;color-scheme:dark}
+    html[data-theme="dark"] b,html[data-theme="dark"] a{color:#aab6ff}
+    html[data-theme="dark"] .tips{color:#b5c0d7}
+    @media (prefers-color-scheme:dark){
+      html[data-theme="auto"]{background:#161d24;color:#e7eaee;color-scheme:dark}
+      html[data-theme="auto"] b,html[data-theme="auto"] a{color:#aab6ff}
+      html[data-theme="auto"] .tips{color:#b5c0d7}
+    }
   </style></head><body>
     <p>${message}</p>${source}
     <p class="tips">${tips}</p>
@@ -4968,7 +4978,7 @@ function renderLevelTest() {
     h += '<p style="margin:10px 0 4px"><strong>Câu ' + (i + 1) + ' [' + q[6] + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
     for (let k = 1; k <= 4; k++) {
       const sel = levelAnswers[i] === k - 1;
-      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:#293cc8;background:#ecfdf5' : '') + '">' + escapeHtml(q[k]) + '</button> ';
+      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:var(--brand-blue);background:var(--brand-blue);color:#fff' : '') + '">' + escapeHtml(q[k]) + '</button> ';
     }
     h += '</div>';
   });
