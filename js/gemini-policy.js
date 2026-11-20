@@ -2,6 +2,25 @@ export const GEMINI_DEFAULT_MODEL = 'gemini-3.8-flash';
 export const GEMINI_LIGHT_MODEL = 'gemini-3.5-flash-lite';
 export const GEMINI_MODELS = [GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL];
 
+export function isValidGeminiModelId(model) {
+  return typeof model === 'string' && /^gemini-[a-z0-9._-]{2,60}$/i.test(model.trim());
+}
+
+export async function listGeminiModels(apiKey, signal) {
+  const key = String(apiKey || '').trim();
+  if (!key) return [];
+  const res = await fetch('https://generativelanguage.googleapis.com/v1beta/models', {
+    headers: { 'x-goog-api-key': key },
+    signal: signal || AbortSignal.timeout(12000),
+  });
+  if (!res.ok) return [];
+  const data = await res.json().catch(() => null);
+  return (data?.models || [])
+    .filter((m) => Array.isArray(m.supportedGenerationMethods) && m.supportedGenerationMethods.includes('generateContent'))
+    .map((m) => String(m.name || '').replace(/^models\//, ''))
+    .filter((id) => isValidGeminiModelId(id));
+}
+
 function waitForRetry(ms, signal) {
   return new Promise((resolve, reject) => {
     signal?.throwIfAborted();

@@ -9,8 +9,14 @@ import { GEMINI_PROVIDER, providerForPurpose } from './provider.js';
 import { addItem } from '../js/store.js';
 const publicLessons=document.querySelector('#public-lessons');
 const app=document.querySelector('#app'),status=document.querySelector('#status'),offline=document.querySelector('#offline-status');
+const sessionGeminiKey = (() => {
+ try {
+  const s = JSON.parse(sessionStorage.getItem('dd-ai-settings-v2') || 'null') || JSON.parse(localStorage.getItem('dd-ai-settings-v2') || 'null');
+  return s?.provider === 'gemini' && typeof s.apiKey === 'string' ? s.apiKey.trim() : '';
+ } catch { return ''; }
+})();
 let providerSettings={
- [GEMINI_PROVIDER.id]:{apiKey:'',model:GEMINI_PROVIDER.model},
+ [GEMINI_PROVIDER.id]:{apiKey:sessionGeminiKey,model:GEMINI_PROVIDER.model},
 };
 let draft=null,request=null,controller=null,epoch=0,currentPlayer=null,saveBusy=false;
 const limit=20;

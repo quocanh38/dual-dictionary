@@ -90,12 +90,15 @@ export async function sendVisionRequest({ baseUrl, model, key, request, maxOutpu
   else signal?.addEventListener('abort', abort, { once: true });
   let status = null;
   try {
-    const response = await fetch(String(baseUrl).replace(/\/$/, '') + '/chat/completions', {
+    const { fetchGeminiWithFallback } = await import('../js/gemini-policy.js');
+    const endpoint = String(baseUrl).replace(/\/$/, '') + '/chat/completions';
+    const send = (chosenModel) => fetch(endpoint, {
       method: 'POST',
       headers: { Authorization: 'Bearer ' + String(key).trim(), 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      body: JSON.stringify({ ...body, model: chosenModel }),
       signal: controller.signal,
     });
+    const { response, model: usedModel } = await fetchGeminiWithFallback(send, model, controller.signal);
     status = response.status;
     if (!response.ok) {
       if ([401, 403].includes(status)) throw Error('Provider rejected the key or model access. Check the key/model, then retry with fresh consent.');
@@ -119,7 +122,7 @@ export async function sendVisionRequest({ baseUrl, model, key, request, maxOutpu
     } : null;
     return {
       providerId: PHOTO_PROVIDER_ID,
-      model,
+      model: usedModel,
       status,
       usage,
       latencyMs: Date.now() - started,

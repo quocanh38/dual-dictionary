@@ -1,11 +1,16 @@
 // BYO-key tutor adapters. Keys stay in this browser profile and are sent only
 // to the provider selected by the learner when they explicitly request AI.
-import { GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL, GEMINI_MODELS, fetchGeminiWithFallback } from './gemini-policy.js';
+import { GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL, GEMINI_MODELS, isValidGeminiModelId, fetchGeminiWithFallback } from './gemini-policy.js';
 
 const KEY = 'dd-ai-settings-v2';
 export const PROVIDERS = {
   gemini: { label: 'Gemini', baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai', model: GEMINI_DEFAULT_MODEL, protocol: 'openai' },
 };
+function pickGeminiModel(candidate, fallback = GEMINI_DEFAULT_MODEL) {
+  const trimmed = typeof candidate === 'string' ? candidate.trim() : '';
+  if (trimmed && trimmed !== 'gemini-3.6-flash' && isValidGeminiModelId(trimmed)) return trimmed;
+  return fallback;
+}
 export function getAiSettings() {
   const defaults = { provider: 'gemini', ...PROVIDERS.gemini, apiKey: '', rememberKey: false };
   try {
@@ -15,7 +20,7 @@ export function getAiSettings() {
     return {
       ...defaults,
       // Older builds wrote 3.6 as the default, with no explicit model choice.
-      model: 'rememberKey' in saved && GEMINI_MODELS.includes(saved.model) ? saved.model : defaults.model,
+      model: 'rememberKey' in saved ? pickGeminiModel(saved.model, defaults.model) : defaults.model,
       apiKey: String(saved.apiKey || ''),
       rememberKey: session ? false : Boolean(saved.apiKey),
     };
@@ -24,7 +29,7 @@ export function getAiSettings() {
 export function saveAiSettings(s) {
   const value = {
     provider: 'gemini', ...PROVIDERS.gemini,
-    model: GEMINI_MODELS.includes(s.model) ? s.model : GEMINI_DEFAULT_MODEL,
+    model: pickGeminiModel(s.model, GEMINI_DEFAULT_MODEL),
     apiKey: String(s.apiKey || '').trim(),
     rememberKey: Boolean(s.rememberKey && s.apiKey?.trim()),
   };
@@ -89,7 +94,7 @@ export async function askTutor({ instructions, input, signal, model, onModel, ti
   if (!settings.apiKey) throw new Error('Add an API key in Settings → Learning.');
   if (!settings.baseUrl || !settings.model) throw new Error('Choose an API endpoint and model.');
   const body = {
-    model: GEMINI_MODELS.includes(model) ? model : settings.model,
+    model: pickGeminiModel(model, settings.model),
     response_format: { type: 'json_object' },
     messages: [{ role: 'system', content: instructions }, { role: 'user', content: input }],
   };
@@ -102,13 +107,14 @@ export async function askTutor({ instructions, input, signal, model, onModel, ti
   try { return JSON.parse(cleaned); } catch { throw new Error('Tutor response was not valid JSON. Please retry.'); }
 }
 
-export async function streamTutor({ instructions, input, signal, onText, onModel }) {
+export async function streamTutor({ instructions, input, signal, model, onText, onModel }) {
   const settings = getAiSettings();
   if (!settings.apiKey) throw new Error('Hãy nhập Gemini API key trong Cài đặt → Học tập.');
+  const chosenModel = pickGeminiModel(model, settings.model || GEMINI_LIGHT_MODEL);
   return request(`${settings.baseUrl}/chat/completions`, {
     Authorization: `Bearer ${settings.apiKey}`, 'Content-Type': 'application/json',
   }, {
-    model: GEMINI_LIGHT_MODEL,
+    model: chosenModel,
     stream: true,
     messages: [{ role: 'system', content: instructions }, { role: 'user', content: input }],
   }, signal, 45000, async (response) => {
@@ -125,11 +131,13 @@ export async function streamTutor({ instructions, input, signal, onText, onModel
         for (const line of lines) {
           if (!line.startsWith('data:')) continue;
           const data = line.slice(5).trim();
+          if (!data) continue;
           if (data === '[DONE]') {
             if (!result.trim() || !finished) throw new Error('Gemini chưa trả lời đầy đủ.');
             return result;
           }
-          const event = JSON.parse(data);
+          let event;
+          try { event = JSON.parse(data); } catch { continue; }
           if (event.error) throw new Error('Gemini báo lỗi khi đang trả lời.');
           const choice = event.choices?.[0];
           const delta = choice?.delta?.content;
@@ -137,9 +145,12 @@ export async function streamTutor({ instructions, input, signal, onText, onModel
             result += delta;
             onText(result);
           }
-          if (choice?.finish_reason === 'stop') finished = true;
+          if (choice?.finish_reason === 'stop' || choice?.finish_reason === 'length') finished = true;
         }
-        if (done) throw new Error('Phản hồi bị ngắt. Bạn có thể thử lại.');
+        if (done) {
+          if (result.trim() && finished) return result;
+          throw new Error('Phản hồi bị ngắt. Bạn có thể thử lại.');
+        }
       }
     } finally {
       await reader.cancel().catch(() => {});

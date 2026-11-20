@@ -11,7 +11,15 @@ Each question must have one correct answer. In writing mode focus on genuine err
 In exam mode create new practice on the same skill, without changing or repeating the original test question.`;
 
 function savedLessons() {
-  return JSON.parse(localStorage.getItem(storageKey) || '[]');
+  try {
+    const parsed = JSON.parse(localStorage.getItem(storageKey) || '[]');
+    return Array.isArray(parsed) ? parsed : [];
+  } catch { return []; }
+}
+
+function deleteSavedLesson(createdAt) {
+  const next = savedLessons().filter((l) => l.createdAt !== createdAt);
+  localStorage.setItem(storageKey, JSON.stringify(next));
 }
 
 function append(parent, tag, text) {
@@ -87,6 +95,12 @@ export function openSavedAiLessons(initialLesson) {
   function showLesson(lesson) {
     list.replaceChildren();
     button(list, 'Về danh sách bài đã lưu', showList).focus();
+    if (lesson.createdAt) {
+      button(list, 'Xóa bài này', () => {
+        deleteSavedLesson(lesson.createdAt);
+        showList();
+      });
+    }
     append(list, 'h3', lesson.title);
     renderLesson(list, lesson);
   }
@@ -97,8 +111,13 @@ export function openSavedAiLessons(initialLesson) {
       const lessons = savedLessons();
       if (!lessons.length) append(list, 'p', 'Chưa có bài đã lưu.');
       for (const lesson of lessons) {
+        const row = append(list, 'div', '');
         const title = lesson.title + ' · ' + new Date(lesson.createdAt).toLocaleString();
-        button(list, title, () => showLesson(lesson));
+        button(row, title, () => showLesson(lesson));
+        button(row, 'Xóa', () => {
+          deleteSavedLesson(lesson.createdAt);
+          showList();
+        });
       }
     } catch {
       append(list, 'p', 'Không đọc được bài đã lưu trên trình duyệt này.');
@@ -124,6 +143,10 @@ export function openAiLessonBuilder({ title, mode, source }) {
   const modelLabel = append(body, 'label', 'Model Gemini ');
   const model = append(modelLabel, 'select', '');
   for (const id of models) append(model, 'option', id).value = id;
+  const consentLabel = append(body, 'label', '');
+  const consent = document.createElement('input');
+  consent.type = 'checkbox';
+  consentLabel.append(consent, document.createTextNode(' Tôi đồng ý gửi nội dung trên tới Gemini API bằng key cá nhân'));
   if (!getAiSettings().apiKey) {
     journey?.step('setup');
     append(body, 'p', 'Thêm key trong Cài đặt → Học tập.');
@@ -148,6 +171,10 @@ export function openAiLessonBuilder({ title, mode, source }) {
   const preview = append(body, 'div', '');
   const generate = button(body, 'Tạo bài bằng Gemini', async () => {
     const material = input.value.trim();
+    if (!consent.checked) {
+      status.textContent = 'Hãy tick đồng ý gửi nội dung tới Gemini trước khi tạo bài.';
+      return;
+    }
     if (!navigator.onLine || !material) {
       status.textContent = 'Cần có mạng và nội dung để tạo bài.';
       return;
