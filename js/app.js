@@ -433,7 +433,8 @@ async function boot() {
   }
   $('#btn-fsrs-optimize')?.addEventListener('click', optimizeFsrs);
   $('#btn-fsrs-reset')?.addEventListener('click', resetFsrsWeightsUi);
-  $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog').showModal(); });
+  $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); checkTtsVoiceStatus(); $('#advanced-dialog').showModal(); });
+  $('#btn-test-tts')?.addEventListener('click', testTtsVoice);
   let quickloadButtonRun;
   $('#btn-quickload')?.addEventListener('click', event => {
     if (loadAbort) {
@@ -5909,6 +5910,7 @@ async function saveSelectedSense() {
     }
     $('#sense-save-dialog')?.close();
     showToast(result.merged ? `This meaning of “${key}” is already in your Vault.` : `Saved this meaning of “${key}” to your Vault.`);
+    if (!result.merged) { try { maybeNudgeBackupMilestone(); } catch (e) {} }
     updateContextBar(key);
     updateSaveButtonState();
     updateVocabBadge();
@@ -8714,20 +8716,122 @@ async function freqBand(word) {
   return map[key] || null;
 }
 
-/* ================= Phase 5-A: bookmarklet / external handoff ================= */
+/* ================= Phase 5-A: bookmarklet / Android share_target / shortcut handoff ================= */
 function handleUrlHandoff() {
   try {
+    if (location.hash === '#quick') {
+      navigate('search');
+      setTimeout(() => { $('#search-input')?.focus(); }, 60);
+    }
     const params = new URLSearchParams(location.search);
     const q = params.get('q');
     const rd = params.get('read');
+    const sharedText = (params.get('text') || '').trim();
+    const sharedTitle = (params.get('title') || '').trim();
+    const sharedUrl = (params.get('url') || '').trim();
+
     if (rd) {
       navigate('reader');
       $('#reader-input').value = rd;
       readerRender(rd, 'shared');
     } else if (q) {
+      const inp = $('#search-input');
+      if (inp) inp.value = q;
       search(q);
+    } else if (sharedText || sharedTitle || sharedUrl) {
+      const primary = sharedText || sharedTitle;
+      const isShortLookup = primary && !/\n/.test(primary)
+        && primary.split(/\s+/).length <= 3
+        && primary.length <= 42
+        && !/^https?:\/\//i.test(primary);
+      if (isShortLookup) {
+        navigate('search');
+        const inp = $('#search-input');
+        if (inp) inp.value = primary;
+        search(primary);
+      } else if (primary && !/^https?:\/\//i.test(primary)) {
+        navigate('reader');
+        const ta = $('#reader-input');
+        if (ta) ta.value = primary;
+        readerRender(primary, sharedTitle || sharedUrl || 'shared');
+      } else if (sharedUrl || /^https?:\/\//i.test(primary)) {
+        const targetUrl = sharedUrl || primary;
+        navigate('reader');
+        const urlInput = $('#reader-url');
+        if (urlInput) {
+          urlInput.value = targetUrl;
+          const details = urlInput.closest('details');
+          if (details) details.open = true;
+        } else if ($('#reader-input')) {
+          $('#reader-input').value = targetUrl;
+        }
+        const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+        showToast(isVi ? 'Đã nhận liên kết chia sẻ — bấm tải hoặc dán đoạn văn vào Reader.' : 'Shared link received — load or paste text in Reader.');
+      }
+      // Clean query params so reloading does not re-trigger the share handoff.
+      try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) {}
     }
   } catch (e) { /* ignore */ }
+}
+
+/* Offline TTS voice check (Settings -> Learning) */
+function checkTtsVoiceStatus() {
+  const el = document.getElementById('tts-voice-status');
+  if (!el) return;
+  const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+  if (!('speechSynthesis' in window)) {
+    el.textContent = isVi ? '⚠️ Trình duyệt này không hỗ trợ Web Speech TTS.' : '⚠️ Web Speech TTS is not supported in this browser.';
+    return;
+  }
+  const voices = speechSynthesis.getVoices() || [];
+  const enVoices = voices.filter((v) => /^en(?:[-_]|$)/i.test(v.lang || ''));
+  const localEn = enVoices.filter((v) => v.localService);
+  if (localEn.length) {
+    el.textContent = isVi
+      ? `✓ Đã có ${localEn.length} giọng tiếng Anh offline trên máy (${localEn[0].name}). Chế độ máy bay phát âm bình thường.`
+      : `✓ ${localEn.length} offline English voice(s) available (${localEn[0].name}). Airplane-mode pronunciation is ready.`;
+  } else if (enVoices.length) {
+    el.textContent = isVi
+      ? `⚠️ Chỉ thấy ${enVoices.length} giọng tiếng Anh trực tuyến (chưa có giọng offline trên máy). Khi bật chế độ máy bay có thể bị im lặng.`
+      : `⚠️ Found ${enVoices.length} online-only English voice(s). Install an offline English voice in OS settings for airplane mode.`;
+  } else {
+    el.textContent = isVi
+      ? '⚠️ Chưa phát hiện giọng tiếng Anh trong trình duyệt — hãy bấm "Thử giọng đọc" bên dưới hoặc cài gói giọng English trong Cài đặt máy.'
+      : '⚠️ No English voices reported yet — tap Test below or install English voice data in device settings.';
+  }
+}
+function testTtsVoice() {
+  checkTtsVoiceStatus();
+  if (!('speechSynthesis' in window)) return;
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance('Practice makes progress.');
+    u.lang = 'en-US';
+    const voices = speechSynthesis.getVoices() || [];
+    const pick = voices.find((v) => /^en[-_](?:US|GB)/i.test(v.lang) && v.localService)
+      || voices.find((v) => /^en\b/i.test(v.lang));
+    if (pick) u.voice = pick;
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+
+/* Vault milestone backup nudge (local-only, once per milestone: 20 / 50 / 100 / 200) */
+const BACKUP_MILESTONES = [20, 50, 100, 200];
+function maybeNudgeBackupMilestone() {
+  const count = Array.isArray(state?.items) ? state.items.length : 0;
+  const hit = BACKUP_MILESTONES.filter((m) => count >= m).pop() || 0;
+  if (!hit) return;
+  let last = 0;
+  try { last = parseInt(localStorage.getItem('dd-backup-nudge-milestone') || '0', 10) || 0; } catch (e) {}
+  if (hit <= last) return;
+  try { localStorage.setItem('dd-backup-nudge-milestone', String(hit)); } catch (e) {}
+  const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+  const msg = isVi
+    ? `🎉 Bạn đã lưu ${count} từ trong Vault! Nên xuất 1 bản sao lưu JSON phòng khi đổi máy.`
+    : `🎉 ${count} words saved in your Vault! Consider downloading a JSON backup.`;
+  setTimeout(() => {
+    showToast(msg, () => { try { exportCompleteStudyBackup(); } catch (e) {} }, 8500, isVi ? 'Sao lưu ngay' : 'Back up now');
+  }, 1200);
 }
 
 /* ================= Phase 5-C: practice depth (recall, hint, streak & daily goal) ================= */
