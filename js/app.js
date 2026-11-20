@@ -8052,18 +8052,13 @@ function renderBackupInfo() {
   const at = parseInt(localStorage.getItem('auto-backup-at') || '0', 10);
   el.textContent = at ? 'Last auto-backup: ' + new Date(at).toLocaleString('en-US') : 'No auto-backup yet (it runs once a day when you have saved items).';
 }
-/* onboarding (first visit) */
+/* onboarding (first visit): handled inline by the 30-second Quick Start card
+ * and #firstload setup card so no blocking modal interrupts first launch. */
 function maybeOnboard() {
-  if (currentView() !== 'search' || loadAbort || Object.keys(SLOTS).some(slot => state.dicts[slot]) || document.querySelector('dialog[open]') || localStorage.getItem('onboarded')) return;
-  const d = $('#onboarding-dialog');
-  if (!d) return;
-  // The nudge link is a dead button where notifications don't exist at all
-  // (iOS Safari in-browser) — hide it instead of silently doing nothing.
-  if (!('Notification' in window)) $('#onboard-reminders')?.classList.add('hidden');
-  d.showModal();
-  localStorage.setItem('onboarded', '1');
-  // this visit WAS the reminders offer — never toast the same thing on top
-  localStorage.setItem('reminders-offered', '1');
+  try {
+    if (!localStorage.getItem('onboarded')) localStorage.setItem('onboarded', '1');
+    if (!localStorage.getItem('reminders-offered')) localStorage.setItem('reminders-offered', '1');
+  } catch (e) {}
 }
 
 /** v116: the onboarding nudge link shows exactly once, on the FIRST visit —

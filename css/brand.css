@@ -350,7 +350,7 @@ nav.dd-nav .dd-mobile-sections {
 .daily-goal-btn {
   border: 1px solid var(--border, var(--brand-line));
   background: var(--surface, #fff);
-  color: inherit;
+  color: var(--text, var(--brand-ink));
   border-radius: 999px;
   padding: 2px 10px;
   font-size: .8rem;
@@ -400,7 +400,7 @@ nav.dd-nav .dd-mobile-sections {
   border: 1px solid var(--border, var(--brand-line));
   border-radius: 999px;
   background: var(--surface, #fff);
-  color: inherit;
+  color: var(--text, var(--brand-ink));
   padding: 5px 11px;
   font-size: .82rem;
   font-weight: 600;
@@ -415,7 +415,7 @@ nav.dd-nav .dd-mobile-sections {
 .quickstart-btn {
   border: 1px solid var(--border, var(--brand-line));
   background: var(--surface, #fff);
-  color: inherit;
+  color: var(--text, var(--brand-ink));
   border-radius: 10px;
   padding: 8px 10px;
   font-size: .83rem;
@@ -423,6 +423,10 @@ nav.dd-nav .dd-mobile-sections {
   text-align: left;
   cursor: pointer;
   line-height: 1.35;
+}
+.quickstart-btn:hover,
+.daily-chip:hover {
+  border-color: var(--accent, var(--brand-blue));
 }
 .quickstart-dismiss {
   border: 0;
