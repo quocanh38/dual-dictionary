@@ -1,32 +1,28 @@
-> **1 November 2026:** [main demo](https://youtu.be/6r8nJDiZr5E) published Unlisted; contest submission verified at 09:39 Vietnam. v160 critical syntax fix is live; physical-phone proof remains a pending supplement. [P0 record](docs/hackathon-submission/P0-PUBLISH-SUBMIT-2026-11-01.md).
+> **20 November 2026:** **HọcTA** (`hocta.app`) is live on `main` (cache `mdx-dict-v230-merged-audit`) with `windows-handoff-2026-11-15` merged, P0/P1/P2 security & reliability fixes applied, and automated GitHub Actions CI/CD (`npm test` + `npm run qa:links` → Netlify production deploy). Historical 1 Nov hackathon record: [main demo](https://youtu.be/6r8nJDiZr5E) · [P0 record](docs/hackathon-submission/P0-PUBLISH-SUBMIT-2026-11-01.md).
 
 # HọcTA — Học tiếng Anh song ngữ
 
-HọcTA helps Vietnamese speakers look up English in context, save and review vocabulary, practise for exams and study downloaded lessons offline. Lesson Studio turns permitted readings into reviewed bilingual lesson packs. Learners can use downloaded packs without an API key.
+HọcTA helps Vietnamese speakers look up English in context, save and review vocabulary with FSRS spaced repetition, practise for IELTS/TOEIC exams and study downloaded lessons offline. Lesson Studio turns permitted readings into reviewed bilingual lesson packs. Learners can use downloaded packs without an API key.
 
-- [Live Studio](https://hocta.app/lessons/)
-- [Live dictionary and Vault](https://hocta.app/)
-- [Hackathon dossier](docs/hackathon-submission/README.md)
-- [Offline pipeline narrative](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md)
-- [Pre-event foundation and new hackathon work](NEW-WORK.md)
+- [Live dictionary, Reader, Vault & Exam Lab](https://hocta.app/)
+- [Live Lesson Studio](https://hocta.app/lessons/)
+- [Vietnamese learning hubs & dictionary](https://hocta.app/vi/)
 - [Studio architecture and author workflow](docs/LESSON-STUDIO.md)
+- [Deploy state & runbook](docs/deploy-state.md)
+- [Hackathon dossier](docs/hackathon-submission/README.md) · [Offline pipeline narrative](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md) · [Pre-event foundation](NEW-WORK.md)
 - [Third-party data and code attribution](NOTICE.md)
 
-## Latest status — 1 November 2026
+## Latest status — 20 November 2026
 
 | Item | Status |
 |---|---|
-| Narrative | Offline lesson pipeline for working adults on flaky networks: prepare where connected, learn airplane-mode ([pipeline note](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md)) |
-| Studio source | Published in [5f9d25ac](https://github.com/quocanh38/dual-dictionary/commit/5f9d25ac) (narrative) on top of [8b39df2a](https://github.com/quocanh38/dual-dictionary/commit/8b39df2a) (Village Kit) + [e3fc2dd8](https://github.com/quocanh38/dual-dictionary/commit/e3fc2dd8) (main-app path); prior public history preserved |
-| Live production | v160 hotfix live, cache `mdx-dict-v154`; main app/Reader and 7-page browser smoke pass. Photo path from v159 retained. |
-| Offline library | 33 approved, versioned AI-assisted packs (workplace 20 + academic 13, B1 20 + B2 13) |
-| Validation | 27 schema/generator contract groups, library and quality-gate checks passed; all 33 pack checksums/metadata verified |
-| Main demo | Completed locally: 3:00, 1080p, English narration/subtitles; [recording evidence](docs/hackathon-submission/STUDIO-DEMO-2026-10-31.md) |
-| Video viewing link | [Watch the 3-minute Studio demo](https://youtu.be/6r8nJDiZr5E) — Unlisted, English captions, 1080p verified |
-| mobile-emulation supplement | [Watch the separate 30-second clip](https://youtu.be/IIomKgrVzmw) — Unlisted; browser/device emulation, not physical-phone proof ([record](docs/hackathon-submission/MOBILE-EMULATION-SUPPLEMENT-2026-11-01.md)) |
-| Submission | Submitted by owner; verified 1 November at 09:39 Vietnam. Physical-phone proof is a pending supplement. |
-
-The Studio demo shows permitted-source authoring, the explicit review boundary, an approved lesson, Chrome Offline reload with restored progress, fixed-key practice, self-assessed transfer and exact-meaning Vault save. It uses labelled retained Meta material and makes no new provider call. This is a desktop browser demonstration, not a learner-outcome study.
+| Live production | [hocta.app](https://hocta.app/) — Service Worker cache `mdx-dict-v230-merged-audit` (GitHub Actions run `44669397224`, commit `f31eb71ba3`) |
+| CI/CD | Automated via [`.github/workflows/deploy-netlify.yml`](.github/workflows/deploy-netlify.yml): runs `npm test` + `npm run qa:links` before deploying to Netlify production on every push to `main` |
+| Static content | **14,822** HTML pages and **627,478** verified internal links (`npm run qa:links` ALL PASS), covering EN–VI dictionary words, phrases, pronunciation, synonyms, collocations, grammar, IELTS/TOEIC guides, and indexable Lesson Studio pages |
+| Offline library | **33** approved, versioned AI-assisted packs (workplace 20 + academic 13, B1 20 + B2 13) with canonical SHA-256 verification |
+| Validation | **15/15** automated suites PASS via `npm test` (`fuzzy-test`, `review-regression` 13 scenarios, and all 13 `tools/lessons/*check*.mjs` contract suites) |
+| AI authoring / Tutor | Optional BYOK via **Gemini API** (explicit per-request payload inspection & consent; keys stay in tab/session memory only; no credentials bundled) |
+| Hackathon demo (archive) | [3-minute Studio demo](https://youtu.be/6r8nJDiZr5E) (1080p, English captions) · [30s mobile-emulation clip](https://youtu.be/IIomKgrVzmw) ([record](docs/hackathon-submission/MOBILE-EMULATION-SUPPLEMENT-2026-11-01.md)) |
 
 ## Run locally
 
@@ -36,28 +32,24 @@ This is a static browser app. With Python 3 installed, run from the repository r
 python3 -m http.server 8080
 ```
 
-Open http://localhost:8080/lessons/ for Studio, or http://localhost:8080/ for the main app. Use localhost or HTTPS for service workers; do not open index.html directly. Install a reviewed pack and wait for offline readiness before going offline.
+Open `http://localhost:8080/` for the main app, or `http://localhost:8080/lessons/` for Lesson Studio. Use `localhost` or HTTPS for service workers; do not open `index.html` directly. Install a reviewed pack and wait for offline readiness before going offline.
 
-Learner practice needs no key. Creating drafts requires the author's own provider account/key, connectivity and per-request consent. The current creation route uses Baseten-hosted Muse Spark Open; optional repair uses Meta Model API. No credentials are bundled. Review and approval remain explicit; free writing is self-assessed.
+Learner practice needs no API key. Creating or repairing drafts and using optional AI Tutor feedback require the user's own Gemini API key, connectivity and explicit per-request consent. No credentials are bundled. Review and approval remain explicit; free writing is self-assessed.
 
 ## Validate without provider calls
 
-Use a current Node.js release (22 or later):
+Requires Node.js 22 or later:
 
 ```sh
-node tools/lessons/check.mjs
-node tools/lessons/library-check.mjs
-node tools/lessons/quality-gate-check.mjs
+npm test          # Runs app regression/fuzzy tests + all 13 Lesson Studio contract checks (0 live provider calls)
+npm run qa:links  # Verifies all internal links across 14,800+ static pages
+npm run qa:titles # Audits page <title> length and duplicates
 ```
 
 The library contains 33 approved, versioned AI-assisted packs. Automated validation and AI-assisted review do not establish learning gains or independent human language certification.
 
-## Source snapshot and scope
+## Scope & attribution
 
-This export contains the current application source, static learning assets, test/build tools and structured generation/review/QA evidence. It includes the 31 October Offline Pipeline narrative (working adults on flaky networks), the Village Kit provenance/weight tooling, the main-app offline/online badges with EN/VI strings, and the separately updated submission documents. The pre-event dictionary, Reader, Vault and Tutor are disclosed in NEW-WORK.md; Studio is the hackathon contribution.
+This repository is the single source of truth for HọcTA (`main` deploys directly to Netlify production via GitHub Actions). It contains the PWA application source, Lesson Studio, static Vietnamese SEO hubs, Netlify Functions (`netlify/functions/`), and build/QA tooling (`tools/`).
 
-Existing public repository history is preserved. Deployment-repository history, workstation handoffs and browser QA PNG screenshots are not exported; historical evidence references to those screenshots may therefore be unavailable. Structured JSON/text evidence remains included. Local demo video files and private study/browser backups are not in this source repository. The main demo is now [available on YouTube Unlisted](https://youtu.be/6r8nJDiZr5E).
-
-This GitHub synchronization does not push to the separate Netlify deployment repository. The deployed application is not rebuilt by this change.
-
-Third-party content retains its own terms in NOTICE.md. No new blanket license grant for original application code is introduced by this synchronization.
+Third-party content and libraries retain their own terms in [NOTICE.md](NOTICE.md).
