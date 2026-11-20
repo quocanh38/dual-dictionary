@@ -1,3 +1,5 @@
+@import url("../../css/brand.css");
+
 /* ============================================================
    Dual Dictionary blog — vi/blog/blog.css
    Self-contained: blog pages load ONLY this file (no app css/js).
@@ -5,13 +7,13 @@
    so the blog reads as the same product. System font stack only.
    ============================================================ */
 :root {
-  --accent: #0f766e;
-  --accent-soft: #14b8a6;
-  --bg: #f4f5f7;
+  --accent: var(--brand-blue);
+  --accent-soft: #6d7df0;
+  --bg: var(--brand-paper);
   --surface: #ffffff;
-  --text: #1f2937;
-  --text-2: #646b78;
-  --border: #e5e7eb;
+  --text: var(--brand-ink);
+  --text-2: var(--brand-muted);
+  --border: var(--brand-line);
   --shadow-1: 0 1px 3px rgba(0,0,0,.08);
 }
 @media (prefers-color-scheme: dark) {
@@ -21,8 +23,8 @@
     --text: #e7eaee;
     --text-2: #9aa3af;
     --border: #2b313c;
-    --accent: #2dd4bf;
-    --accent-soft: #0f766e;
+    --accent: var(--brand-blue-on-dark);
+    --accent-soft: #6170d7;
     --shadow-1: 0 1px 3px rgba(0,0,0,.4);
   }
 }
@@ -30,7 +32,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: var(--brand-font-body);
   background: var(--bg);
   color: var(--text);
   font-size: 17px;
@@ -106,12 +108,11 @@ figcaption {
 .cta-box p:last-of-type { margin-bottom: 0; }
 .cta-button {
   display: inline-block; margin-top: 6px;
-  background: var(--accent); color: #fff !important;
+  background: var(--brand-blue); color: #fff !important;
   padding: 10px 22px; border-radius: 999px;
   text-decoration: none; font-weight: 600;
 }
 .cta-button:hover { filter: brightness(1.08); }
-@media (prefers-color-scheme: dark) { .cta-button { color: #06251f !important; } }
 
 /* ---------- author box ---------- */
 .author-box {

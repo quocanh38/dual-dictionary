@@ -1,6 +1,12 @@
+import { GEMINI_MODELS } from './gemini-policy.js';
+import { refreshApp } from './app-update.js';
+import { lemmaCandidates } from './lookup-lemmas.js';
+import { initExperience, trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from "./experience.js";
+import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanations.js";
 import { MDict } from './mdict.js';
+import { loadLookupSupplement, supplementEntry, lookupPage, renderSupplement } from './lookup-supplement.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
-import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS } from './ai-client.js';
+import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS, validateGeminiKey } from './ai-client.js';
 import { validateTutorPhrases, validateTutorFeedback, validateTutorSituation } from './tutor-validation.js';
 import { TUTOR_PHRASE_INSTRUCTIONS, TUTOR_FEEDBACK_INSTRUCTIONS, TUTOR_SITUATION_INSTRUCTIONS, makeTutorSituationPayload } from './tutor-prompts.js';
 import { rankTutorPhrases } from './tutor-selection.js';
@@ -182,7 +188,7 @@ const defaultDictOf = (slot) =>
 
 // The optional remote-config.json data-source mechanism was removed:
 // the public deployment ships only the open-licensed samples and users load
-// their own .mdx via ⚙ Advanced.
+// their own .mdx via ⚙ Settings.
 
 async function getBundleVer() {
   const b = await getFile('bundle-version');
@@ -409,7 +415,7 @@ async function boot() {
   // alone does not protect the property access.
   try {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
+      navigator.serviceWorker.register('sw.js', {updateViaCache:'none'}).catch(() => {});
     }
   } catch (e) { /* service worker unavailable (sandboxed/unsupported) */ }
   wireUi();
@@ -417,14 +423,28 @@ async function boot() {
   captureI18nOriginals();
   applyLang();
   updateNetBanner();
-  $('#btn-open-help')?.addEventListener('click', () => $('#help-dialog').showModal());
+  $('#btn-update-app')?.addEventListener('click', updateAppFiles);
+  $('#btn-open-help')?.addEventListener('click', () => {
+    $('#help-dialog').showModal();
+    trackUxSignal('dictionary_help_open');
+  });
   for (const [name, sel] of [['dicts', '#adv-tab-dicts'], ['data', '#adv-tab-data'], ['learning', '#adv-tab-learning']]) {
     $(sel)?.addEventListener('click', () => setAdvTab(name));
   }
   $('#btn-fsrs-optimize')?.addEventListener('click', optimizeFsrs);
   $('#btn-fsrs-reset')?.addEventListener('click', resetFsrsWeightsUi);
   $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog').showModal(); });
-  $('#btn-quickload')?.addEventListener('click', () => quickLoadOpenDicts(selectedFirstloadSlots()));
+  let quickloadButtonRun;
+  $('#btn-quickload')?.addEventListener('click', event => {
+    if (loadAbort) {
+      if (event.isTrusted && quickloadButtonRun === loadAbort && !loadAbort.signal.aborted) {
+        trackUxSignal('dictionary_download_repeat_pending');
+      }
+      return;
+    }
+    void quickLoadOpenDicts(selectedFirstloadSlots());
+    quickloadButtonRun = loadAbort;
+  });
   // v91 chooser: "Download all" ticks every card, then runs the same pipeline
   $('#btn-download-all')?.addEventListener('click', () => {
     for (const s of CHOOSER_ORDER) { const c = document.getElementById('chk-firstload-' + s); if (c) c.checked = true; }
@@ -455,7 +475,7 @@ async function boot() {
   setTimeout(markNetlifyBadge, 1200);
 
   defer(async () => {
-    // v71: personalized FSRS weights — trained ON THIS DEVICE by the ⚙ Advanced
+    // v71: personalized FSRS weights — trained ON THIS DEVICE by the ⚙ Settings
     // optimizer (js/fsrs-opt.js) and stored in the `files` store — replace the
     // defaults before anything can schedule a review. Observable marker on
     // <html data-fsrs-weights>: default | custom | default:invalid | default:error.
@@ -557,7 +577,9 @@ async function boot() {
     // unless there is something due; the timer only ever fires when hidden)
     maybeShowDueBanner();
     scheduleBackgroundNotify();
-    setTimeout(() => maybeOnboard(), 400);
+    if (currentView() === 'search' && !Object.keys(SLOTS).some(slot => state.dicts[slot])) {
+      setTimeout(maybeOnboard, 400);
+    }
     // after the onboarding window: first-visit users are marked offered there;
     // everyone else gets the one-time quiet toast (never both)
     setTimeout(() => maybeReofferReminders(), 3000);
@@ -565,6 +587,34 @@ async function boot() {
 }
 
 function wireUi() {
+  initExperience();
+  $('#onboarding-dialog form')?.addEventListener('submit', () => {
+    firstLookupJourney ||= startExperienceJourney('lookup','welcome');
+    if (!Object.values(state.dicts).some(Boolean)) firstLookupJourney?.step('download_needed');
+  });
+  const chatEntries = [
+    ['#btn-reader-lookup-save', 'reader', 'Hỏi về câu đang đọc', () => readerSelection?.sentence],
+    ['#btn-save-sentence', 'reader', 'Hỏi về câu đang đọc', () => readerSelection?.sentence],
+    ['#writing-input', 'writing', 'Hỏi về bài viết', () => $('#writing-input').value],
+    ['#speaking-notes', 'speaking', 'Hỏi về ghi chú nói', () => $('#speaking-notes').value],
+    ['#tutor-stage', 'tutor', 'Hỏi tiếp trợ giảng', () => tutorSession?.target ? JSON.stringify({target:tutorSession.target, answer:tutorSession.answer, feedback:tutorSession.feedback}) : ''],
+  ];
+  for (const [selector, scope, title, source] of chatEntries) {
+    const target = $(selector);
+    if (!target) continue;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn-secondary';
+    button.textContent = title;
+    button.onclick = () => {
+      const text = source();
+      if (text?.trim()) openContextChat(scope, title, text);
+      else showToast('Chọn câu hoặc nhập nội dung trước khi hỏi.');
+    };
+    target.after(button);
+  }
+  $('#saved-learning-chats')?.addEventListener('click', openLearningChatHistory);
+
   const builders = {
     reader: ['Bài ôn từ Reader', () => {
       const selected = window.getSelection();
@@ -643,12 +693,9 @@ function wireUi() {
   });
   $('#more-advanced')?.addEventListener('click', () => {
     $('#more-menu')?.classList.add('hidden');
-    populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog')?.showModal();
-  });
-  $('#more-help')?.addEventListener('click', () => {
-    $('#more-menu')?.classList.add('hidden');
     $('#btn-more')?.setAttribute('aria-expanded', 'false');
-    $('#help-dialog')?.showModal();
+    $('#btn-more')?.focus();
+    populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog')?.showModal();
   });
   // keep the responsive header consistent with the viewport (same breakpoint as CSS)
   const syncTopbar = () => {
@@ -756,7 +803,7 @@ function wireUi() {
     $('#export-dialog').close();
   });
   parseShareParam();
-  // Share-target 07/11 (thay bubble): bôi đen từ app khác → Share → Dual Dict mở kết quả
+  // Share-target 07/11 (thay bubble): bôi đen từ app khác → Share → HọcTA mở kết quả
   try {
     const q = new URLSearchParams(location.search);
     const shared = (q.get('text') || q.get('title') || '').trim();
@@ -795,6 +842,16 @@ function wireUi() {
   $('#btn-restore-backup')?.addEventListener('click', () => restoreFromKey(($('#backup-select') && $('#backup-select').value) || 'auto-backup-latest'));
   $('#btn-create-restore-point')?.addEventListener('click', createRestorePoint);
   $('#btn-export-full-backup')?.addEventListener('click', exportCompleteStudyBackup);
+  const movePanel = $('#domain-move');
+  if (movePanel && location.hostname === 'dualdictionary.netlify.app') {
+    const moveUrl = new URL('https://hocta.app/');
+    moveUrl.pathname = location.pathname === '/recover.html' ? '/' : location.pathname;
+    moveUrl.search = location.search;
+    moveUrl.hash = location.hash;
+    $('#domain-move-link').href = moveUrl.href;
+    $('#domain-move-export').addEventListener('click', exportCompleteStudyBackup);
+    movePanel.classList.remove('hidden');
+  }
   $('#btn-export-encrypted')?.addEventListener('click', exportEncrypted);
   $('#import-encrypted')?.addEventListener('change', (e) => { const f = e.target.files && e.target.files[0]; if (f) importEncryptedFile(f); e.target.value = ''; });
   $('#crypto-confirm')?.addEventListener('click', () => { if (passResolve) { const r = passResolve; passResolve = null; $('#crypto-dialog').close(); r($('#crypto-pass').value); } });
@@ -835,16 +892,14 @@ function wireUi() {
     tutorSetupContinuation = null;
     $('#tutor-setup-dialog')?.close();
   });
-  $('#tutor-setup-provider')?.addEventListener('change', syncTutorQuickSetupFields);
   $('#tutor-setup-dialog')?.addEventListener('close', () => { tutorSetupContinuation = null; });
   $('#btn-tutor-clear-data')?.addEventListener('click', clearTutorData);
   $('#tutor-dialog')?.addEventListener('close', cancelTutorRequest);
   $('#btn-ai-save')?.addEventListener('click', saveTutorSettings);
   $('#btn-ai-test')?.addEventListener('click', testTutorConnection);
-  $('#btn-ai-clear')?.addEventListener('click', () => { clearAiSettings(); $('#ai-api-key').value = ''; $('#ai-settings-status').textContent = 'Key removed from this browser.'; });
+  $('#btn-ai-clear')?.addEventListener('click', () => { clearAiSettings(); populateTutorSettings(); $('#ai-settings-status').textContent = 'Key removed from this browser.'; });
   $('#btn-ai-clear-cache')?.addEventListener('click', () => { clearTutorCache(); $('#ai-settings-status').textContent = 'Cached phrase suggestions cleared from this browser.'; });
-  $('#btn-open-advanced')?.addEventListener('click', () => { const s=getAiSettings(); $('#ai-api-key').value=s.apiKey; $('#ai-provider').value=s.provider; $('#ai-model').value=s.model; $('#ai-base-url').value=s.baseUrl; $('#ai-advanced-fields').open=s.provider==='compatible'; syncAiProviderFields(); });
-  $('#ai-provider')?.addEventListener('change', (e) => { const p=PROVIDERS[e.target.value]; if(p){$('#ai-base-url').value=p.baseUrl;$('#ai-model').value=p.model; $('#ai-advanced-fields').open=e.target.value==='compatible'; syncAiProviderFields();} });
+  $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); });
   // A stage replacement removes the focused button. Keep keyboard navigation
   // inside the open dialog, without moving focus away from an existing control.
   const tutorStage = $('#tutor-stage');
@@ -905,7 +960,6 @@ function wireUi() {
     bmcFadeTimer = setTimeout(() => c.classList.remove('bmc-fade'), 1500);
   }, { passive: true });
   $('#btn-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); $('#advanced-dialog').showModal(); });
-  $('#btn-help')?.addEventListener('click', () => $('#help-dialog').showModal());
   if (!TTS_SUPPORTED) {
     const b = $('#btn-speak');
     if (b) { b.title = 'Text-to-speech is not supported by this browser'; }
@@ -1004,6 +1058,9 @@ function navigate(view) {
 let lastAppliedView = 'search';
 
 function applyView(view) {
+  if (view === 'reader') readerJourney ||= startExperienceJourney('reader',
+    new URLSearchParams(location.search).get('entry') === 'reader_landing' ? 'reader_landing' : 'app');
+  if (view === 'review') reviewJourney ||= startExperienceJourney('review');
   if (!VIEWS.includes(view)) view = 'search';
   if (view === 'search') { try { renderWotd(); } catch (e) {} }
   if (view !== 'reader' && $('#reader-lookup')?.open) $('#reader-lookup').close();
@@ -1313,10 +1370,13 @@ async function quickLoadOpenDicts(requested) {
       err.hidden = false;
     }
   } else if (failed.length) {
+    const journey = pendingLookupJourney || (currentView() === 'reader' ? readerJourney : firstLookupJourney);
+    if (journey?.reached('download_needed') && !journey.reached('result')) journey.step('download_failed');
     updateEmptyStateCopy();
     if (err) {
       err.textContent = i18nFmt('firstload.failed', { names: failed.join(', ') });
       err.hidden = false;
+      if (lookupSurfaceVisible()) trackUxSignal('dictionary_download_error');
     }
   } else {
     // U16: scoped to the lookup surface AND to the moment it is on screen — the
@@ -1452,7 +1512,13 @@ function updateFirstloadCta() {
   const all = $('#btn-download-all');
   if (all) all.disabled = !!loadAbort;
   if (!btn) return;
-  if (loadAbort) { btn.disabled = true; return; }
+  if (loadAbort) {
+    btn.setAttribute('aria-disabled', 'true');
+    btn.textContent = `${i18n('firstload.downloading')}…`;
+    btn.disabled = false;
+    return;
+  }
+  btn.removeAttribute('aria-disabled');
   if (dataUnreachable) {
     btn.textContent = i18n('firstload.retry');
     btn.disabled = false;
@@ -1464,9 +1530,19 @@ function updateFirstloadCta() {
     btn.disabled = true;
     return;
   }
+  if (incompleteDictionaryLoad) {
+    btn.textContent = i18n('firstload.retry');
+    btn.disabled = false;
+    return;
+  }
   const bytes = sel.reduce((sum, s) => sum + ((firstLoadPer[s] && firstLoadPer[s].bytes) || 0), 0);
-  btn.textContent = i18nFmt(sel.length === 1 ? 'firstload.ctaOne' : 'firstload.ctaN',
-    { n: sel.length, size: bytes ? fmtSize(bytes) : '…' });
+  const name = sel.length === 1
+    ? (sel[0] === 'third' ? i18n('envi.short') : $('#chk-firstload-' + sel[0])?.nextElementSibling?.textContent)
+    : '';
+  const vars = { name, n: sel.length, size: fmtSize(bytes) };
+  const hasSizes = sel.every(slot => firstLoadPer[slot]?.bytes > 0);
+  btn.textContent = i18nFmt(name ? (hasSizes ? 'firstload.namedSize' : 'firstload.named') :
+    (hasSizes ? 'firstload.ctaN' : 'firstload.ctaNUnknown'), vars);
   btn.disabled = false;
 }
 
@@ -1495,11 +1571,7 @@ async function showFirstLoadGate() {
   firstLoadTotal = enEN.total + (envi.bytes || 0);
   if (list) {
     list.innerHTML = '';
-    // vi-locale visitors get the EN–VI dictionary pre-selected — the one they are
-    // most likely here for; other locales default to the classic EN–EN pair.
-    const defaults = (lang === 'vi')
-      ? { third: true, oxford: true, longman: false }
-      : { third: false, oxford: true, longman: true };
+    const recommendedSlot = lang === 'vi' ? 'third' : 'longman';
     for (const slot of CHOOSER_ORDER) {
       const info = firstLoadPer[slot] || { bytes: 0, source: 'unknown' };
       let name;
@@ -1516,7 +1588,7 @@ async function showFirstLoadGate() {
       const chk = document.createElement('input');
       chk.type = 'checkbox';
       chk.id = 'chk-firstload-' + slot;
-      chk.checked = !!defaults[slot];
+      chk.checked = slot === recommendedSlot;
       chk.addEventListener('change', updateFirstloadCta);
       const nameEl = document.createElement('span');
       nameEl.className = 'dc-name';
@@ -1549,7 +1621,7 @@ async function showFirstLoadGate() {
   }
   if (firstLoadTotal) {
     dataUnreachable = false;
-    if (msg) msg.textContent = i18nFmt('firstload.desc', { size: fmtSize(firstLoadTotal) });
+    if (msg) msg.textContent = i18n('firstload.desc');
   } else {
     // Probe found no reachable source — do NOT promise a download that cannot
     // happen. Say so, keep the buttons working, and label the CTA as a retry.
@@ -1776,7 +1848,7 @@ async function applyRemoteUrl(slot, urlStr) {
   return { mdx: true, mdd: !!mddFile, css: cssOk };
 }
 
-/** UI wrapper for the manual "Load from URL" inputs in ⚙ Advanced.
+/** UI wrapper for the manual "Load from URL" inputs in ⚙ Settings.
  *  One URL pulls the ENTIRE set from dicts/ on the server: .mdx + matching .mdd
  *  + matching .css are fetched automatically, so the user loads a single link
  *  instead of one file at a time. */
@@ -2048,7 +2120,17 @@ function tapOriginFor(word) {
   return normalizeText(tapOrigin.word) === normalizeText(word) ? tapOrigin : null;
 }
 
+let firstLookupJourney, readerJourney, reviewJourney, tutorJourney, pendingLookupJourney;
+const lookupEntry = new URLSearchParams(location.search);
 async function search(word, fromReaderTap = false) {
+  if (!fromReaderTap && word.trim() && !firstLookupJourney) {
+    firstLookupJourney = startExperienceJourney('lookup', lookupEntry.has('q') ? 'lookup_link' : 'app');
+  }
+  const journey = fromReaderTap ? readerJourney : firstLookupJourney;
+  if (fromReaderTap) {
+    if (journey?.reached('result')) journey.step('continued');
+    journey?.step('lookup_started');
+  }
   if (!fromReaderTap) tapOrigin = null;
   lookupGen++;
   latestLookupEntries = { generation: lookupGen, word: String(word || ''), bySlot: {} };
@@ -2081,6 +2163,8 @@ async function search(word, fromReaderTap = false) {
   const anyLoaded = Object.keys(SLOTS).some((s) => state.dicts[s]);
   const anyLoading = Object.keys(SLOTS).some((s) => state.loading[s]);
   if (!anyLoaded) {
+    journey?.step('download_needed');
+    pendingLookupJourney = journey;
     state.pendingQuery = word;   // C15: replayed after the boot dictionary restore
     updateIdleDictState();
     if (!anyLoading) {
@@ -2096,8 +2180,17 @@ async function search(word, fromReaderTap = false) {
   state.pendingQuery = null;
   updateIdleDictState();
   const gen = lookupGen;
-  const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, word)));
-  if (gen === lookupGen && found.some(Boolean)) pushHistory(word);
+  try {
+    const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, word)));
+    if (gen === lookupGen && word.trim()) {
+      const hasResult = found.some(Boolean);
+      journey?.step(hasResult ? 'result' : 'miss', {duration:journey.elapsed()});
+      if (hasResult) pushHistory(word);
+    }
+  } catch (error) {
+    journey?.step('error');
+    throw error;
+  }
 }
 
 /** U3: the not-loaded state has ONE source of truth (body[data-dict-state]) and
@@ -2263,7 +2356,7 @@ function paintFirstLoadProgress() {
  *  and the first-load card gets them too whenever a download is what it shows. Both
  *  download helpers write their progress through here, so the line and the card can
  *  never drift apart. (The card itself only updates for the gate's quick-load, which
- *  is the flow that sets state.loading — the ⚙ Advanced URL loader does not, and by
+ *  is the flow that sets state.loading — the ⚙ Settings URL loader does not, and by
  *  then loaded panels hide the card anyway.) */
 function setDownloadStatus(slot, label, name, received, total) {
   setStatus(slot, `${label} ${name} — ${fmtProgress(slot, received, total)}`, true);
@@ -2293,8 +2386,20 @@ async function replayPendingQuery() {
   updatePronStrip(q);
   // v116: recorded only when the replayed lookup produced an entry — same rule
   // as a direct search.
-  const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, q)));
-  if (found.some(Boolean)) pushHistory(q);
+  const journey = pendingLookupJourney;
+  pendingLookupJourney = null;
+  const gen = lookupGen;
+  try {
+    const found = await Promise.all(Object.keys(SLOTS).map((slot) => renderSlot(slot, q)));
+    if (gen === lookupGen) {
+      const hasResult = found.some(Boolean);
+      journey?.step(hasResult ? 'result' : 'miss', {duration:journey.elapsed()});
+      if (hasResult) pushHistory(q);
+    }
+  } catch (error) {
+    journey?.step('error');
+    throw error;
+  }
   return true;
 }
 
@@ -2332,9 +2437,13 @@ async function renderSlot(slot, word) {
   try {
     let hits = await d.mdx.lookup(word);
     if (!isCurrent()) return false;
+    const lookupData = !hits.length ? await loadLookupSupplement() : null;
+    if (!isCurrent()) return false;
+    const authored = !hits.length ? supplementEntry(lookupData, word) : null;
+    if (authored) hits = [{ keyText: word, text: renderSupplement(authored, escapeHtml) }];
     let note = '';
     let resolvedKey = word;   // R-D: the key the entry on screen really belongs to
-    if (/\S\s+\S/.test(String(word || ''))) { const slug = String(word).trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''); note += `<div class="phrase-banner">Curated teaching senses (biên soạn gọn): <a href="https://dualdictionary.netlify.app/vi/tu/${slug}/" target="_blank" rel="noopener">/vi/tu/${slug}/</a> — raw dictionary entries follow below.</div>`; }
+    if (!authored && /\S\s+\S/.test(String(word || ''))) { const slug = String(word).trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''); note += `<div class="phrase-banner">Curated teaching senses (biên soạn gọn): <a href="https://hocta.app/vi/tu/${slug}/" target="_blank" rel="noopener">/vi/tu/${slug}/</a> — raw dictionary entries follow below.</div>`; }
     if (!hits.length) {
       // U2: an inflected form ("called") must resolve to its base entry
       // ("call") — never to whatever longer key happens to contain the text
@@ -2358,7 +2467,7 @@ async function renderSlot(slot, word) {
     }
     if (!isCurrent()) return false;
     if (!hits.length) {
-      ifr.srcdoc = emptyDoc(slot, word);
+      ifr.srcdoc = emptyDoc(slot, word, lookupPage(lookupData, word));
       setStatus(slot, `no results found for "${word}"`);
       showDidYouMean(slot, word);
       return false;
@@ -2386,8 +2495,8 @@ async function renderSlot(slot, word) {
     const ranked = rankExactPhraseHits(resolvedKey, hits);
     latestLookupEntries.bySlot[slot] = ranked.map(({ h }) => ({
       slot,
-      source: dictDisplayName(d.mdx),
-      sourceFile: d.mdx.name || '',
+      source: authored ? 'HọcTA · Biên soạn riêng' : dictDisplayName(d.mdx),
+      sourceFile: authored ? 'lookup-supplement.json' : d.mdx.name || '',
       keyText: h.keyText || resolvedKey,
       raw: h.text,
     }));
@@ -2447,51 +2556,6 @@ function slotPanelName(slot) {
  *  set (no data, no dependency): "called" → ["called","call"], "studies" →
  *  ["studies","study","studie"], "running" → ["running","run","runn"], …
  *  The original word always comes first so an exact key still wins. */
-function lemmaCandidates(word) {
-  const w = String(word || '').toLowerCase().replace(/\s+/g, ' ').trim();
-  const out = [];
-  const push = (s) => { if (s && s.length >= 2 && out.indexOf(s) === -1) out.push(s); };
-  push(w);
-  const cut = (base, suffixes, restored) => {
-    for (const suf of suffixes) {
-      if (w.length > suf.length + 1 && w.endsWith(suf)) push(w.slice(0, -suf.length) + restored);
-    }
-  };
-  // irregular forms worth naming (the ones a rule set cannot guess)
-  const IRREGULAR = {
-    ran: 'run', went: 'go', gone: 'go', did: 'do', done: 'do', was: 'be', were: 'be', been: 'be',
-    had: 'have', has: 'have', said: 'say', made: 'make', took: 'take', taken: 'take', gave: 'give',
-    given: 'give', got: 'get', gotten: 'get', came: 'come', saw: 'see', seen: 'see', knew: 'know',
-    known: 'know', thought: 'think', found: 'find', told: 'tell', felt: 'feel', left: 'leave',
-    men: 'man', women: 'woman', children: 'child', feet: 'foot', teeth: 'tooth', mice: 'mouse',
-    better: 'good', best: 'good', worse: 'bad', worst: 'bad', those: 'that', these: 'this',
-  };
-  if (IRREGULAR[w]) push(IRREGULAR[w]);
-  // ...-ies → ...-y
-  cut('', ['ies'], 'y');
-  // ...-ed → base / base+e / de-doubled consonant
-  if (w.length > 3 && w.endsWith('ied')) push(w.slice(0, -3) + 'y');
-  if (w.length > 3 && w.endsWith('ed')) {
-    const stem = w.slice(0, -2);
-    push(stem);
-    push(stem + 'e');
-    if (/([bdfglmnprt])\1$/.test(stem)) push(stem.slice(0, -1));
-    push(w.slice(0, -1)); // "moved" → "move", already covered by stem+'e'; keeps "liked"→"like"
-  }
-  // ...-ing → base / base+e / de-doubled consonant
-  if (w.length > 4 && w.endsWith('ing')) {
-    const stem = w.slice(0, -3);
-    push(stem);
-    push(stem + 'e');
-    if (/([bdfglmnprt])\1$/.test(stem)) push(stem.slice(0, -1));
-  }
-  // ...-es / ...-s (plural + 3rd person)
-  if (w.length > 3 && w.endsWith('es')) push(w.slice(0, -2));
-  if (w.length > 2 && w.endsWith('s')) push(w.slice(0, -1));
-  if (w.length > 4 && w.endsWith('ses')) push(w.slice(0, -2)); // "classes" → "class"
-  return out.filter((c) => c.length >= 2);
-}
-
 /** Look up `query`, walking its lemma candidates: exact first, then prefix
  *  matches on the lemma ("call" finds the "call" entry, not "so-called").
  *  Substring containment is deliberately NOT used here — that is the very
@@ -2706,15 +2770,21 @@ function mtdToBlocks(text) {
   return blocks;
 }
 
-function emptyDoc(slot, word) {
-  return `<!doctype html><html><head><meta charset="utf-8"><style>
+function emptyDoc(slot, word, pageUrl) {
+  const message = lang === 'vi'
+    ? `Gói từ điển hiện tại chưa có mục từ này: <b>${escapeHtml(word)}</b>.`
+    : `This dictionary pack has no entry for <b>${escapeHtml(word)}</b>.`;
+  const source = pageUrl ? `<p><a href="${escapeHtml(pageUrl)}" target="_blank" rel="noopener">${lang === 'vi' ? 'Đọc mục từ trên site' : 'Read the entry on the site'}</a></p>` : '';
+  const tips = lang === 'vi'
+    ? 'Kiểm tra chính tả hoặc thử dạng gốc, ví dụ “run” thay cho “running”. Bạn cũng có thể thử gói từ điển khác.'
+    : 'Check the spelling, try a shorter form (for example, “run” instead of “running”), or try another dictionary pack.';
+  return `<!doctype html><html lang="${lang === 'vi' ? 'vi' : 'en'}"><head><meta charset="utf-8"><style>
     body{font-family:-apple-system,sans-serif;color:#374151;padding:24px;text-align:center;line-height:1.7}
-    b{color:#0f766e}
+    b{color:#293cc8}
     .tips{color:#6b7280;font-size:14px}
   </style></head><body>
-    <p>No entry found for <b>${escapeHtml(word)}</b> in ${escapeHtml(slotPanelName(slot))}.</p>
-    <p class="tips">Check the spelling, or try a shorter form (e.g. “run” instead of “running”).<br>
-       The other panel may still have a match for this word.</p>
+    <p>${message}</p>${source}
+    <p class="tips">${tips}</p>
   </body></html>`;
 }
 
@@ -2729,8 +2799,8 @@ function docSkin() {
     try { dark = window.matchMedia('(prefers-color-scheme: dark)').matches; } catch (e) { /* very old engines */ }
   }
   return dark
-    ? { bg: '#161d24', fg: '#d7dde3', link: '#2dd4bf' }
-    : { bg: '#fbfcfe', fg: '#374151', link: '#0f766e' };
+    ? { bg: '#161d24', fg: '#d7dde3', link: '#aab6ff' }
+    : { bg: '#fbfcfe', fg: '#374151', link: '#293cc8' };
 }
 
 function welcomeDoc(slot) {
@@ -2892,35 +2962,35 @@ async function buildEntryDoc(d, html, opts) {
   p,li,dd,dt,blockquote,.mtd-line,.mtd-sense,.mtd-idiom,.mtd-pos,.mtd-domain{max-width:58ch}
   .tbl-wrap{max-width:100%;overflow-x:auto}
   h1,h2,h3{line-height:1.25}
-  a{color:#0f766e}
-  .audio-btn{border:1px solid #0f766e;color:#0f766e;background:#fff;border-radius:999px;
+  a{color:#293cc8}
+  .audio-btn{border:1px solid #293cc8;color:#293cc8;background:#fff;border-radius:999px;
     padding:2px 10px;font:inherit;font-size:.9em;cursor:pointer;margin:0 2px;vertical-align:middle}
   .audio-btn:disabled{opacity:.5;cursor:default}
   .mdx-sep{border:none;border-top:1px solid #ddd;margin:18px 0}
   img{max-width:100%}
-  .phrase-banner{background:#f0fdfa;border:1px solid #99f6e4;border-radius:8px;
+  .phrase-banner{background:#eef0ff;border:1px solid #cbd2ff;border-radius:8px;
     padding:8px 12px;margin:0 0 12px;font-family:-apple-system,sans-serif;font-size:.85em;
-    line-height:1.5;color:#134e4a}
-  .phrase-banner a{color:#0f766e;cursor:pointer;text-decoration:underline}
+    line-height:1.5;color:#2032a6}
+  .phrase-banner a{color:#293cc8;cursor:pointer;text-decoration:underline}
   .mdx-variant{border:1px solid #e5e7eb;border-radius:8px;margin:8px 0;padding:4px 10px;background:#f9fafb}
-  .mdx-variant summary{cursor:pointer;color:#0f766e;font-size:14px}
+  .mdx-variant summary{cursor:pointer;color:#293cc8;font-size:14px}
   /* R-D: the sentence a word was tapped in, riding in the result itself. Same
-     teal family as .phrase-banner (this document is always light "paper"), so it
+     cobalt family as .phrase-banner (this document is always light "paper"), so it
      reads as app-authored furniture and never as part of the dictionary text. */
-  .src-sentence{background:#f0fdfa;border:1px solid #99f6e4;border-left:3px solid #0f766e;border-radius:8px;
-    padding:8px 12px;margin:0 0 14px;font-family:-apple-system,sans-serif;font-size:.85em;line-height:1.5;color:#134e4a}
+  .src-sentence{background:#eef0ff;border:1px solid #cbd2ff;border-left:3px solid #293cc8;border-radius:8px;
+    padding:8px 12px;margin:0 0 14px;font-family:-apple-system,sans-serif;font-size:.85em;line-height:1.5;color:#2032a6}
   .src-sentence .src-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;
-    letter-spacing:.05em;color:#0f766e;margin-bottom:2px}
+    letter-spacing:.05em;color:#293cc8;margin-bottom:2px}
   .src-sentence .src-text{margin:0;max-width:58ch}
   .src-sentence .src-source{display:block;margin-top:3px;font-size:11px;color:#6b7280}
   .src-sentence mark{background:#fde68a;color:#513c06;padding:0 1px;border-radius:3px}
-  .mtd-pos{font-weight:700;color:#0f766e;margin:10px 0 4px;font-family:-apple-system,sans-serif;font-size:.9em}
+  .mtd-pos{font-weight:700;color:#293cc8;margin:10px 0 4px;font-family:-apple-system,sans-serif;font-size:.9em}
   .mtd-domain{font-weight:600;color:#6b7280;margin:12px 0 4px;font-family:-apple-system,sans-serif;font-size:.82em;
     text-transform:uppercase;letter-spacing:.04em}
   .mtd-sense{padding-left:14px;position:relative;margin:4px 0}
-  .mtd-sense::before{content:'–';position:absolute;left:0;color:#0f766e}
+  .mtd-sense::before{content:'–';position:absolute;left:0;color:#293cc8}
   .mtd-idiom{margin:6px 0;padding-left:14px}
-  .mtd-idiom b{color:#134e4a}
+  .mtd-idiom b{color:#2032a6}
   .mtd-line{margin:4px 0}
 </style>
 <style>${css}</style>
@@ -2931,14 +3001,14 @@ async function buildEntryDoc(d, html, opts) {
     color-scheme: dark;
   }
   html[data-theme="dark"] :is(a, .mtd-pos, .mtd-idiom b, .mtd-domain, .mdx-variant summary) {
-    color: #5eead4;
+    color: #aab6ff;
   }
   html[data-theme="dark"] :is(.phrase-banner, .src-sentence, .mdx-variant, .audio-btn) {
-    background: #172b2a;
-    border-color: #315953;
+    background: #19263b;
+    border-color: #374561;
     color: #e7eaee;
   }
-  html[data-theme="dark"] :is(.src-label, .src-source) { color: #a7d9d1; }
+  html[data-theme="dark"] :is(.src-label, .src-source) { color: #b5c0d7; }
   @media (prefers-color-scheme: dark) {
     html[data-theme="auto"], html[data-theme="auto"] body {
       color: #e7eaee;
@@ -2946,14 +3016,14 @@ async function buildEntryDoc(d, html, opts) {
       color-scheme: dark;
     }
     html[data-theme="auto"] :is(a, .mtd-pos, .mtd-idiom b, .mtd-domain, .mdx-variant summary) {
-      color: #5eead4;
+      color: #aab6ff;
     }
     html[data-theme="auto"] :is(.phrase-banner, .src-sentence, .mdx-variant, .audio-btn) {
-      background: #172b2a;
-      border-color: #315953;
+      background: #19263b;
+      border-color: #374561;
       color: #e7eaee;
     }
-    html[data-theme="auto"] :is(.src-label, .src-source) { color: #a7d9d1; }
+    html[data-theme="auto"] :is(.src-label, .src-source) { color: #b5c0d7; }
   }
 </style>
 </head><body>${body}<script>var AT=${JSON.stringify(anchor ? String(anchor) : '')};
@@ -3431,6 +3501,7 @@ function readerRender(text, source, sourceUrl) {
   const seq = readerRenderSeq;        // this render's sequence number
   pane.innerHTML = '';
   pane.classList.remove('hidden');
+  readerJourney?.step('reading');
   if (wrap) wrap.classList.add('hidden');
   $('#btn-reader-start').textContent = '📖 Re-edit text';
   // v74: the pace clock starts AFTER the pane is visible — its first tick stops
@@ -3835,34 +3906,29 @@ let tutorController = null;
 let tutorRequestId = 0;
 let tutorSetupContinuation = null;
 const TUTOR_PROMPT_VERSION = 'tutor-v3-meaning';
-function syncTutorQuickSetupFields() {
-  const provider = $('#tutor-setup-provider')?.value || 'gemini';
-  const defaults = PROVIDERS[provider] || PROVIDERS.gemini;
-  $('#tutor-setup-model').value = defaults.model;
-  $('#tutor-setup-url').value = defaults.baseUrl;
-  $('#tutor-setup-advanced').open = provider === 'compatible';
+function populateGeminiModelSelect(select, model) {
+  if (!select) return;
+  select.replaceChildren(...GEMINI_MODELS.map(id => new Option(id, id)));
+  select.value = model;
 }
 function openTutorQuickSetup(continuation) {
   const settings = getAiSettings();
   tutorSetupContinuation = continuation || null;
-  $('#tutor-setup-provider').value = settings.provider;
   $('#tutor-setup-key').value = settings.apiKey;
-  $('#tutor-setup-model').value = settings.model;
-  $('#tutor-setup-url').value = settings.baseUrl;
-  $('#tutor-setup-advanced').open = settings.provider === 'compatible';
+  $('#tutor-setup-remember').checked = settings.rememberKey;
+  populateGeminiModelSelect($('#tutor-setup-model'), settings.model);
   $('#tutor-setup-status').textContent = '';
   if (!$('#tutor-setup-dialog').open) $('#tutor-setup-dialog').showModal();
   $('#tutor-setup-key').focus();
 }
 function saveTutorQuickSetup() {
   const key = $('#tutor-setup-key').value.trim();
-  if (!key) { $('#tutor-setup-status').textContent = 'Enter your provider API key to continue. No request has been sent.'; return; }
+  if (!key) { $('#tutor-setup-status').textContent = lang === 'vi' ? 'Nhập khóa API Gemini để tiếp tục.' : 'Enter your Gemini API key to continue.'; return; }
   try {
     saveAiSettings({
-      provider: $('#tutor-setup-provider').value,
       apiKey: key,
+      rememberKey: $('#tutor-setup-remember').checked,
       model: $('#tutor-setup-model').value,
-      baseUrl: $('#tutor-setup-url').value,
     });
     const continuation = tutorSetupContinuation;
     tutorSetupContinuation = null;
@@ -3882,7 +3948,7 @@ function tutorProviderLabel() { return PROVIDERS[getAiSettings().provider]?.labe
 function tutorProviderMatchesSession() {
   if(!tutorSession) return false;
   const settings=getAiSettings();
-  if(settings.provider===tutorSession.provider && settings.model===tutorSession.model) return true;
+  if(settings.provider===tutorSession.provider) return true;
   tutorStatus(`This saved session belongs to ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.model}. Restore those settings or start a new session to use another provider.`);
   return false;
 }
@@ -3900,7 +3966,7 @@ async function tutorLocalHistory() {
 function tutorRenderSuggestions() {
   const stage=$('#tutor-stage');
   const provider=PROVIDERS[tutorSession.provider]?.label||tutorSession.provider||'selected provider';
-  stage.replaceChildren(tutorText('p','Choose one phrase to practise. Suggestions and source sentences were checked against the article.','hint'),tutorText('p',tutorSession.resultSource==='cache'?`Cached result · ${provider} / ${tutorSession.model||'saved model'} · no provider request was made.`:`Live result · ${provider} / ${tutorSession.model||''}`,'hint'));
+  stage.replaceChildren(tutorText('p','Choose one phrase to practise. Suggestions and source sentences were checked against the article.','hint'),tutorText('p',tutorSession.resultSource==='cache'?`Cached result · ${provider} / ${tutorSession.phraseModel||tutorSession.model||'saved model'} · no provider request was made.`:`Live result · ${provider} / ${tutorSession.phraseModel||tutorSession.model||''}`,'hint'));
   tutorSession.phrases.forEach((p,i)=>{
     const card=document.createElement('section'); card.className='adv-section';
     card.append(tutorText('h3',p.phrase),tutorText('p',p.sourceSentence));
@@ -3916,7 +3982,7 @@ function tutorRenderSuggestions() {
 function tutorConsentCopy(kind, payload) {
   const settings=getAiSettings(), provider=PROVIDERS[settings.provider]?.label||'the selected provider';
   const kindLabel={phrases:'find phrase suggestions',prompt:'create a practice situation',feedback:'review your answer'}[kind]||'provide tutoring';
-  return `This request will ${kindLabel} using ${provider} / ${settings.model}. The provider receives the data shown below and the app's tutor instructions. Token charges may apply. The provider may process this data under its own terms. Your current session is saved in this browser. Agree only if you want to send this request.`;
+  return `This request will ${kindLabel} using ${provider} / ${settings.model}. If the model is busy, Gemini Flash-Lite may handle the same request once. The provider receives the data shown below and the app's tutor instructions. Token charges may apply. The provider may process this data under its own terms. Your current session is saved in this browser. Agree only if you want to send this request.`;
 }
 function tutorShowRequestConsent(kind, payload, title, metadata={}) {
   tutorPendingRequest={kind,payload,...metadata};
@@ -3929,10 +3995,11 @@ function tutorShowRequestConsent(kind, payload, title, metadata={}) {
 }
 async function startTutor({fresh=false}={}) {
   if(tutorBusy) return;
+  if (fresh || !tutorJourney) tutorJourney = startExperienceJourney('tutor','reader');
   const reading=$('#reader-text');
   if(!reading || reading.classList.contains('hidden') || reading.innerText.trim().length<80) { setReaderMsg('Start a reading of at least 80 characters before using optional AI practice.'); $('#reader-input')?.focus(); return; }
   const currentArticle=reading.innerText.trim().slice(0,12000), settings=getAiSettings();
-  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & test connection in Advanced \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
+  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save key and test Gemini access in Settings \u2192 Learning before the demo.' : 'Open AI settings and check your Gemini configuration before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
   if(fresh) {
     const article=currentArticle;
     if(!article || article.length<80) { showToast('Open a reading of at least 80 characters first.'); return; }
@@ -3995,30 +4062,38 @@ async function findTutorPhrases({consented=false}={}) {
     catch { cached=null; }
   }
   if(!cached) {
-    if(!settings.apiKey) { tutorStatus('Add an API key in Advanced → Learning to request new phrase suggestions.'); $('#btn-open-advanced')?.click(); return; }
+    if(!settings.apiKey) { tutorStatus('Add an API key in Settings → Learning to request new phrase suggestions.'); $('#btn-open-advanced')?.click(); return; }
     if(!consented) { tutorShowRequestConsent('phrases',input,'Review before finding phrase suggestions'); return; }
   }
   const requestId=++tutorRequestId; tutorController=new AbortController(); tutorBusy=true;
   tutorStatus(cached?`Using a cached phrase result from ${tutorProviderLabel()} (${settings.model}).`:`Finding useful phrases with ${tutorProviderLabel()}…`);
   if(!cached) $('#tutor-stage').replaceChildren(tutorText('p','Requesting live phrase suggestions…','hint'),tutorButton('Cancel request','cancel'));
   try {
-    const out=cached?.value || await askTutor({signal:tutorController.signal,instructions:TUTOR_PHRASE_INSTRUCTIONS,input});
+    const started=Date.now();
+    if (!cached) tutorJourney?.step('sent');
+    let modelUsed=settings.model;
+    const out=cached?.value || await askTutor({signal:tutorController.signal,instructions:TUTOR_PHRASE_INSTRUCTIONS,input,onModel:model=>{modelUsed=model;}});
     if(requestId!==tutorRequestId || !tutorSession) return;
     const validated=validateTutorPhrases(out?.phrases,input);
     if(!validated.length) throw new Error('No suggestions passed the source checks. Try a shorter or cleaner article.');
-    if(!cached) setTutorCache(cacheArgs,out);
+    if(!cached && modelUsed===settings.model) setTutorCache(cacheArgs,out);
     const {confirmedErrors}=await tutorLocalHistory();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorSession.phrases=rankTutorPhrases(validated,{savedItems:state.items,confirmedErrors}).slice(0,3);
     tutorSession.resultSource=cached?'cache':'live';
+    tutorSession.phraseModel=modelUsed;
     tutorSession.stage='select'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
-    tutorRenderSuggestions(); tutorStatus(cached?'Loaded and rechecked the cached phrase result; no AI request was made.':'Live suggestions are checked against the reading. Your Vault and review history stayed on this device.');
+    tutorRenderSuggestions();
+    if (!cached) tutorJourney?.step('response',{duration:Date.now()-started});
+    tutorStatus(cached?'Loaded and rechecked the cached phrase result; no AI request was made.':'Live suggestions from '+modelUsed+' are checked against the reading. Your Vault and review history stayed on this device.');
   } catch(error) {
+    if (!cached && requestId===tutorRequestId) tutorJourney?.step('error',{reason:experienceAiReason(error)});
     if(requestId===tutorRequestId) { tutorShowError('Retry phrase selection','retry-select',error); }
   } finally { if(requestId===tutorRequestId){tutorBusy=false;tutorController=null;} }
 }
 function cancelTutorRequest() {
+  if (tutorBusy) tutorJourney?.step('stopped');
   tutorPendingRequest=null;
   if(!tutorController) return;
   tutorRequestId++; tutorController.abort(); tutorController=null; tutorBusy=false; tutorStatus('Request cancelled. Your draft is saved. The provider may still process it if it already received the request.'); renderTutorStage();
@@ -4046,7 +4121,7 @@ async function handleTutorClick(e) {
     if(tutorSession.stage==='select'&&!tutorSession.phrases.length) await findTutorPhrases(); else tutorStatus('Resumed the saved practice session.');
     return;
   }
-  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Advanced \u2192 Learning \u2192 Save & test connection (small paid request).'); return; }
+  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Settings \u2192 Learning \u2192 Save key and test Gemini access.'); return; }
   if(action==='cancel') { cancelTutorRequest(); return; }
   if(action==='retry-select') { if(!tutorBusy) await findTutorPhrases(); return; }
   if(action==='retry-feedback') { if(!tutorSession || tutorBusy) return; tutorSession.stage='answer'; renderTutorAnswer(); const area=$('#tutor-stage textarea'); if(area) area.value=tutorSession.answer||''; return; }
@@ -4080,9 +4155,10 @@ async function handleTutorClick(e) {
       // only a personalization/ranking explanation (for example, already due).
       const tutorMeaning=String(p.meaningVi||'').trim();
       if(!tutorMeaning) throw new Error('This older suggestion has no saved Vietnamese meaning. Start a new practice to refresh it.');
-      const tutorSense=senseStableKey({slot:'ai-tutor',sourceFile:`${tutorSession.provider}/${tutorSession.model}/${tutorSession.resultSource||'unknown'}`,keyText:p.phrase},`${tutorMeaning}\n${p.sourceSentence}`);
-      const r=await addItem({type:'phrase',text:p.phrase,note:`Tutor: ${noteParts.join(' ')}`,tags:['ai-tutor'],dictionary:{source:`AI Tutor suggestion · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} (${tutorSession.resultSource==='cache'?'cached':'live'})`,sourceFile:tutorSession.model||'',entryKey:p.phrase,definition:tutorMeaning,senseKey:tutorSense},context:{sentence:p.sourceSentence,headword:p.phrase,sourceTitle:tutorSession.articleTitle||'AI tutor reading practice'}});
-      if(!r.merged){state.items.unshift(r.item);renderVault();}
+      const phraseModel=tutorSession.phraseModel||tutorSession.model||'';
+      const tutorSense=senseStableKey({slot:'ai-tutor',sourceFile:`${tutorSession.provider}/${phraseModel}/${tutorSession.resultSource||'unknown'}`,keyText:p.phrase},`${tutorMeaning}\n${p.sourceSentence}`);
+      const r=await addItem({type:'phrase',text:p.phrase,note:`Tutor: ${noteParts.join(' ')}`,tags:['ai-tutor'],dictionary:{source:`AI Tutor suggestion · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} (${tutorSession.resultSource==='cache'?'cached':'live'})`,sourceFile:phraseModel,entryKey:p.phrase,definition:tutorMeaning,senseKey:tutorSense},context:{sentence:p.sourceSentence,headword:p.phrase,sourceTitle:tutorSession.articleTitle||'AI tutor reading practice'}});
+      if(!r.merged){state.items.unshift(r.item);renderVault();tutorJourney?.step('saved');}
       tutorSession.savedItemId=r.item?.id||null; tutorSession.stage='saved'; await persistTutor(); renderTutorStage();
       tutorStatus(r.merged?'This phrase is already in your Vault.':'Saved to your Vault for future FSRS review. Saving is not counted as a review.');
     } catch(error) { tutorStatus('Could not save the review card: '+error.message); }
@@ -4123,12 +4199,14 @@ async function createTutorPrompt(index,{freshContext=false}={}) {
     await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorStatus('Creating a fresh speaking prompt…'); $('#tutor-stage').replaceChildren(tutorText('p','Requesting a live situation prompt…','hint'),tutorButton('Cancel request','cancel'));
-    const out=await askTutor({signal:controller.signal,instructions:TUTOR_SITUATION_INSTRUCTIONS,input:JSON.stringify(payload)});
+    tutorJourney?.step('followup');
+    let modelUsed=getAiSettings().model;
+    const out=await askTutor({signal:controller.signal,instructions:TUTOR_SITUATION_INSTRUCTIONS,input:JSON.stringify(payload),onModel:model=>{modelUsed=model;}});
     if(requestId!==tutorRequestId || !tutorSession) return;
     const situation=validateTutorSituation(out,payload);
     if(tutorSession.prompt) tutorSession.promptHistory=[...(tutorSession.promptHistory||[]),{prompt:tutorSession.prompt,contextId:tutorSession.promptContextId||'study'}].slice(-10);
     tutorSession.promptContextId=situation.contextId; tutorSession.feedback=null; tutorSession.feedbackDecision=null;
-    tutorSession.target=p; tutorSession.prompt=situation.prompt; tutorSession.promptSource='live'; tutorSession.answer=''; tutorSession.stage='answer'; await persistTutor();
+    tutorSession.target=p; tutorSession.prompt=situation.prompt; tutorSession.promptSource='live'; tutorSession.promptModel=modelUsed; tutorSession.answer=''; tutorSession.stage='answer'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     renderTutorAnswer(); tutorStatus('Write one or two sentences.');
   } catch(error) { if(requestId===tutorRequestId){tutorShowError('Retry prompt',freshContext?'retry-answer':'choose:'+index,error);} }
@@ -4136,7 +4214,7 @@ async function createTutorPrompt(index,{freshContext=false}={}) {
 }
 function renderTutorAnswer() {
   const s=$('#tutor-stage'); s.replaceChildren(tutorText('p',tutorSession.target.phrase,'chip'),tutorText('p',tutorSession.prompt));
-  s.append(tutorText('p',tutorSession.promptSource==='live'?`Live AI prompt · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.model}`:'Saved practice prompt · source not recorded','hint'));
+  s.append(tutorText('p',tutorSession.promptSource==='live'?`Live AI prompt · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.promptModel||tutorSession.model}`:'Saved practice prompt · source not recorded','hint'));
   const form=document.createElement('form'); form.id='tutor-answer-form';
   const area=document.createElement('textarea'); area.name='answer'; area.required=true; area.maxLength=1200; area.rows=4; area.value=tutorSession.answer||''; area.setAttribute('aria-label','Your English answer');
   const btn=tutorText('button','Get feedback','btn-primary'); btn.type='submit';
@@ -4162,9 +4240,10 @@ async function requestTutorFeedback(answer) {
     tutorSession.answer=answer; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     tutorStatus('Checking your answer…'); $('#tutor-stage').replaceChildren(tutorText('p','Requesting live answer feedback…','hint'),tutorButton('Cancel request','cancel'));
-    const out=await askTutor({signal:controller.signal,instructions:TUTOR_FEEDBACK_INSTRUCTIONS,input:JSON.stringify({phrase:tutorSession.target.phrase,sourceSentence:tutorSession.target.sourceSentence,prompt:tutorSession.prompt,answer})});
+    let modelUsed=getAiSettings().model;
+    const out=await askTutor({signal:controller.signal,onModel:model=>{modelUsed=model;},instructions:TUTOR_FEEDBACK_INSTRUCTIONS,input:JSON.stringify({phrase:tutorSession.target.phrase,sourceSentence:tutorSession.target.sourceSentence,prompt:tutorSession.prompt,answer})});
     if(requestId!==tutorRequestId || !tutorSession) return;
-    tutorSession.feedback=validateTutorFeedback(out,answer); tutorSession.feedbackSource='live'; tutorSession.feedbackDecision=null; tutorSession.stage='feedback'; await persistTutor();
+    tutorSession.feedback=validateTutorFeedback(out,answer); tutorSession.feedbackSource='live'; tutorSession.feedbackModel=modelUsed; tutorSession.feedbackDecision=null; tutorSession.stage='feedback'; await persistTutor();
     if(requestId!==tutorRequestId || !tutorSession) return;
     renderTutorFeedback();
     tutorStatus(tutorSession.feedback.verdict==='uncertain'?'The tutor is unsure. Review the feedback before accepting it.':'Review the feedback and choose whether it is useful.');
@@ -4173,7 +4252,7 @@ async function requestTutorFeedback(answer) {
 }
 function renderTutorFeedback() {
   const s=$('#tutor-stage'), f=validateTutorFeedback(tutorSession.feedback,tutorSession.answer); tutorSession.feedback=f; if(f.evidenceStatus==='missing-quote' && tutorSession.feedbackDecision==='accepted') tutorSession.feedbackDecision=null; s.replaceChildren(tutorText('p',tutorSession.answer));
-  s.append(tutorText('p',tutorSession.feedbackSource==='live'?`Live AI feedback · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.model} · verify the quote before deciding.`:'Saved feedback · source not recorded','hint'));
+  s.append(tutorText('p',tutorSession.feedbackSource==='live'?`Live AI feedback · ${PROVIDERS[tutorSession.provider]?.label||tutorSession.provider} / ${tutorSession.feedbackModel||tutorSession.model} · verify the quote before deciding.`:'Saved feedback · source not recorded','hint'));
   if(f.quote) s.append(tutorText('blockquote',f.quote));
   const title=f.verdict==='correct'?'Good use':f.verdict==='uncertain'?'The tutor is unsure':'One thing to improve';
   s.append(tutorText('h3',title),tutorText('p',f.verdict==='correct'?(f.explanation_vi||'Your phrase fits the context.'):f.suggestion||f.issue||'The tutor could not identify a clear correction.',f.verdict==='uncertain'?'hint':''));
@@ -4191,24 +4270,23 @@ function renderTutorFeedback() {
 }
 function populateTutorSettings() {
   const settings = getAiSettings();
-  for (const [id, value] of Object.entries({'ai-provider':settings.provider,'ai-base-url':settings.baseUrl,'ai-model':settings.model,'ai-api-key':settings.apiKey})) {
+  for (const [id, value] of Object.entries({'ai-api-key':settings.apiKey})) {
     const field = document.getElementById(id); if (field) field.value = value;
   }
-  const advanced=document.getElementById('ai-advanced-fields'); if(advanced) advanced.open=settings.provider==='compatible';
-  syncAiProviderFields();
-}
-function syncAiProviderFields() {
-  const provider=document.getElementById('ai-provider')?.value||'gemini';
-  const field=document.getElementById('ai-api-key');
-  if(field) field.setAttribute('aria-label',`${PROVIDERS[provider]?.label||'AI provider'} API key`);
+  const remember=document.getElementById('ai-remember-key'); if(remember) remember.checked=settings.rememberKey;
+  populateGeminiModelSelect($('#ai-model'), settings.model);
 }
 async function saveTutorSettings() {
-  try { const settings=saveAiSettings({provider:$('#ai-provider').value,apiKey:$('#ai-api-key').value,model:$('#ai-model').value,baseUrl:$('#ai-base-url').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings in this browser profile.`; return true; }
+  try { const settings=saveAiSettings({apiKey:$('#ai-api-key').value,rememberKey:$('#ai-remember-key').checked,model:$('#ai-model').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings for ${settings.rememberKey ? 'this device' : 'this tab'}.`; return true; }
   catch(error) { $('#ai-settings-status').textContent=error.message; return false; }
 }
 async function testTutorConnection() {
-  try { if(!await saveTutorSettings()) return; $('#ai-settings-status').textContent='Testing connection… this small request may use provider tokens.'; const result=await askTutor({instructions:'Return only JSON: {"status":"ok"}.',input:'Connection check.'}); if(result?.status!=='ok') throw new Error('The provider responded, but the connection check returned an unexpected format.'); $('#ai-settings-status').textContent=`Connected to ${PROVIDERS[getAiSettings().provider].label} / ${getAiSettings().model}.`; }
+  const button=$('#btn-ai-test');
+  if (button.disabled) return;
+  button.disabled=true;
+  try { if(!await saveTutorSettings()) return; $('#ai-settings-status').textContent='Checking Gemini model access…'; const model=await validateGeminiKey(); $('#ai-settings-status').textContent='Access confirmed for '+model+'. No text was generated.'; }
   catch(error) { $('#ai-settings-status').textContent=error.message; }
+  finally { button.disabled=false; }
 }
 
 let toastTimer;
@@ -4383,7 +4461,7 @@ async function exportApkg(items) {
   try {
     const { SQL, writer } = await loadApkgWriter();
     const notes = buildApkgNotes(items, writer);
-    const deckName = 'Dual Dictionary' + (notes.length ? '' : '');
+    const deckName = 'HọcTA' + (notes.length ? '' : '');
     const { bytes, noteCount } = writer.buildApkg(SQL, notes, { deckName });
     downloadBlob(new Blob([bytes], { type: 'application/octet-stream' }),
       'dual-dictionary-anki-' + new Date().toISOString().slice(0, 10) + '.apkg');
@@ -4835,12 +4913,10 @@ function renderLevelTest() {
   const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
   let h = '<div class="practice-card"><p class="practice-prompt">' + (isVi ? 'Test trình độ (20 câu, ~3 phút)' : 'Vocabulary level test (20 questions, ~3 min)') + '</p>';
   LEVEL_QS.forEach((q, i) => {
-    const ord = (levelOptionOrder && levelOptionOrder[i]) || [0, 1, 2, 3];
-    h += '<p style="margin:10px 0 4px"><strong>' + (isVi ? 'Câu ' : 'Q') + (i + 1) + ' [' + escapeHtml(q[6]) + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
-    for (let pos = 0; pos < ord.length; pos++) {
-      const origIdx = ord[pos];
-      const sel = levelAnswers[i] === origIdx;
-      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + origIdx + '" style="' + (sel ? 'border-color:#0f766e;background:#ecfdf5' : '') + '">' + escapeHtml(q[origIdx + 1]) + '</button> ';
+    h += '<p style="margin:10px 0 4px"><strong>Câu ' + (i + 1) + ' [' + q[6] + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
+    for (let k = 1; k <= 4; k++) {
+      const sel = levelAnswers[i] === k - 1;
+      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:#293cc8;background:#ecfdf5' : '') + '">' + escapeHtml(q[k]) + '</button> ';
     }
     h += '</div>';
   });
@@ -5901,7 +5977,15 @@ async function gradeById(id, action) {
   v.lastReviewedAt = now;
   v.reviewCount = (v.reviewCount || 0) + 1;
   if (rating === 3) v.userData.status = 'learning'; // preserved Leitner-era behaviour
-  try { await putItem(v); } catch (e) {
+  try {
+    await putItem(v);
+    if (currentView() === 'review' && reviewJourney && !reviewJourney.reached('result')) {
+      reviewJourney.step('result', {duration:reviewJourney.elapsed()});
+      if (reviewJourney.reached('result')) recordReviewReturn(reviewJourney);
+    }
+    const attemptId = v.dictionary?.experienceAttemptId;
+    if (attemptId) trackExperience('toeic_reviewed', {attemptId});
+  } catch (e) {
     console.warn('could not persist grade:', e);
     return;
   }
@@ -5936,6 +6020,21 @@ function reviewSavedItems(items) {
 
 function reviewSavedItem(item) {
   reviewSavedItems([item]);
+}
+
+function recordReviewReturn(journey) {
+  const key='dd-experience-review-anchor';
+  try {
+    const now=Date.now();
+    const previous=JSON.parse(localStorage.getItem(key));
+    if (previous?.consentAt===journey.consentAt && previous.attemptId!==journey.attemptId &&
+        now>=previous.at && now-previous.at<=7*86400000) {
+      const day=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Ho_Chi_Minh',dateStyle:'short'});
+      if (day.format(previous.at)===day.format(now)) return;
+      trackExperience('journey_step',{attemptId:previous.attemptId,journey:'review',step:'returned'});
+    }
+    localStorage.setItem(key,JSON.stringify({attemptId:journey.attemptId,consentAt:journey.consentAt,at:now}));
+  } catch { /* A study session still works if browser storage is unavailable. */ }
 }
 
 let reviewQueueIds = null; // null = derive from due items when entering Review
@@ -6052,7 +6151,7 @@ function renderDeckOptions() {
   const sel = $('#vault-deck');
   if (sel) {
     const cur = vaultDeck;
-    sel.innerHTML = '<option value="">All decks</option>' + decks.map((d) => '<option value="' + escapeHtml(d) + '">' + escapeHtml(d) + '</option>').join('');
+    sel.innerHTML = '<option value="" data-i18n="vault.allDecks">' + escapeHtml(i18n('vault.allDecks')) + '</option>' + decks.map((d) => '<option value="' + escapeHtml(d) + '">' + escapeHtml(d) + '</option>').join('');
     sel.value = decks.indexOf(cur) !== -1 ? cur : '';
     if (decks.indexOf(cur) === -1) vaultDeck = '';
   }
@@ -6519,6 +6618,7 @@ function renderReview() {
   }
   list.innerHTML = '';
   if (!queue.length) {
+    if (!reviewTotal) reviewJourney?.step('empty');
     const msg = $('#review-empty-msg');
     if (msg) msg.textContent = i18n('review.emptyTitle');
     empty?.classList.remove('hidden');
@@ -6526,6 +6626,7 @@ function renderReview() {
   }
   empty?.classList.add('hidden');
   list.appendChild(buildReviewCard(queue[0]));
+  reviewJourney?.step('card');
 }
 
 function buildReviewCard(item) {
@@ -6599,7 +6700,13 @@ function buildReviewCard(item) {
     b.className = cls;
     b.textContent = label;
     b.dataset.reviewAct = act;
-    b.addEventListener('click', () => advanceReview(item.id, act));
+    b.addEventListener('click', async () => {
+      const controls = [...actions.querySelectorAll('button')];
+      if (controls.some(control => control.disabled)) return;
+      controls.forEach(control => { control.disabled = true; });
+      try { await advanceReview(item.id, act); }
+      finally { controls.forEach(control => { control.disabled = false; }); }
+    });
     return b;
   };
   actions.appendChild(mk(i18n('review.know'), 'know', 'btn-secondary'));
@@ -6777,6 +6884,12 @@ async function importTutorRecords(payload) {
     if(['answer','feedback','saved'].includes(stage)&&!target) stage='select';
     if(stage==='feedback'&&!feedback) stage='answer';
     const safe={id:row.id,stage,article:row.article,articleTitle:String(row.articleTitle||'').slice(0,300),createdAt:Number(row.createdAt)||Date.now(),updatedAt:Number(row.updatedAt)||Date.now(),consentedAt:Number(row.consentedAt)||0,provider:String(row.provider||'').slice(0,40),model:String(row.model||'').slice(0,120),phrases,target,prompt:String(row.prompt||'').slice(0,1200),answer:String(row.answer||'').slice(0,1200),feedback,feedbackDecision:['accepted','rejected'].includes(row.feedbackDecision)?row.feedbackDecision:null,resultSource:['live','cache'].includes(row.resultSource)?row.resultSource:null,confirmedErrors:Array.isArray(row.confirmedErrors)?row.confirmedErrors.slice(0,40):[],savedItemId:String(row.savedItemId||'')};
+    for(const key of ['phraseModel','promptModel','feedbackModel']) {
+      if(typeof row[key]==='string') safe[key]=row[key].slice(0,120);
+    }
+    for(const key of ['promptSource','feedbackSource']) {
+      if(row[key]==='live') safe[key]='live';
+    }
     await putTutorRecord(safe); added++;
   }
   if(added && !localStorage.getItem('dd-tutor-current')) {
@@ -6881,22 +6994,45 @@ function cycleTheme() {
  * comes from the dictionary itself and stays as-shipped. */
 const I18N = {
   en: {
+    'transcript.formats': 'Accepted formats: plain text, SRT, or VTT.', 'ai.saveSettings': 'Save settings', 'ai.saveAndCheck': 'Save key and test Gemini access',
     'nav.search': 'Search', 'nav.reader': 'Reader', 'nav.vault': 'Vault', 'nav.review': 'Review', 'nav.practice': 'Practice', 'nav.stats': 'Stats',
     'section.vault': 'Vault', 'section.review': 'Review', 'section.practice': 'Practice', 'section.stats': 'Stats',
     'top.lang': 'Language (EN / VI)', 'top.theme': 'Theme: auto / light / dark',
-    'top.home': 'Dual Dictionary — go to search', 'top.homeAria': 'Dual Dictionary — go to search',
+    'top.home': 'HọcTA — go to search', 'top.homeAria': 'HọcTA — go to search',
     'top.install': 'Install app', 'top.installAria': 'Install app',
     'top.langAria': 'Navigation language: English or Vietnamese',
     'top.themeAria': 'Theme: system, light or dark',
-    // top.advanced / top.help were referenced by data-i18n-title in the header but
-    // never defined, so both tooltips literally read "top.advanced" / "top.help".
-    'top.advanced': 'Advanced', 'top.help': 'Help',
-    'top.advancedAria': 'Advanced settings — load your own .mdx files',
-    'top.helpAria': 'Help — how to use this app',
-    'top.moreAria': 'More options: advanced settings, help', 'top.more': 'More options',
+    'top.advanced': 'Settings',
+    'vault.deck': "Deck",
+    'vault.deckFilter': "Filter by deck",
+    'vault.allDecks': "All decks",
+    'vault.sort': "Sort",
+    'vault.newest': "Newest",
+    'vault.dueFirst': "Due first",
+    'vault.hardest': "Hardest first",
+    'vault.stats': "📊 Stats",
+    'vault.tags': "🏷️ Tags",
+    'net.offline': "Offline — saved words and loaded dictionaries still work.",
+    'help.close': "Close help",
+    'help.section.practice': "Offline IELTS, TOEIC, Writing and Speaking practice",
+    'help.section.guides': "Learning guides",
+    'help.section.ai': "Optional AI practice — setup, privacy and costs",
+    'help.section.more': "More features",
+    'help.section.bookmark': "Save words from any web page",
+    'help.section.licenses': "Licenses & terms of use",
+    'update.title': "App version",
+    'update.hint': "Refresh the files used by the app. Your dictionaries, saved words, drafts and downloaded TOEIC audio stay on this device. Save any unsaved work before updating.",
+    'update.action': "Update app",
+    'update.busy': "Checking for updates and refreshing app files…",
+    'update.offline': "Connect to the internet to update the app.",
+    'update.unsupported': "This browser cannot manage the offline app. Reload while online to check for an update.",
+    'update.done': "App files updated. Reloading…",
+    'update.failed': "Could not refresh the app. Your saved data is still on this device. Check your connection and try again.",
+    'top.advancedAria': 'Open settings',
+    'top.moreAria': 'Open settings menu', 'top.more': 'Settings',
     'top.tipInstall': 'Install', 'top.tipLang': 'EN / VI', 'top.tipTheme': 'Theme',
-    'top.tipAdvanced': 'Advanced', 'top.tipHelp': 'Help', 'top.tipMore': 'More',
-    'top.advancedShort': '⚙ Advanced', 'top.helpShort': '? Help',
+    'top.tipAdvanced': 'Settings', 'top.tipMore': 'Settings',
+    'top.advancedShort': '⚙ Settings',
     'search.placeholder': 'Type an English word…',
     'review.savedWords': 'Saved words', 'review.progress': 'Progress', 'practice.offlineLessons': 'Offline lessons', 'practice.startOffline': 'Study an offline lesson', 'practice.speakingTools': 'Speaking practice', 'sense.pick': 'Choose one meaning', 'sense.oneMeaning': 'Choose the meaning you want to study.', 'sense.manualMeaning': 'Write one meaning to study, or save the word with its sentence.', 'sense.manualOption': 'Write a meaning',
     'search.gateIdle': 'No dictionary loaded yet — download one below to start looking up words.',
@@ -6960,9 +7096,9 @@ const I18N = {
     'firstload.ctaSize': '⬇ Download dictionaries (≈ {size})',
     'firstload.sizeUnknown': 'size unknown (usually a few GB)',
     'firstload.cancelled': 'Download cancelled — no dictionary is loaded yet.',
-    'firstload.cancelHint': 'Press “↻ Retry dictionary download” to try again, or use your own .mdx files via ⚙ Advanced.',
+    'firstload.cancelHint': 'Press “↻ Retry dictionary download” to try again, or use your own .mdx files via ⚙ Settings.',
     'firstload.sessionOnly': 'Ready for this session. This browser could not save the dictionary for offline use.',
-    'firstload.failed': 'Failed to load: {names}. Check your connection and try again, or open ⚙ Advanced to load your own .mdx files.',
+    'firstload.failed': 'Failed to load: {names}. Check your connection and try again, or open ⚙ Settings to load your own .mdx files.',
     'firstload.unreachableHint': 'The bundled download sources did not respond. Press “↻ Retry dictionary download” to try again, or use “Use my own .mdx files” below to load a dictionary manually.',
     'firstload.checking': 'Checking dictionary sizes…',
     'firstload.note': 'One-time download, stored in the app, fully offline afterwards.',
@@ -6984,7 +7120,7 @@ const I18N = {
     'known.title': 'I already know the most common words',
     'known.hint': 'Pick a starting milestone so "words you know" is counted correctly from day one. Nothing is added to your Vault — this is only a reading-coverage baseline, offline on this device.',
     'known.cta': 'I know the top {n} words',
-    'known.status': 'Milestone set: top {n} — {count} words marked known. Change it in ⚙ Advanced (reset there first to pick a lower one).',
+    'known.status': 'Milestone set: top {n} — {count} words marked known. Change it in ⚙ Settings (reset there first to pick a lower one).',
     'known.advTitle': 'Known words — reading-coverage baseline',
     'known.advNone': 'No milestone set yet — the Vault empty state offers one when your Vault is still empty.',
     'known.advSet': 'Milestone: {level} — {count} words marked known.',
@@ -7012,24 +7148,49 @@ const I18N = {
     'apkg.building': 'Building Anki deck…',
     'apkg.done': 'Anki deck exported — {n} note(s). Import it with File → Import in Anki.',
     'apkg.nothing': 'Nothing to export',
-    'apkg.failed': 'Could not build the Anki deck — try again (the first export needs a moment to load the writer).',
-    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 Start offline lessons — no key', 'hero.hint': 'Paste a short paragraph in the Reader below, press Start reading, then choose AI practice \u2014 or start a free offline lesson (no key needed).', 'tutor.start': '✨ AI practice (online · own key)', 'tutor.title': 'Reading to speaking practice', 'tutor.hint': 'AI suggestions are checked against your reading. Review feedback before saving it to your study history.', 'hero.offline': 'Start a free offline lesson (no key)', 'village.title': 'Learn workplace English where the network drops.', 'village.body': 'Prepare packs where you have a connection; then read, practise and review fully offline — no key, no account, no tracking.', 'village.lessons': 'Offline lessons (33 packs · ~340 KB)', 'village.ielts': 'IELTS/TOEIC offline lab', 'village.offlineBadge': 'OFFLINE · no key', 'village.labNote': 'Offline path: Listening/Reading with fixed answer keys work in airplane mode. Optional AI feedback below needs internet + your own key.', 'reader.offlinePacks': 'Offline lesson packs', 'reader.loopHint': 'Read → phrase → new situation → Vault — or start an offline pack, no key.', 'reader.freeLesson': 'Start a free offline lesson', 'reader.savedArticles': '📁 Saved articles', 'reader.tools': 'Reading tools', 'reader.saveOffline': '💾 Save offline', 'sense.title': 'Save this meaning', 'sense.entry': 'Dictionary entry', 'sense.meaning': 'Meaning to remember', 'sense.context': 'Source sentence (optional)', 'sense.save': 'Save meaning', 'sense.cancel': 'Cancel', 'search.search': 'Search', 'ui.skip': 'Skip to search', 'ui.clear': 'Clear', 'ui.listenTts': 'Listen (text-to-speech)', 'ui.listenPron': 'Listen to pronunciation', 'ui.saveWord': 'Save word', 'ui.saveWordAria': 'Save word to your vocabulary list', 'ui.dismissShort': 'Dismiss', 'ui.dismiss': 'Dismiss this suggestion', 'ui.moreWays': 'More ways to read: file, URL, transcript or audio', 'ui.tsTitle': 'Connect your AI account', 'ui.tsHint': 'This is optional. Offline study stays free. Your key stays in this browser and is sent only to the provider you choose after you approve each request. The provider may charge for tokens.', 'ui.tsProvider': 'Provider', 'ui.tsOther': 'Other compatible service', 'ui.tsKey': 'Provider API key', 'ui.tsAdv': 'Advanced: model and endpoint', 'ui.tsEndpoint': 'API endpoint', 'ui.tsModel': 'Model', 'ui.tsSave': 'Save and continue', 'ui.btnCancel': 'Cancel', 'ui.btnClose': 'Close', 'ui.chooseDict': 'Choose dictionary', 'ui.hearWord': 'Hear the word', 'ui.slowPlayback': 'Slow playback (0.75\u00d7)', 'ui.replaySentence': 'Replay the saved sentence', 'ui.savedCtx': 'Saved context for this word', 'ui.inSavedCtx': 'In your saved context', 'ui.addExample': '\u2795 Add example', 'ui.openInVault': 'Open in Vault', 'ui.cancelDownload': 'Cancel download', 'ui.fullscreen': 'Full-screen reading view', 'ui.fsOxford': 'Full-screen reading view for WordNet', 'ui.fsLongman': 'Full-screen reading view for Wiktionary', 'ui.fsThird': 'Full-screen reading view for slot 3', 'ui.slot3name': 'Slot 3 (optional \u2014 your own .mdx)', 'ui.closeEditor': 'Close editor', 'ui.ppTitle': 'Passphrase', 'ui.ppGo': 'Continue', 'ui.snapTitle': 'Saved articles', 'ui.snapHint': 'Articles you saved for offline reading. Tap one to load it into the Reader \u2014 no network needed.',
+    'apkg.failed': 'Could not export the Anki deck. Wait a moment, then try again.',
+    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 Start offline lessons — no key', 'hero.hint': 'Paste a short paragraph in the Reader below, press Start reading, then choose AI practice \u2014 or start a free offline lesson (no key needed).', 'tutor.start': '✨ AI practice (online · own key)', 'tutor.title': 'Reading to speaking practice', 'tutor.hint': 'AI suggestions are checked against your reading. Review feedback before saving it to your study history.', 'hero.offline': 'Start a free offline lesson (no key)', 'village.title': 'Learn workplace English where the network drops.', 'village.body': 'Prepare packs where you have a connection; then read, practise and review fully offline — no key, no account.', 'village.lessons': 'Offline lessons (33 packs · ~340 KB)', 'village.ielts': 'IELTS/TOEIC offline lab', 'village.offlineBadge': 'OFFLINE · no key', 'village.labNote': 'Offline path: Listening/Reading with fixed answer keys work in airplane mode. Optional AI feedback below needs internet + your own key.', 'reader.offlinePacks': 'Offline lesson packs', 'reader.loopHint': 'Read → phrase → new situation → Vault — or start an offline pack, no key.', 'reader.freeLesson': 'Read a sample lesson', 'reader.savedArticles': '📁 Saved articles', 'reader.tools': 'Reading tools', 'reader.saveOffline': '💾 Save offline', 'sense.title': 'Save this meaning', 'sense.entry': 'Dictionary entry', 'sense.meaning': 'Meaning to remember', 'sense.context': 'Source sentence (optional)', 'sense.save': 'Save meaning', 'sense.cancel': 'Cancel', 'search.search': 'Search', 'ui.skip': 'Skip to main content', 'ui.clear': 'Clear', 'ui.listenTts': 'Listen (text-to-speech)', 'ui.listenPron': 'Listen to pronunciation', 'ui.saveWord': 'Save word', 'ui.saveWordAria': 'Save word to your vocabulary list', 'ui.dismissShort': 'Dismiss', 'ui.dismiss': 'Dismiss this suggestion', 'ui.moreWays': 'More ways to read: file, URL, transcript or audio', 'ui.tsTitle': 'Connect Gemini', 'ui.tsHint': 'Offline study is free. HọcTA sends your key directly to Google when you approve a Gemini request.', 'ui.tsKey': 'Gemini API key', 'ui.tsModel': 'Gemini model', 'ai.rememberKey': 'Remember my key on this device', 'ui.tsSave': 'Save and continue', 'ui.btnCancel': 'Cancel', 'ui.btnClose': 'Close', 'ui.chooseDict': 'Choose dictionary', 'ui.hearWord': 'Hear the word', 'ui.slowPlayback': 'Slow playback (0.75\u00d7)', 'ui.replaySentence': 'Replay the saved sentence', 'ui.savedCtx': 'Saved context for this word', 'ui.inSavedCtx': 'In your saved context', 'ui.addExample': '\u2795 Add example', 'ui.openInVault': 'Open in Vault', 'ui.cancelDownload': 'Cancel download', 'ui.fullscreen': 'Full-screen reading view', 'ui.fsOxford': 'Full-screen reading view for WordNet', 'ui.fsLongman': 'Full-screen reading view for Wiktionary', 'ui.fsThird': 'Full-screen reading view for slot 3', 'ui.slot3name': 'Slot 3 (optional \u2014 your own .mdx)', 'ui.closeEditor': 'Close editor', 'ui.ppTitle': 'Passphrase', 'ui.ppGo': 'Continue', 'ui.snapTitle': 'Saved articles', 'ui.snapHint': 'Articles you saved for offline reading. Tap one to load it into the Reader \u2014 no network needed.',
+    'transcript.formats': 'Hỗ trợ văn bản thuần, SRT hoặc VTT.', 'ai.saveSettings': 'Lưu cài đặt', 'ai.saveAndCheck': 'Lưu khóa và kiểm tra Gemini',
   },
   vi: {
     'nav.search': 'Tra từ', 'nav.reader': 'Đọc', 'nav.vault': 'Sổ tay', 'nav.review': 'Ôn tập', 'nav.practice': 'Luyện tập', 'nav.stats': 'Thống kê',
     'section.vault': 'Sổ tay', 'section.review': 'Ôn tập', 'section.practice': 'Luyện tập', 'section.stats': 'Thống kê',
     'top.lang': 'Ngôn ngữ (EN / VI)', 'top.theme': 'Giao diện: auto / sáng / tối',
-    'top.home': 'Dual Dictionary — về trang tra từ', 'top.homeAria': 'Dual Dictionary — về trang tra từ',
+    'top.home': 'HọcTA — về trang tra từ', 'top.homeAria': 'HọcTA — về trang tra từ',
     'top.install': 'Cài ứng dụng', 'top.installAria': 'Cài ứng dụng',
     'top.langAria': 'Ngôn ngữ điều hướng: tiếng Anh hoặc tiếng Việt',
     'top.themeAria': 'Giao diện: theo hệ thống, sáng hoặc tối',
-    'top.advanced': 'Nâng cao', 'top.help': 'Trợ giúp',
-    'top.advancedAria': 'Cài đặt nâng cao — nạp file .mdx của bạn',
-    'top.helpAria': 'Trợ giúp — cách dùng ứng dụng',
-    'top.moreAria': 'Thêm tuỳ chọn: nâng cao, trợ giúp', 'top.more': 'Thêm tuỳ chọn',
+    'top.advanced': 'Cài đặt',
+    'vault.deck': "Bộ từ",
+    'vault.deckFilter': "Lọc theo bộ từ",
+    'vault.allDecks': "Tất cả bộ từ",
+    'vault.sort': "Sắp xếp",
+    'vault.newest': "Mới nhất",
+    'vault.dueFirst': "Đến hạn trước",
+    'vault.hardest': "Khó nhất trước",
+    'vault.stats': "📊 Thống kê",
+    'vault.tags': "🏷️ Nhãn",
+    'net.offline': "Đang ngoại tuyến. Bạn vẫn có thể tra từ điển đã tải và ôn từ đã lưu.",
+    'help.close': "Đóng trợ giúp",
+    'help.section.practice': "Luyện IELTS, TOEIC, Viết và Nói offline",
+    'help.section.guides': "Bài hướng dẫn học tiếng Anh",
+    'help.section.ai': "Trợ giảng AI: cài đặt, riêng tư và chi phí",
+    'help.section.more': "Các tính năng khác",
+    'help.section.bookmark': "Lưu từ từ trang web bất kỳ",
+    'help.section.licenses': "Giấy phép và điều khoản sử dụng",
+    'update.title': "Phiên bản ứng dụng",
+    'update.hint': "Làm mới các tệp của app. Từ điển, từ đã lưu, bản nháp và audio TOEIC đã tải vẫn ở trên thiết bị. Hãy lưu nội dung đang nhập trước khi cập nhật.",
+    'update.action': "Cập nhật ứng dụng",
+    'update.busy': "Đang kiểm tra phiên bản và làm mới các tệp của app…",
+    'update.offline': "Hãy kết nối mạng để cập nhật ứng dụng.",
+    'update.unsupported': "Trình duyệt này không quản lý được bản offline. Hãy tải lại trang khi có mạng.",
+    'update.done': "Đã cập nhật các tệp của app. Đang tải lại…",
+    'update.failed': "Chưa làm mới được ứng dụng. Dữ liệu học vẫn ở trên thiết bị. Hãy kiểm tra mạng rồi thử lại.",
+    'top.advancedAria': 'Mở cài đặt',
+    'top.moreAria': 'Mở menu cài đặt', 'top.more': 'Cài đặt',
     'top.tipInstall': 'Cài đặt', 'top.tipLang': 'EN / VI', 'top.tipTheme': 'Giao diện',
-    'top.tipAdvanced': 'Nâng cao', 'top.tipHelp': 'Trợ giúp', 'top.tipMore': 'Thêm',
-    'top.advancedShort': '⚙ Nâng cao', 'top.helpShort': '? Trợ giúp',
+    'top.tipAdvanced': 'Cài đặt', 'top.tipMore': 'Cài đặt',
+    'top.advancedShort': '⚙ Cài đặt',
     'search.placeholder': 'Gõ một từ tiếng Anh…',
     'review.savedWords': 'Từ đã lưu', 'review.progress': 'Tiến độ', 'practice.offlineLessons': 'Bài học offline', 'practice.startOffline': 'Học một bài offline', 'practice.speakingTools': 'Luyện nói', 'sense.pick': 'Chọn một nghĩa', 'sense.oneMeaning': 'Chọn nghĩa bạn muốn học.', 'sense.manualMeaning': 'Nhập một nghĩa để học hoặc lưu từ cùng câu ví dụ.', 'sense.manualOption': 'Tự nhập nghĩa',
     'search.gateIdle': 'Chưa có từ điển — tải ở dưới để bắt đầu tra từ.',
@@ -7086,9 +7247,9 @@ const I18N = {
     'firstload.ctaSize': '⬇ Tải từ điển (≈ {size})',
     'firstload.sizeUnknown': 'chưa rõ dung lượng (thường vài GB)',
     'firstload.cancelled': 'Đã huỷ tải — chưa có từ điển nào được nạp.',
-    'firstload.cancelHint': 'Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng file .mdx của bạn trong ⚙ Nâng cao.',
+    'firstload.cancelHint': 'Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng file .mdx của bạn trong ⚙ Cài đặt.',
     'firstload.sessionOnly': 'Dùng được trong phiên này. Trình duyệt không lưu được từ điển để dùng ngoại tuyến.',
-    'firstload.failed': 'Tải thất bại: {names}. Kiểm tra kết nối rồi thử lại, hoặc mở ⚙ Nâng cao để nạp file .mdx của bạn.',
+    'firstload.failed': 'Tải thất bại: {names}. Kiểm tra kết nối rồi thử lại, hoặc mở ⚙ Cài đặt để nạp file .mdx của bạn.',
     'firstload.unreachableHint': 'Các nguồn tải từ điển không phản hồi. Bấm “↻ Tải lại từ điển” để thử lại, hoặc dùng “Dùng file .mdx của tôi” bên dưới để nạp thủ công.',
     'firstload.checking': 'Đang kiểm tra dung lượng từ điển…',
     'firstload.note': 'Tải một lần, lưu trong ứng dụng, sau đó dùng hoàn toàn offline.',
@@ -7110,7 +7271,7 @@ const I18N = {
     'known.title': 'Tôi đã biết những từ phổ thông nhất',
     'known.hint': 'Chọn mốc xuất phát để app đếm đúng "từ bạn đã biết" ngay từ đầu. Không có gì được thêm vào Sổ tay — đây chỉ là mốc đo độ phủ khi đọc, nằm offline trên máy bạn.',
     'known.cta': 'Tôi biết {n} từ phổ thông nhất',
-    'known.status': 'Đã chọn mốc: Top {n} — {count} từ được đánh dấu đã biết. Muốn đổi, hãy xoá mốc trong ⚙ Nâng cao rồi chọn lại.',
+    'known.status': 'Đã chọn mốc: Top {n} — {count} từ được đánh dấu đã biết. Muốn đổi, hãy xoá mốc trong ⚙ Cài đặt rồi chọn lại.',
     'known.advTitle': 'Từ đã biết — mốc đo độ phủ khi đọc',
     'known.advNone': 'Chưa chọn mốc nào — màn hình Sổ tay trống sẽ gợi ý chọn một mốc.',
     'known.advSet': 'Mốc: {level} — {count} từ được đánh dấu đã biết.',
@@ -7139,13 +7300,13 @@ const I18N = {
     'apkg.done': 'Đã xuất bộ thẻ Anki — {n} thẻ. Mở Anki → File → Import để nạp file.',
     'apkg.nothing': 'Không có gì để xuất',
     'apkg.failed': 'Không tạo được bộ thẻ Anki — thử lại (lần xuất đầu cần chút thời gian nạp bộ dựng).',
-    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 H\u1ecdc offline — kh\u00f4ng c\u1ea7n key', 'hero.hint': 'D\u00e1n \u0111o\u1ea1n v\u0103n ng\u1eafn v\u00e0o Reader \u1edf d\u01b0\u1edbi, b\u1ea5m B\u1eaf\u0111 \u0111\u1ea7u \u0111\u1ecdc, r\u1ed3i ch\u1ecdn AI practice \u2014 ho\u1eb7c h\u1ecdc offline mi\u1ec5n ph\u00ed kh\u00f4ng c\u1ea7n key.', 'tutor.start': '✨ Luy\u1ec7n AI (online \u00b7 key c\u1ee7a b\u1ea1n)', 'tutor.title': 'Luy\u1ec7n \u0111\u1ecdc \u2192 n\u00f3i', 'tutor.hint': 'G\u1ee3i \u00fd AI \u0111\u01b0\u1ee3c \u0111\u1ed1i chi\u1ebfu v\u1edbi b\u00e0i \u0111\u1ecdc. H\u00e3y duy\u1ec7t feedback tr\u01b0\u1edbc khi l\u01b0u v\u00e0o l\u1ecbch s\u1eed h\u1ecdc.', 'hero.offline': 'H\u1ecdc offline mi\u1ec5n ph\u00ed (kh\u00f4ng c\u1ea7n key)', 'village.title': 'H\u1ecdc ti\u1ebfng Anh c\u00f4ng s\u1edf n\u01a1i m\u1ea1ng ch\u1eadp ch\u1eddn.', 'village.body': 'Chu\u1ea9n b\u1ecb pack n\u01a1i c\u00f3 m\u1ea1ng; sau \u0111\u00f3 \u0111\u1ecdc, luy\u1ec7n v\u00e0 \u00f4n ho\u00e0n to\u00e0n offline — kh\u00f4ng key, kh\u00f4ng t\u00e0i kho\u1ea3n, kh\u00f4ng theo d\u00f5i.', 'village.lessons': 'B\u00e0i h\u1ecdc offline (33 packs · ~340 KB)', 'village.ielts': 'Lab IELTS/TOEIC offline', 'village.offlineBadge': 'OFFLINE · không cần key', 'village.labNote': 'Đường học offline: Listening/Reading chấm key cố định chạy ở chế độ máy bay. AI feedback optional bên dưới cần mạng + key riêng.', 'reader.offlinePacks': 'B\u1ed9 b\u00e0i h\u1ecdc offline', 'reader.loopHint': 'Đ\u1ecdc → c\u1ee5m t\u1eeb → t\u00ecnh hu\u1ed1ng m\u1edbi → Vault — ho\u1eb7c h\u1ecdc pack offline, kh\u00f4ng c\u1ea7n key', 'reader.freeLesson': 'H\u1ecdc th\u1eed offline mi\u1ec5n ph\u00ed', 'reader.savedArticles': '📁 B\u00e0i \u0111\u00e3 l\u01b0u', 'reader.tools': 'C\u00f4ng c\u1ee5 \u0111\u1ecdc', 'reader.saveOffline': '💾 L\u01b0u offline', 'sense.title': 'L\u01b0u ngh\u0129a n\u00e0y', 'sense.entry': 'M\u1ee5c t\u1eeb \u0111i\u1ec3n', 'sense.meaning': 'Ngh\u0129a c\u1ea7n nh\u1edb', 'sense.context': 'C\u00e2u ngu\u1ed3n (t\u00f9y ch\u1ecdn)', 'sense.save': 'L\u01b0u ngh\u0129a', 'sense.cancel': 'H\u1ee7y', 'search.search': 'T\u00ecm', 'ui.skip': 'B\u1ecf qua \u0111\u1ebfn t\u00ecm ki\u1ebfm', 'ui.clear': 'X\u00f3a', 'ui.listenTts': 'Nghe \u0111\u1ecdc (text-to-speech)', 'ui.listenPron': 'Nghe ph\u00e1t \u00e2m', 'ui.saveWord': 'L\u01b0u t\u1eeb', 'ui.saveWordAria': 'L\u01b0u t\u1eeb v\u00e0o S\u1ed5 tay', 'ui.dismissShort': '\u0110\u00f3ng', 'ui.dismiss': '\u0110\u00f3ng g\u1ee3i \u00fd n\u00e0y', 'ui.moreWays': 'Th\u00eam c\u00e1ch \u0111\u1ecdc: file, URL, transcript ho\u1eb7c audio', 'ui.tsTitle': 'K\u1ebft n\u1ed1i t\u00e0i kho\u1ea3n AI', 'ui.tsHint': 'M\u1ee5c n\u00e0y t\u00f9y ch\u1ecdn. H\u1ecdc offline v\u1eabn mi\u1ec5n ph\u00ed. Key ch\u1ec9 l\u01b0u trong tr\u00ecnh duy\u1ec7t n\u00e0y v\u00e0 ch\u1ec9 g\u1eedi \u0111\u1ebfn nh\u00e0 cung c\u1ea5p b\u1ea1n ch\u1ecdn sau khi b\u1ea1n duy\u1ec7t t\u1eebng y\u00eau c\u1ea7u. Nh\u00e0 cung c\u1ea5p c\u00f3 th\u1ec3 t\u00ednh ph\u00ed token.', 'ui.tsProvider': 'Nh\u00e0 cung c\u1ea5p', 'ui.tsOther': 'D\u1ecbch v\u1ee5 t\u01b0\u01a1ng th\u00edch kh\u00e1c', 'ui.tsKey': 'API key c\u1ee7a nh\u00e0 cung c\u1ea5p', 'ui.tsAdv': 'N\u00e2ng cao: model v\u00e0 endpoint', 'ui.tsEndpoint': 'API endpoint', 'ui.tsModel': 'Model', 'ui.tsSave': 'L\u01b0u v\u00e0 ti\u1ebfp t\u1ee5c', 'ui.btnCancel': 'H\u1ee7y', 'ui.btnClose': '\u0110\u00f3ng', 'ui.chooseDict': 'Ch\u1ecdn t\u1eeb \u0111i\u1ec3n', 'ui.hearWord': 'Nghe t\u1eeb', 'ui.slowPlayback': 'Nghe ch\u1eadm (0.75\u00d7)', 'ui.replaySentence': 'Nghe l\u1ea1i c\u00e2u \u0111\u00e3 l\u01b0u', 'ui.savedCtx': 'Ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u c\u1ee7a t\u1eeb n\u00e0y', 'ui.inSavedCtx': 'Trong ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u', 'ui.addExample': '\u2795 Th\u00eam v\u00ed d\u1ee5', 'ui.openInVault': 'M\u1edf trong Vault', 'ui.cancelDownload': 'H\u1ee7y t\u1ea3i xu\u1ed1ng', 'ui.fullscreen': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh', 'ui.fsOxford': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho WordNet', 'ui.fsLongman': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho Wiktionary', 'ui.fsThird': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho khung 3', 'ui.slot3name': 'Khung 3 (t\u00f9y ch\u1ecdn \u2014 file .mdx c\u1ee7a b\u1ea1n)', 'ui.closeEditor': '\u0110\u00f3ng tr\u00ecnh s\u1eeda', 'ui.ppTitle': 'C\u1ee5m m\u1eadt kh\u1ea9u', 'ui.ppGo': 'Ti\u1ebfp t\u1ee5c', 'ui.snapTitle': 'B\u00e0i \u0111\u00e3 l\u01b0u', 'ui.snapHint': 'B\u00e0i b\u1ea1n \u0111\u00e3 l\u01b0u \u0111\u1ec3 \u0111\u1ecdc offline. Ch\u1ea1m m\u1ed9t b\u00e0i \u0111\u1ec3 m\u1edf trong Reader \u2014 kh\u00f4ng c\u1ea7n m\u1ea1ng.',
+    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 H\u1ecdc offline — kh\u00f4ng c\u1ea7n key', 'hero.hint': 'D\u00e1n \u0111o\u1ea1n v\u0103n ng\u1eafn v\u00e0o Reader \u1edf d\u01b0\u1edbi, b\u1ea5m B\u1eaf\u0111 \u0111\u1ea7u \u0111\u1ecdc, r\u1ed3i ch\u1ecdn AI practice \u2014 ho\u1eb7c h\u1ecdc offline mi\u1ec5n ph\u00ed kh\u00f4ng c\u1ea7n key.', 'tutor.start': '✨ Luy\u1ec7n AI (online \u00b7 key c\u1ee7a b\u1ea1n)', 'tutor.title': 'Luy\u1ec7n \u0111\u1ecdc \u2192 n\u00f3i', 'tutor.hint': 'G\u1ee3i \u00fd AI \u0111\u01b0\u1ee3c \u0111\u1ed1i chi\u1ebfu v\u1edbi b\u00e0i \u0111\u1ecdc. H\u00e3y duy\u1ec7t feedback tr\u01b0\u1edbc khi l\u01b0u v\u00e0o l\u1ecbch s\u1eed h\u1ecdc.', 'hero.offline': 'H\u1ecdc offline mi\u1ec5n ph\u00ed (kh\u00f4ng c\u1ea7n key)', 'village.title': 'H\u1ecdc ti\u1ebfng Anh c\u00f4ng s\u1edf n\u01a1i m\u1ea1ng ch\u1eadp ch\u1eddn.', 'village.body': 'Chu\u1ea9n b\u1ecb pack n\u01a1i c\u00f3 m\u1ea1ng; sau \u0111\u00f3 \u0111\u1ecdc, luy\u1ec7n v\u00e0 \u00f4n ho\u00e0n to\u00e0n offline — kh\u00f4ng key, kh\u00f4ng t\u00e0i kho\u1ea3n, kh\u00f4ng theo d\u00f5i.', 'village.lessons': 'B\u00e0i h\u1ecdc offline (33 packs · ~340 KB)', 'village.ielts': 'Lab IELTS/TOEIC offline', 'village.offlineBadge': 'OFFLINE · không cần key', 'village.labNote': 'Đường học offline: Listening/Reading chấm key cố định chạy ở chế độ máy bay. AI feedback optional bên dưới cần mạng + key riêng.', 'reader.offlinePacks': 'B\u1ed9 b\u00e0i h\u1ecdc offline', 'reader.loopHint': 'Đ\u1ecdc → c\u1ee5m t\u1eeb → t\u00ecnh hu\u1ed1ng m\u1edbi → Vault — ho\u1eb7c h\u1ecdc pack offline, kh\u00f4ng c\u1ea7n key', 'reader.freeLesson': 'Đọc bài mẫu', 'reader.savedArticles': '📁 B\u00e0i \u0111\u00e3 l\u01b0u', 'reader.tools': 'C\u00f4ng c\u1ee5 \u0111\u1ecdc', 'reader.saveOffline': '💾 L\u01b0u offline', 'sense.title': 'L\u01b0u ngh\u0129a n\u00e0y', 'sense.entry': 'M\u1ee5c t\u1eeb \u0111i\u1ec3n', 'sense.meaning': 'Ngh\u0129a c\u1ea7n nh\u1edb', 'sense.context': 'C\u00e2u ngu\u1ed3n (t\u00f9y ch\u1ecdn)', 'sense.save': 'L\u01b0u ngh\u0129a', 'sense.cancel': 'H\u1ee7y', 'search.search': 'T\u00ecm', 'ui.skip': 'Bỏ qua đến nội dung chính', 'ui.clear': 'X\u00f3a', 'ui.listenTts': 'Nghe \u0111\u1ecdc (text-to-speech)', 'ui.listenPron': 'Nghe ph\u00e1t \u00e2m', 'ui.saveWord': 'L\u01b0u t\u1eeb', 'ui.saveWordAria': 'L\u01b0u t\u1eeb v\u00e0o S\u1ed5 tay', 'ui.dismissShort': '\u0110\u00f3ng', 'ui.dismiss': '\u0110\u00f3ng g\u1ee3i \u00fd n\u00e0y', 'ui.moreWays': 'Th\u00eam c\u00e1ch \u0111\u1ecdc: file, URL, transcript ho\u1eb7c audio', 'ui.tsTitle': 'Kết nối Gemini', 'ui.tsHint': 'Bạn có thể học ngoại tuyến miễn phí. HọcTA gửi khóa trực tiếp đến Google khi bạn đồng ý gửi yêu cầu đến Gemini.', 'ui.tsKey': 'Khóa API Gemini', 'ui.tsModel': 'Mô hình Gemini', 'ai.rememberKey': 'Ghi nhớ khóa trên thiết bị này', 'ui.tsSave': 'L\u01b0u v\u00e0 ti\u1ebfp t\u1ee5c', 'ui.btnCancel': 'H\u1ee7y', 'ui.btnClose': '\u0110\u00f3ng', 'ui.chooseDict': 'Ch\u1ecdn t\u1eeb \u0111i\u1ec3n', 'ui.hearWord': 'Nghe t\u1eeb', 'ui.slowPlayback': 'Nghe ch\u1eadm (0.75\u00d7)', 'ui.replaySentence': 'Nghe l\u1ea1i c\u00e2u \u0111\u00e3 l\u01b0u', 'ui.savedCtx': 'Ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u c\u1ee7a t\u1eeb n\u00e0y', 'ui.inSavedCtx': 'Trong ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u', 'ui.addExample': '\u2795 Th\u00eam v\u00ed d\u1ee5', 'ui.openInVault': 'M\u1edf trong Vault', 'ui.cancelDownload': 'H\u1ee7y t\u1ea3i xu\u1ed1ng', 'ui.fullscreen': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh', 'ui.fsOxford': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho WordNet', 'ui.fsLongman': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho Wiktionary', 'ui.fsThird': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho khung 3', 'ui.slot3name': 'Khung 3 (t\u00f9y ch\u1ecdn \u2014 file .mdx c\u1ee7a b\u1ea1n)', 'ui.closeEditor': '\u0110\u00f3ng tr\u00ecnh s\u1eeda', 'ui.ppTitle': 'C\u1ee5m m\u1eadt kh\u1ea9u', 'ui.ppGo': 'Ti\u1ebfp t\u1ee5c', 'ui.snapTitle': 'B\u00e0i \u0111\u00e3 l\u01b0u', 'ui.snapHint': 'B\u00e0i b\u1ea1n \u0111\u00e3 l\u01b0u \u0111\u1ec3 \u0111\u1ecdc offline. Ch\u1ea1m m\u1ed9t b\u00e0i \u0111\u1ec3 m\u1edf trong Reader \u2014 kh\u00f4ng c\u1ea7n m\u1ea1ng.',
   },
 };
 Object.assign(I18N.en, {
   'dialog.itemEdit': 'Edit item', 'dialog.addExample': 'Add an example', 'dialog.export': 'Export',
-  'dialog.tags': 'Tags', 'dialog.welcome': 'Welcome 👋', 'dialog.advanced': 'Advanced',
-  'about.title': 'A study & research dictionary, right in your browser',
+  'dialog.tags': 'Tags', 'dialog.welcome': 'Welcome 👋', 'dialog.advanced': 'Settings', 'settings.close': 'Close settings', 'settings.tabs': 'Settings sections', 'settings.dicts': 'Dictionaries', 'settings.data': 'Data', 'settings.learning': 'Learning', 'settings.ai': 'Optional AI tutor', 'settings.geminiGuide': 'How to get a Gemini API key (Vietnamese)',
+  'about.title': 'Learn English from what you read',
   'about.summary': 'About this app — features & terms of use',
   'about.licH': 'Dictionaries & licenses',
   'about.feedback': 'If this app helps your study, I\'d genuinely like to hear it — <a class="support-link" href="mailto:quocanh38@gmail.com?subject=Dual%20Dictionary%20%E2%80%94%20feedback">one email is enough</a>.',
@@ -7153,21 +7314,21 @@ Object.assign(I18N.en, {
 });
 Object.assign(I18N.vi, {
   'dialog.itemEdit': 'Sửa mục', 'dialog.addExample': 'Thêm ví dụ', 'dialog.export': 'Xuất',
-  'dialog.tags': 'Nhãn', 'dialog.welcome': 'Chào mừng 👋', 'dialog.advanced': 'Nâng cao',
-  'about.title': 'Từ điển học tập & tra cứu, ngay trong trình duyệt',
-  'about.summary': 'Về ứng dụng — tính năng &amp; điều khoản sử dụng',
+  'dialog.tags': 'Nhãn', 'dialog.welcome': 'Chào mừng 👋', 'dialog.advanced': 'Cài đặt', 'settings.close': 'Đóng cài đặt', 'settings.tabs': 'Các mục cài đặt', 'settings.dicts': 'Từ điển', 'settings.data': 'Dữ liệu', 'settings.learning': 'Học tập', 'settings.ai': 'Trợ giảng AI (tùy chọn)', 'settings.geminiGuide': 'Cách lấy Gemini API key',
+  'about.title': 'Học tiếng Anh từ bài bạn đọc',
+  'about.summary': 'Về ứng dụng và điều khoản sử dụng',
   'about.licH': 'Từ điển &amp; giấy phép',
-  'about.intro': '<strong>Dual Dictionary là ứng dụng web offline-first cho việc học và tra cứu cá nhân: tra từ tiếng Anh với nhiều từ điển — một chạm chuyển khung — hỗ trợ file từ điển .mdx/.mdd của riêng bạn. Mọi thứ chạy ngay trong trình duyệt — dữ liệu ở lại trên máy bạn, không tài khoản, không theo dõi, không quảng cáo.</strong>',
+  'about.intro': '<strong>Chạm vào từ trong bài đọc để tra nghĩa, lưu từ cùng câu gốc và ôn lại khi cần.</strong> Bạn có thể luyện TOEIC hoặc IELTS, mở bài học B1–B2 đã tải khi mất mạng và dùng AI Tutor tùy chọn khi có mạng.',
   'about.terms': 'Ứng dụng chỉ dành cho mục đích học tập và tra cứu cá nhân. Đây không phải sản phẩm thương mại, không nhằm thương mại hoá hay phát hành lại bất kỳ nội dung từ điển nào. Dữ liệu mở đi kèm vẫn theo giấy phép riêng (xem NOTICE.md) — điều khoản này chỉ áp dụng cho bản triển khai này.',
   'about.features': '<li><strong>Nhiều từ điển một chỗ:</strong> một lần tìm, một chạm chuyển giữa các từ điển đang tải.</li>'
     + '<li><strong>Chế độ Đọc:</strong> dán bài viết hoặc mở trang Wikipedia, bấm vào từ bất kỳ để tra ở khung bên dưới — không rời khỏi bài đọc.</li>'
     + '<li><strong>Mặc định mở sẵn:</strong> bản công khai đi kèm từ điển giấy phép mở (WordNet 3.1, Simple English Wiktionary) — miễn phí, không cần đăng nhập. Có thể thêm từ điển Anh–Việt mở (OVDP, 386.600 mục) chỉ với một cú bấm.</li>'
     + '<li><strong>Dùng từ điển của riêng bạn:</strong> nạp file .mdx / .mdd bạn sở hữu (định dạng MDX) vào khung bất kỳ — chỉ dùng file bạn được phép dùng.</li>'
-    + '<li><strong>Công cụ học tập:</strong> gợi ý từ, lịch sử tra từ, Sổ tay lưu mọi từ/cụm từ/câu kèm ghi chú và nhãn, cùng hàng đợi Ôn tập lặp lại ngắt quãng — sau vài trăm lượt ôn có thể tinh chỉnh trọng số FSRS theo đúng lịch sử của bạn (trên máy, trong ⚙ Nâng cao).</li>'
+    + '<li><strong>Công cụ học tập:</strong> gợi ý từ, lịch sử tra từ, Sổ tay lưu mọi từ/cụm từ/câu kèm ghi chú và nhãn, cùng hàng đợi Ôn tập lặp lại ngắt quãng — sau vài trăm lượt ôn có thể tinh chỉnh trọng số FSRS theo đúng lịch sử của bạn (trên máy, trong ⚙ Cài đặt).</li>'
     + '<li><strong>Ngữ cảnh đọng lại:</strong> tra một từ đã lưu sẽ thấy câu gốc của bạn được tô nổi phía trên mục từ — thêm ví dụ bất cứ lúc nào.</li>'
-    + '<li><strong>Luyện tập &amp; theo dõi:</strong> biến mục đã lưu thành bài tập nhanh (điền từ, nghe &amp; gõ, đọc to bằng nhận dạng giọng của trình duyệt) và xem từ đã học, tỷ lệ nhớ, nguồn đã đọc trong Thống kê. Ôn tập chạy theo thuật toán FSRS (tinh chỉnh được theo lịch sử của bạn trong ⚙ Nâng cao, hoàn toàn trên máy), phiên âm IPA hiện cho hầu hết từ tiếng Anh. Luyện tập có thêm 🎤 cue card (đề bài, 1 phút chuẩn bị, 2 phút nói), Reader có đồng hồ tốc độ đọc, Sổ tay có tab ✍ Viết kèm đếm từ và hẹn giờ Task 2.</li>'
+    + '<li><strong>Luyện tập &amp; theo dõi:</strong> biến mục đã lưu thành bài tập nhanh (điền từ, nghe &amp; gõ, đọc to bằng nhận dạng giọng của trình duyệt) và xem từ đã học, tỷ lệ nhớ, nguồn đã đọc trong Thống kê. Ôn tập chạy theo thuật toán FSRS (tinh chỉnh được theo lịch sử của bạn trong ⚙ Cài đặt, hoàn toàn trên máy), phiên âm IPA hiện cho hầu hết từ tiếng Anh. Luyện tập có thêm 🎤 cue card (đề bài, 1 phút chuẩn bị, 2 phút nói), Reader có đồng hồ tốc độ đọc, Sổ tay có tab ✍ Viết kèm đếm từ và hẹn giờ Task 2.</li>'
     + '<li><strong>Dữ liệu là của bạn:</strong> xuất / nhập mọi thứ dạng JSON, CSV, TSV hoặc văn bản cho Anki — không cloud, không tài khoản. AI tùy chọn gửi bài và câu trả lời tới nhà cung cấp bạn chọn sau khi bạn đồng ý; tự trả phí token bằng API key của bạn.</li>'
-    + '<li><strong>Cài như ứng dụng:</strong> Thêm vào Màn hình chính trên iOS/Android — sau đó chạy hoàn toàn offline. Có thể bật nhắc ôn (tùy chọn, chỉ chạy local) trong ⚙ Nâng cao.</li>',
+    + '<li><strong>Cài như ứng dụng:</strong> Thêm vào Màn hình chính trên iOS/Android — sau đó chạy hoàn toàn offline. Có thể bật nhắc ôn (tùy chọn, chỉ chạy local) trong ⚙ Cài đặt.</li>',
   'about.licP': 'Bản công khai chỉ đi kèm dữ liệu giấy phép mở (xem <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):',
   // U5: một dòng ngắn cho mỗi nguồn (tên + tên ngắn của giấy phép); toàn văn nằm
   // trong tooltip của liên kết và trong NOTICE.md — nội dung giấy phép không đổi.
@@ -7176,7 +7337,7 @@ Object.assign(I18N.vi, {
     + '<li><strong>Phát âm</strong> — <a href="NOTICE.md" target="_blank" rel="noopener" title="CMUdict (phạm vi công cộng / BSD, cmusphinx). Toàn văn: NOTICE.md">CMUdict</a></li>'
     + '<li><strong>Tần suất từ</strong> — <a href="NOTICE.md" target="_blank" rel="noopener" title="Dải tần suất top 10k từ hermitdave/FrequencyWords, giấy phép MIT. Toàn văn: NOTICE.md">MIT</a></li>'
     + '<li><strong>Phiên âm (IPA)</strong> — <a href="NOTICE.md" target="_blank" rel="noopener" title="Bảng IPA từ thichhoc-org/thichhoc-dict (CC BY-SA 4.0; thượng nguồn WordNet, CMUdict, Wiktionary), lấp chỗ thiếu từ CMUdict (phạm vi công cộng / BSD). Toàn văn: NOTICE.md">CC BY-SA 4.0 &amp; CMUdict</a></li>',
-  'about.licNote': 'Từ điển thương mại (ví dụ OALD, LDOCE) không bao giờ đi kèm ở đây; chỉ nạp file của bạn qua ⚙ Nâng cao nếu bạn được phép dùng.',
+  'about.licNote': 'Từ điển thương mại (ví dụ OALD, LDOCE) không bao giờ đi kèm ở đây; chỉ nạp file của bạn qua ⚙ Cài đặt nếu bạn được phép dùng.',
   'about.feedback': 'Nếu app giúp bạn học tốt hơn, mình rất muốn nghe — <a class="support-link" href="mailto:quocanh38@gmail.com?subject=Dual%20Dictionary%20%E2%80%94%20feedback">một email là đủ</a>.',
   'help.title': 'Cách sử dụng',
   'help.quick': '<li><strong>Chờ tải lần đầu</strong> — từ điển được tải một lần rồi lưu trong app, sau đó dùng offline. Tiến độ, tốc độ và thời gian còn lại hiển thị ở đầu mỗi khung; có thể huỷ hoặc thử lại từ màn hình đầu.</li>'
@@ -7184,17 +7345,17 @@ Object.assign(I18N.vi, {
     + '<li><strong>Đọc &amp; bấm</strong> — mở 📖 <em>Đọc</em>, dán bài viết (hoặc dán URL Wikipedia), rồi bấm vào từ bất kỳ để tra ngay bên dưới mà không rời bài đọc. 🎬 <em>Phụ đề YouTube</em> biến phụ đề video thành bài đọc bấm-tra được như vậy.</li>'
     + '<li><strong>Lưu nghĩa</strong> — ☆ mở các mục từ điển đã tải để chọn nguồn. Có thể sửa toàn bộ định nghĩa để mỗi thẻ ứng với một nghĩa; câu đã chạm trong Reader được lưu kèm. ⭐ <em>Lưu câu</em> lưu riêng cả câu.</li>'
     + '<li><strong>Ôn tập</strong> — mở ★ <em>Sổ tay</em> để xem mọi thứ kèm ghi chú, nhãn và bộ lọc, rồi 🔁 <em>Ôn tập</em> chạy hàng đợi lặp lại ngắt quãng.</li>',
-  'help.more': '<li><strong>Mục đích:</strong> app là công cụ học &amp; tra cứu cá nhân — phi thương mại, không tài khoản, không theo dõi. Mọi dữ liệu từ điển ở lại trên máy bạn.</li>'
+  'help.more': '<li><strong>Mục đích:</strong> app là công cụ học &amp; tra cứu cá nhân — phi thương mại, không tài khoản. Mọi dữ liệu từ điển ở lại trên máy bạn.</li>'
     + '<li><strong>Nghe, đọc to, xem IPA:</strong> bấm 🔊 để nghe đọc từ (text-to-speech của trình duyệt); dải phát âm hiện IPA thật cho hầu hết từ tiếng Anh; bấm 🎤 để đọc từ và được kiểm tra bằng nhận dạng giọng của trình duyệt (Luyện tập cũng có bài đọc to). Trên Chrome audio do Google xử lý, trên Safari do Apple — app này không có server.</li>'
-    + '<li><strong>Nhắc ôn (tùy chọn):</strong> bật trong <em>⚙ Nâng cao</em> — chỉ chạy local và tự nguyện: badge trên icon app, banner nhẹ và thông báo trên PWA đã cài (Android/Chrome desktop) vào thời điểm browser chọn. Không gửi đi đâu.</li>'
-    + '<li><strong>Nạp file từ điển của bạn:</strong> mở <em>⚙ Nâng cao</em> để nạp file .mdx/.mdd bạn có quyền dùng vào một khung. Bản công khai mặc định đi kèm từ điển giấy phép mở (WordNet 3.1, Simple English) — chỉ nạp từ điển thương mại như OALD/LDOCE nếu bạn sở hữu. Xem <a href="data-loading-guide.md" target="_blank" rel="noopener">hướng dẫn nạp chi tiết + xử lý lỗi</a>.</li>'
+    + '<li><strong>Nhắc ôn (tùy chọn):</strong> bật trong <em>⚙ Cài đặt</em> — chỉ chạy local và tự nguyện: badge trên icon app, banner nhẹ và thông báo trên PWA đã cài (Android/Chrome desktop) vào thời điểm browser chọn. Không gửi đi đâu.</li>'
+    + '<li><strong>Nạp file từ điển của bạn:</strong> mở <em>⚙ Cài đặt</em> để nạp file .mdx/.mdd bạn có quyền dùng vào một khung. Bản công khai mặc định đi kèm từ điển giấy phép mở (WordNet 3.1, Simple English) — chỉ nạp từ điển thương mại như OALD/LDOCE nếu bạn sở hữu. Xem <a href="data-loading-guide.md" target="_blank" rel="noopener">hướng dẫn nạp chi tiết + xử lý lỗi</a>.</li>'
     + '<li><strong>Cài lên điện thoại:</strong> iPhone/iPad (Safari): Chia sẻ → <em>Thêm vào Màn hình chính</em>. Android (Chrome): menu ⋮ → <em>Thêm vào Màn hình chính / Cài đặt ứng dụng</em>. Cần iOS 16.4+.</li>'
     + '<li><strong>Tự triển khai app:</strong> kéo thư mục vào <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a> (miễn phí) hoặc GitHub Pages. Chỉ phát hành công khai với dữ liệu <strong>giấy phép mở</strong> đi kèm; nếu nạp từ điển <strong>thương mại</strong> thì giữ bản triển khai riêng tư.</li>'
     + '<li><strong>Bàn phím (máy tính):</strong> ↑/↓ chọn gợi ý, Enter để tra, Esc để ẩn.</li>'
     + '<li><strong>Chế độ Đọc:</strong> dán văn bản hoặc mở trang rồi bấm từ để tra; câu đã lưu ở lại với từ — hiện tô nổi phía trên mục từ, kèm <em>Thêm ví dụ</em>.</li>'
     + '<li><strong>Sổ tay &amp; Ôn tập:</strong> mọi từ, cụm từ và câu nằm một chỗ — ghi chú, nhãn, trạng thái, tìm trong sổ tay, chọn nhiều. <em>Ôn tập</em> là hàng đợi FSRS (biết / quên / bỏ qua).</li>'
     + '<li><strong>Dữ liệu là của bạn:</strong> xuất / nhập mọi thứ dạng JSON — không cloud, không tài khoản. AI tùy chọn gửi bài và câu trả lời tới nhà cung cấp bạn chọn sau khi bạn đồng ý; tự trả phí token bằng API key của bạn.</li>'
-    + '<li><strong>Anh–Việt một cú bấm:</strong> thêm từ điển Anh–Việt mở (OVDP, 386.600 mục) từ màn hình đầu hoặc ⚙ Nâng cao.</li>'
+    + '<li><strong>Anh–Việt một cú bấm:</strong> thêm từ điển Anh–Việt mở (OVDP, 386.600 mục) từ màn hình đầu hoặc ⚙ Cài đặt.</li>'
     + '<li><strong>Luyện tập &amp; thống kê:</strong> 🎯 <em>Luyện tập</em> (từ Sổ tay hoặc Ôn tập) tạo bài nhanh — điền từ còn thiếu, nghe &amp; gõ — với <em>Đã hiểu</em> / <em>Ôn lại</em>. 📊 <em>Thống kê</em> hiện từ đã học, tỷ lệ nhớ, số cần ôn và nguồn đã đọc.</li>'
     + '<li><strong>Xuất đi bất cứ đâu:</strong> Sổ tay xuất mục dạng JSON, CSV, TSV hoặc văn bản cho Anki, có chọn trường.</li>'
     + '<li><strong>Phát âm:</strong> 🔊 đọc từ, 🐢 <em>0.75×</em> đọc chậm, và ↺ đọc lại câu đã lưu. IPA hiện khi dữ liệu từ điển có.</li>',
@@ -7330,7 +7491,7 @@ Object.assign(I18N.en, {
   'reminders.reoffer': '🔔 Want a nudge when words are due for review? Reminders are local-only.',
   'reminders.reofferAction': 'Turn on',
   'remind.title': '{n} item(s) due for review',
-  'remind.body': 'Open Dual Dictionary — nothing leaves your device.',
+  'remind.body': 'Open HọcTA — nothing leaves your device.',
 });
 // v69 R4 — say-it-aloud practice + pron-strip mic (browser speech recognition)
 Object.assign(I18N.en, {
@@ -7382,13 +7543,22 @@ Object.assign(I18N.vi, {
   'reminders.reoffer': '🔔 Nhắc tôi khi có từ đến hạn ôn tập? Nhắc nhở chỉ nằm trên máy bạn.',
   'reminders.reofferAction': 'Bật',
   'remind.title': '{n} mục đến hạn ôn',
-  'remind.body': 'Mở Dual Dictionary — không gì rời khỏi thiết bị của bạn.',
+  'remind.body': 'Mở HọcTA — không gì rời khỏi thiết bị của bạn.',
 });
 // v91 — first-run chooser, real-name tabs, i18n'd panel docs (everything the
 // audit found still hard-coded English inside the VI interface)
 Object.assign(I18N.en, {
-  'firstload.title': 'Choose dictionaries to download',
-  'firstload.desc': 'One-time download of about {size} (open-licensed data — free for everyone) — after that, everything works offline.',
+  'firstload.title': 'Start looking up words',
+  'firstload.options': 'Other dictionary options',
+  'firstload.choices': 'Dictionaries to download',
+  'firstload.namedSize': 'Download {name} (≈ {size})',
+  'firstload.named': 'Download {name}',
+  'firstload.ctaNUnknown': 'Download {n} dictionaries',
+  'onboard.start': 'Look up words offline or try a short lesson and save your first phrase.',
+  'onboard.lookup': 'Set up a dictionary',
+  'onboard.more': 'More about studying',
+  'onboard.offline': 'Dictionary lookup, saving and review work offline. Optional AI practice uses your key and only sends material after you agree.',
+  'firstload.desc': 'Download the dictionaries you want once, then look up words offline.',
   'firstload.unreachable': 'No dictionary data is reachable from this deployment.',
   'firstload.enviDesc': 'Vietnamese meanings for 386,600 words — open data (MIT)',
   'firstload.oxfordDesc': "The standard English–English learner's dictionary",
@@ -7401,18 +7571,27 @@ Object.assign(I18N.en, {
   'firstload.loadingOne': 'Loading {name}… (one-time download, then stored offline)',
   'envi.short': 'EN–VI',
   'slot.third': 'Slot 3',
-  'slot.openLoaded': 'Open-licensed dictionary loaded — use ⚙ Advanced to load your own .mdx files',
+  'slot.openLoaded': 'Open-licensed dictionary loaded — use ⚙ Settings to load your own .mdx files',
   'slot.cancelled': 'Download cancelled',
   'panel.ready': 'is ready.',
   'panel.readyHint': 'Type a word above to start — results appear here.',
   'panel.notLoaded': 'is not loaded yet.',
-  'panel.notLoadedHint': 'Tap Download dictionaries below, or open ⚙ Advanced to use your own .mdx files.',
+  'panel.notLoadedHint': 'Tap Download dictionaries below, or open ⚙ Settings to use your own .mdx files.',
   'panel.loadingRes': 'resources are still loading{eta}.',
   'panel.loadingResHint': 'Watch the progress in the panel header, or search the other dictionary meanwhile.',
 });
 Object.assign(I18N.vi, {
-  'firstload.title': 'Chọn từ điển để tải',
-  'firstload.desc': 'Tải một lần khoảng {size} (dữ liệu mở — miễn phí cho mọi người) — sau đó mọi thứ chạy hoàn toàn offline.',
+  'firstload.title': 'Bắt đầu tra từ',
+  'firstload.options': 'Tùy chọn từ điển khác',
+  'firstload.choices': 'Từ điển để tải xuống',
+  'firstload.namedSize': 'Tải {name} (≈ {size})',
+  'firstload.named': 'Tải {name}',
+  'firstload.ctaNUnknown': 'Tải {n} từ điển',
+  'onboard.start': 'Tra từ ngoại tuyến hoặc thử một bài ngắn và lưu cụm từ đầu tiên.',
+  'onboard.lookup': 'Cài từ điển',
+  'onboard.more': 'Tìm hiểu thêm',
+  'onboard.offline': 'Bạn có thể tra từ, lưu và ôn khi mất mạng. Luyện với AI là tùy chọn, dùng khóa của bạn và chỉ gửi nội dung khi bạn đồng ý.',
+  'firstload.desc': 'Chọn từ điển cần tải một lần, sau đó tra từ ngoại tuyến.',
   'firstload.unreachable': 'Không đọc được dữ liệu từ điển từ bản cài này.',
   'firstload.enviDesc': 'Nghĩa tiếng Việt cho 386.600 từ — dữ liệu mở (MIT)',
   'firstload.oxfordDesc': 'Từ điển Anh–Anh chuẩn cho người học',
@@ -7425,16 +7604,16 @@ Object.assign(I18N.vi, {
   'firstload.loadingOne': 'Đang tải {name}… (tải một lần, sau đó lưu offline)',
   'envi.short': 'Anh–Việt',
   'slot.third': 'Slot 3',
-  'slot.openLoaded': 'Đã tải từ điển mở — dùng ⚙ Nâng cao để dùng file .mdx của bạn',
+  'slot.openLoaded': 'Đã tải từ điển mở — dùng ⚙ Cài đặt để dùng file .mdx của bạn',
   'slot.cancelled': 'Đã hủy tải xuống',
   'panel.ready': 'đã sẵn sàng.',
   'panel.readyHint': 'Gõ một từ ở trên để bắt đầu — kết quả hiện ở đây.',
   'panel.notLoaded': 'chưa được tải.',
-  'panel.notLoadedHint': 'Bấm Tải từ điển ở dưới, hoặc mở ⚙ Nâng cao để dùng file .mdx của bạn.',
+  'panel.notLoadedHint': 'Bấm Tải từ điển ở dưới, hoặc mở ⚙ Cài đặt để dùng file .mdx của bạn.',
   'panel.loadingRes': 'vẫn đang tải tài nguyên{eta}.',
   'panel.loadingResHint': 'Theo dõi tiến độ ở phần đầu panel, hoặc tra từ điển khác trong lúc chờ.',
 });
-let lang = localStorage.getItem('lang') || ((String(navigator.language || '').toLowerCase().indexOf('vi') === 0) ? 'vi' : 'en');
+let lang = localStorage.getItem('lang') || (new URLSearchParams(location.search).get('lang') === 'vi' || /^vi/i.test(navigator.language) ? 'vi' : 'en');
 function i18n(k) { return (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k; }
 /** i18n with {placeholders}: i18nFmt('firstload.ctaSize', {size: fmtSize(n)}) */
 function i18nFmt(k, vars) {
@@ -7460,16 +7639,34 @@ function applyLang() {
     const vi = I18N.vi[el.dataset.i18nHtml];
     el.innerHTML = (lang === 'vi' && vi) ? vi : (el.dataset.i18nEn != null ? el.dataset.i18nEn : el.innerHTML);
   });
+  document.querySelectorAll('[data-help-lang]').forEach(el => { el.hidden = el.dataset.helpLang !== lang; });
   const b = $('#btn-lang'); if (b) b.textContent = lang === 'vi' ? 'VI' : 'EN';
   // JS-built copy (the not-ready gate line, the empty card's message) has no
   // data-i18n attribute to re-render, so it is repainted here — otherwise
   // switching language left those two lines in the previous language.
-  try { updateIdleDictState(); updateEmptyStateCopy(); } catch (e) { /* not ready yet */ }
+  try { updateIdleDictState(); updateEmptyStateCopy(); if (Object.keys(firstLoadPer).length) updateFirstloadCta(); } catch (e) { /* not ready yet */ }
   try { if (covLast) covRender(); } catch (e) { /* reader not active */ } // v118 A1
   // refresh the active dynamic view so JS-built strings pick up the language
   try { applyView(currentView()); } catch (e) { /* not ready yet */ }
 }
 function toggleLang() { lang = lang === 'en' ? 'vi' : 'en'; localStorage.setItem('lang', lang); applyLang(); showToast(lang === 'vi' ? 'Tiếng Việt' : 'English'); }
+
+async function updateAppFiles(event) {
+  const button = event.currentTarget;
+  const status = $('#app-update-status');
+  if (!navigator.onLine) { status.textContent = i18n('update.offline'); return; }
+  if (!('serviceWorker' in navigator)) { status.textContent = i18n('update.unsupported'); return; }
+  button.disabled = true;
+  status.textContent = i18n('update.busy');
+  try {
+    await refreshApp();
+    status.textContent = i18n('update.done');
+    location.reload();
+  } catch {
+    status.textContent = i18n('update.failed');
+    button.disabled = false;
+  }
+}
 
 /* install prompt + offline indicator */
 let installEvt = null;
@@ -7485,7 +7682,7 @@ function updateNetBanner() {
   const off = navigator.onLine === false;
   b.classList.toggle('hidden', !off);
   const el = $('#net-banner-text');
-  if (el) el.textContent = 'Offline — saved words and loaded dictionaries still work.';
+  if (el) el.textContent = i18n('net.offline');
 }
 
 /* search history page */
@@ -7724,7 +7921,7 @@ function renderBackupInfo() {
 }
 /* onboarding (first visit) */
 function maybeOnboard() {
-  if (localStorage.getItem('onboarded')) return;
+  if (currentView() !== 'search' || loadAbort || Object.keys(SLOTS).some(slot => state.dicts[slot]) || document.querySelector('dialog[open]') || localStorage.getItem('onboarded')) return;
   const d = $('#onboarding-dialog');
   if (!d) return;
   // The nudge link is a dead button where notifications don't exist at all
@@ -7797,7 +7994,7 @@ function setAdvTab(name) {
   }
 }
 
-/* v71 — on-device FSRS weight optimizer (⚙ Advanced). One button: reads the
+/* v71 — on-device FSRS weight optimizer (⚙ Settings). One button: reads the
  * review log, fits the 17 weights (js/fsrs-opt.js, lazy-loaded — this code
  * path never runs unless the user clicks), applies them via store.js and
  * persists the blob for future boots. Opt-in, local-only, one-click revert. */
@@ -8087,7 +8284,7 @@ async function openSnapshots() {
  * touches the Vault UI, the stats denominators or the practice deck pools.
  * Each level stores its CUMULATIVE lemma list (every band up to its ceiling)
  * computed offline from the precached data/freq-en.json; levelling up is an
- * idempotent delta-add, ⚙ Advanced reset is the only way down. */
+ * idempotent delta-add, ⚙ Settings reset is the only way down. */
 
 const KNOWN_LEVELS_META = {
   top1k: { n: 1000, band: '1k' },
@@ -8130,7 +8327,7 @@ async function applyKnownLevel(levelId) {
   showToast(i18nFmt('known.setLevel', { n: KNOWN_LEVELS_META[levelId].n.toLocaleString('en-US') }));
 }
 
-/** ⚙ Advanced → Data: the known-words management block (plan D6). */
+/** ⚙ Settings → Data: the known-words management block (plan D6). */
 function renderKnownAdvanced() {
   const status = $('#known-adv-status');
   if (!status) return;
@@ -8183,7 +8380,7 @@ async function resetKnownUi() {
 
 /** Vault empty state (plan D6): the milestone CTA lives exactly where an empty
  *  vault asks "what now?". A non-empty vault hides this block entirely — the
- *  management entry point stays in ⚙ Advanced. */
+ *  management entry point stays in ⚙ Settings. */
 let knownEmptyBusy = false;
 async function renderKnownEmpty() {
   if (knownEmptyBusy) return;

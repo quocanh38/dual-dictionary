@@ -15,3 +15,9 @@
 
 /audio/*
   Cache-Control: public, max-age=31536000, immutable
+
+/recover.html
+  X-Robots-Tag: noindex
+
+/lessons/recover.html
+  X-Robots-Tag: noindex

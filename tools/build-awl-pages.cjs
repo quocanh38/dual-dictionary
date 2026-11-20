@@ -68,7 +68,7 @@ function sublistPageHtml(n, words, ipa) {
   const canonical = `${SITE}/vi/chu-de/awl-${n}/`;
   const h1 = `Từ vựng học thuật AWL Sublist ${n} (${count} từ)`;
   const sample = words.slice(0, 5).join(', ');
-  const desc = `${count} từ AWL Sublist ${n} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ IELTS — Dual Dictionary.`.slice(0, 160);
+  const desc = `${count} từ AWL Sublist ${n} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ IELTS — HọcTA.`.slice(0, 160);
   const rows = words.map((w) =>
     `    <li data-word="${esc(w)}"><a href="/vi/tu/${encodeURIComponent(w)}/">${esc(w)}</a>${ipa[w] ? ` <span class="hub-ipa">/${esc(ipa[w])}/</span>` : ''}</li>`).join('\n');
   const prev = n > 1 ? ` <a href="/vi/chu-de/awl-${n - 1}/">← Sublist ${n - 1}</a>` : '';
@@ -82,7 +82,7 @@ function sublistPageHtml(n, words, ipa) {
         description: desc,
         url: canonical,
         inLanguage: 'vi',
-        isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` },
+        isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` },
       },
       {
         '@type': 'ItemList',
@@ -110,14 +110,14 @@ function sublistPageHtml(n, words, ipa) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
@@ -145,7 +145,7 @@ ${rows}
   </ul>
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 ${FILTER_JS}
 </body>
 </html>
@@ -194,7 +194,7 @@ function hubHtml(subs) {
         description: desc,
         url: canonical,
         inLanguage: 'vi',
-        isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` },
+        isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` },
       },
       {
         '@type': 'BreadcrumbList',
@@ -211,14 +211,14 @@ function hubHtml(subs) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
@@ -252,7 +252,7 @@ ${subRows}
     <li><a href="/vi/cambridge/">Từ vựng đề Cambridge IELTS</a></li>
   </ul>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `;
@@ -280,8 +280,8 @@ function main() {
 
   // sitemap vi/tu/sitemap/topics.xml (hub + 10 sublists)
   const LM = new Date().toISOString().slice(0, 10);
-  const urls = [`https://dualdictionary.netlify.app/vi/chu-de/`,
-    ...subs.map((s) => `https://dualdictionary.netlify.app/vi/chu-de/awl-${s.n}/`)];
+  const urls = [`https://hocta.app/vi/chu-de/`,
+    ...subs.map((s) => `https://hocta.app/vi/chu-de/awl-${s.n}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'topics.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`).join('\n')}\n</urlset>\n`);
 
@@ -290,7 +290,7 @@ function main() {
   let sm = fs.readFileSync(smPath, 'utf8');
   if (!sm.includes('sitemap/topics.xml')) {
     sm = sm.replace('</sitemapindex>',
-      `  <sitemap>\n    <loc>https://dualdictionary.netlify.app/vi/tu/sitemap/topics.xml</loc>\n    <lastmod>${LM}</lastmod>\n  </sitemap>\n</sitemapindex>`);
+      `  <sitemap>\n    <loc>https://hocta.app/vi/tu/sitemap/topics.xml</loc>\n    <lastmod>${LM}</lastmod>\n  </sitemap>\n</sitemapindex>`);
     fs.writeFileSync(smPath, sm);
   }
 

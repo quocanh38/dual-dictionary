@@ -11,7 +11,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const REPO = path.resolve(__dirname, '..');
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 const args = process.argv.slice(2);
 function arg(name) {
   const i = args.indexOf(name);

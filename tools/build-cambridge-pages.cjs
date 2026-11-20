@@ -45,21 +45,21 @@ function pageHtml(p) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -87,7 +87,7 @@ ${pRows}
   </ul>
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 <script>
 (function () {
   var q = document.getElementById('hub-q');
@@ -126,7 +126,7 @@ function main() {
   const rows = slugs.map(({ slug, p }) => `    <li><a href="/vi/cambridge/${slug}/">Từ vựng Cam ${p.book} Test ${p.test} (${esc(p.skill)}) — ${(p.words || []).length} từ + ${(p.phrases || []).length} cụm</a></li>`).join('\n');
   const books = papers.map((p) => p.book);
   const range = `Cam ${Math.min(...books)}-${Math.max(...books)}`;
-  const hubTitle = `Từ vựng đề Cambridge IELTS — ${range} | Dual Dictionary`;
+  const hubTitle = `Từ vựng đề Cambridge IELTS — ${range} | HọcTA`;
   const hubDesc = `Bộ từ vựng hay gặp trong đề thi IELTS Cambridge ${range.replace('Cam ', '')} theo từng test — nghĩa, phát âm, ví dụ thi và bài luyện.`;
   const itemList = {
     '@type': 'ItemList',
@@ -157,14 +157,14 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${esc(hubTitle)}</title>
 <meta name="description" content="${esc(hubDesc)}">
 <link rel="canonical" href="${SITE}/vi/cambridge/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${SITE}/vi/cambridge/">
 <meta property="og:title" content="${esc(hubTitle)}">
 <meta name="twitter:card" content="summary">
@@ -184,12 +184,12 @@ ${navHtml('cambridge')}
 ${rows}
   </ul>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `);
   const LM = new Date().toISOString().slice(0, 10);
-  const urls = [`https://dualdictionary.netlify.app/vi/cambridge/`, ...slugs.map(({ slug }) => `https://dualdictionary.netlify.app/vi/cambridge/${slug}/`)];
+  const urls = [`https://hocta.app/vi/cambridge/`, ...slugs.map(({ slug }) => `https://hocta.app/vi/cambridge/${slug}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'cambridge.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`).join('\n')}\n</urlset>\n`);
   console.log(`CAMBRIDGE: ${papers.length} papers + hub + sitemap`);

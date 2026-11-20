@@ -1,3 +1,4 @@
+import { openContextChat, openLearningChatHistory } from '../js/toeic-ai-explanations.js';
 import {fetchLibraryIndex,fetchLibraryPack} from './library.js';
 import {readEditorDraft} from './draft-file.js';
 import {createBackup,readBackup,restoreBackup,BACKUP_MAX_BYTES} from './backup.js';
@@ -6,6 +7,7 @@ import { listRecords, getRecord, putRecord, saveDraft, installPack, progressKey 
 import { startDraft, selectionRequest, acceptSelection, exerciseRequest, acceptExercises, repairRequest, sendMeta } from './generator.js';
 import { GEMINI_PROVIDER, providerForPurpose } from './provider.js';
 import { addItem } from '../js/store.js';
+const publicLessons=document.querySelector('#public-lessons');
 const app=document.querySelector('#app'),status=document.querySelector('#status'),offline=document.querySelector('#offline-status');
 let providerSettings={
  [GEMINI_PROVIDER.id]:{apiKey:'',model:GEMINI_PROVIDER.model},
@@ -22,10 +24,11 @@ function check(parent,text,id){const l=el('label'),c=el('input');c.type='checkbo
 function settingsForRequest(task){const provider=providerForPurpose(task.purpose),choice=providerSettings[provider.id];return {...choice,providerId:provider.id,providerLabel:provider.label,baseUrl:provider.baseUrl,maxOutputTokens:provider.maxOutputTokens};}
 function refreshDestination(){const label=document.querySelector('#request-destination');if(label&&request){const chosen=settingsForRequest(request),provider=providerForPurpose(request.purpose);label.textContent=`Provider: ${provider.label} · Purpose: ${request.purpose} · Model: ${chosen.model} · Endpoint: ${provider.baseUrl} · Output limit: ${provider.maxOutputTokens.toLocaleString()} tokens${provider.id===GEMINI_PROVIDER.id?'; reasoning is always on':''}`;const heading=label.parentElement?.querySelector('h3');if(heading)heading.textContent=`Inspect before sending to ${provider.label}`;const agree=document.querySelector('#request-consent');if(agree)agree.checked=false;}}
 function cancel(){epoch++;controller?.abort();controller=null;request=null;}
-function heading(text){app.replaceChildren();const h=el('h2',text);h.tabIndex=-1;app.append(h);h.focus();return h;}
+function heading(text){if(publicLessons)publicLessons.hidden=true;app.replaceChildren();const h=el('h2',text);h.tabIndex=-1;app.append(h);h.focus();return h;}
 function download(name,value){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=el('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function persistDraft(next){const ticket=epoch;const saved=await saveDraft(next);if(ticket===epoch)draft=saved;return saved;}
 async function library(){const ticket=++epoch;const [packs,drafts]=await Promise.all([listRecords('packs'),listRecords('drafts')]);if(ticket!==epoch)return;heading('Choose a lesson').classList.add('sr-only');
+ if(publicLessons)publicLessons.hidden=false;
  const catalogue=el('div');catalogue.className='lesson-catalogue';app.append(catalogue);renderCatalogue(catalogue,ticket).catch(e=>{if(ticket===epoch&&catalogue.isConnected){para(catalogue,e.message,'notice');button(catalogue,'Retry lesson library',()=>library());}});
  const tools=el('details');tools.append(el('summary','Import or try a sample pack'));app.append(tools);
  button(tools,'Load authored example',async b=>{b.disabled=true;try{const p=await(await fetch('./example.json')).json();await installPack(await exportPack(p));await library();tell('Authored example installed. It is not a live provider response.');}finally{b.disabled=false;}});
@@ -45,7 +48,9 @@ async function renderCatalogue(host,ticket){
  const renderEntry=(parent,entry,featured=false)=>{
   const section=el('section');
   if(featured){section.classList.add('lesson-featured');para(section,'Suggested lesson','meta');}
-  section.append(el('h3',entry.title));
+  const title=el('h3');
+  link(title,entry.title,'/lessons/'+entry.file.slice(0,-5)+'/');
+  section.append(title);
   para(section,`${entry.topic} · ${entry.levelEstimate} (estimate)`,'meta');
   if(featured && entry.file==='supplier-delivery.json') {
    para(section,'Practise checking a delivery against an order and contacting a supplier.');
@@ -53,11 +58,7 @@ async function renderCatalogue(host,ticket){
   }
   const existing=installed.get(entry.packId+'@'+entry.version);
   button(section,featured?'Start lesson':existing?'Study':'Open lesson',async()=>{
-   const envelope=existing?.sha256===entry.sha256?existing:await fetchLibraryPack(entry);
-   if(envelope!==existing)await installPack(envelope);
-   if(ticket!==epoch)return;
-   const pack=envelope.payload || envelope;
-   await openPlayer(pack,pack.lessons[0]);
+   await openCatalogueEntry(entry,existing,ticket);
   },featured);
   parent.append(section);
  };
@@ -68,10 +69,39 @@ async function renderCatalogue(host,ticket){
  for(const entry of index.packs)renderEntry(grid,entry);
  more.append(grid);
  host.append(more);
+ if(publicLessons)publicLessons.hidden=true;
+}
+
+async function openCatalogueEntry(entry,existing,ticket) {
+ const envelope=existing?.sha256===entry.sha256?existing:await fetchLibraryPack(entry);
+ if(ticket!==epoch)return;
+ if(envelope!==existing)await installPack(envelope);
+ if(ticket!==epoch)return;
+ const pack=envelope.payload;
+ await openPlayer(pack,pack.lessons[0]);
+}
+
+async function openLinkedLesson(slug) {
+ const ticket=epoch;
+ heading('Opening lesson…');
+ try {
+  const index=await fetchLibraryIndex();
+  if(ticket!==epoch)return;
+  const entry=index.packs.find(item=>item.file===slug+'.json');
+  if(!entry)throw Error('This lesson could not be found in the library.');
+  const existing=await getRecord('packs',entry.packId+'@'+entry.version);
+  if(ticket!==epoch)return;
+  await openCatalogueEntry(entry,existing,ticket);
+ } catch(error) {
+  if(ticket!==epoch)return;
+  heading('Unable to open this lesson');
+  para(app,error.message,'notice');
+  link(app,'Back to lesson library','#library');
+ }
 }
 const studioModels = [
- ['gemini-3.6-flash', 'Gemini 3.6 Flash (default)'],
- ['gemini-3.8-flash', 'Gemini 3.8 Flash'],
+ ['gemini-3.8-flash', 'Gemini 3.8 Flash (default)'],
+ ['gemini-3.5-flash-lite', 'Gemini 3.5 Flash-Lite'],
 ];
 function renderStudio(){heading('Gemini online');para(app,'Create a lesson from your reading with Gemini. After review, save the pack to study offline. Use original or permitted text.','notice');
  const config=el('section');
@@ -114,9 +144,21 @@ function renderStudio(){heading('Gemini online');para(app,'Create a lesson from 
  button(app,'Show request usage',async()=>{const rows=await listRecords('usage');const counts=rows.reduce((a,r)=>({input:a.input+(r.usage?.inputTokens||0),output:a.output+(r.usage?.outputTokens||0)}),{input:0,output:0});tell(`${rows.length} requests recorded in this browser; returned token counts: ${counts.input} input / ${counts.output} output. Missing usage remains unknown.`);});
 }
 function renderConsent(){
- const initialSettings=settingsForRequest(request),provider=providerForPurpose(request.purpose);const box=el('section');box.append(el('h3',`Inspect before sending to ${provider.label}`));const destination=el('p',`Provider: ${provider.label} · Purpose: ${request.purpose} · Model: ${initialSettings.model} · Endpoint: ${provider.baseUrl} · Output limit: ${provider.maxOutputTokens.toLocaleString()} tokens${provider.id===GEMINI_PROVIDER.id?'; reasoning is always on':''}`);destination.id='request-destination';box.append(destination);para(box,'This request can incur provider charges. The reading is untrusted data, not instructions for the app. The selected provider receives your key only as authentication.');const details=el('details');details.open=true;details.append(el('summary','Exact instructions and learner/editor data'));details.append(el('pre',JSON.stringify({instructions:request.instructions,input:request.input},null,2)));box.append(details);const agree=check(box,'I agree to send this request to the selected provider','request-consent');
- button(box,'Agree and send request',async()=>{if(!agree.checked)throw Error('Check consent before sending.');if(!navigator.onLine)throw Error('You are offline. Restore the network before generating.');const callSettings=settingsForRequest(request);const rows=await listRecords('usage');if(rows.length>=limit)throw Error('Recorded request limit reached.');const task=request,base=structuredClone(draft),ticket=++epoch,usageId=crypto.randomUUID();if(task.purpose==='repair-exercises'&&rows.some(r=>r.draftId===base.id&&r.purpose==='repair-exercises'))throw Error('One repair request already recorded for this draft. Edit manually or start another draft.');controller=new AbortController();const active=controller;renderStudio();let result;
- try{await putRecord('usage',{id:usageId,at:new Date().toISOString(),draftId:base.id,purpose:task.purpose,providerId:callSettings.providerId,model:callSettings.model,status:null,usage:null,outcome:'in-flight-or-unknown'});if(ticket!==epoch)return;result=await sendMeta(callSettings,task,{signal:active.signal});await putRecord('usage',{id:usageId,at:new Date().toISOString(),draftId:base.id,purpose:task.purpose,providerId:result.providerId,model:result.model,status:result.status,usage:result.usage,latencyMs:result.latencyMs,outcome:ticket===epoch?'received':'discarded-late'});if(ticket!==epoch)return;let next=task.purpose==='select-targets'?acceptSelection(base,result.result,result):acceptExercises(base,result.result,result);if(task.purpose==='repair-exercises')next.repairCount=(base.repairCount||0)+1;next.lastError=null;next.lastOutput=null;await persistDraft(next);tell('Provider output received and structurally validated. Review is still required.');}
+ const callSettings=settingsForRequest(request),provider=providerForPurpose(request.purpose);const box=el('section');box.append(el('h3',`Inspect before sending to ${provider.label}`));const destination=el('p',`Provider: ${provider.label} · Purpose: ${request.purpose} · Model: ${callSettings.model} · Endpoint: ${provider.baseUrl} · Output limit: ${provider.maxOutputTokens.toLocaleString()} tokens${provider.id===GEMINI_PROVIDER.id?'; reasoning is always on':''}`);destination.id='request-destination';box.append(destination);para(box,'This request can incur provider charges. Gemini 3.5 Flash-Lite may handle the same request once if the selected model is busy. The reading is untrusted data, not instructions for the app. The selected provider receives your key only as authentication.');const details=el('details');details.open=true;details.append(el('summary','Exact instructions and learner/editor data'));details.append(el('pre',JSON.stringify({instructions:request.instructions,input:request.input},null,2)));box.append(details);const revision = field(box, 'Yêu cầu chỉnh sửa bổ sung', 'studio-request-revision', '', 'textarea');
+ const versions = el('details');
+ versions.append(el('summary', 'Phiên bản yêu cầu'));
+ for (const version of request.editVersions || []) versions.append(el('pre', version));
+ box.append(versions);
+ button(box, 'Xem yêu cầu đã chỉnh', () => {
+  if (!revision.value.trim()) return;
+  request = {...request, editVersions:[...(request.editVersions || []), request.instructions],
+   instructions:request.instructions + '\nYêu cầu bổ sung: ' + revision.value.trim()};
+  renderStudio();
+ });
+ button(box, 'Hội thoại đã lưu', openLearningChatHistory);
+ const agree=check(box,'I agree to send this request to the selected provider','request-consent');
+ button(box,'Agree and send request',async()=>{if(!agree.checked)throw Error('Check consent before sending.');if(!navigator.onLine)throw Error('You are offline. Restore the network before generating.');const rows=await listRecords('usage');if(rows.length>=limit)throw Error('Recorded request limit reached.');const task=request,base=structuredClone(draft),ticket=++epoch,usageId=crypto.randomUUID();if(task.purpose==='repair-exercises'&&rows.some(r=>r.draftId===base.id&&r.purpose==='repair-exercises'))throw Error('One repair request already recorded for this draft. Edit manually or start another draft.');controller=new AbortController();const active=controller;renderStudio();let result;
+ try{await putRecord('usage',{id:usageId,at:new Date().toISOString(),draftId:base.id,purpose:task.purpose,providerId:callSettings.providerId,model:callSettings.model,status:null,usage:null,outcome:'in-flight-or-unknown'});if(ticket!==epoch)return;result=await sendMeta(callSettings,task,{signal:active.signal,allowFallback:true});await putRecord('usage',{id:usageId,at:new Date().toISOString(),draftId:base.id,purpose:task.purpose,providerId:result.providerId,model:result.model,status:result.status,usage:result.usage,latencyMs:result.latencyMs,outcome:ticket===epoch?'received':'discarded-late'});if(ticket!==epoch)return;let next=task.purpose==='select-targets'?acceptSelection(base,result.result,result):acceptExercises(base,result.result,result);if(task.purpose==='repair-exercises')next.repairCount=(base.repairCount||0)+1;next.lastError=null;next.lastOutput=null;await persistDraft(next);tell('Output from '+result.model+' passed structural checks. Review is still required.');}
  catch(e){if(!result)await putRecord('usage',{id:usageId,at:new Date().toISOString(),draftId:base.id,...(e.call||{purpose:task.purpose,providerId:callSettings.providerId,model:callSettings.model}),outcome:ticket===epoch?'failed':'cancelled-or-unknown'}).catch(()=>{});if(ticket!==epoch)return;await persistDraft({...base,lastError:e.message,lastOutput:result?.result||null});tell(e.message);}
  finally{if(ticket===epoch){controller=null;request=null;renderStudio();}}
  },true);button(box,'Back without sending',()=>{request=null;renderStudio();});app.append(box);
@@ -146,8 +188,9 @@ function addTargetSave(box, pack, lesson, t) {
  }}finally{saveBusy=false;b.disabled=false;}});
 }
 function renderPlayer(){
- if(!currentPlayer)return;const s=currentPlayer,{pack,lesson,progress,preview}=s;heading(preview?'Draft lesson preview':lesson.title);para(app,`${pack.levelEstimate} (estimate) · ${pack.review.reviewerType==='authored-fixture'?'Authored example — not a live AI result':preview?'AI-assisted draft — review pending':'AI-assisted, editor-reviewed'} · ${pack.review.reviewerType}`,'studio-badge');if(preview)para(app,'Unpublished preview. Progress and Vault saving are disabled.','notice');
- button(app,preview?'Back to editor':'Back to library',()=>{currentPlayer=null;if(preview)renderStudio();else library();});para(app,`Step ${progress.step+1} of ${lesson.exercises.length+2}`);
+ if(!currentPlayer)return;const s=currentPlayer,{pack,lesson,progress,preview}=s;heading(preview?'Draft lesson preview':lesson.title);para(app,`${pack.levelEstimate} (estimate) · ${pack.review.reviewerType==='authored-fixture'?'Authored example — not a live Meta result':preview?'AI-assisted draft — review pending':'AI-assisted, editor-reviewed'} · ${pack.review.reviewerType}`,'studio-badge');if(preview)para(app,'Unpublished preview. Progress and Vault saving are disabled.','notice');
+ button(app,preview?'Back to editor':'Back to library',()=>{currentPlayer=null;if(preview)renderStudio();else if(location.hash.startsWith('#study='))location.hash='library';else library();});para(app,`Step ${progress.step+1} of ${lesson.exercises.length+2}`);
+ if (!preview) button(app, 'Hỏi về bài này', () => openContextChat('work', lesson.title, lesson.reading.text));
  const advance=async()=>{const before=progress.step;progress.step++;try{await writeProgress();if(currentPlayer===s)renderPlayer();}catch(e){progress.step=before;throw e;}};
  if(progress.step===0){para(app,lesson.objective);app.append(el('blockquote',lesson.reading.text));for(const t of lesson.targets){const box=el('section');box.append(el('h3',t.phrase));para(box,t.meaningEn+' · '+t.meaningVi);para(box,lesson.reading.sentences.find(x=>x.id===t.sourceSentenceId).text,'source');if(!preview) addTargetSave(box, pack, lesson, t);app.append(box);}button(app,'Start exercises',advance,true);}
  else if(progress.step<=lesson.exercises.length){const e=lesson.exercises[progress.step-1];app.append(el('h3',e.prompt));if(e.type==='transfer'){
@@ -185,7 +228,7 @@ async function offlineReady(){
    './library/east-market-repair-cafe-volunteer-shift.json','./library/school-library-survey-privacy.json','./library/riverside-centre-class-registration.json',
    './library/university-photo-archive-catalogue.json','./library/community-arts-open-day-volunteers.json','./library/volunteer-rota-schedule-change.json',
    './library/east-dock-refill-shop-stock-check.json','./library/student-podcast-interview-editing.json','./library/staggered-start-time-policy-rollout.json',
-   './studio.css','./example.json','../index.html','../js/store.js','../js/db.js'
+   './lesson-ui.css','./example.json','../index.html','../js/store.js','../js/db.js'
   ];
   const ok=(await Promise.all(paths.map(p=>cache.match(new URL(p,location.href))))).every(Boolean);
   offline.textContent=ok?'Ready offline: app shell cached. Installed packs are available on this browser.':'Offline cache is not ready for this version. Stay online, reload after update, or retry.';
@@ -197,6 +240,22 @@ async function offlineReady(){
   offline.textContent='Offline cache unavailable. Stay online; saved records still require browser storage.';
  }
 }
-window.addEventListener('hashchange',()=>{cancel();currentPlayer=null;tell('');if(location.hash==='#studio')renderStudio();else library().catch(e=>tell(e.message));});
+async function offlineReady(){
+ if (location.hostname === 'dualdictionary.netlify.app') {
+  offline.textContent = 'Legacy Studio recovery. Export your backup here and continue at hocta.app.';
+  return;
+ }
+ try{if(!('serviceWorker'in navigator))throw Error('No service worker support.');await navigator.serviceWorker.register('../sw.js');offline.textContent='Preparing offline app cache. Keep the network on until ready.';await navigator.serviceWorker.ready;const shellCaches=(await caches.keys()).filter(name=>/^mdx-dict-v\d+(?:-|$)/.test(name)).sort((a,b)=>parseInt(b.slice('mdx-dict-v'.length),10)-parseInt(a.slice('mdx-dict-v'.length),10));const cacheName=shellCaches[0];if(!cacheName)throw Error('App shell cache is missing.');const cache=await caches.open(cacheName);const paths=['./','./index.html','./app.js','./schema.js','./storage.js','./generator.js','./backup.js','./draft-file.js','./library.js','./village.js','./photo-pane.js','./photo-request.js','./photo-downscale.js','./library/index.json','./library/provenance.json','./library/covers.json','./library/covers/hotel-shift-handover.webp','./library/covers/workshop-safety-plan.webp','./library/covers/library-hours.webp','./library/library-hours.json','./library/tracking-work.json','./library/coastal-survey.json','./library/hotel-shift-handover.json','./library/campus-water-study.json','./library/workshop-safety-plan.json','./library/supplier-delivery.json','./library/museum-access.json','./library/remote-team-handover.json','./library/urban-tree-survey.json','./library/food-bank-volunteer-briefing.json','./library/lab-equipment-audit.json','./library/station-maintenance-notice.json','./library/conference-travel.json','./library/community-garden-water-rotation.json','./library/clinic-appointment-process.json','./library/city-bus-temporary-diversion.json','./library/coastal-bird-count-method.json','./library/community-centre-emergency-drill.json','./library/equipment-loan-desk.json','./library/coastal-temperature-sampling.json','./library/community-kitchen-volunteer-shift.json','./library/urban-heat-survey-method.json','./library/rail-station-lost-property.json','./library/east-market-repair-cafe-volunteer-shift.json','./library/school-library-survey-privacy.json','./library/riverside-centre-class-registration.json','./library/university-photo-archive-catalogue.json','./library/community-arts-open-day-volunteers.json','./library/volunteer-rota-schedule-change.json','./library/east-dock-refill-shop-stock-check.json','./library/student-podcast-interview-editing.json','./library/staggered-start-time-policy-rollout.json','./lesson-ui.css','./example.json','../index.html','../js/store.js','../js/db.js','../js/gemini-policy.js'];const ok=(await Promise.all(paths.map(p=>cache.match(new URL(p,location.href))))).every(Boolean);offline.textContent=ok?'Ready offline: app shell cached. Installed packs are available on this browser.':'Offline cache is not ready for this version. Stay online, reload after update, or retry.';if(!ok)button(document.querySelector('main'),'Retry offline readiness',offlineReady);}catch{offline.textContent='Offline cache unavailable. Stay online; saved records still require browser storage.';}}
+function routeLessonView() {
+ cancel();
+ currentPlayer=null;
+ tell('');
+ const hash=location.hash;
+ if(hash==='#studio')renderStudio();
+ else if(hash.startsWith('#study='))openLinkedLesson(hash.slice(7));
+ else library().catch(error=>tell(error.message));
+}
+window.addEventListener('hashchange',routeLessonView);
 window.addEventListener('beforeunload',()=>controller?.abort());
-if(location.hash==='#studio')renderStudio();else library().catch(e=>tell('Could not read local storage: '+e.message));offlineReady();
+routeLessonView();
+offlineReady();

@@ -8,36 +8,38 @@
 <meta name="hosting-provider" content="Netlify">
 <meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=1af0641f-673e-48e9-9c86-1755d64b6558">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Offline EN–VI & EN–EN dictionary (PWA). Read, tap to look up, then save words with their sentences, tag, review and practice offline, and export to CSV/Anki. No account, no tracking.">
-<meta name="keywords" content="english dictionary, offline dictionary, tu dien anh viet, từ điển anh việt offline, english vietnamese dictionary, mdx reader, mdd, phrase search, tap to lookup, study dictionary, non-commercial, PWA, dual dictionary">
-<meta name="author" content="Dual Dictionary">
+<meta name="description" content="Look up English in context, save and review vocabulary, practise TOEIC and IELTS, and study downloaded lessons offline with HọcTA.">
+<meta name="keywords" content="english dictionary, offline dictionary, tu dien anh viet, từ điển anh việt offline, english vietnamese dictionary, mdx reader, mdd, phrase search, tap to lookup, study dictionary, non-commercial, PWA">
+<meta name="author" content="HọcTA">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Dual Dict">
-<!-- After deploying, replace the URL below with your real domain and add a <link rel="alternate" hreflang> if you add translations -->
-<!-- SEO: canonical phải trỏ đúng domain đang live (dualdictionary — không có gạch giữa).
-     Chỗ trống dưới đây chừa sẵn cho tag verify Google Search Console (user tự verify). -->
+<meta name="apple-mobile-web-app-title" content="HọcTA">
 <!-- <meta name="google-site-verification" content="PASTE_GSC_TOKEN_HERE"> -->
-<link rel="canonical" href="https://dualdictionary.netlify.app/">
-<link rel="alternate" hreflang="en" href="https://dualdictionary.netlify.app/">
-<link rel="alternate" hreflang="vi" href="https://dualdictionary.netlify.app/vi/">
-<link rel="alternate" hreflang="x-default" href="https://dualdictionary.netlify.app/">
+<link rel="canonical" href="https://hocta.app/">
+<link rel="alternate" hreflang="en" href="https://hocta.app/">
+<link rel="alternate" hreflang="vi" href="https://hocta.app/vi/">
+<link rel="alternate" hreflang="x-default" href="https://hocta.app/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Dual Dictionary">
-<meta property="og:title" content="Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)">
-<meta property="og:description" content="Offline EN–VI & EN–EN dictionary (PWA). Read, tap to look up, then save words with their sentences, tag, review and practice offline, and export to CSV/Anki. No account, no tracking.">
-<meta property="og:image" content="https://dualdictionary.netlify.app/icons/icon-512.png">
-<meta property="og:url" content="https://dualdictionary.netlify.app/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)">
-<meta name="twitter:description" content="Offline EN–VI & EN–EN dictionary (PWA). Look up, save with context, review. No account, no tracking.">
-<meta name="twitter:image" content="icons/icon-512.png">
+<meta property="og:site_name" content="HọcTA">
+<meta property="og:title" content="HọcTA — English learning for Vietnamese speakers">
+<meta property="og:description" content="Look up English in context, save and review vocabulary, practise TOEIC and IELTS, and study downloaded lessons offline with HọcTA.">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hocta.app/vi/images/og-default.jpg">
+
+<meta property="og:url" content="https://hocta.app/">
+
+<meta name="twitter:title" content="HọcTA — English learning for Vietnamese speakers">
+<meta name="twitter:description" content="Look up English in context, save and review vocabulary, practise TOEIC and IELTS, and study downloaded lessons offline with HọcTA.">
+
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="icon" href="icons/icon-192.png">
-<title>Dual Dictionary — Offline EN–VI & EN–EN Dictionary (MDX)</title>
+<title>HọcTA — English learning for Vietnamese speakers</title>
 <link rel="preload" href="/css/style.min.css" as="style">
 <link rel="stylesheet" href="/css/style.min.css">
 <script type="application/ld+json">
@@ -46,21 +48,21 @@
   "@graph": [
     {
       "@type": "WebApplication",
-      "name": "Dual Dictionary",
-      "url": "./",
+      "name": "HọcTA",
+      "url": "https://hocta.app/",
       "applicationCategory": "EducationalApplication",
       "browserRequirements": "Requires JavaScript. DecompressionStream (Chrome 80+, Safari 16.4+, Firefox 113+).",
       "operatingSystem": "Any (PWA — iOS, Android, Windows, macOS, Linux)",
       "inLanguage": ["en", "vi"],
-      "publisher": {"@type":"Organization","name":"Dual Dictionary","url":"https://dualdictionary.netlify.app/","logo":{"@type":"ImageObject","url":"https://dualdictionary.netlify.app/icons/icon-512.png"},"sameAs":["https://github.com/quocanh38/dual-dictionary"]},
+      "publisher": {"@type":"Organization","name":"HọcTA","url":"https://hocta.app/","logo":{"@type":"ImageObject","url":"https://hocta.app/icons/icon-512.png"},"sameAs":["https://github.com/quocanh38/dual-dictionary"]},
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "An offline-first English–Vietnamese & English–English dictionary web app (PWA) for study and research: one-click open EN–VI dictionary, one-tap switching between dictionary panels, phrase search, a reading mode with tap-to-lookup, saved words and sentences, support for user-provided .mdx/.mdd files — everything stored locally. Non-commercial use only.",
-      "isPartOf": { "@type": "WebSite", "name": "Dual Dictionary", "url": "https://dualdictionary.netlify.app/" }
+      "description": "Look up English in context, save and review vocabulary, practise TOEIC and IELTS, and study downloaded lessons offline with HọcTA.",
+      "isPartOf": { "@type": "WebSite", "name": "HọcTA", "url": "https://hocta.app/" }
     },
     {
       "@type": "WebSite",
-      "name": "Dual Dictionary",
-      "url": "https://dualdictionary.netlify.app/",
+      "name": "HọcTA",
+      "url": "https://hocta.app/",
       "inLanguage": ["en", "vi"],
       "publisher": { "@type": "Person", "name": "Nguyen Quoc Anh", "url": "https://www.linkedin.com/in/quocanh38/" },
       "featureList": [
@@ -85,47 +87,22 @@
         "Supports user-provided .mdx and .mdd dictionary files",
         "Word suggestions and search history"
       ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Can I look up Vietnamese meanings?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — one click adds the open English–Vietnamese dictionary (OVDP, 386,600 entries including inflected forms like ran → run). It downloads once and then works fully offline." } },
-        { "@type": "Question", "name": "Is Dual Dictionary free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — no account, no tracking. The bundled dictionary data is open-licensed (WordNet 3.1, Simple English Wiktionary). Dictionaries you load yourself are stored locally for personal use only." } },
-        { "@type": "Question", "name": "Does Dual Dictionary work offline?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is an installable PWA: add it to your home screen and look up words with no internet connection." } },
-        { "@type": "Question", "name": "Can I use my own .mdx dictionaries?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — the Advanced panel lets either slot load any .mdx file you have the rights to use, plus the matching .mdd for audio and images. The app is a reader; you provide your own files." } },
-        { "@type": "Question", "name": "Does it help me learn, or only look up words?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Both. Save words, phrases and sentences with their original sentence, add notes and tags, run the spaced-repetition Review queue and quick practice sessions (fill-the-gap, listen & type) to remember them, and export everything to CSV/Anki — all offline, all on your device." } },
-        { "@type": "Question", "name": "How do I install it on my phone?",
-          "acceptedAnswer": { "@type": "Answer", "text": "iPhone/iPad (Safari): Share → Add to Home Screen. Android (Chrome): menu ⋮ → Add to Home screen / Install app. Requires iOS 16.4+." } }
-      ]
     }
   ]
 }
 </script>
+<script defer src="/js/section-switcher.js"></script>
 </head>
 <body data-dict-state="idle">
 <a class="skip-link" href="#search-input" data-i18n="ui.skip">Skip to search</a>
 <header class="topbar">
   <div class="brand">
-    <!-- U18: inline mark only (no file request). The previous open-book glyph was
-         two lobes plus a centre stroke, which read as a "pause" icon at 30px; a
-         CLOSED dictionary (cover + curved spine + text lines) is unambiguous.
-         The wrapper is the <a>, so the SVG stays aria-hidden and the link keeps
-         its own accessible name (title + aria-label, both i18n). -->
     <a class="brand-mark" href="#/search" data-i18n-title="top.home" data-i18n-aria="top.homeAria"
-       title="Dual Dictionary — go to search" aria-label="Dual Dictionary — go to search">
-      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false" fill="none"
-           stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M5 18.9A2.6 2.6 0 0 1 7.6 16.3H19.2"/>
-        <path d="M7.6 3.1H19.2v16.8H7.6A2.6 2.6 0 0 1 5 17.3V5.7A2.6 2.6 0 0 1 7.6 3.1z"/>
-        <path d="M9.4 7.6h6.6M9.4 10.9h6.6"/>
-      </svg>
+       title="HọcTA — go to search" aria-label="HọcTA — go to search">
+      <img src="/assets/brand/mark-on-blue.png" alt="" width="27" height="22">
     </a>
-    <h1>Dual Dictionary</h1>
+    <h1>HọcTA</h1>
+    <div class="section-switcher" lang="vi"><button class="section-trigger" type="button" aria-label="Chuyển khu vực, hiện tại: Ứng dụng" aria-controls="hocta-sections" popovertarget="hocta-sections">Ứng dụng</button><nav id="hocta-sections" class="section-links" aria-label="Các khu vực HọcTA" popover><a href="/" aria-current="page">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></nav></div>
   </div>
   <nav class="app-nav" aria-label="Main">
     <a href="#/search" data-nav="search" class="active" data-i18n="nav.search">Search</a>
@@ -144,19 +121,40 @@
     <button id="btn-install" class="icon-btn hidden" title="Install app" aria-label="Install app" data-i18n-title="top.install" data-i18n-aria="top.installAria" data-i18n-tip="top.tipInstall" data-tip="Install">⬇</button>
     <button id="btn-lang" class="icon-btn" title="Language (EN / VI)" aria-label="Language" data-i18n-title="top.lang" data-i18n-aria="top.langAria" data-i18n-tip="top.tipLang" data-tip="EN / VI">EN</button>
     <button id="btn-theme" class="icon-btn" title="Theme: auto / light / dark" aria-label="Theme" data-i18n-title="top.theme" data-i18n-aria="top.themeAria" data-i18n-tip="top.tipTheme" data-tip="Theme">🌓</button>
-    <button id="btn-advanced" class="icon-btn topbar-optional" title="Advanced" aria-label="Advanced settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Advanced">⚙</button>
-    <button id="btn-help" class="icon-btn topbar-optional" title="Help" aria-label="Help" data-i18n-title="top.help" data-i18n-aria="top.helpAria" data-i18n-tip="top.tipHelp" data-tip="Help">?</button>
-    <button id="btn-more" class="icon-btn hidden" aria-label="More options" aria-expanded="false"
-            aria-haspopup="true" aria-controls="more-menu" title="More options" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="More">⋯</button>
-    <div id="more-menu" class="more-menu hidden" role="menu" aria-label="More options">
-      <button id="more-advanced" type="button" role="menuitem" data-i18n="top.advancedShort">⚙ Advanced</button>
-      <a href="/vi/huong-dan-gemini/" role="menuitem">Hướng dẫn Gemini API key</a>
-      <button id="more-help" type="button" role="menuitem" data-i18n="top.helpShort">? Help</button>
+    <button id="btn-advanced" class="icon-btn topbar-optional" title="Settings" aria-label="Open settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Settings">⚙</button>
+    <button id="btn-more" class="icon-btn hidden" aria-label="Open settings menu" aria-expanded="false"
+            aria-haspopup="true" aria-controls="more-menu" title="Settings" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="Settings">⋯</button>
+    <div id="more-menu" class="more-menu hidden" role="menu" aria-label="Settings" data-i18n-aria="top.advanced">
+      <button id="more-advanced" type="button" role="menuitem" data-i18n="top.advancedShort">⚙ Settings</button>
     </div>
   </div>
 </header>
 
+<aside id="domain-move" class="about hidden" aria-labelledby="domain-move-title">
+  <details open>
+    <summary id="domain-move-title">Dual Dictionary đã chuyển sang HọcTA</summary>
+    <p>Tải bản sao lưu ở đây, rồi mở HọcTA. Trên trang mới, vào Settings → Your data để nhập tệp JSON. Nếu từng thêm app vào màn hình chính, hãy cài lại từ trang mới.</p>
+    <p>Download your study backup here, then open HọcTA and import it from Settings → Your data. Reinstall the app if you use a home-screen shortcut.</p>
+    <button type="button" id="domain-move-export" class="btn-secondary">Tải bản sao lưu / Download backup</button>
+    <a id="domain-move-link" href="https://hocta.app/">Mở HọcTA / Open HọcTA</a>
+    <p class="hint">Cài lại gói từ điển và thiết lập lại khóa AI trên miền mới. Với Lesson Studio, <a href="https://dualdictionary.netlify.app/lessons/recover.html#library">xuất bản sao lưu Studio</a> riêng rồi nhập tại <a href="https://hocta.app/lessons/#library">thư viện mới</a>.</p>
+  </details>
+</aside>
+
+
 <main id="main">
+  <section id="experience-choice" class="offline-study-panel" lang="vi" aria-labelledby="experience-choice-title" hidden>
+    <h2 id="experience-choice-title">Giúp cải thiện trải nghiệm HọcTA</h2>
+    <p>Nếu bạn đồng ý, HọcTA ghi nhận một số bước học, lỗi hiển thị và lượt mở trợ giúp để cải thiện giao diện. Từ bạn tra, đoạn bạn đọc, nội dung chat và API key không được gửi vào báo cáo trải nghiệm.</p>
+    <div class="exam-actions">
+      <button type="button" class="btn-secondary" data-experience-allow>Đồng ý chia sẻ</button>
+      <button type="button" class="btn-secondary" data-experience-decline>Không chia sẻ</button>
+      <a href="/vi/du-lieu-trai-nghiem/">Xem thông tin dữ liệu</a>
+    </div>
+    <p>Bạn có thể đổi lựa chọn trong Luyện tập → Dữ liệu trải nghiệm.</p>
+  </section>
+  <div id="experience-choice-status" lang="vi" role="status"></div>
+  <p id="experience-operations-banner" class="offline-study-panel" lang="vi" hidden>HọcTA gửi số đếm tải audio để cải thiện độ ổn định. <a href="/vi/du-lieu-trai-nghiem/">Xem thông tin dữ liệu</a>.</p>
 <form id="search-form" class="search-wrap" role="search" autocomplete="off">
     <div class="search-box">
       <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -190,7 +188,7 @@
   </div>
 
   <div id="net-banner" class="net-banner hidden" role="status">
-    <span id="net-banner-text"></span>
+    <span id="net-banner-text" data-i18n="net.offline">Offline — saved words and loaded dictionaries still work.</span>
   </div>
 
   <!-- v67 R2: the quiet in-app due surface — max once a day, dismissible.
@@ -210,9 +208,8 @@
            "close" that would suggest a modal. Behaviour is unchanged. -->
       <button type="button" id="btn-reader-close" class="btn-secondary" data-i18n="reader.back" data-i18n-title="reader.backTitle"
               title="Back to search — the Reader keeps its text">← Back to search</button>
-      <a href="./lessons/" class="btn-secondary" data-i18n="reader.offlinePacks">Offline lesson packs</a>
       <span class="hint reader-loop-hint" data-i18n="reader.loopHint">Read → phrase → new situation → Vault — or start an offline pack, no key.</span>
-      <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson" title="Complete an authored lesson and save a real Vault card; no key needed">Start a free offline lesson</a>
+      <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson" title="Complete an authored lesson and save a real Vault card; no key needed">Read a sample lesson</a>
       <button type="button" id="btn-tutor-start" class="btn-primary" data-i18n="tutor.start">✨ AI practice (online · own key)</button>
       <button type="button" id="btn-open-snapshots" class="btn-secondary" data-i18n="reader.savedArticles" title="Read a saved article offline">📁 Saved articles</button>
       <details class="reader-tools"><summary data-i18n="reader.tools">Reading tools</summary>
@@ -279,20 +276,15 @@
     </div>
   </dialog>
 
-  <dialog id="tutor-setup-dialog" class="sense-save-dialog">
+  <dialog id="tutor-setup-dialog" aria-labelledby="tutor-setup-dialog-title" class="sense-save-dialog">
     <div class="sense-save-form" id="tutor-setup-form">
-      <h2 data-i18n="ui.tsTitle">Connect your AI account</h2>
-      <p class="hint" data-i18n="ui.tsHint">This is optional. Offline study stays free. Your key stays in this browser and is sent only to the provider you choose after you approve each request. The provider may charge for tokens.</p>
-      <label for="tutor-setup-provider" data-i18n="ui.tsProvider">Provider</label>
-      <select id="tutor-setup-provider">
-        <option value="gemini">Gemini 3.6 Flash</option>
-      </select>
-      <label for="tutor-setup-key" data-i18n="ui.tsKey">Provider API key</label>
+      <h2 id="tutor-setup-dialog-title" data-i18n="ui.tsTitle">Connect Gemini</h2>
+      <p class="hint" data-i18n="ui.tsHint">This is optional. Offline study stays free. Your key stays in this browser and is sent directly to Google when you approve a Gemini request. Usage is subject to your Google account limits.</p>
+      <label for="tutor-setup-key" data-i18n="ui.tsKey">Gemini API key</label>
       <input id="tutor-setup-key" type="password" autocomplete="off" spellcheck="false" required>
-      <details id="tutor-setup-advanced"><summary data-i18n="ui.tsAdv">Advanced: model and endpoint</summary>
-        <label for="tutor-setup-model" data-i18n="ui.tsModel">Model</label><input id="tutor-setup-model" type="text" spellcheck="false">
-        <label for="tutor-setup-url" data-i18n="ui.tsEndpoint">API endpoint</label><input id="tutor-setup-url" type="url" spellcheck="false">
-      </details>
+      <label><input type="checkbox" id="tutor-setup-remember" name="rememberKey"> <span data-i18n="ai.rememberKey">Remember my key on this device</span></label>
+      <label for="tutor-setup-model" data-i18n="ui.tsModel">Gemini model</label>
+      <select id="tutor-setup-model"></select>
       <p id="tutor-setup-status" class="hint" role="status" aria-live="polite"></p>
       <div class="sense-save-actions">
         <button type="button" id="btn-tutor-setup-save" class="btn-primary" data-i18n="ui.tsSave">Save and continue</button>
@@ -349,22 +341,25 @@
        the CTA sums exactly what is selected. #dict-grid is hidden outright while
        this card is in charge (see body[data-dict-state="idle"] in style.css), so
        the lookup surface never shows a ready-looking search box over empty panels. -->
-  <div id="empty-state" class="empty-state" aria-live="polite">
-    <h2 class="firstload-title" data-i18n="firstload.title">Choose dictionaries to download</h2>
-    <p><strong id="empty-state-msg" data-i18n="firstload.idle">No dictionary is loaded yet — pick the dictionaries you need and download them once.</strong></p>
-    <ul id="first-load-sizes" class="dict-chooser" role="group" aria-label="Dictionaries to download"></ul>
+  <div id="empty-state" class="empty-state">
+    <h2 class="firstload-title" data-i18n="firstload.title">Start looking up words</h2>
+    <p role="status"><strong id="empty-state-msg" data-i18n="firstload.idle">Download a dictionary once to look up words offline.</strong></p>
     <div class="empty-cta">
-      <button id="btn-quickload" class="btn-primary" data-i18n="firstload.download">⬇ Download dictionaries</button>
-      <button type="button" id="btn-download-all" class="btn-secondary" data-i18n="firstload.downloadAll">Download all</button>
-      <button id="btn-cancel-load" class="btn-secondary hidden" data-i18n="ui.cancelDownload">Cancel download</button>
+      <button type="button" id="btn-quickload" class="btn-primary" data-i18n="firstload.download" disabled>Download dictionary</button>
+      <button type="button" id="btn-cancel-load" class="btn-secondary hidden" data-i18n="ui.cancelDownload">Cancel download</button>
+      <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson">Read a sample lesson</a>
     </div>
     <p id="empty-state-error" class="load-error" role="alert" hidden></p>
-    <p class="first-load-note" data-i18n="firstload.note">One-time download, stored in the app, fully offline afterwards.</p>
-    <p class="first-load-actions">
-      <button id="btn-open-advanced" class="btn-secondary" data-i18n="firstload.own">Use my own .mdx files</button>
-      <button type="button" id="btn-envi-empty" class="btn-secondary hidden" data-i18n="firstload.envi">🇻🇳 Add English–Vietnamese dictionary</button>
-      <button type="button" id="btn-open-help" class="btn-secondary" data-i18n="firstload.help">Help</button>
-    </p>
+    <details class="firstload-options">
+      <summary data-i18n="firstload.options">Other dictionary options</summary>
+      <ul id="first-load-sizes" class="dict-chooser" role="group" aria-label="Dictionaries to download" data-i18n-aria="firstload.choices"></ul>
+      <div class="first-load-actions">
+        <button type="button" id="btn-download-all" class="btn-secondary" data-i18n="firstload.downloadAll">Download all</button>
+        <button type="button" id="btn-open-advanced" class="btn-secondary" data-i18n="firstload.own">Use my own .mdx files</button>
+        <button type="button" id="btn-envi-empty" class="btn-secondary hidden" data-i18n="firstload.envi">Add English–Vietnamese dictionary</button>
+        <button type="button" id="btn-open-help" class="btn-secondary" data-i18n="firstload.help">Help</button>
+      </div>
+    </details>
     <!-- U17: the support link lives in the footer only — nothing here competes
          with the download CTA for attention. btn-envi-empty stays in the DOM
          (wired + tested) but the chooser card covers its job, so it is hidden. -->
@@ -435,13 +430,10 @@
   </dialog>
 
   <section id="about" class="about">
-    <h2 data-i18n="about.title">A study &amp; research dictionary, right in your browser</h2>
+    <h2 data-i18n="about.title">Learn English from what you read</h2>
     <details class="about-details">
       <summary data-i18n="about.summary">About this app — features &amp; terms of use</summary>
-      <p data-i18n-html="about.intro"><strong>Dual Dictionary is an offline-first web app built for personal study and research:
-         it looks up English words across several dictionaries with one-tap panel switching, and supports your own .mdx/.mdd
-         dictionary files. Everything runs in your browser — data stays on your device,
-         no account, no tracking, no ads.</strong></p>
+      <p data-i18n-html="about.intro"><strong>Tap a word in Reader to look it up, save it with its original sentence, and review it later.</strong> Practise TOEIC or IELTS, open a downloaded B1–B2 lesson offline, or use the optional AI Tutor online.</p>
       <p class="hint" style="margin-top:8px" data-i18n-html="about.terms">This app is provided for personal study and research
          purposes only. It is not a commercial product and is not intended for commercial use or
          redistribution of any dictionary content. The bundled open data remains available
@@ -459,7 +451,7 @@
         <li><strong>Learn-oriented tools:</strong> word suggestions, search history, a Vault that keeps
            every word, phrase and sentence with your notes and tags, and a spaced-repetition
            Review queue that can re-fit its FSRS weights to your own history (on-device,
-           from ⚙ Advanced, once enough reviews accumulate).</li>
+           from ⚙ Settings, once enough reviews accumulate).</li>
         <li><strong>Context that sticks:</strong> look up a saved word and see your own original
            sentence highlighted above the entry — add extra examples any time.</li>
         <li><strong>Practice &amp; track:</strong> turn saved items into quick practice sessions
@@ -473,7 +465,7 @@
         <li><strong>Learning guides:</strong> 34 developer-written posts (VI) with <a href="./vi/blog/en/">English summary</a> — study method, TOEIC night-shift setup, 30-day pack plan.</li>
         <li><strong>Your data is yours:</strong> export / import Vault items as JSON, CSV, TSV or
            Anki-ready text — no cloud or account for your study data. Optional AI sends your article and answers to your chosen provider after you agree; you pay that provider for tokens.</li>
-        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that. Optional review reminders (opt-in, local-only) can be enabled in ⚙ Advanced.</li>
+        <li><strong>Install like an app:</strong> Add to Home Screen on iOS/Android — works fully offline after that. Optional review reminders (opt-in, local-only) can be enabled in ⚙ Settings.</li>
       </ul>
       <h3 data-i18n="about.licH">Dictionaries &amp; licenses</h3>
       <p data-i18n-html="about.licP">The public edition ships only open-licensed data (see <a href="NOTICE.md" target="_blank" rel="noopener">NOTICE.md</a>):</p>
@@ -492,7 +484,7 @@
             title="IPA table from thichhoc-org/thichhoc-dict (CC BY-SA 4.0; upstream WordNet, CMUdict, Wiktionary) filled from CMUdict (public domain / BSD). Full text: NOTICE.md">CC BY-SA 4.0 &amp; CMUdict</a></li>
       </ul>
       <p data-i18n-html="about.licNote">Commercial dictionaries (e.g. OALD, LDOCE) are never bundled here; load your own
-         files via ⚙ Advanced only if you are authorized to use them.</p>
+         files via ⚙ Settings only if you are authorized to use them.</p>
       <!-- v65: feedback moved out of the footer/Stats — one opt-in line at the end
            of About (mail to is user-initiated; no form, no network call) -->
       <p class="hint" data-i18n-html="about.feedback">If this app helps your study, I'd genuinely like to hear it —
@@ -511,22 +503,22 @@
       <h2 data-i18n="section.vault">Vault</h2>
       <span id="vault-count" class="hint" aria-live="polite"></span>
       <span class="head-actions">
-        <label class="sort-wrap"><span class="hint">Deck</span>
-          <select id="vault-deck" aria-label="Filter by deck"><option value="">All decks</option></select>
+        <label class="sort-wrap"><span class="hint" data-i18n="vault.deck">Deck</span>
+          <select id="vault-deck" aria-label="Filter by deck" data-i18n-aria="vault.deckFilter"><option value="" data-i18n="vault.allDecks">All decks</option></select>
         </label>
-        <label class="sort-wrap"><span class="hint">Sort</span>
-          <select id="vault-sort" aria-label="Sort items">
-            <option value="new">Newest</option>
-            <option value="due">Due first</option>
-            <option value="hard">Hardest first</option>
+        <label class="sort-wrap"><span class="hint" data-i18n="vault.sort">Sort</span>
+          <select id="vault-sort" aria-label="Sort items" data-i18n-aria="vault.sort">
+            <option value="new" data-i18n="vault.newest">Newest</option>
+            <option value="due" data-i18n="vault.dueFirst">Due first</option>
+            <option value="hard" data-i18n="vault.hardest">Hardest first</option>
             <option value="alpha">A–Z</option>
           </select>
         </label>
-        <button type="button" id="btn-vault-tags" class="btn-secondary">🏷️ Tags</button>
+        <button type="button" id="btn-vault-tags" class="btn-secondary" data-i18n="vault.tags">🏷️ Tags</button>
         <!-- U14: the same "Practice" label as the Review section (one vocabulary);
              it was the only Practice entry point left untranslated. -->
         <button type="button" id="btn-vault-practice" class="btn-secondary" data-i18n="review.practice">🎯 Practice</button>
-        <button type="button" id="btn-vault-stats" class="btn-secondary">📊 Stats</button>
+        <button type="button" id="btn-vault-stats" class="btn-secondary" data-i18n="vault.stats">📊 Stats</button>
       </span>
     </div>
     <input id="vault-search" type="search" class="vault-search" placeholder="Search your vault — text, notes, tags…" data-i18n-ph="vault.search" aria-label="Search your vault">
@@ -575,7 +567,8 @@
     <div id="vault-empty" class="empty-state hidden">
       <p><strong data-i18n="vault.emptyTitle">Your Vault is empty</strong></p>
       <p class="hint" data-i18n="vault.emptyHint">Save a word or phrase while reading — your examples and notes will appear here.</p>
-      <a class="btn-primary" href="#/reader" data-i18n="vault.openReader">📖 Open Reader</a>
+      <a class="btn-primary" href="./demo/tutor.html" data-i18n="reader.freeLesson">Read a sample lesson</a>
+      <a class="btn-secondary" href="#/reader" data-i18n="vault.openReader">📖 Open Reader</a>
       <a class="btn-secondary" href="#/search" data-i18n="vault.searchWord">🔍 Search a word</a>
       <!-- v117 A2: known-words milestone CTA (plan D6) — exactly one of the two
            blocks below is visible; renderKnownEmpty() decides. -->
@@ -615,17 +608,9 @@
 
   <!-- ===== Practice (Phase 3+ micro-exercises) ===== -->
   <section id="practice-view" class="practice-view hidden" aria-label="Practice">
-    <section class="offline-study-panel" aria-labelledby="work-english-heading">
-      <h2 id="work-english-heading">Tiếng Anh công việc</h2>
-      <div class="exam-actions">
-        <a class="btn-secondary" href="./lessons/#supplier-delivery" data-work-lesson="supplier-delivery">Giao hàng</a>
-        <a class="btn-secondary" href="./lessons/#hotel-shift-handover" data-work-lesson="hotel-shift-handover">Bàn giao ca</a>
-        <a class="btn-secondary" href="./lessons/#workshop-safety-plan" data-work-lesson="workshop-safety-plan">An toàn tại nơi làm việc</a>
-      </div>
-      <p class="hint"><a href="docs/huong-dan-su-dung.html#studio-packs" target="_blank" rel="noopener">Cách lưu và ôn cụm từ</a></p>
-    </section>
     <section class="offline-study-panel" aria-labelledby="toeic-practice-heading">
       <h2 id="toeic-practice-heading">TOEIC Listening &amp; Reading</h2>
+      <p id="toeic-entry-status" role="status" hidden></p>
       <p class="hint">Mục tiêu 700–900+? Luyện nhận ra cách diễn đạt tương đương ở Part 3–4, điền từ theo ngữ cảnh ở Part 6 và đọc tìm bằng chứng nhanh ở Part 7.</p>
       <button type="button" id="toeic-continue" class="btn-primary hidden"></button>
       <details id="toeic-review-panel">
@@ -638,7 +623,7 @@
       <div class="exam-actions">
         <button type="button" id="toeic-timed-reading" class="btn-primary">Part 6–7 · 14 câu · 10 phút</button>
         <label for="toeic-filter-part">Part</label>
-        <select id="toeic-filter-part"><option value="">Tất cả</option><option>3</option><option>4</option><option>6</option><option>7</option></select>
+        <select id="toeic-filter-part"><option value="">Tất cả</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
         <label for="toeic-filter-offline">Ngoại tuyến</label>
         <select id="toeic-filter-offline"><option value="">Tất cả</option><option value="ready">Sẵn sàng</option><option value="missing">Chưa sẵn sàng</option></select>
       </div>
@@ -646,6 +631,15 @@
       <p id="toeic-filter-empty" class="hint" hidden>Không có bộ phù hợp.</p>
       <div id="toeic-part3-sets" aria-label="Các bộ luyện TOEIC"></div>
       <button type="button" id="toeic-ai-offline-lessons" class="btn-secondary">Bài luyện offline đã lưu</button>
+    </section>
+    <section class="offline-study-panel" aria-labelledby="work-english-heading">
+      <h2 id="work-english-heading">Tiếng Anh công việc</h2>
+      <ul class="work-lesson-list">
+        <li><a class="btn-secondary" href="./lessons/#supplier-delivery" data-work-lesson="supplier-delivery">Giao hàng</a></li>
+        <li><a class="btn-secondary" href="./lessons/#hotel-shift-handover" data-work-lesson="hotel-shift-handover">Bàn giao ca</a></li>
+        <li><a class="btn-secondary" href="./lessons/#workshop-safety-plan" data-work-lesson="workshop-safety-plan">An toàn tại nơi làm việc</a></li>
+      </ul>
+      <p class="hint"><a href="docs/huong-dan-su-dung.html#studio-packs" target="_blank" rel="noopener">Cách lưu và ôn cụm từ</a></p>
     </section>
     <div class="vault-head">
       <h2 data-i18n="section.practice">Practice</h2>
@@ -699,16 +693,16 @@
       <details class="offline-writing">
         <summary><strong>✍ Writing practice</strong></summary>
         <div class="exam-picker"><label for="writing-prompt">IELTS Academic prompt · grouped by pathway stage</label><select id="writing-prompt"></select><button type="button" id="btn-writing-prompt" class="btn-secondary">New prompt in selected stage</button></div>
-        <div id="writing-prompt-text" class="exam-passage" aria-live="polite"></div><textarea id="writing-input" rows="8" placeholder="Write your response. Drafts save automatically on this device."></textarea><p><button type="button" class="btn-secondary" data-ai-lesson="writing">Tạo bài sửa lỗi viết · Gemini</button> <button type="button" class="btn-secondary" data-saved-ai-lessons>Bài luyện offline</button></p>
+        <div id="writing-prompt-text" class="exam-passage" aria-live="polite"></div><label for="writing-input">Your written response</label><textarea id="writing-input" rows="8" placeholder="Write your response. Drafts save automatically on this device."></textarea><p><button type="button" class="btn-secondary" data-ai-lesson="writing">Tạo bài sửa lỗi viết · Gemini</button> <button type="button" class="btn-secondary" data-saved-ai-lessons>Bài luyện offline</button></p>
 <div class="journal-bar"><span id="writing-word-count" class="hint">0 words</span><button id="btn-writing-save" type="button" class="btn-primary">Save attempt</button></div>
         <fieldset class="self-check"><legend>IELTS Writing self-review · formative, not a band score</legend><label><input type="checkbox" data-writing-check value="Task achievement / task response"> I addressed every part of the task and made my position or overview clear</label><label><input type="checkbox" data-writing-check value="Coherence and cohesion"> My ideas follow a clear order and connections are easy to follow</label><label><input type="checkbox" data-writing-check value="Lexical resource"> My word choices fit the meaning and avoid distracting repetition</label><label><input type="checkbox" data-writing-check value="Grammatical range and accuracy"> My sentences have clear subject–verb structure and I checked recurring errors</label></fieldset><p id="writing-save-state" class="hint" aria-live="polite"></p>
-        <details class="ai-review"><summary>Optional AI feedback <span class="online-badge">ONLINE · own key</span></summary><p class="hint">Offline self-review works without an account or key. Each request sends the selected writing prompt and up to 6,000 characters from this response editor to your chosen provider; token charges may apply. It does not include your other drafts.</p><label><input type="checkbox" id="writing-ai-consent"> I agree to send the selected Writing prompt and the response in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-writing-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-writing-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="writing-ai-status" class="hint" role="status" aria-live="polite"></p><div id="writing-ai-feedback" aria-live="polite"></div></details>
+        <details class="ai-review"><summary>Optional AI feedback <span class="online-badge">ONLINE · own key</span></summary><p class="hint">Offline self-review works without an account or key. Each request sends the selected writing prompt and up to 6,000 characters from this response editor to your chosen provider; token charges may apply. It does not include your other drafts. Flash-Lite may handle the same request once if the primary model is busy.</p><label><input type="checkbox" id="writing-ai-consent"> I agree to send the selected Writing prompt and the response in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-writing-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-writing-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="writing-ai-status" class="hint" role="status" aria-live="polite"></p><div id="writing-ai-feedback" aria-live="polite"></div></details>
       </details>
       <details class="offline-speaking">
         <summary><strong>🎤 Speaking practice</strong></summary><p class="hint">Recording uses your microphone and is saved locally. Browser speech recognition is optional and may use an online service; it is not required here.</p>
         <p id="speaking-task-label" class="hint"></p><p id="speaking-method-guidance" class="hint"></p><textarea id="speaking-prompt" rows="3" readonly aria-label="Speaking prompt"></textarea><button type="button" id="btn-speaking-prompt" class="btn-secondary">New speaking prompt in selected stage</button>
-        <textarea id="speaking-notes" rows="3" placeholder="Optional transcript or reflection notes; saves automatically on this device."></textarea><div class="exam-actions"><button type="button" id="btn-record-speaking" class="btn-primary">● Record</button><button type="button" id="btn-stop-speaking" class="btn-secondary" disabled>■ Stop and save recording</button><button type="button" id="btn-speaking-save" class="btn-secondary">Save notes</button></div>
-        <fieldset class="self-check"><legend>IELTS Speaking self-review · formative, not a band score</legend><label><input type="checkbox" data-speaking-check value="Fluency and coherence"> I kept a clear line of thought and managed pauses</label><label><input type="checkbox" data-speaking-check value="Lexical resource"> I used accurate words and phrases, and paraphrased when needed</label><label><input type="checkbox" data-speaking-check value="Grammatical range and accuracy"> I used clear sentence spines and checked repeated grammar errors</label><label><input type="checkbox" data-speaking-check value="Pronunciation"> My speech was understandable, with clear word stress and chunking</label></fieldset><details class="ai-review"><summary>Optional AI feedback</summary><p class="hint">Your recording stays on this device and is not sent. Each request sends only the selected Speaking prompt and up to 6,000 characters from the notes editor; token charges may apply. It does not include your recording or other drafts.</p><label><input type="checkbox" id="speaking-ai-consent"> I agree to send the selected Speaking prompt and the notes in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-speaking-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-speaking-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="speaking-ai-status" class="hint" role="status" aria-live="polite"></p><div id="speaking-ai-feedback" aria-live="polite"></div></details><p id="speaking-status" class="hint" aria-live="polite"></p>
+        <label for="speaking-notes">Speaking notes</label><textarea id="speaking-notes" rows="3" placeholder="Optional transcript or reflection notes; saves automatically on this device."></textarea><div class="exam-actions"><button type="button" id="btn-record-speaking" class="btn-primary">● Record</button><button type="button" id="btn-stop-speaking" class="btn-secondary" disabled>■ Stop and save recording</button><button type="button" id="btn-speaking-save" class="btn-secondary">Save notes</button></div>
+        <fieldset class="self-check"><legend>IELTS Speaking self-review · formative, not a band score</legend><label><input type="checkbox" data-speaking-check value="Fluency and coherence"> I kept a clear line of thought and managed pauses</label><label><input type="checkbox" data-speaking-check value="Lexical resource"> I used accurate words and phrases, and paraphrased when needed</label><label><input type="checkbox" data-speaking-check value="Grammatical range and accuracy"> I used clear sentence spines and checked repeated grammar errors</label><label><input type="checkbox" data-speaking-check value="Pronunciation"> My speech was understandable, with clear word stress and chunking</label></fieldset><details class="ai-review"><summary>Optional AI feedback</summary><p class="hint">Your recording stays on this device and is not sent. Each request sends only the selected Speaking prompt and up to 6,000 characters from the notes editor; token charges may apply. It does not include your recording or other drafts. Flash-Lite may handle the same request once if the primary model is busy.</p><label><input type="checkbox" id="speaking-ai-consent"> I agree to send the selected Speaking prompt and the notes in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-speaking-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-speaking-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="speaking-ai-status" class="hint" role="status" aria-live="polite"></p><div id="speaking-ai-feedback" aria-live="polite"></div></details><p id="speaking-status" class="hint" aria-live="polite"></p>
       </details><details class="offline-history"><summary>Recent Writing, Speaking &amp; exercise attempts</summary><div id="offline-study-history" class="study-history-list"></div></details><details class="offline-study-stats"><summary>Offline practice statistics</summary><div id="offline-study-stats" class="study-history-list"></div></details>
     </details>
     <div id="practice-empty" class="empty-state hidden">
@@ -718,6 +712,31 @@
       <a class="btn-secondary" href="#" id="practice-empty-quiz">🎯 Quiz Vault 3 dạng</a>
       <a class="btn-secondary" href="#" id="practice-empty-level">📊 Test trình độ 3 phút</a>
     </div>
+    <section class="offline-study-panel" lang="vi" aria-labelledby="experience-title">
+      <h2 id="experience-title">Dữ liệu trải nghiệm</h2>
+      <p id="experience-operations-state">Số liệu vận hành mặc định hiện đang tắt hoặc chưa xác định được.</p>
+      <p id="experience-purpose">Nếu bạn bật chia sẻ, HọcTA ghi các bước tra từ, đọc, luyện TOEIC, ôn tập và sử dụng Gemini, cùng thời gian chờ và nhãn nguồn cố định nếu có. Bạn có thể tắt bất cứ lúc nào. <a href="/vi/du-lieu-trai-nghiem/">Dữ liệu nào được gửi?</a></p>
+      <label><input type="checkbox" id="experience-opt-in" aria-describedby="experience-purpose"> Tôi đồng ý chia sẻ số liệu trải nghiệm</label>
+      <details>
+      <summary>Gửi góp ý</summary>
+      <form id="experience-feedback">
+        <label for="experience-note">Góp ý của bạn</label>
+        <textarea id="experience-note" name="note" maxlength="500" required></textarea>
+        <label for="experience-topic">Chủ đề (tùy chọn)</label>
+        <select id="experience-topic" name="topic">
+          <option value="">Chọn chủ đề</option>
+          <option value="lookup">Tra từ</option><option value="reader">Reader</option>
+          <option value="toeic">TOEIC</option><option value="review">Ôn tập</option>
+          <option value="chat">Chat</option><option value="gemini">Gemini / AI Tutor</option>
+          <option value="offline">Offline</option><option value="other">Khác</option>
+        </select>
+        <p class="hint">Góp ý và chủ đề bạn chọn được gửi cùng mã phiên ngẫu nhiên và phiên bản app. Đừng nhập thông tin riêng tư.</p>
+        <button type="submit" class="btn-secondary">Gửi góp ý</button>
+        <p role="status"></p>
+      </form>
+      </details>
+    </section>
+    <button type="button" id="saved-learning-chats" class="btn-secondary">Hội thoại đã lưu</button>
   </section>
 
   <!-- ===== Stats (Phase 3+) ===== -->
@@ -763,8 +782,9 @@
     </p>
     <p class="foot-offline" data-i18n="foot.offline">Offline &amp; non-commercial · bring your own .mdx / .mdd files</p>
     <!-- U17: support stays a small, quiet footer text link — never a competing CTA -->
-    <p class="support">If Dual Dictionary helps your study, you can
+    <p class="support">If HọcTA helps your study, you can
       <a class="support-link" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">buy me a coffee ☕</a>.</p>
+    <p><a href="/vi/du-lieu-trai-nghiem/" lang="vi">Dữ liệu trải nghiệm</a></p>
   </footer>
 </main>
 
@@ -873,21 +893,19 @@
 </dialog>
 
 <!-- ===== Onboarding (first visit) ===== -->
-<dialog id="onboarding-dialog">
+<dialog id="onboarding-dialog" aria-labelledby="onboarding-title">
   <button type="button" class="dialog-close" aria-label="Close">✕</button>
-  <h2 data-i18n="dialog.welcome">Welcome 👋</h2>
-  <ol class="quickstart" data-i18n-html="onboarding.steps">
-    <li><strong>Look up</strong> — type a word, then tap a dictionary tab to read its result;
-        switch anytime. Prefer meanings in your language? Add the Vietnamese dictionary in one click.</li>
-    <li><strong>Read &amp; save</strong> — open 📖 <em>Reader</em>, paste an article (or a Wikipedia URL), tap any word to look it up. Save the word with ☆, or ⭐ save the whole sentence.</li>
-    <li><strong>Review &amp; practice</strong> — your saved items live in ★ <em>Vault</em>: filter, tag, sort. 🔁 <em>Review</em> runs a spaced-repetition queue; 🎯 <em>Practice</em> turns it into quick drills.</li>
-    <li><strong>Make it yours</strong> — switch theme (🌓) or the navigation language (EN/VI); turn on optional review reminders in ⚙ <em>Advanced</em>; dictionary lookup, saving and review work offline for free. Optional AI practice needs internet and your own provider key. You pay the provider for tokens; article text and answers are sent only after your agreement.</li>
-    <li><strong>New: daily word, quizzes &amp; level test</strong> — 📅 <em>Word of the day</em> under the search box (1 word/day at your level + streak); 🎯 <em>Practice</em> has Vault quizzes (flashcards, listen-type, multiple choice); 📊 <em>Level test</em> (20 questions) sets your level and picks the right deck. 🎤 <em>Voice search</em> in the search box; 🔗 <em>Share link</em> in Export sends a word list to friends (no account).</li>
-  </ol>
-  <!-- v67 R2: the only pre-Advanced reminder opt-in — a quiet link, ignorable,
-       never shown again after it is used once (the app hides it on click). -->
-  <p class="hint onboarding-extra"><button type="button" id="onboard-reminders" class="linklike" data-i18n="onboard.reminders">🔔 Get a nudge when words are due</button></p>
-  <form method="dialog"><button class="btn-primary" data-i18n="onboard.cta">Got it — let's go</button></form>
+  <h2 id="onboarding-title" data-i18n="dialog.welcome">Welcome 👋</h2>
+  <p data-i18n="onboard.start">Look up words offline or try a short lesson and save your first phrase.</p>
+  <div class="onboarding-actions">
+    <form method="dialog"><button class="btn-primary" data-i18n="onboard.lookup">Set up a dictionary</button></form>
+    <a href="./demo/tutor.html" class="btn-secondary" data-i18n="reader.freeLesson">Read a sample lesson</a>
+  </div>
+  <details class="help-more">
+    <summary data-i18n="onboard.more">More about studying</summary>
+    <p data-i18n="onboard.offline">Dictionary lookup, saving and review work offline. Optional AI practice uses your key and only sends material after you agree.</p>
+    <p class="hint onboarding-extra"><button type="button" id="onboard-reminders" class="linklike" data-i18n="onboard.reminders">Get a nudge when words are due</button></p>
+  </details>
 </dialog>
 
 <!-- ===== Saved articles (offline snapshots) ===== -->
@@ -900,9 +918,11 @@
 </dialog>
 
 <!-- Help modal -->
-<dialog id="help-dialog">
-  <button type="button" class="dialog-close" aria-label="Close help">✕</button>
-  <h2 data-i18n="help.title">How to use</h2>
+<dialog id="help-dialog" aria-labelledby="help-title">
+  <div class="help-dialog-heading">
+  <button type="button" class="dialog-close" aria-label="Close help" data-i18n-aria="help.close">✕</button>
+  <h2 id="help-title" data-i18n="help.title">How to use</h2>
+  </div>
   <p class="hint"><a href="docs/" target="_blank" rel="noopener">📘 Mở trung tâm hướng dẫn bằng tiếng Việt</a></p>
   <ol class="quickstart" data-i18n-html="help.quick">
     <li><strong>Wait for the first download</strong> — the dictionaries are fetched once,
@@ -916,32 +936,37 @@
     <li><strong>Save a meaning</strong> — ☆ opens loaded dictionary entries. Choose the source and edit the full definition if you want one sense per card. Reader also keeps the tapped sentence; ⭐ <em>Save sentence</em> saves that sentence by itself.</li>
     <li><strong>Review</strong> — open ★ <em>Vault</em> to browse meanings with their saved source and sentence, notes, tags
         and filters, then 🔁 <em>Review</em> runs the FSRS spaced-repetition queue — after a
-        few hundred graded reviews, ⚙ Advanced can re-fit its weights to your own history
+        few hundred graded reviews, ⚙ Settings can re-fit its weights to your own history
         (entirely on this device).</li>
   </ol>
-  <details class="help-more"><summary>Offline IELTS, TOEIC, Writing and Speaking practice</summary>
-    <ol><li>Open <em>Practice</em> and choose IELTS Academic or TOEIC Listening &amp; Reading, then choose Listening, Reading or all objective questions. The versioned original content pack works offline and demonstrates multiple choice, audio choice, short answer, gap-fill and matching; it is not official exam material.</li><li>For TOEIC Part 1, play each bundled statement from its audio control and choose the one that matches the picture. These original audio clips are precached with the app and work offline. Other listening examples reveal their transcript after practice; optional browser voice playback depends on installed voices.</li><li>Choose <em>Practice</em> for feedback after every answer or <em>Timed practice · current question set</em> to move between available questions, go back, skip, and submit against a countdown. Timed pathway practice scales to the selected set. IELTS Academic diagnostic mode has 40 Listening questions in four Parts and 40 Reading questions in three passages, with 30- and 60-minute section timers; both can be completed in one 90-minute objective-only session. Browser-generated Listening voice is synthetic, and the authored items are not calibrated, so results suggest a next stage per skill rather than a predicted or overall band. TOEIC remains a short starter bank (8 Listening and 8 Reading questions). Answers stay hidden until submission; reloading preserves the selected skill, question, answers and remaining time. Progress shows local raw answers by skill, never an official score.</li><li>IELTS Academic Writing prompts cover Task 1 and Task 2, and Speaking prompts cover Parts 1–3. Drafts save on this device. Use the checklist for self-review, then save an attempt to offline history. The TOEIC set intentionally covers L&amp;R; TOEIC Speaking and Writing are separate tests and are not included.</li><li>Optional AI feedback for Writing/Speaking uses the provider and API key you configured in Advanced → Learning. It requires internet, your per-request consent, and may incur token charges with the provider. Writing sends the prompt and your response; Speaking sends only your prompt and typed transcript/notes. Recordings never leave the device through this feature. Feedback is for practice and does not predict an official score. Prompts, drafts, self-review and saved recordings remain available offline without a key.</li><li>Speaking prompts can be recorded with your microphone; recordings are stored on this device (maximum 25 MB each) and included in JSON/encrypted study backups. Microphone access needs a secure browser context and your permission. Speech recognition is optional and may contact the browser vendor online; this app does not guarantee offline transcription.</li><li>In Reader → Listening, save your own audio file and transcript to keep them for later offline sessions. The audio stays local. Include your saved study data in a JSON or encrypted backup before moving devices; media makes the file larger. You can delete saved materials and recordings from their lists.</li><li>Vault’s <em>Journal</em> tab remains available even when you have no saved vocabulary. Journal text and its timer resume after reload on this browser.</li></ol>
-  </details>
-  <details class="help-more"><summary>📚 Learning guides — 34 posts by the developer (EN summary)</summary><p>Study method, TOEIC and IELTS guides in Vietnamese (~48,000 words), with an <a href="./vi/blog/en/" target="_blank" rel="noopener">English summary page</a>. New: <a href="./vi/blog/phuong-phap/offline-lesson-packs/" target="_blank" rel="noopener">how work readings become offline packs</a>, <a href="./vi/blog/phuong-phap/lo-trinh-30-ngay-packs/" target="_blank" rel="noopener">30-day pack plan</a>, <a href="./vi/blog/toeic/toeic-ca-dem-mang-yeu/" target="_blank" rel="noopener">night-shift TOEIC setup</a>. Full list: <a href="./vi/blog/" target="_blank" rel="noopener">Blog học IELTS &amp; TOEIC</a>.</p></details>
-  <details class="help-more"><summary>Optional AI practice — setup, privacy and costs</summary>
+  <details class="help-more"><summary data-i18n="help.section.practice">Offline IELTS, TOEIC, Writing and Speaking practice</summary><div data-help-lang="en">
+    <ol><li>Open <em>Practice</em> and choose IELTS Academic or TOEIC Listening &amp; Reading, then choose Listening, Reading or all objective questions. The versioned original content pack works offline and demonstrates multiple choice, audio choice, short answer, gap-fill and matching; it is not official exam material.</li><li>For TOEIC Part 1, play each bundled statement from its audio control and choose the one that matches the picture. These original audio clips are precached with the app and work offline. Other listening examples reveal their transcript after practice; optional browser voice playback depends on installed voices.</li><li>Choose <em>Practice</em> for feedback after every answer or <em>Timed practice · current question set</em> to move between available questions, go back, skip, and submit against a countdown. Timed pathway practice scales to the selected set. IELTS Academic diagnostic mode has 40 Listening questions in four Parts and 40 Reading questions in three passages, with 30- and 60-minute section timers; both can be completed in one 90-minute objective-only session. Browser-generated Listening voice is synthetic, and the authored items are not calibrated, so results suggest a next stage per skill rather than a predicted or overall band. TOEIC remains a short starter bank (8 Listening and 8 Reading questions). Answers stay hidden until submission; reloading preserves the selected skill, question, answers and remaining time. Progress shows local raw answers by skill, never an official score.</li><li>IELTS Academic Writing prompts cover Task 1 and Task 2, and Speaking prompts cover Parts 1–3. Drafts save on this device. Use the checklist for self-review, then save an attempt to offline history. The TOEIC set intentionally covers L&amp;R; TOEIC Speaking and Writing are separate tests and are not included.</li><li>Optional AI feedback for Writing/Speaking uses the provider and API key you configured in Settings → Learning. It requires internet, your per-request consent, and may incur token charges with the provider. Writing sends the prompt and your response; Speaking sends only your prompt and typed transcript/notes. Recordings never leave the device through this feature. Feedback is for practice and does not predict an official score. Prompts, drafts, self-review and saved recordings remain available offline without a key.</li><li>Speaking prompts can be recorded with your microphone; recordings are stored on this device (maximum 25 MB each) and included in JSON/encrypted study backups. Microphone access needs a secure browser context and your permission. Speech recognition is optional and may contact the browser vendor online; this app does not guarantee offline transcription.</li><li>In Reader → Listening, save your own audio file and transcript to keep them for later offline sessions. The audio stays local. Include your saved study data in a JSON or encrypted backup before moving devices; media makes the file larger. You can delete saved materials and recordings from their lists.</li><li>Vault’s <em>Journal</em> tab remains available even when you have no saved vocabulary. Journal text and its timer resume after reload on this browser.</li></ol>
+  </div>
+<div data-help-lang="vi" hidden><p>Mở Luyện tập, chọn IELTS Academic hoặc TOEIC Nghe và Đọc. Có thể làm từng câu hoặc luyện tính giờ. Sau khi tải dữ liệu cần thiết, bài tập và tiến độ dùng được khi mất mạng.</p><p>Luyện Viết và Nói có đề, bản nháp và bảng tự đánh giá trên thiết bị. Nhận xét AI là tùy chọn online, cần API key và xác nhận trước khi gửi. Bản ghi âm không được gửi qua luồng nhận xét này.</p><p><a href="/docs/huong-dan-su-dung.html#luyen-thi">Xem cách luyện thi và lưu tiến độ</a></p></div>
+</details>
+  <details class="help-more"><summary data-i18n="help.section.guides">📚 Learning guides — 34 posts by the developer (EN summary)</summary><div data-help-lang="en"><p>Study method, TOEIC and IELTS guides in Vietnamese (~48,000 words), with an <a href="./vi/blog/en/" target="_blank" rel="noopener">English summary page</a>. New: <a href="./vi/blog/phuong-phap/offline-lesson-packs/" target="_blank" rel="noopener">how work readings become offline packs</a>, <a href="./vi/blog/phuong-phap/lo-trinh-30-ngay-packs/" target="_blank" rel="noopener">30-day pack plan</a>, <a href="./vi/blog/toeic/toeic-ca-dem-mang-yeu/" target="_blank" rel="noopener">night-shift TOEIC setup</a>. Full list: <a href="./vi/blog/" target="_blank" rel="noopener">Blog học IELTS &amp; TOEIC</a>.</p></div>
+<div data-help-lang="vi" hidden><p><a href="/vi/blog/">Mở blog tiếng Việt</a> để xem cách luyện TOEIC, IELTS và học theo bài đọc. Bạn cũng có thể <a href="/lessons/">chọn bài học B1–B2</a> về công việc hoặc học thuật.</p></div>
+</details>
+  <details class="help-more"><summary data-i18n="help.section.ai">Optional AI practice — setup, privacy and costs</summary><div data-help-lang="en">
     <p>Dictionary lookup, Reader, Vault and review remain free and offline after setup. AI practice is optional, requires internet for new responses and uses an API key for your chosen provider. Token charges are paid directly to that provider.</p>
-    <ol><li>When you first choose AI practice without a saved key, a short setup appears with provider defaults already filled in. Paste your own key and continue; custom model and endpoint values are under <em>Advanced</em>. This saves settings only and does not call AI by itself. You can also configure or forget the key in Advanced → Learning.</li><li>In Reader, start a reading of at least 80 characters, then choose AI practice. Before each live model request, inspect the exact learner data, provider/model and possible token cost, then agree to that request. Cached suggestions are labelled and do not make a provider call.</li><li>Select a phrase with its source sentence, answer the situation, and review the quoted feedback. Accept useful feedback or mark it not useful before saving the phrase to Vault or trying another situation.</li><li>Saving a phrase does not grade a review. Your regular FSRS reviews run locally. Previously cached phrase suggestions may be reused offline; new situations and feedback need your provider connection.</li><li><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Run the authored live AI evaluation cases</a> to review correct use, a grammar error, an off-topic answer, and a missing required phrase. Each case requires separate consent; the exported report contains no API key and describes only those cases.</li><li>Drafts and sessions are saved in this browser and included in study backups. Advanced → Learning lets you forget the key, clear phrase cache, or delete Tutor data. Browser data may be lost when cleared: export a backup first.</li></ol>
+    <ol><li>When you first choose AI practice without a saved key, a short setup appears with provider defaults already filled in. Paste your own key and continue; custom model and endpoint values are under <em>Advanced</em>. This saves settings only and does not call AI by itself. You can also configure or forget the key in Settings → Learning.</li><li>In Reader, start a reading of at least 80 characters, then choose AI practice. Before each live model request, inspect the exact learner data, provider/model and possible token cost, then agree to that request. Cached suggestions are labelled and do not make a provider call.</li><li>Select a phrase with its source sentence, answer the situation, and review the quoted feedback. Accept useful feedback or mark it not useful before saving the phrase to Vault or trying another situation.</li><li>Saving a phrase does not grade a review. Your regular FSRS reviews run locally. Previously cached phrase suggestions may be reused offline; new situations and feedback need your provider connection.</li><li><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Run the authored live AI evaluation cases</a> to review correct use, a grammar error, an off-topic answer, and a missing required phrase. Each case requires separate consent; the exported report contains no API key and describes only those cases.</li><li>Drafts and sessions are saved in this browser and included in study backups. Settings → Learning lets you forget the key, clear phrase cache, or delete Tutor data. Browser data may be lost when cleared: export a backup first.</li></ol>
     <p>The offline tutorial is an authored walkthrough. It does not evaluate your answer or pretend to be a live model result. Browser speech recognition may also use your browser vendor's online service as described in pronunciation help.</p>
-  </details>
-  <details class="help-more">
-    <summary>More features &amp; details</summary>
+  </div>
+<div data-help-lang="vi" hidden><p>Trợ giảng AI cần mạng và Gemini API key cá nhân. Vào <strong>Cài đặt → Học tập</strong> để lưu, kiểm tra quyền truy cập hoặc quên key. Trước khi gửi, đọc nội dung sẽ chuyển tới Google và xác nhận. Google có thể tính phí tùy gói của dự án.</p><p>Trong Reader, hãy bắt đầu bài đọc trước khi yêu cầu gợi ý cụm từ. Kiểm tra ví dụ và đoạn trích trước khi lưu từ vào Sổ tay. Câu trả lời mới cần mạng, còn dữ liệu và bản nháp đã lưu có thể mở trên thiết bị.</p><p><a href="/vi/huong-dan-gemini/">Cách lấy và nhập Gemini API key</a></p></div>
+</details>
+  <details class="help-more"><summary data-i18n="help.section.more">More features &amp; details</summary>
     <ol data-i18n-html="help.more">
       <li><strong>Purpose:</strong> this app is a personal study &amp; research tool — non-commercial,
-         no account, no tracking. All dictionary data stays on your own device.</li>
+         no account. All dictionary data stays on your own device.</li>
       <li><strong>Hear it, say it, see the IPA:</strong> 🔊 hears the word (browser text-to-speech);
          the pronunciation strip shows real IPA for most English words; 🎤 checks your
          pronunciation using your browser's speech recognition (Practice also has a
          say-it-aloud drill). On Chrome the audio is processed by Google, on Safari by
          Apple — this app has no server.</li>
-      <li><strong>Review reminders (optional):</strong> enable in ⚙ <em>Advanced</em> — local-only
+      <li><strong>Review reminders (optional):</strong> enable in ⚙ <em>Settings</em> — local-only
          and opt-in: an app badge, a quiet banner, and notifications on installed
          Android/desktop PWAs at browser-chosen times. Nothing is sent anywhere.</li>
-      <li><strong>Bring your own dictionary file:</strong> open <em>⚙ Advanced</em> in the top bar to load
+      <li><strong>Bring your own dictionary file:</strong> open <em>⚙ Settings</em> in the top bar to load
         a .mdx/.mdd dictionary file you have the rights to use into either slot.
         The public edition ships with open-licensed dictionaries (WordNet 3.1, Simple English)
         by default — load commercial dictionaries such as OALD/LDOCE only if you own them.
@@ -968,7 +993,7 @@
       <li><strong>Your data is yours:</strong> export Vault items as JSON, or use the complete study backup to include local sessions and audio — no cloud,
         no account, nothing leaves your device.</li>
       <li><strong>One-click EN–VI:</strong> add the open English–Vietnamese dictionary
-        (OVDP, 386,600 entries) from the start screen or ⚙ Advanced.</li>
+        (OVDP, 386,600 entries) from the start screen or ⚙ Settings.</li>
       <li><strong>Practice &amp; stats:</strong> 🎯 <em>Practice</em> (from Vault or Review) runs
         quick exercises — fill in the missing word, or listen &amp; type — with
         <em>Got it</em> / <em>Review again</em>. 📊 <em>Stats</em> shows words learned,
@@ -984,17 +1009,17 @@
         Vault renames or deletes a tag across every item.</li>
       <li><strong>Install &amp; offline safety:</strong> the ⬇ button installs the app; an “Offline”
         note appears if the network drops (your data keeps working). A JSON backup of your items is
-        written on-device once a day — restore it from ⚙ Advanced.</li>
+        written on-device once a day — restore it from ⚙ Settings.</li>
     </ol>
   </details>
-  <details class="help-more">
-    <summary>Save words from any web page</summary>
-    <p class="hint">Drag this button to your browser's bookmarks bar. Select text on any page, then click the bookmark to open it in Dual Dictionary's Reader.</p>
-    <p><a class="btn-secondary bookmarklet" href="javascript:void(window.open('https://dualdictionary.netlify.app/?read='+encodeURIComponent(String(window.getSelection()||''))))">📖 Send to Dual Dictionary</a></p>
-    <p class="hint">For a single word you can also open <code>https://dualdictionary.netlify.app/?q=word</code> — it searches right away.</p>
-  </details>
-  <details class="help-more">
-    <summary>Licenses &amp; terms of use</summary>
+  <details class="help-more"><summary data-i18n="help.section.bookmark">Save words from any web page</summary><div data-help-lang="en">
+    <p class="hint">Drag this button to your browser's bookmarks bar. Select text on any page, then click the bookmark to open it in HọcTA's Reader.</p>
+    <p><a class="btn-secondary bookmarklet" href="javascript:void(window.open('https://hocta.app/?read='+encodeURIComponent(String(window.getSelection()||''))))">📖 Send to HọcTA</a></p>
+    <p class="hint">For a single word you can also open <code>https://hocta.app/?q=word</code> — it searches right away.</p>
+  </div>
+<div data-help-lang="vi" hidden><p>Kéo nút bên dưới lên thanh dấu trang. Trên một trang web, bôi đen đoạn tiếng Anh rồi bấm dấu trang để mở đoạn đó trong Reader của HọcTA.</p><p><a class="btn-secondary bookmarklet" href="javascript:void(window.open('https://hocta.app/?read='+encodeURIComponent(String(window.getSelection()||''))))">📖 Gửi sang HọcTA</a></p></div>
+</details>
+  <details class="help-more"><summary data-i18n="help.section.licenses">Licenses &amp; terms of use</summary>
     <p class="license-note" data-i18n-html="help.licenses">
       This app is provided for <strong>personal study and research purposes only</strong> —
       non-commercial use. Dictionary files you load remain the property of their respective
@@ -1007,9 +1032,9 @@
 </dialog>
 
 <!-- Advanced settings modal -->
-<dialog id="advanced-dialog">
-  <button type="button" class="dialog-close" aria-label="Close advanced settings">✕</button>
-  <h2 data-i18n="dialog.advanced">Advanced</h2>
+<dialog id="advanced-dialog" aria-labelledby="advanced-title">
+  <button type="button" class="dialog-close" aria-label="Close settings" data-i18n-aria="settings.close">✕</button>
+  <h2 id="advanced-title" data-i18n="dialog.advanced">Settings</h2>
   <p class="hint"><strong>Optional</strong> — most users never need this screen. Three tabs:
     your dictionaries, your data, and how the app behaves while you study.</p>
 
@@ -1017,10 +1042,10 @@
        different concerns (dictionary setup, data care, study behaviour) now get
        one tab each. All element IDs are unchanged, so the test suites and the
        wiring keep working; the tab choice is context-based (see renderAdvStatus). -->
-  <div class="adv-tabs" role="tablist" aria-label="Advanced settings sections">
-    <button type="button" class="adv-tab" id="adv-tab-dicts" role="tab" aria-selected="true">Dictionaries</button>
-    <button type="button" class="adv-tab" id="adv-tab-data" role="tab" aria-selected="false">Data</button>
-    <button type="button" class="adv-tab" id="adv-tab-learning" role="tab" aria-selected="false">Learning</button>
+  <div class="adv-tabs" role="tablist" aria-label="Settings sections" data-i18n-aria="settings.tabs">
+    <button type="button" class="adv-tab" id="adv-tab-dicts" role="tab" aria-selected="true" data-i18n="settings.dicts">Dictionaries</button>
+    <button type="button" class="adv-tab" id="adv-tab-data" role="tab" aria-selected="false" data-i18n="settings.data">Data</button>
+    <button type="button" class="adv-tab" id="adv-tab-learning" role="tab" aria-selected="false" data-i18n="settings.learning">Learning</button>
   </div>
 
   <div id="adv-panel-dicts" class="adv-panel" role="tabpanel" aria-label="Dictionaries">
@@ -1083,11 +1108,17 @@
   </div>
 
   <div id="adv-panel-data" class="adv-panel" role="tabpanel" aria-label="Your data" hidden>
+  <section class="adv-section" aria-labelledby="app-update-title">
+    <h3 id="app-update-title" data-i18n="update.title">App version</h3>
+    <p id="app-update-hint" class="hint" data-i18n="update.hint">Refresh the files used by the app. Your dictionaries, saved words, drafts and downloaded TOEIC audio stay on this device. Save any unsaved work before updating.</p>
+    <button type="button" id="btn-update-app" class="btn-secondary" data-i18n="update.action" aria-describedby="app-update-hint">Update app</button>
+    <p id="app-update-status" class="hint" role="status"></p>
+  </section>
   <details class="adv-section">
     <summary>Your data — import &amp; backup</summary>
     <div class="envi-row">
       <label class="file-btn" for="import-file">⬆ Import data (.json / Anki .txt / .csv)<input type="file" id="import-file" accept=".json,application/json,.txt,.tsv,.csv,text/plain" hidden></label>
-      <p class="hint">Merge a previously exported Dual Dictionary data file (old v2 or new v3 format). Duplicates are skipped — your current data always wins.</p>
+      <p class="hint">Import a HọcTA or Dual Dictionary JSON backup (v2 or v3). <a href="https://dualdictionary.netlify.app/recover.html">Xuất dữ liệu từ miền cũ / Export data from the old site</a>. Duplicates are skipped — your current data always wins.</p>
       <button type="button" id="btn-export-full-backup" class="btn-secondary">📦 Download complete JSON study backup</button>
       <p class="hint">The complete backup includes local exercise sessions, writing/speaking drafts and saved audio. Media can make the file large. Import the JSON file above to restore it.</p>
     </div>
@@ -1117,28 +1148,21 @@
 
   <div id="adv-panel-learning" class="adv-panel" role="tabpanel" aria-label="Learning behaviour" hidden>
   <details class="adv-section">
-    <summary>Optional AI tutor — connect your AI account</summary><div class="ai-settings-form">
-    <p class="hint">Choose your AI provider and paste its API key. The app fills in the usual model and endpoint for you. Your key is saved in this browser profile and sent only to that provider when you test the connection or request AI feedback. Tutor sessions and answers are included in JSON and encrypted backups; the key is not. Use a key you are comfortable storing in this browser profile.</p>
-    <label for="ai-provider">AI provider</label>
-    <select id="ai-provider" aria-describedby="ai-provider-hint"><option value="gemini">Gemini 3.6 Flash</option></select>
-    <p id="ai-provider-hint" class="hint">The free offline features work without connecting an AI account.</p>
-    <label for="ai-api-key">API key</label>
-    <input id="ai-api-key" type="password" autocomplete="off" spellcheck="false" style="width:100%" aria-label="AI provider API key">
-    <details id="ai-advanced-fields" class="ai-advanced-fields">
-      <summary>Advanced: model and endpoint</summary>
-      <p class="hint">The default values are filled in for the provider above. Change these only if your provider gave you different settings.</p>
-      <label for="ai-base-url">API endpoint</label>
-      <input id="ai-base-url" type="url" spellcheck="false" style="width:100%">
-      <label for="ai-model">Model name</label>
-      <input id="ai-model" type="text" spellcheck="false" style="width:100%">
-    </details>
-    <p class="hint">Saving settings alone does not contact the provider. Testing sends a small request and may incur a token charge.</p>
+    <summary data-i18n="settings.ai">Optional AI tutor</summary><div class="ai-settings-form">
+    <p class="hint">Paste your Gemini API key and choose a model. Your key is kept in this tab unless you choose to remember it on this device. The app sends it directly to Google when you check model access or request feedback. Tutor sessions and answers are included in JSON and encrypted backups; the key is not. Use a key you are comfortable storing in this browser profile.</p>
+    <label for="ai-api-key" data-i18n="ui.tsKey">Gemini API key</label>
+    <input id="ai-api-key" type="password" autocomplete="off" spellcheck="false" style="width:100%">
+    <p class="hint"><a href="/vi/huong-dan-gemini/" target="_blank" rel="noopener noreferrer" data-i18n="settings.geminiGuide">How to get a Gemini API key (Vietnamese)</a></p>
+    <label><input type="checkbox" id="ai-remember-key" name="rememberKey"> <span data-i18n="ai.rememberKey">Remember my key on this device</span></label>
+    <label for="ai-model" data-i18n="ui.tsModel">Gemini model</label>
+    <select id="ai-model"></select>
+    <p class="hint">Saving settings alone does not contact Google. Checking model access reads model metadata without generating text.</p>
     <p class="hint"><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Evaluate live Tutor feedback with four consent-gated cases</a> · the report records latency, verdict and quote checks without including your key.</p>
     <div class="envi-row">
-      <button type="button" id="btn-ai-save" class="btn-secondary">Save settings</button>
-      <button type="button" id="btn-ai-test" class="btn-secondary">Save &amp; test connection</button>
-      <button type="button" id="btn-ai-clear" class="btn-secondary">Forget key</button>
-      <button type="button" id="btn-ai-clear-cache" class="btn-secondary">Clear phrase cache</button>
+      <button type="button" id="btn-ai-save" class="btn-secondary" data-i18n="ai.saveSettings">Save settings</button>
+      <button type="button" id="btn-ai-test" class="btn-secondary" data-i18n="ai.saveAndCheck">Save key and test Gemini access</button>
+      <button type="button" id="btn-ai-clear" class="btn-secondary">Remove saved Gemini key</button>
+      <button type="button" id="btn-ai-clear-cache" class="btn-secondary">Clear cached AI phrase suggestions</button>
     </div>
     <button type="button" id="btn-tutor-clear-data" class="btn-secondary btn-danger">Delete tutor data from this browser</button>
     <p id="ai-settings-status" class="hint" role="status" aria-live="polite"></p></div>

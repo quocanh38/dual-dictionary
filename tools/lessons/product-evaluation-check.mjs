@@ -22,11 +22,14 @@ for (const item of fixture.feedbackCases) {
 // Every request is intercepted in-process; there is no fallback to native fetch.
 const originalFetch = globalThis.fetch;
 const originalStorage = globalThis.localStorage;
+const originalSession = globalThis.sessionStorage;
 let mockRequests = 0;
 try {
   const values = new Map();
+  const sValues = new Map();
   globalThis.localStorage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value), removeItem: key => values.delete(key) };
-  saveAiSettings({ provider: 'meta', apiKey: 'fixture-only-not-a-real-key', baseUrl: 'https://api.meta.ai/v1', model: 'fixture-only' });
+  globalThis.sessionStorage = { getItem: key => sValues.get(key) ?? null, setItem: (key, value) => sValues.set(key, value), removeItem: key => sValues.delete(key) };
+  saveAiSettings({ provider: 'gemini', apiKey: 'fixture-only-not-a-real-key', baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai', model: 'fixture-only' });
   for (const item of fixture.apiCases) {
     globalThis.fetch = async () => { mockRequests++; return { ok: false, status: item.status }; };
     await assert.rejects(askTutor({ instructions: 'Fixture only', input: 'Authored test input' }), new RegExp(item.error));
@@ -36,5 +39,7 @@ try {
   globalThis.fetch = originalFetch;
   if (originalStorage === undefined) delete globalThis.localStorage;
   else globalThis.localStorage = originalStorage;
+  if (originalSession === undefined) delete globalThis.sessionStorage;
+  else globalThis.sessionStorage = originalSession;
 }
 console.log(JSON.stringify({ status: 'PASS', provenance: 'authored-development-fixtures', feedbackCases: 6, feedbackAccepted: 5, feedbackRejected: 1, apiFailureCases: 2, mockRequests, realProviderCalls: 0, providerAccuracy: 'not-measured', learningOutcomes: 'not-measured' }, null, 2));

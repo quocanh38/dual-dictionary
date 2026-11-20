@@ -540,7 +540,7 @@ export function parseDeckRows(text, name) {
  *  ({words:[…], sentences:[…]} — the old export format). Duplicate detection
  *  includes a selected sense when present; local data wins on a matching card. */
 export async function importItems(payload) {
-  if (!payload || typeof payload !== 'object') throw new Error('not a Dual Dictionary export file');
+  if (!payload || typeof payload !== 'object') throw new Error('not a HọcTA export file');
   const incoming = [];
   if (payload.version === 3 && Array.isArray(payload.items)) {
     for (const raw of payload.items) {

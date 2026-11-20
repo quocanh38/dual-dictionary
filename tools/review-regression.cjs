@@ -40,7 +40,7 @@ async function main() {
     const item={id:'r',text:'run',type:'word',due:1,reviewCount:0,box:1,userData:{status:'new',tags:[]}};
     const c=context({state:{items:[item]},getItemById:()=>item,putReview:async r=>logs.push(r),
       updateVocabBadge(){},updateReviewBadge(){},updateSaveButtonState(){},renderPractice(){},markPracticeDay(){},
-      practiceStats:{ok:0,done:0},practiceIndex:0,practiceChecked:true});
+      currentView(){return 'practice';},recordExperienceEvent(){},practiceStats:{ok:0,done:0},practiceIndex:0,practiceChecked:true});
     vm.runInContext(store,c); c.putItem=async row=>{writes++;persisted=structuredClone(row);};
     vm.runInContext(fn('gradeById')+'\n'+fn('finishPracticeCard'),c);
     const before=Date.now(); await c.finishPracticeCard({...item,forceCloze:true},gotIt);
@@ -52,7 +52,7 @@ async function main() {
   await test('Direct Review boot waits for items, then keeps an active queue', async () => {
     const nodes={}; for(const id of ['#review-list','#review-count','#review-empty','#review-empty-msg'])
       nodes[id]={classList:{add(){},remove(){}},innerHTML:'',textContent:'',appendChild(){}};
-    const c=context({$:id=>nodes[id],reviewQueueIds:null,reviewTotal:0,state:{items:[],itemsReady:false},
+    const c=context({$:id=>nodes[id],reviewQueueIds:null,reviewTotal:0,reviewJourney:null,state:{items:[],itemsReady:false},
       buildReviewCard:i=>i,i18n:x=>x}); c.getItemById=id=>c.state.items.find(i=>i.id===id);
     vm.runInContext(fn('dueItems')+'\n'+fn('renderReview'),c);
     c.renderReview(); assert.equal(c.reviewQueueIds,null);
@@ -102,7 +102,7 @@ async function main() {
   for(const warmed of [false,true]) await test('Scheduler/replay parity: first, 10 min, <1 day, 1 day, old logs; warm='+warmed,async()=>{
     let clock=2000000000000; class TestDate extends Date { static now(){return clock;} }
     const item={id:'s',text:'study',type:'word',reviewCount:warmed?4:0,box:3,due:1,lastReviewedAt:warmed?clock-2*86400000:0,userData:{status:'learning',tags:[]}};
-    const logs=[]; const c=context({Date:TestDate,getItemById:()=>item,putReview:async r=>logs.push(structuredClone(r)),updateVocabBadge(){},updateReviewBadge(){},updateSaveButtonState(){}});
+    const logs=[]; const c=context({Date:TestDate,getItemById:()=>item,putReview:async r=>logs.push(structuredClone(r)),updateVocabBadge(){},updateReviewBadge(){},updateSaveButtonState(){},currentView(){return 'review';},reviewJourney:null,recordExperienceEvent(){}});
     vm.runInContext(store,c); c.putItem=async()=>{};vm.runInContext(fn('gradeById'),c);
     const o=context(); vm.runInContext(optimizer,o); const weights=vm.runInContext('DEFAULT_W',o);
     for(const [delta,action] of [[0,'forgot'],[600000,'know'],[86390000,'know'],[86400000,'forgot']]) {

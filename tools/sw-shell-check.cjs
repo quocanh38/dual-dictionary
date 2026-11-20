@@ -8,7 +8,10 @@ function precachePaths(sw) {
   const m = /const ASSETS\s*=\s*\[([\s\S]*?)\]\s*;/.exec(sw);
   if (!m) throw new Error('Cannot parse SW ASSETS');
   const lines = m[1].split('\n').filter(l => !l.trim().startsWith('//')).join('\n');
-  const paths = (lines.match(/'([^']+)'/g) || []).map(s => s.slice(1, -1).replace(/^\.\//, '') || 'index.html');
+  const paths = (lines.match(/'([^']+)'/g) || []).map(s => {
+    const file = s.slice(1, -1).replace(/^\.\//, '');
+    return !file || file.endsWith('/') ? file + 'index.html' : file;
+  });
   if (!paths.length) throw new Error('SW ASSETS is empty');
   return [...new Set(['sw.js', ...paths])];
 }

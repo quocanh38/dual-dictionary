@@ -3,19 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101827">
-  <title>Hướng dẫn sử dụng — Dual Dictionary</title>
+  <meta name="theme-color" content="#293CC8">
+  <title>Hướng dẫn sử dụng — HọcTA</title>
+  <link rel="stylesheet" href="/css/brand.css">
   <style>
-    :root{color-scheme:light dark;--bg:#101827;--panel:#182437;--text:#e9eef7;--muted:#b8c4d6;--link:#8bc5ff;--line:#33445c;--accent:#80d6bd}
+    :root{color-scheme:light dark;--bg:var(--brand-night);--panel:var(--brand-night-surface);--text:var(--brand-night-text);--muted:var(--brand-night-muted);--link:var(--brand-blue-on-dark);--line:var(--brand-night-line);--accent:var(--brand-blue-on-dark)}
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.68 system-ui,-apple-system,"Segoe UI",sans-serif}
     main{width:min(900px,100% - 32px);margin:32px auto 64px}header,section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,32px);margin:16px 0}
     h1,h2,h3{line-height:1.25}h1{font-size:clamp(2rem,6vw,3rem);margin:.2em 0}h2{margin-top:0}h3{margin-bottom:.35em}p,li{max-width:78ch}a{color:var(--link)}code{background:#0d1522;border:1px solid var(--line);border-radius:5px;padding:.08em .35em}.note{border-left:4px solid var(--accent);padding:.65em 1em;background:#132b2c;border-radius:4px}.muted{color:var(--muted)}.toc{display:flex;flex-wrap:wrap;gap:8px}.toc a{border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none}.step{padding-left:1.35em}.small{font-size:.92rem;color:var(--muted)}
-    @media(prefers-color-scheme:light){:root{color-scheme:light;--bg:#f2f5fa;--panel:#fff;--text:#192333;--muted:#536276;--link:#075eaa;--line:#d4deea;--accent:#167b66}.note{background:#e8f6f1}code{background:#f1f4f8}}
+    @media(prefers-color-scheme:light){:root{color-scheme:light;--bg:var(--brand-paper);--panel:#fff;--text:var(--brand-ink);--muted:var(--brand-muted);--link:var(--brand-blue);--line:var(--brand-line);--accent:var(--brand-blue)}.note{background:var(--brand-blue-tint)}code{background:#f1f4f8}}
   </style>
+<link rel="icon" href="/favicon.ico">
+<link rel="canonical" href="https://hocta.app/docs/huong-dan-su-dung.html">
+<script defer src="/js/section-switcher.js"></script>
 </head>
-<body><main>
+<body>
+<header class="section-topbar"><a class="section-wordmark" href="/"><img src="/assets/brand/mark-on-blue.png" alt="" width="27" height="22">HọcTA</a><div class="section-switcher" lang="vi"><button class="section-trigger" type="button" aria-label="Chuyển khu vực, hiện tại: Hướng dẫn" aria-controls="hocta-sections" popovertarget="hocta-sections">Hướng dẫn</button><nav id="hocta-sections" class="section-links" aria-label="Các khu vực HọcTA" popover><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></nav></div></header>
+
+<main>
   <header>
-    <p class="muted"><a href="./">Tài liệu Dual Dictionary</a> · Cập nhật ngày 14/11/2026</p>
+    <p class="muted"><a href="./">Tài liệu HọcTA</a> · Cập nhật ngày 14/11/2026</p>
     <h1>Hướng dẫn sử dụng</h1>
     <p>Tra từ, đọc tài liệu, lưu từ vựng và luyện IELTS/TOEIC ngay trên trình duyệt. Những phần học cốt lõi hoạt động offline sau khi chuẩn bị dữ liệu; AI là tùy chọn online, dùng API key của bạn.</p>
     <p class="note"><strong>Nguyên tắc riêng tư:</strong> từ điển đã tải, dữ liệu học, bản nháp, ghi âm và bài luyện được lưu trong hồ sơ trình duyệt trên thiết bị. Khi bạn chủ động yêu cầu AI và đồng ý gửi, nội dung được chọn sẽ tới nhà cung cấp AI; nhà cung cấp có thể tính phí token.</p>
@@ -26,11 +33,11 @@
 
   <section id="bat-dau"><h2>1. Bắt đầu và chuẩn bị dùng offline</h2>
     <ol class="step">
-      <li>Mở app khi có mạng để tải phần vỏ ứng dụng. Nếu muốn cài như app, dùng nút <em>Install</em> của trình duyệt khi nút này xuất hiện.</li>
-      <li>Từ <em>Search</em>, chờ từ điển mặc định tải xong. Trong <em>Advanced → Open dictionaries</em>, chọn <em>Get EN–VI dictionary</em> nếu cần từ điển Anh–Việt. Tải từ điển là bước cần mạng và tốn dung lượng một lần; dữ liệu tải được lưu để tra offline.</li>
+      <li>Mở app khi có mạng để tải phần vỏ ứng dụng. Nếu muốn cài như app, dùng nút <em>Cài đặt ứng dụng</em> của trình duyệt khi nút này xuất hiện.</li>
+      <li>Ở tab <em>Tra từ</em>, chọn <em>Thêm từ điển Anh–Việt</em> rồi chờ tải xong. Tải từ điển là bước cần mạng và tốn dung lượng một lần; dữ liệu tải được lưu để tra offline.</li>
       <li>Để kiểm tra, sau khi tải xong hãy ngắt mạng rồi tra thử từ, mở một bài luyện hoặc mở bài đã lưu. Nội dung web chưa từng mở/tải có thể chưa có trong bộ nhớ offline.</li>
     </ol>
-    <p class="small">Giao diện hiện dùng một số nhãn tiếng Anh như <em>Search</em>, <em>Reader</em>, <em>Vault</em>, <em>Review</em>, <em>Practice</em> và <em>Advanced</em>. Nút <em>EN/VI</em> đổi ngôn ngữ điều hướng/hướng dẫn có hỗ trợ.</p>
+    <p class="small">Chọn nút <em>EN/VI</em> để đổi ngôn ngữ giao diện. Ở chế độ VI, các khu vực chính là <em>Tra từ</em>, <em>Đọc</em>, <em>Sổ tay</em>, <em>Ôn tập</em> và <em>Luyện tập</em>.</p>
   </section>
 
   <section id="tra-tu"><h2>2. Tra từ và lưu từ</h2>
@@ -73,15 +80,16 @@
   </section>
 
   <section id="du-lieu"><h2>7. Lưu, xuất và khôi phục dữ liệu</h2>
-    <ol class="step"><li>Để chuyển dữ liệu sang thiết bị khác hoặc phòng trường hợp xóa dữ liệu trình duyệt, mở <em>Advanced → Your data — import &amp; backup</em>.</li><li><em>Download complete JSON study backup</em> xuất Vault, phiên luyện, bản nháp và audio đã lưu. Tệp có thể lớn.</li><li><strong>Chia sẻ list từ:</strong> trong Export bấm “🔗 Share link” — app nén tối đa 50 từ vào đường link, gửi cho bạn bè; mở link là nhập cả list vào Vault (không cần tài khoản, không qua máy chủ).</li>
-<li><strong>Tra từ app khác:</strong> bôi đen từ trong bất kỳ app nào → Share → Dual Dictionary — app mở thẳng kết quả tra (thay popup tra nhanh).</li>
+    <ol class="step"><li>Để chuyển dữ liệu sang thiết bị khác hoặc phòng trường hợp xóa dữ liệu trình duyệt, mở <em>Cài đặt → Dữ liệu</em>.</li><li><em>Download complete JSON study backup</em> xuất Vault, phiên luyện, bản nháp và audio đã lưu. Tệp có thể lớn.</li><li><strong>Chia sẻ list từ:</strong> trong Export bấm “🔗 Share link” — app nén tối đa 50 từ vào đường link, gửi cho bạn bè; mở link là nhập cả list vào Vault (không cần tài khoản, không qua máy chủ).</li>
+<li><strong>Tra từ app khác:</strong> bôi đen từ trong bất kỳ app nào → Share → HọcTA — app mở thẳng kết quả tra (thay popup tra nhanh).</li>
 <li>Để lưu ra ngoài thiết bị, chọn <em>Encrypt &amp; download a real backup</em>, đặt passphrase và cất cả tệp lẫn passphrase ở nơi an toàn. Khôi phục bằng <em>Restore from an encrypted backup</em>; app không lưu passphrase và không tải backup lên server.</li><li>Restore point trên thiết bị là tiện ích phụ, không thay thế backup bên ngoài. Khôi phục dạng merge chỉ bổ sung dữ liệu còn thiếu, bỏ qua bản trùng và không xóa dữ liệu hiện tại.</li><li>Để nhập dữ liệu JSON thường hoặc tệp Anki/CSV, dùng <em>Import data</em>. Hãy giữ bản backup trước khi nhập dữ liệu lạ.</li></ol>
     <p class="small">Xóa dữ liệu trình duyệt, gỡ hồ sơ hoặc thiết bị hỏng có thể làm mất từ điển đã tải và dữ liệu học cục bộ. Hãy giữ một bản backup mã hóa ở nơi khác. Backup có thể chứa nội dung học, bản nháp, ghi chú và phiên Tutor; bảo vệ tệp như dữ liệu riêng tư. Cấu hình API key không được đưa vào bản backup này.</p>
   </section>
 
   <section id="loi"><h2>8. Khắc phục nhanh</h2>
-    <ul><li><strong>Không tra được từ:</strong> chờ tải từ điển hoàn tất, kiểm tra tab từ điển đang chọn; nếu cần hãy tải EN–VI trong Advanced.</li><li><strong>Không tải được trang trong Reader:</strong> thử dán nội dung trực tiếp; một số trang chặn trình duyệt đọc URL. Nội dung bên ngoài cần mạng.</li><li><strong>Audio không phát/không ghi âm:</strong> kiểm tra âm lượng và quyền microphone; thử trình duyệt hỗ trợ, đảm bảo mở qua HTTPS/localhost. Ghi âm phụ thuộc quyền thiết bị.</li><li><strong>AI báo lỗi:</strong> kiểm tra mạng, provider, model, endpoint và quyền/quota của key. Không gửi lại nội dung nếu chưa đọc thông báo đồng ý.</li><li><strong>Thiếu dữ liệu sau khi đổi trình duyệt/thiết bị:</strong> dữ liệu không tự đồng bộ qua cloud; nhập backup JSON hoặc backup mã hóa.</li></ul>
-    <p><a href="../index.html#/reader">Mở Dual Dictionary</a> · <a href="../index.html">Về trang chính</a></p>
+    <p>Nếu app vẫn hiển thị phiên bản cũ, mở <strong>Cài đặt → Dữ liệu → Cập nhật ứng dụng</strong> khi có mạng. Thao tác này làm mới các tệp giao diện trên thiết bị. Hãy lưu nội dung đang nhập trước khi app tải lại.</p>
+    <ul><li><strong>Không tra được từ:</strong> chờ tải từ điển hoàn tất, kiểm tra tab từ điển đang chọn; nếu cần hãy tải Anh–Việt trong Cài đặt.</li><li><strong>Không tải được trang trong Reader:</strong> thử dán nội dung trực tiếp; một số trang chặn trình duyệt đọc URL. Nội dung bên ngoài cần mạng.</li><li><strong>Audio không phát/không ghi âm:</strong> kiểm tra âm lượng và quyền microphone; thử trình duyệt hỗ trợ, đảm bảo mở qua HTTPS/localhost. Ghi âm phụ thuộc quyền thiết bị.</li><li><strong>AI báo lỗi:</strong> kiểm tra mạng, provider, model, endpoint và quyền/quota của key. Không gửi lại nội dung nếu chưa đọc thông báo đồng ý.</li><li><strong>Thiếu dữ liệu sau khi đổi trình duyệt/thiết bị:</strong> dữ liệu không tự đồng bộ qua cloud; nhập backup JSON hoặc backup mã hóa.</li></ul>
+    <p><a href="../index.html#/reader">Mở HọcTA</a> · <a href="../index.html">Về trang chính</a></p>
   </section>
   <p class="small">Hướng dẫn phản ánh các chức năng hiện có của app. Phạm vi câu hỏi luyện thi và hỗ trợ trình duyệt có thể thay đổi theo phiên bản; hãy đọc giới hạn hiển thị trong app trước khi luyện.</p>
 </main></body></html>

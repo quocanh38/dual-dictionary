@@ -60,7 +60,7 @@ function guidePageHtml(t, ipa) {
   const canonical = `${SITE}/vi/luyen-thi/${t.slug}/`;
   const h1 = `Từ vựng ${t.word} (${n} mục)`;
   const sample = t.words.slice(0, 5).join(', ');
-  const desc = `${n} mục từ vựng ${t.word} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ thi viết tay — Dual Dictionary.`.slice(0, 160);
+  const desc = `${n} mục từ vựng ${t.word} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ thi viết tay — HọcTA.`.slice(0, 160);
   const wRows = t.words.map((w) =>
     `    <li data-word="${esc(w)}"><a href="/vi/tu/${encodeURIComponent(w)}/">${esc(w)}</a>${ipa[w] ? ` <span class="hub-ipa">/${esc(ipa[w])}/</span>` : ''}</li>`).join('\n');
   const pRows = t.phrases.map((s) =>
@@ -79,7 +79,7 @@ function guidePageHtml(t, ipa) {
         description: desc,
         url: canonical,
         inLanguage: 'vi',
-        isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` },
+        isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` },
       },
       { '@type': 'ItemList', name: `${t.word} — danh sách mục`, numberOfItems: n, itemListElement: allItems },
       {
@@ -97,21 +97,21 @@ function guidePageHtml(t, ipa) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -136,7 +136,7 @@ ${wRows}
   </ul>${phraseSection}
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 ${FILTER_JS}
 </body>
 </html>
@@ -153,7 +153,7 @@ function writeHubIndex(guides, ipa) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'CollectionPage', name: 'Luyện thi IELTS & TOEIC theo dạng bài (18 guide)', description: 'Từ vựng luyện thi theo đúng dạng bài: Writing Task 2, Speaking, Reading, TOEIC Part 5-6-7, Listening — Dual Dictionary.', url: canonical, inLanguage: 'vi', isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` } },
+      { '@type': 'CollectionPage', name: 'Luyện thi IELTS & TOEIC theo dạng bài (18 guide)', description: 'Từ vựng luyện thi theo đúng dạng bài: Writing Task 2, Speaking, Reading, TOEIC Part 5-6-7, Listening — HọcTA.', url: canonical, inLanguage: 'vi', isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` } },
       { '@type': 'ItemList', name: 'Luyện thi theo dạng bài', numberOfItems: guides.length, itemListElement: items },
       { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Luyện thi', item: canonical } ] },
     ],
@@ -163,13 +163,13 @@ function writeHubIndex(guides, ipa) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luyện thi IELTS & TOEIC theo dạng bài (18 guide) | Dual Dictionary</title>
-<meta name="description" content="18 guide từ vựng luyện thi theo dạng bài: Writing Task 2, Speaking, Reading, TOEIC Part 5-6-7, Listening — Dual Dictionary.">
+<title>Luyện thi IELTS & TOEIC theo dạng bài (18 guide) | HọcTA</title>
+<meta name="description" content="18 guide từ vựng luyện thi theo dạng bài: Writing Task 2, Speaking, Reading, TOEIC Part 5-6-7, Listening — HọcTA.">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="Luyện thi IELTS & TOEIC theo dạng bài (18 guide)">
 <meta property="og:description" content="18 guide từ vựng luyện thi theo dạng bài: Writing Task 2, Speaking, Reading, TOEIC Part 5-6-7, Listening.">
@@ -188,7 +188,7 @@ ${navHtml('luyen-thi')}
 ${rows}
   </ul>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `;
@@ -211,8 +211,8 @@ function main() {
 
   // sitemap exam-guides.xml (own file) + sitemap.xml registration (idempotent)
   const LM = new Date().toISOString().slice(0, 10);
-  const urls = [`https://dualdictionary.netlify.app/vi/luyen-thi/`,
-    ...guides.map((g) => `https://dualdictionary.netlify.app/vi/luyen-thi/${g.slug}/`)];
+  const urls = [`https://hocta.app/vi/luyen-thi/`,
+    ...guides.map((g) => `https://hocta.app/vi/luyen-thi/${g.slug}/`)];
   fs.mkdirSync(path.join(REPO, 'vi', 'tu', 'sitemap'), { recursive: true });
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'exam-guides.xml'),
     `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`).join('\n')}\n</urlset>\n`);
@@ -220,7 +220,7 @@ function main() {
   let sm = fs.readFileSync(smPath, 'utf8');
   if (!sm.includes('exam-guides.xml')) {
     sm = sm.replace('</sitemapindex>',
-      `  <sitemap>\n    <loc>https://dualdictionary.netlify.app/vi/tu/sitemap/exam-guides.xml</loc>\n    <lastmod>${LM}</lastmod>\n  </sitemap>\n</sitemapindex>`);
+      `  <sitemap>\n    <loc>https://hocta.app/vi/tu/sitemap/exam-guides.xml</loc>\n    <lastmod>${LM}</lastmod>\n  </sitemap>\n</sitemapindex>`);
     fs.writeFileSync(smPath, sm);
   }
 

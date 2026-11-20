@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const { safeJsonLd } = require('./seo-shared.cjs');
-/* Word page generator for Dual Dictionary (batch 1: top 2,000 frequent words).
+/* Word page generator for HọcTA (batch 1: top 2,000 frequent words).
  *
  * Mirrors the DOL Dictionary idea: every headword gets its own static,
  * indexable page at /vi/tu/{word}/ with:
@@ -23,7 +22,11 @@ const { safeJsonLd } = require('./seo-shared.cjs');
  */
 
 const fs = require('fs');
+const LOOKUP_CORRECTIONS = require('../data/lookup-corrections.json');
+const LOOKUP_TYPO = new RegExp('\\b(' + Object.keys(LOOKUP_CORRECTIONS).join('|') + ')\\b', 'gi');
+const LOOKUP_EXTRAS = require('../data/lookup-extra.json');
 const path = require('path');
+const QUICK_SENSES = require('../data/word-quick-senses.json');
 const { MDict } = require('../js/mdict.js');
 const { buildAutoNote, loadHandNote, renderNoteHTML, lemmaStems, compactRegisterLabels } = require('./word-notes-lib.cjs');
 const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs');
@@ -60,7 +63,7 @@ function behaviorLinksHtml(word){
 const REPO = path.join(__dirname, '..');
 const OUT_DIR = path.join(REPO, 'vi', 'tu');
 const QA_PATH = path.join(REPO, 'docs', 'wordpages-qa.json');
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 // P0: same volunteer feedback channel as the app (mailto, no tracking)
 const REPORT_EMAIL = 'quocanh38@gmail.com';
 
@@ -173,6 +176,8 @@ function mtdToBlocks(text) {
         // v109: a closing paren after the crossref (OVDP "(xem) pro_and_con)")
         // belongs to the outer paren pair — keep it OUT of the link text/href
         const w = word.endsWith(')') ? word.slice(0, -1).trimEnd() : word;
+        if (/[à-ỹ]/i.test(w)) return m;
+        if (w.startsWith('prick (twinge,')) return '(xem) ' + ['prick','twinge','qualm','worm'].map(target => `<a href="/?q=${target}">${target}</a>`).join(', ');
         const target = w.trim().toLowerCase();
         const href = BUILT.has(target) ? wordPageUrl(target) : '/?q=' + encodeURIComponent(target);
         return `(xem) <a href="${href}">${w}</a>${word.endsWith(')') ? ')' : ''}`;
@@ -234,6 +239,8 @@ function mtdToBlocksRender(text) {
         // v109: a closing paren after the crossref (OVDP "(xem) pro_and_con)")
         // belongs to the outer paren pair — keep it OUT of the link text/href
         const w = word.endsWith(')') ? word.slice(0, -1).trimEnd() : word;
+        if (/[à-ỹ]/i.test(w)) return m;
+        if (w.startsWith('prick (twinge,')) return '(xem) ' + ['prick','twinge','qualm','worm'].map(target => `<a href="/?q=${target}">${target}</a>`).join(', ');
         const target = w.trim().toLowerCase();
         const href = BUILT.has(target) ? wordPageUrl(target) : '/?q=' + encodeURIComponent(target);
         return `(xem) <a href="${href}">${w}</a>${word.endsWith(')') ? ')' : ''}`;
@@ -292,6 +299,7 @@ function demoteLeadingDomain(blocks) {
  * orphan space collapsed. */
 function sanitizeRaw(raw) {
   return compactRegisterLabels(String(raw || '')
+    .replace(LOOKUP_TYPO, text => LOOKUP_CORRECTIONS[text.toLowerCase()])
     .replace(/\u0000/g, '')
     .replace(/<[^>]*>/g, '')
     .replace(/_/g, ' ')
@@ -548,6 +556,14 @@ function wordMetaDesc(word, ipa, raw) {
 
 function wordPageUrl(word) {
   return `/vi/tu/${encodeURIComponent(String(word).toLowerCase())}/`;
+}
+
+function renderLookupExtras(word) {
+  return LOOKUP_EXTRAS.filter(entry => entry.source === wordPageUrl(word)).map(entry =>
+    `<section class="hand-block"><h2>${escapeHtml(entry.phrase)}</h2>` +
+    entry.senses.map(sense => `<p><strong>${escapeHtml(sense.m)}</strong></p><p>${escapeHtml(sense.pat || '')}</p>` +
+      sense.ex.map(([en, vi]) => `<div class="mtd-ex"><p class="mtd-ex-en">${escapeHtml(en)}</p><p class="mtd-ex-vi">${escapeHtml(vi)}</p></div>`).join('')).join('') +
+    '<p class="hand-src">Nghĩa và ví dụ do HọcTA biên soạn.</p></section>').join('');
 }
 
 function slugOf(word) {
@@ -967,11 +983,14 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
   const practiceCta = (examDeck || practiceDeck)
     ? `\n        <a class="word-cta-btn word-cta-btn-practice" href="/?deck=${examDeck || practiceDeck}">${examDeck === 'toeic' ? '💼' : '🎯'} Luyện ${examDeck === 'toeic' ? 'TOEIC Business' : examDeck === 'ielts' ? 'IELTS Core' : 'bộ từ này'} trong app ↗</a>`
     : '';
-  const title = `${word} nghĩa là gì? | Dual Dictionary`;
+  const title = `${word} nghĩa là gì? | HọcTA`;
   /* P0 SEO: unique meta per page — first rendered sense (post-priority) + IPA.
    * raw is passed from the build loop; direct renderEntry() callers without
    * raw keep the old generic template via the '' fallback in wordMetaDesc. */
-  const desc = wordMetaDesc(word, ipa, raw || '');
+  const quickSenses = Object.hasOwn(QUICK_SENSES, word) ? QUICK_SENSES[word] : null;
+  const desc = quickSenses
+    ? `${word} nghĩa là ${quickSenses.map(([sense]) => sense).join('; ')}. Xem ví dụ Anh–Việt và nghĩa chi tiết.`
+    : wordMetaDesc(word, ipa, raw || '');
   const canonical = canonicalOverride || `${SITE}${wordPageUrl(word)}`;
   const relatedHtml = related.length
     ? `<section class="related"><h2>Từ liên quan</h2><div class="related-list">${related
@@ -1032,7 +1051,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
         description: desc,
         inDefinedTermSet: {
           '@type': 'DefinedTermSet',
-          name: 'Từ điển Anh-Việt Dual Dictionary',
+          name: 'Từ điển Anh-Việt HọcTA',
           url: `${SITE}/vi/`,
         },
         url: canonical,
@@ -1064,21 +1083,21 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#293CC8">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${escapeHtml(title)}">
 <meta property="og:description" content="${escapeHtml(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${escapeHtml(title)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -1095,19 +1114,25 @@ ${navHtml('tu')}
   <header class="word-head">
     <p class="word-kicker">Nghĩa tiếng Việt của</p>
     <h1>${escapeHtml(word)}</h1>
-    ${ipaLineHtml(word, ipa)}
+    ${ipaLineHtml(word, ipa)} ${quickSenses ? `
+    <section aria-labelledby="quick-senses">
+      <h2 id="quick-senses">Nghĩa thường dùng</h2>
+      <ul>
+        ${quickSenses.map(([sense, example, translation]) => `<li><strong>${escapeHtml(sense)}</strong> · <span lang="en">${escapeHtml(example)}</span> ${escapeHtml(translation)}</li>`).join('\n        ')}
+      </ul>
+    </section>` : ''}
     <figure style="margin:16px 0"><img src="/vi/images/ipa-vowels.jpg" alt="Bảng khẩu hình nguyên âm tiếng Anh" loading="lazy" width="800" height="450" style="max-width:100%;height:auto;border-radius:8px"><figcaption style="color:var(--muted);font-size:.85rem">Khẩu hình 10 nguyên âm chính — đối chiếu IPA ở trên khi luyện phát âm.</figcaption></figure>
     ${badgeRowHtml(word, labels, builtSet)}${entryLemma ? `
     <p class="entry-lemma-note">Trong từ điển không có mục riêng cho dạng “${escapeHtml(word)}” — mục dưới đây là của nguyên mẫu ${builtSet.has(entryLemma)
       ? `<a href="${wordPageUrl(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`
       : `<a href="/?q=${encodeURIComponent(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`} (như trong app: tra dạng chia, hiện mục gốc).</p>` : ''}
-    <div class="entry-body">${entryHtml || '<p class="word-empty">Chưa có dữ liệu nghĩa chi tiết cho từ này trong bản từ điển hiện tại.</p>'}</div>
+    <div class="entry-body">${entryHtml || '<p class="word-empty">Chưa có dữ liệu nghĩa chi tiết cho từ này trong bản từ điển hiện tại.</p>'}</div>${renderLookupExtras(word)}
     <div class="word-cta">
       <div class="word-cta-actions">
         <a class="word-cta-btn" href="/?q=${encodeURIComponent(word)}">Tra "${escapeHtml(word)}" trong app offline ↗</a>${practiceCta}
       </div>
-      <p class="word-cta-note">App Dual Dictionary: từ điển Anh-Việt offline, không cần mạng, không tài khoản.</p>
-      <p class="word-report"><a href="mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(`Lỗi mục từ "${word}" — Dual Dictionary`)}">Phát hiện lỗi (phiên âm, nghĩa, ví dụ)? Báo qua email — mình sửa trong bản tới.</a></p>
+      <p class="word-cta-note">App HọcTA: từ điển Anh-Việt offline, không cần mạng, không tài khoản.</p>
+      <p class="word-report"><a href="mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(`Lỗi mục từ "${word}" — HọcTA`)}">Phát hiện lỗi (phiên âm, nghĩa, ví dụ)? Báo qua email — mình sửa trong bản tới.</a></p>
     </div>
   </header>
 
@@ -1140,7 +1165,7 @@ ${navHtml('tu')}
 </main>
 
 <footer class="blog-footer">
-  <p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p>
+  <p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p>
 </footer>
 </body>
 </html>
@@ -1767,17 +1792,21 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Từ điển Anh-Việt: ${built.length} từ phổ biến nhất | Dual Dictionary</title>
-<meta name="description" content="Danh sách ${built.length} từ tiếng Anh (phổ biến nhất + học thuật AWL) kèm phiên âm và nghĩa tiếng Việt chi tiết."
+<title>Từ điển Anh-Việt: ${built.length} mục từ | HọcTA</title>
+<meta name="description" content="Danh sách ${built.length} từ tiếng Anh (phổ biến nhất + học thuật AWL) kèm phiên âm và nghĩa tiếng Việt chi tiết.">
 <link rel="canonical" href="${SITE}/vi/tu/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${SITE}/vi/tu/">
-<meta property="og:title" content="Từ điển Anh-Việt: ${built.length} từ phổ biến nhất | Dual Dictionary">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">${safeJsonLd({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} từ phổ biến nhất`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
+<meta property="og:title" content="Từ điển Anh-Việt: ${built.length} mục từ | HọcTA">
+<meta property="og:image" content="${SITE}/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/vi/images/og-default.jpg">
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} mục từ`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 </head>
@@ -1786,7 +1815,8 @@ ${navHtml('tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <span aria-current="page">Từ điển</span></nav>
 <main class="page">
   <p class="word-kicker">Từ điển Anh-Việt</p>
-  <h1 style="font-size:2.4rem">${built.length} từ tiếng Anh phổ biến nhất</h1>
+  <h1 style="font-size:2.4rem">${built.length} mục từ tiếng Anh</h1>
+  <p>Danh mục gồm từ phổ biến, từ học thuật và cả các dạng biến thể. Ví dụ, <em>accepting</em> dẫn về mục gốc <a href="/vi/tu/accept/">accept</a>.</p>
   <p style="color:var(--muted)">Mỗi từ có trang riêng: phiên âm, loại từ, nghĩa tiếng Việt và ví dụ. Nhãn <b>Học chính</b> dựa trên danh sách NGSL (New General Service List, Browne &amp; Culligan), nhóm <b>Học thuật (AWL)</b> dựa trên Academic Word List của Coxhead (570 họ từ chia 10 sublist — chip ghi đúng số sublist, ví dụ "AWL Sublist 1"). <b>Tần suất</b> (top 1K/2K/5K/10K) tính riêng theo corpus phụ đề phim OpenSubtitles — nhãn tần suất và nhãn học không trộn vào nhau: một từ có thể "top 10K" mà vẫn thuộc NGSL. Nhóm "Dạng chia" là biến thể của từ gốc (trang hiển thị mục của từ gốc, có dán nhãn). Từ ngoài các danh sách học vẫn có trang riêng, được dán nhãn rõ ràng.</p>
   <p style="margin:12px 0 0"><a href="${PHRASE_HUB_URL}">Duyệt thêm ${phraseIndex.phrases.length.toLocaleString('vi-VN')} cụm từ tiếng Anh (phrasal verbs, collocations) →</a></p>
   <p style="margin:8px 0 0"><a class="word-cta-btn word-cta-btn-practice" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:var(--teal);color:#fff;font-weight:800;text-decoration:none" href="/?deck=ielts">🎯 Luyện IELTS Core trong app ↗</a></p>
@@ -1796,7 +1826,7 @@ ${hubRows}
   </ul>
   <p id="hub-more-wrap" style="margin:14px 0 0"><button type="button" id="hub-more" class="related-chip" style="cursor:pointer">Hiện thêm (${(built.length - hubSsrWords.length).toLocaleString('vi-VN')} từ còn lại)</button></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 <script src="/vi/tu/hub-index.js" defer></script>
 <script>
 (function () {
@@ -1979,7 +2009,7 @@ ${hubRows}
   document.getElementById('mylist-quiz').addEventListener('click', function(){
     if(!picked.length) return;
     var q2=picked.map(function(w4,i){ return (i+1)+'. '+w4+' — nghĩa tiếng Việt là gì? (xem /vi/tu/'+w4+'/ )'; }).join('\n');
-    copyText('QUIZ — '+picked.length+' từ (Dual Dictionary)\n'+q2, function(){ cnt.textContent='Đã chép quiz '+picked.length+' câu ✅'; });
+    copyText('QUIZ — '+picked.length+' từ (HọcTA)\n'+q2, function(){ cnt.textContent='Đã chép quiz '+picked.length+' câu ✅'; });
   });
   document.getElementById('mylist-clear').addEventListener('click', function(){ picked=[]; try{localStorage.removeItem('dd-mylist');}catch(e){} refreshPick(); });
   refreshPick();
@@ -2065,6 +2095,7 @@ module.exports = {
   REMOVE_WORDS,
   escapeHtml,
   sanitizeRaw,
+  renderLookupExtras,
   mtdToBlocks,
   applyOvdpFixes,
   dropLeadingIpaFragment,

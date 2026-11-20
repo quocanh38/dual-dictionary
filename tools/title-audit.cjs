@@ -77,8 +77,8 @@ if (long.length) {
     suf.get(tail).push(r);
   }
   md += `## Quá 60 ký tự (${long.length} trang) — nhóm theo template\n\n`;
-  md += `Template word hiện tại: \`{word} nghĩa là gì? — Nghĩa tiếng Việt | Dual Dictionary\` (phần cố định ~40 ký tự).\n`;
-  md += `Đề xuất rút gọn toàn site: \`{word} nghĩa là gì? | Dual Dictionary\` (tiết kiệm ~19 ký tự).\n\n`;
+  md += `Template word hiện tại: \`{word} nghĩa là gì? — Nghĩa tiếng Việt | HọcTA\` (phần cố định ~40 ký tự).\n`;
+  md += `Đề xuất rút gọn toàn site: \`{word} nghĩa là gì? | HọcTA\` (tiết kiệm ~19 ký tự).\n\n`;
   md += `Top 10 trang dài nhất:\n\n`;
   for (const r of long.slice(0, 10)) md += `- ${r.len}ch — ${r.title.slice(0, 100)} (\`${r.file}\`)\n`;
   md += `\nPhân bố theo nhánh:\n\n`;

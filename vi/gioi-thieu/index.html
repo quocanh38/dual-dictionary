@@ -3,24 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>Về Dual Dictionary — ai viết, dữ liệu từ đâu | Dual Dictionary</title>
-<meta name="description" content="Dual Dictionary do Quốc Anh (TMA) xây dựng: dữ liệu từ điển mở WordNet 3.1 + Simple English Wiktionary, nội dung học do người biên soạn và review tay.">
-<link rel="canonical" href="https://dualdictionary.netlify.app/vi/gioi-thieu/">
+<meta name="theme-color" content="#293CC8">
+<title>Giới thiệu HọcTA và nguồn dữ liệu</title>
+<meta name="description" content="HọcTA do Quốc Anh (TMA) xây dựng: dữ liệu từ điển mở WordNet 3.1 + Simple English Wiktionary, nội dung học do người biên soạn và review tay.">
+<link rel="canonical" href="https://hocta.app/vi/gioi-thieu/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
-<meta property="og:url" content="https://dualdictionary.netlify.app/vi/gioi-thieu/">
-<meta property="og:title" content="Về Dual Dictionary — ai viết, dữ liệu từ đâu">
-<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="HọcTA">
+<meta property="og:url" content="https://hocta.app/vi/gioi-thieu/">
+<meta property="og:title" content="Về HọcTA — ai viết, dữ liệu từ đâu">
+
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","name":"Về Dual Dictionary","url":"https://dualdictionary.netlify.app/vi/gioi-thieu/","inLanguage":"vi","author":{"@type":"Person","name":"Nguyễn Quốc Anh","jobTitle":"Senior Business Development","worksFor":{"@type":"Organization","name":"TMA"},"url":"https://www.linkedin.com/in/quocanh38/","sameAs":["https://www.linkedin.com/in/quocanh38/","https://github.com/quocanh38/dual-dictionary"]}, "publisher":{"@type":"Organization","name":"Dual Dictionary","url":"https://dualdictionary.netlify.app/","logo":{"@type":"ImageObject","url":"https://dualdictionary.netlify.app/icons/icon-512.png"},"sameAs":["https://github.com/quocanh38/dual-dictionary"]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://dualdictionary.netlify.app/vi/"},{"@type":"ListItem","position":2,"name":"Giới thiệu"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","name":"Về HọcTA","url":"https://hocta.app/vi/gioi-thieu/","inLanguage":"vi","author":{"@type":"Person","name":"Nguyễn Quốc Anh","jobTitle":"Senior Business Development","worksFor":{"@type":"Organization","name":"TMA Solutions"},"url":"https://hocta.app/vi/tac-gia/","sameAs":["https://www.linkedin.com/in/quocanh38/","https://github.com/quocanh38/dual-dictionary"],"@id":"https://hocta.app/vi/tac-gia/#person"},"publisher":{"@type":"Organization","name":"HọcTA","url":"https://hocta.app/","logo":{"@type":"ImageObject","url":"https://hocta.app/icons/icon-512.png"},"sameAs":["https://github.com/quocanh38/dual-dictionary"],"@id":"https://hocta.app/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://hocta.app/vi/"},{"@type":"ListItem","position":2,"name":"Giới thiệu"}]}]}</script>
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hocta.app/vi/images/og-default.jpg">
+<link rel="icon" href="/favicon.ico">
 </head>
 <body class="word-page">
 <nav class="dd-nav" aria-label="Điều hướng chính"><div class="dd-nav-in">
-<a class="dd-brand" href="/vi/">📖 Dual Dictionary</a>
+<a class="dd-brand" href="/vi/">HọcTA</a>
 <button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 <div class="dd-links">
 <a href="/vi/tu/" aria-current="page" class="dd-nav-on">Từ điển</a>
@@ -54,12 +60,12 @@
 </div>
 <form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>
 </div></nav>
-<style>.dd-nav{position:sticky;top:0;z-index:50;background:#0f766e;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#e6fffa;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#e6fffa;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#0d5c55;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#115e59;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
+<style>.dd-nav{position:sticky;top:0;z-index:50;background:#293cc8;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#eef0ff;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#eef0ff;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#2032a6;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#2032a6;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <span aria-current="page">Giới thiệu</span></nav>
 <main class="page">
   <p class="word-kicker">Về chúng tôi</p>
-  <h1 style="font-size:2.2rem">Về Dual Dictionary</h1>
-  <p class="tldr"><strong>Dual Dictionary là từ điển Anh–Việt offline-first cho người Việt học IELTS/TOEIC</strong> — do Nguyễn Quốc Anh (Senior Business Development, TMA) khởi tạo, ban đầu để đồng nghiệp luyện TOEIC, giờ mở cho mọi người.</p>
+  <h1 style="font-size:2.2rem">Về HọcTA</h1>
+  <p class="tldr"><strong>HọcTA là ứng dụng học tiếng Anh cho người Việt, từ tra từ trong bài đọc đến ôn từ, luyện TOEIC hoặc IELTS và học với bài đã tải</strong> — do <a href="/vi/tac-gia/" rel="author">Nguyễn Quốc Anh</a> (Senior Business Development tại TMA Solutions) khởi tạo, ban đầu để đồng nghiệp luyện TOEIC, giờ mở cho mọi người.</p>
   <h2>Người biên soạn</h2>
   <p>Quốc Anh — người đang luyện IELTS, không phải giáo viên hay trung tâm. Mọi bài blog đều ghi tên tác giả và ngày viết; mọi góp ý được đón nhận qua <a href="https://www.linkedin.com/in/quocanh38/" target="_blank" rel="noopener">LinkedIn</a>.</p>
   <h2>Dữ liệu từ điển từ đâu</h2>
@@ -75,7 +81,7 @@
 <li><strong>📊 Test trình độ trong app</strong> — 20 câu 3 phút, biết level A2–C1, app tự gợi gói học phù hợp.</li>
 <li><strong>🎤 Tìm bằng giọng nói</strong> — bấm mic ở ô tìm kiếm, nói từ tiếng Anh là tra luôn; nút “Say it” chấm phát âm của bạn.</li>
 <li><strong>🔗 Chia sẻ list từ</strong> — gửi link cho bạn bè, mở link là nhập cả list vào Vault (không cần tài khoản).</li>
-<li><strong>📤 Share-to-lookup</strong> — bôi đen từ ở app khác → Share → Dual Dictionary mở thẳng kết quả (thay popup tra nhanh).</li>
+<li><strong>📤 Share-to-lookup</strong> — bôi đen từ ở app khác → Share → HọcTA mở thẳng kết quả (thay popup tra nhanh).</li>
 </ul>
 <h2>Nguyên tắc nội dung</h2>
   <p>Chi tiết xem <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a>: mỗi trang phải trả lời được một câu hỏi thật của người học, không đẻ trang cho đủ số lượng.</p>
@@ -86,6 +92,6 @@
   </div>
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. · <a href="/vi/gioi-thieu/">Giới thiệu</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. · <a href="/vi/gioi-thieu/">Giới thiệu</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>

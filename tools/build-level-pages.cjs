@@ -64,7 +64,7 @@ function levelPageHtml(lv, words, ipa, maniSet) {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'CollectionPage', name: h1, description: desc, url: canonical, inLanguage: 'vi',
-        isPartOf: { '@type': 'WebSite', name: 'Dual Dictionary', url: `${SITE}/vi/` } },
+        isPartOf: { '@type': 'WebSite', name: 'HọcTA', url: `${SITE}/vi/` } },
       { '@type': 'ItemList', name: h1,
         itemListElement: built.map((w, i) => ({ '@type': 'ListItem', position: i + 1, name: w, url: `${SITE}/vi/tu/${encodeURIComponent(w)}/` })) },
       { '@type': 'BreadcrumbList', itemListElement: [
@@ -79,20 +79,20 @@ function levelPageHtml(lv, words, ipa, maniSet) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${esc(h1)} | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${esc(h1)} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -110,7 +110,7 @@ ${navHtml('tu')}
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
 ${FILTER_JS}
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `;
@@ -150,14 +150,14 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>Từ vựng tiếng Anh theo trình độ A2–C1 | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>Từ vựng tiếng Anh theo trình độ A2–C1 | HọcTA</title>
 <meta name="description" content="Học từ vựng theo trình độ A2 sơ cấp, B1 trung cấp, B2 trung cao cấp, C1 nâng cao — kèm IPA, nghĩa Việt, ví dụ thi thật.">
 <link rel="canonical" href="${SITE}/vi/trinh-do/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -174,7 +174,7 @@ ${navHtml('tu')}
 ${hubRows}
   </ul>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `);

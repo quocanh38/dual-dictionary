@@ -6,14 +6,14 @@
  * Then update index.html: og:image -> v2.jpg, add og:width/height if missing,
  * update <figure><img> to use v2 + srcset, ensure twitter:image sync.
  * Images contain 100% English text inside (per handoff OCR rule).
- * Usage: node tools/batch-blog-covers.cjs [--dry]
+ * Usage: node tools/batch-blog-covers.cjs [--dry | --refresh-existing]
  */
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
 const REPO = path.join(__dirname, '..');
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 
 const COVERS = {
   'ielts/cach-hoc-tu-vung-ielts-khong-quen': { enTitle: 'Learn IELTS Vocabulary\nand Remember Longer', badge: 'IELTS Vocabulary', accent: '#0f766e' },
@@ -55,58 +55,53 @@ const COVERS = {
 function escXml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 function coverSvg(enTitle, badge, accent) {
-  const lines = enTitle.split('\n');
-  const t1 = escXml(lines[0]||'');
-  const t2 = escXml(lines[1]||'');
-  return `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img">
-<title>${escXml(badge)} - ${escXml(enTitle.replace(/\n/g,' '))}</title>
-<rect width="1200" height="630" rx="0" fill="#ffffff"/>
-<!-- top bar -->
-<rect width="1200" height="8" fill="${accent}"/>
-<!-- left accent block -->
-<rect x="0" y="8" width="480" height="622" fill="${accent}"/>
-<!-- subtle pattern dots -->
-<g fill="white" opacity="0.08">
-  <circle cx="60" cy="80" r="2"/><circle cx="120" cy="80" r="2"/><circle cx="180" cy="80" r="2"/><circle cx="240" cy="80" r="2"/><circle cx="300" cy="80" r="2"/><circle cx="360" cy="80" r="2"/>
-  <circle cx="60" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="180" cy="120" r="2"/><circle cx="240" cy="120" r="2"/><circle cx="300" cy="120" r="2"/><circle cx="360" cy="120" r="2"/>
+  const [title, subtitle = ''] = enTitle.split('\n');
+  const titleSize = Math.min(66, Math.floor(1390 / Math.max(title.length, 1)));
+  const subtitleSize = Math.min(35, Math.floor(1390 / Math.max(subtitle.length, 1)));
+  return `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="630" fill="#293cc8"/>
+<rect width="16" height="630" fill="#ffe383"/>
+<circle cx="1100" cy="80" r="280" fill="${accent}" opacity=".28"/>
+<circle cx="1160" cy="70" r="210" fill="none" stroke="#aab6ff" opacity=".24" stroke-width="2"/>
+<text x="86" y="103" fill="#ffe383" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="2">${escXml(badge.toUpperCase())}</text>
+<text x="84" y="260" fill="white" font-family="Arial, sans-serif" font-size="${titleSize}" font-weight="700">${escXml(title)}</text>
+<text x="86" y="332" fill="#fbf8ef" font-family="Arial, sans-serif" font-size="${subtitleSize}">${escXml(subtitle)}</text>
+<path d="M86 441h1028" stroke="#aab6ff" opacity=".4"/>
+<text x="86" y="528" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="700">HọcTA</text>
+<text x="86" y="566" fill="#ffe383" font-family="Arial, sans-serif" font-size="23">hocta.app</text>
+<g transform="translate(1030 477) scale(.8)" fill="#fbf8ef">
+  <rect x="6" y="17" width="72" height="26" rx="12"/><path d="M42 34h24L41 66H17z"/><rect x="6" y="57" width="50" height="26" rx="12"/><rect x="65" y="57" width="29" height="26" rx="12" fill="#ffe383"/>
 </g>
-<!-- badge -->
-<rect x="48" y="48" width="220" height="32" rx="16" fill="white" opacity="0.96"/>
-<text x="158" y="68" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700" fill="${accent}" letter-spacing="0.06em">${escXml(badge.toUpperCase())}</text>
-<!-- main title lines (English only) -->
-<text x="48" y="152" font-family="Inter,system-ui,sans-serif" font-size="44" font-weight="800" fill="white" letter-spacing="-0.02em">${t1}</text>
-<text x="48" y="202" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="600" fill="white" opacity="0.92">${t2}</text>
-<!-- divider -->
-<rect x="48" y="238" width="96" height="4" rx="2" fill="white" opacity="0.7"/>
-<!-- bullet points decor -->
-<text x="48" y="280" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="white" opacity="0.85">Vocabulary  •  Context  •  Practice</text>
-<!-- right side: illustration area -->
-<rect x="520" y="48" width="632" height="400" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
-<!-- abstract book/card illustration -->
-<rect x="580" y="98" width="200" height="280" rx="12" fill="white" stroke="#e2e8f0"/>
-<rect x="596" y="118" width="168" height="10" rx="5" fill="#e2e8f0"/>
-<rect x="596" y="140" width="140" height="8" rx="4" fill="#f1f5f9"/>
-<rect x="596" y="160" width="168" height="8" rx="4" fill="#f1f5f9"/>
-<rect x="596" y="176" width="120" height="8" rx="4" fill="#f1f5f9"/>
-<rect x="596" y="210" width="168" height="36" rx="8" fill="${accent}" opacity="0.08"/>
-<text x="680" y="233" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="${accent}">Example Sentence</text>
-<rect x="820" y="98" width="200" height="132" rx="12" fill="${accent}" opacity="0.06" stroke="${accent}" stroke-width="1" stroke-dasharray="6 6"/>
-<text x="920" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-size="42">\uD83D\uDCA1</text>
-<text x="920" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="${accent}">Learn • Save • Review</text>
-<rect x="820" y="246" width="200" height="132" rx="12" fill="white" stroke="#e2e8f0"/>
-<text x="920" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#475569">AUDIO + IPA</text>
-<text x="920" y="302" text-anchor="middle" font-family="Inter,sans-serif" font-size="28">\uD83D\uDD0A</text>
-<text x="920" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#64748b">US &amp; UK pronunciation</text>
-<!-- bottom brand -->
-<text x="520" y="512" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#0f766e" letter-spacing="0.08em">DUAL DICTIONARY</text>
-<text x="520" y="532" font-family="Inter,sans-serif" font-size="12" fill="#64748b">Offline-first English-Vietnamese Dictionary</text>
-<text x="1090" y="532" text-anchor="end" font-family="Inter,sans-serif" font-size="11" fill="#94a3b8">dualdictionary.netlify.app</text>
-<!-- small footer line -->
-<rect x="48" y="590" width="1104" height="1" fill="#e2e8f0"/>
 </svg>`;
 }
 
+const HUB_COVERS = {
+  'lo-trinh-tu-hoc-ielts': { enTitle: 'IELTS Study Roadmap\nStart with the Four Skills', badge: 'IELTS Guide', accent: '#1e40af' },
+  toeic: { enTitle: 'TOEIC Study Guide\nPractise Listening and Reading', badge: 'TOEIC', accent: '#d97706' },
+};
+
+async function refreshExistingCovers() {
+  const imageRoot = path.join(REPO, 'vi', 'blog', 'images');
+  const bySlug = new Map(Object.entries(COVERS).map(([slug, config]) => [slug.split('/').at(-1), config]));
+  const files = fs.readdirSync(imageRoot, { recursive: true })
+    .filter(file => /^og-(?:1200x630(?:-v2)?|320w)\.(?:jpg|png|webp)$/.test(path.basename(file)));
+  if (!files.length) throw new Error("No existing blog covers found");
+  for (const file of files) {
+    const folder = path.basename(path.dirname(file));
+    const config = HUB_COVERS[folder] || bySlug.get(folder);
+    if (!config) throw new Error(`Missing cover configuration for ${file}`);
+    const svg = Buffer.from(coverSvg(config.enTitle, config.badge, config.accent));
+    let image = sharp(svg);
+    if (file.endsWith('.webp')) image = image.resize(320, 168).webp({ quality: 82 });
+    else if (file.endsWith('.png')) image = image.png();
+    else image = image.jpeg({ quality: 86, mozjpeg: true });
+    await image.toFile(path.join(imageRoot, file));
+  }
+  console.log(`BATCH-BLOG-COVERS: refreshed ${files.length} existing cover files`);
+}
+
 async function main() {
+  if (process.argv.includes('--refresh-existing')) return refreshExistingCovers();
   const dry = process.argv.includes('--dry');
   const slugs = Object.keys(COVERS);
   let made = 0, updated = 0, skipped = 0;
@@ -142,7 +137,7 @@ async function main() {
     }
     if (!html.includes(imgUrl) && html.includes('og:image')) {
       // generic fallback: replace any og:image under this slug path
-      html = html.replace(/content="https:\/\/dualdictionary\.netlify\.app\/vi\/blog\/images\/[^"]*"/, `content=\"${imgUrl}\"`);
+      html = html.replace(/content="https:\/\/hocta\.app\/vi\/blog\/images\/[^"]*"/, `content=\"${imgUrl}\"`);
       changed = true;
     }
     // Ensure og:image:width/height present
@@ -152,12 +147,12 @@ async function main() {
     }
     // Sync JSON-LD image
     if (html.includes('"image":')) {
-      const re = /\"image\":\s*\"https:\/\/dualdictionary\.netlify\.app\/vi\/blog\/images\/[^"]+\"/;
+      const re = /\"image\":\s*\"https:\/\/hocta\.app\/vi\/blog\/images\/[^"]+\"/;
       if (re.test(html)) { html = html.replace(re, `\"image\": \"${imgUrl}\"`); changed = true; }
     }
     // Update figure <img> in body to v2 with srcset
     const figRe = /<figure[^>]*><img[^>]*src="[^"]*og-1200x630[^"]*"[^>]*>.*?<\/figure>/s;
-    const newFig = `<figure style=\"margin:16px 0\"><img src=\"/vi/blog/images/${slug}/og-1200x630-v2.jpg\" srcset=\"/vi/blog/images/${slug}/og-320w.webp 320w, /vi/blog/images/${slug}/og-1200x630-v2.jpg 1200w\" sizes=\"(max-width: 640px) 320px, 640px\" alt=\"${escXml(cfg.enTitle.replace(/\n/g,' — '))} — illustration for Dual Dictionary\" width=\"1200\" height=\"630\" loading=\"lazy\" decoding=\"async\" style=\"width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px\">Minh họa cho bài viết — English text inside image for accessibility</figcaption></figure>`;
+    const newFig = `<figure style=\"margin:16px 0\"><img src=\"/vi/blog/images/${slug}/og-1200x630-v2.jpg\" srcset=\"/vi/blog/images/${slug}/og-320w.webp 320w, /vi/blog/images/${slug}/og-1200x630-v2.jpg 1200w\" sizes=\"(max-width: 640px) 320px, 640px\" alt=\"${escXml(cfg.enTitle.replace(/\n/g,' — '))} — illustration for HọcTA\" width=\"1200\" height=\"630\" loading=\"lazy\" decoding=\"async\" style=\"width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px\">Minh họa cho bài viết — English text inside image for accessibility</figcaption></figure>`;
     if (figRe.test(html)) {
       html = html.replace(figRe, newFig);
       changed = true;

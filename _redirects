@@ -1,6 +1,55 @@
-# Block internal tooling, repo metadata, and handoff docs from public hosting
+# Legacy recovery uses the original origin to access browser storage.
+https://dualdictionary.netlify.app/recover.html  /index.html  200!
+https://dualdictionary.netlify.app/lessons/recover.html  /lessons/index.html  200!
+
+# Preserve links to the word index on both domains.
+https://dualdictionary.netlify.app/vi/tu/index/  https://hocta.app/vi/tu/index-word/  301!
+https://dualdictionary.netlify.app/vi/dong-nghia/index/  https://hocta.app/vi/dong-nghia/index-word/  301!
+https://dualdictionary.netlify.app/vi/phat-am/index/  https://hocta.app/vi/phat-am/index-word/  301!
+/vi/tu/index/  /vi/tu/index-word/  301!
+/vi/dong-nghia/index/  /vi/dong-nghia/index-word/  301!
+/vi/phat-am/index/  /vi/phat-am/index-word/  301!
+/lessons/recover.html  https://dualdictionary.netlify.app/lessons/recover.html  301!
+
+# Move public pages, leaving same-origin recovery assets available.
+https://dualdictionary.netlify.app/  https://hocta.app/  301!
+https://dualdictionary.netlify.app/index.html  https://hocta.app/  301!
+https://dualdictionary.netlify.app/404.html  https://hocta.app/404.html  301!
+https://dualdictionary.netlify.app/lessons  https://hocta.app/lessons/  301!
+https://dualdictionary.netlify.app/lessons/  https://hocta.app/lessons/  301!
+https://dualdictionary.netlify.app/lessons/index.html  https://hocta.app/lessons/  301!
+https://dualdictionary.netlify.app/lessons/why-meta.html  https://hocta.app/lessons/why-meta.html  301!
+https://dualdictionary.netlify.app/vi  https://hocta.app/vi/  301!
+https://dualdictionary.netlify.app/vi/  https://hocta.app/vi/  301!
+https://dualdictionary.netlify.app/docs  https://hocta.app/docs/  301!
+https://dualdictionary.netlify.app/docs/  https://hocta.app/docs/  301!
+https://dualdictionary.netlify.app/admin/experience  https://hocta.app/admin/experience/  301!
+https://dualdictionary.netlify.app/admin/experience/  https://hocta.app/admin/experience/  301!
+https://dualdictionary.netlify.app/admin/experience/index.html  https://hocta.app/admin/experience/  301!
+https://dualdictionary.netlify.app/demo/tutor.html  https://hocta.app/demo/tutor.html  301!
+https://dualdictionary.netlify.app/tools/tutor-live-eval.html  https://hocta.app/tools/tutor-live-eval.html  301!
+https://dualdictionary.netlify.app/sitemap.xml  https://hocta.app/sitemap.xml  301!
+https://dualdictionary.netlify.app/sitemap-pages.xml  https://hocta.app/sitemap-pages.xml  301!
+https://dualdictionary.netlify.app/lessons/why-meta  https://hocta.app/lessons/why-meta.html  301!
+https://dualdictionary.netlify.app/demo/tutor  https://hocta.app/demo/tutor.html  301!
+https://dualdictionary.netlify.app/tools/tutor-live-eval  https://hocta.app/tools/tutor-live-eval.html  301!
+https://dualdictionary.netlify.app/docs/index.html  https://hocta.app/docs/  301!
+https://dualdictionary.netlify.app/docs/huong-dan-su-dung  https://hocta.app/docs/huong-dan-su-dung.html  301!
+https://dualdictionary.netlify.app/vi/index.html  https://hocta.app/vi/  301!
+https://dualdictionary.netlify.app/vi/:section/index.html  https://hocta.app/vi/:section/  301!
+https://dualdictionary.netlify.app/vi/:section/:page/index.html  https://hocta.app/vi/:section/:page/  301!
+https://dualdictionary.netlify.app/vi/:section/:group/:page/index.html  https://hocta.app/vi/:section/:group/:page/  301!
+https://dualdictionary.netlify.app/llms.txt  https://hocta.app/llms.txt  301!
+https://dualdictionary.netlify.app/readme.md  https://hocta.app/readme.md  301!
+https://dualdictionary.netlify.app/README.md  https://hocta.app/readme.md  301!
+https://dualdictionary.netlify.app/vi/*  https://hocta.app/vi/:splat  301!
+https://dualdictionary.netlify.app/docs/*  https://hocta.app/docs/:splat  301!
+
+# Stylesheet URL retained for readers with an older Lesson Studio page.
+/lessons/studio.css  /lessons/lesson-ui.css  301
+
+# Block internal CI/metadata/handoff files from public hosting
 /.github/*  /404.html  404!
-/tools/*  /404.html  404!
 /package.json  /404.html  404!
 /package-lock.json  /404.html  404!
 /pnpm-lock.yaml  /404.html  404!

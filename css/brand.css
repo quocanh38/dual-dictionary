@@ -1,0 +1,211 @@
+/* HọcTA visual identity. The app and public pages share these values. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../assets/brand/BricolageGrotesque-Bold.ttf") format("truetype");
+  font-weight: 700 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("../assets/brand/CrimsonPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+:root {
+  --brand-blue: #293cc8;
+  --brand-deep: #2032a6;
+  --brand-blue-tint: #e8ecff;
+  --brand-blue-on-dark: #aab6ff;
+  --brand-paper: #fbf8ef;
+  --brand-surface: #fff;
+  --brand-ink: #17253b;
+  --brand-muted: #566277;
+  --brand-line: #d9dce5;
+  --brand-yellow: #ffe383;
+  --brand-yellow-soft: #fff2c4;
+  --brand-green: #176458;
+  --brand-green-on-dark: #94e0cc;
+  --brand-night: #111a2c;
+  --brand-night-surface: #19263b;
+  --brand-night-text: #f1f3fb;
+  --brand-night-muted: #b5c0d7;
+  --brand-night-line: #374561;
+  --brand-focus-on-blue: #ffe383;
+  --brand-font-body: "Segoe UI", system-ui, sans-serif;
+  --brand-font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --brand-font-reading: "Crimson Pro", Georgia, serif;
+}
+:where(h1, h2, h3) {
+  font-family: var(--brand-font-display);
+  text-wrap: balance;
+}
+.dd-nav .dd-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--brand-font-display);
+}
+.dd-nav .dd-brand::before {
+  content: "";
+  inline-size: 1.35rem;
+  block-size: 1.1rem;
+  background: url("../assets/brand/mark-on-blue.png") center / contain no-repeat;
+  flex: none;
+}
+:where(.dd-nav, .topbar) :focus-visible { outline-color: var(--brand-focus-on-blue); }
+@media (forced-colors: active) {
+  :where(.dd-nav, .topbar) :focus-visible { outline-color: Highlight; }
+  .dd-nav .dd-brand::before { display: none; }
+}
+
+/* A compact section switcher shared by the main HọcTA surfaces. */
+.section-topbar {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .25rem max(12px, calc((100% - 948px) / 2));
+  color: var(--brand-paper);
+  background: var(--brand-blue);
+}
+
+body > header.section-topbar,
+.lesson-page > header.section-topbar {
+  justify-content: flex-start;
+  gap: .65rem;
+  margin: 0;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  padding-block: .25rem;
+  background: var(--brand-blue);
+}
+
+.section-topbar .section-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--brand-paper);
+  font-family: var(--brand-font-display);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.section-switcher {
+  flex: none;
+  font-family: var(--brand-font-body);
+  font-size: .875rem;
+}
+
+.section-switcher .section-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: .55em;
+  min-height: 44px;
+  margin: 0;
+  padding: .25rem .55rem;
+  border: 0;
+  border-radius: .45rem;
+  background: transparent;
+  color: var(--brand-paper);
+  font: inherit;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.section-trigger::after {
+  content: "";
+  inline-size: .42em;
+  block-size: .42em;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-.12em) rotate(45deg);
+}
+
+.section-trigger:hover { background: rgba(255, 255, 255, .13); }
+.section-trigger:focus-visible { outline: 2px solid var(--brand-focus-on-blue); }
+
+.section-switcher .section-links {
+  display: grid;
+  gap: .12rem;
+  box-sizing: border-box;
+  width: min(208px, calc(100vw - 24px));
+  padding: .32rem;
+  border: 1px solid var(--border, var(--brand-line));
+  border-radius: .65rem;
+  background: var(--surface, light-dark(var(--brand-surface), var(--brand-night-surface)));
+  color: var(--text, light-dark(var(--brand-ink), var(--brand-night-text)));
+  box-shadow: 0 8px 25px rgba(10, 20, 55, .2);
+}
+
+.section-switcher .section-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .65rem;
+  border-radius: .35rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-links a:hover,
+.section-links a:focus-visible,
+.section-links a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+
+@supports selector(:popover-open) {
+  .section-switcher .section-links:not(:popover-open) { display: none; }
+  .section-switcher .section-links:popover-open {
+    position: fixed;
+    inset: var(--section-top, 54px) auto auto var(--section-left, 12px);
+    margin: 0;
+  }
+}
+
+@supports not selector(:popover-open) {
+  .section-switcher:not([data-fallback]) .section-trigger { display: none; }
+  .section-switcher[data-fallback] { position: relative; }
+  .section-switcher[data-fallback] .section-links {
+    position: absolute;
+    z-index: 70;
+    inset: calc(100% + 6px) auto auto 0;
+  }
+  .section-switcher[data-fallback] .section-links[hidden] { display: none; }
+}
+
+@media (max-width: 420px) {
+  .topbar .brand { gap: .15rem; }
+  .topbar .brand h1 {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    clip-path: inset(50%);
+  }
+}
+
+@media (forced-colors: active) {
+  .section-trigger:focus-visible { outline-color: Highlight; }
+}
+
+.help-dialog-heading {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  padding-block-end: .25rem;
+  background: var(--surface);
+}
+
+.help-dialog-heading h2 { margin: 0; }
+.help-dialog-heading .dialog-close {
+  position: static;
+  flex: 0 0 44px;
+  float: none;
+  margin: 0;
+}

@@ -3,26 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Từ điển Anh–Việt offline miễn phí cho người học tiếng Anh</title>
-<meta name="description" content="Từ điển Anh–Việt & Anh–Anh offline miễn phí: 386.000 mục từ, Reader mode tra từ trong bài đọc, ôn tập FSRS có nhắc ôn, luyện phát âm, lưu câu ví dụ, dùng file .mdx riêng.">
-<meta name="keywords" content="từ điển anh việt offline, tu dien anh viet, từ điển anh văn offline, học từ vựng tiếng anh, từ điển mdx, tra từ offline, dual dictionary">
+<title>HọcTA | Học tiếng Anh song ngữ và offline</title>
+<meta name="description" content="Tra từ Anh–Việt trong bài đọc, lưu từ để ôn, luyện TOEIC và IELTS, rồi học tiếp với các bài đã tải ngay cả khi mất mạng.">
+<meta name="keywords" content="từ điển anh việt offline, tu dien anh viet, từ điển anh văn offline, học từ vựng tiếng anh, từ điển mdx, tra từ offline">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://dualdictionary.netlify.app/vi/">
-<link rel="alternate" hreflang="vi" href="https://dualdictionary.netlify.app/vi/">
-<link rel="alternate" hreflang="en" href="https://dualdictionary.netlify.app/">
-<link rel="alternate" hreflang="x-default" href="https://dualdictionary.netlify.app/">
+<link rel="canonical" href="https://hocta.app/vi/">
+<link rel="alternate" hreflang="vi" href="https://hocta.app/vi/">
+<link rel="alternate" hreflang="en" href="https://hocta.app/">
+<link rel="alternate" hreflang="x-default" href="https://hocta.app/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Dual Dictionary">
-<meta property="og:title" content="Từ điển Anh–Việt offline miễn phí cho người học tiếng Anh">
-<meta property="og:description" content="386.000 mục từ Anh–Việt, Reader mode tra từ ngay trong bài đọc, lưu câu ví dụ, hỗ trợ file .mdx. Không cần tài khoản, không quảng cáo.">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/hero-vi.jpg">
+<meta property="og:site_name" content="HọcTA">
+<meta property="og:title" content="HọcTA | Học tiếng Anh song ngữ và offline">
+<meta property="og:description" content="Tra từ Anh–Việt trong bài đọc, lưu từ để ôn, luyện TOEIC và IELTS, rồi học tiếp với các bài đã tải ngay cả khi mất mạng.">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://dualdictionary.netlify.app/vi/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Từ điển Anh–Việt offline miễn phí | Dual Dictionary">
-<meta name="twitter:description" content="386.000 mục từ Anh–Việt offline, tra từ ngay trong bài đọc, lưu câu ví dụ. Không cần tài khoản.">
-<meta name="theme-color" content="#0f766e">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hocta.app/vi/images/og-default.jpg">
+
+
+
+<meta property="og:url" content="https://hocta.app/vi/">
+
+<meta name="twitter:title" content="HọcTA | Học tiếng Anh song ngữ và offline">
+<meta name="twitter:description" content="Tra từ Anh–Việt trong bài đọc, lưu từ để ôn, luyện TOEIC và IELTS, rồi học tiếp với các bài đã tải ngay cả khi mất mạng.">
+<meta name="theme-color" content="#293CC8">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icons/icon-192.png">
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
@@ -31,9 +36,15 @@
 <link rel="stylesheet" href="/css/style.min.css">
 <style>
   .vi-landing { max-width: 52rem; margin: 0 auto; padding: 0 var(--sp-3); }
-  .vi-hero { text-align: center; padding: var(--sp-6) 0 var(--sp-4); }
-  .vi-hero h1 { font-size: var(--fs-xl); line-height: 1.3; margin-bottom: var(--sp-2); }
-  .vi-hero .lede { color: var(--text-2); font-size: var(--fs-md); line-height: 1.7; }
+  .vi-hero { text-align: start; padding: clamp(2rem, 6vw, 4.5rem) 0 var(--sp-4); }
+  .vi-hero h1 { font-size: clamp(2rem, 1.2rem + 3vw, 4rem); line-height: 1.08; margin: 0 0 var(--sp-3); }
+  .vi-hero .vi-cta { justify-content: flex-start; margin-block: 1.25rem 1.75rem; }
+  .hero-example { display: grid; gap: .85rem; margin: 0; padding: clamp(1rem, 4vw, 2rem); background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; }
+  .hero-example blockquote { margin: 0; font: 400 clamp(1.25rem, 1.05rem + 1vw, 1.8rem)/1.45 var(--brand-font-reading); }
+  .hero-example mark { background: var(--brand-yellow); color: var(--brand-ink); border-radius: .3rem; padding-inline: .2em; }
+  .hero-example .hero-definition { margin: 0; padding-block-start: .8rem; border-block-start: 1px solid var(--border); color: var(--text-2); }
+  .hero-definition a { color: var(--accent); font-weight: 750; }
+  .vi-hero .lede { max-width: 65ch; color: var(--text-2); font-size: 1.05rem; line-height: 1.65; }
   .vi-cta { display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap; margin: var(--sp-4) 0; }
   .vi-section { margin: var(--sp-5) 0; }
   .vi-section h2 { font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
@@ -53,15 +64,15 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "name": "Dual Dictionary",
-      "url": "https://dualdictionary.netlify.app/vi/",
+      "name": "HọcTA",
+      "url": "https://hocta.app/vi/",
       "inLanguage": "vi",
-      "potentialAction": {"@type": "SearchAction", "target": "https://dualdictionary.netlify.app/?q={query}", "query-input": "required name=query"}
+      "potentialAction": {"@type": "SearchAction", "target": "https://hocta.app/?q={query}", "query-input": "required name=query"}
     },
     {
       "@type": "WebApplication",
-      "name": "Dual Dictionary",
-      "url": "https://dualdictionary.netlify.app/",
+      "name": "HọcTA",
+      "url": "https://hocta.app/",
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Any (PWA — iOS, Android, Windows, macOS, Linux)",
       "inLanguage": ["vi", "en"],
@@ -82,16 +93,16 @@
         "Luyện điền từ (cloze) từ chính những câu bạn đã đọc, gồm cả từ biến dạng (run → running)",
         "Xuất / nhập dạng JSON, CSV, TSV, văn bản cho Anki, hoặc bộ thẻ .apkg chuẩn một lần bấm",
         "Hỗ trợ file .mdx/.mdd của người dùng",
-        "Không cần tài khoản, không quảng cáo, không theo dõi"
+        "Không cần tài khoản, không quảng cáo"
       ],
-      "publisher": {"@type":"Organization","name":"Dual Dictionary","url":"https://dualdictionary.netlify.app/","logo":{"@type":"ImageObject","url":"https://dualdictionary.netlify.app/icons/icon-512.png"},"sameAs":["https://github.com/quocanh38/dual-dictionary","https://www.linkedin.com/in/quocanh38/"]},
+      "publisher": {"@type":"Organization","name":"HọcTA","url":"https://hocta.app/","logo":{"@type":"ImageObject","url":"https://hocta.app/icons/icon-512.png"},"sameAs":["https://github.com/quocanh38/dual-dictionary","https://www.linkedin.com/in/quocanh38/"]},
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "Từ điển Anh–Việt có mất phí không?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Không. Dual Dictionary miễn phí hoàn toàn, không cần tài khoản, không quảng cáo. Kể cả các tính năng mà app trả phí thu subscription — chỉ báo độ phủ khi đọc (LingQ $14.99/tháng), luyện điền từ vào câu đã đọc, xuất bộ thẻ .apkg cho Anki (Readlang $6/tháng) — đều miễn phí ở đây. Từ điển Anh–Việt dùng dữ liệu mở (OVDP, giấy phép MIT)." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Tra từ, ôn tập và học với bài có sẵn đều miễn phí. Nếu dùng AI Tutor với khóa riêng, nhà cung cấp AI có thể tính phí." } },
         { "@type": "Question", "name": "Tra offline được không?",
           "acceptedAnswer": { "@type": "Answer", "text": "Có. Dữ liệu từ điển tải một lần về máy (lưu trong IndexedDB của trình duyệt), sau đó tra từ hoàn toàn offline. App chạy dạng PWA, cài lên điện thoại như ứng dụng thường." } },
         { "@type": "Question", "name": "Tra được từ đã chia thì như ran, stopped không?",
@@ -105,10 +116,12 @@
   ]
 }
 </script>
+<script defer src="/js/section-switcher.js"></script>
 </head>
 <body>
 <nav class="dd-nav" aria-label="Điều hướng chính"><div class="dd-nav-in">
-<a class="dd-brand" href="/vi/">📖 Dual Dictionary</a>
+<a class="dd-brand" href="/vi/">HọcTA</a>
+<div class="section-switcher" lang="vi"><button class="section-trigger" type="button" aria-label="Chuyển khu vực, hiện tại: Từ điển" aria-controls="hocta-sections" popovertarget="hocta-sections">Từ điển</button><nav id="hocta-sections" class="section-links" aria-label="Các khu vực HọcTA" popover><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></nav></div>
 <button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 <div class="dd-links">
 <a href="/vi/tu/">Từ điển</a>
@@ -143,30 +156,34 @@
 </div>
 <form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>
 </div></nav>
-<style>.dd-nav{position:sticky;top:0;z-index:50;background:#0f766e;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#e6fffa;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#e6fffa;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#0d5c55;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#115e59;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
+<style>.dd-nav{position:sticky;top:0;z-index:50;background:#293cc8;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#eef0ff;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#eef0ff;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#2032a6;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#2032a6;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block}.dd-links{display:none;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:flex}.dd-drop-menu{position:static;box-shadow:none}.dd-search{margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
+
 <main class="page">
 <div class="vi-landing">
   <header class="vi-hero">
-    <h1>Từ điển Anh–Việt offline miễn phí cho người học tiếng Anh</h1>
-    <p class="lede">Tra WordNet và Simple English Wiktionary trong một lần tìm — một chạm chuyển giữa các từ điển, hoặc bật từ điển Anh–Việt với 386.000 mục từ. Chạy ngay trong trình duyệt, dữ liệu lưu trên máy bạn.</p>
+    <h1>Tra từ trong ngữ cảnh. Học tiếp khi offline.</h1>
+    <p class="lede">Chạm vào từ trong bài đọc để tra nghĩa Anh–Việt. Lưu từ cùng câu gốc để ôn lại, luyện TOEIC hoặc IELTS, và tải bài học để học tiếp khi mất mạng.</p>
     <div class="vi-cta">
-      <a class="btn-primary" href="/" style="text-decoration:none">🚀 Mở từ điển ngay</a>
-      <a class="btn-secondary" href="/#about" style="text-decoration:none">Tính năng chi tiết</a>
+      <a class="btn-primary" href="/?lang=vi" style="text-decoration:none">Mở HọcTA</a>
+      <a class="btn-secondary" href="/lessons/" style="text-decoration:none">Xem bài học offline</a>
     </div>
-    <figure style="margin:var(--sp-4) auto 0;max-width:640px"><img src="/vi/images/hero-vi.jpg" alt="Giao diện Dual Dictionary tra từ offline trên điện thoại và laptop" width="640" height="640" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.08)"><figcaption style="font-size:12px;color:var(--text-2);margin-top:8px">Offline-first · PWA cài lên màn hình chính · Không quảng cáo</figcaption></figure>
+    <figure class="hero-example">
+      <blockquote lang="en">I try to <mark>make time</mark> to read every day.</blockquote>
+      <figcaption class="hero-definition"><a href="/?q=make%20time&amp;lang=vi" lang="en">make time</a> — sắp xếp thời gian</figcaption>
+    </figure>
   </header>
 
   <section class="vi-section">
-    <h2>Vì sao chọn Dual Dictionary</h2>
+    <h2>Vì sao chọn HọcTA</h2>
     <!-- v119: the free-vs-paid banner leads the section — the new features are
          exactly the ones paid tools put behind a subscription. -->
-    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: #0f766e; background: #f0fdfa;">
+    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: var(--accent);">
       <strong>💡 Những gì app trả phí tính subscription — ở đây miễn phí</strong>
       <p>Chỉ báo "độ phủ từ vựng" khi đọc (LingQ tính <strong>$14.99/tháng</strong> cho tính năng này — app của tôi đo miễn phí, hoàn toàn offline trên máy bạn). Xuất bộ thẻ <strong>.apkg</strong> chuẩn Anki một lần bấm (Readlang tính <strong>$6/tháng</strong>). Luyện <strong>điền từ vào chính câu bạn đã đọc</strong>, ôn theo lịch FSRS, Reader đa nguồn, từ điển .mdx của riêng bạn — không gói Premium, không tài khoản, không giới hạn.</p>
     </div>
-    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: #0f766e; background: #f0fdfa;">
+    <div class="vi-feature" style="grid-column: 1 / -1; border-width: 2px; border-color: var(--accent);">
       <strong>📚 Offline lesson pipeline — học tiếng Anh công sở nơi mạng chập chờn</strong>
-      <p>33 packs workplace + academic (~10KB/pack): chuẩn bị nơi có mạng, cài một lần rồi đọc, luyện, ôn hoàn toàn offline — không key, không tracking. <a href="/lessons/">Mở thư viện 33 packs →</a> · <a href="/#/practice">Lab IELTS/TOEIC offline →</a> · <a href="/vi/blog/en/">English summary →</a></p>
+      <p>33 packs workplace + academic (~10KB/pack): chuẩn bị nơi có mạng, cài một lần rồi đọc, luyện, ôn hoàn toàn offline — không key. <a href="/lessons/">Mở thư viện 33 packs →</a> · <a href="/#/practice">Lab IELTS/TOEIC offline →</a> · <a href="/vi/blog/en/">English summary →</a></p>
     </div>
     <div class="vi-features">
       <div class="vi-feature"><strong>📖 Nhiều từ điển, một chạm</strong><p>WordNet 3.1, Simple English Wiktionary, Anh–Việt: tra một lần, bấm tab để đổi nguồn — so nghĩa tức thì.</p></div>
@@ -180,7 +197,7 @@
       <div class="vi-feature"><strong>📊 Test trình độ 3 phút</strong><p>20 câu A2–C1 ngay trong app, <a href="/vi/test-trinh-do/">làm thử trên web</a> — xong app gợi gói học phù hợp.</p></div>
       <div class="vi-feature"><strong>🎤 Tìm bằng giọng nói</strong><p>Bấm mic ở ô tìm kiếm, nói từ tiếng Anh là tra luôn; nút “Say it” chấm phát âm của bạn.</p></div>
       <div class="vi-feature"><strong>🔗 Chia sẻ list từ</strong><p>Gửi link cho bạn bè — mở link là nhập cả list vào Vault, không tài khoản, không máy chủ.</p></div>
-      <div class="vi-feature"><strong>📤 Tra từ app khác</strong><p>Bôi đen từ ở bất kỳ app nào → Share → Dual Dictionary mở thẳng kết quả.</p></div>
+      <div class="vi-feature"><strong>📤 Tra từ app khác</strong><p>Bôi đen từ ở bất kỳ app nào → Share → HọcTA mở thẳng kết quả.</p></div>
       <div class="vi-feature"><strong>🗃️ Vault — sổ tay từ vựng</strong><p>Mọi từ, cụm từ, câu bạn lưu nằm gọn một chỗ: ghi chú, gắn nhãn, lọc và tìm lại dễ dàng.</p></div>
       <div class="vi-feature"><strong>🔁 Ôn tập (Review)</strong><p>Lặp lại ngắt quãng theo thuật toán FSRS — biết / quên / bỏ qua, nhớ lâu hơn. Bật thêm nhắc ôn local (tùy chọn) để không bỏ lỡ phiên ôn.</p></div>
       <div class="vi-feature"><strong>🎯 Luyện tập</strong><p>Biến từ đã lưu thành bài tập nhanh: điền từ còn thiếu, nghe &amp; gõ, trắc nghiệm, đọc to — biết / quên / bỏ qua.</p></div>
@@ -193,7 +210,7 @@
   </section>
 
   <section class="vi-section">
-    <h2>Học IELTS &amp; TOEIC với Dual Dictionary</h2>
+    <h2>Học IELTS &amp; TOEIC với HọcTA</h2>
     <p>Những ai ôn thi thường hỏi: một cái từ điển thì giúp được gì cho điểm số? Câu trả lời nằm ở thói quen hằng ngày, không nằm ở ngày thi. Bốn việc dưới đây là những gì người học làm được với app mỗi ngày, không tốn thêm một phút nào cho "việc phụ":</p>
     <ul class="vi-steps">
       <li><strong>Ôn từ không quên</strong> — mỗi từ bạn lưu đi vào hàng đợi Ôn tập chạy thuật toán FSRS: app tự nhắc đúng lúc bạn sắp quên, đỡ phải tự nhớ xem hôm nay nên ôn từ nào.</li>
@@ -202,6 +219,12 @@
       <li><strong>Luyện Writing Task 2 đúng giờ</strong> — Vault có mục Journal với đồng hồ 40 phút chuẩn Task 2 và đếm từ trực tiếp, viết xong bài nằm luôn trong sổ tay để đọc lại.</li>
     </ul>
     <p>Mọi thứ trên chạy trên chính thiết bị của bạn — kể cả khi không có mạng, kể cả khi app đã cài vào màn hình chính điện thoại. Không tài khoản, không quảng cáo, dữ liệu không đi đâu cả.</p>
+  </section>
+
+  <section class="vi-section">
+    <h2>Hỏi Gemini ngay trong lúc học</h2>
+    <p>Trong Reader, chọn một câu để hỏi thêm về nghĩa hoặc cách dùng. Khi luyện TOEIC, bạn có thể hỏi vì sao một đáp án sai, đặt câu hỏi tiếp và lưu lời giải để xem lại.</p>
+    <p>Chat và AI Tutor là tính năng tùy chọn, cần internet và Gemini API key của bạn. App cho xem nội dung sẽ gửi trước mỗi yêu cầu. <a href="/vi/huong-dan-gemini/">Xem cách thiết lập Gemini</a>.</p>
   </section>
 
   <section class="vi-section">
@@ -228,8 +251,8 @@
   </section>
 
   <section class="vi-section" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--sp-4);">
-    <h2 style="margin-top:0">Về tác giả — E-E-A-T</h2>
-    <p><strong>Nguyễn Quốc Anh</strong> — Senior Business Development tại TMA Solutions, người xây dựng Dual Dictionary để đồng nghiệp luyện TOEIC bớt khổ, nay mở cho cộng đồng học IELTS/TOEIC.</p>
+    <h2 style="margin-top:0">Về tác giả</h2>
+    <p><strong>Nguyễn Quốc Anh</strong> — Senior Business Development tại TMA Solutions, người xây dựng HọcTA để đồng nghiệp luyện TOEIC bớt khổ, nay mở cho cộng đồng học IELTS/TOEIC.</p>
     <p>Nguồn dữ liệu: <strong>OVDP</strong> (Open Vietnamese Dictionary Project, MIT) + WordNet 3.1 — mọi mục từ ghi rõ nguồn. Ghi chú sử dụng do tác giả biên soạn thủ công, có gắn <em>HAND-WRITTEN</em>, không dùng AI đại trà.</p>
     <p style="margin-bottom:0"><a href="/vi/gioi-thieu/">Giới thiệu chi tiết →</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung →</a> · Liên hệ: <a href="mailto:quocanh38@gmail.com">quocanh38@gmail.com</a> · <a href="https://www.linkedin.com/in/quocanh38/" target="_blank" rel="noopener">LinkedIn</a> · Cập nhật: 06/11/2026</p>
   </section>
@@ -237,15 +260,15 @@
   <section class="vi-section">
     <h2>Bắt đầu trong 3 bước</h2>
     <ol class="vi-steps">
-      <li><a href="/"><strong>Mở từ điển</strong></a> và bấm tải dữ liệu (khoảng 13 MB, một lần duy nhất).</li>
+      <li><a href="/?lang=vi"><strong>Mở từ điển</strong></a> và bấm tải dữ liệu (xem dung lượng trước khi tải).</li>
       <li>Bấm <strong>🇻🇳 Add English–Vietnamese dictionary</strong> nếu muốn tra nghĩa tiếng Việt.</li>
-      <li>Tra từ, đọc bài với Reader mode, lưu từ muốn nhớ — mọi thứ hoạt động offline sau đó.</li>
+      <li>Tra từ ngay trong bài đọc, lưu từ vào Vault và ôn khi cần. Tải bài học trước để học khi mất mạng.</li>
     </ol>
   </section>
 
   <section class="vi-section">
     <h2>Câu hỏi thường gặp</h2>
-    <p><strong>Có mất phí không?</strong> Miễn phí hoàn toàn — không tài khoản, không quảng cáo, không theo dõi. App phi thương mại.</p>
+    <p><strong>Có mất phí không?</strong> Tra từ, ôn tập và học với bài có sẵn đều miễn phí. Nếu dùng AI Tutor với khóa riêng, nhà cung cấp AI có thể tính phí.</p>
     <p><strong>Tra offline được không?</strong> Có — dữ liệu tải một lần về IndexedDB của trình duyệt, tra từ không cần mạng.</p>
     <p><strong>Tra được "ran", "stopped" không?</strong> Có — 386.600 dạng tra được gồm biến thể từ, nghĩa dẫn về nguyên mẫu bằng tiếng Việt.</p>
     <p><strong>Dùng file .mdx riêng được không?</strong> Được — mở ⚙ Advanced và nạp file vào panel bạn muốn.</p>
@@ -255,7 +278,7 @@
     <p><strong>Test trình độ ở đâu?</strong> <a href="/vi/test-trinh-do/">Làm quiz 20 câu 3 phút trên web</a> hoặc ngay trong app — xong app lưu level và gợi gói học phù hợp.</p>
     <p><strong>Tìm bằng giọng nói được không?</strong> Được — bấm 🎤 ở ô tìm kiếm, nói từ tiếng Anh là tra luôn (trình duyệt hỗ trợ; iOS có thể không).</p>
     <p><strong>Chia sẻ list từ cho bạn bè?</strong> Được — trong Export bấm “🔗 Share link”, gửi link; bạn mở link là nhập cả list vào Vault.</p>
-    <p><strong>Tra từ app khác (thay popup)?</strong> Được — bôi đen từ → Share → Dual Dictionary mở thẳng kết quả tra.</p>
+    <p><strong>Tra từ app khác (thay popup)?</strong> Được — bôi đen từ → Share → HọcTA mở thẳng kết quả tra.</p>
   </section>
 
   <section class="vi-section">
@@ -264,10 +287,11 @@
   </section>
 
   <div class="vi-cta-bottom">
-    <a class="btn-primary" href="/">🚀 Mở từ điển ngay — miễn phí</a>
+    <a class="btn-primary" href="/?lang=vi">Mở HọcTA — miễn phí</a>
     <p class="vi-note">Dữ liệu Anh–Việt: “Từ điển Anh–Việt” © Open Vietnamese Dictionary Project (catusf/tudien) — MIT license.</p>
   <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </div>
 </main>
+<p><a href="/vi/du-lieu-trai-nghiem/">Dữ liệu trải nghiệm</a></p>
 </body>
 </html>

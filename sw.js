@@ -166,21 +166,39 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v189-audit-fixes';
+const CACHE = 'mdx-dict-v230-merged-audit';
+const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
+const LEGACY_APP = './recover.html';
+const LEGACY_STUDIO = './lessons/recover.html';
 const ASSETS = [
   './',
   './index.html',
   './robots.txt',
   './NOTICE.md',
+  './css/style.css',
   './css/style.min.css',
+  './css/brand.css',
+  './js/section-switcher.js',
+  './assets/brand/BricolageGrotesque-Bold.ttf',
+  './assets/brand/CrimsonPro-Regular.ttf',
+  './assets/brand/mark-on-blue.png',
+  './favicon.ico',
   './js/mdict.js',
   './js/db.js',
   './js/fuzzy.js',
   './js/store.js',
   './js/fsrs-opt.js',
   './js/app.js',
+  './js/app-update.js',
+  './js/lookup-supplement.js',
+  './js/lookup-lemmas.js',
+  './data/lookup-supplement.json',
   './js/ai-client.js',
+  './js/gemini-policy.js',
   './js/offline-ai-lessons.js',
+  './js/toeic-ai-explanations.js',
+  './js/experience.js',
+  './js/experience-config.js',
   './js/tutor-validation.js',
   './js/tutor-prompts.js',
   './js/tutor-selection.js',
@@ -189,6 +207,7 @@ const ASSETS = [
   './js/assignment-engine.js',
   './js/study-content.js',
   './js/ielts-diagnostic-content.js',
+  './js/ielts-meta-practice.js',
   './assets/study/toeic-office-desk.svg',
   './assets/study/audio/toeic-part1-a.wav',
   './assets/study/audio/toeic-part1-b.wav',
@@ -252,7 +271,7 @@ const ASSETS = [
   './lessons/library/east-dock-refill-shop-stock-check.json',
   './lessons/library/student-podcast-interview-editing.json',
   './lessons/library/staggered-start-time-policy-rollout.json',
-  './lessons/studio.css',
+  './lessons/lesson-ui.css',
   './lessons/example.json',
   './js/epub.js',
   './js/pdf.js',
@@ -272,9 +291,9 @@ const ASSETS = [
   // bundled demo dictionary — precached so the test sample works offline
   './samples/sample.mdx',
   './samples/sample.mdd',
-  // Fallback dictionaries (wordnet31.mdx ~10.8 MB, simple-en.mdx ~2.2 MB) and
-  // ielts-meta-practice.js (~867 KB) are deliberately NOT precached so SW install
-  // stays ~2.4 MB on flaky mobile networks; they persist in IndexedDB / runtime cache on first use.
+  // free fallback dictionaries — used when the full dicts/ folder is absent
+  './samples/wordnet31.mdx',
+  './samples/simple-en.mdx',
   // The PDF engine (js/vendor/pdf.min.mjs + pdf.worker.min.mjs, ~1.3 MB) is
   // deliberately NOT precached. It is dynamically imported only when a PDF is
   // actually opened, and the runtime branch of the fetch handler below caches it
@@ -301,15 +320,8 @@ async function preserveToeicAudio() {
 }
 
 async function serveToeicAudio(request) {
-  const cache = await caches.open(TOEIC_AUDIO_CACHE);
-  const cached = await cache.match(request.url);
-  if (!cached) {
-    const resp = await fetch(request);
-    if (resp && resp.ok && resp.status === 200) {
-      cache.put(request.url, resp.clone()).catch(() => {});
-    }
-    return resp;
-  }
+  const cached = await (await caches.open(TOEIC_AUDIO_CACHE)).match(request.url);
+  if (!cached) return fetch(request);
   const range = request.headers.get('Range');
   if (!range) return cached;
   const bytes = await cached.arrayBuffer();
@@ -328,10 +340,30 @@ async function serveToeicAudio(request) {
   return new Response(null, {status: 416, headers: {'Content-Range': `bytes */${size}`}});
 }
 
-self.addEventListener('install', (e) => {
-  // Build the new offline shell from fresh responses before activating it.
-  const requests = ASSETS.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
-  e.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(requests)).then(() => self.skipWaiting()));
+function precacheAppShell() {
+  // addAll writes the replacement entries together after all requests succeed.
+  const assets = LEGACY_HOST
+    ? [...ASSETS.filter(path => !['./', './index.html', './lessons/', './lessons/index.html', './docs/', './docs/index.html', './docs/huong-dan-su-dung.html', './demo/tutor.html'].includes(path)), LEGACY_APP, LEGACY_STUDIO]
+    : ASSETS;
+  const requests = assets.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
+  return caches.open(CACHE).then(cache => cache.addAll(requests));
+}
+
+self.addEventListener('install', event => {
+  event.waitUntil(precacheAppShell().then(() => self.skipWaiting()));
+});
+
+let shellRefresh;
+self.addEventListener('message', event => {
+  if (event.data?.type === 'SKIP_WAITING') {
+    event.waitUntil(self.skipWaiting());
+  } else if (event.data?.type === 'REFRESH_APP_SHELL' && event.ports[0]) {
+    shellRefresh ||= precacheAppShell().finally(() => { shellRefresh = null; });
+    event.waitUntil(shellRefresh.then(
+      () => event.ports[0].postMessage({ok:true}),
+      () => event.ports[0].postMessage({ok:false}),
+    ));
+  }
 });
 
 self.addEventListener('activate', (e) => {
@@ -352,6 +384,9 @@ self.addEventListener('fetch', (e) => {
   const reqUrl = new URL(e.request.url);
   if (reqUrl.origin !== self.location.origin) return;
   const path = reqUrl.pathname;
+  if (path.startsWith('/.netlify/functions/')) return;
+  if (LEGACY_HOST && e.request.mode === 'navigate' &&
+      path !== '/recover.html' && path !== '/lessons/recover.html') return;
   if (TOEIC_AUDIO.test(path)) {
     e.respondWith(serveToeicAudio(e.request));
     return;
@@ -376,7 +411,7 @@ self.addEventListener('fetch', (e) => {
       }).catch(() => {
         // Offline fallback only for page navigations — never for assets like
         // css/js, where index.html would be parsed as garbage.
-        if (e.request.mode === 'navigate') return caches.match('./index.html');
+        if (e.request.mode === 'navigate') return caches.match(LEGACY_HOST ? LEGACY_APP : './index.html');
         return Response.error();
       })
     )
@@ -475,23 +510,22 @@ self.addEventListener('message', (e) => {
   const reply = (payload) => { if (e.ports && e.ports[0]) e.ports[0].postMessage(payload); };
   if (d.type === 'test:due-check') {
     e.waitUntil((async () => {
-      const origShow = self.registration.showNotification.bind(self.registration);
-      const origSet = self.registration.setAppBadge;
-      const origClear = self.registration.clearAppBadge;
       try {
         let shown = false, body = '';
+        const origShow = self.registration.showNotification.bind(self.registration);
         self.registration.showNotification = async (title, opts) => { shown = true; body = (opts && opts.body) || ''; };
         let badge = null;
+        const origSet = self.registration.setAppBadge;
         self.registration.setAppBadge = async (n) => { badge = n; };
+        const origClear = self.registration.clearAppBadge;
         self.registration.clearAppBadge = async () => { badge = 0; };
         await checkDueAndNotify();
-        reply({ notificationShown: shown, body, badgeValue: badge });
-      } catch (err) {
-        reply({ error: String(err).slice(0, 200) });
-      } finally {
         self.registration.showNotification = origShow;
         self.registration.setAppBadge = origSet;
         self.registration.clearAppBadge = origClear;
+        reply({ notificationShown: shown, body, badgeValue: badge });
+      } catch (err) {
+        reply({ error: String(err).slice(0, 200) });
       }
     })());
   } else if (d.type === 'test:clients-diag') {

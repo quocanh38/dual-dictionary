@@ -1,13 +1,13 @@
 {
-  "name": "Dual Dictionary — EN–VI & EN–EN",
-  "short_name": "Dual Dict",
-  "description": "Offline EN–VI & EN–EN dictionary (PWA): look up, save words/phrases/sentences with their context, then review and practise. Export to CSV/TSV/Anki. Your own .mdx/.mdd files, no account, no tracking.",
+  "name": "HọcTA — Học tiếng Anh",
+  "short_name": "HọcTA",
+  "description": "Tra từ Anh–Việt trong bài đọc, lưu từ để ôn, luyện TOEIC và IELTS, rồi học tiếp với các bài đã tải ngay cả khi mất mạng.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f4f5f7",
-  "theme_color": "#0f766e",
+  "background_color": "#FBF8EF",
+  "theme_color": "#293CC8",
   "icons": [
     {
       "src": "icons/icon-192.png",

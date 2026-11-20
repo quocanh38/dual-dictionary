@@ -10,7 +10,7 @@
  * Run: node tools/coverage-smoke.js [baseUrl]
  */
 const { chromium } = require('playwright-core');
-const BASE = (process.argv[2] || 'https://dualdictionary.netlify.app').replace(/\/$/, '');
+const BASE = (process.argv[2] || 'https://hocta.app').replace(/\/$/, '');
 
 const SAMPLE = ('The quick brown fox jumps over the lazy dog. '.repeat(6) +
   'She said that they would come back home when the rain stopped falling over the quiet town. ' +

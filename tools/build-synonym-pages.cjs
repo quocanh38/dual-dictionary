@@ -43,7 +43,7 @@ function pageHtml(p, wordHref) {
   let tldr = `“${p.word}” có ${p.synonyms.length} từ đồng nghĩa phổ biến nhất là ${p.synonyms.slice(0, 3).join(', ')}${p.antonyms.length ? `; trái nghĩa thường gặp: ${p.antonyms.slice(0, 3).join(', ')}` : '; từ này không có trái nghĩa trực tiếp'}. ${nu}`;
   if (wc(tldr) < 40) tldr += ` Xem chi tiết từng từ đồng nghĩa, ví dụ song ngữ và cách phân biệt sắc thái trong bài.`;
   if (wc(tldr) > 60) tldr = tldr.split(/\s+/).slice(0, 60).join(' ') + '…';
-  const desc = `${h1}${p.antonyms.length ? ' và trái nghĩa' : ''}: ${p.synonyms.slice(0, 4).join(', ')}. Phân biệt sắc thái + câu mẫu song ngữ EN–VI — Dual Dictionary.`.slice(0, 160);
+  const desc = `${h1}${p.antonyms.length ? ' và trái nghĩa' : ''}: ${p.synonyms.slice(0, 4).join(', ')}. Phân biệt sắc thái + câu mẫu song ngữ EN–VI — HọcTA.`.slice(0, 160);
   const robotsTag = p.noindex ? 'noindex, follow' : 'index, follow';
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -108,21 +108,21 @@ function pageHtml(p, wordHref) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${esc(h1)}${p.antonyms.length ? ' (kèm trái nghĩa)' : ''} | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${esc(h1)}${p.antonyms.length ? ' (kèm trái nghĩa)' : ''} | HọcTA</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="${robotsTag}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="https://dualdictionary.netlify.app/vi/images/og-default.jpg">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dual Dictionary — từ điển Anh-Việt offline-first">
+<meta property="og:image:alt" content="HọcTA — từ điển Anh-Việt offline-first">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
@@ -162,7 +162,7 @@ ${exRows}
   ${blogLinksHtml(`/vi/dong-nghia/${p.slug}/`)}
 <p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `;
@@ -228,16 +228,16 @@ function main() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f766e">
-<title>${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | Dual Dictionary</title>
+<meta name="theme-color" content="#293CC8">
+<title>${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | HọcTA</title>
 <meta name="description" content="${pairs.length} từ tiếng Anh kèm từ đồng nghĩa, trái nghĩa, phân biệt sắc thái và câu mẫu song ngữ.">
 <link rel="canonical" href="${SITE}/vi/dong-nghia/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Dual Dictionary">
+<meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${SITE}/vi/dong-nghia/">
-<meta property="og:title" content="${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | Dual Dictionary">
+<meta property="og:title" content="${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | HọcTA">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -252,13 +252,13 @@ ${navHtml('dong-nghia')}
   <p style="color:var(--muted)">Mỗi từ 1 trang riêng: list đồng nghĩa link về trang từ, trái nghĩa, phân biệt sắc thái, câu mẫu song ngữ EN–VI. Tra không dấu vẫn ra đúng từ.</p>
   ${hubListHtml(rows.split('\n'), {cols:2})}
 </main>
-<footer class="blog-footer"><p><a href="/vi/">Dual Dictionary</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
+<footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
 </html>
 `);
   const LM = new Date().toISOString().slice(0, 10);
   const indexable = pairs.filter((p) => !p.noindex);
-  const urls = [`https://dualdictionary.netlify.app/vi/dong-nghia/`, ...indexable.map((p) => `https://dualdictionary.netlify.app/vi/dong-nghia/${p.word}/`)];
+  const urls = [`https://hocta.app/vi/dong-nghia/`, ...indexable.map((p) => `https://hocta.app/vi/dong-nghia/${p.word}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'synonyms.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n')}\n</urlset>\n`);
   console.log(`SYNONYMS: ${pairs.length} pages + hub + sitemap (manifest-guard dead: ${deadLinks})`);

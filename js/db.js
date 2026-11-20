@@ -77,6 +77,27 @@ export async function getStudyRecord(id) {
   });
 }
 
+export async function updateStudyRecord(id, update) {
+  const db = await openDb();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('study', 'readwrite');
+    const store = tx.objectStore('study');
+    const request = store.get(id);
+    let record;
+    request.onsuccess = () => {
+      try {
+        record = update(request.result || null);
+        store.put(record);
+      } catch (error) {
+        reject(error);
+        tx.abort();
+      }
+    };
+    tx.oncomplete = () => { db.close(); resolve(record); };
+    tx.onabort = () => { db.close(); reject(tx.error); };
+  });
+}
+
 export async function allStudyRecords() {
   const db = await openDb();
   return new Promise((resolve, reject) => {

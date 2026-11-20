@@ -2,7 +2,7 @@
 
 > Positioning: not "another dictionary app", not a generic English OS.
 > **The only web app where your own .mdx/.mdd library IS the OS.**
-> Read → tap → look up in *your* dictionaries → save the original sentence → remember forever. Offline-first, no account, no tracking.
+> Read → tap → look up in *your* dictionaries → save the original sentence → remember forever. Offline-first, no account.
 
 ## Why MDX-first (the moat)
 
@@ -17,7 +17,7 @@ offline-first on the web. Every phase below keeps MDX at the center.
 - **Offline-first**: after one-time load, everything works without network.
 - **Data ownership**: dictionaries, saved words, progress live in the user's
   IndexedDB. Export/import file replaces cloud sync.
-- **No account, no tracking, non-commercial.**
+- **No account, non-commercial.**
 - **AI, if ever**: bring-your-own API key, called directly from the user's
   browser, key stored only locally — never a server-side proxy.
 

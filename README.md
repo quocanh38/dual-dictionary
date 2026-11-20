@@ -1,11 +1,11 @@
 > **1 November 2026:** [main demo](https://youtu.be/6r8nJDiZr5E) published Unlisted; contest submission verified at 09:39 Vietnam. v160 critical syntax fix is live; physical-phone proof remains a pending supplement. [P0 record](docs/hackathon-submission/P0-PUBLISH-SUBMIT-2026-11-01.md).
 
-# Dual Dictionary — Offline Lesson Pipeline
+# HọcTA — Học tiếng Anh song ngữ
 
-Turn a permitted reading into a reviewed bilingual lesson pack, then learn workplace English where the network drops — no API key.
+HọcTA helps Vietnamese speakers look up English in context, save and review vocabulary, practise for exams and study downloaded lessons offline. Lesson Studio turns permitted readings into reviewed bilingual lesson packs. Learners can use downloaded packs without an API key.
 
-- [Live Studio](https://dualdictionary.netlify.app/lessons/)
-- [Live dictionary and Vault](https://dualdictionary.netlify.app/)
+- [Live Studio](https://hocta.app/lessons/)
+- [Live dictionary and Vault](https://hocta.app/)
 - [Hackathon dossier](docs/hackathon-submission/README.md)
 - [Offline pipeline narrative](docs/hackathon-submission/OFFLINE-PIPELINE-2026-10-31.md)
 - [Pre-event foundation and new hackathon work](NEW-WORK.md)
