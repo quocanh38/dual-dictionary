@@ -435,6 +435,18 @@ async function boot() {
   $('#btn-fsrs-reset')?.addEventListener('click', resetFsrsWeightsUi);
   $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); checkTtsVoiceStatus(); $('#advanced-dialog').showModal(); });
   $('#btn-test-tts')?.addEventListener('click', testTtsVoice);
+  $('#pt-2min')?.addEventListener('click', () => {
+    if (Array.isArray(state?.items) && state.items.length >= 3) { $('#practice-saved')?.click(); }
+    else { startCurriculumPractice('ngsl2'); }
+    $('#practice-stage')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  $('#pt-5min')?.addEventListener('click', () => {
+    const lab = document.getElementById('offline-exam-lab');
+    if (lab) { lab.open = true; lab.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+  $('#pt-10min')?.addEventListener('click', () => {
+    $('#toeic-timed-reading')?.click();
+  });
   let quickloadButtonRun;
   $('#btn-quickload')?.addEventListener('click', event => {
     if (loadAbort) {
@@ -3503,6 +3515,13 @@ function readerRender(text, source, sourceUrl) {
   pane.innerHTML = '';
   pane.classList.remove('hidden');
   readerJourney?.step('reading');
+  try {
+    const cleanText = String(text || '').trim();
+    if (cleanText.length >= 40) {
+      const label = (source && source !== 'shared' && source !== 'pasted' ? String(source) : cleanText.slice(0, 34)).trim();
+      localStorage.setItem('dd-last-reader', JSON.stringify({ title: label.slice(0, 42), text: cleanText.slice(0, 12000), at: Date.now() }));
+    }
+  } catch (e) {}
   if (wrap) wrap.classList.add('hidden');
   $('#btn-reader-start').textContent = '📖 Re-edit text';
   // v74: the pace clock starts AFTER the pane is visible — its first tick stops
@@ -6656,6 +6675,14 @@ function dueItems() {
   return state.items.filter((i) => i.due <= now && i.userData.status !== 'known');
 }
 
+function startQuickReview(limit = 5) {
+  const urgent = dueItems().sort((a, b) => a.due - b.due).slice(0, Math.max(1, limit));
+  reviewQueueIds = urgent.map((i) => i.id);
+  reviewTotal = reviewQueueIds.length;
+  navigate('review');
+  renderReview();
+}
+
 function renderReview() {
   const list = $('#review-list');
   if (!list) return;
@@ -6674,11 +6701,44 @@ function renderReview() {
     const done = Math.max(0, reviewTotal - queue.length);
     count.textContent = reviewTotal ? `${done}/${reviewTotal} done · ${queue.length} left` : '';
   }
+  const prevTrim = typeof document !== 'undefined' ? document.getElementById('btn-review-quick5') : null;
+  if (prevTrim) prevTrim.remove();
+  if (typeof document !== 'undefined' && queue.length > 10 && count && count.parentNode) {
+    const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+    const q5 = document.createElement('button');
+    q5.type = 'button';
+    q5.id = 'btn-review-quick5';
+    q5.className = 'daily-chip';
+    q5.textContent = isVi ? '⚡ Chỉ ôn 5 thẻ (~1 phút)' : '⚡ Quick 5 cards (~1m)';
+    q5.addEventListener('click', () => startQuickReview(5));
+    count.parentNode.appendChild(q5);
+  }
   list.innerHTML = '';
   if (!queue.length) {
     if (!reviewTotal) reviewJourney?.step('empty');
     const msg = $('#review-empty-msg');
     if (msg) msg.textContent = i18n('review.emptyTitle');
+    if (typeof document !== 'undefined' && empty) {
+      let hint = document.getElementById('review-tomorrow-hint');
+      if (!hint) {
+        hint = document.createElement('p');
+        hint.id = 'review-tomorrow-hint';
+        hint.className = 'hint';
+        empty.appendChild(hint);
+      }
+      if (reviewTotal > 0) {
+        const now = Date.now();
+        const tomorrowDue = state.items.filter((i) => i.userData.status !== 'known' && i.due > now && i.due <= now + 86400000).length;
+        const estMin = Math.max(1, Math.ceil(tomorrowDue / 4));
+        const { streak } = typeof practiceStreakInfo === 'function' ? practiceStreakInfo() : { streak: 0 };
+        const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+        hint.textContent = isVi
+          ? `✓ Xong ${reviewTotal} thẻ! Ngày mai bạn chỉ còn ${tomorrowDue} thẻ (~${estMin} phút) để giữ chuỗi 🔥 ${streak} ngày.`
+          : `✓ Finished ${reviewTotal} card${reviewTotal === 1 ? '' : 's'}! Tomorrow: only ${tomorrowDue} card${tomorrowDue === 1 ? '' : 's'} (~${estMin}m) to keep your 🔥 ${streak}-day streak.`;
+      } else {
+        hint.textContent = '';
+      }
+    }
     empty?.classList.remove('hidden');
     return;
   }
@@ -8973,19 +9033,35 @@ async function renderWotd() {
   const canNudgeRemind = doneToday && typeof remindersOn === 'function' && !remindersOn()
     && 'Notification' in window && Notification.permission === 'default';
 
+  let lastReader = null;
+  try {
+    const lr = JSON.parse(localStorage.getItem('dd-last-reader') || 'null');
+    if (lr && lr.text && Date.now() - (lr.at || 0) < 7 * 86400000) lastReader = lr;
+  } catch (e) {}
+  const resumeChip = lastReader
+    ? '<button type="button" id="daily-resume-reader" class="daily-chip">▶ ' +
+        (isVi ? 'Đọc tiếp: ' : 'Resume: ') + escapeHtml(String(lastReader.title || '').slice(0, 22)) +
+      '</button>'
+    : '';
+
   let primaryAction = '';
   if (due > 0) {
     primaryAction =
       '<a href="#/review" id="daily-review-cta" class="daily-cta">🔁 ' +
         (isVi ? `Ôn ${due} thẻ (~${estMin} phút)` : `Review ${due} due (~${estMin}m)`) +
       '</a>' +
-      '<button type="button" id="wotd-lookup-chip" class="daily-chip">📅 ' + escapeHtml(w.word) + (w.ipa ? ' /' + escapeHtml(w.ipa) + '/' : '') + '</button>';
+      (due > 10
+        ? '<button type="button" id="daily-quick5-cta" class="daily-chip">⚡ ' + (isVi ? 'Ôn nhanh 5 thẻ' : 'Quick 5 cards') + '</button>'
+        : '') +
+      '<button type="button" id="wotd-lookup-chip" class="daily-chip">📅 ' + escapeHtml(w.word) + (w.ipa ? ' /' + escapeHtml(w.ipa) + '/' : '') + '</button>' +
+      resumeChip;
   } else if (doneToday) {
     primaryAction =
       '<span class="daily-chip" style="border-color:var(--brand-green);color:var(--brand-green)">✓ ' +
         (isVi ? 'Xong mục tiêu hôm nay!' : 'Daily goal complete!') +
       '</span>' +
       '<button type="button" id="wotd-lookup-chip" class="daily-chip">📅 ' + escapeHtml(w.word) + '</button>' +
+      resumeChip +
       (canNudgeRemind
         ? '<button type="button" id="daily-enable-remind" class="daily-chip">🔔 ' + (isVi ? 'Nhắc ôn mỗi ngày' : 'Daily reminder') + '</button>'
         : '');
@@ -8994,7 +9070,8 @@ async function renderWotd() {
       '<button type="button" id="wotd-lookup-chip" class="daily-cta">📅 ' +
         (isVi ? 'Từ hôm nay: ' : 'Word of day: ') + escapeHtml(w.word) +
       '</button>' +
-      '<button type="button" id="wotd-practice" class="daily-chip">⚡ ' + (isVi ? 'Luyện nhanh' : 'Quick practice') + '</button>';
+      '<button type="button" id="wotd-practice" class="daily-chip">⚡ ' + (isVi ? 'Luyện nhanh' : 'Quick practice') + '</button>' +
+      resumeChip;
   }
 
   el.innerHTML =
@@ -9010,6 +9087,15 @@ async function renderWotd() {
       '<div class="daily-progress-track" aria-hidden="true"><div class="daily-progress-fill' + (doneToday ? ' done' : '') + '" style="width:' + pct + '%"></div></div>' +
       '<div class="daily-focus-actions">' + primaryAction + '</div>' +
     '</div>';
+
+  document.getElementById('daily-quick5-cta')?.addEventListener('click', () => startQuickReview(5));
+  document.getElementById('daily-resume-reader')?.addEventListener('click', () => {
+    if (!lastReader) return;
+    navigate('reader');
+    const ta = $('#reader-input');
+    if (ta) ta.value = lastReader.text;
+    try { readerRender(lastReader.text, lastReader.title || 'resumed'); } catch (e) {}
+  });
 
   document.getElementById('btn-daily-goal')?.addEventListener('click', () => {
     const next = cycleDailyGoal();
