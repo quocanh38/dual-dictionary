@@ -1,11 +1,45 @@
 // BYO-key tutor adapters. Keys stay in this browser profile and are sent only
 // to the provider selected by the learner when they explicitly request AI.
-import { GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL, GEMINI_MODELS, isValidGeminiModelId, fetchGeminiWithFallback } from './gemini-policy.js';
+import { GEMINI_DEFAULT_MODEL, GEMINI_LIGHT_MODEL, GEMINI_MODELS, isValidGeminiModelId, listGeminiModels, fetchGeminiWithFallback } from './gemini-policy.js';
+export { listGeminiModels };
 
 const KEY = 'dd-ai-settings-v2';
+const USAGE_KEY = 'dd-ai-usage-v1';
 export const PROVIDERS = {
   gemini: { label: 'Gemini', baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai', model: GEMINI_DEFAULT_MODEL, protocol: 'openai' },
 };
+function todayIso() { return new Date().toISOString().slice(0, 10); }
+export function getAiUsageSummary() {
+  const today = todayIso();
+  try {
+    const raw = JSON.parse(localStorage.getItem(USAGE_KEY) || 'null');
+    if (!raw || typeof raw !== 'object') return { day: today, todayCalls: 0, todayTokens: 0, totalCalls: 0, totalTokens: 0 };
+    const sameDay = raw.day === today;
+    return {
+      day: today,
+      todayCalls: sameDay ? Number(raw.todayCalls) || 0 : 0,
+      todayTokens: sameDay ? Number(raw.todayTokens) || 0 : 0,
+      totalCalls: Number(raw.totalCalls) || 0,
+      totalTokens: Number(raw.totalTokens) || 0,
+    };
+  } catch { return { day: today, todayCalls: 0, todayTokens: 0, totalCalls: 0, totalTokens: 0 }; }
+}
+export function resetAiUsage() {
+  try { localStorage.removeItem(USAGE_KEY); } catch {}
+}
+function recordAiUsage(tokens) {
+  try {
+    const cur = getAiUsageSummary();
+    const t = Number.isFinite(tokens) && tokens > 0 ? Math.round(tokens) : 0;
+    localStorage.setItem(USAGE_KEY, JSON.stringify({
+      day: cur.day,
+      todayCalls: cur.todayCalls + 1,
+      todayTokens: cur.todayTokens + t,
+      totalCalls: cur.totalCalls + 1,
+      totalTokens: cur.totalTokens + t,
+    }));
+  } catch {}
+}
 function pickGeminiModel(candidate, fallback = GEMINI_DEFAULT_MODEL) {
   const trimmed = typeof candidate === 'string' ? candidate.trim() : '';
   if (trimmed && trimmed !== 'gemini-3.6-flash' && isValidGeminiModelId(trimmed)) return trimmed;
@@ -103,6 +137,8 @@ export async function askTutor({ instructions, input, signal, model, onModel, ti
   }, body, signal, timeoutMs, undefined, onModel);
   const content = data?.choices?.[0]?.message?.content;
   if (typeof content !== 'string') throw new Error('Provider returned an unexpected response.');
+  const estTokens = data?.usage?.total_tokens ?? Math.ceil((String(instructions).length + String(input).length + content.length) / 4);
+  recordAiUsage(estTokens);
   const cleaned = content.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
   try { return JSON.parse(cleaned); } catch { throw new Error('Tutor response was not valid JSON. Please retry.'); }
 }
@@ -111,7 +147,7 @@ export async function streamTutor({ instructions, input, signal, model, onText, 
   const settings = getAiSettings();
   if (!settings.apiKey) throw new Error('Hãy nhập Gemini API key trong Cài đặt → Học tập.');
   const chosenModel = pickGeminiModel(model, settings.model || GEMINI_LIGHT_MODEL);
-  return request(`${settings.baseUrl}/chat/completions`, {
+  const out = await request(`${settings.baseUrl}/chat/completions`, {
     Authorization: `Bearer ${settings.apiKey}`, 'Content-Type': 'application/json',
   }, {
     model: chosenModel,
@@ -157,4 +193,6 @@ export async function streamTutor({ instructions, input, signal, model, onText, 
       reader.releaseLock();
     }
   }, onModel);
+  recordAiUsage(Math.ceil((String(instructions).length + String(input).length + String(out || '').length) / 4));
+  return out;
 }

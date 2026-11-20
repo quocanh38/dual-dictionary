@@ -6,7 +6,7 @@ import { openContextChat, openLearningChatHistory } from "./toeic-ai-explanation
 import { MDict } from './mdict.js';
 import { loadLookupSupplement, supplementEntry, lookupPage, renderSupplement } from './lookup-supplement.js';
 import { openDb, putFile, getFile, delFile, putReview, allReviews, putTutorRecord, getTutorRecord, allTutorRecords, deleteTutorRecord, clearTutorRecords } from './db.js';
-import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS, validateGeminiKey } from './ai-client.js';
+import { askTutor, getAiSettings, saveAiSettings, clearAiSettings, PROVIDERS, validateGeminiKey, getAiUsageSummary, listGeminiModels } from './ai-client.js';
 import { validateTutorPhrases, validateTutorFeedback, validateTutorSituation } from './tutor-validation.js';
 import { TUTOR_PHRASE_INSTRUCTIONS, TUTOR_FEEDBACK_INSTRUCTIONS, TUTOR_SITUATION_INSTRUCTIONS, makeTutorSituationPayload } from './tutor-prompts.js';
 import { rankTutorPhrases } from './tutor-selection.js';
@@ -42,7 +42,7 @@ import {
 } from './store.js';
 import { parseEpub } from './epub.js';
 import { parsePdf } from './pdf.js';
-import { openAiLessonBuilder, openSavedAiLessons } from './offline-ai-lessons.js';
+import { openAiLessonBuilder, openSavedAiLessons, openVaultStoryBuilder } from './offline-ai-lessons.js';
 let _offlineStudyPromise = null;
 let _offlineStudyInited = false;
 function loadOfflineStudy() {
@@ -4268,6 +4268,15 @@ function renderTutorFeedback() {
   if(tutorSession.feedbackDecision) s.append(tutorButton('Revise this answer','revise-answer'),tutorButton('Try another situation','retry-answer'));
   s.append(tutorButton('Back to phrase choices','back-choices'));
 }
+function renderAiUsageSummary() {
+  const el = document.getElementById('ai-usage-summary');
+  if (!el) return;
+  const u = getAiUsageSummary();
+  const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+  el.textContent = isVi
+    ? `Lượt gọi Gemini trên máy này — Hôm nay: ${u.todayCalls} lượt (~${u.todayTokens.toLocaleString()} token) · Tổng: ${u.totalCalls} lượt`
+    : `Local Gemini usage — Today: ${u.todayCalls} calls (~${u.todayTokens.toLocaleString()} tokens) · Total: ${u.totalCalls} calls`;
+}
 function populateTutorSettings() {
   const settings = getAiSettings();
   for (const [id, value] of Object.entries({'ai-api-key':settings.apiKey})) {
@@ -4275,16 +4284,38 @@ function populateTutorSettings() {
   }
   const remember=document.getElementById('ai-remember-key'); if(remember) remember.checked=settings.rememberKey;
   populateGeminiModelSelect($('#ai-model'), settings.model);
+  renderAiUsageSummary();
 }
 async function saveTutorSettings() {
-  try { const settings=saveAiSettings({apiKey:$('#ai-api-key').value,rememberKey:$('#ai-remember-key').checked,model:$('#ai-model').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings for ${settings.rememberKey ? 'this device' : 'this tab'}.`; return true; }
+  try { const settings=saveAiSettings({apiKey:$('#ai-api-key').value,rememberKey:$('#ai-remember-key').checked,model:$('#ai-model').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings for ${settings.rememberKey ? 'this device' : 'this tab'}.`; renderAiUsageSummary(); return true; }
   catch(error) { $('#ai-settings-status').textContent=error.message; return false; }
 }
 async function testTutorConnection() {
   const button=$('#btn-ai-test');
   if (button.disabled) return;
   button.disabled=true;
-  try { if(!await saveTutorSettings()) return; $('#ai-settings-status').textContent='Checking Gemini model access…'; const model=await validateGeminiKey(); $('#ai-settings-status').textContent='Access confirmed for '+model+'. No text was generated.'; }
+  try {
+    if(!await saveTutorSettings()) return;
+    $('#ai-settings-status').textContent='Checking Gemini model access…';
+    const model=await validateGeminiKey();
+    const available = await listGeminiModels(getAiSettings().apiKey).catch(() => []);
+    const sel = $('#ai-model');
+    if (sel && available.length) {
+      const existing = new Set([...sel.options].map((o) => o.value));
+      for (const id of available) {
+        if (!existing.has(id)) {
+          const opt = document.createElement('option');
+          opt.value = id;
+          opt.textContent = id;
+          sel.append(opt);
+        }
+      }
+      sel.value = model;
+    }
+    const extraNote = available.length ? ` (${available.length} models available)` : '';
+    $('#ai-settings-status').textContent='Access confirmed for '+model+extraNote+'. No text was generated.';
+    renderAiUsageSummary();
+  }
   catch(error) { $('#ai-settings-status').textContent=error.message; }
   finally { button.disabled=false; }
 }
@@ -6104,6 +6135,26 @@ function wireVault() {
     reviewQueueIds = [...vaultSelected];
     vaultSelected.clear();
     navigate('review');
+  });
+  $('#btn-vault-story')?.addEventListener('click', () => {
+    const pool = (state.items || [])
+      .filter((i) => i && (i.type === 'word' || i.type === 'phrase') && i.userData?.status !== 'known')
+      .sort((a, b) => {
+        const la = a.userData?.tags?.includes('review-later') ? 1 : 0;
+        const lb = b.userData?.tags?.includes('review-later') ? 1 : 0;
+        if (lb !== la) return lb - la;
+        return (b.fsrs?.d || 5) - (a.fsrs?.d || 5);
+      });
+    const words = pool.slice(0, 8).map((i) => i.text);
+    openVaultStoryBuilder({
+      words,
+      onOpenInReader: (title, passage) => {
+        const inp = $('#reader-input');
+        if (inp) inp.value = (title ? title + '\n\n' : '') + passage;
+        navigate('reader');
+        try { openReader(); } catch {}
+      },
+    });
   });
   $('#btn-vault-tag')?.addEventListener('click', batchAddTag);
   $('#btn-vault-known')?.addEventListener('click', batchMarkKnown);

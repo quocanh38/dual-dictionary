@@ -562,7 +562,7 @@
         <button type="button" id="btn-vault-delete" class="btn-secondary btn-danger" disabled data-i18n="vault.delete">Delete</button>
       </span>
     </div>
-    <p><button type="button" class="btn-secondary" data-ai-lesson="vault">Tạo bài luyện từ Sổ tay · Gemini</button> <button type="button" class="btn-secondary" data-saved-ai-lessons>Bài luyện offline</button></p>
+    <p><button type="button" class="btn-secondary" data-ai-lesson="vault">Tạo bài luyện từ Sổ tay · Gemini</button> <button type="button" id="btn-vault-story" class="btn-secondary">✨ Tạo bài đọc từ hay quên</button> <button type="button" class="btn-secondary" data-saved-ai-lessons>Bài luyện offline</button></p>
 <div id="vault-list"></div>
     <div id="vault-empty" class="empty-state hidden">
       <p><strong data-i18n="vault.emptyTitle">Your Vault is empty</strong></p>
@@ -1165,6 +1165,7 @@
       <button type="button" id="btn-ai-clear-cache" class="btn-secondary">Clear cached AI phrase suggestions</button>
     </div>
     <button type="button" id="btn-tutor-clear-data" class="btn-secondary btn-danger">Delete tutor data from this browser</button>
+    <p id="ai-usage-summary" class="hint"></p>
     <p id="ai-settings-status" class="hint" role="status" aria-live="polite"></p></div>
   </details>
   <details class="adv-section">
