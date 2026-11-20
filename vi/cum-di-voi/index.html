@@ -26,7 +26,7 @@
 <div class="dd-links">
 <div class="dd-mobile-sections" aria-label="Các khu vực HọcTA"><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></div>
 <a href="/vi/tu/">Từ điển</a>
-<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-current="page" class="dd-nav-on">Từ vựng ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-current="page" class="dd-nav-on" aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Từ vựng ▾</button>
 <div class="dd-drop-menu">
 <a href="/vi/chu-de/">Chủ đề</a>
 <a href="/vi/phan-biet/">Phân biệt</a>
@@ -37,7 +37,7 @@
 <a href="/vi/cum-di-voi/" aria-current="page" class="dd-nav-on">Cụm đi với</a>
 </div></div>
 <a href="/vi/blog/">Blog</a>
-<div class="dd-drop"><button type="button" class="dd-drop-btn">Công cụ ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Công cụ ▾</button>
 <div class="dd-drop-menu">
 <a href="/vi/test-trinh-do/">📊 Test trình độ</a>
 <a href="/vi/luyen-shadowing/">🎤 Luyện phát âm</a>
@@ -49,7 +49,7 @@
 <a href="/vi/cambridge/">Cambridge Papers</a>
 <a href="/vi/ngu-phap/">Ngữ pháp</a>
 </div></div>
-<div class="dd-drop"><button type="button" class="dd-drop-btn">Về chúng tôi ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Về chúng tôi ▾</button>
 <div class="dd-drop-menu">
 <a href="/vi/gioi-thieu/">Giới thiệu</a>
 <a href="/vi/tac-gia/">✍️ Tác giả</a>

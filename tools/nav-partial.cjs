@@ -11,7 +11,7 @@ function navHtml(active) {
 <div class="dd-links">
 <div class="dd-mobile-sections" aria-label="Các khu vực HọcTA"><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></div>
 <a href="/vi/tu/"${on('tu')}>Từ điển</a>
-<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['chu-de','phan-biet','dong-nghia','phat-am','loi-sai','gioi-tu','cum-di-voi'])}>Từ vựng ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['chu-de','phan-biet','dong-nghia','phat-am','loi-sai','gioi-tu','cum-di-voi'])} aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Từ vựng ▾</button>
 <div class="dd-drop-menu">
 <a href="/vi/chu-de/"${on('chu-de')}>Chủ đề</a>
 <a href="/vi/phan-biet/"${on('phan-biet')}>Phân biệt</a>
@@ -22,7 +22,7 @@ function navHtml(active) {
 <a href="/vi/cum-di-voi/"${on('cum-di-voi')}>Cụm đi với</a>
 </div></div>
 <a href="/vi/blog/"${on('blog')}>Blog</a>
-<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['test','shadowing','lo-trinh','trinh-do','luyen-thi','toeic','ielts','cambridge','ngu-phap'])}>Công cụ ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['test','shadowing','lo-trinh','trinh-do','luyen-thi','toeic','ielts','cambridge','ngu-phap'])} aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Công cụ ▾</button>
 <div class="dd-drop-menu">
 <a href="/vi/test-trinh-do/"${on('test')}>📊 Test trình độ</a>
 <a href="/vi/luyen-shadowing/"${on('shadowing')}>🎤 Luyện phát âm</a>
@@ -34,7 +34,7 @@ function navHtml(active) {
 <a href="/vi/cambridge/"${on('cambridge')}>Cambridge Papers</a>
 <a href="/vi/ngu-phap/"${on('ngu-phap')}>Ngữ pháp</a>
 </div></div>
-<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['gioi-thieu','tac-gia','cap-nhat'])}>Về chúng tôi ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['gioi-thieu','tac-gia','cap-nhat'])} aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Về chúng tôi ▾</button>
 <div class="dd-drop-menu">
 <a href="/vi/gioi-thieu/"${on('gioi-thieu')}>Giới thiệu</a>
 <a href="/vi/tac-gia/"${on('tac-gia')}>✍️ Tác giả</a>

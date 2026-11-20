@@ -310,6 +310,12 @@ nav.dd-nav .dd-mobile-sections {
   }
   nav.dd-nav .dd-drop:hover .dd-drop-menu,
   nav.dd-nav .dd-drop:focus-within .dd-drop-menu {
+    display: none;
+  }
+  nav.dd-nav .dd-drop.open > .dd-drop-btn {
+    background: rgba(255, 255, 255, .18);
+  }
+  nav.dd-nav .dd-drop.open .dd-drop-menu {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 4px;
