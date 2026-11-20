@@ -37,7 +37,22 @@ import {
 import { parseEpub } from './epub.js';
 import { parsePdf } from './pdf.js';
 import { openAiLessonBuilder, openSavedAiLessons } from './offline-ai-lessons.js';
-import { initOfflineStudy, exportOfflineStudy, importOfflineStudy } from './offline-study.js';
+let _offlineStudyPromise = null;
+let _offlineStudyInited = false;
+function loadOfflineStudy() {
+  if (!_offlineStudyPromise) _offlineStudyPromise = import('./offline-study.js');
+  return _offlineStudyPromise;
+}
+async function ensureOfflineStudy(onSaveWord) {
+  const mod = await loadOfflineStudy();
+  if (!_offlineStudyInited) {
+    _offlineStudyInited = true;
+    mod.initOfflineStudy(onSaveWord);
+  }
+  return mod;
+}
+async function exportOfflineStudy() { return (await loadOfflineStudy()).exportOfflineStudy(); }
+async function importOfflineStudy(data) { return (await loadOfflineStudy()).importOfflineStudy(data); }
 
 const SLOTS = {
   // Slot keys are historical (oxford/longman) — the LABELS below must name the
@@ -52,7 +67,7 @@ const SLOTS = {
 const state = {
   dicts: { oxford: null, longman: null }, // {mdx, mdd, cssCache, blobUrls}
   loading: { oxford: false, longman: false }, // a download is currently in progress for this slot
-  history: JSON.parse(localStorage.getItem('history') || '[]'),
+  history: (() => { try { const h = JSON.parse(localStorage.getItem('history') || '[]'); return Array.isArray(h) ? h : []; } catch { return []; } })(),
   // Phase 3 Release A: saved words + sentences are LearningItems in IndexedDB
   // (js/store.js) — loaded at boot. localStorage vocab/sentences keys remain
   // untouched as the pre-migration rollback copy.
@@ -2348,26 +2363,26 @@ async function renderSlot(slot, word) {
       showDidYouMean(slot, word);
       return false;
     }
-/** Exact-phrase priority: MDX StripKey merges spaces/hyphens/punctuation, so
- *  `take off` also matches `take-off` and the noun `takeoff`. Keep every hit
- *  (no data hidden) but render the exact spelling first and label merged
- *  variants, so phrasal-verb senses are not buried in noun/technical senses. */
-function rankExactPhraseHits(word, hits) {
-  const q = String(word || '').trim().toLowerCase();
-  const normSpace = (k) => String(k || '').trim().toLowerCase().replace(/\s+/g, ' ');
-  const normSpaceDash = (k) => normSpace(k).replace(/[\-‐‑‒–—]/g, ' ').replace(/\s+/g, ' ').trim();
-  const normStrip = (k) => normSpace(k).replace(/[\s\-.,:;!?'"()\[\]{}\/\\]/g, '');
-  const scored = hits.map((h, i) => {
-    const k = h.keyText || '';
-    let rank = 3;
-    if (normSpace(k) === q) rank = 0;
-    else if (normSpaceDash(k) === normSpaceDash(q)) rank = 1;
-    else if (normStrip(k) === normStrip(q)) rank = 2;
-    return { h, i, rank };
-  });
-  scored.sort((a, b) => (a.rank - b.rank) || (a.i - b.i));
-  return scored;
-}
+    /** Exact-phrase priority: MDX StripKey merges spaces/hyphens/punctuation, so
+     *  `take off` also matches `take-off` and the noun `takeoff`. Keep every hit
+     *  (no data hidden) but render the exact spelling first and label merged
+     *  variants, so phrasal-verb senses are not buried in noun/technical senses. */
+    function rankExactPhraseHits(word, hits) {
+      const q = String(word || '').trim().toLowerCase();
+      const normSpace = (k) => String(k || '').trim().toLowerCase().replace(/\s+/g, ' ');
+      const normSpaceDash = (k) => normSpace(k).replace(/[\-‐‑‒–—]/g, ' ').replace(/\s+/g, ' ').trim();
+      const normStrip = (k) => normSpace(k).replace(/[\s\-.,:;!?'"()\[\]{}\/\\]/g, '');
+      const scored = hits.map((h, i) => {
+        const k = h.keyText || '';
+        let rank = 3;
+        if (normSpace(k) === q) rank = 0;
+        else if (normSpaceDash(k) === normSpaceDash(q)) rank = 1;
+        else if (normStrip(k) === normStrip(q)) rank = 2;
+        return { h, i, rank };
+      });
+      scored.sort((a, b) => (a.rank - b.rank) || (a.i - b.i));
+      return scored;
+    }
     const ranked = rankExactPhraseHits(resolvedKey, hits);
     latestLookupEntries.bySlot[slot] = ranked.map(({ h }) => ({
       slot,
@@ -2769,12 +2784,13 @@ async function buildEntryDoc(d, html, opts) {
   const parsed = new DOMParser().parseFromString(html, 'text/html');
   // MDX content is UNTRUSTED (dictol-style): strip executable & embed vectors;
   // the iframe sandbox + CSP are the real boundary, this is defense in depth.
-  parsed.querySelectorAll('script, iframe, object, embed, link[rel="import"], base').forEach((el) => el.remove());
+  parsed.querySelectorAll('script, iframe, object, embed, link[rel="import"], base, meta[http-equiv="refresh"]').forEach((el) => el.remove());
   for (const el of parsed.querySelectorAll('*')) {
     for (const attr of [...el.attributes]) {
       const n = attr.name.toLowerCase();
-      const v = attr.value.trim().toLowerCase();
-      if (n.startsWith('on') || (n === 'href' && v.startsWith('javascript:')) || n === 'srcdoc') {
+      const v = attr.value.replace(/[\x00-\x20]+/g, '').toLowerCase();
+      const urlAttr = n === 'href' || n === 'xlink:href' || n === 'src' || n === 'action' || n === 'formaction';
+      if (n.startsWith('on') || n === 'srcdoc' || (urlAttr && (v.startsWith('javascript:') || v.startsWith('vbscript:') || v.startsWith('data:text/html')))) {
         el.removeAttribute(attr.name);
       }
     }
@@ -4796,8 +4812,17 @@ const LEVEL_QS = [
   ["punctual","đúng giờ","trễ nãi","vội vàng","thong thả",0,"B1"]
 ];
 let levelAnswers = null;
+let levelOptionOrder = null;
 function startLevelTest() {
   levelAnswers = new Array(LEVEL_QS.length).fill(-1);
+  levelOptionOrder = LEVEL_QS.map(() => {
+    const ord = [0, 1, 2, 3];
+    for (let i = ord.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [ord[i], ord[j]] = [ord[j], ord[i]];
+    }
+    return ord;
+  });
   practiceQueue = [];
   practiceIndex = 0;
   navigate('practice');
@@ -4807,16 +4832,19 @@ function renderLevelTest() {
   if (!stage) return;
   const empty = document.getElementById('practice-empty');
   empty && empty.classList.add('hidden');
-  let h = '<div class="practice-card"><p class="practice-prompt">Test trình độ (20 câu, ~3 phút)</p>';
+  const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+  let h = '<div class="practice-card"><p class="practice-prompt">' + (isVi ? 'Test trình độ (20 câu, ~3 phút)' : 'Vocabulary level test (20 questions, ~3 min)') + '</p>';
   LEVEL_QS.forEach((q, i) => {
-    h += '<p style="margin:10px 0 4px"><strong>Câu ' + (i + 1) + ' [' + q[6] + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
-    for (let k = 1; k <= 4; k++) {
-      const sel = levelAnswers[i] === k - 1;
-      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + (k - 1) + '" style="' + (sel ? 'border-color:#0f766e;background:#ecfdf5' : '') + '">' + escapeHtml(q[k]) + '</button> ';
+    const ord = (levelOptionOrder && levelOptionOrder[i]) || [0, 1, 2, 3];
+    h += '<p style="margin:10px 0 4px"><strong>' + (isVi ? 'Câu ' : 'Q') + (i + 1) + ' [' + escapeHtml(q[6]) + ']: ' + escapeHtml(q[0]) + '</strong></p><div>';
+    for (let pos = 0; pos < ord.length; pos++) {
+      const origIdx = ord[pos];
+      const sel = levelAnswers[i] === origIdx;
+      h += '<button type="button" class="btn-secondary" data-q="' + i + '" data-k="' + origIdx + '" style="' + (sel ? 'border-color:#0f766e;background:#ecfdf5' : '') + '">' + escapeHtml(q[origIdx + 1]) + '</button> ';
     }
     h += '</div>';
   });
-  h += '<p style="margin-top:12px"><button type="button" class="btn-primary" id="level-finish">Xem kết quả</button></p><div id="level-res"></div></div>';
+  h += '<p style="margin-top:12px"><button type="button" class="btn-primary" id="level-finish">' + (isVi ? 'Xem kết quả' : 'See result') + '</button></p><div id="level-res"></div></div>';
   stage.innerHTML = h;
   stage.querySelectorAll('[data-q]').forEach((b) => b.addEventListener('click', () => {
     levelAnswers[+b.dataset.q] = +b.dataset.k;
@@ -4828,9 +4856,10 @@ function renderLevelTest() {
     const lv = score >= 17 ? 'C1' : score >= 12 ? 'B2' : score >= 7 ? 'B1' : 'A2';
     try { localStorage.setItem('dd-level', lv); } catch (e) {}
     const deck = { A2: 'ngsl1', B1: 'ngsl2', B2: 'ielts', C1: 'awl' }[lv];
-    document.getElementById('level-res').innerHTML = '<p class="practice-prompt">Kết quả: ' + score + '/20 — trình độ ' + lv + '</p><p><button type="button" class="btn-primary" id="level-go">Học ngay gói ' + deck.toUpperCase() + ' →</button></p>';
+    document.getElementById('level-res').innerHTML = '<p class="practice-prompt">' + (isVi ? 'Kết quả: ' + score + '/20 — trình độ ' + lv : 'Score: ' + score + '/20 — level ' + lv) + '</p><p><button type="button" class="btn-primary" id="level-go">' + (isVi ? 'Học ngay gói ' : 'Start pack ') + deck.toUpperCase() + ' →</button></p>';
     document.getElementById('level-go').addEventListener('click', () => {
       levelAnswers = null;
+      levelOptionOrder = null;
       startCurriculumPractice(deck);
     });
   });
@@ -5948,10 +5977,20 @@ function wireVault() {
   });
   document.addEventListener('review-saved-item', (event) => reviewSavedItem(event.detail));
   document.addEventListener('review-saved-items', (event) => reviewSavedItems(event.detail));
-  initOfflineStudy(async (value) => {
+  const bootOfflineStudy = () => ensureOfflineStudy(async (value) => {
     const word = value.trim();
     if (!word) return;
     await openSenseSaveDialog(word);
+  }).catch(() => {});
+  if (location.hash.includes('practice') || location.hash.includes('study') || location.hash.includes('exam')) {
+    bootOfflineStudy();
+  } else if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(bootOfflineStudy, { timeout: 2500 });
+  } else {
+    setTimeout(bootOfflineStudy, 800);
+  }
+  window.addEventListener('hashchange', () => {
+    if (location.hash.includes('practice') || location.hash.includes('study') || location.hash.includes('exam')) bootOfflineStudy();
   });
   $('#btn-vault-select-all')?.addEventListener('click', () => {
     const list = vaultFiltered();
@@ -8480,13 +8519,14 @@ async function renderWotd() {
   if (!el) return;
   const w = await wordOfDay();
   const streak = practiceDayStreak();
-  el.innerHTML = '<strong>📅 Từ hôm nay: ' + escapeHtml(w.word) + '</strong>' +
+  const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+  el.innerHTML = '<strong>📅 ' + (isVi ? 'Từ hôm nay: ' : 'Word of the day: ') + escapeHtml(w.word) + '</strong>' +
     (w.ipa ? ' <span class="hint">/' + escapeHtml(w.ipa) + '/</span>' : '') +
     (w.gloss ? '<br><span>' + escapeHtml(w.gloss.slice(0, 80)) + '</span>' : '') +
-    '<br><span class="hint">🔥 Streak ' + streak + ' ngày · ' +
-    '<a href="#" id="wotd-practice">Luyện ngay</a> · ' +
-    '<a href="#" id="wotd-quiz">Quiz Vault</a> · ' +
-    '<a href="#" id="wotd-level">Test trình độ</a></span>';
+    '<br><span class="hint">🔥 ' + (isVi ? 'Streak ' + streak + ' ngày' : streak + '-day streak') + ' · ' +
+    '<a href="#" id="wotd-practice">' + (isVi ? 'Luyện ngay' : 'Practice now') + '</a> · ' +
+    '<a href="#" id="wotd-quiz">' + (isVi ? 'Quiz Vault' : 'Vault quiz') + '</a> · ' +
+    '<a href="#" id="wotd-level">' + (isVi ? 'Test trình độ' : 'Level test') + '</a></span>';
   const p1 = document.getElementById('wotd-practice');
   if (p1) p1.addEventListener('click', (e) => { e.preventDefault(); startCurriculumPractice('ngsl2'); navigate('practice'); });
   const p2 = document.getElementById('wotd-quiz');
@@ -8538,9 +8578,12 @@ async function encryptString(plain, pass) {
 }
 /** Iteration count to use for a container: the value stored in the file when it
  *  has one, otherwise the historical 150000 for legacy (v1 / pre-iter) files. */
+const PBKDF2_ITER_MIN = 100000;
+const PBKDF2_ITER_MAX = 5000000;
 function containerIterations(o) {
   const n = parseInt(o && o.iter, 10);
-  return Number.isFinite(n) && n > 0 ? n : PBKDF2_ITER_LEGACY;
+  if (!Number.isFinite(n) || n <= 0) return PBKDF2_ITER_LEGACY;
+  return Math.min(Math.max(n, PBKDF2_ITER_MIN), PBKDF2_ITER_MAX);
 }
 async function decryptString(wrap, pass, iterations) {
   const o = (typeof wrap === 'string') ? JSON.parse(wrap) : wrap;

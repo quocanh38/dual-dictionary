@@ -166,13 +166,12 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v188-practice-doc-links';
+const CACHE = 'mdx-dict-v189-audit-fixes';
 const ASSETS = [
   './',
   './index.html',
   './robots.txt',
   './NOTICE.md',
-  './css/style.css',
   './css/style.min.css',
   './js/mdict.js',
   './js/db.js',
@@ -190,7 +189,6 @@ const ASSETS = [
   './js/assignment-engine.js',
   './js/study-content.js',
   './js/ielts-diagnostic-content.js',
-  './js/ielts-meta-practice.js',
   './assets/study/toeic-office-desk.svg',
   './assets/study/audio/toeic-part1-a.wav',
   './assets/study/audio/toeic-part1-b.wav',
@@ -274,9 +272,9 @@ const ASSETS = [
   // bundled demo dictionary — precached so the test sample works offline
   './samples/sample.mdx',
   './samples/sample.mdd',
-  // free fallback dictionaries — used when the full dicts/ folder is absent
-  './samples/wordnet31.mdx',
-  './samples/simple-en.mdx',
+  // Fallback dictionaries (wordnet31.mdx ~10.8 MB, simple-en.mdx ~2.2 MB) and
+  // ielts-meta-practice.js (~867 KB) are deliberately NOT precached so SW install
+  // stays ~2.4 MB on flaky mobile networks; they persist in IndexedDB / runtime cache on first use.
   // The PDF engine (js/vendor/pdf.min.mjs + pdf.worker.min.mjs, ~1.3 MB) is
   // deliberately NOT precached. It is dynamically imported only when a PDF is
   // actually opened, and the runtime branch of the fetch handler below caches it
@@ -303,8 +301,15 @@ async function preserveToeicAudio() {
 }
 
 async function serveToeicAudio(request) {
-  const cached = await (await caches.open(TOEIC_AUDIO_CACHE)).match(request.url);
-  if (!cached) return fetch(request);
+  const cache = await caches.open(TOEIC_AUDIO_CACHE);
+  const cached = await cache.match(request.url);
+  if (!cached) {
+    const resp = await fetch(request);
+    if (resp && resp.ok && resp.status === 200) {
+      cache.put(request.url, resp.clone()).catch(() => {});
+    }
+    return resp;
+  }
   const range = request.headers.get('Range');
   if (!range) return cached;
   const bytes = await cached.arrayBuffer();
@@ -344,8 +349,10 @@ self.addEventListener('fetch', (e) => {
   // Never cache the bundled dictionary files (multi-GB) — they go straight to
   // IndexedDB on load and would blow up the Cache Storage quota otherwise.
   // remote-config.json is optional (private deployments only) — never cache it.
-  const path = new URL(e.request.url).pathname;
-  if (new URL(e.request.url).origin === self.location.origin && TOEIC_AUDIO.test(path)) {
+  const reqUrl = new URL(e.request.url);
+  if (reqUrl.origin !== self.location.origin) return;
+  const path = reqUrl.pathname;
+  if (TOEIC_AUDIO.test(path)) {
     e.respondWith(serveToeicAudio(e.request));
     return;
   }
@@ -468,22 +475,23 @@ self.addEventListener('message', (e) => {
   const reply = (payload) => { if (e.ports && e.ports[0]) e.ports[0].postMessage(payload); };
   if (d.type === 'test:due-check') {
     e.waitUntil((async () => {
+      const origShow = self.registration.showNotification.bind(self.registration);
+      const origSet = self.registration.setAppBadge;
+      const origClear = self.registration.clearAppBadge;
       try {
         let shown = false, body = '';
-        const origShow = self.registration.showNotification.bind(self.registration);
         self.registration.showNotification = async (title, opts) => { shown = true; body = (opts && opts.body) || ''; };
         let badge = null;
-        const origSet = self.registration.setAppBadge;
         self.registration.setAppBadge = async (n) => { badge = n; };
-        const origClear = self.registration.clearAppBadge;
         self.registration.clearAppBadge = async () => { badge = 0; };
         await checkDueAndNotify();
-        self.registration.showNotification = origShow;
-        self.registration.setAppBadge = origSet;
-        self.registration.clearAppBadge = origClear;
         reply({ notificationShown: shown, body, badgeValue: badge });
       } catch (err) {
         reply({ error: String(err).slice(0, 200) });
+      } finally {
+        self.registration.showNotification = origShow;
+        self.registration.setAppBadge = origSet;
+        self.registration.clearAppBadge = origClear;
       }
     })());
   } else if (d.type === 'test:clients-diag') {

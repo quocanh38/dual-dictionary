@@ -10,7 +10,7 @@ const worker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
 
 const cacheVersion = worker.match(/const CACHE\s*=\s*'([^']+)'/);
 assert.ok(cacheVersion, 'service worker must declare one cache version');
-assert.match(cacheVersion[1], /^mdx-dict-v\d+$/);
+assert.match(cacheVersion[1], /^mdx-dict-v\d+(?:-|$)/);
 
 const assetsBlock = worker.match(/const ASSETS\s*=\s*\[([\s\S]*?)\n\];/);
 assert.ok(assetsBlock, 'service worker must declare its precache asset list');
@@ -31,7 +31,7 @@ for (const relative of required) {
 
 assert.match(
   readinessBlock[1],
-  /\.filter\(name\s*=>\s*\/\^mdx-dict-v\\d\+\$\/\.test\(name\)\)/,
+  /\.filter\(name\s*=>\s*\/\^mdx-dict-v\\d\+\(\?:-|\$\)\/\.test\(name\)\)|\.filter\(name\s*=>\s*\/\^mdx-dict-v\\d\+\(\?:-\|\$\)\/\.test\(name\)\)/,
   'Lesson Studio must discover a versioned shell cache instead of pinning a cache name',
 );
 

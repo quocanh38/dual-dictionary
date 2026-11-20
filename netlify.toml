@@ -1,7 +1,2 @@
-[[redirects]]
-  from = "/vi/tu/*"
-  to = "/vi/tu/"
-  status = 404
-
 [build]
   publish = "."

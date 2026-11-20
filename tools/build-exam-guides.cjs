@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Exam guides by test format: /vi/luyen-thi/{slug}/ x18 + hub index
  * + regenerate toeic-situations sitemap section (gop vao guides.xml).
  * Data: data/exam-guides.json {guides:[{slug,name,intro,words[],phrases[],deck}]} — all slugs verified.
@@ -115,7 +116,7 @@ function guidePageHtml(t, ipa) {
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('luyen-thi')}

@@ -7,7 +7,7 @@ import {
   validatePhotoInput, validatePhotoDataUrl,
   buildVisionRequest, previewVisionRequest, parseVisionResult, sendVisionRequest,
 } from '../../lessons/photo-request.js';
-import { providerForPurpose, META_MODEL_API_PROVIDER } from '../../lessons/provider.js';
+import { providerForPurpose, GEMINI_PROVIDER } from '../../lessons/provider.js';
 
 const results = [];
 async function test(name, fn) { await fn(); results.push({ name, status: 'PASS' }); console.log('PASS ' + name); }
@@ -28,12 +28,12 @@ await test('photo data URL must be valid and within send budget', async () => {
 });
 
 await test('vision request exposes purpose, instructions and model before consent', async () => {
-  const req = buildVisionRequest({ dataUrl: 'data:image/jpeg;base64,/9j/4AAQ', model: 'muse-spark-1.3' });
+  const req = buildVisionRequest({ dataUrl: 'data:image/jpeg;base64,/9j/4AAQ', model: GEMINI_PROVIDER.model });
   assert.equal(req.purpose, PHOTO_PURPOSE);
-  assert.equal(PHOTO_PROVIDER_ID, 'meta-model-api');
+  assert.equal(PHOTO_PROVIDER_ID, 'gemini');
   assert.ok(req.instructions.includes('untrusted lesson data'));
   assert.ok(req.instructions.includes('JSON only'));
-  assert.equal(req.model, 'muse-spark-1.3');
+  assert.equal(req.model, GEMINI_PROVIDER.model);
   assert.throws(() => buildVisionRequest({ dataUrl: 'data:image/jpeg;base64,/9j/4AAQ', model: ' ' }), /model ID/i);
   const preview = previewVisionRequest(req, 16);
   assert.ok(preview.input.imageDataUrl.includes('chars, sent in full'));
@@ -47,13 +47,13 @@ await test('vision result needs 100+ legible characters, never invented text', a
   }
 });
 
-await test('photo-extract routes to Meta Model API like repair', async () => {
-  assert.equal(providerForPurpose(PHOTO_PURPOSE).id, META_MODEL_API_PROVIDER.id);
-  assert.equal(providerForPurpose('repair-exercises').id, META_MODEL_API_PROVIDER.id);
+await test('photo-extract routes to Gemini API like repair', async () => {
+  assert.equal(providerForPurpose(PHOTO_PURPOSE).id, GEMINI_PROVIDER.id);
+  assert.equal(providerForPurpose('repair-exercises').id, GEMINI_PROVIDER.id);
 });
 
 await test('vision sender needs a key before any network', async () => {
-  await assert.rejects(() => sendVisionRequest({ baseUrl: 'https://api.meta.ai/v1', model: 'muse-spark-1.3', key: '', request: { purpose: PHOTO_PURPOSE } }), /key/i);
+  await assert.rejects(() => sendVisionRequest({ baseUrl: GEMINI_PROVIDER.baseUrl, model: GEMINI_PROVIDER.model, key: '', request: { purpose: PHOTO_PURPOSE } }), /key/i);
 });
 
 console.log(`${results.length} photo-request contract groups PASS`);

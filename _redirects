@@ -1,3 +1,12 @@
+# Block internal tooling, repo metadata, and handoff docs from public hosting
+/tools/*  /404.html  404!
+/package.json  /404.html  404!
+/package-lock.json  /404.html  404!
+/pnpm-lock.yaml  /404.html  404!
+/ROADMAP.md  /404.html  404!
+/NEW-WORK.md  /404.html  404!
+/HANDOFF-*.md  /404.html  404!
+
 # 404 safety net (owner-approved 02/11): guessed-but-never-built /vi/tu/* URLs
 # serve the dictionary hub content with a 404 status (no soft-404 for SEO).
 # Existing files always win (no force flag) — real pages are unaffected.

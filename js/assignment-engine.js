@@ -62,7 +62,7 @@ function buildSkillStats(records, stage, exercises, writingPrompts, speakingProm
   const promptIds = new Set([...writingPrompts, ...speakingPrompts].map((item) => item.id));
   const measures = [];
   for (const row of records) {
-    if (!row || isDiagnostic(row) || row.exam && row.exam !== "IELTS Academic") continue;
+    if (!row || isDiagnostic(row) || (row.exam && !String(row.exam).startsWith("IELTS Academic"))) continue;
     if (row.pathwayStage && row.pathwayStage !== stage) continue;
     if (row.type === "exam-attempt" && itemIds.has(row.questionId)) {
       measures.push({ skill: row.skill, score: row.correct ? 1 : 0, createdAt: row.createdAt || 0 });

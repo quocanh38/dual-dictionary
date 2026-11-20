@@ -4,7 +4,6 @@
 // through storage.js, and fills the source textarea for normal review.
 (function () {
   'use strict';
-  var booted = false;
   function el(tag, text) {
     var e = document.createElement(tag);
     if (text !== undefined) e.textContent = text;
@@ -12,17 +11,17 @@
   }
   function metaConfig() {
     var keyInput = document.querySelector('#studio-gemini-key');
-    
     return {
       tabKey: keyInput ? keyInput.value : '',
       model: document.querySelector('#studio-gemini-model')?.value,
     };
   }
+  function isStudioView() {
+    return location.hash === '#studio' && !!document.querySelector('#source-article');
+  }
   async function mount() {
-    if (booted) return;
     var app = document.querySelector('#app');
-    if (!app) return;
-    booted = true;
+    if (!app || !isStudioView() || app.querySelector('#photo-author')) return;
     var box = el('section');
     box.id = 'photo-author';
     box.append(el('h2', 'Experimental: photograph a printed notice'));
@@ -92,6 +91,7 @@
             status.textContent = 'Sending to Gemini API…';
             var store = await import('./storage.js');
             var rows = await store.listRecords('usage');
+            if (rows.length >= 20) throw Error('Recorded request limit reached.');
             var usageId = crypto.randomUUID();
             var cfg2 = metaConfig();
             if (!cfg2.tabKey || !cfg2.tabKey.trim()) throw Error('Add your Gemini API key in Studio first. It stays in tab memory.');
@@ -129,7 +129,8 @@
     });
   }
   new MutationObserver(function () {
-    if (document.querySelector('#app') && !booted) mount();
+    if (isStudioView() && !document.querySelector('#photo-author')) mount();
   }).observe(document.body, { childList: true, subtree: true });
+  window.addEventListener('hashchange', mount);
   mount();
 })();

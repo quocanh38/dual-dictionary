@@ -61,12 +61,24 @@ export async function parseEpub(buf) {
   const tEl = opf.getElementsByTagName('dc:title')[0] || opf.getElementsByTagName('title')[0];
   const title = tEl ? tEl.textContent.trim() : '';
 
+  const resolvePath = (baseDir, rel) => {
+    let decoded = rel;
+    try { decoded = decodeURIComponent(rel); } catch { /* keep raw */ }
+    const parts = (baseDir + decoded).split('/');
+    const stack = [];
+    for (const part of parts) {
+      if (!part || part === '.') continue;
+      if (part === '..') stack.pop();
+      else stack.push(part);
+    }
+    return stack.join('/');
+  };
   const items = {};
   for (const it of opf.getElementsByTagName('item')) items[it.getAttribute('id')] = it.getAttribute('href');
   const hrefs = [];
   for (const ir of opf.getElementsByTagName('itemref')) {
     const h = items[ir.getAttribute('idref')];
-    if (h) hrefs.push(base + h);
+    if (h) hrefs.push(resolvePath(base, h));
   }
 
   let text = '';
@@ -75,7 +87,9 @@ export async function parseEpub(buf) {
     if (!b) continue;
     const doc = new DOMParser().parseFromString(new TextDecoder().decode(b), 'text/html');
     for (const bad of doc.querySelectorAll('script,style,head')) bad.remove();
-    const paras = [...doc.querySelectorAll('p,h1,h2,h3,h4,h5,li,blockquote,dd,figcaption,div')]
+    const BLOCK_SEL = 'p,h1,h2,h3,h4,h5,li,blockquote,dd,figcaption';
+    const paras = [...doc.querySelectorAll(`${BLOCK_SEL},div`)]
+      .filter((el) => el.tagName !== 'DIV' || !el.querySelector(BLOCK_SEL))
       .map((el) => el.textContent.replace(/\s+/g, ' ').trim())
       .filter((s) => s.length > 1);
     const body = paras.length ? paras.join('\n') : (doc.body ? doc.body.textContent.replace(/\s+/g, ' ').trim() : '');

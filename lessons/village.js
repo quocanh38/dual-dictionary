@@ -19,12 +19,14 @@
   }
   function decorateCatalogue() {
     var host = document.querySelector('#app');
-    if (!host || host.dataset.pipelineDecorated) return;
+    if (!host || host.querySelector('#pipeline-search')) return;
     var h2s = host.querySelectorAll('h2');
     var found = false;
-    h2s.forEach(function (h) { if (h.textContent.indexOf('Reviewed lesson library') !== -1) found = true; });
+    h2s.forEach(function (h) {
+      if (h.textContent.indexOf('Choose a lesson') !== -1 || h.textContent.indexOf('Reviewed lesson library') !== -1) found = true;
+    });
     if (!found) return;
-    host.dataset.pipelineDecorated = '1';
+    var cardSelector = host.querySelector('.lesson-grid') ? '.lesson-grid > section' : ':scope > section';
     // 1) offline search box (client-side filter, no network)
     var label = document.createElement('label');
     label.textContent = 'Search lessons (offline filter)';
@@ -34,11 +36,12 @@
     input.type = 'search';
     input.placeholder = 'e.g. handover, B2, academic…';
     input.autocomplete = 'off';
-    host.insertBefore(input, host.children[2] || null);
+    var anchor = host.querySelector('.lesson-catalogue') || host.children[2] || null;
+    host.insertBefore(input, anchor);
     host.insertBefore(label, input);
     input.addEventListener('input', function () {
       var q = input.value.trim().toLowerCase();
-      host.querySelectorAll(':scope > section').forEach(function (s) {
+      host.querySelectorAll(cardSelector).forEach(function (s) {
         var t = (s.textContent || '').toLowerCase();
         s.style.display = (!q || t.indexOf(q) !== -1) ? '' : 'none';
       });
@@ -48,7 +51,7 @@
     Promise.all([fetch('./library/index.json').then(function (r) { return r.json(); }), fetch('./library/covers.json').then(function (r) { return r.ok ? r.json() : null; })]).then(function (pair) {
       var index = pair[0], doc = pair[1];
       if (!index || !index.packs || !doc || !doc.covers) return;
-      var sections = host.querySelectorAll(':scope > section');
+      var sections = host.querySelectorAll(cardSelector);
       index.packs.forEach(function (entry, i) {
         var c = doc.covers[entry.file];
         var s = sections[i];
@@ -66,9 +69,9 @@
         s.insertBefore(cap, s.children[1] || null);
       });
     }).catch(function () {});
-    // 2) per-pack Meta provenance line (one small JSON fetch, cached)
+    // 2) per-pack provenance line (one small JSON fetch, cached)
     provMap().then(function (m) {
-      host.querySelectorAll(':scope > section').forEach(function (s) {
+      host.querySelectorAll(cardSelector).forEach(function (s) {
         var btn = s.querySelector('button');
         var title = (s.querySelector('h3') || {}).textContent || '';
         var key = Object.keys(m).find(function (k) { return m[k].title === title; });

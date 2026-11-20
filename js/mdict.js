@@ -352,12 +352,33 @@ export class MDict {
       else lo = mid + 1;
     }
     if (hit === -1) return [];
-    const entries = await this._getKeyBlock(hit);
+    // Expand to adjacent blocks if duplicate/normalized keys span block boundaries
+    let startBlock = hit;
+    while (startBlock > 0) {
+      const prev = await this._blockFirstLast(startBlock - 1);
+      if (this.normKey(prev.last) === target) startBlock--;
+      else break;
+    }
+    let endBlock = hit;
+    while (endBlock + 1 < this.keyInfoList.length) {
+      const next = await this._blockFirstLast(endBlock + 1);
+      if (this.normKey(next.first) === target) endBlock++;
+      else break;
+    }
     const res = [];
-    for (let i = 0; i < entries.length; i++) {
-      if (this.normKey(entries[i].key) === target) {
-        entries[i].end = i + 1 < entries.length ? entries[i + 1].offset : undefined;
-        res.push(entries[i]);
+    for (let bi = startBlock; bi <= endBlock; bi++) {
+      const entries = await this._getKeyBlock(bi);
+      for (let i = 0; i < entries.length; i++) {
+        if (this.normKey(entries[i].key) === target) {
+          let end;
+          if (i + 1 < entries.length) {
+            end = entries[i + 1].offset;
+          } else if (bi + 1 < this.keyInfoList.length) {
+            const nextEntries = await this._getKeyBlock(bi + 1);
+            end = nextEntries[0]?.offset;
+          }
+          res.push({ ...entries[i], end });
+        }
       }
     }
     return res;

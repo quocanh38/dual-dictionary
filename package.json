@@ -1,6 +1,15 @@
 {
-	"devDependencies": {
-		"playwright-core": "1.62.1",
-		"sharp": "^0.35.5"
-	}
+  "scripts": {
+    "test": "npm run test:app && npm run test:lessons",
+    "test:app": "node tools/fuzzy-test.cjs && node tools/review-regression.cjs",
+    "test:lessons": "node tools/lessons/batch-input-check.mjs && node tools/lessons/budget-check.mjs && node tools/lessons/check.mjs && node tools/lessons/covers-check.mjs && node tools/lessons/draft-file-check.mjs && node tools/lessons/library-check.mjs && node tools/lessons/offline-shell-contract-check.mjs && node tools/lessons/photo-request-check.mjs && node tools/lessons/product-evaluation-check.mjs && node tools/lessons/provider-routing-check.mjs && node tools/lessons/quality-gate-check.mjs && node tools/lessons/repair-preflight-check.mjs && node tools/lessons/storage-open-check.mjs",
+    "qa:links": "node tools/local-qa.cjs link-check",
+    "qa:titles": "node tools/title-audit.cjs",
+    "qa:covers": "node tools/cover-qa.cjs",
+    "build:sitemaps": "node tools/sitemap-maint.cjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.62.1",
+    "sharp": "^0.35.5"
+  }
 }

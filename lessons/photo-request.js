@@ -107,14 +107,21 @@ export async function sendVisionRequest({ baseUrl, model, key, request, maxOutpu
     const data = await response.json().catch(() => { throw Error('Provider returned a non-JSON response.'); });
     const text = data?.choices?.[0]?.message?.content;
     if (typeof text !== 'string' || !text.trim()) throw Error('Provider returned an empty response.');
+    const cleaned = text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
     let parsed;
-    try { parsed = JSON.parse(text); }
+    try { parsed = JSON.parse(cleaned); }
     catch { throw Error('Provider did not return JSON. Nothing was filled into your draft.'); }
+    const rawUsage = data?.usage;
+    const usage = rawUsage && typeof rawUsage === 'object' ? {
+      inputTokens: rawUsage.inputTokens ?? rawUsage.prompt_tokens ?? null,
+      outputTokens: rawUsage.outputTokens ?? rawUsage.completion_tokens ?? null,
+      totalTokens: rawUsage.totalTokens ?? rawUsage.total_tokens ?? null,
+    } : null;
     return {
       providerId: PHOTO_PROVIDER_ID,
       model,
       status,
-      usage: data?.usage ?? null,
+      usage,
       latencyMs: Date.now() - started,
       result: parsed,
     };

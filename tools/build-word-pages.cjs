@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Word page generator for Dual Dictionary (batch 1: top 2,000 frequent words).
  *
  * Mirrors the DOL Dictionary idea: every headword gets its own static,
@@ -45,10 +46,13 @@ function behaviorLinksHtml(word){
   try {
     const tg = require('../data/exam-tags.json').words || {};
     const t = tg[w];
-    if (t && t.cefr) links.push(`<a class="related-chip" href="/vi/trinh-do/${String(t.cefr).toLowerCase()}/">\u0001F4CA Từ vựng ${t.cefr} →</a>`);
+    if (t && t.cefr) {
+      const cefr = String(t.cefr);
+      links.push(`<a class="related-chip" href="/vi/trinh-do/${encodeURIComponent(cefr.toLowerCase())}/">\u{1F4CA} Từ vựng ${escapeHtml(cefr)} →</a>`);
+    }
   } catch (e) {}
-  if(PHAT_SET.has(w)) links.push(`<a class="related-chip" href="/vi/phat-am/${w}/">🔊 Phát âm "${w}" →</a>`);
-  if(DONG_SET.has(w)) links.push(`<a class="related-chip" href="/vi/dong-nghia/${w}/">📚 Đồng nghĩa "${w}" →</a>`);
+  if(PHAT_SET.has(w)) links.push(`<a class="related-chip" href="/vi/phat-am/${encodeURIComponent(w)}/">🔊 Phát âm "${escapeHtml(w)}" →</a>`);
+  if(DONG_SET.has(w)) links.push(`<a class="related-chip" href="/vi/dong-nghia/${encodeURIComponent(w)}/">📚 Đồng nghĩa "${escapeHtml(w)}" →</a>`);
   if(!links.length) return '';
   return `<section class="related"><h2>Mở rộng</h2><div class="related-list">${links.join('')}</div></section>`;
 }
@@ -1079,7 +1083,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
 <meta name="twitter:title" content="${escapeHtml(title)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('tu')}
@@ -1773,7 +1777,7 @@ ${Object.entries(GROUP_NAMES).map(([v, n]) => `      <option value="${v}">${esca
 <meta property="og:url" content="${SITE}/vi/tu/">
 <meta property="og:title" content="Từ điển Anh-Việt: ${built.length} từ phổ biến nhất | Dual Dictionary">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} từ phổ biến nhất`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
+<script type="application/ld+json">${safeJsonLd({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: `Từ điển Anh-Việt: ${built.length} từ phổ biến nhất`, url: `${SITE}/vi/tu/`, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }] }] })}</script>
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 </head>

@@ -53,5 +53,6 @@ export async function askTutor({ instructions, input, signal, model, timeoutMs =
   }, body, signal, timeoutMs);
   const content = data?.choices?.[0]?.message?.content;
   if (typeof content !== 'string') throw new Error('Provider returned an unexpected response.');
-  try { return JSON.parse(content); } catch { throw new Error('Tutor response was not valid JSON. Please retry.'); }
+  const cleaned = content.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+  try { return JSON.parse(cleaned); } catch { throw new Error('Tutor response was not valid JSON. Please retry.'); }
 }

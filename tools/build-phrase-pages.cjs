@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Phrase page generator for Dual Dictionary (VI-P1 + VI-P2 + SEO rich gate).
  *
  * Builds /vi/tu/{phrase}/ pages from TWO content sources, plus one enricher:
@@ -117,6 +118,10 @@ function sanitizeWn(text, phrase) {
   let t = String(text).replace(/\u0000/g, '').trim();
   const heading = new RegExp('^<p><b[^>]*>\\s*' + core.escapeHtml(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) + '\\s*</b></p>', 'i');
   t = t.replace(heading, '');
+  t = t.replace(/<(script|iframe|object|embed|style|base|meta)\b[^>]*>[\s\S]*?<\/\1>/gi, '');
+  t = t.replace(/<(script|iframe|object|embed|base|meta)\b[^>]*\/?>/gi, '');
+  t = t.replace(/\s+on[a-z]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '');
+  t = t.replace(/\b(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2/gi, '$1="#"');
   return t.trim();
 }
 
@@ -240,7 +245,7 @@ function pageHtml({ phrase, ovdpKey, entryHtml, posList, relatedHtml, hand, wnHt
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>${HAND_STYLES}</style>
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('cum-tu')}
@@ -360,7 +365,7 @@ function phraseHubHtml({ built, prep, handCount, wordCount }) {
 <meta property="og:description" content="${esc(desc)}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(title)}">
-<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: title, description: desc, url: canonical, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }, { '@type': 'ListItem', position: 3, name: 'Cụm từ', item: canonical }] }] })}</script>
+<script type="application/ld+json">${safeJsonLd({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: title, description: desc, url: canonical, inLanguage: 'vi' }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` }, { '@type': 'ListItem', position: 2, name: 'Từ điển', item: `${SITE}/vi/tu/` }, { '@type': 'ListItem', position: 3, name: 'Cụm từ', item: canonical }] }] })}</script>
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.hub-tab{cursor:pointer;border:1px solid rgba(0,0,0,.18);background:transparent}.hub-tab[aria-pressed="true"]{font-weight:700;box-shadow:inset 0 0 0 1.5px currentColor}@media (max-width:900px){#hub-list{columns:2 !important}}@media (max-width:600px){#hub-list{columns:1 !important}}.hub-filters{position:relative}.hub-suggest{position:absolute;z-index:20;max-width:480px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(23,32,38,.12);overflow:hidden}.hub-suggest a{display:flex;gap:8px;align-items:baseline;padding:9px 14px;text-decoration:none;color:var(--ink)}.hub-suggest a:hover,.hub-suggest a.active{background:var(--soft)}.hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}.hub-suggest button{display:flex;width:100%;gap:8px;align-items:baseline;padding:9px 14px;background:none;border:0;font:inherit;color:var(--ink);cursor:pointer;text-align:left}.hub-suggest button:hover,.hub-suggest button.active{background:var(--soft)}</style>

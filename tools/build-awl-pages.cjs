@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* AWL sublist pages (owner-approved 01/11): /vi/chu-de/awl-{1..10}/ + hub /vi/chu-de/.
  * Data: data/awl.json {words:{word:sublistNumber}}. Only words WITH a built page
  * (docs/wordpages-manifest.json slugs) are linked. IPA via docs/wordpages-qa.json
@@ -124,7 +125,7 @@ function sublistPageHtml(n, words, ipa) {
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('chu-de')}
@@ -225,7 +226,7 @@ function hubHtml(subs) {
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('chu-de')}

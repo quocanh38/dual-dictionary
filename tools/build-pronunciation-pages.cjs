@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Pronunciation pages (nhanh 2 / phat-am): /vi/phat-am/{word}/
  * "Cach phat am {word} (IPA + audio My-Anh)" + player My + Anh (reuse audio-tag
  * pattern tu build-word-pages.cjs) + IPA US/UK + loi hay sai + 3 minimal pairs
@@ -55,10 +56,10 @@ function ipaTokens(ipa){ const out=[]; let i=0; while(i<ipa.length){ let two=ipa
 function ipaBreakdownHtml(ipa){ const toks=ipaTokens(ipa); const rows=toks.map(t=>`    <tr><td><code>/${esc(t)}/</code></td><td>${esc(IPA_DESC[t]||'âm vị — giữ đúng vị trí miệng, không Việt hóa')}</td></tr>`).join('\n'); return `<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:.92rem"><thead><tr style="background:var(--soft)"><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Âm</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Cách đặt miệng/lưỡi</th></tr></thead><tbody>\n${rows}\n</tbody></table>`; }
 function vnContrast(p){ const cm=p.common_mistake||''; if(cm.includes('th không rung')||cm.includes('θ')) return 'Tiếng Việt không có /θ/. Người Việt hay thay bằng /t/ (“think” → “tink”). Đặt lưỡi giữa hai răng, thổi hơi nhẹ, không chạm lợi.'; if(cm.includes('th rung')||cm.includes('ð')) return 'Tiếng Việt không có /ð/. Đừng đọc thành /d/ hay /z/. Lưỡi giữa răng và rung cổ họng.'; if(cm.includes('æ')) return 'Âm /æ/ bẹt không có trong tiếng Việt. Đừng đọc thành “a” hay “e”. Hạ hàm, miệng mở ngang.'; if(cm.includes('r')||cm.includes('/ɚ/')||cm.includes('ɝ')) return 'Âm /r/ Mỹ cong lưỡi, không chạm vòm. Người Việt hay bỏ hẳn hoặc đọc thành “r” Việt quá mạnh.'; if(cm.includes('l')) return 'Âm /l/ đầu lưỡi chạm lợi, khác “n”. Đừng nuốt phụ âm cuối.'; if(cm.includes('trọng âm')) return 'Tiếng Việt không có trọng âm từ. Nhấn mạnh đúng âm tiết thì người nghe mới bắt được từ.'; return 'Giữ đúng độ dài nguyên âm và bật rõ phụ âm cuối — hai lỗi phổ biến nhất của người Việt khi nói từ này.'; }
 function loadWordExamples(word){ try{ const html=require('fs').readFileSync(require('path').join(REPO,'vi','tu',word,'index.html'),'utf8'); const re=/<div class="mtd-ex"><span class="mtd-ex-en">(.*?)<\/span> — <span class="mtd-ex-vi">(.*?)<\/span><\/div>/g; let m, out=[]; while((m=re.exec(html))&&out.length<3){ let en=m[1].replace(/<[^>]+>/g,''); let vi=m[2].replace(/<[^>]+>/g,''); if(en&&vi) out.push([en,vi]); } return out.length?out:null; }catch(e){ return null; } }
-function exampleSentences(p){ const fromWord=loadWordExamples(p.word); if(fromWord) return fromWord; const w=p.word; const caps=w[0].toUpperCase()+w.slice(1); return [
-  [ `I ${w} it will help you in the long run.`, `Tôi nghĩ điều này sẽ giúp bạn về lâu dài.` ],
-  [ `${caps} about it before you decide.`, `Hãy cân nhắc về điều này trước khi quyết định.` ],
-  [ `We need to ${w} carefully in this situation.`, `Chúng ta cần xem xét kỹ trong tình huống này.` ]
+function exampleSentences(p){ const fromWord=loadWordExamples(p.word); if(fromWord) return fromWord; const w=p.word; return [
+  [ `Please say "${w}" slowly and pay attention to the main stress.`, `Hãy đọc chậm từ "${w}" và chú ý trọng âm chính.` ],
+  [ `Listen carefully to how "${w}" is pronounced in US and UK English.`, `Nghe kỹ cách phát âm từ "${w}" theo giọng Anh-Mỹ và Anh-Anh.` ],
+  [ `Practise reading "${w}" aloud three times to lock in the ending sound.`, `Luyện đọc to từ "${w}" ba lần để nhớ chắc âm cuối.` ]
 ]; }
 
 function pageHtml(p, wordHref) {
@@ -164,7 +165,7 @@ function pageHtml(p, wordHref) {
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.ex-en{font-weight:600}.ex-vi{color:var(--muted)}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}.mp-note{color:var(--muted)}.aud-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.ipa-play{border:1px solid var(--teal);background:#fff;color:var(--teal);border-radius:8px;padding:6px 12px;font-size:.9rem;font-weight:600;cursor:pointer}.ipa-play:hover{background:var(--teal);color:#fff}</style>
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('phat-am')}
@@ -286,7 +287,7 @@ function main() {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('phat-am')}

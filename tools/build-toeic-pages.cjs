@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* TOEIC situation hubs: /vi/toeic/{slug}/ x12 + hub index /vi/toeic/ (index.html overwrite)
  * + regenerate toeic-situations sitemap section (gop vao topics.xml).
  * Data: data/toeic-situations.json {topics:[{slug,name,intro,words[],phrases[]}]} — all slugs verified.
@@ -113,7 +114,7 @@ function topicPageHtml(t, ipa) {
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('toeic')}

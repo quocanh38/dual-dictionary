@@ -63,8 +63,6 @@ function entry(name) {
 const tier3 = Object.keys(tierInfo).filter((n) => !TIER1.includes(n) && !TIER2.includes(n)).sort();
 const blocks = [
   '  <sitemap>\n    <loc>https://dualdictionary.netlify.app/sitemap-pages.xml</loc>\n  </sitemap>',
-  '  <sitemap>\n    <loc>https://dualdictionary.netlify.app/vi/tu/sitemap/index.xml</loc>\n  </sitemap>',
-  '  <sitemap>\n    <loc>https://dualdictionary.netlify.app/vi/tu/sitemap/phrases-index.xml</loc>\n  </sitemap>',
   ...TIER1.filter((n) => tierInfo[n]).map(entry),
   ...TIER2.filter((n) => tierInfo[n]).map(entry),
   ...tier3.map(entry),

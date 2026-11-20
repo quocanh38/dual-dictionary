@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Learning paths 07/11 (vượt top3): /vi/lo-trinh/{slug}/ — Course + HowTo schema.
  * 3 lộ trình từ data sẵn: A2→B1 (30 ngày), IELTS Core (chủ đề), TOEIC 500+ (văn phòng).
  * Dữ liệu: exam-tags (level), topics (chủ đề), toeic hubs — không data mới.
@@ -78,7 +79,7 @@ function pageHtml(p) {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('tu')}

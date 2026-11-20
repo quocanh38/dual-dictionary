@@ -40,7 +40,10 @@ export async function downscalePhoto(file, { maxDim = PHOTO_TARGET_MAX_DIM, qual
   canvas.getContext('2d').drawImage(bitmap, 0, 0, width, height);
   if (typeof bitmap.close === 'function') bitmap.close();
   const mime = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
-  const blob = await new Promise((resolve) => canvas.toBlob(resolve, mime, quality));
+  let blob = await new Promise((resolve) => canvas.toBlob(resolve, mime, quality));
+  if (blob && mime === 'image/png' && blob.size > 1_500_000) {
+    blob = await new Promise((resolve) => canvas.toBlob(resolve, 'image/jpeg', quality));
+  }
   if (!blob) throw Error('Could not compress the photo.');
   if (!PHOTO_ACCEPTED_MIME.includes(blob.type) && blob.type !== 'image/jpeg') throw Error('Unsupported photo output.');
   const dataUrl = await blobToDataUrl(blob);

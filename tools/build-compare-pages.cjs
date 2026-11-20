@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Comparison pages (owner-approved 01/11): /vi/phan-biet/{a}-vs-{b}/
  * Hand-written distinguish content (data/comparisons.json). Each page:
  * H1 + diff table + right/wrong sentences + FAQ schema + 2-way links.
@@ -19,6 +20,7 @@ function slugOf(s) {
   return String(s).normalize('NFC').toLowerCase().replace(/[^a-z0-9'\s-]/g, '').replace(/\s+/g, '-');
 }/* P2 compare-link guard: only link terms that HAVE a built page (word manifest
  * or phrase manifest); others fall back to the app search deep-link. */
+const buildCompareCaches = { mistakeSlugs: null, ipaMap: null };
 let BUILT_TERMS = null;
 function builtTerms() {
   if (BUILT_TERMS === null) {
@@ -51,17 +53,16 @@ function pageHtml(p) {
   /* Anti-cannibalization (02/11): a wrong line that HAS its own loi-sai page
    * links to it ("Giải thích chi tiết") — signals Google the mistake page is
    * the deep answer, the compare page is the comparison context. */
-  let MISTAKE_SLUGS = null;
   const mistakeHref = (w) => {
-    if (MISTAKE_SLUGS === null) {
-      MISTAKE_SLUGS = {};
+    if (buildCompareCaches.mistakeSlugs === null) {
+      buildCompareCaches.mistakeSlugs = {};
       try {
         const pairs = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'mistakes.json'), 'utf8')).pairs || [];
         const s = (x) => String(x).normalize('NFC').toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'loi-sai';
-        for (const m of pairs) MISTAKE_SLUGS[String(m.mistake || '').toLowerCase()] = s(m.mistake);
+        for (const m of pairs) buildCompareCaches.mistakeSlugs[String(m.mistake || '').toLowerCase()] = s(m.mistake);
       } catch (e) {}
     }
-    const sl = MISTAKE_SLUGS[String(w).toLowerCase()];
+    const sl = buildCompareCaches.mistakeSlugs[String(w).toLowerCase()];
     return sl ? `/vi/loi-sai/${sl}/` : '';
   };
   const wrongRows = (p.wrong || []).map((w) => {
@@ -75,13 +76,12 @@ function pageHtml(p) {
    * spans, directly quotable for featured snippet / PAA / voice. Derived from
    * hand-written diff + right sentences, plus SpeakableSpecification. */
   /* 4-col table (03/11, format PREP): IPA from data/ipa-en.json (149k entries). */
-  let IPA_MAP = null;
   const ipaOf = (w) => {
-    if (IPA_MAP === null) {
-      try { IPA_MAP = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'ipa-en.json'), 'utf8')); }
-      catch (e) { IPA_MAP = {}; }
+    if (buildCompareCaches.ipaMap === null) {
+      try { buildCompareCaches.ipaMap = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'ipa-en.json'), 'utf8')); }
+      catch (e) { buildCompareCaches.ipaMap = {}; }
     }
-    const v = IPA_MAP[String(w).toLowerCase()];
+    const v = buildCompareCaches.ipaMap[String(w).toLowerCase()];
     return typeof v === 'string' ? v : (v && v.ipa ? v.ipa : '');
   };
   const posOf = (w, diff) => {
@@ -166,7 +166,7 @@ function pageHtml(p) {
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.cmp-table{width:100%;border-collapse:collapse;margin:14px 0}.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}.cmp-table th{background:var(--soft)}.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.cmp-links{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('phan-biet')}
@@ -247,7 +247,7 @@ function hubHtml(pairs) {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('phan-biet')}

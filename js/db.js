@@ -12,8 +12,11 @@
 const DB_NAME = 'mdx-dict';
 const DB_VERSION = 6;
 
+let dbPromise = null;
+
 export function openDb() {
-  return new Promise((resolve, reject) => {
+  if (dbPromise) return dbPromise;
+  dbPromise = new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, DB_VERSION);
     req.onupgradeneeded = () => {
       const db = req.result;
@@ -43,9 +46,16 @@ export function openDb() {
       // documents and recordings. Records stay local and can be exported.
       if (!db.objectStoreNames.contains('study')) db.createObjectStore('study', { keyPath: 'id' });
     };
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
+    req.onsuccess = () => {
+      const db = req.result;
+      db.onversionchange = () => { db.close(); dbPromise = null; };
+      db.onclose = () => { dbPromise = null; };
+      resolve(db);
+    };
+    req.onerror = () => { dbPromise = null; reject(req.error); };
+    req.onblocked = () => { dbPromise = null; reject(new Error('IndexedDB open blocked by another tab')); };
   });
+  return dbPromise;
 }
 
 export async function putStudyRecord(record) {

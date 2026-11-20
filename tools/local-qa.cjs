@@ -31,8 +31,8 @@ function loadGitignore(root) {
   let txt = '';
   try { txt = fs.readFileSync(path.join(root, '.gitignore'), 'utf8'); } catch { return { files, dirs }; }
   for (const line of txt.split('\n')) {
-    const t = line.trim();
-    if (!t || t.startsWith('#') || t.includes('*') || t.startsWith('/')) continue;
+    const t = line.trim().replace(/^\/+/, '');
+    if (!t || t.startsWith('#') || t.includes('*')) continue;
     if (t.endsWith('/')) dirs.add(t.slice(0, -1));
     else files.add(t);
   }
@@ -73,9 +73,11 @@ function resolveLocal(v, fileDir) {
 /* File exists (as file, as dir/index.html, or with .html appended).
  * Windows FS is case-insensitive — same behaviour as Netlify. */
 function existsCandidate(full) {
-  let st; try { st = fs.statSync(full); } catch { return false; }
-  if (st.isFile()) return true;
-  if (st.isDirectory() && fs.existsSync(path.join(full, 'index.html'))) return true;
+  try {
+    const st = fs.statSync(full);
+    if (st.isFile()) return true;
+    if (st.isDirectory() && fs.existsSync(path.join(full, 'index.html'))) return true;
+  } catch { /* fall through to .html check */ }
   return fs.existsSync(full + '.html');
 }
 
@@ -209,7 +211,7 @@ async function liveSmoke(attempts) {
 
 async function main() {
 let code = 0;
-const modes = mode === 'all' ? ['link-check', 'link-check', 'sw-version-check', 'regression', 'live-smoke'] : [mode];
+const modes = mode === 'all' ? ['link-check', 'sw-version-check', 'regression', 'live-smoke'] : [mode];
 for (const m of modes) {
   console.log(`\n=== ${m} ===`);
   if (m === 'regression') {

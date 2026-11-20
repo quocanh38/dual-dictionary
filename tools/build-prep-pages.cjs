@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Preposition pages (owner-approved 02/11): /vi/gioi-tu/{slug}/
  * "{Word} đi với giới từ gì?" + 1-line answer (tldr, snippet-quotable) + explain
  * + 2-3 hand-written EN examples with VI translation + mistake cross-link
@@ -108,7 +109,7 @@ function pageHtml(p, wordHref, slugToHead) {
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.ex-en{font-weight:600}.ex-vi{color:var(--muted)}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('gioi-tu')}
@@ -204,7 +205,7 @@ function main() {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('gioi-tu')}

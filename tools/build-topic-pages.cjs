@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* IELTS topic hubs (owner-approved 02/11): /vi/chu-de/{slug}/ x15 + patch hub index
  * + regenerate topics.xml (10 awl + 15 topic).
  * Data: data/topics.json {topics:[{slug,name,intro,words[],phrases[]}]} — all slugs verified.
@@ -113,7 +114,7 @@ function topicPageHtml(t, ipa) {
 <meta name="twitter:title" content="${esc(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('chu-de')}

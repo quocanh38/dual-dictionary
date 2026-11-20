@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Common-mistake pages (owner-approved 01/11): /vi/loi-sai/{slug}/
  * 1 mistake + why + 3 right sentences + link to word page + FAQ schema.
  * Owned by NO manifest: never wiped. */
@@ -17,8 +18,8 @@ function slugOf(s) {
   return String(s).normalize('NFC').toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'loi-sai';
 }
 
-function pageHtml(m, wordHref) {
-  const slug = slugOf(m.mistake);
+function pageHtml(m, wordHref, resolvedSlug) {
+  const slug = resolvedSlug || slugOf(m.mistake);
   const canonical = `${SITE}/vi/loi-sai/${slug}/`;
   const h1 = `Đừng nói “${m.mistake}” — cách dùng đúng`;
   const desc = `Vì sao “${m.mistake}” là sai? Cách dùng đúng của “${m.word}” kèm câu mẫu IELTS/TOEIC — Dual Dictionary.`.slice(0, 160);
@@ -99,7 +100,7 @@ function pageHtml(m, wordHref) {
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.cmp-wrong{color:#991b1b}.cmp-right{color:#065f46}.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}</style>
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('loi-sai')}
@@ -151,7 +152,7 @@ function main() {
     slugs.push(slug);
     const dir = path.join(OUT_DIR, slug);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(m, wordHref));
+    fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(m, wordHref, slug));
   }
   const rows = pairs.map((m, i) => `    <li><a href="/vi/loi-sai/${slugs[i]}/">Đừng nói “${esc(m.mistake)}” (${esc(m.word)})</a></li>`).join('\n');
   const hubTitle = `${pairs.length} lỗi sai tiếng Anh thường gặp`;
@@ -196,7 +197,7 @@ function main() {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('loi-sai')}

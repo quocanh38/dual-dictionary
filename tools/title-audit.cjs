@@ -10,7 +10,10 @@ const path = require('path');
 const REPO = path.join(__dirname, '..');
 const DIRS = ['vi/tu', 'vi/gioi-tu', 'vi/cum-di-voi', 'vi/phan-biet', 'vi/loi-sai',
   'vi/dong-nghia', 'vi/phat-am', 'vi/ngu-phap', 'vi/chu-de', 'vi/toeic',
-  'vi/cambridge', 'vi/luyen-thi', 'vi/blog/ielts', 'vi/blog/toeic', 'vi/blog/phuong-phap'];
+  'vi/cambridge', 'vi/luyen-thi', 'vi/trinh-do', 'vi/lo-trinh',
+  'vi/gioi-thieu', 'vi/tac-gia', 'vi/chinh-sach-noi-dung', 'vi/cap-nhat',
+  'vi/test-trinh-do', 'vi/luyen-shadowing',
+  'vi/blog/ielts', 'vi/blog/toeic', 'vi/blog/phuong-phap', 'vi/blog/en'];
 
 function* walkHtml(dirs) {
   for (const d of dirs) {

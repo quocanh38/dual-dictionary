@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* CEFR level hubs (07/11): /vi/trinh-do/{a2,b1,b2,c1}/ + hub index.
  * Data: data/exam-tags.json (cefr estimate per word) + wordpages-manifest.
  * Conventions from build-topic-pages.cjs: CollectionPage+ItemList+BreadcrumbList,
@@ -95,7 +96,7 @@ function levelPageHtml(lv, words, ipa, maniSet) {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('tu')}
@@ -160,7 +161,7 @@ function main() {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(hubJsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(hubJsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('tu')}

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Grammar hubs (owner task 03/11): /vi/ngu-phap/{slug}/ x10 + hub index
  * + regenerate grammar.xml (hub + 10 guides) + sitemap.xml registration.
  * Data: data/grammar.json {guides:[{slug,name,intro,rules[5],mistakes[5 {t,fix,slug|null}],sentences[5 {en,vi}]}]}.
@@ -142,7 +143,7 @@ function guidePageHtml(g) {
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
 <style>.tldr{background:var(--soft);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-size:1.02rem;line-height:1.7}.mist-text{color:#991b1b}.sent-en{color:#065f46;font-weight:600}.hub-list li{margin:4px 0}</style>
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('ngu-phap')}
@@ -221,7 +222,7 @@ function hubIndexHtml(guides) {
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml('ngu-phap')}

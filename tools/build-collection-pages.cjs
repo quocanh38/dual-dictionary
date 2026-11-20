@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* P1 collection pages (owner-approved 01/11): 3 static tag pages for SEO
  * topical authority — /vi/tu/ielts/ /vi/tu/toeic/ /vi/tu/giao-tiep/.
  * Each: unique H1 + description + full link list (SEO) + deck CTA + hub links.
@@ -72,7 +73,7 @@ function pageHtml({ slug, h1, desc, intro, groups, deckCta }) {
 <meta name="twitter:title" content="${core.escapeHtml(h1)}">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json">${safeJsonLd(jsonLd)}</script>
 </head>
 <body class="word-page">
 ${navHtml(slug === 'giao-tiep' ? 'tu' : slug)}

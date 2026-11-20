@@ -31,7 +31,7 @@ export function validateSelection(targets, reading) {
 }
 export function validatePack(p, { approved = false } = {}) {
   const errors = [];
-  if (/LLM_[0-9]{6,}_[A-Za-z0-9_-]{12,}/.test(JSON.stringify(p))) return {ok:false,errors:['Credential-like content must not be included in a lesson pack.']};
+  if (/LLM_[0-9]{6,}_[A-Za-z0-9_-]{12,}|AIza[0-9A-Za-z_-]{35}/.test(JSON.stringify(p))) return {ok:false,errors:['Credential-like content must not be included in a lesson pack.']};
   const fail = s => errors.push(s);
   const obj = (o, keys, name) => { if (!o || Array.isArray(o) || typeof o !== 'object') { fail(`${name} must be an object.`); return false; } if (Object.keys(o).some(k => !keys.includes(k))) fail(`${name} contains unexpected fields.`); return true; };
   const str = (s, name, max = 1000) => { if (typeof s !== 'string' || !s.trim() || s.length > max) fail(`Invalid ${name}.`); };
@@ -111,7 +111,13 @@ export function validatePack(p, { approved = false } = {}) {
   } catch { fail('Malformed pack structure.'); }
   return { ok: errors.length === 0, errors: [...new Set(errors)] };
 }
-export function stableJSON(v) { if(Array.isArray(v))return '['+v.map(stableJSON).join(',')+']';if(v&&typeof v==='object')return '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+stableJSON(v[k])).join(',')+'}';return JSON.stringify(v); }
+export function stableJSON(v) {
+  if (Array.isArray(v)) return '[' + v.map(x => x === undefined ? 'null' : stableJSON(x)).join(',') + ']';
+  if (v && typeof v === 'object') {
+    return '{' + Object.keys(v).sort().filter(k => v[k] !== undefined).map(k => JSON.stringify(k) + ':' + stableJSON(v[k])).join(',') + '}';
+  }
+  return JSON.stringify(v);
+}
 export async function digest(v) { const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(stableJSON(v)));return Array.from(new Uint8Array(b),x=>x.toString(16).padStart(2,'0')).join(''); }
 export async function exportPack(pack) { const v=validatePack(pack,{approved:true});if(!v.ok)throw Error(v.errors.join('\n'));return { format:FORMAT,payload:pack,sha256:await digest(pack) }; }
 export async function readPack(text) { if(new TextEncoder().encode(text).length>MAX_BYTES)throw Error('File exceeds 2 MB.');let e;try{e=JSON.parse(text);}catch{throw Error('File is not valid JSON.');}if(!e||Object.keys(e).some(k=>!['format','payload','sha256'].includes(k))||e.format!==FORMAT)throw Error('Not a supported lesson pack.');const v=validatePack(e.payload,{approved:true});if(!v.ok)throw Error(v.errors.join('\n'));if(e.sha256!==await digest(e.payload))throw Error('Integrity check failed. This checksum is not an author signature.');return e; }

@@ -63,7 +63,7 @@ export async function approve(pack, review) {
 }
 async function readJSON(path) {
   const bytes = await fs.readFile(path); if (bytes.length > 2 * 1024 * 1024) throw Error('File exceeds 2 MB.');
-  if (/LLM_[0-9]{6,}_[A-Za-z0-9_-]{12,}/.test(bytes.toString())) throw Error('Credential-like text rejected.');
+  if (/LLM_[0-9]{6,}_[A-Za-z0-9_-]{12,}|AIza[0-9A-Za-z_-]{35}/.test(bytes.toString())) throw Error('Credential-like text rejected.');
   return JSON.parse(bytes);
 }
 async function main() {
