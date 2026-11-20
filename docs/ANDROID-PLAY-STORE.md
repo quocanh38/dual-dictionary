@@ -14,6 +14,9 @@ Tài liệu này hướng dẫn từng bước đóng gói PWA `https://hocta.ap
   - Đã cấu hình header `Content-Type: application/json; charset=utf-8` trong [`_headers`](../_headers).
 - [`android-twa/`](../android-twa/):
   - Dự án Android TWA đã được khởi tạo sẵn bằng `@bubblewrap/core` với đầy đủ [`twa-manifest.json`](../android-twa/twa-manifest.json), [`AndroidManifest.xml`](../android-twa/app/src/main/AndroidManifest.xml), [`app/build.gradle`](../android-twa/app/build.gradle), bộ Adaptive Icons (`mipmap-anydpi-v26`), splash screen, `share_target` (`ACTION_SEND`) và 3 shortcuts.
+  - **Tích hợp Native bổ sung:**
+    - [`ProcessTextActivity.java`](../android-twa/app/src/main/java/app/hocta/twa/ProcessTextActivity.java): hiện mục **"Tra với HọcTA"** ngay trên thanh menu bôi đen chữ (`ACTION_PROCESS_TEXT`) ở mọi ứng dụng Android (Chrome, Kindle, PDF, Facebook…). Từ/cụm ngắn (≤5 từ) tự mở tra từ điển (`?q=...`), câu/đoạn dài tự mở thẳng trong Reader (`?read=...`).
+    - [`QuickLookupWidgetProvider.java`](../android-twa/app/src/main/java/app/hocta/twa/QuickLookupWidgetProvider.java): **Widget màn hình chính** (*HọcTA — Tra nhanh*) gồm thanh tra nhanh 1 chạm + 3 nút mở thẳng *Đọc & Tra*, *Ôn FSRS*, *Luyện thi*.
 - [`.gitignore`](../.gitignore):
   - Đã chặn `*.keystore`, `*.jks`, `android-twa/*.apk`, `android-twa/*.aab` để không vô tình đẩy khóa ký ứng dụng hay bản build lên Git công khai.
 

@@ -38,5 +38,13 @@
         }
     }]
     
-  </string>  
+  </string>
+
+  <string name="process_text_label">Tra với HọcTA</string>
+  <string name="widget_label">HọcTA — Tra nhanh</string>
+  <string name="widget_description">Thanh tra từ Anh–Việt offline và lối tắt mở nhanh Reader, Ôn tập FSRS, Luyện thi TOEIC/IELTS.</string>
+  <string name="widget_search_hint">Tra từ Anh–Việt offline…</string>
+  <string name="widget_btn_reader">Đọc &amp; Tra</string>
+  <string name="widget_btn_review">Ôn FSRS</string>
+  <string name="widget_btn_practice">Luyện thi</string>
 </resources>
