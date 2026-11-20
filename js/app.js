@@ -3887,6 +3887,7 @@ async function saveSentence() {
   state.items = [r.item, ...state.items.filter((item) => item.id !== r.item.id)];
   updateVocabBadge();
   updateReviewBadge();
+  if (!r.merged) { try { recordDailyActivity(1); } catch (e) {} }
   if (readerSelection?.sentence === sentence) {
     for (const id of ['#btn-review-reader-sentence', '#btn-review-lookup-sentence']) {
       const review = $(id);
@@ -5902,7 +5903,10 @@ async function saveSelectedSense() {
         sourceUrl: ctx?.sourceUrl || '',
       } : undefined,
     });
-    if (!result.merged) state.items.unshift(result.item);
+    if (!result.merged) {
+      state.items.unshift(result.item);
+      try { recordDailyActivity(1); } catch (e) {}
+    }
     $('#sense-save-dialog')?.close();
     showToast(result.merged ? `This meaning of “${key}” is already in your Vault.` : `Saved this meaning of “${key}” to your Vault.`);
     updateContextBar(key);
@@ -6030,6 +6034,7 @@ async function gradeById(id, action) {
   updateVocabBadge();
   updateReviewBadge();
   updateSaveButtonState();
+  try { recordDailyActivity(1); } catch (e) {}
 }
 
 /* ---------------- Vault (Phase 3 Release B) ---------------- */
@@ -7934,6 +7939,7 @@ function syncAppBadge(count) {
 function maybeShowDueBanner() {
   const banner = $('#due-banner');
   if (!banner || !banner.classList.contains('hidden')) return;
+  if (currentView() === 'search' && document.getElementById('wotd-card')) return;
   const now = Date.now();
   const last = parseInt(localStorage.getItem('reminders-last-banner') || '0', 10);
   const due = dueCount();
@@ -8724,28 +8730,63 @@ function handleUrlHandoff() {
   } catch (e) { /* ignore */ }
 }
 
-/* ================= Phase 5-C: practice depth (recall, hint, streak) ================= */
+/* ================= Phase 5-C: practice depth (recall, hint, streak & daily goal) ================= */
+const DAILY_GOALS = [5, 10, 20];
+function todayIso() { return new Date().toISOString().slice(0, 10); }
+function getDailyGoal() {
+  try {
+    const g = parseInt(localStorage.getItem('dd-daily-goal') || '10', 10);
+    return DAILY_GOALS.includes(g) ? g : 10;
+  } catch (e) { return 10; }
+}
+function cycleDailyGoal() {
+  const cur = getDailyGoal();
+  const next = DAILY_GOALS[(DAILY_GOALS.indexOf(cur) + 1) % DAILY_GOALS.length];
+  try { localStorage.setItem('dd-daily-goal', String(next)); } catch (e) {}
+  return next;
+}
+function getDailyProgress() {
+  const day = todayIso();
+  let today = 0;
+  try {
+    const log = JSON.parse(localStorage.getItem('dd-daily-log') || '{}');
+    today = Math.max(0, parseInt(log[day] || '0', 10) || 0);
+  } catch (e) {}
+  return { today, goal: getDailyGoal() };
+}
+function recordDailyActivity(points = 1) {
+  const day = todayIso();
+  try {
+    const log = JSON.parse(localStorage.getItem('dd-daily-log') || '{}');
+    log[day] = (parseInt(log[day] || '0', 10) || 0) + Math.max(1, points);
+    const keys = Object.keys(log).sort().slice(-60);
+    const trimmed = {};
+    for (const k of keys) trimmed[k] = log[k];
+    localStorage.setItem('dd-daily-log', JSON.stringify(trimmed));
+  } catch (e) { /* ignore */ }
+  markPracticeDay();
+  if (currentView() === 'search') { try { renderWotd(); } catch (e) {} }
+}
 function markPracticeDay() {
   try {
     const days = JSON.parse(localStorage.getItem('practice-days') || '[]');
-    const today = new Date().toISOString().slice(0, 10);
+    const today = todayIso();
     if (days.indexOf(today) === -1) {
       days.push(today);
       localStorage.setItem('practice-days', JSON.stringify(days.slice(-400)));
     }
   } catch (e) { /* ignore */ }
 }
-/* WOTD 07/11 (giữ chân): 1 từ/ngày theo level user, streak có sẵn.
- * Level từ quiz trong app (localStorage dd-level) hoặc exam-tags CEFR B1 mặc định. */
+/* WOTD 07/11 (giữ chân): 1 từ/ngày theo level user, streak + mục tiêu ngày + quick start 30s. */
 async function wordOfDay() {
-  const day = new Date().toISOString().slice(0, 10);
+  const day = todayIso();
   try {
     const cached = JSON.parse(localStorage.getItem('wotd') || '{}');
     if (cached.day === day && cached.word) return cached;
   } catch (e) {}
   const lvl = (localStorage.getItem('dd-level') || 'B1').toUpperCase();
   const pick = { A2: 'ngsl1', B1: 'ngsl2', B2: 'ielts', C1: 'awl' }[lvl] || 'ngsl2';
-  let word = 'abandon', ipa = '', gloss = '';
+  let word = 'resilient', ipa = '', gloss = '';
   try {
     const bw = await loadBuiltWords();
     if (bw && bw.words) {
@@ -8763,43 +8804,174 @@ async function wordOfDay() {
   try { localStorage.setItem('wotd', JSON.stringify(out)); } catch (e) {}
   return out;
 }
+const QUICKSTART_SAMPLE_TEXT =
+  'Learning a new language works best in short daily sessions. ' +
+  'When you read a real paragraph and tap unfamiliar words right away, your brain connects meaning with context. ' +
+  'Save one useful phrase today and review it tomorrow to make it stick. ' +
+  'Consistency always beats cramming.';
+
 async function renderWotd() {
   const el = document.getElementById('wotd-card');
   if (!el) return;
-  const w = await wordOfDay();
-  const streak = practiceDayStreak();
   const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
-  el.innerHTML = '<strong>📅 ' + (isVi ? 'Từ hôm nay: ' : 'Word of the day: ') + escapeHtml(w.word) + '</strong>' +
-    (w.ipa ? ' <span class="hint">/' + escapeHtml(w.ipa) + '/</span>' : '') +
-    (w.gloss ? '<br><span>' + escapeHtml(w.gloss.slice(0, 80)) + '</span>' : '') +
-    '<br><span class="hint">🔥 ' + (isVi ? 'Streak ' + streak + ' ngày' : streak + '-day streak') + ' · ' +
-    '<a href="#" id="wotd-practice">' + (isVi ? 'Luyện ngay' : 'Practice now') + '</a> · ' +
-    '<a href="#" id="wotd-quiz">' + (isVi ? 'Quiz Vault' : 'Vault quiz') + '</a> · ' +
-    '<a href="#" id="wotd-level">' + (isVi ? 'Test trình độ' : 'Level test') + '</a></span>';
-  const p1 = document.getElementById('wotd-practice');
-  if (p1) p1.addEventListener('click', (e) => { e.preventDefault(); startCurriculumPractice('ngsl2'); navigate('practice'); });
-  const p2 = document.getElementById('wotd-quiz');
-  if (p2) p2.addEventListener('click', (e) => { e.preventDefault(); startVaultQuiz('choice'); });
-  const p3 = document.getElementById('wotd-level');
-  if (p3) p3.addEventListener('click', (e) => { e.preventDefault(); startLevelTest(); });
+  const itemCount = Array.isArray(state?.items) ? state.items.length : 0;
+  const qsDone = localStorage.getItem('dd-quick-start-done') === '1';
+
+  // Step 2: 30-second Quick Start for brand-new users (0 saved words, not dismissed)
+  if (itemCount === 0 && !qsDone) {
+    el.innerHTML =
+      '<div class="daily-focus">' +
+        '<div class="daily-focus-head">' +
+          '<strong>✨ ' + (isVi ? 'Bắt đầu nhanh trong 30 giây' : '30-second quick start') + '</strong>' +
+          '<button type="button" id="qs-dismiss" class="quickstart-dismiss" aria-label="' + (isVi ? 'Đóng' : 'Dismiss') + '">&times;</button>' +
+        '</div>' +
+        '<div class="quickstart-grid">' +
+          '<button type="button" id="qs-lookup" class="quickstart-btn">🔍 ' + (isVi ? 'Tra thử từ "resilient"' : 'Look up "resilient"') + '</button>' +
+          '<button type="button" id="qs-read" class="quickstart-btn">📖 ' + (isVi ? 'Đọc thử đoạn 4 câu' : 'Read a 4-line sample') + '</button>' +
+          '<button type="button" id="qs-exam" class="quickstart-btn">🎯 ' + (isVi ? 'Luyện TOEIC / IELTS' : 'TOEIC / IELTS practice') + '</button>' +
+        '</div>' +
+      '</div>';
+    document.getElementById('qs-dismiss')?.addEventListener('click', () => {
+      try { localStorage.setItem('dd-quick-start-done', '1'); } catch (e) {}
+      renderWotd();
+    });
+    document.getElementById('qs-lookup')?.addEventListener('click', () => {
+      try { localStorage.setItem('dd-quick-start-done', '1'); } catch (e) {}
+      const inp = $('#search-input');
+      if (inp) inp.value = 'resilient';
+      search('resilient');
+      renderWotd();
+    });
+    document.getElementById('qs-read')?.addEventListener('click', () => {
+      try { localStorage.setItem('dd-quick-start-done', '1'); } catch (e) {}
+      navigate('reader');
+      const ta = $('#reader-input');
+      if (ta) ta.value = QUICKSTART_SAMPLE_TEXT;
+      try { readerRender(QUICKSTART_SAMPLE_TEXT, isVi ? 'Bài đọc mẫu' : 'Sample reading'); } catch (e) {}
+    });
+    document.getElementById('qs-exam')?.addEventListener('click', () => {
+      try { localStorage.setItem('dd-quick-start-done', '1'); } catch (e) {}
+      navigate('practice');
+      const lab = document.getElementById('offline-exam-lab');
+      if (lab) lab.open = true;
+    });
+    return;
+  }
+
+  // Step 1: Unified Daily Focus Card (Daily Goal + Streak + Gentle Freeze + Next Best Action)
+  const w = await wordOfDay();
+  const { streak, frozen } = practiceStreakInfo();
+  const { today, goal } = getDailyProgress();
+  const pct = Math.min(100, Math.round((today / Math.max(1, goal)) * 100));
+  const doneToday = today >= goal;
+  const due = typeof dueCount === 'function' ? dueCount() : 0;
+  const estMin = Math.max(1, Math.ceil(due / 4));
+  const canNudgeRemind = doneToday && typeof remindersOn === 'function' && !remindersOn()
+    && 'Notification' in window && Notification.permission === 'default';
+
+  let primaryAction = '';
+  if (due > 0) {
+    primaryAction =
+      '<a href="#/review" id="daily-review-cta" class="daily-cta">🔁 ' +
+        (isVi ? `Ôn ${due} thẻ (~${estMin} phút)` : `Review ${due} due (~${estMin}m)`) +
+      '</a>' +
+      '<button type="button" id="wotd-lookup-chip" class="daily-chip">📅 ' + escapeHtml(w.word) + (w.ipa ? ' /' + escapeHtml(w.ipa) + '/' : '') + '</button>';
+  } else if (doneToday) {
+    primaryAction =
+      '<span class="daily-chip" style="border-color:var(--brand-green);color:var(--brand-green)">✓ ' +
+        (isVi ? 'Xong mục tiêu hôm nay!' : 'Daily goal complete!') +
+      '</span>' +
+      '<button type="button" id="wotd-lookup-chip" class="daily-chip">📅 ' + escapeHtml(w.word) + '</button>' +
+      (canNudgeRemind
+        ? '<button type="button" id="daily-enable-remind" class="daily-chip">🔔 ' + (isVi ? 'Nhắc ôn mỗi ngày' : 'Daily reminder') + '</button>'
+        : '');
+  } else {
+    primaryAction =
+      '<button type="button" id="wotd-lookup-chip" class="daily-cta">📅 ' +
+        (isVi ? 'Từ hôm nay: ' : 'Word of day: ') + escapeHtml(w.word) +
+      '</button>' +
+      '<button type="button" id="wotd-practice" class="daily-chip">⚡ ' + (isVi ? 'Luyện nhanh' : 'Quick practice') + '</button>';
+  }
+
+  el.innerHTML =
+    '<div class="daily-focus">' +
+      '<div class="daily-focus-head">' +
+        '<span><strong>🔥 ' + (isVi ? `${streak} ngày` : `${streak}-day streak`) + '</strong>' +
+          (frozen ? ' <span class="hint" title="' + (isVi ? 'Đã bảo vệ chuỗi (1 ngày nghỉ/tuần)' : 'Streak protected (1 rest day/week)') + '">🛡️</span>' : '') +
+          ' · <span class="hint">' + (isVi ? 'Hôm nay' : 'Today') + ': <strong>' + today + '/' + goal + '</strong></span></span>' +
+        '<button type="button" id="btn-daily-goal" class="daily-goal-btn" title="' + (isVi ? 'Đổi mục tiêu ngày (5 / 10 / 20)' : 'Switch daily goal (5 / 10 / 20)') + '">' +
+          (isVi ? 'Mục tiêu: ' : 'Goal: ') + goal +
+        '</button>' +
+      '</div>' +
+      '<div class="daily-progress-track" aria-hidden="true"><div class="daily-progress-fill' + (doneToday ? ' done' : '') + '" style="width:' + pct + '%"></div></div>' +
+      '<div class="daily-focus-actions">' + primaryAction + '</div>' +
+    '</div>';
+
+  document.getElementById('btn-daily-goal')?.addEventListener('click', () => {
+    const next = cycleDailyGoal();
+    showToast(isVi ? `Mục tiêu mỗi ngày: ${next} mục` : `Daily goal: ${next} items`, null, 1800);
+    renderWotd();
+  });
+  document.getElementById('wotd-lookup-chip')?.addEventListener('click', () => {
+    const inp = $('#search-input');
+    if (inp) inp.value = w.word;
+    search(w.word);
+  });
+  document.getElementById('wotd-practice')?.addEventListener('click', () => {
+    startCurriculumPractice('ngsl2');
+    navigate('practice');
+  });
+  document.getElementById('daily-enable-remind')?.addEventListener('click', async () => {
+    try {
+      const perm = await Notification.requestPermission();
+      if (perm === 'granted') {
+        localStorage.setItem('reminders', '1');
+        showToast(isVi ? 'Đã bật nhắc ôn mỗi ngày!' : 'Daily reminders enabled!');
+        renderWotd();
+      }
+    } catch (e) {}
+  });
 }
-function practiceDayStreak() {
+
+/** Gentle streak calculation: allows 1 missed rest day per 7-day window so
+ *  a single busy day never destroys a learner's multi-week habit. */
+function practiceStreakInfo() {
   try {
-    const days = JSON.parse(localStorage.getItem('practice-days') || '[]').sort();
-    if (!days.length) return 0;
-    const today = new Date().toISOString().slice(0, 10);
-    const yest = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-    const last = days[days.length - 1];
-    if (last !== today && last !== yest) return 0;
+    const days = [...new Set(JSON.parse(localStorage.getItem('practice-days') || '[]'))].sort();
+    if (!days.length) return { streak: 0, frozen: false };
+    const msDay = 86400000;
+    const toNum = (s) => Math.floor(Date.parse(s + 'T00:00:00Z') / msDay);
+    const todayN = toNum(todayIso());
+    const lastN = toNum(days[days.length - 1]);
+    const gapFromToday = todayN - lastN;
+    if (gapFromToday > 2) return { streak: 0, frozen: false };
     let streak = 1;
-    let d = last;
+    let frozen = gapFromToday === 2;
+    let freezesUsedInWindow = frozen ? 1 : 0;
+    let windowDays = 1;
+    let cur = lastN;
     for (let i = days.length - 2; i >= 0; i--) {
-      const prev = new Date(new Date(d).getTime() - 86400000).toISOString().slice(0, 10);
-      if (days[i] === prev) { streak++; d = prev; } else break;
+      const prev = toNum(days[i]);
+      const diff = cur - prev;
+      if (diff === 1) {
+        streak++;
+        cur = prev;
+        windowDays++;
+        if (windowDays >= 7) { windowDays = 0; freezesUsedInWindow = 0; }
+      } else if (diff === 2 && freezesUsedInWindow === 0) {
+        streak++;
+        frozen = true;
+        freezesUsedInWindow = 1;
+        cur = prev;
+        windowDays += 2;
+      } else {
+        break;
+      }
     }
-    return streak;
-  } catch (e) { return 0; }
+    return { streak, frozen };
+  } catch (e) { return { streak: 0, frozen: false }; }
 }
+function practiceDayStreak() { return practiceStreakInfo().streak; }
 
 /* ================= Phase 5-H: E2E-encrypted backup (AES-256-GCM) ================= */
 /* Container format:

@@ -123,10 +123,15 @@ export function initExperience() {
   if (!opt) return;
   const notice = document.querySelector('#experience-choice');
   const message = document.querySelector('#experience-choice-status');
+  let visits = 1;
+  try {
+    visits = Math.max(1, parseInt(localStorage.getItem('dd-visits') || '0', 10) + 1);
+    localStorage.setItem('dd-visits', String(visits));
+  } catch {}
   const syncChoice = () => {
     const choice = experienceChoice();
     opt.checked = choice?.allowed === true;
-    if (notice) notice.hidden = Boolean(choice);
+    if (notice) notice.hidden = Boolean(choice) || visits < 2;
   };
   const setChoice = (allowed) => {
     try {
