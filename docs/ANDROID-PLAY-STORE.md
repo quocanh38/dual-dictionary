@@ -188,16 +188,16 @@ Sau khi lệnh chạy xong, bạn sẽ có:
 
 ---
 
-### 5.4. Kịch bản 6 ảnh chụp màn hình điện thoại (Phone Screenshots 9:16 — ví dụ `1080×1920`)
+### 5.4. Bộ 6 ảnh chụp màn hình điện thoại (`1080×1920` PNG — Đã tạo sẵn trong repo)
 
-Google Play yêu cầu tối thiểu 2 ảnh (khuyên dùng 4–6 ảnh). Bạn có thể mở `https://hocta.app/` trên Chrome (chế độ thiết bị `390×844` hoặc chụp trực tiếp từ điện thoại Android sau khi cài APK) theo đúng 6 màn hình sau:
+Toàn bộ 6 ảnh chụp màn hình tỷ lệ chuẩn `9:16` (`1080×1920` px) đã được chụp trực tiếp từ ứng dụng và lưu sẵn tại thư mục [`android-twa/screenshots/`](../android-twa/screenshots/) để bạn kéo-thả thẳng vào mục **Phone screenshots** trên Google Play Console:
 
-1. **Màn hình 1 — Tra từ song ngữ Anh–Việt & Anh–Anh:** Tra một từ đa nghĩa (ví dụ `affect` hoặc `bear market`), hiện rõ dải phiên âm IPA, nút nghe US/UK, nhãn tần suất `Top 1k` và 2 cột nghĩa song song.
-2. **Màn hình 2 — Reader chạm để tra trong ngữ cảnh:** Mở một đoạn bài đọc trong tab *Reader*, chạm vào một từ đang được tô sáng và hiện khung nghĩa + nút *"Lưu câu này"* ngay bên dưới.
-3. **Màn hình 3 — Ôn tập FSRS 30 giây:** Tab *Ôn tập (Review)* đang mở một thẻ bài tập Cloze (điền từ vào câu gốc đã lưu) kèm 4 nút chấm mức độ nhớ FSRS (*Quên / Khó / Được / Dễ*).
-4. **Màn hình 4 — Luyện thi TOEIC & IELTS Offline:** Tab *Luyện thi* hiển thị câu hỏi TOEIC Part 5 hoặc bài chẩn đoán IELTS 4 kỹ năng kèm giải thích song ngữ.
-5. **Màn hình 5 — Thư viện 33 gói bài học Offline (Lesson Studio):** Màn hình `/lessons/` hiển thị danh sách các gói bài học công việc & học thuật B1/B2 có nhãn *Sẵn sàng offline*.
-6. **Màn hình 6 — Sổ tay (Vault) & Làm chủ dữ liệu:** Danh sách từ/câu đã lưu trong *Sổ tay* cùng hộp thoại *Xuất Anki / Sao lưu mã hóa .ddbackup*.
+1. [`android-twa/screenshots/01-tra-tu-song-ngu.png`](../android-twa/screenshots/01-tra-tu-song-ngu.png) — **Tra từ song ngữ Anh–Việt & IPA khẩu hình:** Trang từ `affect` với phiên âm IPA Mỹ/Anh, nút phát âm, sơ đồ khẩu hình 10 nguyên âm và nhãn tần suất *Top 5K / NGSL / AWL / IELTS Core*.
+2. [`android-twa/screenshots/02-reader-cham-de-tra.png`](../android-twa/screenshots/02-reader-cham-de-tra.png) — **Đọc tiếng Anh & tra từ trong ngữ cảnh (Reader):** Tình huống công việc thực tế (*Đổi lịch giao hàng*), giải thích nghĩa theo ngữ cảnh email và câu mẫu song ngữ.
+3. [`android-twa/screenshots/03-on-tap-fsrs.png`](../android-twa/screenshots/03-on-tap-fsrs.png) — **Ôn tập ngắt quãng FSRS-4.5:** Thẻ ôn từ `schedule` kèm câu gốc đã lưu (*"When shifts change, staff review the schedule..."*), nghĩa từ điển Anh–Việt OVDP, ghi chú collocation và các nút chấm mức độ nhớ (*Biết / Quên / Bỏ qua*).
+4. [`android-twa/screenshots/04-luyen-thi-toeic.png`](../android-twa/screenshots/04-luyen-thi-toeic.png) — **Luyện thi TOEIC theo 12 tình huống công sở:** 161 cụm TOEIC Business chia theo Họp hành, Thư tín & Email, Văn phòng, Tuyển dụng & Nhân sự.
+5. [`android-twa/screenshots/05-goi-bai-hoc-offline.png`](../android-twa/screenshots/05-goi-bai-hoc-offline.png) — **Thư viện 33 gói bài học Offline (Lesson Studio):** Các bài đọc tiếng Anh công việc & học thuật B1–B2 (*Checking Deliveries and Contacting Suppliers*) học ngay không cần mạng.
+6. [`android-twa/screenshots/06-phan-biet-ngu-canh.png`](../android-twa/screenshots/06-phan-biet-ngu-canh.png) — **Phân biệt từ dễ nhầm & câu mẫu:** Bảng so sánh nhanh `affect` vs `effect` kèm tóm tắt 1 dòng, phiên âm, loại từ và ví dụ đúng.
 
 ---
 
