@@ -9,6 +9,7 @@ function navHtml(active) {
 <a class="dd-brand" href="/vi/">HọcTA</a>
 <button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
 <div class="dd-links">
+<div class="dd-mobile-sections" aria-label="Các khu vực HọcTA"><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></div>
 <a href="/vi/tu/"${on('tu')}>Từ điển</a>
 <div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['chu-de','phan-biet','dong-nghia','phat-am','loi-sai','gioi-tu','cum-di-voi'])}>Từ vựng ▾</button>
 <div class="dd-drop-menu">

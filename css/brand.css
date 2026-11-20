@@ -230,11 +230,17 @@ html.is-offline .net-banner {
 
 /* Mobile navbar fix for /vi/ pages: override inline flex:1 bug so menu wraps
    full-width below the topbar in a compact 2-column grid instead of squeezing
-   into a tall right-hand column. */
+   into a tall right-hand column, and merge section-switcher into ☰ on mobile. */
+nav.dd-nav .dd-mobile-sections {
+  display: none;
+}
 @media (max-width: 720px) {
   nav.dd-nav .dd-nav-in {
     align-items: center;
     row-gap: 8px;
+  }
+  nav.dd-nav .section-switcher {
+    display: none;
   }
   nav.dd-nav .dd-burger {
     margin-left: auto;
@@ -256,8 +262,29 @@ html.is-offline .net-banner {
   nav.dd-nav.open .dd-links {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4px 6px;
+    gap: 6px;
     align-items: stretch;
+  }
+  nav.dd-nav .dd-mobile-sections {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    padding-bottom: 8px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, .16);
+  }
+  nav.dd-nav .dd-mobile-sections a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 36px;
+    padding: 6px 4px;
+    font-size: .78rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, .14);
+    border-radius: 8px;
   }
   nav.dd-nav .dd-links > a,
   nav.dd-nav .dd-drop-btn {
