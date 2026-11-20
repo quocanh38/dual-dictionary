@@ -443,5 +443,52 @@ nav.dd-nav .dd-mobile-sections {
   }
 }
 
+/* Site-wide dark-mode polish (Main App banners, Daily Focus Card & /vi/ search) */
+:root[data-theme="dark"] .net-banner {
+  background: #2b2110;
+  color: #fde68a;
+  border-color: #92400e;
+}
+:root[data-theme="dark"] .due-banner-cta,
+:root[data-theme="dark"] .due-banner-cta:hover {
+  color: #fde68a;
+}
+:root[data-theme="dark"] #wotd-card.net-banner {
+  background: var(--brand-night-surface);
+  color: var(--brand-night-text);
+  border-color: var(--brand-night-line);
+}
+:root[data-theme="dark"] .daily-progress-track {
+  background: rgba(170, 182, 255, .22);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .net-banner {
+    background: #2b2110;
+    color: #fde68a;
+    border-color: #92400e;
+  }
+  :root:not([data-theme="light"]) .due-banner-cta,
+  :root:not([data-theme="light"]) .due-banner-cta:hover {
+    color: #fde68a;
+  }
+  :root:not([data-theme="light"]) #wotd-card.net-banner {
+    background: var(--brand-night-surface);
+    color: var(--brand-night-text);
+    border-color: var(--brand-night-line);
+  }
+  :root:not([data-theme="light"]) .daily-progress-track {
+    background: rgba(170, 182, 255, .22);
+  }
+  nav.dd-nav .dd-search input {
+    background: var(--brand-night-surface);
+    color: var(--brand-night-text);
+    border: 1px solid rgba(255, 255, 255, .22);
+  }
+  nav.dd-nav .dd-search input::placeholder {
+    color: var(--brand-night-muted);
+  }
+}
+
+
 
 
