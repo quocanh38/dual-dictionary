@@ -50,6 +50,7 @@ https://dualdictionary.netlify.app/docs/*  https://hocta.app/docs/:splat  301!
 
 # Block internal CI/metadata/handoff files from public hosting
 /.github/*  /404.html  404!
+/android-twa/*  /404.html  404!
 /package.json  /404.html  404!
 /package-lock.json  /404.html  404!
 /pnpm-lock.yaml  /404.html  404!

@@ -1,0 +1,75 @@
+{
+  "packageId": "app.hocta.twa",
+  "host": "hocta.app",
+  "name": "HọcTA — Học tiếng Anh",
+  "launcherName": "HọcTA",
+  "display": "standalone",
+  "themeColor": "#293CC8",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#FBF8EF",
+  "enableNotifications": true,
+  "startUrl": "/index.html",
+  "iconUrl": "https://hocta.app/icons/icon-512.png",
+  "maskableIconUrl": "https://hocta.app/icons/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "Tra nhanh",
+      "shortName": "Tra từ",
+      "url": "https://hocta.app/index.html#quick",
+      "chosenIconUrl": "https://hocta.app/icons/icon-192.png"
+    },
+    {
+      "name": "Ôn tập FSRS",
+      "shortName": "Ôn tập",
+      "url": "https://hocta.app/index.html#/review",
+      "chosenIconUrl": "https://hocta.app/icons/icon-192.png"
+    },
+    {
+      "name": "Đọc & Tra",
+      "shortName": "Reader",
+      "url": "https://hocta.app/index.html#/reader",
+      "chosenIconUrl": "https://hocta.app/icons/icon-192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://hocta.app/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://hocta.app/",
+  "minSdkVersion": 21,
+  "shareTarget": {
+    "action": "https://hocta.app/index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": "",
+  "displayOverride": [],
+  "appVersion": "1"
+}

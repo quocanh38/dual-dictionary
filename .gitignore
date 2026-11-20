@@ -9,6 +9,15 @@ node_modules/
 !.env.example
 *.pem
 *.key
+*.keystore
+*.jks
+android-twa/.gradle/
+android-twa/build/
+android-twa/app/build/
+android-twa/local.properties
+android-twa/*.apk
+android-twa/*.aab
+android-twa/*.idsig
 .playwright/
 playwright/.auth/
 /outputs/
