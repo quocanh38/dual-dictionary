@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v233-mobile-offline';
+const CACHE = 'mdx-dict-v234-airplane-ready';
 const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
 const LEGACY_APP = './recover.html';
 const LEGACY_STUDIO = './lessons/recover.html';
@@ -350,13 +350,67 @@ async function serveToeicAudio(request) {
   return serveRangeResponse(cached, request.headers.get('Range'), 'audio/wav');
 }
 
-function precacheAppShell() {
-  // addAll writes the replacement entries together after all requests succeed.
+const CORE_SHELL_RE = /^(?:\.\/(?:index\.html|manifest\.webmanifest|favicon\.ico|recover\.html)?|\.\/css\/|\.\/assets\/brand\/|\.\/icons\/|\.\/lessons\/(?:index\.html|lesson-ui\.css|app\.js|schema\.js|storage\.js|library\.js|village\.js|recover\.html)?|\.\/js\/(?:app\.js|db\.js|store\.js|mdict\.js|fuzzy\.js|fsrs-opt\.js|section-switcher\.js|app-update\.js|offline-study\.js|study-content\.js|assignment-engine\.js|lookup-supplement\.js|lookup-lemmas\.js|ai-client\.js|gemini-policy\.js|offline-ai-lessons\.js|experience\.js|experience-config\.js))$/;
+
+async function cacheOneWithRetry(cache, path) {
+  const url = new URL(path, self.registration.scope);
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const resp = await fetch(new Request(url, { cache: 'reload' }));
+      if (resp && resp.ok && resp.status === 200) {
+        await cache.put(url, resp);
+        return true;
+      }
+    } catch (_) { /* retry once on transient mobile network drop */ }
+  }
+  return false;
+}
+
+async function precacheAppShell() {
   const assets = LEGACY_HOST
     ? [...ASSETS.filter(path => !['./', './index.html', './lessons/', './lessons/index.html', './docs/', './docs/index.html', './docs/huong-dan-su-dung.html', './demo/tutor.html'].includes(path)), LEGACY_APP, LEGACY_STUDIO]
     : ASSETS;
-  const requests = assets.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }));
-  return caches.open(CACHE).then(cache => cache.addAll(requests));
+  const cache = await caches.open(CACHE);
+  const core = [];
+  const secondary = [];
+  for (const path of assets) {
+    if (CORE_SHELL_RE.test(path)) core.push(path);
+    else secondary.push(path);
+  }
+  // Phase 1 (atomic): HTML, CSS, fonts, manifest, icons & core JS (~1.5 MB).
+  // Guarantees CSS and core UI are always committed together.
+  await cache.addAll(core.map((path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' })));
+  // Phase 2 (resilient batches of 6): lessons, covers, audio & docs.
+  // Bounded concurrency avoids choking mobile Safari and a single dropped asset
+  // cannot abort CSS/shell installation.
+  const BATCH = 6;
+  for (let i = 0; i < secondary.length; i += BATCH) {
+    await Promise.allSettled(secondary.slice(i, i + BATCH).map((path) => cacheOneWithRetry(cache, path)));
+  }
+}
+
+function offlineFallbackFor(path) {
+  if (LEGACY_HOST) {
+    return caches.match(path.startsWith('/lessons') ? LEGACY_STUDIO : LEGACY_APP);
+  }
+  if (path === '/lessons' || path.startsWith('/lessons/')) {
+    return caches.match('./lessons/index.html').then((hit) => hit || caches.match('./index.html'));
+  }
+  if (path === '/docs' || path.startsWith('/docs/')) {
+    return caches.match('./docs/index.html').then((hit) => hit || caches.match('./index.html'));
+  }
+  if (path === '/demo' || path.startsWith('/demo/')) {
+    return caches.match('./demo/tutor.html').then((hit) => hit || caches.match('./index.html'));
+  }
+  return caches.match('./index.html');
+}
+
+async function matchCachedAsset(request, path) {
+  const direct = await caches.match(request, { ignoreSearch: true });
+  if (direct) return direct;
+  // Fallback by normalized URL (handles iOS Safari preload vs stylesheet / mode mismatches).
+  const normalized = new URL(path, self.registration.scope);
+  return caches.match(normalized, { ignoreSearch: true });
 }
 
 self.addEventListener('install', event => {
@@ -406,13 +460,13 @@ self.addEventListener('fetch', (e) => {
   // and gracefully fall back to the cached app shell when offline in airplane mode.
   if (path === '/vi/' || path.startsWith('/vi/')) {
     if (e.request.mode === 'navigate') {
-      e.respondWith(fetch(e.request).catch(() => caches.match(LEGACY_HOST ? LEGACY_APP : './index.html')));
+      e.respondWith(fetch(e.request).catch(() => offlineFallbackFor(path)));
     }
     return;
   }
   const range = e.request.headers.get('Range');
   e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then((hit) => {
+    matchCachedAsset(e.request, path).then((hit) => {
       if (hit) {
         if (range && /\.(?:wav|m4a|mp3|ogg)$/i.test(path)) {
           return serveRangeResponse(hit, range, path.endsWith('.wav') ? 'audio/wav' : 'audio/mp4');
@@ -431,7 +485,7 @@ self.addEventListener('fetch', (e) => {
       }).catch(() => {
         // Offline fallback only for page navigations — never for assets like
         // css/js, where index.html would be parsed as garbage.
-        if (e.request.mode === 'navigate') return caches.match(LEGACY_HOST ? LEGACY_APP : './index.html');
+        if (e.request.mode === 'navigate') return offlineFallbackFor(path);
         return Response.error();
       });
     })

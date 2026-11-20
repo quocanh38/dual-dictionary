@@ -209,3 +209,22 @@ body > header.section-topbar,
   float: none;
   margin: 0;
 }
+
+/* Airplane / offline mode cues */
+html.is-offline #btn-ai-tutor,
+html.is-offline #btn-vault-story,
+html.is-offline #btn-ai-test,
+html.is-offline #btn-ai-writing-review,
+html.is-offline #btn-ai-speaking-review,
+html.is-offline #btn-ai-reading-coach,
+html.is-offline #btn-voice {
+  opacity: .62;
+}
+html.is-offline .net-banner {
+  border-color: var(--brand-blue);
+}
+#airplane-pack-status {
+  margin: .35rem 0 .5rem;
+  font-weight: 600;
+}
+

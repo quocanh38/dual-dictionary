@@ -1706,6 +1706,7 @@ export function initOfflineStudy(lookup) {
     renderListenLibrary();
     updateOfflineStorage();
   });
+  $("#btn-airplane-pack")?.addEventListener("click", downloadAirplanePack);
   $("#btn-offline-storage")?.addEventListener("click", async () => {
     if (!navigator.storage?.persist) {
       $("#offline-data-status").textContent =
@@ -1793,4 +1794,110 @@ async function updateOfflineStorage() {
       ? `${Math.round(n / 1024)} KB`
       : `${(n / 1024 / 1024).toFixed(1)} MB`;
   el.textContent = `${docs} saved listening item${docs === 1 ? "" : "s"} · ${savedAudio.length} local recording${savedAudio.length === 1 ? "" : "s"} (${fmt(media)}) · ${drafts} draft${drafts === 1 ? "" : "s"}${used && quota ? ` · browser storage ${fmt(used)} of ${fmt(quota)}` : ""}.`;
+  updateAirplanePackStatus();
+}
+
+const AIRPLANE_PACK_ITEMS = [
+  { url: "./assets/study/audio/toeic-delivery.wav", cache: "mdx-dict-toeic-audio" },
+  { url: "./assets/study/audio/toeic-training-room.wav", cache: "mdx-dict-toeic-audio" },
+  { url: "./assets/study/audio/toeic-invoice-correction.wav", cache: "mdx-dict-toeic-audio" },
+  { url: "./assets/study/audio/toeic-focus-l4.wav", cache: "mdx-dict-toeic-audio" },
+  { url: "./assets/study/audio/toeic-focus-l8.wav", cache: "mdx-dict-toeic-audio" },
+  { url: "./js/ielts-meta-practice.js", cache: "shell" },
+  { url: "./samples/simple-en.mdx", cache: "shell" },
+];
+
+async function activeShellCacheName() {
+  if (!("caches" in window)) return "";
+  const keys = (await caches.keys())
+    .filter((name) => /^mdx-dict-v\d+(?:-|$)/.test(name))
+    .sort((a, b) => parseInt(b.slice("mdx-dict-v".length), 10) - parseInt(a.slice("mdx-dict-v".length), 10));
+  return keys[0] || "";
+}
+
+async function updateAirplanePackStatus() {
+  const el = $("#airplane-pack-status");
+  const btn = $("#btn-airplane-pack");
+  if (!el) return;
+  if (!("caches" in window)) {
+    el.textContent = "✈️ Cache Storage không khả dụng trên trình duyệt này.";
+    return;
+  }
+  try {
+    const shellName = await activeShellCacheName();
+    const shellCache = shellName ? await caches.open(shellName) : null;
+    const audioCache = await caches.open("mdx-dict-toeic-audio");
+    const cssOk = shellCache
+      ? Boolean(await shellCache.match(new URL("./css/brand.css", location.href), { ignoreSearch: true }))
+        && Boolean(await shellCache.match(new URL("./css/style.min.css", location.href), { ignoreSearch: true }))
+      : false;
+    let readyCount = 0;
+    for (const item of AIRPLANE_PACK_ITEMS) {
+      const target = item.cache === "shell" ? shellCache : audioCache;
+      if (target && await target.match(new URL(item.url, location.href), { ignoreSearch: true })) {
+        readyCount++;
+      }
+    }
+    const total = AIRPLANE_PACK_ITEMS.length;
+    if (cssOk && readyCount === total) {
+      el.textContent = `✈️ Sẵn sàng chế độ máy bay (100%): CSS, 5 bài nghe TOEIC, 800 câu IELTS & từ điển rút gọn đã lưu trên máy.`;
+      if (btn) btn.textContent = "✓ Gói Chế độ Máy bay đã sẵn sàng (Kiểm tra lại)";
+    } else if (cssOk) {
+      el.textContent = `✈️ Chế độ máy bay cơ bản đã sẵn sàng (CSS & giao diện OK · ${readyCount}/${total} tệp audio/IELTS mở rộng).`;
+    } else {
+      el.textContent = "⚠️ Chưa hoàn tất cache giao diện ngoại tuyến — hãy giữ mạng ổn định rồi bấm tải gói bên dưới.";
+    }
+  } catch (_) {
+    el.textContent = "Không kiểm tra được trạng thái cache ngoại tuyến.";
+  }
+}
+
+async function downloadAirplanePack() {
+  const el = $("#airplane-pack-status");
+  const btn = $("#btn-airplane-pack");
+  if (!navigator.onLine) {
+    if (el) el.textContent = "⚠️ Bạn đang ngoại tuyến — hãy kết nối mạng trước khi tải gói Chế độ Máy bay.";
+    return;
+  }
+  if (!("caches" in window)) {
+    if (el) el.textContent = "Trình duyệt không hỗ trợ Cache Storage.";
+    return;
+  }
+  if (btn) btn.disabled = true;
+  try {
+    if (navigator.serviceWorker?.ready) await navigator.serviceWorker.ready;
+    const shellName = (await activeShellCacheName()) || "mdx-dict-v234-airplane-ready";
+    const shellCache = await caches.open(shellName);
+    const audioCache = await caches.open("mdx-dict-toeic-audio");
+    // Ensure core CSS & HTML are definitely present in shell cache first.
+    const critical = ["./index.html", "./css/brand.css", "./css/style.min.css", "./css/style.css"];
+    for (const c of critical) {
+      const url = new URL(c, location.href);
+      if (!(await shellCache.match(url, { ignoreSearch: true }))) {
+        const r = await fetch(url, { cache: "reload" });
+        if (r.ok && r.status === 200) await shellCache.put(url, r);
+      }
+    }
+    let done = 0;
+    const total = AIRPLANE_PACK_ITEMS.length;
+    for (const item of AIRPLANE_PACK_ITEMS) {
+      if (el) el.textContent = `⏳ Đang tải gói Chế độ Máy bay (${done + 1}/${total})…`;
+      const target = item.cache === "shell" ? shellCache : audioCache;
+      const url = new URL(item.url, location.href);
+      if (!(await target.match(url, { ignoreSearch: true }))) {
+        const r = await fetch(url);
+        if (!r.ok || r.status !== 200) throw new Error(`HTTP ${r.status} for ${item.url}`);
+        await target.put(url, r);
+      }
+      done++;
+    }
+    if (navigator.storage?.persist) {
+      await navigator.storage.persist().catch(() => false);
+    }
+    await updateOfflineStorage();
+  } catch (err) {
+    if (el) el.textContent = `⚠️ Tải gói Chế độ Máy bay bị gián đoạn (${err?.message || "lỗi mạng"}). Hãy thử lại khi mạng ổn định.`;
+  } finally {
+    if (btn) btn.disabled = false;
+  }
 }

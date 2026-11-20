@@ -7728,9 +7728,10 @@ function promptInstall() {
   $('#btn-install')?.classList.add('hidden');
 }
 function updateNetBanner() {
+  const off = navigator.onLine === false;
+  document.documentElement.classList.toggle('is-offline', off);
   const b = $('#net-banner');
   if (!b) return;
-  const off = navigator.onLine === false;
   b.classList.toggle('hidden', !off);
   const el = $('#net-banner-text');
   if (el) el.textContent = i18n('net.offline');
