@@ -1,4 +1,5 @@
 # Block internal tooling, repo metadata, and handoff docs from public hosting
+/.github/*  /404.html  404!
 /tools/*  /404.html  404!
 /package.json  /404.html  404!
 /package-lock.json  /404.html  404!

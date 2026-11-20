@@ -1,0 +1,46 @@
+name: Test & Deploy to Netlify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-netlify-prod
+  cancel-in-progress: false
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Run internal link check
+        run: npm run qa:links
+
+      - name: Verify Netlify token secret
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "::error::Missing GitHub Secret NETLIFY_AUTH_TOKEN. Add it in Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Deploy to Netlify production
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID || '1af0641f-673e-48e9-9c86-1755d64b6558' }}
+        run: npx --yes netlify-cli@19 deploy --prod --dir=. --site="$NETLIFY_SITE_ID" --message="GitHub Actions deploy ${GITHUB_SHA::9}"
