@@ -276,21 +276,15 @@
     </div>
   </dialog>
 
-  <dialog id="tutor-setup-dialog" class="sense-save-dialog">
+  <dialog id="tutor-setup-dialog" aria-labelledby="tutor-setup-dialog-title" class="sense-save-dialog">
     <div class="sense-save-form" id="tutor-setup-form">
-      <h2 data-i18n="ui.tsTitle">Connect your AI account</h2>
-      <p class="hint" data-i18n="ui.tsHint">This is optional. Offline study stays free. Your key stays in this browser and is sent only to the provider you choose after you approve each request. The provider may charge for tokens.</p>
-      <label for="tutor-setup-provider" data-i18n="ui.tsProvider">Provider</label>
-      <select id="tutor-setup-provider">
-        <option value="gemini">Gemini</option>
-      </select>
-      <label for="tutor-setup-key" data-i18n="ui.tsKey">Provider API key</label>
+      <h2 id="tutor-setup-dialog-title" data-i18n="ui.tsTitle">Connect Gemini</h2>
+      <p class="hint" data-i18n="ui.tsHint">This is optional. Offline study stays free. Your key stays in this browser and is sent directly to Google when you approve a Gemini request. Usage is subject to your Google account limits.</p>
+      <label for="tutor-setup-key" data-i18n="ui.tsKey">Gemini API key</label>
       <input id="tutor-setup-key" type="password" autocomplete="off" spellcheck="false" required>
-      <label><input type="checkbox" id="tutor-setup-remember" name="rememberKey"> Remember my key on this device</label>
-      <details id="tutor-setup-advanced"><summary data-i18n="ui.tsAdv">Advanced: model and endpoint</summary>
-        <label for="tutor-setup-model" data-i18n="ui.tsModel">Model</label><input id="tutor-setup-model" type="text" spellcheck="false">
-        <label for="tutor-setup-url" data-i18n="ui.tsEndpoint">API endpoint</label><input id="tutor-setup-url" type="url" spellcheck="false">
-      </details>
+      <label><input type="checkbox" id="tutor-setup-remember" name="rememberKey"> <span data-i18n="ai.rememberKey">Remember my key on this device</span></label>
+      <label for="tutor-setup-model" data-i18n="ui.tsModel">Gemini model</label>
+      <select id="tutor-setup-model"></select>
       <p id="tutor-setup-status" class="hint" role="status" aria-live="polite"></p>
       <div class="sense-save-actions">
         <button type="button" id="btn-tutor-setup-save" class="btn-primary" data-i18n="ui.tsSave">Save and continue</button>
@@ -1155,29 +1149,20 @@
   <div id="adv-panel-learning" class="adv-panel" role="tabpanel" aria-label="Learning behaviour" hidden>
   <details class="adv-section">
     <summary data-i18n="settings.ai">Optional AI tutor</summary><div class="ai-settings-form">
-    <p class="hint">Choose your AI provider and paste its API key. The app fills in the usual model and endpoint for you. Your key is kept in this tab unless you choose to remember it on this device. The app sends it directly to Google when you check model access or request feedback. Tutor sessions and answers are included in JSON and encrypted backups; the key is not. Use a key you are comfortable storing in this browser profile.</p>
-    <label for="ai-provider">AI provider</label>
-    <select id="ai-provider" aria-describedby="ai-provider-hint"><option value="gemini">Gemini</option></select>
-    <p id="ai-provider-hint" class="hint">The free offline features work without connecting an AI account.</p>
-    <label for="ai-api-key">API key</label>
-    <input id="ai-api-key" type="password" autocomplete="off" spellcheck="false" style="width:100%" aria-label="AI provider API key">
+    <p class="hint">Paste your Gemini API key and choose a model. Your key is kept in this tab unless you choose to remember it on this device. The app sends it directly to Google when you check model access or request feedback. Tutor sessions and answers are included in JSON and encrypted backups; the key is not. Use a key you are comfortable storing in this browser profile.</p>
+    <label for="ai-api-key" data-i18n="ui.tsKey">Gemini API key</label>
+    <input id="ai-api-key" type="password" autocomplete="off" spellcheck="false" style="width:100%">
     <p class="hint"><a href="/vi/huong-dan-gemini/" target="_blank" rel="noopener noreferrer" data-i18n="settings.geminiGuide">How to get a Gemini API key (Vietnamese)</a></p>
-    <label><input type="checkbox" id="ai-remember-key" name="rememberKey"> Remember my key on this device</label>
-    <details id="ai-advanced-fields" class="ai-advanced-fields">
-      <summary>Advanced: model and endpoint</summary>
-      <p class="hint">The default values are filled in for the provider above. Change these only if your provider gave you different settings.</p>
-      <label for="ai-base-url">API endpoint</label>
-      <input id="ai-base-url" type="url" spellcheck="false" style="width:100%">
-      <label for="ai-model">Model name</label>
-      <input id="ai-model" type="text" spellcheck="false" style="width:100%">
-    </details>
+    <label><input type="checkbox" id="ai-remember-key" name="rememberKey"> <span data-i18n="ai.rememberKey">Remember my key on this device</span></label>
+    <label for="ai-model" data-i18n="ui.tsModel">Gemini model</label>
+    <select id="ai-model"></select>
     <p class="hint">Saving settings alone does not contact Google. Checking model access reads model metadata without generating text.</p>
     <p class="hint"><a href="./tools/tutor-live-eval.html" target="_blank" rel="noopener">Evaluate live Tutor feedback with four consent-gated cases</a> · the report records latency, verdict and quote checks without including your key.</p>
     <div class="envi-row">
-      <button type="button" id="btn-ai-save" class="btn-secondary">Save settings</button>
-      <button type="button" id="btn-ai-test" class="btn-secondary">Save &amp; check model access</button>
-      <button type="button" id="btn-ai-clear" class="btn-secondary">Forget key</button>
-      <button type="button" id="btn-ai-clear-cache" class="btn-secondary">Clear phrase cache</button>
+      <button type="button" id="btn-ai-save" class="btn-secondary" data-i18n="ai.saveSettings">Save settings</button>
+      <button type="button" id="btn-ai-test" class="btn-secondary" data-i18n="ai.saveAndCheck">Save key and test Gemini access</button>
+      <button type="button" id="btn-ai-clear" class="btn-secondary">Remove saved Gemini key</button>
+      <button type="button" id="btn-ai-clear-cache" class="btn-secondary">Clear cached AI phrase suggestions</button>
     </div>
     <button type="button" id="btn-tutor-clear-data" class="btn-secondary btn-danger">Delete tutor data from this browser</button>
     <p id="ai-settings-status" class="hint" role="status" aria-live="polite"></p></div>

@@ -66,7 +66,7 @@ async function request(url, headers, body, signal, timeoutMs, readStream, onMode
     const send = model => fetch(url, { method: 'POST', headers, body: JSON.stringify({ ...body, model }), signal: controller.signal });
     const { response, model } = await fetchGeminiWithFallback(send, body.model, controller.signal);
     if (!response.ok) {
-      if ([401, 403].includes(response.status)) throw new Error('Provider rejected the key or model access. Open AI settings to check the key/model, then use Save & check model access in Settings → Learning.');
+      if ([401, 403].includes(response.status)) throw new Error('Gemini rejected the key or denied access to the model. In Settings → Learning, select Save key and test Gemini access.');
       if (response.status === 402) throw new Error('Provider billing or available quota is insufficient for this key. Check your provider account.');
       if (response.status === 429) throw new Error('Provider rate limit or quota reached. Check your provider account, then wait and retry.');
       if (response.status === 400) throw new Error('Provider rejected the request. Check the selected model and request compatibility in AI settings.');

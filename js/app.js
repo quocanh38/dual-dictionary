@@ -1,3 +1,4 @@
+import { GEMINI_MODELS } from './gemini-policy.js';
 import { refreshApp } from './app-update.js';
 import { lemmaCandidates } from './lookup-lemmas.js';
 import { initExperience, trackExperience, trackUxSignal, startExperienceJourney, experienceAiReason } from "./experience.js";
@@ -876,7 +877,6 @@ function wireUi() {
     tutorSetupContinuation = null;
     $('#tutor-setup-dialog')?.close();
   });
-  $('#tutor-setup-provider')?.addEventListener('change', syncTutorQuickSetupFields);
   $('#tutor-setup-dialog')?.addEventListener('close', () => { tutorSetupContinuation = null; });
   $('#btn-tutor-clear-data')?.addEventListener('click', clearTutorData);
   $('#tutor-dialog')?.addEventListener('close', cancelTutorRequest);
@@ -885,7 +885,6 @@ function wireUi() {
   $('#btn-ai-clear')?.addEventListener('click', () => { clearAiSettings(); populateTutorSettings(); $('#ai-settings-status').textContent = 'Key removed from this browser.'; });
   $('#btn-ai-clear-cache')?.addEventListener('click', () => { clearTutorCache(); $('#ai-settings-status').textContent = 'Cached phrase suggestions cleared from this browser.'; });
   $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); });
-  $('#ai-provider')?.addEventListener('change', (e) => { const p=PROVIDERS[e.target.value]; if(p){$('#ai-base-url').value=p.baseUrl;$('#ai-model').value=p.model; $('#ai-advanced-fields').open=e.target.value==='compatible'; syncAiProviderFields();} });
   // A stage replacement removes the focused button. Keep keyboard navigation
   // inside the open dialog, without moving focus away from an existing control.
   const tutorStage = $('#tutor-stage');
@@ -3891,36 +3890,29 @@ let tutorController = null;
 let tutorRequestId = 0;
 let tutorSetupContinuation = null;
 const TUTOR_PROMPT_VERSION = 'tutor-v3-meaning';
-function syncTutorQuickSetupFields() {
-  const provider = $('#tutor-setup-provider')?.value || 'gemini';
-  const defaults = PROVIDERS[provider] || PROVIDERS.gemini;
-  $('#tutor-setup-model').value = defaults.model;
-  $('#tutor-setup-url').value = defaults.baseUrl;
-  $('#tutor-setup-advanced').open = provider === 'compatible';
+function populateGeminiModelSelect(select, model) {
+  if (!select) return;
+  select.replaceChildren(...GEMINI_MODELS.map(id => new Option(id, id)));
+  select.value = model;
 }
 function openTutorQuickSetup(continuation) {
   const settings = getAiSettings();
   tutorSetupContinuation = continuation || null;
-  $('#tutor-setup-provider').value = settings.provider;
   $('#tutor-setup-key').value = settings.apiKey;
   $('#tutor-setup-remember').checked = settings.rememberKey;
-  $('#tutor-setup-model').value = settings.model;
-  $('#tutor-setup-url').value = settings.baseUrl;
-  $('#tutor-setup-advanced').open = settings.provider === 'compatible';
+  populateGeminiModelSelect($('#tutor-setup-model'), settings.model);
   $('#tutor-setup-status').textContent = '';
   if (!$('#tutor-setup-dialog').open) $('#tutor-setup-dialog').showModal();
   $('#tutor-setup-key').focus();
 }
 function saveTutorQuickSetup() {
   const key = $('#tutor-setup-key').value.trim();
-  if (!key) { $('#tutor-setup-status').textContent = 'Enter your provider API key to continue. No request has been sent.'; return; }
+  if (!key) { $('#tutor-setup-status').textContent = lang === 'vi' ? 'Nhập khóa API Gemini để tiếp tục.' : 'Enter your Gemini API key to continue.'; return; }
   try {
     saveAiSettings({
-      provider: $('#tutor-setup-provider').value,
       apiKey: key,
       rememberKey: $('#tutor-setup-remember').checked,
       model: $('#tutor-setup-model').value,
-      baseUrl: $('#tutor-setup-url').value,
     });
     const continuation = tutorSetupContinuation;
     tutorSetupContinuation = null;
@@ -3991,7 +3983,7 @@ async function startTutor({fresh=false}={}) {
   const reading=$('#reader-text');
   if(!reading || reading.classList.contains('hidden') || reading.innerText.trim().length<80) { setReaderMsg('Start a reading of at least 80 characters before using optional AI practice.'); $('#reader-input')?.focus(); return; }
   const currentArticle=reading.innerText.trim().slice(0,12000), settings=getAiSettings();
-  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save & check model access in Settings \u2192 Learning before the demo.' : 'Saved AI settings look incomplete (endpoint/model). Open AI settings to fix them before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
+  { const pre=tutorPreflight(); if(!pre.ok && !getTutorCache({provider:settings.provider,model:settings.model,task:'phrases',input:currentArticle.slice(0,12000),promptVersion:TUTOR_PROMPT_VERSION})) { tutorStatus(pre.reason==='missing-key' ? 'Add your provider key first \u2014 no request was sent. Save, then use Save key and test Gemini access in Settings \u2192 Learning before the demo.' : 'Open AI settings and check your Gemini configuration before the demo \u2014 no request was sent.'); tutorJourney?.step('setup'); openTutorQuickSetup(() => startTutor({fresh})); return; } }
   if(fresh) {
     const article=currentArticle;
     if(!article || article.length<80) { showToast('Open a reading of at least 80 characters first.'); return; }
@@ -4113,7 +4105,7 @@ async function handleTutorClick(e) {
     if(tutorSession.stage==='select'&&!tutorSession.phrases.length) await findTutorPhrases(); else tutorStatus('Resumed the saved practice session.');
     return;
   }
-  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Settings \u2192 Learning \u2192 Save & check model access.'); return; }
+  if(action==='open-ai-settings') { openTutorQuickSetup(null); tutorStatus('Check the provider key/model, save, then retry. Full check: Settings \u2192 Learning \u2192 Save key and test Gemini access.'); return; }
   if(action==='cancel') { cancelTutorRequest(); return; }
   if(action==='retry-select') { if(!tutorBusy) await findTutorPhrases(); return; }
   if(action==='retry-feedback') { if(!tutorSession || tutorBusy) return; tutorSession.stage='answer'; renderTutorAnswer(); const area=$('#tutor-stage textarea'); if(area) area.value=tutorSession.answer||''; return; }
@@ -4262,20 +4254,14 @@ function renderTutorFeedback() {
 }
 function populateTutorSettings() {
   const settings = getAiSettings();
-  for (const [id, value] of Object.entries({'ai-provider':settings.provider,'ai-base-url':settings.baseUrl,'ai-model':settings.model,'ai-api-key':settings.apiKey})) {
+  for (const [id, value] of Object.entries({'ai-api-key':settings.apiKey})) {
     const field = document.getElementById(id); if (field) field.value = value;
   }
   const remember=document.getElementById('ai-remember-key'); if(remember) remember.checked=settings.rememberKey;
-  const advanced=document.getElementById('ai-advanced-fields'); if(advanced) advanced.open=settings.provider==='compatible';
-  syncAiProviderFields();
-}
-function syncAiProviderFields() {
-  const provider=document.getElementById('ai-provider')?.value||'gemini';
-  const field=document.getElementById('ai-api-key');
-  if(field) field.setAttribute('aria-label',`${PROVIDERS[provider]?.label||'AI provider'} API key`);
+  populateGeminiModelSelect($('#ai-model'), settings.model);
 }
 async function saveTutorSettings() {
-  try { const settings=saveAiSettings({provider:$('#ai-provider').value,apiKey:$('#ai-api-key').value,rememberKey:$('#ai-remember-key').checked,model:$('#ai-model').value,baseUrl:$('#ai-base-url').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings for ${settings.rememberKey ? 'this device' : 'this tab'}.`; return true; }
+  try { const settings=saveAiSettings({apiKey:$('#ai-api-key').value,rememberKey:$('#ai-remember-key').checked,model:$('#ai-model').value}); $('#ai-api-key').value=settings.apiKey; $('#ai-settings-status').textContent=`Saved ${PROVIDERS[settings.provider].label} settings for ${settings.rememberKey ? 'this device' : 'this tab'}.`; return true; }
   catch(error) { $('#ai-settings-status').textContent=error.message; return false; }
 }
 async function testTutorConnection() {
@@ -6971,6 +6957,7 @@ function cycleTheme() {
  * comes from the dictionary itself and stays as-shipped. */
 const I18N = {
   en: {
+    'transcript.formats': 'Accepted formats: plain text, SRT, or VTT.', 'ai.saveSettings': 'Save settings', 'ai.saveAndCheck': 'Save key and test Gemini access',
     'nav.search': 'Search', 'nav.reader': 'Reader', 'nav.vault': 'Vault', 'nav.review': 'Review', 'nav.practice': 'Practice', 'nav.stats': 'Stats',
     'section.vault': 'Vault', 'section.review': 'Review', 'section.practice': 'Practice', 'section.stats': 'Stats',
     'top.lang': 'Language (EN / VI)', 'top.theme': 'Theme: auto / light / dark',
@@ -7124,8 +7111,9 @@ const I18N = {
     'apkg.building': 'Building Anki deck…',
     'apkg.done': 'Anki deck exported — {n} note(s). Import it with File → Import in Anki.',
     'apkg.nothing': 'Nothing to export',
-    'apkg.failed': 'Could not build the Anki deck — try again (the first export needs a moment to load the writer).',
-    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 Start offline lessons — no key', 'hero.hint': 'Paste a short paragraph in the Reader below, press Start reading, then choose AI practice \u2014 or start a free offline lesson (no key needed).', 'tutor.start': '✨ AI practice (online · own key)', 'tutor.title': 'Reading to speaking practice', 'tutor.hint': 'AI suggestions are checked against your reading. Review feedback before saving it to your study history.', 'hero.offline': 'Start a free offline lesson (no key)', 'village.title': 'Learn workplace English where the network drops.', 'village.body': 'Prepare packs where you have a connection; then read, practise and review fully offline — no key, no account.', 'village.lessons': 'Offline lessons (33 packs · ~340 KB)', 'village.ielts': 'IELTS/TOEIC offline lab', 'village.offlineBadge': 'OFFLINE · no key', 'village.labNote': 'Offline path: Listening/Reading with fixed answer keys work in airplane mode. Optional AI feedback below needs internet + your own key.', 'reader.offlinePacks': 'Offline lesson packs', 'reader.loopHint': 'Read → phrase → new situation → Vault — or start an offline pack, no key.', 'reader.freeLesson': 'Read a sample lesson', 'reader.savedArticles': '📁 Saved articles', 'reader.tools': 'Reading tools', 'reader.saveOffline': '💾 Save offline', 'sense.title': 'Save this meaning', 'sense.entry': 'Dictionary entry', 'sense.meaning': 'Meaning to remember', 'sense.context': 'Source sentence (optional)', 'sense.save': 'Save meaning', 'sense.cancel': 'Cancel', 'search.search': 'Search', 'ui.skip': 'Skip to search', 'ui.clear': 'Clear', 'ui.listenTts': 'Listen (text-to-speech)', 'ui.listenPron': 'Listen to pronunciation', 'ui.saveWord': 'Save word', 'ui.saveWordAria': 'Save word to your vocabulary list', 'ui.dismissShort': 'Dismiss', 'ui.dismiss': 'Dismiss this suggestion', 'ui.moreWays': 'More ways to read: file, URL, transcript or audio', 'ui.tsTitle': 'Connect your AI account', 'ui.tsHint': 'This is optional. Offline study stays free. Your key stays in this browser and is sent only to the provider you choose after you approve each request. The provider may charge for tokens.', 'ui.tsProvider': 'Provider', 'ui.tsOther': 'Other compatible service', 'ui.tsKey': 'Provider API key', 'ui.tsAdv': 'Advanced: model and endpoint', 'ui.tsEndpoint': 'API endpoint', 'ui.tsModel': 'Model', 'ui.tsSave': 'Save and continue', 'ui.btnCancel': 'Cancel', 'ui.btnClose': 'Close', 'ui.chooseDict': 'Choose dictionary', 'ui.hearWord': 'Hear the word', 'ui.slowPlayback': 'Slow playback (0.75\u00d7)', 'ui.replaySentence': 'Replay the saved sentence', 'ui.savedCtx': 'Saved context for this word', 'ui.inSavedCtx': 'In your saved context', 'ui.addExample': '\u2795 Add example', 'ui.openInVault': 'Open in Vault', 'ui.cancelDownload': 'Cancel download', 'ui.fullscreen': 'Full-screen reading view', 'ui.fsOxford': 'Full-screen reading view for WordNet', 'ui.fsLongman': 'Full-screen reading view for Wiktionary', 'ui.fsThird': 'Full-screen reading view for slot 3', 'ui.slot3name': 'Slot 3 (optional \u2014 your own .mdx)', 'ui.closeEditor': 'Close editor', 'ui.ppTitle': 'Passphrase', 'ui.ppGo': 'Continue', 'ui.snapTitle': 'Saved articles', 'ui.snapHint': 'Articles you saved for offline reading. Tap one to load it into the Reader \u2014 no network needed.',
+    'apkg.failed': 'Could not export the Anki deck. Wait a moment, then try again.',
+    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 Start offline lessons — no key', 'hero.hint': 'Paste a short paragraph in the Reader below, press Start reading, then choose AI practice \u2014 or start a free offline lesson (no key needed).', 'tutor.start': '✨ AI practice (online · own key)', 'tutor.title': 'Reading to speaking practice', 'tutor.hint': 'AI suggestions are checked against your reading. Review feedback before saving it to your study history.', 'hero.offline': 'Start a free offline lesson (no key)', 'village.title': 'Learn workplace English where the network drops.', 'village.body': 'Prepare packs where you have a connection; then read, practise and review fully offline — no key, no account.', 'village.lessons': 'Offline lessons (33 packs · ~340 KB)', 'village.ielts': 'IELTS/TOEIC offline lab', 'village.offlineBadge': 'OFFLINE · no key', 'village.labNote': 'Offline path: Listening/Reading with fixed answer keys work in airplane mode. Optional AI feedback below needs internet + your own key.', 'reader.offlinePacks': 'Offline lesson packs', 'reader.loopHint': 'Read → phrase → new situation → Vault — or start an offline pack, no key.', 'reader.freeLesson': 'Read a sample lesson', 'reader.savedArticles': '📁 Saved articles', 'reader.tools': 'Reading tools', 'reader.saveOffline': '💾 Save offline', 'sense.title': 'Save this meaning', 'sense.entry': 'Dictionary entry', 'sense.meaning': 'Meaning to remember', 'sense.context': 'Source sentence (optional)', 'sense.save': 'Save meaning', 'sense.cancel': 'Cancel', 'search.search': 'Search', 'ui.skip': 'Skip to main content', 'ui.clear': 'Clear', 'ui.listenTts': 'Listen (text-to-speech)', 'ui.listenPron': 'Listen to pronunciation', 'ui.saveWord': 'Save word', 'ui.saveWordAria': 'Save word to your vocabulary list', 'ui.dismissShort': 'Dismiss', 'ui.dismiss': 'Dismiss this suggestion', 'ui.moreWays': 'More ways to read: file, URL, transcript or audio', 'ui.tsTitle': 'Connect Gemini', 'ui.tsHint': 'Offline study is free. HọcTA sends your key directly to Google when you approve a Gemini request.', 'ui.tsKey': 'Gemini API key', 'ui.tsModel': 'Gemini model', 'ai.rememberKey': 'Remember my key on this device', 'ui.tsSave': 'Save and continue', 'ui.btnCancel': 'Cancel', 'ui.btnClose': 'Close', 'ui.chooseDict': 'Choose dictionary', 'ui.hearWord': 'Hear the word', 'ui.slowPlayback': 'Slow playback (0.75\u00d7)', 'ui.replaySentence': 'Replay the saved sentence', 'ui.savedCtx': 'Saved context for this word', 'ui.inSavedCtx': 'In your saved context', 'ui.addExample': '\u2795 Add example', 'ui.openInVault': 'Open in Vault', 'ui.cancelDownload': 'Cancel download', 'ui.fullscreen': 'Full-screen reading view', 'ui.fsOxford': 'Full-screen reading view for WordNet', 'ui.fsLongman': 'Full-screen reading view for Wiktionary', 'ui.fsThird': 'Full-screen reading view for slot 3', 'ui.slot3name': 'Slot 3 (optional \u2014 your own .mdx)', 'ui.closeEditor': 'Close editor', 'ui.ppTitle': 'Passphrase', 'ui.ppGo': 'Continue', 'ui.snapTitle': 'Saved articles', 'ui.snapHint': 'Articles you saved for offline reading. Tap one to load it into the Reader \u2014 no network needed.',
+    'transcript.formats': 'Hỗ trợ văn bản thuần, SRT hoặc VTT.', 'ai.saveSettings': 'Lưu cài đặt', 'ai.saveAndCheck': 'Lưu khóa và kiểm tra Gemini',
   },
   vi: {
     'nav.search': 'Tra từ', 'nav.reader': 'Đọc', 'nav.vault': 'Sổ tay', 'nav.review': 'Ôn tập', 'nav.practice': 'Luyện tập', 'nav.stats': 'Thống kê',
@@ -7275,7 +7263,7 @@ const I18N = {
     'apkg.done': 'Đã xuất bộ thẻ Anki — {n} thẻ. Mở Anki → File → Import để nạp file.',
     'apkg.nothing': 'Không có gì để xuất',
     'apkg.failed': 'Không tạo được bộ thẻ Anki — thử lại (lần xuất đầu cần chút thời gian nạp bộ dựng).',
-    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 H\u1ecdc offline — kh\u00f4ng c\u1ea7n key', 'hero.hint': 'D\u00e1n \u0111o\u1ea1n v\u0103n ng\u1eafn v\u00e0o Reader \u1edf d\u01b0\u1edbi, b\u1ea5m B\u1eaf\u0111 \u0111\u1ea7u \u0111\u1ecdc, r\u1ed3i ch\u1ecdn AI practice \u2014 ho\u1eb7c h\u1ecdc offline mi\u1ec5n ph\u00ed kh\u00f4ng c\u1ea7n key.', 'tutor.start': '✨ Luy\u1ec7n AI (online \u00b7 key c\u1ee7a b\u1ea1n)', 'tutor.title': 'Luy\u1ec7n \u0111\u1ecdc \u2192 n\u00f3i', 'tutor.hint': 'G\u1ee3i \u00fd AI \u0111\u01b0\u1ee3c \u0111\u1ed1i chi\u1ebfu v\u1edbi b\u00e0i \u0111\u1ecdc. H\u00e3y duy\u1ec7t feedback tr\u01b0\u1edbc khi l\u01b0u v\u00e0o l\u1ecbch s\u1eed h\u1ecdc.', 'hero.offline': 'H\u1ecdc offline mi\u1ec5n ph\u00ed (kh\u00f4ng c\u1ea7n key)', 'village.title': 'H\u1ecdc ti\u1ebfng Anh c\u00f4ng s\u1edf n\u01a1i m\u1ea1ng ch\u1eadp ch\u1eddn.', 'village.body': 'Chu\u1ea9n b\u1ecb pack n\u01a1i c\u00f3 m\u1ea1ng; sau \u0111\u00f3 \u0111\u1ecdc, luy\u1ec7n v\u00e0 \u00f4n ho\u00e0n to\u00e0n offline — kh\u00f4ng key, kh\u00f4ng t\u00e0i kho\u1ea3n, kh\u00f4ng theo d\u00f5i.', 'village.lessons': 'B\u00e0i h\u1ecdc offline (33 packs · ~340 KB)', 'village.ielts': 'Lab IELTS/TOEIC offline', 'village.offlineBadge': 'OFFLINE · không cần key', 'village.labNote': 'Đường học offline: Listening/Reading chấm key cố định chạy ở chế độ máy bay. AI feedback optional bên dưới cần mạng + key riêng.', 'reader.offlinePacks': 'B\u1ed9 b\u00e0i h\u1ecdc offline', 'reader.loopHint': 'Đ\u1ecdc → c\u1ee5m t\u1eeb → t\u00ecnh hu\u1ed1ng m\u1edbi → Vault — ho\u1eb7c h\u1ecdc pack offline, kh\u00f4ng c\u1ea7n key', 'reader.freeLesson': 'Đọc bài mẫu', 'reader.savedArticles': '📁 B\u00e0i \u0111\u00e3 l\u01b0u', 'reader.tools': 'C\u00f4ng c\u1ee5 \u0111\u1ecdc', 'reader.saveOffline': '💾 L\u01b0u offline', 'sense.title': 'L\u01b0u ngh\u0129a n\u00e0y', 'sense.entry': 'M\u1ee5c t\u1eeb \u0111i\u1ec3n', 'sense.meaning': 'Ngh\u0129a c\u1ea7n nh\u1edb', 'sense.context': 'C\u00e2u ngu\u1ed3n (t\u00f9y ch\u1ecdn)', 'sense.save': 'L\u01b0u ngh\u0129a', 'sense.cancel': 'H\u1ee7y', 'search.search': 'T\u00ecm', 'ui.skip': 'B\u1ecf qua \u0111\u1ebfn t\u00ecm ki\u1ebfm', 'ui.clear': 'X\u00f3a', 'ui.listenTts': 'Nghe \u0111\u1ecdc (text-to-speech)', 'ui.listenPron': 'Nghe ph\u00e1t \u00e2m', 'ui.saveWord': 'L\u01b0u t\u1eeb', 'ui.saveWordAria': 'L\u01b0u t\u1eeb v\u00e0o S\u1ed5 tay', 'ui.dismissShort': '\u0110\u00f3ng', 'ui.dismiss': '\u0110\u00f3ng g\u1ee3i \u00fd n\u00e0y', 'ui.moreWays': 'Th\u00eam c\u00e1ch \u0111\u1ecdc: file, URL, transcript ho\u1eb7c audio', 'ui.tsTitle': 'K\u1ebft n\u1ed1i t\u00e0i kho\u1ea3n AI', 'ui.tsHint': 'M\u1ee5c n\u00e0y t\u00f9y ch\u1ecdn. H\u1ecdc offline v\u1eabn mi\u1ec5n ph\u00ed. Key ch\u1ec9 l\u01b0u trong tr\u00ecnh duy\u1ec7t n\u00e0y v\u00e0 ch\u1ec9 g\u1eedi \u0111\u1ebfn nh\u00e0 cung c\u1ea5p b\u1ea1n ch\u1ecdn sau khi b\u1ea1n duy\u1ec7t t\u1eebng y\u00eau c\u1ea7u. Nh\u00e0 cung c\u1ea5p c\u00f3 th\u1ec3 t\u00ednh ph\u00ed token.', 'ui.tsProvider': 'Nh\u00e0 cung c\u1ea5p', 'ui.tsOther': 'D\u1ecbch v\u1ee5 t\u01b0\u01a1ng th\u00edch kh\u00e1c', 'ui.tsKey': 'API key c\u1ee7a nh\u00e0 cung c\u1ea5p', 'ui.tsAdv': 'N\u00e2ng cao: model v\u00e0 endpoint', 'ui.tsEndpoint': 'API endpoint', 'ui.tsModel': 'Model', 'ui.tsSave': 'L\u01b0u v\u00e0 ti\u1ebfp t\u1ee5c', 'ui.btnCancel': 'H\u1ee7y', 'ui.btnClose': '\u0110\u00f3ng', 'ui.chooseDict': 'Ch\u1ecdn t\u1eeb \u0111i\u1ec3n', 'ui.hearWord': 'Nghe t\u1eeb', 'ui.slowPlayback': 'Nghe ch\u1eadm (0.75\u00d7)', 'ui.replaySentence': 'Nghe l\u1ea1i c\u00e2u \u0111\u00e3 l\u01b0u', 'ui.savedCtx': 'Ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u c\u1ee7a t\u1eeb n\u00e0y', 'ui.inSavedCtx': 'Trong ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u', 'ui.addExample': '\u2795 Th\u00eam v\u00ed d\u1ee5', 'ui.openInVault': 'M\u1edf trong Vault', 'ui.cancelDownload': 'H\u1ee7y t\u1ea3i xu\u1ed1ng', 'ui.fullscreen': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh', 'ui.fsOxford': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho WordNet', 'ui.fsLongman': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho Wiktionary', 'ui.fsThird': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho khung 3', 'ui.slot3name': 'Khung 3 (t\u00f9y ch\u1ecdn \u2014 file .mdx c\u1ee7a b\u1ea1n)', 'ui.closeEditor': '\u0110\u00f3ng tr\u00ecnh s\u1eeda', 'ui.ppTitle': 'C\u1ee5m m\u1eadt kh\u1ea9u', 'ui.ppGo': 'Ti\u1ebfp t\u1ee5c', 'ui.snapTitle': 'B\u00e0i \u0111\u00e3 l\u01b0u', 'ui.snapHint': 'B\u00e0i b\u1ea1n \u0111\u00e3 l\u01b0u \u0111\u1ec3 \u0111\u1ecdc offline. Ch\u1ea1m m\u1ed9t b\u00e0i \u0111\u1ec3 m\u1edf trong Reader \u2014 kh\u00f4ng c\u1ea7n m\u1ea1ng.',
+    'cov.band1k': 'top 1k', 'cov.band2k': 'top 2k', 'cov.band5k': 'top 5k', 'cov.band10k': 'top 10k', 'hero.ctaOffline': '📚 H\u1ecdc offline — kh\u00f4ng c\u1ea7n key', 'hero.hint': 'D\u00e1n \u0111o\u1ea1n v\u0103n ng\u1eafn v\u00e0o Reader \u1edf d\u01b0\u1edbi, b\u1ea5m B\u1eaf\u0111 \u0111\u1ea7u \u0111\u1ecdc, r\u1ed3i ch\u1ecdn AI practice \u2014 ho\u1eb7c h\u1ecdc offline mi\u1ec5n ph\u00ed kh\u00f4ng c\u1ea7n key.', 'tutor.start': '✨ Luy\u1ec7n AI (online \u00b7 key c\u1ee7a b\u1ea1n)', 'tutor.title': 'Luy\u1ec7n \u0111\u1ecdc \u2192 n\u00f3i', 'tutor.hint': 'G\u1ee3i \u00fd AI \u0111\u01b0\u1ee3c \u0111\u1ed1i chi\u1ebfu v\u1edbi b\u00e0i \u0111\u1ecdc. H\u00e3y duy\u1ec7t feedback tr\u01b0\u1edbc khi l\u01b0u v\u00e0o l\u1ecbch s\u1eed h\u1ecdc.', 'hero.offline': 'H\u1ecdc offline mi\u1ec5n ph\u00ed (kh\u00f4ng c\u1ea7n key)', 'village.title': 'H\u1ecdc ti\u1ebfng Anh c\u00f4ng s\u1edf n\u01a1i m\u1ea1ng ch\u1eadp ch\u1eddn.', 'village.body': 'Chu\u1ea9n b\u1ecb pack n\u01a1i c\u00f3 m\u1ea1ng; sau \u0111\u00f3 \u0111\u1ecdc, luy\u1ec7n v\u00e0 \u00f4n ho\u00e0n to\u00e0n offline — kh\u00f4ng key, kh\u00f4ng t\u00e0i kho\u1ea3n, kh\u00f4ng theo d\u00f5i.', 'village.lessons': 'B\u00e0i h\u1ecdc offline (33 packs · ~340 KB)', 'village.ielts': 'Lab IELTS/TOEIC offline', 'village.offlineBadge': 'OFFLINE · không cần key', 'village.labNote': 'Đường học offline: Listening/Reading chấm key cố định chạy ở chế độ máy bay. AI feedback optional bên dưới cần mạng + key riêng.', 'reader.offlinePacks': 'B\u1ed9 b\u00e0i h\u1ecdc offline', 'reader.loopHint': 'Đ\u1ecdc → c\u1ee5m t\u1eeb → t\u00ecnh hu\u1ed1ng m\u1edbi → Vault — ho\u1eb7c h\u1ecdc pack offline, kh\u00f4ng c\u1ea7n key', 'reader.freeLesson': 'Đọc bài mẫu', 'reader.savedArticles': '📁 B\u00e0i \u0111\u00e3 l\u01b0u', 'reader.tools': 'C\u00f4ng c\u1ee5 \u0111\u1ecdc', 'reader.saveOffline': '💾 L\u01b0u offline', 'sense.title': 'L\u01b0u ngh\u0129a n\u00e0y', 'sense.entry': 'M\u1ee5c t\u1eeb \u0111i\u1ec3n', 'sense.meaning': 'Ngh\u0129a c\u1ea7n nh\u1edb', 'sense.context': 'C\u00e2u ngu\u1ed3n (t\u00f9y ch\u1ecdn)', 'sense.save': 'L\u01b0u ngh\u0129a', 'sense.cancel': 'H\u1ee7y', 'search.search': 'T\u00ecm', 'ui.skip': 'Bỏ qua đến nội dung chính', 'ui.clear': 'X\u00f3a', 'ui.listenTts': 'Nghe \u0111\u1ecdc (text-to-speech)', 'ui.listenPron': 'Nghe ph\u00e1t \u00e2m', 'ui.saveWord': 'L\u01b0u t\u1eeb', 'ui.saveWordAria': 'L\u01b0u t\u1eeb v\u00e0o S\u1ed5 tay', 'ui.dismissShort': '\u0110\u00f3ng', 'ui.dismiss': '\u0110\u00f3ng g\u1ee3i \u00fd n\u00e0y', 'ui.moreWays': 'Th\u00eam c\u00e1ch \u0111\u1ecdc: file, URL, transcript ho\u1eb7c audio', 'ui.tsTitle': 'Kết nối Gemini', 'ui.tsHint': 'Bạn có thể học ngoại tuyến miễn phí. HọcTA gửi khóa trực tiếp đến Google khi bạn đồng ý gửi yêu cầu đến Gemini.', 'ui.tsKey': 'Khóa API Gemini', 'ui.tsModel': 'Mô hình Gemini', 'ai.rememberKey': 'Ghi nhớ khóa trên thiết bị này', 'ui.tsSave': 'L\u01b0u v\u00e0 ti\u1ebfp t\u1ee5c', 'ui.btnCancel': 'H\u1ee7y', 'ui.btnClose': '\u0110\u00f3ng', 'ui.chooseDict': 'Ch\u1ecdn t\u1eeb \u0111i\u1ec3n', 'ui.hearWord': 'Nghe t\u1eeb', 'ui.slowPlayback': 'Nghe ch\u1eadm (0.75\u00d7)', 'ui.replaySentence': 'Nghe l\u1ea1i c\u00e2u \u0111\u00e3 l\u01b0u', 'ui.savedCtx': 'Ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u c\u1ee7a t\u1eeb n\u00e0y', 'ui.inSavedCtx': 'Trong ng\u1eef c\u1ea3nh \u0111\u00e3 l\u01b0u', 'ui.addExample': '\u2795 Th\u00eam v\u00ed d\u1ee5', 'ui.openInVault': 'M\u1edf trong Vault', 'ui.cancelDownload': 'H\u1ee7y t\u1ea3i xu\u1ed1ng', 'ui.fullscreen': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh', 'ui.fsOxford': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho WordNet', 'ui.fsLongman': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho Wiktionary', 'ui.fsThird': 'Xem \u0111\u1ecdc to\u00e0n m\u00e0n h\u00ecnh cho khung 3', 'ui.slot3name': 'Khung 3 (t\u00f9y ch\u1ecdn \u2014 file .mdx c\u1ee7a b\u1ea1n)', 'ui.closeEditor': '\u0110\u00f3ng tr\u00ecnh s\u1eeda', 'ui.ppTitle': 'C\u1ee5m m\u1eadt kh\u1ea9u', 'ui.ppGo': 'Ti\u1ebfp t\u1ee5c', 'ui.snapTitle': 'B\u00e0i \u0111\u00e3 l\u01b0u', 'ui.snapHint': 'B\u00e0i b\u1ea1n \u0111\u00e3 l\u01b0u \u0111\u1ec3 \u0111\u1ecdc offline. Ch\u1ea1m m\u1ed9t b\u00e0i \u0111\u1ec3 m\u1edf trong Reader \u2014 kh\u00f4ng c\u1ea7n m\u1ea1ng.',
   },
 };
 Object.assign(I18N.en, {

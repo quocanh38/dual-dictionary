@@ -5,6 +5,14 @@ const fs = require("fs"),
   assert = require("assert/strict");
 const root = process.cwd();
 const server = http.createServer((req, res) => {
+  if (req.url === "/.netlify/functions/experience?operations" && req.method === "GET") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ enabled: false }));
+  }
+  if (req.url === "/.netlify/functions/experience?catalog" && req.method === "GET") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ hidden: [] }));
+  }
   let f = path.join(root, decodeURIComponent(req.url.split("?")[0]));
   if (fs.existsSync(f) && fs.statSync(f).isDirectory())
     f = path.join(f, "index.html");
