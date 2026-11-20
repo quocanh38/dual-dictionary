@@ -94,3 +94,18 @@ h1{margin:0 0 8px;font-size:3rem;line-height:1.05}
 .hub-suggest button:hover,.hub-suggest button.active{background:var(--soft)}
 .hub-suggest .sg-tag{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}
 .hub-filters{position:relative}
+@media (prefers-color-scheme: dark){
+  :root{--ink:var(--brand-night-text);--muted:var(--brand-night-muted);--paper:var(--brand-night-surface);--soft:#162238;--line:var(--brand-night-line);--teal:var(--brand-blue-on-dark);--teal-dark:#c5ceff;--coral:var(--brand-blue-on-dark)}
+  body{color-scheme:dark;background:var(--brand-night);color:var(--ink)}
+  .entry-body{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .mtd-idiom b{color:#c5ceff}
+  .word-cta-btn,.word-cta-btn-practice,.chip-learn{color:var(--brand-night)}
+  .word-note p{color:var(--ink)}
+  .word-note code{background:rgba(170,182,255,.16);color:#dbe2ff}
+  .chip-core,.chip-learn2,#mylist-bar{background:rgba(170,182,255,.14);color:#dbe2ff;border-color:rgba(170,182,255,.4)}
+  .chip-off{background:#233047;color:#cbd5e1;border-color:#475569}
+  .chip-awl{background:#3a2810;color:#fde68a;border-color:#92400e}
+  .chip-exam2{background:#1e2b58;color:#c7d2fe;border-color:#4f66c8}
+  .chip-cefr{background:#2c1f4a;color:#ddd6fe;border-color:#7c5cc4}
+  .exam-copy{color:var(--ink)}
+}
