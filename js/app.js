@@ -7731,7 +7731,20 @@ Object.assign(I18N.vi, {
   'panel.loadingRes': 'vẫn đang tải tài nguyên{eta}.',
   'panel.loadingResHint': 'Theo dõi tiến độ ở phần đầu panel, hoặc tra từ điển khác trong lúc chờ.',
 });
-let lang = localStorage.getItem('lang') || (new URLSearchParams(location.search).get('lang') === 'vi' || /^vi/i.test(navigator.language) ? 'vi' : 'en');
+function detectDefaultLang() {
+  try {
+    const qLang = new URLSearchParams(location.search).get('lang');
+    if (qLang === 'vi' || qLang === 'en') return qLang;
+    const saved = localStorage.getItem('lang');
+    if (saved === 'vi' || saved === 'en') return saved;
+    if (/^vi/i.test(navigator.language || '')) return 'vi';
+    if (Array.isArray(navigator.languages) && navigator.languages.some((l) => /^vi/i.test(l || ''))) return 'vi';
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (tz === 'Asia/Ho_Chi_Minh' || tz === 'Asia/Saigon') return 'vi';
+  } catch (e) { /* fallback to en */ }
+  return 'en';
+}
+let lang = detectDefaultLang();
 function i18n(k) { return (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k; }
 /** i18n with {placeholders}: i18nFmt('firstload.ctaSize', {size: fmtSize(n)}) */
 function i18nFmt(k, vars) {
