@@ -24,7 +24,7 @@ def twaManifest = [
     applicationId: 'app.hocta.twa',
     hostName: 'hocta.app', // The domain being opened in the TWA.
     launchUrl: '/index.html', // The start path for the TWA. Must be relative to the domain.
-    name: 'HọcTA — Học tiếng Anh', // The application name.
+    name: 'HọcTA - Từ điển Anh Việt', // The application name.
     launcherName: 'HọcTA', // The name shown on the Android Launcher.
     themeColor: '#293CC8', // The color used for the status bar.
     themeColorDark: '#000000', // The color used for the dark status bar.

@@ -108,85 +108,88 @@ Sau khi lệnh chạy xong, bạn sẽ có:
 - **App Icon (512×512 PNG, 32-bit):** Dùng sẵn file [`android-twa/store_icon.png`](../android-twa/store_icon.png) hoặc [`icons/icon-512.png`](../icons/icon-512.png).
 - **Feature Graphic (1024×500 PNG, không alpha):** Đã tạo sẵn tại [`android-twa/feature-graphic-1024x500.png`](../android-twa/feature-graphic-1024x500.png).
 
-### 5.2. Bản Tiếng Việt (`vi-VN` — Ngôn ngữ mặc định)
+### 5.2. Bản Tiếng Việt (`vi-VN` — Ngôn ngữ mặc định, đã tối ưu ASO)
 
-- **Tên ứng dụng (App name — tối đa 30 ký tự):** *(23/30 ký tự)*
+- **Tên ứng dụng (App name — tối đa 30 ký tự):** *(24/30 ký tự)*
   ```text
-  HọcTA — Từ điển & Ôn từ
+  HọcTA - Từ điển Anh Việt
   ```
-  *(Hoặc nếu muốn nhấn mạnh học tiếng Anh: `HọcTA — Học tiếng Anh` — 21/30 ký tự)*
+  *(Khớp trực tiếp từ khóa tìm kiếm lớn nhất "từ điển anh việt"; tùy chọn thay thế đánh rộng hơn: `HọcTA: Từ điển & Học tiếng Anh` — 30/30 ký tự)*
 
 - **Mô tả ngắn (Short description — tối đa 80 ký tự):** *(78/80 ký tự)*
   ```text
-  Tra từ Anh–Việt trong bài đọc, lưu câu gốc, ôn FSRS & luyện TOEIC/IELTS offline
+  Học tiếng Anh offline: tra từ trong bài đọc, học từ vựng & luyện TOEIC, IELTS.
   ```
 
-- **Mô tả đầy đủ (Full description — tối đa 4.000 ký tự):** *(~2.450/4.000 ký tự)*
+- **Mô tả đầy đủ (Full description — tối đa 4.000 ký tự):** *(~2.750/4.000 ký tự)*
   ```text
-  HọcTA (hocta.app) là ứng dụng học tiếng Anh song ngữ theo hướng offline-first dành cho người Việt: đọc văn bản thật, chạm vào bất kỳ từ nào để tra nghĩa trong ngữ cảnh, lưu lại cả câu gốc và ôn tập dài hạn bằng thuật toán lặp lại ngắt quãng FSRS.
+  HọcTA (hocta.app) là ứng dụng từ điển Anh Việt offline và học tiếng Anh toàn diện dành cho người Việt: đọc tài liệu thật, chạm vào bất kỳ từ nào để tra nghĩa trong ngữ cảnh, lưu cả câu gốc thành flashcard và ôn từ vựng dài hạn bằng thuật toán lặp lại ngắt quãng FSRS.
 
-  Không cần đăng ký tài khoản. Không quảng cáo làm phiền. Sau khi tải từ điển và gói bài học về máy, toàn bộ tính năng cốt lõi đều hoạt động mượt mà ngay cả khi mất mạng hoặc bật chế độ máy bay.
+  Không cần đăng ký tài khoản. Không quảng cáo làm phiền. Sau khi tải bộ từ điển và gói bài học về máy, toàn bộ tính năng học tiếng Anh cốt lõi đều chạy mượt ngay cả khi mất mạng hoặc bật chế độ máy bay.
 
   TÍNH NĂNG NỔI BẬT
 
-  1. Từ điển kép Anh–Việt & Anh–Anh (Hỗ trợ định dạng .MDX / .MDD)
-  • Tải nhanh từ điển Anh–Việt mở (~386.600 mục từ, bao gồm cả dạng chia động từ/số nhiều) và từ điển Anh–Anh (WordNet 3.1, Simple English) chỉ với 1 chạm.
-  • Hỗ trợ nạp thêm tệp từ điển .mdx / .mdd cá nhân của riêng bạn ngay trên thiết bị.
-  • Hiển thị phiên âm IPA Anh–Mỹ / Anh–Anh, phát âm audio, phân loại tần suất từ vựng (Top 1K / 2K / 5K / 10K) và tự động tìm từ gốc (lemmatization) khi tra động từ chia hoặc danh từ số nhiều.
+  1. Từ điển Anh Việt offline & Từ điển Anh–Anh (.MDX / .MDD)
+  • Tải nhanh từ điển Anh–Việt mở (~386.600 mục từ, gồm cả dạng chia động từ/số nhiều) và từ điển Anh–Anh (WordNet 3.1, Simple English) chỉ với 1 chạm.
+  • Hỗ trợ nạp thêm tệp từ điển .mdx / .mdd cá nhân của riêng bạn ngay trên điện thoại.
+  • Đầy đủ phiên âm IPA Anh–Mỹ / Anh–Anh, phát âm audio, nhãn tần suất từ vựng (Top 1K / 2K / 5K / 10K) và tự động tìm từ gốc khi tra động từ chia hoặc danh từ số nhiều.
 
-  2. Trình đọc tiếng Anh chạm để tra (Context Reader)
+  2. Tra nhanh ở mọi ứng dụng & Widget màn hình chính
+  • Bôi đen bất kỳ từ hoặc đoạn văn tiếng Anh nào trên Chrome, PDF, Kindle, Facebook… rồi chọn "Tra với HọcTA" ngay trên thanh công cụ để tra từ điển hoặc mở thẳng trong trình đọc.
+  • Đặt Widget "HọcTA — Tra nhanh" ngoài màn hình chính Android để mở tra từ 1 chạm hoặc vào thẳng Reader, Ôn tập FSRS, Luyện thi.
+
+  3. Đọc tiếng Anh chạm để tra trong ngữ cảnh (Reader)
   • Dán bài báo, mở sách điện tử EPUB, tài liệu PDF hoặc lời thoại YouTube để đọc trực tiếp với bố cục sạch, dễ nhìn.
-  • Chạm vào bất kỳ từ hay cụm từ nào trong bài đọc để xem nghĩa song ngữ ngay bên dưới mà không bị đứt mạch đọc.
-  • Lưu từ vựng kèm nguyên văn câu gốc và tiêu đề nguồn đọc vào Sổ tay (Vault) chỉ với 1 chạm.
+  • Chạm vào bất kỳ từ hay cụm từ nào để xem nghĩa song ngữ ngay bên dưới mà không bị đứt mạch đọc.
+  • Lưu từ vựng tiếng Anh kèm nguyên văn câu gốc và nguồn đọc vào Sổ tay (Vault) chỉ với 1 chạm.
 
-  3. Sổ tay từ vựng (Vault) & Ôn tập ngắt quãng FSRS
-  • Thuật toán FSRS-4.5 (Free Spaced Repetition Scheduler) tự động tính toán thời điểm vàng để nhắc ôn trước khi bạn quên, kèm bộ tối ưu trọng số ngay trên thiết bị.
-  • Đa dạng bài tập ngắn 30 giây: trắc nghiệm ngữ cảnh, điền từ vào chỗ trống (Cloze), nghe chép chính tả, nhớ từ qua nghĩa và luyện phát âm qua mic.
-  • Hỗ trợ nhập/xuất dữ liệu hai chiều với Anki (.txt / .csv / .tsv) và sao lưu mã hóa đầu cuối (.ddbackup AES-256-GCM).
+  4. Học từ vựng bằng Flashcard & Ôn tập ngắt quãng FSRS
+  • Thuật toán FSRS-4.5 (Free Spaced Repetition Scheduler) tự động tính toán thời điểm tối ưu để nhắc bạn ôn từ trước khi quên.
+  • Đa dạng bài tập 30 giây: lật flashcard, trắc nghiệm ngữ cảnh, điền từ vào câu gốc (Cloze), nghe chép chính tả và luyện phát âm qua mic.
+  • Nhập/xuất dữ liệu hai chiều với Anki (.txt / .csv / .tsv) và sao lưu mã hóa đầu cuối (.ddbackup AES-256-GCM).
 
-  4. Phòng luyện thi TOEIC & IELTS (Exam Lab)
-  • Bộ bài kiểm tra chẩn đoán trình độ 4 kỹ năng và lộ trình học IELTS theo từng nấc band điểm (5.0 → 6.5 → 7.0).
-  • Luyện tập TOEIC Part 5–6, nghe hiểu, đọc hiểu, bấm giờ làm bài Writing Task 1/2 và Speaking Cue Card (1 phút chuẩn bị, 2 phút nói).
-  • Tự động lưu các câu làm sai vào Sổ tay để ôn lại sau.
+  5. Luyện thi TOEIC & IELTS offline (Exam Lab)
+  • Luyện TOEIC Part 5–6 và 12 tình huống công sở (họp hành, email, giao hàng, tuyển dụng…), tự động lưu câu làm sai vào Sổ tay để ôn lại.
+  • Bộ bài chẩn đoán trình độ IELTS 4 kỹ năng, lộ trình theo band (5.0 → 6.5 → 7.0), đồng hồ bấm giờ Writing Task 1/2 và thẻ Speaking Part 2 Cue Card.
 
-  5. 33 gói bài học song ngữ Offline (Lesson Studio)
-  • Thư viện 33 gói bài học tiếng Anh công việc và học thuật (trình độ B1–B2) đã được biên tập và kiểm duyệt sẵn: đọc hiểu theo từng câu, cụm từ trọng tâm và bài tập thực hành không cần mạng.
+  6. 33 gói bài học tiếng Anh song ngữ Offline (Lesson Studio)
+  • Thư viện 33 bài đọc tiếng Anh công việc và học thuật (trình độ B1–B2) đã được biên tập sẵn: đọc hiểu theo từng câu, cụm từ trọng tâm và bài tập thực hành không cần mạng.
 
-  6. Tùy chọn AI Tutor minh bạch (Bring Your Own Key)
-  • Nếu muốn chấm chữa bài viết, giải thích chi tiết đáp án TOEIC hoặc hỏi đáp ngữ cảnh sâu hơn, bạn có thể gắn khóa Gemini API cá nhân của mình.
-  • Khóa chỉ lưu cục bộ trên máy của bạn; mỗi lượt gọi AI đều hiển thị rõ nội dung gửi đi để bạn xác nhận trước.
+  7. Tùy chọn AI Tutor minh bạch (Gemini API cá nhân)
+  • Gắn khóa Gemini API của riêng bạn nếu muốn chấm chữa bài viết, giải thích sâu đáp án TOEIC hoặc hỏi đáp ngữ cảnh. Khóa chỉ lưu trên thiết bị và luôn hỏi xác nhận trước mỗi lượt gửi.
 
   VÌ SAO CHỌN HỌCTA?
-  • 100% quyền làm chủ dữ liệu: từ điển, từ đã lưu và lịch sử ôn tập nằm ngay trên thiết bị của bạn.
-  • Nhẹ, nhanh, tiết kiệm pin và dung lượng mạng.
-  • Hoàn toàn miễn phí và không quảng cáo.
+  • 100% quyền làm chủ dữ liệu: từ điển, sổ tay từ vựng và tiến độ ôn tập nằm gọn trên máy của bạn.
+  • Nhẹ, nhanh, tiết kiệm pin và dung lượng 4G.
+  • Miễn phí và hoàn toàn không quảng cáo.
 
   Tìm hiểu thêm tại: https://hocta.app/vi/
   ```
 
 ---
 
-### 5.3. Bản Tiếng Anh (`en-US` — Bổ sung để mở rộng tìm kiếm)
+### 5.3. Bản Tiếng Anh (`en-US` — Tối ưu ASO tìm kiếm quốc tế)
 
-- **App name (30 chars max):** *(26/30 chars)*
+- **App name (30 chars max):** *(29/30 chars)*
   ```text
-  HọcTA — English Dictionary
+  HọcTA: EN-VI Dictionary & SRS
   ```
 - **Short description (80 chars max):** *(78/80 chars)*
   ```text
-  Offline EN–VI & MDX dictionary, tap-to-lookup reader, FSRS review & IELTS prep
+  Offline English-Vietnamese & MDX dictionary, tap reader, flashcards, TOEIC lab
   ```
 - **Full description:**
   ```text
-  HọcTA (hocta.app) is an offline-first bilingual English learning companion built for Vietnamese learners. Look up English words in context, read EPUB/PDF articles with one-tap dictionary lookup, save words with their original sentences, and retain vocabulary long-term with the FSRS-4.5 spaced repetition scheduler.
+  HọcTA (hocta.app) is an offline-first English–Vietnamese dictionary and bilingual English learning app. Look up English words in context, read EPUB/PDF documents with one-tap lookup, save words with their original sentences as flashcards, and retain vocabulary long-term with FSRS-4.5 spaced repetition.
 
   Key Features:
-  • Dual Dictionary & MDX/MDD Engine: One-click offline English–Vietnamese (386,600+ entries) and English–English dictionaries, plus support for your own .mdx/.mdd dictionary files.
-  • Context Reader: Open EPUBs, PDFs, or paste articles. Tap any word to see definitions across your dictionaries and save the exact source sentence.
-  • FSRS Spaced Repetition & Anki Sync: Review vocabulary with cloze, dictation, recall, and speaking drills. Full CSV/Anki import & export and AES-256-GCM encrypted backups.
-  • Offline IELTS & TOEIC Exam Lab: Timed diagnostics, reading/listening drills, Writing Task 2 timer, and Speaking Part 2 cue cards.
-  • 33 Offline Bilingual Lesson Packs: Workplace and academic B1–B2 reading packs ready for airplane-mode study.
-  • Privacy-First, No Account, No Ads: Your dictionaries and study progress live locally on your device. Optional AI Tutor works with your own Gemini API key with explicit per-request consent.
+  • Offline EN–VI & MDX/MDD Dictionary: One-click offline English–Vietnamese (386,600+ entries) and English–English dictionaries with US/UK IPA pronunciation, plus support for your own .mdx/.mdd files.
+  • Look Up Anywhere & Home Screen Widget: Highlight any English word or paragraph in Chrome, PDF, or Kindle and tap "Tra với HọcTA" to look it up instantly. Add the Home Screen Widget for one-tap search and study shortcuts.
+  • Tap-to-Lookup Context Reader: Open EPUBs, PDFs, YouTube transcripts, or pasted articles. Tap any word to view bilingual definitions and save the exact source sentence.
+  • Smart Flashcards (FSRS) & Anki Sync: Review vocabulary with cloze, dictation, recall, and speaking drills. Full CSV/Anki import & export and AES-256-GCM encrypted backups.
+  • Offline TOEIC & IELTS Exam Lab: Workplace TOEIC drills, 4-skill IELTS diagnostics, Writing Task 2 timer, and Speaking Part 2 cue cards.
+  • 33 Offline Bilingual Lesson Packs: Curated B1–B2 workplace and academic reading lessons ready for airplane mode.
+  • Privacy-First, No Account, No Ads: All dictionaries and study data stay on your device. Optional AI Tutor uses your own Gemini API key with explicit per-request consent.
   ```
 
 ---
