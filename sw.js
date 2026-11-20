@@ -166,7 +166,7 @@
 // v151: Village Kit — precache village.js + provenance.json for cheap-device offline.
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
-const CACHE = 'mdx-dict-v232-gemini-learning-loop';
+const CACHE = 'mdx-dict-v233-mobile-offline';
 const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
 const LEGACY_APP = './recover.html';
 const LEGACY_STUDIO = './lessons/recover.html';
@@ -207,7 +207,6 @@ const ASSETS = [
   './js/assignment-engine.js',
   './js/study-content.js',
   './js/ielts-diagnostic-content.js',
-  './js/ielts-meta-practice.js',
   './assets/study/toeic-office-desk.svg',
   './assets/study/audio/toeic-part1-a.wav',
   './assets/study/audio/toeic-part1-b.wav',
@@ -291,9 +290,9 @@ const ASSETS = [
   // bundled demo dictionary — precached so the test sample works offline
   './samples/sample.mdx',
   './samples/sample.mdd',
-  // free fallback dictionaries — used when the full dicts/ folder is absent
-  './samples/wordnet31.mdx',
-  './samples/simple-en.mdx',
+  // Fallback dictionaries (wordnet31.mdx ~10.8 MB, simple-en.mdx ~2.2 MB) and
+  // ielts-meta-practice.js (~867 KB) stay out of atomic install so mobile CSS/shell
+  // caches in ~3.2 MB instead of 17.1 MB; they persist in IndexedDB / runtime cache on first use.
   // The PDF engine (js/vendor/pdf.min.mjs + pdf.worker.min.mjs, ~1.3 MB) is
   // deliberately NOT precached. It is dynamically imported only when a PDF is
   // actually opened, and the runtime branch of the fetch handler below caches it
@@ -319,10 +318,7 @@ async function preserveToeicAudio() {
   }
 }
 
-async function serveToeicAudio(request) {
-  const cached = await (await caches.open(TOEIC_AUDIO_CACHE)).match(request.url);
-  if (!cached) return fetch(request);
-  const range = request.headers.get('Range');
+async function serveRangeResponse(cached, range, fallbackMime) {
   if (!range) return cached;
   const bytes = await cached.arrayBuffer();
   const size = bytes.byteLength;
@@ -332,12 +328,26 @@ async function serveToeicAudio(request) {
     const end = match[1] && match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
     if (start <= end) {
       return new Response(bytes.slice(start, end + 1), {status: 206, headers: {
-        'Content-Type': 'audio/wav', 'Content-Range': `bytes ${start}-${end}/${size}`,
+        'Content-Type': cached.headers.get('Content-Type') || fallbackMime,
+        'Content-Range': `bytes ${start}-${end}/${size}`,
         'Content-Length': String(end - start + 1), 'Accept-Ranges': 'bytes',
       }});
     }
   }
   return new Response(null, {status: 416, headers: {'Content-Range': `bytes */${size}`}});
+}
+
+async function serveToeicAudio(request) {
+  const cache = await caches.open(TOEIC_AUDIO_CACHE);
+  const cached = await cache.match(request.url);
+  if (!cached) {
+    const resp = await fetch(request);
+    if (resp && resp.ok && resp.status === 200) {
+      cache.put(request.url, resp.clone()).catch(() => {});
+    }
+    return resp;
+  }
+  return serveRangeResponse(cached, request.headers.get('Range'), 'audio/wav');
 }
 
 function precacheAppShell() {
@@ -392,14 +402,24 @@ self.addEventListener('fetch', (e) => {
     return;
   }
   if (path.includes('/dicts/') || path.endsWith('/remote-config.json')) return;
-  // Vietnamese landing + blog (/vi/...) are marketing content that changes
-  // independently of app releases — never enter the app cache (stale pages +
-  // blog images would eat the Cache Storage quota). Network pass-through only;
-  // the app shell never references /vi/, so users are unaffected.
-  if (path === '/vi/' || path.startsWith('/vi/')) return;
+  // Vietnamese landing + blog (/vi/...) stay fresh from network when online,
+  // and gracefully fall back to the cached app shell when offline in airplane mode.
+  if (path === '/vi/' || path.startsWith('/vi/')) {
+    if (e.request.mode === 'navigate') {
+      e.respondWith(fetch(e.request).catch(() => caches.match(LEGACY_HOST ? LEGACY_APP : './index.html')));
+    }
+    return;
+  }
+  const range = e.request.headers.get('Range');
   e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then((hit) =>
-      hit || fetch(e.request).then((resp) => {
+    caches.match(e.request, { ignoreSearch: true }).then((hit) => {
+      if (hit) {
+        if (range && /\.(?:wav|m4a|mp3|ogg)$/i.test(path)) {
+          return serveRangeResponse(hit, range, path.endsWith('.wav') ? 'audio/wav' : 'audio/mp4');
+        }
+        return hit;
+      }
+      return fetch(e.request).then((resp) => {
         // Cache ONLY successful responses — a cached 404/HTML error page would
         // permanently shadow the real asset on the next deploy (this is what
         // broke the previous deployment: style.css/app.js were served from an
@@ -413,8 +433,8 @@ self.addEventListener('fetch', (e) => {
         // css/js, where index.html would be parsed as garbage.
         if (e.request.mode === 'navigate') return caches.match(LEGACY_HOST ? LEGACY_APP : './index.html');
         return Response.error();
-      })
-    )
+      });
+    })
   );
 });
 
