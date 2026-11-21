@@ -803,13 +803,8 @@ function familyHtml(word, builtSet) {
   }
   let items = (FAMILY_IDX[String(word).toLowerCase()] || []).slice(0, 6);
   if (!items.length) {
-    try {
-      const tg = require('../data/exam-tags.json').words || {};
-      const t = tg[String(word).toLowerCase()];
-      if (t && t.cefr) items.push({ t: 'Từ vựng ' + t.cefr + ' (cùng trình độ)', u: '/vi/trinh-do/' + String(t.cefr).toLowerCase() + '/' });
-    } catch (e) {}
+    items.push({ t: 'Tra từ điển Việt–Anh theo ngữ cảnh', u: '/vi/viet-anh/' });
     items.push({ t: 'Kiểm tra trình độ của bạn', u: '/vi/test-trinh-do/' });
-    if (!items.length) return '';
   }
   return '<section class="related"><h2>Họ từ &amp; kết hợp</h2><div class="related-list">' + items.map((x) => '<a class="related-chip" href="' + x.u + '">' + escapeHtml(x.t) + ' →</a>').join('') + '</div></section>';
 }
@@ -942,8 +937,11 @@ function wordFaq() {
 }
 function faqHtml(word, autoQa) {
   const list = wordFaq()[String(word).toLowerCase()];
-  const rows = (list && list.length ? list : (autoQa || [])).map(([head, body]) =>
-    `<details class="faq-item"><summary>${escapeHtml(head)} — ${escapeHtml(String(body).slice(0, 80))}${String(body).length > 80 ? '…' : ''}</summary><p>${escapeHtml(body)}</p></details>`).join('\n');
+  const rows = (list && list.length ? list : (autoQa || [])).map(([head, body], idx) => {
+    const qText = String(head || '').trim().replace(/\?*$/, '?');
+    const aText = String(body || '').replace(/nghĩa là:\s*-\s*/g, 'nghĩa là: ').trim();
+    return `<details class="faq-item"${idx === 0 ? ' open' : ''}><summary>${escapeHtml(qText)}</summary><p>${escapeHtml(aText)}</p></details>`;
+  }).join('\n');
   if (!rows) return '';
   return `<section class="related faq-sec"><h2>Câu hỏi thường gặp</h2>${rows}</section>`;
 }
