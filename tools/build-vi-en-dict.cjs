@@ -17,7 +17,7 @@ const DONG_NGHIA_DIR = path.join(ROOT, 'vi', 'dong-nghia');
 const OUT_JSON = path.join(ROOT, 'data', 'vi-en-index.json');
 const VIET_ANH_DIR = path.join(ROOT, 'vi', 'viet-anh');
 const OUT_HTML = path.join(VIET_ANH_DIR, 'index.html');
-const MAX_CONCEPT_PAGES = 600;
+const MAX_CONCEPT_PAGES = 3000;
 
 function esc(s) {
   return String(s || '')
@@ -129,7 +129,7 @@ function extractConceptClusters(payload) {
     'khong', 'mot', 'cac', 'nhung', 'nay', 'do', 'khi', 'neu', 'thi', 'ma',
     'de', 'va', 'hoac', 'hay', 've', 'tu', 'den', 'ra', 'vao', 'len', 'xuong',
     'di', 'lai', 'nguoi', 'vat', 'viec', 'su', 'tinh', 'cach', 'noi', 'luc',
-    'co-the', 'lam-cho', 'thuoc-ve', 'lien-quan'
+    'co-the', 'lam-cho', 'thuoc-ve', 'lien-quan', 'cai', 'con', 'chiec', 'loai'
   ]);
   const map = new Map();
 
@@ -143,14 +143,14 @@ function extractConceptClusters(payload) {
 
     for (let p of rawParts) {
       p = p.replace(/^(?:sự|việc|tính|người|kẻ|vật|cái|làm cho|làm|có tính|thuộc|mang tính)\s+/i, '').trim();
-      if (!p || p.length < 4 || p.length > 24) continue;
+      if (!p || p.length < 3 || p.length > 26) continue;
       const words = p.split(/\s+/);
-      if (words.length < 2 || words.length > 3) continue;
+      if (words.length < 1 || words.length > 4) continue;
       if (!/[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i.test(p)) continue;
       const k = foldSlug(p);
-      if (!k || k.length < 4 || STOP.has(k) || seen.has(k)) continue;
+      if (!k || k.length < 3 || STOP.has(k) || seen.has(k)) continue;
       seen.add(k);
-      if (!map.has(k)) map.set(k, { slug: k, term: p, entries: [], ieltsCount: 0, awlCount: 0 });
+      if (!map.has(k)) map.set(k, { slug: k, term: p, entries: [], ieltsCount: 0, awlCount: 0, wordCount: words.length });
       const g = map.get(k);
       g.entries.push(row);
       if (tags.includes('IELTS')) g.ieltsCount++;
@@ -177,20 +177,22 @@ function extractConceptClusters(payload) {
     if (!map.has(mSlug) || map.get(mSlug).entries.length < 2) {
       const entries = payload.items.filter((row) => row[2].toLowerCase().includes(mTerm) || (mSlug === 'ben-vung' && /duy trì|lâu dài|bền/i.test(row[2])) || (mSlug === 'can-kiet' && /cạn|hết sạch|kiệt/i.test(row[2]))).slice(0, 14);
       if (entries.length) {
-        map.set(mSlug, { slug: mSlug, term: mTerm, entries, ieltsCount: 3, awlCount: 2 });
+        map.set(mSlug, { slug: mSlug, term: mTerm, entries, ieltsCount: 3, awlCount: 2, wordCount: 2 });
       }
     }
   }
 
   const candidates = [...map.values()].filter(
-    (g) => mustSlugs.has(g.slug) || (g.entries.length >= 3 && g.entries.length <= 28 && (g.ieltsCount >= 1 || g.awlCount >= 1))
+    (g) => mustSlugs.has(g.slug) || (g.entries.length >= 2 && g.entries.length <= 35 && (g.wordCount >= 2 || g.entries.length >= 3))
   );
 
   candidates.sort((a, b) => {
-    const aMust = mustSlugs.has(a.slug) ? 1000 : 0;
-    const bMust = mustSlugs.has(b.slug) ? 1000 : 0;
-    const aScore = aMust + a.ieltsCount * 3 + a.awlCount * 2 + a.entries.length;
-    const bScore = bMust + b.ieltsCount * 3 + b.awlCount * 2 + b.entries.length;
+    const aMust = mustSlugs.has(a.slug) ? 10000 : 0;
+    const bMust = mustSlugs.has(b.slug) ? 10000 : 0;
+    const aMulti = a.wordCount >= 2 && a.wordCount <= 3 ? 25 : 0;
+    const bMulti = b.wordCount >= 2 && b.wordCount <= 3 ? 25 : 0;
+    const aScore = aMust + aMulti + a.ieltsCount * 3 + a.awlCount * 2 + a.entries.length;
+    const bScore = bMust + bMulti + b.ieltsCount * 3 + b.awlCount * 2 + b.entries.length;
     return bScore - aScore || a.term.localeCompare(b.term, 'vi');
   });
 
