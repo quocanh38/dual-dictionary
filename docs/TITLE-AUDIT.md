@@ -1,42 +1,39 @@
-# Title audit — 2026-11-03
+# Title audit — 2026-11-21
 
-- Pages: 12372 · unique titles: 12372
+- Pages: 14773 · unique titles: 14773
 - Duplicate groups: 0 (0 pages)
-- Over 60 chars: 4408 (35.6%)
+- Over 60 chars: 57 (0.4%)
 - Under 20 chars: 0 · missing: 0
 
 ## Trùng title: KHÔNG CÓ ✅
 
-## Quá 60 ký tự (4408 trang) — nhóm theo template
+## Quá 60 ký tự (57 trang) — nhóm theo template
 
-Template word hiện tại: `{word} nghĩa là gì? — Nghĩa tiếng Việt | Dual Dictionary` (phần cố định ~40 ký tự).
-Đề xuất rút gọn toàn site: `{word} nghĩa là gì? | Dual Dictionary` (tiết kiệm ~19 ký tự).
+Template word hiện tại: `{word} nghĩa là gì? — Nghĩa tiếng Việt | HọcTA` (phần cố định ~40 ký tự).
+Đề xuất rút gọn toàn site: `{word} nghĩa là gì? | HọcTA` (tiết kiệm ~19 ký tự).
 
 Top 10 trang dài nhất:
 
-- 93ch — food and agriculture organization nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/food-and-agriculture-organization/index.html`)
-- 91ch — organization of american states nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/organization-of-american-states/index.html`)
-- 91ch — office of management and budget nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/office-of-management-and-budget/index.html`)
-- 91ch — federal bureau of investigation nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/federal-bureau-of-investigation/index.html`)
-- 91ch — environmental protection agency nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/environmental-protection-agency/index.html`)
-- 90ch — interstate commerce commission nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/interstate-commerce-commission/index.html`)
-- 90ch — international court of justice nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/international-court-of-justice/index.html`)
-- 89ch — individual retirement account nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/individual-retirement-account/index.html`)
-- 89ch — housing and urban development nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/housing-and-urban-development/index.html`)
-- 88ch — sexually transmitted disease nghĩa là gì? — Ý nghĩa ? ví dụ tiếng Việt | Dual Dictionary (`vi/tu/sexually-transmitted-disease/index.html`)
+- 78ch — Học từ vựng trong ngữ cảnh: vì sao từ trong câu thì sống, từ trơ trọi thì trôi (`vi/blog/phuong-phap/hoc-tu-vung-trong-ngu-canh/index.html`)
+- 76ch — Đừng nói “I used to living in Hanoi for five years” — cách dùng đúng | HọcTA (`vi/loi-sai/i-used-to-living-in-hanoi-for-five-years/index.html`)
+- 76ch — Từ bài đọc công việc thành pack học offline: bên trong Offline Lesson Studio (`vi/blog/phuong-phap/offline-lesson-packs/index.html`)
+- 76ch — Hiểu tiếng Anh không cần dịch: vì sao dịch từng từ khiến bạn chậm và mất gốc (`vi/blog/phuong-phap/hieu-tieng-anh-khong-can-dich/index.html`)
+- 75ch — Đừng nói “my actual job (ý là công việc hiện tại)” — cách dùng đúng | HọcTA (`vi/loi-sai/my-actual-job-l-cng-vic-hin-ti/index.html`)
+- 75ch — Reading IELTS: đọc một lần là hiểu — nắm trục câu trước, chi tiết gắn quanh (`vi/blog/phuong-phap/reading-hieu-mot-lan/index.html`)
+- 74ch — Lộ trình 4 tuần bỏ dịch: luyện hiểu tiếng Anh trực tiếp cho cả bốn kỹ năng (`vi/blog/phuong-phap/lo-trinh-4-tuan-bo-dich/index.html`)
+- 73ch — Đừng nói “This secret is just between you and I” — cách dùng đúng | HọcTA (`vi/loi-sai/this-secret-is-just-between-you-and-i/index.html`)
+- 73ch — Đừng nói “There are too much people in the room” — cách dùng đúng | HọcTA (`vi/loi-sai/there-are-too-much-people-in-the-room/index.html`)
+- 73ch — Danh từ đếm được và không đếm được — quy tắc + lỗi sai thường gặp | HọcTA (`vi/ngu-phap/countability/index.html`)
 
 Phân bố theo nhánh:
 
-- tu: 4199
-- dong-nghia: 65
-- phan-biet: 47
-- loi-sai: 27
-- luyen-thi: 19
-- ngu-phap: 11
-- toeic: 11
+- loi-sai: 21
 - blog: 10
-- cambridge: 8
-- phat-am: 6
-- cum-di-voi: 4
+- ngu-phap: 9
+- toeic: 6
+- phan-biet: 4
+- luyen-thi: 4
 - chu-de: 1
+- tu: 1
+- phat-am: 1
 
