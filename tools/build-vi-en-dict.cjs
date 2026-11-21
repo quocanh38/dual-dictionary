@@ -81,16 +81,137 @@ function viInitialLetter(term) {
   return VI_ALPHA_ORDER.includes(up) ? up : 'A';
 }
 
-function cleanSense(raw) {
+const SKIP_SENSE_RE = /^\s*\(?\s*\((?:cổ|từ cổ|nghĩa cổ|thơ ca|cũ|từ lóng|thông tục|khẩu ngữ|đùa cợt|xem|viết tắt|như|sử học|đánh cờ|hàng hải|thổ ngữ|phương ngữ|từ hiếm|hiếm|quân sự|tôn giáo|từ Mỹ,nghĩa Mỹ|từ Anh,nghĩa Anh)[^)]*\)?\s*/i;
+const SKIP_WHOLE_SENSE_RE = /^(?:\(?\s*\((?:cổ|từ cổ|nghĩa cổ|thơ ca|cũ|từ lóng|đùa cợt|xem|viết tắt|sử học|đánh cờ|thổ ngữ|phương ngữ|từ hiếm|hiếm)[^)]*\)|số nhiều của\b|quá khứ của\b|phân từ\b|\(xem\)\s)/i;
+
+// Per-word OVDP typo fixes and erroneous/archaic sense exclusions
+const OVDP_TYPO_FIXES = {
+  castle: [[/\blâu dài\b/gi, 'lâu đài']],
+  reject: [[/\bkhông nhanh\b/gi, 'không nhận']],
+  send: [[/\bcho đi scend\b/gi, 'gửi đi']],
+};
+const WORD_BAD_SENSES = {
+  bee: [/nhà thơ/i],
+  always: [/đôi khi|đôi lúc|thỉnh thoảng/i],
+  mud: [/bảo thủ|chậm tiến|lạc hậu/i],
+  cope: [/áo khoác|áo lễ/i],
+  dot: [/của hồi môn/i],
+  continent: [/điều độ|tiết dục/i],
+  vacation: [/bỏ không|bỏ trống/i],
+  can: [/bi đông|vỏ đồ hộp|hộp đồ hộp|nhà tiêu|nhà tù/i],
+  deal: [/gỗ tùng|gỗ thông|tấm ván cây/i],
+  lay: [/bài thơ ngắn|bài vè|bài hát|bài ca|tiếng chim/i],
+  wife: [/bà già/i],
+  customer: [/anh chàng|gã/i],
+  silly: [/choáng váng|mê mẩn/i],
+  fly: [/con ruồi|ruồi \(/i],
+  hang: [/sự cúi xuống|sự gục xuống|mặt dốc/i],
+  fast: [/ăn chay|bệnh gút/i],
+  husband: [/tiết kiệm/i],
+  jack: [/từ bỏ/i],
+  do: [/an toàn/i],
+  doctor: [/anh nuôi/i],
+  red: [/ác liệt/i],
+};
+const SKIP_HEADWORDS = new Set([
+  'sammy', 'johnny', 'joker', 'thy', 'thee', 'thou', 'ye',
+  'ate', 'eaten', 'became', 'began', 'begun', 'blown', 'bought', 'brought', 'built',
+  'caught', 'children', 'chose', 'chosen', 'could', 'cried', 'dealt', 'drawn', 'drew',
+  'dreamt', 'drank', 'driven', 'fell', 'fallen', 'feet', 'felt', 'flew', 'flown',
+  'forgot', 'forgotten', 'fought', 'froze', 'frozen', 'gave', 'given', 'goes', 'gone',
+  'gotten', 'grew', 'grown', 'had', 'heard', 'held', 'heroes', 'hid', 'hidden', 'hung',
+  'kept', 'knew', 'known', 'laid', 'led', 'lent', 'lied', 'made', 'meant', 'men', 'met',
+  'mice', 'paid', 'ran', 'ridden', 'risen', 'rode', 'said', 'sang', 'sat', 'seen', 'sent',
+  'shook', 'shaken', 'shown', 'slept', 'sold', 'spoke', 'spoken', 'spent', 'stole', 'stolen',
+  'stood', 'sung', 'swam', 'swum', 'swore', 'sworn', 'taken', 'taught', 'teeth', 'thought',
+  'threw', 'thrown', 'told', 'took', 'tore', 'torn', 'understood', 'was', 'went', 'were',
+  'wives', 'woke', 'woken', 'women', 'won', 'wore', 'worn', 'would', 'written', 'wrote',
+  'been', 'did', 'done', 'does', 'has', 'is', 'are', 'am', 'yourselves', 'themselves', 'ourselves'
+]);
+
+const UK_TO_US = {
+  licence: 'license',
+  offence: 'offense',
+  recognised: 'recognized',
+  recognise: 'recognize',
+  favour: 'favor',
+  favourite: 'favorite',
+  colour: 'color',
+  centre: 'center',
+  grey: 'gray',
+  disc: 'disk',
+  organisation: 'organization',
+  organise: 'organize',
+  programme: 'program',
+  defence: 'defense',
+  labour: 'labor',
+  behaviour: 'behavior',
+  analyse: 'analyze',
+  realise: 'realize',
+  apologise: 'apologize',
+  criticise: 'criticize',
+  emphasise: 'emphasize',
+  minimise: 'minimize',
+  maximise: 'maximize',
+  practise: 'practice',
+  travelling: 'traveling',
+  travelled: 'traveled',
+  cancelled: 'canceled',
+  catalogue: 'catalog',
+  dialogue: 'dialog',
+  amongst: 'among',
+  anyhow: 'anyway',
+  tyre: 'tire',
+  enquiry: 'inquiry',
+};
+
+function truncateClean(str, maxLen) {
+  const s = String(str || '').trim();
+  if (s.length <= maxLen) return s;
+  const cut = s.slice(0, maxLen);
+  // Prefer cutting at a delimiter (·, ;, ,) so no Vietnamese phrase is cut mid-word
+  const delim = Math.max(cut.lastIndexOf(' · '), cut.lastIndexOf('; '), cut.lastIndexOf(', '));
+  if (delim >= Math.floor(maxLen * 0.45)) return cut.slice(0, delim).trim();
+  const sp = cut.lastIndexOf(' ');
+  if (sp >= Math.floor(maxLen * 0.5)) return cut.slice(0, sp).trim();
+  return cut.trim();
+}
+
+function cleanSense(raw, head) {
   let s = decodeEntities(raw.replace(/<[^>]+>/g, ' '));
-  s = s.replace(/^\((?:trang trọng|thông tục|khẩu ngữ|từ lóng|số nhiều|kỹ thuật|y học|pháp lý|kinh tế|nghĩa bóng|nghĩa đen|cũ|văn học|tôn giáo|sử học)[^)]*\)\s*/i, '');
-  if (s.length > 68) s = s.slice(0, 66).trim() + '…';
-  return s.trim();
+  if (!s || SKIP_WHOLE_SENSE_RE.test(s)) return '';
+
+  // Remove OVDP double-parentheses tags including ((nghĩa đen) & (nghĩa bóng)) and ((thường) + out)
+  s = s.replace(/\(\([^)]*\)\s*(?:&\s*\([^)]*\))?[^)]*\)/g, ' ');
+  s = s.replace(/\(\([^)]*\)\)/g, ' ');
+  // Remove leading domain/register parens
+  s = s.replace(SKIP_SENSE_RE, '');
+  // Remove remaining parenthetical clarifications (nested or single)
+  s = s.replace(/\([^)]*\)/g, ' ');
+  // Clean stray unmatched parens, standalone &, leading "+ prep" fragments, and punctuation
+  s = s.replace(/[()]/g, ' ').replace(/(?:^|\s)&\s*/g, ' ').replace(/^\+\s*[a-z]+\s+/i, '');
+  s = s.replace(/\s*([,;:])\s*/g, '$1 ').replace(/\s+/g, ' ').trim();
+  s = s.replace(/^[,;:\-–—&\s]+|[,;:\-–—&\s]+$/g, '').trim();
+  if (!s || !/[a-zA-ZÀ-ỹ]/.test(s)) return '';
+
+  const lowHead = String(head || '').toLowerCase();
+  if (OVDP_TYPO_FIXES[lowHead]) {
+    for (const [re, rep] of OVDP_TYPO_FIXES[lowHead]) s = s.replace(re, rep);
+  }
+  if (WORD_BAD_SENSES[lowHead]) {
+    if (WORD_BAD_SENSES[lowHead].some((re) => re.test(s))) return '';
+  }
+  return s;
 }
 
 function buildIndex() {
+  const quickSensesPath = path.join(ROOT, 'data', 'word-quick-senses.json');
+  const quickSenses = fs.existsSync(quickSensesPath)
+    ? JSON.parse(fs.readFileSync(quickSensesPath, 'utf8'))
+    : {};
+
   const dirs = fs.readdirSync(TU_DIR, { withFileTypes: true }).filter((d) => d.isDirectory());
-  const items = [];
+  const rawRecords = [];
 
   for (const d of dirs) {
     if (['cum-tu', 'ielts', 'toeic'].includes(d.name)) continue;
@@ -103,18 +224,59 @@ function buildIndex() {
     if (!h1Match) continue;
     const head = decodeEntities(h1Match[1]);
     if (!head) continue;
+    const lowHead = head.toLowerCase();
+    if (SKIP_HEADWORDS.has(lowHead) || UK_TO_US[lowHead]) continue;
 
-    const senses = [...html.matchAll(/<div class="mtd-sense">([\s\S]*?)<\/div>/g)]
-      .map((m) => cleanSense(m[1]))
-      .filter((s) => s && /[a-zA-ZÀ-ỹ]/.test(s));
-    if (!senses.length) continue;
-
-    const pickedSenses = [];
-    for (const s of senses) {
-      if (!pickedSenses.includes(s)) pickedSenses.push(s);
-      if (pickedSenses.length >= 2) break;
+    // Parse POS blocks + senses so we capture primary meanings across all POS (not just first 2 raw senses)
+    const tokens = [...html.matchAll(/<div class="mtd-(pos|sense)">([\s\S]*?)<\/div>/g)];
+    const posGroups = [];
+    let current = { pos: '', senses: [] };
+    for (const m of tokens) {
+      if (m[1] === 'pos') {
+        if (current.senses.length) posGroups.push(current);
+        current = { pos: decodeEntities(m[2].replace(/<[^>]+>/g, ' ')), senses: [] };
+      } else {
+        const cleaned = cleanSense(m[2], head);
+        if (cleaned) current.senses.push(cleaned);
+      }
     }
-    const viGloss = pickedSenses.join(' · ').slice(0, 88);
+    if (current.senses.length) posGroups.push(current);
+
+    // Collect up to 2 clean senses per POS group for concept extraction, and pick top 2-3 for display gloss
+    const allCleanSenses = [];
+    const displaySenses = [];
+
+    if (quickSenses[lowHead] && Array.isArray(quickSenses[lowHead])) {
+      for (const qs of quickSenses[lowHead]) {
+        if (qs && qs[0]) {
+          const cleanQ = String(qs[0]).trim();
+          if (cleanQ && !displaySenses.includes(cleanQ)) displaySenses.push(cleanQ);
+          if (cleanQ && !allCleanSenses.includes(cleanQ)) allCleanSenses.push(cleanQ);
+        }
+      }
+    }
+
+    // First pass: take 1 primary sense from each POS group (ensures verbs/adjectives aren't drowned out by homonym nouns)
+    for (const grp of posGroups) {
+      if (grp.senses[0]) {
+        const s0 = truncateClean(grp.senses[0], 64);
+        if (s0 && !displaySenses.includes(s0) && displaySenses.length < 3) {
+          displaySenses.push(s0);
+        }
+      }
+      for (const s of grp.senses.slice(0, 2)) {
+        if (!allCleanSenses.includes(s)) allCleanSenses.push(s);
+      }
+    }
+    // Fallback: if only 1 POS group, take its 2nd sense for display
+    if (displaySenses.length < 2 && posGroups[0] && posGroups[0].senses[1]) {
+      const s1 = truncateClean(posGroups[0].senses[1], 64);
+      if (s1 && !displaySenses.includes(s1)) displaySenses.push(s1);
+    }
+
+    if (!displaySenses.length) continue;
+    const viGloss = truncateClean(displaySenses.join(' · '), 96);
+    if (!viGloss) continue;
 
     const ipaMatch = html.match(/class="ipa-ame"[^>]*>([^<]+)<\/span>/);
     const ipa = ipaMatch ? decodeEntities(ipaMatch[1]).replace(/^Mỹ\s*/i, '').trim() : '';
@@ -131,7 +293,10 @@ function buildIndex() {
     const isOffList = html.includes('chip-off');
     if (isOffList && !tags.length) continue;
 
-    items.push([head, d.name, viGloss, tags.join(' '), ipa]);
+    rawRecords.push({
+      row: [head, d.name, viGloss, tags.join(' '), ipa],
+      allSenses: allCleanSenses
+    });
   }
 
   const rankOf = (row) => {
@@ -143,96 +308,172 @@ function buildIndex() {
     if (t.includes('PHRASE')) score += 2;
     return -score;
   };
-  items.sort((a, b) => rankOf(a) - rankOf(b) || a[0].localeCompare(b[0]));
+  rawRecords.sort((a, b) => rankOf(a.row) - rankOf(b.row) || a.row[0].localeCompare(b.row[0]));
 
-  const payload = { v: 1, count: items.length, items };
+  // Deduplicate exact-gloss inflected/variant twins (keep higher-ranked / shorter lemma)
+  const seenExactGloss = new Map();
+  const keptRecords = [];
+  for (const rec of rawRecords) {
+    const g = rec.row[2];
+    const head = rec.row[0].toLowerCase();
+    if (seenExactGloss.has(g)) {
+      const prevHead = seenExactGloss.get(g);
+      // Skip if same stem (e.g. broadcast/broadcasting, deserve/deserved, basis/bases, medium/media)
+      if (head.slice(0, 4) === prevHead.slice(0, 4)) continue;
+    } else {
+      seenExactGloss.set(g, head);
+    }
+    keptRecords.push(rec);
+  }
+
+  const items = keptRecords.map((r) => r.row);
+  const allSensesMap = new Map(keptRecords.map((r) => [r.row[0], r.allSenses]));
+
+  const payload = { v: 2, count: items.length, items };
   fs.writeFileSync(OUT_JSON, JSON.stringify(payload));
   console.log(`Wrote ${OUT_JSON}: ${items.length} entries (${(fs.statSync(OUT_JSON).size / 1024).toFixed(1)} KB)`);
+  payload._allSensesMap = allSensesMap;
   return payload;
+}
+
+const VI_VOWEL_RE = /[aeiouyàáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵ]/i;
+const VI_VALID_CODA_RE = /(?:ng|nh|ch|[aàáảãạăằắẳẵặâầấẩẫậeèéẻẽẹêềếểễệiìíỉĩịoòóỏõọôồốổỗộơờớởỡợuùúủũụưừứửữựyỳýỷỹỵcmnpt])$/i;
+const VI_DIACRITIC_RE = /[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i;
+
+function isValidViSyllable(w) {
+  if (!w || w.length > 7) return false;
+  if (/[fjwz0-9]/i.test(w)) return false;
+  if (!VI_VOWEL_RE.test(w)) return false;
+  if (!VI_VALID_CODA_RE.test(w)) return false;
+  if (w.length === 1 && !/^[ýởủứơêôảáàạỷỹỳ]$/.test(w)) return false;
+  return true;
+}
+
+function isValidViConcept(p, noiseSet) {
+  if (!p || p.length < 4 || p.length > 26 || noiseSet.has(p)) return false;
+  if (!VI_DIACRITIC_RE.test(p)) return false;
+  // Reject possessive pronouns & grammatical fragments
+  if (/^(?:của|chính)\s+(?:anh|chị|em|ông|bà|cô|chú|bác|mày|tao|nó|ngài|chúng|họ|bạn|tôi|mình)\b/.test(p)) return false;
+  if (/^(?:được|bị|chỉ là|đúng là|đúng với|cho đến|do bởi|bao gồm cả|chủ yếu là|về phía|về một bên|vào lúc|vậy thì|tất cả|mọi người|mỗi người)\b/.test(p)) return false;
+  if (/\b(?:của|và|hoặc|nhưng|mà|để|với|trong|về|từ|bởi|vì|nếu|khi|như|là|một|các|những|rất|quá)$/.test(p)) return false;
+
+  const words = p.split(/\s+/);
+  if (words.length < 2 || words.length > 3) return false;
+  return words.every(isValidViSyllable);
+}
+
+function lemmaKey(enWord) {
+  const w = String(enWord || '').toLowerCase().trim();
+  if (w.includes(' ')) return w;
+  if (UK_TO_US[w]) return UK_TO_US[w];
+  return w.replace(/(ies|ied|ing|ed|es|s)$/, '').slice(0, 6);
 }
 
 function extractConceptClusters(payload) {
   const NOISE_VI = new Set([
     'ai cập', 'hy lạp', 'la mã', 'anh quốc', 'nước anh', 'nước mỹ', 'nước pháp',
     'việt nam', 'trung quốc', 'nhật bản', 'ấn độ', 'châu âu', 'châu á', 'châu mỹ',
-    'anh ấy', 'cô ấy', 'ông ấy', 'bà ấy', 'chúng tôi', 'chúng ta', 'của tôi', 'của bạn', 'chính mình',
-    'có thể', 'làm cho', 'thuộc về', 'liên quan', 'có ý', 'ăn cơm', 'về một bên',
-    'về phía', 'vào lúc', 'vậy thì', 'vả chăng', 'vả lại', 'áo lễ', 'thằng cha',
-    'vỏ đồ hộp', 'vũng nước bẩn', 'vò chơi khăm', 'xe bò', 'xe ngựa'
+    'do thái', 'anh ấy', 'cô ấy', 'ông ấy', 'bà ấy', 'chúng tôi', 'chúng ta', 'của tôi',
+    'của bạn', 'chính mình', 'có thể', 'làm cho', 'thuộc về', 'liên quan', 'có ý', 'ăn cơm',
+    'vả chăng', 'vả lại', 'áo lễ', 'thằng cha', 'vỏ đồ hộp', 'vũng nước bẩn', 'vò chơi khăm',
+    'xe bò', 'xe ngựa', 'ăn thủng', 'bi đông', 'bà già', 'bài ca', 'bỏ không', 'bán rẻ',
+    'cấp đăng ký', 'cấp giấy phép', 'cấp môn bài', 'bản báo cáo', 'người báo cáo',
+    'ở ni nào', 'ao nuôi cá', 'anh nuôi'
   ]);
+
+  const allSensesMap = payload._allSensesMap || new Map();
 
   // Step 1: Group strictly by EXACT diacritic Vietnamese term (never merge bảo thủ with báo thù!)
   const exactMap = new Map();
 
   for (const row of payload.items) {
     const [head, , gloss, tags] = row;
-    // Skip archaic church meaning of cope -> áo khoác / áo lễ
-    if (head === 'cope' && /áo khoác|áo lễ/i.test(gloss)) continue;
-
-    const cleanGloss = gloss.replace(/\([^)]*\)?/g, ' ').replace(/…/g, ' ');
-    const rawParts = cleanGloss
-      .split(/[·;,/]/)
-      .map((s) => s.replace(/[^a-zA-ZÀ-ỹ\s-]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase());
+    const senseList = allSensesMap.get(head) || [gloss];
     const seen = new Set();
 
-    for (let p of rawParts) {
-      p = p.replace(/^(?:sự|việc|tính|người|kẻ|vật|cái|làm cho|làm|có tính|thuộc|mang tính)\s+/i, '').trim();
-      p = p.replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
-      if (!p || p.length < 4 || p.length > 26 || NOISE_VI.has(p)) continue;
-      const words = p.split(/\s+/);
-      // Require 2 to 3 Vietnamese syllables so every headword is a clear, self-contained Vietnamese concept
-      if (words.length < 2 || words.length > 3) continue;
-      if (!/[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i.test(p)) continue;
-      if (seen.has(p)) continue;
-      seen.add(p);
+    for (const rawSense of senseList) {
+      const cleanStr = rawSense.replace(/\([^)]*\)?/g, ' ').replace(/…/g, ' ');
+      const rawParts = cleanStr
+        .split(/[·;,/]/)
+        .map((s) => s.replace(/[^a-zA-ZÀ-ỹ\s-]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase());
 
-      if (!exactMap.has(p)) {
-        exactMap.set(p, {
-          term: p,
-          baseSlug: foldSlug(p),
-          entries: [],
-          ieltsCount: 0,
-          awlCount: 0
-        });
+      for (let p of rawParts) {
+        // Only strip neutral abstract nominalizers (sự / việc); NEVER strip người/kẻ/vật/cái!
+        p = p.replace(/^(?:sự|việc)\s+/i, '').trim();
+        p = p.replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+        if (!isValidViConcept(p, NOISE_VI)) continue;
+        if (seen.has(p)) continue;
+        seen.add(p);
+
+        if (!exactMap.has(p)) {
+          exactMap.set(p, {
+            term: p,
+            baseSlug: foldSlug(p),
+            entries: [],
+            seenLemmas: new Set(),
+            ieltsCount: 0,
+            awlCount: 0
+          });
+        }
+        const g = exactMap.get(p);
+        const lk = lemmaKey(head);
+        if (g.seenLemmas.has(lk)) continue;
+        g.seenLemmas.add(lk);
+        g.entries.push(row);
+        if (tags.includes('IELTS')) g.ieltsCount++;
+        if (tags.includes('AWL')) g.awlCount++;
       }
-      const g = exactMap.get(p);
-      g.entries.push(row);
-      if (tags.includes('IELTS')) g.ieltsCount++;
-      if (tags.includes('AWL')) g.awlCount++;
     }
   }
 
-  // Ensure our 10 flagship concepts are always present
+  // Curated flagship concepts with verified English words (only kept if present in payload.items)
+  const byHead = new Map(payload.items.map((r) => [r[0].toLowerCase(), r]));
   const mustTopics = [
-    ['danh-gia', 'đánh giá'],
-    ['ben-vung', 'bền vững'],
-    ['tiet-kiem', 'tiết kiệm'],
-    ['giai-quyet', 'giải quyết'],
-    ['anh-huong', 'ảnh hưởng'],
-    ['duy-tri', 'duy trì'],
-    ['tu-bo', 'từ bỏ'],
-    ['can-kiet', 'cạn kiệt'],
-    ['dong-y', 'đồng ý'],
-    ['thuc-day', 'thúc đẩy'],
+    ['danh-gia', 'đánh giá', ['evaluate', 'assessment', 'estimate', 'appreciate', 'judge', 'rate', 'review', 'value']],
+    ['ben-vung', 'bền vững', ['sustainable', 'sustain', 'permanent', 'maintain', 'last', 'endure', 'steady', 'stable']],
+    ['tiet-kiem', 'tiết kiệm', ['economical', 'save', 'saving', 'economy', 'spare', 'cut down', 'budget']],
+    ['giai-quyet', 'giải quyết', ['resolve', 'solve', 'settle', 'deal with', 'handle', 'address', 'work out', 'sort out']],
+    ['anh-huong', 'ảnh hưởng', ['affect', 'impact', 'influence', 'effect', 'consequence']],
+    ['duy-tri', 'duy trì', ['maintain', 'sustain', 'keep up', 'preserve', 'retain', 'continue', 'hold']],
+    ['tu-bo', 'từ bỏ', ['abandon', 'give up', 'quit', 'drop', 'leave', 'surrender', 'renounce']],
+    ['can-kiet', 'cạn kiệt', ['run out of', 'run out', 'drain', 'empty', 'consume', 'use up', 'dry up']],
+    ['dong-y', 'đồng ý', ['agree', 'approve', 'consent', 'accept', 'accord', 'favor']],
+    ['thuc-day', 'thúc đẩy', ['promote', 'boost', 'encourage', 'drive', 'push', 'advance', 'foster', 'stimulate']],
   ];
   const mustTerms = new Set(mustTopics.map((x) => x[1]));
 
-  for (const [mSlug, mTerm] of mustTopics) {
-    if (!exactMap.has(mTerm) || exactMap.get(mTerm).entries.length < 2) {
-      const entries = payload.items
-        .filter((row) =>
-          row[2].toLowerCase().includes(mTerm) ||
-          (mSlug === 'ben-vung' && /duy trì|lâu dài|bền/i.test(row[2])) ||
-          (mSlug === 'can-kiet' && /cạn|hết sạch|kiệt/i.test(row[2]))
-        )
-        .slice(0, 14);
-      if (entries.length) {
-        exactMap.set(mTerm, { term: mTerm, baseSlug: mSlug, entries, ieltsCount: 3, awlCount: 2 });
+  for (const [mSlug, mTerm, preferredWords] of mustTopics) {
+    const picked = [];
+    const pickedLemmas = new Set();
+    for (const w of preferredWords) {
+      const row = byHead.get(w);
+      if (row) {
+        picked.push(row);
+        pickedLemmas.add(lemmaKey(row[0]));
       }
+    }
+    const existing = exactMap.get(mTerm);
+    if (existing) {
+      for (const row of existing.entries) {
+        const lk = lemmaKey(row[0]);
+        if (!pickedLemmas.has(lk) && picked.length < 14) {
+          picked.push(row);
+          pickedLemmas.add(lk);
+        }
+      }
+    }
+    if (picked.length >= 2) {
+      exactMap.set(mTerm, {
+        term: mTerm,
+        baseSlug: mSlug,
+        entries: picked,
+        ieltsCount: picked.filter((r) => r[3].includes('IELTS')).length,
+        awlCount: picked.filter((r) => r[3].includes('AWL')).length
+      });
     }
   }
 
-  // Filter to exact Vietnamese terms that have at least 2 distinct English translations
+  // Filter to exact Vietnamese terms that have at least 2 distinct English lemmas
   const validGroups = [...exactMap.values()].filter(
     (g) => mustTerms.has(g.term) || (g.entries.length >= 2 && g.entries.length <= 32)
   );
@@ -255,7 +496,6 @@ function extractConceptClusters(payload) {
     let slug = g.baseSlug;
     if (!slug || slug.length < 3) continue;
     if (usedSlugs.has(slug)) {
-      // Disambiguate colliding non-diacritic slug using the top English word slug (e.g. bao-thu-revenge)
       const disambig = foldSlug(g.entries[0][0]);
       slug = `${slug}-${disambig}`;
       if (usedSlugs.has(slug)) continue;
@@ -271,16 +511,17 @@ function extractConceptClusters(payload) {
   }
 
   // Save compact Vietnamese->English concept index for the /vi/viet-anh/ hub page
-  // Schema: [viTerm, slug, [[enWord, enSlug, ipa, tags, shortGloss], ...]]
+  // Schema: [viTerm, slug, [[enWord, enSlug, ipa, tags, shortGloss], ...], totalCount]
   const conceptsPayload = {
-    v: 2,
+    v: 3,
     count: finalClusters.length,
     concepts: [...finalClusters]
       .sort((a, b) => a.term.localeCompare(b.term, 'vi'))
       .map((c) => [
         c.term,
         c.slug,
-        c.entries.slice(0, 8).map((r) => [r[0], r[1], r[4] || '', r[3] || '', r[2] || ''])
+        c.entries.slice(0, 8).map((r) => [r[0], r[1], r[4] || '', r[3] || '', r[2] || '']),
+        c.entries.length
       ])
   };
   fs.writeFileSync(OUT_CONCEPTS_JSON, JSON.stringify(conceptsPayload));
@@ -538,7 +779,19 @@ ${navHtml('viet-anh')}
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
   });
 
-  console.log(`Built ${clusters.length} static /vi/viet-anh/<slug>/ concept pages (0 accent collisions).`);
+  // Remove stale concept directories no longer in the clean cluster set
+  const activeSlugs = new Set(clusters.map((c) => c.slug));
+  let removed = 0;
+  if (fs.existsSync(VIET_ANH_DIR)) {
+    for (const d of fs.readdirSync(VIET_ANH_DIR, { withFileTypes: true })) {
+      if (d.isDirectory() && !activeSlugs.has(d.name)) {
+        fs.rmSync(path.join(VIET_ANH_DIR, d.name), { recursive: true, force: true });
+        removed++;
+      }
+    }
+  }
+
+  console.log(`Built ${clusters.length} static /vi/viet-anh/<slug>/ concept pages (removed ${removed} stale dirs, 0 accent collisions).`);
   return wordToConcepts;
 }
 
@@ -578,18 +831,19 @@ function injectReverseLinksIntoWordPages(wordToConcepts) {
 }
 
 function buildHtmlPage(payload, clusters) {
-  const curatedTopics = [
-    { q: 'đánh giá', slug: 'danh-gia', label: 'đánh giá → evaluate, assess' },
-    { q: 'bền vững', slug: 'ben-vung', label: 'bền vững → sustain, sustainable' },
-    { q: 'tiết kiệm', slug: 'tiet-kiem', label: 'tiết kiệm → economical, save' },
-    { q: 'giải quyết', slug: 'giai-quyet', label: 'giải quyết → resolve, deal with' },
-    { q: 'ảnh hưởng', slug: 'anh-huong', label: 'ảnh hưởng → affect, impact' },
-    { q: 'duy trì', slug: 'duy-tri', label: 'duy trì → maintain, keep up' },
-    { q: 'từ bỏ', slug: 'tu-bo', label: 'từ bỏ → abandon, give up' },
-    { q: 'cạn kiệt', slug: 'can-kiet', label: 'cạn kiệt → run out of, exhaust' },
-    { q: 'đồng ý', slug: 'dong-y', label: 'đồng ý → agree, approve' },
-    { q: 'thúc đẩy', slug: 'thuc-day', label: 'thúc đẩy → promote, boost' },
+  const clusterBySlug = new Map(clusters.map((c) => [c.slug, c]));
+  const curatedSlugs = [
+    'danh-gia', 'ben-vung', 'tiet-kiem', 'giai-quyet', 'anh-huong',
+    'duy-tri', 'tu-bo', 'can-kiet', 'dong-y', 'thuc-day'
   ];
+  const curatedTopics = curatedSlugs
+    .map((slug) => clusterBySlug.get(slug))
+    .filter(Boolean)
+    .map((c) => ({
+      q: c.term,
+      slug: c.slug,
+      label: `${c.term} → ${c.entries.slice(0, 2).map((r) => r[0]).join(', ')}`
+    }));
 
   const jsonld = safeJsonLd({
     '@context': 'https://schema.org',
@@ -748,7 +1002,7 @@ ${navHtml('viet-anh')}
   <div class="word-cta">
     <div class="word-cta-actions">
       <a class="word-cta-btn" href="/">Mở App HọcTA (tra cả Việt–Anh &amp; Anh–Việt offline) ↗</a>
-      <a class="word-cta-btn word-cta-btn-practice" href="/vi/tu/">Chuyển sang Từ điển Anh–Việt (6.907 từ) →</a>
+      <a class="word-cta-btn word-cta-btn-practice" href="/vi/tu/">Chuyển sang Từ điển Anh–Việt (${payload.count.toLocaleString('vi-VN')} từ) →</a>
     </div>
     <p class="word-cta-note">Trong app HọcTA, bạn cũng có thể gõ trực tiếp tiếng Việt vào ô tìm kiếm chính để tra ngược Việt → Anh ngay cả khi đang ở chế độ máy bay.</p>
   </div>
@@ -780,7 +1034,7 @@ ${navHtml('viet-anh')}
 
     for (var i = 0; i < concepts.length; i++) {
       var c = concepts[i];
-      var viTerm = c[0], viSlug = c[1], enList = c[2], viFold = c[3];
+      var viTerm = c[0], viSlug = c[1], enList = c[2], totalCount = c[3] || enList.length, viFold = c[4] || '';
 
       var filteredEn = tagFilter
         ? enList.filter(function(r) { return (' ' + (r[3] || '') + ' ').indexOf(' ' + tagFilter + ' ') !== -1; })
@@ -788,7 +1042,7 @@ ${navHtml('viet-anh')}
       if (!filteredEn.length) continue;
 
       if (!rawQ) {
-        matches.push({ c: c, enList: filteredEn, score: 1 });
+        matches.push({ c: c, enList: filteredEn, totalCount: tagFilter ? filteredEn.length : totalCount, score: 1 });
         if (matches.length >= 24) break;
         continue;
       }
@@ -811,7 +1065,7 @@ ${navHtml('viet-anh')}
       }
 
       if (score > 0) {
-        matches.push({ c: c, enList: filteredEn, score: score + Math.min(8, filteredEn.length) });
+        matches.push({ c: c, enList: filteredEn, totalCount: tagFilter ? filteredEn.length : totalCount, score: score + Math.min(8, filteredEn.length) });
       }
     }
 
@@ -825,7 +1079,7 @@ ${navHtml('viet-anh')}
 
     resultsEl.innerHTML = '';
     top.forEach(function(m) {
-      var viTerm = m.c[0], viSlug = m.c[1], enList = m.enList;
+      var viTerm = m.c[0], viSlug = m.c[1], enList = m.enList, totalCount = m.totalCount;
       var conceptUrl = '/vi/viet-anh/' + viSlug + '/';
 
       var card = document.createElement('div');
@@ -841,7 +1095,7 @@ ${navHtml('viet-anh')}
       var cmpA = document.createElement('a');
       cmpA.className = 'vien-compare-link';
       cmpA.setAttribute('hr' + 'ef', conceptUrl);
-      cmpA.textContent = 'So sánh ' + enList.length + ' từ tiếng Anh →';
+      cmpA.textContent = 'So sánh ' + totalCount + ' từ tiếng Anh →';
       headDiv.append(viA, cmpA);
 
       var listDiv = document.createElement('div');
@@ -887,7 +1141,7 @@ ${navHtml('viet-anh')}
     .then(function(r) { return r.json(); })
     .then(function(data) {
       concepts = (data.concepts || []).map(function(c) {
-        c[3] = foldVi(c[0]);
+        c[4] = foldVi(c[0]);
         return c;
       });
       var urlQ = new URLSearchParams(location.search).get('q');
