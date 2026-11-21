@@ -1164,8 +1164,24 @@ ${navHtml('viet-anh')}
   console.log(`Wrote ${OUT_HTML}`);
 }
 
+function buildSitemap(clusters) {
+  const smPath = path.join(TU_DIR, 'sitemap', 'viet-anh.xml');
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = [
+    `  <url><loc>https://hocta.app/vi/viet-anh/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>`,
+    ...clusters.map(
+      (c) => `  <url><loc>https://hocta.app/vi/viet-anh/${esc(c.slug)}/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`
+    )
+  ];
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
+  fs.mkdirSync(path.dirname(smPath), { recursive: true });
+  fs.writeFileSync(smPath, xml, 'utf8');
+  console.log(`Wrote ${smPath}: ${urls.length} URLs`);
+}
+
 const payload = buildIndex();
 const clusters = extractConceptClusters(payload);
 const wordToConcepts = buildConceptPages(clusters);
 injectReverseLinksIntoWordPages(wordToConcepts);
 buildHtmlPage(payload, clusters);
+buildSitemap(clusters);
