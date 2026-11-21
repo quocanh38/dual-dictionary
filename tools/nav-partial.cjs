@@ -11,8 +11,9 @@ function navHtml(active) {
 <div class="dd-links">
 <div class="dd-mobile-sections" aria-label="Các khu vực HọcTA"><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></div>
 <a href="/vi/tu/"${on('tu')}>Từ điển</a>
-<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['chu-de','phan-biet','dong-nghia','phat-am','loi-sai','gioi-tu','cum-di-voi'])} aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Từ vựng ▾</button>
+<div class="dd-drop"><button type="button" class="dd-drop-btn"${dropOn(['viet-anh','chu-de','phan-biet','dong-nghia','phat-am','loi-sai','gioi-tu','cum-di-voi'])} aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Từ vựng ▾</button>
 <div class="dd-drop-menu">
+<a href="/vi/viet-anh/"${on('viet-anh')}>🇻🇳→🇬🇧 Việt–Anh</a>
 <a href="/vi/chu-de/"${on('chu-de')}>Chủ đề</a>
 <a href="/vi/phan-biet/"${on('phan-biet')}>Phân biệt</a>
 <a href="/vi/dong-nghia/"${on('dong-nghia')}>Đồng nghĩa</a>

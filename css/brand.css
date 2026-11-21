@@ -453,7 +453,8 @@ nav.dd-nav .dd-mobile-sections {
 :root[data-theme="dark"] .due-banner-cta:hover {
   color: #fde68a;
 }
-:root[data-theme="dark"] #wotd-card.net-banner {
+:root[data-theme="dark"] #wotd-card.net-banner,
+:root[data-theme="dark"] #vien-reverse-card.net-banner {
   background: var(--brand-night-surface);
   color: var(--brand-night-text);
   border-color: var(--brand-night-line);
@@ -471,7 +472,8 @@ nav.dd-nav .dd-mobile-sections {
   :root:not([data-theme="light"]) .due-banner-cta:hover {
     color: #fde68a;
   }
-  :root:not([data-theme="light"]) #wotd-card.net-banner {
+  :root:not([data-theme="light"]) #wotd-card.net-banner,
+  :root:not([data-theme="light"]) #vien-reverse-card.net-banner {
     background: var(--brand-night-surface);
     color: var(--brand-night-text);
     border-color: var(--brand-night-line);
@@ -487,6 +489,57 @@ nav.dd-nav .dd-mobile-sections {
   nav.dd-nav .dd-search input::placeholder {
     color: var(--brand-night-muted);
   }
+}
+#vien-reverse-card.net-banner {
+  background: var(--surface, #fff);
+  color: var(--text, var(--brand-ink));
+  border-color: var(--border, var(--brand-line));
+}
+.vien-hit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 6px;
+  margin-top: 6px;
+}
+.vien-hit-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--border, var(--brand-line));
+  border-radius: 10px;
+  background: var(--surface, #fff);
+  color: var(--text, var(--brand-ink));
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.vien-hit-btn:hover {
+  border-color: var(--accent, var(--brand-blue));
+}
+.vien-hit-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.vien-hit-word {
+  font-weight: 800;
+  color: var(--accent, var(--brand-blue));
+  font-size: .95rem;
+}
+.vien-hit-tag {
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(41, 60, 200, .12);
+  color: var(--accent, var(--brand-blue));
+}
+.vien-hit-gloss {
+  font-size: .8rem;
+  color: var(--text-2, var(--brand-muted));
+  line-height: 1.35;
 }
 
 

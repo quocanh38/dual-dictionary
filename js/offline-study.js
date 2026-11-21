@@ -1805,6 +1805,7 @@ const AIRPLANE_PACK_ITEMS = [
   { url: "./assets/study/audio/toeic-focus-l8.wav", cache: "mdx-dict-toeic-audio" },
   { url: "./js/ielts-meta-practice.js", cache: "shell" },
   { url: "./samples/simple-en.mdx", cache: "shell" },
+  { url: "./data/vi-en-index.json", cache: "shell" },
 ];
 
 async function activeShellCacheName() {

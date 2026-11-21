@@ -679,6 +679,7 @@ function wireUi() {
     hideSuggestions();
     updateSearchFilledState();
     $('#context-bar')?.classList.add('hidden');
+    $('#vien-reverse-card')?.classList.add('hidden');
     input.focus();
   });
   // U11: on narrow screens the remaining header controls pushed the app title onto
@@ -2170,6 +2171,7 @@ async function search(word, fromReaderTap = false) {
   // from "Recent", and the parked ?q= replay records on its own success.
   updateContextBar(word);
   updatePronStrip(word);
+  try { void renderViEnReverseCard(word); } catch (e) {}
   // U3: with no dictionary loaded there is nothing to look up. Do not invite a
   // fake lookup: keep the honest not-loaded panel (CTA first) in charge and stop
   // before the lookup surface pretends to work.
@@ -3393,7 +3395,133 @@ function suggest(q) {
     if (hasMore) { const qTrim = String(q).trim(); addOption(qTrim, 'sug-more', `Show more results for “${qTrim}”`); }
     box.classList.remove('hidden');
     $('#search-input').setAttribute('aria-expanded', 'true');
+    if (isLikelyViQuery(q) || visible.length < 3) {
+      void appendViEnSuggestions(q, box, addOption);
+    }
   }, 120);
+}
+
+/* ---------------- Vietnamese -> English reverse lookup (offline-ready) ---------------- */
+let viEnIndexPromise = null;
+function foldViText(s) {
+  return String(s || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+function isLikelyViQuery(q) {
+  const s = String(q || '').trim();
+  if (s.length < 2) return false;
+  if (/[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i.test(s)) return true;
+  return false;
+}
+function loadViEnIndex() {
+  if (!viEnIndexPromise) {
+    viEnIndexPromise = fetch('data/vi-en-index.json')
+      .then((r) => (r.ok ? r.json() : { items: [] }))
+      .then((data) => (data.items || []).map((row) => {
+        row[5] = foldViText(row[2]);
+        return row;
+      }))
+      .catch(() => []);
+  }
+  return viEnIndexPromise;
+}
+async function findViEnMatches(query, limit = 8, allowFolded = false) {
+  const raw = String(query || '').trim().toLowerCase();
+  if (raw.length < 2) return [];
+  const hasViDiacritics = isLikelyViQuery(raw);
+  if (!hasViDiacritics && !allowFolded) return [];
+  const folded = foldViText(raw);
+  const items = await loadViEnIndex();
+  const hits = [];
+  for (let i = 0; i < items.length; i++) {
+    const row = items[i];
+    const head = row[0], gloss = (row[2] || '').toLowerCase(), tags = row[3] || '', glossFold = row[5] || '';
+    let score = 0;
+    if (gloss === raw) score = 100;
+    else if (gloss.startsWith(raw + ' ') || gloss.startsWith(raw + ';') || gloss.startsWith(raw + ',') || gloss.includes(' ' + raw)) score = 86;
+    else if (gloss.includes(raw)) score = 70;
+    else if (allowFolded && folded.length >= 3 && (glossFold.startsWith(folded + ' ') || glossFold.includes(' ' + folded))) score = 58;
+    if (score > 0) {
+      if (tags.includes('IELTS')) score += 5;
+      if (tags.includes('AWL')) score += 4;
+      if (tags.includes('NGSL')) score += 3;
+      hits.push({ row, score });
+    }
+  }
+  hits.sort((a, b) => b.score - a.score || a.row[0].localeCompare(b.row[0]));
+  return hits.slice(0, limit).map((h) => h.row);
+}
+async function appendViEnSuggestions(q, box, addOption) {
+  try {
+    const matches = await findViEnMatches(q, 5, false);
+    if (!matches.length || document.activeElement !== $('#search-input')) return;
+    for (const r of matches) {
+      const head = r[0], gloss = r[2], tags = r[3] || '';
+      const cefr = (tags.match(/\b[A-C][12]\b/) || [])[0] || '';
+      const label = `🇻🇳→🇬🇧 ${head}${cefr ? ' (~' + cefr + ')' : ''} — ${gloss.slice(0, 52)}`;
+      addOption(head, 'sug-vien', label);
+    }
+    box.classList.remove('hidden');
+    $('#search-input').setAttribute('aria-expanded', 'true');
+  } catch (e) {}
+}
+async function renderViEnReverseCard(query) {
+  const card = document.getElementById('vien-reverse-card');
+  if (!card) return;
+  const q = String(query || '').trim();
+  // Activate when the query has Vietnamese diacritics OR is a multi-word query not in English headwords
+  const hasDiacritics = isLikelyViQuery(q);
+  const allowFolded = !hasDiacritics && q.includes(' ') && q.length >= 4;
+  if (!hasDiacritics && !allowFolded) {
+    card.classList.add('hidden');
+    card.innerHTML = '';
+    return;
+  }
+  const matches = await findViEnMatches(q, 8, allowFolded);
+  if (!matches.length) {
+    card.classList.add('hidden');
+    card.innerHTML = '';
+    return;
+  }
+  const isVi = (typeof currentLang === 'function' ? currentLang() : localStorage.getItem('lang')) !== 'en';
+  card.innerHTML =
+    '<div class="daily-focus">' +
+      '<div class="daily-focus-head">' +
+        '<strong>🇻🇳→🇬🇧 ' + (isVi ? `Từ điển Việt–Anh cho “${escapeHtml(q)}”` : `Vietnamese → English for “${escapeHtml(q)}”`) + '</strong>' +
+        '<a href="/vi/viet-anh/?q=' + encodeURIComponent(q) + '" class="daily-chip">' + (isVi ? 'Mở Từ điển Việt–Anh đầy đủ →' : 'Full Vi–En dictionary →') + '</a>' +
+      '</div>' +
+      '<div class="vien-hit-list">' +
+        matches.map((r) => {
+          const head = r[0], gloss = r[2], tags = r[3] || '', ipa = r[4] || '';
+          const badges = [];
+          const cefr = (tags.match(/\b[A-C][12]\b/) || [])[0];
+          if (cefr) badges.push('~' + cefr);
+          if (tags.includes('IELTS')) badges.push('IELTS');
+          else if (tags.includes('AWL')) badges.push('AWL');
+          else if (tags.includes('PHRASE')) badges.push(isVi ? 'Cụm từ' : 'Phrase');
+          return '<button type="button" class="vien-hit-btn" data-en-word="' + escapeHtml(head) + '">' +
+            '<div class="vien-hit-top">' +
+              '<span class="vien-hit-word">' + escapeHtml(head) + (ipa ? ' <span class="hint" style="font-weight:400">' + escapeHtml(ipa) + '</span>' : '') + '</span>' +
+              (badges.length ? '<span class="vien-hit-tag">' + escapeHtml(badges.join(' · ')) + '</span>' : '') +
+            '</div>' +
+            '<span class="vien-hit-gloss">' + escapeHtml(gloss) + '</span>' +
+          '</button>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  card.classList.remove('hidden');
+  card.querySelectorAll('[data-en-word]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const enWord = btn.getAttribute('data-en-word');
+      if (enWord) search(enWord);
+    });
+  });
 }
 
 /* ---------------- history ---------------- */
