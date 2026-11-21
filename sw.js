@@ -167,7 +167,7 @@
 // v150: route lesson draft creation to Baseten and optional repair to Meta;
 // add provider metadata to the offline Studio shell.
 // v154: PWA manifest & Digital Asset Links prepared for Google Play TWA packaging.
-const CACHE = 'mdx-dict-v246-vi-en-dict';
+const CACHE = 'mdx-dict-v247-docs-sync';
 const LEGACY_HOST = self.location.hostname === 'dualdictionary.netlify.app';
 const LEGACY_APP = './recover.html';
 const LEGACY_STUDIO = './lessons/recover.html';
