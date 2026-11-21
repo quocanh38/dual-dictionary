@@ -526,12 +526,32 @@ function buildHtmlPage(payload, clusters) {
     ]
   });
 
-  const directoryHtml = clusters
-    .map((c) => {
-      const sampleEn = c.entries.slice(0, 3).map((r) => r[0]).join(', ');
-      return `<li><a href="/vi/viet-anh/${esc(c.slug)}/"><strong>${esc(c.term)}</strong></a> <span style="color:var(--muted);font-size:.86rem">(${c.entries.length} từ: ${esc(sampleEn)})</span></li>`;
+  // Group all 3,000 concept pages by initial letter (A-Z) for fast mobile rendering & 100% crawler visibility
+  const byLetter = new Map();
+  const sortedByAlpha = [...clusters].sort((a, b) => a.term.localeCompare(b.term, 'vi'));
+  for (const c of sortedByAlpha) {
+    const letter = (c.slug.charAt(0) || 'a').toUpperCase();
+    if (!byLetter.has(letter)) byLetter.set(letter, []);
+    byLetter.get(letter).push(c);
+  }
+  const letters = [...byLetter.keys()].sort();
+  const directoryHtml = letters
+    .map((L, idx) => {
+      const list = byLetter.get(L);
+      const itemsHtml = list
+        .map((c) => {
+          const sampleEn = c.entries.slice(0, 2).map((r) => r[0]).join(', ');
+          return `<li><a href="/vi/viet-anh/${esc(c.slug)}/"><strong>${esc(c.term)}</strong></a> <span style="color:var(--muted);font-size:.84rem">(${c.entries.length}: ${esc(sampleEn)})</span></li>`;
+        })
+        .join('\n        ');
+      return `<details class="vien-alpha-group"${idx < 3 ? ' open' : ''}>
+      <summary><strong>Vần ${esc(L)}</strong> <span style="color:var(--muted);font-weight:400">(${list.length} mục từ Việt–Anh)</span></summary>
+      <ul class="vien-dir-list">
+        ${itemsHtml}
+      </ul>
+    </details>`;
     })
-    .join('\n      ');
+    .join('\n    ');
 
   const html = `<!DOCTYPE html>
 <html lang="vi">
@@ -539,7 +559,7 @@ function buildHtmlPage(payload, clusters) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Từ điển Việt–Anh theo trình độ &amp; ngữ cảnh (IELTS / TOEIC / Giao tiếp) | HọcTA</title>
-<meta name="description" content="Tra từ điển Việt–Anh với ${payload.count.toLocaleString('vi-VN')} từ và cụm từ tiếng Anh chọn lọc cùng ${clusters.length} trang so sánh sắc thái Việt–Anh theo cấp độ CEFR B1–C1, IELTS Academic, AWL.">
+<meta name="description" content="Tra từ điển Việt–Anh với ${payload.count.toLocaleString('vi-VN')} từ và cụm từ tiếng Anh chọn lọc cùng ${clusters.length.toLocaleString('vi-VN')} trang so sánh sắc thái Việt–Anh theo cấp độ CEFR B1–C1, IELTS Academic, AWL.">
 <link rel="canonical" href="https://hocta.app/vi/viet-anh/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -577,7 +597,9 @@ function buildHtmlPage(payload, clusters) {
 .vien-actions{display:flex;gap:10px;margin-top:6px;font-size:.83rem}
 .vien-actions a{color:var(--teal);font-weight:700;text-decoration:none}
 .vien-actions a:hover{text-decoration:underline}
-.vien-dir-list{columns:2 260px;column-gap:24px;padding-left:18px;line-height:1.85}
+.vien-dir-list{columns:2 260px;column-gap:24px;padding-left:18px;line-height:1.85;margin:10px 0 4px}
+.vien-alpha-group{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0;background:var(--paper)}
+.vien-alpha-group summary{cursor:pointer}
 </style>
 </head>
 <body class="word-page">
@@ -609,11 +631,9 @@ ${navHtml('viet-anh')}
   <div id="vien-results" class="vien-grid"></div>
 
   <section class="word-note" style="margin-top:32px">
-    <h2>Danh mục ${clusters.length} mục từ Việt–Anh theo sắc thái &amp; trình độ</h2>
+    <h2>Danh mục ${clusters.length.toLocaleString('vi-VN')} mục từ Việt–Anh theo bảng chữ cái (A–Z)</h2>
     <p style="color:var(--muted);font-size:.92rem">Mỗi trang dưới đây phân tích các cách diễn đạt một ý tiếng Việt sang tiếng Anh theo cấp độ Giao tiếp (A2–B1), Cụm động từ và Học thuật / IELTS (B2–C1):</p>
-    <ul class="vien-dir-list">
-      ${directoryHtml}
-    </ul>
+    ${directoryHtml}
   </section>
 
   <div class="word-cta">
