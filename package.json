@@ -6,7 +6,10 @@
     "qa:links": "node tools/local-qa.cjs link-check",
     "qa:titles": "node tools/title-audit.cjs",
     "qa:covers": "node tools/cover-qa.cjs",
-    "build:sitemaps": "node tools/sitemap-maint.cjs"
+    "build:sitemaps": "node tools/sitemap-maint.cjs",
+    "seo:indexnow": "node tools/indexnow-submit.cjs --all",
+    "seo:indexnow:changed": "node tools/indexnow-submit.cjs --changed",
+    "seo:indexnow:dry": "node tools/indexnow-submit.cjs --all --dry-run"
   },
   "devDependencies": {
     "playwright-core": "1.62.1",

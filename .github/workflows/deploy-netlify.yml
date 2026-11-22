@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      indexnow_full:
+        description: 'Submit full sitemap to IndexNow (Bing / AI Search)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -18,6 +24,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -44,3 +52,13 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID || '1af0641f-673e-48e9-9c86-1755d64b6558' }}
         run: npx --yes netlify-cli@19 deploy --prod --dir=. --site="$NETLIFY_SITE_ID" --message="GitHub Actions deploy ${GITHUB_SHA::9}"
+
+      - name: Notify IndexNow (Bing / AI Search)
+        continue-on-error: true
+        run: |
+          sleep 5
+          if [ "${{ inputs.indexnow_full }}" = "true" ]; then
+            npm run seo:indexnow
+          else
+            npm run seo:indexnow:changed
+          fi
