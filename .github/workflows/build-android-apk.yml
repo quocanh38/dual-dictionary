@@ -1,0 +1,164 @@
+name: Build Android APK & Publish Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android-twa/**'
+      - '.github/workflows/build-android-apk.yml'
+    tags:
+      - 'android-v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-android-apk
+  cancel-in-progress: true
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android-twa
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Accept Android SDK licenses
+        run: |
+          if [ -x "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" ]; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
+          fi
+
+      - name: Prepare signing keystore
+        id: keystore
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASS: ${{ secrets.ANDROID_KEY_PASS }}
+        run: |
+          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
+            echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > release.keystore
+            echo "mode=release" >> "$GITHUB_OUTPUT"
+            echo "alias=${ANDROID_KEY_ALIAS:-android}" >> "$GITHUB_OUTPUT"
+            echo "pass=$ANDROID_KEYSTORE_PASS" >> "$GITHUB_OUTPUT"
+            echo "key_pass=${ANDROID_KEY_PASS:-$ANDROID_KEYSTORE_PASS}" >> "$GITHUB_OUTPUT"
+          else
+            # Ephemeral test signing key so the APK can be installed directly on Android phones
+            keytool -genkeypair -v \
+              -keystore release.keystore \
+              -alias hocta-preview \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 3650 \
+              -storepass hocta123456 \
+              -keypass hocta123456 \
+              -dname "CN=HocTA Preview, OU=Education, O=HocTA, L=Hanoi, ST=HN, C=VN"
+            echo "mode=preview" >> "$GITHUB_OUTPUT"
+            echo "alias=hocta-preview" >> "$GITHUB_OUTPUT"
+            echo "pass=hocta123456" >> "$GITHUB_OUTPUT"
+            echo "key_pass=hocta123456" >> "$GITHUB_OUTPUT"
+          fi
+          SHA256=$(keytool -list -v -keystore release.keystore -storepass "$( [ -n "$ANDROID_KEYSTORE_BASE64" ] && echo "$ANDROID_KEYSTORE_PASS" || echo "hocta123456" )" | grep -m1 "SHA256:" | sed 's/.*SHA256:[[:space:]]*//')
+          echo "sha256=$SHA256" >> "$GITHUB_OUTPUT"
+
+      - name: Build Android Release APK & AAB
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleRelease bundleRelease --no-daemon
+
+      - name: Align and Sign APK (and AAB)
+        env:
+          KEY_ALIAS: ${{ steps.keystore.outputs.alias }}
+          STORE_PASS: ${{ steps.keystore.outputs.pass }}
+          KEY_PASS: ${{ steps.keystore.outputs.key_pass }}
+        run: |
+          BUILD_TOOLS_DIR=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)
+          echo "Using build-tools: $BUILD_TOOLS_DIR"
+
+          UNSIGNED_APK="app/build/outputs/apk/release/app-release-unsigned.apk"
+          "$BUILD_TOOLS_DIR/zipalign" -v -p 4 "$UNSIGNED_APK" app-aligned.apk
+          "$BUILD_TOOLS_DIR/apksigner" sign \
+            --ks release.keystore \
+            --ks-key-alias "$KEY_ALIAS" \
+            --ks-pass "pass:$STORE_PASS" \
+            --key-pass "pass:$KEY_PASS" \
+            --out hocta-android.apk \
+            app-aligned.apk
+          "$BUILD_TOOLS_DIR/apksigner" verify hocta-android.apk
+
+          cp app/build/outputs/bundle/release/app-release.aab hocta-android.aab
+          jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
+            -keystore release.keystore \
+            -storepass "$STORE_PASS" \
+            -keypass "$KEY_PASS" \
+            hocta-android.aab "$KEY_ALIAS"
+
+          ls -lh hocta-android.apk hocta-android.aab
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hocta-android-build
+          path: |
+            android-twa/hocta-android.apk
+            android-twa/hocta-android.aab
+          retention-days: 30
+
+      - name: Publish APK to GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SIGN_MODE: ${{ steps.keystore.outputs.mode }}
+          SIGN_SHA256: ${{ steps.keystore.outputs.sha256 }}
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/android-v* ]]; then
+            TAG="${GITHUB_REF#refs/tags/}"
+            TITLE="HọcTA Android ${TAG#android-}"
+          else
+            TAG="android-latest"
+            TITLE="HọcTA Android — Bản cài trực tiếp mới nhất"
+          fi
+
+          if [ "$SIGN_MODE" = "release" ]; then
+            SIGN_NOTE="Đã ký bằng khóa phát hành chính thức (GitHub Secrets)."
+          else
+            SIGN_NOTE="Đã ký bằng khóa xem trước (preview) để cài thử trực tiếp lên điện thoại Android. Để phát hành lên Google Play, thêm các Secret \`ANDROID_KEYSTORE_BASE64\`, \`ANDROID_KEYSTORE_PASS\`, \`ANDROID_KEY_ALIAS\`, \`ANDROID_KEY_PASS\` hoặc tự ký ở máy local."
+          fi
+
+          sed 's/^          //' <<EOF > release-notes.md
+          ### Tải về & cài đặt trên điện thoại Android
+          1. Tải file **\`hocta-android.apk\`** ở mục **Assets** bên dưới.
+          2. Mở file vừa tải → bật **"Cho phép cài đặt từ nguồn này"** nếu Android hỏi → bấm **Cài đặt**.
+
+          ### Tính năng tích hợp trong bản Android này
+          - Toàn bộ tính năng học tập offline của **HọcTA** (\`https://hocta.app/\`): Từ điển Anh–Việt 386K+ từ, \`.mdx/.mdd\`, Reader chạm để tra (EPUB/PDF), Sổ tay & Ôn tập FSRS-4.5, Luyện thi TOEIC/IELTS, 33 gói bài học offline.
+          - **Bôi đen chữ ở mọi app → "Tra với HọcTA"** (\`ACTION_PROCESS_TEXT\`).
+          - **Widget màn hình chính** (*HọcTA — Tra nhanh*) với thanh tra 1 chạm + lối tắt *Đọc & Tra*, *Ôn FSRS*, *Luyện thi*.
+          - **3 App Shortcuts** khi nhấn giữ biểu tượng ứng dụng.
+
+          ---
+          - **Commit:** \`${GITHUB_SHA::10}\`
+          - **Trạng thái ký:** ${SIGN_NOTE}
+          - **SHA-256 fingerprint:** \`${SIGN_SHA256}\`
+          EOF
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --title "$TITLE" --notes-file release-notes.md
+            gh release upload "$TAG" hocta-android.apk hocta-android.aab --clobber
+          else
+            gh release create "$TAG" hocta-android.apk hocta-android.aab \
+              --title "$TITLE" \
+              --notes-file release-notes.md
+          fi
