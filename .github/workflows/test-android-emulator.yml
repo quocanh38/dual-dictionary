@@ -99,35 +99,25 @@ jobs:
             echo "PASS: LauncherActivity launched"
 
             echo "=== 5. Test ProcessTextActivity (short word -> ?q=affect) ==="
-            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain \
-              --es android.intent.extra.PROCESS_TEXT "affect" \
-              -n app.hocta.twa/.ProcessTextActivity
+            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain --es android.intent.extra.PROCESS_TEXT "affect" -n app.hocta.twa/.ProcessTextActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/02-emulator-process-text-word.png
             echo "PASS: ProcessTextActivity (word) launched"
 
             echo "=== 6. Test ProcessTextActivity (long sentence -> ?read=...) ==="
-            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain \
-              --es android.intent.extra.PROCESS_TEXT "Effective communication at work requires clear handovers between shifts." \
-              -n app.hocta.twa/.ProcessTextActivity
+            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain --es android.intent.extra.PROCESS_TEXT "Effective communication at work requires clear handovers between shifts." -n app.hocta.twa/.ProcessTextActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/03-emulator-process-text-reader.png
             echo "PASS: ProcessTextActivity (sentence -> Reader) launched"
 
             echo "=== 7. Test Widget deep-link (FSRS Review -> #/review) ==="
-            adb shell am start -W -a android.intent.action.VIEW \
-              -d "https://hocta.app/index.html#/review" \
-              -n app.hocta.twa/.LauncherActivity
+            adb shell am start -W -a android.intent.action.VIEW -d "https://hocta.app/index.html#/review" -n app.hocta.twa/.LauncherActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/04-emulator-widget-review.png
             echo "PASS: Widget deep-link (#/review) launched"
 
             echo "=== 8. Check logcat for FATAL crashes in app.hocta.twa ==="
-            if adb logcat -d | grep -E "FATAL EXCEPTION|AndroidRuntime.*app\.hocta\.twa" | grep -A 5 "app.hocta.twa"; then
-              echo "FAIL: Fatal crash detected in app.hocta.twa!"
-              exit 1
-            fi
-            echo "PASS: Zero fatal crashes in logcat"
+            bash -c 'if adb logcat -d | grep -E "FATAL EXCEPTION|AndroidRuntime.*app\.hocta\.twa" | grep -A 5 "app.hocta.twa"; then echo "FAIL: Fatal crash detected!"; exit 1; else echo "PASS: Zero fatal crashes in logcat"; fi'
             ls -lh emulator-screenshots/
 
       - name: Upload Emulator Screenshots
