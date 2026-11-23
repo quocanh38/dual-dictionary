@@ -94,6 +94,11 @@ jobs:
             echo "=== 4. Clear logcat & Test LauncherActivity ==="
             adb logcat -c
             adb shell am start -W -n app.hocta.twa/.LauncherActivity
+            sleep 6
+            # Dismiss Chrome First-Run Experience ("Use without an account") on fresh emulator
+            adb shell input tap 540 2080
+            sleep 6
+            adb shell am start -W -n app.hocta.twa/.LauncherActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/01-emulator-launch.png
             echo "PASS: LauncherActivity launched"
