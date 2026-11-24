@@ -21,7 +21,7 @@ plugins {
 }
 
 def twaManifest = [
-    applicationId: 'app.hocta.twa',
+    applicationId: 'vn.hocta.app',
     hostName: 'hocta.app', // The domain being opened in the TWA.
     launchUrl: '/index.html', // The start path for the TWA. Must be relative to the domain.
     name: 'HọcTA - Từ điển Anh Việt', // The application name.
@@ -52,9 +52,9 @@ def twaManifest = [
 
 android {
     compileSdkVersion 36
-    namespace "app.hocta.twa"
+    namespace "vn.hocta.app"
     defaultConfig {
-        applicationId "app.hocta.twa"
+        applicationId "vn.hocta.app"
         minSdkVersion 24
         targetSdkVersion 36
         versionCode 1

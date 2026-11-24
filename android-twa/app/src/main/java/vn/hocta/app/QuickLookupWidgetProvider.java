@@ -1,4 +1,4 @@
-package app.hocta.twa;
+package vn.hocta.app;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;

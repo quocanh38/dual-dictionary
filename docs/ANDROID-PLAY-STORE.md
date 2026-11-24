@@ -10,7 +10,7 @@ Tài liệu này hướng dẫn từng bước đóng gói PWA `https://hocta.ap
   - Có `id: "/"`, `display: "standalone"`, `orientation: "portrait"`, `categories`, `share_target`, `shortcuts` (*Tra nhanh*, *Ôn tập FSRS*, *Đọc & Tra*).
   - Icon `192x192` và `512x512` khai báo cả `purpose: "any"` và `purpose: "maskable"` (biểu tượng chữ **Z.** nằm trong vùng an toàn với lề >25% mỗi cạnh, không bị cắt khi Android bo tròn).
 - [`/.well-known/assetlinks.json`](../.well-known/assetlinks.json):
-  - Tệp xác thực Digital Asset Links giữa domain `hocta.app` và ứng dụng Android `app.hocta.twa`.
+  - Tệp xác thực Digital Asset Links giữa domain `hocta.app` và ứng dụng Android `vn.hocta.app`.
   - Đã cấu hình header `Content-Type: application/json; charset=utf-8` trong [`_headers`](../_headers).
 - [`android-twa/`](../android-twa/):
   - Dự án Android TWA đã được khởi tạo sẵn bằng `@bubblewrap/core` với đầy đủ [`twa-manifest.json`](../android-twa/twa-manifest.json), [`AndroidManifest.xml`](../android-twa/app/src/main/AndroidManifest.xml), [`app/build.gradle`](../android-twa/app/build.gradle), bộ Adaptive Icons (`mipmap-anydpi-v26`), splash screen, `share_target` (`ACTION_SEND`) và 3 shortcuts.
@@ -74,7 +74,7 @@ Sau khi lệnh chạy xong, bạn sẽ có:
        "relation": ["delegate_permission/common.handle_all_urls"],
        "target": {
          "namespace": "android_app",
-         "package_name": "app.hocta.twa",
+         "package_name": "vn.hocta.app",
          "sha256_cert_fingerprints": [
            "AA:BB:CC:...:11:22",
            "33:44:55:...:88:99"

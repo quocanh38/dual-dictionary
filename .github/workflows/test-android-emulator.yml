@@ -80,49 +80,49 @@ jobs:
 
             echo "=== 1. Install hocta-android.apk ==="
             adb install -r android-twa/hocta-android.apk
-            adb shell pm list packages | grep -q "package:app.hocta.twa"
-            echo "PASS: Package app.hocta.twa installed"
+            adb shell pm list packages | grep -q "package:vn.hocta.app"
+            echo "PASS: Package vn.hocta.app installed"
 
             echo "=== 2. Verify ACTION_PROCESS_TEXT registration ==="
-            adb shell cmd package query-activities -a android.intent.action.PROCESS_TEXT -t text/plain | grep -q "app.hocta.twa"
+            adb shell cmd package query-activities -a android.intent.action.PROCESS_TEXT -t text/plain | grep -q "vn.hocta.app"
             echo "PASS: ProcessTextActivity registered for ACTION_PROCESS_TEXT"
 
             echo "=== 3. Verify QuickLookupWidgetProvider registration ==="
-            adb shell dumpsys package app.hocta.twa | grep -q "QuickLookupWidgetProvider"
+            adb shell dumpsys package vn.hocta.app | grep -q "QuickLookupWidgetProvider"
             echo "PASS: QuickLookupWidgetProvider registered"
 
             echo "=== 4. Clear logcat & Test LauncherActivity ==="
             adb logcat -c
-            adb shell am start -W -n app.hocta.twa/.LauncherActivity
+            adb shell am start -W -n vn.hocta.app/.LauncherActivity
             sleep 6
             # Dismiss Chrome First-Run Experience ("Use without an account") on fresh emulator
             adb shell input tap 540 2080
             sleep 6
-            adb shell am start -W -n app.hocta.twa/.LauncherActivity
+            adb shell am start -W -n vn.hocta.app/.LauncherActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/01-emulator-launch.png
             echo "PASS: LauncherActivity launched"
 
             echo "=== 5. Test ProcessTextActivity (short word -> ?q=affect) ==="
-            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain --es android.intent.extra.PROCESS_TEXT "affect" -n app.hocta.twa/.ProcessTextActivity
+            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain --es android.intent.extra.PROCESS_TEXT "affect" -n vn.hocta.app/.ProcessTextActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/02-emulator-process-text-word.png
             echo "PASS: ProcessTextActivity (word) launched"
 
             echo "=== 6. Test ProcessTextActivity (long sentence -> ?read=...) ==="
-            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain --es android.intent.extra.PROCESS_TEXT "Effective communication at work requires clear handovers between shifts." -n app.hocta.twa/.ProcessTextActivity
+            adb shell am start -W -a android.intent.action.PROCESS_TEXT -t text/plain --es android.intent.extra.PROCESS_TEXT "Effective communication at work requires clear handovers between shifts." -n vn.hocta.app/.ProcessTextActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/03-emulator-process-text-reader.png
             echo "PASS: ProcessTextActivity (sentence -> Reader) launched"
 
             echo "=== 7. Test Widget deep-link (FSRS Review -> #/review) ==="
-            adb shell am start -W -a android.intent.action.VIEW -d "https://hocta.app/index.html#/review" -n app.hocta.twa/.LauncherActivity
+            adb shell am start -W -a android.intent.action.VIEW -d "https://hocta.app/index.html#/review" -n vn.hocta.app/.LauncherActivity
             sleep 8
             adb exec-out screencap -p > emulator-screenshots/04-emulator-widget-review.png
             echo "PASS: Widget deep-link (#/review) launched"
 
-            echo "=== 8. Check logcat for FATAL crashes in app.hocta.twa ==="
-            bash -c 'if adb logcat -d | grep -E "FATAL EXCEPTION|AndroidRuntime.*app\.hocta\.twa" | grep -A 5 "app.hocta.twa"; then echo "FAIL: Fatal crash detected!"; exit 1; else echo "PASS: Zero fatal crashes in logcat"; fi'
+            echo "=== 8. Check logcat for FATAL crashes in vn.hocta.app ==="
+            bash -c 'if adb logcat -d | grep -E "FATAL EXCEPTION|AndroidRuntime.*vn\.hocta\.app" | grep -A 5 "vn.hocta.app"; then echo "FAIL: Fatal crash detected!"; exit 1; else echo "PASS: Zero fatal crashes in logcat"; fi'
             ls -lh emulator-screenshots/
 
       - name: Upload Emulator Screenshots
