@@ -122,12 +122,12 @@
          fallback). On narrow screens the two least-used controls (advanced, help)
          collapse into the ⋯ overflow menu so the app title stays on one line —
          the theme toggle stays in the bar on every screen size. -->
-    <button id="btn-install" class="icon-btn hidden" title="Install app" aria-label="Install app" data-i18n-title="top.install" data-i18n-aria="top.installAria" data-i18n-tip="top.tipInstall" data-tip="Install">⬇</button>
+    <button id="btn-install" class="icon-btn hidden" title="Install app" aria-label="Install app" data-i18n-title="top.install" data-i18n-aria="top.installAria" data-i18n-tip="top.tipInstall" data-tip="Install"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg></button>
     <button id="btn-lang" class="icon-btn" title="Language (EN / VI)" aria-label="Language" data-i18n-title="top.lang" data-i18n-aria="top.langAria" data-i18n-tip="top.tipLang" data-tip="EN / VI">EN</button>
     <button id="btn-theme" class="icon-btn" title="Theme: auto / light / dark" aria-label="Theme" data-i18n-title="top.theme" data-i18n-aria="top.themeAria" data-i18n-tip="top.tipTheme" data-tip="Theme">🌓</button>
-    <button id="btn-advanced" class="icon-btn topbar-optional" title="Settings" aria-label="Open settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Settings">⚙</button>
+    <button id="btn-advanced" class="icon-btn topbar-optional" title="Settings" aria-label="Open settings" data-i18n-title="top.advanced" data-i18n-aria="top.advancedAria" data-i18n-tip="top.tipAdvanced" data-tip="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
     <button id="btn-more" class="icon-btn hidden" aria-label="Open settings menu" aria-expanded="false"
-            aria-haspopup="true" aria-controls="more-menu" title="Settings" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="Settings">⋯</button>
+            aria-haspopup="true" aria-controls="more-menu" title="Settings" data-i18n-title="top.more" data-i18n-aria="top.moreAria" data-i18n-tip="top.tipMore" data-tip="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
     <div id="more-menu" class="more-menu hidden" role="menu" aria-label="Settings" data-i18n-aria="top.advanced">
       <button id="more-advanced" type="button" role="menuitem" data-i18n="top.advancedShort">⚙ Settings</button>
     </div>
@@ -186,6 +186,7 @@
     <p id="search-gate-note" class="gate-note" role="status" aria-live="polite" data-i18n="search.gateStarting">Checking for a dictionary stored on this device…</p>
   </form>
   <div id="vien-reverse-card" class="net-banner hidden" role="region" aria-label="Từ điển Việt–Anh"></div>
+  <section id="instant-lookup-card" class="instant-lookup-card hidden" role="region" aria-live="polite" aria-label="Tra nhanh trực tuyến"></section>
 
   <div id="storage-banner" class="storage-banner hidden" role="alert">
     <span id="storage-banner-text"></span>
@@ -620,7 +621,13 @@
         <button type="button" id="pt-10min" class="quickstart-btn">✍️ 10 phút<br><span class="hint">Đọc bấm giờ Part 6–7</span></button>
       </div>
     </div>
-    <section class="offline-study-panel" aria-labelledby="toeic-practice-heading">
+    <div id="practice-subtabs" class="practice-subtabs" role="tablist" aria-label="Khu vực luyện tập">
+      <button type="button" role="tab" data-ptab="toeic" aria-selected="true" class="active">TOEIC</button>
+      <button type="button" role="tab" data-ptab="vocab" aria-selected="false" data-i18n="practice.tabVocab">Từ vựng</button>
+      <button type="button" role="tab" data-ptab="ielts" aria-selected="false">IELTS &amp; Đề thi</button>
+      <button type="button" role="tab" data-ptab="work" aria-selected="false" data-i18n="practice.tabWork">Công việc &amp; Nói</button>
+    </div>
+    <section class="offline-study-panel" data-practice-panel="toeic" aria-labelledby="toeic-practice-heading">
       <h2 id="toeic-practice-heading">TOEIC Listening &amp; Reading</h2>
       <p id="toeic-entry-status" role="status" hidden></p>
       <p class="hint">Mục tiêu 700–900+? Luyện nhận ra cách diễn đạt tương đương ở Part 3–4, điền từ theo ngữ cảnh ở Part 6 và đọc tìm bằng chứng nhanh ở Part 7.</p>
@@ -632,18 +639,23 @@
         <button type="button" id="toeic-review-start" class="btn-primary">Ôn thẻ đến hạn</button>
         <ul id="toeic-review-list"></ul>
       </details>
-      <div class="exam-actions">
+      <div class="exam-actions toeic-toolbar">
         <button type="button" id="toeic-timed-reading" class="btn-primary">Part 6–7 · 14 câu · 10 phút</button>
-        <label for="toeic-filter-part">Part</label>
-        <select id="toeic-filter-part"><option value="">Tất cả</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
-        <label for="toeic-filter-offline">Ngoại tuyến</label>
-        <select id="toeic-filter-offline"><option value="">Tất cả</option><option value="ready">Sẵn sàng</option><option value="missing">Chưa sẵn sàng</option></select>
+        <div class="toeic-filters">
+          <label class="toeic-filter-item" for="toeic-filter-part"><span>Part</span>
+            <select id="toeic-filter-part"><option value="">Tất cả</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+          </label>
+          <label class="toeic-filter-item" for="toeic-filter-offline"><span>Ngoại tuyến</span>
+            <select id="toeic-filter-offline"><option value="">Tất cả</option><option value="ready">Sẵn sàng</option><option value="missing">Chưa sẵn sàng</option></select>
+          </label>
+        </div>
       </div>
       <p class="hint"><a href="docs/huong-dan-su-dung.html#toeic" target="_blank" rel="noopener">Cách luyện TOEIC offline</a></p>
       <p id="toeic-filter-empty" class="hint" hidden>Không có bộ phù hợp.</p>
       <div id="toeic-part3-sets" aria-label="Các bộ luyện TOEIC"></div>
       <button type="button" id="toeic-ai-offline-lessons" class="btn-secondary">Bài luyện offline đã lưu</button>
     </section>
+    <div data-practice-panel="work" class="hidden">
     <section class="offline-study-panel" aria-labelledby="work-english-heading">
       <h2 id="work-english-heading">Tiếng Anh công việc</h2>
       <ul class="work-lesson-list">
@@ -653,16 +665,7 @@
       </ul>
       <p class="hint"><a href="docs/huong-dan-su-dung.html#studio-packs" target="_blank" rel="noopener">Cách lưu và ôn cụm từ</a></p>
     </section>
-    <div class="vault-head">
-      <h2 data-i18n="section.practice">Practice</h2>
-      <span id="practice-count" class="hint" aria-live="polite"></span>
-    </div>
-    <div class="practice-entry">
-      <button type="button" id="practice-saved" class="btn-primary" data-i18n="review.savedWords">Saved words</button>
-      <a class="btn-secondary" href="./lessons/#supplier-delivery" data-i18n="practice.startOffline">Study an offline lesson</a>
-    </div>
-    <div id="practice-stage"></div>
-    <details class="offline-study-panel">
+    <details class="offline-study-panel" open>
       <summary data-i18n="practice.speakingTools">Speaking practice</summary>
     <!-- v76: cue card — a prompt, a 1-minute prep and a 2-minute speak countdown,
          with the browser's own recognition to read back what was said. Free
@@ -684,7 +687,27 @@
       <p class="hint" id="cue-result" role="status"></p>
     </div>
     </details>
-    <details id="offline-exam-lab" class="offline-study-panel">
+    </div>
+    <div data-practice-panel="vocab" class="hidden">
+    <div class="vault-head">
+      <h2 data-i18n="section.practice">Practice</h2>
+      <span id="practice-count" class="hint" aria-live="polite"></span>
+    </div>
+    <div class="practice-entry">
+      <button type="button" id="practice-saved" class="btn-primary" data-i18n="review.savedWords">Saved words</button>
+      <a class="btn-secondary" href="./lessons/#supplier-delivery" data-i18n="practice.startOffline">Study an offline lesson</a>
+    </div>
+    <div id="practice-stage"></div>
+    <div id="practice-empty" class="empty-state hidden">
+      <p><strong id="practice-empty-msg" data-i18n="practice.emptyTitle">Nothing to practice yet</strong></p>
+      <p class="hint" data-i18n="practice.emptyHint">Save a few words, phrases or sentences first, then come back — Practice builds quick fill-the-gap and listen-and-type drills from your Vault.</p>
+      <a class="btn-secondary" href="#/vault" data-i18n="practice.openVault">Open Vault</a>
+      <a class="btn-secondary" href="#" id="practice-empty-quiz">🎯 Quiz Vault 3 dạng</a>
+      <a class="btn-secondary" href="#" id="practice-empty-level">📊 Test trình độ 3 phút</a>
+    </div>
+    </div>
+    <div data-practice-panel="ielts" class="hidden">
+    <details id="offline-exam-lab" class="offline-study-panel" open>
       <summary><strong>📚 IELTS Academic &amp; TOEIC practice</strong> <span class="offline-badge" data-i18n="village.offlineBadge">OFFLINE · no key</span><span class="hint"> Answer keys and explanations · offline</span></summary><p class="hint" data-i18n="village.labNote">Offline path: Listening/Reading with fixed answer keys work in airplane mode. Optional AI feedback below needs internet + your own key.</p>
       <p class="hint">Original offline content pack · IELTS Academic Listening and Reading include 40-question diagnostics for section-length practice; Writing and Speaking include prompts for all four practice stages. Listening uses browser-generated voice, so this is not an official or calibrated mock and does not produce an overall four-skill band.</p>
       <details class="offline-data-details"><summary><strong>Manage offline storage &amp; Airplane Mode</strong></summary><h3>Offline data on this device</h3><p id="airplane-pack-status" class="hint" aria-live="polite">Checking Airplane Mode pack…</p><p id="offline-data-status" class="hint" aria-live="polite">Checking local storage…</p><div class="exam-actions"><button id="btn-airplane-pack" type="button" class="btn-primary">✈️ Download Airplane Mode Pack (~6.5 MB)</button><button id="btn-offline-storage" type="button" class="btn-secondary">Keep data on this device</button><button id="btn-offline-dictionaries" type="button" class="btn-secondary">Manage downloaded dictionaries</button><a href="#/vault" class="btn-secondary">Open saved words</a></div><p class="hint">Downloads all 5 long TOEIC audio tracks, 800-item IELTS practice pack, and starter English dictionary into browser storage for flights and airplane mode.</p></details>
@@ -717,15 +740,12 @@
         <fieldset class="self-check"><legend>IELTS Speaking self-review · formative, not a band score</legend><label><input type="checkbox" data-speaking-check value="Fluency and coherence"> I kept a clear line of thought and managed pauses</label><label><input type="checkbox" data-speaking-check value="Lexical resource"> I used accurate words and phrases, and paraphrased when needed</label><label><input type="checkbox" data-speaking-check value="Grammatical range and accuracy"> I used clear sentence spines and checked repeated grammar errors</label><label><input type="checkbox" data-speaking-check value="Pronunciation"> My speech was understandable, with clear word stress and chunking</label></fieldset><details class="ai-review"><summary>Optional AI feedback</summary><p class="hint">Your recording stays on this device and is not sent. Each request sends only the selected Speaking prompt and up to 6,000 characters from the notes editor; token charges may apply. It does not include your recording or other drafts. Flash-Lite may handle the same request once if the primary model is busy.</p><label><input type="checkbox" id="speaking-ai-consent"> I agree to send the selected Speaking prompt and the notes in this editor (up to 6,000 characters) for AI feedback.</label><div class="exam-actions"><button type="button" id="btn-speaking-ai-review" class="btn-secondary">Request AI feedback</button><button type="button" id="btn-speaking-ai-cancel" class="btn-secondary" hidden>Cancel request</button></div><p id="speaking-ai-status" class="hint" role="status" aria-live="polite"></p><div id="speaking-ai-feedback" aria-live="polite"></div></details><p id="speaking-status" class="hint" aria-live="polite"></p>
       </details><details class="offline-history"><summary>Recent Writing, Speaking &amp; exercise attempts</summary><div id="offline-study-history" class="study-history-list"></div></details><details class="offline-study-stats"><summary>Offline practice statistics</summary><div id="offline-study-stats" class="study-history-list"></div></details>
     </details>
-    <div id="practice-empty" class="empty-state hidden">
-      <p><strong id="practice-empty-msg" data-i18n="practice.emptyTitle">Nothing to practice yet</strong></p>
-      <p class="hint" data-i18n="practice.emptyHint">Save a few words, phrases or sentences first, then come back — Practice builds quick fill-the-gap and listen-and-type drills from your Vault.</p>
-      <a class="btn-secondary" href="#/vault" data-i18n="practice.openVault">Open Vault</a>
-      <a class="btn-secondary" href="#" id="practice-empty-quiz">🎯 Quiz Vault 3 dạng</a>
-      <a class="btn-secondary" href="#" id="practice-empty-level">📊 Test trình độ 3 phút</a>
     </div>
-    <section class="offline-study-panel" lang="vi" aria-labelledby="experience-title">
-      <h2 id="experience-title">Dữ liệu trải nghiệm</h2>
+    <div class="practice-footer-tools">
+      <button type="button" id="saved-learning-chats" class="btn-secondary">Hội thoại đã lưu</button>
+    </div>
+    <details class="offline-study-panel experience-compact" lang="vi" aria-labelledby="experience-title">
+      <summary id="experience-title">Dữ liệu trải nghiệm &amp; góp ý</summary>
       <p id="experience-operations-state">Số liệu vận hành mặc định hiện đang tắt hoặc chưa xác định được.</p>
       <p id="experience-purpose">Nếu bạn bật chia sẻ, HọcTA ghi các bước tra từ, đọc, luyện TOEIC, ôn tập và sử dụng Gemini, cùng thời gian chờ và nhãn nguồn cố định nếu có. Bạn có thể tắt bất cứ lúc nào. <a href="/vi/du-lieu-trai-nghiem/">Dữ liệu nào được gửi?</a></p>
       <label><input type="checkbox" id="experience-opt-in" aria-describedby="experience-purpose"> Tôi đồng ý chia sẻ số liệu trải nghiệm</label>
@@ -747,8 +767,7 @@
         <p role="status"></p>
       </form>
       </details>
-    </section>
-    <button type="button" id="saved-learning-chats" class="btn-secondary">Hội thoại đã lưu</button>
+    </details>
   </section>
 
   <!-- ===== Stats (Phase 3+) ===== -->
@@ -794,7 +813,7 @@
     </p>
     <p class="foot-offline" data-i18n="foot.offline">Offline &amp; non-commercial · bring your own .mdx / .mdd files</p>
     <!-- U17: support stays a small, quiet footer text link — never a competing CTA -->
-    <p class="support">If HọcTA helps your study, you can
+    <p class="support" data-i18n-html="foot.support">If HọcTA helps your study, you can
       <a class="support-link" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">buy me a coffee ☕</a>.</p>
     <p><a href="/vi/du-lieu-trai-nghiem/" lang="vi">Dữ liệu trải nghiệm</a></p>
   </footer>
@@ -802,10 +821,10 @@
 
 <!-- ===== Bottom navigation (mobile only, <900px) ===== -->
 <nav class="bottom-nav" aria-label="Main (mobile)">
-  <a href="#/search" data-nav="search" class="active"><span class="bn-icon">🔍</span><span class="bn-label" data-i18n="nav.search">Search</span></a>
-  <a href="#/reader" data-nav="reader"><span class="bn-icon">📖</span><span class="bn-label" data-i18n="nav.reader">Reader</span></a>
-  <a href="#/review" data-nav="review"><span class="bn-icon">🔁</span><span class="bn-label" data-i18n="nav.review">Review</span><span class="badge review-due hidden"></span></a>
-  <a href="#/practice" data-nav="practice"><span class="bn-icon">✍</span><span class="bn-label" data-i18n="nav.practice">Practice</span></a>
+  <a href="#/search" data-nav="search" class="active"><span class="bn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><span class="bn-label" data-i18n="nav.search">Search</span></a>
+  <a href="#/reader" data-nav="reader"><span class="bn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3H10a2 2 0 0 1 2 2v16a2 2 0 0 0-2-2H4.5A2.5 2.5 0 0 1 2 16.5Z"/><path d="M22 5.5A2.5 2.5 0 0 0 19.5 3H14a2 2 0 0 0-2 2v16a2 2 0 0 1 2-2h5.5a2.5 2.5 0 0 0 2.5-2.5Z"/></svg></span><span class="bn-label" data-i18n="nav.reader">Reader</span></a>
+  <a href="#/review" data-nav="review"><span class="bn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><span class="bn-label" data-i18n="nav.review">Review</span><span class="badge review-due hidden"></span></a>
+  <a href="#/practice" data-nav="practice"><span class="bn-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="bn-label" data-i18n="nav.practice">Practice</span></a>
 </nav>
 
 <!-- ===== Item editor (Vault ••• → edit note / tags / status / delete / export) ===== -->

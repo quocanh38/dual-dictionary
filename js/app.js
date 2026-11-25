@@ -435,16 +435,36 @@ async function boot() {
   $('#btn-fsrs-reset')?.addEventListener('click', resetFsrsWeightsUi);
   $('#btn-open-advanced')?.addEventListener('click', () => { populateTutorSettings(); renderAdvStatus(); renderBackupManager(); renderKnownAdvanced(); checkTtsVoiceStatus(); $('#advanced-dialog').showModal(); });
   $('#btn-test-tts')?.addEventListener('click', testTtsVoice);
+  const setPracticeTab = (tab) => {
+    const tabs = document.querySelectorAll('#practice-subtabs [data-ptab]');
+    const panels = document.querySelectorAll('#practice-view [data-practice-panel]');
+    if (!tabs.length) return;
+    tabs.forEach((b) => {
+      const on = b.dataset.ptab === tab;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', String(on));
+    });
+    panels.forEach((p) => {
+      p.classList.toggle('hidden', p.dataset.practicePanel !== tab);
+    });
+  };
+  document.querySelectorAll('#practice-subtabs [data-ptab]').forEach((b) => {
+    b.addEventListener('click', () => setPracticeTab(b.dataset.ptab));
+  });
+  window.__setPracticeTab = setPracticeTab;
   $('#pt-2min')?.addEventListener('click', () => {
+    setPracticeTab('vocab');
     if (Array.isArray(state?.items) && state.items.length >= 3) { $('#practice-saved')?.click(); }
     else { startCurriculumPractice('ngsl2'); }
     $('#practice-stage')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   $('#pt-5min')?.addEventListener('click', () => {
+    setPracticeTab('ielts');
     const lab = document.getElementById('offline-exam-lab');
     if (lab) { lab.open = true; lab.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
   $('#pt-10min')?.addEventListener('click', () => {
+    setPracticeTab('toeic');
     $('#toeic-timed-reading')?.click();
   });
   let quickloadButtonRun;
@@ -680,6 +700,7 @@ function wireUi() {
     updateSearchFilledState();
     $('#context-bar')?.classList.add('hidden');
     $('#vien-reverse-card')?.classList.add('hidden');
+    $('#instant-lookup-card')?.classList.add('hidden');
     input.focus();
   });
   // U11: on narrow screens the remaining header controls pushed the app title onto
@@ -2182,16 +2203,22 @@ async function search(word, fromReaderTap = false) {
     pendingLookupJourney = journey;
     state.pendingQuery = word;   // C15: replayed after the boot dictionary restore
     updateIdleDictState();
+    const gen = lookupGen;
+    const instantOk = await renderInstantOnlineLookup(word, gen);
+    if (instantOk && gen === lookupGen) {
+      journey?.step('result', { duration: journey.elapsed() });
+      pushHistory(word);
+    }
     if (!anyLoading) {
       $('#empty-state')?.classList.remove('hidden');
       updateEmptyStateCopy();
-      // v116: the submit itself must surface the guidance — the download card
-      // can sit below the fold (or behind the closed keyboard) with the ghosted
-      // Search button giving no other feedback.
-      $('#empty-state')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (!instantOk) {
+        $('#empty-state')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     }
     return;
   }
+  $('#instant-lookup-card')?.classList.add('hidden');
   state.pendingQuery = null;
   updateIdleDictState();
   const gen = lookupGen;
@@ -2205,6 +2232,125 @@ async function search(word, fromReaderTap = false) {
   } catch (error) {
     journey?.step('error');
     throw error;
+  }
+}
+
+/** Instant online fallback before the user downloads the 10.9 MB offline pack.
+ *  Fetches the same-origin static word page /vi/tu/<slug>/ (6,907+ words) and
+ *  renders a clean, sanitized preview card so first-time users get an answer in <200ms. */
+async function renderInstantOnlineLookup(word, gen) {
+  const card = $('#instant-lookup-card');
+  if (!card) return false;
+  const raw = String(word || '').trim();
+  if (!raw || (typeof navigator !== 'undefined' && navigator.onLine === false)) {
+    card.classList.add('hidden');
+    return false;
+  }
+  if (/[^\x00-\x7F]/.test(raw)) {
+    card.classList.add('hidden');
+    return false;
+  }
+  const slug = raw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  if (!slug) {
+    card.classList.add('hidden');
+    return false;
+  }
+  try {
+    const res = await fetch(`/vi/tu/${encodeURIComponent(slug)}/`, { credentials: 'same-origin' });
+    if (!res.ok || gen !== lookupGen) {
+      if (gen === lookupGen) card.classList.add('hidden');
+      return false;
+    }
+    const html = await res.text();
+    if (gen !== lookupGen) return false;
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const entry = doc.querySelector('.entry-body');
+    if (!entry) {
+      card.classList.add('hidden');
+      return false;
+    }
+    const headword = doc.querySelector('.word-head h1')?.textContent?.trim() || raw;
+    const ipaText = doc.querySelector('.ipa-ame')?.textContent?.trim() || '';
+    card.replaceChildren();
+
+    const header = document.createElement('div');
+    header.className = 'instant-lookup-head';
+    const titleWrap = document.createElement('div');
+    titleWrap.className = 'instant-lookup-title-wrap';
+    const h3 = document.createElement('h3');
+    h3.textContent = headword;
+    titleWrap.append(h3);
+    if (ipaText) {
+      const ipaEl = document.createElement('span');
+      ipaEl.className = 'instant-lookup-ipa';
+      ipaEl.textContent = ipaText;
+      titleWrap.append(ipaEl);
+    }
+    const badge = document.createElement('span');
+    badge.className = 'instant-lookup-badge';
+    badge.textContent = lang === 'vi' ? 'Tra nhanh trực tuyến' : 'Instant online lookup';
+    header.append(titleWrap, badge);
+    card.append(header);
+
+    const body = document.createElement('div');
+    body.className = 'instant-lookup-body';
+    let senseCount = 0;
+    let exCount = 0;
+    for (const node of entry.children) {
+      if (node.classList.contains('mtd-domain')) break;
+      if (node.classList.contains('mtd-pos')) {
+        const pos = document.createElement('div');
+        pos.className = 'instant-pos';
+        pos.textContent = node.textContent.trim();
+        body.append(pos);
+      } else if (node.classList.contains('mtd-sense') && senseCount < 6) {
+        const sense = document.createElement('div');
+        sense.className = 'instant-sense';
+        sense.textContent = node.textContent.trim();
+        body.append(sense);
+        senseCount++;
+      } else if (node.classList.contains('mtd-ex') && exCount < 4) {
+        const ex = document.createElement('div');
+        ex.className = 'instant-ex';
+        const en = node.querySelector('.mtd-ex-en')?.textContent?.trim();
+        const vi = node.querySelector('.mtd-ex-vi')?.textContent?.trim();
+        if (en) {
+          const strong = document.createElement('strong');
+          strong.textContent = en;
+          ex.append(strong);
+          if (vi) ex.append(document.createTextNode(' — ' + vi));
+        } else {
+          ex.textContent = node.textContent.trim();
+        }
+        body.append(ex);
+        exCount++;
+      }
+    }
+    if (!body.childElementCount) {
+      card.classList.add('hidden');
+      return false;
+    }
+    card.append(body);
+
+    const foot = document.createElement('div');
+    foot.className = 'instant-lookup-foot';
+    const dlBtn = document.createElement('button');
+    dlBtn.type = 'button';
+    dlBtn.className = 'btn-secondary';
+    dlBtn.textContent = lang === 'vi' ? 'Tải gói Anh–Việt (10.9 MB) để tra 386.600 từ offline' : 'Download EN–VI (10.9 MB) for 386,600 offline entries';
+    dlBtn.addEventListener('click', () => $('#btn-quickload')?.click());
+    const fullLink = document.createElement('a');
+    fullLink.className = 'instant-full-link';
+    fullLink.href = `/vi/tu/${encodeURIComponent(slug)}/`;
+    fullLink.textContent = lang === 'vi' ? 'Xem ghi chú & ví dụ đầy đủ ↗' : 'Full notes & examples ↗';
+    foot.append(dlBtn, fullLink);
+    card.append(foot);
+
+    card.classList.remove('hidden');
+    return true;
+  } catch (e) {
+    if (gen === lookupGen) card.classList.add('hidden');
+    return false;
   }
 }
 
@@ -2249,25 +2395,18 @@ function updateIdleDictState() {
   const form = $('#search-form');
   if (form) form.dataset.dictState = st;
   const box = document.querySelector('.search-box');
-  if (box) box.classList.toggle('search-box-idle', st !== 'ready');
+  const onlineIdle = st === 'idle' && (typeof navigator === 'undefined' || navigator.onLine !== false);
+  if (box) box.classList.toggle('search-box-idle', st !== 'ready' && !onlineIdle);
   // One neutral status convention per slot: a panel with no dictionary is a
   // neutral state, not an error — CSS keys off .has-dict, never off the accent.
   for (const slot of Object.keys(SLOTS)) {
     const panel = $('#panel-' + slot);
     if (panel) panel.classList.toggle('has-dict', !!state.dicts[slot]);
   }
-  // The Search button is still clickable (it reveals the download card rather
-  // than a fake result), so it announces itself as "not ready" instead of being
-  // disabled — a disabled button would also kill Enter-to-submit. R-A: the paint
-  // follows the announcement — CSS (.search-wrap .search-box-idle .btn-search)
-  // renders it as a muted ghost until a dictionary is loaded, so the surface never
-  // promises a lookup it cannot run.
   const btn = $('.btn-search');
-  if (btn) btn.setAttribute('aria-disabled', String(st !== 'ready'));
+  if (btn) btn.setAttribute('aria-disabled', String(st !== 'ready' && !onlineIdle));
   const gateText = i18n(!dictInit.done ? 'search.gateStarting' : (st === 'loading' ? 'search.gateLoading' : 'search.gateIdle'));
-  // v116: the ghosted button explains itself on hover/focus too — the gate note
-  // below the box scrolls away, the pointer lands on the button.
-  if (btn) btn.title = st === 'ready' ? '' : gateText;
+  if (btn) btn.title = (st === 'ready' || onlineIdle) ? '' : gateText;
   const note = $('#search-gate-note');
   if (note) {
     if (st === 'ready') {
@@ -3574,8 +3713,8 @@ function openReader() {
   $('#reader-input-wrap')?.classList.remove('hidden');
   $('#reader-input')?.focus();
   const btn = $('#btn-save-sentence');
-  if (btn) btn.title = 'Tap a word in the text first';
-  setReaderMsg('Tap any word to see its meaning — then “⭐ Save sentence” keeps its original sentence.');
+  if (btn) btn.title = lang === 'vi' ? 'Chạm vào một từ trong bài đọc trước' : 'Tap a word in the text first';
+  setReaderMsg(i18n('reader.tapHint'));
 }
 
 function closeReader() {
@@ -7644,6 +7783,11 @@ Object.assign(I18N.en, {
   'foot.licLink': 'Licences & sources',
   'foot.licLinkTitle': 'Full licence text and the bundled dictionary sources (WordNet 3.1, Simple English Wiktionary, EN–VI OVDP). Also in-app under About — “Dictionaries & licenses”. Full text: NOTICE.md',
   'foot.offline': 'Offline & non-commercial · bring your own .mdx / .mdd files',
+  'foot.support': 'If HọcTA helps your study, you can <a class="support-link" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">buy me a coffee ☕</a>.',
+  'reader.tapHint': 'Tap any word to see its meaning — then “⭐ Save sentence” keeps its original sentence.',
+  'practice.tabVocab': 'Vocabulary',
+  'practice.tabWork': 'Work & Speaking',
+  'search.gateIdle': 'Instant online lookup is ready for 6,900+ common words — or download the EN–VI pack below for 386,600 offline entries.',
   // Encrypted-backup dialog copy: these three keys were referenced from JS but
   // never defined in either table, so the dialog/toast showed the raw key.
   'crypto.passNew': 'Choose a passphrase for this backup — you will need it to restore it',
@@ -7666,6 +7810,11 @@ Object.assign(I18N.vi, {
   'foot.licLink': 'Giấy phép & nguồn dữ liệu',
   'foot.licLinkTitle': 'Toàn văn giấy phép và các nguồn từ điển đi kèm (WordNet 3.1, Simple English Wiktionary, Anh–Việt OVDP). Cũng có trong ứng dụng ở mục “Về ứng dụng” — “Từ điển & giấy phép”. Toàn văn: NOTICE.md',
   'foot.offline': 'Offline & phi thương mại · tự mang file .mdx / .mdd của bạn',
+  'foot.support': 'Nếu HọcTA giúp bạn học tốt hơn, bạn có thể <a class="support-link" href="https://buymeacoffee.com/quocanh38r" target="_blank" rel="noopener">mời tác giả ly cà phê ☕</a>.',
+  'reader.tapHint': 'Chạm vào bất kỳ từ nào để tra nghĩa ngay — rồi bấm “⭐ Lưu câu” để giữ lại cả câu gốc.',
+  'practice.tabVocab': 'Từ vựng',
+  'practice.tabWork': 'Công việc & Nói',
+  'search.gateIdle': 'Gõ từ để tra nhanh trực tuyến ngay — hoặc tải gói Anh–Việt bên dưới để tra 386.600 từ khi ngoại tuyến.',
   'crypto.passNew': 'Chọn mật khẩu cho bản sao lưu này — bạn sẽ cần nó khi phục hồi',
   'crypto.passOpen': 'Nhập mật khẩu của bản sao lưu này',
   'crypto.failed': 'Không phục hồi được bản sao lưu — sai mật khẩu hoặc file bị hỏng',

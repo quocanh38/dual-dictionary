@@ -55,12 +55,15 @@ async function renderCatalogue(host,ticket){
   const section=el('section');
   if(featured){section.classList.add('lesson-featured');para(section,'Suggested lesson','meta');}
   const title=el('h3');
-  link(title,entry.title,'/lessons/'+entry.file.slice(0,-5)+'/');
+  const titleLink=el('a',entry.title);
+  titleLink.href='/lessons/'+entry.file.slice(0,-5)+'/';
+  titleLink.className='lesson-title-link';
+  title.append(titleLink);
   section.append(title);
   para(section,`${entry.topic} · ${entry.levelEstimate} (estimate)`,'meta');
   if(featured && entry.file==='supplier-delivery.json') {
    para(section,'Practise checking a delivery against an order and contacting a supplier.');
-   link(section,'Luyện TOEIC cùng chủ đề','../index.html?toeic=toeic-part7-delayed-order#/practice');
+   link(section,'Practise matching TOEIC set','../index.html?toeic=toeic-part7-delayed-order#/practice');
   }
   const existing=installed.get(entry.packId+'@'+entry.version);
   button(section,featured?'Start lesson':existing?'Study':'Open lesson',async()=>{
