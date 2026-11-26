@@ -40,9 +40,20 @@ const { safeJsonLd } = require('./seo-shared.cjs');
 let PHAT_SET=null, DONG_SET=null;
 function behaviorLinksHtml(word){
   if(PHAT_SET===null){
-    try{ const fs=require('fs'); const path=require('path');
-      PHAT_SET=new Set(require('fs').readdirSync(path.join(__dirname,'..','vi','phat-am')).filter(n=>!n.includes('.')));
-      DONG_SET=new Set(require('fs').readdirSync(path.join(__dirname,'..','vi','dong-nghia')).filter(n=>!n.includes('.')));
+    try{
+      const loadFromSm = (smFile, prefix, fallbackDir) => {
+        const smPath = path.join(__dirname, '..', 'vi', 'tu', 'sitemap', smFile);
+        if (fs.existsSync(smPath)) {
+          const xml = fs.readFileSync(smPath, 'utf8');
+          const set = new Set();
+          const re = new RegExp(`<loc>https://hocta\\.app/${prefix}/([^/<]+)/</loc>`, 'g');
+          for (const m of xml.matchAll(re)) set.add(decodeURIComponent(m[1]).toLowerCase());
+          if (set.size) return set;
+        }
+        return new Set(fs.readdirSync(path.join(__dirname, '..', fallbackDir)).filter((n) => !n.includes('.')));
+      };
+      PHAT_SET = loadFromSm('pronunciation.xml', 'vi/phat-am', 'vi/phat-am');
+      DONG_SET = loadFromSm('synonyms.xml', 'vi/dong-nghia', 'vi/dong-nghia');
     }catch(e){ PHAT_SET=new Set(); DONG_SET=new Set(); }
   }
   const w=String(word).toLowerCase();

@@ -30,10 +30,9 @@ function pageHtml(p, wordHref) {
   // enrich: table IPA + nuance hint + 3 examples
   const synTableRows = p.synonyms.slice(0,8).map(s=>{ const ipa=ipaOf(s); const hint = s===p.synonyms[0] ? 'gần nhất về nghĩa' : s===p.synonyms[1] ? 'học thuật/trung tính' : 'ngữ cảnh hẹp hơn'; return `    <tr><td><a href="${wordHref(s)}">${esc(s)}</a></td><td><code>/${esc(ipa||'—')}/</code></td><td>${esc(hint)}</td></tr>`; }).join('\n');
   const synTable = `<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:.92rem"><thead><tr style="background:var(--soft)"><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Từ</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">IPA</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Sắc thái</th></tr></thead><tbody>\n${synTableRows}\n</tbody></table>`;
-  // enrich examples 2→3
+  // enrich examples using real EN-VI examples only (never emit broken 'consider the {word}' boilerplate)
   let allEx = [...(p.examples||[])];
   if(allEx.length<3){ const extra=loadWordExamples(p.word); if(extra) for(const e of extra) if(allEx.length<3 && !allEx.some(x=>x[0]===e[0])) allEx.push(e); }
-  if(allEx.length<3) allEx.push([`We need to consider the ${p.word} in this context.`, `Chúng ta cần xem xét ${p.word} trong bối cảnh này.`]);
   const exRows = allEx.slice(0,3).map(([en, vi]) =>
     `<li><span class="ex-en">${esc(en)}</span><br><span class="ex-vi">${esc(vi)}</span></li>`).join('\n');
   const ieltsTip = p.synonyms.length>=2 ? `Viết IELTS: “${p.word}” trung tính, dùng mọi ngữ cảnh; “${p.synonyms[0]}” ${p.synonyms[0].length>p.word.length?'trang trọng hơn':'ngắn gọn hơn'} — chọn theo mức độ học thuật của bài.` : `Từ này không có trái nghĩa trực tiếp; khi viết, tập trung phân biệt với từ gần nghĩa nhất là “${p.synonyms[0]||'—'}”.`;
@@ -157,10 +156,12 @@ ${exRows}
   </ul>
   <div class="cmp-links">
     <a class="related-chip" href="${wordHref(p.word)}">Tra “${esc(p.word)}” →</a>
+    <a class="related-chip" href="/?q=${encodeURIComponent(p.word)}">⭐ Lưu vào FSRS offline ↗</a>
+    <a class="related-chip" href="/vi/viet-anh/">🇻🇳→🇬🇧 Từ điển Việt–Anh →</a>
     <a class="related-chip" href="/vi/dong-nghia/">Tất cả từ đồng nghĩa →</a>
   </div>
-  ${blogLinksHtml(`/vi/dong-nghia/${p.slug}/`)}
-<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
+  ${blogLinksHtml(`/vi/dong-nghia/${p.word}/`)}
+<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 26/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
@@ -168,14 +169,35 @@ ${exRows}
 `;
 }
 
+const SYN_BASIC_STOP = new Set([
+  'a','an','the','and','or','but','in','on','at','to','for','of','by','up','as',
+  'is','am','are','was','were','be','do','go','he','she','it','we','you','me',
+  'my','us','no','so','if','its','his','her','our','all','any','can','may','not',
+  'now','out','too','yes','yet','one','two','six','ten','big','old','new','bad',
+  'hot','day','man','way','who','why','how'
+]);
+
 function main() {
   const data = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'synonyms.json'), 'utf8'));
-  let pairs = data.pairs || [];
+  let pairs = (data.pairs || []).map((p) => ({ ...p, _curated: true }));
   // merge expanded if exists
   try{
     const exp=JSON.parse(fs.readFileSync(path.join(REPO,'data','synonyms-expanded.json'),'utf8'));
-    if(exp.pairs) pairs = pairs.concat(exp.pairs);
+    if(exp.pairs) pairs = pairs.concat(exp.pairs.map((p) => ({ ...p, _curated: false })));
   }catch(e){}
+  let examTags = {};
+  try {
+    examTags = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'exam-tags.json'), 'utf8')).words || {};
+  } catch (e) {}
+  for (const p of pairs) {
+    const w = String(p.word || '').toLowerCase();
+    const tag = examTags[w];
+    const isUpper = Boolean(tag && (tag.cefr === 'B1' || tag.cefr === 'B2' || tag.cefr === 'C1' || (tag.tags || []).includes('ielts')));
+    if (p.noindex || w.length < 4 || SYN_BASIC_STOP.has(w) || (p.synonyms || []).length < 3 || (!p._curated && !isUpper)) {
+      p.noindex = true;
+    }
+  }
+  const indexable = pairs.filter((p) => !p.noindex);
   let wordSlugs = new Set();
   try {
     const wm = JSON.parse(fs.readFileSync(path.join(REPO, 'docs', 'wordpages-manifest.json'), 'utf8'));
@@ -197,9 +219,9 @@ function main() {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(p, wordHref));
   }
-  const rows = pairs.map((p) =>
+  const rows = indexable.map((p) =>
     `    <li><a href="/vi/dong-nghia/${p.word}/">Từ đồng nghĩa với ${esc(p.word)} — ${esc(p.synonyms.slice(0, 4).join(', '))}</a></li>`).join('\n');
-  const hubTitle = `${pairs.length} từ tiếng Anh + từ đồng nghĩa & trái nghĩa hay tra nhất`;
+  const hubTitle = `${indexable.length} từ IELTS & học thuật kèm đồng nghĩa, trái nghĩa theo sắc thái`;
   const hubJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -207,7 +229,7 @@ function main() {
       {
         '@type': 'ItemList',
         name: hubTitle,
-        itemListElement: pairs.map((p, i) => ({
+        itemListElement: indexable.map((p, i) => ({
           '@type': 'ListItem',
           position: i + 1,
           name: `Từ đồng nghĩa với ${p.word}`,
@@ -218,7 +240,7 @@ function main() {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: `${SITE}/vi/` },
-          { '@type': 'ListItem', position: 2, name: 'Đồng nghĩa' },
+          { '@type': 'ListItem', position: 2, name: 'Từ đồng nghĩa' },
         ],
       },
     ],
@@ -229,15 +251,15 @@ function main() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#293CC8">
-<title>${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | HọcTA</title>
-<meta name="description" content="${pairs.length} từ tiếng Anh kèm từ đồng nghĩa, trái nghĩa, phân biệt sắc thái và câu mẫu song ngữ.">
+<title>${hubTitle} | HọcTA</title>
+<meta name="description" content="${indexable.length} từ tiếng Anh B1–C1 & IELTS kèm từ đồng nghĩa, trái nghĩa, phân biệt sắc thái và câu mẫu song ngữ.">
 <link rel="canonical" href="${SITE}/vi/dong-nghia/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${SITE}/vi/dong-nghia/">
-<meta property="og:title" content="${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra | HọcTA">
+<meta property="og:title" content="${hubTitle} | HọcTA">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/vi/blog/blog.css">
 <link rel="stylesheet" href="/vi/tu/word.css">
@@ -248,8 +270,8 @@ ${navHtml('dong-nghia')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/tu/">Từ điển</a> › <span aria-current="page">Từ đồng nghĩa</span></nav>
 <main class="page">
   <p class="word-kicker">Từ đồng nghĩa &amp; trái nghĩa</p>
-  <h1 style="font-size:2.2rem">${pairs.length} từ + từ đồng nghĩa &amp; trái nghĩa hay tra</h1>
-  <p style="color:var(--muted)">Mỗi từ 1 trang riêng: list đồng nghĩa link về trang từ, trái nghĩa, phân biệt sắc thái, câu mẫu song ngữ EN–VI. Tra không dấu vẫn ra đúng từ.</p>
+  <h1 style="font-size:2.2rem">${hubTitle}</h1>
+  <p style="color:var(--muted)">Chọn lọc ${indexable.length} mục từ trọng tâm viết luận IELTS/TOEIC: phân biệt sắc thái, IPA, câu mẫu song ngữ và lưu trực tiếp vào <a href="/vi/blog/phuong-phap/fsrs-la-gi/">hàng đợi ôn tập FSRS</a>.</p>
   ${hubListHtml(rows.split('\n'), {cols:2})}
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
@@ -257,11 +279,10 @@ ${navHtml('dong-nghia')}
 </html>
 `);
   const LM = new Date().toISOString().slice(0, 10);
-  const indexable = pairs.filter((p) => !p.noindex);
   const urls = [`https://hocta.app/vi/dong-nghia/`, ...indexable.map((p) => `https://hocta.app/vi/dong-nghia/${p.word}/`)];
   fs.writeFileSync(path.join(REPO, 'vi', 'tu', 'sitemap', 'synonyms.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc><lastmod>${LM}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n')}\n</urlset>\n`);
-  console.log(`SYNONYMS: ${pairs.length} pages + hub + sitemap (manifest-guard dead: ${deadLinks})`);
+  console.log(`SYNONYMS: ${pairs.length} built (${indexable.length} indexable, ${pairs.length - indexable.length} noindex) + hub + sitemap (manifest-guard dead: ${deadLinks})`);
 }
 
 if (require.main === module) {
