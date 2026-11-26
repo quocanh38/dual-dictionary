@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 460" width="840" height="460" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Kiến trúc lưu trữ Offline-First của ứng dụng từ điển HọcTA trên trình duyệt</title>
+  <desc id="d2">Sơ đồ 3 tầng dữ liệu cục bộ trên thiết bị: Service Worker và Cache API cho vỏ ứng dụng 1 MB, IndexedDB lưu 386.600 mục từ Anh-Việt cùng Vault và log FSRS, và tầng xử lý tại chỗ không cần mạng cho Tap-to-lookup dưới 10 mili-giây.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#ecfeff"/>
+    </linearGradient>
+    <filter id="sh2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#293cc8"/>
+    </marker>
+  </defs>
+
+  <rect width="840" height="460" rx="16" fill="url(#bg2)" stroke="#cbd5e1"/>
+
+  <!-- Header -->
+  <text x="36" y="42" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="800" fill="#0f172a">Kiến trúc Offline-First trên trình duyệt: Vì sao Tap-to-lookup đạt độ trễ ~0 ms mạng</text>
+  <text x="36" y="65" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#475569">Toàn bộ từ điển, Reader, Vault và bộ tối ưu hóa FSRS chạy cục bộ trong trình duyệt — giữ mạch đọc liền mạch kể cả ở chế độ máy bay</text>
+
+  <!-- Device Boundary -->
+  <rect x="36" y="84" width="540" height="316" rx="14" fill="#ffffff" stroke="#293cc8" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="36" y="84" width="540" height="34" rx="14" fill="#293cc8"/>
+  <rect x="36" y="104" width="540" height="14" fill="#293cc8"/>
+  <text x="54" y="106" font-family="system-ui,sans-serif" font-size="13.5" font-weight="700" fill="#ffffff">TRÊN THIẾT BỊ NGƯỜI HỌC (100% OFFLINE · 0 NETWORK HOPS)</text>
+
+  <!-- Layer 1: UI + Tap-to-lookup -->
+  <g transform="translate(56, 134)">
+    <rect x="0" y="0" width="500" height="68" rx="10" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="16" y="24" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#1e3a8a">1. Tầng Giao diện &amp; Xử lý cục bộ (Reader · Tap-to-lookup · FSRS)</text>
+    <text x="16" y="44" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Chạm từ trong bài đọc → tra chỉ mục nhị phân (js/mdict.js) trong &lt; 10 ms</text>
+    <text x="16" y="60" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Tính lịch ôn &amp; huấn luyện lại 17 trọng số FSRS (js/fsrs-opt.js) ngay trên CPU máy</text>
+  </g>
+
+  <!-- Arrows Layer 1 <-> Layer 2 -->
+  <line x1="180" y1="202" x2="180" y2="226" stroke="#293cc8" stroke-width="2" marker-end="url(#arr2)" marker-start="url(#arr2)"/>
+  <line x1="430" y1="202" x2="430" y2="226" stroke="#293cc8" stroke-width="2" marker-end="url(#arr2)" marker-start="url(#arr2)"/>
+
+  <!-- Layer 2: IndexedDB -->
+  <g transform="translate(56, 230)">
+    <rect x="0" y="0" width="242" height="150" rx="10" fill="#f0fdfa" stroke="#5eead4"/>
+    <text x="14" y="24" font-family="system-ui,sans-serif" font-size="13.5" font-weight="800" fill="#115e59">2A. IndexedDB (js/db.js)</text>
+    <text x="14" y="46" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Từ điển Anh–Việt OVDP</text>
+    <text x="24" y="62" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">(386.600 mục từ · star_anhviet.mdx)</text>
+    <text x="14" y="84" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Chỉ mục ngược Việt–Anh</text>
+    <text x="14" y="104" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Kho Vault &amp; lịch sử reviews</text>
+    <text x="14" y="124" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Bài đọc &amp; audio đã lưu offline</text>
+  </g>
+
+  <!-- Layer 2B: Service Worker + Cache API -->
+  <g transform="translate(314, 230)">
+    <rect x="0" y="0" width="242" height="150" rx="10" fill="#fefce8" stroke="#fde047"/>
+    <text x="14" y="24" font-family="system-ui,sans-serif" font-size="13.5" font-weight="800" fill="#854d0e">2B. Service Worker (sw.js)</text>
+    <text x="14" y="46" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Vỏ PWA siêu nhẹ (~1 MB core)</text>
+    <text x="14" y="66" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Airplane Mode Pack (~6.5 MB)</text>
+    <text x="24" y="82" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">5 bài TOEIC + 800 câu IELTS</text>
+    <text x="14" y="104" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Khởi chạy tức thì khi mất sóng</text>
+    <text x="14" y="124" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Không đăng nhập · Không quảng cáo</text>
+  </g>
+
+  <!-- Right side: Optional Online Zone -->
+  <rect x="602" y="84" width="202" height="316" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <rect x="602" y="84" width="202" height="34" rx="14" fill="#475569"/>
+  <rect x="602" y="104" width="202" height="14" fill="#475569"/>
+  <text x="703" y="106" font-family="system-ui,sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">TÙY CHỌN ONLINE (BYOK)</text>
+
+  <g transform="translate(618, 138)">
+    <rect x="0" y="0" width="170" height="96" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="12" y="24" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1e293b">Tải dữ liệu lần đầu</text>
+    <text x="12" y="44" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">• 1 lần tải gói từ điển</text>
+    <text x="12" y="62" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">• 33 Offline Lesson Packs</text>
+    <text x="12" y="80" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">• Sau đó tắt mạng học luôn</text>
+
+    <rect x="0" y="116" width="170" height="122" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="12" y="140" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1e293b">AI Tutor / Gemini</text>
+    <text x="12" y="160" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">• Chỉ chạy khi bạn chủ</text>
+    <text x="12" y="176" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">  động bấm &amp; xác nhận</text>
+    <text x="12" y="196" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">• Dùng API key riêng</text>
+    <text x="12" y="216" font-family="system-ui,sans-serif" font-size="11.5" fill="#475569">• Không gửi lịch sử Vault</text>
+  </g>
+
+  <!-- Dotted bridge arrow -->
+  <line x1="576" y1="186" x2="602" y2="186" stroke="#64748b" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- Footer strip -->
+  <rect x="36" y="412" width="768" height="34" rx="8" fill="#ccfbf1"/>
+  <text x="50" y="433" font-family="system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#115e59">Lợi ích Reading Flow: Không chuyển tab · Không chờ HTTP 300–800 ms · Dữ liệu học luôn thuộc về thiết bị của bạn.</text>
+</svg>

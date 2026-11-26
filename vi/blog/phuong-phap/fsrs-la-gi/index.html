@@ -136,15 +136,54 @@
 
 <p>Nói công bằng: SM-2 cũng là người hầu tốt, và chênh lệch không phải là cách biệt một trời một vực. Chênh lệch lớn nhất nằm ở người mới không biết chỉnh hệ số — FSRS chạy chuẩn ngay từ đầu, không cần am hiểu tinh chỉnh. Đó là lý do tôi chọn nó cho app của mình: đồng nghiệp tôi cần công cụ chạy được ngay, không cần đọc manual về các hệ số.</p>
 
-<h2 id="trong-app">FSRS trong HọcTA — và phần tôi thích nhất</h2>
+<h2 id="mo-phong-fsrs-sm2">Phân tích kỹ thuật: Mô phỏng chu kỳ FSRS-4.5 so với SM-2</h2>
+
+<p>Để thấy rõ sự khác biệt thay vì nói chung chung, dưới đây là mô phỏng chạy trực tiếp từ bộ 17 trọng số mặc định (<code>DEFAULT_W</code>) trong mô-đun mã nguồn mở <a href="https://github.com/quocanh38/dual-dictionary/blob/main/js/fsrs-opt.js" target="_blank" rel="noopener"><code>js/fsrs-opt.js</code></a> của HọcTA (ngưỡng xác suất nhớ mục tiêu <code>R = 90%</code>, hệ số suy giảm <code>decay = -0.5</code>) so với thuật toán SM-2 truyền thống (hệ số dễ ban đầu <code>EF = 2.5</code>) qua 7 lượt ôn — đặc biệt khi người học <strong>quên 1 lần ở lượt thứ 4</strong>:</p>
+
+<figure>
+  <img src="/vi/blog/images/fsrs-vs-sm2-curve.svg" alt="Biểu đồ so sánh chu kỳ ôn tập FSRS-4.5 trong HọcTA (4, 23, 109, quên về 9, 47, 206, 775 ngày) so với SM-2 truyền thống (1, 6, 15, reset về 1, 6, 13, 28 ngày) qua 7 lượt ôn" loading="lazy" width="840" height="460" style="width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb">
+  <figcaption>Mô phỏng chu kỳ giãn cách từ bộ trọng số FSRS-4.5 đang chạy trong HọcTA so với SM-2 khi có 1 lần quên (Lapse) ở lượt thứ 4.</figcaption>
+</figure>
+
+<div style="overflow-x:auto;margin:16px 0">
+  <table style="width:100%;border-collapse:collapse;font-size:.92rem">
+    <thead>
+      <tr style="border-bottom:2px solid var(--line);text-align:left">
+        <th style="padding:8px 10px">Lượt ôn</th>
+        <th style="padding:8px 10px">Kết quả</th>
+        <th style="padding:8px 10px">Khoảng cách SM-2 (EF=2.5)</th>
+        <th style="padding:8px 10px">Khoảng cách FSRS-4.5 (R=90%)</th>
+        <th style="padding:8px 10px">Độ bền S (FSRS)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 10px">Lượt 1</td><td style="padding:8px 10px">Nhớ (Good)</td><td style="padding:8px 10px">1 ngày</td><td style="padding:8px 10px"><strong>4 ngày</strong></td><td style="padding:8px 10px">3.7 ngày</td></tr>
+      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 10px">Lượt 2</td><td style="padding:8px 10px">Nhớ (Good)</td><td style="padding:8px 10px">6 ngày</td><td style="padding:8px 10px"><strong>23 ngày</strong></td><td style="padding:8px 10px">22.7 ngày</td></tr>
+      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 10px">Lượt 3</td><td style="padding:8px 10px">Nhớ (Good)</td><td style="padding:8px 10px">15 ngày</td><td style="padding:8px 10px"><strong>109 ngày</strong></td><td style="padding:8px 10px">108.6 ngày</td></tr>
+      <tr style="border-bottom:1px solid var(--line);background:rgba(220,38,38,.06)"><td style="padding:8px 10px"><strong>Lượt 4</strong></td><td style="padding:8px 10px"><strong>Quên (Forgot)</strong></td><td style="padding:8px 10px">Reset về 1 ngày</td><td style="padding:8px 10px"><strong>9 ngày</strong></td><td style="padding:8px 10px">8.9 ngày</td></tr>
+      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 10px">Lượt 5</td><td style="padding:8px 10px">Nhớ (Good)</td><td style="padding:8px 10px">6 ngày</td><td style="padding:8px 10px"><strong>47 ngày</strong></td><td style="padding:8px 10px">46.9 ngày</td></tr>
+      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 10px">Lượt 6</td><td style="padding:8px 10px">Nhớ (Good)</td><td style="padding:8px 10px">13 ngày</td><td style="padding:8px 10px"><strong>206 ngày</strong></td><td style="padding:8px 10px">205.9 ngày</td></tr>
+      <tr><td style="padding:8px 10px">Lượt 7</td><td style="padding:8px 10px">Nhớ (Good)</td><td style="padding:8px 10px">28 ngày (Ease Hell)</td><td style="padding:8px 10px"><strong>775 ngày</strong></td><td style="padding:8px 10px">775.4 ngày</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Điểm đắt giá nhất nằm ở <strong>lượt thứ 4</strong>: SM-2 phạt một lần quên bằng cách xóa sạch công sức 3 lượt trước (reset về 1 ngày và kéo tụt hệ số Ease xuống thấp, tạo ra bẫy "Ease Hell" khiến người học phải ôn đi ôn lại một từ đã khá quen). Ngược lại, hàm <code>forgetStability()</code> của FSRS-4.5 vẫn tính đến độ bền trí nhớ tích lũy trước đó (<code>S = 108.6</code>), chỉ rút ngắn chu kỳ về 9 ngày rồi giãn nhanh trở lại 47 → 206 ngày ngay khi bạn nhớ lại.</p>
+
+<h2 id="trong-app">FSRS trong HọcTA — và góc nhìn kỹ thuật khi chạy 100% trên trình duyệt</h2>
 
 <p>Trong app, hàng đợi ôn chạy FSRS toàn bộ: mỗi thẻ bạn lưu từ bất kỳ đâu (tra từ, Reader, Listening) tự vào lịch. Bạn chấm ba nút — Know it / Forgot / Skip — và lịch tự giãn nén theo. Không bảng cài đặt nào phải đụng tới.</p>
 
-<p>Phần tôi thích nhất: khi log ôn của bạn đủ dày (khoảng 200 lượt, tốt nhất từ 400), app có nút <em>tối ưu hóa</em> — huấn luyện lại bộ trọng số FSRS theo chính lịch sử quên của bạn, ngay trên thiết bị. Cùng một thuật toán cộng đồng, nhưng lịch trở thành của riêng bạn theo đúng nghĩa đen. Và một điều nữa khớp DNA của app: toàn bộ việc này chạy offline trên máy bạn — lịch ôn là dữ liệu riêng tư nhất của người học, và nó không bao giờ rời khỏi thiết bị.</p>
+<blockquote style="border-left:4px solid var(--teal);padding:10px 16px;margin:16px 0;background:var(--soft);border-radius:0 8px 8px 0">
+  <p style="margin:0"><strong>Góc nhìn tác giả (Nguyễn Quốc Anh — người phát triển HọcTA):</strong> “Khi cài đặt FSRS-4.5 cho HọcTA, tôi chủ ý viết cả bộ tối ưu hóa 17 trọng số (<code>js/fsrs-opt.js</code>) chạy bằng JavaScript thuần ngay trong trình duyệt từ log <code>reviews</code> trong IndexedDB, thay vì gửi dữ liệu ôn tập về máy chủ. Thứ nhất, lịch sử bạn hay quên từ nào là dữ liệu riêng tư nhất của người học — nó nên ở lại trên thiết bị. Thứ hai, chạy cục bộ giúp người học tối ưu lịch ôn ngay cả khi đang ở chế độ máy bay.”</p>
+</blockquote>
+
+<p>Khi log ôn của bạn đủ dày (khoảng 200 lượt, tốt nhất từ 400), bạn có thể mở <em>Cài đặt → Advanced → Optimize</em> để huấn luyện lại bộ 17 trọng số theo đúng đường cong quên của riêng mình (tối ưu hàm mất mát binary cross-entropy kèm điều chuẩn L2 hướng về bộ trọng số mặc định để tránh quá khớp).</p>
 
 <h2 id="doc-tiep">Đọc tiếp</h2>
 
 <ul>
+  <li><a href="/vi/blog/phuong-phap/tap-to-lookup-offline-reading-flow/"><strong>Tap-to-lookup &amp; kiến trúc Offline-first: đọc tiếng Anh không đứt mạch</strong></a> — cách dữ liệu từ Reader chảy thẳng vào hàng đợi FSRS chỉ bằng một chạm.</li>
   <li><a href="/vi/blog/phuong-phap/spaced-repetition-la-gi/"><strong>Spaced repetition là gì?</strong></a> — lý thuyết gốc mà FSRS là bản hiện đại.</li>
   <li><a href="/vi/blog/ielts/cach-hoc-tu-vung-ielts-khong-quen/"><strong>Cách học từ vựng IELTS để nhớ lâu hơn</strong></a> — FSRS nằm ở nguyên tắc số 3 của bài đó.</li>
   <li><a href="/vi/blog/toeic/hoc-toeic-flashcard-anki/"><strong>Học TOEIC bằng flashcard: đúng cách và sai cách</strong></a> — FSRS trong thực tế của người thi, kèm cách chuyển dữ liệu từ Anki.</li>

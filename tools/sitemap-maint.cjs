@@ -27,19 +27,61 @@ function urlToFile(loc) {
   return null;
 }
 
-let urlCount = 0, keptCount = 0;
+const TIER1 = ['collections.xml', 'viet-anh.xml', 'topics.xml', 'compare.xml', 'mistakes.xml', 'grammar.xml', 'prepositions.xml', 'collocations.xml', 'cambridge.xml', 'pronunciation.xml', 'synonyms.xml', 'exam-guides.xml'];
+const TIER2 = ['words-ielts.xml', 'words-giao-tiep.xml', 'phrases-ielts.xml', 'phrases-toeic.xml'];
+
+function isNoindexFile(hf) {
+  if (!hf) return false;
+  try {
+    const head = fs.readFileSync(hf, 'utf8').slice(0, 4096);
+    return /<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(head);
+  } catch (e) {
+    return false;
+  }
+}
+
+/* Seed seenUrls with sitemap-pages.xml so child sitemaps never duplicate core pages. */
+const seenUrls = new Set();
+const pagesXmlPath = path.join(REPO, 'sitemap-pages.xml');
+if (fs.existsSync(pagesXmlPath)) {
+  const pagesXml = fs.readFileSync(pagesXmlPath, 'utf8');
+  for (const m of pagesXml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    seenUrls.add(m[1].trim());
+  }
+}
+
+const allXml = fs.readdirSync(SM_DIR).filter((x) => x.endsWith('.xml'));
+const tier3Files = allXml.filter((n) => !TIER1.includes(n) && !TIER2.includes(n)).sort();
+const orderedFiles = [
+  ...TIER1.filter((n) => allXml.includes(n)),
+  ...TIER2.filter((n) => allXml.includes(n)),
+  ...tier3Files,
+];
+
+let urlCount = 0, keptCount = 0, dedupedCount = 0, noindexCount = 0;
 const tierInfo = {}; // xmlName -> { newest, count }
 
-/* Pass 1: per-URL lastmod from real file mtime (chunk + topical sitemaps). */
-for (const f of fs.readdirSync(SM_DIR).filter((x) => x.endsWith('.xml'))) {
+/* Pass 1: deduplicate in strict priority order (sitemap-pages -> Tier 1 -> Tier 2 -> Tier 3),
+ * drop noindex pages, and stamp truthful per-URL <lastmod> from real file mtime. */
+for (const f of orderedFiles) {
   const fp = path.join(SM_DIR, f);
   let xml = fs.readFileSync(fp, 'utf8');
   if (!/<urlset\b/.test(xml)) continue;
   let newest = 0, count = 0;
-  xml = xml.replace(/<url>[\s\S]*?<\/url>/g, (block) => {
+  xml = xml.replace(/[ \t]*<url>[\s\S]*?<\/url>[ \t]*\r?\n?/g, (block) => {
     const m = block.match(/<loc>([^<]+)<\/loc>/);
     if (!m) return block;
-    const hf = urlToFile(m[1]);
+    const loc = m[1].trim();
+    if (seenUrls.has(loc)) {
+      dedupedCount++;
+      return '';
+    }
+    const hf = urlToFile(loc);
+    if (isNoindexFile(hf)) {
+      noindexCount++;
+      return '';
+    }
+    seenUrls.add(loc);
     const mt = hf ? mtime(hf) : null;
     count++; urlCount++;
     if (!mt) return block;
@@ -52,22 +94,22 @@ for (const f of fs.readdirSync(SM_DIR).filter((x) => x.endsWith('.xml'))) {
   tierInfo[f] = { newest, count };
 }
 
-/* Pass 2: tiered sitemap.xml. Tier 1 = crawl-priority (hubs, collections, SEO
- * clusters, topics). Tier 2 = topical tag sitemaps. Tier 3 = bulk chunks. */
-const TIER1 = ['collections.xml', 'viet-anh.xml', 'topics.xml', 'compare.xml', 'mistakes.xml', 'grammar.xml', 'prepositions.xml', 'collocations.xml', 'cambridge.xml', 'pronunciation.xml', 'synonyms.xml', 'exam-guides.xml'];
-const TIER2 = ['words-ielts.xml', 'words-giao-tiep.xml', 'phrases-ielts.xml', 'phrases-toeic.xml'];
+/* Pass 2: tiered sitemap.xml (omit sitemaps that became empty after deduplication). */
 function entry(name) {
   const t = tierInfo[name];
   const lm = t && t.newest ? `\n    <lastmod>${fmt(t.newest)}</lastmod>` : '';
   return `  <sitemap>\n    <loc>${SITE}/vi/tu/sitemap/${name}</loc>${lm}\n  </sitemap>`;
 }
-const tier3 = Object.keys(tierInfo).filter((n) => !TIER1.includes(n) && !TIER2.includes(n)).sort();
+const nonEmpty = (n) => tierInfo[n] && tierInfo[n].count > 0;
+const t1Active = TIER1.filter(nonEmpty);
+const t2Active = TIER2.filter(nonEmpty);
+const t3Active = tier3Files.filter(nonEmpty);
 const blocks = [
   '  <sitemap>\n    <loc>https://hocta.app/sitemap-pages.xml</loc>\n  </sitemap>',
-  ...TIER1.filter((n) => tierInfo[n]).map(entry),
-  ...TIER2.filter((n) => tierInfo[n]).map(entry),
-  ...tier3.map(entry),
+  ...t1Active.map(entry),
+  ...t2Active.map(entry),
+  ...t3Active.map(entry),
 ];
 fs.writeFileSync(path.join(REPO, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${blocks.join('\n')}\n</sitemapindex>\n`);
-console.log(`SITEMAP-MAINT: ${urlCount} urls truthful-lastmod (${keptCount} mapped), index tiered ${TIER1.length}T1/${TIER2.length}T2/${tier3.length}T3`);
+console.log(`SITEMAP-MAINT: ${urlCount} unique child urls truthful-lastmod (${keptCount} mapped), deduped ${dedupedCount}, dropped ${noindexCount} noindex, index tiered ${t1Active.length}T1/${t2Active.length}T2/${t3Active.length}T3`);

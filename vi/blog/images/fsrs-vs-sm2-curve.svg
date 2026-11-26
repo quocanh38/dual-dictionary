@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 460" width="840" height="460" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Biểu đồ so sánh chu kỳ ôn tập FSRS-4.5 trong HọcTA và SM-2 truyền thống khi gặp lần quên ở lượt 4</title>
+  <desc id="d1">Mô phỏng từ bộ 17 trọng số FSRS-4.5 (js/fsrs-opt.js, ngưỡng nhớ R = 90%) so với SM-2 hệ số EF 2.5 qua 7 lượt ôn, minh họa cơ chế phục hồi độ bền trí nhớ của FSRS so với bẫy reset 1 ngày của SM-2.</desc>
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="sh1" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="840" height="460" rx="16" fill="url(#bg1)" stroke="#cbd5e1"/>
+
+  <!-- Header -->
+  <text x="36" y="42" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="800" fill="#0f172a">FSRS-4.5 (HọcTA) vs. SM-2 truyền thống: Chu kỳ giãn cách khi quên ở lượt 4</text>
+  <text x="36" y="65" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#475569">Mô phỏng trực tiếp từ 17 trọng số mặc định trong js/fsrs-opt.js (mục tiêu xác suất nhớ R = 90%) · Trục tung theo thang log (ngày)</text>
+
+  <!-- Legend -->
+  <g transform="translate(36, 82)">
+    <rect x="0" y="0" width="235" height="30" rx="8" fill="#ffffff" stroke="#c7d2fe"/>
+    <line x1="12" y1="15" x2="36" y2="15" stroke="#293cc8" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="24" cy="15" r="4" fill="#293cc8"/>
+    <text x="44" y="19" font-family="system-ui,sans-serif" font-size="12.5" font-weight="700" fill="#1e293b">FSRS-4.5 (DSR · R = 90%)</text>
+
+    <rect x="248" y="0" width="225" height="30" rx="8" fill="#ffffff" stroke="#fde68a"/>
+    <line x1="260" y1="15" x2="284" y2="15" stroke="#d97706" stroke-width="3" stroke-dasharray="6 4" stroke-linecap="round"/>
+    <circle cx="272" cy="15" r="4" fill="#d97706"/>
+    <text x="292" y="19" font-family="system-ui,sans-serif" font-size="12.5" font-weight="700" fill="#1e293b">SM-2 (EF = 2.5 · reset cứng)</text>
+
+    <rect x="486" y="0" width="185" height="30" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+    <circle cx="502" cy="15" r="5" fill="#dc2626"/>
+    <text x="514" y="19" font-family="system-ui,sans-serif" font-size="12.5" font-weight="700" fill="#991b1b">Lượt 4: Quên (Lapse)</text>
+  </g>
+
+  <!-- Chart area -->
+  <g transform="translate(76, 130)">
+    <rect x="0" y="0" width="724" height="250" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#sh1)"/>
+
+    <!-- Horizontal log grid lines: 1d (y=225), 10d (y=155), 100d (y=85), 1000d (y=15) -->
+    <g stroke="#e2e8f0" stroke-width="1">
+      <line x1="0" y1="225" x2="724" y2="225"/>
+      <line x1="0" y1="155" x2="724" y2="155"/>
+      <line x1="0" y1="85" x2="724" y2="85"/>
+      <line x1="0" y1="15" x2="724" y2="15"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="11.5" fill="#64748b" text-anchor="end">
+      <text x="-10" y="229">1 ngày</text>
+      <text x="-10" y="159">10 ngày</text>
+      <text x="-10" y="89">100 ngày</text>
+      <text x="-10" y="19">1.000 ngày</text>
+    </g>
+
+    <!-- Lapse vertical highlight at rev 4 (x=362) -->
+    <rect x="334" y="1" width="56" height="248" fill="#fef2f2" opacity="0.8"/>
+    <line x1="362" y1="1" x2="362" y2="249" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="362" y="18" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">Quên ở lượt 4</text>
+
+    <!-- X-axis labels (7 reviews: x = 52, 155, 258, 362, 465, 568, 672) -->
+    <g font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#334155" text-anchor="middle">
+      <text x="52" y="270">Lượt 1</text>
+      <text x="155" y="270">Lượt 2</text>
+      <text x="258" y="270">Lượt 3</text>
+      <text x="362" y="270" fill="#b91c1c">Lượt 4 (Quên)</text>
+      <text x="465" y="270">Lượt 5</text>
+      <text x="568" y="270">Lượt 6</text>
+      <text x="672" y="270">Lượt 7</text>
+    </g>
+
+    <!-- SM-2 line: [1, 6, 15, 1, 6, 13, 28] -> y = 225 - 70*log10(v) -->
+    <!-- 1->225, 6->170.5, 15->142.7, 1->225, 6->170.5, 13->147, 28->123.7 -->
+    <polyline fill="none" stroke="#d97706" stroke-width="3" stroke-dasharray="7 5" stroke-linejoin="round"
+      points="52,225 155,170.5 258,142.7 362,225 465,170.5 568,147 672,123.7"/>
+    <g fill="#d97706">
+      <circle cx="52" cy="225" r="5"/>
+      <circle cx="155" cy="170.5" r="5"/>
+      <circle cx="258" cy="142.7" r="5"/>
+      <circle cx="362" cy="225" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="465" cy="170.5" r="5"/>
+      <circle cx="568" cy="147" r="5"/>
+      <circle cx="672" cy="123.7" r="5"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#b45309" text-anchor="middle">
+      <text x="52" y="242">1d</text>
+      <text x="155" y="188">6d</text>
+      <text x="258" y="160">15d</text>
+      <text x="362" y="243" fill="#b91c1c">Reset 1d</text>
+      <text x="465" y="188">6d</text>
+      <text x="568" y="165">13d</text>
+      <text x="672" y="142">28d (Ease Hell)</text>
+    </g>
+
+    <!-- FSRS-4.5 line: [4, 23, 109, 9, 47, 206, 775] -> y = 225 - 70*log10(v) -->
+    <!-- 4->182.9, 23->129.7, 109->82.4, 9->158.2, 47->108, 206->63, 775->22.7 -->
+    <polyline fill="none" stroke="#293cc8" stroke-width="3.5" stroke-linejoin="round"
+      points="52,182.9 155,129.7 258,82.4 362,158.2 465,108 568,63 672,22.7"/>
+    <g fill="#293cc8">
+      <circle cx="52" cy="182.9" r="5.5"/>
+      <circle cx="155" cy="129.7" r="5.5"/>
+      <circle cx="258" cy="82.4" r="5.5"/>
+      <circle cx="362" cy="158.2" r="6.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="465" cy="108" r="5.5"/>
+      <circle cx="568" cy="63" r="5.5"/>
+      <circle cx="672" cy="22.7" r="5.5"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="12" font-weight="800" fill="#1d4ed8" text-anchor="middle">
+      <text x="52" y="171">4d</text>
+      <text x="155" y="118">23d</text>
+      <text x="258" y="70">109d</text>
+      <text x="362" y="145" fill="#b91c1c">9d (giữ nền S)</text>
+      <text x="465" y="96">47d</text>
+      <text x="568" y="51">206d</text>
+      <text x="660" y="14">775d</text>
+    </g>
+  </g>
+
+  <!-- Bottom takeaway callout -->
+  <rect x="36" y="412" width="768" height="34" rx="8" fill="#e0e7ff"/>
+  <text x="50" y="433" font-family="system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#1e3a8a">Kết luận kỹ thuật: FSRS dùng forgetStability() để bảo toàn phần trí nhớ nền khi quên (9d → 47d → 206d), tránh vòng lặp ôn thừa của SM-2.</text>
+</svg>

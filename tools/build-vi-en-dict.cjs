@@ -81,8 +81,8 @@ function viInitialLetter(term) {
   return VI_ALPHA_ORDER.includes(up) ? up : 'A';
 }
 
-const SKIP_SENSE_RE = /^\s*\(?\s*\((?:cổ|từ cổ|nghĩa cổ|thơ ca|cũ|từ lóng|thông tục|khẩu ngữ|đùa cợt|xem|viết tắt|như|sử học|đánh cờ|hàng hải|thổ ngữ|phương ngữ|từ hiếm|hiếm|quân sự|tôn giáo|từ Mỹ,nghĩa Mỹ|từ Anh,nghĩa Anh)[^)]*\)?\s*/i;
-const SKIP_WHOLE_SENSE_RE = /^(?:\(?\s*\((?:cổ|từ cổ|nghĩa cổ|thơ ca|cũ|từ lóng|đùa cợt|xem|viết tắt|sử học|đánh cờ|thổ ngữ|phương ngữ|từ hiếm|hiếm)[^)]*\)|số nhiều của\b|quá khứ của\b|phân từ\b|\(xem\)\s)/i;
+const SKIP_SENSE_RE = /^\s*\(?\s*\((?:cổ|từ cổ|nghĩa cổ|thơ ca|cũ|từ lóng|tiếng lóng|thông tục|khẩu ngữ|đùa cợt|nghĩa bóng|xem|viết tắt|như|sử học|đánh cờ|hàng hải|thổ ngữ|phương ngữ|địa phương|từ hiếm|hiếm|quân sự|tôn giáo|từ Mỹ,nghĩa Mỹ|từ Anh,nghĩa Anh)[^)]*\)?\s*/i;
+const SKIP_WHOLE_SENSE_RE = /^(?:\(?\s*\((?:cổ|từ cổ|nghĩa cổ|thơ ca|cũ|từ lóng|tiếng lóng|thông tục|khẩu ngữ|đùa cợt|nghĩa bóng|xem|viết tắt|sử học|đánh cờ|hàng hải|thổ ngữ|phương ngữ|địa phương|từ hiếm|hiếm|quân sự|tôn giáo)[^)]*\)|số nhiều của\b|quá khứ của\b|phân từ\b|\(xem\)\s)/i;
 
 // Per-word OVDP typo fixes and erroneous/archaic sense exclusions
 const OVDP_TYPO_FIXES = {
@@ -112,6 +112,19 @@ const WORD_BAD_SENSES = {
   do: [/an toàn/i],
   doctor: [/anh nuôi/i],
   red: [/ác liệt/i],
+  smart: [/ác liệt|đau buốt/i],
+  brass: [/tiền bạc/i],
+  funky: [/nhút nhát|sợ hãi/i],
+  forget: [/coi thường|xem thường/i],
+  drive: [/lùng sục/i],
+  zip: [/nghị lực/i],
+  steam: [/nghị lực/i],
+  accidental: [/phụ thuộc/i],
+  collateral: [/phụ thuộc/i],
+  closed: [/bảo thủ/i],
+  swamp: [/che khuất/i],
+  front: [/bình phong/i],
+  screen: [/bình phong/i],
 };
 const SKIP_HEADWORDS = new Set([
   'sammy', 'johnny', 'joker', 'thy', 'thee', 'thou', 'ye',
@@ -256,16 +269,20 @@ function buildIndex() {
       }
     }
 
-    // First pass: take 1 primary sense from each POS group (ensures verbs/adjectives aren't drowned out by homonym nouns)
-    for (const grp of posGroups) {
+    // First pass: take 1 primary sense from each of the first 2 POS groups (prevents obscure 3rd/4th homonym senses from polluting clusters)
+    for (let gi = 0; gi < posGroups.length; gi++) {
+      const grp = posGroups[gi];
       if (grp.senses[0]) {
         const s0 = truncateClean(grp.senses[0], 64);
         if (s0 && !displaySenses.includes(s0) && displaySenses.length < 3) {
           displaySenses.push(s0);
         }
+        if (gi < 2 && !allCleanSenses.includes(grp.senses[0])) {
+          allCleanSenses.push(grp.senses[0]);
+        }
       }
-      for (const s of grp.senses.slice(0, 2)) {
-        if (!allCleanSenses.includes(s)) allCleanSenses.push(s);
+      if (gi === 0 && posGroups.length === 1 && grp.senses[1] && !allCleanSenses.includes(grp.senses[1])) {
+        allCleanSenses.push(grp.senses[1]);
       }
     }
     // Fallback: if only 1 POS group, take its 2nd sense for display
@@ -501,12 +518,16 @@ function extractConceptClusters(payload) {
       if (usedSlugs.has(slug)) continue;
     }
     usedSlugs.add(slug);
+    const coreCount = g.entries.filter((r) => /\b(?:NGSL|IELTS|AWL|PHRASE)\b/.test(r[3] || '')).length;
+    const isMust = mustTerms.has(g.term);
+    const indexable = isMust || (g.entries.length >= 3 && coreCount >= 2 && (g.ieltsCount >= 1 || g.awlCount >= 1));
     finalClusters.push({
       slug,
       term: g.term,
       entries: g.entries,
       ieltsCount: g.ieltsCount,
-      awlCount: g.awlCount
+      awlCount: g.awlCount,
+      indexable
     });
   }
 
@@ -574,19 +595,22 @@ function buildConceptPages(clusters) {
   );
 
   const wordToConcepts = new Map();
+  const indexableClusters = clusters.filter((c) => c.indexable);
 
   clusters.forEach((cluster, idx) => {
-    const { slug, term, entries } = cluster;
+    const { slug, term, entries, indexable } = cluster;
     const capTerm = term.charAt(0).toUpperCase() + term.slice(1);
     const topWords = entries.slice(0, 5).map((r) => r[0]);
     const topWordsPlain = topWords.join(', ');
 
-    for (const r of entries) {
-      const enSlug = r[1];
-      if (!wordToConcepts.has(enSlug)) wordToConcepts.set(enSlug, []);
-      const arr = wordToConcepts.get(enSlug);
-      if (arr.length < 4 && !arr.some((x) => x.slug === slug)) {
-        arr.push({ slug, term });
+    if (indexable) {
+      for (const r of entries) {
+        const enSlug = r[1];
+        if (!wordToConcepts.has(enSlug)) wordToConcepts.set(enSlug, []);
+        const arr = wordToConcepts.get(enSlug);
+        if (arr.length < 4 && !arr.some((x) => x.slug === slug)) {
+          arr.push({ slug, term });
+        }
       }
     }
 
@@ -601,6 +625,8 @@ function buildConceptPages(clusters) {
       (phraseChoices.length
         ? `trong giao tiếp hàng ngày hoặc IELTS Speaking, có thể dùng ${phraseChoices.join(', ')}.`
         : 'hãy đối chiếu bảng trình độ CEFR và sắc thái nghĩa dưới đây để chọn đúng từ.');
+    const metaDesc = truncateClean(directAnswerText, 158);
+    const robotsMeta = indexable ? 'index, follow' : 'noindex, follow';
 
     const entrySlugs = new Set(entries.map((r) => r[1]));
     const relatedCompares = comparePages
@@ -612,8 +638,10 @@ function buildConceptPages(clusters) {
     const relatedSyns = entries.filter((r) => synSet.has(r[1])).slice(0, 4);
 
     const neighbors = [];
-    for (let step = 1; neighbors.length < 6 && step < clusters.length; step++) {
-      const n = clusters[(idx + step) % clusters.length];
+    const pool = indexableClusters.length >= 6 ? indexableClusters : clusters;
+    const basePos = idx % pool.length;
+    for (let step = 1; neighbors.length < 6 && step < pool.length; step++) {
+      const n = pool[(basePos + step) % pool.length];
       if (n.slug !== slug) neighbors.push(n);
     }
 
@@ -676,15 +704,15 @@ function buildConceptPages(clusters) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(capTerm)} tiếng Anh là gì? ${entries.length} từ &amp; cụm từ (${esc(topWords.slice(0, 3).join(', '))}) | HọcTA</title>
-<meta name="description" content="${esc(directAnswerText.slice(0, 158))}">
+<meta name="description" content="${esc(metaDesc)}">
 <link rel="canonical" href="${pageUrl}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="${robotsMeta}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="HọcTA">
 <meta property="og:url" content="${pageUrl}">
 <meta property="og:title" content="${esc(capTerm)} tiếng Anh là gì? Phân biệt ${esc(topWords.slice(0, 3).join(', '))} | HọcTA">
-<meta property="og:description" content="${esc(directAnswerText.slice(0, 158))}">
+<meta property="og:description" content="${esc(metaDesc)}">
 <meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -779,8 +807,9 @@ ${navHtml('viet-anh')}
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
   });
 
-  // Remove stale concept directories no longer in the clean cluster set
+  // Remove stale concept directories no longer in the clean cluster set (keep van/ sub-hubs)
   const activeSlugs = new Set(clusters.map((c) => c.slug));
+  activeSlugs.add('van');
   let removed = 0;
   if (fs.existsSync(VIET_ANH_DIR)) {
     for (const d of fs.readdirSync(VIET_ANH_DIR, { withFileTypes: true })) {
@@ -791,7 +820,7 @@ ${navHtml('viet-anh')}
     }
   }
 
-  console.log(`Built ${clusters.length} static /vi/viet-anh/<slug>/ concept pages (removed ${removed} stale dirs, 0 accent collisions).`);
+  console.log(`Built ${clusters.length} static /vi/viet-anh/<slug>/ concept pages (${indexableClusters.length} indexable, ${clusters.length - indexableClusters.length} noindex, removed ${removed} stale dirs, 0 accent collisions).`);
   return wordToConcepts;
 }
 
@@ -830,7 +859,142 @@ function injectReverseLinksIntoWordPages(wordToConcepts) {
   console.log(`Injected two-way Việt–Anh internal links into ${injected} /vi/tu/<word>/ pages.`);
 }
 
-function buildHtmlPage(payload, clusters) {
+const VI_LETTER_SLUGS = {
+  A: 'a', 'Ă': 'aw', 'Â': 'aa', B: 'b', C: 'c', D: 'd', 'Đ': 'dd',
+  E: 'e', 'Ê': 'ee', G: 'g', H: 'h', I: 'i', K: 'k', L: 'l', M: 'm',
+  N: 'n', O: 'o', 'Ô': 'oo', 'Ơ': 'ow', P: 'p', Q: 'q', R: 'r', S: 's',
+  T: 't', U: 'u', 'Ư': 'uw', V: 'v', X: 'x', Y: 'y'
+};
+
+function buildLetterSubHubs(clusters) {
+  const byLetter = new Map();
+  const sortedByAlpha = [...clusters].sort((a, b) => a.term.localeCompare(b.term, 'vi'));
+  for (const c of sortedByAlpha) {
+    const letter = viInitialLetter(c.term);
+    if (!byLetter.has(letter)) byLetter.set(letter, []);
+    byLetter.get(letter).push(c);
+  }
+  const letters = VI_ALPHA_ORDER.filter((L) => byLetter.has(L));
+  const vanDir = path.join(VIET_ANH_DIR, 'van');
+  fs.mkdirSync(vanDir, { recursive: true });
+  const activeLetterSlugs = new Set();
+  const indexableLetterSlugs = [];
+
+  for (const L of letters) {
+    const lSlug = VI_LETTER_SLUGS[L] || foldSlug(L);
+    activeLetterSlugs.add(lSlug);
+    const allList = byLetter.get(L);
+    const idxList = allList.filter((c) => c.indexable);
+    const displayList = idxList.length ? idxList : allList;
+    const isIdx = idxList.length > 0;
+    if (isIdx) indexableLetterSlugs.push(lSlug);
+
+    const pageUrl = `https://hocta.app/vi/viet-anh/van/${lSlug}/`;
+    const letterDesc = truncateClean(
+      `Danh mục ${displayList.length} mục từ Việt–Anh vần ${L} đối chiếu từ vựng tiếng Anh theo trình độ CEFR, IELTS Core và AWL tại HọcTA.`,
+      158
+    );
+    const jsonld = safeJsonLd({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          name: `Từ điển Việt–Anh vần ${L} (${displayList.length} mục từ) | HọcTA`,
+          url: pageUrl,
+          inLanguage: 'vi',
+          description: letterDesc
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: 'https://hocta.app/vi/' },
+            { '@type': 'ListItem', position: 2, name: 'Từ điển Việt–Anh', item: 'https://hocta.app/vi/viet-anh/' },
+            { '@type': 'ListItem', position: 3, name: `Vần ${L}`, item: pageUrl }
+          ]
+        }
+      ]
+    });
+
+    const alphaNav = letters
+      .map((other) => {
+        const oSlug = VI_LETTER_SLUGS[other] || foldSlug(other);
+        const cur = other === L ? ' aria-current="page" style="background:var(--teal);color:#fff;border-color:var(--teal)"' : '';
+        return `<a class="vien-alpha-pill" href="/vi/viet-anh/van/${esc(oSlug)}/"${cur}>${esc(other)}</a>`;
+      })
+      .join(' ');
+
+    const itemsHtml = displayList
+      .map((c) => {
+        const sampleEn = c.entries.slice(0, 3).map((r) => r[0]).join(', ');
+        return `<li><a href="/vi/viet-anh/${esc(c.slug)}/"><strong>${esc(c.term)}</strong></a> <span style="color:var(--muted);font-size:.84rem">→ ${esc(sampleEn)}${c.entries.length > 3 ? ` (+${c.entries.length - 3})` : ''}</span></li>`;
+      })
+      .join('\n      ');
+
+    const letterHtml = `<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Từ điển Việt–Anh vần ${esc(L)} (${displayList.length} mục từ) | HọcTA</title>
+<meta name="description" content="${esc(letterDesc)}">
+<link rel="canonical" href="${pageUrl}">
+<meta name="robots" content="${isIdx ? 'index, follow' : 'noindex, follow'}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="HọcTA">
+<meta property="og:url" content="${pageUrl}">
+<meta property="og:title" content="Từ điển Việt–Anh vần ${esc(L)} | HọcTA">
+<meta property="og:description" content="${esc(letterDesc)}">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
+<link rel="icon" href="/favicon.ico">
+<meta name="theme-color" content="#293CC8">
+<link rel="stylesheet" href="/vi/blog/blog.css">
+<link rel="stylesheet" href="/vi/tu/word.css">
+<script type="application/ld+json">${jsonld}</script>
+<script defer src="/js/section-switcher.js"></script>
+<style>
+.vien-alpha-bar{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px}
+.vien-alpha-pill{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;padding:0 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font-weight:700;font-size:.88rem;text-decoration:none}
+.vien-alpha-pill:hover{border-color:var(--teal);color:var(--teal)}
+.vien-dir-list{columns:2 260px;column-gap:24px;padding-left:18px;line-height:1.9;margin:12px 0 20px}
+</style>
+</head>
+<body class="word-page">
+${navHtml('viet-anh')}
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <a href="/vi/viet-anh/">Từ điển Việt–Anh</a> › <span aria-current="page">Vần ${esc(L)}</span></nav>
+<main class="page">
+  <p class="word-kicker">Danh mục Từ điển Việt–Anh theo bảng chữ cái Tiếng Việt</p>
+  <h1 style="font-size:2.1rem">Từ điển Việt–Anh vần ${esc(L)} (${displayList.length} mục từ)</h1>
+  <p style="color:var(--muted)">Chọn mục từ tiếng Việt bắt đầu bằng chữ <strong>${esc(L)}</strong> để so sánh các từ và cụm từ tiếng Anh tương ứng theo trình độ CEFR, IELTS Core và Học thuật AWL. Hoặc <a href="/vi/viet-anh/">quay lại ô tìm kiếm Việt–Anh</a>.</p>
+  <nav class="vien-alpha-bar" aria-label="Chuyển vần tiếng Việt">
+    ${alphaNav}
+  </nav>
+  <ul class="vien-dir-list">
+    ${itemsHtml}
+  </ul>
+</main>
+<footer class="blog-footer">
+  <p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p>
+</footer>
+</body>
+</html>`;
+
+    const outDir = path.join(vanDir, lSlug);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), letterHtml, 'utf8');
+  }
+
+  for (const d of fs.readdirSync(vanDir, { withFileTypes: true })) {
+    if (d.isDirectory() && !activeLetterSlugs.has(d.name)) {
+      fs.rmSync(path.join(vanDir, d.name), { recursive: true, force: true });
+    }
+  }
+  console.log(`Built ${letters.length} /vi/viet-anh/van/<letter>/ sub-hub pages (${indexableLetterSlugs.length} indexable).`);
+  return { byLetter, letters, indexableLetterSlugs };
+}
+
+function buildHtmlPage(payload, clusters, letterMeta) {
+  const indexableCount = clusters.filter((c) => c.indexable).length;
   const clusterBySlug = new Map(clusters.map((c) => [c.slug, c]));
   const curatedSlugs = [
     'danh-gia', 'ben-vung', 'tiet-kiem', 'giai-quyet', 'anh-huong',
@@ -853,7 +1017,7 @@ function buildHtmlPage(payload, clusters) {
         name: 'Từ điển Việt–Anh theo trình độ & ngữ cảnh (IELTS / TOEIC / Giao tiếp) | HọcTA',
         url: 'https://hocta.app/vi/viet-anh/',
         inLanguage: 'vi',
-        description: `Từ điển Việt–Anh với ${clusters.length.toLocaleString('vi-VN')} mục từ tiếng Việt đối chiếu sang ${payload.count.toLocaleString('vi-VN')} từ và cụm từ tiếng Anh theo cấp độ CEFR B1–C1, IELTS Core, AWL.`
+        description: `Từ điển Việt–Anh với ${indexableCount.toLocaleString('vi-VN')} chủ điểm chọn lọc đối chiếu sang ${payload.count.toLocaleString('vi-VN')} từ và cụm từ tiếng Anh theo cấp độ CEFR B1–C1, IELTS Core, AWL.`
       },
       {
         '@type': 'BreadcrumbList',
@@ -866,32 +1030,19 @@ function buildHtmlPage(payload, clusters) {
     ]
   });
 
-  // Group all concept pages by true Vietnamese Alphabet (A, Ă, Â, B, C, D, Đ, E, Ê...)
-  const byLetter = new Map();
-  const sortedByAlpha = [...clusters].sort((a, b) => a.term.localeCompare(b.term, 'vi'));
-  for (const c of sortedByAlpha) {
-    const letter = viInitialLetter(c.term);
-    if (!byLetter.has(letter)) byLetter.set(letter, []);
-    byLetter.get(letter).push(c);
-  }
-  const letters = VI_ALPHA_ORDER.filter((L) => byLetter.has(L));
-  const directoryHtml = letters
-    .map((L) => {
-      const list = byLetter.get(L);
-      const itemsHtml = list
-        .map((c) => {
-          const sampleEn = c.entries.slice(0, 3).map((r) => r[0]).join(', ');
-          return `<li><a href="/vi/viet-anh/${esc(c.slug)}/"><strong>${esc(c.term)}</strong></a> <span style="color:var(--muted);font-size:.84rem">→ ${esc(sampleEn)}${c.entries.length > 3 ? ` (+${c.entries.length - 3})` : ''}</span></li>`;
+  // Compact A-Y Vietnamese alphabet grid linking to /vi/viet-anh/van/<letter>/ sub-hubs (avoids 2,800+ links on one hub)
+  const { byLetter, letters } = letterMeta;
+  const directoryHtml = `<div class="vien-alpha-grid">
+      ${letters
+        .map((L) => {
+          const lSlug = VI_LETTER_SLUGS[L] || foldSlug(L);
+          const list = byLetter.get(L);
+          const idxCnt = list.filter((c) => c.indexable).length;
+          const cnt = idxCnt || list.length;
+          return `<a class="vien-alpha-card" href="/vi/viet-anh/van/${esc(lSlug)}/"><strong>Vần ${esc(L)}</strong><span>${cnt} mục từ</span></a>`;
         })
-        .join('\n        ');
-      return `<details class="vien-alpha-group"${['A', 'B', 'C', 'Đ'].includes(L) ? ' open' : ''}>
-      <summary><strong>Vần ${esc(L)}</strong> <span style="color:var(--muted);font-weight:400">(${list.length} mục từ Việt → Anh)</span></summary>
-      <ul class="vien-dir-list">
-        ${itemsHtml}
-      </ul>
-    </details>`;
-    })
-    .join('\n    ');
+        .join('\n      ')}
+    </div>`;
 
   // Pre-render the 12 flagship/top Vietnamese->English cards statically in HTML for instant paint & SEO
   const staticCardsHtml = clusters.slice(0, 12).map((c) => {
@@ -917,7 +1068,7 @@ function buildHtmlPage(payload, clusters) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Từ điển Việt–Anh theo trình độ &amp; ngữ cảnh (IELTS / TOEIC / Giao tiếp) | HọcTA</title>
-<meta name="description" content="Từ điển Việt–Anh với ${clusters.length.toLocaleString('vi-VN')} mục từ tiếng Việt đối chiếu sang ${payload.count.toLocaleString('vi-VN')} từ và cụm từ tiếng Anh theo cấp độ CEFR B1–C1, IELTS Academic, AWL.">
+<meta name="description" content="Từ điển Việt–Anh đối chiếu mục từ tiếng Việt sang ${payload.count.toLocaleString('vi-VN')} từ và cụm từ tiếng Anh theo cấp độ CEFR B1–C1, IELTS Academic, AWL.">
 <link rel="canonical" href="https://hocta.app/vi/viet-anh/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -958,9 +1109,11 @@ function buildHtmlPage(payload, clusters) {
 .vien-en-pill:hover{border-color:var(--teal)}
 .vien-ipa{font-size:.82rem;color:var(--muted)}
 .vien-pill-tag{font-size:.73rem;font-weight:700;padding:1px 6px;border-radius:999px;background:rgba(41,60,200,.14);color:var(--teal)}
-.vien-dir-list{columns:2 260px;column-gap:24px;padding-left:18px;line-height:1.85;margin:10px 0 4px}
-.vien-alpha-group{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0;background:var(--paper)}
-.vien-alpha-group summary{cursor:pointer}
+.vien-alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(115px,1fr));gap:10px;margin:14px 0 8px}
+.vien-alpha-card{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);text-decoration:none}
+.vien-alpha-card strong{font-size:1rem;color:var(--teal)}
+.vien-alpha-card span{font-size:.8rem;color:var(--muted)}
+.vien-alpha-card:hover{border-color:var(--teal);background:var(--soft)}
 </style>
 </head>
 <body class="word-page">
@@ -994,8 +1147,8 @@ ${navHtml('viet-anh')}
   </div>
 
   <section class="word-note" style="margin-top:32px">
-    <h2>Danh mục ${clusters.length.toLocaleString('vi-VN')} mục từ Việt–Anh theo bảng chữ cái Tiếng Việt (A–Y)</h2>
-    <p style="color:var(--muted);font-size:.92rem">Được sắp xếp đúng chuẩn bảng chữ cái Tiếng Việt (tách riêng <strong>A / Ă / Â, D / Đ, E / Ê, O / Ô / Ơ, U / Ư</strong>) — mỗi trang phân tích các từ tiếng Anh tương ứng theo cấp độ Giao tiếp (A2–B1), Cụm động từ và Học thuật / IELTS (B2–C1):</p>
+    <h2>Duyệt Từ điển Việt–Anh theo bảng chữ cái Tiếng Việt (A–Y)</h2>
+    <p style="color:var(--muted);font-size:.92rem">Chia theo từng vần chuẩn Tiếng Việt (tách riêng <strong>A / Ă / Â, D / Đ, E / Ê, O / Ô / Ơ, U / Ư</strong>) với ${indexableCount.toLocaleString('vi-VN')} trang chủ điểm chọn lọc — mỗi trang so sánh các từ tiếng Anh theo cấp độ Giao tiếp (A2–B1), Cụm động từ và Học thuật / IELTS (B2–C1):</p>
     ${directoryHtml}
   </section>
 
@@ -1164,24 +1317,29 @@ ${navHtml('viet-anh')}
   console.log(`Wrote ${OUT_HTML}`);
 }
 
-function buildSitemap(clusters) {
+function buildSitemap(clusters, letterMeta) {
   const smPath = path.join(TU_DIR, 'sitemap', 'viet-anh.xml');
   const today = new Date().toISOString().slice(0, 10);
+  const indexableClusters = clusters.filter((c) => c.indexable);
   const urls = [
     `  <url><loc>https://hocta.app/vi/viet-anh/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>`,
-    ...clusters.map(
+    ...letterMeta.indexableLetterSlugs.map(
+      (lSlug) => `  <url><loc>https://hocta.app/vi/viet-anh/van/${esc(lSlug)}/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>`
+    ),
+    ...indexableClusters.map(
       (c) => `  <url><loc>https://hocta.app/vi/viet-anh/${esc(c.slug)}/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`
     )
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
   fs.mkdirSync(path.dirname(smPath), { recursive: true });
   fs.writeFileSync(smPath, xml, 'utf8');
-  console.log(`Wrote ${smPath}: ${urls.length} URLs`);
+  console.log(`Wrote ${smPath}: ${urls.length} URLs (excluded ${clusters.length - indexableClusters.length} noindex pages)`);
 }
 
 const payload = buildIndex();
 const clusters = extractConceptClusters(payload);
 const wordToConcepts = buildConceptPages(clusters);
 injectReverseLinksIntoWordPages(wordToConcepts);
-buildHtmlPage(payload, clusters);
-buildSitemap(clusters);
+const letterMeta = buildLetterSubHubs(clusters);
+buildHtmlPage(payload, clusters, letterMeta);
+buildSitemap(clusters, letterMeta);

@@ -33,6 +33,7 @@ const { resolveIpa, IPA_CHAR_OK, lemmaCandidates } = require('./ipa-inflect.cjs'
 const { wordGroup, ABBREV_RE, FRAGMENTS, PROPER_RE } = require('./wordlist-lib.cjs');
 const { navHtml } = require('./nav-partial.cjs');
 const { blogLinksHtml } = require('./blog-links-lib.cjs');
+const { safeJsonLd } = require('./seo-shared.cjs');
 /* Behavioral internal linking (06/11): top-traffic vi/tu -> phat-am/dong-nghia
  * Dwell-time booster: if a word has a pronunciation/synonym page, link it.
  * Top traffic heuristic = freq 1k/2k (most searched). */
@@ -1014,27 +1015,106 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
     const list = db.words && db.words[String(word).toLowerCase()];
     if (list && list.length && list[0][0]) examExample = list[0][0];
   } catch (e) { /* no example */ }
-  /* Auto-FAQ 07/11: mọi trang từ đều có 3 Q/A từ dữ liệu sẵn có (nghĩa, phát âm, ví dụ).
+  /* Auto-FAQ: mọi trang từ đều có Q/A sạch từ dữ liệu sẵn có (nghĩa, loại từ, phát âm, ví dụ).
    * Trang nào có word-faq tay thì dùng tay (ưu tiên trong faqJsonLd/faqHtml). */
   const autoQa = [];
   autoQa.push([`"${word}" nghĩa là gì`, desc]);
-  // PAA morphology 07/11: 5 câu người Việt gõ thật (đếm được/quá khứ/loại từ/trái nghĩa)
   try {
+    const wLower = String(word || '').toLowerCase();
     const rawL = String(raw || '').replace(/<[^>]+>/g, ' ');
-    const isNoun = /danh từ/.test(rawL), isVerb = /động từ|ngoại động|nội động/.test(rawL);
-    const isAdj = /tính từ/.test(rawL), isAdv = /phó từ|trạng từ/.test(rawL);
-    const pos = [isNoun?'danh từ':null, isVerb?'động từ':null, isAdj?'tính từ':null, isAdv?'trạng từ':null].filter(Boolean).join(', ') || (posList.length ? posList.join(', ') : 'xem mục từ điển ở trên');
+    const posArr = Array.isArray(posList) ? posList.map((p) => String(p).trim()).filter(Boolean) : [];
+    const posL = posArr.map((p) => p.toLowerCase());
+    const primaryPosL = posL[0] || '';
+    const isInterj = posL.some((p) => /thán từ/.test(p));
+    const isFunctionWord = posL.some((p) => /thán từ|đại từ|giới từ|liên từ|mạo từ|trợ động từ|từ hạn định|số từ/.test(p));
+    const isNoun = posL.some((p) => /danh từ/.test(p));
+    const isVerb = posL.some((p) => /động từ|ngoại động|nội động/.test(p));
+    const verbIdx = posL.findIndex((p) => /động từ|ngoại động|nội động/.test(p));
+    const isAdj = posL.some((p) => /tính từ/.test(p));
+    const isAdv = posL.some((p) => /phó từ|trạng từ/.test(p));
+    const pos = posArr.length
+      ? posArr.join(', ')
+      : ([isNoun ? 'danh từ' : null, isVerb ? 'động từ' : null, isAdj ? 'tính từ' : null, isAdv ? 'trạng từ' : null].filter(Boolean).join(', ') || 'xem mục từ điển ở trên');
     autoQa[0] = [`"${word}" nghĩa là gì, loại từ gì`, desc + ` Loại từ: ${pos}.`];
-    if (isNoun) {
+
+    const isInflected = Boolean(entryLemma);
+    if (isNoun && !isInterj && !isFunctionWord && !isInflected && posL.findIndex((p) => /danh từ/.test(p)) <= 1) {
       const uncount = /không đếm được|uncountable|\(U\)/.test(rawL);
-      autoQa.push([`"${word}" đếm được không`, `"${word}" là danh từ ${uncount ? 'KHÔNG đếm được — không dùng a/an, không thêm -s (ví dụ: much ' + word + ', không nói *a ' + word + ')' : 'đếm được — dùng được a/an và số nhiều'}.`]);
+      if (uncount) {
+        autoQa.push([`"${word}" đếm được không`, `"${word}" là danh từ KHÔNG đếm được — không dùng a/an và không thêm -s (ví dụ: much ${word}, không nói *a ${word}).`]);
+      } else {
+        autoQa.push([`"${word}" đếm được không`, `"${word}" có thể dùng như danh từ đếm được (dùng được a/an và số nhiều — xem chi tiết từng nghĩa ở mục từ điển trên).`]);
+      }
     }
-    if (isVerb) {
-      const irr = /quá khứ|past|Ved|V2/.test(rawL);
-      autoQa.push([`Quá khứ của "${word}" là gì`, irr ? `Xem bảng chia trong mục từ điển ở trên (cột quá khứ — từ bất quy tắc cần học thuộc).` : `Động từ có quy tắc: thêm -ed (${word} → ${word}ed).`]);
+
+    const NO_PAST_FAQ = new Set([
+      'can', 'could', 'may', 'might', 'must', 'shall', 'should', 'will', 'would', 'ought',
+      'hello', 'hi', 'hey', 'bye', 'goodbye', 'yes', 'no', 'ok', 'okay', 'oh', 'wow',
+      'ah', 'aha', 'alas', 'bravo', 'cheers', 'amen', 'oops', 'ouch', 'phew', 'yay',
+      'hooray', 'thanks', 'thank', 'please', 'sorry', 'welcome', 'farewell', 'bingo'
+    ]);
+    const IRREGULAR_PAST = {
+      be: 'was / were', beat: 'beat', become: 'became', begin: 'began', bend: 'bent',
+      bet: 'bet', bind: 'bound', bite: 'bit', bleed: 'bled', blow: 'blew',
+      break: 'broke', breed: 'bred', bring: 'brought', broadcast: 'broadcast', build: 'built',
+      burn: 'burned / burnt', burst: 'burst', buy: 'bought', cast: 'cast', catch: 'caught',
+      choose: 'chose', cling: 'clung', come: 'came', cost: 'cost', creep: 'crept',
+      cut: 'cut', deal: 'dealt', dig: 'dug', do: 'did', draw: 'drew',
+      dream: 'dreamed / dreamt', drink: 'drank', drive: 'drove', eat: 'ate', fall: 'fell',
+      feed: 'fed', feel: 'felt', fight: 'fought', find: 'found', flee: 'fled',
+      fling: 'flung', fly: 'flew', forbid: 'forbade', forget: 'forgot', forgive: 'forgave',
+      freeze: 'froze', get: 'got', give: 'gave', go: 'went', grind: 'ground',
+      grow: 'grew', hang: 'hung / hanged', have: 'had', hear: 'heard', hide: 'hid',
+      hit: 'hit', hold: 'held', hurt: 'hurt', keep: 'kept', kneel: 'knelt / kneeled',
+      knit: 'knitted / knit', know: 'knew', lay: 'laid', lead: 'led', lean: 'leaned / leant',
+      leap: 'leapt / leaped', learn: 'learned / learnt', leave: 'left', lend: 'lent', let: 'let',
+      lie: 'lay (nằm) / lied (nói dối)', light: 'lit / lighted', lose: 'lost', make: 'made',
+      mean: 'meant', meet: 'met', overcome: 'overcame', pay: 'paid', put: 'put',
+      quit: 'quit', read: 'read (/red/)', ride: 'rode', ring: 'rang', rise: 'rose',
+      run: 'ran', say: 'said', see: 'saw', seek: 'sought', sell: 'sold',
+      send: 'sent', set: 'set', sew: 'sewed', shake: 'shook', shed: 'shed',
+      shine: 'shone', shoot: 'shot', show: 'showed', shrink: 'shrank', shut: 'shut',
+      sing: 'sang', sink: 'sank', sit: 'sat', slay: 'slew', sleep: 'slept',
+      slide: 'slid', sling: 'slung', slit: 'slit', smell: 'smelled / smelt', speak: 'spoke',
+      speed: 'sped / speeded', spell: 'spelled / spelt', spend: 'spent', spill: 'spilled / spilt',
+      spin: 'spun', spit: 'spat', split: 'split', spoil: 'spoiled / spoilt', spread: 'spread',
+      spring: 'sprang', stand: 'stood', steal: 'stole', stick: 'stuck', sting: 'stung',
+      stink: 'stank', stride: 'strode', strike: 'struck', string: 'strung', strive: 'strove',
+      swear: 'swore', sweep: 'swept', swell: 'swelled', swim: 'swam', swing: 'swung',
+      take: 'took', teach: 'taught', tear: 'tore', tell: 'told', think: 'thought',
+      throw: 'threw', thrust: 'thrust', tread: 'trod', undergo: 'underwent', understand: 'understood',
+      undertake: 'undertook', upset: 'upset', wake: 'woke', wear: 'wore', weave: 'wove',
+      weep: 'wept', win: 'won', wind: 'wound', withdraw: 'withdrew', withhold: 'withheld',
+      withstand: 'withstood', wring: 'wrung', write: 'wrote'
+    };
+    const isCommonVerb = isVerb
+      && verbIdx >= 0 && verbIdx <= 1
+      && !isInterj
+      && !/thán từ|đại từ|giới từ|liên từ|mạo từ|trợ động từ/.test(primaryPosL)
+      && !isInflected
+      && /^[a-z]+$/.test(wLower)
+      && !NO_PAST_FAQ.has(wLower)
+      && !(wLower.endsWith('ed') && !IRREGULAR_PAST[wLower] && !/^(need|feed|bleed|breed|heed|seed|weed|speed|bed|shed|wed|sled)$/.test(wLower))
+      && !(wLower.endsWith('ing') && !IRREGULAR_PAST[wLower] && !/^(bring|sing|ring|swing|cling|fling|sting|string|wring|spring|ping|wing|king)$/.test(wLower));
+
+    if (isCommonVerb) {
+      if (Object.hasOwn(IRREGULAR_PAST, wLower)) {
+        autoQa.push([`Quá khứ của "${word}" là gì`, `Động từ bất quy tắc: ${word} → ${IRREGULAR_PAST[wLower]}.`]);
+      } else if (wLower.endsWith('e')) {
+        autoQa.push([`Quá khứ của "${word}" là gì`, `Động từ có quy tắc (tận cùng bằng -e, thêm -d): ${word} → ${word}d.`]);
+      } else if (/[^aeiou]y$/.test(wLower)) {
+        autoQa.push([`Quá khứ của "${word}" là gì`, `Động từ có quy tắc (đổi -y thành -ied): ${word} → ${word.slice(0, -1)}ied.`]);
+      } else if (wLower.endsWith('c')) {
+        autoQa.push([`Quá khứ của "${word}" là gì`, `Động từ có quy tắc (tận cùng bằng -c, thêm -ked): ${word} → ${word}ked.`]);
+      } else if (/[^aeiou][aeiou][bcdfghjklmnpqrstvz]$/.test(wLower)) {
+        autoQa.push([`Quá khứ của "${word}" là gì`, `Động từ có quy tắc: thêm hậu tố -ed (nhân đôi phụ âm cuối nếu trọng âm rơi vào âm tiết cuối).`]);
+      } else {
+        autoQa.push([`Quá khứ của "${word}" là gì`, `Động từ có quy tắc: thêm -ed (${word} → ${word}ed).`]);
+      }
     }
-    if (isAdj) autoQa.push([`Trái nghĩa với "${word}" là gì`, `Xem khối Phân biệt dễ nhầm ở dưới — cặp trái nghĩa và từ gần nghĩa của "${word}".`]);
-    else if (!isNoun && !isVerb) autoQa.push([`"${word}" dùng thế nào trong câu`, `Xem khối Ví dụ thi và Câu mẫu ở trên — "${word}" ${pos}, dùng trong văn IELTS/TOEIC.`]);
+    if (!isNoun && !isVerb && !isInflected) {
+      autoQa.push([`"${word}" dùng thế nào trong câu`, `Xem mục nghĩa và ví dụ ở trên — "${word}" (${pos}).`]);
+    }
   } catch (e) {}
   if (ipa) autoQa.push([`Phát âm "${word}" thế nào`, `Phiên âm Mỹ /${ipa}/${breOf(ipa, word) && breOf(ipa, word) !== ipa ? `, Anh /${breOf(ipa, word)}/` : ''} — nghe audio Mỹ/Anh ở đầu trang, đọc chậm từng âm.`]);
   if (examExample) autoQa.push([`Đặt câu với "${word}"`, examExample]);

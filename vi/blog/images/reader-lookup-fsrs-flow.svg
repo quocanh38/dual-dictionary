@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 390" width="840" height="390" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Quy trình 3 bước khép kín trong HọcTA: Đọc (Reader) → Chạm tra (Tap-to-lookup) → Ôn tập (FSRS)</title>
+  <desc id="d3">Sơ đồ 3 bước học tiếng Anh không ngắt quãng: Bước 1 đọc bài TOEIC Part 7 hoặc IELTS Task 2 trong Reader có đo tốc độ wpm, Bước 2 chạm từ để tra chéo Anh-Việt hoặc Việt-Anh tức thì và lưu kèm câu gốc, Bước 3 ôn lại tự động bằng thuật toán FSRS-4.5.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="sh3" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#293cc8"/>
+    </marker>
+  </defs>
+
+  <rect width="840" height="390" rx="16" fill="url(#bg3)" stroke="#cbd5e1"/>
+
+  <text x="36" y="42" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="800" fill="#0f172a">Vòng lặp 3 bước: Đọc (Reader) → Chạm tra (Tap-to-lookup) → Ôn tập (FSRS)</text>
+  <text x="36" y="65" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#475569">Biến bài đọc TOEIC Part 7 và bài mẫu IELTS Writing Task 2 thành kho từ vựng cá nhân hóa mà không rời khỏi mạch đọc</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(36, 94)" filter="url(#sh3)">
+    <rect x="0" y="0" width="232" height="224" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="0" y="0" width="232" height="44" rx="14" fill="#293cc8"/>
+    <rect x="0" y="30" width="232" height="14" fill="#293cc8"/>
+    <text x="16" y="28" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#ffffff">BƯỚC 1 · ĐỌC (READER)</text>
+
+    <text x="16" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#0f172a">Đưa văn bản thật vào học</text>
+    <text x="16" y="96" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Dán email TOEIC Part 7,</text>
+    <text x="24" y="112" font-family="system-ui,sans-serif" font-size="12" fill="#334155">bài mẫu IELTS Task 2, EPUB/PDF</text>
+    <text x="16" y="136" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Đồng hồ đo tốc độ đọc (wpm)</text>
+    <text x="16" y="158" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Ước tính độ phủ từ vựng theo</text>
+    <text x="24" y="174" font-family="system-ui,sans-serif" font-size="12" fill="#334155">mốc 1k / 2k / 5k / 10k</text>
+    <rect x="16" y="190" width="200" height="22" rx="6" fill="#eff6ff"/>
+    <text x="116" y="205" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#1d4ed8" text-anchor="middle">Đầu ra: Giữ nguyên Reading Flow</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="272" y1="206" x2="298" y2="206" stroke="#293cc8" stroke-width="3" marker-end="url(#arr3)"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(304, 94)" filter="url(#sh3)">
+    <rect x="0" y="0" width="232" height="224" rx="14" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+    <rect x="0" y="0" width="232" height="44" rx="14" fill="#0d9488"/>
+    <rect x="0" y="30" width="232" height="14" fill="#0d9488"/>
+    <text x="16" y="28" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#ffffff">BƯỚC 2 · TAP-TO-LOOKUP</text>
+
+    <text x="16" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#0f172a">Tra chéo tại chỗ &amp; lưu ngữ cảnh</text>
+    <text x="16" y="96" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Chạm trực tiếp từ khó → hiện</text>
+    <text x="24" y="112" font-family="system-ui,sans-serif" font-size="12" fill="#334155">nghĩa Anh–Việt offline &lt; 10 ms</text>
+    <text x="16" y="136" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Không chuyển tab, không đứt ý</text>
+    <text x="16" y="158" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Bấm ☆ để trích xuất từ/cụm</text>
+    <text x="24" y="174" font-family="system-ui,sans-serif" font-size="12" fill="#334155">vào Vault kèm nguyên câu gốc</text>
+    <rect x="16" y="190" width="200" height="22" rx="6" fill="#f0fdfa"/>
+    <text x="116" y="205" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#0f766e" text-anchor="middle">Đầu ra: Thẻ nghĩa + câu ngữ cảnh</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="540" y1="206" x2="566" y2="206" stroke="#293cc8" stroke-width="3" marker-end="url(#arr3)"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(572, 94)" filter="url(#sh3)">
+    <rect x="0" y="0" width="232" height="224" rx="14" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+    <rect x="0" y="0" width="232" height="44" rx="14" fill="#d97706"/>
+    <rect x="0" y="30" width="232" height="14" fill="#d97706"/>
+    <text x="16" y="28" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#ffffff">BƯỚC 3 · ÔN TẬP (FSRS)</text>
+
+    <text x="16" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#0f172a">Xếp lịch lặp lại ngắt quãng</text>
+    <text x="16" y="96" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Thẻ tự vào hàng đợi FSRS-4.5</text>
+    <text x="16" y="118" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Chấm Know it / Forgot / Skip</text>
+    <text x="16" y="140" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Luyện điền từ từ chính câu đã</text>
+    <text x="24" y="156" font-family="system-ui,sans-serif" font-size="12" fill="#334155">đọc (Practice → Từ bài đã đọc)</text>
+    <text x="16" y="176" font-family="system-ui,sans-serif" font-size="12" fill="#334155">• Tối ưu 17 trọng số trên máy</text>
+    <rect x="16" y="190" width="200" height="22" rx="6" fill="#fef3c7"/>
+    <text x="116" y="205" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#92400e" text-anchor="middle">Đầu ra: Trí nhớ dài hạn (R ≈ 90%)</text>
+  </g>
+
+  <!-- Feedback loop arrow -->
+  <path d="M 688 318 C 688 362, 152 362, 152 322" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr3)"/>
+  <rect x="292" y="340" width="256" height="26" rx="13" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="420" y="357" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#334155" text-anchor="middle">Vốn từ tăng → Đọc bài kế nhanh hơn (wpm ↑)</text>
+</svg>

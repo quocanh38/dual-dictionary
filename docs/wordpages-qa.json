@@ -34224,6 +34224,13 @@
       "lemma": null
     },
     {
+      "word": "fortunate",
+      "source": "dataset",
+      "ipa": "ˈfɔɹtʃənət",
+      "prev": "ˈfɔɹtʃənət",
+      "lemma": null
+    },
+    {
       "word": "forty",
       "source": "dataset",
       "ipa": "ˈfɔɹti",
@@ -34858,6 +34865,13 @@
       "source": "dataset",
       "ipa": "ˈɡɹidi",
       "prev": "ˈɡɹidi",
+      "lemma": null
+    },
+    {
+      "word": "greet",
+      "source": "dataset",
+      "ipa": "ɡɹit",
+      "prev": "ɡɹit",
       "lemma": null
     },
     {
@@ -36846,6 +36860,13 @@
       "source": "dataset",
       "ipa": "lip",
       "prev": "lip",
+      "lemma": null
+    },
+    {
+      "word": "learnt",
+      "source": "dataset",
+      "ipa": "lɝn",
+      "prev": "lɝn",
       "lemma": null
     },
     {
@@ -42890,6 +42911,13 @@
       "lemma": "sibling"
     },
     {
+      "word": "sickness",
+      "source": "dataset",
+      "ipa": "ˈsɪknəs",
+      "prev": "ˈsɪknəs",
+      "lemma": null
+    },
+    {
       "word": "sidewalk",
       "source": "dataset",
       "ipa": "ˈsaɪˌdwɔk",
@@ -48423,13 +48451,7 @@
     "vet",
     "vip"
   ],
-  "removedFat": [
-    "fortunate",
-    "greet",
-    "learnt",
-    "lust",
-    "sickness"
-  ],
+  "removedFat": [],
   "removedThin": [
     "abigail",
     "accomplice",
@@ -48580,6 +48602,7 @@
     "lire",
     "lizard",
     "lizzie",
+    "lust",
     "mack",
     "madman",
     "madonna",
@@ -48777,9 +48800,9 @@
     }
   },
   "summary": {
-    "built": 6907,
+    "built": 6911,
     "ipaSources": {
-      "dataset": 6641,
+      "dataset": 6645,
       "absent": 19,
       "derived": 246,
       "table": 1
@@ -48791,8 +48814,8 @@
     "removedVulgar": 21,
     "removedEmpty": 5,
     "removedAbbrev": 39,
-    "removedFat": 5,
-    "removedThin": 298,
+    "removedFat": 0,
+    "removedThin": 299,
     "sensePriority": {
       "evidence": {
         "reordered": true,
@@ -48800,6 +48823,6 @@
         "after": "(pháp lý) chứng, chứng cớ, bằng chứng"
       }
     },
-    "generatedAt": "2026-11-07T07:54:16.565Z"
+    "generatedAt": "2026-11-26T04:01:20.822Z"
   }
 }

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tap-to-lookup &amp; Kiến trúc Offline-first: Đọc tiếng Anh không đứt mạch | HọcTA</title>
+<meta name="description" content="Cách tính năng Tap-to-lookup và kiến trúc web Offline-first (IndexedDB + Service Worker) giữ nguyên reading flow khi đọc tài liệu tiếng Anh chuyên ngành và luyện thi.">
+<link rel="canonical" href="https://hocta.app/vi/blog/phuong-phap/tap-to-lookup-offline-reading-flow/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="HọcTA">
+<meta property="og:url" content="https://hocta.app/vi/blog/phuong-phap/tap-to-lookup-offline-reading-flow/">
+<meta property="og:title" content="Tap-to-lookup &amp; Kiến trúc Offline-first: Đọc tiếng Anh không đứt mạch">
+<meta property="og:description" content="Tra chéo từ vựng ngay trong câu dưới 10 ms không cần mạng, giữ trọn reading flow khi đọc tài liệu chuyên ngành, TOEIC Part 7 và IELTS Reading.">
+<meta property="og:image" content="https://hocta.app/vi/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-26T08:00:00+07:00">
+<meta property="article:modified_time" content="2026-11-26">
+<meta property="article:author" content="https://www.linkedin.com/in/quocanh38/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tap-to-lookup &amp; Offline-first: Đọc tiếng Anh không ngắt quãng">
+<meta name="twitter:description" content="Vì sao tra từ tại chỗ dưới 10 ms trên IndexedDB bảo vệ mạch đọc hiểu tốt hơn việc chuyển tab tra từ điển online.">
+<link rel="stylesheet" href="/vi/blog/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Tap-to-lookup & Kiến trúc Offline-first: Đọc tiếng Anh chuyên ngành không đứt mạch","description":"Cách tính năng Tap-to-lookup và kiến trúc web Offline-first (IndexedDB + Service Worker) giữ nguyên reading flow khi đọc tài liệu tiếng Anh chuyên ngành và luyện thi.","inLanguage":"vi","datePublished":"2026-11-26T08:00:00+07:00","dateModified":"2026-11-26","author":{"@type":"Person","@id":"https://hocta.app/vi/tac-gia/#person","name":"Nguyễn Quốc Anh","url":"https://hocta.app/vi/tac-gia/"},"publisher":{"@type":"Organization","@id":"https://hocta.app/#organization","name":"HọcTA","url":"https://hocta.app/","sameAs":["https://github.com/quocanh38/dual-dictionary"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://hocta.app/vi/blog/phuong-phap/tap-to-lookup-offline-reading-flow/"},"image":["https://hocta.app/vi/blog/images/offline-storage-arch.svg","https://hocta.app/vi/blog/images/reader-lookup-fsrs-flow.svg"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://hocta.app/vi/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://hocta.app/vi/blog/"},{"@type":"ListItem","position":3,"name":"Phương pháp","item":"https://hocta.app/vi/blog/phuong-phap/"},{"@type":"ListItem","position":4,"name":"Tap-to-lookup & Offline-first"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Tap-to-lookup trong HọcTA hoạt động như thế nào khi không có mạng?","acceptedAnswer":{"@type":"Answer","text":"Sau một lần tải gói từ điển OVDP 386.600 mục từ vào IndexedDB, mỗi lần bạn chạm một từ trong Reader, bộ đọc chỉ mục nhị phân (js/mdict.js) truy xuất nghĩa trực tiếp trên thiết bị trong dưới 10 mili-giây mà không cần gửi yêu cầu mạng."}},{"@type":"Question","name":"Vì sao chuyển tab tra từ lại làm giảm tốc độ đọc hiểu tiếng Anh?","acceptedAnswer":{"@type":"Answer","text":"Mỗi lần chuyển tab, gõ từ, chờ tải trang web và quay lại văn bản làm mất 10–15 giây và xóa bộ nhớ làm việc (working memory) của câu đang đọc, khiến bạn phải đọc lại từ đầu đoạn."}}]}]}</script>
+<link rel="icon" href="/favicon.ico">
+<meta name="theme-color" content="#293CC8">
+</head>
+<body class="blog-post">
+<nav class="dd-nav" aria-label="Điều hướng chính"><div class="dd-nav-in">
+<a class="dd-brand" href="/vi/">HọcTA</a>
+<button type="button" class="dd-burger" aria-label="Mở menu" aria-expanded="false" onclick="var n=this.closest('.dd-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
+<div class="dd-links">
+<div class="dd-mobile-sections" aria-label="Các khu vực HọcTA"><a href="/">Ứng dụng</a><a href="/lessons/">Bài học</a><a href="/vi/tu/">Từ điển</a><a href="/docs/">Hướng dẫn</a></div>
+<a href="/vi/tu/">Từ điển</a>
+<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Từ vựng ▾</button>
+<div class="dd-drop-menu">
+<a href="/vi/viet-anh/">🇻🇳→🇬🇧 Việt–Anh</a>
+<a href="/vi/chu-de/">Chủ đề</a>
+<a href="/vi/phan-biet/">Phân biệt</a>
+<a href="/vi/dong-nghia/">Đồng nghĩa</a>
+<a href="/vi/phat-am/">Phát âm</a>
+<a href="/vi/loi-sai/">Lỗi sai</a>
+<a href="/vi/gioi-tu/">Giới từ</a>
+<a href="/vi/cum-di-voi/">Cụm đi với</a>
+</div></div>
+<a href="/vi/blog/" aria-current="location" class="dd-nav-on">Blog</a>
+<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Công cụ ▾</button>
+<div class="dd-drop-menu">
+<a href="/vi/test-trinh-do/">📊 Test trình độ</a>
+<a href="/vi/luyen-shadowing/">🎤 Luyện phát âm</a>
+<a href="/vi/lo-trinh/">🗺️ Lộ trình 30 ngày</a>
+<a href="/vi/trinh-do/">📶 Từ theo trình độ</a>
+<a href="/vi/luyen-thi/">📝 Luyện thi</a>
+<a href="/vi/tu/ielts/">IELTS Core</a>
+<a href="/vi/tu/toeic/">TOEIC Business</a>
+<a href="/vi/cambridge/">Cambridge Papers</a>
+<a href="/vi/ngu-phap/">Ngữ pháp</a>
+</div></div>
+<div class="dd-drop"><button type="button" class="dd-drop-btn" aria-expanded="false" onclick="var d=this.parentNode,o=d.classList.toggle('open');this.setAttribute('aria-expanded',o);d.parentNode.querySelectorAll('.dd-drop.open').forEach(function(x){if(x!==d){x.classList.remove('open');var b=x.querySelector('.dd-drop-btn');if(b)b.setAttribute('aria-expanded','false')}});if(!o)this.blur()">Về chúng tôi ▾</button>
+<div class="dd-drop-menu">
+<a href="/vi/gioi-thieu/">Giới thiệu</a>
+<a href="/vi/tac-gia/">✍️ Tác giả</a>
+<a href="/vi/chinh-sach-noi-dung/">📜 Chính sách nội dung</a>
+<a href="/vi/cap-nhat/">🗞️ Nhật ký cập nhật</a>
+</div></div>
+</div>
+<form class="dd-search" action="/" method="get" role="search"><input name="q" type="search" placeholder="Tra từ…" aria-label="Tra từ trong app" autocomplete="off"><button type="submit" aria-label="Tìm">🔍</button></form>
+</div></nav>
+<style>.dd-nav{position:sticky;top:0;z-index:50;background:#293cc8;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.dd-nav-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}.dd-brand{color:#fff;font-weight:800;text-decoration:none;white-space:nowrap}.dd-links{display:flex;gap:2px;flex-wrap:wrap;flex:1;align-items:center}.dd-links a{color:#eef0ff;text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;white-space:nowrap}.dd-links a:hover{background:rgba(255,255,255,.15)}.dd-nav-on{background:rgba(255,255,255,.22)!important}.dd-drop{position:relative}.dd-drop-btn{border:0;background:transparent;color:#eef0ff;font-size:.85rem;font-weight:600;padding:6px 9px;border-radius:8px;cursor:pointer;white-space:nowrap}.dd-drop-btn:hover{background:rgba(255,255,255,.15)}.dd-drop-menu{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#2032a6;border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}.dd-drop-menu a{display:block;padding:8px 10px}.dd-drop:hover .dd-drop-menu,.dd-drop:focus-within .dd-drop-menu{display:block}.dd-search{display:flex;gap:4px;margin-left:auto}.dd-search input{border:0;border-radius:8px;padding:6px 10px;font-size:.85rem;width:130px}.dd-search button{border:0;border-radius:8px;background:#2032a6;color:#fff;padding:6px 10px;cursor:pointer}.dd-burger{display:none;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:8px;padding:4px 10px;font-size:1rem;cursor:pointer}@media(max-width:720px){.dd-burger{display:block;margin-left:auto}.dd-links{display:none;flex:1 0 100%;width:100%;flex-direction:column;align-items:stretch}.dd-nav.open .dd-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.dd-drop{grid-column:1/-1}.dd-drop-menu{position:static;box-shadow:none}.dd-search{flex:1 0 100%;margin-left:0;width:100%}.dd-search input{flex:1;width:auto}}</style>
+<main class="page">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/vi/">Trang chủ</a> › <a href="/vi/blog/">Blog</a> ›
+  <a href="/vi/blog/phuong-phap/">Phương pháp</a> › <span aria-current="page">Tap-to-lookup &amp; Offline-first</span>
+</nav>
+
+<article>
+<h1>Tap-to-lookup &amp; Kiến trúc Offline-first: Đọc tiếng Anh chuyên ngành không đứt mạch</h1>
+
+<p class="byline">
+  <a href="/vi/tac-gia/" rel="author">Quốc Anh</a> · 26/11/2026 · ~7 phút đọc
+</p>
+
+<aside class="series-box">
+  <p><strong>Tóm tắt 3 điểm cốt lõi</strong></p>
+  <ul>
+    <li><strong>Vấn đề:</strong> Chuyển tab tra từ điển online làm mất 10–15 giây mỗi từ và xóa sạch bộ nhớ ngữ cảnh của câu đang đọc.</li>
+    <li><strong>Giải pháp Tap-to-lookup:</strong> Chạm trực tiếp vào từ trong Reader để tra chéo Anh–Việt tại chỗ và bấm <code>☆</code> lưu kèm nguyên câu gốc.</li>
+    <li><strong>Nền tảng Offline-first:</strong> Từ điển 386.600 mục từ nằm sẵn trong IndexedDB, giúp độ trễ tra cứu dưới 10 ms ngay cả trên máy bay hay tầng hầm mất sóng.</li>
+  </ul>
+</aside>
+
+<nav class="toc" aria-label="Mục lục">
+  <p>Mục lục</p>
+  <ul>
+    <li><a href="#reading-flow">Vì sao chuyển tab tra từ giết chết Reading Flow</a></li>
+    <li><a href="#tap-to-lookup">Tap-to-lookup: tra chéo tại chỗ không rời ngữ cảnh</a></li>
+    <li><a href="#kien-truc-offline">Kiến trúc Offline-first trong HọcTA hoạt động ra sao</a></li>
+    <li><a href="#goc-nhin-ky-thuat">Góc nhìn kỹ thuật từ người phát triển</a></li>
+    <li><a href="#vong-lap-3-buoc">Vòng lặp 3 bước: Reader → Tap-to-lookup → FSRS</a></li>
+    <li><a href="#doc-tiep">Đọc tiếp</a></li>
+  </ul>
+</nav>
+
+<h2 id="reading-flow">Vì sao chuyển tab tra từ giết chết Reading Flow</h2>
+
+<p>Khi đọc một tài liệu kỹ thuật, báo cáo tài chính, bài báo kinh tế hay đoạn văn TOEIC Part 7 / IELTS Reading, não bạn phải giữ cùng lúc ba thứ trong bộ nhớ làm việc (<em>working memory</em>): chủ ngữ chính của đoạn, quan hệ nhân–quả giữa các mệnh đề, và luận điểm tác giả đang dẫn tới.</p>
+
+<p>Thói quen phổ biến nhất — bôi đen từ lạ, copy, mở tab từ điển hoặc Google Dịch, chờ mạng tải trang (300–800 ms trên 4G yếu, đôi khi 2–3 giây kèm quảng cáo), rồi quay lại tab cũ — trông tưởng vô hại nhưng thực chất tạo ra một <strong>lần chuyển ngữ cảnh (context switch) hoàn toàn</strong>. Khi mắt quay lại bài đọc, bạn quên mất nửa câu trước và buộc phải đọc lại từ đầu. Sau 10 từ như vậy, bạn kiệt sức và gấp bài lại trước khi hết trang đầu tiên.</p>
+
+<h2 id="tap-to-lookup">Tap-to-lookup: tra chéo tại chỗ không rời ngữ cảnh</h2>
+
+<p>Tính năng <strong>Tap-to-lookup</strong> trong <a href="/vi/doc-tieng-anh/">Reader của HọcTA</a> được thiết kế để xóa bỏ hoàn toàn bước chuyển tab:</p>
+
+<ul>
+  <li><strong>Chạm 1 lần trên từ bất kỳ:</strong> Dán văn bản, mở file EPUB/PDF hoặc chọn bài trong thư viện đã lưu — chạm thẳng vào từ cần tra (kể cả dạng chia <em>mitigated</em>, <em>discrepancies</em>, <em>allocating</em>), bảng nghĩa Anh–Việt mở ngay cạnh dòng đang đọc.</li>
+  <li><strong>Tra chéo nhiều nguồn nghĩa:</strong> Đối chiếu ngay giữa từ điển Anh–Việt OVDP, từ điển Anh–Anh rút gọn và chỉ mục Việt–Anh để chọn đúng sắc thái chuyên ngành thay vì dịch máy chung chung.</li>
+  <li><strong>Lưu kèm nguyên câu gốc bằng 1 chạm <code>☆</code>:</strong> Hệ thống tự động trích đúng câu chứa từ đó trong bài đọc làm ngữ cảnh cho thẻ flashcard, không cần gõ tay hay copy-paste.</li>
+</ul>
+
+<h2 id="kien-truc-offline">Kiến trúc Offline-first trong HọcTA hoạt động ra sao</h2>
+
+<p>Nhiều app đọc tiếng Anh cũng có popup tra từ, nhưng vẫn gọi API máy chủ cho từng cú chạm. Chỉ cần bạn ngồi trên xe buýt, tàu điện, máy bay hoặc khu vực sóng 4G chập chờn, mỗi cú chạm bị khựng 1–2 giây là mạch đọc vẫn gãy. Đó là lý do HọcTA đặt toàn bộ lõi tra cứu và ôn tập lên kiến trúc <strong>Offline-first ngay trên trình duyệt</strong>:</p>
+
+<figure>
+  <img src="/vi/blog/images/offline-storage-arch.svg" alt="Sơ đồ kiến trúc Offline-first 3 tầng của HọcTA trên trình duyệt: Service Worker lưu vỏ PWA 1 MB, IndexedDB lưu 386.600 mục từ Anh-Việt cùng Vault và log FSRS, tầng xử lý cục bộ cho Tap-to-lookup dưới 10 mili-giây không cần mạng" loading="lazy" width="840" height="460" style="width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb">
+  <figcaption>Kiến trúc 3 tầng lưu trữ cục bộ của HọcTA: toàn bộ thao tác Đọc – Tra từ – Lưu Vault – Xếp lịch FSRS chạy 0 network hops trên thiết bị.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Tầng 1 — Service Worker &amp; Cache API (<code>sw.js</code>):</strong> Đóng gói vỏ ứng dụng (~1 MB core) và gói <em>Airplane Mode Pack</em> (~6.5 MB gồm 5 bài nghe TOEIC, 800 câu IELTS, từ điển Anh–Anh rút gọn và chỉ mục Việt–Anh). Mở app khi tắt Wi-Fi/4G vẫn khởi chạy tức thì.</li>
+  <li><strong>Tầng 2 — IndexedDB (<code>js/db.js</code>):</strong> Lưu trọn bộ từ điển Anh–Việt OVDP 386.600 mục từ (<code>star_anhviet.mdx</code>), kho từ đã lưu (Vault), lịch sử ôn tập (<code>reviews</code>) và các bài đọc bạn đã lưu offline.</li>
+  <li><strong>Tầng 3 — Xử lý nhị phân &amp; FSRS trên thiết bị (<code>js/mdict.js</code>, <code>js/fsrs-opt.js</code>):</strong> Khi bạn chạm một từ, bộ đọc chỉ mục nhị phân tìm kiếm trực tiếp trong dữ liệu cục bộ (thời gian phản hồi dưới 10 ms), không qua máy chủ trung gian.</li>
+</ul>
+
+<h2 id="goc-nhin-ky-thuat">Góc nhìn kỹ thuật từ người phát triển</h2>
+
+<blockquote style="border-left:4px solid var(--teal);padding:12px 16px;margin:18px 0;background:var(--soft);border-radius:0 8px 8px 0">
+  <p style="margin:0"><strong>Nguyễn Quốc Anh (người khởi tạo HọcTA):</strong> “Khi viết HọcTA cho đồng nghiệp luyện TOEIC và IELTS trong giờ nghỉ trưa hoặc lúc đi công tác, tôi nhận ra nút thắt lớn nhất của web app học tiếng Anh không phải là thiếu tính năng AI, mà là <strong>độ trễ mạng phá vỡ nhịp tập trung</strong>. Chọn kiến trúc web offline-first dùng IndexedDB + Service Worker tốn công xử lý hơn nhiều so với gọi REST API đơn thuần — phải tự viết bộ giải nén và tìm kiếm chỉ mục MDX ngay trên trình duyệt — nhưng đổi lại mỗi cú chạm Tap-to-lookup phản hồi tức thì ở mọi nơi, không phụ thuộc 4G và không bao giờ đẩy lịch sử đọc của người dùng lên server.”</p>
+</blockquote>
+
+<h2 id="vong-lap-3-buoc">Vòng lặp 3 bước: Reader → Tap-to-lookup → FSRS</h2>
+
+<p>Tra xong mà quên thì buổi đọc chỉ mang lại cảm giác "hiểu lúc đó". Vì vậy HọcTA nối trực tiếp Tap-to-lookup với hàng đợi lặp lại ngắt quãng <a href="/vi/blog/phuong-phap/fsrs-la-gi/">FSRS-4.5</a> thành một vòng lặp khép kín:</p>
+
+<figure>
+  <img src="/vi/blog/images/reader-lookup-fsrs-flow.svg" alt="Sơ đồ vòng lặp 3 bước trong HọcTA: Bước 1 Đọc bài trong Reader có đo wpm và độ phủ vốn từ, Bước 2 Tap-to-lookup tra nghĩa tại chỗ và lưu kèm câu gốc, Bước 3 Ôn tập tự động theo thuật toán FSRS-4.5" loading="lazy" width="840" height="390" style="width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb">
+  <figcaption>Vòng lặp 3 bước: mỗi từ bạn chạm tra hôm nay tự động quay lại đúng thời điểm sắp quên trong hàng đợi FSRS.</figcaption>
+</figure>
+
+<p>Nếu bạn đang ôn thi cụ thể, hãy xem hai hướng dẫn thực hành trực tiếp trên chính vòng lặp này:</p>
+<ul>
+  <li><strong>Mục tiêu TOEIC 650+:</strong> <a href="/vi/blog/toeic/toeic-part-7-doc-nhanh/#tap-to-lookup-part7">Bóc tách từ vựng khó trong bài đọc TOEIC Part 7 bằng Tap-to-lookup</a>.</li>
+  <li><strong>Mục tiêu IELTS 6.0–7.0+:</strong> <a href="/vi/blog/ielts/ielts-writing-task-2-luyen-viet/#trich-xuat-tu-vung-fsrs">Trích xuất từ vựng học thuật từ bài mẫu IELTS Task 2 vào hệ thống FSRS</a>.</li>
+</ul>
+
+<h2 id="doc-tiep">Đọc tiếp</h2>
+<ul>
+  <li><a href="/vi/blog/phuong-phap/fsrs-la-gi/"><strong>FSRS là gì? Phân tích kỹ thuật &amp; mô phỏng chu kỳ so với SM-2</strong></a> — vì sao FSRS không kéo từ bạn đã thuộc vào bẫy "Ease Hell".</li>
+  <li><a href="/vi/blog/phuong-phap/tu-dien-anh-viet-offline/"><strong>Từ điển Anh–Việt offline: cài trong 2 phút</strong></a> — hướng dẫn tải gói từ điển về máy.</li>
+  <li><a href="/vi/blog/phuong-phap/offline-lesson-packs/"><strong>33 Offline Lesson Packs cho tiếng Anh công việc &amp; học thuật</strong></a> — tải một lần, học mọi lúc không cần mạng.</li>
+</ul>
+
+<div class="cta-box">
+  <p><strong>Thử đọc 1 đoạn tiếng Anh chuyên ngành bằng Tap-to-lookup ngay bây giờ.</strong></p>
+  <p>Mở tab Reader trong HọcTA, dán đoạn văn bạn đang đọc dở và chạm vào bất kỳ từ nào để tra nghĩa tức thì — hoạt động hoàn toàn offline sau lần tải từ điển đầu tiên.</p>
+  <p><a class="cta-button" href="/">Mở HọcTA Reader ↗</a></p>
+</div>
+</article>
+
+<section class="author-box" aria-label="Về tác giả">
+  <img class="author-avatar" src="/vi/blog/images/author-quoc-anh.webp" alt="Ảnh tác giả Quốc Anh" width="72" height="72" loading="lazy">
+  <div class="author-info">
+    <p class="author-name">Quốc Anh <span class="author-title">· Senior Business Development, TMA</span></p>
+    <p>Người khởi tạo HọcTA — ứng dụng từ điển &amp; luyện từ vựng offline-first mã nguồn mở cho người Việt học IELTS/TOEIC và đọc tài liệu công việc. Không quảng cáo, không thu phí, dữ liệu học ở lại trên thiết bị của bạn.</p>
+    <p><a class="author-link" href="https://www.linkedin.com/in/quocanh38/" target="_blank" rel="noopener">Liên hệ / theo dõi trên LinkedIn →</a></p>
+  </div>
+</section>
+
+<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 26/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
+</main>
+<footer class="blog-footer">
+  <p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. · <a href="/vi/blog/">Blog học IELTS &amp; TOEIC</a></p>
+</footer>
+</body>
+</html>
