@@ -3,7 +3,7 @@
  * HTML escaping, and canonical site constants. */
 'use strict';
 
-const SITE = 'https://dualdictionary.netlify.app';
+const SITE = 'https://hocta.app';
 const UPDATED_DATE = '07/11/2026';
 
 function escapeHtml(s) {

@@ -69,8 +69,12 @@ function wordGroup(word, ctx) {
     };
   }
 
-  // regular inflection: a rule candidate that is a dictionary key
-  const dictLemma = lemmaCandidates(w).find((c) => ctx.allKeys && ctx.allKeys.has(c));
+  // regular inflection: prefer a candidate in NGSL/AWL before falling back to any
+  // raw dictionary key (prevents coming -> "com" when "come" is in NGSL core).
+  const cands = lemmaCandidates(w).filter((c) => ctx.allKeys && ctx.allKeys.has(c));
+  const dictLemma =
+    cands.find((c) => lemmaRank(c) || (ctx.awl && ctx.awl.has(c))) ||
+    cands[0];
   const dlRank = lemmaRank(dictLemma);
   if (dictLemma) {
     return {

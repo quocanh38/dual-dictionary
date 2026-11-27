@@ -984,7 +984,7 @@ function ipaLineHtml(word, ipa) {
   const transcript = `<p class="ipa-transcript" style="font-size:0.9em;color:var(--muted);margin-top:6px">Transcript: từ "${escapeHtml(word)}" phát âm Mỹ /${escapeHtml(ipa)}/ ${bre && bre!==ipa ? `Anh /${escapeHtml(bre)}/`: ""} — audio file: ${safe}.m4a (nghe online hoặc trong app offline)</p>`;
   return `<p class="word-ipa"><span class="ipa-label">Phiên âm</span> <span class="ipa-ame" title="Phiên âm Anh-Mỹ">Mỹ /${escapeHtml(ipa)}/</span>${usAud}${brePart}${gbAud}${hearFallback}</p>${transcript}<audio id="ipa-player" preload="none"></audio><script>(function(){var p=document.getElementById('ipa-player');if(!p)return;document.querySelectorAll('.ipa-play').forEach(function(b){b.addEventListener('click',function(){p.src=b.getAttribute('data-aud');p.play();});});})();</script>`;
 }
-function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, raw }) {
+function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList, noteHtml, noteIsHand, labels, builtSet, practiceDeck, canonicalOverride, isNoindex, raw }) {
   /* P1 deck CTA (owner-approved 01/11): word pages point at the matching exam
    * deck (?deck=ielts / ?deck=toeic) instead of the NGSL band deck. */
   const exam = examTagsFor(word, null);
@@ -1176,7 +1176,7 @@ function pageHtml({ word, ipa, entryLemma, entryHtml, related, phrases, posList,
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(desc)}">
 <link rel="canonical" href="${canonical}">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="robots" content="${isNoindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large'}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="HọcTA">
@@ -1210,7 +1210,6 @@ ${navHtml('tu')}
         ${quickSenses.map(([sense, example, translation]) => `<li><strong>${escapeHtml(sense)}</strong> · <span lang="en">${escapeHtml(example)}</span> ${escapeHtml(translation)}</li>`).join('\n        ')}
       </ul>
     </section>` : ''}
-    <figure style="margin:16px 0"><img src="/vi/images/ipa-vowels.jpg" alt="Bảng khẩu hình nguyên âm tiếng Anh" loading="lazy" width="800" height="450" style="max-width:100%;height:auto;border-radius:8px"><figcaption style="color:var(--muted);font-size:.85rem">Khẩu hình 10 nguyên âm chính — đối chiếu IPA ở trên khi luyện phát âm.</figcaption></figure>
     ${badgeRowHtml(word, labels, builtSet)}${entryLemma ? `
     <p class="entry-lemma-note">Trong từ điển không có mục riêng cho dạng “${escapeHtml(word)}” — mục dưới đây là của nguyên mẫu ${builtSet.has(entryLemma)
       ? `<a href="${wordPageUrl(entryLemma)}">“${escapeHtml(entryLemma)}”</a>`
@@ -1597,23 +1596,32 @@ async function main() {
     // gate warning: entry rendered nothing and no note — page would be empty
     if (!entryHtml && !noteHtml) qa.thinPages.push(word);
 
-    // VI-CANNI (16/10/2026, owner-approved): an inflection page whose rendered
-    // definitions are IDENTICAL to the lemma's is a duplicate URL competing
-    // with the lemma page (68 mirrors in the 16/10 audit — led/lead 117
-    // senses, logs/log 58...). Keep the page for users (badge + link back)
-    // but hand the canonical signal to the lemma page and leave the sitemaps.
+    // VI-CANNI + Index Budget Gate: consolidate inflected forms to their lemma,
+    // and gate low-value off-list/vulgar/1-2-char stubs with noindex, follow so
+    // Googlebot spends crawl budget on core vocabulary, hubs, and editorial guides.
     let canonicalOverride = null;
-    if (labels.group === 'inflection' && labels.lemma && labels.lemma !== word && BUILT.has(labels.lemma)) {
-      const ownDefs = defsKey(raw);
-      if (ownDefs) {
-        try {
-          const lemmaRaw = await lookupBestEntry(dict, labels.lemma);
-          if (lemmaRaw && defsKey(lemmaRaw) === ownDefs) {
-            canonicalOverride = `${SITE}${wordPageUrl(labels.lemma)}`;
-            mirrorSlugs.add(word);
-          }
-        } catch (e) { /* keep self-canonical */ }
+    let isNoindex = false;
+    const examForGate = examTagsFor(word, null);
+    const hasExamTag = Boolean(examForGate && Array.isArray(examForGate.tags) && examForGate.tags.length > 0);
+    const hasQuickSense = Object.hasOwn(QUICK_SENSES, word);
+    const isProperOrAbbrev = PROPER_RE.test(sanitizeRaw(raw)) || ABBREV_RE.test(sanitizeRaw(raw));
+    const targetLemma = (labels.group === 'inflection' && labels.lemma && labels.lemma !== word)
+      ? labels.lemma
+      : (rawLemma && rawLemma !== word ? rawLemma : null);
+    if (targetLemma) {
+      isNoindex = true;
+      if (BUILT.has(targetLemma)) {
+        canonicalOverride = `${SITE}${wordPageUrl(targetLemma)}`;
       }
+      mirrorSlugs.add(word);
+    } else if (
+      labels.group === 'vulgar' ||
+      (isProperOrAbbrev && labels.group !== 'core' && labels.group !== 'academic') ||
+      (word.length <= 2 && labels.group !== 'core') ||
+      (labels.group === 'off-list' && !noteIsHand && !hasExamTag && !hasQuickSense)
+    ) {
+      isNoindex = true;
+      mirrorSlugs.add(word);
     }
 
     const html = pageHtml({
@@ -1630,6 +1638,7 @@ async function main() {
       builtSet: BUILT,
       practiceDeck,
       canonicalOverride,
+      isNoindex,
       raw,
     });
 
