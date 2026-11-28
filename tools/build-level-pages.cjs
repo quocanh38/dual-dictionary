@@ -169,10 +169,26 @@ ${navHtml('tu')}
 <main class="page">
   <p class="word-kicker">Học theo trình độ</p>
   <h1 style="font-size:2.2rem">Từ vựng tiếng Anh theo trình độ A2–C1</h1>
-  <p style="color:var(--muted)">Chọn trình độ của bạn, học dần lên — mỗi từ có phiên âm, nghĩa Việt, ví dụ thi thật.</p>
+  <p style="color:var(--muted)">Chọn đúng bậc trình độ hiện tại để học từ vựng tiếng Anh có hệ thống — mỗi mục từ đều có phiên âm IPA Mỹ/Anh, nghĩa tiếng Việt rõ sắc thái, ví dụ ngữ cảnh thật và lưu ngay vào <a href="/vi/blog/phuong-phap/fsrs-la-gi/">hàng đợi ôn tập FSRS</a> offline.</p>
   <ul style="line-height:2">
 ${hubRows}
   </ul>
+  <h2>Bảng so sánh 4 bậc từ vựng A2–C1</h2>
+  <table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem">
+    <thead><tr style="background:var(--soft)"><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Trình độ</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Quy đổi tham khảo</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Trọng tâm từ vựng</th><th style="text-align:left;padding:8px;border:1px solid #e5e7eb">Mục tiêu sử dụng</th></tr></thead>
+    <tbody>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb"><a href="/vi/trinh-do/a2/"><strong>A2 (Sơ cấp)</strong></a></td><td style="padding:8px;border:1px solid #e5e7eb">TOEIC 350–450 · IELTS 3.5–4.0</td><td style="padding:8px;border:1px solid #e5e7eb">1.000 từ giao tiếp nền tảng (NGSL top 1K)</td><td style="padding:8px;border:1px solid #e5e7eb">Đọc hiểu thông báo ngắn, giao tiếp sinh hoạt hằng ngày</td></tr>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb"><a href="/vi/trinh-do/b1/"><strong>B1 (Trung cấp)</strong></a></td><td style="padding:8px;border:1px solid #e5e7eb">TOEIC 500–650 · IELTS 4.5–5.5</td><td style="padding:8px;border:1px solid #e5e7eb">Từ vựng công sở, du lịch, tin tức phổ thông</td><td style="padding:8px;border:1px solid #e5e7eb">Đọc email công việc, tóm tắt ý chính bài báo ngắn</td></tr>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb"><a href="/vi/trinh-do/b2/"><strong>B2 (Trung cao cấp)</strong></a></td><td style="padding:8px;border:1px solid #e5e7eb">TOEIC 700–850 · IELTS 6.0–6.5</td><td style="padding:8px;border:1px solid #e5e7eb">Học thuật AWL + collocation công sở &amp; báo chí</td><td style="padding:8px;border:1px solid #e5e7eb">Viết luận IELTS Task 2 mạch lạc, đọc tài liệu chuyên môn</td></tr>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb"><a href="/vi/trinh-do/c1/"><strong>C1 (Nâng cao)</strong></a></td><td style="padding:8px;border:1px solid #e5e7eb">TOEIC 900+ · IELTS 7.0–8.0</td><td style="padding:8px;border:1px solid #e5e7eb">Từ vựng chính xác sắc thái, paraphrase học thuật</td><td style="padding:8px;border:1px solid #e5e7eb">Tranh luận sâu, đọc nghiên cứu và phân tích văn bản phức tạp</td></tr>
+    </tbody>
+  </table>
+  <h2>Cách chọn đúng cấp độ xuất phát</h2>
+  <ol>
+    <li><strong>Làm bài kiểm tra nhanh 3 phút:</strong> Nếu chưa rõ mình đang ở đâu, hãy làm <a href="/vi/test-trinh-do/">20 câu test từ vựng A2–C1 miễn phí</a> để nhận gợi ý bậc học phù hợp.</li>
+    <li><strong>Áp dụng quy tắc 95% khi đọc:</strong> Mở một bài đọc trong <a href="/lessons/">thư viện bài học B1–B2</a>; nếu mỗi đoạn 100 từ bạn gặp quá 8–10 từ lạ, hãy lùi xuống một bậc để xây nền chắc chắn hơn.</li>
+    <li><strong>Kết hợp lộ trình 30 ngày:</strong> Chọn sẵn kế hoạch học mỗi ngày 15–20 phút tại mục <a href="/vi/lo-trinh/">Lộ trình học 30 ngày</a> và luyện thêm <a href="/vi/phat-am/">phát âm IPA Mỹ/Anh</a> cho từng từ mới lưu.</li>
+  </ol>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>

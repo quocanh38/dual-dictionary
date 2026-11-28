@@ -131,10 +131,28 @@ ${navHtml('tu')}
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/vi/">Trang chủ</a> › <span aria-current="page">Lộ trình</span></nav>
 <main class="page">
   <p class="word-kicker">Học có lộ trình</p>
-  <h1 style="font-size:2.2rem">Lộ trình học từ vựng</h1>
+  <h1 style="font-size:2.2rem">Lộ trình học từ vựng 30 ngày</h1>
+  <p style="color:var(--muted)">Mỗi lộ trình chia nhỏ thành mục tiêu hằng ngày trong 15–20 phút, kết hợp đọc hiểu, nghe phát âm IPA và ôn tập ngắt quãng FSRS offline để bạn duy trì tiến độ đều đặn không bỏ giữa chừng.</p>
   <ul style="line-height:2">
 ${PATHS.map((p) => `    <li><a href="/vi/lo-trinh/${p.slug}/">${esc(p.name)}</a> — ${esc(p.desc)}</li>`).join('\n')}
   </ul>
+  <h2>Cách chọn lộ trình phù hợp mục tiêu của bạn</h2>
+  <ul>
+    <li><strong>Cần lấy lại nền tảng giao tiếp &amp; đọc hiểu cơ bản:</strong> Chọn lộ trình <em>A2 lên B1 trong 30 ngày</em> nếu bạn đang ở khoảng 1.000 từ nền tảng và hay bị ngắt quãng khi đọc bài tiếng Anh ngắn.</li>
+    <li><strong>Chuẩn bị thi IELTS 6.0–7.0+:</strong> Chọn lộ trình <em>IELTS Core theo chủ đề</em> để phủ đều 15 chủ điểm học thuật AWL, kết hợp thêm <a href="/vi/cambridge/">từ vựng đề Cambridge thật</a> và <a href="/vi/dong-nghia/">từ đồng nghĩa viết luận</a>.</li>
+    <li><strong>Cần tiếng Anh công sở &amp; chứng chỉ TOEIC 500–800+:</strong> Chọn lộ trình <em>TOEIC văn phòng</em> kết hợp thực hành trên <a href="/vi/toeic/">12 tình huống TOEIC công sở</a> (họp, email, hợp đồng, hóa đơn, giao hàng).</li>
+  </ul>
+  <h2>Cấu trúc một buổi học 20 phút chuẩn FSRS</h2>
+  <ol>
+    <li><strong>5 phút đầu — Ôn thẻ đến hạn trong app:</strong> Mở tab <em>Ôn tập</em> trên <a href="/">ứng dụng HọcTA</a> để giải quyết toàn bộ từ sắp quên theo lịch <a href="/vi/blog/phuong-phap/fsrs-la-gi/">FSRS</a>.</li>
+    <li><strong>10 phút giữa — Học từ mới theo ngữ cảnh:</strong> Mở bài của ngày hôm nay, nghe phát âm Mỹ/Anh và đọc câu ví dụ mẫu thay vì chỉ học vẹt nghĩa đơn lẻ.</li>
+    <li><strong>5 phút cuối — Luyện phản xạ đầu ra:</strong> Đọc đuổi theo audio tại <a href="/vi/luyen-shadowing/">công cụ Shadowing 30 giây</a> hoặc kiểm tra lại bẫy từ dễ nhầm tại <a href="/vi/phan-biet/">Phân biệt từ dễ nhầm</a>.</li>
+  </ol>
+  <div class="cmp-links">
+    <a class="related-chip" href="/vi/test-trinh-do/">Test trình độ 3 phút →</a>
+    <a class="related-chip" href="/vi/trinh-do/">Từ vựng theo trình độ A2–C1 →</a>
+    <a class="related-chip" href="/vi/blog/">Đọc thêm phương pháp học →</a>
+  </div>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt.</p></footer>
 </body>

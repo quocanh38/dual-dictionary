@@ -45,11 +45,55 @@ function termHref(t) {
   return `/?q=${encodeURIComponent(t)}`;
 }
 
-function pageHtml(p) {
+function truncateDesc(text, max = 155) {
+  const s = String(text || '').replace(/\s+/g, ' ').trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const lastDot = cut.lastIndexOf('.');
+  if (lastDot >= 95) return cut.slice(0, lastDot + 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).replace(/[,;:\-–—\s]+$/, '') + '…';
+}
+
+function decodeHtmlEntities(s) {
+  return String(s || '')
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
+
+function loadWordExamples(term) {
+  try {
+    const slug = slugOf(term);
+    const html = fs.readFileSync(path.join(REPO, 'vi', 'tu', slug, 'index.html'), 'utf8');
+    const re = /<div class="mtd-ex"><span class="mtd-ex-en">(.*?)<\/span> — <span class="mtd-ex-vi">(.*?)<\/span><\/div>/g;
+    let m;
+    const out = [];
+    while ((m = re.exec(html)) && out.length < 2) {
+      const en = decodeHtmlEntities(m[1].replace(/<[^>]+>/g, '')).trim();
+      const vi = decodeHtmlEntities(m[2].replace(/<[^>]+>/g, '')).trim();
+      if (en && vi) out.push([en, vi]);
+    }
+    return out;
+  } catch (e) {
+    return [];
+  }
+}
+
+function maskTermInSentence(sentence, term) {
+  const escaped = String(term || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`\\b${escaped}(?:s|es|ed|ing)?\\b`, 'i');
+  if (re.test(sentence)) return sentence.replace(re, '______');
+  return null;
+}
+
+function pageHtml(p, allPairs) {
   const slug = `${slugOf(p.a)}-vs-${slugOf(p.b)}`;
   const canonical = `${SITE}/vi/phan-biet/${slug}/`;
   const h1 = `Phân biệt ${p.a} và ${p.b}`;
-  const desc = `${p.a} khác ${p.b} thế nào? ${p.diff} Câu đúng/sai, cách dùng IELTS/TOEIC — HọcTA.`.slice(0, 160);
+  const desc = truncateDesc(`${p.a} khác ${p.b} thế nào? ${p.diff} Kèm bảng so sánh, câu đúng/sai và bài tập ngắn IELTS/TOEIC — HọcTA.`);
   /* Anti-cannibalization (02/11): a wrong line that HAS its own loi-sai page
    * links to it ("Giải thích chi tiết") — signals Google the mistake page is
    * the deep answer, the compare page is the comparison context. */
@@ -94,6 +138,45 @@ function pageHtml(p) {
   };
   const tldr = `Tóm tắt: ${p.diff}${(p.right || []).length ? ` Ví dụ: ${(p.right || []).map((r) => String(r).replace(/\.+$/, '')).join(' / ')}.` : ''}`;
   const tldrHtml = `<p class="tldr">${esc(tldr)}</p>`;
+  const exA = loadWordExamples(p.a);
+  const exB = loadWordExamples(p.b);
+  const extraExamples = [
+    ...exA.map(([en, vi]) => `<li><strong>${esc(p.a)}:</strong> <span class="ex-en" lang="en">${esc(en)}</span> — <span class="ex-vi">${esc(vi)}</span></li>`),
+    ...exB.map(([en, vi]) => `<li><strong>${esc(p.b)}:</strong> <span class="ex-en" lang="en">${esc(en)}</span> — <span class="ex-vi">${esc(vi)}</span></li>`),
+  ].join('\n');
+  const quizItems = [];
+  for (const r of (p.right || [])) {
+    const mA = maskTermInSentence(r, p.a);
+    if (mA) {
+      quizItems.push({ q: mA, ans: p.a, full: r });
+      continue;
+    }
+    const mB = maskTermInSentence(r, p.b);
+    if (mB) quizItems.push({ q: mB, ans: p.b, full: r });
+  }
+  const quizHtml = quizItems.length
+    ? `<h2>Bài tập điền từ nhanh (${esc(p.a)} hay ${esc(p.b)}?)</h2>
+  <p>Thử chọn <strong>${esc(p.a)}</strong> hoặc <strong>${esc(p.b)}</strong> (chia dạng phù hợp nếu cần) cho các câu dưới đây trước khi mở đáp án:</p>
+  <ol>
+${quizItems.map((it) => `    <li><span lang="en">${esc(it.q)}</span><details class="cmp-ans"><summary>Xem đáp án</summary><p><strong>${esc(it.ans)}</strong> — <span lang="en">${esc(it.full)}</span></p></details></li>`).join('\n')}
+  </ol>`
+    : '';
+  const idx = (allPairs || []).indexOf(p);
+  const siblingPairs = (allPairs || [])
+    .filter((x) => x !== p && (x.a === p.a || x.b === p.a || x.a === p.b || x.b === p.b))
+    .concat((allPairs || []).filter((x, i) => x !== p && idx >= 0 && Math.abs(i - idx) <= 4))
+    .filter((x, i, arr) => arr.indexOf(x) === i)
+    .slice(0, 4);
+  const siblingHtml = siblingPairs.length
+    ? `<h2>Các cặp từ dễ nhầm liên quan</h2>
+  <div class="cmp-links">
+${siblingPairs.map((s) => `    <a class="related-chip" href="/vi/phan-biet/${slugOf(s.a)}-vs-${slugOf(s.b)}/">${esc(s.a)} vs ${esc(s.b)} →</a>`).join('\n')}
+  </div>`
+    : '';
+  const faqAnswer1 = p.diff;
+  const faqAnswer2 = p.wrong && p.wrong.length
+    ? `Tránh dùng các cách diễn đạt sai như: ${p.wrong.join('; ')}. Hãy đối chiếu câu đúng và ngữ cảnh sử dụng ở bảng trên.`
+    : `Người học thường nhầm giữa “${p.a}” và “${p.b}” khi dịch sát nghĩa từng từ từ tiếng Việt sang tiếng Anh. Luôn kiểm tra từ loại và danh từ/động từ đi kèm trước khi viết.`;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -182,17 +265,30 @@ ${navHtml('phan-biet')}
   </table>
   <p>${esc(p.diff)}</p>
   ${wrongRows ? `<h2>Lỗi sai thường gặp</h2>\n  <ul>\n${wrongRows}\n  </ul>` : ''}
-  <h2>Câu đúng</h2>
+  <h2>Câu đúng mẫu</h2>
   <ul>
 ${rightRows}
   </ul>
+  ${extraExamples ? `<h2>Ví dụ mở rộng trong ngữ cảnh thực tế</h2>\n  <ul>\n${extraExamples}\n  </ul>` : ''}
+  <h2>Mẹo ghi nhớ nhanh cho IELTS &amp; TOEIC</h2>
+  <ul>
+    <li><strong>Bước 1 — Chốt từ loại &amp; cấu trúc đi kèm:</strong> Trước khi chọn <strong>${esc(p.a)}</strong> hay <strong>${esc(p.b)}</strong> trong TOEIC Part 5–6 hoặc IELTS Writing, hãy nhìn từ đứng ngay trước và sau chỗ trống (mạo từ, giới từ, tân ngữ) để loại trừ ngay đáp án sai ngữ pháp.</li>
+    <li><strong>Bước 2 — Đối chiếu sắc thái nghĩa:</strong> ${esc(p.diff)} Đừng dịch thuần một nghĩa tiếng Việt dùng chung cho cả hai từ.</li>
+    <li><strong>Bước 3 — Học theo nguyên cụm câu:</strong> Lưu trực tiếp 1 câu đúng tiêu biểu của <strong>${esc(p.a)}</strong> và <strong>${esc(p.b)}</strong> vào <a href="/vi/blog/phuong-phap/fsrs-la-gi/">hàng đợi lặp lại ngắt quãng FSRS</a> để ôn lại đúng lúc sắp quên.</li>
+  </ul>
+  ${quizHtml}
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="faq-item" open><summary>${esc(p.a)} và ${esc(p.b)} khác nhau thế nào?</summary><p>${esc(faqAnswer1)}</p></details>
+  <details class="faq-item"><summary>Lỗi sai thường gặp giữa ${esc(p.a)} và ${esc(p.b)}?</summary><p>${esc(faqAnswer2)}</p></details>
   <div class="cmp-links">
     <a class="related-chip" href="${termHref(p.a)}">Tra “${esc(p.a)}” →</a>
     <a class="related-chip" href="${termHref(p.b)}">Tra “${esc(p.b)}” →</a>
+    <a class="related-chip" href="/?q=${encodeURIComponent(p.a)}">⭐ Lưu vào FSRS offline ↗</a>
     <a class="related-chip" href="/vi/phan-biet/">Tất cả phân biệt →</a>
   </div>
+  ${siblingHtml}
   ${blogLinksHtml(`/vi/phan-biet/${slug}/`)}
-<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
+<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 28/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>
@@ -279,7 +375,7 @@ function main() {
     // sitemap slash URL, splitting link equity).
     const dir = path.join(OUT_DIR, slug);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(p));
+    fs.writeFileSync(path.join(dir, 'index.html'), pageHtml(p, pairs));
   }
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), hubHtml(pairs));
   // sitemap

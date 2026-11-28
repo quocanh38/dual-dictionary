@@ -183,6 +183,13 @@ ${navHtml('cambridge')}
   <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>
+  <h2>Cách khai thác hiệu quả bộ từ vựng đề Cambridge IELTS</h2>
+  <p>Bộ sách Cambridge IELTS phản ánh sát nhất ngôn ngữ học thuật và cách ra bẫy paraphrase trong bài thi thật. Tuy nhiên, việc chỉ đọc lướt danh sách từ rời rạc rất dễ quên sau vài ngày. Để biến bộ từ vựng này thành điểm số thực tế ở Reading, Listening và Writing, bạn nên áp dụng 3 nguyên tắc sau:</p>
+  <ol>
+    <li><strong>Học trước khi giải đề hoặc ngay sau khi chấm bài:</strong> Mở đúng cuốn Cambridge bạn đang luyện, lọc ra 15–20 từ khiến bạn hiểu nhầm câu hỏi True/False/Not Given hoặc bỏ lỡ ý trong Listening Section 3–4.</li>
+    <li><strong>Ghi nhớ kèm họ từ và từ đồng nghĩa:</strong> Trong đề Cambridge, đáp án đúng hầu như luôn được viết lại bằng từ đồng nghĩa hoặc dạng từ khác. Hãy đối chiếu thêm tại mục <a href="/vi/dong-nghia/">Từ đồng nghĩa học thuật</a> và <a href="/vi/phan-biet/">Phân biệt từ dễ nhầm</a>.</li>
+    <li><strong>Đưa từ sai vào hàng đợi FSRS:</strong> Lưu các từ hay quên kèm đúng câu ngữ cảnh vào app HọcTA để ôn lặp lại ngắt quãng offline mỗi ngày trước kỳ thi.</li>
+  </ol>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 </body>

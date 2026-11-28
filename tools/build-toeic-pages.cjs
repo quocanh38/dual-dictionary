@@ -53,12 +53,13 @@ const FILTER_JS = `<script>
 })();
 </script>`;
 
-function topicPageHtml(t, ipa) {
+function topicPageHtml(t, ipa, allTopics) {
   const n = t.words.length + t.phrases.length;
   const canonical = `${SITE}/vi/toeic/${t.slug}/`;
   const h1 = `Từ vựng TOEIC tình huống ${t.name} (${n} mục)`;
   const sample = t.words.slice(0, 5).join(', ');
-  const desc = `${n} mục từ vựng TOEIC tình huống ${t.name} (${sample}…) kèm phiên âm, nghĩa tiếng Việt, ví dụ công sở viết tay — HọcTA.`.slice(0, 160);
+  const rawDesc = `${n} mục từ vựng TOEIC tình huống ${t.name} (${sample}…) kèm phiên âm IPA, nghĩa tiếng Việt và mẹo làm bài công sở — HọcTA.`;
+  const desc = rawDesc.length <= 155 ? rawDesc : rawDesc.slice(0, 152).replace(/\s+\S*$/, '') + '…';
   const wRows = t.words.map((w) =>
     `    <li data-word="${esc(w)}"><a href="/vi/tu/${encodeURIComponent(w)}/">${esc(w)}</a>${ipa[w] ? ` <span class="hub-ipa">/${esc(ipa[w])}/</span>` : ''}</li>`).join('\n');
   const pRows = t.phrases.map((s) =>
@@ -132,7 +133,20 @@ ${navHtml('toeic')}
   <ul class="hub-list" style="columns:3;gap:20px;padding-left:18px;line-height:2">
 ${wRows}
   </ul>${phraseSection}
-<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 07/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
+  <h2>Cách chủ đề ${esc(t.name)} xuất hiện trong đề thi TOEIC</h2>
+  <ul>
+    <li><strong>Listening Part 3 &amp; Part 4 (Hội thoại &amp; Thông báo công sở):</strong> Các từ khóa như <em>${esc(t.words.slice(0, 4).join(', '))}</em> thường xuất hiện trong câu hỏi về mục đích cuộc gọi, vấn đề phát sinh hoặc hành động tiếp theo của nhân viên. Hãy bấm vào từng từ để nghe phát âm giọng Mỹ và Anh nhằm tránh nghe sót nối âm.</li>
+    <li><strong>Reading Part 5 &amp; Part 6 (Hoàn thành câu &amp; Đoạn văn):</strong> Đề thường kiểm tra họ từ (danh từ / động từ / tính từ) và giới từ đi kèm ngay quanh các từ khóa chủ đề ${esc(t.name)}. Xem thêm hướng dẫn xử lý nhanh tại <a href="/vi/luyen-thi/toeic-part5-6-incomplete-sentence/">chiến thuật TOEIC Part 5–6</a>.</li>
+    <li><strong>Reading Part 7 (Email, thông báo &amp; bảng biểu):</strong> Chú ý các cụm từ đồng nghĩa và cách diễn đạt trang trọng (paraphrase) thay vì chỉ dò trùng khớp từng từ đơn lẻ.</li>
+  </ul>
+  <h2>Lộ trình ôn nhanh ${n} mục từ trong 15 phút</h2>
+  <ol>
+    <li>Lướt nhanh danh sách trên, bấm mở các từ bạn chưa chắc nghĩa hoặc chưa biết phát âm để xem ví dụ công sở và lưu vào app HọcTA.</li>
+    <li>Ôn lại các từ vừa lưu bằng thuật toán lặp lại ngắt quãng <a href="/vi/blog/phuong-phap/fsrs-la-gi/">FSRS offline</a> — chỉ mất 5 phút mỗi ngày để giữ trí nhớ dài hạn ngay cả khi không có mạng.</li>
+    <li>Chuyển sang <a href="/?deck=toeic">bộ thẻ luyện tập TOEIC Business trong app ↗</a> để luyện điền từ vào câu thực tế.</li>
+  </ol>
+  ${(allTopics && allTopics.length) ? `<h2>Tình huống TOEIC công sở khác</h2>\n  <div class="cmp-links">${allTopics.filter((x) => x.slug !== t.slug).slice(0, 6).map((x) => `<a class="related-chip" href="/vi/toeic/${x.slug}/">${esc(x.name)} →</a>`).join(' ')}</div>` : ''}
+<p class="upd" style="color:var(--muted);font-size:.82rem;margin-top:24px;border-top:1px solid var(--line);padding-top:10px">Cập nhật nội dung: 28/11/2026 · <a href="/vi/cap-nhat/">Lịch sử cập nhật</a></p>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 ${FILTER_JS}
@@ -208,7 +222,7 @@ function main() {
   for (const t of topics) {
     const dir = path.join(OUT_DIR, t.slug);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), topicPageHtml(t, ipa));
+    fs.writeFileSync(path.join(dir, 'index.html'), topicPageHtml(t, ipa, topics));
   }
   writeHubIndex(topics, ipa);
 

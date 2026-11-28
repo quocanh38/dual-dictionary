@@ -238,6 +238,19 @@ ${navHtml('ngu-phap')}
   <ul class="hub-list" style="columns:1;gap:20px;padding-left:18px;line-height:2">
 ${rows}
   </ul>
+  <h2>Vì sao nên học ngữ pháp đi từ lỗi sai thực tế?</h2>
+  <p>Đa số người Việt học tiếng Anh đều từng thuộc công thức các thì hay câu điều kiện, nhưng khi viết email công việc, làm TOEIC Part 5–6 hoặc viết IELTS Task 2 vẫn lặp lại cùng một nhóm lỗi cố hữu (quên chia động từ theo chủ ngữ số ít, dùng sai giới từ sau động từ, nhầm danh từ không đếm được như <em>advice / information / evidence</em>). Thay vì học dàn trải sách ngữ pháp dày hàng trăm trang, bộ 10 chủ điểm trên tập trung sửa trực diện 50 lỗi mất điểm phổ biến nhất.</p>
+  <h2>Lộ trình ôn 10 chủ điểm ngữ pháp trong 2 tuần</h2>
+  <ol>
+    <li><strong>Tuần 1 — Chặn lỗi mất điểm cơ bản:</strong> Ôn 5 chủ điểm nền tảng (Thì động từ, Hòa hợp chủ–vị, Danh từ đếm được/không đếm được, Mạo từ a/an/the, Giới từ). Mỗi ngày đọc 1 chủ điểm, chép lại 5 câu đúng mẫu và kiểm tra chéo với mục <a href="/vi/loi-sai/">30 lỗi sai thường gặp</a>.</li>
+    <li><strong>Tuần 2 — Nâng cấp cấu trúc câu cho IELTS &amp; TOEIC:</strong> Chuyển sang Câu bị động, Mệnh đề quan hệ, Câu điều kiện, Động từ khuyết thiếu và Liên từ/Cấu trúc song song. Kết hợp đối chiếu các cặp từ dễ gây bẫy ngữ pháp tại <a href="/vi/phan-biet/">Phân biệt từ dễ nhầm</a> và <a href="/vi/gioi-tu/">100 cặp từ + giới từ đi kèm</a>.</li>
+  </ol>
+  <div class="cmp-links">
+    <a class="related-chip" href="/vi/loi-sai/">30 lỗi sai hay gặp →</a>
+    <a class="related-chip" href="/vi/phan-biet/">Phân biệt từ dễ nhầm →</a>
+    <a class="related-chip" href="/vi/gioi-tu/">Giới từ đi kèm →</a>
+    <a class="related-chip" href="/vi/luyen-thi/">Hướng dẫn luyện thi →</a>
+  </div>
 </main>
 <footer class="blog-footer"><p><a href="/vi/">HọcTA</a> — từ điển &amp; công cụ học từ vựng offline-first cho người Việt. Biên soạn bởi <a href="/vi/tac-gia/">Nguyễn Quốc Anh</a> · <a href="/vi/chinh-sach-noi-dung/">Chính sách nội dung</a></p></footer>
 ${FILTER_JS}
